@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "KuroCurve_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -95,70 +95,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ItemMaterialControllerActorData_C">();
+		BP_STATIC_CLASS_IMPL("ItemMaterialControllerActorData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemMaterialControllerActorData_C")
 	}
 	static class UItemMaterialControllerActorData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UItemMaterialControllerActorData_C>();
 	}
 };
-static_assert(alignof(UItemMaterialControllerActorData_C) == 0x000008, "Wrong alignment on UItemMaterialControllerActorData_C");
-static_assert(sizeof(UItemMaterialControllerActorData_C) == 0x002AD8, "Wrong size on UItemMaterialControllerActorData_C");
-static_assert(offsetof(UItemMaterialControllerActorData_C, StartTime) == 0x000038, "Member 'UItemMaterialControllerActorData_C::StartTime' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, LoopTime) == 0x00003C, "Member 'UItemMaterialControllerActorData_C::LoopTime' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EndTime) == 0x000040, "Member 'UItemMaterialControllerActorData_C::EndTime' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableBaseColorScale) == 0x000044, "Member 'UItemMaterialControllerActorData_C::EnableBaseColorScale' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, BaseColorScale) == 0x000048, "Member 'UItemMaterialControllerActorData_C::BaseColorScale' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableAddEmissionColor) == 0x0000D8, "Member 'UItemMaterialControllerActorData_C::EnableAddEmissionColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, AddEmissionColor) == 0x0000E0, "Member 'UItemMaterialControllerActorData_C::AddEmissionColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableRimLight) == 0x000300, "Member 'UItemMaterialControllerActorData_C::EnableRimLight' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, RimLightColor) == 0x000308, "Member 'UItemMaterialControllerActorData_C::RimLightColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableDissolve) == 0x000528, "Member 'UItemMaterialControllerActorData_C::EnableDissolve' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveProgress) == 0x000530, "Member 'UItemMaterialControllerActorData_C::DissolveProgress' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveAdjustment) == 0x0005C0, "Member 'UItemMaterialControllerActorData_C::DissolveAdjustment' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveTexScaleOffset) == 0x000650, "Member 'UItemMaterialControllerActorData_C::DissolveTexScaleOffset' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveTexSpeed) == 0x000870, "Member 'UItemMaterialControllerActorData_C::DissolveTexSpeed' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, RimPower) == 0x000A90, "Member 'UItemMaterialControllerActorData_C::RimPower' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveUv) == 0x000B20, "Member 'UItemMaterialControllerActorData_C::DissolveUv' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveEdageColor) == 0x000B28, "Member 'UItemMaterialControllerActorData_C::DissolveEdageColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveEdageStrength) == 0x000D48, "Member 'UItemMaterialControllerActorData_C::DissolveEdageStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DissolveEdageWidth) == 0x000DD8, "Member 'UItemMaterialControllerActorData_C::DissolveEdageWidth' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableScanning) == 0x000E68, "Member 'UItemMaterialControllerActorData_C::EnableScanning' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, ScanningOutlineStrength) == 0x000E70, "Member 'UItemMaterialControllerActorData_C::ScanningOutlineStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, ScanningOutlineTexScaleOffset) == 0x000F00, "Member 'UItemMaterialControllerActorData_C::ScanningOutlineTexScaleOffset' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, ScanningOutlineColor) == 0x001120, "Member 'UItemMaterialControllerActorData_C::ScanningOutlineColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, ScanningOutlineMixNoiseStrength) == 0x001340, "Member 'UItemMaterialControllerActorData_C::ScanningOutlineMixNoiseStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableEmissionChange) == 0x0013D0, "Member 'UItemMaterialControllerActorData_C::EnableEmissionChange' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EmissionLightColorChangeProgress) == 0x0013D8, "Member 'UItemMaterialControllerActorData_C::EmissionLightColorChangeProgress' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EmissionLightColorChangeStrength) == 0x001468, "Member 'UItemMaterialControllerActorData_C::EmissionLightColorChangeStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EmissionLightColorChangeColor) == 0x0014F8, "Member 'UItemMaterialControllerActorData_C::EmissionLightColorChangeColor' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, VertexAnimTimeDebug) == 0x001718, "Member 'UItemMaterialControllerActorData_C::VertexAnimTimeDebug' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, VertexAnimFrame) == 0x0017A8, "Member 'UItemMaterialControllerActorData_C::VertexAnimFrame' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnablePivotPainterWorldPositionOffset) == 0x001838, "Member 'UItemMaterialControllerActorData_C::EnablePivotPainterWorldPositionOffset' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, PivotPainterTransform) == 0x001840, "Member 'UItemMaterialControllerActorData_C::PivotPainterTransform' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, FloatingThreshold) == 0x001A60, "Member 'UItemMaterialControllerActorData_C::FloatingThreshold' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, DisableFoliageEffect) == 0x001AF0, "Member 'UItemMaterialControllerActorData_C::DisableFoliageEffect' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableFoliageEffect) == 0x001AF1, "Member 'UItemMaterialControllerActorData_C::EnableFoliageEffect' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, UseRimlightColorSpecil) == 0x001AF2, "Member 'UItemMaterialControllerActorData_C::UseRimlightColorSpecil' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, RimLightColorSpecil) == 0x001AF8, "Member 'UItemMaterialControllerActorData_C::RimLightColorSpecil' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, RimlightColorStrength) == 0x001D18, "Member 'UItemMaterialControllerActorData_C::RimlightColorStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableWorldPositionOffset) == 0x001DA8, "Member 'UItemMaterialControllerActorData_C::EnableWorldPositionOffset' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, WorldPositionOffsetOffset) == 0x001DB0, "Member 'UItemMaterialControllerActorData_C::WorldPositionOffsetOffset' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, WorldPositionOffsetNormal) == 0x001FD0, "Member 'UItemMaterialControllerActorData_C::WorldPositionOffsetNormal' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, UseEmissionTex) == 0x002060, "Member 'UItemMaterialControllerActorData_C::UseEmissionTex' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EmissionTexStrength) == 0x002068, "Member 'UItemMaterialControllerActorData_C::EmissionTexStrength' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, SimpleUspeed) == 0x0020F8, "Member 'UItemMaterialControllerActorData_C::SimpleUspeed' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, SimpleVspeed) == 0x002188, "Member 'UItemMaterialControllerActorData_C::SimpleVspeed' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, SimpleUseFlow) == 0x002218, "Member 'UItemMaterialControllerActorData_C::SimpleUseFlow' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableQuanXiPinTu) == 0x0022A8, "Member 'UItemMaterialControllerActorData_C::EnableQuanXiPinTu' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, TransparencyQuanXiPinTu) == 0x0022B0, "Member 'UItemMaterialControllerActorData_C::TransparencyQuanXiPinTu' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, TransparentColorQuanXiPinTu) == 0x002340, "Member 'UItemMaterialControllerActorData_C::TransparentColorQuanXiPinTu' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, OpaqueColorQuanXiPinTu) == 0x002560, "Member 'UItemMaterialControllerActorData_C::OpaqueColorQuanXiPinTu' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, EnableQuanXiFengSuo) == 0x002780, "Member 'UItemMaterialControllerActorData_C::EnableQuanXiFengSuo' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, TransparencyQuanXiFengSuo) == 0x002788, "Member 'UItemMaterialControllerActorData_C::TransparencyQuanXiFengSuo' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, TransparentColorQuanXiFengSuo) == 0x002818, "Member 'UItemMaterialControllerActorData_C::TransparentColorQuanXiFengSuo' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, CustomScalarParMap) == 0x002A38, "Member 'UItemMaterialControllerActorData_C::CustomScalarParMap' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerActorData_C, CustomColorParMap) == 0x002A88, "Member 'UItemMaterialControllerActorData_C::CustomColorParMap' has a wrong offset!");
+DUMPER7_ASSERTS_UItemMaterialControllerActorData_C;
 
 }
 

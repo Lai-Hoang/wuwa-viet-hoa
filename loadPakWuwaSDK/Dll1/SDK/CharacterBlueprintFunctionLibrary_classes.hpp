@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESelfCenteredMode_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ESelfCenteredMode_structs.hpp"
 
 
 namespace SDK
@@ -61,19 +61,24 @@ public:
 	static void SetCharacterDirectlySightLockEnableState(int32 id, bool bEnable, class UObject* __WorldContext);
 	static void RestoreSightLockBoneLimit(int32 id, class UObject* __WorldContext);
 	static void SetCharacterSightLockBoneLimit(int32 id, float yawMin, float yawMax, float pitchMin, float pitchMax, float assistLimit, const struct FVector& sightDirectInSightBone, const struct FVector& upAxisInSightBone, class UObject* __WorldContext);
+	static class FString GetCharacterMovementModeInfo(int32 id, class UObject* __WorldContext);
+	static class FString GetCharacterMovementStateInfo(int32 id, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CharacterBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("CharacterBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CharacterBlueprintFunctionLibrary_C")
 	}
 	static class UCharacterBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCharacterBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UCharacterBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UCharacterBlueprintFunctionLibrary_C");
-static_assert(sizeof(UCharacterBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UCharacterBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UCharacterBlueprintFunctionLibrary_C;
 
 }
 

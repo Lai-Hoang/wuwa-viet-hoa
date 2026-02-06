@@ -13,9 +13,9 @@
 #include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTasks_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "KuroGAS_structs.hpp"
 
 
@@ -53,27 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_SpecifiedAnimInstancePlayMontageAndWait">();
+		STATIC_CLASS_IMPL("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_SpecifiedAnimInstancePlayMontageAndWait")
 	}
 	static class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait>();
 	}
 };
-static_assert(alignof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait) == 0x000008, "Wrong alignment on UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait");
-static_assert(sizeof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait) == 0x000130, "Wrong size on UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnCompleted) == 0x000088, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnCompleted' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnBlendOut) == 0x000098, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnBlendOut' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnInterrupted) == 0x0000A8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnInterrupted' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnCancelled) == 0x0000B8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnCancelled' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnTick) == 0x0000C8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnTick' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, MontageToPlay) == 0x000100, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::MontageToPlay' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, SkeletalMeshComponentTag) == 0x000108, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::SkeletalMeshComponentTag' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, Rate) == 0x000114, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::Rate' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, StartSection) == 0x000118, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::StartSection' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, AnimRootMotionTranslationScale) == 0x000124, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::AnimRootMotionTranslationScale' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, StartTimeSeconds) == 0x000128, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::StartTimeSeconds' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, bStopWhenAbilityEnds) == 0x00012C, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait;
 
 // Class KuroGAS.AsyncTaskAnyAttributeChanged
 // 0x0018 (0x0050 - 0x0038)
@@ -91,17 +82,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskAnyAttributeChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskAnyAttributeChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskAnyAttributeChanged")
 	}
 	static class UAsyncTaskAnyAttributeChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskAnyAttributeChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskAnyAttributeChanged) == 0x000008, "Wrong alignment on UAsyncTaskAnyAttributeChanged");
-static_assert(sizeof(UAsyncTaskAnyAttributeChanged) == 0x000050, "Wrong size on UAsyncTaskAnyAttributeChanged");
-static_assert(offsetof(UAsyncTaskAnyAttributeChanged, OnAttributeChanged) == 0x000038, "Member 'UAsyncTaskAnyAttributeChanged::OnAttributeChanged' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskAnyAttributeChanged, ASC) == 0x000048, "Member 'UAsyncTaskAnyAttributeChanged::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskAnyAttributeChanged;
 
 // Class KuroGAS.AsyncTaskAnyEffectInhibitionChanged
 // 0x0018 (0x0050 - 0x0038)
@@ -119,17 +111,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskAnyEffectInhibitionChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskAnyEffectInhibitionChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskAnyEffectInhibitionChanged")
 	}
 	static class UAsyncTaskAnyEffectInhibitionChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskAnyEffectInhibitionChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskAnyEffectInhibitionChanged) == 0x000008, "Wrong alignment on UAsyncTaskAnyEffectInhibitionChanged");
-static_assert(sizeof(UAsyncTaskAnyEffectInhibitionChanged) == 0x000050, "Wrong size on UAsyncTaskAnyEffectInhibitionChanged");
-static_assert(offsetof(UAsyncTaskAnyEffectInhibitionChanged, OnEffectInhibitionChanged) == 0x000038, "Member 'UAsyncTaskAnyEffectInhibitionChanged::OnEffectInhibitionChanged' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskAnyEffectInhibitionChanged, AbilityComp) == 0x000048, "Member 'UAsyncTaskAnyEffectInhibitionChanged::AbilityComp' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskAnyEffectInhibitionChanged;
 
 // Class KuroGAS.AsyncTaskAnyEffectRemoved
 // 0x0030 (0x0068 - 0x0038)
@@ -148,17 +141,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskAnyEffectRemoved">();
+		STATIC_CLASS_IMPL("AsyncTaskAnyEffectRemoved")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskAnyEffectRemoved")
 	}
 	static class UAsyncTaskAnyEffectRemoved* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskAnyEffectRemoved>();
 	}
 };
-static_assert(alignof(UAsyncTaskAnyEffectRemoved) == 0x000008, "Wrong alignment on UAsyncTaskAnyEffectRemoved");
-static_assert(sizeof(UAsyncTaskAnyEffectRemoved) == 0x000068, "Wrong size on UAsyncTaskAnyEffectRemoved");
-static_assert(offsetof(UAsyncTaskAnyEffectRemoved, OnEffectRemoved) == 0x000038, "Member 'UAsyncTaskAnyEffectRemoved::OnEffectRemoved' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskAnyEffectRemoved, ASC) == 0x000048, "Member 'UAsyncTaskAnyEffectRemoved::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskAnyEffectRemoved;
 
 // Class KuroGAS.AsyncTaskAnyEffectStackChanged
 // 0x0030 (0x0068 - 0x0038)
@@ -177,17 +171,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskAnyEffectStackChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskAnyEffectStackChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskAnyEffectStackChanged")
 	}
 	static class UAsyncTaskAnyEffectStackChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskAnyEffectStackChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskAnyEffectStackChanged) == 0x000008, "Wrong alignment on UAsyncTaskAnyEffectStackChanged");
-static_assert(sizeof(UAsyncTaskAnyEffectStackChanged) == 0x000068, "Wrong size on UAsyncTaskAnyEffectStackChanged");
-static_assert(offsetof(UAsyncTaskAnyEffectStackChanged, OnStackChanged) == 0x000038, "Member 'UAsyncTaskAnyEffectStackChanged::OnStackChanged' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskAnyEffectStackChanged, AbilityComp) == 0x000048, "Member 'UAsyncTaskAnyEffectStackChanged::AbilityComp' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskAnyEffectStackChanged;
 
 // Class KuroGAS.AsyncTaskEffectApplied
 // 0x0030 (0x0068 - 0x0038)
@@ -206,17 +201,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskEffectApplied">();
+		STATIC_CLASS_IMPL("AsyncTaskEffectApplied")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskEffectApplied")
 	}
 	static class UAsyncTaskEffectApplied* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskEffectApplied>();
 	}
 };
-static_assert(alignof(UAsyncTaskEffectApplied) == 0x000008, "Wrong alignment on UAsyncTaskEffectApplied");
-static_assert(sizeof(UAsyncTaskEffectApplied) == 0x000068, "Wrong size on UAsyncTaskEffectApplied");
-static_assert(offsetof(UAsyncTaskEffectApplied, OnEffectApplied) == 0x000038, "Member 'UAsyncTaskEffectApplied::OnEffectApplied' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskEffectApplied, ASC) == 0x000048, "Member 'UAsyncTaskEffectApplied::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskEffectApplied;
 
 // Class KuroGAS.AsyncTaskEffectDebugString
 // 0x0018 (0x0050 - 0x0038)
@@ -234,17 +230,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskEffectDebugString">();
+		STATIC_CLASS_IMPL("AsyncTaskEffectDebugString")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskEffectDebugString")
 	}
 	static class UAsyncTaskEffectDebugString* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskEffectDebugString>();
 	}
 };
-static_assert(alignof(UAsyncTaskEffectDebugString) == 0x000008, "Wrong alignment on UAsyncTaskEffectDebugString");
-static_assert(sizeof(UAsyncTaskEffectDebugString) == 0x000050, "Wrong size on UAsyncTaskEffectDebugString");
-static_assert(offsetof(UAsyncTaskEffectDebugString, OnAnyGameplayEffectExecuted) == 0x000038, "Member 'UAsyncTaskEffectDebugString::OnAnyGameplayEffectExecuted' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskEffectDebugString, ASC) == 0x000048, "Member 'UAsyncTaskEffectDebugString::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskEffectDebugString;
 
 // Class KuroGAS.AsyncTaskEffectInhibitionChanged
 // 0x0020 (0x0058 - 0x0038)
@@ -262,16 +259,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskEffectInhibitionChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskEffectInhibitionChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskEffectInhibitionChanged")
 	}
 	static class UAsyncTaskEffectInhibitionChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskEffectInhibitionChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskEffectInhibitionChanged) == 0x000008, "Wrong alignment on UAsyncTaskEffectInhibitionChanged");
-static_assert(sizeof(UAsyncTaskEffectInhibitionChanged) == 0x000058, "Wrong size on UAsyncTaskEffectInhibitionChanged");
-static_assert(offsetof(UAsyncTaskEffectInhibitionChanged, OnInhibitionChanged) == 0x000038, "Member 'UAsyncTaskEffectInhibitionChanged::OnInhibitionChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskEffectInhibitionChanged;
 
 // Class KuroGAS.AsyncTaskEffectStackChanged
 // 0x0020 (0x0058 - 0x0038)
@@ -289,16 +288,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskEffectStackChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskEffectStackChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskEffectStackChanged")
 	}
 	static class UAsyncTaskEffectStackChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskEffectStackChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskEffectStackChanged) == 0x000008, "Wrong alignment on UAsyncTaskEffectStackChanged");
-static_assert(sizeof(UAsyncTaskEffectStackChanged) == 0x000058, "Wrong size on UAsyncTaskEffectStackChanged");
-static_assert(offsetof(UAsyncTaskEffectStackChanged, OnStackChanged) == 0x000038, "Member 'UAsyncTaskEffectStackChanged::OnStackChanged' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskEffectStackChanged;
 
 // Class KuroGAS.AsyncTaskGameplayCueNotify
 // 0x0018 (0x0050 - 0x0038)
@@ -316,17 +317,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskGameplayCueNotify">();
+		STATIC_CLASS_IMPL("AsyncTaskGameplayCueNotify")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskGameplayCueNotify")
 	}
 	static class UAsyncTaskGameplayCueNotify* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskGameplayCueNotify>();
 	}
 };
-static_assert(alignof(UAsyncTaskGameplayCueNotify) == 0x000008, "Wrong alignment on UAsyncTaskGameplayCueNotify");
-static_assert(sizeof(UAsyncTaskGameplayCueNotify) == 0x000050, "Wrong size on UAsyncTaskGameplayCueNotify");
-static_assert(offsetof(UAsyncTaskGameplayCueNotify, GameplayCueEvent) == 0x000038, "Member 'UAsyncTaskGameplayCueNotify::GameplayCueEvent' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskGameplayCueNotify, ASC) == 0x000048, "Member 'UAsyncTaskGameplayCueNotify::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskGameplayCueNotify;
 
 // Class KuroGAS.AsyncTaskPlayMontageAndWait
 // 0x0078 (0x00B0 - 0x0038)
@@ -353,22 +355,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskPlayMontageAndWait">();
+		STATIC_CLASS_IMPL("AsyncTaskPlayMontageAndWait")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskPlayMontageAndWait")
 	}
 	static class UAsyncTaskPlayMontageAndWait* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskPlayMontageAndWait>();
 	}
 };
-static_assert(alignof(UAsyncTaskPlayMontageAndWait) == 0x000008, "Wrong alignment on UAsyncTaskPlayMontageAndWait");
-static_assert(sizeof(UAsyncTaskPlayMontageAndWait) == 0x0000B0, "Wrong size on UAsyncTaskPlayMontageAndWait");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, EndCallback) == 0x000038, "Member 'UAsyncTaskPlayMontageAndWait::EndCallback' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, BlendOutCallback) == 0x000048, "Member 'UAsyncTaskPlayMontageAndWait::BlendOutCallback' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, RemainCallback) == 0x000058, "Member 'UAsyncTaskPlayMontageAndWait::RemainCallback' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, bShouldEmitOnEndedEvent) == 0x000068, "Member 'UAsyncTaskPlayMontageAndWait::bShouldEmitOnEndedEvent' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, MontageLength) == 0x00006C, "Member 'UAsyncTaskPlayMontageAndWait::MontageLength' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, AnimInstance) == 0x000070, "Member 'UAsyncTaskPlayMontageAndWait::AnimInstance' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskPlayMontageAndWait, MontageToPlay) == 0x000078, "Member 'UAsyncTaskPlayMontageAndWait::MontageToPlay' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskPlayMontageAndWait;
 
 // Class KuroGAS.AsyncTaskRotateSequence
 // 0x0140 (0x01B0 - 0x0070)
@@ -399,22 +397,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskRotateSequence">();
+		STATIC_CLASS_IMPL("AsyncTaskRotateSequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskRotateSequence")
 	}
 	static class UAsyncTaskRotateSequence* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskRotateSequence>();
 	}
 };
-static_assert(alignof(UAsyncTaskRotateSequence) == 0x000010, "Wrong alignment on UAsyncTaskRotateSequence");
-static_assert(sizeof(UAsyncTaskRotateSequence) == 0x0001B0, "Wrong size on UAsyncTaskRotateSequence");
-static_assert(offsetof(UAsyncTaskRotateSequence, OnShootStepFired) == 0x000070, "Member 'UAsyncTaskRotateSequence::OnShootStepFired' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, OnSequenceFinished) == 0x000080, "Member 'UAsyncTaskRotateSequence::OnSequenceFinished' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, AimToleranceDeg) == 0x000090, "Member 'UAsyncTaskRotateSequence::AimToleranceDeg' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, AimSpeedDegPerSec) == 0x000094, "Member 'UAsyncTaskRotateSequence::AimSpeedDegPerSec' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, PostFireDelay) == 0x000098, "Member 'UAsyncTaskRotateSequence::PostFireDelay' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, TimeDilation) == 0x00009C, "Member 'UAsyncTaskRotateSequence::TimeDilation' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskRotateSequence, RotateOffset) == 0x0000A4, "Member 'UAsyncTaskRotateSequence::RotateOffset' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskRotateSequence;
 
 // Class KuroGAS.AsyncTaskTagCountChanged
 // 0x0028 (0x0060 - 0x0038)
@@ -433,17 +427,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskTagCountChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskTagCountChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskTagCountChanged")
 	}
 	static class UAsyncTaskTagCountChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskTagCountChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskTagCountChanged) == 0x000008, "Wrong alignment on UAsyncTaskTagCountChanged");
-static_assert(sizeof(UAsyncTaskTagCountChanged) == 0x000060, "Wrong size on UAsyncTaskTagCountChanged");
-static_assert(offsetof(UAsyncTaskTagCountChanged, OnTagCountChanged) == 0x000038, "Member 'UAsyncTaskTagCountChanged::OnTagCountChanged' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskTagCountChanged, ASC) == 0x000048, "Member 'UAsyncTaskTagCountChanged::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskTagCountChanged;
 
 // Class KuroGAS.AsyncTaskTagSignificantChanged
 // 0x0028 (0x0060 - 0x0038)
@@ -462,17 +457,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskTagSignificantChanged">();
+		STATIC_CLASS_IMPL("AsyncTaskTagSignificantChanged")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskTagSignificantChanged")
 	}
 	static class UAsyncTaskTagSignificantChanged* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskTagSignificantChanged>();
 	}
 };
-static_assert(alignof(UAsyncTaskTagSignificantChanged) == 0x000008, "Wrong alignment on UAsyncTaskTagSignificantChanged");
-static_assert(sizeof(UAsyncTaskTagSignificantChanged) == 0x000060, "Wrong size on UAsyncTaskTagSignificantChanged");
-static_assert(offsetof(UAsyncTaskTagSignificantChanged, OnTagSignificantChanged) == 0x000038, "Member 'UAsyncTaskTagSignificantChanged::OnTagSignificantChanged' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskTagSignificantChanged, ASC) == 0x000048, "Member 'UAsyncTaskTagSignificantChanged::ASC' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskTagSignificantChanged;
 
 // Class KuroGAS.AsyncTaskWaitGameplayEvent
 // 0x0018 (0x0050 - 0x0038)
@@ -490,17 +486,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTaskWaitGameplayEvent">();
+		STATIC_CLASS_IMPL("AsyncTaskWaitGameplayEvent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTaskWaitGameplayEvent")
 	}
 	static class UAsyncTaskWaitGameplayEvent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTaskWaitGameplayEvent>();
 	}
 };
-static_assert(alignof(UAsyncTaskWaitGameplayEvent) == 0x000008, "Wrong alignment on UAsyncTaskWaitGameplayEvent");
-static_assert(sizeof(UAsyncTaskWaitGameplayEvent) == 0x000050, "Wrong size on UAsyncTaskWaitGameplayEvent");
-static_assert(offsetof(UAsyncTaskWaitGameplayEvent, EventReceived) == 0x000038, "Member 'UAsyncTaskWaitGameplayEvent::EventReceived' has a wrong offset!");
-static_assert(offsetof(UAsyncTaskWaitGameplayEvent, AbilitySystemComponent) == 0x000048, "Member 'UAsyncTaskWaitGameplayEvent::AbilitySystemComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTaskWaitGameplayEvent;
 
 // Class KuroGAS.BaseAbilitySystemComponent
 // 0x0000 (0x1388 - 0x1388)
@@ -542,15 +539,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseAbilitySystemComponent">();
+		STATIC_CLASS_IMPL("BaseAbilitySystemComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseAbilitySystemComponent")
 	}
 	static class UBaseAbilitySystemComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseAbilitySystemComponent>();
 	}
 };
-static_assert(alignof(UBaseAbilitySystemComponent) == 0x000008, "Wrong alignment on UBaseAbilitySystemComponent");
-static_assert(sizeof(UBaseAbilitySystemComponent) == 0x001388, "Wrong size on UBaseAbilitySystemComponent");
+DUMPER7_ASSERTS_UBaseAbilitySystemComponent;
 
 // Class KuroGAS.BaseAttributeSet
 // 0x0D98 (0x0DD0 - 0x0038)
@@ -715,156 +715,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseAttributeSet">();
+		STATIC_CLASS_IMPL("BaseAttributeSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseAttributeSet")
 	}
 	static class UBaseAttributeSet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseAttributeSet>();
 	}
 };
-static_assert(alignof(UBaseAttributeSet) == 0x000008, "Wrong alignment on UBaseAttributeSet");
-static_assert(sizeof(UBaseAttributeSet) == 0x000DD0, "Wrong size on UBaseAttributeSet");
-static_assert(offsetof(UBaseAttributeSet, Lv) == 0x000038, "Member 'UBaseAttributeSet::Lv' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, LifeMax) == 0x000050, "Member 'UBaseAttributeSet::LifeMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Life) == 0x000068, "Member 'UBaseAttributeSet::Life' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Sheild) == 0x000080, "Member 'UBaseAttributeSet::Sheild' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SheildDamageChange) == 0x000098, "Member 'UBaseAttributeSet::SheildDamageChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SheildDamageReduce) == 0x0000B0, "Member 'UBaseAttributeSet::SheildDamageReduce' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Atk) == 0x0000C8, "Member 'UBaseAttributeSet::Atk' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Crit) == 0x0000E0, "Member 'UBaseAttributeSet::Crit' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, CritDamage) == 0x0000F8, "Member 'UBaseAttributeSet::CritDamage' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Def) == 0x000110, "Member 'UBaseAttributeSet::Def' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, EnergyEfficiency) == 0x000128, "Member 'UBaseAttributeSet::EnergyEfficiency' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, CDReduse) == 0x000140, "Member 'UBaseAttributeSet::CDReduse' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionEfficiency) == 0x000158, "Member 'UBaseAttributeSet::ReactionEfficiency' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeNormalSkill) == 0x000170, "Member 'UBaseAttributeSet::DamageChangeNormalSkill' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChange) == 0x000188, "Member 'UBaseAttributeSet::DamageChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduce) == 0x0001A0, "Member 'UBaseAttributeSet::DamageReduce' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeAuto) == 0x0001B8, "Member 'UBaseAttributeSet::DamageChangeAuto' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeCast) == 0x0001D0, "Member 'UBaseAttributeSet::DamageChangeCast' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeUltra) == 0x0001E8, "Member 'UBaseAttributeSet::DamageChangeUltra' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeQTE) == 0x000200, "Member 'UBaseAttributeSet::DamageChangeQTE' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangePhys) == 0x000218, "Member 'UBaseAttributeSet::DamageChangePhys' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement1) == 0x000230, "Member 'UBaseAttributeSet::DamageChangeElement1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement2) == 0x000248, "Member 'UBaseAttributeSet::DamageChangeElement2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement3) == 0x000260, "Member 'UBaseAttributeSet::DamageChangeElement3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement4) == 0x000278, "Member 'UBaseAttributeSet::DamageChangeElement4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement5) == 0x000290, "Member 'UBaseAttributeSet::DamageChangeElement5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangeElement6) == 0x0002A8, "Member 'UBaseAttributeSet::DamageChangeElement6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistancePhys) == 0x0002C0, "Member 'UBaseAttributeSet::DamageResistancePhys' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement1) == 0x0002D8, "Member 'UBaseAttributeSet::DamageResistanceElement1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement2) == 0x0002F0, "Member 'UBaseAttributeSet::DamageResistanceElement2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement3) == 0x000308, "Member 'UBaseAttributeSet::DamageResistanceElement3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement4) == 0x000320, "Member 'UBaseAttributeSet::DamageResistanceElement4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement5) == 0x000338, "Member 'UBaseAttributeSet::DamageResistanceElement5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageResistanceElement6) == 0x000350, "Member 'UBaseAttributeSet::DamageResistanceElement6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HealChange) == 0x000368, "Member 'UBaseAttributeSet::HealChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HealedChange) == 0x000380, "Member 'UBaseAttributeSet::HealedChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReducePhys) == 0x000398, "Member 'UBaseAttributeSet::DamageReducePhys' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement1) == 0x0003B0, "Member 'UBaseAttributeSet::DamageReduceElement1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement2) == 0x0003C8, "Member 'UBaseAttributeSet::DamageReduceElement2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement3) == 0x0003E0, "Member 'UBaseAttributeSet::DamageReduceElement3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement4) == 0x0003F8, "Member 'UBaseAttributeSet::DamageReduceElement4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement5) == 0x000410, "Member 'UBaseAttributeSet::DamageReduceElement5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageReduceElement6) == 0x000428, "Member 'UBaseAttributeSet::DamageReduceElement6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange1) == 0x000440, "Member 'UBaseAttributeSet::ReactionChange1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange2) == 0x000458, "Member 'UBaseAttributeSet::ReactionChange2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange3) == 0x000470, "Member 'UBaseAttributeSet::ReactionChange3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange4) == 0x000488, "Member 'UBaseAttributeSet::ReactionChange4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange5) == 0x0004A0, "Member 'UBaseAttributeSet::ReactionChange5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange6) == 0x0004B8, "Member 'UBaseAttributeSet::ReactionChange6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange7) == 0x0004D0, "Member 'UBaseAttributeSet::ReactionChange7' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange8) == 0x0004E8, "Member 'UBaseAttributeSet::ReactionChange8' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange9) == 0x000500, "Member 'UBaseAttributeSet::ReactionChange9' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange10) == 0x000518, "Member 'UBaseAttributeSet::ReactionChange10' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange11) == 0x000530, "Member 'UBaseAttributeSet::ReactionChange11' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange12) == 0x000548, "Member 'UBaseAttributeSet::ReactionChange12' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange13) == 0x000560, "Member 'UBaseAttributeSet::ReactionChange13' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange14) == 0x000578, "Member 'UBaseAttributeSet::ReactionChange14' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ReactionChange15) == 0x000590, "Member 'UBaseAttributeSet::ReactionChange15' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, EnergyMax) == 0x0005A8, "Member 'UBaseAttributeSet::EnergyMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Energy) == 0x0005C0, "Member 'UBaseAttributeSet::Energy' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy1Max) == 0x0005D8, "Member 'UBaseAttributeSet::SpecialEnergy1Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy1) == 0x0005F0, "Member 'UBaseAttributeSet::SpecialEnergy1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy2Max) == 0x000608, "Member 'UBaseAttributeSet::SpecialEnergy2Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy2) == 0x000620, "Member 'UBaseAttributeSet::SpecialEnergy2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy3Max) == 0x000638, "Member 'UBaseAttributeSet::SpecialEnergy3Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy3) == 0x000650, "Member 'UBaseAttributeSet::SpecialEnergy3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy4Max) == 0x000668, "Member 'UBaseAttributeSet::SpecialEnergy4Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialEnergy4) == 0x000680, "Member 'UBaseAttributeSet::SpecialEnergy4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthMax) == 0x000698, "Member 'UBaseAttributeSet::StrengthMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Strength) == 0x0006B0, "Member 'UBaseAttributeSet::Strength' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthRecover) == 0x0006C8, "Member 'UBaseAttributeSet::StrengthRecover' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthPunishTime) == 0x0006E0, "Member 'UBaseAttributeSet::StrengthPunishTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthRun) == 0x0006F8, "Member 'UBaseAttributeSet::StrengthRun' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthSwim) == 0x000710, "Member 'UBaseAttributeSet::StrengthSwim' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthFastSwim) == 0x000728, "Member 'UBaseAttributeSet::StrengthFastSwim' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthClimb) == 0x000740, "Member 'UBaseAttributeSet::StrengthClimb' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthFastClimb) == 0x000758, "Member 'UBaseAttributeSet::StrengthFastClimb' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HardnessMax) == 0x000770, "Member 'UBaseAttributeSet::HardnessMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Hardness) == 0x000788, "Member 'UBaseAttributeSet::Hardness' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HardnessRecover) == 0x0007A0, "Member 'UBaseAttributeSet::HardnessRecover' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HardnessPunishTime) == 0x0007B8, "Member 'UBaseAttributeSet::HardnessPunishTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HardnessChange) == 0x0007D0, "Member 'UBaseAttributeSet::HardnessChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, HardnessReduce) == 0x0007E8, "Member 'UBaseAttributeSet::HardnessReduce' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ToughMax) == 0x000800, "Member 'UBaseAttributeSet::ToughMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Tough) == 0x000818, "Member 'UBaseAttributeSet::Tough' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ToughRecover) == 0x000830, "Member 'UBaseAttributeSet::ToughRecover' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ToughChange) == 0x000848, "Member 'UBaseAttributeSet::ToughChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ToughReduce) == 0x000860, "Member 'UBaseAttributeSet::ToughReduce' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower1) == 0x000878, "Member 'UBaseAttributeSet::ElementPower1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower2) == 0x000890, "Member 'UBaseAttributeSet::ElementPower2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower3) == 0x0008A8, "Member 'UBaseAttributeSet::ElementPower3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower4) == 0x0008C0, "Member 'UBaseAttributeSet::ElementPower4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower5) == 0x0008D8, "Member 'UBaseAttributeSet::ElementPower5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPower6) == 0x0008F0, "Member 'UBaseAttributeSet::ElementPower6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpecialDamageChange) == 0x000908, "Member 'UBaseAttributeSet::SpecialDamageChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthFastClimbCost) == 0x000920, "Member 'UBaseAttributeSet::StrengthFastClimbCost' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ElementPropertyType) == 0x000938, "Member 'UBaseAttributeSet::ElementPropertyType' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, WeakTime) == 0x000950, "Member 'UBaseAttributeSet::WeakTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDefRate) == 0x000968, "Member 'UBaseAttributeSet::IgnoreDefRate' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistancePhys) == 0x000980, "Member 'UBaseAttributeSet::IgnoreDamageResistancePhys' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement1) == 0x000998, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement2) == 0x0009B0, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement3) == 0x0009C8, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement4) == 0x0009E0, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement5) == 0x0009F8, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, IgnoreDamageResistanceElement6) == 0x000A10, "Member 'UBaseAttributeSet::IgnoreDamageResistanceElement6' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SkillToughRatio) == 0x000A28, "Member 'UBaseAttributeSet::SkillToughRatio' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthClimbJump) == 0x000A40, "Member 'UBaseAttributeSet::StrengthClimbJump' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StrengthGliding) == 0x000A58, "Member 'UBaseAttributeSet::StrengthGliding' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Mass) == 0x000A70, "Member 'UBaseAttributeSet::Mass' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, BrakingFrictionFactor) == 0x000A88, "Member 'UBaseAttributeSet::BrakingFrictionFactor' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, GravityScale) == 0x000AA0, "Member 'UBaseAttributeSet::GravityScale' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, SpeedRatio) == 0x000AB8, "Member 'UBaseAttributeSet::SpeedRatio' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, DamageChangePhantom) == 0x000AD0, "Member 'UBaseAttributeSet::DamageChangePhantom' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, AutoAttackSpeed) == 0x000AE8, "Member 'UBaseAttributeSet::AutoAttackSpeed' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, CastAttackSpeed) == 0x000B00, "Member 'UBaseAttributeSet::CastAttackSpeed' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp1Max) == 0x000B18, "Member 'UBaseAttributeSet::StatusBuildUp1Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp1) == 0x000B30, "Member 'UBaseAttributeSet::StatusBuildUp1' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp2Max) == 0x000B48, "Member 'UBaseAttributeSet::StatusBuildUp2Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp2) == 0x000B60, "Member 'UBaseAttributeSet::StatusBuildUp2' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp3Max) == 0x000B78, "Member 'UBaseAttributeSet::StatusBuildUp3Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp3) == 0x000B90, "Member 'UBaseAttributeSet::StatusBuildUp3' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp4Max) == 0x000BA8, "Member 'UBaseAttributeSet::StatusBuildUp4Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp4) == 0x000BC0, "Member 'UBaseAttributeSet::StatusBuildUp4' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp5Max) == 0x000BD8, "Member 'UBaseAttributeSet::StatusBuildUp5Max' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, StatusBuildUp5) == 0x000BF0, "Member 'UBaseAttributeSet::StatusBuildUp5' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, RageMax) == 0x000C08, "Member 'UBaseAttributeSet::RageMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Rage) == 0x000C20, "Member 'UBaseAttributeSet::Rage' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, RageRecover) == 0x000C38, "Member 'UBaseAttributeSet::RageRecover' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, RagePunishTime) == 0x000C50, "Member 'UBaseAttributeSet::RagePunishTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, RageChange) == 0x000C68, "Member 'UBaseAttributeSet::RageChange' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, RageReduce) == 0x000C80, "Member 'UBaseAttributeSet::RageReduce' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ToughRecoverDelayTime) == 0x000C98, "Member 'UBaseAttributeSet::ToughRecoverDelayTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, Jump) == 0x000CB0, "Member 'UBaseAttributeSet::Jump' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ParalysisTimeMax) == 0x000CC8, "Member 'UBaseAttributeSet::ParalysisTimeMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ParalysisTime) == 0x000CE0, "Member 'UBaseAttributeSet::ParalysisTime' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, ParalysisTimeRecover) == 0x000CF8, "Member 'UBaseAttributeSet::ParalysisTimeRecover' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, WeaknessBuildUp) == 0x000D10, "Member 'UBaseAttributeSet::WeaknessBuildUp' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, WeaknessBuildUpMax) == 0x000D28, "Member 'UBaseAttributeSet::WeaknessBuildUpMax' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, WeaknessTotalBonus) == 0x000D40, "Member 'UBaseAttributeSet::WeaknessTotalBonus' has a wrong offset!");
-static_assert(offsetof(UBaseAttributeSet, WeaknessTotalResist) == 0x000D58, "Member 'UBaseAttributeSet::WeaknessTotalResist' has a wrong offset!");
+DUMPER7_ASSERTS_UBaseAttributeSet;
 
 // Class KuroGAS.BaseCharacter
 // 0x00D0 (0x0680 - 0x05B0)
@@ -903,27 +765,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseCharacter">();
+		STATIC_CLASS_IMPL("BaseCharacter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseCharacter")
 	}
 	static class ABaseCharacter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABaseCharacter>();
 	}
 };
-static_assert(alignof(ABaseCharacter) == 0x000010, "Wrong alignment on ABaseCharacter");
-static_assert(sizeof(ABaseCharacter) == 0x000680, "Wrong size on ABaseCharacter");
-static_assert(offsetof(ABaseCharacter, CachedActorLocation) == 0x0005B0, "Member 'ABaseCharacter::CachedActorLocation' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorRotation) == 0x0005C8, "Member 'ABaseCharacter::CachedActorRotation' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorQuat) == 0x0005E0, "Member 'ABaseCharacter::CachedActorQuat' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorScale) == 0x0005F0, "Member 'ABaseCharacter::CachedActorScale' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorTransform) == 0x000600, "Member 'ABaseCharacter::CachedActorTransform' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorUp) == 0x000640, "Member 'ABaseCharacter::CachedActorUp' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorForward) == 0x00064C, "Member 'ABaseCharacter::CachedActorForward' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, CachedActorVelocity) == 0x000658, "Member 'ABaseCharacter::CachedActorVelocity' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, EntityIdInternal) == 0x000664, "Member 'ABaseCharacter::EntityIdInternal' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, bInitializeAttributes) == 0x000668, "Member 'ABaseCharacter::bInitializeAttributes' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, AttributeSet) == 0x000670, "Member 'ABaseCharacter::AttributeSet' has a wrong offset!");
-static_assert(offsetof(ABaseCharacter, AbilitySystemComponent) == 0x000678, "Member 'ABaseCharacter::AbilitySystemComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ABaseCharacter;
 
 // Class KuroGAS.BaseGameplayAbility
 // 0x0008 (0x03C8 - 0x03C0)
@@ -940,16 +793,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseGameplayAbility">();
+		STATIC_CLASS_IMPL("BaseGameplayAbility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseGameplayAbility")
 	}
 	static class UBaseGameplayAbility* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseGameplayAbility>();
 	}
 };
-static_assert(alignof(UBaseGameplayAbility) == 0x000008, "Wrong alignment on UBaseGameplayAbility");
-static_assert(sizeof(UBaseGameplayAbility) == 0x0003C8, "Wrong size on UBaseGameplayAbility");
-static_assert(offsetof(UBaseGameplayAbility, StartOnGiven) == 0x0003C0, "Member 'UBaseGameplayAbility::StartOnGiven' has a wrong offset!");
+DUMPER7_ASSERTS_UBaseGameplayAbility;
 
 // Class KuroGAS.BaseGameplayEffectExecutionCalculation
 // 0x0000 (0x0048 - 0x0048)
@@ -961,15 +816,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseGameplayEffectExecutionCalculation">();
+		STATIC_CLASS_IMPL("BaseGameplayEffectExecutionCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseGameplayEffectExecutionCalculation")
 	}
 	static class UBaseGameplayEffectExecutionCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseGameplayEffectExecutionCalculation>();
 	}
 };
-static_assert(alignof(UBaseGameplayEffectExecutionCalculation) == 0x000008, "Wrong alignment on UBaseGameplayEffectExecutionCalculation");
-static_assert(sizeof(UBaseGameplayEffectExecutionCalculation) == 0x000048, "Wrong size on UBaseGameplayEffectExecutionCalculation");
+DUMPER7_ASSERTS_UBaseGameplayEffectExecutionCalculation;
 
 // Class KuroGAS.BaseGameplayModMagnitudeCalculation
 // 0x0000 (0x0048 - 0x0048)
@@ -981,15 +839,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BaseGameplayModMagnitudeCalculation">();
+		STATIC_CLASS_IMPL("BaseGameplayModMagnitudeCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BaseGameplayModMagnitudeCalculation")
 	}
 	static class UBaseGameplayModMagnitudeCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBaseGameplayModMagnitudeCalculation>();
 	}
 };
-static_assert(alignof(UBaseGameplayModMagnitudeCalculation) == 0x000008, "Wrong alignment on UBaseGameplayModMagnitudeCalculation");
-static_assert(sizeof(UBaseGameplayModMagnitudeCalculation) == 0x000048, "Wrong size on UBaseGameplayModMagnitudeCalculation");
+DUMPER7_ASSERTS_UBaseGameplayModMagnitudeCalculation;
 
 // Class KuroGAS.DamageExecCalculation
 // 0x0000 (0x0048 - 0x0048)
@@ -998,15 +859,18 @@ class UDamageExecCalculation final : public UGameplayEffectExecutionCalculation
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DamageExecCalculation">();
+		STATIC_CLASS_IMPL("DamageExecCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DamageExecCalculation")
 	}
 	static class UDamageExecCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDamageExecCalculation>();
 	}
 };
-static_assert(alignof(UDamageExecCalculation) == 0x000008, "Wrong alignment on UDamageExecCalculation");
-static_assert(sizeof(UDamageExecCalculation) == 0x000048, "Wrong size on UDamageExecCalculation");
+DUMPER7_ASSERTS_UDamageExecCalculation;
 
 // Class KuroGAS.GASBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -1073,15 +937,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GASBPLibrary">();
+		STATIC_CLASS_IMPL("GASBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GASBPLibrary")
 	}
 	static class UGASBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGASBPLibrary>();
 	}
 };
-static_assert(alignof(UGASBPLibrary) == 0x000008, "Wrong alignment on UGASBPLibrary");
-static_assert(sizeof(UGASBPLibrary) == 0x000030, "Wrong size on UGASBPLibrary");
+DUMPER7_ASSERTS_UGASBPLibrary;
 
 // Class KuroGAS.AbilityTask_WaitDelayForNextTick
 // 0x0018 (0x00A0 - 0x0088)
@@ -1097,16 +964,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitDelayForNextTick">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitDelayForNextTick")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitDelayForNextTick")
 	}
 	static class UAbilityTask_WaitDelayForNextTick* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitDelayForNextTick>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitDelayForNextTick) == 0x000008, "Wrong alignment on UAbilityTask_WaitDelayForNextTick");
-static_assert(sizeof(UAbilityTask_WaitDelayForNextTick) == 0x0000A0, "Wrong size on UAbilityTask_WaitDelayForNextTick");
-static_assert(offsetof(UAbilityTask_WaitDelayForNextTick, OnFinish) == 0x000088, "Member 'UAbilityTask_WaitDelayForNextTick::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitDelayForNextTick;
 
 }
 

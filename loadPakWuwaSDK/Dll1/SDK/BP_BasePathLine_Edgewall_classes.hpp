@@ -31,28 +31,26 @@ public:
 	bool                                          IsAttachedToEntity;                                // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void Save();
-	void 贴地处理();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_BasePathLine_Edgewall(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void 贴地处理();
+	void Save();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BasePathLine_Edgewall_C">();
+		BP_STATIC_CLASS_IMPL("BP_BasePathLine_Edgewall_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BasePathLine_Edgewall_C")
 	}
 	static class ABP_BasePathLine_Edgewall_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BasePathLine_Edgewall_C>();
 	}
 };
-static_assert(alignof(ABP_BasePathLine_Edgewall_C) == 0x000008, "Wrong alignment on ABP_BasePathLine_Edgewall_C");
-static_assert(sizeof(ABP_BasePathLine_Edgewall_C) == 0x0002E0, "Wrong size on ABP_BasePathLine_Edgewall_C");
-static_assert(offsetof(ABP_BasePathLine_Edgewall_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_BasePathLine_Edgewall_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_BasePathLine_Edgewall_C, Spline) == 0x0002B8, "Member 'ABP_BasePathLine_Edgewall_C::Spline' has a wrong offset!");
-static_assert(offsetof(ABP_BasePathLine_Edgewall_C, OriginalLocation) == 0x0002C0, "Member 'ABP_BasePathLine_Edgewall_C::OriginalLocation' has a wrong offset!");
-static_assert(offsetof(ABP_BasePathLine_Edgewall_C, DebugTarget) == 0x0002D0, "Member 'ABP_BasePathLine_Edgewall_C::DebugTarget' has a wrong offset!");
-static_assert(offsetof(ABP_BasePathLine_Edgewall_C, IsAttachedToEntity) == 0x0002D8, "Member 'ABP_BasePathLine_Edgewall_C::IsAttachedToEntity' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BasePathLine_Edgewall_C;
 
 }
 

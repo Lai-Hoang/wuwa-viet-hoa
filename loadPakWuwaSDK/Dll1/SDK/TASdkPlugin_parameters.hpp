@@ -25,10 +25,7 @@ public:
 	int32                                         Index_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_CalibrateTime) == 0x000004, "Wrong alignment on ThinkingAnalytics_CalibrateTime");
-static_assert(sizeof(ThinkingAnalytics_CalibrateTime) == 0x000030, "Wrong size on ThinkingAnalytics_CalibrateTime");
-static_assert(offsetof(ThinkingAnalytics_CalibrateTime, OnTimeCalibrated) == 0x000000, "Member 'ThinkingAnalytics_CalibrateTime::OnTimeCalibrated' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_CalibrateTime, Index_0) == 0x000028, "Member 'ThinkingAnalytics_CalibrateTime::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_CalibrateTime;
 
 // Function TASdkPlugin.ThinkingAnalytics.CreateSimpleInstance
 // 0x0098 (0x0098 - 0x0000)
@@ -39,10 +36,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_CreateSimpleInstance) == 0x000008, "Wrong alignment on ThinkingAnalytics_CreateSimpleInstance");
-static_assert(sizeof(ThinkingAnalytics_CreateSimpleInstance) == 0x000098, "Wrong size on ThinkingAnalytics_CreateSimpleInstance");
-static_assert(offsetof(ThinkingAnalytics_CreateSimpleInstance, Param) == 0x000000, "Member 'ThinkingAnalytics_CreateSimpleInstance::Param' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_CreateSimpleInstance, ReturnValue) == 0x000090, "Member 'ThinkingAnalytics_CreateSimpleInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_CreateSimpleInstance;
 
 // Function TASdkPlugin.ThinkingAnalytics.DestroyAllInstance
 // 0x0001 (0x0001 - 0x0000)
@@ -51,9 +45,7 @@ struct ThinkingAnalytics_DestroyAllInstance final
 public:
 	bool                                          Flush_0;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_DestroyAllInstance) == 0x000001, "Wrong alignment on ThinkingAnalytics_DestroyAllInstance");
-static_assert(sizeof(ThinkingAnalytics_DestroyAllInstance) == 0x000001, "Wrong size on ThinkingAnalytics_DestroyAllInstance");
-static_assert(offsetof(ThinkingAnalytics_DestroyAllInstance, Flush_0) == 0x000000, "Member 'ThinkingAnalytics_DestroyAllInstance::Flush_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_DestroyAllInstance;
 
 // Function TASdkPlugin.ThinkingAnalytics.DestroyInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -64,10 +56,7 @@ public:
 	bool                                          Flush_0;                                           // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_DestroyInstance) == 0x000004, "Wrong alignment on ThinkingAnalytics_DestroyInstance");
-static_assert(sizeof(ThinkingAnalytics_DestroyInstance) == 0x000008, "Wrong size on ThinkingAnalytics_DestroyInstance");
-static_assert(offsetof(ThinkingAnalytics_DestroyInstance, Index_0) == 0x000000, "Member 'ThinkingAnalytics_DestroyInstance::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_DestroyInstance, Flush_0) == 0x000004, "Member 'ThinkingAnalytics_DestroyInstance::Flush_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_DestroyInstance;
 
 // Function TASdkPlugin.ThinkingAnalytics.EnableAutoTrack
 // 0x0004 (0x0004 - 0x0000)
@@ -76,9 +65,7 @@ struct ThinkingAnalytics_EnableAutoTrack final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_EnableAutoTrack) == 0x000004, "Wrong alignment on ThinkingAnalytics_EnableAutoTrack");
-static_assert(sizeof(ThinkingAnalytics_EnableAutoTrack) == 0x000004, "Wrong size on ThinkingAnalytics_EnableAutoTrack");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrack, Index_0) == 0x000000, "Member 'ThinkingAnalytics_EnableAutoTrack::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_EnableAutoTrack;
 
 // Function TASdkPlugin.ThinkingAnalytics.EnableAutoTrackWithType
 // 0x0018 (0x0018 - 0x0000)
@@ -89,10 +76,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_EnableAutoTrackWithType) == 0x000008, "Wrong alignment on ThinkingAnalytics_EnableAutoTrackWithType");
-static_assert(sizeof(ThinkingAnalytics_EnableAutoTrackWithType) == 0x000018, "Wrong size on ThinkingAnalytics_EnableAutoTrackWithType");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrackWithType, EventTypeList) == 0x000000, "Member 'ThinkingAnalytics_EnableAutoTrackWithType::EventTypeList' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrackWithType, Index_0) == 0x000010, "Member 'ThinkingAnalytics_EnableAutoTrackWithType::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_EnableAutoTrackWithType;
 
 // Function TASdkPlugin.ThinkingAnalytics.EnableAutoTrackWithTypeAndProperties
 // 0x0028 (0x0028 - 0x0000)
@@ -104,11 +88,7 @@ public:
 	int32                                         Index_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties) == 0x000008, "Wrong alignment on ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties");
-static_assert(sizeof(ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties) == 0x000028, "Wrong size on ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties, EventTypeList) == 0x000000, "Member 'ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties::EventTypeList' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties, Properties) == 0x000010, "Member 'ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties, Index_0) == 0x000020, "Member 'ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_EnableAutoTrackWithTypeAndProperties;
 
 // Function TASdkPlugin.ThinkingAnalytics.EnableThirdPartySharing
 // 0x0018 (0x0018 - 0x0000)
@@ -119,10 +99,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_EnableThirdPartySharing) == 0x000008, "Wrong alignment on ThinkingAnalytics_EnableThirdPartySharing");
-static_assert(sizeof(ThinkingAnalytics_EnableThirdPartySharing) == 0x000018, "Wrong size on ThinkingAnalytics_EnableThirdPartySharing");
-static_assert(offsetof(ThinkingAnalytics_EnableThirdPartySharing, EventTypeList) == 0x000000, "Member 'ThinkingAnalytics_EnableThirdPartySharing::EventTypeList' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_EnableThirdPartySharing, Index_0) == 0x000010, "Member 'ThinkingAnalytics_EnableThirdPartySharing::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_EnableThirdPartySharing;
 
 // Function TASdkPlugin.ThinkingAnalytics.EnableTracking
 // 0x0008 (0x0008 - 0x0000)
@@ -133,10 +110,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_EnableTracking) == 0x000004, "Wrong alignment on ThinkingAnalytics_EnableTracking");
-static_assert(sizeof(ThinkingAnalytics_EnableTracking) == 0x000008, "Wrong size on ThinkingAnalytics_EnableTracking");
-static_assert(offsetof(ThinkingAnalytics_EnableTracking, bIsEnable) == 0x000000, "Member 'ThinkingAnalytics_EnableTracking::bIsEnable' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_EnableTracking, Index_0) == 0x000004, "Member 'ThinkingAnalytics_EnableTracking::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_EnableTracking;
 
 // Function TASdkPlugin.ThinkingAnalytics.Flush
 // 0x0004 (0x0004 - 0x0000)
@@ -145,9 +119,7 @@ struct ThinkingAnalytics_Flush final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_Flush) == 0x000004, "Wrong alignment on ThinkingAnalytics_Flush");
-static_assert(sizeof(ThinkingAnalytics_Flush) == 0x000004, "Wrong size on ThinkingAnalytics_Flush");
-static_assert(offsetof(ThinkingAnalytics_Flush, Index_0) == 0x000000, "Member 'ThinkingAnalytics_Flush::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Flush;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetAppId
 // 0x0018 (0x0018 - 0x0000)
@@ -158,10 +130,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetAppId) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetAppId");
-static_assert(sizeof(ThinkingAnalytics_GetAppId) == 0x000018, "Wrong size on ThinkingAnalytics_GetAppId");
-static_assert(offsetof(ThinkingAnalytics_GetAppId, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetAppId::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetAppId, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetAppId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetAppId;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetCurrentCPUSampledAvgFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -170,9 +139,7 @@ struct ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency) == 0x000004, "Wrong alignment on ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency");
-static_assert(sizeof(ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency) == 0x000004, "Wrong size on ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency");
-static_assert(offsetof(ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency, ReturnValue) == 0x000000, "Member 'ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetCurrentCPUSampledAvgFrequency;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetCurrentCPUSampledMaxFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -181,9 +148,7 @@ struct ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency) == 0x000004, "Wrong alignment on ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency");
-static_assert(sizeof(ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency) == 0x000004, "Wrong size on ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency");
-static_assert(offsetof(ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency, ReturnValue) == 0x000000, "Member 'ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetCurrentCPUSampledMaxFrequency;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetDeviceId
 // 0x0018 (0x0018 - 0x0000)
@@ -194,10 +159,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetDeviceId) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetDeviceId");
-static_assert(sizeof(ThinkingAnalytics_GetDeviceId) == 0x000018, "Wrong size on ThinkingAnalytics_GetDeviceId");
-static_assert(offsetof(ThinkingAnalytics_GetDeviceId, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetDeviceId::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetDeviceId, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetDeviceId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetDeviceId;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetDistinctId
 // 0x0018 (0x0018 - 0x0000)
@@ -208,10 +170,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetDistinctId) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetDistinctId");
-static_assert(sizeof(ThinkingAnalytics_GetDistinctId) == 0x000018, "Wrong size on ThinkingAnalytics_GetDistinctId");
-static_assert(offsetof(ThinkingAnalytics_GetDistinctId, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetDistinctId::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetDistinctId, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetDistinctId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetDistinctId;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetMachineID
 // 0x0010 (0x0010 - 0x0000)
@@ -220,9 +179,7 @@ struct ThinkingAnalytics_GetMachineID final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetMachineID) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetMachineID");
-static_assert(sizeof(ThinkingAnalytics_GetMachineID) == 0x000010, "Wrong size on ThinkingAnalytics_GetMachineID");
-static_assert(offsetof(ThinkingAnalytics_GetMachineID, ReturnValue) == 0x000000, "Member 'ThinkingAnalytics_GetMachineID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetMachineID;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetPresetProperties
 // 0x0018 (0x0018 - 0x0000)
@@ -233,10 +190,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetPresetProperties) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetPresetProperties");
-static_assert(sizeof(ThinkingAnalytics_GetPresetProperties) == 0x000018, "Wrong size on ThinkingAnalytics_GetPresetProperties");
-static_assert(offsetof(ThinkingAnalytics_GetPresetProperties, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetPresetProperties::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetPresetProperties, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetPresetProperties::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetPresetProperties;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetServerUrl
 // 0x0018 (0x0018 - 0x0000)
@@ -247,10 +201,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetServerUrl) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetServerUrl");
-static_assert(sizeof(ThinkingAnalytics_GetServerUrl) == 0x000018, "Wrong size on ThinkingAnalytics_GetServerUrl");
-static_assert(offsetof(ThinkingAnalytics_GetServerUrl, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetServerUrl::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetServerUrl, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetServerUrl::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetServerUrl;
 
 // Function TASdkPlugin.ThinkingAnalytics.GetSuperProperties
 // 0x0018 (0x0018 - 0x0000)
@@ -261,10 +212,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_GetSuperProperties) == 0x000008, "Wrong alignment on ThinkingAnalytics_GetSuperProperties");
-static_assert(sizeof(ThinkingAnalytics_GetSuperProperties) == 0x000018, "Wrong size on ThinkingAnalytics_GetSuperProperties");
-static_assert(offsetof(ThinkingAnalytics_GetSuperProperties, Index_0) == 0x000000, "Member 'ThinkingAnalytics_GetSuperProperties::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_GetSuperProperties, ReturnValue) == 0x000008, "Member 'ThinkingAnalytics_GetSuperProperties::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_GetSuperProperties;
 
 // Function TASdkPlugin.ThinkingAnalytics.HasDefaultInstanceInitialized
 // 0x0001 (0x0001 - 0x0000)
@@ -273,9 +221,7 @@ struct ThinkingAnalytics_HasDefaultInstanceInitialized final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_HasDefaultInstanceInitialized) == 0x000001, "Wrong alignment on ThinkingAnalytics_HasDefaultInstanceInitialized");
-static_assert(sizeof(ThinkingAnalytics_HasDefaultInstanceInitialized) == 0x000001, "Wrong size on ThinkingAnalytics_HasDefaultInstanceInitialized");
-static_assert(offsetof(ThinkingAnalytics_HasDefaultInstanceInitialized, ReturnValue) == 0x000000, "Member 'ThinkingAnalytics_HasDefaultInstanceInitialized::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_HasDefaultInstanceInitialized;
 
 // Function TASdkPlugin.ThinkingAnalytics.HasInstanceInitialized
 // 0x0008 (0x0008 - 0x0000)
@@ -286,10 +232,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_HasInstanceInitialized) == 0x000004, "Wrong alignment on ThinkingAnalytics_HasInstanceInitialized");
-static_assert(sizeof(ThinkingAnalytics_HasInstanceInitialized) == 0x000008, "Wrong size on ThinkingAnalytics_HasInstanceInitialized");
-static_assert(offsetof(ThinkingAnalytics_HasInstanceInitialized, Index_0) == 0x000000, "Member 'ThinkingAnalytics_HasInstanceInitialized::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_HasInstanceInitialized, ReturnValue) == 0x000004, "Member 'ThinkingAnalytics_HasInstanceInitialized::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_HasInstanceInitialized;
 
 // Function TASdkPlugin.ThinkingAnalytics.HasInstanceTimeCalibrated
 // 0x0008 (0x0008 - 0x0000)
@@ -300,10 +243,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_HasInstanceTimeCalibrated) == 0x000004, "Wrong alignment on ThinkingAnalytics_HasInstanceTimeCalibrated");
-static_assert(sizeof(ThinkingAnalytics_HasInstanceTimeCalibrated) == 0x000008, "Wrong size on ThinkingAnalytics_HasInstanceTimeCalibrated");
-static_assert(offsetof(ThinkingAnalytics_HasInstanceTimeCalibrated, Index_0) == 0x000000, "Member 'ThinkingAnalytics_HasInstanceTimeCalibrated::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_HasInstanceTimeCalibrated, ReturnValue) == 0x000004, "Member 'ThinkingAnalytics_HasInstanceTimeCalibrated::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_HasInstanceTimeCalibrated;
 
 // Function TASdkPlugin.ThinkingAnalytics.Identify
 // 0x0018 (0x0018 - 0x0000)
@@ -314,10 +254,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_Identify) == 0x000008, "Wrong alignment on ThinkingAnalytics_Identify");
-static_assert(sizeof(ThinkingAnalytics_Identify) == 0x000018, "Wrong size on ThinkingAnalytics_Identify");
-static_assert(offsetof(ThinkingAnalytics_Identify, DistinctId) == 0x000000, "Member 'ThinkingAnalytics_Identify::DistinctId' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_Identify, Index_0) == 0x000010, "Member 'ThinkingAnalytics_Identify::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Identify;
 
 // Function TASdkPlugin.ThinkingAnalytics.Initialize
 // 0x0001 (0x0001 - 0x0000)
@@ -326,9 +263,7 @@ struct ThinkingAnalytics_Initialize final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_Initialize) == 0x000001, "Wrong alignment on ThinkingAnalytics_Initialize");
-static_assert(sizeof(ThinkingAnalytics_Initialize) == 0x000001, "Wrong size on ThinkingAnalytics_Initialize");
-static_assert(offsetof(ThinkingAnalytics_Initialize, ReturnValue) == 0x000000, "Member 'ThinkingAnalytics_Initialize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Initialize;
 
 // Function TASdkPlugin.ThinkingAnalytics.InitializeDefaultInsWithURL_Appid
 // 0x0038 (0x0038 - 0x0000)
@@ -347,17 +282,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0035(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid) == 0x000008, "Wrong alignment on ThinkingAnalytics_InitializeDefaultInsWithURL_Appid");
-static_assert(sizeof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid) == 0x000038, "Wrong size on ThinkingAnalytics_InitializeDefaultInsWithURL_Appid");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, ServerURL) == 0x000000, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::ServerURL' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, Appid) == 0x000010, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::Appid' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, ExitWaitTime) == 0x000020, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::ExitWaitTime' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, MaxPendingLog) == 0x000024, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::MaxPendingLog' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, SendHttpTimeout) == 0x000028, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::SendHttpTimeout' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, bExitFlush) == 0x00002C, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::bExitFlush' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, CalibrateIntervalTime) == 0x000030, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::CalibrateIntervalTime' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, bCalibratedStopTimer) == 0x000034, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::bCalibratedStopTimer' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeDefaultInsWithURL_Appid, ReturnValue) == 0x000035, "Member 'ThinkingAnalytics_InitializeDefaultInsWithURL_Appid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_InitializeDefaultInsWithURL_Appid;
 
 // Function TASdkPlugin.ThinkingAnalytics.InitializeEncryptInstance
 // 0x0078 (0x0078 - 0x0000)
@@ -378,18 +303,7 @@ public:
 	class FString                                 SymmetricEncryption;                               // 0x0058(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AsymmetricEncryption;                              // 0x0068(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_InitializeEncryptInstance) == 0x000008, "Wrong alignment on ThinkingAnalytics_InitializeEncryptInstance");
-static_assert(sizeof(ThinkingAnalytics_InitializeEncryptInstance) == 0x000078, "Wrong size on ThinkingAnalytics_InitializeEncryptInstance");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, appid) == 0x000000, "Member 'ThinkingAnalytics_InitializeEncryptInstance::appid' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, serverurl) == 0x000010, "Member 'ThinkingAnalytics_InitializeEncryptInstance::serverurl' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, mode) == 0x000020, "Member 'ThinkingAnalytics_InitializeEncryptInstance::mode' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, bEnableLog) == 0x000021, "Member 'ThinkingAnalytics_InitializeEncryptInstance::bEnableLog' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, timeZone) == 0x000028, "Member 'ThinkingAnalytics_InitializeEncryptInstance::timeZone' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, bEnableEncrypt) == 0x000038, "Member 'ThinkingAnalytics_InitializeEncryptInstance::bEnableEncrypt' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, EncryptPublicKey) == 0x000040, "Member 'ThinkingAnalytics_InitializeEncryptInstance::EncryptPublicKey' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, EncryptVersion) == 0x000050, "Member 'ThinkingAnalytics_InitializeEncryptInstance::EncryptVersion' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, SymmetricEncryption) == 0x000058, "Member 'ThinkingAnalytics_InitializeEncryptInstance::SymmetricEncryption' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_InitializeEncryptInstance, AsymmetricEncryption) == 0x000068, "Member 'ThinkingAnalytics_InitializeEncryptInstance::AsymmetricEncryption' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_InitializeEncryptInstance;
 
 // Function TASdkPlugin.ThinkingAnalytics.Login
 // 0x0018 (0x0018 - 0x0000)
@@ -400,10 +314,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_Login) == 0x000008, "Wrong alignment on ThinkingAnalytics_Login");
-static_assert(sizeof(ThinkingAnalytics_Login) == 0x000018, "Wrong size on ThinkingAnalytics_Login");
-static_assert(offsetof(ThinkingAnalytics_Login, AccountId) == 0x000000, "Member 'ThinkingAnalytics_Login::AccountId' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_Login, Index_0) == 0x000010, "Member 'ThinkingAnalytics_Login::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Login;
 
 // Function TASdkPlugin.ThinkingAnalytics.Logout
 // 0x0004 (0x0004 - 0x0000)
@@ -412,9 +323,7 @@ struct ThinkingAnalytics_Logout final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_Logout) == 0x000004, "Wrong alignment on ThinkingAnalytics_Logout");
-static_assert(sizeof(ThinkingAnalytics_Logout) == 0x000004, "Wrong size on ThinkingAnalytics_Logout");
-static_assert(offsetof(ThinkingAnalytics_Logout, Index_0) == 0x000000, "Member 'ThinkingAnalytics_Logout::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Logout;
 
 // Function TASdkPlugin.ThinkingAnalytics.OptInTracking
 // 0x0004 (0x0004 - 0x0000)
@@ -423,9 +332,7 @@ struct ThinkingAnalytics_OptInTracking final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_OptInTracking) == 0x000004, "Wrong alignment on ThinkingAnalytics_OptInTracking");
-static_assert(sizeof(ThinkingAnalytics_OptInTracking) == 0x000004, "Wrong size on ThinkingAnalytics_OptInTracking");
-static_assert(offsetof(ThinkingAnalytics_OptInTracking, Index_0) == 0x000000, "Member 'ThinkingAnalytics_OptInTracking::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_OptInTracking;
 
 // Function TASdkPlugin.ThinkingAnalytics.OptOutTracking
 // 0x0004 (0x0004 - 0x0000)
@@ -434,9 +341,7 @@ struct ThinkingAnalytics_OptOutTracking final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_OptOutTracking) == 0x000004, "Wrong alignment on ThinkingAnalytics_OptOutTracking");
-static_assert(sizeof(ThinkingAnalytics_OptOutTracking) == 0x000004, "Wrong size on ThinkingAnalytics_OptOutTracking");
-static_assert(offsetof(ThinkingAnalytics_OptOutTracking, Index_0) == 0x000000, "Member 'ThinkingAnalytics_OptOutTracking::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_OptOutTracking;
 
 // Function TASdkPlugin.ThinkingAnalytics.SetTrackStatus
 // 0x0008 (0x0008 - 0x0000)
@@ -446,10 +351,7 @@ public:
 	int32                                         Status;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_SetTrackStatus) == 0x000004, "Wrong alignment on ThinkingAnalytics_SetTrackStatus");
-static_assert(sizeof(ThinkingAnalytics_SetTrackStatus) == 0x000008, "Wrong size on ThinkingAnalytics_SetTrackStatus");
-static_assert(offsetof(ThinkingAnalytics_SetTrackStatus, Status) == 0x000000, "Member 'ThinkingAnalytics_SetTrackStatus::Status' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_SetTrackStatus, Index_0) == 0x000004, "Member 'ThinkingAnalytics_SetTrackStatus::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_SetTrackStatus;
 
 // Function TASdkPlugin.ThinkingAnalytics.TimeEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -460,10 +362,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_TimeEvent) == 0x000008, "Wrong alignment on ThinkingAnalytics_TimeEvent");
-static_assert(sizeof(ThinkingAnalytics_TimeEvent) == 0x000018, "Wrong size on ThinkingAnalytics_TimeEvent");
-static_assert(offsetof(ThinkingAnalytics_TimeEvent, EventName) == 0x000000, "Member 'ThinkingAnalytics_TimeEvent::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TimeEvent, Index_0) == 0x000010, "Member 'ThinkingAnalytics_TimeEvent::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_TimeEvent;
 
 // Function TASdkPlugin.ThinkingAnalytics.ToggleSampleCPUFrequency
 // 0x0008 (0x0008 - 0x0000)
@@ -474,10 +373,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SampleInterval;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_ToggleSampleCPUFrequency) == 0x000004, "Wrong alignment on ThinkingAnalytics_ToggleSampleCPUFrequency");
-static_assert(sizeof(ThinkingAnalytics_ToggleSampleCPUFrequency) == 0x000008, "Wrong size on ThinkingAnalytics_ToggleSampleCPUFrequency");
-static_assert(offsetof(ThinkingAnalytics_ToggleSampleCPUFrequency, bActive) == 0x000000, "Member 'ThinkingAnalytics_ToggleSampleCPUFrequency::bActive' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_ToggleSampleCPUFrequency, SampleInterval) == 0x000004, "Member 'ThinkingAnalytics_ToggleSampleCPUFrequency::SampleInterval' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_ToggleSampleCPUFrequency;
 
 // Function TASdkPlugin.ThinkingAnalytics.Track
 // 0x0028 (0x0028 - 0x0000)
@@ -490,12 +386,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_Track) == 0x000008, "Wrong alignment on ThinkingAnalytics_Track");
-static_assert(sizeof(ThinkingAnalytics_Track) == 0x000028, "Wrong size on ThinkingAnalytics_Track");
-static_assert(offsetof(ThinkingAnalytics_Track, EventName) == 0x000000, "Member 'ThinkingAnalytics_Track::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_Track, Properties) == 0x000010, "Member 'ThinkingAnalytics_Track::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_Track, Index_0) == 0x000020, "Member 'ThinkingAnalytics_Track::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_Track, ReturnValue) == 0x000024, "Member 'ThinkingAnalytics_Track::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_Track;
 
 // Function TASdkPlugin.ThinkingAnalytics.TrackFirst
 // 0x0028 (0x0028 - 0x0000)
@@ -508,12 +399,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_TrackFirst) == 0x000008, "Wrong alignment on ThinkingAnalytics_TrackFirst");
-static_assert(sizeof(ThinkingAnalytics_TrackFirst) == 0x000028, "Wrong size on ThinkingAnalytics_TrackFirst");
-static_assert(offsetof(ThinkingAnalytics_TrackFirst, EventName) == 0x000000, "Member 'ThinkingAnalytics_TrackFirst::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirst, Properties) == 0x000010, "Member 'ThinkingAnalytics_TrackFirst::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirst, Index_0) == 0x000020, "Member 'ThinkingAnalytics_TrackFirst::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirst, ReturnValue) == 0x000024, "Member 'ThinkingAnalytics_TrackFirst::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_TrackFirst;
 
 // Function TASdkPlugin.ThinkingAnalytics.TrackFirstWithId
 // 0x0038 (0x0038 - 0x0000)
@@ -527,13 +413,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_TrackFirstWithId) == 0x000008, "Wrong alignment on ThinkingAnalytics_TrackFirstWithId");
-static_assert(sizeof(ThinkingAnalytics_TrackFirstWithId) == 0x000038, "Wrong size on ThinkingAnalytics_TrackFirstWithId");
-static_assert(offsetof(ThinkingAnalytics_TrackFirstWithId, EventName) == 0x000000, "Member 'ThinkingAnalytics_TrackFirstWithId::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirstWithId, Properties) == 0x000010, "Member 'ThinkingAnalytics_TrackFirstWithId::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirstWithId, FirstCheckId) == 0x000020, "Member 'ThinkingAnalytics_TrackFirstWithId::FirstCheckId' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirstWithId, Index_0) == 0x000030, "Member 'ThinkingAnalytics_TrackFirstWithId::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackFirstWithId, ReturnValue) == 0x000034, "Member 'ThinkingAnalytics_TrackFirstWithId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_TrackFirstWithId;
 
 // Function TASdkPlugin.ThinkingAnalytics.TrackOverwrite
 // 0x0038 (0x0038 - 0x0000)
@@ -547,13 +427,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_TrackOverwrite) == 0x000008, "Wrong alignment on ThinkingAnalytics_TrackOverwrite");
-static_assert(sizeof(ThinkingAnalytics_TrackOverwrite) == 0x000038, "Wrong size on ThinkingAnalytics_TrackOverwrite");
-static_assert(offsetof(ThinkingAnalytics_TrackOverwrite, EventName) == 0x000000, "Member 'ThinkingAnalytics_TrackOverwrite::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackOverwrite, Properties) == 0x000010, "Member 'ThinkingAnalytics_TrackOverwrite::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackOverwrite, EventId) == 0x000020, "Member 'ThinkingAnalytics_TrackOverwrite::EventId' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackOverwrite, Index_0) == 0x000030, "Member 'ThinkingAnalytics_TrackOverwrite::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackOverwrite, ReturnValue) == 0x000034, "Member 'ThinkingAnalytics_TrackOverwrite::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_TrackOverwrite;
 
 // Function TASdkPlugin.ThinkingAnalytics.TrackUpdate
 // 0x0038 (0x0038 - 0x0000)
@@ -567,13 +441,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_TrackUpdate) == 0x000008, "Wrong alignment on ThinkingAnalytics_TrackUpdate");
-static_assert(sizeof(ThinkingAnalytics_TrackUpdate) == 0x000038, "Wrong size on ThinkingAnalytics_TrackUpdate");
-static_assert(offsetof(ThinkingAnalytics_TrackUpdate, EventName) == 0x000000, "Member 'ThinkingAnalytics_TrackUpdate::EventName' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackUpdate, Properties) == 0x000010, "Member 'ThinkingAnalytics_TrackUpdate::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackUpdate, EventId) == 0x000020, "Member 'ThinkingAnalytics_TrackUpdate::EventId' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackUpdate, Index_0) == 0x000030, "Member 'ThinkingAnalytics_TrackUpdate::Index_0' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_TrackUpdate, ReturnValue) == 0x000034, "Member 'ThinkingAnalytics_TrackUpdate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_TrackUpdate;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserAdd
 // 0x0018 (0x0018 - 0x0000)
@@ -584,11 +452,7 @@ public:
 	float                                         Value;                                             // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Index_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_UserAdd) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserAdd");
-static_assert(sizeof(ThinkingAnalytics_UserAdd) == 0x000018, "Wrong size on ThinkingAnalytics_UserAdd");
-static_assert(offsetof(ThinkingAnalytics_UserAdd, Property) == 0x000000, "Member 'ThinkingAnalytics_UserAdd::Property' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserAdd, Value) == 0x000010, "Member 'ThinkingAnalytics_UserAdd::Value' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserAdd, Index_0) == 0x000014, "Member 'ThinkingAnalytics_UserAdd::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserAdd;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserAppend
 // 0x0018 (0x0018 - 0x0000)
@@ -599,10 +463,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_UserAppend) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserAppend");
-static_assert(sizeof(ThinkingAnalytics_UserAppend) == 0x000018, "Wrong size on ThinkingAnalytics_UserAppend");
-static_assert(offsetof(ThinkingAnalytics_UserAppend, Properties) == 0x000000, "Member 'ThinkingAnalytics_UserAppend::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserAppend, Index_0) == 0x000010, "Member 'ThinkingAnalytics_UserAppend::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserAppend;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserDelete
 // 0x0004 (0x0004 - 0x0000)
@@ -611,9 +472,7 @@ struct ThinkingAnalytics_UserDelete final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ThinkingAnalytics_UserDelete) == 0x000004, "Wrong alignment on ThinkingAnalytics_UserDelete");
-static_assert(sizeof(ThinkingAnalytics_UserDelete) == 0x000004, "Wrong size on ThinkingAnalytics_UserDelete");
-static_assert(offsetof(ThinkingAnalytics_UserDelete, Index_0) == 0x000000, "Member 'ThinkingAnalytics_UserDelete::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserDelete;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserSet
 // 0x0018 (0x0018 - 0x0000)
@@ -624,10 +483,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_UserSet) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserSet");
-static_assert(sizeof(ThinkingAnalytics_UserSet) == 0x000018, "Wrong size on ThinkingAnalytics_UserSet");
-static_assert(offsetof(ThinkingAnalytics_UserSet, Properties) == 0x000000, "Member 'ThinkingAnalytics_UserSet::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserSet, Index_0) == 0x000010, "Member 'ThinkingAnalytics_UserSet::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserSet;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserSetOnce
 // 0x0018 (0x0018 - 0x0000)
@@ -638,10 +494,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_UserSetOnce) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserSetOnce");
-static_assert(sizeof(ThinkingAnalytics_UserSetOnce) == 0x000018, "Wrong size on ThinkingAnalytics_UserSetOnce");
-static_assert(offsetof(ThinkingAnalytics_UserSetOnce, Properties) == 0x000000, "Member 'ThinkingAnalytics_UserSetOnce::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserSetOnce, Index_0) == 0x000010, "Member 'ThinkingAnalytics_UserSetOnce::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserSetOnce;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserUniqueAppend
 // 0x0018 (0x0018 - 0x0000)
@@ -652,10 +505,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_UserUniqueAppend) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserUniqueAppend");
-static_assert(sizeof(ThinkingAnalytics_UserUniqueAppend) == 0x000018, "Wrong size on ThinkingAnalytics_UserUniqueAppend");
-static_assert(offsetof(ThinkingAnalytics_UserUniqueAppend, Properties) == 0x000000, "Member 'ThinkingAnalytics_UserUniqueAppend::Properties' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserUniqueAppend, Index_0) == 0x000010, "Member 'ThinkingAnalytics_UserUniqueAppend::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserUniqueAppend;
 
 // Function TASdkPlugin.ThinkingAnalytics.UserUnset
 // 0x0018 (0x0018 - 0x0000)
@@ -666,10 +516,7 @@ public:
 	int32                                         Index_0;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ThinkingAnalytics_UserUnset) == 0x000008, "Wrong alignment on ThinkingAnalytics_UserUnset");
-static_assert(sizeof(ThinkingAnalytics_UserUnset) == 0x000018, "Wrong size on ThinkingAnalytics_UserUnset");
-static_assert(offsetof(ThinkingAnalytics_UserUnset, Property) == 0x000000, "Member 'ThinkingAnalytics_UserUnset::Property' has a wrong offset!");
-static_assert(offsetof(ThinkingAnalytics_UserUnset, Index_0) == 0x000010, "Member 'ThinkingAnalytics_UserUnset::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_ThinkingAnalytics_UserUnset;
 
 }
 

@@ -27,12 +27,7 @@ public:
 	TArray<struct FSSkillBehaviorAction>          SkillBehaviorActionGroup_20_E7E8941646BF84E137B075AD36D96317; // 0x0020(0x0010)(Edit, BlueprintVisible)
 	bool                                          SkillBehaviorContinue_34_DCA2FD6843FDD1BA359888B5BC8283A0; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSSkillBehavior) == 0x000008, "Wrong alignment on FSSkillBehavior");
-static_assert(sizeof(FSSkillBehavior) == 0x000038, "Wrong size on FSSkillBehavior");
-static_assert(offsetof(FSSkillBehavior, SkillBehaviorConditionGroup_23_D256B3E54F0444CCB6BA3B977B371542) == 0x000000, "Member 'FSSkillBehavior::SkillBehaviorConditionGroup_23_D256B3E54F0444CCB6BA3B977B371542' has a wrong offset!");
-static_assert(offsetof(FSSkillBehavior, SkillBehaviorConditionFormula_27_32ED9061461B3AC3C2028BB34993284A) == 0x000010, "Member 'FSSkillBehavior::SkillBehaviorConditionFormula_27_32ED9061461B3AC3C2028BB34993284A' has a wrong offset!");
-static_assert(offsetof(FSSkillBehavior, SkillBehaviorActionGroup_20_E7E8941646BF84E137B075AD36D96317) == 0x000020, "Member 'FSSkillBehavior::SkillBehaviorActionGroup_20_E7E8941646BF84E137B075AD36D96317' has a wrong offset!");
-static_assert(offsetof(FSSkillBehavior, SkillBehaviorContinue_34_DCA2FD6843FDD1BA359888B5BC8283A0) == 0x000030, "Member 'FSSkillBehavior::SkillBehaviorContinue_34_DCA2FD6843FDD1BA359888B5BC8283A0' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehavior;
 
 }
 

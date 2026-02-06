@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Passive.Ga_Passive_C
-// 0x0008 (0x0590 - 0x0588)
+// 0x0008 (0x0598 - 0x0590)
 class UGa_Passive_C final : public UGA_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Ga_Passive_C;                       // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Ga_Passive_C;                       // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Ga_Passive(int32 EntryPoint);
@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Ga_Passive_C">();
+		BP_STATIC_CLASS_IMPL("Ga_Passive_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Ga_Passive_C")
 	}
 	static class UGa_Passive_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGa_Passive_C>();
 	}
 };
-static_assert(alignof(UGa_Passive_C) == 0x000008, "Wrong alignment on UGa_Passive_C");
-static_assert(sizeof(UGa_Passive_C) == 0x000590, "Wrong size on UGa_Passive_C");
-static_assert(offsetof(UGa_Passive_C, UberGraphFrame_Ga_Passive_C) == 0x000588, "Member 'UGa_Passive_C::UberGraphFrame_Ga_Passive_C' has a wrong offset!");
+DUMPER7_ASSERTS_UGa_Passive_C;
 
 }
 

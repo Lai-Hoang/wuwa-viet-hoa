@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SNpcHookPart_structs.hpp"
-#include "EBodyPartName_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SNpcSetupPartInfo_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EBodyPartName_structs.hpp"
+#include "SNpcSetupPartInfo_structs.hpp"
 #include "SNpcHookPartMaterial_structs.hpp"
+#include "SNpcHookPart_structs.hpp"
 
 
 namespace SDK::Params
@@ -35,15 +35,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_SetupSkeletalMeshComponents_Suc;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetupNpcMesh) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_SetupNpcMesh");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupNpcMesh) == 0x000028, "Wrong size on BP_NpcCombinedMesh_C_SetupNpcMesh");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, Data) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::Data' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, bIgnoreSockets) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::bIgnoreSockets' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, IsSuc) == 0x000009, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::IsSuc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, SkleMain) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::SkleMain' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, CallFunc_IsValid_ReturnValue_1) == 0x000021, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupNpcMesh, CallFunc_SetupSkeletalMeshComponents_Suc) == 0x000022, "Member 'BP_NpcCombinedMesh_C_SetupNpcMesh::CallFunc_SetupSkeletalMeshComponents_Suc' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetupNpcMesh;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.ResetNpcMesh
 // 0x0038 (0x0038 - 0x0000)
@@ -61,17 +53,7 @@ public:
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_ResetNpcMesh) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_ResetNpcMesh");
-static_assert(sizeof(BP_NpcCombinedMesh_C_ResetNpcMesh) == 0x000038, "Wrong size on BP_NpcCombinedMesh_C_ResetNpcMesh");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, ___int_Array_Index_Variable) == 0x000000, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, ___int_Loop_Counter_Variable) == 0x000004, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_Subtract_IntInt_ReturnValue) == 0x000008, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00000C, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_GetChildrenComponents_Children) == 0x000010, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00002C, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_ResetNpcMesh, CallFunc_Max_ReturnValue) == 0x000030, "Member 'BP_NpcCombinedMesh_C_ResetNpcMesh::CallFunc_Max_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_ResetNpcMesh;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSkeletalMeshComponents
 // 0x0068 (0x0068 - 0x0000)
@@ -105,28 +87,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents) == 0x000068, "Wrong size on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, Suc) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_Suc) == 0x000001, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_SkeletalComp) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Array_Add_ReturnValue) == 0x000014, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000018, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_Suc_1) == 0x000019, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_Suc_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_SkeletalComp_1) == 0x000020, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_SkeletalComp_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Array_Add_ReturnValue_1) == 0x000028, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_Suc_2) == 0x00002C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_Suc_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_SkeletalComp_2) == 0x000030, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_SkeletalComp_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Array_Add_ReturnValue_2) == 0x000038, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_Suc_3) == 0x00003C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_Suc_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_SkeletalComp_3) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_SkeletalComp_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_Suc_4) == 0x000048, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_Suc_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_SetupSkeletalMeshComponent_SkeletalComp_4) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_SetupSkeletalMeshComponent_SkeletalComp_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Array_Add_ReturnValue_3) == 0x000058, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Array_Add_ReturnValue_4) == 0x00005C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_Not_PreBool_ReturnValue) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSockets
 // 0x0440 (0x0440 - 0x0000)
@@ -200,62 +161,7 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetupSockets) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSockets");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSockets) == 0x000440, "Wrong size on BP_NpcCombinedMesh_C_SetupSockets");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_1) == 0x000004, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_2) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_1) == 0x000014, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_2) == 0x00001C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_3) == 0x000020, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_2) == 0x000024, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_3) == 0x000028, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_3) == 0x00002C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_4) == 0x000030, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_4) == 0x000034, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_4) == 0x000038, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetHeadTransform_OutTransform) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetHeadTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_1) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp) == 0x000138, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetLegTransform_OutTransform) == 0x000140, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetLegTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_1) == 0x000170, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_1) == 0x000178, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue) == 0x000180, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue) == 0x000184, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_1) == 0x000188, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_5) == 0x00018C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000190, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_5) == 0x000194, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_5) == 0x000198, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_2) == 0x0001A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWeaponTransform_OutTransform) == 0x000200, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWeaponTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_3) == 0x000230, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_2) == 0x000290, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_2) == 0x000298, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetBackTransform_OutTransform) == 0x0002A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetBackTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_3) == 0x0002D0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_3) == 0x0002D8, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_2) == 0x0002E0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_2) == 0x0002E4, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_3) == 0x0002E8, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_3) == 0x0002EC, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_4) == 0x0002F0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_5) == 0x000350, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetArmTransform_OutTransform) == 0x0003B0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetArmTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWaistTransform_OutTransform) == 0x0003E0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWaistTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_4) == 0x000410, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_4) == 0x000418, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_5) == 0x000420, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_5) == 0x000428, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_4) == 0x000430, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_5) == 0x000434, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_4) == 0x000438, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_5) == 0x000439, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetupSockets;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.Setup Socket
 // 0x0250 (0x0250 - 0x0000)
@@ -321,55 +227,7 @@ public:
 	struct FSNpcHookPartMaterial                  CallFunc_Array_Get_Item_1;                         // 0x0238(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_Setup_Socket) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_Setup_Socket");
-static_assert(sizeof(BP_NpcCombinedMesh_C_Setup_Socket) == 0x000250, "Wrong size on BP_NpcCombinedMesh_C_Setup_Socket");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SocketName) == 0x000000, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SocketName' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Transform) == 0x000010, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Transform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SkeletalMesh) == 0x000040, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, MorphTargets) == 0x000048, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::MorphTargets' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Materials) == 0x000058, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Materials' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, index) == 0x000068, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::index' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Suc) == 0x00006C, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SkeletalComp) == 0x000070, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SocketSkelComp) == 0x000078, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SocketSkelComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Loop_Counter_Variable) == 0x000080, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_IntToString_ReturnValue) == 0x000088, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BuildString_Name_ReturnValue) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BuildString_Name_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_StringToName_ReturnValue) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Length_ReturnValue) == 0x0000BC, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Length_ReturnValue_1) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsValid_ReturnValue) == 0x0000C5, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Not_PreBool_ReturnValue) == 0x0000C6, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsValid_ReturnValue_1) == 0x0000C7, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Location) == 0x0000C8, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Rotation) == 0x0000D4, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Scale) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000100, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Concat_StrStr_ReturnValue) == 0x000110, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000120, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000130, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000140, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsEmpty_ReturnValue) == 0x000141, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BooleanOR_ReturnValue) == 0x000142, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_AddNamedComponent_ReturnValue) == 0x000148, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_AddNamedComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BooleanOR_ReturnValue_1) == 0x000150, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, K2Node_DynamicCast_As_______) == 0x000158, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::K2Node_DynamicCast_As_______' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000164, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Array_Index_Variable) == 0x0001F8, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Get_Item) == 0x000200, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_StringToName_ReturnValue_1) == 0x000218, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_StringToName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Loop_Counter_Variable_1) == 0x000224, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Less_IntInt_ReturnValue_1) == 0x000228, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Add_IntInt_ReturnValue_1) == 0x00022C, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000230, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_DoesSocketExist_ReturnValue) == 0x000231, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Array_Index_Variable_1) == 0x000234, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Get_Item_1) == 0x000238, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000248, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_Setup_Socket;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetArmTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -381,11 +239,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetArmTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetArmTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetArmTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetArmTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetArmTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetArmTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetArmTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetArmTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetArmTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetArmTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetArmTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetWeaponTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -397,11 +251,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetWeaponTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetWeaponTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetWeaponTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetWeaponTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWeaponTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetWeaponTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWeaponTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetWeaponTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWeaponTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetWeaponTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetWeaponTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetLegTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -413,11 +263,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetLegTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetLegTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetLegTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetLegTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetLegTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetLegTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetLegTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetLegTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetLegTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetLegTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetLegTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetBackTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -429,11 +275,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetBackTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetBackTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetBackTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetBackTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetBackTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetBackTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetBackTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetBackTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetBackTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetBackTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetBackTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetWaistTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -445,11 +287,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetWaistTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetWaistTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetWaistTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetWaistTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWaistTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetWaistTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWaistTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetWaistTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetWaistTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetWaistTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetWaistTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSkeletalMeshComponent
 // 0x0200 (0x0200 - 0x0000)
@@ -492,38 +330,7 @@ public:
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0164(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent) == 0x000200, "Wrong size on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, InSkeletalMesh) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::InSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, BodyType) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::BodyType' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, Suc) == 0x000009, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, SkeletalComp) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, NewLocalVar_0) == 0x000018, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_SwitchEnum_CmpSuccess) == 0x000029, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_MakeTransform_ReturnValue) == 0x000030, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_1) == 0x000080, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_1) == 0x000090, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_2) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_2) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_3) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_3) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_4) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_4) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_1) == 0x00010C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_2) == 0x000118, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_3) == 0x000124, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_4) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___byte_Variable) == 0x00013C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_Select_Default) == 0x000140, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_AddNamedComponent_ReturnValue) == 0x000150, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_AddNamedComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_DynamicCast_As_______) == 0x000158, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_DynamicCast_As_______' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000164, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001F8, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.AddSkeletalComponent
 // 0x0058 (0x0058 - 0x0000)
@@ -540,15 +347,7 @@ public:
 	struct FSNpcSetupPartInfo                     K2Node_MakeStruct_SNpcSetupPartInfo;               // 0x0040(0x0010)(ContainsInstancedReference, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_AddSkeletalComponent) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_AddSkeletalComponent");
-static_assert(sizeof(BP_NpcCombinedMesh_C_AddSkeletalComponent) == 0x000058, "Wrong size on BP_NpcCombinedMesh_C_AddSkeletalComponent");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, Name_0) == 0x000000, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::Name_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, SkeletalComp) == 0x000010, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, K2Node_MakeArray_Array) == 0x000018, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, CallFunc_Map_Find_Value) == 0x000028, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, CallFunc_Map_Find_ReturnValue) == 0x000038, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, K2Node_MakeStruct_SNpcSetupPartInfo) == 0x000040, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::K2Node_MakeStruct_SNpcSetupPartInfo' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_AddSkeletalComponent, CallFunc_Array_Add_ReturnValue) == 0x000050, "Member 'BP_NpcCombinedMesh_C_AddSkeletalComponent::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_AddSkeletalComponent;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetSkeletonMeshDI
 // 0x00B8 (0x00B8 - 0x0000)
@@ -586,32 +385,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_SetSkeletonMeshDI");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI) == 0x0000B8, "Wrong size on BP_NpcCombinedMesh_C_SetSkeletonMeshDI");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, SKMesh) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::SKMesh' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ParamName01) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::ParamName01' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ParamName02) == 0x000014, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::ParamName02' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, BodyType) == 0x000020, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::BodyType' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, SkinColorName) == 0x000024, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::SkinColorName' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, Materials) == 0x000030, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::Materials' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, NewLocalVar_1) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::NewLocalVar_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ___int_Array_Index_Variable) == 0x00004C, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Get_Item) == 0x000058, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Length_ReturnValue_2) == 0x000064, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Greater_IntInt_ReturnValue) == 0x000068, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ___int_Loop_Counter_Variable) == 0x00006C, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Add_IntInt_ReturnValue) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ___int_Array_Index_Variable_1) == 0x000074, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, ___int_Loop_Counter_Variable_1) == 0x000078, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Less_IntInt_ReturnValue) == 0x00007C, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Add_IntInt_ReturnValue_1) == 0x000080, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_GetMaterials_ReturnValue) == 0x000088, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Get_Item_1) == 0x000098, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Array_Length_ReturnValue_3) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0000A8, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletonMeshDI, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetSkeletonMeshDI::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetSkeletonMeshDI;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetHeadTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -623,11 +397,7 @@ public:
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OutTransform;                                      // 0x0040(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_GetHeadTransform) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_GetHeadTransform");
-static_assert(sizeof(BP_NpcCombinedMesh_C_GetHeadTransform) == 0x000070, "Wrong size on BP_NpcCombinedMesh_C_GetHeadTransform");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetHeadTransform, InTransform) == 0x000000, "Member 'BP_NpcCombinedMesh_C_GetHeadTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetHeadTransform, Index_0) == 0x000030, "Member 'BP_NpcCombinedMesh_C_GetHeadTransform::Index_0' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_GetHeadTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetHeadTransform::OutTransform' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_GetHeadTransform;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.Test
 // 0x0018 (0x0018 - 0x0000)
@@ -638,11 +408,7 @@ public:
 	class UMaterialInstance*                      MI;                                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_Test) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_Test");
-static_assert(sizeof(BP_NpcCombinedMesh_C_Test) == 0x000018, "Wrong size on BP_NpcCombinedMesh_C_Test");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Test, SKMesh) == 0x000000, "Member 'BP_NpcCombinedMesh_C_Test::SKMesh' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Test, MI) == 0x000008, "Member 'BP_NpcCombinedMesh_C_Test::MI' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_Test, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_NpcCombinedMesh_C_Test::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_Test;
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetSkeletalMeshMaterial
 // 0x01C0 (0x01C0 - 0x0000)
@@ -686,39 +452,7 @@ public:
 	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial) == 0x000008, "Wrong alignment on BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial) == 0x0001C0, "Wrong size on BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, ReplaceMaterial) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::ReplaceMaterial' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, SkeletalMeshComp) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::SkeletalMeshComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, ParamName01) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::ParamName01' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, ParamName02) == 0x00001C, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::ParamName02' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, SkinColorName) == 0x000028, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::SkinColorName' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, NumSlots) == 0x000034, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::NumSlots' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, MaterialIndex) == 0x000038, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::MaterialIndex' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_GetPathName_ReturnValue) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_GetPathName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_LeftS) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_LeftS' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_RightS) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_RightS' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_ReturnValue) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_LeftS_1) == 0x000078, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_LeftS_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_RightS_1) == 0x000088, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_RightS_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_ReturnValue_1) == 0x000098, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_4) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Conv_StringToName_ReturnValue) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Add_IntInt_ReturnValue) == 0x0000FC, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_GetAssetRegistry_ReturnValue) == 0x000108, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_GetAssetRegistry_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Conv_InterfaceToObject_ReturnValue) == 0x000118, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Conv_InterfaceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, K2Node_DynamicCast_As_____) == 0x000120, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::K2Node_DynamicCast_As_____' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_GetAssetByObjectPath_ReturnValue) == 0x000138, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_GetAssetByObjectPath_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_GetAsset_ReturnValue) == 0x0001A0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_GetAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, K2Node_DynamicCast_As____) == 0x0001A8, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::K2Node_DynamicCast_As____' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, K2Node_DynamicCast_bSuccess_1) == 0x0001B0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x0001B8, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial;
 
 }
 

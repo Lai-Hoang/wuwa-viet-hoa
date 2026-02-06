@@ -37,20 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMoveSplineComponent">();
+		STATIC_CLASS_IMPL("KuroMoveSplineComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMoveSplineComponent")
 	}
 	static class UKuroMoveSplineComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMoveSplineComponent>();
 	}
 };
-static_assert(alignof(UKuroMoveSplineComponent) == 0x000010, "Wrong alignment on UKuroMoveSplineComponent");
-static_assert(sizeof(UKuroMoveSplineComponent) == 0x000670, "Wrong size on UKuroMoveSplineComponent");
-static_assert(offsetof(UKuroMoveSplineComponent, MoveStates) == 0x000620, "Member 'UKuroMoveSplineComponent::MoveStates' has a wrong offset!");
-static_assert(offsetof(UKuroMoveSplineComponent, MoveSpeeds) == 0x000630, "Member 'UKuroMoveSplineComponent::MoveSpeeds' has a wrong offset!");
-static_assert(offsetof(UKuroMoveSplineComponent, IgnorePoints) == 0x000640, "Member 'UKuroMoveSplineComponent::IgnorePoints' has a wrong offset!");
-static_assert(offsetof(UKuroMoveSplineComponent, StayTimes) == 0x000650, "Member 'UKuroMoveSplineComponent::StayTimes' has a wrong offset!");
-static_assert(offsetof(UKuroMoveSplineComponent, IsHides) == 0x000660, "Member 'UKuroMoveSplineComponent::IsHides' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroMoveSplineComponent;
 
 // Class KuroSplines.KuroParkourSplineComponent
 // 0x0030 (0x0650 - 0x0620)
@@ -69,18 +67,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroParkourSplineComponent">();
+		STATIC_CLASS_IMPL("KuroParkourSplineComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroParkourSplineComponent")
 	}
 	static class UKuroParkourSplineComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroParkourSplineComponent>();
 	}
 };
-static_assert(alignof(UKuroParkourSplineComponent) == 0x000010, "Wrong alignment on UKuroParkourSplineComponent");
-static_assert(sizeof(UKuroParkourSplineComponent) == 0x000650, "Wrong size on UKuroParkourSplineComponent");
-static_assert(offsetof(UKuroParkourSplineComponent, RadiusGroup) == 0x000620, "Member 'UKuroParkourSplineComponent::RadiusGroup' has a wrong offset!");
-static_assert(offsetof(UKuroParkourSplineComponent, ModifiedTimes) == 0x000630, "Member 'UKuroParkourSplineComponent::ModifiedTimes' has a wrong offset!");
-static_assert(offsetof(UKuroParkourSplineComponent, BuffIds) == 0x000640, "Member 'UKuroParkourSplineComponent::BuffIds' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroParkourSplineComponent;
 
 }
 

@@ -21,9 +21,7 @@ struct BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome) == 0x000004, "Wrong alignment on BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome");
-static_assert(sizeof(BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome) == 0x000004, "Wrong size on BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome");
-static_assert(offsetof(BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome, EntryPoint) == 0x000000, "Member 'BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SkyDome_C_ExecuteUbergraph_BP_SkyDome;
 
 }
 

@@ -28,17 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_AudioVisualizationGlobalConfigs_C">();
+		BP_STATIC_CLASS_IMPL("PDA_AudioVisualizationGlobalConfigs_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_AudioVisualizationGlobalConfigs_C")
 	}
 	static class UPDA_AudioVisualizationGlobalConfigs_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_AudioVisualizationGlobalConfigs_C>();
 	}
 };
-static_assert(alignof(UPDA_AudioVisualizationGlobalConfigs_C) == 0x000008, "Wrong alignment on UPDA_AudioVisualizationGlobalConfigs_C");
-static_assert(sizeof(UPDA_AudioVisualizationGlobalConfigs_C) == 0x000050, "Wrong size on UPDA_AudioVisualizationGlobalConfigs_C");
-static_assert(offsetof(UPDA_AudioVisualizationGlobalConfigs_C, GlobalRtpcs) == 0x000038, "Member 'UPDA_AudioVisualizationGlobalConfigs_C::GlobalRtpcs' has a wrong offset!");
-static_assert(offsetof(UPDA_AudioVisualizationGlobalConfigs_C, MPCFile) == 0x000048, "Member 'UPDA_AudioVisualizationGlobalConfigs_C::MPCFile' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_AudioVisualizationGlobalConfigs_C;
 
 }
 

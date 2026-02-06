@@ -30,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPF_CameraHelper_C">();
+		BP_STATIC_CLASS_IMPL("BPF_CameraHelper_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPF_CameraHelper_C")
 	}
 	static class UBPF_CameraHelper_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPF_CameraHelper_C>();
 	}
 };
-static_assert(alignof(UBPF_CameraHelper_C) == 0x000008, "Wrong alignment on UBPF_CameraHelper_C");
-static_assert(sizeof(UBPF_CameraHelper_C) == 0x000030, "Wrong size on UBPF_CameraHelper_C");
+DUMPER7_ASSERTS_UBPF_CameraHelper_C;
 
 }
 

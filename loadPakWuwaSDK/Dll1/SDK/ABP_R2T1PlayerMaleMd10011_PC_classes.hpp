@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "KawaiiPhysics_structs.hpp"
-#include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroAnim_structs.hpp"
+#include "KawaiiPhysics_structs.hpp"
 
 
 namespace SDK
@@ -56,34 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_R2T1PlayerMaleMd10011_PC_C">();
+		BP_STATIC_CLASS_IMPL("ABP_R2T1PlayerMaleMd10011_PC_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_R2T1PlayerMaleMd10011_PC_C")
 	}
 	static class UABP_R2T1PlayerMaleMd10011_PC_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_R2T1PlayerMaleMd10011_PC_C>();
 	}
 };
-static_assert(alignof(UABP_R2T1PlayerMaleMd10011_PC_C) == 0x000010, "Wrong alignment on UABP_R2T1PlayerMaleMd10011_PC_C");
-static_assert(sizeof(UABP_R2T1PlayerMaleMd10011_PC_C) == 0x001D90, "Wrong size on UABP_R2T1PlayerMaleMd10011_PC_C");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, UberGraphFrame) == 0x000730, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_Root_1) == 0x000738, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LinkedInputPose) == 0x000770, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LocalToComponentSpace) == 0x0008A8, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_ComponentToLocalSpace) == 0x0008C8, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_MountBuffer) == 0x0008F0, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_MountBuffer' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup_5) == 0x000AD0, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup_5' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup_4) == 0x000D70, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup_4' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup_3) == 0x001010, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup_3' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup_2) == 0x0012B0, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup_2' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup_1) == 0x001550, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup_1' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_KawaiiPhysicsGroup) == 0x0017F0, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_KawaiiPhysicsGroup' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_Root) == 0x001A90, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LinkedAnimGraph_2) == 0x001AC8, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LinkedAnimGraph_2' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LinkedAnimLayer) == 0x001B70, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LinkedAnimGraph_1) == 0x001C30, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LinkedAnimGraph_1' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, AnimGraphNode_LinkedAnimGraph) == 0x001CD8, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, PhysicsClothSimulateEnable) == 0x001D80, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::PhysicsClothSimulateEnable' has a wrong offset!");
-static_assert(offsetof(UABP_R2T1PlayerMaleMd10011_PC_C, PhysicsClothSimulateScale) == 0x001D84, "Member 'UABP_R2T1PlayerMaleMd10011_PC_C::PhysicsClothSimulateScale' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_R2T1PlayerMaleMd10011_PC_C;
 
 }
 

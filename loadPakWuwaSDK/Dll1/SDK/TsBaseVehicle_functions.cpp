@@ -17,19 +17,21 @@
 namespace SDK
 {
 
-// Function TsBaseVehicle.TsBaseVehicle_C.GetEntityId
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function TsBaseVehicle.TsBaseVehicle_C.ExecuteUbergraph_TsBaseVehicle
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ATsBaseVehicle_C::GetEntityId()
+void ATsBaseVehicle_C::ExecuteUbergraph_TsBaseVehicle(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseVehicle_C", "GetEntityId");
+		Func = Class->GetFunction("TsBaseVehicle_C", "ExecuteUbergraph_TsBaseVehicle");
 
-	Params::TsBaseVehicle_C_GetEntityId Parms{};
+	Params::TsBaseVehicle_C_ExecuteUbergraph_TsBaseVehicle Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -37,8 +39,25 @@ int32 ATsBaseVehicle_C::GetEntityId()
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
 
-	return Parms.ReturnValue;
+
+// Function TsBaseVehicle.TsBaseVehicle_C.ReceiveDestroyed
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATsBaseVehicle_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseVehicle_C", "ReceiveDestroyed");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -69,40 +88,19 @@ void ATsBaseVehicle_C::SetDitherEffect(float dither, ECharacterDitherType dither
 }
 
 
-// Function TsBaseVehicle.TsBaseVehicle_C.ReceiveDestroyed
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsBaseVehicle_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseVehicle_C", "ReceiveDestroyed");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsBaseVehicle.TsBaseVehicle_C.ExecuteUbergraph_TsBaseVehicle
-// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Function TsBaseVehicle.TsBaseVehicle_C.GetEntityId
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsBaseVehicle_C::ExecuteUbergraph_TsBaseVehicle(int32 EntryPoint)
+int32 ATsBaseVehicle_C::GetEntityId()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseVehicle_C", "ExecuteUbergraph_TsBaseVehicle");
+		Func = Class->GetFunction("TsBaseVehicle_C", "GetEntityId");
 
-	Params::TsBaseVehicle_C_ExecuteUbergraph_TsBaseVehicle Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::TsBaseVehicle_C_GetEntityId Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -110,6 +108,8 @@ void ATsBaseVehicle_C::ExecuteUbergraph_TsBaseVehicle(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

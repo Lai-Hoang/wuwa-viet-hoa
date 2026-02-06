@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "KuroAnim_structs.hpp"
-#include "SClimbInfo_structs.hpp"
-#include "SMovementSetting_structs.hpp"
-#include "EExitClimb_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EClimbState_structs.hpp"
 #include "EMovementDirection_structs.hpp"
+#include "SMovementSetting_structs.hpp"
+#include "SClimbInfo_structs.hpp"
+#include "SMovementSetting_State_structs.hpp"
+#include "EExitClimb_structs.hpp"
 #include "EEnterClimb_structs.hpp"
 #include "SClimbState_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SMovementSetting_State_structs.hpp"
 
 
 namespace SDK::Params
@@ -39,14 +39,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority) == 0x000038, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, value) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::value' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, sweep) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithPriority;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetActorRotationWithContext
 // 0x0038 (0x0038 - 0x0000)
@@ -61,14 +54,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext) == 0x000038, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, rotation) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, sweep) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetActorRotationWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.ActorTeleportToWithContext
 // 0x0048 (0x0048 - 0x0000)
@@ -83,13 +69,7 @@ public:
 	class FString                                 context;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext) == 0x000048, "Wrong size on TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext, location) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext::location' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext, rotation) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext, context) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext, __WorldContext) == 0x000040, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_ActorTeleportToWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.ActorKuroMoveAlongFloorWithContext
 // 0x0030 (0x0030 - 0x0000)
@@ -103,13 +83,7 @@ public:
 	class FString                                 context;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext, velocity) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext::velocity' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext, deltaSeconds) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext::deltaSeconds' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_ActorKuroMoveAlongFloorWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetInputDirect
 // 0x0028 (0x0028 - 0x0000)
@@ -121,11 +95,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetInputDirect) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetInputDirect");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetInputDirect) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetInputDirect");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputDirect, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputDirect::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputDirect, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputDirect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputDirect, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetInputDirect;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetInputDirect
 // 0x0028 (0x0028 - 0x0000)
@@ -137,11 +107,7 @@ public:
 	struct FVectorDouble                          direct;                                            // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetInputDirect) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetInputDirect");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetInputDirect) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetInputDirect");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputDirect, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputDirect::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputDirect, direct) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputDirect::direct' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputDirect, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputDirect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetInputDirect;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetInputRotator
 // 0x0020 (0x0020 - 0x0000)
@@ -153,11 +119,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetInputRotator) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetInputRotator");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetInputRotator) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetInputRotator");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputRotator, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputRotator::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputRotator, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputRotator::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetInputRotator, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetInputRotator::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetInputRotator;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetInputRotator
 // 0x0018 (0x0018 - 0x0000)
@@ -168,11 +130,7 @@ public:
 	struct FRotator                               rotator;                                           // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetInputRotator) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetInputRotator");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetInputRotator) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetInputRotator");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputRotator, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputRotator::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputRotator, rotator) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputRotator::rotator' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetInputRotator, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetInputRotator::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetInputRotator;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetCharacterHidden
 // 0x0028 (0x0028 - 0x0000)
@@ -186,13 +144,7 @@ public:
 	class FString                                 reason;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden, isHidden) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden::isHidden' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden, callObject) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden::callObject' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden, reason) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden::reason' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetCharacterHidden;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetHiddenMovementMode
 // 0x0010 (0x0010 - 0x0000)
@@ -204,11 +156,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode, isHidden) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode::isHidden' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetHiddenMovementMode;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.CanResponseInput
 // 0x0018 (0x0018 - 0x0000)
@@ -220,11 +168,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_CanResponseInput) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_CanResponseInput");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_CanResponseInput) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_CanResponseInput");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanResponseInput, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_CanResponseInput::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanResponseInput, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_CanResponseInput::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanResponseInput, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_CanResponseInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_CanResponseInput;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.CanJumpPress
 // 0x0018 (0x0018 - 0x0000)
@@ -236,11 +180,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_CanJumpPress) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_CanJumpPress");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_CanJumpPress) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_CanJumpPress");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanJumpPress, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_CanJumpPress::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanJumpPress, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_CanJumpPress::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanJumpPress, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_CanJumpPress::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_CanJumpPress;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.CanWalkPress
 // 0x0018 (0x0018 - 0x0000)
@@ -252,11 +192,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_CanWalkPress) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_CanWalkPress");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_CanWalkPress) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_CanWalkPress");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanWalkPress, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_CanWalkPress::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanWalkPress, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_CanWalkPress::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanWalkPress, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_CanWalkPress::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_CanWalkPress;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetAimYawRate
 // 0x0018 (0x0018 - 0x0000)
@@ -268,11 +204,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetAimYawRate) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetAimYawRate");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetAimYawRate) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetAimYawRate");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAimYawRate, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAimYawRate::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAimYawRate, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAimYawRate::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAimYawRate, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAimYawRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetAimYawRate;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetMovementData
 // 0x0658 (0x0658 - 0x0000)
@@ -284,11 +216,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMovementSetting_State                ReturnValue;                                       // 0x0010(0x0648)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetMovementData) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetMovementData");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetMovementData) == 0x000658, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetMovementData");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMovementData, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMovementData::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMovementData, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMovementData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMovementData, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMovementData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetMovementData;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SmoothCharacterRotation
 // 0x0030 (0x0030 - 0x0000)
@@ -302,13 +230,7 @@ public:
 	class FString                                 context;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation, target) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation::target' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation, speed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SmoothCharacterRotation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.HasMoveInput
 // 0x0018 (0x0018 - 0x0000)
@@ -320,11 +242,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_HasMoveInput) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_HasMoveInput");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_HasMoveInput) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_HasMoveInput");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInput, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInput::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInput, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInput::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInput, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_HasMoveInput;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.HasRotatorInput
 // 0x0018 (0x0018 - 0x0000)
@@ -336,11 +254,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_HasRotatorInput) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_HasRotatorInput");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_HasRotatorInput) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_HasRotatorInput");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasRotatorInput, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_HasRotatorInput::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasRotatorInput, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_HasRotatorInput::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasRotatorInput, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_HasRotatorInput::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_HasRotatorInput;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.IsMoving
 // 0x0018 (0x0018 - 0x0000)
@@ -352,11 +266,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_IsMoving) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_IsMoving");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_IsMoving) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_IsMoving");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsMoving, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_IsMoving::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsMoving, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_IsMoving::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsMoving, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_IsMoving::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_IsMoving;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.IsJump
 // 0x0018 (0x0018 - 0x0000)
@@ -368,11 +278,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_IsJump) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_IsJump");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_IsJump) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_IsJump");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsJump, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_IsJump::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsJump, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_IsJump::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsJump, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_IsJump::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_IsJump;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetSpeed
 // 0x0018 (0x0018 - 0x0000)
@@ -384,11 +290,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetSpeed) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSpeed, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSpeed::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSpeed, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetGroundedTime
 // 0x0018 (0x0018 - 0x0000)
@@ -400,11 +302,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetGroundedTime) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetGroundedTime");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetGroundedTime) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetGroundedTime");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGroundedTime, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGroundedTime::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGroundedTime, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGroundedTime::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGroundedTime, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGroundedTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetGroundedTime;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.IsFallingIntoWater
 // 0x0018 (0x0018 - 0x0000)
@@ -416,11 +314,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_IsFallingIntoWater;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetForceSpeed
 // 0x0028 (0x0028 - 0x0000)
@@ -432,11 +326,7 @@ public:
 	struct FVectorDouble                          speed;                                             // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetForceSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetForceSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetForceSpeed) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetForceSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetForceSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetForceSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetForceSpeed, speed) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetForceSpeed::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetForceSpeed, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetForceSpeed::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetForceSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAddMove
 // 0x0040 (0x0040 - 0x0000)
@@ -452,14 +342,7 @@ public:
 	class UCurveFloat*                            curve;                                             // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAddMove) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAddMove");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAddMove) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAddMove");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, mesh) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::mesh' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, speed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, timeLength) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::timeLength' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, curve) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::curve' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMove, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMove::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAddMove;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.StopAddMove
 // 0x0018 (0x0018 - 0x0000)
@@ -471,11 +354,7 @@ public:
 	class UMeshComponent*                         mesh;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_StopAddMove) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_StopAddMove");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_StopAddMove) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_StopAddMove");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_StopAddMove, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_StopAddMove::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_StopAddMove, mesh) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_StopAddMove::mesh' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_StopAddMove, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_StopAddMove::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_StopAddMove;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.FixActorLocation
 // 0x00C8 (0x00C8 - 0x0000)
@@ -490,13 +369,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             ReturnValue;                                       // 0x0030(0x0094)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_FixActorLocation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation) == 0x0000C8, "Wrong size on TsMoveBlueprintFunctionLibrary_C_FixActorLocation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_FixActorLocation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation, target) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_FixActorLocation::target' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation, offset) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_FixActorLocation::offset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_FixActorLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FixActorLocation, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_FixActorLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_FixActorLocation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.StopAllAddMove
 // 0x0010 (0x0010 - 0x0000)
@@ -507,10 +380,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_StopAllAddMove) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_StopAllAddMove");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_StopAllAddMove) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_StopAllAddMove");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_StopAllAddMove, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_StopAllAddMove::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_StopAllAddMove, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_StopAllAddMove::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_StopAllAddMove;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAddMoveWorld
 // 0x0040 (0x0040 - 0x0000)
@@ -526,14 +396,7 @@ public:
 	class UCurveFloat*                            curve;                                             // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, mesh) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::mesh' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, speed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, timeLength) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::timeLength' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, curve) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::curve' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorld;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAddMoveWorldSpeed
 // 0x0030 (0x0030 - 0x0000)
@@ -546,12 +409,7 @@ public:
 	struct FVectorDouble                          speed;                                             // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed, mesh) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed::mesh' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed, speed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAddMoveWorldSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAddMoveOffset
 // 0x0028 (0x0028 - 0x0000)
@@ -563,11 +421,7 @@ public:
 	struct FVectorDouble                          offset;                                            // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset, offset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset::offset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAddMoveOffset;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAddMoveRotation
 // 0x0018 (0x0018 - 0x0000)
@@ -578,11 +432,7 @@ public:
 	struct FRotator                               rotation;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation, rotation) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAddMoveRotation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetEnterWaterState
 // 0x0010 (0x0010 - 0x0000)
@@ -594,11 +444,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState, isEnter) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState::isEnter' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetEnterWaterState;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetClimbState
 // 0x0018 (0x0018 - 0x0000)
@@ -610,11 +456,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSClimbState                           ReturnValue;                                       // 0x0010(0x0003)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetClimbState) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetClimbState");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetClimbState) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetClimbState");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbState, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbState::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbState, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbState::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbState, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbState::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetClimbState;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetClimbRadius
 // 0x0018 (0x0018 - 0x0000)
@@ -626,11 +468,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetClimbRadius) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetClimbRadius");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetClimbRadius) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetClimbRadius");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbRadius, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbRadius::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbRadius, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbRadius::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbRadius, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbRadius::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetClimbRadius;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetClimbInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -642,11 +480,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSClimbInfo                            ReturnValue;                                       // 0x0010(0x001C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetClimbInfo) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetClimbInfo");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetClimbInfo) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetClimbInfo");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbInfo, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbInfo::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbInfo, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbInfo, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetClimbInfo;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.KickExitCheck
 // 0x0010 (0x0010 - 0x0000)
@@ -657,10 +491,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_KickExitCheck) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_KickExitCheck");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_KickExitCheck) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_KickExitCheck");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_KickExitCheck, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_KickExitCheck::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_KickExitCheck, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_KickExitCheck::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_KickExitCheck;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.CanClimbPress
 // 0x0018 (0x0018 - 0x0000)
@@ -672,11 +503,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_CanClimbPress) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_CanClimbPress");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_CanClimbPress) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_CanClimbPress");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanClimbPress, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_CanClimbPress::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanClimbPress, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_CanClimbPress::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_CanClimbPress, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_CanClimbPress::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_CanClimbPress;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.OnEnterClimb
 // 0x0010 (0x0010 - 0x0000)
@@ -687,10 +514,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_OnEnterClimb) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_OnEnterClimb");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_OnEnterClimb) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_OnEnterClimb");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_OnEnterClimb, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_OnEnterClimb::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_OnEnterClimb, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_OnEnterClimb::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_OnEnterClimb;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.OnExitClimb
 // 0x0010 (0x0010 - 0x0000)
@@ -701,10 +525,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_OnExitClimb) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_OnExitClimb");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_OnExitClimb) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_OnExitClimb");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_OnExitClimb, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_OnExitClimb::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_OnExitClimb, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_OnExitClimb::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_OnExitClimb;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.DealClimbUpStart
 // 0x0010 (0x0010 - 0x0000)
@@ -715,10 +536,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_DealClimbUpStart;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.FinishClimbDown
 // 0x0010 (0x0010 - 0x0000)
@@ -729,10 +547,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_FinishClimbDown) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_FinishClimbDown");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_FinishClimbDown) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_FinishClimbDown");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FinishClimbDown, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_FinishClimbDown::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_FinishClimbDown, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_FinishClimbDown::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_FinishClimbDown;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.DealClimbUpFinish
 // 0x0010 (0x0010 - 0x0000)
@@ -743,10 +558,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_DealClimbUpFinish;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetClimbState
 // 0x0010 (0x0010 - 0x0000)
@@ -758,11 +570,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetClimbState) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetClimbState");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetClimbState) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetClimbState");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetClimbState, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetClimbState::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetClimbState, climbState) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetClimbState::climbState' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetClimbState, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetClimbState::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetClimbState;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetEnterClimbType
 // 0x0010 (0x0010 - 0x0000)
@@ -774,11 +582,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType, enterType) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType::enterType' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetEnterClimbType;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetExitClimbType
 // 0x0010 (0x0010 - 0x0000)
@@ -790,11 +594,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetExitClimbType) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetExitClimbType");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetExitClimbType) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetExitClimbType");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetExitClimbType, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetExitClimbType::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetExitClimbType, exitType) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetExitClimbType::exitType' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetExitClimbType, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetExitClimbType::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetExitClimbType;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetWaterLocation
 // 0x0028 (0x0028 - 0x0000)
@@ -806,11 +606,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetWaterLocation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetWaterLocation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetWaterLocation) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetWaterLocation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterLocation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterLocation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterLocation, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterLocation, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetWaterLocation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetWaterVolume
 // 0x0018 (0x0018 - 0x0000)
@@ -822,11 +618,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetWaterVolume) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetWaterVolume");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetWaterVolume) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetWaterVolume");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterVolume, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterVolume::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterVolume, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterVolume::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetWaterVolume, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetWaterVolume::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetWaterVolume;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetClimbOnWallAngle
 // 0x0018 (0x0018 - 0x0000)
@@ -838,11 +630,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetClimbOnWallAngle;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetUseDebugMovementSetting
 // 0x0010 (0x0010 - 0x0000)
@@ -854,11 +642,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting, newSelect) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting::newSelect' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetUseDebugMovementSetting;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetDebugMovementSetting
 // 0x0068 (0x0068 - 0x0000)
@@ -870,11 +654,7 @@ public:
 	struct FSMovementSetting                      newSetting;                                        // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting) == 0x000068, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting, newSetting) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting::newSetting' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting, __WorldContext) == 0x000060, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetDebugMovementSetting;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetLockedRotation
 // 0x0010 (0x0010 - 0x0000)
@@ -886,11 +666,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetLockedRotation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetLockedRotation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetLockedRotation) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetLockedRotation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetLockedRotation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetLockedRotation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetLockedRotation, lock) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetLockedRotation::lock' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetLockedRotation, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetLockedRotation::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetLockedRotation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetLockedRotation
 // 0x0018 (0x0018 - 0x0000)
@@ -902,11 +678,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetLockedRotation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetLockedRotation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetLockedRotation) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetLockedRotation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetLockedRotation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetLockedRotation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetLockedRotation, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetLockedRotation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetLockedRotation, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetLockedRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetLockedRotation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetFallingHorizontalMaxSpeed
 // 0x0010 (0x0010 - 0x0000)
@@ -917,11 +689,7 @@ public:
 	float                                         speed;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed, speed) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetFallingHorizontalMaxSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.ClearFallingHorizontalMaxSpeed
 // 0x0010 (0x0010 - 0x0000)
@@ -932,10 +700,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_ClearFallingHorizontalMaxSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.DetectClimbWithDirect
 // 0x0030 (0x0030 - 0x0000)
@@ -949,13 +714,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect, bSprintEnter) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect::bSprintEnter' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect, direct) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect::direct' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect, ReturnValue) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_DetectClimbWithDirect;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.TurnToTarget
 // 0x0020 (0x0020 - 0x0000)
@@ -969,12 +728,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_TurnToTarget");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_TurnToTarget");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnToTarget::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget, target) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnToTarget::target' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget, speed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnToTarget::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnToTarget, __WorldContext) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnToTarget::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_TurnToTarget;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetMonsterMoveDirection
 // 0x0018 (0x0018 - 0x0000)
@@ -986,11 +740,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMovementDirection                            ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetMonsterMoveDirection;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetRoleBody
 // 0x0020 (0x0020 - 0x0000)
@@ -1002,11 +752,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetRoleBody) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetRoleBody");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetRoleBody) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetRoleBody");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRoleBody, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRoleBody::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRoleBody, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRoleBody::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRoleBody, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRoleBody::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetRoleBody;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetRacingRightSpeed
 // 0x0018 (0x0018 - 0x0000)
@@ -1018,11 +764,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetRacingRightSpeed;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetPendulumData
 // 0x0038 (0x0038 - 0x0000)
@@ -1043,21 +785,7 @@ public:
 	float                                         maxFallingSpeed;                                   // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetPendulumData");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData) == 0x000038, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetPendulumData");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, addVelocityX) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::addVelocityX' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, addVelocityY) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::addVelocityY' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, addVelocityZ) == 0x00000C, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::addVelocityZ' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, forwardLossPercentage) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::forwardLossPercentage' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, lossPercentage) == 0x000014, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::lossPercentage' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, gravity) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::gravity' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, friction) == 0x00001C, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::friction' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, deceleration) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::deceleration' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, accelerator) == 0x000024, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::accelerator' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, maxSpeed) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::maxSpeed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, maxFallingSpeed) == 0x00002C, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::maxFallingSpeed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetPendulumData, __WorldContext) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetPendulumData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetPendulumData;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.Reset
 // 0x0010 (0x0010 - 0x0000)
@@ -1068,10 +796,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_Reset) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_Reset");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_Reset) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_Reset");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_Reset, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_Reset::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_Reset, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_Reset::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_Reset;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetGrabPoint
 // 0x0028 (0x0028 - 0x0000)
@@ -1083,11 +808,7 @@ public:
 	struct FVectorDouble                          point;                                             // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetGrabPoint) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetGrabPoint");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetGrabPoint) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetGrabPoint");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetGrabPoint, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetGrabPoint::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetGrabPoint, point) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetGrabPoint::point' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetGrabPoint, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetGrabPoint::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetGrabPoint;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetGrabPoint
 // 0x0028 (0x0028 - 0x0000)
@@ -1099,11 +820,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetGrabPoint) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetGrabPoint");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetGrabPoint) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetGrabPoint");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGrabPoint, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGrabPoint::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGrabPoint, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGrabPoint::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetGrabPoint, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetGrabPoint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetGrabPoint;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetHooked
 // 0x0010 (0x0010 - 0x0000)
@@ -1115,11 +832,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetHooked) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetHooked");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetHooked) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetHooked");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHooked, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHooked::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHooked, isHooked) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHooked::isHooked' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetHooked, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetHooked::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetHooked;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetHooked
 // 0x0018 (0x0018 - 0x0000)
@@ -1131,11 +844,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetHooked) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetHooked");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetHooked) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetHooked");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHooked, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHooked::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHooked, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHooked::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHooked, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHooked::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetHooked;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetSocketName
 // 0x0020 (0x0020 - 0x0000)
@@ -1147,11 +856,7 @@ public:
 	class FString                                 socketName;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetSocketName) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetSocketName");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetSocketName) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetSocketName");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetSocketName, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetSocketName::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetSocketName, socketName) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetSocketName::socketName' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetSocketName, __WorldContext) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_SetSocketName::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetSocketName;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetRopeForce
 // 0x0010 (0x0010 - 0x0000)
@@ -1162,11 +867,7 @@ public:
 	float                                         ropeForce;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetRopeForce) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetRopeForce");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetRopeForce) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetRopeForce");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetRopeForce, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetRopeForce::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetRopeForce, ropeForce) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetRopeForce::ropeForce' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetRopeForce, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetRopeForce::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetRopeForce;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetRopeForce
 // 0x0018 (0x0018 - 0x0000)
@@ -1178,11 +879,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetRopeForce) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetRopeForce");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetRopeForce) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetRopeForce");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRopeForce, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRopeForce::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRopeForce, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRopeForce::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetRopeForce, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetRopeForce::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetRopeForce;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetDistanceRopeToActor
 // 0x0010 (0x0010 - 0x0000)
@@ -1193,11 +890,7 @@ public:
 	float                                         ropeForce;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor, ropeForce) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor::ropeForce' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetDistanceRopeToActor;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetDistanceRopeToActor
 // 0x0018 (0x0018 - 0x0000)
@@ -1209,11 +902,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetDistanceRopeToActor;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetAirControl
 // 0x0010 (0x0010 - 0x0000)
@@ -1224,11 +913,7 @@ public:
 	float                                         airControl;                                        // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetAirControl) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetAirControl");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetAirControl) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetAirControl");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAirControl, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAirControl::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAirControl, airControl) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAirControl::airControl' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetAirControl, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetAirControl::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetAirControl;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetAirControl
 // 0x0018 (0x0018 - 0x0000)
@@ -1240,11 +925,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetAirControl) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetAirControl");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetAirControl) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetAirControl");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAirControl, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAirControl::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAirControl, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAirControl::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAirControl, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAirControl::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetAirControl;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetUpLength
 // 0x0010 (0x0010 - 0x0000)
@@ -1255,11 +936,7 @@ public:
 	float                                         length;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetUpLength) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetUpLength");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetUpLength) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetUpLength");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUpLength, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUpLength::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUpLength, length) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUpLength::length' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetUpLength, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetUpLength::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetUpLength;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetCanMoveFromInput
 // 0x0010 (0x0010 - 0x0000)
@@ -1271,11 +948,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput, canMove) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput::canMove' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetCanMoveFromInput;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.UpdateAnimInfoMoveMonster
 // 0x0018 (0x0018 - 0x0000)
@@ -1287,11 +960,7 @@ public:
 	class UBP_ABPLogicParams_C*                   animLogicParams;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster, animLogicParams) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster::animLogicParams' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveMonster;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.UpdateAnimInfoMove
 // 0x0018 (0x0018 - 0x0000)
@@ -1303,11 +972,7 @@ public:
 	class UBP_ABPLogicParams_C*                   animLogicParams;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove, animLogicParams) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove::animLogicParams' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMove;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.UpdateAnimInfoMoveRoleNpc
 // 0x0018 (0x0018 - 0x0000)
@@ -1319,11 +984,7 @@ public:
 	class UBP_ABPLogicParams_C*                   animLogicParams;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc, animLogicParams) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc::animLogicParams' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_UpdateAnimInfoMoveRoleNpc;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.TurnOffAutomaticFlightMode
 // 0x0010 (0x0010 - 0x0000)
@@ -1334,10 +995,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_TurnOffAutomaticFlightMode;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.HasMoveInputOrTickIntervalAndModelBuffer
 // 0x0018 (0x0018 - 0x0000)
@@ -1349,11 +1007,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_HasMoveInputOrTickIntervalAndModelBuffer;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetActorLocationWithContext
 // 0x0048 (0x0048 - 0x0000)
@@ -1369,14 +1023,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext) == 0x000048, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, location) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::location' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, sweep) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, context) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext, ReturnValue) == 0x000040, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetActorLocationWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetActorLocationAndRotationWithContext
 // 0x0048 (0x0048 - 0x0000)
@@ -1392,14 +1039,7 @@ public:
 	class FString                                 context;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext) == 0x000048, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, location) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::location' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, rotation) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, sweep) == 0x00002C, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, context) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext, __WorldContext) == 0x000040, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetActorLocationAndRotationWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.AddActorWorldOffsetWithContext
 // 0x0040 (0x0040 - 0x0000)
@@ -1414,13 +1054,7 @@ public:
 	class FString                                 context;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext, offset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext::offset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext, sweep) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext, context) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.AddActorWorldRotationWithContext
 // 0x0030 (0x0030 - 0x0000)
@@ -1434,13 +1068,7 @@ public:
 	class FString                                 context;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext, rotation) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext, sweep) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_AddActorWorldRotationWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.AddActorLocalRotationWithContext
 // 0x0030 (0x0030 - 0x0000)
@@ -1454,13 +1082,7 @@ public:
 	class FString                                 context;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext) == 0x000030, "Wrong size on TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext, rotation) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext::rotation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext, sweep) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext, context) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_AddActorLocalRotationWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.AddActorLocalOffsetWithContext
 // 0x0040 (0x0040 - 0x0000)
@@ -1475,13 +1097,7 @@ public:
 	class FString                                 context;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext, offset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext::offset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext, sweep) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext, context) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_AddActorLocalOffsetWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetSwimLocation
 // 0x0028 (0x0028 - 0x0000)
@@ -1493,11 +1109,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetSwimLocation) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetSwimLocation");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetSwimLocation) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetSwimLocation");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSwimLocation, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSwimLocation::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSwimLocation, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSwimLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetSwimLocation, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetSwimLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetSwimLocation;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SimpleSwim
 // 0x0048 (0x0048 - 0x0000)
@@ -1512,14 +1124,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SimpleSwim");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim) == 0x000048, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SimpleSwim");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, deltaSeconds) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::deltaSeconds' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, detectedHeight) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::detectedHeight' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, currentSpeed) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::currentSpeed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SimpleSwim, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SimpleSwim::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SimpleSwim;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeaveRoll
 // 0x0010 (0x0010 - 0x0000)
@@ -1530,10 +1135,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_LeaveRoll) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_LeaveRoll");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_LeaveRoll) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_LeaveRoll");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeaveRoll, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_LeaveRoll::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeaveRoll, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_LeaveRoll::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_LeaveRoll;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.EnterRoll
 // 0x0028 (0x0028 - 0x0000)
@@ -1550,16 +1152,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_EnterRoll) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_EnterRoll");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_EnterRoll) == 0x000028, "Wrong size on TsMoveBlueprintFunctionLibrary_C_EnterRoll");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, targetSpeed) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::targetSpeed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, friction) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::friction' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, accelOnGround) == 0x00000C, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::accelOnGround' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, gravity) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::gravity' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, stepUpHeight) == 0x000014, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::stepUpHeight' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, maxSpeed) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::maxSpeed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterRoll, __WorldContext) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterRoll::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_EnterRoll;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.EnterKite
 // 0x0018 (0x0018 - 0x0000)
@@ -1571,11 +1164,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_EnterKite) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_EnterKite");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_EnterKite) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_EnterKite");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterKite, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterKite::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterKite, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterKite::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_EnterKite, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_EnterKite::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_EnterKite;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetAcceleration
 // 0x0020 (0x0020 - 0x0000)
@@ -1587,11 +1176,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ReturnValue;                                       // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetAcceleration) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetAcceleration");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetAcceleration) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetAcceleration");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAcceleration, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAcceleration::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAcceleration, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAcceleration::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetAcceleration, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetAcceleration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetAcceleration;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.GetHeightAboveGround
 // 0x0018 (0x0018 - 0x0000)
@@ -1603,12 +1188,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround, detectedHeight) == 0x000004, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround::detectedHeight' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround, ReturnValue) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_GetHeightAboveGround;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.TurnOffCameraDrivenAutoFlightMode
 // 0x0010 (0x0010 - 0x0000)
@@ -1619,10 +1199,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_TurnOffCameraDrivenAutoFlightMode;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.TurnOnAutomaticFlightMode
 // 0x0018 (0x0018 - 0x0000)
@@ -1634,11 +1211,7 @@ public:
 	class UICM_AutomaticFlight_DataBase_C*        dataAsset;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode, dataAsset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode::dataAsset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_TurnOnAutomaticFlightMode;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.TurnOnCameraDrivenAutoFlightMode
 // 0x0018 (0x0018 - 0x0000)
@@ -1650,11 +1223,7 @@ public:
 	class UBP_CameraDrivenAutoFlightData_C*       dataAsset;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode) == 0x000018, "Wrong size on TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode, dataAsset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode::dataAsset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode, __WorldContext) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_TurnOnCameraDrivenAutoFlightMode;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.AddActorWorldOffsetWithContextAndReset
 // 0x0040 (0x0040 - 0x0000)
@@ -1669,13 +1238,7 @@ public:
 	class FString                                 context;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset, offset) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset::offset' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset, sweep) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset::sweep' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset, context) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset, __WorldContext) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_AddActorWorldOffsetWithContextAndReset;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.SetActorLookAtWithContext
 // 0x0040 (0x0040 - 0x0000)
@@ -1689,13 +1252,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext, targetPoint) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext::targetPoint' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext, context) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext::context' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext, __WorldContext) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext, ReturnValue) == 0x000038, "Member 'TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_SetActorLookAtWithContext;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.MoveCharacter
 // 0x0038 (0x0038 - 0x0000)
@@ -1710,14 +1267,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_MoveCharacter");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter) == 0x000038, "Wrong size on TsMoveBlueprintFunctionLibrary_C_MoveCharacter");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, targetLocation) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::targetLocation' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, speed) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::speed' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, arriveDist) == 0x000024, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::arriveDist' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_MoveCharacter, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_MoveCharacter::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_MoveCharacter;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LerpVelocityBlend
 // 0x0040 (0x0040 - 0x0000)
@@ -1731,13 +1281,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVeloctiyBlend                         ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend) == 0x000040, "Wrong size on TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend, out) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend::out' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend, to) == 0x000010, "Member 'TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend::to' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend, alpha) == 0x000020, "Member 'TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend::alpha' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend, __WorldContext) == 0x000028, "Member 'TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend, ReturnValue) == 0x000030, "Member 'TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftStartSwing
 // 0x0010 (0x0010 - 0x0000)
@@ -1748,10 +1292,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_LeftStartSwing) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_LeftStartSwing");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_LeftStartSwing) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_LeftStartSwing");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftStartSwing, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftStartSwing::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftStartSwing, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftStartSwing::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_LeftStartSwing;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftLoopSwing
 // 0x0010 (0x0010 - 0x0000)
@@ -1762,10 +1303,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftEndSwing
 // 0x0010 (0x0010 - 0x0000)
@@ -1776,10 +1314,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_LeftEndSwing) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_LeftEndSwing");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_LeftEndSwing) == 0x000010, "Wrong size on TsMoveBlueprintFunctionLibrary_C_LeftEndSwing");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftEndSwing, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftEndSwing::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_LeftEndSwing, __WorldContext) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_LeftEndSwing::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_LeftEndSwing;
 
 // Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.ResetClimbConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -1791,11 +1326,29 @@ public:
 	class FString                                 key;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig) == 0x000008, "Wrong alignment on TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig");
-static_assert(sizeof(TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig) == 0x000020, "Wrong size on TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig, entityId) == 0x000000, "Member 'TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig::entityId' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig, key) == 0x000008, "Member 'TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig::key' has a wrong offset!");
-static_assert(offsetof(TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig, __WorldContext) == 0x000018, "Member 'TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig;
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.EnableGoThrough
+// 0x0010 (0x0010 - 0x0000)
+struct TsMoveBlueprintFunctionLibrary_C_EnableGoThrough final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         goThroughPriority;                                 // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_EnableGoThrough;
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.DisableGoThrough
+// 0x0010 (0x0010 - 0x0000)
+struct TsMoveBlueprintFunctionLibrary_C_DisableGoThrough final
+{
+public:
+	int32                                         entityId1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsMoveBlueprintFunctionLibrary_C_DisableGoThrough;
 
 }
 

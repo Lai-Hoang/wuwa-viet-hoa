@@ -1160,5 +1160,65 @@ void UCharacterBlueprintFunctionLibrary_C::SetCharacterSightLockBoneLimit(int32 
 	Func->FunctionFlags = Flgs;
 }
 
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterMovementModeInfo
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UCharacterBlueprintFunctionLibrary_C::GetCharacterMovementModeInfo(int32 id, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "GetCharacterMovementModeInfo");
+
+	Params::CharacterBlueprintFunctionLibrary_C_GetCharacterMovementModeInfo Parms{};
+
+	Parms.id = id;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterMovementStateInfo
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UCharacterBlueprintFunctionLibrary_C::GetCharacterMovementStateInfo(int32 id, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "GetCharacterMovementStateInfo");
+
+	Params::CharacterBlueprintFunctionLibrary_C_GetCharacterMovementStateInfo Parms{};
+
+	Parms.id = id;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
 }
 

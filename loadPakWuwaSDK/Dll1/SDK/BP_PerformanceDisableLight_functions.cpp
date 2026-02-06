@@ -146,5 +146,19 @@ void ABP_PerformanceDisableLight_C::DisableToonLightFun()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.TickFunction
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PerformanceDisableLight_C::TickFunction()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PerformanceDisableLight_C", "TickFunction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

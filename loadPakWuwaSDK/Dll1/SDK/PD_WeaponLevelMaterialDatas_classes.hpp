@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_WeaponLevelMaterialDatas_C">();
+		BP_STATIC_CLASS_IMPL("PD_WeaponLevelMaterialDatas_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_WeaponLevelMaterialDatas_C")
 	}
 	static class UPD_WeaponLevelMaterialDatas_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_WeaponLevelMaterialDatas_C>();
 	}
 };
-static_assert(alignof(UPD_WeaponLevelMaterialDatas_C) == 0x000008, "Wrong alignment on UPD_WeaponLevelMaterialDatas_C");
-static_assert(sizeof(UPD_WeaponLevelMaterialDatas_C) == 0x000088, "Wrong size on UPD_WeaponLevelMaterialDatas_C");
-static_assert(offsetof(UPD_WeaponLevelMaterialDatas_C, LevelDatas) == 0x000038, "Member 'UPD_WeaponLevelMaterialDatas_C::LevelDatas' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_WeaponLevelMaterialDatas_C;
 
 }
 

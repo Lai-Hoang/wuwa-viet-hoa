@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CrowdAiBoidActorSystemBase_C">();
+		BP_STATIC_CLASS_IMPL("BP_CrowdAiBoidActorSystemBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CrowdAiBoidActorSystemBase_C")
 	}
 	static class ABP_CrowdAiBoidActorSystemBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_CrowdAiBoidActorSystemBase_C>();
 	}
 };
-static_assert(alignof(ABP_CrowdAiBoidActorSystemBase_C) == 0x000010, "Wrong alignment on ABP_CrowdAiBoidActorSystemBase_C");
-static_assert(sizeof(ABP_CrowdAiBoidActorSystemBase_C) == 0x000810, "Wrong size on ABP_CrowdAiBoidActorSystemBase_C");
-static_assert(offsetof(ABP_CrowdAiBoidActorSystemBase_C, Data) == 0x000800, "Member 'ABP_CrowdAiBoidActorSystemBase_C::Data' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CrowdAiBoidActorSystemBase_C;
 
 }
 

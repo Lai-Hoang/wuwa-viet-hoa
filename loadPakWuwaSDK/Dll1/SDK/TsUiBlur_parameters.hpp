@@ -21,9 +21,7 @@ struct TsUiBlur_C_SetEnableUiBlur final
 public:
 	bool                                          value;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsUiBlur_C_SetEnableUiBlur) == 0x000001, "Wrong alignment on TsUiBlur_C_SetEnableUiBlur");
-static_assert(sizeof(TsUiBlur_C_SetEnableUiBlur) == 0x000001, "Wrong size on TsUiBlur_C_SetEnableUiBlur");
-static_assert(offsetof(TsUiBlur_C_SetEnableUiBlur, value) == 0x000000, "Member 'TsUiBlur_C_SetEnableUiBlur::value' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiBlur_C_SetEnableUiBlur;
 
 }
 

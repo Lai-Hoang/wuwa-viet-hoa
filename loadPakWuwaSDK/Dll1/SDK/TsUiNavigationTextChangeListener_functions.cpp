@@ -17,37 +17,23 @@
 namespace SDK
 {
 
-// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.OnNotifyTextChangeBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.ExecuteUbergraph_TsUiNavigationTextChangeListener
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    NotifyText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTsUiNavigationTextChangeListener_C::OnNotifyTextChangeBP(const class FString& NotifyText)
+void UTsUiNavigationTextChangeListener_C::ExecuteUbergraph_TsUiNavigationTextChangeListener(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "OnNotifyTextChangeBP");
+		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "ExecuteUbergraph_TsUiNavigationTextChangeListener");
 
-	Params::TsUiNavigationTextChangeListener_C_OnNotifyTextChangeBP Parms{};
+	Params::TsUiNavigationTextChangeListener_C_ExecuteUbergraph_TsUiNavigationTextChangeListener Parms{};
 
-	Parms.NotifyText = std::move(NotifyText);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.AwakeBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTsUiNavigationTextChangeListener_C::AwakeBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "AwakeBP");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -65,21 +51,35 @@ void UTsUiNavigationTextChangeListener_C::StartBP()
 }
 
 
-// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.ExecuteUbergraph_TsUiNavigationTextChangeListener
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.AwakeBP
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
-void UTsUiNavigationTextChangeListener_C::ExecuteUbergraph_TsUiNavigationTextChangeListener(int32 EntryPoint)
+void UTsUiNavigationTextChangeListener_C::AwakeBP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "ExecuteUbergraph_TsUiNavigationTextChangeListener");
+		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "AwakeBP");
 
-	Params::TsUiNavigationTextChangeListener_C_ExecuteUbergraph_TsUiNavigationTextChangeListener Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function TsUiNavigationTextChangeListener.TsUiNavigationTextChangeListener_C.OnNotifyTextChangeBP
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    NotifyText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UTsUiNavigationTextChangeListener_C::OnNotifyTextChangeBP(const class FString& NotifyText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsUiNavigationTextChangeListener_C", "OnNotifyTextChangeBP");
+
+	Params::TsUiNavigationTextChangeListener_C_OnNotifyTextChangeBP Parms{};
+
+	Parms.NotifyText = std::move(NotifyText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "LGUI_classes.hpp"
 #include "SHotPatchGamepad_structs.hpp"
+#include "LGUI_classes.hpp"
 
 
 namespace SDK
@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsHotPatchPanelConfig_C">();
+		BP_STATIC_CLASS_IMPL("TsHotPatchPanelConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsHotPatchPanelConfig_C")
 	}
 	static class UTsHotPatchPanelConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsHotPatchPanelConfig_C>();
 	}
 };
-static_assert(alignof(UTsHotPatchPanelConfig_C) == 0x000008, "Wrong alignment on UTsHotPatchPanelConfig_C");
-static_assert(sizeof(UTsHotPatchPanelConfig_C) == 0x0001A8, "Wrong size on UTsHotPatchPanelConfig_C");
-static_assert(offsetof(UTsHotPatchPanelConfig_C, UberGraphFrame) == 0x000100, "Member 'UTsHotPatchPanelConfig_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTsHotPatchPanelConfig_C, AxisMap) == 0x000108, "Member 'UTsHotPatchPanelConfig_C::AxisMap' has a wrong offset!");
-static_assert(offsetof(UTsHotPatchPanelConfig_C, ActionMap) == 0x000158, "Member 'UTsHotPatchPanelConfig_C::ActionMap' has a wrong offset!");
+DUMPER7_ASSERTS_UTsHotPatchPanelConfig_C;
 
 }
 

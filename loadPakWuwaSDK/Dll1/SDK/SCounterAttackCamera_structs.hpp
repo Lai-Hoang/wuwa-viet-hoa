@@ -31,15 +31,7 @@ public:
 	class FString                                 CameraAttachSocket_18_6C5DA6F14E99C3E47A533BAC2B020FBD; // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	struct FSCameraModifier_Settings              摄像机配置_9_0D23F3FF4B053EADB03E308C9B93B190;     // 0x0030(0x0118)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCounterAttackCamera) == 0x000008, "Wrong alignment on FSCounterAttackCamera");
-static_assert(sizeof(FSCounterAttackCamera) == 0x000148, "Wrong size on FSCounterAttackCamera");
-static_assert(offsetof(FSCounterAttackCamera, Tag_26_5F7910584795619EF6679EB61BB46FF8) == 0x000000, "Member 'FSCounterAttackCamera::Tag_26_5F7910584795619EF6679EB61BB46FF8' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, 持续时间_2_00D3B6BE4D5398340D79DBB535CB2B3E) == 0x00000C, "Member 'FSCounterAttackCamera::持续时间_2_00D3B6BE4D5398340D79DBB535CB2B3E' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, 淡入时间_4_C5AC925340D20321B902A9AC2BFB3294) == 0x000010, "Member 'FSCounterAttackCamera::淡入时间_4_C5AC925340D20321B902A9AC2BFB3294' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, 淡出时间_6_7765076E4F718E300481828BCA924171) == 0x000014, "Member 'FSCounterAttackCamera::淡出时间_6_7765076E4F718E300481828BCA924171' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, 打断淡出时间_12_2392BC1040C7E8D2A871E5838CA1AE01) == 0x000018, "Member 'FSCounterAttackCamera::打断淡出时间_12_2392BC1040C7E8D2A871E5838CA1AE01' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, CameraAttachSocket_18_6C5DA6F14E99C3E47A533BAC2B020FBD) == 0x000020, "Member 'FSCounterAttackCamera::CameraAttachSocket_18_6C5DA6F14E99C3E47A533BAC2B020FBD' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackCamera, 摄像机配置_9_0D23F3FF4B053EADB03E308C9B93B190) == 0x000030, "Member 'FSCounterAttackCamera::摄像机配置_9_0D23F3FF4B053EADB03E308C9B93B190' has a wrong offset!");
+DUMPER7_ASSERTS_FSCounterAttackCamera;
 
 }
 

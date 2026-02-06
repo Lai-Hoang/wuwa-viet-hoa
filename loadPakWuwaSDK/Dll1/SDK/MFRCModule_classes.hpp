@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "MFRCModule_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -39,16 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MFRCActor">();
+		STATIC_CLASS_IMPL("MFRCActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MFRCActor")
 	}
 	static class AMFRCActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AMFRCActor>();
 	}
 };
-static_assert(alignof(AMFRCActor) == 0x000008, "Wrong alignment on AMFRCActor");
-static_assert(sizeof(AMFRCActor) == 0x0002C8, "Wrong size on AMFRCActor");
-static_assert(offsetof(AMFRCActor, CurrentState) == 0x0002B0, "Member 'AMFRCActor::CurrentState' has a wrong offset!");
+DUMPER7_ASSERTS_AMFRCActor;
 
 }
 

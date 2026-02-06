@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyAddMotionVertexOffset_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyAddMotionVertexOffset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyAddMotionVertexOffset_C")
 	}
 	static class UAnimNotifyAddMotionVertexOffset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyAddMotionVertexOffset_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyAddMotionVertexOffset_C) == 0x000008, "Wrong alignment on UAnimNotifyAddMotionVertexOffset_C");
-static_assert(sizeof(UAnimNotifyAddMotionVertexOffset_C) == 0x000058, "Wrong size on UAnimNotifyAddMotionVertexOffset_C");
+DUMPER7_ASSERTS_UAnimNotifyAddMotionVertexOffset_C;
 
 }
 

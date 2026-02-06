@@ -28,12 +28,7 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC) == 0x000008, "Wrong alignment on BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC");
-static_assert(sizeof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC) == 0x000018, "Wrong size on BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC");
-static_assert(offsetof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC, EntryPoint) == 0x000000, "Member 'BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC, CallFunc_GetComponentByClass_ReturnValue) == 0x000008, "Member 'BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC, K2Node_Event_DeltaSeconds) == 0x000010, "Member 'BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_ExecuteUbergraph_BP_SeqNPC;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -42,9 +37,7 @@ struct BP_SeqNPC_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SeqNPC_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SeqNPC_C_ReceiveTick");
-static_assert(sizeof(BP_SeqNPC_C_ReceiveTick) == 0x000004, "Wrong size on BP_SeqNPC_C_ReceiveTick");
-static_assert(offsetof(BP_SeqNPC_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SeqNPC_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_ReceiveTick;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.UserConstructionScript
 // 0x0010 (0x0010 - 0x0000)
@@ -53,9 +46,7 @@ struct BP_SeqNPC_C_UserConstructionScript final
 public:
 	TArray<class USkeletalMeshComponent*>         SKComps;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 };
-static_assert(alignof(BP_SeqNPC_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_SeqNPC_C_UserConstructionScript");
-static_assert(sizeof(BP_SeqNPC_C_UserConstructionScript) == 0x000010, "Wrong size on BP_SeqNPC_C_UserConstructionScript");
-static_assert(offsetof(BP_SeqNPC_C_UserConstructionScript, SKComps) == 0x000000, "Member 'BP_SeqNPC_C_UserConstructionScript::SKComps' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_UserConstructionScript;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.UpdateNpcByDa
 // 0x0040 (0x0040 - 0x0000)
@@ -74,17 +65,7 @@ public:
 	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USkeletalMeshComponent*>         CallFunc_SetupNpcMesh_SkleMain;                    // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 };
-static_assert(alignof(BP_SeqNPC_C_UpdateNpcByDa) == 0x000008, "Wrong alignment on BP_SeqNPC_C_UpdateNpcByDa");
-static_assert(sizeof(BP_SeqNPC_C_UpdateNpcByDa) == 0x000040, "Wrong size on BP_SeqNPC_C_UpdateNpcByDa");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, ___int_Array_Index_Variable) == 0x000000, "Member 'BP_SeqNPC_C_UpdateNpcByDa::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, ___int_Loop_Counter_Variable) == 0x000004, "Member 'BP_SeqNPC_C_UpdateNpcByDa::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000010, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_Array_Get_Item) == 0x000020, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_SetupNpcMesh_IsSuc) == 0x00002D, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_SetupNpcMesh_IsSuc' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_UpdateNpcByDa, CallFunc_SetupNpcMesh_SkleMain) == 0x000030, "Member 'BP_SeqNPC_C_UpdateNpcByDa::CallFunc_SetupNpcMesh_SkleMain' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_UpdateNpcByDa;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.SetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -94,10 +75,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_SetAnimDataVector) == 0x000008, "Wrong alignment on BP_SeqNPC_C_SetAnimDataVector");
-static_assert(sizeof(BP_SeqNPC_C_SetAnimDataVector) == 0x000058, "Wrong size on BP_SeqNPC_C_SetAnimDataVector");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_SeqNPC_C_SetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_SetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_SetAnimDataVector;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.SetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -107,10 +85,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_SetAnimDataFloat) == 0x000008, "Wrong alignment on BP_SeqNPC_C_SetAnimDataFloat");
-static_assert(sizeof(BP_SeqNPC_C_SetAnimDataFloat) == 0x000018, "Wrong size on BP_SeqNPC_C_SetAnimDataFloat");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_SetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_SeqNPC_C_SetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_SetAnimDataFloat;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetSupportGroupNames
 // 0x0020 (0x0020 - 0x0000)
@@ -120,10 +95,7 @@ public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_SeqNPC_C_GetSupportGroupNames) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetSupportGroupNames");
-static_assert(sizeof(BP_SeqNPC_C_GetSupportGroupNames) == 0x000020, "Wrong size on BP_SeqNPC_C_GetSupportGroupNames");
-static_assert(offsetof(BP_SeqNPC_C_GetSupportGroupNames, ReturnValue) == 0x000000, "Member 'BP_SeqNPC_C_GetSupportGroupNames::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_GetSupportGroupNames, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_SeqNPC_C_GetSupportGroupNames::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetSupportGroupNames;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -133,10 +105,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_GetAnimDataVector) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetAnimDataVector");
-static_assert(sizeof(BP_SeqNPC_C_GetAnimDataVector) == 0x000058, "Wrong size on BP_SeqNPC_C_GetAnimDataVector");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_SeqNPC_C_GetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_GetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetAnimDataVector;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -146,10 +115,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_GetAnimDataFloat) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetAnimDataFloat");
-static_assert(sizeof(BP_SeqNPC_C_GetAnimDataFloat) == 0x000018, "Wrong size on BP_SeqNPC_C_GetAnimDataFloat");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_SeqNPC_C_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetAnimDataFloat;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.SetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -159,10 +125,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_SetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqNPC_C_SetAnimDataTransform");
-static_assert(sizeof(BP_SeqNPC_C_SetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqNPC_C_SetAnimDataTransform");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_SetAnimDataTransform;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.IsCustomSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -171,9 +134,7 @@ struct BP_SeqNPC_C_IsCustomSupport final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_IsCustomSupport) == 0x000001, "Wrong alignment on BP_SeqNPC_C_IsCustomSupport");
-static_assert(sizeof(BP_SeqNPC_C_IsCustomSupport) == 0x000001, "Wrong size on BP_SeqNPC_C_IsCustomSupport");
-static_assert(offsetof(BP_SeqNPC_C_IsCustomSupport, ReturnValue) == 0x000000, "Member 'BP_SeqNPC_C_IsCustomSupport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_IsCustomSupport;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -183,10 +144,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqNPC_C_GetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetAnimDataTransform");
-static_assert(sizeof(BP_SeqNPC_C_GetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqNPC_C_GetAnimDataTransform");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqNPC_C_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_GetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetAnimDataTransform;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetABPC_Body_V2
 // 0x0008 (0x0008 - 0x0000)
@@ -195,9 +153,7 @@ struct BP_SeqNPC_C_GetABPC_Body_V2 final
 public:
 	class UABPC_Seq_Body_V2_C*                    ABPC_Body_V2_0;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SeqNPC_C_GetABPC_Body_V2) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetABPC_Body_V2");
-static_assert(sizeof(BP_SeqNPC_C_GetABPC_Body_V2) == 0x000008, "Wrong size on BP_SeqNPC_C_GetABPC_Body_V2");
-static_assert(offsetof(BP_SeqNPC_C_GetABPC_Body_V2, ABPC_Body_V2_0) == 0x000000, "Member 'BP_SeqNPC_C_GetABPC_Body_V2::ABPC_Body_V2_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetABPC_Body_V2;
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetSeqAudio
 // 0x0008 (0x0008 - 0x0000)
@@ -206,9 +162,7 @@ struct BP_SeqNPC_C_GetSeqAudio final
 public:
 	class USeqAudio_Seq_V2_C*                     SeqAudio;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SeqNPC_C_GetSeqAudio) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetSeqAudio");
-static_assert(sizeof(BP_SeqNPC_C_GetSeqAudio) == 0x000008, "Wrong size on BP_SeqNPC_C_GetSeqAudio");
-static_assert(offsetof(BP_SeqNPC_C_GetSeqAudio, SeqAudio) == 0x000000, "Member 'BP_SeqNPC_C_GetSeqAudio::SeqAudio' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqNPC_C_GetSeqAudio;
 
 }
 

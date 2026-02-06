@@ -22,10 +22,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GlobalBlueprintFunctionLibrary_C_GetBpEventManager) == 0x000008, "Wrong alignment on GlobalBlueprintFunctionLibrary_C_GetBpEventManager");
-static_assert(sizeof(GlobalBlueprintFunctionLibrary_C_GetBpEventManager) == 0x000010, "Wrong size on GlobalBlueprintFunctionLibrary_C_GetBpEventManager");
-static_assert(offsetof(GlobalBlueprintFunctionLibrary_C_GetBpEventManager, __WorldContext) == 0x000000, "Member 'GlobalBlueprintFunctionLibrary_C_GetBpEventManager::__WorldContext' has a wrong offset!");
-static_assert(offsetof(GlobalBlueprintFunctionLibrary_C_GetBpEventManager, ReturnValue) == 0x000008, "Member 'GlobalBlueprintFunctionLibrary_C_GetBpEventManager::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GlobalBlueprintFunctionLibrary_C_GetBpEventManager;
 
 // Function GlobalBlueprintFunctionLibrary.GlobalBlueprintFunctionLibrary_C.GetBpFightManager
 // 0x0010 (0x0010 - 0x0000)
@@ -35,10 +32,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GlobalBlueprintFunctionLibrary_C_GetBpFightManager) == 0x000008, "Wrong alignment on GlobalBlueprintFunctionLibrary_C_GetBpFightManager");
-static_assert(sizeof(GlobalBlueprintFunctionLibrary_C_GetBpFightManager) == 0x000010, "Wrong size on GlobalBlueprintFunctionLibrary_C_GetBpFightManager");
-static_assert(offsetof(GlobalBlueprintFunctionLibrary_C_GetBpFightManager, __WorldContext) == 0x000000, "Member 'GlobalBlueprintFunctionLibrary_C_GetBpFightManager::__WorldContext' has a wrong offset!");
-static_assert(offsetof(GlobalBlueprintFunctionLibrary_C_GetBpFightManager, ReturnValue) == 0x000008, "Member 'GlobalBlueprintFunctionLibrary_C_GetBpFightManager::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GlobalBlueprintFunctionLibrary_C_GetBpFightManager;
 
 }
 

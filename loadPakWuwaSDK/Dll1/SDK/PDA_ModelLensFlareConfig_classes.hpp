@@ -23,15 +23,18 @@ class UPDA_ModelLensFlareConfig_C final : public USunLensFlareConfig
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_ModelLensFlareConfig_C">();
+		BP_STATIC_CLASS_IMPL("PDA_ModelLensFlareConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_ModelLensFlareConfig_C")
 	}
 	static class UPDA_ModelLensFlareConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_ModelLensFlareConfig_C>();
 	}
 };
-static_assert(alignof(UPDA_ModelLensFlareConfig_C) == 0x000008, "Wrong alignment on UPDA_ModelLensFlareConfig_C");
-static_assert(sizeof(UPDA_ModelLensFlareConfig_C) == 0x000068, "Wrong size on UPDA_ModelLensFlareConfig_C");
+DUMPER7_ASSERTS_UPDA_ModelLensFlareConfig_C;
 
 }
 

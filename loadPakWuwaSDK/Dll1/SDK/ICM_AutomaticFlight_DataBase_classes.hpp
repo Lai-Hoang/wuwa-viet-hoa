@@ -34,23 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ICM_AutomaticFlight_DataBase_C">();
+		BP_STATIC_CLASS_IMPL("ICM_AutomaticFlight_DataBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ICM_AutomaticFlight_DataBase_C")
 	}
 	static class UICM_AutomaticFlight_DataBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UICM_AutomaticFlight_DataBase_C>();
 	}
 };
-static_assert(alignof(UICM_AutomaticFlight_DataBase_C) == 0x000008, "Wrong alignment on UICM_AutomaticFlight_DataBase_C");
-static_assert(sizeof(UICM_AutomaticFlight_DataBase_C) == 0x000060, "Wrong size on UICM_AutomaticFlight_DataBase_C");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 低飞行速度) == 0x000038, "Member 'UICM_AutomaticFlight_DataBase_C::低飞行速度' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 标准飞行速度) == 0x00003C, "Member 'UICM_AutomaticFlight_DataBase_C::标准飞行速度' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 高飞行速度) == 0x000040, "Member 'UICM_AutomaticFlight_DataBase_C::高飞行速度' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 速度过渡曲线) == 0x000048, "Member 'UICM_AutomaticFlight_DataBase_C::速度过渡曲线' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 前向轴输入响应比例) == 0x000050, "Member 'UICM_AutomaticFlight_DataBase_C::前向轴输入响应比例' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 前向轴输入响应技能) == 0x000054, "Member 'UICM_AutomaticFlight_DataBase_C::前向轴输入响应技能' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 后向轴输入响应比例) == 0x000058, "Member 'UICM_AutomaticFlight_DataBase_C::后向轴输入响应比例' has a wrong offset!");
-static_assert(offsetof(UICM_AutomaticFlight_DataBase_C, 后向轴输入响应技能) == 0x00005C, "Member 'UICM_AutomaticFlight_DataBase_C::后向轴输入响应技能' has a wrong offset!");
+DUMPER7_ASSERTS_UICM_AutomaticFlight_DataBase_C;
 
 }
 

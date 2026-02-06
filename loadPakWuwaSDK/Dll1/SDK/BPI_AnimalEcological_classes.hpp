@@ -21,28 +21,32 @@ namespace SDK
 class IBPI_AnimalEcological_C final
 {
 public:
-	void SystemUiEnd();
-	void SystemUiStart();
-	void FeedStart(const struct FGameplayTag& GameplayTag);
-	void GetCurrentActionTime(float* ActionTime);
-	void NoneStateEnd();
-	void NoneStateStart();
-	void StateMachineInitializationComplete();
-	void InteractEnd();
-	void InteractStart();
-	void IdleEnd();
-	void IdleStart();
-	void UnderAttackEnd();
-	void UnderAttackStart();
-	void AlertEnd();
-	void AlertStart();
-	void TakeOffEnd();
 	void TakeOffStart();
+	void TakeOffEnd();
+	void AlertStart();
+	void AlertEnd();
+	void UnderAttackStart();
+	void UnderAttackEnd();
+	void IdleStart();
+	void IdleEnd();
+	void InteractStart();
+	void InteractEnd();
+	void StateMachineInitializationComplete();
+	void NoneStateStart();
+	void NoneStateEnd();
+	void GetCurrentActionTime(float* ActionTime);
+	void FeedStart(const struct FGameplayTag& GameplayTag);
+	void SystemUiStart();
+	void SystemUiEnd();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPI_AnimalEcological_C">();
+		BP_STATIC_CLASS_IMPL("BPI_AnimalEcological_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPI_AnimalEcological_C")
 	}
 	static class IBPI_AnimalEcological_C* GetDefaultObj()
 	{
@@ -58,8 +62,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBPI_AnimalEcological_C) == 0x000001, "Wrong alignment on IBPI_AnimalEcological_C");
-static_assert(sizeof(IBPI_AnimalEcological_C) == 0x000001, "Wrong size on IBPI_AnimalEcological_C");
+DUMPER7_ASSERTS_IBPI_AnimalEcological_C;
 
 }
 

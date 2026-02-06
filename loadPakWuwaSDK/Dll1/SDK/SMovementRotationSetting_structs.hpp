@@ -27,13 +27,7 @@ public:
 	float                                         最大角度差_8_7A9F8FE04A55339AC02AAEB090EA895C;     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSBaseCurve                            渐变曲线_12_9C61E50E499F38ACF124D5B988CF40CC;      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMovementRotationSetting) == 0x000004, "Wrong alignment on FSMovementRotationSetting");
-static_assert(sizeof(FSMovementRotationSetting) == 0x000018, "Wrong size on FSMovementRotationSetting");
-static_assert(offsetof(FSMovementRotationSetting, 最小旋转速度_2_42CC573F431E7DBFFABA1E99A992965A) == 0x000000, "Member 'FSMovementRotationSetting::最小旋转速度_2_42CC573F431E7DBFFABA1E99A992965A' has a wrong offset!");
-static_assert(offsetof(FSMovementRotationSetting, 最大旋转速度_4_2A78C2A54DD035CB44EF24B26C435670) == 0x000004, "Member 'FSMovementRotationSetting::最大旋转速度_4_2A78C2A54DD035CB44EF24B26C435670' has a wrong offset!");
-static_assert(offsetof(FSMovementRotationSetting, 最小角度差_6_1201515F4B55190A65300085E598BB55) == 0x000008, "Member 'FSMovementRotationSetting::最小角度差_6_1201515F4B55190A65300085E598BB55' has a wrong offset!");
-static_assert(offsetof(FSMovementRotationSetting, 最大角度差_8_7A9F8FE04A55339AC02AAEB090EA895C) == 0x00000C, "Member 'FSMovementRotationSetting::最大角度差_8_7A9F8FE04A55339AC02AAEB090EA895C' has a wrong offset!");
-static_assert(offsetof(FSMovementRotationSetting, 渐变曲线_12_9C61E50E499F38ACF124D5B988CF40CC) == 0x000010, "Member 'FSMovementRotationSetting::渐变曲线_12_9C61E50E499F38ACF124D5B988CF40CC' has a wrong offset!");
+DUMPER7_ASSERTS_FSMovementRotationSetting;
 
 }
 

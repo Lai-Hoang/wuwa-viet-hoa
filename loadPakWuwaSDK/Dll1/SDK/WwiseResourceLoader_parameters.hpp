@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WwiseResourceLoader_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "WwiseResourceLoader_structs.hpp"
 
 
 namespace SDK::Params
@@ -32,15 +32,7 @@ public:
 	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OutHardCodedSoundBankShortId;                      // 0x0054(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_BreakStruct) == 0x000008, "Wrong alignment on WwiseEventInfoLibrary_BreakStruct");
-static_assert(sizeof(WwiseEventInfoLibrary_BreakStruct) == 0x000058, "Wrong size on WwiseEventInfoLibrary_BreakStruct");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_BreakStruct::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutWwiseGuid) == 0x000028, "Member 'WwiseEventInfoLibrary_BreakStruct::OutWwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutWwiseShortId) == 0x000038, "Member 'WwiseEventInfoLibrary_BreakStruct::OutWwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutWwiseName) == 0x000040, "Member 'WwiseEventInfoLibrary_BreakStruct::OutWwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutSwitchContainerLoading) == 0x000050, "Member 'WwiseEventInfoLibrary_BreakStruct::OutSwitchContainerLoading' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutDestroyOptions) == 0x000051, "Member 'WwiseEventInfoLibrary_BreakStruct::OutDestroyOptions' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_BreakStruct, OutHardCodedSoundBankShortId) == 0x000054, "Member 'WwiseEventInfoLibrary_BreakStruct::OutHardCodedSoundBankShortId' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_BreakStruct;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetDestroyOptions
 // 0x002C (0x002C - 0x0000)
@@ -51,10 +43,7 @@ public:
 	EWwiseEventDestroyOptions                     ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetDestroyOptions) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_GetDestroyOptions");
-static_assert(sizeof(WwiseEventInfoLibrary_GetDestroyOptions) == 0x00002C, "Wrong size on WwiseEventInfoLibrary_GetDestroyOptions");
-static_assert(offsetof(WwiseEventInfoLibrary_GetDestroyOptions, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetDestroyOptions::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetDestroyOptions, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetDestroyOptions::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetDestroyOptions;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetHardCodedSoundBankShortId
 // 0x002C (0x002C - 0x0000)
@@ -64,10 +53,7 @@ public:
 	struct FWwiseEventInfo                        Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetHardCodedSoundBankShortId) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_GetHardCodedSoundBankShortId");
-static_assert(sizeof(WwiseEventInfoLibrary_GetHardCodedSoundBankShortId) == 0x00002C, "Wrong size on WwiseEventInfoLibrary_GetHardCodedSoundBankShortId");
-static_assert(offsetof(WwiseEventInfoLibrary_GetHardCodedSoundBankShortId, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetHardCodedSoundBankShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetHardCodedSoundBankShortId, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetHardCodedSoundBankShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetHardCodedSoundBankShortId;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetSwitchContainerLoading
 // 0x002C (0x002C - 0x0000)
@@ -78,10 +64,7 @@ public:
 	EWwiseEventSwitchContainerLoading             ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetSwitchContainerLoading) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_GetSwitchContainerLoading");
-static_assert(sizeof(WwiseEventInfoLibrary_GetSwitchContainerLoading) == 0x00002C, "Wrong size on WwiseEventInfoLibrary_GetSwitchContainerLoading");
-static_assert(offsetof(WwiseEventInfoLibrary_GetSwitchContainerLoading, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetSwitchContainerLoading::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetSwitchContainerLoading, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetSwitchContainerLoading::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetSwitchContainerLoading;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetWwiseGuid
 // 0x0038 (0x0038 - 0x0000)
@@ -91,10 +74,7 @@ public:
 	struct FWwiseEventInfo                        Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetWwiseGuid) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_GetWwiseGuid");
-static_assert(sizeof(WwiseEventInfoLibrary_GetWwiseGuid) == 0x000038, "Wrong size on WwiseEventInfoLibrary_GetWwiseGuid");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseGuid, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetWwiseGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseGuid, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetWwiseGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetWwiseGuid;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetWwiseName
 // 0x0038 (0x0038 - 0x0000)
@@ -104,10 +84,7 @@ public:
 	struct FWwiseEventInfo                        Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetWwiseName) == 0x000008, "Wrong alignment on WwiseEventInfoLibrary_GetWwiseName");
-static_assert(sizeof(WwiseEventInfoLibrary_GetWwiseName) == 0x000038, "Wrong size on WwiseEventInfoLibrary_GetWwiseName");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseName, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseName, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetWwiseName;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.GetWwiseShortId
 // 0x002C (0x002C - 0x0000)
@@ -117,10 +94,7 @@ public:
 	struct FWwiseEventInfo                        Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_GetWwiseShortId) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_GetWwiseShortId");
-static_assert(sizeof(WwiseEventInfoLibrary_GetWwiseShortId) == 0x00002C, "Wrong size on WwiseEventInfoLibrary_GetWwiseShortId");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseShortId, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_GetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_GetWwiseShortId, ReturnValue) == 0x000028, "Member 'WwiseEventInfoLibrary_GetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_GetWwiseShortId;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.MakeStruct
 // 0x0058 (0x0058 - 0x0000)
@@ -137,15 +111,7 @@ public:
 	int32                                         HardCodedSoundBankShortId;                         // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x0030(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_MakeStruct) == 0x000008, "Wrong alignment on WwiseEventInfoLibrary_MakeStruct");
-static_assert(sizeof(WwiseEventInfoLibrary_MakeStruct) == 0x000058, "Wrong size on WwiseEventInfoLibrary_MakeStruct");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, WwiseGuid) == 0x000000, "Member 'WwiseEventInfoLibrary_MakeStruct::WwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, WwiseShortId) == 0x000010, "Member 'WwiseEventInfoLibrary_MakeStruct::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, WwiseName) == 0x000018, "Member 'WwiseEventInfoLibrary_MakeStruct::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, SwitchContainerLoading) == 0x000028, "Member 'WwiseEventInfoLibrary_MakeStruct::SwitchContainerLoading' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, DestroyOptions) == 0x000029, "Member 'WwiseEventInfoLibrary_MakeStruct::DestroyOptions' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, HardCodedSoundBankShortId) == 0x00002C, "Member 'WwiseEventInfoLibrary_MakeStruct::HardCodedSoundBankShortId' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_MakeStruct, ReturnValue) == 0x000030, "Member 'WwiseEventInfoLibrary_MakeStruct::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_MakeStruct;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetDestroyOptions
 // 0x0054 (0x0054 - 0x0000)
@@ -157,11 +123,7 @@ public:
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetDestroyOptions) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_SetDestroyOptions");
-static_assert(sizeof(WwiseEventInfoLibrary_SetDestroyOptions) == 0x000054, "Wrong size on WwiseEventInfoLibrary_SetDestroyOptions");
-static_assert(offsetof(WwiseEventInfoLibrary_SetDestroyOptions, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetDestroyOptions::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetDestroyOptions, DestroyOptions) == 0x000028, "Member 'WwiseEventInfoLibrary_SetDestroyOptions::DestroyOptions' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetDestroyOptions, ReturnValue) == 0x00002C, "Member 'WwiseEventInfoLibrary_SetDestroyOptions::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetDestroyOptions;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetHardCodedSoundBankShortId
 // 0x0054 (0x0054 - 0x0000)
@@ -172,11 +134,7 @@ public:
 	int32                                         HardCodedSoundBankShortId;                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetHardCodedSoundBankShortId) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_SetHardCodedSoundBankShortId");
-static_assert(sizeof(WwiseEventInfoLibrary_SetHardCodedSoundBankShortId) == 0x000054, "Wrong size on WwiseEventInfoLibrary_SetHardCodedSoundBankShortId");
-static_assert(offsetof(WwiseEventInfoLibrary_SetHardCodedSoundBankShortId, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetHardCodedSoundBankShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetHardCodedSoundBankShortId, HardCodedSoundBankShortId) == 0x000028, "Member 'WwiseEventInfoLibrary_SetHardCodedSoundBankShortId::HardCodedSoundBankShortId' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetHardCodedSoundBankShortId, ReturnValue) == 0x00002C, "Member 'WwiseEventInfoLibrary_SetHardCodedSoundBankShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetHardCodedSoundBankShortId;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetSwitchContainerLoading
 // 0x0054 (0x0054 - 0x0000)
@@ -188,11 +146,7 @@ public:
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetSwitchContainerLoading) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_SetSwitchContainerLoading");
-static_assert(sizeof(WwiseEventInfoLibrary_SetSwitchContainerLoading) == 0x000054, "Wrong size on WwiseEventInfoLibrary_SetSwitchContainerLoading");
-static_assert(offsetof(WwiseEventInfoLibrary_SetSwitchContainerLoading, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetSwitchContainerLoading::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetSwitchContainerLoading, SwitchContainerLoading) == 0x000028, "Member 'WwiseEventInfoLibrary_SetSwitchContainerLoading::SwitchContainerLoading' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetSwitchContainerLoading, ReturnValue) == 0x00002C, "Member 'WwiseEventInfoLibrary_SetSwitchContainerLoading::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetSwitchContainerLoading;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetWwiseGuid
 // 0x0060 (0x0060 - 0x0000)
@@ -203,11 +157,7 @@ public:
 	struct FGuid                                  WwiseGuid;                                         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetWwiseGuid) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_SetWwiseGuid");
-static_assert(sizeof(WwiseEventInfoLibrary_SetWwiseGuid) == 0x000060, "Wrong size on WwiseEventInfoLibrary_SetWwiseGuid");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseGuid, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetWwiseGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseGuid, WwiseGuid) == 0x000028, "Member 'WwiseEventInfoLibrary_SetWwiseGuid::WwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseGuid, ReturnValue) == 0x000038, "Member 'WwiseEventInfoLibrary_SetWwiseGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetWwiseGuid;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetWwiseName
 // 0x0060 (0x0060 - 0x0000)
@@ -218,11 +168,7 @@ public:
 	class FString                                 WwiseName;                                         // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetWwiseName) == 0x000008, "Wrong alignment on WwiseEventInfoLibrary_SetWwiseName");
-static_assert(sizeof(WwiseEventInfoLibrary_SetWwiseName) == 0x000060, "Wrong size on WwiseEventInfoLibrary_SetWwiseName");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseName, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseName, WwiseName) == 0x000028, "Member 'WwiseEventInfoLibrary_SetWwiseName::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseName, ReturnValue) == 0x000038, "Member 'WwiseEventInfoLibrary_SetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetWwiseName;
 
 // Function WwiseResourceLoader.WwiseEventInfoLibrary.SetWwiseShortId
 // 0x0054 (0x0054 - 0x0000)
@@ -233,11 +179,7 @@ public:
 	int32                                         WwiseShortId;                                      // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseEventInfo                        ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseEventInfoLibrary_SetWwiseShortId) == 0x000004, "Wrong alignment on WwiseEventInfoLibrary_SetWwiseShortId");
-static_assert(sizeof(WwiseEventInfoLibrary_SetWwiseShortId) == 0x000054, "Wrong size on WwiseEventInfoLibrary_SetWwiseShortId");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseShortId, Ref) == 0x000000, "Member 'WwiseEventInfoLibrary_SetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseShortId, WwiseShortId) == 0x000028, "Member 'WwiseEventInfoLibrary_SetWwiseShortId::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseEventInfoLibrary_SetWwiseShortId, ReturnValue) == 0x00002C, "Member 'WwiseEventInfoLibrary_SetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseEventInfoLibrary_SetWwiseShortId;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.BreakStruct
 // 0x0050 (0x0050 - 0x0000)
@@ -250,13 +192,7 @@ public:
 	int32                                         OutWwiseShortId;                                   // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 OutWwiseName;                                      // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_BreakStruct) == 0x000008, "Wrong alignment on WwiseGroupValueInfoLibrary_BreakStruct");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_BreakStruct) == 0x000050, "Wrong size on WwiseGroupValueInfoLibrary_BreakStruct");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_BreakStruct, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_BreakStruct::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_BreakStruct, OutAssetGuid) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_BreakStruct::OutAssetGuid' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_BreakStruct, OutGroupShortId) == 0x000038, "Member 'WwiseGroupValueInfoLibrary_BreakStruct::OutGroupShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_BreakStruct, OutWwiseShortId) == 0x00003C, "Member 'WwiseGroupValueInfoLibrary_BreakStruct::OutWwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_BreakStruct, OutWwiseName) == 0x000040, "Member 'WwiseGroupValueInfoLibrary_BreakStruct::OutWwiseName' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_BreakStruct;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.GetAssetGuid
 // 0x0038 (0x0038 - 0x0000)
@@ -266,10 +202,7 @@ public:
 	struct FWwiseGroupValueInfo                   Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_GetAssetGuid) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_GetAssetGuid");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_GetAssetGuid) == 0x000038, "Wrong size on WwiseGroupValueInfoLibrary_GetAssetGuid");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetAssetGuid, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_GetAssetGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetAssetGuid, ReturnValue) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_GetAssetGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_GetAssetGuid;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.GetGroupShortId
 // 0x002C (0x002C - 0x0000)
@@ -279,10 +212,7 @@ public:
 	struct FWwiseGroupValueInfo                   Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_GetGroupShortId) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_GetGroupShortId");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_GetGroupShortId) == 0x00002C, "Wrong size on WwiseGroupValueInfoLibrary_GetGroupShortId");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetGroupShortId, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_GetGroupShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetGroupShortId, ReturnValue) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_GetGroupShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_GetGroupShortId;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.GetWwiseName
 // 0x0038 (0x0038 - 0x0000)
@@ -292,10 +222,7 @@ public:
 	struct FWwiseGroupValueInfo                   Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_GetWwiseName) == 0x000008, "Wrong alignment on WwiseGroupValueInfoLibrary_GetWwiseName");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_GetWwiseName) == 0x000038, "Wrong size on WwiseGroupValueInfoLibrary_GetWwiseName");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetWwiseName, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_GetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetWwiseName, ReturnValue) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_GetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_GetWwiseName;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.GetWwiseShortId
 // 0x002C (0x002C - 0x0000)
@@ -305,10 +232,7 @@ public:
 	struct FWwiseGroupValueInfo                   Ref;                                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_GetWwiseShortId) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_GetWwiseShortId");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_GetWwiseShortId) == 0x00002C, "Wrong size on WwiseGroupValueInfoLibrary_GetWwiseShortId");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetWwiseShortId, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_GetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_GetWwiseShortId, ReturnValue) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_GetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_GetWwiseShortId;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.MakeStruct
 // 0x0050 (0x0050 - 0x0000)
@@ -321,13 +245,7 @@ public:
 	class FString                                 WwiseName;                                         // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseGroupValueInfo                   ReturnValue;                                       // 0x0028(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_MakeStruct) == 0x000008, "Wrong alignment on WwiseGroupValueInfoLibrary_MakeStruct");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_MakeStruct) == 0x000050, "Wrong size on WwiseGroupValueInfoLibrary_MakeStruct");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_MakeStruct, AssetGuid) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_MakeStruct::AssetGuid' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_MakeStruct, GroupShortId) == 0x000010, "Member 'WwiseGroupValueInfoLibrary_MakeStruct::GroupShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_MakeStruct, WwiseShortId) == 0x000014, "Member 'WwiseGroupValueInfoLibrary_MakeStruct::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_MakeStruct, WwiseName) == 0x000018, "Member 'WwiseGroupValueInfoLibrary_MakeStruct::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_MakeStruct, ReturnValue) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_MakeStruct::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_MakeStruct;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.SetAssetGuid
 // 0x0060 (0x0060 - 0x0000)
@@ -338,11 +256,7 @@ public:
 	struct FGuid                                  AssetGuid;                                         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseGroupValueInfo                   ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_SetAssetGuid) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_SetAssetGuid");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_SetAssetGuid) == 0x000060, "Wrong size on WwiseGroupValueInfoLibrary_SetAssetGuid");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetAssetGuid, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_SetAssetGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetAssetGuid, AssetGuid) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_SetAssetGuid::AssetGuid' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetAssetGuid, ReturnValue) == 0x000038, "Member 'WwiseGroupValueInfoLibrary_SetAssetGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_SetAssetGuid;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.SetGroupShortId
 // 0x0054 (0x0054 - 0x0000)
@@ -353,11 +267,7 @@ public:
 	int32                                         GroupShortId;                                      // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseGroupValueInfo                   ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_SetGroupShortId) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_SetGroupShortId");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_SetGroupShortId) == 0x000054, "Wrong size on WwiseGroupValueInfoLibrary_SetGroupShortId");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetGroupShortId, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_SetGroupShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetGroupShortId, GroupShortId) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_SetGroupShortId::GroupShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetGroupShortId, ReturnValue) == 0x00002C, "Member 'WwiseGroupValueInfoLibrary_SetGroupShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_SetGroupShortId;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.SetWwiseName
 // 0x0060 (0x0060 - 0x0000)
@@ -368,11 +278,7 @@ public:
 	class FString                                 WwiseName;                                         // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseGroupValueInfo                   ReturnValue;                                       // 0x0038(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_SetWwiseName) == 0x000008, "Wrong alignment on WwiseGroupValueInfoLibrary_SetWwiseName");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_SetWwiseName) == 0x000060, "Wrong size on WwiseGroupValueInfoLibrary_SetWwiseName");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseName, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_SetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseName, WwiseName) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_SetWwiseName::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseName, ReturnValue) == 0x000038, "Member 'WwiseGroupValueInfoLibrary_SetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_SetWwiseName;
 
 // Function WwiseResourceLoader.WwiseGroupValueInfoLibrary.SetWwiseShortId
 // 0x0054 (0x0054 - 0x0000)
@@ -383,11 +289,7 @@ public:
 	int32                                         WwiseShortId;                                      // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseGroupValueInfo                   ReturnValue;                                       // 0x002C(0x0028)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseGroupValueInfoLibrary_SetWwiseShortId) == 0x000004, "Wrong alignment on WwiseGroupValueInfoLibrary_SetWwiseShortId");
-static_assert(sizeof(WwiseGroupValueInfoLibrary_SetWwiseShortId) == 0x000054, "Wrong size on WwiseGroupValueInfoLibrary_SetWwiseShortId");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseShortId, Ref) == 0x000000, "Member 'WwiseGroupValueInfoLibrary_SetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseShortId, WwiseShortId) == 0x000028, "Member 'WwiseGroupValueInfoLibrary_SetWwiseShortId::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseGroupValueInfoLibrary_SetWwiseShortId, ReturnValue) == 0x00002C, "Member 'WwiseGroupValueInfoLibrary_SetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseGroupValueInfoLibrary_SetWwiseShortId;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.BreakStruct
 // 0x0050 (0x0050 - 0x0000)
@@ -401,13 +303,7 @@ public:
 	int32                                         OutHardCodedSoundBankShortId;                      // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(WwiseObjectInfoLibrary_BreakStruct) == 0x000008, "Wrong alignment on WwiseObjectInfoLibrary_BreakStruct");
-static_assert(sizeof(WwiseObjectInfoLibrary_BreakStruct) == 0x000050, "Wrong size on WwiseObjectInfoLibrary_BreakStruct");
-static_assert(offsetof(WwiseObjectInfoLibrary_BreakStruct, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_BreakStruct::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_BreakStruct, OutWwiseGuid) == 0x000024, "Member 'WwiseObjectInfoLibrary_BreakStruct::OutWwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_BreakStruct, OutWwiseShortId) == 0x000034, "Member 'WwiseObjectInfoLibrary_BreakStruct::OutWwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_BreakStruct, OutWwiseName) == 0x000038, "Member 'WwiseObjectInfoLibrary_BreakStruct::OutWwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_BreakStruct, OutHardCodedSoundBankShortId) == 0x000048, "Member 'WwiseObjectInfoLibrary_BreakStruct::OutHardCodedSoundBankShortId' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_BreakStruct;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.GetHardCodedSoundBankShortId
 // 0x0028 (0x0028 - 0x0000)
@@ -417,10 +313,7 @@ public:
 	struct FWwiseObjectInfo                       Ref;                                               // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId");
-static_assert(sizeof(WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId) == 0x000028, "Wrong size on WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId, ReturnValue) == 0x000024, "Member 'WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_GetHardCodedSoundBankShortId;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.GetWwiseGuid
 // 0x0034 (0x0034 - 0x0000)
@@ -430,10 +323,7 @@ public:
 	struct FWwiseObjectInfo                       Ref;                                               // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_GetWwiseGuid) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_GetWwiseGuid");
-static_assert(sizeof(WwiseObjectInfoLibrary_GetWwiseGuid) == 0x000034, "Wrong size on WwiseObjectInfoLibrary_GetWwiseGuid");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseGuid, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_GetWwiseGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseGuid, ReturnValue) == 0x000024, "Member 'WwiseObjectInfoLibrary_GetWwiseGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_GetWwiseGuid;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.GetWwiseName
 // 0x0038 (0x0038 - 0x0000)
@@ -444,10 +334,7 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_GetWwiseName) == 0x000008, "Wrong alignment on WwiseObjectInfoLibrary_GetWwiseName");
-static_assert(sizeof(WwiseObjectInfoLibrary_GetWwiseName) == 0x000038, "Wrong size on WwiseObjectInfoLibrary_GetWwiseName");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseName, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_GetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseName, ReturnValue) == 0x000028, "Member 'WwiseObjectInfoLibrary_GetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_GetWwiseName;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.GetWwiseShortId
 // 0x0028 (0x0028 - 0x0000)
@@ -457,10 +344,7 @@ public:
 	struct FWwiseObjectInfo                       Ref;                                               // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_GetWwiseShortId) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_GetWwiseShortId");
-static_assert(sizeof(WwiseObjectInfoLibrary_GetWwiseShortId) == 0x000028, "Wrong size on WwiseObjectInfoLibrary_GetWwiseShortId");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseShortId, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_GetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_GetWwiseShortId, ReturnValue) == 0x000024, "Member 'WwiseObjectInfoLibrary_GetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_GetWwiseShortId;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.MakeStruct
 // 0x0050 (0x0050 - 0x0000)
@@ -474,13 +358,7 @@ public:
 	int32                                         HardCodedSoundBankShortId;                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseObjectInfo                       ReturnValue;                                       // 0x002C(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_MakeStruct) == 0x000008, "Wrong alignment on WwiseObjectInfoLibrary_MakeStruct");
-static_assert(sizeof(WwiseObjectInfoLibrary_MakeStruct) == 0x000050, "Wrong size on WwiseObjectInfoLibrary_MakeStruct");
-static_assert(offsetof(WwiseObjectInfoLibrary_MakeStruct, WwiseGuid) == 0x000000, "Member 'WwiseObjectInfoLibrary_MakeStruct::WwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_MakeStruct, WwiseShortId) == 0x000010, "Member 'WwiseObjectInfoLibrary_MakeStruct::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_MakeStruct, WwiseName) == 0x000018, "Member 'WwiseObjectInfoLibrary_MakeStruct::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_MakeStruct, HardCodedSoundBankShortId) == 0x000028, "Member 'WwiseObjectInfoLibrary_MakeStruct::HardCodedSoundBankShortId' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_MakeStruct, ReturnValue) == 0x00002C, "Member 'WwiseObjectInfoLibrary_MakeStruct::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_MakeStruct;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.SetHardCodedSoundBankShortId
 // 0x004C (0x004C - 0x0000)
@@ -491,11 +369,7 @@ public:
 	int32                                         HardCodedSoundBankShortId;                         // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseObjectInfo                       ReturnValue;                                       // 0x0028(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId");
-static_assert(sizeof(WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId) == 0x00004C, "Wrong size on WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId, HardCodedSoundBankShortId) == 0x000024, "Member 'WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId::HardCodedSoundBankShortId' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId, ReturnValue) == 0x000028, "Member 'WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_SetHardCodedSoundBankShortId;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.SetWwiseGuid
 // 0x0058 (0x0058 - 0x0000)
@@ -506,11 +380,7 @@ public:
 	struct FGuid                                  WwiseGuid;                                         // 0x0024(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseObjectInfo                       ReturnValue;                                       // 0x0034(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_SetWwiseGuid) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_SetWwiseGuid");
-static_assert(sizeof(WwiseObjectInfoLibrary_SetWwiseGuid) == 0x000058, "Wrong size on WwiseObjectInfoLibrary_SetWwiseGuid");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseGuid, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_SetWwiseGuid::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseGuid, WwiseGuid) == 0x000024, "Member 'WwiseObjectInfoLibrary_SetWwiseGuid::WwiseGuid' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseGuid, ReturnValue) == 0x000034, "Member 'WwiseObjectInfoLibrary_SetWwiseGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_SetWwiseGuid;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.SetWwiseName
 // 0x0060 (0x0060 - 0x0000)
@@ -523,11 +393,7 @@ public:
 	struct FWwiseObjectInfo                       ReturnValue;                                       // 0x0038(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(WwiseObjectInfoLibrary_SetWwiseName) == 0x000008, "Wrong alignment on WwiseObjectInfoLibrary_SetWwiseName");
-static_assert(sizeof(WwiseObjectInfoLibrary_SetWwiseName) == 0x000060, "Wrong size on WwiseObjectInfoLibrary_SetWwiseName");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseName, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_SetWwiseName::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseName, WwiseName) == 0x000028, "Member 'WwiseObjectInfoLibrary_SetWwiseName::WwiseName' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseName, ReturnValue) == 0x000038, "Member 'WwiseObjectInfoLibrary_SetWwiseName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_SetWwiseName;
 
 // Function WwiseResourceLoader.WwiseObjectInfoLibrary.SetWwiseShortId
 // 0x004C (0x004C - 0x0000)
@@ -538,11 +404,7 @@ public:
 	int32                                         WwiseShortId;                                      // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWwiseObjectInfo                       ReturnValue;                                       // 0x0028(0x0024)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseObjectInfoLibrary_SetWwiseShortId) == 0x000004, "Wrong alignment on WwiseObjectInfoLibrary_SetWwiseShortId");
-static_assert(sizeof(WwiseObjectInfoLibrary_SetWwiseShortId) == 0x00004C, "Wrong size on WwiseObjectInfoLibrary_SetWwiseShortId");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseShortId, Ref) == 0x000000, "Member 'WwiseObjectInfoLibrary_SetWwiseShortId::Ref' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseShortId, WwiseShortId) == 0x000024, "Member 'WwiseObjectInfoLibrary_SetWwiseShortId::WwiseShortId' has a wrong offset!");
-static_assert(offsetof(WwiseObjectInfoLibrary_SetWwiseShortId, ReturnValue) == 0x000028, "Member 'WwiseObjectInfoLibrary_SetWwiseShortId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseObjectInfoLibrary_SetWwiseShortId;
 
 }
 

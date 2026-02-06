@@ -31,14 +31,7 @@ public:
 	EGameplayTaskRunResult                        ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GameplayTasksComponent_K2_RunGameplayTask) == 0x000008, "Wrong alignment on GameplayTasksComponent_K2_RunGameplayTask");
-static_assert(sizeof(GameplayTasksComponent_K2_RunGameplayTask) == 0x000048, "Wrong size on GameplayTasksComponent_K2_RunGameplayTask");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, TaskOwner) == 0x000000, "Member 'GameplayTasksComponent_K2_RunGameplayTask::TaskOwner' has a wrong offset!");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, Task) == 0x000010, "Member 'GameplayTasksComponent_K2_RunGameplayTask::Task' has a wrong offset!");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, Priority) == 0x000018, "Member 'GameplayTasksComponent_K2_RunGameplayTask::Priority' has a wrong offset!");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, AdditionalRequiredResources) == 0x000020, "Member 'GameplayTasksComponent_K2_RunGameplayTask::AdditionalRequiredResources' has a wrong offset!");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, AdditionalClaimedResources) == 0x000030, "Member 'GameplayTasksComponent_K2_RunGameplayTask::AdditionalClaimedResources' has a wrong offset!");
-static_assert(offsetof(GameplayTasksComponent_K2_RunGameplayTask, ReturnValue) == 0x000040, "Member 'GameplayTasksComponent_K2_RunGameplayTask::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTasksComponent_K2_RunGameplayTask;
 
 // Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource
 // 0x0030 (0x0030 - 0x0000)
@@ -52,13 +45,7 @@ public:
 	class FName                                   TaskInstanceName;                                  // 0x001C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGameplayTask_ClaimResource*            ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_ClaimResource_ClaimResource) == 0x000008, "Wrong alignment on GameplayTask_ClaimResource_ClaimResource");
-static_assert(sizeof(GameplayTask_ClaimResource_ClaimResource) == 0x000030, "Wrong size on GameplayTask_ClaimResource_ClaimResource");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResource, InTaskOwner) == 0x000000, "Member 'GameplayTask_ClaimResource_ClaimResource::InTaskOwner' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResource, ResourceClass) == 0x000010, "Member 'GameplayTask_ClaimResource_ClaimResource::ResourceClass' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResource, Priority) == 0x000018, "Member 'GameplayTask_ClaimResource_ClaimResource::Priority' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResource, TaskInstanceName) == 0x00001C, "Member 'GameplayTask_ClaimResource_ClaimResource::TaskInstanceName' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResource, ReturnValue) == 0x000028, "Member 'GameplayTask_ClaimResource_ClaimResource::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_ClaimResource_ClaimResource;
 
 // Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
 // 0x0038 (0x0038 - 0x0000)
@@ -72,13 +59,7 @@ public:
 	class FName                                   TaskInstanceName;                                  // 0x0024(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGameplayTask_ClaimResource*            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_ClaimResource_ClaimResources) == 0x000008, "Wrong alignment on GameplayTask_ClaimResource_ClaimResources");
-static_assert(sizeof(GameplayTask_ClaimResource_ClaimResources) == 0x000038, "Wrong size on GameplayTask_ClaimResource_ClaimResources");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResources, InTaskOwner) == 0x000000, "Member 'GameplayTask_ClaimResource_ClaimResources::InTaskOwner' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResources, ResourceClasses) == 0x000010, "Member 'GameplayTask_ClaimResource_ClaimResources::ResourceClasses' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResources, Priority) == 0x000020, "Member 'GameplayTask_ClaimResource_ClaimResources::Priority' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResources, TaskInstanceName) == 0x000024, "Member 'GameplayTask_ClaimResource_ClaimResources::TaskInstanceName' has a wrong offset!");
-static_assert(offsetof(GameplayTask_ClaimResource_ClaimResources, ReturnValue) == 0x000030, "Member 'GameplayTask_ClaimResource_ClaimResources::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_ClaimResource_ClaimResources;
 
 // Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
 // 0x0040 (0x0040 - 0x0000)
@@ -93,14 +74,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameplayTask_SpawnActor*               ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_SpawnActor_SpawnActor) == 0x000008, "Wrong alignment on GameplayTask_SpawnActor_SpawnActor");
-static_assert(sizeof(GameplayTask_SpawnActor_SpawnActor) == 0x000040, "Wrong size on GameplayTask_SpawnActor_SpawnActor");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, TaskOwner) == 0x000000, "Member 'GameplayTask_SpawnActor_SpawnActor::TaskOwner' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, SpawnLocation) == 0x000010, "Member 'GameplayTask_SpawnActor_SpawnActor::SpawnLocation' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, SpawnRotation) == 0x00001C, "Member 'GameplayTask_SpawnActor_SpawnActor::SpawnRotation' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, Class_0) == 0x000028, "Member 'GameplayTask_SpawnActor_SpawnActor::Class_0' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, bSpawnOnlyOnAuthority) == 0x000030, "Member 'GameplayTask_SpawnActor_SpawnActor::bSpawnOnlyOnAuthority' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_SpawnActor, ReturnValue) == 0x000038, "Member 'GameplayTask_SpawnActor_SpawnActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_SpawnActor_SpawnActor;
 
 // Function GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
 // 0x0018 (0x0018 - 0x0000)
@@ -112,11 +86,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GameplayTask_SpawnActor_BeginSpawningActor) == 0x000008, "Wrong alignment on GameplayTask_SpawnActor_BeginSpawningActor");
-static_assert(sizeof(GameplayTask_SpawnActor_BeginSpawningActor) == 0x000018, "Wrong size on GameplayTask_SpawnActor_BeginSpawningActor");
-static_assert(offsetof(GameplayTask_SpawnActor_BeginSpawningActor, WorldContextObject) == 0x000000, "Member 'GameplayTask_SpawnActor_BeginSpawningActor::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_BeginSpawningActor, SpawnedActor) == 0x000008, "Member 'GameplayTask_SpawnActor_BeginSpawningActor::SpawnedActor' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_BeginSpawningActor, ReturnValue) == 0x000010, "Member 'GameplayTask_SpawnActor_BeginSpawningActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_SpawnActor_BeginSpawningActor;
 
 // Function GameplayTasks.GameplayTask_SpawnActor.FinishSpawningActor
 // 0x0010 (0x0010 - 0x0000)
@@ -126,10 +96,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 SpawnedActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_SpawnActor_FinishSpawningActor) == 0x000008, "Wrong alignment on GameplayTask_SpawnActor_FinishSpawningActor");
-static_assert(sizeof(GameplayTask_SpawnActor_FinishSpawningActor) == 0x000010, "Wrong size on GameplayTask_SpawnActor_FinishSpawningActor");
-static_assert(offsetof(GameplayTask_SpawnActor_FinishSpawningActor, WorldContextObject) == 0x000000, "Member 'GameplayTask_SpawnActor_FinishSpawningActor::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(GameplayTask_SpawnActor_FinishSpawningActor, SpawnedActor) == 0x000008, "Member 'GameplayTask_SpawnActor_FinishSpawningActor::SpawnedActor' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_SpawnActor_FinishSpawningActor;
 
 // Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
 // 0x0020 (0x0020 - 0x0000)
@@ -143,13 +110,7 @@ public:
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameplayTask_WaitDelay*                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_WaitDelay_TaskWaitDelay) == 0x000008, "Wrong alignment on GameplayTask_WaitDelay_TaskWaitDelay");
-static_assert(sizeof(GameplayTask_WaitDelay_TaskWaitDelay) == 0x000020, "Wrong size on GameplayTask_WaitDelay_TaskWaitDelay");
-static_assert(offsetof(GameplayTask_WaitDelay_TaskWaitDelay, TaskOwner) == 0x000000, "Member 'GameplayTask_WaitDelay_TaskWaitDelay::TaskOwner' has a wrong offset!");
-static_assert(offsetof(GameplayTask_WaitDelay_TaskWaitDelay, Time) == 0x000010, "Member 'GameplayTask_WaitDelay_TaskWaitDelay::Time' has a wrong offset!");
-static_assert(offsetof(GameplayTask_WaitDelay_TaskWaitDelay, Priority) == 0x000014, "Member 'GameplayTask_WaitDelay_TaskWaitDelay::Priority' has a wrong offset!");
-static_assert(offsetof(GameplayTask_WaitDelay_TaskWaitDelay, NeedTick) == 0x000015, "Member 'GameplayTask_WaitDelay_TaskWaitDelay::NeedTick' has a wrong offset!");
-static_assert(offsetof(GameplayTask_WaitDelay_TaskWaitDelay, ReturnValue) == 0x000018, "Member 'GameplayTask_WaitDelay_TaskWaitDelay::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_WaitDelay_TaskWaitDelay;
 
 // Function GameplayTasks.GameplayTask_WaitDelay.TickTask
 // 0x0004 (0x0004 - 0x0000)
@@ -158,9 +119,7 @@ struct GameplayTask_WaitDelay_TickTask final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameplayTask_WaitDelay_TickTask) == 0x000004, "Wrong alignment on GameplayTask_WaitDelay_TickTask");
-static_assert(sizeof(GameplayTask_WaitDelay_TickTask) == 0x000004, "Wrong size on GameplayTask_WaitDelay_TickTask");
-static_assert(offsetof(GameplayTask_WaitDelay_TickTask, DeltaTime) == 0x000000, "Member 'GameplayTask_WaitDelay_TickTask::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_GameplayTask_WaitDelay_TickTask;
 
 }
 

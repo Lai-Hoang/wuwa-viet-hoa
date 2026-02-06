@@ -356,6 +356,7 @@ float UKuroAnimInstance::CalculateStandRate(class UCurveFloat*& AngleToStepFrequ
 // Function KuroAnim.KuroAnimInstance.CalculateStepLengthMixed
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
+// class ACharacter*                       Character                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCurveFloat*&                     AngleToStepLength                                      (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCurveFloat*&                     WalkCurve                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UCurveFloat*&                     RunCurve                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -363,7 +364,7 @@ float UKuroAnimInstance::CalculateStandRate(class UCurveFloat*& AngleToStepFrequ
 // const float&                            Slop                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UKuroAnimInstance::CalculateStepLengthMixed(class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& Speed, const float& Slop)
+float UKuroAnimInstance::CalculateStepLengthMixed(class ACharacter* Character, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& Speed, const float& Slop)
 {
 	static class UFunction* Func = nullptr;
 
@@ -372,6 +373,7 @@ float UKuroAnimInstance::CalculateStepLengthMixed(class UCurveFloat*& AngleToSte
 
 	Params::KuroAnimInstance_CalculateStepLengthMixed Parms{};
 
+	Parms.Character = Character;
 	Parms.AngleToStepLength = AngleToStepLength;
 	Parms.WalkCurve = WalkCurve;
 	Parms.RunCurve = RunCurve;
@@ -1665,6 +1667,7 @@ void UKuroAnimInstance::UpdateIKInfoLocalValue(class ACharacter* Character, stru
 // Function KuroAnim.KuroAnimInstance.UpdateMoveInfoMixed
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
+// class ACharacter*&                      Character                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float&                                  WalkRunMixed                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float&                            DeltaTime                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const float&                            Slop                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1679,7 +1682,7 @@ void UKuroAnimInstance::UpdateIKInfoLocalValue(class ACharacter* Character, stru
 // const float&                            SprintSpeed                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float&                                  StandRate                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroAnimInstance::UpdateMoveInfoMixed(float& WalkRunMixed, const float& DeltaTime, const float& Slop, class UCurveFloat*& AngleToStepFrequency, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& SpeedSize, float& StepLengthMixed, const float& AnimWalkSpeed, const float& AnimRunSpeed, const float& SprintSpeed, float& StandRate)
+void UKuroAnimInstance::UpdateMoveInfoMixed(class ACharacter*& Character, float& WalkRunMixed, const float& DeltaTime, const float& Slop, class UCurveFloat*& AngleToStepFrequency, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& SpeedSize, float& StepLengthMixed, const float& AnimWalkSpeed, const float& AnimRunSpeed, const float& SprintSpeed, float& StandRate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1688,6 +1691,7 @@ void UKuroAnimInstance::UpdateMoveInfoMixed(float& WalkRunMixed, const float& De
 
 	Params::KuroAnimInstance_UpdateMoveInfoMixed Parms{};
 
+	Parms.Character = Character;
 	Parms.WalkRunMixed = WalkRunMixed;
 	Parms.DeltaTime = DeltaTime;
 	Parms.Slop = Slop;
@@ -1709,6 +1713,7 @@ void UKuroAnimInstance::UpdateMoveInfoMixed(float& WalkRunMixed, const float& De
 
 	Func->FunctionFlags = Flgs;
 
+	Character = Parms.Character;
 	WalkRunMixed = Parms.WalkRunMixed;
 	AngleToStepFrequency = Parms.AngleToStepFrequency;
 	AngleToStepLength = Parms.AngleToStepLength;
@@ -1845,6 +1850,166 @@ void UKuroAnimInstance::UpdateSkillMoveInfo(const float& DeltaTime, const struct
 	LeanAmount = std::move(Parms.LeanAmount);
 	AimAngle = Parms.AimAngle;
 	AimMoveMixed = std::move(Parms.AimMoveMixed);
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterEntity
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::RegisterEntity(const class UGameInstance* World, int32 EntityId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "RegisterEntity");
+
+	Params::KuroAnimJsSubsystemProxy_RegisterEntity Parms{};
+
+	Parms.World = World;
+	Parms.EntityId = EntityId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateAnimInfoCsFunction
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(int32 EntityId)>         UpdateAnimInfoCsFunction                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::RegisterUpdateAnimInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "RegisterUpdateAnimInfoCsFunction");
+
+	Params::KuroAnimJsSubsystemProxy_RegisterUpdateAnimInfoCsFunction Parms{};
+
+	Parms.World = World;
+	Parms.UpdateAnimInfoCsFunction = UpdateAnimInfoCsFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateMonsterInfoCsFunction
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(int32 EntityId)>         UpdateAnimInfoCsFunction                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::RegisterUpdateMonsterInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "RegisterUpdateMonsterInfoCsFunction");
+
+	Params::KuroAnimJsSubsystemProxy_RegisterUpdateMonsterInfoCsFunction Parms{};
+
+	Parms.World = World;
+	Parms.UpdateAnimInfoCsFunction = UpdateAnimInfoCsFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateNpcInfoCsFunction
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(int32 EntityId)>         UpdateAnimInfoCsFunction                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::RegisterUpdateNpcInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "RegisterUpdateNpcInfoCsFunction");
+
+	Params::KuroAnimJsSubsystemProxy_RegisterUpdateNpcInfoCsFunction Parms{};
+
+	Parms.World = World;
+	Parms.UpdateAnimInfoCsFunction = UpdateAnimInfoCsFunction;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.UnregisterEntity
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::UnregisterEntity(const class UGameInstance* World, int32 EntityId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "UnregisterEntity");
+
+	Params::KuroAnimJsSubsystemProxy_UnregisterEntity Parms{};
+
+	Parms.World = World;
+	Parms.EntityId = EntityId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.UnregisterUpdateAnimInfoFunction
+// (Final, Native, Static, Public)
+// Parameters:
+// const class UGameInstance*              World                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAnimJsSubsystemProxy::UnregisterUpdateAnimInfoFunction(const class UGameInstance* World)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimJsSubsystemProxy", "UnregisterUpdateAnimInfoFunction");
+
+	Params::KuroAnimJsSubsystemProxy_UnregisterUpdateAnimInfoFunction Parms{};
+
+	Parms.World = World;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

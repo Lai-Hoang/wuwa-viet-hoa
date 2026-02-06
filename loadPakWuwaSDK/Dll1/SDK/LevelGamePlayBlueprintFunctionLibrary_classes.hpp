@@ -30,19 +30,25 @@ public:
 	static struct FKuroGeometryGeneralPolygonList DifferenceSelectedActorsSplines(class UObject* __WorldContext);
 	static struct FKuroGeometryGeneralPolygonList GetPolygonListFromSplines(TArray<class USplineComponent*>& splines, class UObject* __WorldContext);
 	static struct FKuroGeometryGeneralPolygonList PolygonsOpenPathsDifferenceViaSplines(TArray<class USplineComponent*>& subjects, TArray<class USplineComponent*>& openPaths, float strokeWidth, EJoinType joinType, EEndType endType, class UObject* __WorldContext);
+	static bool UseNewScanSystem(class UObject* __WorldContext);
+	static void StartScan(class UObject* __WorldContext);
+	static void GenFurniturePrefabIcon(const class FString& path, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"LevelGamePlayBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("LevelGamePlayBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LevelGamePlayBlueprintFunctionLibrary_C")
 	}
 	static class ULevelGamePlayBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULevelGamePlayBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(ULevelGamePlayBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on ULevelGamePlayBlueprintFunctionLibrary_C");
-static_assert(sizeof(ULevelGamePlayBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on ULevelGamePlayBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_ULevelGamePlayBlueprintFunctionLibrary_C;
 
 }
 

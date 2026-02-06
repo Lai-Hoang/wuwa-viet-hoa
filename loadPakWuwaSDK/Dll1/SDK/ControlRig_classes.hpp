@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "ControlRig_structs.hpp"
-#include "PropertyPath_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PropertyPath_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "MovieSceneTracks_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
 #include "LevelSequence_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 #include "AnimGraphRuntime_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
@@ -63,28 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRig">();
+		STATIC_CLASS_IMPL("ControlRig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRig")
 	}
 	static class UControlRig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRig>();
 	}
 };
-static_assert(alignof(UControlRig) == 0x000008, "Wrong alignment on UControlRig");
-static_assert(sizeof(UControlRig) == 0x000660, "Wrong size on UControlRig");
-static_assert(offsetof(UControlRig, ExecutionType) == 0x00004D, "Member 'UControlRig::ExecutionType' has a wrong offset!");
-static_assert(offsetof(UControlRig, VM) == 0x000050, "Member 'UControlRig::VM' has a wrong offset!");
-static_assert(offsetof(UControlRig, Hierarchy) == 0x000058, "Member 'UControlRig::Hierarchy' has a wrong offset!");
-static_assert(offsetof(UControlRig, GizmoLibrary) == 0x0003C0, "Member 'UControlRig::GizmoLibrary' has a wrong offset!");
-static_assert(offsetof(UControlRig, InputProperties) == 0x000400, "Member 'UControlRig::InputProperties' has a wrong offset!");
-static_assert(offsetof(UControlRig, OutputProperties) == 0x000450, "Member 'UControlRig::OutputProperties' has a wrong offset!");
-static_assert(offsetof(UControlRig, DrawContainer) == 0x0004A0, "Member 'UControlRig::DrawContainer' has a wrong offset!");
-static_assert(offsetof(UControlRig, DataSourceRegistry) == 0x0004D0, "Member 'UControlRig::DataSourceRegistry' has a wrong offset!");
-static_assert(offsetof(UControlRig, EventQueue) == 0x0004D8, "Member 'UControlRig::EventQueue' has a wrong offset!");
-static_assert(offsetof(UControlRig, Influences) == 0x000560, "Member 'UControlRig::Influences' has a wrong offset!");
-static_assert(offsetof(UControlRig, InteractionRig) == 0x0005C0, "Member 'UControlRig::InteractionRig' has a wrong offset!");
-static_assert(offsetof(UControlRig, InteractionRigClass) == 0x0005C8, "Member 'UControlRig::InteractionRigClass' has a wrong offset!");
-static_assert(offsetof(UControlRig, AssetUserData) == 0x0005D0, "Member 'UControlRig::AssetUserData' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRig;
 
 // Class ControlRig.AdditiveControlRig
 // 0x0010 (0x0670 - 0x0660)
@@ -96,15 +86,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AdditiveControlRig">();
+		STATIC_CLASS_IMPL("AdditiveControlRig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AdditiveControlRig")
 	}
 	static class UAdditiveControlRig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAdditiveControlRig>();
 	}
 };
-static_assert(alignof(UAdditiveControlRig) == 0x000008, "Wrong alignment on UAdditiveControlRig");
-static_assert(sizeof(UAdditiveControlRig) == 0x000670, "Wrong size on UAdditiveControlRig");
+DUMPER7_ASSERTS_UAdditiveControlRig;
 
 // Class ControlRig.ControlRigAnimInstance
 // 0x0000 (0x0730 - 0x0730)
@@ -113,15 +106,18 @@ class UControlRigAnimInstance final : public UAnimInstance
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigAnimInstance">();
+		STATIC_CLASS_IMPL("ControlRigAnimInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigAnimInstance")
 	}
 	static class UControlRigAnimInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigAnimInstance>();
 	}
 };
-static_assert(alignof(UControlRigAnimInstance) == 0x000010, "Wrong alignment on UControlRigAnimInstance");
-static_assert(sizeof(UControlRigAnimInstance) == 0x000730, "Wrong size on UControlRigAnimInstance");
+DUMPER7_ASSERTS_UControlRigAnimInstance;
 
 // Class ControlRig.ControlRigBlueprintGeneratedClass
 // 0x0000 (0x0338 - 0x0338)
@@ -130,15 +126,18 @@ class UControlRigBlueprintGeneratedClass final : public UBlueprintGeneratedClass
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigBlueprintGeneratedClass">();
+		STATIC_CLASS_IMPL("ControlRigBlueprintGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigBlueprintGeneratedClass")
 	}
 	static class UControlRigBlueprintGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigBlueprintGeneratedClass>();
 	}
 };
-static_assert(alignof(UControlRigBlueprintGeneratedClass) == 0x000008, "Wrong alignment on UControlRigBlueprintGeneratedClass");
-static_assert(sizeof(UControlRigBlueprintGeneratedClass) == 0x000338, "Wrong size on UControlRigBlueprintGeneratedClass");
+DUMPER7_ASSERTS_UControlRigBlueprintGeneratedClass;
 
 // Class ControlRig.ControlRigComponent
 // 0x00F0 (0x0620 - 0x0530)
@@ -210,28 +209,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigComponent">();
+		STATIC_CLASS_IMPL("ControlRigComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigComponent")
 	}
 	static class UControlRigComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigComponent>();
 	}
 };
-static_assert(alignof(UControlRigComponent) == 0x000010, "Wrong alignment on UControlRigComponent");
-static_assert(sizeof(UControlRigComponent) == 0x000620, "Wrong size on UControlRigComponent");
-static_assert(offsetof(UControlRigComponent, ControlRigClass) == 0x000528, "Member 'UControlRigComponent::ControlRigClass' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostInitializeDelegate) == 0x000530, "Member 'UControlRigComponent::OnPostInitializeDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPreSetupDelegate) == 0x000540, "Member 'UControlRigComponent::OnPreSetupDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostSetupDelegate) == 0x000550, "Member 'UControlRigComponent::OnPostSetupDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPreUpdateDelegate) == 0x000560, "Member 'UControlRigComponent::OnPreUpdateDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, OnPostUpdateDelegate) == 0x000570, "Member 'UControlRigComponent::OnPostUpdateDelegate' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, MappedElements) == 0x000580, "Member 'UControlRigComponent::MappedElements' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bResetTransformBeforeTick) == 0x000590, "Member 'UControlRigComponent::bResetTransformBeforeTick' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bResetInitialsBeforeSetup) == 0x000591, "Member 'UControlRigComponent::bResetInitialsBeforeSetup' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bUpdateRigOnTick) == 0x000592, "Member 'UControlRigComponent::bUpdateRigOnTick' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bUpdateInEditor) == 0x000593, "Member 'UControlRigComponent::bUpdateInEditor' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, bDrawBones) == 0x000594, "Member 'UControlRigComponent::bDrawBones' has a wrong offset!");
-static_assert(offsetof(UControlRigComponent, ControlRig) == 0x000598, "Member 'UControlRigComponent::ControlRig' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigComponent;
 
 // Class ControlRig.ControlRigControlActor
 // 0x0098 (0x0348 - 0x02B0)
@@ -263,29 +252,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigControlActor">();
+		STATIC_CLASS_IMPL("ControlRigControlActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigControlActor")
 	}
 	static class AControlRigControlActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AControlRigControlActor>();
 	}
 };
-static_assert(alignof(AControlRigControlActor) == 0x000008, "Wrong alignment on AControlRigControlActor");
-static_assert(sizeof(AControlRigControlActor) == 0x000348, "Wrong size on AControlRigControlActor");
-static_assert(offsetof(AControlRigControlActor, ActorToTrack) == 0x0002B0, "Member 'AControlRigControlActor::ActorToTrack' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlRigClass) == 0x0002B8, "Member 'AControlRigControlActor::ControlRigClass' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bRefreshOnTick) == 0x0002C0, "Member 'AControlRigControlActor::bRefreshOnTick' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bIsSelectable) == 0x0002C1, "Member 'AControlRigControlActor::bIsSelectable' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, MaterialOverride) == 0x0002C8, "Member 'AControlRigControlActor::MaterialOverride' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ColorParameter) == 0x0002D0, "Member 'AControlRigControlActor::ColorParameter' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, bCastShadows) == 0x0002E0, "Member 'AControlRigControlActor::bCastShadows' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ActorRootComponent) == 0x0002E8, "Member 'AControlRigControlActor::ActorRootComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlRig) == 0x0002F0, "Member 'AControlRigControlActor::ControlRig' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ControlNames) == 0x0002F8, "Member 'AControlRigControlActor::ControlNames' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, GizmoTransforms) == 0x000308, "Member 'AControlRigControlActor::GizmoTransforms' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, Components) == 0x000318, "Member 'AControlRigControlActor::Components' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, Materials) == 0x000328, "Member 'AControlRigControlActor::Materials' has a wrong offset!");
-static_assert(offsetof(AControlRigControlActor, ColorParameterName) == 0x000338, "Member 'AControlRigControlActor::ColorParameterName' has a wrong offset!");
+DUMPER7_ASSERTS_AControlRigControlActor;
 
 // Class ControlRig.ControlRigGizmoActor
 // 0x0030 (0x02E0 - 0x02B0)
@@ -323,20 +301,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigGizmoActor">();
+		STATIC_CLASS_IMPL("ControlRigGizmoActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigGizmoActor")
 	}
 	static class AControlRigGizmoActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AControlRigGizmoActor>();
 	}
 };
-static_assert(alignof(AControlRigGizmoActor) == 0x000008, "Wrong alignment on AControlRigGizmoActor");
-static_assert(sizeof(AControlRigGizmoActor) == 0x0002E0, "Wrong size on AControlRigGizmoActor");
-static_assert(offsetof(AControlRigGizmoActor, ActorRootComponent) == 0x0002B0, "Member 'AControlRigGizmoActor::ActorRootComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigGizmoActor, StaticMeshComponent) == 0x0002B8, "Member 'AControlRigGizmoActor::StaticMeshComponent' has a wrong offset!");
-static_assert(offsetof(AControlRigGizmoActor, ControlRigIndex) == 0x0002C0, "Member 'AControlRigGizmoActor::ControlRigIndex' has a wrong offset!");
-static_assert(offsetof(AControlRigGizmoActor, ControlName) == 0x0002C4, "Member 'AControlRigGizmoActor::ControlName' has a wrong offset!");
-static_assert(offsetof(AControlRigGizmoActor, ColorParameterName) == 0x0002D0, "Member 'AControlRigGizmoActor::ColorParameterName' has a wrong offset!");
+DUMPER7_ASSERTS_AControlRigGizmoActor;
 
 // Class ControlRig.ControlRigGizmoLibrary
 // 0x00D0 (0x0100 - 0x0030)
@@ -353,19 +329,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigGizmoLibrary">();
+		STATIC_CLASS_IMPL("ControlRigGizmoLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigGizmoLibrary")
 	}
 	static class UControlRigGizmoLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigGizmoLibrary>();
 	}
 };
-static_assert(alignof(UControlRigGizmoLibrary) == 0x000010, "Wrong alignment on UControlRigGizmoLibrary");
-static_assert(sizeof(UControlRigGizmoLibrary) == 0x000100, "Wrong size on UControlRigGizmoLibrary");
-static_assert(offsetof(UControlRigGizmoLibrary, DefaultGizmo) == 0x000030, "Member 'UControlRigGizmoLibrary::DefaultGizmo' has a wrong offset!");
-static_assert(offsetof(UControlRigGizmoLibrary, DefaultMaterial) == 0x0000A0, "Member 'UControlRigGizmoLibrary::DefaultMaterial' has a wrong offset!");
-static_assert(offsetof(UControlRigGizmoLibrary, MaterialColorParameter) == 0x0000D0, "Member 'UControlRigGizmoLibrary::MaterialColorParameter' has a wrong offset!");
-static_assert(offsetof(UControlRigGizmoLibrary, Gizmos) == 0x0000E0, "Member 'UControlRigGizmoLibrary::Gizmos' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigGizmoLibrary;
 
 // Class ControlRig.ControlRigLayerInstance
 // 0x0010 (0x0740 - 0x0730)
@@ -377,15 +352,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigLayerInstance">();
+		STATIC_CLASS_IMPL("ControlRigLayerInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigLayerInstance")
 	}
 	static class UControlRigLayerInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigLayerInstance>();
 	}
 };
-static_assert(alignof(UControlRigLayerInstance) == 0x000010, "Wrong alignment on UControlRigLayerInstance");
-static_assert(sizeof(UControlRigLayerInstance) == 0x000740, "Wrong size on UControlRigLayerInstance");
+DUMPER7_ASSERTS_UControlRigLayerInstance;
 
 // Class ControlRig.ControlRigValidationPass
 // 0x0000 (0x0030 - 0x0030)
@@ -394,15 +372,18 @@ class UControlRigValidationPass : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigValidationPass">();
+		STATIC_CLASS_IMPL("ControlRigValidationPass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigValidationPass")
 	}
 	static class UControlRigValidationPass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigValidationPass>();
 	}
 };
-static_assert(alignof(UControlRigValidationPass) == 0x000008, "Wrong alignment on UControlRigValidationPass");
-static_assert(sizeof(UControlRigValidationPass) == 0x000030, "Wrong size on UControlRigValidationPass");
+DUMPER7_ASSERTS_UControlRigValidationPass;
 
 // Class ControlRig.ControlRigNumericalValidationPass
 // 0x0040 (0x0070 - 0x0030)
@@ -425,25 +406,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigNumericalValidationPass">();
+		STATIC_CLASS_IMPL("ControlRigNumericalValidationPass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigNumericalValidationPass")
 	}
 	static class UControlRigNumericalValidationPass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigNumericalValidationPass>();
 	}
 };
-static_assert(alignof(UControlRigNumericalValidationPass) == 0x000008, "Wrong alignment on UControlRigNumericalValidationPass");
-static_assert(sizeof(UControlRigNumericalValidationPass) == 0x000070, "Wrong size on UControlRigNumericalValidationPass");
-static_assert(offsetof(UControlRigNumericalValidationPass, bCheckControls) == 0x000030, "Member 'UControlRigNumericalValidationPass::bCheckControls' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, bCheckBones) == 0x000031, "Member 'UControlRigNumericalValidationPass::bCheckBones' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, bCheckCurves) == 0x000032, "Member 'UControlRigNumericalValidationPass::bCheckCurves' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, TranslationPrecision) == 0x000034, "Member 'UControlRigNumericalValidationPass::TranslationPrecision' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, RotationPrecision) == 0x000038, "Member 'UControlRigNumericalValidationPass::RotationPrecision' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, ScalePrecision) == 0x00003C, "Member 'UControlRigNumericalValidationPass::ScalePrecision' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, CurvePrecision) == 0x000040, "Member 'UControlRigNumericalValidationPass::CurvePrecision' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, EventNameA) == 0x000044, "Member 'UControlRigNumericalValidationPass::EventNameA' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, EventNameB) == 0x000050, "Member 'UControlRigNumericalValidationPass::EventNameB' has a wrong offset!");
-static_assert(offsetof(UControlRigNumericalValidationPass, Pose) == 0x000060, "Member 'UControlRigNumericalValidationPass::Pose' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigNumericalValidationPass;
 
 // Class ControlRig.ControlRigObjectHolder
 // 0x0010 (0x0040 - 0x0030)
@@ -455,16 +429,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigObjectHolder">();
+		STATIC_CLASS_IMPL("ControlRigObjectHolder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigObjectHolder")
 	}
 	static class UControlRigObjectHolder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigObjectHolder>();
 	}
 };
-static_assert(alignof(UControlRigObjectHolder) == 0x000008, "Wrong alignment on UControlRigObjectHolder");
-static_assert(sizeof(UControlRigObjectHolder) == 0x000040, "Wrong size on UControlRigObjectHolder");
-static_assert(offsetof(UControlRigObjectHolder, Objects) == 0x000030, "Member 'UControlRigObjectHolder::Objects' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigObjectHolder;
 
 // Class ControlRig.ControlRigSequence
 // 0x0068 (0x02B0 - 0x0248)
@@ -479,18 +455,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigSequence">();
+		STATIC_CLASS_IMPL("ControlRigSequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigSequence")
 	}
 	static class UControlRigSequence* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigSequence>();
 	}
 };
-static_assert(alignof(UControlRigSequence) == 0x000008, "Wrong alignment on UControlRigSequence");
-static_assert(sizeof(UControlRigSequence) == 0x0002B0, "Wrong size on UControlRigSequence");
-static_assert(offsetof(UControlRigSequence, LastExportedToAnimationSequence) == 0x000248, "Member 'UControlRigSequence::LastExportedToAnimationSequence' has a wrong offset!");
-static_assert(offsetof(UControlRigSequence, LastExportedUsingSkeletalMesh) == 0x000278, "Member 'UControlRigSequence::LastExportedUsingSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(UControlRigSequence, LastExportedFrameRate) == 0x0002A8, "Member 'UControlRigSequence::LastExportedFrameRate' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigSequence;
 
 // Class ControlRig.ControlRigSequencerAnimInstance
 // 0x0000 (0x0740 - 0x0740)
@@ -499,15 +475,18 @@ class UControlRigSequencerAnimInstance final : public UAnimSequencerInstance
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigSequencerAnimInstance">();
+		STATIC_CLASS_IMPL("ControlRigSequencerAnimInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigSequencerAnimInstance")
 	}
 	static class UControlRigSequencerAnimInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigSequencerAnimInstance>();
 	}
 };
-static_assert(alignof(UControlRigSequencerAnimInstance) == 0x000010, "Wrong alignment on UControlRigSequencerAnimInstance");
-static_assert(sizeof(UControlRigSequencerAnimInstance) == 0x000740, "Wrong size on UControlRigSequencerAnimInstance");
+DUMPER7_ASSERTS_UControlRigSequencerAnimInstance;
 
 // Class ControlRig.ControlRigSettings
 // 0x0000 (0x0048 - 0x0048)
@@ -516,15 +495,18 @@ class UControlRigSettings final : public UDeveloperSettings
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigSettings">();
+		STATIC_CLASS_IMPL("ControlRigSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigSettings")
 	}
 	static class UControlRigSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigSettings>();
 	}
 };
-static_assert(alignof(UControlRigSettings) == 0x000008, "Wrong alignment on UControlRigSettings");
-static_assert(sizeof(UControlRigSettings) == 0x000048, "Wrong size on UControlRigSettings");
+DUMPER7_ASSERTS_UControlRigSettings;
 
 // Class ControlRig.ControlRigValidator
 // 0x0040 (0x0070 - 0x0030)
@@ -537,16 +519,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlRigValidator">();
+		STATIC_CLASS_IMPL("ControlRigValidator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlRigValidator")
 	}
 	static class UControlRigValidator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlRigValidator>();
 	}
 };
-static_assert(alignof(UControlRigValidator) == 0x000008, "Wrong alignment on UControlRigValidator");
-static_assert(sizeof(UControlRigValidator) == 0x000070, "Wrong size on UControlRigValidator");
-static_assert(offsetof(UControlRigValidator, Passes) == 0x000030, "Member 'UControlRigValidator::Passes' has a wrong offset!");
+DUMPER7_ASSERTS_UControlRigValidator;
 
 // Class ControlRig.FKControlRig
 // 0x0018 (0x0678 - 0x0660)
@@ -560,17 +544,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FKControlRig">();
+		STATIC_CLASS_IMPL("FKControlRig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FKControlRig")
 	}
 	static class UFKControlRig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFKControlRig>();
 	}
 };
-static_assert(alignof(UFKControlRig) == 0x000008, "Wrong alignment on UFKControlRig");
-static_assert(sizeof(UFKControlRig) == 0x000678, "Wrong size on UFKControlRig");
-static_assert(offsetof(UFKControlRig, IsControlActive) == 0x000660, "Member 'UFKControlRig::IsControlActive' has a wrong offset!");
-static_assert(offsetof(UFKControlRig, ApplyMode) == 0x000670, "Member 'UFKControlRig::ApplyMode' has a wrong offset!");
+DUMPER7_ASSERTS_UFKControlRig;
 
 // Class ControlRig.MovieSceneControlRigParameterSection
 // 0x01A8 (0x0300 - 0x0158)
@@ -593,54 +578,46 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneControlRigParameterSection">();
+		STATIC_CLASS_IMPL("MovieSceneControlRigParameterSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneControlRigParameterSection")
 	}
 	static class UMovieSceneControlRigParameterSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneControlRigParameterSection>();
 	}
 };
-static_assert(alignof(UMovieSceneControlRigParameterSection) == 0x000008, "Wrong alignment on UMovieSceneControlRigParameterSection");
-static_assert(sizeof(UMovieSceneControlRigParameterSection) == 0x000300, "Wrong size on UMovieSceneControlRigParameterSection");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, ControlRig) == 0x000158, "Member 'UMovieSceneControlRigParameterSection::ControlRig' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, ControlsMask) == 0x000160, "Member 'UMovieSceneControlRigParameterSection::ControlsMask' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, TransformMask) == 0x000170, "Member 'UMovieSceneControlRigParameterSection::TransformMask' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, bAdditive) == 0x000174, "Member 'UMovieSceneControlRigParameterSection::bAdditive' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, bApplyBoneFilter) == 0x000175, "Member 'UMovieSceneControlRigParameterSection::bApplyBoneFilter' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, BoneFilter) == 0x000178, "Member 'UMovieSceneControlRigParameterSection::BoneFilter' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, Weight) == 0x000188, "Member 'UMovieSceneControlRigParameterSection::Weight' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, ControlChannelMap) == 0x000228, "Member 'UMovieSceneControlRigParameterSection::ControlChannelMap' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, EnumParameterNamesAndCurves) == 0x000278, "Member 'UMovieSceneControlRigParameterSection::EnumParameterNamesAndCurves' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterSection, IntegerParameterNamesAndCurves) == 0x000288, "Member 'UMovieSceneControlRigParameterSection::IntegerParameterNamesAndCurves' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneControlRigParameterSection;
 
 // Class ControlRig.MovieSceneControlRigParameterTrack
-// 0x0040 (0x00C0 - 0x0080)
+// 0x0040 (0x00D8 - 0x0098)
 class UMovieSceneControlRigParameterTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UControlRig*                            ControlRig;                                        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieSceneSection*                     SectionToKey;                                      // 0x0098(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	class FName                                   TrackName;                                         // 0x00B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x10];                                      // 0x0098(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UControlRig*                            ControlRig;                                        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSection*                     SectionToKey;                                      // 0x00B0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	class FName                                   TrackName;                                         // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneControlRigParameterTrack">();
+		STATIC_CLASS_IMPL("MovieSceneControlRigParameterTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneControlRigParameterTrack")
 	}
 	static class UMovieSceneControlRigParameterTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneControlRigParameterTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneControlRigParameterTrack) == 0x000008, "Wrong alignment on UMovieSceneControlRigParameterTrack");
-static_assert(sizeof(UMovieSceneControlRigParameterTrack) == 0x0000C0, "Wrong size on UMovieSceneControlRigParameterTrack");
-static_assert(offsetof(UMovieSceneControlRigParameterTrack, ControlRig) == 0x000090, "Member 'UMovieSceneControlRigParameterTrack::ControlRig' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterTrack, SectionToKey) == 0x000098, "Member 'UMovieSceneControlRigParameterTrack::SectionToKey' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterTrack, Sections) == 0x0000A0, "Member 'UMovieSceneControlRigParameterTrack::Sections' has a wrong offset!");
-static_assert(offsetof(UMovieSceneControlRigParameterTrack, TrackName) == 0x0000B0, "Member 'UMovieSceneControlRigParameterTrack::TrackName' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneControlRigParameterTrack;
 
 }
 

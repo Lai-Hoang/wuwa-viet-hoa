@@ -34,20 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BodySetupCore">();
+		STATIC_CLASS_IMPL("BodySetupCore")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BodySetupCore")
 	}
 	static class UBodySetupCore* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBodySetupCore>();
 	}
 };
-static_assert(alignof(UBodySetupCore) == 0x000008, "Wrong alignment on UBodySetupCore");
-static_assert(sizeof(UBodySetupCore) == 0x000050, "Wrong size on UBodySetupCore");
-static_assert(offsetof(UBodySetupCore, BoneName) == 0x000030, "Member 'UBodySetupCore::BoneName' has a wrong offset!");
-static_assert(offsetof(UBodySetupCore, PhysicsType) == 0x00003C, "Member 'UBodySetupCore::PhysicsType' has a wrong offset!");
-static_assert(offsetof(UBodySetupCore, CollisionTraceFlag) == 0x00003D, "Member 'UBodySetupCore::CollisionTraceFlag' has a wrong offset!");
-static_assert(offsetof(UBodySetupCore, CollisionReponse) == 0x00003E, "Member 'UBodySetupCore::CollisionReponse' has a wrong offset!");
-static_assert(offsetof(UBodySetupCore, bOnlyUseSimpleCollision) == 0x00003F, "Member 'UBodySetupCore::bOnlyUseSimpleCollision' has a wrong offset!");
+DUMPER7_ASSERTS_UBodySetupCore;
 
 // Class PhysicsCore.ChaosPhysicalMaterial
 // 0x0020 (0x0050 - 0x0030)
@@ -66,22 +64,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosPhysicalMaterial">();
+		STATIC_CLASS_IMPL("ChaosPhysicalMaterial")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosPhysicalMaterial")
 	}
 	static class UChaosPhysicalMaterial* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosPhysicalMaterial>();
 	}
 };
-static_assert(alignof(UChaosPhysicalMaterial) == 0x000008, "Wrong alignment on UChaosPhysicalMaterial");
-static_assert(sizeof(UChaosPhysicalMaterial) == 0x000050, "Wrong size on UChaosPhysicalMaterial");
-static_assert(offsetof(UChaosPhysicalMaterial, Friction) == 0x000030, "Member 'UChaosPhysicalMaterial::Friction' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, StaticFriction) == 0x000034, "Member 'UChaosPhysicalMaterial::StaticFriction' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, Restitution) == 0x000038, "Member 'UChaosPhysicalMaterial::Restitution' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, LinearEtherDrag) == 0x00003C, "Member 'UChaosPhysicalMaterial::LinearEtherDrag' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, AngularEtherDrag) == 0x000040, "Member 'UChaosPhysicalMaterial::AngularEtherDrag' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, SleepingLinearVelocityThreshold) == 0x000044, "Member 'UChaosPhysicalMaterial::SleepingLinearVelocityThreshold' has a wrong offset!");
-static_assert(offsetof(UChaosPhysicalMaterial, SleepingAngularVelocityThreshold) == 0x000048, "Member 'UChaosPhysicalMaterial::SleepingAngularVelocityThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosPhysicalMaterial;
 
 // Class PhysicsCore.PhysicalMaterial
 // 0x0058 (0x0088 - 0x0030)
@@ -111,30 +105,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PhysicalMaterial">();
+		STATIC_CLASS_IMPL("PhysicalMaterial")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicalMaterial")
 	}
 	static class UPhysicalMaterial* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPhysicalMaterial>();
 	}
 };
-static_assert(alignof(UPhysicalMaterial) == 0x000008, "Wrong alignment on UPhysicalMaterial");
-static_assert(sizeof(UPhysicalMaterial) == 0x000088, "Wrong size on UPhysicalMaterial");
-static_assert(offsetof(UPhysicalMaterial, Friction) == 0x000030, "Member 'UPhysicalMaterial::Friction' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, StaticFriction) == 0x000034, "Member 'UPhysicalMaterial::StaticFriction' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, FrictionCombineMode) == 0x000038, "Member 'UPhysicalMaterial::FrictionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, bOverrideFrictionCombineMode) == 0x000039, "Member 'UPhysicalMaterial::bOverrideFrictionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, Restitution) == 0x00003C, "Member 'UPhysicalMaterial::Restitution' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, RestitutionCombineMode) == 0x000040, "Member 'UPhysicalMaterial::RestitutionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, bOverrideRestitutionCombineMode) == 0x000041, "Member 'UPhysicalMaterial::bOverrideRestitutionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, Density) == 0x000044, "Member 'UPhysicalMaterial::Density' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, SleepLinearVelocityThreshold) == 0x000048, "Member 'UPhysicalMaterial::SleepLinearVelocityThreshold' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, SleepAngularVelocityThreshold) == 0x00004C, "Member 'UPhysicalMaterial::SleepAngularVelocityThreshold' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, SleepCounterThreshold) == 0x000050, "Member 'UPhysicalMaterial::SleepCounterThreshold' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, RaiseMassToPower) == 0x000054, "Member 'UPhysicalMaterial::RaiseMassToPower' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, DestructibleDamageThresholdScale) == 0x000058, "Member 'UPhysicalMaterial::DestructibleDamageThresholdScale' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, PhysicalMaterialProperty) == 0x000060, "Member 'UPhysicalMaterial::PhysicalMaterialProperty' has a wrong offset!");
-static_assert(offsetof(UPhysicalMaterial, SurfaceType) == 0x000068, "Member 'UPhysicalMaterial::SurfaceType' has a wrong offset!");
+DUMPER7_ASSERTS_UPhysicalMaterial;
 
 // Class PhysicsCore.PhysicalMaterialPropertyBase
 // 0x0000 (0x0030 - 0x0030)
@@ -143,15 +125,18 @@ class UPhysicalMaterialPropertyBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PhysicalMaterialPropertyBase">();
+		STATIC_CLASS_IMPL("PhysicalMaterialPropertyBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicalMaterialPropertyBase")
 	}
 	static class UPhysicalMaterialPropertyBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPhysicalMaterialPropertyBase>();
 	}
 };
-static_assert(alignof(UPhysicalMaterialPropertyBase) == 0x000008, "Wrong alignment on UPhysicalMaterialPropertyBase");
-static_assert(sizeof(UPhysicalMaterialPropertyBase) == 0x000030, "Wrong size on UPhysicalMaterialPropertyBase");
+DUMPER7_ASSERTS_UPhysicalMaterialPropertyBase;
 
 // Class PhysicsCore.PhysicsSettingsCore
 // 0x00A8 (0x00F0 - 0x0048)
@@ -188,38 +173,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PhysicsSettingsCore">();
+		STATIC_CLASS_IMPL("PhysicsSettingsCore")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PhysicsSettingsCore")
 	}
 	static class UPhysicsSettingsCore* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPhysicsSettingsCore>();
 	}
 };
-static_assert(alignof(UPhysicsSettingsCore) == 0x000008, "Wrong alignment on UPhysicsSettingsCore");
-static_assert(sizeof(UPhysicsSettingsCore) == 0x0000F0, "Wrong size on UPhysicsSettingsCore");
-static_assert(offsetof(UPhysicsSettingsCore, DefaultGravityZ) == 0x000048, "Member 'UPhysicsSettingsCore::DefaultGravityZ' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, DefaultTerminalVelocity) == 0x00004C, "Member 'UPhysicsSettingsCore::DefaultTerminalVelocity' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, DefaultFluidFriction) == 0x000050, "Member 'UPhysicsSettingsCore::DefaultFluidFriction' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, SimulateScratchMemorySize) == 0x000054, "Member 'UPhysicsSettingsCore::SimulateScratchMemorySize' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, RagdollAggregateThreshold) == 0x000058, "Member 'UPhysicsSettingsCore::RagdollAggregateThreshold' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, TriangleMeshTriangleMinAreaThreshold) == 0x00005C, "Member 'UPhysicsSettingsCore::TriangleMeshTriangleMinAreaThreshold' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bEnableShapeSharing) == 0x000060, "Member 'UPhysicsSettingsCore::bEnableShapeSharing' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bEnablePCM) == 0x000061, "Member 'UPhysicsSettingsCore::bEnablePCM' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bEnableStabilization) == 0x000062, "Member 'UPhysicsSettingsCore::bEnableStabilization' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bWarnMissingLocks) == 0x000063, "Member 'UPhysicsSettingsCore::bWarnMissingLocks' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bEnable2DPhysics) == 0x000064, "Member 'UPhysicsSettingsCore::bEnable2DPhysics' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bDefaultHasComplexCollision) == 0x000065, "Member 'UPhysicsSettingsCore::bDefaultHasComplexCollision' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, BounceThresholdVelocity) == 0x000068, "Member 'UPhysicsSettingsCore::BounceThresholdVelocity' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, FrictionCombineMode) == 0x00006C, "Member 'UPhysicsSettingsCore::FrictionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, RestitutionCombineMode) == 0x00006D, "Member 'UPhysicsSettingsCore::RestitutionCombineMode' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, MaxAngularVelocity) == 0x000070, "Member 'UPhysicsSettingsCore::MaxAngularVelocity' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, MaxDepenetrationVelocity) == 0x000074, "Member 'UPhysicsSettingsCore::MaxDepenetrationVelocity' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, ContactOffsetMultiplier) == 0x000078, "Member 'UPhysicsSettingsCore::ContactOffsetMultiplier' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, MinContactOffset) == 0x00007C, "Member 'UPhysicsSettingsCore::MinContactOffset' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, MaxContactOffset) == 0x000080, "Member 'UPhysicsSettingsCore::MaxContactOffset' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, bSimulateSkeletalMeshOnDedicatedServer) == 0x000084, "Member 'UPhysicsSettingsCore::bSimulateSkeletalMeshOnDedicatedServer' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, DefaultShapeComplexity) == 0x000085, "Member 'UPhysicsSettingsCore::DefaultShapeComplexity' has a wrong offset!");
-static_assert(offsetof(UPhysicsSettingsCore, SolverOptions) == 0x000088, "Member 'UPhysicsSettingsCore::SolverOptions' has a wrong offset!");
+DUMPER7_ASSERTS_UPhysicsSettingsCore;
 
 }
 

@@ -21,9 +21,7 @@ struct KuroPakKeyLibrary_BindPakMountedCallback final
 public:
 	TDelegate<void(const class FString& Tag)>     Callback;                                          // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_BindPakMountedCallback) == 0x000004, "Wrong alignment on KuroPakKeyLibrary_BindPakMountedCallback");
-static_assert(sizeof(KuroPakKeyLibrary_BindPakMountedCallback) == 0x000028, "Wrong size on KuroPakKeyLibrary_BindPakMountedCallback");
-static_assert(offsetof(KuroPakKeyLibrary_BindPakMountedCallback, Callback) == 0x000000, "Member 'KuroPakKeyLibrary_BindPakMountedCallback::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_BindPakMountedCallback;
 
 // Function KuroPakKey.KuroPakKeyLibrary.GetUpdateInterval
 // 0x0004 (0x0004 - 0x0000)
@@ -32,9 +30,7 @@ struct KuroPakKeyLibrary_GetUpdateInterval final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_GetUpdateInterval) == 0x000004, "Wrong alignment on KuroPakKeyLibrary_GetUpdateInterval");
-static_assert(sizeof(KuroPakKeyLibrary_GetUpdateInterval) == 0x000004, "Wrong size on KuroPakKeyLibrary_GetUpdateInterval");
-static_assert(offsetof(KuroPakKeyLibrary_GetUpdateInterval, ReturnValue) == 0x000000, "Member 'KuroPakKeyLibrary_GetUpdateInterval::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_GetUpdateInterval;
 
 // Function KuroPakKey.KuroPakKeyLibrary.HasPendingEncryptedPaks
 // 0x0001 (0x0001 - 0x0000)
@@ -43,9 +39,7 @@ struct KuroPakKeyLibrary_HasPendingEncryptedPaks final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_HasPendingEncryptedPaks) == 0x000001, "Wrong alignment on KuroPakKeyLibrary_HasPendingEncryptedPaks");
-static_assert(sizeof(KuroPakKeyLibrary_HasPendingEncryptedPaks) == 0x000001, "Wrong size on KuroPakKeyLibrary_HasPendingEncryptedPaks");
-static_assert(offsetof(KuroPakKeyLibrary_HasPendingEncryptedPaks, ReturnValue) == 0x000000, "Member 'KuroPakKeyLibrary_HasPendingEncryptedPaks::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_HasPendingEncryptedPaks;
 
 // Function KuroPakKey.KuroPakKeyLibrary.LoadKeys
 // 0x0030 (0x0030 - 0x0000)
@@ -56,11 +50,7 @@ public:
 	class FString                                 FilePath;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Tag;                                               // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_LoadKeys) == 0x000008, "Wrong alignment on KuroPakKeyLibrary_LoadKeys");
-static_assert(sizeof(KuroPakKeyLibrary_LoadKeys) == 0x000030, "Wrong size on KuroPakKeyLibrary_LoadKeys");
-static_assert(offsetof(KuroPakKeyLibrary_LoadKeys, RSAPubKey) == 0x000000, "Member 'KuroPakKeyLibrary_LoadKeys::RSAPubKey' has a wrong offset!");
-static_assert(offsetof(KuroPakKeyLibrary_LoadKeys, FilePath) == 0x000010, "Member 'KuroPakKeyLibrary_LoadKeys::FilePath' has a wrong offset!");
-static_assert(offsetof(KuroPakKeyLibrary_LoadKeys, Tag) == 0x000020, "Member 'KuroPakKeyLibrary_LoadKeys::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_LoadKeys;
 
 // Function KuroPakKey.KuroPakKeyLibrary.LoadPakKeysFromFile
 // 0x0010 (0x0010 - 0x0000)
@@ -69,9 +59,7 @@ struct KuroPakKeyLibrary_LoadPakKeysFromFile final
 public:
 	class FString                                 FilePath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_LoadPakKeysFromFile) == 0x000008, "Wrong alignment on KuroPakKeyLibrary_LoadPakKeysFromFile");
-static_assert(sizeof(KuroPakKeyLibrary_LoadPakKeysFromFile) == 0x000010, "Wrong size on KuroPakKeyLibrary_LoadPakKeysFromFile");
-static_assert(offsetof(KuroPakKeyLibrary_LoadPakKeysFromFile, FilePath) == 0x000000, "Member 'KuroPakKeyLibrary_LoadPakKeysFromFile::FilePath' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_LoadPakKeysFromFile;
 
 // Function KuroPakKey.KuroPakKeyLibrary.NeedExtPakKeys
 // 0x0001 (0x0001 - 0x0000)
@@ -80,9 +68,7 @@ struct KuroPakKeyLibrary_NeedExtPakKeys final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_NeedExtPakKeys) == 0x000001, "Wrong alignment on KuroPakKeyLibrary_NeedExtPakKeys");
-static_assert(sizeof(KuroPakKeyLibrary_NeedExtPakKeys) == 0x000001, "Wrong size on KuroPakKeyLibrary_NeedExtPakKeys");
-static_assert(offsetof(KuroPakKeyLibrary_NeedExtPakKeys, ReturnValue) == 0x000000, "Member 'KuroPakKeyLibrary_NeedExtPakKeys::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_NeedExtPakKeys;
 
 // Function KuroPakKey.KuroPakKeyLibrary.SetLoadCallback
 // 0x0028 (0x0028 - 0x0000)
@@ -91,9 +77,7 @@ struct KuroPakKeyLibrary_SetLoadCallback final
 public:
 	TDelegate<void(bool Success, const class FString& Tag)> Callback;                                // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_SetLoadCallback) == 0x000004, "Wrong alignment on KuroPakKeyLibrary_SetLoadCallback");
-static_assert(sizeof(KuroPakKeyLibrary_SetLoadCallback) == 0x000028, "Wrong size on KuroPakKeyLibrary_SetLoadCallback");
-static_assert(offsetof(KuroPakKeyLibrary_SetLoadCallback, Callback) == 0x000000, "Member 'KuroPakKeyLibrary_SetLoadCallback::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_SetLoadCallback;
 
 // Function KuroPakKey.KuroPakKeyLibrary.SetRSAPublicKey
 // 0x0010 (0x0010 - 0x0000)
@@ -102,9 +86,7 @@ struct KuroPakKeyLibrary_SetRSAPublicKey final
 public:
 	class FString                                 PublicKey;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPakKeyLibrary_SetRSAPublicKey) == 0x000008, "Wrong alignment on KuroPakKeyLibrary_SetRSAPublicKey");
-static_assert(sizeof(KuroPakKeyLibrary_SetRSAPublicKey) == 0x000010, "Wrong size on KuroPakKeyLibrary_SetRSAPublicKey");
-static_assert(offsetof(KuroPakKeyLibrary_SetRSAPublicKey, PublicKey) == 0x000000, "Member 'KuroPakKeyLibrary_SetRSAPublicKey::PublicKey' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPakKeyLibrary_SetRSAPublicKey;
 
 }
 

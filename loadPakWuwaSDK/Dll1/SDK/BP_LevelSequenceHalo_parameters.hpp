@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_BillboardMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_BillboardMode_structs.hpp"
 
 
 namespace SDK::Params
@@ -25,10 +25,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo");
-static_assert(sizeof(BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo) == 0x000008, "Wrong size on BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo");
-static_assert(offsetof(BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo, EntryPoint) == 0x000000, "Member 'BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_ExecuteUbergraph_BP_LevelSequenceHalo;
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -37,9 +34,7 @@ struct BP_LevelSequenceHalo_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_ReceiveTick");
-static_assert(sizeof(BP_LevelSequenceHalo_C_ReceiveTick) == 0x000004, "Wrong size on BP_LevelSequenceHalo_C_ReceiveTick");
-static_assert(offsetof(BP_LevelSequenceHalo_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_LevelSequenceHalo_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_ReceiveTick;
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.UpdateHaloParameter
 // 0x00FC (0x00FC - 0x0000)
@@ -79,37 +74,7 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x00DC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_2;                   // 0x00EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_UpdateHaloParameter) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_UpdateHaloParameter");
-static_assert(sizeof(BP_LevelSequenceHalo_C_UpdateHaloParameter) == 0x0000FC, "Wrong size on BP_LevelSequenceHalo_C_UpdateHaloParameter");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, UpdateComponent) == 0x000000, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::UpdateComponent' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable) == 0x000004, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_1) == 0x000010, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_2) == 0x00001C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_3) == 0x000028, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_4) == 0x000034, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___byte_Variable) == 0x000040, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable) == 0x000044, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_1) == 0x000048, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_2) == 0x00004C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_5) == 0x000050, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_6) == 0x00005C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_7) == 0x000068, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_8) == 0x000074, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_IsValid_ReturnValue) == 0x000080, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_9) == 0x000084, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_9' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_Select_Default) == 0x000090, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000094, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000098, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor) == 0x00009C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x0000AC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x0000B0, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x0000B4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_10) == 0x0000C4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_10' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x0000D0, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x0000D4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_6) == 0x0000D8, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_1) == 0x0000DC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_2) == 0x0000EC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_UpdateHaloParameter;
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.GetHaloDrawParameters
 // 0x0010 (0x0010 - 0x0000)
@@ -121,12 +86,7 @@ public:
 	float                                         MinDrawRange_0;                                    // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MaxDrawRange_0;                                    // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_GetHaloDrawParameters) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_GetHaloDrawParameters");
-static_assert(sizeof(BP_LevelSequenceHalo_C_GetHaloDrawParameters) == 0x000010, "Wrong size on BP_LevelSequenceHalo_C_GetHaloDrawParameters");
-static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MinDrawDistance_0) == 0x000000, "Member 'BP_LevelSequenceHalo_C_GetHaloDrawParameters::MinDrawDistance_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MaxDrawDistance_0) == 0x000004, "Member 'BP_LevelSequenceHalo_C_GetHaloDrawParameters::MaxDrawDistance_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MinDrawRange_0) == 0x000008, "Member 'BP_LevelSequenceHalo_C_GetHaloDrawParameters::MinDrawRange_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MaxDrawRange_0) == 0x00000C, "Member 'BP_LevelSequenceHalo_C_GetHaloDrawParameters::MaxDrawRange_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_GetHaloDrawParameters;
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.Update
 // 0x000C (0x000C - 0x0000)
@@ -139,12 +99,7 @@ public:
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_Update) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_Update");
-static_assert(sizeof(BP_LevelSequenceHalo_C_Update) == 0x00000C, "Wrong size on BP_LevelSequenceHalo_C_Update");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_SetStaticMesh_ReturnValue) == 0x000008, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_Update;
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.SetLightQualityMaterial
 // 0x0040 (0x0040 - 0x0000)
@@ -162,17 +117,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_SetLightQualityMaterial) == 0x000008, "Wrong alignment on BP_LevelSequenceHalo_C_SetLightQualityMaterial");
-static_assert(sizeof(BP_LevelSequenceHalo_C_SetLightQualityMaterial) == 0x000040, "Wrong size on BP_LevelSequenceHalo_C_SetLightQualityMaterial");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, HaloComponent_0) == 0x000000, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::HaloComponent_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, UseTranslucentMaterial_0) == 0x000008, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::UseTranslucentMaterial_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, Use_DOF_Material_0) == 0x000009, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::Use_DOF_Material_0' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo_Translucent_DOF) == 0x000010, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo_Translucent_DOF' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo_Translucent) == 0x000018, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo_Translucent' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo) == 0x000020, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000028, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000030, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000038, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LevelSequenceHalo_C_SetLightQualityMaterial;
 
 }
 

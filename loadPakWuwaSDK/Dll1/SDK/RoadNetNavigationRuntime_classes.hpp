@@ -31,18 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetNavigationPath">();
+		STATIC_CLASS_IMPL("RoadNetNavigationPath")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetNavigationPath")
 	}
 	static class URoadNetNavigationPath* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URoadNetNavigationPath>();
 	}
 };
-static_assert(alignof(URoadNetNavigationPath) == 0x000008, "Wrong alignment on URoadNetNavigationPath");
-static_assert(sizeof(URoadNetNavigationPath) == 0x000048, "Wrong size on URoadNetNavigationPath");
-static_assert(offsetof(URoadNetNavigationPath, PathPoints) == 0x000030, "Member 'URoadNetNavigationPath::PathPoints' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationPath, Length) == 0x000040, "Member 'URoadNetNavigationPath::Length' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationPath, IsPartial) == 0x000044, "Member 'URoadNetNavigationPath::IsPartial' has a wrong offset!");
+DUMPER7_ASSERTS_URoadNetNavigationPath;
 
 // Class RoadNetNavigationRuntime.RoadNetNavigationSetting
 // 0x0020 (0x0050 - 0x0030)
@@ -59,20 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetNavigationSetting">();
+		STATIC_CLASS_IMPL("RoadNetNavigationSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetNavigationSetting")
 	}
 	static class URoadNetNavigationSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URoadNetNavigationSetting>();
 	}
 };
-static_assert(alignof(URoadNetNavigationSetting) == 0x000008, "Wrong alignment on URoadNetNavigationSetting");
-static_assert(sizeof(URoadNetNavigationSetting) == 0x000050, "Wrong size on URoadNetNavigationSetting");
-static_assert(offsetof(URoadNetNavigationSetting, MaxPathPoints) == 0x000030, "Member 'URoadNetNavigationSetting::MaxPathPoints' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationSetting, MaxSearchPoints) == 0x000034, "Member 'URoadNetNavigationSetting::MaxSearchPoints' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationSetting, MaxCheckCount) == 0x000038, "Member 'URoadNetNavigationSetting::MaxCheckCount' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationSetting, DotAngleThreshold) == 0x00003C, "Member 'URoadNetNavigationSetting::DotAngleThreshold' has a wrong offset!");
-static_assert(offsetof(URoadNetNavigationSetting, FinderHalfExtents) == 0x000040, "Member 'URoadNetNavigationSetting::FinderHalfExtents' has a wrong offset!");
+DUMPER7_ASSERTS_URoadNetNavigationSetting;
 
 // Class RoadNetNavigationRuntime.RoadNetNavigationSystem
 // 0x0060 (0x0090 - 0x0030)
@@ -87,15 +85,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetNavigationSystem">();
+		STATIC_CLASS_IMPL("RoadNetNavigationSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetNavigationSystem")
 	}
 	static class URoadNetNavigationSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URoadNetNavigationSystem>();
 	}
 };
-static_assert(alignof(URoadNetNavigationSystem) == 0x000008, "Wrong alignment on URoadNetNavigationSystem");
-static_assert(sizeof(URoadNetNavigationSystem) == 0x000090, "Wrong size on URoadNetNavigationSystem");
+DUMPER7_ASSERTS_URoadNetNavigationSystem;
 
 }
 

@@ -23,9 +23,7 @@ struct ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Defaul
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default) == 0x000004, "Wrong alignment on ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default");
-static_assert(sizeof(ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default) == 0x000004, "Wrong size on ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default");
-static_assert(offsetof(ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default, EntryPoint) == 0x000000, "Member 'ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Nanzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nanzhu_Gameplay_Default;
 
 // Function ABP_Nanzhu_Gameplay_Default.ABP_Nanzhu_Gameplay_Default_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -34,9 +32,7 @@ struct ABP_Nanzhu_Gameplay_Default_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Nanzhu_Gameplay_Default_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Nanzhu_Gameplay_Default_C_AnimGraph");
-static_assert(sizeof(ABP_Nanzhu_Gameplay_Default_C_AnimGraph) == 0x000010, "Wrong size on ABP_Nanzhu_Gameplay_Default_C_AnimGraph");
-static_assert(offsetof(ABP_Nanzhu_Gameplay_Default_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Nanzhu_Gameplay_Default_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Nanzhu_Gameplay_Default_C_AnimGraph;
 
 }
 

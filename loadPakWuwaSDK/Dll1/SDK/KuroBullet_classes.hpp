@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "KuroSimpleCombat_structs.hpp"
 #include "KuroSimpleCombat_classes.hpp"
@@ -30,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BulletActionBase">();
+		STATIC_CLASS_IMPL("BulletActionBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletActionBase")
 	}
 	static class UBulletActionBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletActionBase>();
 	}
 };
-static_assert(alignof(UBulletActionBase) == 0x000008, "Wrong alignment on UBulletActionBase");
-static_assert(sizeof(UBulletActionBase) == 0x000038, "Wrong size on UBulletActionBase");
+DUMPER7_ASSERTS_UBulletActionBase;
 
 // Class KuroBullet.ActionChildBullet
 // 0x0000 (0x0038 - 0x0038)
@@ -47,15 +51,18 @@ class UActionChildBullet final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionChildBullet">();
+		STATIC_CLASS_IMPL("ActionChildBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionChildBullet")
 	}
 	static class UActionChildBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionChildBullet>();
 	}
 };
-static_assert(alignof(UActionChildBullet) == 0x000008, "Wrong alignment on UActionChildBullet");
-static_assert(sizeof(UActionChildBullet) == 0x000038, "Wrong size on UActionChildBullet");
+DUMPER7_ASSERTS_UActionChildBullet;
 
 // Class KuroBullet.ActionDestroyBullet
 // 0x0000 (0x0038 - 0x0038)
@@ -64,39 +71,22 @@ class UActionDestroyBullet final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionDestroyBullet">();
+		STATIC_CLASS_IMPL("ActionDestroyBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionDestroyBullet")
 	}
 	static class UActionDestroyBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionDestroyBullet>();
 	}
 };
-static_assert(alignof(UActionDestroyBullet) == 0x000008, "Wrong alignment on UActionDestroyBullet");
-static_assert(sizeof(UActionDestroyBullet) == 0x000038, "Wrong size on UActionDestroyBullet");
-
-// Class KuroBullet.BulletHitActorData
-// 0x0048 (0x0078 - 0x0030)
-class UBulletHitActorData final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x48];                                      // 0x0030(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"BulletHitActorData">();
-	}
-	static class UBulletHitActorData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBulletHitActorData>();
-	}
-};
-static_assert(alignof(UBulletHitActorData) == 0x000008, "Wrong alignment on UBulletHitActorData");
-static_assert(sizeof(UBulletHitActorData) == 0x000078, "Wrong size on UBulletHitActorData");
+DUMPER7_ASSERTS_UActionDestroyBullet;
 
 // Class KuroBullet.ActionInitBullet
 // 0x0008 (0x0040 - 0x0038)
-class UActionInitBullet final : public UBulletActionBase
+class UActionInitBullet : public UBulletActionBase
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -104,32 +94,38 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionInitBullet">();
+		STATIC_CLASS_IMPL("ActionInitBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionInitBullet")
 	}
 	static class UActionInitBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionInitBullet>();
 	}
 };
-static_assert(alignof(UActionInitBullet) == 0x000008, "Wrong alignment on UActionInitBullet");
-static_assert(sizeof(UActionInitBullet) == 0x000040, "Wrong size on UActionInitBullet");
+DUMPER7_ASSERTS_UActionInitBullet;
 
-// Class KuroBullet.ActionUpdateCollision
-// 0x0000 (0x0038 - 0x0038)
-class UActionUpdateCollision final : public UBulletActionBase
+// Class KuroBullet.ActionInitBulletKFC
+// 0x0000 (0x0040 - 0x0040)
+class UActionInitBulletKFC final : public UActionInitBullet
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionUpdateCollision">();
+		STATIC_CLASS_IMPL("ActionInitBulletKFC")
 	}
-	static class UActionUpdateCollision* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UActionUpdateCollision>();
+		STATIC_NAME_IMPL(L"ActionInitBulletKFC")
+	}
+	static class UActionInitBulletKFC* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActionInitBulletKFC>();
 	}
 };
-static_assert(alignof(UActionUpdateCollision) == 0x000008, "Wrong alignment on UActionUpdateCollision");
-static_assert(sizeof(UActionUpdateCollision) == 0x000038, "Wrong size on UActionUpdateCollision");
+DUMPER7_ASSERTS_UActionInitBulletKFC;
 
 // Class KuroBullet.ActionUpdateAtLast
 // 0x0000 (0x0038 - 0x0038)
@@ -138,15 +134,38 @@ class UActionUpdateAtLast final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionUpdateAtLast">();
+		STATIC_CLASS_IMPL("ActionUpdateAtLast")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionUpdateAtLast")
 	}
 	static class UActionUpdateAtLast* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionUpdateAtLast>();
 	}
 };
-static_assert(alignof(UActionUpdateAtLast) == 0x000008, "Wrong alignment on UActionUpdateAtLast");
-static_assert(sizeof(UActionUpdateAtLast) == 0x000038, "Wrong size on UActionUpdateAtLast");
+DUMPER7_ASSERTS_UActionUpdateAtLast;
+
+// Class KuroBullet.ActionUpdateCollision
+// 0x0000 (0x0038 - 0x0038)
+class UActionUpdateCollision final : public UBulletActionBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ActionUpdateCollision")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionUpdateCollision")
+	}
+	static class UActionUpdateCollision* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UActionUpdateCollision>();
+	}
+};
+DUMPER7_ASSERTS_UActionUpdateCollision;
 
 // Class KuroBullet.ActionUpdateLiveTime
 // 0x0000 (0x0038 - 0x0038)
@@ -155,15 +174,18 @@ class UActionUpdateLiveTime final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionUpdateLiveTime">();
+		STATIC_CLASS_IMPL("ActionUpdateLiveTime")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionUpdateLiveTime")
 	}
 	static class UActionUpdateLiveTime* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionUpdateLiveTime>();
 	}
 };
-static_assert(alignof(UActionUpdateLiveTime) == 0x000008, "Wrong alignment on UActionUpdateLiveTime");
-static_assert(sizeof(UActionUpdateLiveTime) == 0x000038, "Wrong size on UActionUpdateLiveTime");
+DUMPER7_ASSERTS_UActionUpdateLiveTime;
 
 // Class KuroBullet.ActionUpdateMove
 // 0x0000 (0x0038 - 0x0038)
@@ -172,15 +194,18 @@ class UActionUpdateMove final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionUpdateMove">();
+		STATIC_CLASS_IMPL("ActionUpdateMove")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionUpdateMove")
 	}
 	static class UActionUpdateMove* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionUpdateMove>();
 	}
 };
-static_assert(alignof(UActionUpdateMove) == 0x000008, "Wrong alignment on UActionUpdateMove");
-static_assert(sizeof(UActionUpdateMove) == 0x000038, "Wrong size on UActionUpdateMove");
+DUMPER7_ASSERTS_UActionUpdateMove;
 
 // Class KuroBullet.ActionUpdateTimeScale
 // 0x0000 (0x0038 - 0x0038)
@@ -189,18 +214,21 @@ class UActionUpdateTimeScale final : public UBulletActionBase
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActionUpdateTimeScale">();
+		STATIC_CLASS_IMPL("ActionUpdateTimeScale")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActionUpdateTimeScale")
 	}
 	static class UActionUpdateTimeScale* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActionUpdateTimeScale>();
 	}
 };
-static_assert(alignof(UActionUpdateTimeScale) == 0x000008, "Wrong alignment on UActionUpdateTimeScale");
-static_assert(sizeof(UActionUpdateTimeScale) == 0x000038, "Wrong size on UActionUpdateTimeScale");
+DUMPER7_ASSERTS_UActionUpdateTimeScale;
 
 // Class KuroBullet.BulletEntity
-// 0x0340 (0x0370 - 0x0030)
+// 0x0350 (0x0380 - 0x0030)
 class alignas(0x10) UBulletEntity final : public UObject
 {
 public:
@@ -212,19 +240,20 @@ public:
 	TScriptInterface<class IBulletOwner>          BulletOwner;                                       // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	uint8                                         Pad_60[0x68];                                      // 0x0060(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    CollisionComponent;                                // 0x00C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D0[0xC8];                                      // 0x00D0(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bNeedDetach;                                       // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_199[0x5F];                                     // 0x0199(0x005F)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class AActor*, class UBulletHitActorData*> MapHitActorData;                                 // 0x01F8(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class UBulletHitActorData*>            ArrayHitActorData;                                 // 0x0248(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class AActor*, class UBulletHitActorData*> LastMapHitActorData;                             // 0x0258(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class UBulletHitActorData*>            LastArrayHitActorData;                             // 0x02A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTraceSphereElement*                    ObstacleTraceSphere;                               // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTraceBoxElement*                       ObstacleTraceBox;                                  // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0[0x40];                                     // 0x02D0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBulletActionBase*>              TickActions;                                       // 0x0310(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_320[0x50];                                     // 0x0320(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UBulletKFCComponent*                    KFCComponent;                                      // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0xD0];                                      // 0x00D8(0x00D0)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bNeedDetach;                                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x5F];                                     // 0x01A9(0x005F)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class AActor*, class UBulletHitActorData*> MapHitActorData;                                 // 0x0208(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class UBulletHitActorData*>            ArrayHitActorData;                                 // 0x0258(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class AActor*, class UBulletHitActorData*> LastMapHitActorData;                             // 0x0268(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class UBulletHitActorData*>            LastArrayHitActorData;                             // 0x02B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTraceSphereElement*                    ObstacleTraceSphere;                               // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTraceBoxElement*                       ObstacleTraceBox;                                  // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E0[0x40];                                     // 0x02E0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBulletActionBase*>              TickActions;                                       // 0x0320(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_330[0x50];                                     // 0x0330(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnObstacleTrace(bool Result, class UTraceBaseElement* Element, double Frame, double Index_0);
@@ -232,28 +261,66 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BulletEntity">();
+		STATIC_CLASS_IMPL("BulletEntity")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletEntity")
 	}
 	static class UBulletEntity* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletEntity>();
 	}
 };
-static_assert(alignof(UBulletEntity) == 0x000010, "Wrong alignment on UBulletEntity");
-static_assert(sizeof(UBulletEntity) == 0x000370, "Wrong size on UBulletEntity");
-static_assert(offsetof(UBulletEntity, Actor) == 0x000030, "Member 'UBulletEntity::Actor' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, EntityId) == 0x000038, "Member 'UBulletEntity::EntityId' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, ConfigId) == 0x000040, "Member 'UBulletEntity::ConfigId' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, BulletOwner) == 0x000050, "Member 'UBulletEntity::BulletOwner' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, CollisionComponent) == 0x0000C8, "Member 'UBulletEntity::CollisionComponent' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, bNeedDetach) == 0x000198, "Member 'UBulletEntity::bNeedDetach' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, MapHitActorData) == 0x0001F8, "Member 'UBulletEntity::MapHitActorData' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, ArrayHitActorData) == 0x000248, "Member 'UBulletEntity::ArrayHitActorData' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, LastMapHitActorData) == 0x000258, "Member 'UBulletEntity::LastMapHitActorData' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, LastArrayHitActorData) == 0x0002A8, "Member 'UBulletEntity::LastArrayHitActorData' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, ObstacleTraceSphere) == 0x0002C0, "Member 'UBulletEntity::ObstacleTraceSphere' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, ObstacleTraceBox) == 0x0002C8, "Member 'UBulletEntity::ObstacleTraceBox' has a wrong offset!");
-static_assert(offsetof(UBulletEntity, TickActions) == 0x000310, "Member 'UBulletEntity::TickActions' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletEntity;
+
+// Class KuroBullet.BulletHitActorData
+// 0x0058 (0x0088 - 0x0030)
+class UBulletHitActorData final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x58];                                      // 0x0030(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BulletHitActorData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletHitActorData")
+	}
+	static class UBulletHitActorData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBulletHitActorData>();
+	}
+};
+DUMPER7_ASSERTS_UBulletHitActorData;
+
+// Class KuroBullet.BulletKFCComponent
+// 0x0090 (0x00C0 - 0x0030)
+class alignas(0x10) UBulletKFCComponent final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBulletEntity*                          BulletEntity;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0x80];                                      // 0x0040(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BulletKFCComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletKFCComponent")
+	}
+	static class UBulletKFCComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBulletKFCComponent>();
+	}
+};
+DUMPER7_ASSERTS_UBulletKFCComponent;
 
 // Class KuroBullet.BulletOwner
 // 0x0000 (0x0000 - 0x0000)
@@ -262,7 +329,11 @@ class IBulletOwner final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BulletOwner">();
+		STATIC_CLASS_IMPL("BulletOwner")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletOwner")
 	}
 	static class IBulletOwner* GetDefaultObj()
 	{
@@ -278,8 +349,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBulletOwner) == 0x000001, "Wrong alignment on IBulletOwner");
-static_assert(sizeof(IBulletOwner) == 0x000001, "Wrong size on IBulletOwner");
+DUMPER7_ASSERTS_IBulletOwner;
 
 // Class KuroBullet.BulletWorld
 // 0x01E0 (0x0210 - 0x0030)
@@ -318,24 +388,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BulletWorld">();
+		STATIC_CLASS_IMPL("BulletWorld")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletWorld")
 	}
 	static class UBulletWorld* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletWorld>();
 	}
 };
-static_assert(alignof(UBulletWorld) == 0x000008, "Wrong alignment on UBulletWorld");
-static_assert(sizeof(UBulletWorld) == 0x000210, "Wrong size on UBulletWorld");
-static_assert(offsetof(UBulletWorld, KscWorld) == 0x000030, "Member 'UBulletWorld::KscWorld' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, BulletEntityMap) == 0x000038, "Member 'UBulletWorld::BulletEntityMap' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, CommonBulletDataTableList) == 0x000088, "Member 'UBulletWorld::CommonBulletDataTableList' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, StickGroundLineTrace) == 0x0000B8, "Member 'UBulletWorld::StickGroundLineTrace' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, bFlatGround) == 0x0000C0, "Member 'UBulletWorld::bFlatGround' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, GroundZ) == 0x0000C8, "Member 'UBulletWorld::GroundZ' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, ForceUpdateOverlap) == 0x0000D0, "Member 'UBulletWorld::ForceUpdateOverlap' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, OnBulletModifyBuff) == 0x0000D8, "Member 'UBulletWorld::OnBulletModifyBuff' has a wrong offset!");
-static_assert(offsetof(UBulletWorld, ObjectHold) == 0x0000F8, "Member 'UBulletWorld::ObjectHold' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletWorld;
 
 // Class KuroBullet.KSC_DA_Buff_KuroBullet
 // 0x0010 (0x01C0 - 0x01B0)
@@ -349,17 +413,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Buff_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_DA_Buff_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_DA_Buff_KuroBullet")
 	}
 	static class UKSC_DA_Buff_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_DA_Buff_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_DA_Buff_KuroBullet) == 0x000010, "Wrong alignment on UKSC_DA_Buff_KuroBullet");
-static_assert(sizeof(UKSC_DA_Buff_KuroBullet) == 0x0001C0, "Wrong size on UKSC_DA_Buff_KuroBullet");
-static_assert(offsetof(UKSC_DA_Buff_KuroBullet, BulletId) == 0x0001A8, "Member 'UKSC_DA_Buff_KuroBullet::BulletId' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff_KuroBullet, DestroyBulletOnBuffEnd) == 0x0001B0, "Member 'UKSC_DA_Buff_KuroBullet::DestroyBulletOnBuffEnd' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_DA_Buff_KuroBullet;
 
 // Class KuroBullet.KSC_Buff_KuroBullet
 // 0x0010 (0x0070 - 0x0060)
@@ -372,98 +437,103 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Buff_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_Buff_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_Buff_KuroBullet")
 	}
 	static class UKSC_Buff_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_Buff_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_Buff_KuroBullet) == 0x000008, "Wrong alignment on UKSC_Buff_KuroBullet");
-static_assert(sizeof(UKSC_Buff_KuroBullet) == 0x000070, "Wrong size on UKSC_Buff_KuroBullet");
-static_assert(offsetof(UKSC_Buff_KuroBullet, DaBuffKuroBullet_) == 0x000060, "Member 'UKSC_Buff_KuroBullet::DaBuffKuroBullet_' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_Buff_KuroBullet;
 
 // Class KuroBullet.KSC_DA_Buff_Period_KuroBullet
-// 0x0030 (0x0230 - 0x0200)
+// 0x0070 (0x02D0 - 0x0260)
 class UKSC_DA_Buff_Period_KuroBullet final : public UKSC_DA_Buff_Period
 {
 public:
-	int64                                         BulletId;                                          // 0x0200(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_BulletTarget                             Target;                                            // 0x0208(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EKSC_Faction>                          IgnoreFaction;                                     // 0x0210(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         Range;                                             // 0x0220(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int64                                         BulletId;                                          // 0x0260(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_BulletTarget                             Target;                                            // 0x0268(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NoTargetNoBullet;                                  // 0x0269(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_BuffBulletInitTrans                      BulletInitTrans;                                   // 0x026A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_26B[0x5];                                      // 0x026B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_Faction>                          IgnoreFaction;                                     // 0x0270(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         Range;                                             // 0x0280(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_284[0xC];                                      // 0x0284(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformDouble                       SceneRelativeTrans;                                // 0x0290(0x0040)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Buff_Period_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_DA_Buff_Period_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_DA_Buff_Period_KuroBullet")
 	}
 	static class UKSC_DA_Buff_Period_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_DA_Buff_Period_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_DA_Buff_Period_KuroBullet) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Period_KuroBullet");
-static_assert(sizeof(UKSC_DA_Buff_Period_KuroBullet) == 0x000230, "Wrong size on UKSC_DA_Buff_Period_KuroBullet");
-static_assert(offsetof(UKSC_DA_Buff_Period_KuroBullet, BulletId) == 0x000200, "Member 'UKSC_DA_Buff_Period_KuroBullet::BulletId' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff_Period_KuroBullet, Target) == 0x000208, "Member 'UKSC_DA_Buff_Period_KuroBullet::Target' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff_Period_KuroBullet, IgnoreFaction) == 0x000210, "Member 'UKSC_DA_Buff_Period_KuroBullet::IgnoreFaction' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff_Period_KuroBullet, Range) == 0x000220, "Member 'UKSC_DA_Buff_Period_KuroBullet::Range' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_DA_Buff_Period_KuroBullet;
 
 // Class KuroBullet.KSC_Buff_Period_KuroBullet
-// 0x0010 (0x0088 - 0x0078)
-class UKSC_Buff_Period_KuroBullet final : public UKSC_Buff_Period
+// 0x0058 (0x0100 - 0x00A8)
+class alignas(0x10) UKSC_Buff_Period_KuroBullet final : public UKSC_Buff_Period
 {
 public:
-	class UKSC_DA_Buff_Period_KuroBullet*         DaBuffPeriodKuroBullet_;                           // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x48];                                      // 0x00A8(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_Period_KuroBullet*         DaBuffPeriodKuroBullet_;                           // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Buff_Period_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_Buff_Period_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_Buff_Period_KuroBullet")
 	}
 	static class UKSC_Buff_Period_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_Buff_Period_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_Buff_Period_KuroBullet) == 0x000008, "Wrong alignment on UKSC_Buff_Period_KuroBullet");
-static_assert(sizeof(UKSC_Buff_Period_KuroBullet) == 0x000088, "Wrong size on UKSC_Buff_Period_KuroBullet");
-static_assert(offsetof(UKSC_Buff_Period_KuroBullet, DaBuffPeriodKuroBullet_) == 0x000078, "Member 'UKSC_Buff_Period_KuroBullet::DaBuffPeriodKuroBullet_' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_Buff_Period_KuroBullet;
 
 // Class KuroBullet.KSC_DA_Skill_KuroBullet
-// 0x0030 (0x0190 - 0x0160)
+// 0x0030 (0x01A0 - 0x0170)
 class UKSC_DA_Skill_KuroBullet final : public UKSC_DA_Skill_Anim
 {
 public:
-	TArray<struct FKSC_SkillKuroBullet>           Bullets;                                           // 0x0160(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	EKSC_BulletTarget                             Target;                                            // 0x0170(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKuroBulletSkillDirection                     SkillDirection;                                    // 0x0171(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_172[0x2];                                      // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CastRangeMin;                                      // 0x0174(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int64>                                 AddBuffsToSelf;                                    // 0x0178(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FKSC_SkillKuroBullet>           Bullets;                                           // 0x0170(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_BulletTarget                             Target;                                            // 0x0180(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroBulletSkillDirection                     SkillDirection;                                    // 0x0181(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_182[0x2];                                      // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CastRangeMin;                                      // 0x0184(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int64>                                 AddBuffsToSelf;                                    // 0x0188(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Skill_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_DA_Skill_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_DA_Skill_KuroBullet")
 	}
 	static class UKSC_DA_Skill_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_DA_Skill_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_KuroBullet) == 0x000010, "Wrong alignment on UKSC_DA_Skill_KuroBullet");
-static_assert(sizeof(UKSC_DA_Skill_KuroBullet) == 0x000190, "Wrong size on UKSC_DA_Skill_KuroBullet");
-static_assert(offsetof(UKSC_DA_Skill_KuroBullet, Bullets) == 0x000160, "Member 'UKSC_DA_Skill_KuroBullet::Bullets' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_KuroBullet, Target) == 0x000170, "Member 'UKSC_DA_Skill_KuroBullet::Target' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_KuroBullet, SkillDirection) == 0x000171, "Member 'UKSC_DA_Skill_KuroBullet::SkillDirection' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_KuroBullet, CastRangeMin) == 0x000174, "Member 'UKSC_DA_Skill_KuroBullet::CastRangeMin' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_KuroBullet, AddBuffsToSelf) == 0x000178, "Member 'UKSC_DA_Skill_KuroBullet::AddBuffsToSelf' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_DA_Skill_KuroBullet;
 
 // Class KuroBullet.KSC_Skill_KuroBullet
 // 0x0028 (0x00D0 - 0x00A8)
@@ -476,16 +546,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Skill_KuroBullet">();
+		STATIC_CLASS_IMPL("KSC_Skill_KuroBullet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSC_Skill_KuroBullet")
 	}
 	static class UKSC_Skill_KuroBullet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSC_Skill_KuroBullet>();
 	}
 };
-static_assert(alignof(UKSC_Skill_KuroBullet) == 0x000008, "Wrong alignment on UKSC_Skill_KuroBullet");
-static_assert(sizeof(UKSC_Skill_KuroBullet) == 0x0000D0, "Wrong size on UKSC_Skill_KuroBullet");
-static_assert(offsetof(UKSC_Skill_KuroBullet, DaSkillKuroBullet_) == 0x0000A8, "Member 'UKSC_Skill_KuroBullet::DaSkillKuroBullet_' has a wrong offset!");
+DUMPER7_ASSERTS_UKSC_Skill_KuroBullet;
 
 // Class KuroBullet.KSCBulletOwner
 // 0x0048 (0x0078 - 0x0030)
@@ -499,16 +571,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSCBulletOwner">();
+		STATIC_CLASS_IMPL("KSCBulletOwner")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KSCBulletOwner")
 	}
 	static class UKSCBulletOwner* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKSCBulletOwner>();
 	}
 };
-static_assert(alignof(UKSCBulletOwner) == 0x000008, "Wrong alignment on UKSCBulletOwner");
-static_assert(sizeof(UKSCBulletOwner) == 0x000078, "Wrong size on UKSCBulletOwner");
-static_assert(offsetof(UKSCBulletOwner, OwnerBulletDataTable) == 0x000068, "Member 'UKSCBulletOwner::OwnerBulletDataTable' has a wrong offset!");
+DUMPER7_ASSERTS_UKSCBulletOwner;
 
 // Class KuroBullet.KuroBulletFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -522,15 +596,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBulletFunctionLibrary">();
+		STATIC_CLASS_IMPL("KuroBulletFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBulletFunctionLibrary")
 	}
 	static class UKuroBulletFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBulletFunctionLibrary>();
 	}
 };
-static_assert(alignof(UKuroBulletFunctionLibrary) == 0x000008, "Wrong alignment on UKuroBulletFunctionLibrary");
-static_assert(sizeof(UKuroBulletFunctionLibrary) == 0x000030, "Wrong size on UKuroBulletFunctionLibrary");
+DUMPER7_ASSERTS_UKuroBulletFunctionLibrary;
 
 // Class KuroBullet.KuroBulletSubsystem
 // 0x0000 (0x0038 - 0x0038)
@@ -544,15 +621,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBulletSubsystem">();
+		STATIC_CLASS_IMPL("KuroBulletSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBulletSubsystem")
 	}
 	static class UKuroBulletSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBulletSubsystem>();
 	}
 };
-static_assert(alignof(UKuroBulletSubsystem) == 0x000008, "Wrong alignment on UKuroBulletSubsystem");
-static_assert(sizeof(UKuroBulletSubsystem) == 0x000038, "Wrong size on UKuroBulletSubsystem");
+DUMPER7_ASSERTS_UKuroBulletSubsystem;
 
 }
 

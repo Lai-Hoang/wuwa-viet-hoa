@@ -23,15 +23,18 @@ class UNCS_Block_Nomal_C final : public UBP_CameraShakeAndForceFeedback_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"NCS_Block_Nomal_C">();
+		BP_STATIC_CLASS_IMPL("NCS_Block_Nomal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NCS_Block_Nomal_C")
 	}
 	static class UNCS_Block_Nomal_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNCS_Block_Nomal_C>();
 	}
 };
-static_assert(alignof(UNCS_Block_Nomal_C) == 0x000010, "Wrong alignment on UNCS_Block_Nomal_C");
-static_assert(sizeof(UNCS_Block_Nomal_C) == 0x0001E0, "Wrong size on UNCS_Block_Nomal_C");
+DUMPER7_ASSERTS_UNCS_Block_Nomal_C;
 
 }
 

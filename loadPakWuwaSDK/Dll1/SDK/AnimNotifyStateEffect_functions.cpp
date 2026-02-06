@@ -234,12 +234,12 @@ void UAnimNotifyStateEffect_C::CheckRealAttach()
 // Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.StopEffectInternal
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USkeletalMeshComponent*           meshComp1                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                animation1                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           meshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UAnimNotifyStateEffect_C::StopEffectInternal(class USkeletalMeshComponent* meshComp1, class UAnimSequenceBase* animation1, const class FString& reason)
+bool UAnimNotifyStateEffect_C::StopEffectInternal(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* animation, const class FString& reason)
 {
 	static class UFunction* Func = nullptr;
 
@@ -248,8 +248,8 @@ bool UAnimNotifyStateEffect_C::StopEffectInternal(class USkeletalMeshComponent* 
 
 	Params::AnimNotifyStateEffect_C_StopEffectInternal Parms{};
 
-	Parms.meshComp1 = meshComp1;
-	Parms.animation1 = animation1;
+	Parms.meshComp = meshComp;
+	Parms.animation = animation;
 	Parms.reason = std::move(reason);
 
 	auto Flgs = Func->FunctionFlags;

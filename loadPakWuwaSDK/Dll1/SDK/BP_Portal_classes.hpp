@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK
@@ -121,70 +121,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Portal_C">();
+		BP_STATIC_CLASS_IMPL("BP_Portal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Portal_C")
 	}
 	static class ABP_Portal_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Portal_C>();
 	}
 };
-static_assert(alignof(ABP_Portal_C) == 0x000010, "Wrong alignment on ABP_Portal_C");
-static_assert(sizeof(ABP_Portal_C) == 0x0005E0, "Wrong size on ABP_Portal_C");
-static_assert(offsetof(ABP_Portal_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_Portal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CapturePosition1) == 0x0002B8, "Member 'ABP_Portal_C::CapturePosition1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CapturePosition2) == 0x0002C0, "Member 'ABP_Portal_C::CapturePosition2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_Portal_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalWorldTransform1) == 0x0002D0, "Member 'ABP_Portal_C::PortalWorldTransform1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalWorldTransform2) == 0x000310, "Member 'ABP_Portal_C::PortalWorldTransform2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, DMI_Portal1) == 0x000350, "Member 'ABP_Portal_C::DMI_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, DMI_Portal2) == 0x000358, "Member 'ABP_Portal_C::DMI_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalColor1) == 0x000360, "Member 'ABP_Portal_C::PortalColor1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalColor2) == 0x000370, "Member 'ABP_Portal_C::PortalColor2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, DebugActor1) == 0x000380, "Member 'ABP_Portal_C::DebugActor1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, DebugActor2) == 0x000388, "Member 'ABP_Portal_C::DebugActor2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, Portal1Enable) == 0x000390, "Member 'ABP_Portal_C::Portal1Enable' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, Portal2Enable) == 0x000391, "Member 'ABP_Portal_C::Portal2Enable' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, RT2) == 0x000398, "Member 'ABP_Portal_C::RT2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimShowLen_Portal1) == 0x0003A0, "Member 'ABP_Portal_C::AnimShowLen_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimFadeLen_Portal1) == 0x0003A4, "Member 'ABP_Portal_C::AnimFadeLen_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimIsShowing_Portal1) == 0x0003A8, "Member 'ABP_Portal_C::AnimIsShowing_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimShowCurve_Portal1) == 0x0003B0, "Member 'ABP_Portal_C::AnimShowCurve_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimFadeCurve_Portal1) == 0x0003B8, "Member 'ABP_Portal_C::AnimFadeCurve_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimCounter_Portal1) == 0x0003C0, "Member 'ABP_Portal_C::AnimCounter_Portal1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimShowLen_Portal2) == 0x0003C4, "Member 'ABP_Portal_C::AnimShowLen_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimFadeLen_Portal2) == 0x0003C8, "Member 'ABP_Portal_C::AnimFadeLen_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimIsShowing_Portal2) == 0x0003CC, "Member 'ABP_Portal_C::AnimIsShowing_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimShowCurve_Portal2) == 0x0003D0, "Member 'ABP_Portal_C::AnimShowCurve_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimFadeCurve_Portal2) == 0x0003D8, "Member 'ABP_Portal_C::AnimFadeCurve_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, AnimCounter_Portal2) == 0x0003E0, "Member 'ABP_Portal_C::AnimCounter_Portal2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, RT1) == 0x0003E8, "Member 'ABP_Portal_C::RT1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EffectData_1) == 0x0003F0, "Member 'ABP_Portal_C::EffectData_1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EffectData_2) == 0x000410, "Member 'ABP_Portal_C::EffectData_2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalBounds1) == 0x000430, "Member 'ABP_Portal_C::PortalBounds1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EnableDebugCamera1) == 0x00043C, "Member 'ABP_Portal_C::EnableDebugCamera1' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EnableDebugCamera2) == 0x00043D, "Member 'ABP_Portal_C::EnableDebugCamera2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PortalBounds2) == 0x000440, "Member 'ABP_Portal_C::PortalBounds2' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Mobile_VeryLow) == 0x00044C, "Member 'ABP_Portal_C::CaptureConfig_Mobile_VeryLow' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Mobile_Low) == 0x000464, "Member 'ABP_Portal_C::CaptureConfig_Mobile_Low' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Mobile_Mid) == 0x00047C, "Member 'ABP_Portal_C::CaptureConfig_Mobile_Mid' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Mobile_High) == 0x000494, "Member 'ABP_Portal_C::CaptureConfig_Mobile_High' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Pc_VeryLow) == 0x0004AC, "Member 'ABP_Portal_C::CaptureConfig_Pc_VeryLow' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Pc_Low) == 0x0004C4, "Member 'ABP_Portal_C::CaptureConfig_Pc_Low' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Pc_Mid) == 0x0004DC, "Member 'ABP_Portal_C::CaptureConfig_Pc_Mid' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureConfig_Pc_High) == 0x0004F4, "Member 'ABP_Portal_C::CaptureConfig_Pc_High' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, IsMobile) == 0x00050C, "Member 'ABP_Portal_C::IsMobile' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PerformanceLevel_A) == 0x000510, "Member 'ABP_Portal_C::PerformanceLevel_A' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, PerformanceLevel_B) == 0x000514, "Member 'ABP_Portal_C::PerformanceLevel_B' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureMaxViewDistance_A) == 0x000518, "Member 'ABP_Portal_C::CaptureMaxViewDistance_A' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CaptureMaxViewDistance_B) == 0x00051C, "Member 'ABP_Portal_C::CaptureMaxViewDistance_B' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EnableDebugCapture1Params) == 0x000520, "Member 'ABP_Portal_C::EnableDebugCapture1Params' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, EnableDebugCapture2Params) == 0x000521, "Member 'ABP_Portal_C::EnableDebugCapture2Params' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CapturePerf_Lv0_MaxDist) == 0x000524, "Member 'ABP_Portal_C::CapturePerf_Lv0_MaxDist' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CapturePerf_Lv1_MaxDist) == 0x000528, "Member 'ABP_Portal_C::CapturePerf_Lv1_MaxDist' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, CapturePerf_Lv2_MaxDist) == 0x00052C, "Member 'ABP_Portal_C::CapturePerf_Lv2_MaxDist' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, Capture1InitShowFlags) == 0x000530, "Member 'ABP_Portal_C::Capture1InitShowFlags' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, Capture2InitShowFlags) == 0x000580, "Member 'ABP_Portal_C::Capture2InitShowFlags' has a wrong offset!");
-static_assert(offsetof(ABP_Portal_C, IsMac) == 0x0005D0, "Member 'ABP_Portal_C::IsMac' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Portal_C;
 
 }
 

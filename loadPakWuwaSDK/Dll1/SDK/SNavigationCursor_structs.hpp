@@ -26,11 +26,7 @@ public:
 	int32                                         BoundOffset_9_CB362485407CBDA2C3E910AC8F4583E4;    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          Switch_12_48B8E4EB4D500E99B2A67E8110F9A938;        // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(FSNavigationCursor) == 0x000004, "Wrong alignment on FSNavigationCursor");
-static_assert(sizeof(FSNavigationCursor) == 0x00000C, "Wrong size on FSNavigationCursor");
-static_assert(offsetof(FSNavigationCursor, OffsetType_7_E9376C9F46DC5DE301F4CFBC50EF945A) == 0x000000, "Member 'FSNavigationCursor::OffsetType_7_E9376C9F46DC5DE301F4CFBC50EF945A' has a wrong offset!");
-static_assert(offsetof(FSNavigationCursor, BoundOffset_9_CB362485407CBDA2C3E910AC8F4583E4) == 0x000004, "Member 'FSNavigationCursor::BoundOffset_9_CB362485407CBDA2C3E910AC8F4583E4' has a wrong offset!");
-static_assert(offsetof(FSNavigationCursor, Switch_12_48B8E4EB4D500E99B2A67E8110F9A938) == 0x000008, "Member 'FSNavigationCursor::Switch_12_48B8E4EB4D500E99B2A67E8110F9A938' has a wrong offset!");
+DUMPER7_ASSERTS_FSNavigationCursor;
 
 }
 

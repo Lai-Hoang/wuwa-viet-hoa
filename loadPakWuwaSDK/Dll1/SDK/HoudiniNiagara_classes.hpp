@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
-#include "HoudiniNiagara_structs.hpp"
 #include "Niagara_classes.hpp"
+#include "HoudiniNiagara_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -97,34 +97,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoudiniPointCache">();
+		STATIC_CLASS_IMPL("HoudiniPointCache")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoudiniPointCache")
 	}
 	static class UHoudiniPointCache* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHoudiniPointCache>();
 	}
 };
-static_assert(alignof(UHoudiniPointCache) == 0x000008, "Wrong alignment on UHoudiniPointCache");
-static_assert(sizeof(UHoudiniPointCache) == 0x0000F0, "Wrong size on UHoudiniPointCache");
-static_assert(offsetof(UHoudiniPointCache, FileName) == 0x000030, "Member 'UHoudiniPointCache::FileName' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, NumberOfSamples) == 0x000040, "Member 'UHoudiniPointCache::NumberOfSamples' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, NumberOfAttributes) == 0x000044, "Member 'UHoudiniPointCache::NumberOfAttributes' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, NumberOfPoints) == 0x000048, "Member 'UHoudiniPointCache::NumberOfPoints' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, NumberOfFrames) == 0x00004C, "Member 'UHoudiniPointCache::NumberOfFrames' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, FirstFrame) == 0x000050, "Member 'UHoudiniPointCache::FirstFrame' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, LastFrame) == 0x000054, "Member 'UHoudiniPointCache::LastFrame' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, MinSampleTime) == 0x000058, "Member 'UHoudiniPointCache::MinSampleTime' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, MaxSampleTime) == 0x00005C, "Member 'UHoudiniPointCache::MaxSampleTime' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, SourceCSVTitleRow) == 0x000060, "Member 'UHoudiniPointCache::SourceCSVTitleRow' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, AttributeArray) == 0x000070, "Member 'UHoudiniPointCache::AttributeArray' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, FloatSampleData) == 0x000088, "Member 'UHoudiniPointCache::FloatSampleData' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, SpawnTimes) == 0x000098, "Member 'UHoudiniPointCache::SpawnTimes' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, LifeValues) == 0x0000A8, "Member 'UHoudiniPointCache::LifeValues' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, PointTypes) == 0x0000B8, "Member 'UHoudiniPointCache::PointTypes' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, SpecialAttributeIndexes) == 0x0000C8, "Member 'UHoudiniPointCache::SpecialAttributeIndexes' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, PointValueIndexes) == 0x0000D8, "Member 'UHoudiniPointCache::PointValueIndexes' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, UseCustomCSVTitleRow) == 0x0000E8, "Member 'UHoudiniPointCache::UseCustomCSVTitleRow' has a wrong offset!");
-static_assert(offsetof(UHoudiniPointCache, FileType) == 0x0000E9, "Member 'UHoudiniPointCache::FileType' has a wrong offset!");
+DUMPER7_ASSERTS_UHoudiniPointCache;
 
 // Class HoudiniNiagara.NiagaraDataInterfaceHoudini
 // 0x0008 (0x0048 - 0x0040)
@@ -136,16 +120,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraDataInterfaceHoudini">();
+		STATIC_CLASS_IMPL("NiagaraDataInterfaceHoudini")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraDataInterfaceHoudini")
 	}
 	static class UNiagaraDataInterfaceHoudini* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNiagaraDataInterfaceHoudini>();
 	}
 };
-static_assert(alignof(UNiagaraDataInterfaceHoudini) == 0x000008, "Wrong alignment on UNiagaraDataInterfaceHoudini");
-static_assert(sizeof(UNiagaraDataInterfaceHoudini) == 0x000048, "Wrong size on UNiagaraDataInterfaceHoudini");
-static_assert(offsetof(UNiagaraDataInterfaceHoudini, HoudiniPointCacheAsset) == 0x000040, "Member 'UNiagaraDataInterfaceHoudini::HoudiniPointCacheAsset' has a wrong offset!");
+DUMPER7_ASSERTS_UNiagaraDataInterfaceHoudini;
 
 }
 

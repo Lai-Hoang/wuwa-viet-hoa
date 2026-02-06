@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "RoadNetRuntime_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "RoadNetRuntime_structs.hpp"
 
 
 namespace SDK
@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetActor">();
+		STATIC_CLASS_IMPL("RoadNetActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetActor")
 	}
 	static class ARoadNetActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ARoadNetActor>();
 	}
 };
-static_assert(alignof(ARoadNetActor) == 0x000008, "Wrong alignment on ARoadNetActor");
-static_assert(sizeof(ARoadNetActor) == 0x0002B8, "Wrong size on ARoadNetActor");
-static_assert(offsetof(ARoadNetActor, RoadNetComponent) == 0x0002B0, "Member 'ARoadNetActor::RoadNetComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ARoadNetActor;
 
 // Class RoadNetRuntime.RoadNetComponent
 // 0x0080 (0x05B0 - 0x0530)
@@ -61,21 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetComponent">();
+		STATIC_CLASS_IMPL("RoadNetComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetComponent")
 	}
 	static class URoadNetComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URoadNetComponent>();
 	}
 };
-static_assert(alignof(URoadNetComponent) == 0x000010, "Wrong alignment on URoadNetComponent");
-static_assert(sizeof(URoadNetComponent) == 0x0005B0, "Wrong size on URoadNetComponent");
-static_assert(offsetof(URoadNetComponent, bDrawDebug) == 0x000528, "Member 'URoadNetComponent::bDrawDebug' has a wrong offset!");
-static_assert(offsetof(URoadNetComponent, bHasBeenEdited) == 0x000529, "Member 'URoadNetComponent::bHasBeenEdited' has a wrong offset!");
-static_assert(offsetof(URoadNetComponent, TileSize) == 0x00052C, "Member 'URoadNetComponent::TileSize' has a wrong offset!");
-static_assert(offsetof(URoadNetComponent, RoadNetNodes) == 0x000538, "Member 'URoadNetComponent::RoadNetNodes' has a wrong offset!");
-static_assert(offsetof(URoadNetComponent, RoadNetID) == 0x000588, "Member 'URoadNetComponent::RoadNetID' has a wrong offset!");
-static_assert(offsetof(URoadNetComponent, DataBoundsBox) == 0x00058C, "Member 'URoadNetComponent::DataBoundsBox' has a wrong offset!");
+DUMPER7_ASSERTS_URoadNetComponent;
 
 // Class RoadNetRuntime.RoadNetSetting
 // 0x0010 (0x0040 - 0x0030)
@@ -88,16 +87,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RoadNetSetting">();
+		STATIC_CLASS_IMPL("RoadNetSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RoadNetSetting")
 	}
 	static class URoadNetSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URoadNetSetting>();
 	}
 };
-static_assert(alignof(URoadNetSetting) == 0x000008, "Wrong alignment on URoadNetSetting");
-static_assert(sizeof(URoadNetSetting) == 0x000040, "Wrong size on URoadNetSetting");
-static_assert(offsetof(URoadNetSetting, NodePlaceOffset) == 0x000030, "Member 'URoadNetSetting::NodePlaceOffset' has a wrong offset!");
+DUMPER7_ASSERTS_URoadNetSetting;
 
 }
 

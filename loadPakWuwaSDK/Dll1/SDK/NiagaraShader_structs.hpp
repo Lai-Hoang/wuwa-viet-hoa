@@ -41,13 +41,7 @@ public:
 	int32                                         MinStage;                                          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxStage;                                          // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSimulationStageMetaData) == 0x000008, "Wrong alignment on FSimulationStageMetaData");
-static_assert(sizeof(FSimulationStageMetaData) == 0x000038, "Wrong size on FSimulationStageMetaData");
-static_assert(offsetof(FSimulationStageMetaData, SimulationStageName) == 0x000000, "Member 'FSimulationStageMetaData::SimulationStageName' has a wrong offset!");
-static_assert(offsetof(FSimulationStageMetaData, IterationSource) == 0x00000C, "Member 'FSimulationStageMetaData::IterationSource' has a wrong offset!");
-static_assert(offsetof(FSimulationStageMetaData, OutputDestinations) == 0x000020, "Member 'FSimulationStageMetaData::OutputDestinations' has a wrong offset!");
-static_assert(offsetof(FSimulationStageMetaData, MinStage) == 0x000030, "Member 'FSimulationStageMetaData::MinStage' has a wrong offset!");
-static_assert(offsetof(FSimulationStageMetaData, MaxStage) == 0x000034, "Member 'FSimulationStageMetaData::MaxStage' has a wrong offset!");
+DUMPER7_ASSERTS_FSimulationStageMetaData;
 
 // ScriptStruct NiagaraShader.NiagaraDataInterfaceGeneratedFunction
 // 0x0030 (0x0030 - 0x0000)
@@ -56,8 +50,7 @@ struct alignas(0x08) FNiagaraDataInterfaceGeneratedFunction final
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNiagaraDataInterfaceGeneratedFunction) == 0x000008, "Wrong alignment on FNiagaraDataInterfaceGeneratedFunction");
-static_assert(sizeof(FNiagaraDataInterfaceGeneratedFunction) == 0x000030, "Wrong size on FNiagaraDataInterfaceGeneratedFunction");
+DUMPER7_ASSERTS_FNiagaraDataInterfaceGeneratedFunction;
 
 // ScriptStruct NiagaraShader.NiagaraDataInterfaceGPUParamInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -68,11 +61,7 @@ public:
 	class FString                                 DIClassName;                                       // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FNiagaraDataInterfaceGeneratedFunction> GeneratedFunctions;                        // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNiagaraDataInterfaceGPUParamInfo) == 0x000008, "Wrong alignment on FNiagaraDataInterfaceGPUParamInfo");
-static_assert(sizeof(FNiagaraDataInterfaceGPUParamInfo) == 0x000030, "Wrong size on FNiagaraDataInterfaceGPUParamInfo");
-static_assert(offsetof(FNiagaraDataInterfaceGPUParamInfo, DataInterfaceHLSLSymbol) == 0x000000, "Member 'FNiagaraDataInterfaceGPUParamInfo::DataInterfaceHLSLSymbol' has a wrong offset!");
-static_assert(offsetof(FNiagaraDataInterfaceGPUParamInfo, DIClassName) == 0x000010, "Member 'FNiagaraDataInterfaceGPUParamInfo::DIClassName' has a wrong offset!");
-static_assert(offsetof(FNiagaraDataInterfaceGPUParamInfo, GeneratedFunctions) == 0x000020, "Member 'FNiagaraDataInterfaceGPUParamInfo::GeneratedFunctions' has a wrong offset!");
+DUMPER7_ASSERTS_FNiagaraDataInterfaceGPUParamInfo;
 
 // ScriptStruct NiagaraShader.NiagaraCompileEvent
 // 0x0048 (0x0048 - 0x0000)
@@ -86,13 +75,7 @@ public:
 	struct FGuid                                  PinGuid;                                           // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FGuid>                          StackGuids;                                        // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNiagaraCompileEvent) == 0x000008, "Wrong alignment on FNiagaraCompileEvent");
-static_assert(sizeof(FNiagaraCompileEvent) == 0x000048, "Wrong size on FNiagaraCompileEvent");
-static_assert(offsetof(FNiagaraCompileEvent, Severity) == 0x000000, "Member 'FNiagaraCompileEvent::Severity' has a wrong offset!");
-static_assert(offsetof(FNiagaraCompileEvent, Message) == 0x000008, "Member 'FNiagaraCompileEvent::Message' has a wrong offset!");
-static_assert(offsetof(FNiagaraCompileEvent, NodeGuid) == 0x000018, "Member 'FNiagaraCompileEvent::NodeGuid' has a wrong offset!");
-static_assert(offsetof(FNiagaraCompileEvent, PinGuid) == 0x000028, "Member 'FNiagaraCompileEvent::PinGuid' has a wrong offset!");
-static_assert(offsetof(FNiagaraCompileEvent, StackGuids) == 0x000038, "Member 'FNiagaraCompileEvent::StackGuids' has a wrong offset!");
+DUMPER7_ASSERTS_FNiagaraCompileEvent;
 
 }
 

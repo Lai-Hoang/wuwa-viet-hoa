@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "KuroCurve_structs.hpp"
 #include "Engine_structs.hpp"
 #include "E_Cloud_Presents_structs.hpp"
+#include "KuroCurve_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "SD_KuroTraceCloudData_structs.hpp"
 
 
@@ -23,189 +23,197 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_GlobalGI.BP_GlobalGI_C
-// 0x04B0 (0x39A0 - 0x34F0)
+// 0x04D0 (0x3A40 - 0x3570)
 class ABP_GlobalGI_C final : public AKuroGlobalGI
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x34F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkyAtmosphereComponent*                SkyAtmosphere;                                     // 0x34F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  GodRayPostVolume;                                  // 0x3500(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneRayTracingGICaptureComponentCube* SceneRayTracingGICaptureComponentCube;             // 0x3508(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   KuroVolumeCloudGlobal;                             // 0x3510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   RainOverrider;                                     // 0x3518(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroGlobalHeightMapComponent*          KuroGlobalHeightMap;                               // 0x3520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CloudOcean;                                        // 0x3528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroGlobalColorMapComponent*           KuroGlobalColorMap;                                // 0x3530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_MilkyWay;                                       // 0x3538(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_UiSceneRenderingComponent_C*        BP_UiSceneRenderingComponent;                      // 0x3540(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroPostProcessComponent*              GlobalUiScenePostProcess;                          // 0x3548(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   ImposterManager;                                   // 0x3550(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS6;                                  // 0x3558(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS5;                                  // 0x3560(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS4;                                  // 0x3568(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS3;                                  // 0x3570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS2;                                  // 0x3578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS1;                                  // 0x3580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Com_Roc_01AS;                                   // 0x3588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroPostProcessComponent*              LUTPostProcess;                                    // 0x3590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Stars;                                          // 0x3598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Skybox;                                            // 0x35A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  GlobalPostProcessVolume;                           // 0x35A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             SceneLight;                                        // 0x35B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             AtmoMoonLight;                                     // 0x35B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             AtmoSunLight;                                      // 0x35C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkyLightComponent*                     SkyLight;                                          // 0x35C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UExponentialHeightFogComponent*         HeightFog;                                         // 0x35D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x35D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         CharacterLightHorizontal;                          // 0x35E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrTimeOfDay;                                     // 0x35E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableTODCycle;                                    // 0x35E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          PauseTOD;                                          // 0x35E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          编辑器下更新;                                      // 0x35EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_35EB[0x1];                                     // 0x35EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TODCycleTime;                                      // 0x35EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               SenenDirLightRot;                                  // 0x35F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         MainLightAngleLimit;                               // 0x35FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsGIEnable;                                        // 0x3600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          使用随机的昼夜循环天气组;                          // 0x3601(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3602[0x2];                                     // 0x3602(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         当前的天气组索引值;                                // 0x3604(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           太阳颜色;                                          // 0x3608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FVector2D>                      SunLightExistTime;                                 // 0x3618(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<struct FVector2D>                      MoonLightExistTime;                                // 0x3628(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          运行时自动开始循环;                                // 0x3638(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UISceneRendering;                                  // 0x3639(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsRootGI;                                          // 0x363A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DEBUG_使用角色预览方向光;                          // 0x363B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	float                                         DEBUG_角色预览方向光方向;                          // 0x363C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TotalDaysElapsed;                                  // 0x3640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MoonFade;                                          // 0x3644(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              MoonVisibleTime;                                   // 0x3648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          编辑器下关闭LensFlare;                             // 0x3650(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
-	bool                                          关闭雾效;                                          // 0x3651(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          RuntimeTimeEnable;                                 // 0x3652(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_3653[0x1];                                     // 0x3653(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MainLightTickSecond;                               // 0x3654(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MainLightTickCounter;                              // 0x3658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ForceUpdateMainLightDir;                           // 0x365C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_365D[0x3];                                     // 0x365D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WindDir;                                           // 0x3660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          使用临时雾效;                                      // 0x3664(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3665[0x3];                                     // 0x3665(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      TempFogMaterial;                                   // 0x3668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               TempFogDMI;                                        // 0x3670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      SkyboxMaterial;                                    // 0x3678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SunDiscColor;                                      // 0x3680(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SunScatterColor;                                   // 0x3690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SunSize;                                           // 0x36A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           MoonDiscColor;                                     // 0x36A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           MoonScatterColor;                                  // 0x36B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MoonSize;                                          // 0x36C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HorizonColor;                                      // 0x36C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HorizonFalloff;                                    // 0x36D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ZenithColor;                                       // 0x36DC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExtremWeatherWeight;                               // 0x36EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ST_TopColor;                                       // 0x36F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ST_DomeColorTint;                                  // 0x3700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ST_TopWidth;                                       // 0x3710(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3714[0x4];                                     // 0x3714(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            CharMainLightCurve;                                // 0x3718(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            CharSkyLightCurve;                                 // 0x3720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseCharCustomLighting;                             // 0x3728(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3729[0x3];                                     // 0x3729(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CharAmbientColor;                                  // 0x372C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CharSkinAmbientColor;                              // 0x373C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_374C[0x4];                                     // 0x374C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            CharShadowCurve;                                   // 0x3750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      LightFunctionMaterial;                             // 0x3758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightFunctionIntensity;                            // 0x3760(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3764[0x4];                                     // 0x3764(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               LightFunctionDMI;                                  // 0x3768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DEBUG开启无音区特殊地表;                           // 0x3770(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_3771[0x7];                                     // 0x3771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      LensFlareMI;                                       // 0x3778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               LensFlareDMI;                                      // 0x3780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      MobileLensFlareMI_Ghost;                           // 0x3788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Nadir_Color;                                       // 0x3790(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Nadir_Falloff;                                     // 0x37A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Sun_Scatter_Size;                                  // 0x37A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Moon_Scatter_Size;                                 // 0x37A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37AC[0x4];                                     // 0x37AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      StarsMaterial;                                     // 0x37B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MainDirectionLightUpdateThreshold_Mobile;          // 0x37B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MainDirectionLightUpdateThreshold;                 // 0x37BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GlobalWindDirection;                               // 0x37C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GlobalWindRightDirection;                          // 0x37CC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DEBUG无音区特殊地表强度;                           // 0x37D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37DC[0x4];                                     // 0x37DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ControlTodTime_C*                   TodTimeController;                                 // 0x37E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RealTimeOfDay;                                     // 0x37E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37EC[0x4];                                     // 0x37EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_Clouds_C*                           DynamicCloudsActor;                                // 0x37F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EKuroDynamicCloudType                         LocalDynamicCloudsType;                            // 0x37F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_37F9[0x3];                                     // 0x37F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RainDensityChangeSpeed;                            // 0x37FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RainDensity;                                       // 0x3800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SnowDensity;                                       // 0x3804(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RainGravity;                                       // 0x3808(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RainGravityChangeSpeed;                            // 0x380C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RainWindPower;                                     // 0x3810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RainWindPowerChangeSpeed;                          // 0x3814(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanSpawnEffect;                                    // 0x3818(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3819[0x3];                                     // 0x3819(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FinalSnowDensity;                                  // 0x381C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FinalRainDensity;                                  // 0x3820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FinalRainGravity;                                  // 0x3824(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DefaultSkyLightShadowSupplement;                   // 0x3828(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DefaultSkyLightReflectionAddIntensity;             // 0x382C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      MobileLensFlareMI_Halo;                            // 0x3830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MobileLensFlareDMI_Ghost;                          // 0x3838(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MobileLensFlareDMI_Halo;                           // 0x3840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             HeightMapTexture;                                  // 0x3848(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HeightMapUpdated;                                  // 0x3850(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3851[0x3];                                     // 0x3851(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SunLightDirection;                                 // 0x3854(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsComponentsEnable;                                // 0x3860(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3861[0x7];                                     // 0x3861(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Last_LightFunction_Map;                            // 0x3868(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               InitLightFunctionMap;                              // 0x3870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TODLightLoadingWait;                               // 0x3878(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DayLightLoadingTime;                               // 0x387C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NightLightLoadingTime;                             // 0x3880(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ComputeLightGridSkipFrames;                        // 0x3884(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      MilkyWayMaterial;                                  // 0x3888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          使用主角位置;                                      // 0x3890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3891[0x3];                                     // 0x3891(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DEBUG_角色预览方向光垂直方向;                      // 0x3894(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsinEditor)> CallCloudChange; // 0x3898(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FKuroCurveFloat                        FogTImeControl;                                    // 0x38A8(0x0090)(Edit, BlueprintVisible)
-	bool                                          Is_Editor_Update;                                  // 0x3938(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          EnableImposterUpdate;                              // 0x3939(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_393A[0x2];                                     // 0x393A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Clouds_Change_CD;                                  // 0x393C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Clouds_Change_Time;                                // 0x3940(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Clouds_Change_Time_0;                              // 0x3944(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          启用时间参数写入;                                  // 0x3948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UINeedLerpData;                                    // 0x3949(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bEnableLumen;                                      // 0x394A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_394B[0x5];                                     // 0x394B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      LightFunctionMaterial_seq;                         // 0x3950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Override_Cloud_Rotation;                           // 0x3958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3959[0x3];                                     // 0x3959(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Sequence_Cloud_Time_Control;                       // 0x395C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Sequence_Cloud_Time_Offset;                        // 0x3960(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3964[0x4];                                     // 0x3964(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      VolumetricLightFunctionMaterial;                   // 0x3968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PerformanceLightExist;                             // 0x3970(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bEnableAutoExposure;                               // 0x3971(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          PerformanceLightExist_MP4;                         // 0x3972(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          BPScreenFilter;                                    // 0x3973(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3974[0x4];                                     // 0x3974(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      Star_Material_V2;                                  // 0x3978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UKuroScreenFilterSystemData*            ScreenFilterAsset;                                 // 0x3980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSD_KuroTraceCloudData>         Data;                                              // 0x3988(0x0010)(Edit, BlueprintVisible)
-	bool                                          bCurrentPC;                                        // 0x3998(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bSetDailyRandom;                                   // 0x3999(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3570(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkyAtmosphereComponent*                SkyAtmosphere;                                     // 0x3578(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  GodRayPostVolume;                                  // 0x3580(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneRayTracingGICaptureComponentCube* SceneRayTracingGICaptureComponentCube;             // 0x3588(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   KuroVolumeCloudGlobal;                             // 0x3590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   RainOverrider;                                     // 0x3598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UKuroGlobalHeightMapComponent*          KuroGlobalHeightMap;                               // 0x35A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CloudOcean;                                        // 0x35A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UKuroGlobalColorMapComponent*           KuroGlobalColorMap;                                // 0x35B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_MilkyWay;                                       // 0x35B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_UiSceneRenderingComponent_C*        BP_UiSceneRenderingComponent;                      // 0x35C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UKuroPostProcessComponent*              GlobalUiScenePostProcess;                          // 0x35C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   ImposterManager;                                   // 0x35D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS6;                                  // 0x35D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS5;                                  // 0x35E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS4;                                  // 0x35E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS3;                                  // 0x35F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS2;                                  // 0x35F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS1;                                  // 0x3600(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Com_Roc_01AS;                                   // 0x3608(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UKuroPostProcessComponent*              LUTPostProcess;                                    // 0x3610(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Stars;                                          // 0x3618(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Skybox;                                            // 0x3620(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  GlobalPostProcessVolume;                           // 0x3628(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             SceneLight;                                        // 0x3630(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             AtmoMoonLight;                                     // 0x3638(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             AtmoSunLight;                                      // 0x3640(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkyLightComponent*                     SkyLight;                                          // 0x3648(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UExponentialHeightFogComponent*         HeightFog;                                         // 0x3650(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x3658(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         CharacterLightHorizontal;                          // 0x3660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrTimeOfDay;                                     // 0x3664(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableTODCycle;                                    // 0x3668(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          PauseTOD;                                          // 0x3669(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          编辑器下更新;                                      // 0x366A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_366B[0x1];                                     // 0x366B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TODCycleTime;                                      // 0x366C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               SenenDirLightRot;                                  // 0x3670(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         MainLightAngleLimit;                               // 0x367C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsGIEnable;                                        // 0x3680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          使用随机的昼夜循环天气组;                          // 0x3681(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3682[0x2];                                     // 0x3682(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         当前的天气组索引值;                                // 0x3684(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           太阳颜色;                                          // 0x3688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FVector2D>                      SunLightExistTime;                                 // 0x3698(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector2D>                      MoonLightExistTime;                                // 0x36A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          运行时自动开始循环;                                // 0x36B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UISceneRendering;                                  // 0x36B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsRootGI;                                          // 0x36BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DEBUG_使用角色预览方向光;                          // 0x36BB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	float                                         DEBUG_角色预览方向光方向;                          // 0x36BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TotalDaysElapsed;                                  // 0x36C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MoonFade;                                          // 0x36C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              MoonVisibleTime;                                   // 0x36C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          编辑器下关闭LensFlare;                             // 0x36D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor)
+	bool                                          关闭雾效;                                          // 0x36D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          RuntimeTimeEnable;                                 // 0x36D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_36D3[0x1];                                     // 0x36D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MainLightTickSecond;                               // 0x36D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MainLightTickCounter;                              // 0x36D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ForceUpdateMainLightDir;                           // 0x36DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_36DD[0x3];                                     // 0x36DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WindDir;                                           // 0x36E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          使用临时雾效;                                      // 0x36E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_36E5[0x3];                                     // 0x36E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      TempFogMaterial;                                   // 0x36E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               TempFogDMI;                                        // 0x36F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      SkyboxMaterial;                                    // 0x36F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SunDiscColor;                                      // 0x3700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SunScatterColor;                                   // 0x3710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SunSize;                                           // 0x3720(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           MoonDiscColor;                                     // 0x3724(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           MoonScatterColor;                                  // 0x3734(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MoonSize;                                          // 0x3744(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HorizonColor;                                      // 0x3748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HorizonFalloff;                                    // 0x3758(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ZenithColor;                                       // 0x375C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExtremWeatherWeight;                               // 0x376C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ST_TopColor;                                       // 0x3770(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ST_DomeColorTint;                                  // 0x3780(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ST_TopWidth;                                       // 0x3790(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3794[0x4];                                     // 0x3794(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            CharMainLightCurve;                                // 0x3798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            CharSkyLightCurve;                                 // 0x37A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseCharCustomLighting;                             // 0x37A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_37A9[0x3];                                     // 0x37A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CharAmbientColor;                                  // 0x37AC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CharSkinAmbientColor;                              // 0x37BC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37CC[0x4];                                     // 0x37CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            CharShadowCurve;                                   // 0x37D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      LightFunctionMaterial;                             // 0x37D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightFunctionIntensity;                            // 0x37E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37E4[0x4];                                     // 0x37E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               LightFunctionDMI;                                  // 0x37E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DEBUG开启无音区特殊地表;                           // 0x37F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_37F1[0x7];                                     // 0x37F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      LensFlareMI;                                       // 0x37F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               LensFlareDMI;                                      // 0x3800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      MobileLensFlareMI_Ghost;                           // 0x3808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Nadir_Color;                                       // 0x3810(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Nadir_Falloff;                                     // 0x3820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Sun_Scatter_Size;                                  // 0x3824(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Moon_Scatter_Size;                                 // 0x3828(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_382C[0x4];                                     // 0x382C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      StarsMaterial;                                     // 0x3830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MainDirectionLightUpdateThreshold_Mobile;          // 0x3838(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MainDirectionLightUpdateThreshold;                 // 0x383C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GlobalWindDirection;                               // 0x3840(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GlobalWindRightDirection;                          // 0x384C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DEBUG无音区特殊地表强度;                           // 0x3858(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_385C[0x4];                                     // 0x385C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ControlTodTime_C*                   TodTimeController;                                 // 0x3860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RealTimeOfDay;                                     // 0x3868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_386C[0x4];                                     // 0x386C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_Clouds_C*                           DynamicCloudsActor;                                // 0x3870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EKuroDynamicCloudType                         LocalDynamicCloudsType;                            // 0x3878(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3879[0x3];                                     // 0x3879(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RainDensityChangeSpeed;                            // 0x387C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RainDensity;                                       // 0x3880(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SnowDensity;                                       // 0x3884(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RainGravity;                                       // 0x3888(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RainGravityChangeSpeed;                            // 0x388C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RainWindPower;                                     // 0x3890(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RainWindPowerChangeSpeed;                          // 0x3894(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSpawnEffect;                                    // 0x3898(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3899[0x3];                                     // 0x3899(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FinalSnowDensity;                                  // 0x389C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FinalRainDensity;                                  // 0x38A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FinalRainGravity;                                  // 0x38A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DefaultSkyLightShadowSupplement;                   // 0x38A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DefaultSkyLightReflectionAddIntensity;             // 0x38AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      MobileLensFlareMI_Halo;                            // 0x38B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MobileLensFlareDMI_Ghost;                          // 0x38B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MobileLensFlareDMI_Halo;                           // 0x38C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             HeightMapTexture;                                  // 0x38C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HeightMapUpdated;                                  // 0x38D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38D1[0x3];                                     // 0x38D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SunLightDirection;                                 // 0x38D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsComponentsEnable;                                // 0x38E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38E1[0x7];                                     // 0x38E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Last_LightFunction_Map;                            // 0x38E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               InitLightFunctionMap;                              // 0x38F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TODLightLoadingWait;                               // 0x38F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DayLightLoadingTime;                               // 0x38FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NightLightLoadingTime;                             // 0x3900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ComputeLightGridSkipFrames;                        // 0x3904(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      MilkyWayMaterial;                                  // 0x3908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          使用主角位置;                                      // 0x3910(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3911[0x3];                                     // 0x3911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DEBUG_角色预览方向光垂直方向;                      // 0x3914(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsinEditor)> CallCloudChange; // 0x3918(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FKuroCurveFloat                        FogTImeControl;                                    // 0x3928(0x0090)(Edit, BlueprintVisible)
+	bool                                          Is_Editor_Update;                                  // 0x39B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          EnableImposterUpdate;                              // 0x39B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39BA[0x2];                                     // 0x39BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Clouds_Change_CD;                                  // 0x39BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Clouds_Change_Time;                                // 0x39C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Clouds_Change_Time_0;                              // 0x39C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          启用时间参数写入;                                  // 0x39C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UINeedLerpData;                                    // 0x39C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bEnableLumen;                                      // 0x39CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39CB[0x5];                                     // 0x39CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      LightFunctionMaterial_seq;                         // 0x39D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Override_Cloud_Rotation;                           // 0x39D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39D9[0x3];                                     // 0x39D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Sequence_Cloud_Time_Control;                       // 0x39DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Sequence_Cloud_Time_Offset;                        // 0x39E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39E4[0x4];                                     // 0x39E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      VolumetricLightFunctionMaterial;                   // 0x39E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PerformanceLightExist;                             // 0x39F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bEnableAutoExposure;                               // 0x39F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          PerformanceLightExist_MP4;                         // 0x39F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          BPScreenFilter;                                    // 0x39F3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39F4[0x4];                                     // 0x39F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      Star_Material_V2;                                  // 0x39F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UKuroScreenFilterSystemData*            ScreenFilterAsset;                                 // 0x3A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSD_KuroTraceCloudData>         Data;                                              // 0x3A08(0x0010)(Edit, BlueprintVisible)
+	bool                                          bCurrentPC;                                        // 0x3A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bSetDailyRandom;                                   // 0x3A19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A1A[0x6];                                     // 0x3A1A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      FrozenMaterial;                                    // 0x3A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               FrozenDMI;                                         // 0x3A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TimeTotal;                                         // 0x3A30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChangeFrozen;                                      // 0x3A34(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Ini;                                               // 0x3A35(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          NeedDissolve;                                      // 0x3A36(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	EKuroRainType                                 CurrentRainType;                                   // 0x3A37(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_GlobalGI(int32 EntryPoint);
@@ -257,7 +265,7 @@ public:
 	void 下午();
 	void 申时();
 	void UpdateFlowmapSkybox();
-	void UpdateMisc();
+	void Update_Misc();
 	void UpdateSkybox();
 	void GetSkyboxDMI(class UMaterialInstanceDynamic** DMIRet);
 	void UpdateClusteredStuff();
@@ -275,179 +283,29 @@ public:
 	void UpdateBigWorld();
 	void OnGlobalGITick();
 	void UpdateEditor();
+	void UpdateFrozen();
 	void UpdateOcean();
 	void IsPerformanceLightExist();
 	void UpdateVolumeCloudLightWeight();
 	void UpdateOriginSkyAtmosphere();
+	void Set_GIControlParamToGlobalShaderParam();
+	void UpdateCharacterRootPos();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GlobalGI_C">();
+		BP_STATIC_CLASS_IMPL("BP_GlobalGI_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GlobalGI_C")
 	}
 	static class ABP_GlobalGI_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_GlobalGI_C>();
 	}
 };
-static_assert(alignof(ABP_GlobalGI_C) == 0x000010, "Wrong alignment on ABP_GlobalGI_C");
-static_assert(sizeof(ABP_GlobalGI_C) == 0x0039A0, "Wrong size on ABP_GlobalGI_C");
-static_assert(offsetof(ABP_GlobalGI_C, UberGraphFrame) == 0x0034F0, "Member 'ABP_GlobalGI_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SkyAtmosphere) == 0x0034F8, "Member 'ABP_GlobalGI_C::SkyAtmosphere' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, GodRayPostVolume) == 0x003500, "Member 'ABP_GlobalGI_C::GodRayPostVolume' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SceneRayTracingGICaptureComponentCube) == 0x003508, "Member 'ABP_GlobalGI_C::SceneRayTracingGICaptureComponentCube' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, KuroVolumeCloudGlobal) == 0x003510, "Member 'ABP_GlobalGI_C::KuroVolumeCloudGlobal' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainOverrider) == 0x003518, "Member 'ABP_GlobalGI_C::RainOverrider' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, KuroGlobalHeightMap) == 0x003520, "Member 'ABP_GlobalGI_C::KuroGlobalHeightMap' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CloudOcean) == 0x003528, "Member 'ABP_GlobalGI_C::CloudOcean' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, KuroGlobalColorMap) == 0x003530, "Member 'ABP_GlobalGI_C::KuroGlobalColorMap' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_MilkyWay) == 0x003538, "Member 'ABP_GlobalGI_C::SM_MilkyWay' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, BP_UiSceneRenderingComponent) == 0x003540, "Member 'ABP_GlobalGI_C::BP_UiSceneRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, GlobalUiScenePostProcess) == 0x003548, "Member 'ABP_GlobalGI_C::GlobalUiScenePostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ImposterManager) == 0x003550, "Member 'ABP_GlobalGI_C::ImposterManager' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS6) == 0x003558, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS6' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS5) == 0x003560, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS5' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS4) == 0x003568, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS4' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS3) == 0x003570, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS3' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS2) == 0x003578, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS2' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS1) == 0x003580, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS1' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Com_Roc_01AS) == 0x003588, "Member 'ABP_GlobalGI_C::SM_Com_Roc_01AS' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LUTPostProcess) == 0x003590, "Member 'ABP_GlobalGI_C::LUTPostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SM_Stars) == 0x003598, "Member 'ABP_GlobalGI_C::SM_Stars' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Skybox) == 0x0035A0, "Member 'ABP_GlobalGI_C::Skybox' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, GlobalPostProcessVolume) == 0x0035A8, "Member 'ABP_GlobalGI_C::GlobalPostProcessVolume' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SceneLight) == 0x0035B0, "Member 'ABP_GlobalGI_C::SceneLight' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, AtmoMoonLight) == 0x0035B8, "Member 'ABP_GlobalGI_C::AtmoMoonLight' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, AtmoSunLight) == 0x0035C0, "Member 'ABP_GlobalGI_C::AtmoSunLight' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SkyLight) == 0x0035C8, "Member 'ABP_GlobalGI_C::SkyLight' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, HeightFog) == 0x0035D0, "Member 'ABP_GlobalGI_C::HeightFog' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DefaultSceneRoot) == 0x0035D8, "Member 'ABP_GlobalGI_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharacterLightHorizontal) == 0x0035E0, "Member 'ABP_GlobalGI_C::CharacterLightHorizontal' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CurrTimeOfDay) == 0x0035E4, "Member 'ABP_GlobalGI_C::CurrTimeOfDay' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, EnableTODCycle) == 0x0035E8, "Member 'ABP_GlobalGI_C::EnableTODCycle' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, PauseTOD) == 0x0035E9, "Member 'ABP_GlobalGI_C::PauseTOD' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 编辑器下更新) == 0x0035EA, "Member 'ABP_GlobalGI_C::编辑器下更新' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TODCycleTime) == 0x0035EC, "Member 'ABP_GlobalGI_C::TODCycleTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SenenDirLightRot) == 0x0035F0, "Member 'ABP_GlobalGI_C::SenenDirLightRot' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MainLightAngleLimit) == 0x0035FC, "Member 'ABP_GlobalGI_C::MainLightAngleLimit' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, IsGIEnable) == 0x003600, "Member 'ABP_GlobalGI_C::IsGIEnable' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 使用随机的昼夜循环天气组) == 0x003601, "Member 'ABP_GlobalGI_C::使用随机的昼夜循环天气组' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 当前的天气组索引值) == 0x003604, "Member 'ABP_GlobalGI_C::当前的天气组索引值' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 太阳颜色) == 0x003608, "Member 'ABP_GlobalGI_C::太阳颜色' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SunLightExistTime) == 0x003618, "Member 'ABP_GlobalGI_C::SunLightExistTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonLightExistTime) == 0x003628, "Member 'ABP_GlobalGI_C::MoonLightExistTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 运行时自动开始循环) == 0x003638, "Member 'ABP_GlobalGI_C::运行时自动开始循环' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, UISceneRendering) == 0x003639, "Member 'ABP_GlobalGI_C::UISceneRendering' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, IsRootGI) == 0x00363A, "Member 'ABP_GlobalGI_C::IsRootGI' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DEBUG_使用角色预览方向光) == 0x00363B, "Member 'ABP_GlobalGI_C::DEBUG_使用角色预览方向光' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DEBUG_角色预览方向光方向) == 0x00363C, "Member 'ABP_GlobalGI_C::DEBUG_角色预览方向光方向' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TotalDaysElapsed) == 0x003640, "Member 'ABP_GlobalGI_C::TotalDaysElapsed' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonFade) == 0x003644, "Member 'ABP_GlobalGI_C::MoonFade' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonVisibleTime) == 0x003648, "Member 'ABP_GlobalGI_C::MoonVisibleTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 编辑器下关闭LensFlare) == 0x003650, "Member 'ABP_GlobalGI_C::编辑器下关闭LensFlare' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 关闭雾效) == 0x003651, "Member 'ABP_GlobalGI_C::关闭雾效' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RuntimeTimeEnable) == 0x003652, "Member 'ABP_GlobalGI_C::RuntimeTimeEnable' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MainLightTickSecond) == 0x003654, "Member 'ABP_GlobalGI_C::MainLightTickSecond' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MainLightTickCounter) == 0x003658, "Member 'ABP_GlobalGI_C::MainLightTickCounter' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ForceUpdateMainLightDir) == 0x00365C, "Member 'ABP_GlobalGI_C::ForceUpdateMainLightDir' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, WindDir) == 0x003660, "Member 'ABP_GlobalGI_C::WindDir' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 使用临时雾效) == 0x003664, "Member 'ABP_GlobalGI_C::使用临时雾效' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TempFogMaterial) == 0x003668, "Member 'ABP_GlobalGI_C::TempFogMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TempFogDMI) == 0x003670, "Member 'ABP_GlobalGI_C::TempFogDMI' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SkyboxMaterial) == 0x003678, "Member 'ABP_GlobalGI_C::SkyboxMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SunDiscColor) == 0x003680, "Member 'ABP_GlobalGI_C::SunDiscColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SunScatterColor) == 0x003690, "Member 'ABP_GlobalGI_C::SunScatterColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SunSize) == 0x0036A0, "Member 'ABP_GlobalGI_C::SunSize' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonDiscColor) == 0x0036A4, "Member 'ABP_GlobalGI_C::MoonDiscColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonScatterColor) == 0x0036B4, "Member 'ABP_GlobalGI_C::MoonScatterColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MoonSize) == 0x0036C4, "Member 'ABP_GlobalGI_C::MoonSize' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, HorizonColor) == 0x0036C8, "Member 'ABP_GlobalGI_C::HorizonColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, HorizonFalloff) == 0x0036D8, "Member 'ABP_GlobalGI_C::HorizonFalloff' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ZenithColor) == 0x0036DC, "Member 'ABP_GlobalGI_C::ZenithColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ExtremWeatherWeight) == 0x0036EC, "Member 'ABP_GlobalGI_C::ExtremWeatherWeight' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ST_TopColor) == 0x0036F0, "Member 'ABP_GlobalGI_C::ST_TopColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ST_DomeColorTint) == 0x003700, "Member 'ABP_GlobalGI_C::ST_DomeColorTint' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ST_TopWidth) == 0x003710, "Member 'ABP_GlobalGI_C::ST_TopWidth' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharMainLightCurve) == 0x003718, "Member 'ABP_GlobalGI_C::CharMainLightCurve' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharSkyLightCurve) == 0x003720, "Member 'ABP_GlobalGI_C::CharSkyLightCurve' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, UseCharCustomLighting) == 0x003728, "Member 'ABP_GlobalGI_C::UseCharCustomLighting' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharAmbientColor) == 0x00372C, "Member 'ABP_GlobalGI_C::CharAmbientColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharSkinAmbientColor) == 0x00373C, "Member 'ABP_GlobalGI_C::CharSkinAmbientColor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CharShadowCurve) == 0x003750, "Member 'ABP_GlobalGI_C::CharShadowCurve' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LightFunctionMaterial) == 0x003758, "Member 'ABP_GlobalGI_C::LightFunctionMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LightFunctionIntensity) == 0x003760, "Member 'ABP_GlobalGI_C::LightFunctionIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LightFunctionDMI) == 0x003768, "Member 'ABP_GlobalGI_C::LightFunctionDMI' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DEBUG开启无音区特殊地表) == 0x003770, "Member 'ABP_GlobalGI_C::DEBUG开启无音区特殊地表' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LensFlareMI) == 0x003778, "Member 'ABP_GlobalGI_C::LensFlareMI' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LensFlareDMI) == 0x003780, "Member 'ABP_GlobalGI_C::LensFlareDMI' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MobileLensFlareMI_Ghost) == 0x003788, "Member 'ABP_GlobalGI_C::MobileLensFlareMI_Ghost' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Nadir_Color) == 0x003790, "Member 'ABP_GlobalGI_C::Nadir_Color' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Nadir_Falloff) == 0x0037A0, "Member 'ABP_GlobalGI_C::Nadir_Falloff' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Sun_Scatter_Size) == 0x0037A4, "Member 'ABP_GlobalGI_C::Sun_Scatter_Size' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Moon_Scatter_Size) == 0x0037A8, "Member 'ABP_GlobalGI_C::Moon_Scatter_Size' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, StarsMaterial) == 0x0037B0, "Member 'ABP_GlobalGI_C::StarsMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MainDirectionLightUpdateThreshold_Mobile) == 0x0037B8, "Member 'ABP_GlobalGI_C::MainDirectionLightUpdateThreshold_Mobile' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MainDirectionLightUpdateThreshold) == 0x0037BC, "Member 'ABP_GlobalGI_C::MainDirectionLightUpdateThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, GlobalWindDirection) == 0x0037C0, "Member 'ABP_GlobalGI_C::GlobalWindDirection' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, GlobalWindRightDirection) == 0x0037CC, "Member 'ABP_GlobalGI_C::GlobalWindRightDirection' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DEBUG无音区特殊地表强度) == 0x0037D8, "Member 'ABP_GlobalGI_C::DEBUG无音区特殊地表强度' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TodTimeController) == 0x0037E0, "Member 'ABP_GlobalGI_C::TodTimeController' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RealTimeOfDay) == 0x0037E8, "Member 'ABP_GlobalGI_C::RealTimeOfDay' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DynamicCloudsActor) == 0x0037F0, "Member 'ABP_GlobalGI_C::DynamicCloudsActor' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LocalDynamicCloudsType) == 0x0037F8, "Member 'ABP_GlobalGI_C::LocalDynamicCloudsType' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainDensityChangeSpeed) == 0x0037FC, "Member 'ABP_GlobalGI_C::RainDensityChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainDensity) == 0x003800, "Member 'ABP_GlobalGI_C::RainDensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SnowDensity) == 0x003804, "Member 'ABP_GlobalGI_C::SnowDensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainGravity) == 0x003808, "Member 'ABP_GlobalGI_C::RainGravity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainGravityChangeSpeed) == 0x00380C, "Member 'ABP_GlobalGI_C::RainGravityChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainWindPower) == 0x003810, "Member 'ABP_GlobalGI_C::RainWindPower' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, RainWindPowerChangeSpeed) == 0x003814, "Member 'ABP_GlobalGI_C::RainWindPowerChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CanSpawnEffect) == 0x003818, "Member 'ABP_GlobalGI_C::CanSpawnEffect' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, FinalSnowDensity) == 0x00381C, "Member 'ABP_GlobalGI_C::FinalSnowDensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, FinalRainDensity) == 0x003820, "Member 'ABP_GlobalGI_C::FinalRainDensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, FinalRainGravity) == 0x003824, "Member 'ABP_GlobalGI_C::FinalRainGravity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DefaultSkyLightShadowSupplement) == 0x003828, "Member 'ABP_GlobalGI_C::DefaultSkyLightShadowSupplement' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DefaultSkyLightReflectionAddIntensity) == 0x00382C, "Member 'ABP_GlobalGI_C::DefaultSkyLightReflectionAddIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MobileLensFlareMI_Halo) == 0x003830, "Member 'ABP_GlobalGI_C::MobileLensFlareMI_Halo' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MobileLensFlareDMI_Ghost) == 0x003838, "Member 'ABP_GlobalGI_C::MobileLensFlareDMI_Ghost' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MobileLensFlareDMI_Halo) == 0x003840, "Member 'ABP_GlobalGI_C::MobileLensFlareDMI_Halo' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, HeightMapTexture) == 0x003848, "Member 'ABP_GlobalGI_C::HeightMapTexture' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, HeightMapUpdated) == 0x003850, "Member 'ABP_GlobalGI_C::HeightMapUpdated' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, SunLightDirection) == 0x003854, "Member 'ABP_GlobalGI_C::SunLightDirection' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, IsComponentsEnable) == 0x003860, "Member 'ABP_GlobalGI_C::IsComponentsEnable' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Last_LightFunction_Map) == 0x003868, "Member 'ABP_GlobalGI_C::Last_LightFunction_Map' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, InitLightFunctionMap) == 0x003870, "Member 'ABP_GlobalGI_C::InitLightFunctionMap' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, TODLightLoadingWait) == 0x003878, "Member 'ABP_GlobalGI_C::TODLightLoadingWait' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DayLightLoadingTime) == 0x00387C, "Member 'ABP_GlobalGI_C::DayLightLoadingTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, NightLightLoadingTime) == 0x003880, "Member 'ABP_GlobalGI_C::NightLightLoadingTime' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ComputeLightGridSkipFrames) == 0x003884, "Member 'ABP_GlobalGI_C::ComputeLightGridSkipFrames' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, MilkyWayMaterial) == 0x003888, "Member 'ABP_GlobalGI_C::MilkyWayMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 使用主角位置) == 0x003890, "Member 'ABP_GlobalGI_C::使用主角位置' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, DEBUG_角色预览方向光垂直方向) == 0x003894, "Member 'ABP_GlobalGI_C::DEBUG_角色预览方向光垂直方向' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, CallCloudChange) == 0x003898, "Member 'ABP_GlobalGI_C::CallCloudChange' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, FogTImeControl) == 0x0038A8, "Member 'ABP_GlobalGI_C::FogTImeControl' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Is_Editor_Update) == 0x003938, "Member 'ABP_GlobalGI_C::Is_Editor_Update' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, EnableImposterUpdate) == 0x003939, "Member 'ABP_GlobalGI_C::EnableImposterUpdate' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Clouds_Change_CD) == 0x00393C, "Member 'ABP_GlobalGI_C::Clouds_Change_CD' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Clouds_Change_Time) == 0x003940, "Member 'ABP_GlobalGI_C::Clouds_Change_Time' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Clouds_Change_Time_0) == 0x003944, "Member 'ABP_GlobalGI_C::Clouds_Change_Time_0' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, 启用时间参数写入) == 0x003948, "Member 'ABP_GlobalGI_C::启用时间参数写入' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, UINeedLerpData) == 0x003949, "Member 'ABP_GlobalGI_C::UINeedLerpData' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, bEnableLumen) == 0x00394A, "Member 'ABP_GlobalGI_C::bEnableLumen' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, LightFunctionMaterial_seq) == 0x003950, "Member 'ABP_GlobalGI_C::LightFunctionMaterial_seq' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Override_Cloud_Rotation) == 0x003958, "Member 'ABP_GlobalGI_C::Override_Cloud_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Sequence_Cloud_Time_Control) == 0x00395C, "Member 'ABP_GlobalGI_C::Sequence_Cloud_Time_Control' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Sequence_Cloud_Time_Offset) == 0x003960, "Member 'ABP_GlobalGI_C::Sequence_Cloud_Time_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, VolumetricLightFunctionMaterial) == 0x003968, "Member 'ABP_GlobalGI_C::VolumetricLightFunctionMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, PerformanceLightExist) == 0x003970, "Member 'ABP_GlobalGI_C::PerformanceLightExist' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, bEnableAutoExposure) == 0x003971, "Member 'ABP_GlobalGI_C::bEnableAutoExposure' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, PerformanceLightExist_MP4) == 0x003972, "Member 'ABP_GlobalGI_C::PerformanceLightExist_MP4' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, BPScreenFilter) == 0x003973, "Member 'ABP_GlobalGI_C::BPScreenFilter' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Star_Material_V2) == 0x003978, "Member 'ABP_GlobalGI_C::Star_Material_V2' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, ScreenFilterAsset) == 0x003980, "Member 'ABP_GlobalGI_C::ScreenFilterAsset' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, Data) == 0x003988, "Member 'ABP_GlobalGI_C::Data' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, bCurrentPC) == 0x003998, "Member 'ABP_GlobalGI_C::bCurrentPC' has a wrong offset!");
-static_assert(offsetof(ABP_GlobalGI_C, bSetDailyRandom) == 0x003999, "Member 'ABP_GlobalGI_C::bSetDailyRandom' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_GlobalGI_C;
 
 }
 

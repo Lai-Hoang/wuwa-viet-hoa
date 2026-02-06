@@ -23,15 +23,18 @@ class UAudioEndpointSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioEndpointSettingsBase">();
+		STATIC_CLASS_IMPL("AudioEndpointSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioEndpointSettingsBase")
 	}
 	static class UAudioEndpointSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioEndpointSettingsBase>();
 	}
 };
-static_assert(alignof(UAudioEndpointSettingsBase) == 0x000008, "Wrong alignment on UAudioEndpointSettingsBase");
-static_assert(sizeof(UAudioEndpointSettingsBase) == 0x000030, "Wrong size on UAudioEndpointSettingsBase");
+DUMPER7_ASSERTS_UAudioEndpointSettingsBase;
 
 // Class AudioExtensions.SpatializationPluginSourceSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -40,15 +43,18 @@ class USpatializationPluginSourceSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SpatializationPluginSourceSettingsBase">();
+		STATIC_CLASS_IMPL("SpatializationPluginSourceSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SpatializationPluginSourceSettingsBase")
 	}
 	static class USpatializationPluginSourceSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USpatializationPluginSourceSettingsBase>();
 	}
 };
-static_assert(alignof(USpatializationPluginSourceSettingsBase) == 0x000008, "Wrong alignment on USpatializationPluginSourceSettingsBase");
-static_assert(sizeof(USpatializationPluginSourceSettingsBase) == 0x000030, "Wrong size on USpatializationPluginSourceSettingsBase");
+DUMPER7_ASSERTS_USpatializationPluginSourceSettingsBase;
 
 // Class AudioExtensions.OcclusionPluginSourceSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -57,15 +63,18 @@ class UOcclusionPluginSourceSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OcclusionPluginSourceSettingsBase">();
+		STATIC_CLASS_IMPL("OcclusionPluginSourceSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OcclusionPluginSourceSettingsBase")
 	}
 	static class UOcclusionPluginSourceSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOcclusionPluginSourceSettingsBase>();
 	}
 };
-static_assert(alignof(UOcclusionPluginSourceSettingsBase) == 0x000008, "Wrong alignment on UOcclusionPluginSourceSettingsBase");
-static_assert(sizeof(UOcclusionPluginSourceSettingsBase) == 0x000030, "Wrong size on UOcclusionPluginSourceSettingsBase");
+DUMPER7_ASSERTS_UOcclusionPluginSourceSettingsBase;
 
 // Class AudioExtensions.ReverbPluginSourceSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -74,15 +83,18 @@ class UReverbPluginSourceSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReverbPluginSourceSettingsBase">();
+		STATIC_CLASS_IMPL("ReverbPluginSourceSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReverbPluginSourceSettingsBase")
 	}
 	static class UReverbPluginSourceSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReverbPluginSourceSettingsBase>();
 	}
 };
-static_assert(alignof(UReverbPluginSourceSettingsBase) == 0x000008, "Wrong alignment on UReverbPluginSourceSettingsBase");
-static_assert(sizeof(UReverbPluginSourceSettingsBase) == 0x000030, "Wrong size on UReverbPluginSourceSettingsBase");
+DUMPER7_ASSERTS_UReverbPluginSourceSettingsBase;
 
 // Class AudioExtensions.SoundModulatorBase
 // 0x0000 (0x0030 - 0x0030)
@@ -91,15 +103,18 @@ class USoundModulatorBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundModulatorBase">();
+		STATIC_CLASS_IMPL("SoundModulatorBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundModulatorBase")
 	}
 	static class USoundModulatorBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundModulatorBase>();
 	}
 };
-static_assert(alignof(USoundModulatorBase) == 0x000008, "Wrong alignment on USoundModulatorBase");
-static_assert(sizeof(USoundModulatorBase) == 0x000030, "Wrong size on USoundModulatorBase");
+DUMPER7_ASSERTS_USoundModulatorBase;
 
 // Class AudioExtensions.SoundfieldEndpointSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -108,15 +123,18 @@ class USoundfieldEndpointSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundfieldEndpointSettingsBase">();
+		STATIC_CLASS_IMPL("SoundfieldEndpointSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundfieldEndpointSettingsBase")
 	}
 	static class USoundfieldEndpointSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundfieldEndpointSettingsBase>();
 	}
 };
-static_assert(alignof(USoundfieldEndpointSettingsBase) == 0x000008, "Wrong alignment on USoundfieldEndpointSettingsBase");
-static_assert(sizeof(USoundfieldEndpointSettingsBase) == 0x000030, "Wrong size on USoundfieldEndpointSettingsBase");
+DUMPER7_ASSERTS_USoundfieldEndpointSettingsBase;
 
 // Class AudioExtensions.SoundfieldEncodingSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -125,15 +143,18 @@ class USoundfieldEncodingSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundfieldEncodingSettingsBase">();
+		STATIC_CLASS_IMPL("SoundfieldEncodingSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundfieldEncodingSettingsBase")
 	}
 	static class USoundfieldEncodingSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundfieldEncodingSettingsBase>();
 	}
 };
-static_assert(alignof(USoundfieldEncodingSettingsBase) == 0x000008, "Wrong alignment on USoundfieldEncodingSettingsBase");
-static_assert(sizeof(USoundfieldEncodingSettingsBase) == 0x000030, "Wrong size on USoundfieldEncodingSettingsBase");
+DUMPER7_ASSERTS_USoundfieldEncodingSettingsBase;
 
 // Class AudioExtensions.SoundfieldEffectSettingsBase
 // 0x0000 (0x0030 - 0x0030)
@@ -142,15 +163,18 @@ class USoundfieldEffectSettingsBase final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundfieldEffectSettingsBase">();
+		STATIC_CLASS_IMPL("SoundfieldEffectSettingsBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundfieldEffectSettingsBase")
 	}
 	static class USoundfieldEffectSettingsBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundfieldEffectSettingsBase>();
 	}
 };
-static_assert(alignof(USoundfieldEffectSettingsBase) == 0x000008, "Wrong alignment on USoundfieldEffectSettingsBase");
-static_assert(sizeof(USoundfieldEffectSettingsBase) == 0x000030, "Wrong size on USoundfieldEffectSettingsBase");
+DUMPER7_ASSERTS_USoundfieldEffectSettingsBase;
 
 // Class AudioExtensions.SoundfieldEffectBase
 // 0x0008 (0x0038 - 0x0030)
@@ -162,16 +186,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SoundfieldEffectBase">();
+		STATIC_CLASS_IMPL("SoundfieldEffectBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SoundfieldEffectBase")
 	}
 	static class USoundfieldEffectBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USoundfieldEffectBase>();
 	}
 };
-static_assert(alignof(USoundfieldEffectBase) == 0x000008, "Wrong alignment on USoundfieldEffectBase");
-static_assert(sizeof(USoundfieldEffectBase) == 0x000038, "Wrong size on USoundfieldEffectBase");
-static_assert(offsetof(USoundfieldEffectBase, Settings) == 0x000030, "Member 'USoundfieldEffectBase::Settings' has a wrong offset!");
+DUMPER7_ASSERTS_USoundfieldEffectBase;
 
 }
 

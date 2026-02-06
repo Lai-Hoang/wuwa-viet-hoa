@@ -23,15 +23,18 @@ class UNiagaraScriptBase : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraScriptBase">();
+		STATIC_CLASS_IMPL("NiagaraScriptBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraScriptBase")
 	}
 	static class UNiagaraScriptBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNiagaraScriptBase>();
 	}
 };
-static_assert(alignof(UNiagaraScriptBase) == 0x000008, "Wrong alignment on UNiagaraScriptBase");
-static_assert(sizeof(UNiagaraScriptBase) == 0x000030, "Wrong size on UNiagaraScriptBase");
+DUMPER7_ASSERTS_UNiagaraScriptBase;
 
 }
 

@@ -25,11 +25,7 @@ public:
 	class UObject*                                Object;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void()>                             OnDataTableChanged;                                // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate) == 0x000008, "Wrong alignment on KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate");
-static_assert(sizeof(KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate) == 0x000038, "Wrong size on KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate");
-static_assert(offsetof(KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate, Table) == 0x000000, "Member 'KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate::Table' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate, Object) == 0x000008, "Member 'KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate::Object' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate, OnDataTableChanged) == 0x000010, "Member 'KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate::OnDataTableChanged' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDataTableFunctionLibrary_AddOnDataTableChangedDelegate;
 
 // Function KuroPuertsWrapper.KuroDataTableFunctionLibrary.GetDataTableRowFromName
 // 0x0028 (0x0028 - 0x0000)
@@ -42,12 +38,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroDataTableFunctionLibrary_GetDataTableRowFromName) == 0x000008, "Wrong alignment on KuroDataTableFunctionLibrary_GetDataTableRowFromName");
-static_assert(sizeof(KuroDataTableFunctionLibrary_GetDataTableRowFromName) == 0x000028, "Wrong size on KuroDataTableFunctionLibrary_GetDataTableRowFromName");
-static_assert(offsetof(KuroDataTableFunctionLibrary_GetDataTableRowFromName, Table) == 0x000000, "Member 'KuroDataTableFunctionLibrary_GetDataTableRowFromName::Table' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_GetDataTableRowFromName, RowName) == 0x000008, "Member 'KuroDataTableFunctionLibrary_GetDataTableRowFromName::RowName' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_GetDataTableRowFromName, OutRow) == 0x000018, "Member 'KuroDataTableFunctionLibrary_GetDataTableRowFromName::OutRow' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_GetDataTableRowFromName, ReturnValue) == 0x000020, "Member 'KuroDataTableFunctionLibrary_GetDataTableRowFromName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDataTableFunctionLibrary_GetDataTableRowFromName;
 
 // Function KuroPuertsWrapper.KuroDataTableFunctionLibrary.RemoveOnDataTableChangedDelegate
 // 0x0010 (0x0010 - 0x0000)
@@ -57,10 +48,7 @@ public:
 	class UDataTable*                             Table;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                Object;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate) == 0x000008, "Wrong alignment on KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate");
-static_assert(sizeof(KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate) == 0x000010, "Wrong size on KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate");
-static_assert(offsetof(KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate, Table) == 0x000000, "Member 'KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate::Table' has a wrong offset!");
-static_assert(offsetof(KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate, Object) == 0x000008, "Member 'KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate::Object' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDataTableFunctionLibrary_RemoveOnDataTableChangedDelegate;
 
 }
 

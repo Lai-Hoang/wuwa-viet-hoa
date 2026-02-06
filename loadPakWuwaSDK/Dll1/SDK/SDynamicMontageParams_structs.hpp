@@ -25,13 +25,7 @@ public:
 	float                                         播放速率_10_E665DA9642EF3B39410BE8903D10A7BA;      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         开始时间_12_D137D6384AD3E3284A29468A59BCC54F;      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSDynamicMontageParams) == 0x000008, "Wrong alignment on FSDynamicMontageParams");
-static_assert(sizeof(FSDynamicMontageParams) == 0x000018, "Wrong size on FSDynamicMontageParams");
-static_assert(offsetof(FSDynamicMontageParams, 动画_2_3794D3D1442A819F87705C99D8862FFE) == 0x000000, "Member 'FSDynamicMontageParams::动画_2_3794D3D1442A819F87705C99D8862FFE' has a wrong offset!");
-static_assert(offsetof(FSDynamicMontageParams, 进入融合时间_6_E7BC4CBF48288D7C5355808BCE917E7F) == 0x000008, "Member 'FSDynamicMontageParams::进入融合时间_6_E7BC4CBF48288D7C5355808BCE917E7F' has a wrong offset!");
-static_assert(offsetof(FSDynamicMontageParams, 退出融合时间_8_3420C69E4D8ED20D5898F391A0C90191) == 0x00000C, "Member 'FSDynamicMontageParams::退出融合时间_8_3420C69E4D8ED20D5898F391A0C90191' has a wrong offset!");
-static_assert(offsetof(FSDynamicMontageParams, 播放速率_10_E665DA9642EF3B39410BE8903D10A7BA) == 0x000010, "Member 'FSDynamicMontageParams::播放速率_10_E665DA9642EF3B39410BE8903D10A7BA' has a wrong offset!");
-static_assert(offsetof(FSDynamicMontageParams, 开始时间_12_D137D6384AD3E3284A29468A59BCC54F) == 0x000014, "Member 'FSDynamicMontageParams::开始时间_12_D137D6384AD3E3284A29468A59BCC54F' has a wrong offset!");
+DUMPER7_ASSERTS_FSDynamicMontageParams;
 
 }
 

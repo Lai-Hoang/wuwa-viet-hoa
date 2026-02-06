@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass EffectModelNiagara.EffectModelNiagara_C
-// 0x0000 (0x06C0 - 0x06C0)
+// 0x0000 (0x0A08 - 0x0A08)
 class UEffectModelNiagara_C final : public UEffectModelNiagara
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectModelNiagara_C">();
+		BP_STATIC_CLASS_IMPL("EffectModelNiagara_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelNiagara_C")
 	}
 	static class UEffectModelNiagara_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectModelNiagara_C>();
 	}
 };
-static_assert(alignof(UEffectModelNiagara_C) == 0x000008, "Wrong alignment on UEffectModelNiagara_C");
-static_assert(sizeof(UEffectModelNiagara_C) == 0x0006C0, "Wrong size on UEffectModelNiagara_C");
+DUMPER7_ASSERTS_UEffectModelNiagara_C;
 
 }
 

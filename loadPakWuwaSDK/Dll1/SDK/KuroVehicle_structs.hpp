@@ -79,12 +79,7 @@ public:
 	float                                         BrakingTurnReduce;                                 // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BrakingTurnMaxSpeed;                               // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorBrakingTurnConfig) == 0x000004, "Wrong alignment on FMotorBrakingTurnConfig");
-static_assert(sizeof(FMotorBrakingTurnConfig) == 0x000010, "Wrong size on FMotorBrakingTurnConfig");
-static_assert(offsetof(FMotorBrakingTurnConfig, BrakingTurnThreshold) == 0x000000, "Member 'FMotorBrakingTurnConfig::BrakingTurnThreshold' has a wrong offset!");
-static_assert(offsetof(FMotorBrakingTurnConfig, BrakingTurnAccel) == 0x000004, "Member 'FMotorBrakingTurnConfig::BrakingTurnAccel' has a wrong offset!");
-static_assert(offsetof(FMotorBrakingTurnConfig, BrakingTurnReduce) == 0x000008, "Member 'FMotorBrakingTurnConfig::BrakingTurnReduce' has a wrong offset!");
-static_assert(offsetof(FMotorBrakingTurnConfig, BrakingTurnMaxSpeed) == 0x00000C, "Member 'FMotorBrakingTurnConfig::BrakingTurnMaxSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorBrakingTurnConfig;
 
 // ScriptStruct KuroVehicle.MotorFloatRange
 // 0x0018 (0x0018 - 0x0000)
@@ -97,13 +92,7 @@ public:
 	float                                         ToMax;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            Curve;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorFloatRange) == 0x000008, "Wrong alignment on FMotorFloatRange");
-static_assert(sizeof(FMotorFloatRange) == 0x000018, "Wrong size on FMotorFloatRange");
-static_assert(offsetof(FMotorFloatRange, FromMin) == 0x000000, "Member 'FMotorFloatRange::FromMin' has a wrong offset!");
-static_assert(offsetof(FMotorFloatRange, FromMax) == 0x000004, "Member 'FMotorFloatRange::FromMax' has a wrong offset!");
-static_assert(offsetof(FMotorFloatRange, ToMin) == 0x000008, "Member 'FMotorFloatRange::ToMin' has a wrong offset!");
-static_assert(offsetof(FMotorFloatRange, ToMax) == 0x00000C, "Member 'FMotorFloatRange::ToMax' has a wrong offset!");
-static_assert(offsetof(FMotorFloatRange, Curve) == 0x000010, "Member 'FMotorFloatRange::Curve' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorFloatRange;
 
 // ScriptStruct KuroVehicle.MotorBoostConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -114,11 +103,7 @@ public:
 	float                                         BoostMaxSpeedOnAir;                                // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMotorFloatRange                       SlowDownOnGround;                                  // 0x0008(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorBoostConfig) == 0x000008, "Wrong alignment on FMotorBoostConfig");
-static_assert(sizeof(FMotorBoostConfig) == 0x000020, "Wrong size on FMotorBoostConfig");
-static_assert(offsetof(FMotorBoostConfig, BoostAccelOnAir) == 0x000000, "Member 'FMotorBoostConfig::BoostAccelOnAir' has a wrong offset!");
-static_assert(offsetof(FMotorBoostConfig, BoostMaxSpeedOnAir) == 0x000004, "Member 'FMotorBoostConfig::BoostMaxSpeedOnAir' has a wrong offset!");
-static_assert(offsetof(FMotorBoostConfig, SlowDownOnGround) == 0x000008, "Member 'FMotorBoostConfig::SlowDownOnGround' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorBoostConfig;
 
 // ScriptStruct KuroVehicle.MotorBalanceConfig
 // 0x0130 (0x0130 - 0x0000)
@@ -151,30 +136,7 @@ public:
 	struct FVector2D                              AirInputControlRotateLimit;                        // 0x010C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_114[0x1C];                                     // 0x0114(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMotorBalanceConfig) == 0x000010, "Wrong alignment on FMotorBalanceConfig");
-static_assert(sizeof(FMotorBalanceConfig) == 0x000130, "Wrong size on FMotorBalanceConfig");
-static_assert(offsetof(FMotorBalanceConfig, AirBalanceDecreaseRate) == 0x000000, "Member 'FMotorBalanceConfig::AirBalanceDecreaseRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, AirBalanceDegSpeed) == 0x000008, "Member 'FMotorBalanceConfig::AirBalanceDegSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, AirBalanceDegMinTargetOffset) == 0x000020, "Member 'FMotorBalanceConfig::AirBalanceDegMinTargetOffset' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, OneWheelBalanceDecreaseRate) == 0x000024, "Member 'FMotorBalanceConfig::OneWheelBalanceDecreaseRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, OneWheelBalanceDegSpeed) == 0x000028, "Member 'FMotorBalanceConfig::OneWheelBalanceDegSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, TwoWheelBalanceDecreaseRate) == 0x000040, "Member 'FMotorBalanceConfig::TwoWheelBalanceDecreaseRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, TwoWheelBalanceDegSpeed) == 0x000044, "Member 'FMotorBalanceConfig::TwoWheelBalanceDegSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, NormalBalanceRotator) == 0x000048, "Member 'FMotorBalanceConfig::NormalBalanceRotator' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, VerticalBalanceDecreaseRate) == 0x000054, "Member 'FMotorBalanceConfig::VerticalBalanceDecreaseRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, FloorNormalLerpSpeed) == 0x000058, "Member 'FMotorBalanceConfig::FloorNormalLerpSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyIncline) == 0x000060, "Member 'FMotorBalanceConfig::BodyIncline' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineBackMove) == 0x000078, "Member 'FMotorBalanceConfig::BodyInclineBackMove' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineDegSpeed) == 0x000090, "Member 'FMotorBalanceConfig::BodyInclineDegSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineDegRate) == 0x000094, "Member 'FMotorBalanceConfig::BodyInclineDegRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineBackBraking) == 0x000098, "Member 'FMotorBalanceConfig::BodyInclineBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineDegSpeedBackBraking) == 0x0000B0, "Member 'FMotorBalanceConfig::BodyInclineDegSpeedBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, BodyInclineDegRateBackBraking) == 0x0000B4, "Member 'FMotorBalanceConfig::BodyInclineDegRateBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, FloorUpRateBySpeed) == 0x0000B8, "Member 'FMotorBalanceConfig::FloorUpRateBySpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, FloorUpRateByZ) == 0x0000D0, "Member 'FMotorBalanceConfig::FloorUpRateByZ' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, AirInputControlRotateRate) == 0x0000E8, "Member 'FMotorBalanceConfig::AirInputControlRotateRate' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, AirInputControlRotateSpeed) == 0x000100, "Member 'FMotorBalanceConfig::AirInputControlRotateSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorBalanceConfig, AirInputControlRotateLimit) == 0x00010C, "Member 'FMotorBalanceConfig::AirInputControlRotateLimit' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorBalanceConfig;
 
 // ScriptStruct KuroVehicle.MotorAccelConfig
 // 0x0180 (0x0180 - 0x0000)
@@ -213,35 +175,7 @@ public:
 	float                                         MaxSpeedInTurn;                                    // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMotorAccelConfig) == 0x000008, "Wrong alignment on FMotorAccelConfig");
-static_assert(sizeof(FMotorAccelConfig) == 0x000180, "Wrong size on FMotorAccelConfig");
-static_assert(offsetof(FMotorAccelConfig, bDoubleDrive) == 0x000000, "Member 'FMotorAccelConfig::bDoubleDrive' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, BackWheelRate) == 0x000008, "Member 'FMotorAccelConfig::BackWheelRate' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, NormalDrag) == 0x000020, "Member 'FMotorAccelConfig::NormalDrag' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, FrontWheelBrakingDrag) == 0x000024, "Member 'FMotorAccelConfig::FrontWheelBrakingDrag' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, BackWheelBrakingDrag) == 0x000028, "Member 'FMotorAccelConfig::BackWheelBrakingDrag' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, DragNormalNoInput) == 0x00002C, "Member 'FMotorAccelConfig::DragNormalNoInput' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, BackMoveBrakingDragAbs) == 0x000030, "Member 'FMotorAccelConfig::BackMoveBrakingDragAbs' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, BackMoveBrakingDragRate) == 0x000034, "Member 'FMotorAccelConfig::BackMoveBrakingDragRate' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, PowerAccel) == 0x000038, "Member 'FMotorAccelConfig::PowerAccel' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, MaxTimeLengthWhenNoSupport) == 0x000050, "Member 'FMotorAccelConfig::MaxTimeLengthWhenNoSupport' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, RotateAccelNormal) == 0x000054, "Member 'FMotorAccelConfig::RotateAccelNormal' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedNormal) == 0x000058, "Member 'FMotorAccelConfig::TurnSpeedNormal' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedRateNormal) == 0x000070, "Member 'FMotorAccelConfig::TurnSpeedRateNormal' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, RotateAccelFrontBraking) == 0x000088, "Member 'FMotorAccelConfig::RotateAccelFrontBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedFrontBraking) == 0x000090, "Member 'FMotorAccelConfig::TurnSpeedFrontBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedRateFrontBraking) == 0x0000A8, "Member 'FMotorAccelConfig::TurnSpeedRateFrontBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, RotateAccelBackMove) == 0x0000C0, "Member 'FMotorAccelConfig::RotateAccelBackMove' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedBackMove) == 0x0000C8, "Member 'FMotorAccelConfig::TurnSpeedBackMove' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, FrontWheelPressureRateIncreaseBackBraking) == 0x0000E0, "Member 'FMotorAccelConfig::FrontWheelPressureRateIncreaseBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, FrontWheelAccelRateBackBraking) == 0x0000F8, "Member 'FMotorAccelConfig::FrontWheelAccelRateBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, RotateAccelBackBraking) == 0x000110, "Member 'FMotorAccelConfig::RotateAccelBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, RotateAccelRateBackBraking) == 0x000128, "Member 'FMotorAccelConfig::RotateAccelRateBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedBackBraking) == 0x000140, "Member 'FMotorAccelConfig::TurnSpeedBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, TurnSpeedRateBackBraking) == 0x000158, "Member 'FMotorAccelConfig::TurnSpeedRateBackBraking' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, MaxSpeed) == 0x000170, "Member 'FMotorAccelConfig::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, MaxBackSpeed) == 0x000174, "Member 'FMotorAccelConfig::MaxBackSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorAccelConfig, MaxSpeedInTurn) == 0x000178, "Member 'FMotorAccelConfig::MaxSpeedInTurn' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorAccelConfig;
 
 // ScriptStruct KuroVehicle.MotorTurnConfig
 // 0x0030 (0x0030 - 0x0000)
@@ -254,11 +188,7 @@ public:
 	float                                         FrontWheelTurnRate;                                // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMotorTurnConfig) == 0x000008, "Wrong alignment on FMotorTurnConfig");
-static_assert(sizeof(FMotorTurnConfig) == 0x000030, "Wrong size on FMotorTurnConfig");
-static_assert(offsetof(FMotorTurnConfig, FrontWheelTurnAxis) == 0x000000, "Member 'FMotorTurnConfig::FrontWheelTurnAxis' has a wrong offset!");
-static_assert(offsetof(FMotorTurnConfig, FrontWheelTurnAngle) == 0x000010, "Member 'FMotorTurnConfig::FrontWheelTurnAngle' has a wrong offset!");
-static_assert(offsetof(FMotorTurnConfig, FrontWheelTurnRate) == 0x000028, "Member 'FMotorTurnConfig::FrontWheelTurnRate' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorTurnConfig;
 
 // ScriptStruct KuroVehicle.MotorContactPhysParams
 // 0x0020 (0x0020 - 0x0000)
@@ -270,12 +200,7 @@ public:
 	float                                         MotorHitDragCoeff;                                 // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MotorHitDragWheelRate;                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorContactPhysParams) == 0x000004, "Wrong alignment on FMotorContactPhysParams");
-static_assert(sizeof(FMotorContactPhysParams) == 0x000020, "Wrong size on FMotorContactPhysParams");
-static_assert(offsetof(FMotorContactPhysParams, MotorHitReboundReduce) == 0x000000, "Member 'FMotorContactPhysParams::MotorHitReboundReduce' has a wrong offset!");
-static_assert(offsetof(FMotorContactPhysParams, MotorHitReboundCoeff) == 0x00000C, "Member 'FMotorContactPhysParams::MotorHitReboundCoeff' has a wrong offset!");
-static_assert(offsetof(FMotorContactPhysParams, MotorHitDragCoeff) == 0x000018, "Member 'FMotorContactPhysParams::MotorHitDragCoeff' has a wrong offset!");
-static_assert(offsetof(FMotorContactPhysParams, MotorHitDragWheelRate) == 0x00001C, "Member 'FMotorContactPhysParams::MotorHitDragWheelRate' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorContactPhysParams;
 
 // ScriptStruct KuroVehicle.MotorHangConfigParams
 // 0x0048 (0x0048 - 0x0000)
@@ -290,14 +215,7 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LimitDirect;                                       // 0x003C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorHangConfigParams) == 0x000008, "Wrong alignment on FMotorHangConfigParams");
-static_assert(sizeof(FMotorHangConfigParams) == 0x000048, "Wrong size on FMotorHangConfigParams");
-static_assert(offsetof(FMotorHangConfigParams, MaxDist) == 0x000000, "Member 'FMotorHangConfigParams::MaxDist' has a wrong offset!");
-static_assert(offsetof(FMotorHangConfigParams, GPerCm) == 0x000004, "Member 'FMotorHangConfigParams::GPerCm' has a wrong offset!");
-static_assert(offsetof(FMotorHangConfigParams, Damping) == 0x000008, "Member 'FMotorHangConfigParams::Damping' has a wrong offset!");
-static_assert(offsetof(FMotorHangConfigParams, RotateDamping) == 0x000020, "Member 'FMotorHangConfigParams::RotateDamping' has a wrong offset!");
-static_assert(offsetof(FMotorHangConfigParams, LimitType) == 0x000038, "Member 'FMotorHangConfigParams::LimitType' has a wrong offset!");
-static_assert(offsetof(FMotorHangConfigParams, LimitDirect) == 0x00003C, "Member 'FMotorHangConfigParams::LimitDirect' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorHangConfigParams;
 
 // ScriptStruct KuroVehicle.MotorMovingStateParams
 // 0x003C (0x003C - 0x0000)
@@ -313,14 +231,7 @@ public:
 	struct FVector                                NextRotateAxis;                                    // 0x002C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         NextRotateSpeed;                                   // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorMovingStateParams) == 0x000004, "Wrong alignment on FMotorMovingStateParams");
-static_assert(sizeof(FMotorMovingStateParams) == 0x00003C, "Wrong size on FMotorMovingStateParams");
-static_assert(offsetof(FMotorMovingStateParams, bLockRotateAxis) == 0x000000, "Member 'FMotorMovingStateParams::bLockRotateAxis' has a wrong offset!");
-static_assert(offsetof(FMotorMovingStateParams, Velocity) == 0x000004, "Member 'FMotorMovingStateParams::Velocity' has a wrong offset!");
-static_assert(offsetof(FMotorMovingStateParams, RotateAxis) == 0x00001C, "Member 'FMotorMovingStateParams::RotateAxis' has a wrong offset!");
-static_assert(offsetof(FMotorMovingStateParams, RotateSpeed) == 0x000028, "Member 'FMotorMovingStateParams::RotateSpeed' has a wrong offset!");
-static_assert(offsetof(FMotorMovingStateParams, NextRotateAxis) == 0x00002C, "Member 'FMotorMovingStateParams::NextRotateAxis' has a wrong offset!");
-static_assert(offsetof(FMotorMovingStateParams, NextRotateSpeed) == 0x000038, "Member 'FMotorMovingStateParams::NextRotateSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorMovingStateParams;
 
 // ScriptStruct KuroVehicle.MotorBodyShapeConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -332,11 +243,7 @@ public:
 	float                                         Radius;                                            // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMotorBodyShapeConfig) == 0x000010, "Wrong alignment on FMotorBodyShapeConfig");
-static_assert(sizeof(FMotorBodyShapeConfig) == 0x000040, "Wrong size on FMotorBodyShapeConfig");
-static_assert(offsetof(FMotorBodyShapeConfig, LocalTrans) == 0x000000, "Member 'FMotorBodyShapeConfig::LocalTrans' has a wrong offset!");
-static_assert(offsetof(FMotorBodyShapeConfig, HalfHeight) == 0x000030, "Member 'FMotorBodyShapeConfig::HalfHeight' has a wrong offset!");
-static_assert(offsetof(FMotorBodyShapeConfig, Radius) == 0x000034, "Member 'FMotorBodyShapeConfig::Radius' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorBodyShapeConfig;
 
 // ScriptStruct KuroVehicle.MotorWheelShapeConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -349,13 +256,7 @@ public:
 	int32                                         AccurateCheckCount;                                // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BowShapeWheelWidthScale;                           // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorWheelShapeConfig) == 0x000010, "Wrong alignment on FMotorWheelShapeConfig");
-static_assert(sizeof(FMotorWheelShapeConfig) == 0x000040, "Wrong size on FMotorWheelShapeConfig");
-static_assert(offsetof(FMotorWheelShapeConfig, LocalTrans) == 0x000000, "Member 'FMotorWheelShapeConfig::LocalTrans' has a wrong offset!");
-static_assert(offsetof(FMotorWheelShapeConfig, Radius) == 0x000030, "Member 'FMotorWheelShapeConfig::Radius' has a wrong offset!");
-static_assert(offsetof(FMotorWheelShapeConfig, Width) == 0x000034, "Member 'FMotorWheelShapeConfig::Width' has a wrong offset!");
-static_assert(offsetof(FMotorWheelShapeConfig, AccurateCheckCount) == 0x000038, "Member 'FMotorWheelShapeConfig::AccurateCheckCount' has a wrong offset!");
-static_assert(offsetof(FMotorWheelShapeConfig, BowShapeWheelWidthScale) == 0x00003C, "Member 'FMotorWheelShapeConfig::BowShapeWheelWidthScale' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorWheelShapeConfig;
 
 // ScriptStruct KuroVehicle.MotorShapeConfig
 // 0x00D0 (0x00D0 - 0x0000)
@@ -367,20 +268,14 @@ public:
 	struct FMotorWheelShapeConfig                 FrontWheelShape;                                   // 0x0050(0x0040)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMotorWheelShapeConfig                 BackWheelShape;                                    // 0x0090(0x0040)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMotorShapeConfig) == 0x000010, "Wrong alignment on FMotorShapeConfig");
-static_assert(sizeof(FMotorShapeConfig) == 0x0000D0, "Wrong size on FMotorShapeConfig");
-static_assert(offsetof(FMotorShapeConfig, BodyShape) == 0x000000, "Member 'FMotorShapeConfig::BodyShape' has a wrong offset!");
-static_assert(offsetof(FMotorShapeConfig, BodyOtherShapes) == 0x000040, "Member 'FMotorShapeConfig::BodyOtherShapes' has a wrong offset!");
-static_assert(offsetof(FMotorShapeConfig, FrontWheelShape) == 0x000050, "Member 'FMotorShapeConfig::FrontWheelShape' has a wrong offset!");
-static_assert(offsetof(FMotorShapeConfig, BackWheelShape) == 0x000090, "Member 'FMotorShapeConfig::BackWheelShape' has a wrong offset!");
+DUMPER7_ASSERTS_FMotorShapeConfig;
 
 // ScriptStruct KuroVehicle.VehicleRootMotionSourceGroup
 // 0x0000 (0x0038 - 0x0038)
 struct FVehicleRootMotionSourceGroup final : public FRootMotionSourceGroup
 {
 };
-static_assert(alignof(FVehicleRootMotionSourceGroup) == 0x000008, "Wrong alignment on FVehicleRootMotionSourceGroup");
-static_assert(sizeof(FVehicleRootMotionSourceGroup) == 0x000038, "Wrong size on FVehicleRootMotionSourceGroup");
+DUMPER7_ASSERTS_FVehicleRootMotionSourceGroup;
 
 }
 

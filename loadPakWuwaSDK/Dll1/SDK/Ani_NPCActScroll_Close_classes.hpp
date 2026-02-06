@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BlueprintGeneratedClass Ani_NPCActScroll_Close.SequenceDirector_C", true, "SequenceDirector_C">();
+		BP_STATIC_CLASS_IMPL_FULLNAME("BlueprintGeneratedClass Ani_NPCActScroll_Close.SequenceDirector_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequenceDirector_C")
 	}
 	static class Ani_NPCActScroll_Close::USequenceDirector_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<Ani_NPCActScroll_Close::USequenceDirector_C>();
 	}
 };
-static_assert(alignof(Ani_NPCActScroll_Close::USequenceDirector_C) == 0x000008, "Wrong alignment on Ani_NPCActScroll_Close::USequenceDirector_C");
-static_assert(sizeof(Ani_NPCActScroll_Close::USequenceDirector_C) == 0x000040, "Wrong size on Ani_NPCActScroll_Close::USequenceDirector_C");
-static_assert(offsetof(Ani_NPCActScroll_Close::USequenceDirector_C, UberGraphFrame) == 0x000038, "Member 'Ani_NPCActScroll_Close::USequenceDirector_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_Ani_NPCActScroll_Close__USequenceDirector_C;
 
 }
 

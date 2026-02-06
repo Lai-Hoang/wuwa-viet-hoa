@@ -27,35 +27,35 @@ public:
 	class UCapsuleComponent*                      CapsuleCollision;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void RefreshDitherEffect();
-	void Initialize();
-	void SetPlayerSourceLocation(const struct FVector& location);
-	void AddSourcePitchInput(float pitch);
-	void ResetCamera();
-	float GetFov();
-	void SetFov(float length);
-	struct FTransform GetCameraInitializeTransform();
-	void SetCameraInitializeTransform(const struct FTransform& transform);
-	void AddSourceYawInput(float yaw);
-	void ReceiveDestroyed();
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_TsPhotographer(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveDestroyed();
+	void AddSourceYawInput(float yaw);
+	void SetCameraInitializeTransform(const struct FTransform& transform);
+	struct FTransform GetCameraInitializeTransform();
+	void SetFov(float length);
+	float GetFov();
+	void ResetCamera();
+	void AddSourcePitchInput(float pitch);
+	void SetPlayerSourceLocation(const struct FVector& location);
+	void Initialize();
+	void RefreshDitherEffect();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsPhotographer_C">();
+		BP_STATIC_CLASS_IMPL("TsPhotographer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsPhotographer_C")
 	}
 	static class ATsPhotographer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsPhotographer_C>();
 	}
 };
-static_assert(alignof(ATsPhotographer_C) == 0x000008, "Wrong alignment on ATsPhotographer_C");
-static_assert(sizeof(ATsPhotographer_C) == 0x0002C8, "Wrong size on ATsPhotographer_C");
-static_assert(offsetof(ATsPhotographer_C, UberGraphFrame) == 0x0002B0, "Member 'ATsPhotographer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsPhotographer_C, CameraArm) == 0x0002B8, "Member 'ATsPhotographer_C::CameraArm' has a wrong offset!");
-static_assert(offsetof(ATsPhotographer_C, CapsuleCollision) == 0x0002C0, "Member 'ATsPhotographer_C::CapsuleCollision' has a wrong offset!");
+DUMPER7_ASSERTS_ATsPhotographer_C;
 
 }
 

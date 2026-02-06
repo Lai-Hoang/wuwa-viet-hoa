@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterState_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ECharacterState_structs.hpp"
 #include "KuroGameplay_classes.hpp"
 
 
@@ -77,18 +77,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAiController_C">();
+		BP_STATIC_CLASS_IMPL("TsAiController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAiController_C")
 	}
 	static class ATsAiController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsAiController_C>();
 	}
 };
-static_assert(alignof(ATsAiController_C) == 0x000008, "Wrong alignment on ATsAiController_C");
-static_assert(sizeof(ATsAiController_C) == 0x0003D8, "Wrong size on ATsAiController_C");
-static_assert(offsetof(ATsAiController_C, UberGraphFrame) == 0x0003C0, "Member 'ATsAiController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsAiController_C, BehaviorTree) == 0x0003C8, "Member 'ATsAiController_C::BehaviorTree' has a wrong offset!");
-static_assert(offsetof(ATsAiController_C, StateMachineGroup) == 0x0003D0, "Member 'ATsAiController_C::StateMachineGroup' has a wrong offset!");
+DUMPER7_ASSERTS_ATsAiController_C;
 
 }
 

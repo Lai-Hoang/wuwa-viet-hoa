@@ -33,23 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FlyingFeatherConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_FlyingFeatherConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FlyingFeatherConfig_C")
 	}
 	static class UBP_FlyingFeatherConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FlyingFeatherConfig_C>();
 	}
 };
-static_assert(alignof(UBP_FlyingFeatherConfig_C) == 0x000008, "Wrong alignment on UBP_FlyingFeatherConfig_C");
-static_assert(sizeof(UBP_FlyingFeatherConfig_C) == 0x000078, "Wrong size on UBP_FlyingFeatherConfig_C");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, BulletDelayTime) == 0x000038, "Member 'UBP_FlyingFeatherConfig_C::BulletDelayTime' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, SkillId) == 0x00003C, "Member 'UBP_FlyingFeatherConfig_C::SkillId' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, BulletId) == 0x000040, "Member 'UBP_FlyingFeatherConfig_C::BulletId' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, FeatherTarget) == 0x000050, "Member 'UBP_FlyingFeatherConfig_C::FeatherTarget' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, MaxSpeed) == 0x000060, "Member 'UBP_FlyingFeatherConfig_C::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, Acceleration) == 0x000068, "Member 'UBP_FlyingFeatherConfig_C::Acceleration' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, MaxChangeStateTime) == 0x000070, "Member 'UBP_FlyingFeatherConfig_C::MaxChangeStateTime' has a wrong offset!");
-static_assert(offsetof(UBP_FlyingFeatherConfig_C, ArriveDistance) == 0x000074, "Member 'UBP_FlyingFeatherConfig_C::ArriveDistance' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FlyingFeatherConfig_C;
 
 }
 

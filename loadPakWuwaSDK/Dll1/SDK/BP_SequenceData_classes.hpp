@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EPlotSequenceType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EPlotSequenceType_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -48,7 +48,8 @@ public:
 	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 GraphName;                                         // 0x00E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          bIsForceFinalTrans;                                // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CollectExtraTexture;                               // 0x00F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         相机过渡时间;                                      // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          约束宽高比;                                        // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsEnableDynamicStreamingSource;                    // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -56,39 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SequenceData_C">();
+		BP_STATIC_CLASS_IMPL("BP_SequenceData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SequenceData_C")
 	}
 	static class UBP_SequenceData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SequenceData_C>();
 	}
 };
-static_assert(alignof(UBP_SequenceData_C) == 0x000010, "Wrong alignment on UBP_SequenceData_C");
-static_assert(sizeof(UBP_SequenceData_C) == 0x000110, "Wrong size on UBP_SequenceData_C");
-static_assert(offsetof(UBP_SequenceData_C, 类型) == 0x000038, "Member 'UBP_SequenceData_C::类型' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 剧情资源) == 0x000040, "Member 'UBP_SequenceData_C::剧情资源' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 文本资源ID) == 0x000050, "Member 'UBP_SequenceData_C::文本资源ID' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 绑定角色标签) == 0x000060, "Member 'UBP_SequenceData_C::绑定角色标签' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 绑定起始点标签) == 0x000070, "Member 'UBP_SequenceData_C::绑定起始点标签' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 是否固定起始点) == 0x000080, "Member 'UBP_SequenceData_C::是否固定起始点' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, NeedSwitchMainCharacter) == 0x000081, "Member 'UBP_SequenceData_C::NeedSwitchMainCharacter' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, IsTransformOverride) == 0x000082, "Member 'UBP_SequenceData_C::IsTransformOverride' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, OverrideTransform) == 0x000090, "Member 'UBP_SequenceData_C::OverrideTransform' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, AnimationBlendInTime) == 0x0000C0, "Member 'UBP_SequenceData_C::AnimationBlendInTime' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, AnimationBlendOutTime) == 0x0000C4, "Member 'UBP_SequenceData_C::AnimationBlendOutTime' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, CameraBlendInTime) == 0x0000C8, "Member 'UBP_SequenceData_C::CameraBlendInTime' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, CameraBlendOutTime) == 0x0000CC, "Member 'UBP_SequenceData_C::CameraBlendOutTime' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, MovementSync) == 0x0000D0, "Member 'UBP_SequenceData_C::MovementSync' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, SaveFinalTransform) == 0x0000D1, "Member 'UBP_SequenceData_C::SaveFinalTransform' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 标识为演出制作中) == 0x0000D2, "Member 'UBP_SequenceData_C::标识为演出制作中' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, HidePlayer) == 0x0000D3, "Member 'UBP_SequenceData_C::HidePlayer' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, GeneratedData) == 0x0000D8, "Member 'UBP_SequenceData_C::GeneratedData' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 葫芦状态) == 0x0000E0, "Member 'UBP_SequenceData_C::葫芦状态' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, GraphName) == 0x0000E8, "Member 'UBP_SequenceData_C::GraphName' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, bIsForceFinalTrans) == 0x0000F8, "Member 'UBP_SequenceData_C::bIsForceFinalTrans' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 相机过渡时间) == 0x0000FC, "Member 'UBP_SequenceData_C::相机过渡时间' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, 约束宽高比) == 0x000100, "Member 'UBP_SequenceData_C::约束宽高比' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_C, IsEnableDynamicStreamingSource) == 0x000101, "Member 'UBP_SequenceData_C::IsEnableDynamicStreamingSource' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SequenceData_C;
 
 }
 

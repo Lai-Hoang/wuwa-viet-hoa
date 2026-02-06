@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -132,102 +132,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_BaseRole_Seq_V2_C">();
+		BP_STATIC_CLASS_IMPL("ABP_BaseRole_Seq_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_BaseRole_Seq_V2_C")
 	}
 	static class UABP_BaseRole_Seq_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_BaseRole_Seq_V2_C>();
 	}
 };
-static_assert(alignof(UABP_BaseRole_Seq_V2_C) == 0x000010, "Wrong alignment on UABP_BaseRole_Seq_V2_C");
-static_assert(sizeof(UABP_BaseRole_Seq_V2_C) == 0x0033A0, "Wrong size on UABP_BaseRole_Seq_V2_C");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, UberGraphFrame) == 0x000730, "Member 'UABP_BaseRole_Seq_V2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Root_4) == 0x000738, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Root_4' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedInputPose_2) == 0x000770, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedInputPose_2' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x0008A8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_RBF) == 0x0008D0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_RBF' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LocalToComponentSpace_1) == 0x000A20, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Root_3) == 0x000A40, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Root_3' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedInputPose_1) == 0x000A78, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedInputPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_CurveSource) == 0x000BB0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_CurveSource' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_CurveFix) == 0x000BF0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_CurveFix' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_CombineCurves_1) == 0x000C20, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_CombineCurves_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_7) == 0x000C80, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_7' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_CombineCurves) == 0x000CE0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_CombineCurves' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_BlendListByBool) == 0x000D40, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_PoseSnapshot) == 0x000DF0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_PoseSnapshot' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_6) == 0x000EA0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Root_2) == 0x000F00, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Root_2' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_5) == 0x000F38, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_4) == 0x000F98, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_TwoWayBlend) == 0x000FF8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_SequencePlayer) == 0x0010C0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_3) == 0x001198, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LayeredBoneBlend_1) == 0x0011F8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_2) == 0x0012B8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LayeredBoneBlend) == 0x001318, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot_1) == 0x0013D8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Slot) == 0x001438, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Root_1) == 0x001498, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedInputPose) == 0x0014D0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_17) == 0x001608, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_17' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LocalToComponentSpace) == 0x001730, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ComponentToLocalSpace) == 0x001750, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_16) == 0x001770, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_16' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_RotationOffsetBlendSpace) == 0x001898, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_RotationOffsetBlendSpace' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_15) == 0x001A50, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_15' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_MorphTargetModifier) == 0x001B78, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_MorphTargetModifier' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_14) == 0x001BD8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_14' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_13) == 0x001D00, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_13' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_12) == 0x001E28, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_12' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_11) == 0x001F50, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_11' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_10) == 0x002078, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_10' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_9) == 0x0021A0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_9' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_8) == 0x0022C8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_8' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_7) == 0x0023F0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_7' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_6) == 0x002518, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_6' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_5) == 0x002640, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_5' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_4) == 0x002768, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_4' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_3) == 0x002890, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_3' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_2) == 0x0029B8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_2' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone_1) == 0x002AE0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_ModifyBone) == 0x002C08, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_KuroModifyBones) == 0x002D30, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_KuroModifyBones' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_Root) == 0x002EC0, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedAnimLayer_3) == 0x002EF8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedAnimLayer_2) == 0x002FB8, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedAnimLayer_1) == 0x003078, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AnimGraphNode_LinkedAnimLayer) == 0x003138, "Member 'UABP_BaseRole_Seq_V2_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, LookXY) == 0x0031F8, "Member 'UABP_BaseRole_Seq_V2_C::LookXY' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, LookFixHead) == 0x003200, "Member 'UABP_BaseRole_Seq_V2_C::LookFixHead' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, LookFixNeck) == 0x00320C, "Member 'UABP_BaseRole_Seq_V2_C::LookFixNeck' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Enable_AimOffset) == 0x003218, "Member 'UABP_BaseRole_Seq_V2_C::Enable_AimOffset' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, LookFixSpine) == 0x00321C, "Member 'UABP_BaseRole_Seq_V2_C::LookFixSpine' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, AimOffset) == 0x003228, "Member 'UABP_BaseRole_Seq_V2_C::AimOffset' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Enable_Stand) == 0x003230, "Member 'UABP_BaseRole_Seq_V2_C::Enable_Stand' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Stand) == 0x003238, "Member 'UABP_BaseRole_Seq_V2_C::Stand' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, EnableSwitchPose) == 0x003240, "Member 'UABP_BaseRole_Seq_V2_C::EnableSwitchPose' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, CachePose) == 0x003248, "Member 'UABP_BaseRole_Seq_V2_C::CachePose' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, SwitchPoseTime) == 0x003288, "Member 'UABP_BaseRole_Seq_V2_C::SwitchPoseTime' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LClavicle) == 0x00328C, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LClavicle' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LUpper_Arm) == 0x003298, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LUpper_Arm' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LForearm) == 0x0032A4, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LForearm' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RClavicle) == 0x0032B0, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RClavicle' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RUpper_Arm) == 0x0032BC, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RUpper_Arm' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RForearm) == 0x0032C8, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RForearm' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001Spine_1) == 0x0032D4, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001Spine_1' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RHand) == 0x0032E0, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RHand' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LHand) == 0x0032EC, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LHand' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, SeqLHandWeight) == 0x0032F8, "Member 'UABP_BaseRole_Seq_V2_C::SeqLHandWeight' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, SeqRHandWeight) == 0x0032FC, "Member 'UABP_BaseRole_Seq_V2_C::SeqRHandWeight' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, StateAnimAlpha) == 0x003300, "Member 'UABP_BaseRole_Seq_V2_C::StateAnimAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LThigh) == 0x003304, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LThigh' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LCalf) == 0x003310, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LCalf' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001LFoot) == 0x00331C, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001LFoot' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RThigh) == 0x003328, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RThigh' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RCalf) == 0x003334, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RCalf' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, Add_Bip_001RFoot) == 0x003340, "Member 'UABP_BaseRole_Seq_V2_C::Add_Bip_001RFoot' has a wrong offset!");
-static_assert(offsetof(UABP_BaseRole_Seq_V2_C, CustomData) == 0x003350, "Member 'UABP_BaseRole_Seq_V2_C::CustomData' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_BaseRole_Seq_V2_C;
 
 }
 

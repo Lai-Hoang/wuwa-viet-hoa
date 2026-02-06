@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EDangoPerformLocationType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EDangoPerformLocationType_structs.hpp"
 
 
 namespace SDK
@@ -29,13 +29,7 @@ public:
 	class FName                                   骨骼名称_14_998C95CB499F54721C71BFA91BE63D82;      // 0x0040(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         释放延迟时间_15_66EE6DF84AEFA68C1AF7F98F54EAEDD7;  // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSDangoPerformEffectData) == 0x000008, "Wrong alignment on FSDangoPerformEffectData");
-static_assert(sizeof(FSDangoPerformEffectData) == 0x000050, "Wrong size on FSDangoPerformEffectData");
-static_assert(offsetof(FSDangoPerformEffectData, 特效路径_11_01DCBFBC499FE9391D68A3852B72CAA4) == 0x000000, "Member 'FSDangoPerformEffectData::特效路径_11_01DCBFBC499FE9391D68A3852B72CAA4' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformEffectData, 特效位置类型_12_3052F95D43953B432515628B0678BF49) == 0x000030, "Member 'FSDangoPerformEffectData::特效位置类型_12_3052F95D43953B432515628B0678BF49' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformEffectData, 位置偏移_13_8ECC4B87433426135981AD972C69305F) == 0x000034, "Member 'FSDangoPerformEffectData::位置偏移_13_8ECC4B87433426135981AD972C69305F' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformEffectData, 骨骼名称_14_998C95CB499F54721C71BFA91BE63D82) == 0x000040, "Member 'FSDangoPerformEffectData::骨骼名称_14_998C95CB499F54721C71BFA91BE63D82' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformEffectData, 释放延迟时间_15_66EE6DF84AEFA68C1AF7F98F54EAEDD7) == 0x00004C, "Member 'FSDangoPerformEffectData::释放延迟时间_15_66EE6DF84AEFA68C1AF7F98F54EAEDD7' has a wrong offset!");
+DUMPER7_ASSERTS_FSDangoPerformEffectData;
 
 }
 

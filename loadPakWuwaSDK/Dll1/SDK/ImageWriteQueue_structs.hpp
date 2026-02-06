@@ -38,13 +38,7 @@ public:
 	bool                                          bAsync;                                            // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_36[0x4A];                                      // 0x0036(0x004A)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FImageWriteOptions) == 0x000010, "Wrong alignment on FImageWriteOptions");
-static_assert(sizeof(FImageWriteOptions) == 0x000080, "Wrong size on FImageWriteOptions");
-static_assert(offsetof(FImageWriteOptions, Format) == 0x000000, "Member 'FImageWriteOptions::Format' has a wrong offset!");
-static_assert(offsetof(FImageWriteOptions, OnComplete) == 0x000008, "Member 'FImageWriteOptions::OnComplete' has a wrong offset!");
-static_assert(offsetof(FImageWriteOptions, CompressionQuality) == 0x000030, "Member 'FImageWriteOptions::CompressionQuality' has a wrong offset!");
-static_assert(offsetof(FImageWriteOptions, bOverwriteFile) == 0x000034, "Member 'FImageWriteOptions::bOverwriteFile' has a wrong offset!");
-static_assert(offsetof(FImageWriteOptions, bAsync) == 0x000035, "Member 'FImageWriteOptions::bAsync' has a wrong offset!");
+DUMPER7_ASSERTS_FImageWriteOptions;
 
 }
 

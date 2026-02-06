@@ -27,12 +27,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DeviceName;                                        // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRegisteredDeviceInfo) == 0x000008, "Wrong alignment on FRegisteredDeviceInfo");
-static_assert(sizeof(FRegisteredDeviceInfo) == 0x000020, "Wrong size on FRegisteredDeviceInfo");
-static_assert(offsetof(FRegisteredDeviceInfo, Handle) == 0x000000, "Member 'FRegisteredDeviceInfo::Handle' has a wrong offset!");
-static_assert(offsetof(FRegisteredDeviceInfo, VendorID) == 0x000004, "Member 'FRegisteredDeviceInfo::VendorID' has a wrong offset!");
-static_assert(offsetof(FRegisteredDeviceInfo, ProductID) == 0x000008, "Member 'FRegisteredDeviceInfo::ProductID' has a wrong offset!");
-static_assert(offsetof(FRegisteredDeviceInfo, DeviceName) == 0x000010, "Member 'FRegisteredDeviceInfo::DeviceName' has a wrong offset!");
+DUMPER7_ASSERTS_FRegisteredDeviceInfo;
 
 // ScriptStruct RawInput.RawInputDeviceAxisProperties
 // 0x0030 (0x0030 - 0x0000)
@@ -47,10 +42,7 @@ public:
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Offset;                                            // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRawInputDeviceAxisProperties) == 0x000008, "Wrong alignment on FRawInputDeviceAxisProperties");
-static_assert(sizeof(FRawInputDeviceAxisProperties) == 0x000030, "Wrong size on FRawInputDeviceAxisProperties");
-static_assert(offsetof(FRawInputDeviceAxisProperties, Key) == 0x000008, "Member 'FRawInputDeviceAxisProperties::Key' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceAxisProperties, Offset) == 0x00002C, "Member 'FRawInputDeviceAxisProperties::Offset' has a wrong offset!");
+DUMPER7_ASSERTS_FRawInputDeviceAxisProperties;
 
 // ScriptStruct RawInput.RawInputDeviceButtonProperties
 // 0x0028 (0x0028 - 0x0000)
@@ -61,9 +53,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   Key;                                               // 0x0008(0x0020)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRawInputDeviceButtonProperties) == 0x000008, "Wrong alignment on FRawInputDeviceButtonProperties");
-static_assert(sizeof(FRawInputDeviceButtonProperties) == 0x000028, "Wrong size on FRawInputDeviceButtonProperties");
-static_assert(offsetof(FRawInputDeviceButtonProperties, Key) == 0x000008, "Member 'FRawInputDeviceButtonProperties::Key' has a wrong offset!");
+DUMPER7_ASSERTS_FRawInputDeviceButtonProperties;
 
 // ScriptStruct RawInput.RawInputDeviceAxisButtonProperties
 // 0x0030 (0x0030 - 0x0000)
@@ -76,12 +66,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKey                                   Key;                                               // 0x0010(0x0020)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRawInputDeviceAxisButtonProperties) == 0x000008, "Wrong alignment on FRawInputDeviceAxisButtonProperties");
-static_assert(sizeof(FRawInputDeviceAxisButtonProperties) == 0x000030, "Wrong size on FRawInputDeviceAxisButtonProperties");
-static_assert(offsetof(FRawInputDeviceAxisButtonProperties, AnalogIndex) == 0x000000, "Member 'FRawInputDeviceAxisButtonProperties::AnalogIndex' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceAxisButtonProperties, AnalogValue) == 0x000004, "Member 'FRawInputDeviceAxisButtonProperties::AnalogValue' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceAxisButtonProperties, MaxAnalogValue) == 0x000008, "Member 'FRawInputDeviceAxisButtonProperties::MaxAnalogValue' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceAxisButtonProperties, Key) == 0x000010, "Member 'FRawInputDeviceAxisButtonProperties::Key' has a wrong offset!");
+DUMPER7_ASSERTS_FRawInputDeviceAxisButtonProperties;
 
 // ScriptStruct RawInput.RawInputDeviceConfiguration
 // 0x0080 (0x0080 - 0x0000)
@@ -97,16 +82,7 @@ public:
 	TArray<struct FRawInputDeviceButtonProperties> BluetoothButtonProperties;                        // 0x0060(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FRawInputDeviceAxisButtonProperties> BluetoothAxisButtonProperties;                // 0x0070(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRawInputDeviceConfiguration) == 0x000008, "Wrong alignment on FRawInputDeviceConfiguration");
-static_assert(sizeof(FRawInputDeviceConfiguration) == 0x000080, "Wrong size on FRawInputDeviceConfiguration");
-static_assert(offsetof(FRawInputDeviceConfiguration, VendorID) == 0x000000, "Member 'FRawInputDeviceConfiguration::VendorID' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, ProductID) == 0x000010, "Member 'FRawInputDeviceConfiguration::ProductID' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, AxisProperties) == 0x000020, "Member 'FRawInputDeviceConfiguration::AxisProperties' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, ButtonProperties) == 0x000030, "Member 'FRawInputDeviceConfiguration::ButtonProperties' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, AxisButtonProperties) == 0x000040, "Member 'FRawInputDeviceConfiguration::AxisButtonProperties' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, BluetoothAxisProperties) == 0x000050, "Member 'FRawInputDeviceConfiguration::BluetoothAxisProperties' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, BluetoothButtonProperties) == 0x000060, "Member 'FRawInputDeviceConfiguration::BluetoothButtonProperties' has a wrong offset!");
-static_assert(offsetof(FRawInputDeviceConfiguration, BluetoothAxisButtonProperties) == 0x000070, "Member 'FRawInputDeviceConfiguration::BluetoothAxisButtonProperties' has a wrong offset!");
+DUMPER7_ASSERTS_FRawInputDeviceConfiguration;
 
 }
 

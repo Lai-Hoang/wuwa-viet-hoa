@@ -23,15 +23,18 @@ class UNCS_Role_Manipulate_Intercat_C final : public UBP_CameraShakeAndForceFeed
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"NCS_Role_Manipulate_Intercat_C">();
+		BP_STATIC_CLASS_IMPL("NCS_Role_Manipulate_Intercat_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NCS_Role_Manipulate_Intercat_C")
 	}
 	static class UNCS_Role_Manipulate_Intercat_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNCS_Role_Manipulate_Intercat_C>();
 	}
 };
-static_assert(alignof(UNCS_Role_Manipulate_Intercat_C) == 0x000010, "Wrong alignment on UNCS_Role_Manipulate_Intercat_C");
-static_assert(sizeof(UNCS_Role_Manipulate_Intercat_C) == 0x0001E0, "Wrong size on UNCS_Role_Manipulate_Intercat_C");
+DUMPER7_ASSERTS_UNCS_Role_Manipulate_Intercat_C;
 
 }
 

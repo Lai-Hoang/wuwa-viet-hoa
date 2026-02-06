@@ -26,11 +26,7 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture) == 0x000004, "Wrong alignment on BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture");
-static_assert(sizeof(BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture) == 0x00000C, "Wrong size on BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture");
-static_assert(offsetof(BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture, EntryPoint) == 0x000000, "Member 'BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_ExecuteUbergraph_BP_KuroPortalCapture;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -39,9 +35,7 @@ struct BP_KuroPortalCapture_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_KuroPortalCapture_C_ReceiveTick");
-static_assert(sizeof(BP_KuroPortalCapture_C_ReceiveTick) == 0x000004, "Wrong size on BP_KuroPortalCapture_C_ReceiveTick");
-static_assert(offsetof(BP_KuroPortalCapture_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_KuroPortalCapture_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_ReceiveTick;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.Teleport
 // 0x0C30 (0x0C30 - 0x0000)
@@ -209,152 +203,7 @@ public:
 	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue_2;  // 0x0C00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue_1;         // 0x0C18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_Teleport) == 0x000010, "Wrong alignment on BP_KuroPortalCapture_C_Teleport");
-static_assert(sizeof(BP_KuroPortalCapture_C_Teleport) == 0x000C30, "Wrong size on BP_KuroPortalCapture_C_Teleport");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, InTrans) == 0x000000, "Member 'BP_KuroPortalCapture_C_Teleport::InTrans' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, InActor) == 0x000040, "Member 'BP_KuroPortalCapture_C_Teleport::InActor' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, IsRole) == 0x000048, "Member 'BP_KuroPortalCapture_C_Teleport::IsRole' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, VelocityRotator) == 0x00004C, "Member 'BP_KuroPortalCapture_C_Teleport::VelocityRotator' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, Loc) == 0x000058, "Member 'BP_KuroPortalCapture_C_Teleport::Loc' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, SourceTrans) == 0x000070, "Member 'BP_KuroPortalCapture_C_Teleport::SourceTrans' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, TempTrans) == 0x0000B0, "Member 'BP_KuroPortalCapture_C_Teleport::TempTrans' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeTransformDouble_ReturnValue) == 0x0000F0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeTransformDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location) == 0x000130, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation) == 0x000148, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale) == 0x000154, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetInverseTransform_ReturnValue) == 0x000160, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetInverseTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeTransformDouble_ReturnValue_1) == 0x0001A0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeTransformDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetInverseTransform_ReturnValue_1) == 0x0001E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetInverseTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetTransform_ReturnValue) == 0x000220, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_TransformDoubleToTransform_ReturnValue) == 0x000260, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_TransformDoubleToTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_TransformToMatrix_ReturnValue) == 0x000290, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_TransformToMatrix_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_DynamicCast_AsTs_Base_Character) == 0x0002D0, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_DynamicCast_bSuccess) == 0x0002D8, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetTransform_ReturnValue_1) == 0x0002E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetTransform_ReturnValue_2) == 0x000320, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetTransform_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeTransform_ReturnValue) == 0x000360, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_TransformDoubleToTransform_ReturnValue_1) == 0x000390, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_TransformDoubleToTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_TransformToMatrix_ReturnValue_1) == 0x0003C0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_TransformToMatrix_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_TransformToMatrix_ReturnValue_2) == 0x000400, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_TransformToMatrix_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetTransform_ReturnValue_3) == 0x000440, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetTransform_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetForwardVector_ReturnValue) == 0x000480, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue) == 0x000490, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Normal_ReturnValue) == 0x0004D0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue_1) == 0x0004E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000520, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue_2) == 0x000530, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetUpVector_ReturnValue) == 0x000570, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_1) == 0x000580, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_1) == 0x000598, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_1) == 0x0005A4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetUpVector_ReturnValue_1) == 0x0005B0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetUpVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetRightVector_ReturnValue) == 0x0005BC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetRightVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetForwardVector_ReturnValue_1) == 0x0005C8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Cross_VectorVector_ReturnValue) == 0x0005D4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Cross_VectorVector_ReturnValue_1) == 0x0005E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Cross_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_VSize_ReturnValue) == 0x0005EC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_VSize_ReturnValue_1) == 0x0005F0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_VSize_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Abs_ReturnValue) == 0x0005F4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Abs_ReturnValue_1) == 0x0005F8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_LookRotation_UpFirst_ReturnValue) == 0x0005FC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_LookRotation_UpFirst_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000608, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_K2_KuroTeleportTo_ReturnValue) == 0x000609, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_K2_KuroTeleportTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_LookRotation_UpFirst_ReturnValue_1) == 0x00060C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_LookRotation_UpFirst_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetForwardVector_ReturnValue_2) == 0x000618, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetForwardVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetComponentByClass_ReturnValue) == 0x000628, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeRotFromYZ_ReturnValue) == 0x000630, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeRotFromYZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_K2_KuroTeleportTo_ReturnValue_1) == 0x00063C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_K2_KuroTeleportTo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_VSize_ReturnValue_2) == 0x000640, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_VSize_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000644, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000650, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_X) == 0x000668, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Y) == 0x00066C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Z) == 0x000670, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_MakeStruct_FormatArgumentData) == 0x000678, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_MakeStruct_FormatArgumentData_1) == 0x0006B8, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_MakeStruct_FormatArgumentData_2) == 0x0006F8, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, K2Node_MakeArray_Array) == 0x000738, "Member 'BP_KuroPortalCapture_C_Teleport::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Format_ReturnValue) == 0x000748, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue_3) == 0x000760, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue_4) == 0x0007A0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_2) == 0x0007E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_2) == 0x0007F8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_2) == 0x000804, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeTransformDouble_ReturnValue_2) == 0x000810, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeTransformDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000850, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetPhysicsLinearVelocity_ReturnValue) == 0x000858, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetPhysicsLinearVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Matrix_InverseTransformVector_ReturnValue) == 0x000864, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Matrix_InverseTransformVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Matrix_TransformVector_ReturnValue) == 0x000870, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Matrix_TransformVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_Vector4ToVector_ReturnValue) == 0x000880, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_Vector4ToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Matrix_TransformVector_ReturnValue_1) == 0x000890, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Matrix_TransformVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_Vector4ToVector_ReturnValue_1) == 0x0008A0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_Vector4ToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_K2_SetWorldTransform_SweepHitResult) == 0x0008AC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_X_1) == 0x000940, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Y_1) == 0x000944, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Z_1) == 0x000948, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00094C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_3) == 0x000950, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_3) == 0x000968, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_3) == 0x000974, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue) == 0x000980, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetForwardVector_ReturnValue_3) == 0x000984, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetForwardVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000990, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_X_2) == 0x000994, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Y_2) == 0x000998, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakVector_Z_2) == 0x00099C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0009A0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x0009A4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x0009A8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue_1) == 0x0009AC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue_2) == 0x0009B0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0009B4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x0009B8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0009BC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x0009C0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x0009C4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x0009C8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue_3) == 0x0009CC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue_4) == 0x0009D0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue_3) == 0x0009D4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue_4) == 0x0009D8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x0009DC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue_4) == 0x0009E0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeVector_ReturnValue) == 0x0009E4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x0009F0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Normal_ReturnValue_1) == 0x0009F4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Normal_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_FTrunc_ReturnValue_5) == 0x000A00, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_FTrunc_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_IntToFloat_ReturnValue_5) == 0x000A04, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_IntToFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_K2_KuroTeleportTo_ReturnValue_2) == 0x000A08, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_K2_KuroTeleportTo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Divide_FloatFloat_ReturnValue_5) == 0x000A0C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Divide_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeVector_ReturnValue_1) == 0x000A10, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_4) == 0x000A20, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_4) == 0x000A38, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_4) == 0x000A44, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Roll) == 0x000A50, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Pitch) == 0x000A54, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Yaw) == 0x000A58, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x000A5C, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_VectorToVectorDouble_ReturnValue_1) == 0x000A68, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_VectorToVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_5) == 0x000A80, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_5) == 0x000A98, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_5) == 0x000AA4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_Add_VectorVector_ReturnValue) == 0x000AB0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Roll_1) == 0x000AC8, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Pitch_1) == 0x000ACC, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakRotator_Yaw_1) == 0x000AD0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeRotator_ReturnValue) == 0x000AD4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeRotator_ReturnValue_1) == 0x000AE0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_MakeTransformDouble_ReturnValue_3) == 0x000AF0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_MakeTransformDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_GetTransform_ReturnValue_4) == 0x000B30, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_GetTransform_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Location_6) == 0x000B70, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Location_6' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Rotation_6) == 0x000B88, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Rotation_6' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_BreakTransformDouble_Scale_6) == 0x000B94, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_BreakTransformDouble_Scale_6' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_IsValid_ReturnValue) == 0x000BA0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_GetForwardVector_ReturnValue_4) == 0x000BA4, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_GetForwardVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Multiply_VectorFloat_ReturnValue_2) == 0x000BB0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Multiply_VectorFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_ComposeTransforms_ReturnValue_5) == 0x000BC0, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_ComposeTransforms_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_Conv_VectorToVectorDouble_ReturnValue_2) == 0x000C00, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_Conv_VectorToVectorDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_Teleport, CallFunc_D_Add_VectorVector_ReturnValue_1) == 0x000C18, "Member 'BP_KuroPortalCapture_C_Teleport::CallFunc_D_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_Teleport;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.SetPair
 // 0x0008 (0x0008 - 0x0000)
@@ -363,9 +212,7 @@ struct BP_KuroPortalCapture_C_SetPair final
 public:
 	class AActor*                                 Pair;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_SetPair) == 0x000008, "Wrong alignment on BP_KuroPortalCapture_C_SetPair");
-static_assert(sizeof(BP_KuroPortalCapture_C_SetPair) == 0x000008, "Wrong size on BP_KuroPortalCapture_C_SetPair");
-static_assert(offsetof(BP_KuroPortalCapture_C_SetPair, Pair) == 0x000000, "Member 'BP_KuroPortalCapture_C_SetPair::Pair' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_SetPair;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.SetPbDataId
 // 0x0004 (0x0004 - 0x0000)
@@ -374,9 +221,7 @@ struct BP_KuroPortalCapture_C_SetPbDataId final
 public:
 	int32                                         PbdataId_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_SetPbDataId) == 0x000004, "Wrong alignment on BP_KuroPortalCapture_C_SetPbDataId");
-static_assert(sizeof(BP_KuroPortalCapture_C_SetPbDataId) == 0x000004, "Wrong size on BP_KuroPortalCapture_C_SetPbDataId");
-static_assert(offsetof(BP_KuroPortalCapture_C_SetPbDataId, PbdataId_0) == 0x000000, "Member 'BP_KuroPortalCapture_C_SetPbDataId::PbdataId_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_SetPbDataId;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.GetPortalTrans
 // 0x0080 (0x0080 - 0x0000)
@@ -386,10 +231,7 @@ public:
 	struct FTransformDouble                       NewParam;                                          // 0x0000(0x0040)(Parm, OutParm, IsPlainOldData, NoDestructor)
 	struct FTransformDouble                       CallFunc_D_K2_GetComponentToWorld_ReturnValue;     // 0x0040(0x0040)(IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_GetPortalTrans) == 0x000010, "Wrong alignment on BP_KuroPortalCapture_C_GetPortalTrans");
-static_assert(sizeof(BP_KuroPortalCapture_C_GetPortalTrans) == 0x000080, "Wrong size on BP_KuroPortalCapture_C_GetPortalTrans");
-static_assert(offsetof(BP_KuroPortalCapture_C_GetPortalTrans, NewParam) == 0x000000, "Member 'BP_KuroPortalCapture_C_GetPortalTrans::NewParam' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_GetPortalTrans, CallFunc_D_K2_GetComponentToWorld_ReturnValue) == 0x000040, "Member 'BP_KuroPortalCapture_C_GetPortalTrans::CallFunc_D_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_GetPortalTrans;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.GetPair
 // 0x0018 (0x0018 - 0x0000)
@@ -400,11 +242,7 @@ public:
 	class ABP_KuroPortalCapture_C*                K2Node_DynamicCast_AsBP_Kuro_Portal_Capture;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_GetPair) == 0x000008, "Wrong alignment on BP_KuroPortalCapture_C_GetPair");
-static_assert(sizeof(BP_KuroPortalCapture_C_GetPair) == 0x000018, "Wrong size on BP_KuroPortalCapture_C_GetPair");
-static_assert(offsetof(BP_KuroPortalCapture_C_GetPair, Target_0) == 0x000000, "Member 'BP_KuroPortalCapture_C_GetPair::Target_0' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_GetPair, K2Node_DynamicCast_AsBP_Kuro_Portal_Capture) == 0x000008, "Member 'BP_KuroPortalCapture_C_GetPair::K2Node_DynamicCast_AsBP_Kuro_Portal_Capture' has a wrong offset!");
-static_assert(offsetof(BP_KuroPortalCapture_C_GetPair, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_KuroPortalCapture_C_GetPair::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_GetPair;
 
 // Function BP_KuroPortalCapture.BP_KuroPortalCapture_C.ToggleDebug
 // 0x0001 (0x0001 - 0x0000)
@@ -413,9 +251,7 @@ struct BP_KuroPortalCapture_C_ToggleDebug final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroPortalCapture_C_ToggleDebug) == 0x000001, "Wrong alignment on BP_KuroPortalCapture_C_ToggleDebug");
-static_assert(sizeof(BP_KuroPortalCapture_C_ToggleDebug) == 0x000001, "Wrong size on BP_KuroPortalCapture_C_ToggleDebug");
-static_assert(offsetof(BP_KuroPortalCapture_C_ToggleDebug, Enable) == 0x000000, "Member 'BP_KuroPortalCapture_C_ToggleDebug::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroPortalCapture_C_ToggleDebug;
 
 }
 

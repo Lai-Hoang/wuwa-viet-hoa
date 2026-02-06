@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SAudioEventProbabilityCooldownInfo_structs.hpp"
 #include "KuroAudio_structs.hpp"
+#include "SAudioEventProbabilityCooldownInfo_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -44,24 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateAudioEvent_C")
 	}
 	static class UTsAnimNotifyStateAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateAudioEvent_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateAudioEvent_C");
-static_assert(sizeof(UTsAnimNotifyStateAudioEvent_C) == 0x000128, "Wrong size on UTsAnimNotifyStateAudioEvent_C");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, AudioEvent) == 0x000048, "Member 'UTsAnimNotifyStateAudioEvent_C::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, SocketName) == 0x000078, "Member 'UTsAnimNotifyStateAudioEvent_C::SocketName' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, Follow) == 0x000084, "Member 'UTsAnimNotifyStateAudioEvent_C::Follow' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, KeepAlive) == 0x000085, "Member 'UTsAnimNotifyStateAudioEvent_C::KeepAlive' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, FadeDuration) == 0x000088, "Member 'UTsAnimNotifyStateAudioEvent_C::FadeDuration' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, FadeCurve) == 0x00008C, "Member 'UTsAnimNotifyStateAudioEvent_C::FadeCurve' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, TrailingAudioEvent) == 0x000090, "Member 'UTsAnimNotifyStateAudioEvent_C::TrailingAudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, HandleMap) == 0x0000C0, "Member 'UTsAnimNotifyStateAudioEvent_C::HandleMap' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAudioEvent_C, TagProbabilityInfo) == 0x000110, "Member 'UTsAnimNotifyStateAudioEvent_C::TagProbabilityInfo' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateAudioEvent_C;
 
 }
 

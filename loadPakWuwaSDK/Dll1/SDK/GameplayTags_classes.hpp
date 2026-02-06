@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -59,15 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BlueprintGameplayTagLibrary">();
+		STATIC_CLASS_IMPL("BlueprintGameplayTagLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BlueprintGameplayTagLibrary")
 	}
 	static class UBlueprintGameplayTagLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBlueprintGameplayTagLibrary>();
 	}
 };
-static_assert(alignof(UBlueprintGameplayTagLibrary) == 0x000008, "Wrong alignment on UBlueprintGameplayTagLibrary");
-static_assert(sizeof(UBlueprintGameplayTagLibrary) == 0x000030, "Wrong size on UBlueprintGameplayTagLibrary");
+DUMPER7_ASSERTS_UBlueprintGameplayTagLibrary;
 
 // Class GameplayTags.GameplayTagAssetInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -82,7 +85,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagAssetInterface">();
+		STATIC_CLASS_IMPL("GameplayTagAssetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagAssetInterface")
 	}
 	static class IGameplayTagAssetInterface* GetDefaultObj()
 	{
@@ -98,8 +105,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IGameplayTagAssetInterface) == 0x000001, "Wrong alignment on IGameplayTagAssetInterface");
-static_assert(sizeof(IGameplayTagAssetInterface) == 0x000001, "Wrong size on IGameplayTagAssetInterface");
+DUMPER7_ASSERTS_IGameplayTagAssetInterface;
 
 // Class GameplayTags.EditableGameplayTagQuery
 // 0x0070 (0x00A0 - 0x0030)
@@ -114,18 +120,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQuery">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQuery")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQuery")
 	}
 	static class UEditableGameplayTagQuery* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQuery>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQuery) == 0x000008, "Wrong alignment on UEditableGameplayTagQuery");
-static_assert(sizeof(UEditableGameplayTagQuery) == 0x0000A0, "Wrong size on UEditableGameplayTagQuery");
-static_assert(offsetof(UEditableGameplayTagQuery, UserDescription) == 0x000030, "Member 'UEditableGameplayTagQuery::UserDescription' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, RootExpression) == 0x000050, "Member 'UEditableGameplayTagQuery::RootExpression' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, TagQueryExportText_Helper) == 0x000058, "Member 'UEditableGameplayTagQuery::TagQueryExportText_Helper' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQuery;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression
 // 0x0000 (0x0030 - 0x0030)
@@ -134,15 +140,18 @@ class UEditableGameplayTagQueryExpression : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression")
 	}
 	static class UEditableGameplayTagQueryExpression* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression");
-static_assert(sizeof(UEditableGameplayTagQueryExpression) == 0x000030, "Wrong size on UEditableGameplayTagQueryExpression");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
 // 0x0020 (0x0050 - 0x0030)
@@ -154,16 +163,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AnyTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AnyTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AnyTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AnyTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000050, "Wrong size on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyTagsMatch, Tags) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_AnyTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
 // 0x0020 (0x0050 - 0x0030)
@@ -175,16 +186,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AllTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AllTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AllTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AllTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000050, "Wrong size on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllTagsMatch, Tags) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_AllTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
 // 0x0020 (0x0050 - 0x0030)
@@ -196,16 +209,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_NoTagsMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_NoTagsMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_NoTagsMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_NoTagsMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000050, "Wrong size on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoTagsMatch, Tags) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_NoTagsMatch::Tags' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoTagsMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
 // 0x0010 (0x0040 - 0x0030)
@@ -217,16 +232,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AnyExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AnyExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AnyExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AnyExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000040, "Wrong size on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyExprMatch, Expressions) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_AnyExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AnyExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0040 - 0x0030)
@@ -238,16 +255,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_AllExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_AllExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_AllExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_AllExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000040, "Wrong size on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllExprMatch, Expressions) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_AllExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_AllExprMatch;
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
 // 0x0010 (0x0040 - 0x0030)
@@ -259,16 +278,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditableGameplayTagQueryExpression_NoExprMatch">();
+		STATIC_CLASS_IMPL("EditableGameplayTagQueryExpression_NoExprMatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditableGameplayTagQueryExpression_NoExprMatch")
 	}
 	static class UEditableGameplayTagQueryExpression_NoExprMatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000040, "Wrong size on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoExprMatch, Expressions) == 0x000030, "Member 'UEditableGameplayTagQueryExpression_NoExprMatch::Expressions' has a wrong offset!");
+DUMPER7_ASSERTS_UEditableGameplayTagQueryExpression_NoExprMatch;
 
 // Class GameplayTags.GameplayTagsManager
 // 0x02D8 (0x0308 - 0x0030)
@@ -284,17 +305,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsManager">();
+		STATIC_CLASS_IMPL("GameplayTagsManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsManager")
 	}
 	static class UGameplayTagsManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsManager>();
 	}
 };
-static_assert(alignof(UGameplayTagsManager) == 0x000008, "Wrong alignment on UGameplayTagsManager");
-static_assert(sizeof(UGameplayTagsManager) == 0x000308, "Wrong size on UGameplayTagsManager");
-static_assert(offsetof(UGameplayTagsManager, TagSources) == 0x0000C8, "Member 'UGameplayTagsManager::TagSources' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsManager, GameplayTagTables) == 0x0001B8, "Member 'UGameplayTagsManager::GameplayTagTables' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsManager;
 
 // Class GameplayTags.GameplayTagsList
 // 0x0020 (0x0050 - 0x0030)
@@ -307,17 +329,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsList">();
+		STATIC_CLASS_IMPL("GameplayTagsList")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsList")
 	}
 	static class UGameplayTagsList* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsList>();
 	}
 };
-static_assert(alignof(UGameplayTagsList) == 0x000008, "Wrong alignment on UGameplayTagsList");
-static_assert(sizeof(UGameplayTagsList) == 0x000050, "Wrong size on UGameplayTagsList");
-static_assert(offsetof(UGameplayTagsList, ConfigFileName) == 0x000030, "Member 'UGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsList, GameplayTagList) == 0x000040, "Member 'UGameplayTagsList::GameplayTagList' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsList;
 
 // Class GameplayTags.RestrictedGameplayTagsList
 // 0x0020 (0x0050 - 0x0030)
@@ -330,17 +353,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RestrictedGameplayTagsList">();
+		STATIC_CLASS_IMPL("RestrictedGameplayTagsList")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RestrictedGameplayTagsList")
 	}
 	static class URestrictedGameplayTagsList* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URestrictedGameplayTagsList>();
 	}
 };
-static_assert(alignof(URestrictedGameplayTagsList) == 0x000008, "Wrong alignment on URestrictedGameplayTagsList");
-static_assert(sizeof(URestrictedGameplayTagsList) == 0x000050, "Wrong size on URestrictedGameplayTagsList");
-static_assert(offsetof(URestrictedGameplayTagsList, ConfigFileName) == 0x000030, "Member 'URestrictedGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(URestrictedGameplayTagsList, RestrictedGameplayTagList) == 0x000040, "Member 'URestrictedGameplayTagsList::RestrictedGameplayTagList' has a wrong offset!");
+DUMPER7_ASSERTS_URestrictedGameplayTagsList;
 
 // Class GameplayTags.GameplayTagsSettings
 // 0x0070 (0x00C0 - 0x0050)
@@ -363,26 +387,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsSettings">();
+		STATIC_CLASS_IMPL("GameplayTagsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsSettings")
 	}
 	static class UGameplayTagsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsSettings) == 0x000008, "Wrong alignment on UGameplayTagsSettings");
-static_assert(sizeof(UGameplayTagsSettings) == 0x0000C0, "Wrong size on UGameplayTagsSettings");
-static_assert(offsetof(UGameplayTagsSettings, ImportTagsFromConfig) == 0x000050, "Member 'UGameplayTagsSettings::ImportTagsFromConfig' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, WarnOnInvalidTags) == 0x000051, "Member 'UGameplayTagsSettings::WarnOnInvalidTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, FastReplication) == 0x000052, "Member 'UGameplayTagsSettings::FastReplication' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, InvalidTagCharacters) == 0x000058, "Member 'UGameplayTagsSettings::InvalidTagCharacters' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CategoryRemapping) == 0x000068, "Member 'UGameplayTagsSettings::CategoryRemapping' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagTableList) == 0x000078, "Member 'UGameplayTagsSettings::GameplayTagTableList' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagRedirects) == 0x000088, "Member 'UGameplayTagsSettings::GameplayTagRedirects' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CommonlyReplicatedTags) == 0x000098, "Member 'UGameplayTagsSettings::CommonlyReplicatedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NumBitsForContainerSize) == 0x0000A8, "Member 'UGameplayTagsSettings::NumBitsForContainerSize' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NetIndexFirstBitSegment) == 0x0000AC, "Member 'UGameplayTagsSettings::NetIndexFirstBitSegment' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, RestrictedConfigFiles) == 0x0000B0, "Member 'UGameplayTagsSettings::RestrictedConfigFiles' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsSettings;
 
 // Class GameplayTags.GameplayTagsDeveloperSettings
 // 0x0020 (0x0068 - 0x0048)
@@ -396,17 +412,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagsDeveloperSettings">();
+		STATIC_CLASS_IMPL("GameplayTagsDeveloperSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagsDeveloperSettings")
 	}
 	static class UGameplayTagsDeveloperSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagsDeveloperSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsDeveloperSettings) == 0x000008, "Wrong alignment on UGameplayTagsDeveloperSettings");
-static_assert(sizeof(UGameplayTagsDeveloperSettings) == 0x000068, "Wrong size on UGameplayTagsDeveloperSettings");
-static_assert(offsetof(UGameplayTagsDeveloperSettings, DeveloperConfigName) == 0x000048, "Member 'UGameplayTagsDeveloperSettings::DeveloperConfigName' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsDeveloperSettings, FavoriteTagSource) == 0x000058, "Member 'UGameplayTagsDeveloperSettings::FavoriteTagSource' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagsDeveloperSettings;
 
 }
 

@@ -26,7 +26,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABPI_Seq_LevelB_C">();
+		BP_STATIC_CLASS_IMPL("ABPI_Seq_LevelB_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABPI_Seq_LevelB_C")
 	}
 	static class IABPI_Seq_LevelB_C* GetDefaultObj()
 	{
@@ -42,8 +46,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IABPI_Seq_LevelB_C) == 0x000001, "Wrong alignment on IABPI_Seq_LevelB_C");
-static_assert(sizeof(IABPI_Seq_LevelB_C) == 0x000001, "Wrong size on IABPI_Seq_LevelB_C");
+DUMPER7_ASSERTS_IABPI_Seq_LevelB_C;
 
 }
 

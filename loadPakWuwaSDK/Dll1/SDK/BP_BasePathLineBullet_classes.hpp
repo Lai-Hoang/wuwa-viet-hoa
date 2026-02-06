@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BasePathLineBullet_C">();
+		BP_STATIC_CLASS_IMPL("BP_BasePathLineBullet_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BasePathLineBullet_C")
 	}
 	static class ABP_BasePathLineBullet_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BasePathLineBullet_C>();
 	}
 };
-static_assert(alignof(ABP_BasePathLineBullet_C) == 0x000008, "Wrong alignment on ABP_BasePathLineBullet_C");
-static_assert(sizeof(ABP_BasePathLineBullet_C) == 0x0002B8, "Wrong size on ABP_BasePathLineBullet_C");
-static_assert(offsetof(ABP_BasePathLineBullet_C, Spline) == 0x0002B0, "Member 'ABP_BasePathLineBullet_C::Spline' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BasePathLineBullet_C;
 
 }
 

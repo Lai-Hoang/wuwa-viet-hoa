@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPhysicsSplitSystem">();
+		STATIC_CLASS_IMPL("KuroPhysicsSplitSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPhysicsSplitSystem")
 	}
 	static class UKuroPhysicsSplitSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPhysicsSplitSystem>();
 	}
 };
-static_assert(alignof(UKuroPhysicsSplitSystem) == 0x000008, "Wrong alignment on UKuroPhysicsSplitSystem");
-static_assert(sizeof(UKuroPhysicsSplitSystem) == 0x0000B0, "Wrong size on UKuroPhysicsSplitSystem");
-static_assert(offsetof(UKuroPhysicsSplitSystem, NoPhysicsCompSet) == 0x000040, "Member 'UKuroPhysicsSplitSystem::NoPhysicsCompSet' has a wrong offset!");
-static_assert(offsetof(UKuroPhysicsSplitSystem, ToTickCompList) == 0x000090, "Member 'UKuroPhysicsSplitSystem::ToTickCompList' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroPhysicsSplitSystem;
 
 }
 

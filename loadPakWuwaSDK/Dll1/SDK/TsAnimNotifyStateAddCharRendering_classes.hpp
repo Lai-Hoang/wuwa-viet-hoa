@@ -30,16 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateAddCharRendering_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateAddCharRendering_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateAddCharRendering_C")
 	}
 	static class UTsAnimNotifyStateAddCharRendering_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateAddCharRendering_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateAddCharRendering_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateAddCharRendering_C");
-static_assert(sizeof(UTsAnimNotifyStateAddCharRendering_C) == 0x000050, "Wrong size on UTsAnimNotifyStateAddCharRendering_C");
-static_assert(offsetof(UTsAnimNotifyStateAddCharRendering_C, RenderType) == 0x000048, "Member 'UTsAnimNotifyStateAddCharRendering_C::RenderType' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateAddCharRendering_C;
 
 }
 

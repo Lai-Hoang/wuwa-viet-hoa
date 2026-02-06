@@ -21,9 +21,7 @@ struct BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance) == 0x000004, "Wrong alignment on BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance");
-static_assert(sizeof(BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance) == 0x000004, "Wrong size on BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance");
-static_assert(offsetof(BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance, EntryPoint) == 0x000000, "Member 'BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainGameInstance_C_ExecuteUbergraph_BP_MainGameInstance;
 
 // Function BP_MainGameInstance.BP_MainGameInstance_C.MountLauncherPak
 // 0x0040 (0x0040 - 0x0000)
@@ -35,12 +33,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainGameInstance_C_MountLauncherPak) == 0x000008, "Wrong alignment on BP_MainGameInstance_C_MountLauncherPak");
-static_assert(sizeof(BP_MainGameInstance_C_MountLauncherPak) == 0x000040, "Wrong size on BP_MainGameInstance_C_MountLauncherPak");
-static_assert(offsetof(BP_MainGameInstance_C_MountLauncherPak, CallFunc_GameSavedDir_ReturnValue) == 0x000000, "Member 'BP_MainGameInstance_C_MountLauncherPak::CallFunc_GameSavedDir_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountLauncherPak, CallFunc_GetAppVersion_ReturnValue) == 0x000010, "Member 'BP_MainGameInstance_C_MountLauncherPak::CallFunc_GetAppVersion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountLauncherPak, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MainGameInstance_C_MountLauncherPak::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountLauncherPak, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MainGameInstance_C_MountLauncherPak::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainGameInstance_C_MountLauncherPak;
 
 // Function BP_MainGameInstance.BP_MainGameInstance_C.MountGamePak
 // 0x0040 (0x0040 - 0x0000)
@@ -52,12 +45,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MainGameInstance_C_MountGamePak) == 0x000008, "Wrong alignment on BP_MainGameInstance_C_MountGamePak");
-static_assert(sizeof(BP_MainGameInstance_C_MountGamePak) == 0x000040, "Wrong size on BP_MainGameInstance_C_MountGamePak");
-static_assert(offsetof(BP_MainGameInstance_C_MountGamePak, CallFunc_GameSavedDir_ReturnValue) == 0x000000, "Member 'BP_MainGameInstance_C_MountGamePak::CallFunc_GameSavedDir_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountGamePak, CallFunc_GetAppVersion_ReturnValue) == 0x000010, "Member 'BP_MainGameInstance_C_MountGamePak::CallFunc_GetAppVersion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountGamePak, CallFunc_Concat_StrStr_ReturnValue) == 0x000020, "Member 'BP_MainGameInstance_C_MountGamePak::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainGameInstance_C_MountGamePak, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000030, "Member 'BP_MainGameInstance_C_MountGamePak::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_MainGameInstance_C_MountGamePak;
 
 }
 

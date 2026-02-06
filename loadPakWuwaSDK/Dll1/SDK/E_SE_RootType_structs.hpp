@@ -15,13 +15,14 @@ namespace SDK
 {
 
 // UserDefinedEnum E_SE_RootType.E_SE_RootType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class E_SE_RootType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
 	NewEnumerator2                           = 2,
-	E_SE_MAX                                 = 3,
+	NewEnumerator3                           = 3,
+	E_SE_MAX                                 = 4,
 };
 
 }

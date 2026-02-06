@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -37,22 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseExternalSourceSettings">();
+		STATIC_CLASS_IMPL("WwiseExternalSourceSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseExternalSourceSettings")
 	}
 	static class UWwiseExternalSourceSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseExternalSourceSettings>();
 	}
 };
-static_assert(alignof(UWwiseExternalSourceSettings) == 0x000008, "Wrong alignment on UWwiseExternalSourceSettings");
-static_assert(sizeof(UWwiseExternalSourceSettings) == 0x0000C8, "Wrong size on UWwiseExternalSourceSettings");
-static_assert(offsetof(UWwiseExternalSourceSettings, MediaInfoTable) == 0x000030, "Member 'UWwiseExternalSourceSettings::MediaInfoTable' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, ExternalSourceDefaultMedia) == 0x000050, "Member 'UWwiseExternalSourceSettings::ExternalSourceDefaultMedia' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, ExternalSourceStagingDirectory) == 0x000070, "Member 'UWwiseExternalSourceSettings::ExternalSourceStagingDirectory' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, bUseKuroExternalSource) == 0x000080, "Member 'UWwiseExternalSourceSettings::bUseKuroExternalSource' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, KuroExternalSourcePath) == 0x000088, "Member 'UWwiseExternalSourceSettings::KuroExternalSourcePath' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, bUseLanguageTypes) == 0x000098, "Member 'UWwiseExternalSourceSettings::bUseLanguageTypes' has a wrong offset!");
-static_assert(offsetof(UWwiseExternalSourceSettings, LanguageTypes) == 0x0000A0, "Member 'UWwiseExternalSourceSettings::LanguageTypes' has a wrong offset!");
+DUMPER7_ASSERTS_UWwiseExternalSourceSettings;
 
 }
 

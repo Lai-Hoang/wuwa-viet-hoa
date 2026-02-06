@@ -21,9 +21,7 @@ struct AnimNotify_PlayNiagaraEffect_GetSpawnedEffect final
 public:
 	class UFXSystemComponent*                     ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AnimNotify_PlayNiagaraEffect_GetSpawnedEffect) == 0x000008, "Wrong alignment on AnimNotify_PlayNiagaraEffect_GetSpawnedEffect");
-static_assert(sizeof(AnimNotify_PlayNiagaraEffect_GetSpawnedEffect) == 0x000008, "Wrong size on AnimNotify_PlayNiagaraEffect_GetSpawnedEffect");
-static_assert(offsetof(AnimNotify_PlayNiagaraEffect_GetSpawnedEffect, ReturnValue) == 0x000000, "Member 'AnimNotify_PlayNiagaraEffect_GetSpawnedEffect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AnimNotify_PlayNiagaraEffect_GetSpawnedEffect;
 
 }
 

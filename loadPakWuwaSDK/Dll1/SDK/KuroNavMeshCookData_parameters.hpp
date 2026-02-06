@@ -25,10 +25,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges) == 0x000008, "Wrong alignment on NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges");
-static_assert(sizeof(NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges) == 0x000018, "Wrong size on NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges");
-static_assert(offsetof(NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges, QueryBoundsArr) == 0x000000, "Member 'NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges::QueryBoundsArr' has a wrong offset!");
-static_assert(offsetof(NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges, ReturnValue) == 0x000010, "Member 'NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_NavMeshCookDataSubsystem_D_MultiQueryNavBoundaryEdges;
 
 // Function KuroNavMeshCookData.NavMeshCookDataSubsystem.D_QueryNavBoundaryEdges
 // 0x0038 (0x0038 - 0x0000)
@@ -41,11 +38,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges) == 0x000008, "Wrong alignment on NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges");
-static_assert(sizeof(NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges) == 0x000038, "Wrong size on NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges");
-static_assert(offsetof(NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges, QueryBounds) == 0x000000, "Member 'NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges::QueryBounds' has a wrong offset!");
-static_assert(offsetof(NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges, OutBoundaryEdgesDouble) == 0x000020, "Member 'NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges::OutBoundaryEdgesDouble' has a wrong offset!");
-static_assert(offsetof(NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges, ReturnValue) == 0x000030, "Member 'NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_NavMeshCookDataSubsystem_D_QueryNavBoundaryEdges;
 
 }
 

@@ -29,16 +29,7 @@ public:
 	float                                         K2Node_Event_time;                                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_alpha;                                // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase) == 0x000004, "Wrong alignment on SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase");
-static_assert(sizeof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase) == 0x000020, "Wrong size on SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, EntryPoint) == 0x000000, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_EnvironmentFactor) == 0x000004, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_EnvironmentFactor' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_visibility) == 0x000008, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_visibility' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_DeltaSeconds) == 0x00000C, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_time_2) == 0x000010, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_time_2' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_time_1) == 0x000014, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_time_1' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_time) == 0x000018, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_time' has a wrong offset!");
-static_assert(offsetof(SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase, K2Node_Event_alpha) == 0x00001C, "Member 'SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase::K2Node_Event_alpha' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_ExecuteUbergraph_SE_ControllerBase;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.ApplyEnvironmentFactor
 // 0x0004 (0x0004 - 0x0000)
@@ -47,9 +38,7 @@ struct SE_ControllerBase_C_ApplyEnvironmentFactor final
 public:
 	float                                         EnvironmentFactor;                                 // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_ApplyEnvironmentFactor) == 0x000004, "Wrong alignment on SE_ControllerBase_C_ApplyEnvironmentFactor");
-static_assert(sizeof(SE_ControllerBase_C_ApplyEnvironmentFactor) == 0x000004, "Wrong size on SE_ControllerBase_C_ApplyEnvironmentFactor");
-static_assert(offsetof(SE_ControllerBase_C_ApplyEnvironmentFactor, EnvironmentFactor) == 0x000000, "Member 'SE_ControllerBase_C_ApplyEnvironmentFactor::EnvironmentFactor' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_ApplyEnvironmentFactor;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.ApplyAlpha
 // 0x0004 (0x0004 - 0x0000)
@@ -58,9 +47,7 @@ struct SE_ControllerBase_C_ApplyAlpha final
 public:
 	float                                         alpha;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_ApplyAlpha) == 0x000004, "Wrong alignment on SE_ControllerBase_C_ApplyAlpha");
-static_assert(sizeof(SE_ControllerBase_C_ApplyAlpha) == 0x000004, "Wrong size on SE_ControllerBase_C_ApplyAlpha");
-static_assert(offsetof(SE_ControllerBase_C_ApplyAlpha, alpha) == 0x000000, "Member 'SE_ControllerBase_C_ApplyAlpha::alpha' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_ApplyAlpha;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.Loop
 // 0x0004 (0x0004 - 0x0000)
@@ -69,9 +56,7 @@ struct SE_ControllerBase_C_Loop final
 public:
 	float                                         time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_Loop) == 0x000004, "Wrong alignment on SE_ControllerBase_C_Loop");
-static_assert(sizeof(SE_ControllerBase_C_Loop) == 0x000004, "Wrong size on SE_ControllerBase_C_Loop");
-static_assert(offsetof(SE_ControllerBase_C_Loop, time) == 0x000000, "Member 'SE_ControllerBase_C_Loop::time' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_Loop;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.Start
 // 0x0004 (0x0004 - 0x0000)
@@ -80,9 +65,7 @@ struct SE_ControllerBase_C_Start final
 public:
 	float                                         time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_Start) == 0x000004, "Wrong alignment on SE_ControllerBase_C_Start");
-static_assert(sizeof(SE_ControllerBase_C_Start) == 0x000004, "Wrong size on SE_ControllerBase_C_Start");
-static_assert(offsetof(SE_ControllerBase_C_Start, time) == 0x000000, "Member 'SE_ControllerBase_C_Start::time' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_Start;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.End
 // 0x0004 (0x0004 - 0x0000)
@@ -91,9 +74,7 @@ struct SE_ControllerBase_C_End final
 public:
 	float                                         time;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_End) == 0x000004, "Wrong alignment on SE_ControllerBase_C_End");
-static_assert(sizeof(SE_ControllerBase_C_End) == 0x000004, "Wrong size on SE_ControllerBase_C_End");
-static_assert(offsetof(SE_ControllerBase_C_End, time) == 0x000000, "Member 'SE_ControllerBase_C_End::time' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_End;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -102,9 +83,7 @@ struct SE_ControllerBase_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SE_ControllerBase_C_ReceiveTick) == 0x000004, "Wrong alignment on SE_ControllerBase_C_ReceiveTick");
-static_assert(sizeof(SE_ControllerBase_C_ReceiveTick) == 0x000004, "Wrong size on SE_ControllerBase_C_ReceiveTick");
-static_assert(offsetof(SE_ControllerBase_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'SE_ControllerBase_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_ReceiveTick;
 
 // Function SE_ControllerBase.SE_ControllerBase_C.ApplyVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -113,9 +92,7 @@ struct SE_ControllerBase_C_ApplyVisibility final
 public:
 	bool                                          visibility;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SE_ControllerBase_C_ApplyVisibility) == 0x000001, "Wrong alignment on SE_ControllerBase_C_ApplyVisibility");
-static_assert(sizeof(SE_ControllerBase_C_ApplyVisibility) == 0x000001, "Wrong size on SE_ControllerBase_C_ApplyVisibility");
-static_assert(offsetof(SE_ControllerBase_C_ApplyVisibility, visibility) == 0x000000, "Member 'SE_ControllerBase_C_ApplyVisibility::visibility' has a wrong offset!");
+DUMPER7_ASSERTS_SE_ControllerBase_C_ApplyVisibility;
 
 }
 

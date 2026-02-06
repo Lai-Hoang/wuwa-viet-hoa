@@ -16,50 +16,6 @@
 namespace SDK::Params
 {
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
-// 0x0010 (0x0010 - 0x0000)
-struct TsParkourCheckPoint_C_GenerateFxByPath final
-{
-public:
-	class FString                                 effectPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsParkourCheckPoint_C_GenerateFxByPath) == 0x000008, "Wrong alignment on TsParkourCheckPoint_C_GenerateFxByPath");
-static_assert(sizeof(TsParkourCheckPoint_C_GenerateFxByPath) == 0x000010, "Wrong size on TsParkourCheckPoint_C_GenerateFxByPath");
-static_assert(offsetof(TsParkourCheckPoint_C_GenerateFxByPath, effectPath) == 0x000000, "Member 'TsParkourCheckPoint_C_GenerateFxByPath::effectPath' has a wrong offset!");
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFx
-// 0x0008 (0x0008 - 0x0000)
-struct TsParkourCheckPoint_C_GenerateFx final
-{
-public:
-	class UEffectModelBase*                       inModelBase1;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsParkourCheckPoint_C_GenerateFx) == 0x000008, "Wrong alignment on TsParkourCheckPoint_C_GenerateFx");
-static_assert(sizeof(TsParkourCheckPoint_C_GenerateFx) == 0x000008, "Wrong size on TsParkourCheckPoint_C_GenerateFx");
-static_assert(offsetof(TsParkourCheckPoint_C_GenerateFx, inModelBase1) == 0x000000, "Member 'TsParkourCheckPoint_C_GenerateFx::inModelBase1' has a wrong offset!");
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.SetDetectSphere
-// 0x0004 (0x0004 - 0x0000)
-struct TsParkourCheckPoint_C_SetDetectSphere final
-{
-public:
-	float                                         inRadius1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsParkourCheckPoint_C_SetDetectSphere) == 0x000004, "Wrong alignment on TsParkourCheckPoint_C_SetDetectSphere");
-static_assert(sizeof(TsParkourCheckPoint_C_SetDetectSphere) == 0x000004, "Wrong size on TsParkourCheckPoint_C_SetDetectSphere");
-static_assert(offsetof(TsParkourCheckPoint_C_SetDetectSphere, inRadius1) == 0x000000, "Member 'TsParkourCheckPoint_C_SetDetectSphere::inRadius1' has a wrong offset!");
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct TsParkourCheckPoint_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsParkourCheckPoint_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on TsParkourCheckPoint_C_ReceiveEndPlay");
-static_assert(sizeof(TsParkourCheckPoint_C_ReceiveEndPlay) == 0x000001, "Wrong size on TsParkourCheckPoint_C_ReceiveEndPlay");
-static_assert(offsetof(TsParkourCheckPoint_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'TsParkourCheckPoint_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
 // Function TsParkourCheckPoint.TsParkourCheckPoint_C.ExecuteUbergraph_TsParkourCheckPoint
 // 0x0008 (0x0008 - 0x0000)
 struct TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint final
@@ -68,10 +24,43 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint) == 0x000004, "Wrong alignment on TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint");
-static_assert(sizeof(TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint) == 0x000008, "Wrong size on TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint");
-static_assert(offsetof(TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint, EntryPoint) == 0x000000, "Member 'TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint, K2Node_Event_EndPlayReason) == 0x000004, "Member 'TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint::K2Node_Event_EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct TsParkourCheckPoint_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_ReceiveEndPlay;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.SetDetectSphere
+// 0x0004 (0x0004 - 0x0000)
+struct TsParkourCheckPoint_C_SetDetectSphere final
+{
+public:
+	float                                         inRadius1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_SetDetectSphere;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFx
+// 0x0008 (0x0008 - 0x0000)
+struct TsParkourCheckPoint_C_GenerateFx final
+{
+public:
+	class UEffectModelBase*                       inModelBase1;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_GenerateFx;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
+// 0x0010 (0x0010 - 0x0000)
+struct TsParkourCheckPoint_C_GenerateFxByPath final
+{
+public:
+	class FString                                 effectPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_GenerateFxByPath;
 
 }
 

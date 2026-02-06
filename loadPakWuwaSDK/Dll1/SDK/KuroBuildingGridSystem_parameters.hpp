@@ -28,12 +28,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGrid_OccupyTarget) == 0x000008, "Wrong alignment on KuroBuildingGrid_OccupyTarget");
-static_assert(sizeof(KuroBuildingGrid_OccupyTarget) == 0x000018, "Wrong size on KuroBuildingGrid_OccupyTarget");
-static_assert(offsetof(KuroBuildingGrid_OccupyTarget, InCoords) == 0x000000, "Member 'KuroBuildingGrid_OccupyTarget::InCoords' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_OccupyTarget, InTarget) == 0x000008, "Member 'KuroBuildingGrid_OccupyTarget::InTarget' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_OccupyTarget, DegreeAlongNormal) == 0x000010, "Member 'KuroBuildingGrid_OccupyTarget::DegreeAlongNormal' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_OccupyTarget, ReturnValue) == 0x000014, "Member 'KuroBuildingGrid_OccupyTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGrid_OccupyTarget;
 
 // Function KuroBuildingGridSystem.KuroBuildingGrid.UnoccupyTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -44,10 +39,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGrid_UnoccupyTarget) == 0x000008, "Wrong alignment on KuroBuildingGrid_UnoccupyTarget");
-static_assert(sizeof(KuroBuildingGrid_UnoccupyTarget) == 0x000010, "Wrong size on KuroBuildingGrid_UnoccupyTarget");
-static_assert(offsetof(KuroBuildingGrid_UnoccupyTarget, InTarget) == 0x000000, "Member 'KuroBuildingGrid_UnoccupyTarget::InTarget' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_UnoccupyTarget, ReturnValue) == 0x000008, "Member 'KuroBuildingGrid_UnoccupyTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGrid_UnoccupyTarget;
 
 // Function KuroBuildingGridSystem.KuroBuildingGrid.GetBuildingGridGuidString
 // 0x0010 (0x0010 - 0x0000)
@@ -56,9 +48,7 @@ struct KuroBuildingGrid_GetBuildingGridGuidString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGrid_GetBuildingGridGuidString) == 0x000008, "Wrong alignment on KuroBuildingGrid_GetBuildingGridGuidString");
-static_assert(sizeof(KuroBuildingGrid_GetBuildingGridGuidString) == 0x000010, "Wrong size on KuroBuildingGrid_GetBuildingGridGuidString");
-static_assert(offsetof(KuroBuildingGrid_GetBuildingGridGuidString, ReturnValue) == 0x000000, "Member 'KuroBuildingGrid_GetBuildingGridGuidString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGrid_GetBuildingGridGuidString;
 
 // Function KuroBuildingGridSystem.KuroBuildingGrid.GetCellIndex
 // 0x0010 (0x0010 - 0x0000)
@@ -70,11 +60,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGrid_GetCellIndex) == 0x000004, "Wrong alignment on KuroBuildingGrid_GetCellIndex");
-static_assert(sizeof(KuroBuildingGrid_GetCellIndex) == 0x000010, "Wrong size on KuroBuildingGrid_GetCellIndex");
-static_assert(offsetof(KuroBuildingGrid_GetCellIndex, InCoords) == 0x000000, "Member 'KuroBuildingGrid_GetCellIndex::InCoords' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_GetCellIndex, OutIndex) == 0x000008, "Member 'KuroBuildingGrid_GetCellIndex::OutIndex' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_GetCellIndex, ReturnValue) == 0x00000C, "Member 'KuroBuildingGrid_GetCellIndex::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGrid_GetCellIndex;
 
 // Function KuroBuildingGridSystem.KuroBuildingGrid.GetPosition
 // 0x0028 (0x0028 - 0x0000)
@@ -85,11 +71,7 @@ public:
 	struct FKuroBuildingGridCellVector            InCoords;                                          // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGrid_GetPosition) == 0x000008, "Wrong alignment on KuroBuildingGrid_GetPosition");
-static_assert(sizeof(KuroBuildingGrid_GetPosition) == 0x000028, "Wrong size on KuroBuildingGrid_GetPosition");
-static_assert(offsetof(KuroBuildingGrid_GetPosition, InSize) == 0x000000, "Member 'KuroBuildingGrid_GetPosition::InSize' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_GetPosition, InCoords) == 0x000008, "Member 'KuroBuildingGrid_GetPosition::InCoords' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGrid_GetPosition, ReturnValue) == 0x000010, "Member 'KuroBuildingGrid_GetPosition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGrid_GetPosition;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridPlaceholderInterface.Occupied
 // 0x0018 (0x0018 - 0x0000)
@@ -101,11 +83,7 @@ public:
 	float                                         InDegree;                                          // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGridPlaceholderInterface_Occupied) == 0x000008, "Wrong alignment on KuroBuildingGridPlaceholderInterface_Occupied");
-static_assert(sizeof(KuroBuildingGridPlaceholderInterface_Occupied) == 0x000018, "Wrong size on KuroBuildingGridPlaceholderInterface_Occupied");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_Occupied, InGrid) == 0x000000, "Member 'KuroBuildingGridPlaceholderInterface_Occupied::InGrid' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_Occupied, InCoords) == 0x000008, "Member 'KuroBuildingGridPlaceholderInterface_Occupied::InCoords' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_Occupied, InDegree) == 0x000010, "Member 'KuroBuildingGridPlaceholderInterface_Occupied::InDegree' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridPlaceholderInterface_Occupied;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridPlaceholderInterface.CanBeRemoved
 // 0x0001 (0x0001 - 0x0000)
@@ -114,9 +92,7 @@ struct KuroBuildingGridPlaceholderInterface_CanBeRemoved final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridPlaceholderInterface_CanBeRemoved) == 0x000001, "Wrong alignment on KuroBuildingGridPlaceholderInterface_CanBeRemoved");
-static_assert(sizeof(KuroBuildingGridPlaceholderInterface_CanBeRemoved) == 0x000001, "Wrong size on KuroBuildingGridPlaceholderInterface_CanBeRemoved");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_CanBeRemoved, ReturnValue) == 0x000000, "Member 'KuroBuildingGridPlaceholderInterface_CanBeRemoved::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridPlaceholderInterface_CanBeRemoved;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridPlaceholderInterface.GetSize
 // 0x0008 (0x0008 - 0x0000)
@@ -125,9 +101,7 @@ struct KuroBuildingGridPlaceholderInterface_GetSize final
 public:
 	struct FKuroBuildingGridCellVector            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridPlaceholderInterface_GetSize) == 0x000004, "Wrong alignment on KuroBuildingGridPlaceholderInterface_GetSize");
-static_assert(sizeof(KuroBuildingGridPlaceholderInterface_GetSize) == 0x000008, "Wrong size on KuroBuildingGridPlaceholderInterface_GetSize");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_GetSize, ReturnValue) == 0x000000, "Member 'KuroBuildingGridPlaceholderInterface_GetSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridPlaceholderInterface_GetSize;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridPlaceholderInterface.GetSizeByDegree
 // 0x000C (0x000C - 0x0000)
@@ -137,10 +111,7 @@ public:
 	float                                         Degree;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKuroBuildingGridCellVector            ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridPlaceholderInterface_GetSizeByDegree) == 0x000004, "Wrong alignment on KuroBuildingGridPlaceholderInterface_GetSizeByDegree");
-static_assert(sizeof(KuroBuildingGridPlaceholderInterface_GetSizeByDegree) == 0x00000C, "Wrong size on KuroBuildingGridPlaceholderInterface_GetSizeByDegree");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_GetSizeByDegree, Degree) == 0x000000, "Member 'KuroBuildingGridPlaceholderInterface_GetSizeByDegree::Degree' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridPlaceholderInterface_GetSizeByDegree, ReturnValue) == 0x000004, "Member 'KuroBuildingGridPlaceholderInterface_GetSizeByDegree::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridPlaceholderInterface_GetSizeByDegree;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridSubsystem.GetGridCellSize
 // 0x0004 (0x0004 - 0x0000)
@@ -149,9 +120,7 @@ struct KuroBuildingGridSubsystem_GetGridCellSize final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridSubsystem_GetGridCellSize) == 0x000004, "Wrong alignment on KuroBuildingGridSubsystem_GetGridCellSize");
-static_assert(sizeof(KuroBuildingGridSubsystem_GetGridCellSize) == 0x000004, "Wrong size on KuroBuildingGridSubsystem_GetGridCellSize");
-static_assert(offsetof(KuroBuildingGridSubsystem_GetGridCellSize, ReturnValue) == 0x000000, "Member 'KuroBuildingGridSubsystem_GetGridCellSize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridSubsystem_GetGridCellSize;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridSubsystem.K2_FindBuildingGrid
 // 0x0020 (0x0020 - 0x0000)
@@ -162,11 +131,7 @@ public:
 	class FString                                 InGuidString;                                      // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AKuroBuildingGrid*                      ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridSubsystem_K2_FindBuildingGrid) == 0x000008, "Wrong alignment on KuroBuildingGridSubsystem_K2_FindBuildingGrid");
-static_assert(sizeof(KuroBuildingGridSubsystem_K2_FindBuildingGrid) == 0x000020, "Wrong size on KuroBuildingGridSubsystem_K2_FindBuildingGrid");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_FindBuildingGrid, WorldContextObject) == 0x000000, "Member 'KuroBuildingGridSubsystem_K2_FindBuildingGrid::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_FindBuildingGrid, InGuidString) == 0x000008, "Member 'KuroBuildingGridSubsystem_K2_FindBuildingGrid::InGuidString' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_FindBuildingGrid, ReturnValue) == 0x000018, "Member 'KuroBuildingGridSubsystem_K2_FindBuildingGrid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridSubsystem_K2_FindBuildingGrid;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridSubsystem.K2_ForEachIntersectingCell
 // 0x0058 (0x0058 - 0x0000)
@@ -181,14 +146,7 @@ public:
 	int32                                         DirMask;                                           // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class FString& GridGuid, const struct FKuroBuildingGridCellVector& Coords, const int32 CellIndex)> Func_0; // 0x0030(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell) == 0x000008, "Wrong alignment on KuroBuildingGridSubsystem_K2_ForEachIntersectingCell");
-static_assert(sizeof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell) == 0x000058, "Wrong size on KuroBuildingGridSubsystem_K2_ForEachIntersectingCell");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, WorldContextObject) == 0x000000, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, InPoint) == 0x000008, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::InPoint' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, InRadius) == 0x000020, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::InRadius' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, UseDirMask) == 0x000028, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::UseDirMask' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, DirMask) == 0x00002C, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::DirMask' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ForEachIntersectingCell, Func_0) == 0x000030, "Member 'KuroBuildingGridSubsystem_K2_ForEachIntersectingCell::Func_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridSubsystem_K2_ForEachIntersectingCell;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridSubsystem.K2_ProjectPointToGrid
 // 0x00A0 (0x00A0 - 0x0000)
@@ -203,13 +161,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_91[0xF];                                       // 0x0091(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid) == 0x000010, "Wrong alignment on KuroBuildingGridSubsystem_K2_ProjectPointToGrid");
-static_assert(sizeof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid) == 0x0000A0, "Wrong size on KuroBuildingGridSubsystem_K2_ProjectPointToGrid");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid, WorldContextObject) == 0x000000, "Member 'KuroBuildingGridSubsystem_K2_ProjectPointToGrid::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid, InPoint) == 0x000008, "Member 'KuroBuildingGridSubsystem_K2_ProjectPointToGrid::InPoint' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid, InNormal) == 0x000020, "Member 'KuroBuildingGridSubsystem_K2_ProjectPointToGrid::InNormal' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid, OutResult) == 0x000030, "Member 'KuroBuildingGridSubsystem_K2_ProjectPointToGrid::OutResult' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_ProjectPointToGrid, ReturnValue) == 0x000090, "Member 'KuroBuildingGridSubsystem_K2_ProjectPointToGrid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridSubsystem_K2_ProjectPointToGrid;
 
 // Function KuroBuildingGridSystem.KuroBuildingGridSubsystem.K2_RaycastGrid
 // 0x00B0 (0x00B0 - 0x0000)
@@ -224,13 +176,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A1[0xF];                                       // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBuildingGridSubsystem_K2_RaycastGrid) == 0x000010, "Wrong alignment on KuroBuildingGridSubsystem_K2_RaycastGrid");
-static_assert(sizeof(KuroBuildingGridSubsystem_K2_RaycastGrid) == 0x0000B0, "Wrong size on KuroBuildingGridSubsystem_K2_RaycastGrid");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_RaycastGrid, WorldContextObject) == 0x000000, "Member 'KuroBuildingGridSubsystem_K2_RaycastGrid::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_RaycastGrid, Start) == 0x000008, "Member 'KuroBuildingGridSubsystem_K2_RaycastGrid::Start' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_RaycastGrid, End) == 0x000020, "Member 'KuroBuildingGridSubsystem_K2_RaycastGrid::End' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_RaycastGrid, OutResult) == 0x000040, "Member 'KuroBuildingGridSubsystem_K2_RaycastGrid::OutResult' has a wrong offset!");
-static_assert(offsetof(KuroBuildingGridSubsystem_K2_RaycastGrid, ReturnValue) == 0x0000A0, "Member 'KuroBuildingGridSubsystem_K2_RaycastGrid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBuildingGridSubsystem_K2_RaycastGrid;
 
 }
 

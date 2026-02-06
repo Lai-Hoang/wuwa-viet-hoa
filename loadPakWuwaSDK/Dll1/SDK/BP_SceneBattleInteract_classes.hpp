@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "ESceneBattleInteractEntityType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ESceneBattleInteractEntityType_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -56,41 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SceneBattleInteract_C">();
+		BP_STATIC_CLASS_IMPL("BP_SceneBattleInteract_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SceneBattleInteract_C")
 	}
 	static class UBP_SceneBattleInteract_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SceneBattleInteract_C>();
 	}
 };
-static_assert(alignof(UBP_SceneBattleInteract_C) == 0x000008, "Wrong alignment on UBP_SceneBattleInteract_C");
-static_assert(sizeof(UBP_SceneBattleInteract_C) == 0x0000C8, "Wrong size on UBP_SceneBattleInteract_C");
-static_assert(offsetof(UBP_SceneBattleInteract_C, ShapeType) == 0x000038, "Member 'UBP_SceneBattleInteract_C::ShapeType' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponType) == 0x00003C, "Member 'UBP_SceneBattleInteract_C::WeaponType' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, EffectRadius) == 0x000040, "Member 'UBP_SceneBattleInteract_C::EffectRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, CollisionRadius) == 0x000044, "Member 'UBP_SceneBattleInteract_C::CollisionRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, CollisionHalfHeight) == 0x000048, "Member 'UBP_SceneBattleInteract_C::CollisionHalfHeight' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, CollisionOffset) == 0x000050, "Member 'UBP_SceneBattleInteract_C::CollisionOffset' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, Interval) == 0x000068, "Member 'UBP_SceneBattleInteract_C::Interval' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleRadius) == 0x00006C, "Member 'UBP_SceneBattleInteract_C::RippleRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleIntensity) == 0x000070, "Member 'UBP_SceneBattleInteract_C::RippleIntensity' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleType) == 0x000074, "Member 'UBP_SceneBattleInteract_C::RippleType' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleDensity) == 0x000078, "Member 'UBP_SceneBattleInteract_C::RippleDensity' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, EntityType) == 0x00007C, "Member 'UBP_SceneBattleInteract_C::EntityType' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, BreakEvent) == 0x00007D, "Member 'UBP_SceneBattleInteract_C::BreakEvent' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, BreakIntensity) == 0x000080, "Member 'UBP_SceneBattleInteract_C::BreakIntensity' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, BreakRadius) == 0x000084, "Member 'UBP_SceneBattleInteract_C::BreakRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleMinConnectDistance) == 0x000088, "Member 'UBP_SceneBattleInteract_C::RippleMinConnectDistance' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RippleMaxConnectDistance) == 0x00008C, "Member 'UBP_SceneBattleInteract_C::RippleMaxConnectDistance' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, SendWeaponEvent) == 0x000090, "Member 'UBP_SceneBattleInteract_C::SendWeaponEvent' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, ForceFieldRadius) == 0x000094, "Member 'UBP_SceneBattleInteract_C::ForceFieldRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, RotationalForceField) == 0x000098, "Member 'UBP_SceneBattleInteract_C::RotationalForceField' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, CentripetalForceField) == 0x00009C, "Member 'UBP_SceneBattleInteract_C::CentripetalForceField' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, DirectionalForceField) == 0x0000A0, "Member 'UBP_SceneBattleInteract_C::DirectionalForceField' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, NoiseForceField) == 0x0000AC, "Member 'UBP_SceneBattleInteract_C::NoiseForceField' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponRadius) == 0x0000B0, "Member 'UBP_SceneBattleInteract_C::WeaponRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponOffset) == 0x0000B4, "Member 'UBP_SceneBattleInteract_C::WeaponOffset' has a wrong offset!");
-static_assert(offsetof(UBP_SceneBattleInteract_C, SampleIntensity) == 0x0000C0, "Member 'UBP_SceneBattleInteract_C::SampleIntensity' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SceneBattleInteract_C;
 
 }
 

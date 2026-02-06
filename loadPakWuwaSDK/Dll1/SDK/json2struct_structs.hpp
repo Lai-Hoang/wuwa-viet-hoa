@@ -42,9 +42,7 @@ struct FJson2struct_filter final
 public:
 	TMap<class FString, EJson2StructFilterEnum>   fields;                                            // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FJson2struct_filter) == 0x000008, "Wrong alignment on FJson2struct_filter");
-static_assert(sizeof(FJson2struct_filter) == 0x000050, "Wrong size on FJson2struct_filter");
-static_assert(offsetof(FJson2struct_filter, fields) == 0x000000, "Member 'FJson2struct_filter::fields' has a wrong offset!");
+DUMPER7_ASSERTS_FJson2struct_filter;
 
 }
 

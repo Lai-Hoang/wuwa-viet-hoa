@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateRoleRotate_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateRoleRotate_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateRoleRotate_C")
 	}
 	static class UTsAnimNotifyStateRoleRotate_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateRoleRotate_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateRoleRotate_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateRoleRotate_C");
-static_assert(sizeof(UTsAnimNotifyStateRoleRotate_C) == 0x000078, "Wrong size on UTsAnimNotifyStateRoleRotate_C");
-static_assert(offsetof(UTsAnimNotifyStateRoleRotate_C, 是否自动朝向目标) == 0x000048, "Member 'UTsAnimNotifyStateRoleRotate_C::是否自动朝向目标' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRoleRotate_C, TagContainer) == 0x000050, "Member 'UTsAnimNotifyStateRoleRotate_C::TagContainer' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRoleRotate_C, 旋转速度) == 0x000070, "Member 'UTsAnimNotifyStateRoleRotate_C::旋转速度' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRoleRotate_C, 在横板模式中禁用) == 0x000074, "Member 'UTsAnimNotifyStateRoleRotate_C::在横板模式中禁用' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRoleRotate_C, 只在横板模式中生效) == 0x000075, "Member 'UTsAnimNotifyStateRoleRotate_C::只在横板模式中生效' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateRoleRotate_C;
 
 }
 

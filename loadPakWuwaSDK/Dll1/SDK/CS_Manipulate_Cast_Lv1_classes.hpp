@@ -23,15 +23,18 @@ class UCS_Manipulate_Cast_Lv1_C final : public UMatineeCameraShake
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CS_Manipulate_Cast_Lv1_C">();
+		BP_STATIC_CLASS_IMPL("CS_Manipulate_Cast_Lv1_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CS_Manipulate_Cast_Lv1_C")
 	}
 	static class UCS_Manipulate_Cast_Lv1_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCS_Manipulate_Cast_Lv1_C>();
 	}
 };
-static_assert(alignof(UCS_Manipulate_Cast_Lv1_C) == 0x000010, "Wrong alignment on UCS_Manipulate_Cast_Lv1_C");
-static_assert(sizeof(UCS_Manipulate_Cast_Lv1_C) == 0x0001A0, "Wrong size on UCS_Manipulate_Cast_Lv1_C");
+DUMPER7_ASSERTS_UCS_Manipulate_Cast_Lv1_C;
 
 }
 

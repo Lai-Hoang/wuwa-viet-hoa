@@ -27,10 +27,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(InstanceCapsuleComponent_AddNewInstanceData) == 0x000010, "Wrong alignment on InstanceCapsuleComponent_AddNewInstanceData");
-static_assert(sizeof(InstanceCapsuleComponent_AddNewInstanceData) == 0x000040, "Wrong size on InstanceCapsuleComponent_AddNewInstanceData");
-static_assert(offsetof(InstanceCapsuleComponent_AddNewInstanceData, WorldSpaceInstanceTransform) == 0x000000, "Member 'InstanceCapsuleComponent_AddNewInstanceData::WorldSpaceInstanceTransform' has a wrong offset!");
-static_assert(offsetof(InstanceCapsuleComponent_AddNewInstanceData, ReturnValue) == 0x000030, "Member 'InstanceCapsuleComponent_AddNewInstanceData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_InstanceCapsuleComponent_AddNewInstanceData;
 
 // Function KuroSimpleCombat.InstanceCapsuleComponent.UpdateInstanceBodyTransform
 // 0x0040 (0x0040 - 0x0000)
@@ -41,10 +38,7 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WorldSpaceInstanceTransform;                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InstanceCapsuleComponent_UpdateInstanceBodyTransform) == 0x000010, "Wrong alignment on InstanceCapsuleComponent_UpdateInstanceBodyTransform");
-static_assert(sizeof(InstanceCapsuleComponent_UpdateInstanceBodyTransform) == 0x000040, "Wrong size on InstanceCapsuleComponent_UpdateInstanceBodyTransform");
-static_assert(offsetof(InstanceCapsuleComponent_UpdateInstanceBodyTransform, InstanceIndex) == 0x000000, "Member 'InstanceCapsuleComponent_UpdateInstanceBodyTransform::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(InstanceCapsuleComponent_UpdateInstanceBodyTransform, WorldSpaceInstanceTransform) == 0x000010, "Member 'InstanceCapsuleComponent_UpdateInstanceBodyTransform::WorldSpaceInstanceTransform' has a wrong offset!");
+DUMPER7_ASSERTS_InstanceCapsuleComponent_UpdateInstanceBodyTransform;
 
 // Function KuroSimpleCombat.InstanceCapsuleComponent.UpdateInstanceTransforms
 // 0x0020 (0x0020 - 0x0000)
@@ -54,10 +48,7 @@ public:
 	TArray<int32>                                 InstanceIndices;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FTransform>                     InTransforms;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(InstanceCapsuleComponent_UpdateInstanceTransforms) == 0x000008, "Wrong alignment on InstanceCapsuleComponent_UpdateInstanceTransforms");
-static_assert(sizeof(InstanceCapsuleComponent_UpdateInstanceTransforms) == 0x000020, "Wrong size on InstanceCapsuleComponent_UpdateInstanceTransforms");
-static_assert(offsetof(InstanceCapsuleComponent_UpdateInstanceTransforms, InstanceIndices) == 0x000000, "Member 'InstanceCapsuleComponent_UpdateInstanceTransforms::InstanceIndices' has a wrong offset!");
-static_assert(offsetof(InstanceCapsuleComponent_UpdateInstanceTransforms, InTransforms) == 0x000010, "Member 'InstanceCapsuleComponent_UpdateInstanceTransforms::InTransforms' has a wrong offset!");
+DUMPER7_ASSERTS_InstanceCapsuleComponent_UpdateInstanceTransforms;
 
 // Function KuroSimpleCombat.KSC_AttrSet.AssignAttrListen
 // 0x0030 (0x0030 - 0x0000)
@@ -68,10 +59,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EKSC_AttrType AttrType, int32 Value)> InDelegate;                                 // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_AttrSet_AssignAttrListen) == 0x000004, "Wrong alignment on KSC_AttrSet_AssignAttrListen");
-static_assert(sizeof(KSC_AttrSet_AssignAttrListen) == 0x000030, "Wrong size on KSC_AttrSet_AssignAttrListen");
-static_assert(offsetof(KSC_AttrSet_AssignAttrListen, Id) == 0x000000, "Member 'KSC_AttrSet_AssignAttrListen::Id' has a wrong offset!");
-static_assert(offsetof(KSC_AttrSet_AssignAttrListen, InDelegate) == 0x000008, "Member 'KSC_AttrSet_AssignAttrListen::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_AttrSet_AssignAttrListen;
 
 // Function KuroSimpleCombat.KSC_AttrSet.RemoveAttrListen
 // 0x0030 (0x0030 - 0x0000)
@@ -82,10 +70,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EKSC_AttrType AttrType, int32 Value)> InDelegate;                                 // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_AttrSet_RemoveAttrListen) == 0x000004, "Wrong alignment on KSC_AttrSet_RemoveAttrListen");
-static_assert(sizeof(KSC_AttrSet_RemoveAttrListen) == 0x000030, "Wrong size on KSC_AttrSet_RemoveAttrListen");
-static_assert(offsetof(KSC_AttrSet_RemoveAttrListen, Id) == 0x000000, "Member 'KSC_AttrSet_RemoveAttrListen::Id' has a wrong offset!");
-static_assert(offsetof(KSC_AttrSet_RemoveAttrListen, InDelegate) == 0x000008, "Member 'KSC_AttrSet_RemoveAttrListen::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_AttrSet_RemoveAttrListen;
 
 // Function KuroSimpleCombat.KSC_Buff_DiffTransferAddAttr.OnAttrChange
 // 0x0008 (0x0008 - 0x0000)
@@ -96,10 +81,39 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Buff_DiffTransferAddAttr_OnAttrChange) == 0x000004, "Wrong alignment on KSC_Buff_DiffTransferAddAttr_OnAttrChange");
-static_assert(sizeof(KSC_Buff_DiffTransferAddAttr_OnAttrChange) == 0x000008, "Wrong size on KSC_Buff_DiffTransferAddAttr_OnAttrChange");
-static_assert(offsetof(KSC_Buff_DiffTransferAddAttr_OnAttrChange, AttrType) == 0x000000, "Member 'KSC_Buff_DiffTransferAddAttr_OnAttrChange::AttrType' has a wrong offset!");
-static_assert(offsetof(KSC_Buff_DiffTransferAddAttr_OnAttrChange, Value) == 0x000004, "Member 'KSC_Buff_DiffTransferAddAttr_OnAttrChange::Value' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_Buff_DiffTransferAddAttr_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_Buff_ListenEvent.OnAttrChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Buff_ListenEvent_OnAttrChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Buff_ListenEvent_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_Buff_Period.OnAttackSpeedChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Buff_Period_OnAttackSpeedChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Buff_Period_OnAttackSpeedChange;
+
+// Function KuroSimpleCombat.KSC_GPUHeadUI.InitHeadUIInternal
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_GPUHeadUI_InitHeadUIInternal final
+{
+public:
+	class UInstancedStaticMeshComponent*          InComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               InMI;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_GPUHeadUI_InitHeadUIInternal;
 
 // Function KuroSimpleCombat.KSC_Buff_TransferAddAttr.OnAttrChange
 // 0x0008 (0x0008 - 0x0000)
@@ -110,10 +124,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Buff_TransferAddAttr_OnAttrChange) == 0x000004, "Wrong alignment on KSC_Buff_TransferAddAttr_OnAttrChange");
-static_assert(sizeof(KSC_Buff_TransferAddAttr_OnAttrChange) == 0x000008, "Wrong size on KSC_Buff_TransferAddAttr_OnAttrChange");
-static_assert(offsetof(KSC_Buff_TransferAddAttr_OnAttrChange, AttrType) == 0x000000, "Member 'KSC_Buff_TransferAddAttr_OnAttrChange::AttrType' has a wrong offset!");
-static_assert(offsetof(KSC_Buff_TransferAddAttr_OnAttrChange, Value) == 0x000004, "Member 'KSC_Buff_TransferAddAttr_OnAttrChange::Value' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_Buff_TransferAddAttr_OnAttrChange;
 
 // Function KuroSimpleCombat.KSC_BuffId.AddBuffDA
 // 0x0010 (0x0010 - 0x0000)
@@ -123,511 +134,25 @@ public:
 	int64                                         BuffId;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKSC_DA_Buff*                           Data;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_BuffId_AddBuffDA) == 0x000008, "Wrong alignment on KSC_BuffId_AddBuffDA");
-static_assert(sizeof(KSC_BuffId_AddBuffDA) == 0x000010, "Wrong size on KSC_BuffId_AddBuffDA");
-static_assert(offsetof(KSC_BuffId_AddBuffDA, BuffId) == 0x000000, "Member 'KSC_BuffId_AddBuffDA::BuffId' has a wrong offset!");
-static_assert(offsetof(KSC_BuffId_AddBuffDA, Data) == 0x000008, "Member 'KSC_BuffId_AddBuffDA::Data' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_BuffId_AddBuffDA;
 
-// Function KuroSimpleCombat.KSC_DamageId.AddDamageData
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_DamageId_AddDamageData final
-{
-public:
-	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKSCDamage                             Data;                                              // 0x0004(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_DamageId_AddDamageData) == 0x000004, "Wrong alignment on KSC_DamageId_AddDamageData");
-static_assert(sizeof(KSC_DamageId_AddDamageData) == 0x000010, "Wrong size on KSC_DamageId_AddDamageData");
-static_assert(offsetof(KSC_DamageId_AddDamageData, DamageId) == 0x000000, "Member 'KSC_DamageId_AddDamageData::DamageId' has a wrong offset!");
-static_assert(offsetof(KSC_DamageId_AddDamageData, Data) == 0x000004, "Member 'KSC_DamageId_AddDamageData::Data' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.ApplyBuffSelf
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_ApplyBuffSelf final
-{
-public:
-	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_ApplyBuffSelf) == 0x000008, "Wrong alignment on KSC_Entity_ApplyBuffSelf");
-static_assert(sizeof(KSC_Entity_ApplyBuffSelf) == 0x000008, "Wrong size on KSC_Entity_ApplyBuffSelf");
-static_assert(offsetof(KSC_Entity_ApplyBuffSelf, DaBuff) == 0x000000, "Member 'KSC_Entity_ApplyBuffSelf::DaBuff' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.Dead
+// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownMax
 // 0x0004 (0x0004 - 0x0000)
-struct KSC_Entity_Dead final
+struct KSC_Skill_GetSkillCoolDownMax final
 {
 public:
-	int32                                         KillBy;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Entity_Dead) == 0x000004, "Wrong alignment on KSC_Entity_Dead");
-static_assert(sizeof(KSC_Entity_Dead) == 0x000004, "Wrong size on KSC_Entity_Dead");
-static_assert(offsetof(KSC_Entity_Dead, KillBy) == 0x000000, "Member 'KSC_Entity_Dead::KillBy' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownMax;
 
-// Function KuroSimpleCombat.KSC_Entity.GetMoveComponent
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_GetMoveComponent final
-{
-public:
-	class UKSC_Move*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_GetMoveComponent) == 0x000008, "Wrong alignment on KSC_Entity_GetMoveComponent");
-static_assert(sizeof(KSC_Entity_GetMoveComponent) == 0x000008, "Wrong size on KSC_Entity_GetMoveComponent");
-static_assert(offsetof(KSC_Entity_GetMoveComponent, ReturnValue) == 0x000000, "Member 'KSC_Entity_GetMoveComponent::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.GetRenderActor
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_GetRenderActor final
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_GetRenderActor) == 0x000008, "Wrong alignment on KSC_Entity_GetRenderActor");
-static_assert(sizeof(KSC_Entity_GetRenderActor) == 0x000008, "Wrong size on KSC_Entity_GetRenderActor");
-static_assert(offsetof(KSC_Entity_GetRenderActor, ReturnValue) == 0x000000, "Member 'KSC_Entity_GetRenderActor::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.RemoveBuffSelf
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_RemoveBuffSelf final
-{
-public:
-	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_RemoveBuffSelf) == 0x000008, "Wrong alignment on KSC_Entity_RemoveBuffSelf");
-static_assert(sizeof(KSC_Entity_RemoveBuffSelf) == 0x000008, "Wrong size on KSC_Entity_RemoveBuffSelf");
-static_assert(offsetof(KSC_Entity_RemoveBuffSelf, DaBuff) == 0x000000, "Member 'KSC_Entity_RemoveBuffSelf::DaBuff' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.RemoveDaBuffImmediately
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_RemoveDaBuffImmediately final
-{
-public:
-	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_RemoveDaBuffImmediately) == 0x000008, "Wrong alignment on KSC_Entity_RemoveDaBuffImmediately");
-static_assert(sizeof(KSC_Entity_RemoveDaBuffImmediately) == 0x000008, "Wrong size on KSC_Entity_RemoveDaBuffImmediately");
-static_assert(offsetof(KSC_Entity_RemoveDaBuffImmediately, DaBuff) == 0x000000, "Member 'KSC_Entity_RemoveDaBuffImmediately::DaBuff' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetAttr
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_SetAttr final
-{
-public:
-	EKSC_AttrType                                 Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetAttr) == 0x000004, "Wrong alignment on KSC_Entity_SetAttr");
-static_assert(sizeof(KSC_Entity_SetAttr) == 0x000008, "Wrong size on KSC_Entity_SetAttr");
-static_assert(offsetof(KSC_Entity_SetAttr, Type) == 0x000000, "Member 'KSC_Entity_SetAttr::Type' has a wrong offset!");
-static_assert(offsetof(KSC_Entity_SetAttr, Value) == 0x000004, "Member 'KSC_Entity_SetAttr::Value' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetFaction
-// 0x0001 (0x0001 - 0x0000)
-struct KSC_Entity_SetFaction final
-{
-public:
-	EKSC_Faction                                  Faction;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetFaction) == 0x000001, "Wrong alignment on KSC_Entity_SetFaction");
-static_assert(sizeof(KSC_Entity_SetFaction) == 0x000001, "Wrong size on KSC_Entity_SetFaction");
-static_assert(offsetof(KSC_Entity_SetFaction, Faction) == 0x000000, "Member 'KSC_Entity_SetFaction::Faction' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetIgnoreFactions
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_Entity_SetIgnoreFactions final
-{
-public:
-	TArray<EKSC_Faction>                          Factions;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetIgnoreFactions) == 0x000008, "Wrong alignment on KSC_Entity_SetIgnoreFactions");
-static_assert(sizeof(KSC_Entity_SetIgnoreFactions) == 0x000010, "Wrong size on KSC_Entity_SetIgnoreFactions");
-static_assert(offsetof(KSC_Entity_SetIgnoreFactions, Factions) == 0x000000, "Member 'KSC_Entity_SetIgnoreFactions::Factions' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetLocationByWorld
-// 0x0018 (0x0018 - 0x0000)
-struct KSC_Entity_SetLocationByWorld final
-{
-public:
-	struct FVectorDouble                          D_Location;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetLocationByWorld) == 0x000008, "Wrong alignment on KSC_Entity_SetLocationByWorld");
-static_assert(sizeof(KSC_Entity_SetLocationByWorld) == 0x000018, "Wrong size on KSC_Entity_SetLocationByWorld");
-static_assert(offsetof(KSC_Entity_SetLocationByWorld, D_Location) == 0x000000, "Member 'KSC_Entity_SetLocationByWorld::D_Location' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetRenderActor
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_SetRenderActor final
-{
-public:
-	class AActor*                                 RenderActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetRenderActor) == 0x000008, "Wrong alignment on KSC_Entity_SetRenderActor");
-static_assert(sizeof(KSC_Entity_SetRenderActor) == 0x000008, "Wrong size on KSC_Entity_SetRenderActor");
-static_assert(offsetof(KSC_Entity_SetRenderActor, RenderActor) == 0x000000, "Member 'KSC_Entity_SetRenderActor::RenderActor' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.SetTransformByWorld
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_Entity_SetTransformByWorld final
-{
-public:
-	struct FTransformDouble                       D_Transform;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_SetTransformByWorld) == 0x000010, "Wrong alignment on KSC_Entity_SetTransformByWorld");
-static_assert(sizeof(KSC_Entity_SetTransformByWorld) == 0x000040, "Wrong size on KSC_Entity_SetTransformByWorld");
-static_assert(offsetof(KSC_Entity_SetTransformByWorld, D_Transform) == 0x000000, "Member 'KSC_Entity_SetTransformByWorld::D_Transform' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.TryActiveSKill
+// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownRemain
 // 0x0004 (0x0004 - 0x0000)
-struct KSC_Entity_TryActiveSKill final
+struct KSC_Skill_GetSkillCoolDownRemain final
 {
 public:
-	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Entity_TryActiveSKill) == 0x000004, "Wrong alignment on KSC_Entity_TryActiveSKill");
-static_assert(sizeof(KSC_Entity_TryActiveSKill) == 0x000004, "Wrong size on KSC_Entity_TryActiveSKill");
-static_assert(offsetof(KSC_Entity_TryActiveSKill, SkillIndex) == 0x000000, "Member 'KSC_Entity_TryActiveSKill::SkillIndex' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.UpdateBuffWithStackNumSelf
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_Entity_UpdateBuffWithStackNumSelf final
-{
-public:
-	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StackNum;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KSC_Entity_UpdateBuffWithStackNumSelf) == 0x000008, "Wrong alignment on KSC_Entity_UpdateBuffWithStackNumSelf");
-static_assert(sizeof(KSC_Entity_UpdateBuffWithStackNumSelf) == 0x000010, "Wrong size on KSC_Entity_UpdateBuffWithStackNumSelf");
-static_assert(offsetof(KSC_Entity_UpdateBuffWithStackNumSelf, DaBuff) == 0x000000, "Member 'KSC_Entity_UpdateBuffWithStackNumSelf::DaBuff' has a wrong offset!");
-static_assert(offsetof(KSC_Entity_UpdateBuffWithStackNumSelf, StackNum) == 0x000008, "Member 'KSC_Entity_UpdateBuffWithStackNumSelf::StackNum' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.GetSceneComp
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_GetSceneComp final
-{
-public:
-	class UKSC_SceneComp*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_GetSceneComp) == 0x000008, "Wrong alignment on KSC_Entity_GetSceneComp");
-static_assert(sizeof(KSC_Entity_GetSceneComp) == 0x000008, "Wrong size on KSC_Entity_GetSceneComp");
-static_assert(offsetof(KSC_Entity_GetSceneComp, ReturnValue) == 0x000000, "Member 'KSC_Entity_GetSceneComp::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity.GetSkillComp
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_GetSkillComp final
-{
-public:
-	class UKSC_SkillComp*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Entity_GetSkillComp) == 0x000008, "Wrong alignment on KSC_Entity_GetSkillComp");
-static_assert(sizeof(KSC_Entity_GetSkillComp) == 0x000008, "Wrong size on KSC_Entity_GetSkillComp");
-static_assert(offsetof(KSC_Entity_GetSkillComp, ReturnValue) == 0x000000, "Member 'KSC_Entity_GetSkillComp::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_AddEntity
-// 0x0050 (0x0050 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_AddEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          InIsPreview;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_AddEntity) == 0x000010, "Wrong alignment on KSC_RenderEntityInterface_KSC_AddEntity");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_AddEntity) == 0x000050, "Wrong size on KSC_RenderEntityInterface_KSC_AddEntity");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_AddEntity, EntityId) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_AddEntity::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_AddEntity, InTransform) == 0x000010, "Member 'KSC_RenderEntityInterface_KSC_AddEntity::InTransform' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_AddEntity, InIsPreview) == 0x000040, "Member 'KSC_RenderEntityInterface_KSC_AddEntity::InIsPreview' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_DelayRemoveEntity
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_DelayRemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DelayTime;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_DelayRemoveEntity) == 0x000004, "Wrong alignment on KSC_RenderEntityInterface_KSC_DelayRemoveEntity");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_DelayRemoveEntity) == 0x000008, "Wrong size on KSC_RenderEntityInterface_KSC_DelayRemoveEntity");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_DelayRemoveEntity, EntityId) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_DelayRemoveEntity::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_DelayRemoveEntity, DelayTime) == 0x000004, "Member 'KSC_RenderEntityInterface_KSC_DelayRemoveEntity::DelayTime' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_InitData
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_InitData final
-{
-public:
-	class UKSC_DA_EntityRender*                   DaEntityRender;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_InitData) == 0x000008, "Wrong alignment on KSC_RenderEntityInterface_KSC_InitData");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_InitData) == 0x000008, "Wrong size on KSC_RenderEntityInterface_KSC_InitData");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_InitData, DaEntityRender) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_InitData::DaEntityRender' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_RemoveEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_RemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_RemoveEntity) == 0x000004, "Wrong alignment on KSC_RenderEntityInterface_KSC_RemoveEntity");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_RemoveEntity) == 0x000004, "Wrong size on KSC_RenderEntityInterface_KSC_RemoveEntity");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_RemoveEntity, EntityId) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_RemoveEntity::EntityId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_SetActorTransform_AnyThread
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread) == 0x000010, "Wrong alignment on KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread) == 0x000040, "Wrong size on KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread, EntityId) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread, InTransform) == 0x000010, "Member 'KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread::InTransform' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_UpdateEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_UpdateEntity final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityInterface_KSC_UpdateEntity) == 0x000004, "Wrong alignment on KSC_RenderEntityInterface_KSC_UpdateEntity");
-static_assert(sizeof(KSC_RenderEntityInterface_KSC_UpdateEntity) == 0x000004, "Wrong size on KSC_RenderEntityInterface_KSC_UpdateEntity");
-static_assert(offsetof(KSC_RenderEntityInterface_KSC_UpdateEntity, DeltaSeconds) == 0x000000, "Member 'KSC_RenderEntityInterface_KSC_UpdateEntity::DeltaSeconds' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_AddEntity
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_AddEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityHeadUIInterface_KSC_AddEntity) == 0x000004, "Wrong alignment on KSC_RenderEntityHeadUIInterface_KSC_AddEntity");
-static_assert(sizeof(KSC_RenderEntityHeadUIInterface_KSC_AddEntity) == 0x000010, "Wrong size on KSC_RenderEntityHeadUIInterface_KSC_AddEntity");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_AddEntity, EntityId) == 0x000000, "Member 'KSC_RenderEntityHeadUIInterface_KSC_AddEntity::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_AddEntity, InLocation) == 0x000004, "Member 'KSC_RenderEntityHeadUIInterface_KSC_AddEntity::InLocation' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_RemoveEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity) == 0x000004, "Wrong alignment on KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity");
-static_assert(sizeof(KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity) == 0x000004, "Wrong size on KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity, EntityId) == 0x000000, "Member 'KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity::EntityId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetActorLocation
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation) == 0x000004, "Wrong alignment on KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation");
-static_assert(sizeof(KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation) == 0x000010, "Wrong size on KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation, EntityId) == 0x000000, "Member 'KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation, InLocation) == 0x000004, "Member 'KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation::InLocation' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetHP
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_SetHP final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Percent;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityHeadUIInterface_KSC_SetHP) == 0x000004, "Wrong alignment on KSC_RenderEntityHeadUIInterface_KSC_SetHP");
-static_assert(sizeof(KSC_RenderEntityHeadUIInterface_KSC_SetHP) == 0x000008, "Wrong size on KSC_RenderEntityHeadUIInterface_KSC_SetHP");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_SetHP, EntityId) == 0x000000, "Member 'KSC_RenderEntityHeadUIInterface_KSC_SetHP::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityHeadUIInterface_KSC_SetHP, Percent) == 0x000004, "Member 'KSC_RenderEntityHeadUIInterface_KSC_SetHP::Percent' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity_AssistMachine.D_Fire
-// 0x0050 (0x0050 - 0x0000)
-struct KSC_Entity_AssistMachine_D_Fire final
-{
-public:
-	struct FTransformDouble                       D_FireTrans;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         SkillIndex;                                        // 0x0040(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KSC_Entity_AssistMachine_D_Fire) == 0x000010, "Wrong alignment on KSC_Entity_AssistMachine_D_Fire");
-static_assert(sizeof(KSC_Entity_AssistMachine_D_Fire) == 0x000050, "Wrong size on KSC_Entity_AssistMachine_D_Fire");
-static_assert(offsetof(KSC_Entity_AssistMachine_D_Fire, D_FireTrans) == 0x000000, "Member 'KSC_Entity_AssistMachine_D_Fire::D_FireTrans' has a wrong offset!");
-static_assert(offsetof(KSC_Entity_AssistMachine_D_Fire, SkillIndex) == 0x000040, "Member 'KSC_Entity_AssistMachine_D_Fire::SkillIndex' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Entity_AssistMachine.SetSkillAutoCast
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_AssistMachine_SetSkillAutoCast final
-{
-public:
-	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_SkillAutoCast                            AutoCast;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KSC_Entity_AssistMachine_SetSkillAutoCast) == 0x000004, "Wrong alignment on KSC_Entity_AssistMachine_SetSkillAutoCast");
-static_assert(sizeof(KSC_Entity_AssistMachine_SetSkillAutoCast) == 0x000008, "Wrong size on KSC_Entity_AssistMachine_SetSkillAutoCast");
-static_assert(offsetof(KSC_Entity_AssistMachine_SetSkillAutoCast, SkillIndex) == 0x000000, "Member 'KSC_Entity_AssistMachine_SetSkillAutoCast::SkillIndex' has a wrong offset!");
-static_assert(offsetof(KSC_Entity_AssistMachine_SetSkillAutoCast, AutoCast) == 0x000004, "Member 'KSC_Entity_AssistMachine_SetSkillAutoCast::AutoCast' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_PauseAnim
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_PauseAnim final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityAnimInterface_KSC_PauseAnim) == 0x000004, "Wrong alignment on KSC_RenderEntityAnimInterface_KSC_PauseAnim");
-static_assert(sizeof(KSC_RenderEntityAnimInterface_KSC_PauseAnim) == 0x000004, "Wrong size on KSC_RenderEntityAnimInterface_KSC_PauseAnim");
-static_assert(offsetof(KSC_RenderEntityAnimInterface_KSC_PauseAnim, EntityId) == 0x000000, "Member 'KSC_RenderEntityAnimInterface_KSC_PauseAnim::EntityId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_ResumeAnim
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_ResumeAnim final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityAnimInterface_KSC_ResumeAnim) == 0x000004, "Wrong alignment on KSC_RenderEntityAnimInterface_KSC_ResumeAnim");
-static_assert(sizeof(KSC_RenderEntityAnimInterface_KSC_ResumeAnim) == 0x000004, "Wrong size on KSC_RenderEntityAnimInterface_KSC_ResumeAnim");
-static_assert(offsetof(KSC_RenderEntityAnimInterface_KSC_ResumeAnim, EntityId) == 0x000000, "Member 'KSC_RenderEntityAnimInterface_KSC_ResumeAnim::EntityId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_UpdateAnimState
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_UpdateAnimState final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_GPUNPCAnimState                          EnemyState;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KSC_RenderEntityAnimInterface_KSC_UpdateAnimState) == 0x000004, "Wrong alignment on KSC_RenderEntityAnimInterface_KSC_UpdateAnimState");
-static_assert(sizeof(KSC_RenderEntityAnimInterface_KSC_UpdateAnimState) == 0x000008, "Wrong size on KSC_RenderEntityAnimInterface_KSC_UpdateAnimState");
-static_assert(offsetof(KSC_RenderEntityAnimInterface_KSC_UpdateAnimState, EntityId) == 0x000000, "Member 'KSC_RenderEntityAnimInterface_KSC_UpdateAnimState::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityAnimInterface_KSC_UpdateAnimState, EnemyState) == 0x000004, "Member 'KSC_RenderEntityAnimInterface_KSC_UpdateAnimState::EnemyState' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_AddMaterial
-// 0x0018 (0x0018 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_AddMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLoop;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial) == 0x000008, "Wrong alignment on KSC_RenderEntityMaterialInterface_KSC_AddMaterial");
-static_assert(sizeof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial) == 0x000018, "Wrong size on KSC_RenderEntityMaterialInterface_KSC_AddMaterial");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial, EntityId) == 0x000000, "Member 'KSC_RenderEntityMaterialInterface_KSC_AddMaterial::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial, DataAsset) == 0x000008, "Member 'KSC_RenderEntityMaterialInterface_KSC_AddMaterial::DataAsset' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial, bLoop) == 0x000010, "Member 'KSC_RenderEntityMaterialInterface_KSC_AddMaterial::bLoop' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_AddMaterial, ReturnValue) == 0x000014, "Member 'KSC_RenderEntityMaterialInterface_KSC_AddMaterial::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_ApplyBeHitMaterial
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial) == 0x000004, "Wrong alignment on KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial");
-static_assert(sizeof(KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial) == 0x000004, "Wrong size on KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial, EntityId) == 0x000000, "Member 'KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial::EntityId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_DelayAddMaterial
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Delay;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial) == 0x000008, "Wrong alignment on KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial");
-static_assert(sizeof(KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial) == 0x000010, "Wrong size on KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial, EntityId) == 0x000000, "Member 'KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial, Delay) == 0x000004, "Member 'KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial::Delay' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial, DataAsset) == 0x000008, "Member 'KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial::DataAsset' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_RemoveMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HandleId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial) == 0x000004, "Wrong alignment on KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial");
-static_assert(sizeof(KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial) == 0x000008, "Wrong size on KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial, EntityId) == 0x000000, "Member 'KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial, HandleId) == 0x000004, "Member 'KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial::HandleId' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_GPUHeadUI.InitHeadUIInternal
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_GPUHeadUI_InitHeadUIInternal final
-{
-public:
-	class UInstancedStaticMeshComponent*          InComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               InMI;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_GPUHeadUI_InitHeadUIInternal) == 0x000008, "Wrong alignment on KSC_GPUHeadUI_InitHeadUIInternal");
-static_assert(sizeof(KSC_GPUHeadUI_InitHeadUIInternal) == 0x000010, "Wrong size on KSC_GPUHeadUI_InitHeadUIInternal");
-static_assert(offsetof(KSC_GPUHeadUI_InitHeadUIInternal, InComp) == 0x000000, "Member 'KSC_GPUHeadUI_InitHeadUIInternal::InComp' has a wrong offset!");
-static_assert(offsetof(KSC_GPUHeadUI_InitHeadUIInternal, InMI) == 0x000008, "Member 'KSC_GPUHeadUI_InitHeadUIInternal::InMI' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Move_Approach.SetTargetEntity
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_Approach_SetTargetEntity final
-{
-public:
-	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Move_Approach_SetTargetEntity) == 0x000008, "Wrong alignment on KSC_Move_Approach_SetTargetEntity");
-static_assert(sizeof(KSC_Move_Approach_SetTargetEntity) == 0x000008, "Wrong size on KSC_Move_Approach_SetTargetEntity");
-static_assert(offsetof(KSC_Move_Approach_SetTargetEntity, Entity) == 0x000000, "Member 'KSC_Move_Approach_SetTargetEntity::Entity' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSpline
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_Spline_SetSpline final
-{
-public:
-	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Move_Spline_SetSpline) == 0x000008, "Wrong alignment on KSC_Move_Spline_SetSpline");
-static_assert(sizeof(KSC_Move_Spline_SetSpline) == 0x000008, "Wrong size on KSC_Move_Spline_SetSpline");
-static_assert(offsetof(KSC_Move_Spline_SetSpline, SplineComp) == 0x000000, "Member 'KSC_Move_Spline_SetSpline::SplineComp' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineHeight
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Move_Spline_SetSplineHeight final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Move_Spline_SetSplineHeight) == 0x000004, "Wrong alignment on KSC_Move_Spline_SetSplineHeight");
-static_assert(sizeof(KSC_Move_Spline_SetSplineHeight) == 0x000004, "Wrong size on KSC_Move_Spline_SetSplineHeight");
-static_assert(offsetof(KSC_Move_Spline_SetSplineHeight, Height) == 0x000000, "Member 'KSC_Move_Spline_SetSplineHeight::Height' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineWide
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Move_Spline_SetSplineWide final
-{
-public:
-	float                                         Width;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Move_Spline_SetSplineWide) == 0x000004, "Wrong alignment on KSC_Move_Spline_SetSplineWide");
-static_assert(sizeof(KSC_Move_Spline_SetSplineWide) == 0x000004, "Wrong size on KSC_Move_Spline_SetSplineWide");
-static_assert(offsetof(KSC_Move_Spline_SetSplineWide, Width) == 0x000000, "Member 'KSC_Move_Spline_SetSplineWide::Width' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownRemain;
 
 // Function KuroSimpleCombat.KSC_PlayerHeadUiHandle.OnAttrChange
 // 0x0008 (0x0008 - 0x0000)
@@ -638,65 +163,25 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_PlayerHeadUiHandle_OnAttrChange) == 0x000004, "Wrong alignment on KSC_PlayerHeadUiHandle_OnAttrChange");
-static_assert(sizeof(KSC_PlayerHeadUiHandle_OnAttrChange) == 0x000008, "Wrong size on KSC_PlayerHeadUiHandle_OnAttrChange");
-static_assert(offsetof(KSC_PlayerHeadUiHandle_OnAttrChange, AttrType) == 0x000000, "Member 'KSC_PlayerHeadUiHandle_OnAttrChange::AttrType' has a wrong offset!");
-static_assert(offsetof(KSC_PlayerHeadUiHandle_OnAttrChange, Value) == 0x000004, "Member 'KSC_PlayerHeadUiHandle_OnAttrChange::Value' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_PlayerHeadUiHandle_OnAttrChange;
 
-// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownMax
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Skill_GetSkillCoolDownMax final
+// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.CreateWorld
+// 0x0008 (0x0008 - 0x0000)
+struct KuroSimpleCombatSubsystem_CreateWorld final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_World*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Skill_GetSkillCoolDownMax) == 0x000004, "Wrong alignment on KSC_Skill_GetSkillCoolDownMax");
-static_assert(sizeof(KSC_Skill_GetSkillCoolDownMax) == 0x000004, "Wrong size on KSC_Skill_GetSkillCoolDownMax");
-static_assert(offsetof(KSC_Skill_GetSkillCoolDownMax, ReturnValue) == 0x000000, "Member 'KSC_Skill_GetSkillCoolDownMax::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSimpleCombatSubsystem_CreateWorld;
 
-// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownRemain
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Skill_GetSkillCoolDownRemain final
+// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.GetKSCWorld
+// 0x0008 (0x0008 - 0x0000)
+struct KuroSimpleCombatSubsystem_GetKSCWorld final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_World*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_Skill_GetSkillCoolDownRemain) == 0x000004, "Wrong alignment on KSC_Skill_GetSkillCoolDownRemain");
-static_assert(sizeof(KSC_Skill_GetSkillCoolDownRemain) == 0x000004, "Wrong size on KSC_Skill_GetSkillCoolDownRemain");
-static_assert(offsetof(KSC_Skill_GetSkillCoolDownRemain, ReturnValue) == 0x000000, "Member 'KSC_Skill_GetSkillCoolDownRemain::ReturnValue' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Skill_BulletAttack.OnBulletHit
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_Skill_BulletAttack_OnBulletHit final
-{
-public:
-	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Skill_BulletAttack_OnBulletHit) == 0x000010, "Wrong alignment on KSC_Skill_BulletAttack_OnBulletHit");
-static_assert(sizeof(KSC_Skill_BulletAttack_OnBulletHit) == 0x000040, "Wrong size on KSC_Skill_BulletAttack_OnBulletHit");
-static_assert(offsetof(KSC_Skill_BulletAttack_OnBulletHit, TargetContext) == 0x000000, "Member 'KSC_Skill_BulletAttack_OnBulletHit::TargetContext' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Skill_BulletPierceAttack.OnBulletHits
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_Skill_BulletPierceAttack_OnBulletHits final
-{
-public:
-	TArray<class UKSC_SkillComp*>                 Hits;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Skill_BulletPierceAttack_OnBulletHits) == 0x000008, "Wrong alignment on KSC_Skill_BulletPierceAttack_OnBulletHits");
-static_assert(sizeof(KSC_Skill_BulletPierceAttack_OnBulletHits) == 0x000010, "Wrong size on KSC_Skill_BulletPierceAttack_OnBulletHits");
-static_assert(offsetof(KSC_Skill_BulletPierceAttack_OnBulletHits, Hits) == 0x000000, "Member 'KSC_Skill_BulletPierceAttack_OnBulletHits::Hits' has a wrong offset!");
-
-// Function KuroSimpleCombat.KSC_Skill_ManualBulletAttack.OnBulletHit
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_Skill_ManualBulletAttack_OnBulletHit final
-{
-public:
-	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KSC_Skill_ManualBulletAttack_OnBulletHit) == 0x000010, "Wrong alignment on KSC_Skill_ManualBulletAttack_OnBulletHit");
-static_assert(sizeof(KSC_Skill_ManualBulletAttack_OnBulletHit) == 0x000040, "Wrong size on KSC_Skill_ManualBulletAttack_OnBulletHit");
-static_assert(offsetof(KSC_Skill_ManualBulletAttack_OnBulletHit, TargetContext) == 0x000000, "Member 'KSC_Skill_ManualBulletAttack_OnBulletHit::TargetContext' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSimpleCombatSubsystem_GetKSCWorld;
 
 // Function KuroSimpleCombat.KSC_SkillComp.GetSkillCollDown
 // 0x0004 (0x0004 - 0x0000)
@@ -705,9 +190,16 @@ struct KSC_SkillComp_GetSkillCollDown final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_SkillComp_GetSkillCollDown) == 0x000004, "Wrong alignment on KSC_SkillComp_GetSkillCollDown");
-static_assert(sizeof(KSC_SkillComp_GetSkillCollDown) == 0x000004, "Wrong size on KSC_SkillComp_GetSkillCollDown");
-static_assert(offsetof(KSC_SkillComp_GetSkillCollDown, ReturnValue) == 0x000000, "Member 'KSC_SkillComp_GetSkillCollDown::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_SkillComp_GetSkillCollDown;
+
+// Function KuroSimpleCombat.KSC_Skill_ManualBulletAttack.OnBulletHit
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_Skill_ManualBulletAttack_OnBulletHit final
+{
+public:
+	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_ManualBulletAttack_OnBulletHit;
 
 // Function KuroSimpleCombat.KSC_World.AddDaEntity
 // 0x0050 (0x0050 - 0x0000)
@@ -722,13 +214,7 @@ public:
 	int32                                         CreatureId;                                        // 0x0044(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AKSC_Entity*                            ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_AddDaEntity) == 0x000010, "Wrong alignment on KSC_World_AddDaEntity");
-static_assert(sizeof(KSC_World_AddDaEntity) == 0x000050, "Wrong size on KSC_World_AddDaEntity");
-static_assert(offsetof(KSC_World_AddDaEntity, DaEntity) == 0x000000, "Member 'KSC_World_AddDaEntity::DaEntity' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddDaEntity, Transform) == 0x000010, "Member 'KSC_World_AddDaEntity::Transform' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddDaEntity, IsPreview) == 0x000040, "Member 'KSC_World_AddDaEntity::IsPreview' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddDaEntity, CreatureId) == 0x000044, "Member 'KSC_World_AddDaEntity::CreatureId' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddDaEntity, ReturnValue) == 0x000048, "Member 'KSC_World_AddDaEntity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_AddDaEntity;
 
 // Function KuroSimpleCombat.KSC_World.AddDecorator
 // 0x0010 (0x0010 - 0x0000)
@@ -739,10 +225,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_AddDecorator) == 0x000008, "Wrong alignment on KSC_World_AddDecorator");
-static_assert(sizeof(KSC_World_AddDecorator) == 0x000010, "Wrong size on KSC_World_AddDecorator");
-static_assert(offsetof(KSC_World_AddDecorator, DaDecorator) == 0x000000, "Member 'KSC_World_AddDecorator::DaDecorator' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddDecorator, ReturnValue) == 0x000008, "Member 'KSC_World_AddDecorator::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_AddDecorator;
 
 // Function KuroSimpleCombat.KSC_World.AddHeadUI
 // 0x0010 (0x0010 - 0x0000)
@@ -753,10 +236,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_AddHeadUI) == 0x000008, "Wrong alignment on KSC_World_AddHeadUI");
-static_assert(sizeof(KSC_World_AddHeadUI) == 0x000010, "Wrong size on KSC_World_AddHeadUI");
-static_assert(offsetof(KSC_World_AddHeadUI, InHeadUIClass) == 0x000000, "Member 'KSC_World_AddHeadUI::InHeadUIClass' has a wrong offset!");
-static_assert(offsetof(KSC_World_AddHeadUI, ReturnValue) == 0x000008, "Member 'KSC_World_AddHeadUI::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_AddHeadUI;
 
 // Function KuroSimpleCombat.KSC_World.AssignBatchRemoveDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -765,9 +245,16 @@ struct KSC_World_AssignBatchRemoveDelegate final
 public:
 	TDelegate<void(const TArray<struct FKSC_RemoveContext>& RemoveContext)> InDelegate;              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_AssignBatchRemoveDelegate) == 0x000004, "Wrong alignment on KSC_World_AssignBatchRemoveDelegate");
-static_assert(sizeof(KSC_World_AssignBatchRemoveDelegate) == 0x000028, "Wrong size on KSC_World_AssignBatchRemoveDelegate");
-static_assert(offsetof(KSC_World_AssignBatchRemoveDelegate, InDelegate) == 0x000000, "Member 'KSC_World_AssignBatchRemoveDelegate::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_AssignBatchRemoveDelegate;
+
+// Function KuroSimpleCombat.KSC_World.AssignKSCEntitySpawn
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_World_AssignKSCEntitySpawn final
+{
+public:
+	TDelegate<void(const struct FTransformDouble& OwnerTransform, const TArray<struct FKSC_SpawnEntity>& SpawnEntities)> InDelegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_AssignKSCEntitySpawn;
 
 // Function KuroSimpleCombat.KSC_World.AssignLandFireSpawnDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -776,9 +263,18 @@ struct KSC_World_AssignLandFireSpawnDelegate final
 public:
 	TDelegate<void(const TArray<struct FKSC_LandFireContext>& LandFireContext)> InDelegate;          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_AssignLandFireSpawnDelegate) == 0x000004, "Wrong alignment on KSC_World_AssignLandFireSpawnDelegate");
-static_assert(sizeof(KSC_World_AssignLandFireSpawnDelegate) == 0x000028, "Wrong size on KSC_World_AssignLandFireSpawnDelegate");
-static_assert(offsetof(KSC_World_AssignLandFireSpawnDelegate, InDelegate) == 0x000000, "Member 'KSC_World_AssignLandFireSpawnDelegate::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_AssignLandFireSpawnDelegate;
+
+// Function KuroSimpleCombat.KSC_World.AssignWorldAttrListen
+// 0x0030 (0x0030 - 0x0000)
+struct KSC_World_AssignWorldAttrListen final
+{
+public:
+	EKSC_WorldAttrType                            Id;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EKSC_WorldAttrType AttrType, int32 OldValue, int32 NewValue)> InDelegate;         // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_AssignWorldAttrListen;
 
 // Function KuroSimpleCombat.KSC_World.D_AddDaEntity
 // 0x0060 (0x0060 - 0x0000)
@@ -793,13 +289,7 @@ public:
 	int32                                         CreatureId;                                        // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AKSC_Entity*                            ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_D_AddDaEntity) == 0x000010, "Wrong alignment on KSC_World_D_AddDaEntity");
-static_assert(sizeof(KSC_World_D_AddDaEntity) == 0x000060, "Wrong size on KSC_World_D_AddDaEntity");
-static_assert(offsetof(KSC_World_D_AddDaEntity, DaEntity) == 0x000000, "Member 'KSC_World_D_AddDaEntity::DaEntity' has a wrong offset!");
-static_assert(offsetof(KSC_World_D_AddDaEntity, Transform) == 0x000010, "Member 'KSC_World_D_AddDaEntity::Transform' has a wrong offset!");
-static_assert(offsetof(KSC_World_D_AddDaEntity, InIsPreview) == 0x000050, "Member 'KSC_World_D_AddDaEntity::InIsPreview' has a wrong offset!");
-static_assert(offsetof(KSC_World_D_AddDaEntity, CreatureId) == 0x000054, "Member 'KSC_World_D_AddDaEntity::CreatureId' has a wrong offset!");
-static_assert(offsetof(KSC_World_D_AddDaEntity, ReturnValue) == 0x000058, "Member 'KSC_World_D_AddDaEntity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_D_AddDaEntity;
 
 // Function KuroSimpleCombat.KSC_World.Debug_GetEntityAttr
 // 0x0060 (0x0060 - 0x0000)
@@ -812,11 +302,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_GetEntityAttr) == 0x000008, "Wrong alignment on KSC_World_Debug_GetEntityAttr");
-static_assert(sizeof(KSC_World_Debug_GetEntityAttr) == 0x000060, "Wrong size on KSC_World_Debug_GetEntityAttr");
-static_assert(offsetof(KSC_World_Debug_GetEntityAttr, EntityId) == 0x000000, "Member 'KSC_World_Debug_GetEntityAttr::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityAttr, Attr) == 0x000008, "Member 'KSC_World_Debug_GetEntityAttr::Attr' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityAttr, ReturnValue) == 0x000058, "Member 'KSC_World_Debug_GetEntityAttr::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_GetEntityAttr;
 
 // Function KuroSimpleCombat.KSC_World.Debug_GetEntityBuffs
 // 0x0060 (0x0060 - 0x0000)
@@ -829,11 +315,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_GetEntityBuffs) == 0x000008, "Wrong alignment on KSC_World_Debug_GetEntityBuffs");
-static_assert(sizeof(KSC_World_Debug_GetEntityBuffs) == 0x000060, "Wrong size on KSC_World_Debug_GetEntityBuffs");
-static_assert(offsetof(KSC_World_Debug_GetEntityBuffs, EntityId) == 0x000000, "Member 'KSC_World_Debug_GetEntityBuffs::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityBuffs, Buffs) == 0x000008, "Member 'KSC_World_Debug_GetEntityBuffs::Buffs' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityBuffs, ReturnValue) == 0x000058, "Member 'KSC_World_Debug_GetEntityBuffs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_GetEntityBuffs;
 
 // Function KuroSimpleCombat.KSC_World.Debug_GetEntityTags
 // 0x0060 (0x0060 - 0x0000)
@@ -846,11 +328,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_GetEntityTags) == 0x000008, "Wrong alignment on KSC_World_Debug_GetEntityTags");
-static_assert(sizeof(KSC_World_Debug_GetEntityTags) == 0x000060, "Wrong size on KSC_World_Debug_GetEntityTags");
-static_assert(offsetof(KSC_World_Debug_GetEntityTags, EntityId) == 0x000000, "Member 'KSC_World_Debug_GetEntityTags::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityTags, Tags) == 0x000008, "Member 'KSC_World_Debug_GetEntityTags::Tags' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetEntityTags, ReturnValue) == 0x000058, "Member 'KSC_World_Debug_GetEntityTags::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_GetEntityTags;
 
 // Function KuroSimpleCombat.KSC_World.Debug_GetOriginalTagName
 // 0x0020 (0x0020 - 0x0000)
@@ -861,10 +339,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_Debug_GetOriginalTagName) == 0x000008, "Wrong alignment on KSC_World_Debug_GetOriginalTagName");
-static_assert(sizeof(KSC_World_Debug_GetOriginalTagName) == 0x000020, "Wrong size on KSC_World_Debug_GetOriginalTagName");
-static_assert(offsetof(KSC_World_Debug_GetOriginalTagName, TagName) == 0x000000, "Member 'KSC_World_Debug_GetOriginalTagName::TagName' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetOriginalTagName, ReturnValue) == 0x000010, "Member 'KSC_World_Debug_GetOriginalTagName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_GetOriginalTagName;
 
 // Function KuroSimpleCombat.KSC_World.Debug_GetWorldAttr
 // 0x0058 (0x0058 - 0x0000)
@@ -875,10 +350,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_GetWorldAttr) == 0x000008, "Wrong alignment on KSC_World_Debug_GetWorldAttr");
-static_assert(sizeof(KSC_World_Debug_GetWorldAttr) == 0x000058, "Wrong size on KSC_World_Debug_GetWorldAttr");
-static_assert(offsetof(KSC_World_Debug_GetWorldAttr, Attr) == 0x000000, "Member 'KSC_World_Debug_GetWorldAttr::Attr' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_GetWorldAttr, ReturnValue) == 0x000050, "Member 'KSC_World_Debug_GetWorldAttr::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_GetWorldAttr;
 
 // Function KuroSimpleCombat.KSC_World.Debug_IsEntityAlive
 // 0x0008 (0x0008 - 0x0000)
@@ -889,10 +361,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_IsEntityAlive) == 0x000004, "Wrong alignment on KSC_World_Debug_IsEntityAlive");
-static_assert(sizeof(KSC_World_Debug_IsEntityAlive) == 0x000008, "Wrong size on KSC_World_Debug_IsEntityAlive");
-static_assert(offsetof(KSC_World_Debug_IsEntityAlive, EntityId) == 0x000000, "Member 'KSC_World_Debug_IsEntityAlive::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_IsEntityAlive, ReturnValue) == 0x000004, "Member 'KSC_World_Debug_IsEntityAlive::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_IsEntityAlive;
 
 // Function KuroSimpleCombat.KSC_World.Debug_SetEntityAttr
 // 0x0010 (0x0010 - 0x0000)
@@ -906,12 +375,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_SetEntityAttr) == 0x000004, "Wrong alignment on KSC_World_Debug_SetEntityAttr");
-static_assert(sizeof(KSC_World_Debug_SetEntityAttr) == 0x000010, "Wrong size on KSC_World_Debug_SetEntityAttr");
-static_assert(offsetof(KSC_World_Debug_SetEntityAttr, EntityId) == 0x000000, "Member 'KSC_World_Debug_SetEntityAttr::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityAttr, Attr) == 0x000004, "Member 'KSC_World_Debug_SetEntityAttr::Attr' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityAttr, Value) == 0x000008, "Member 'KSC_World_Debug_SetEntityAttr::Value' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityAttr, ReturnValue) == 0x00000C, "Member 'KSC_World_Debug_SetEntityAttr::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_SetEntityAttr;
 
 // Function KuroSimpleCombat.KSC_World.Debug_SetEntityTag
 // 0x0018 (0x0018 - 0x0000)
@@ -924,12 +388,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_Debug_SetEntityTag) == 0x000004, "Wrong alignment on KSC_World_Debug_SetEntityTag");
-static_assert(sizeof(KSC_World_Debug_SetEntityTag) == 0x000018, "Wrong size on KSC_World_Debug_SetEntityTag");
-static_assert(offsetof(KSC_World_Debug_SetEntityTag, EntityId) == 0x000000, "Member 'KSC_World_Debug_SetEntityTag::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityTag, Attr) == 0x000004, "Member 'KSC_World_Debug_SetEntityTag::Attr' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityTag, TagCount) == 0x000010, "Member 'KSC_World_Debug_SetEntityTag::TagCount' has a wrong offset!");
-static_assert(offsetof(KSC_World_Debug_SetEntityTag, ReturnValue) == 0x000014, "Member 'KSC_World_Debug_SetEntityTag::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_Debug_SetEntityTag;
 
 // Function KuroSimpleCombat.KSC_World.GetEntityById
 // 0x0010 (0x0010 - 0x0000)
@@ -940,10 +399,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AKSC_Entity*                            ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_GetEntityById) == 0x000008, "Wrong alignment on KSC_World_GetEntityById");
-static_assert(sizeof(KSC_World_GetEntityById) == 0x000010, "Wrong size on KSC_World_GetEntityById");
-static_assert(offsetof(KSC_World_GetEntityById, EntityId) == 0x000000, "Member 'KSC_World_GetEntityById::EntityId' has a wrong offset!");
-static_assert(offsetof(KSC_World_GetEntityById, ReturnValue) == 0x000008, "Member 'KSC_World_GetEntityById::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_GetEntityById;
 
 // Function KuroSimpleCombat.KSC_World.GetEntityPositionsEx
 // 0x0010 (0x0010 - 0x0000)
@@ -952,9 +408,7 @@ struct KSC_World_GetEntityPositionsEx final
 public:
 	TArray<struct FKSC_MiniMapContext>            EntityPositions;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_GetEntityPositionsEx) == 0x000008, "Wrong alignment on KSC_World_GetEntityPositionsEx");
-static_assert(sizeof(KSC_World_GetEntityPositionsEx) == 0x000010, "Wrong size on KSC_World_GetEntityPositionsEx");
-static_assert(offsetof(KSC_World_GetEntityPositionsEx, EntityPositions) == 0x000000, "Member 'KSC_World_GetEntityPositionsEx::EntityPositions' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_GetEntityPositionsEx;
 
 // Function KuroSimpleCombat.KSC_World.GetHeadHpInfos
 // 0x0010 (0x0010 - 0x0000)
@@ -963,9 +417,7 @@ struct KSC_World_GetHeadHpInfos final
 public:
 	TArray<struct FKSC_HeadHpContext>             HpInfos;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_GetHeadHpInfos) == 0x000008, "Wrong alignment on KSC_World_GetHeadHpInfos");
-static_assert(sizeof(KSC_World_GetHeadHpInfos) == 0x000010, "Wrong size on KSC_World_GetHeadHpInfos");
-static_assert(offsetof(KSC_World_GetHeadHpInfos, HpInfos) == 0x000000, "Member 'KSC_World_GetHeadHpInfos::HpInfos' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_GetHeadHpInfos;
 
 // Function KuroSimpleCombat.KSC_World.GetWorldAttr
 // 0x0008 (0x0008 - 0x0000)
@@ -976,10 +428,18 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_GetWorldAttr) == 0x000004, "Wrong alignment on KSC_World_GetWorldAttr");
-static_assert(sizeof(KSC_World_GetWorldAttr) == 0x000008, "Wrong size on KSC_World_GetWorldAttr");
-static_assert(offsetof(KSC_World_GetWorldAttr, Type) == 0x000000, "Member 'KSC_World_GetWorldAttr::Type' has a wrong offset!");
-static_assert(offsetof(KSC_World_GetWorldAttr, ReturnValue) == 0x000004, "Member 'KSC_World_GetWorldAttr::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_GetWorldAttr;
+
+// Function KuroSimpleCombat.KSC_World.ModifyWorldAttr
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_World_ModifyWorldAttr final
+{
+public:
+	EKSC_WorldAttrType                            Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_ModifyWorldAttr;
 
 // Function KuroSimpleCombat.KSC_World.PopHitInfos
 // 0x0010 (0x0010 - 0x0000)
@@ -988,9 +448,7 @@ struct KSC_World_PopHitInfos final
 public:
 	TArray<struct FKSC_HitContext>                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_PopHitInfos) == 0x000008, "Wrong alignment on KSC_World_PopHitInfos");
-static_assert(sizeof(KSC_World_PopHitInfos) == 0x000010, "Wrong size on KSC_World_PopHitInfos");
-static_assert(offsetof(KSC_World_PopHitInfos, ReturnValue) == 0x000000, "Member 'KSC_World_PopHitInfos::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_PopHitInfos;
 
 // Function KuroSimpleCombat.KSC_World.RemoveDecorator
 // 0x0010 (0x0010 - 0x0000)
@@ -1001,10 +459,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_RemoveDecorator) == 0x000008, "Wrong alignment on KSC_World_RemoveDecorator");
-static_assert(sizeof(KSC_World_RemoveDecorator) == 0x000010, "Wrong size on KSC_World_RemoveDecorator");
-static_assert(offsetof(KSC_World_RemoveDecorator, DaDecorator) == 0x000000, "Member 'KSC_World_RemoveDecorator::DaDecorator' has a wrong offset!");
-static_assert(offsetof(KSC_World_RemoveDecorator, ReturnValue) == 0x000008, "Member 'KSC_World_RemoveDecorator::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_RemoveDecorator;
 
 // Function KuroSimpleCombat.KSC_World.RemoveEntity
 // 0x0008 (0x0008 - 0x0000)
@@ -1013,9 +468,7 @@ struct KSC_World_RemoveEntity final
 public:
 	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_RemoveEntity) == 0x000008, "Wrong alignment on KSC_World_RemoveEntity");
-static_assert(sizeof(KSC_World_RemoveEntity) == 0x000008, "Wrong size on KSC_World_RemoveEntity");
-static_assert(offsetof(KSC_World_RemoveEntity, Entity) == 0x000000, "Member 'KSC_World_RemoveEntity::Entity' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_RemoveEntity;
 
 // Function KuroSimpleCombat.KSC_World.RemoveEntityReason
 // 0x0018 (0x0018 - 0x0000)
@@ -1026,10 +479,18 @@ public:
 	class FName                                   Reason;                                            // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KSC_World_RemoveEntityReason) == 0x000008, "Wrong alignment on KSC_World_RemoveEntityReason");
-static_assert(sizeof(KSC_World_RemoveEntityReason) == 0x000018, "Wrong size on KSC_World_RemoveEntityReason");
-static_assert(offsetof(KSC_World_RemoveEntityReason, Entity) == 0x000000, "Member 'KSC_World_RemoveEntityReason::Entity' has a wrong offset!");
-static_assert(offsetof(KSC_World_RemoveEntityReason, Reason) == 0x000008, "Member 'KSC_World_RemoveEntityReason::Reason' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_RemoveEntityReason;
+
+// Function KuroSimpleCombat.KSC_World.RemoveWorldAttrListen
+// 0x0030 (0x0030 - 0x0000)
+struct KSC_World_RemoveWorldAttrListen final
+{
+public:
+	EKSC_WorldAttrType                            Id;                                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EKSC_WorldAttrType AttrType, int32 OldValue, int32 NewValue)> InDelegate;         // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_RemoveWorldAttrListen;
 
 // Function KuroSimpleCombat.KSC_World.SetObstacleSegments
 // 0x0010 (0x0010 - 0x0000)
@@ -1038,9 +499,7 @@ struct KSC_World_SetObstacleSegments final
 public:
 	TArray<struct FKSC_Segment>                   InObstacleSegments;                                // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_SetObstacleSegments) == 0x000008, "Wrong alignment on KSC_World_SetObstacleSegments");
-static_assert(sizeof(KSC_World_SetObstacleSegments) == 0x000010, "Wrong size on KSC_World_SetObstacleSegments");
-static_assert(offsetof(KSC_World_SetObstacleSegments, InObstacleSegments) == 0x000000, "Member 'KSC_World_SetObstacleSegments::InObstacleSegments' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_SetObstacleSegments;
 
 // Function KuroSimpleCombat.KSC_World.SetWorldAttr
 // 0x0008 (0x0008 - 0x0000)
@@ -1051,10 +510,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_SetWorldAttr) == 0x000004, "Wrong alignment on KSC_World_SetWorldAttr");
-static_assert(sizeof(KSC_World_SetWorldAttr) == 0x000008, "Wrong size on KSC_World_SetWorldAttr");
-static_assert(offsetof(KSC_World_SetWorldAttr, Type) == 0x000000, "Member 'KSC_World_SetWorldAttr::Type' has a wrong offset!");
-static_assert(offsetof(KSC_World_SetWorldAttr, Value) == 0x000004, "Member 'KSC_World_SetWorldAttr::Value' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_SetWorldAttr;
 
 // Function KuroSimpleCombat.KSC_World.SetWorldBounds
 // 0x0008 (0x0008 - 0x0000)
@@ -1063,9 +519,7 @@ struct KSC_World_SetWorldBounds final
 public:
 	class UKSC_DA_WorldBounds*                    DAWorldBounds;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_SetWorldBounds) == 0x000008, "Wrong alignment on KSC_World_SetWorldBounds");
-static_assert(sizeof(KSC_World_SetWorldBounds) == 0x000008, "Wrong size on KSC_World_SetWorldBounds");
-static_assert(offsetof(KSC_World_SetWorldBounds, DAWorldBounds) == 0x000000, "Member 'KSC_World_SetWorldBounds::DAWorldBounds' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_SetWorldBounds;
 
 // Function KuroSimpleCombat.KSC_World.SetWorldTimeDilation
 // 0x0004 (0x0004 - 0x0000)
@@ -1074,9 +528,7 @@ struct KSC_World_SetWorldTimeDilation final
 public:
 	float                                         NewTimeDilation;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_SetWorldTimeDilation) == 0x000004, "Wrong alignment on KSC_World_SetWorldTimeDilation");
-static_assert(sizeof(KSC_World_SetWorldTimeDilation) == 0x000004, "Wrong size on KSC_World_SetWorldTimeDilation");
-static_assert(offsetof(KSC_World_SetWorldTimeDilation, NewTimeDilation) == 0x000000, "Member 'KSC_World_SetWorldTimeDilation::NewTimeDilation' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_SetWorldTimeDilation;
 
 // Function KuroSimpleCombat.KSC_World.GetBuffData
 // 0x0008 (0x0008 - 0x0000)
@@ -1085,31 +537,491 @@ struct KSC_World_GetBuffData final
 public:
 	class UKSC_BuffId*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_World_GetBuffData) == 0x000008, "Wrong alignment on KSC_World_GetBuffData");
-static_assert(sizeof(KSC_World_GetBuffData) == 0x000008, "Wrong size on KSC_World_GetBuffData");
-static_assert(offsetof(KSC_World_GetBuffData, ReturnValue) == 0x000000, "Member 'KSC_World_GetBuffData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_World_GetBuffData;
 
-// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.CreateWorld
+// Function KuroSimpleCombat.KSC_TopBossHeadUiHandle.OnAttrChange
 // 0x0008 (0x0008 - 0x0000)
-struct KuroSimpleCombatSubsystem_CreateWorld final
+struct KSC_TopBossHeadUiHandle_OnAttrChange final
 {
 public:
-	class UKSC_World*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSimpleCombatSubsystem_CreateWorld) == 0x000008, "Wrong alignment on KuroSimpleCombatSubsystem_CreateWorld");
-static_assert(sizeof(KuroSimpleCombatSubsystem_CreateWorld) == 0x000008, "Wrong size on KuroSimpleCombatSubsystem_CreateWorld");
-static_assert(offsetof(KuroSimpleCombatSubsystem_CreateWorld, ReturnValue) == 0x000000, "Member 'KuroSimpleCombatSubsystem_CreateWorld::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_TopBossHeadUiHandle_OnAttrChange;
 
-// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.GetKSCWorld
-// 0x0008 (0x0008 - 0x0000)
-struct KuroSimpleCombatSubsystem_GetKSCWorld final
+// Function KuroSimpleCombat.KSC_Skill_BulletAttack.OnBulletHit
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_Skill_BulletAttack_OnBulletHit final
 {
 public:
-	class UKSC_World*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSimpleCombatSubsystem_GetKSCWorld) == 0x000008, "Wrong alignment on KuroSimpleCombatSubsystem_GetKSCWorld");
-static_assert(sizeof(KuroSimpleCombatSubsystem_GetKSCWorld) == 0x000008, "Wrong size on KuroSimpleCombatSubsystem_GetKSCWorld");
-static_assert(offsetof(KuroSimpleCombatSubsystem_GetKSCWorld, ReturnValue) == 0x000000, "Member 'KuroSimpleCombatSubsystem_GetKSCWorld::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_Skill_BulletAttack_OnBulletHit;
+
+// Function KuroSimpleCombat.KSC_DamageId.AddDamageData
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_DamageId_AddDamageData final
+{
+public:
+	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             Data;                                              // 0x0004(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_DamageId_AddDamageData;
+
+// Function KuroSimpleCombat.KSC_DamageId.UpdateDamageAmplify
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_DamageId_UpdateDamageAmplify final
+{
+public:
+	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Amplify;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_DamageId_UpdateDamageAmplify;
+
+// Function KuroSimpleCombat.KSC_Entity.ApplyBuffSelf
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_ApplyBuffSelf final
+{
+public:
+	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_ApplyBuffSelf;
+
+// Function KuroSimpleCombat.KSC_Entity.Dead
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Entity_Dead final
+{
+public:
+	int32                                         KillBy;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_Dead;
+
+// Function KuroSimpleCombat.KSC_Entity.GetMoveComponent
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_GetMoveComponent final
+{
+public:
+	class UKSC_Move*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_GetMoveComponent;
+
+// Function KuroSimpleCombat.KSC_Entity.GetRenderActor
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_GetRenderActor final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_GetRenderActor;
+
+// Function KuroSimpleCombat.KSC_Entity.RemoveBuffSelf
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_RemoveBuffSelf final
+{
+public:
+	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_RemoveBuffSelf;
+
+// Function KuroSimpleCombat.KSC_Entity.RemoveDaBuffImmediately
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_RemoveDaBuffImmediately final
+{
+public:
+	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_RemoveDaBuffImmediately;
+
+// Function KuroSimpleCombat.KSC_Entity.SetAttr
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_SetAttr final
+{
+public:
+	EKSC_AttrType                                 Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetAttr;
+
+// Function KuroSimpleCombat.KSC_Entity.SetFaction
+// 0x0001 (0x0001 - 0x0000)
+struct KSC_Entity_SetFaction final
+{
+public:
+	EKSC_Faction                                  Faction;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetFaction;
+
+// Function KuroSimpleCombat.KSC_Entity.SetIgnoreFactions
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Entity_SetIgnoreFactions final
+{
+public:
+	TArray<EKSC_Faction>                          Factions;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetIgnoreFactions;
+
+// Function KuroSimpleCombat.KSC_Entity.SetLocationByWorld
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_Entity_SetLocationByWorld final
+{
+public:
+	struct FVectorDouble                          D_Location;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetLocationByWorld;
+
+// Function KuroSimpleCombat.KSC_Entity.SetRenderActor
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_SetRenderActor final
+{
+public:
+	class AActor*                                 RenderActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetRenderActor;
+
+// Function KuroSimpleCombat.KSC_Entity.SetTransformByWorld
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_Entity_SetTransformByWorld final
+{
+public:
+	struct FTransformDouble                       D_Transform;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetTransformByWorld;
+
+// Function KuroSimpleCombat.KSC_Entity.TryActiveSKill
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Entity_TryActiveSKill final
+{
+public:
+	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_TryActiveSKill;
+
+// Function KuroSimpleCombat.KSC_Entity.UpdateBuffWithStackNumSelf
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Entity_UpdateBuffWithStackNumSelf final
+{
+public:
+	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StackNum;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_UpdateBuffWithStackNumSelf;
+
+// Function KuroSimpleCombat.KSC_Entity.GetSceneComp
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_GetSceneComp final
+{
+public:
+	class UKSC_SceneComp*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_GetSceneComp;
+
+// Function KuroSimpleCombat.KSC_Entity.GetSkillComp
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_GetSkillComp final
+{
+public:
+	class UKSC_SkillComp*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_GetSkillComp;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_AddEntity
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_AddEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          InIsPreview;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_AddEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_DelayRemoveEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_DelayRemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DelayTime;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_DelayRemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_InitData
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_InitData final
+{
+public:
+	class UKSC_DA_EntityRender*                   DaEntityRender;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_InitData;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_RemoveEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_RemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_RemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_SetActorTransform_AnyThread
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_UpdateEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_UpdateEntity final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_UpdateEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_AddEntity
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_AddEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_AddEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_RemoveEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetActorLocation
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetHP
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_SetHP final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Percent;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetHP;
+
+// Function KuroSimpleCombat.KSC_Entity_AssistMachine.D_Fire
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_Entity_AssistMachine_D_Fire final
+{
+public:
+	struct FTransformDouble                       D_FireTrans;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         SkillIndex;                                        // 0x0040(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_AssistMachine_D_Fire;
+
+// Function KuroSimpleCombat.KSC_Entity_AssistMachine.SetSkillAutoCast
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_AssistMachine_SetSkillAutoCast final
+{
+public:
+	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_SkillAutoCast                            AutoCast;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_AssistMachine_SetSkillAutoCast;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_PauseAnim
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_PauseAnim final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_PauseAnim;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_ResumeAnim
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_ResumeAnim final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_ResumeAnim;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_UpdateAnimState
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_UpdateAnimState final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_GPUNPCAnimState                          EnemyState;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_UpdateAnimState;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_AddMaterial
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_AddMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLoop;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_AddMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_ApplyBeHitMaterial
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_DelayAddMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Delay;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_RemoveMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HandleId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial;
+
+// Function KuroSimpleCombat.KSC_Move_Approach.SetTargetEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_Approach_SetTargetEntity final
+{
+public:
+	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Approach_SetTargetEntity;
+
+// Function KuroSimpleCombat.KSC_Move_MultiStage.SetSpline
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_MultiStage_SetSpline final
+{
+public:
+	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_MultiStage_SetSpline;
+
+// Function KuroSimpleCombat.KSC_Move_MultiStage.SetTargetEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_MultiStage_SetTargetEntity final
+{
+public:
+	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_MultiStage_SetTargetEntity;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSpline
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_Spline_SetSpline final
+{
+public:
+	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSpline;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineHeight
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Move_Spline_SetSplineHeight final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineHeight;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineWide
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Move_Spline_SetSplineWide final
+{
+public:
+	float                                         Width;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineWide;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.D_SetMovementTarget
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_SceneMovement_D_SetMovementTarget final
+{
+public:
+	struct FVectorDouble                          NewMovementTarget;                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_D_SetMovementTarget;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetMovementDirection
+// 0x000C (0x000C - 0x0000)
+struct KSC_SceneMovement_SetMovementDirection final
+{
+public:
+	struct FVector                                NewMovementDirection;                              // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetMovementDirection;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetSceneSegment
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_SceneMovement_SetSceneSegment final
+{
+public:
+	class UKSC_DA_SceneSegmentContainer*          NewSceneSegment;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GenerateCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetSceneSegment;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetSegmentRotation
+// 0x000C (0x000C - 0x0000)
+struct KSC_SceneMovement_SetSegmentRotation final
+{
+public:
+	struct FRotator                               NewSegmentRotation;                                // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetSegmentRotation;
+
+// Function KuroSimpleCombat.KSC_Skill_BulletPierceAttack.OnBulletHits
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Skill_BulletPierceAttack_OnBulletHits final
+{
+public:
+	TArray<class UKSC_SkillComp*>                 Hits;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_BulletPierceAttack_OnBulletHits;
 
 }
 

@@ -25,11 +25,7 @@ public:
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent) == 0x000004, "Wrong alignment on BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent");
-static_assert(sizeof(BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent) == 0x000008, "Wrong size on BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent, EntryPoint) == 0x000000, "Member 'BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent, K2Node_Event_EndPlayReason) == 0x000004, "Member 'BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000005, "Member 'BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UiSceneRenderingComponent_C_ExecuteUbergraph_BP_UiSceneRenderingComponent;
 
 // Function BP_UiSceneRenderingComponent.BP_UiSceneRenderingComponent_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -38,9 +34,7 @@ struct BP_UiSceneRenderingComponent_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UiSceneRenderingComponent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_UiSceneRenderingComponent_C_ReceiveEndPlay");
-static_assert(sizeof(BP_UiSceneRenderingComponent_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_UiSceneRenderingComponent_C_ReceiveEndPlay");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_UiSceneRenderingComponent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UiSceneRenderingComponent_C_ReceiveEndPlay;
 
 // Function BP_UiSceneRenderingComponent.BP_UiSceneRenderingComponent_C.Init
 // 0x0008 (0x0008 - 0x0000)
@@ -49,9 +43,7 @@ struct BP_UiSceneRenderingComponent_C_Init final
 public:
 	class ABP_GlobalGI_C*                         InGlobalGI;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UiSceneRenderingComponent_C_Init) == 0x000008, "Wrong alignment on BP_UiSceneRenderingComponent_C_Init");
-static_assert(sizeof(BP_UiSceneRenderingComponent_C_Init) == 0x000008, "Wrong size on BP_UiSceneRenderingComponent_C_Init");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_Init, InGlobalGI) == 0x000000, "Member 'BP_UiSceneRenderingComponent_C_Init::InGlobalGI' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UiSceneRenderingComponent_C_Init;
 
 // Function BP_UiSceneRenderingComponent.BP_UiSceneRenderingComponent_C.OnKuroStartUiScene
 // 0x0030 (0x0030 - 0x0000)
@@ -62,11 +54,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UiSceneRenderingComponent_C_OnKuroStartUiScene) == 0x000008, "Wrong alignment on BP_UiSceneRenderingComponent_C_OnKuroStartUiScene");
-static_assert(sizeof(BP_UiSceneRenderingComponent_C_OnKuroStartUiScene) == 0x000030, "Wrong size on BP_UiSceneRenderingComponent_C_OnKuroStartUiScene");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_OnKuroStartUiScene, UiScenePath) == 0x000000, "Member 'BP_UiSceneRenderingComponent_C_OnKuroStartUiScene::UiScenePath' has a wrong offset!");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_OnKuroStartUiScene, CallFunc_Concat_StrStr_ReturnValue) == 0x000010, "Member 'BP_UiSceneRenderingComponent_C_OnKuroStartUiScene::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UiSceneRenderingComponent_C_OnKuroStartUiScene, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000020, "Member 'BP_UiSceneRenderingComponent_C_OnKuroStartUiScene::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_UiSceneRenderingComponent_C_OnKuroStartUiScene;
 
 }
 

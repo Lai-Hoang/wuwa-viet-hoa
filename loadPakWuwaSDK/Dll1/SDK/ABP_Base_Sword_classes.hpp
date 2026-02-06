@@ -38,21 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Base_Sword_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Base_Sword_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Base_Sword_C")
 	}
 	static class UABP_Base_Sword_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Base_Sword_C>();
 	}
 };
-static_assert(alignof(UABP_Base_Sword_C) == 0x000010, "Wrong alignment on UABP_Base_Sword_C");
-static_assert(sizeof(UABP_Base_Sword_C) == 0x000C20, "Wrong size on UABP_Base_Sword_C");
-static_assert(offsetof(UABP_Base_Sword_C, UberGraphFrame) == 0x000730, "Member 'UABP_Base_Sword_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Base_Sword_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Base_Sword_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Base_Sword_C, AnimGraphNode_PhyCloth) == 0x000770, "Member 'UABP_Base_Sword_C::AnimGraphNode_PhyCloth' has a wrong offset!");
-static_assert(offsetof(UABP_Base_Sword_C, AnimGraphNode_ComponentToLocalSpace) == 0x000BC0, "Member 'UABP_Base_Sword_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Base_Sword_C, AnimGraphNode_LocalToComponentSpace) == 0x000BE0, "Member 'UABP_Base_Sword_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Base_Sword_C, AnimGraphNode_LocalRefPose) == 0x000C00, "Member 'UABP_Base_Sword_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Base_Sword_C;
 
 }
 

@@ -26,11 +26,7 @@ public:
 	class UCurveVector*                           缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1;   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          特定形状开关_10_627DC635472F7D10349AA6872BE92D28;  // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSReBulletDataScale) == 0x000008, "Wrong alignment on FSReBulletDataScale");
-static_assert(sizeof(FSReBulletDataScale) == 0x000020, "Wrong size on FSReBulletDataScale");
-static_assert(offsetof(FSReBulletDataScale, 缩放倍率_7_06C9B76548AE06E63683EBB72FF80B72) == 0x000000, "Member 'FSReBulletDataScale::缩放倍率_7_06C9B76548AE06E63683EBB72FF80B72' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataScale, 缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1) == 0x000010, "Member 'FSReBulletDataScale::缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataScale, 特定形状开关_10_627DC635472F7D10349AA6872BE92D28) == 0x000018, "Member 'FSReBulletDataScale::特定形状开关_10_627DC635472F7D10349AA6872BE92D28' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataScale;
 
 }
 

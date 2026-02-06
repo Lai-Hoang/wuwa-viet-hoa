@@ -10,7 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -26,7 +29,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BulletHitActorInterface">();
+		STATIC_CLASS_IMPL("BulletHitActorInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletHitActorInterface")
 	}
 	static class IBulletHitActorInterface* GetDefaultObj()
 	{
@@ -42,8 +49,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBulletHitActorInterface) == 0x000001, "Wrong alignment on IBulletHitActorInterface");
-static_assert(sizeof(IBulletHitActorInterface) == 0x000001, "Wrong size on IBulletHitActorInterface");
+DUMPER7_ASSERTS_IBulletHitActorInterface;
 
 // Class KuroGameplayInterface.GamePartitionInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -55,7 +61,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GamePartitionInterface">();
+		STATIC_CLASS_IMPL("GamePartitionInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GamePartitionInterface")
 	}
 	static class IGamePartitionInterface* GetDefaultObj()
 	{
@@ -71,8 +81,144 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IGamePartitionInterface) == 0x000001, "Wrong alignment on IGamePartitionInterface");
-static_assert(sizeof(IGamePartitionInterface) == 0x000001, "Wrong size on IGamePartitionInterface");
+DUMPER7_ASSERTS_IGamePartitionInterface;
+
+// Class KuroGameplayInterface.KuroFreezeWaterAsset
+// 0x0008 (0x0040 - 0x0038)
+class UKuroFreezeWaterAsset final : public UPrimaryDataAsset
+{
+public:
+	float                                         InteractionSize;                                   // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Attenuation;                                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroFreezeWaterAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFreezeWaterAsset")
+	}
+	static class UKuroFreezeWaterAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroFreezeWaterAsset>();
+	}
+};
+DUMPER7_ASSERTS_UKuroFreezeWaterAsset;
+
+// Class KuroGameplayInterface.KuroTrailCollisionAsset
+// 0x0048 (0x0080 - 0x0038)
+class UKuroTrailCollisionAsset final : public UPrimaryDataAsset
+{
+public:
+	float                                         StepDistance;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepInterval;                                      // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfWidth;                                         // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfHeight;                                        // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaddingAlong;                                      // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TTLSeconds;                                        // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxSegments;                                       // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCollisionProfileName                  CollisionProfileName;                              // 0x0054(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         bGenerateOverlapEvents : 1;                        // 0x0060(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bKuroOverlapNotify : 1;                            // 0x0060(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bKuroPassiveCollisionUpdateOverlapsWhenEnterOverlap : 1; // 0x0060(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bKuroPassiveCollision : 1;                         // 0x0060(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIgnoreOwner : 1;                                  // 0x0060(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EComponentMobility                            Mobility;                                          // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TeleportDistance;                                  // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bMergeCollinear : 1;                               // 0x0068(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MergeAngleDeg;                                     // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MergeGapMax;                                       // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bDrawDebug : 1;                                    // 0x0074(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 DebugColor;                                        // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 DebugMergedColor;                                  // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroTrailCollisionAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTrailCollisionAsset")
+	}
+	static class UKuroTrailCollisionAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroTrailCollisionAsset>();
+	}
+};
+DUMPER7_ASSERTS_UKuroTrailCollisionAsset;
+
+// Class KuroGameplayInterface.KuroWaterDetectedInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKuroWaterDetectedInterface final
+{
+public:
+	void BroadcastWaterDetectedEnd();
+	void BroadcastWaterDetectedStart();
+	void BroadcastWaterDetectedTick(const float DeltaTime, const float WaterSurface, const struct FVectorDouble& Location);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroWaterDetectedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroWaterDetectedInterface")
+	}
+	static class IKuroWaterDetectedInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKuroWaterDetectedInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IKuroWaterDetectedInterface;
+
+// Class KuroGameplayInterface.KuroWaterDetectedReceiverInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKuroWaterDetectedReceiverInterface final
+{
+public:
+	class AActor* GetTargetInvoker();
+	TScriptInterface<class IKuroWaterDetectedInterface> GetWaterDetectedInterface();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroWaterDetectedReceiverInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroWaterDetectedReceiverInterface")
+	}
+	static class IKuroWaterDetectedReceiverInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKuroWaterDetectedReceiverInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IKuroWaterDetectedReceiverInterface;
 
 }
 

@@ -23,11 +23,7 @@ public:
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(AnimNotifyDaiyuAnimEnd_C_K2_Notify) == 0x000008, "Wrong alignment on AnimNotifyDaiyuAnimEnd_C_K2_Notify");
-static_assert(sizeof(AnimNotifyDaiyuAnimEnd_C_K2_Notify) == 0x000018, "Wrong size on AnimNotifyDaiyuAnimEnd_C_K2_Notify");
-static_assert(offsetof(AnimNotifyDaiyuAnimEnd_C_K2_Notify, MeshComp) == 0x000000, "Member 'AnimNotifyDaiyuAnimEnd_C_K2_Notify::MeshComp' has a wrong offset!");
-static_assert(offsetof(AnimNotifyDaiyuAnimEnd_C_K2_Notify, Animation) == 0x000008, "Member 'AnimNotifyDaiyuAnimEnd_C_K2_Notify::Animation' has a wrong offset!");
-static_assert(offsetof(AnimNotifyDaiyuAnimEnd_C_K2_Notify, ReturnValue) == 0x000010, "Member 'AnimNotifyDaiyuAnimEnd_C_K2_Notify::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AnimNotifyDaiyuAnimEnd_C_K2_Notify;
 
 }
 

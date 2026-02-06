@@ -10,51 +10,31 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "KuroGameBudget_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class KuroGameBudget.KuroGameBudgetBlueprintDefine
-// 0x0000 (0x0030 - 0x0030)
-class UKuroGameBudgetBlueprintDefine final : public UBlueprintFunctionLibrary
+// Class KuroGameBudget.KuroGameBudgetComponent
+// 0x00B0 (0x0170 - 0x00C0)
+class UKuroGameBudgetComponent final : public UActorComponent
 {
 public:
-	static void Clear();
-	static void Initialize(const TArray<struct FGameBudgetBlueprintGroupConfig>& GroupConfigs);
+	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x00C8(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x0120(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x0168(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroGameBudgetBlueprintDefine">();
-	}
-	static class UKuroGameBudgetBlueprintDefine* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroGameBudgetBlueprintDefine>();
-	}
-};
-static_assert(alignof(UKuroGameBudgetBlueprintDefine) == 0x000008, "Wrong alignment on UKuroGameBudgetBlueprintDefine");
-static_assert(sizeof(UKuroGameBudgetBlueprintDefine) == 0x000030, "Wrong size on UKuroGameBudgetBlueprintDefine");
-
-// Class KuroGameBudget.KuroGameBudgetBlueprintActor
-// 0x00F8 (0x03A8 - 0x02B0)
-class AKuroGameBudgetBlueprintActor : public AActor
-{
-public:
-	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x02B8(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_308[0x50];                                     // 0x0308(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroGameBudgetBoundsComponent*         GameBudgetBoundsComponent;                         // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_360[0x8];                                      // 0x0360(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x0368(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x03A0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1[0x7];                                      // 0x03A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
+	void ManualRegisterTick();
+	void ManualUnregisterTick();
 	void MarkSpecialBlueprintActor();
+	void OnEnvInteractChanged(bool bEnableEnvInteract);
 	void OnInvisible();
 	void OnLogicDisable();
 	void OnLogicEnable();
@@ -68,51 +48,100 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroGameBudgetBlueprintActor">();
+		STATIC_CLASS_IMPL("KuroGameBudgetComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameBudgetComponent")
+	}
+	static class UKuroGameBudgetComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroGameBudgetComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroGameBudgetComponent;
+
+// Class KuroGameBudget.KuroGameBudgetBlueprintActor
+// 0x0108 (0x03B8 - 0x02B0)
+class AKuroGameBudgetBlueprintActor : public AActor
+{
+public:
+	uint8                                         Pad_2B0[0x8];                                      // 0x02B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x02B8(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_308[0x50];                                     // 0x0308(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroGameBudgetBoundsComponent*         GameBudgetBoundsComponent;                         // 0x0358(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_360[0x8];                                      // 0x0360(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x0368(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x03B0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ManualRegisterTick();
+	void ManualUnregisterTick();
+	void MarkSpecialBlueprintActor();
+	void OnEnvInteractChanged(bool bEnableEnvInteract);
+	void OnInvisible();
+	void OnLogicDisable();
+	void OnLogicEnable();
+	void OnVisible();
+	void OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType);
+	void PauseGameBudget();
+	void ResumeGameBudget();
+	void UpdateOverrideBounds(const TArray<class AActor*>& InActors);
+	void UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroGameBudgetBlueprintActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameBudgetBlueprintActor")
 	}
 	static class AKuroGameBudgetBlueprintActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroGameBudgetBlueprintActor>();
 	}
 };
-static_assert(alignof(AKuroGameBudgetBlueprintActor) == 0x000008, "Wrong alignment on AKuroGameBudgetBlueprintActor");
-static_assert(sizeof(AKuroGameBudgetBlueprintActor) == 0x0003A8, "Wrong size on AKuroGameBudgetBlueprintActor");
-static_assert(offsetof(AKuroGameBudgetBlueprintActor, TickActorComponents) == 0x0002B8, "Member 'AKuroGameBudgetBlueprintActor::TickActorComponents' has a wrong offset!");
-static_assert(offsetof(AKuroGameBudgetBlueprintActor, GameBudgetBoundsComponent) == 0x000358, "Member 'AKuroGameBudgetBlueprintActor::GameBudgetBoundsComponent' has a wrong offset!");
-static_assert(offsetof(AKuroGameBudgetBlueprintActor, GameBudgetBlueprint) == 0x000368, "Member 'AKuroGameBudgetBlueprintActor::GameBudgetBlueprint' has a wrong offset!");
-static_assert(offsetof(AKuroGameBudgetBlueprintActor, GameBudgetBlueprintEnvironment) == 0x0003A0, "Member 'AKuroGameBudgetBlueprintActor::GameBudgetBlueprintEnvironment' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroGameBudgetBlueprintActor;
 
 // Class KuroGameBudget.GameBudgetAllocator
-// 0x0600 (0x0630 - 0x0030)
+// 0x0640 (0x0670 - 0x0030)
 class UGameBudgetAllocator final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x600];                                     // 0x0030(0x0600)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x640];                                     // 0x0030(0x0640)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AfterTickOutside(float DeltaSeconds);
 	void SetCenterActor(class AActor* CenterActor);
 	void SetDefaultTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
+	void SetDefaultTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
 	void SetGlobalMode(EGameBudgetAllocatorGlobalMode Mode);
 	void SetGroupConfig(class FName GroupName, const struct FGameBudgetAllocatorGroupConfig& Config);
 	void SetMaximumFrameRate(uint32 MaxFPS);
 	void SetPauseFrame(uint64 Frame);
 	void SetTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
+	void SetTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
 	void TickOutside(float DeltaSeconds);
 	void UpdateMinUpdateFIFOBudgetTime(float Time);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameBudgetAllocator">();
+		STATIC_CLASS_IMPL("GameBudgetAllocator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameBudgetAllocator")
 	}
 	static class UGameBudgetAllocator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameBudgetAllocator>();
 	}
 };
-static_assert(alignof(UGameBudgetAllocator) == 0x000008, "Wrong alignment on UGameBudgetAllocator");
-static_assert(sizeof(UGameBudgetAllocator) == 0x000630, "Wrong size on UGameBudgetAllocator");
+DUMPER7_ASSERTS_UGameBudgetAllocator;
 
 // Class KuroGameBudget.Interface_KuroGameBudgetBlueprint
 // 0x0000 (0x0000 - 0x0000)
@@ -121,7 +150,11 @@ class IInterface_KuroGameBudgetBlueprint final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Interface_KuroGameBudgetBlueprint">();
+		STATIC_CLASS_IMPL("Interface_KuroGameBudgetBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Interface_KuroGameBudgetBlueprint")
 	}
 	static class IInterface_KuroGameBudgetBlueprint* GetDefaultObj()
 	{
@@ -137,12 +170,35 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IInterface_KuroGameBudgetBlueprint) == 0x000001, "Wrong alignment on IInterface_KuroGameBudgetBlueprint");
-static_assert(sizeof(IInterface_KuroGameBudgetBlueprint) == 0x000001, "Wrong size on IInterface_KuroGameBudgetBlueprint");
+DUMPER7_ASSERTS_IInterface_KuroGameBudgetBlueprint;
+
+// Class KuroGameBudget.KuroGameBudgetBlueprintDefine
+// 0x0000 (0x0030 - 0x0030)
+class UKuroGameBudgetBlueprintDefine final : public UBlueprintFunctionLibrary
+{
+public:
+	static void Clear();
+	static void Initialize(const TArray<struct FGameBudgetBlueprintGroupConfig>& GroupConfigs);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroGameBudgetBlueprintDefine")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameBudgetBlueprintDefine")
+	}
+	static class UKuroGameBudgetBlueprintDefine* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroGameBudgetBlueprintDefine>();
+	}
+};
+DUMPER7_ASSERTS_UKuroGameBudgetBlueprintDefine;
 
 // Class KuroGameBudget.KuroGameBudgetBoundsComponent
 // 0x0020 (0x0550 - 0x0530)
-class UKuroGameBudgetBoundsComponent : public UPrimitiveComponent
+class UKuroGameBudgetBoundsComponent final : public UPrimitiveComponent
 {
 public:
 	uint8                                         Pad_528[0x28];                                     // 0x0528(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -150,54 +206,45 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroGameBudgetBoundsComponent">();
+		STATIC_CLASS_IMPL("KuroGameBudgetBoundsComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameBudgetBoundsComponent")
 	}
 	static class UKuroGameBudgetBoundsComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroGameBudgetBoundsComponent>();
 	}
 };
-static_assert(alignof(UKuroGameBudgetBoundsComponent) == 0x000010, "Wrong alignment on UKuroGameBudgetBoundsComponent");
-static_assert(sizeof(UKuroGameBudgetBoundsComponent) == 0x000550, "Wrong size on UKuroGameBudgetBoundsComponent");
+DUMPER7_ASSERTS_UKuroGameBudgetBoundsComponent;
 
-// Class KuroGameBudget.KuroGameBudgetComponent
-// 0x00A0 (0x05F0 - 0x0550)
-class UKuroGameBudgetComponent final : public UKuroGameBudgetBoundsComponent
+// Class KuroGameBudget.KuroGameBudgetSubSystem
+// 0x0018 (0x0050 - 0x0038)
+class UKuroGameBudgetSubSystem final : public UGameInstanceSubsystem
 {
 public:
-	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x0550(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5A0[0x8];                                      // 0x05A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x05A8(0x0038)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x05E0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E1[0xF];                                      // 0x05E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<TWeakObjectPtr<class UObject>>         ListenEnvInteractGameBudgets;                      // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void MarkSpecialBlueprintActor();
-	void OnInvisible();
-	void OnLogicDisable();
-	void OnLogicEnable();
-	void OnVisible();
-	void OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType);
-	void PauseGameBudget();
-	void ResumeGameBudget();
-	void UpdateOverrideBounds(const TArray<class AActor*>& InActors);
-	void UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors);
+	void SetEnvInteractChange(bool bEnableEnvInteract);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroGameBudgetComponent">();
+		STATIC_CLASS_IMPL("KuroGameBudgetSubSystem")
 	}
-	static class UKuroGameBudgetComponent* GetDefaultObj()
+	static const class FName& StaticName()
 	{
-		return GetDefaultObjImpl<UKuroGameBudgetComponent>();
+		STATIC_NAME_IMPL(L"KuroGameBudgetSubSystem")
+	}
+	static class UKuroGameBudgetSubSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroGameBudgetSubSystem>();
 	}
 };
-static_assert(alignof(UKuroGameBudgetComponent) == 0x000010, "Wrong alignment on UKuroGameBudgetComponent");
-static_assert(sizeof(UKuroGameBudgetComponent) == 0x0005F0, "Wrong size on UKuroGameBudgetComponent");
-static_assert(offsetof(UKuroGameBudgetComponent, TickActorComponents) == 0x000550, "Member 'UKuroGameBudgetComponent::TickActorComponents' has a wrong offset!");
-static_assert(offsetof(UKuroGameBudgetComponent, GameBudgetBlueprint) == 0x0005A8, "Member 'UKuroGameBudgetComponent::GameBudgetBlueprint' has a wrong offset!");
-static_assert(offsetof(UKuroGameBudgetComponent, GameBudgetBlueprintEnvironment) == 0x0005E0, "Member 'UKuroGameBudgetComponent::GameBudgetBlueprintEnvironment' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroGameBudgetSubSystem;
 
 }
 

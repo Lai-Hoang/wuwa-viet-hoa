@@ -68,5 +68,122 @@ int32 IGamePartitionInterface::GetGamePartitionObjectID()
 	return Parms.ReturnValue;
 }
 
+
+// Function KuroGameplayInterface.KuroWaterDetectedInterface.BroadcastWaterDetectedEnd
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void IKuroWaterDetectedInterface::BroadcastWaterDetectedEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("KuroWaterDetectedInterface", "BroadcastWaterDetectedEnd");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameplayInterface.KuroWaterDetectedInterface.BroadcastWaterDetectedStart
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void IKuroWaterDetectedInterface::BroadcastWaterDetectedStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("KuroWaterDetectedInterface", "BroadcastWaterDetectedStart");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameplayInterface.KuroWaterDetectedInterface.BroadcastWaterDetectedTick
+// (Native, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const float                             DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             WaterSurface                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void IKuroWaterDetectedInterface::BroadcastWaterDetectedTick(const float DeltaTime, const float WaterSurface, const struct FVectorDouble& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("KuroWaterDetectedInterface", "BroadcastWaterDetectedTick");
+
+	Params::KuroWaterDetectedInterface_BroadcastWaterDetectedTick Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+	Parms.WaterSurface = WaterSurface;
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameplayInterface.KuroWaterDetectedReceiverInterface.GetTargetInvoker
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AActor* IKuroWaterDetectedReceiverInterface::GetTargetInvoker()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("KuroWaterDetectedReceiverInterface", "GetTargetInvoker");
+
+	Params::KuroWaterDetectedReceiverInterface_GetTargetInvoker Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroGameplayInterface.KuroWaterDetectedReceiverInterface.GetWaterDetectedInterface
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TScriptInterface<class IKuroWaterDetectedInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+
+TScriptInterface<class IKuroWaterDetectedInterface> IKuroWaterDetectedReceiverInterface::GetWaterDetectedInterface()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("KuroWaterDetectedReceiverInterface", "GetWaterDetectedInterface");
+
+	Params::KuroWaterDetectedReceiverInterface_GetWaterDetectedInterface Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
 }
 

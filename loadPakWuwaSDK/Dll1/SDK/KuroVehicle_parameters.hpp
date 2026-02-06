@@ -26,9 +26,7 @@ struct KuroAnimInstanceVehicle_GetDriver final
 public:
 	class ABaseCharacter*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstanceVehicle_GetDriver) == 0x000008, "Wrong alignment on KuroAnimInstanceVehicle_GetDriver");
-static_assert(sizeof(KuroAnimInstanceVehicle_GetDriver) == 0x000008, "Wrong size on KuroAnimInstanceVehicle_GetDriver");
-static_assert(offsetof(KuroAnimInstanceVehicle_GetDriver, ReturnValue) == 0x000000, "Member 'KuroAnimInstanceVehicle_GetDriver::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstanceVehicle_GetDriver;
 
 // Function KuroVehicle.KuroAnimInstanceVehicle.SetDriver
 // 0x0008 (0x0008 - 0x0000)
@@ -37,9 +35,7 @@ struct KuroAnimInstanceVehicle_SetDriver final
 public:
 	class ABaseCharacter*                         InDriver;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstanceVehicle_SetDriver) == 0x000008, "Wrong alignment on KuroAnimInstanceVehicle_SetDriver");
-static_assert(sizeof(KuroAnimInstanceVehicle_SetDriver) == 0x000008, "Wrong size on KuroAnimInstanceVehicle_SetDriver");
-static_assert(offsetof(KuroAnimInstanceVehicle_SetDriver, InDriver) == 0x000000, "Member 'KuroAnimInstanceVehicle_SetDriver::InDriver' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstanceVehicle_SetDriver;
 
 // Function KuroVehicle.KuroBaseVehicle.K2_OnVehicleMovementModeChanged
 // 0x0004 (0x0004 - 0x0000)
@@ -51,12 +47,7 @@ public:
 	uint8                                         PrevCustomMode;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         NewCustomMode;                                     // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged) == 0x000001, "Wrong alignment on KuroBaseVehicle_K2_OnVehicleMovementModeChanged");
-static_assert(sizeof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged) == 0x000004, "Wrong size on KuroBaseVehicle_K2_OnVehicleMovementModeChanged");
-static_assert(offsetof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged, PrevMovementMode) == 0x000000, "Member 'KuroBaseVehicle_K2_OnVehicleMovementModeChanged::PrevMovementMode' has a wrong offset!");
-static_assert(offsetof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged, NewMovementMode) == 0x000001, "Member 'KuroBaseVehicle_K2_OnVehicleMovementModeChanged::NewMovementMode' has a wrong offset!");
-static_assert(offsetof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged, PrevCustomMode) == 0x000002, "Member 'KuroBaseVehicle_K2_OnVehicleMovementModeChanged::PrevCustomMode' has a wrong offset!");
-static_assert(offsetof(KuroBaseVehicle_K2_OnVehicleMovementModeChanged, NewCustomMode) == 0x000003, "Member 'KuroBaseVehicle_K2_OnVehicleMovementModeChanged::NewCustomMode' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBaseVehicle_K2_OnVehicleMovementModeChanged;
 
 // Function KuroVehicle.KuroBaseVehicle.K2_UpdateVehicleCustomMovement
 // 0x0004 (0x0004 - 0x0000)
@@ -65,9 +56,7 @@ struct KuroBaseVehicle_K2_UpdateVehicleCustomMovement final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBaseVehicle_K2_UpdateVehicleCustomMovement) == 0x000004, "Wrong alignment on KuroBaseVehicle_K2_UpdateVehicleCustomMovement");
-static_assert(sizeof(KuroBaseVehicle_K2_UpdateVehicleCustomMovement) == 0x000004, "Wrong size on KuroBaseVehicle_K2_UpdateVehicleCustomMovement");
-static_assert(offsetof(KuroBaseVehicle_K2_UpdateVehicleCustomMovement, DeltaTime) == 0x000000, "Member 'KuroBaseVehicle_K2_UpdateVehicleCustomMovement::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBaseVehicle_K2_UpdateVehicleCustomMovement;
 
 // Function KuroVehicle.KuroConfigHelper.AddSubConfig
 // 0x0028 (0x0028 - 0x0000)
@@ -79,12 +68,7 @@ public:
 	TArray<class FName>                           PropertyNames;                                     // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class UObject*                                InData;                                            // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroConfigHelper_AddSubConfig) == 0x000008, "Wrong alignment on KuroConfigHelper_AddSubConfig");
-static_assert(sizeof(KuroConfigHelper_AddSubConfig) == 0x000028, "Wrong size on KuroConfigHelper_AddSubConfig");
-static_assert(offsetof(KuroConfigHelper_AddSubConfig, KeyName) == 0x000000, "Member 'KuroConfigHelper_AddSubConfig::KeyName' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfig, Priority) == 0x00000C, "Member 'KuroConfigHelper_AddSubConfig::Priority' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfig, PropertyNames) == 0x000010, "Member 'KuroConfigHelper_AddSubConfig::PropertyNames' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfig, InData) == 0x000020, "Member 'KuroConfigHelper_AddSubConfig::InData' has a wrong offset!");
+DUMPER7_ASSERTS_KuroConfigHelper_AddSubConfig;
 
 // Function KuroVehicle.KuroConfigHelper.AddSubConfigByNumber
 // 0x0028 (0x0028 - 0x0000)
@@ -96,12 +80,7 @@ public:
 	TArray<int32>                                 PropertyIds;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class UObject*                                InData;                                            // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroConfigHelper_AddSubConfigByNumber) == 0x000008, "Wrong alignment on KuroConfigHelper_AddSubConfigByNumber");
-static_assert(sizeof(KuroConfigHelper_AddSubConfigByNumber) == 0x000028, "Wrong size on KuroConfigHelper_AddSubConfigByNumber");
-static_assert(offsetof(KuroConfigHelper_AddSubConfigByNumber, KeyName) == 0x000000, "Member 'KuroConfigHelper_AddSubConfigByNumber::KeyName' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfigByNumber, Priority) == 0x00000C, "Member 'KuroConfigHelper_AddSubConfigByNumber::Priority' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfigByNumber, PropertyIds) == 0x000010, "Member 'KuroConfigHelper_AddSubConfigByNumber::PropertyIds' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_AddSubConfigByNumber, InData) == 0x000020, "Member 'KuroConfigHelper_AddSubConfigByNumber::InData' has a wrong offset!");
+DUMPER7_ASSERTS_KuroConfigHelper_AddSubConfigByNumber;
 
 // Function KuroVehicle.KuroConfigHelper.InitBase
 // 0x0010 (0x0010 - 0x0000)
@@ -111,10 +90,7 @@ public:
 	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                InData;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroConfigHelper_InitBase) == 0x000008, "Wrong alignment on KuroConfigHelper_InitBase");
-static_assert(sizeof(KuroConfigHelper_InitBase) == 0x000010, "Wrong size on KuroConfigHelper_InitBase");
-static_assert(offsetof(KuroConfigHelper_InitBase, InObject) == 0x000000, "Member 'KuroConfigHelper_InitBase::InObject' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_InitBase, InData) == 0x000008, "Member 'KuroConfigHelper_InitBase::InData' has a wrong offset!");
+DUMPER7_ASSERTS_KuroConfigHelper_InitBase;
 
 // Function KuroVehicle.KuroConfigHelper.RemoveSubConfig
 // 0x000C (0x000C - 0x0000)
@@ -123,9 +99,7 @@ struct KuroConfigHelper_RemoveSubConfig final
 public:
 	class FName                                   KeyName;                                           // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroConfigHelper_RemoveSubConfig) == 0x000004, "Wrong alignment on KuroConfigHelper_RemoveSubConfig");
-static_assert(sizeof(KuroConfigHelper_RemoveSubConfig) == 0x00000C, "Wrong size on KuroConfigHelper_RemoveSubConfig");
-static_assert(offsetof(KuroConfigHelper_RemoveSubConfig, KeyName) == 0x000000, "Member 'KuroConfigHelper_RemoveSubConfig::KeyName' has a wrong offset!");
+DUMPER7_ASSERTS_KuroConfigHelper_RemoveSubConfig;
 
 // Function KuroVehicle.KuroConfigHelper.SetEnumMapping
 // 0x0018 (0x0018 - 0x0000)
@@ -135,10 +109,7 @@ public:
 	class UEnum*                                  Enumtype;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         PropertyNames;                                     // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroConfigHelper_SetEnumMapping) == 0x000008, "Wrong alignment on KuroConfigHelper_SetEnumMapping");
-static_assert(sizeof(KuroConfigHelper_SetEnumMapping) == 0x000018, "Wrong size on KuroConfigHelper_SetEnumMapping");
-static_assert(offsetof(KuroConfigHelper_SetEnumMapping, Enumtype) == 0x000000, "Member 'KuroConfigHelper_SetEnumMapping::Enumtype' has a wrong offset!");
-static_assert(offsetof(KuroConfigHelper_SetEnumMapping, PropertyNames) == 0x000008, "Member 'KuroConfigHelper_SetEnumMapping::PropertyNames' has a wrong offset!");
+DUMPER7_ASSERTS_KuroConfigHelper_SetEnumMapping;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.BackToRecord
 // 0x0004 (0x0004 - 0x0000)
@@ -147,9 +118,7 @@ struct KuroVehicleMovementComponent_BackToRecord final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_BackToRecord) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_BackToRecord");
-static_assert(sizeof(KuroVehicleMovementComponent_BackToRecord) == 0x000004, "Wrong size on KuroVehicleMovementComponent_BackToRecord");
-static_assert(offsetof(KuroVehicleMovementComponent_BackToRecord, Index_0) == 0x000000, "Member 'KuroVehicleMovementComponent_BackToRecord::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_BackToRecord;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.EnableFixFlyMode
 // 0x0002 (0x0002 - 0x0000)
@@ -159,10 +128,7 @@ public:
 	bool                                          enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFixFlyModeType                               Type;                                              // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_EnableFixFlyMode) == 0x000001, "Wrong alignment on KuroVehicleMovementComponent_EnableFixFlyMode");
-static_assert(sizeof(KuroVehicleMovementComponent_EnableFixFlyMode) == 0x000002, "Wrong size on KuroVehicleMovementComponent_EnableFixFlyMode");
-static_assert(offsetof(KuroVehicleMovementComponent_EnableFixFlyMode, enable) == 0x000000, "Member 'KuroVehicleMovementComponent_EnableFixFlyMode::enable' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_EnableFixFlyMode, Type) == 0x000001, "Member 'KuroVehicleMovementComponent_EnableFixFlyMode::Type' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_EnableFixFlyMode;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetBaseMovement
 // 0x0010 (0x0010 - 0x0000)
@@ -171,9 +137,7 @@ struct KuroVehicleMovementComponent_GetBaseMovement final
 public:
 	TArray<class UPrimitiveComponent*>            Out;                                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetBaseMovement) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_GetBaseMovement");
-static_assert(sizeof(KuroVehicleMovementComponent_GetBaseMovement) == 0x000010, "Wrong size on KuroVehicleMovementComponent_GetBaseMovement");
-static_assert(offsetof(KuroVehicleMovementComponent_GetBaseMovement, Out) == 0x000000, "Member 'KuroVehicleMovementComponent_GetBaseMovement::Out' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetBaseMovement;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorFrontPulling
 // 0x000C (0x000C - 0x0000)
@@ -182,9 +146,7 @@ struct KuroVehicleMovementComponent_GetCurrentMotorFrontPulling final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetCurrentMotorFrontPulling) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetCurrentMotorFrontPulling");
-static_assert(sizeof(KuroVehicleMovementComponent_GetCurrentMotorFrontPulling) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_GetCurrentMotorFrontPulling");
-static_assert(offsetof(KuroVehicleMovementComponent_GetCurrentMotorFrontPulling, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetCurrentMotorFrontPulling::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetCurrentMotorFrontPulling;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorPower
 // 0x0004 (0x0004 - 0x0000)
@@ -193,9 +155,7 @@ struct KuroVehicleMovementComponent_GetCurrentMotorPower final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetCurrentMotorPower) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetCurrentMotorPower");
-static_assert(sizeof(KuroVehicleMovementComponent_GetCurrentMotorPower) == 0x000004, "Wrong size on KuroVehicleMovementComponent_GetCurrentMotorPower");
-static_assert(offsetof(KuroVehicleMovementComponent_GetCurrentMotorPower, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetCurrentMotorPower::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetCurrentMotorPower;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorRearPulling
 // 0x000C (0x000C - 0x0000)
@@ -204,9 +164,7 @@ struct KuroVehicleMovementComponent_GetCurrentMotorRearPulling final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetCurrentMotorRearPulling) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetCurrentMotorRearPulling");
-static_assert(sizeof(KuroVehicleMovementComponent_GetCurrentMotorRearPulling) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_GetCurrentMotorRearPulling");
-static_assert(offsetof(KuroVehicleMovementComponent_GetCurrentMotorRearPulling, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetCurrentMotorRearPulling::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetCurrentMotorRearPulling;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetMotorInputDirect
 // 0x000C (0x000C - 0x0000)
@@ -215,9 +173,7 @@ struct KuroVehicleMovementComponent_GetMotorInputDirect final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetMotorInputDirect) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetMotorInputDirect");
-static_assert(sizeof(KuroVehicleMovementComponent_GetMotorInputDirect) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_GetMotorInputDirect");
-static_assert(offsetof(KuroVehicleMovementComponent_GetMotorInputDirect, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetMotorInputDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetMotorInputDirect;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetMotorNormal
 // 0x000C (0x000C - 0x0000)
@@ -226,9 +182,7 @@ struct KuroVehicleMovementComponent_GetMotorNormal final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetMotorNormal) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetMotorNormal");
-static_assert(sizeof(KuroVehicleMovementComponent_GetMotorNormal) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_GetMotorNormal");
-static_assert(offsetof(KuroVehicleMovementComponent_GetMotorNormal, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetMotorNormal::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetMotorNormal;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetRecordDataString
 // 0x0018 (0x0018 - 0x0000)
@@ -239,10 +193,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetRecordDataString) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_GetRecordDataString");
-static_assert(sizeof(KuroVehicleMovementComponent_GetRecordDataString) == 0x000018, "Wrong size on KuroVehicleMovementComponent_GetRecordDataString");
-static_assert(offsetof(KuroVehicleMovementComponent_GetRecordDataString, Index_0) == 0x000000, "Member 'KuroVehicleMovementComponent_GetRecordDataString::Index_0' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_GetRecordDataString, ReturnValue) == 0x000008, "Member 'KuroVehicleMovementComponent_GetRecordDataString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetRecordDataString;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetRecordInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -252,10 +203,7 @@ public:
 	int32                                         CurrentIndex;                                      // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RecordLength;                                      // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetRecordInfo) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetRecordInfo");
-static_assert(sizeof(KuroVehicleMovementComponent_GetRecordInfo) == 0x000008, "Wrong size on KuroVehicleMovementComponent_GetRecordInfo");
-static_assert(offsetof(KuroVehicleMovementComponent_GetRecordInfo, CurrentIndex) == 0x000000, "Member 'KuroVehicleMovementComponent_GetRecordInfo::CurrentIndex' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_GetRecordInfo, RecordLength) == 0x000004, "Member 'KuroVehicleMovementComponent_GetRecordInfo::RecordLength' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetRecordInfo;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.IgnoreMoveFriction
 // 0x0004 (0x0004 - 0x0000)
@@ -264,9 +212,7 @@ struct KuroVehicleMovementComponent_IgnoreMoveFriction final
 public:
 	float                                         Duration;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_IgnoreMoveFriction) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_IgnoreMoveFriction");
-static_assert(sizeof(KuroVehicleMovementComponent_IgnoreMoveFriction) == 0x000004, "Wrong size on KuroVehicleMovementComponent_IgnoreMoveFriction");
-static_assert(offsetof(KuroVehicleMovementComponent_IgnoreMoveFriction, Duration) == 0x000000, "Member 'KuroVehicleMovementComponent_IgnoreMoveFriction::Duration' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_IgnoreMoveFriction;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.IsValidTransform
 // 0x0060 (0x0060 - 0x0000)
@@ -278,11 +224,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroVehicleMovementComponent_IsValidTransform) == 0x000010, "Wrong alignment on KuroVehicleMovementComponent_IsValidTransform");
-static_assert(sizeof(KuroVehicleMovementComponent_IsValidTransform) == 0x000060, "Wrong size on KuroVehicleMovementComponent_IsValidTransform");
-static_assert(offsetof(KuroVehicleMovementComponent_IsValidTransform, Trans) == 0x000000, "Member 'KuroVehicleMovementComponent_IsValidTransform::Trans' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_IsValidTransform, IgnoreActors) == 0x000040, "Member 'KuroVehicleMovementComponent_IsValidTransform::IgnoreActors' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_IsValidTransform, ReturnValue) == 0x000050, "Member 'KuroVehicleMovementComponent_IsValidTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_IsValidTransform;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.Kuro_SetGravityDirect
 // 0x000C (0x000C - 0x0000)
@@ -291,9 +233,7 @@ struct KuroVehicleMovementComponent_Kuro_SetGravityDirect final
 public:
 	struct FVector                                InGravityDirect;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_Kuro_SetGravityDirect) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_Kuro_SetGravityDirect");
-static_assert(sizeof(KuroVehicleMovementComponent_Kuro_SetGravityDirect) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_Kuro_SetGravityDirect");
-static_assert(offsetof(KuroVehicleMovementComponent_Kuro_SetGravityDirect, InGravityDirect) == 0x000000, "Member 'KuroVehicleMovementComponent_Kuro_SetGravityDirect::InGravityDirect' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_Kuro_SetGravityDirect;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.KuroShipping_HandlePassiveImpact
 // 0x00B8 (0x00B8 - 0x0000)
@@ -306,13 +246,7 @@ public:
 	struct FVector                                NormalImpulse;                                     // 0x0018(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             Hit;                                               // 0x0024(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact");
-static_assert(sizeof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact) == 0x0000B8, "Wrong size on KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact");
-static_assert(offsetof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact, HitComponent) == 0x000000, "Member 'KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact::HitComponent' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact, OtherActor) == 0x000008, "Member 'KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact::OtherActor' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact, OtherComp) == 0x000010, "Member 'KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact::OtherComp' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact, NormalImpulse) == 0x000018, "Member 'KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact::NormalImpulse' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact, Hit) == 0x000024, "Member 'KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact::Hit' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_KuroShipping_HandlePassiveImpact;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.MotorAddSubConfig
 // 0x0028 (0x0028 - 0x0000)
@@ -324,12 +258,7 @@ public:
 	TArray<class FName>                           PropertyNames;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class UMotorcycleConfigs*                     SubConfig;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_MotorAddSubConfig) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_MotorAddSubConfig");
-static_assert(sizeof(KuroVehicleMovementComponent_MotorAddSubConfig) == 0x000028, "Wrong size on KuroVehicleMovementComponent_MotorAddSubConfig");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorAddSubConfig, KeyName) == 0x000000, "Member 'KuroVehicleMovementComponent_MotorAddSubConfig::KeyName' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorAddSubConfig, Priority) == 0x00000C, "Member 'KuroVehicleMovementComponent_MotorAddSubConfig::Priority' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorAddSubConfig, PropertyNames) == 0x000010, "Member 'KuroVehicleMovementComponent_MotorAddSubConfig::PropertyNames' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorAddSubConfig, SubConfig) == 0x000020, "Member 'KuroVehicleMovementComponent_MotorAddSubConfig::SubConfig' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_MotorAddSubConfig;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.MotorInitBaseConfig
 // 0x0008 (0x0008 - 0x0000)
@@ -338,9 +267,7 @@ struct KuroVehicleMovementComponent_MotorInitBaseConfig final
 public:
 	class UMotorcycleConfigs*                     BaseConfig;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_MotorInitBaseConfig) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_MotorInitBaseConfig");
-static_assert(sizeof(KuroVehicleMovementComponent_MotorInitBaseConfig) == 0x000008, "Wrong size on KuroVehicleMovementComponent_MotorInitBaseConfig");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorInitBaseConfig, BaseConfig) == 0x000000, "Member 'KuroVehicleMovementComponent_MotorInitBaseConfig::BaseConfig' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_MotorInitBaseConfig;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.MotorRemoveSubConfig
 // 0x000C (0x000C - 0x0000)
@@ -349,9 +276,7 @@ struct KuroVehicleMovementComponent_MotorRemoveSubConfig final
 public:
 	class FName                                   KeyName;                                           // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_MotorRemoveSubConfig) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_MotorRemoveSubConfig");
-static_assert(sizeof(KuroVehicleMovementComponent_MotorRemoveSubConfig) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_MotorRemoveSubConfig");
-static_assert(offsetof(KuroVehicleMovementComponent_MotorRemoveSubConfig, KeyName) == 0x000000, "Member 'KuroVehicleMovementComponent_MotorRemoveSubConfig::KeyName' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_MotorRemoveSubConfig;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.MoveMotorcycle
 // 0x0030 (0x0030 - 0x0000)
@@ -364,11 +289,7 @@ public:
 	bool                                          bSweep;                                            // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroVehicleMovementComponent_MoveMotorcycle) == 0x000010, "Wrong alignment on KuroVehicleMovementComponent_MoveMotorcycle");
-static_assert(sizeof(KuroVehicleMovementComponent_MoveMotorcycle) == 0x000030, "Wrong size on KuroVehicleMovementComponent_MoveMotorcycle");
-static_assert(offsetof(KuroVehicleMovementComponent_MoveMotorcycle, LocationDelta) == 0x000000, "Member 'KuroVehicleMovementComponent_MoveMotorcycle::LocationDelta' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_MoveMotorcycle, QuatDelta) == 0x000010, "Member 'KuroVehicleMovementComponent_MoveMotorcycle::QuatDelta' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_MoveMotorcycle, bSweep) == 0x000020, "Member 'KuroVehicleMovementComponent_MoveMotorcycle::bSweep' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_MoveMotorcycle;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.SetMotorInput
 // 0x0020 (0x0020 - 0x0000)
@@ -380,12 +301,7 @@ public:
 	float                                         BackBraking;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AirRotateInput;                                    // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_SetMotorInput) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_SetMotorInput");
-static_assert(sizeof(KuroVehicleMovementComponent_SetMotorInput) == 0x000020, "Wrong size on KuroVehicleMovementComponent_SetMotorInput");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorInput, InputDirect) == 0x000000, "Member 'KuroVehicleMovementComponent_SetMotorInput::InputDirect' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorInput, FrontBraking) == 0x00000C, "Member 'KuroVehicleMovementComponent_SetMotorInput::FrontBraking' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorInput, BackBraking) == 0x000010, "Member 'KuroVehicleMovementComponent_SetMotorInput::BackBraking' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorInput, AirRotateInput) == 0x000014, "Member 'KuroVehicleMovementComponent_SetMotorInput::AirRotateInput' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMotorInput;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.SetMotorRotateSpeed
 // 0x0010 (0x0010 - 0x0000)
@@ -395,10 +311,7 @@ public:
 	struct FVector                                Axis;                                              // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SpeedRad;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_SetMotorRotateSpeed) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_SetMotorRotateSpeed");
-static_assert(sizeof(KuroVehicleMovementComponent_SetMotorRotateSpeed) == 0x000010, "Wrong size on KuroVehicleMovementComponent_SetMotorRotateSpeed");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorRotateSpeed, Axis) == 0x000000, "Member 'KuroVehicleMovementComponent_SetMotorRotateSpeed::Axis' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMotorRotateSpeed, SpeedRad) == 0x00000C, "Member 'KuroVehicleMovementComponent_SetMotorRotateSpeed::SpeedRad' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMotorRotateSpeed;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.SetMovementMode
 // 0x0002 (0x0002 - 0x0000)
@@ -408,10 +321,7 @@ public:
 	EKuroVehicleMovementMode                      NewMovementMode;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         NewCustomMode;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_SetMovementMode) == 0x000001, "Wrong alignment on KuroVehicleMovementComponent_SetMovementMode");
-static_assert(sizeof(KuroVehicleMovementComponent_SetMovementMode) == 0x000002, "Wrong size on KuroVehicleMovementComponent_SetMovementMode");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMovementMode, NewMovementMode) == 0x000000, "Member 'KuroVehicleMovementComponent_SetMovementMode::NewMovementMode' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_SetMovementMode, NewCustomMode) == 0x000001, "Member 'KuroVehicleMovementComponent_SetMovementMode::NewCustomMode' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMovementMode;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.SetSimulatedMotorWheelInfos
 // 0x0010 (0x0010 - 0x0000)
@@ -420,9 +330,7 @@ struct KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos final
 public:
 	TArray<struct FMotorWheelDisplayInfo>         In;                                                // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos) == 0x000008, "Wrong alignment on KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos");
-static_assert(sizeof(KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos) == 0x000010, "Wrong size on KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos");
-static_assert(offsetof(KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos, In) == 0x000000, "Member 'KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos::In' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.TryMotorcyclingOneStep
 // 0x0004 (0x0004 - 0x0000)
@@ -431,9 +339,7 @@ struct KuroVehicleMovementComponent_TryMotorcyclingOneStep final
 public:
 	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_TryMotorcyclingOneStep) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_TryMotorcyclingOneStep");
-static_assert(sizeof(KuroVehicleMovementComponent_TryMotorcyclingOneStep) == 0x000004, "Wrong size on KuroVehicleMovementComponent_TryMotorcyclingOneStep");
-static_assert(offsetof(KuroVehicleMovementComponent_TryMotorcyclingOneStep, Index_0) == 0x000000, "Member 'KuroVehicleMovementComponent_TryMotorcyclingOneStep::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_TryMotorcyclingOneStep;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.UpdateMotorRailMoveTransform
 // 0x0060 (0x0060 - 0x0000)
@@ -447,12 +353,29 @@ public:
 	bool                                          bSweep;                                            // 0x0051(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_52[0xE];                                       // 0x0052(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform) == 0x000010, "Wrong alignment on KuroVehicleMovementComponent_UpdateMotorRailMoveTransform");
-static_assert(sizeof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform) == 0x000060, "Wrong size on KuroVehicleMovementComponent_UpdateMotorRailMoveTransform");
-static_assert(offsetof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform, DeltaSeconds) == 0x000000, "Member 'KuroVehicleMovementComponent_UpdateMotorRailMoveTransform::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform, TargetTransform) == 0x000010, "Member 'KuroVehicleMovementComponent_UpdateMotorRailMoveTransform::TargetTransform' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform, bApplyRootMotion) == 0x000050, "Member 'KuroVehicleMovementComponent_UpdateMotorRailMoveTransform::bApplyRootMotion' has a wrong offset!");
-static_assert(offsetof(KuroVehicleMovementComponent_UpdateMotorRailMoveTransform, bSweep) == 0x000051, "Member 'KuroVehicleMovementComponent_UpdateMotorRailMoveTransform::bSweep' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_UpdateMotorRailMoveTransform;
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetBackMotorHitResult
+// 0x0098 (0x0098 - 0x0000)
+struct KuroVehicleMovementComponent_GetBackMotorHitResult final
+{
+public:
+	struct FHitResult                             OutHit;                                            // 0x0000(0x0094)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0094(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetBackMotorHitResult;
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetFrontMotorHitResult
+// 0x0098 (0x0098 - 0x0000)
+struct KuroVehicleMovementComponent_GetFrontMotorHitResult final
+{
+public:
+	struct FHitResult                             OutHit;                                            // 0x0000(0x0094)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0094(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetFrontMotorHitResult;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.GetMaxAcceleration
 // 0x0004 (0x0004 - 0x0000)
@@ -461,9 +384,7 @@ struct KuroVehicleMovementComponent_GetMaxAcceleration final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_GetMaxAcceleration) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_GetMaxAcceleration");
-static_assert(sizeof(KuroVehicleMovementComponent_GetMaxAcceleration) == 0x000004, "Wrong size on KuroVehicleMovementComponent_GetMaxAcceleration");
-static_assert(offsetof(KuroVehicleMovementComponent_GetMaxAcceleration, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_GetMaxAcceleration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_GetMaxAcceleration;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.Kuro_GetGravity
 // 0x000C (0x000C - 0x0000)
@@ -472,9 +393,7 @@ struct KuroVehicleMovementComponent_Kuro_GetGravity final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_Kuro_GetGravity) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_Kuro_GetGravity");
-static_assert(sizeof(KuroVehicleMovementComponent_Kuro_GetGravity) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_Kuro_GetGravity");
-static_assert(offsetof(KuroVehicleMovementComponent_Kuro_GetGravity, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_Kuro_GetGravity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_Kuro_GetGravity;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.Kuro_GetGravityDirect
 // 0x000C (0x000C - 0x0000)
@@ -483,9 +402,7 @@ struct KuroVehicleMovementComponent_Kuro_GetGravityDirect final
 public:
 	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroVehicleMovementComponent_Kuro_GetGravityDirect) == 0x000004, "Wrong alignment on KuroVehicleMovementComponent_Kuro_GetGravityDirect");
-static_assert(sizeof(KuroVehicleMovementComponent_Kuro_GetGravityDirect) == 0x00000C, "Wrong size on KuroVehicleMovementComponent_Kuro_GetGravityDirect");
-static_assert(offsetof(KuroVehicleMovementComponent_Kuro_GetGravityDirect, ReturnValue) == 0x000000, "Member 'KuroVehicleMovementComponent_Kuro_GetGravityDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_Kuro_GetGravityDirect;
 
 }
 

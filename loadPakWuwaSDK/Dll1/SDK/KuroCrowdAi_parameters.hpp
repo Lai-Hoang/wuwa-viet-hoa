@@ -26,11 +26,7 @@ public:
 	class FName                                   SectionName;                                       // 0x0004(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMontageSectionInfoItem                ReturnValue;                                       // 0x0010(0x0014)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo) == 0x000024, "Wrong size on KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo, SectionName) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo::SectionName' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo, ReturnValue) == 0x000010, "Member 'KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_GetMontageSectionInfo;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidAnimUpdater.PlayMontage
 // 0x0010 (0x0010 - 0x0000)
@@ -44,13 +40,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_PlayMontage) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_PlayMontage");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_PlayMontage) == 0x000010, "Wrong size on KuroCrowdAiBoidAnimUpdater_PlayMontage");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_PlayMontage, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_PlayMontage::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_PlayMontage, PlayRate) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_PlayMontage::PlayRate' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_PlayMontage, StartPos) == 0x000008, "Member 'KuroCrowdAiBoidAnimUpdater_PlayMontage::StartPos' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_PlayMontage, bIsLoop) == 0x00000C, "Member 'KuroCrowdAiBoidAnimUpdater_PlayMontage::bIsLoop' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_PlayMontage, ReturnValue) == 0x00000D, "Member 'KuroCrowdAiBoidAnimUpdater_PlayMontage::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_PlayMontage;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidAnimUpdater.SetMontageNextSection
 // 0x0020 (0x0020 - 0x0000)
@@ -63,12 +53,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_SetMontageNextSection");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection) == 0x000020, "Wrong size on KuroCrowdAiBoidAnimUpdater_SetMontageNextSection");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontageNextSection::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection, FromSection) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontageNextSection::FromSection' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection, ToSection) == 0x000010, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontageNextSection::ToSection' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontageNextSection, ReturnValue) == 0x00001C, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontageNextSection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_SetMontageNextSection;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidAnimUpdater.SetMontagePlayRate
 // 0x000C (0x000C - 0x0000)
@@ -80,11 +65,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate) == 0x00000C, "Wrong size on KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate, NewPlayRate) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate::NewPlayRate' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate, ReturnValue) == 0x000008, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_SetMontagePlayRate;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidAnimUpdater.SetMontagePosition
 // 0x000C (0x000C - 0x0000)
@@ -96,11 +77,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_SetMontagePosition) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_SetMontagePosition");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_SetMontagePosition) == 0x00000C, "Wrong size on KuroCrowdAiBoidAnimUpdater_SetMontagePosition");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePosition, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePosition::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePosition, NewPosition) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePosition::NewPosition' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_SetMontagePosition, ReturnValue) == 0x000008, "Member 'KuroCrowdAiBoidAnimUpdater_SetMontagePosition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_SetMontagePosition;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidAnimUpdater.StopMontage
 // 0x0008 (0x0008 - 0x0000)
@@ -112,11 +89,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidAnimUpdater_StopMontage) == 0x000004, "Wrong alignment on KuroCrowdAiBoidAnimUpdater_StopMontage");
-static_assert(sizeof(KuroCrowdAiBoidAnimUpdater_StopMontage) == 0x000008, "Wrong size on KuroCrowdAiBoidAnimUpdater_StopMontage");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_StopMontage, AnimIndex) == 0x000000, "Member 'KuroCrowdAiBoidAnimUpdater_StopMontage::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_StopMontage, bImmediately) == 0x000004, "Member 'KuroCrowdAiBoidAnimUpdater_StopMontage::bImmediately' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidAnimUpdater_StopMontage, ReturnValue) == 0x000005, "Member 'KuroCrowdAiBoidAnimUpdater_StopMontage::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidAnimUpdater_StopMontage;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidActorSystem.InitGpuNpc
 // 0x0001 (0x0001 - 0x0000)
@@ -125,9 +98,7 @@ struct KuroCrowdAiBoidActorSystem_InitGpuNpc final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiBoidActorSystem_InitGpuNpc) == 0x000001, "Wrong alignment on KuroCrowdAiBoidActorSystem_InitGpuNpc");
-static_assert(sizeof(KuroCrowdAiBoidActorSystem_InitGpuNpc) == 0x000001, "Wrong size on KuroCrowdAiBoidActorSystem_InitGpuNpc");
-static_assert(offsetof(KuroCrowdAiBoidActorSystem_InitGpuNpc, ReturnValue) == 0x000000, "Member 'KuroCrowdAiBoidActorSystem_InitGpuNpc::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidActorSystem_InitGpuNpc;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidActorSystem.SpawnBoidActor
 // 0x0040 (0x0040 - 0x0000)
@@ -140,11 +111,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidActorSystem_SpawnBoidActor) == 0x000010, "Wrong alignment on KuroCrowdAiBoidActorSystem_SpawnBoidActor");
-static_assert(sizeof(KuroCrowdAiBoidActorSystem_SpawnBoidActor) == 0x000040, "Wrong size on KuroCrowdAiBoidActorSystem_SpawnBoidActor");
-static_assert(offsetof(KuroCrowdAiBoidActorSystem_SpawnBoidActor, InTransform) == 0x000000, "Member 'KuroCrowdAiBoidActorSystem_SpawnBoidActor::InTransform' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidActorSystem_SpawnBoidActor, bForce) == 0x000030, "Member 'KuroCrowdAiBoidActorSystem_SpawnBoidActor::bForce' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidActorSystem_SpawnBoidActor, ReturnValue) == 0x000034, "Member 'KuroCrowdAiBoidActorSystem_SpawnBoidActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidActorSystem_SpawnBoidActor;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidActorSystem.SwitchBoidToPerformState
 // 0x0004 (0x0004 - 0x0000)
@@ -153,9 +120,7 @@ struct KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState final
 public:
 	int32                                         BoidId;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState) == 0x000004, "Wrong alignment on KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState");
-static_assert(sizeof(KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState) == 0x000004, "Wrong size on KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState");
-static_assert(offsetof(KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState, BoidId) == 0x000000, "Member 'KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState::BoidId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidActorSystem_SwitchBoidToPerformState;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidComponent.EnableBoidCollision
 // 0x0001 (0x0001 - 0x0000)
@@ -164,9 +129,7 @@ struct KuroCrowdAiBoidComponent_EnableBoidCollision final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiBoidComponent_EnableBoidCollision) == 0x000001, "Wrong alignment on KuroCrowdAiBoidComponent_EnableBoidCollision");
-static_assert(sizeof(KuroCrowdAiBoidComponent_EnableBoidCollision) == 0x000001, "Wrong size on KuroCrowdAiBoidComponent_EnableBoidCollision");
-static_assert(offsetof(KuroCrowdAiBoidComponent_EnableBoidCollision, bEnable) == 0x000000, "Member 'KuroCrowdAiBoidComponent_EnableBoidCollision::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidComponent_EnableBoidCollision;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxy.PlayAnimation
 // 0x0010 (0x0010 - 0x0000)
@@ -179,12 +142,7 @@ public:
 	bool                                          bIsLoop;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation) == 0x000004, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation) == 0x000010, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation, AnimationIndex) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation::AnimationIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation, PlayRate) == 0x000004, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation::PlayRate' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation, StartPos) == 0x000008, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation::StartPos' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation, bIsLoop) == 0x00000C, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation::bIsLoop' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxy_PlayAnimation;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxy.StopAnimation
 // 0x0008 (0x0008 - 0x0000)
@@ -195,10 +153,7 @@ public:
 	bool                                          bImmediately;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation) == 0x000004, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation) == 0x000008, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation, AnimationIndex) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation::AnimationIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation, bImmediately) == 0x000004, "Member 'KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation::bImmediately' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxy_StopAnimation;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter.AddRoute
 // 0x0010 (0x0010 - 0x0000)
@@ -210,11 +165,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute) == 0x000008, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute) == 0x000010, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute, ProxyActor) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute::ProxyActor' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute, InstanceId) == 0x000008, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute::InstanceId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute, ReturnValue) == 0x00000C, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxyRouter_AddRoute;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter.GetRouteSource
 // 0x0010 (0x0010 - 0x0000)
@@ -225,10 +176,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AKuroCrowdAiBoidInstanceSequenceProxy*  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource) == 0x000008, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource) == 0x000010, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource, BoidId) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource, ReturnValue) == 0x000008, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteSource;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter.GetRouteTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -239,10 +187,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget) == 0x000008, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget) == 0x000010, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget, ProxyActor) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget::ProxyActor' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget, ReturnValue) == 0x000008, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxyRouter_GetRouteTarget;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter.RemoveRouteByBoidId
 // 0x0008 (0x0008 - 0x0000)
@@ -253,10 +198,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId) == 0x000004, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId) == 0x000008, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId, BoidId) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId, ReturnValue) == 0x000004, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByBoidId;
 
 // Function KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter.RemoveRouteByProxyActor
 // 0x0010 (0x0010 - 0x0000)
@@ -267,10 +209,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor) == 0x000008, "Wrong alignment on KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor");
-static_assert(sizeof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor) == 0x000010, "Wrong size on KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor, ProxyActor) == 0x000000, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor::ProxyActor' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor, ReturnValue) == 0x000008, "Member 'KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiBoidInstanceSequenceProxyRouter_RemoveRouteByProxyActor;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.BoidPlayAnimation
 // 0x0014 (0x0014 - 0x0000)
@@ -285,14 +224,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_BoidPlayAnimation) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_BoidPlayAnimation");
-static_assert(sizeof(KuroCrowdAiSubsystem_BoidPlayAnimation) == 0x000014, "Wrong size on KuroCrowdAiSubsystem_BoidPlayAnimation");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, AnimIndex) == 0x000004, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, PlayRate) == 0x000008, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::PlayRate' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, StartPos) == 0x00000C, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::StartPos' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, bIsLoop) == 0x000010, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::bIsLoop' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidPlayAnimation, ReturnValue) == 0x000011, "Member 'KuroCrowdAiSubsystem_BoidPlayAnimation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_BoidPlayAnimation;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.BoidStopAnimation
 // 0x000C (0x000C - 0x0000)
@@ -305,12 +237,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_BoidStopAnimation) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_BoidStopAnimation");
-static_assert(sizeof(KuroCrowdAiSubsystem_BoidStopAnimation) == 0x00000C, "Wrong size on KuroCrowdAiSubsystem_BoidStopAnimation");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidStopAnimation, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_BoidStopAnimation::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidStopAnimation, AnimIndex) == 0x000004, "Member 'KuroCrowdAiSubsystem_BoidStopAnimation::AnimIndex' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidStopAnimation, bImmediately) == 0x000008, "Member 'KuroCrowdAiSubsystem_BoidStopAnimation::bImmediately' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_BoidStopAnimation, ReturnValue) == 0x000009, "Member 'KuroCrowdAiSubsystem_BoidStopAnimation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_BoidStopAnimation;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.ChangeGroupWatchingBoid
 // 0x000C (0x000C - 0x0000)
@@ -322,11 +249,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_ChangeGroupWatchingBoid) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_ChangeGroupWatchingBoid");
-static_assert(sizeof(KuroCrowdAiSubsystem_ChangeGroupWatchingBoid) == 0x00000C, "Wrong size on KuroCrowdAiSubsystem_ChangeGroupWatchingBoid");
-static_assert(offsetof(KuroCrowdAiSubsystem_ChangeGroupWatchingBoid, GroupId) == 0x000000, "Member 'KuroCrowdAiSubsystem_ChangeGroupWatchingBoid::GroupId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_ChangeGroupWatchingBoid, BoidId) == 0x000004, "Member 'KuroCrowdAiSubsystem_ChangeGroupWatchingBoid::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_ChangeGroupWatchingBoid, ReturnValue) == 0x000008, "Member 'KuroCrowdAiSubsystem_ChangeGroupWatchingBoid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_ChangeGroupWatchingBoid;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.EnableBoidIdlePerform
 // 0x0008 (0x0008 - 0x0000)
@@ -337,10 +260,7 @@ public:
 	bool                                          bEnable;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_EnableBoidIdlePerform) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_EnableBoidIdlePerform");
-static_assert(sizeof(KuroCrowdAiSubsystem_EnableBoidIdlePerform) == 0x000008, "Wrong size on KuroCrowdAiSubsystem_EnableBoidIdlePerform");
-static_assert(offsetof(KuroCrowdAiSubsystem_EnableBoidIdlePerform, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_EnableBoidIdlePerform::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_EnableBoidIdlePerform, bEnable) == 0x000004, "Member 'KuroCrowdAiSubsystem_EnableBoidIdlePerform::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_EnableBoidIdlePerform;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.EnableDebugMode
 // 0x0001 (0x0001 - 0x0000)
@@ -349,9 +269,7 @@ struct KuroCrowdAiSubsystem_EnableDebugMode final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_EnableDebugMode) == 0x000001, "Wrong alignment on KuroCrowdAiSubsystem_EnableDebugMode");
-static_assert(sizeof(KuroCrowdAiSubsystem_EnableDebugMode) == 0x000001, "Wrong size on KuroCrowdAiSubsystem_EnableDebugMode");
-static_assert(offsetof(KuroCrowdAiSubsystem_EnableDebugMode, Enable) == 0x000000, "Member 'KuroCrowdAiSubsystem_EnableDebugMode::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_EnableDebugMode;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetAllGroupIds
 // 0x0010 (0x0010 - 0x0000)
@@ -360,9 +278,7 @@ struct KuroCrowdAiSubsystem_GetAllGroupIds final
 public:
 	TArray<int32>                                 OutGroupIds;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetAllGroupIds) == 0x000008, "Wrong alignment on KuroCrowdAiSubsystem_GetAllGroupIds");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetAllGroupIds) == 0x000010, "Wrong size on KuroCrowdAiSubsystem_GetAllGroupIds");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetAllGroupIds, OutGroupIds) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetAllGroupIds::OutGroupIds' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetAllGroupIds;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidAnimUpdater
 // 0x0010 (0x0010 - 0x0000)
@@ -373,10 +289,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroCrowdAiBoidAnimUpdater*            ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidAnimUpdater) == 0x000008, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidAnimUpdater");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidAnimUpdater) == 0x000010, "Wrong size on KuroCrowdAiSubsystem_GetBoidAnimUpdater");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidAnimUpdater, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidAnimUpdater::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidAnimUpdater, ReturnValue) == 0x000008, "Member 'KuroCrowdAiSubsystem_GetBoidAnimUpdater::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidAnimUpdater;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidGroupId
 // 0x0008 (0x0008 - 0x0000)
@@ -386,10 +299,7 @@ public:
 	int32                                         BoidId;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidGroupId) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidGroupId");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidGroupId) == 0x000008, "Wrong size on KuroCrowdAiSubsystem_GetBoidGroupId");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidGroupId, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidGroupId::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidGroupId, ReturnValue) == 0x000004, "Member 'KuroCrowdAiSubsystem_GetBoidGroupId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidGroupId;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidLastTransform
 // 0x0040 (0x0040 - 0x0000)
@@ -400,10 +310,7 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidLastTransform) == 0x000010, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidLastTransform");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidLastTransform) == 0x000040, "Wrong size on KuroCrowdAiSubsystem_GetBoidLastTransform");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidLastTransform, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidLastTransform::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidLastTransform, ReturnValue) == 0x000010, "Member 'KuroCrowdAiSubsystem_GetBoidLastTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidLastTransform;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidLastVelocity
 // 0x0010 (0x0010 - 0x0000)
@@ -413,10 +320,7 @@ public:
 	int32                                         BoidId;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0004(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidLastVelocity) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidLastVelocity");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidLastVelocity) == 0x000010, "Wrong size on KuroCrowdAiSubsystem_GetBoidLastVelocity");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidLastVelocity, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidLastVelocity::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidLastVelocity, ReturnValue) == 0x000004, "Member 'KuroCrowdAiSubsystem_GetBoidLastVelocity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidLastVelocity;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidTransform
 // 0x0040 (0x0040 - 0x0000)
@@ -427,10 +331,7 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidTransform) == 0x000010, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidTransform");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidTransform) == 0x000040, "Wrong size on KuroCrowdAiSubsystem_GetBoidTransform");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidTransform, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidTransform::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidTransform, ReturnValue) == 0x000010, "Member 'KuroCrowdAiSubsystem_GetBoidTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidTransform;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.GetBoidVelocity
 // 0x0010 (0x0010 - 0x0000)
@@ -440,10 +341,7 @@ public:
 	int32                                         BoidId;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0004(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_GetBoidVelocity) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_GetBoidVelocity");
-static_assert(sizeof(KuroCrowdAiSubsystem_GetBoidVelocity) == 0x000010, "Wrong size on KuroCrowdAiSubsystem_GetBoidVelocity");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidVelocity, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_GetBoidVelocity::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_GetBoidVelocity, ReturnValue) == 0x000004, "Member 'KuroCrowdAiSubsystem_GetBoidVelocity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_GetBoidVelocity;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.NotifyBoidsMoveTo
 // 0x000C (0x000C - 0x0000)
@@ -452,9 +350,7 @@ struct KuroCrowdAiSubsystem_NotifyBoidsMoveTo final
 public:
 	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_NotifyBoidsMoveTo) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_NotifyBoidsMoveTo");
-static_assert(sizeof(KuroCrowdAiSubsystem_NotifyBoidsMoveTo) == 0x00000C, "Wrong size on KuroCrowdAiSubsystem_NotifyBoidsMoveTo");
-static_assert(offsetof(KuroCrowdAiSubsystem_NotifyBoidsMoveTo, NewLocation) == 0x000000, "Member 'KuroCrowdAiSubsystem_NotifyBoidsMoveTo::NewLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_NotifyBoidsMoveTo;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.QueryUsablePositionForBoid
 // 0x0024 (0x0024 - 0x0000)
@@ -467,13 +363,7 @@ public:
 	int32                                         MaxTryCount;                                       // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_QueryUsablePositionForBoid");
-static_assert(sizeof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid) == 0x000024, "Wrong size on KuroCrowdAiSubsystem_QueryUsablePositionForBoid");
-static_assert(offsetof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid, QueryPosition) == 0x000000, "Member 'KuroCrowdAiSubsystem_QueryUsablePositionForBoid::QueryPosition' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid, QueryRadius) == 0x00000C, "Member 'KuroCrowdAiSubsystem_QueryUsablePositionForBoid::QueryRadius' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid, BoidRadius) == 0x000010, "Member 'KuroCrowdAiSubsystem_QueryUsablePositionForBoid::BoidRadius' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid, MaxTryCount) == 0x000014, "Member 'KuroCrowdAiSubsystem_QueryUsablePositionForBoid::MaxTryCount' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_QueryUsablePositionForBoid, ReturnValue) == 0x000018, "Member 'KuroCrowdAiSubsystem_QueryUsablePositionForBoid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_QueryUsablePositionForBoid;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.RemoveBoid
 // 0x0008 (0x0008 - 0x0000)
@@ -485,11 +375,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_RemoveBoid) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_RemoveBoid");
-static_assert(sizeof(KuroCrowdAiSubsystem_RemoveBoid) == 0x000008, "Wrong size on KuroCrowdAiSubsystem_RemoveBoid");
-static_assert(offsetof(KuroCrowdAiSubsystem_RemoveBoid, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_RemoveBoid::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_RemoveBoid, bForce) == 0x000004, "Member 'KuroCrowdAiSubsystem_RemoveBoid::bForce' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_RemoveBoid, ReturnValue) == 0x000005, "Member 'KuroCrowdAiSubsystem_RemoveBoid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_RemoveBoid;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.SetBoidAppearanceInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -502,11 +388,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_SetBoidAppearanceInfo) == 0x000008, "Wrong alignment on KuroCrowdAiSubsystem_SetBoidAppearanceInfo");
-static_assert(sizeof(KuroCrowdAiSubsystem_SetBoidAppearanceInfo) == 0x000020, "Wrong size on KuroCrowdAiSubsystem_SetBoidAppearanceInfo");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidAppearanceInfo, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_SetBoidAppearanceInfo::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidAppearanceInfo, CustomDataArray) == 0x000008, "Member 'KuroCrowdAiSubsystem_SetBoidAppearanceInfo::CustomDataArray' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidAppearanceInfo, ReturnValue) == 0x000018, "Member 'KuroCrowdAiSubsystem_SetBoidAppearanceInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_SetBoidAppearanceInfo;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.SetBoidControlledByCrowdAi
 // 0x0008 (0x0008 - 0x0000)
@@ -518,11 +400,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi");
-static_assert(sizeof(KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi) == 0x000008, "Wrong size on KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi, Enable) == 0x000004, "Member 'KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi::Enable' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi, ReturnValue) == 0x000005, "Member 'KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_SetBoidControlledByCrowdAi;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.SetBoidScale
 // 0x0014 (0x0014 - 0x0000)
@@ -534,11 +412,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_SetBoidScale) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_SetBoidScale");
-static_assert(sizeof(KuroCrowdAiSubsystem_SetBoidScale) == 0x000014, "Wrong size on KuroCrowdAiSubsystem_SetBoidScale");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidScale, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_SetBoidScale::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidScale, NewScale) == 0x000004, "Member 'KuroCrowdAiSubsystem_SetBoidScale::NewScale' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidScale, ReturnValue) == 0x000010, "Member 'KuroCrowdAiSubsystem_SetBoidScale::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_SetBoidScale;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.SetBoidTransform
 // 0x0050 (0x0050 - 0x0000)
@@ -552,12 +426,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0041(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_42[0xE];                                       // 0x0042(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_SetBoidTransform) == 0x000010, "Wrong alignment on KuroCrowdAiSubsystem_SetBoidTransform");
-static_assert(sizeof(KuroCrowdAiSubsystem_SetBoidTransform) == 0x000050, "Wrong size on KuroCrowdAiSubsystem_SetBoidTransform");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidTransform, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_SetBoidTransform::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidTransform, NewTransform) == 0x000010, "Member 'KuroCrowdAiSubsystem_SetBoidTransform::NewTransform' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidTransform, bTeleport) == 0x000040, "Member 'KuroCrowdAiSubsystem_SetBoidTransform::bTeleport' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetBoidTransform, ReturnValue) == 0x000041, "Member 'KuroCrowdAiSubsystem_SetBoidTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_SetBoidTransform;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.SetWatchingBoidAndJoinGroup
 // 0x000C (0x000C - 0x0000)
@@ -568,11 +437,7 @@ public:
 	int32                                         WatchingBoidId;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup");
-static_assert(sizeof(KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup) == 0x00000C, "Wrong size on KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup, WatchingBoidId) == 0x000004, "Member 'KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup::WatchingBoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup, ReturnValue) == 0x000008, "Member 'KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_SetWatchingBoidAndJoinGroup;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.UpdateDebugNavMeshEdges
 // 0x001C (0x001C - 0x0000)
@@ -581,9 +446,7 @@ struct KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges final
 public:
 	struct FBox                                   Range;                                             // 0x0000(0x001C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges");
-static_assert(sizeof(KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges) == 0x00001C, "Wrong size on KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges");
-static_assert(offsetof(KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges, Range) == 0x000000, "Member 'KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges::Range' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_UpdateDebugNavMeshEdges;
 
 // Function KuroCrowdAi.KuroCrowdAiSubsystem.WasBoidControlledByCrowdAi
 // 0x0008 (0x0008 - 0x0000)
@@ -594,10 +457,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi) == 0x000004, "Wrong alignment on KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi");
-static_assert(sizeof(KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi) == 0x000008, "Wrong size on KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi");
-static_assert(offsetof(KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi, BoidId) == 0x000000, "Member 'KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi::BoidId' has a wrong offset!");
-static_assert(offsetof(KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi, ReturnValue) == 0x000004, "Member 'KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiSubsystem_WasBoidControlledByCrowdAi;
 
 // Function KuroCrowdAi.KuroCrowdAiManagerProxyActor.SetEnableParallelUpdate
 // 0x0001 (0x0001 - 0x0000)
@@ -606,9 +466,7 @@ struct KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate) == 0x000001, "Wrong alignment on KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate");
-static_assert(sizeof(KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate) == 0x000001, "Wrong size on KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate");
-static_assert(offsetof(KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate, bEnable) == 0x000000, "Member 'KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCrowdAiManagerProxyActor_SetEnableParallelUpdate;
 
 }
 

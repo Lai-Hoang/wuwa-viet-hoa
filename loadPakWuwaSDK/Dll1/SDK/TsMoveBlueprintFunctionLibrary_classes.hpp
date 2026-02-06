@@ -129,19 +129,24 @@ public:
 	static void LeftLoopSwing(int32 entityId, class UObject* __WorldContext);
 	static void LeftEndSwing(int32 entityId, class UObject* __WorldContext);
 	static void ResetClimbConfig(int32 entityId, const class FString& key, class UObject* __WorldContext);
+	static void EnableGoThrough(int32 entityId, int32 goThroughPriority, class UObject* __WorldContext);
+	static void DisableGoThrough(int32 entityId1, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsMoveBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsMoveBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsMoveBlueprintFunctionLibrary_C")
 	}
 	static class UTsMoveBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsMoveBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsMoveBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsMoveBlueprintFunctionLibrary_C");
-static_assert(sizeof(UTsMoveBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UTsMoveBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsMoveBlueprintFunctionLibrary_C;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateShowUiWeapon_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateShowUiWeapon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateShowUiWeapon_C")
 	}
 	static class UTsAnimNotifyStateShowUiWeapon_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateShowUiWeapon_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateShowUiWeapon_C) == 0x000010, "Wrong alignment on UTsAnimNotifyStateShowUiWeapon_C");
-static_assert(sizeof(UTsAnimNotifyStateShowUiWeapon_C) == 0x000090, "Wrong size on UTsAnimNotifyStateShowUiWeapon_C");
-static_assert(offsetof(UTsAnimNotifyStateShowUiWeapon_C, WeaponIndex) == 0x000048, "Member 'UTsAnimNotifyStateShowUiWeapon_C::WeaponIndex' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiWeapon_C, ShowMaterialController) == 0x00004C, "Member 'UTsAnimNotifyStateShowUiWeapon_C::ShowMaterialController' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiWeapon_C, HideEffect) == 0x00004D, "Member 'UTsAnimNotifyStateShowUiWeapon_C::HideEffect' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiWeapon_C, Transform) == 0x000050, "Member 'UTsAnimNotifyStateShowUiWeapon_C::Transform' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiWeapon_C, HangSocketName) == 0x000080, "Member 'UTsAnimNotifyStateShowUiWeapon_C::HangSocketName' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateShowUiWeapon_C;
 
 }
 

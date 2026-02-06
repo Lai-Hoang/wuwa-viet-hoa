@@ -11,176 +11,12 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SequenceDialogue_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SequenceDialogue_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function SequenceDialogue.MovieSceneQteManager.FinishQte
-// 0x0004 (0x0004 - 0x0000)
-struct MovieSceneQteManager_FinishQte final
-{
-public:
-	int32                                         Id;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneQteManager_FinishQte) == 0x000004, "Wrong alignment on MovieSceneQteManager_FinishQte");
-static_assert(sizeof(MovieSceneQteManager_FinishQte) == 0x000004, "Wrong size on MovieSceneQteManager_FinishQte");
-static_assert(offsetof(MovieSceneQteManager_FinishQte, Id) == 0x000000, "Member 'MovieSceneQteManager_FinishQte::Id' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneQteManager.OnMontageBlendingOut
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneQteManager_OnMontageBlendingOut final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneQteManager_OnMontageBlendingOut) == 0x000008, "Wrong alignment on MovieSceneQteManager_OnMontageBlendingOut");
-static_assert(sizeof(MovieSceneQteManager_OnMontageBlendingOut) == 0x000010, "Wrong size on MovieSceneQteManager_OnMontageBlendingOut");
-static_assert(offsetof(MovieSceneQteManager_OnMontageBlendingOut, Montage) == 0x000000, "Member 'MovieSceneQteManager_OnMontageBlendingOut::Montage' has a wrong offset!");
-static_assert(offsetof(MovieSceneQteManager_OnMontageBlendingOut, bInterrupted) == 0x000008, "Member 'MovieSceneQteManager_OnMontageBlendingOut::bInterrupted' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneQteManager.UpdateQte
-// 0x000C (0x000C - 0x0000)
-struct MovieSceneQteManager_UpdateQte final
-{
-public:
-	int32                                         Id;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bProgress;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProgressPercentage;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneQteManager_UpdateQte) == 0x000004, "Wrong alignment on MovieSceneQteManager_UpdateQte");
-static_assert(sizeof(MovieSceneQteManager_UpdateQte) == 0x00000C, "Wrong size on MovieSceneQteManager_UpdateQte");
-static_assert(offsetof(MovieSceneQteManager_UpdateQte, Id) == 0x000000, "Member 'MovieSceneQteManager_UpdateQte::Id' has a wrong offset!");
-static_assert(offsetof(MovieSceneQteManager_UpdateQte, bProgress) == 0x000004, "Member 'MovieSceneQteManager_UpdateQte::bProgress' has a wrong offset!");
-static_assert(offsetof(MovieSceneQteManager_UpdateQte, ProgressPercentage) == 0x000008, "Member 'MovieSceneQteManager_UpdateQte::ProgressPercentage' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddScalarParameterKey
-// 0x0014 (0x0014 - 0x0000)
-struct MovieSceneSeqAnimDataSection_AddScalarParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_AddScalarParameterKey) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_AddScalarParameterKey");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_AddScalarParameterKey) == 0x000014, "Wrong size on MovieSceneSeqAnimDataSection_AddScalarParameterKey");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKey, InTime) == 0x00000C, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKey, InValue) == 0x000010, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKey::InValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddScalarParameterKeyCustom
-// 0x002C (0x002C - 0x0000)
-struct MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom final
-{
-public:
-	struct FSeqAnimCurveFloatDesc                 InParameterName;                                   // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0024(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom) == 0x00002C, "Wrong size on MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom, InTime) == 0x000024, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom, InValue) == 0x000028, "Member 'MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom::InValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKey
-// 0x001C (0x001C - 0x0000)
-struct MovieSceneSeqAnimDataSection_AddVectorParameterKey final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InValue;                                           // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_AddVectorParameterKey) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_AddVectorParameterKey");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_AddVectorParameterKey) == 0x00001C, "Wrong size on MovieSceneSeqAnimDataSection_AddVectorParameterKey");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKey, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKey::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKey, InTime) == 0x00000C, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKey::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKey, InValue) == 0x000010, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKey::InValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKeyCustom
-// 0x0050 (0x0050 - 0x0000)
-struct MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom final
-{
-public:
-	struct FSeqAnimCurveVectorDesc                InParameterName;                                   // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x0040(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InValue;                                           // 0x0044(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom) == 0x000050, "Wrong size on MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom, InTime) == 0x000040, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom, InValue) == 0x000044, "Member 'MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom::InValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.GetScalarParameters
-// 0x0060 (0x0060 - 0x0000)
-struct MovieSceneSeqAnimDataSection_GetScalarParameters final
-{
-public:
-	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, float>                      Floats;                                            // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_GetScalarParameters) == 0x000008, "Wrong alignment on MovieSceneSeqAnimDataSection_GetScalarParameters");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_GetScalarParameters) == 0x000060, "Wrong size on MovieSceneSeqAnimDataSection_GetScalarParameters");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetScalarParameters, InTime) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_GetScalarParameters::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetScalarParameters, Floats) == 0x000008, "Member 'MovieSceneSeqAnimDataSection_GetScalarParameters::Floats' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetScalarParameters, ReturnValue) == 0x000058, "Member 'MovieSceneSeqAnimDataSection_GetScalarParameters::ReturnValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.GetVectorParameter
-// 0x0020 (0x0020 - 0x0000)
-struct MovieSceneSeqAnimDataSection_GetVectorParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Value;                                             // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_GetVectorParameter) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_GetVectorParameter");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_GetVectorParameter) == 0x000020, "Wrong size on MovieSceneSeqAnimDataSection_GetVectorParameter");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetVectorParameter, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_GetVectorParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetVectorParameter, InTime) == 0x00000C, "Member 'MovieSceneSeqAnimDataSection_GetVectorParameter::InTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetVectorParameter, Value) == 0x000010, "Member 'MovieSceneSeqAnimDataSection_GetVectorParameter::Value' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_GetVectorParameter, ReturnValue) == 0x00001C, "Member 'MovieSceneSeqAnimDataSection_GetVectorParameter::ReturnValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.RemoveCategory
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneSeqAnimDataSection_RemoveCategory final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_RemoveCategory) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_RemoveCategory");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_RemoveCategory) == 0x000010, "Wrong size on MovieSceneSeqAnimDataSection_RemoveCategory");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_RemoveCategory, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_RemoveCategory::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_RemoveCategory, ReturnValue) == 0x00000C, "Member 'MovieSceneSeqAnimDataSection_RemoveCategory::ReturnValue' has a wrong offset!");
-
-// Function SequenceDialogue.MovieSceneSeqAnimDataSection.RemoveScalarParameter
-// 0x0010 (0x0010 - 0x0000)
-struct MovieSceneSeqAnimDataSection_RemoveScalarParameter final
-{
-public:
-	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MovieSceneSeqAnimDataSection_RemoveScalarParameter) == 0x000004, "Wrong alignment on MovieSceneSeqAnimDataSection_RemoveScalarParameter");
-static_assert(sizeof(MovieSceneSeqAnimDataSection_RemoveScalarParameter) == 0x000010, "Wrong size on MovieSceneSeqAnimDataSection_RemoveScalarParameter");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_RemoveScalarParameter, InParameterName) == 0x000000, "Member 'MovieSceneSeqAnimDataSection_RemoveScalarParameter::InParameterName' has a wrong offset!");
-static_assert(offsetof(MovieSceneSeqAnimDataSection_RemoveScalarParameter, ReturnValue) == 0x00000C, "Member 'MovieSceneSeqAnimDataSection_RemoveScalarParameter::ReturnValue' has a wrong offset!");
 
 // Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogue
 // 0x0038 (0x0038 - 0x0000)
@@ -198,15 +34,7 @@ public:
 	int32                                         AutoPlayDelay;                                     // 0x0030(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MovieSceneDialogueSubsystem_ShowDialogue) == 0x000008, "Wrong alignment on MovieSceneDialogueSubsystem_ShowDialogue");
-static_assert(sizeof(MovieSceneDialogueSubsystem_ShowDialogue) == 0x000038, "Wrong size on MovieSceneDialogueSubsystem_ShowDialogue");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, bShow) == 0x000000, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::bShow' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, DialogueID) == 0x000008, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::DialogueID' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, GuardTime) == 0x000020, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::GuardTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, AudioDelay) == 0x000024, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::AudioDelay' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, AudioTransitionDuration) == 0x000028, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::AudioTransitionDuration' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, LanguageType) == 0x00002C, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::LanguageType' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogue, AutoPlayDelay) == 0x000030, "Member 'MovieSceneDialogueSubsystem_ShowDialogue::AutoPlayDelay' has a wrong offset!");
+DUMPER7_ASSERTS_MovieSceneDialogueSubsystem_ShowDialogue;
 
 // Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogueAudio
 // 0x0020 (0x0020 - 0x0000)
@@ -219,11 +47,7 @@ public:
 	int32                                         AudioTransitionDuration;                           // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MovieSceneDialogueSubsystem_ShowDialogueAudio) == 0x000008, "Wrong alignment on MovieSceneDialogueSubsystem_ShowDialogueAudio");
-static_assert(sizeof(MovieSceneDialogueSubsystem_ShowDialogueAudio) == 0x000020, "Wrong size on MovieSceneDialogueSubsystem_ShowDialogueAudio");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogueAudio, bShow) == 0x000000, "Member 'MovieSceneDialogueSubsystem_ShowDialogueAudio::bShow' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogueAudio, AudioKey) == 0x000008, "Member 'MovieSceneDialogueSubsystem_ShowDialogueAudio::AudioKey' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_ShowDialogueAudio, AudioTransitionDuration) == 0x000018, "Member 'MovieSceneDialogueSubsystem_ShowDialogueAudio::AudioTransitionDuration' has a wrong offset!");
+DUMPER7_ASSERTS_MovieSceneDialogueSubsystem_ShowDialogueAudio;
 
 // Function SequenceDialogue.MovieSceneDialogueSubsystem.TryGetAutoTransformByOffsetTime
 // 0x0040 (0x0040 - 0x0000)
@@ -236,12 +60,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0035(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_36[0xA];                                       // 0x0036(0x000A)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime) == 0x000010, "Wrong alignment on MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime");
-static_assert(sizeof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime) == 0x000040, "Wrong size on MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime");
-static_assert(offsetof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime, OutTrans) == 0x000000, "Member 'MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime::OutTrans' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime, OffsetTime) == 0x000030, "Member 'MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime::OffsetTime' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime, bApplyCameraProperties) == 0x000034, "Member 'MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime::bApplyCameraProperties' has a wrong offset!");
-static_assert(offsetof(MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime, ReturnValue) == 0x000035, "Member 'MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime;
 
 // Function SequenceDialogue.MovieSceneDialogueSubsystem.GetQteManager
 // 0x0008 (0x0008 - 0x0000)
@@ -250,9 +69,131 @@ struct MovieSceneDialogueSubsystem_GetQteManager final
 public:
 	class UMovieSceneQteManager*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MovieSceneDialogueSubsystem_GetQteManager) == 0x000008, "Wrong alignment on MovieSceneDialogueSubsystem_GetQteManager");
-static_assert(sizeof(MovieSceneDialogueSubsystem_GetQteManager) == 0x000008, "Wrong size on MovieSceneDialogueSubsystem_GetQteManager");
-static_assert(offsetof(MovieSceneDialogueSubsystem_GetQteManager, ReturnValue) == 0x000000, "Member 'MovieSceneDialogueSubsystem_GetQteManager::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MovieSceneDialogueSubsystem_GetQteManager;
+
+// Function SequenceDialogue.MovieSceneQteManager.FinishQte
+// 0x0004 (0x0004 - 0x0000)
+struct MovieSceneQteManager_FinishQte final
+{
+public:
+	int32                                         Id;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneQteManager_FinishQte;
+
+// Function SequenceDialogue.MovieSceneQteManager.OnMontageBlendingOut
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneQteManager_OnMontageBlendingOut final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneQteManager_OnMontageBlendingOut;
+
+// Function SequenceDialogue.MovieSceneQteManager.UpdateQte
+// 0x000C (0x000C - 0x0000)
+struct MovieSceneQteManager_UpdateQte final
+{
+public:
+	int32                                         Id;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bProgress;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProgressPercentage;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneQteManager_UpdateQte;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddScalarParameterKey
+// 0x0014 (0x0014 - 0x0000)
+struct MovieSceneSeqAnimDataSection_AddScalarParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_AddScalarParameterKey;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddScalarParameterKeyCustom
+// 0x002C (0x002C - 0x0000)
+struct MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom final
+{
+public:
+	struct FSeqAnimCurveFloatDesc                 InParameterName;                                   // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0024(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKey
+// 0x001C (0x001C - 0x0000)
+struct MovieSceneSeqAnimDataSection_AddVectorParameterKey final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InValue;                                           // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_AddVectorParameterKey;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKeyCustom
+// 0x0050 (0x0050 - 0x0000)
+struct MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom final
+{
+public:
+	struct FSeqAnimCurveVectorDesc                InParameterName;                                   // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x0040(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InValue;                                           // 0x0044(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.GetScalarParameters
+// 0x0060 (0x0060 - 0x0000)
+struct MovieSceneSeqAnimDataSection_GetScalarParameters final
+{
+public:
+	struct FFrameNumber                           InTime;                                            // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, float>                      Floats;                                            // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_GetScalarParameters;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.GetVectorParameter
+// 0x0020 (0x0020 - 0x0000)
+struct MovieSceneSeqAnimDataSection_GetVectorParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           InTime;                                            // 0x000C(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_GetVectorParameter;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.RemoveCategory
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneSeqAnimDataSection_RemoveCategory final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_RemoveCategory;
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.RemoveScalarParameter
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneSeqAnimDataSection_RemoveScalarParameter final
+{
+public:
+	class FName                                   InParameterName;                                   // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MovieSceneSeqAnimDataSection_RemoveScalarParameter;
 
 // Function SequenceDialogue.SeqAnimDataInterface.GetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -263,10 +204,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_GetAnimDataFloat) == 0x000008, "Wrong alignment on SeqAnimDataInterface_GetAnimDataFloat");
-static_assert(sizeof(SeqAnimDataInterface_GetAnimDataFloat) == 0x000018, "Wrong size on SeqAnimDataInterface_GetAnimDataFloat");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'SeqAnimDataInterface_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'SeqAnimDataInterface_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_GetAnimDataFloat;
 
 // Function SequenceDialogue.SeqAnimDataInterface.GetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -277,10 +215,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_GetAnimDataTransform) == 0x000008, "Wrong alignment on SeqAnimDataInterface_GetAnimDataTransform");
-static_assert(sizeof(SeqAnimDataInterface_GetAnimDataTransform) == 0x000058, "Wrong size on SeqAnimDataInterface_GetAnimDataTransform");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'SeqAnimDataInterface_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'SeqAnimDataInterface_GetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_GetAnimDataTransform;
 
 // Function SequenceDialogue.SeqAnimDataInterface.GetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -291,10 +226,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_GetAnimDataVector) == 0x000008, "Wrong alignment on SeqAnimDataInterface_GetAnimDataVector");
-static_assert(sizeof(SeqAnimDataInterface_GetAnimDataVector) == 0x000058, "Wrong size on SeqAnimDataInterface_GetAnimDataVector");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataVector, VectorCurveData) == 0x000000, "Member 'SeqAnimDataInterface_GetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_GetAnimDataVector, ReturnValue) == 0x000050, "Member 'SeqAnimDataInterface_GetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_GetAnimDataVector;
 
 // Function SequenceDialogue.SeqAnimDataInterface.GetSupportGroupNames
 // 0x0010 (0x0010 - 0x0000)
@@ -303,9 +235,7 @@ struct SeqAnimDataInterface_GetSupportGroupNames final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SeqAnimDataInterface_GetSupportGroupNames) == 0x000008, "Wrong alignment on SeqAnimDataInterface_GetSupportGroupNames");
-static_assert(sizeof(SeqAnimDataInterface_GetSupportGroupNames) == 0x000010, "Wrong size on SeqAnimDataInterface_GetSupportGroupNames");
-static_assert(offsetof(SeqAnimDataInterface_GetSupportGroupNames, ReturnValue) == 0x000000, "Member 'SeqAnimDataInterface_GetSupportGroupNames::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_GetSupportGroupNames;
 
 // Function SequenceDialogue.SeqAnimDataInterface.IsCustomSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -314,9 +244,7 @@ struct SeqAnimDataInterface_IsCustomSupport final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SeqAnimDataInterface_IsCustomSupport) == 0x000001, "Wrong alignment on SeqAnimDataInterface_IsCustomSupport");
-static_assert(sizeof(SeqAnimDataInterface_IsCustomSupport) == 0x000001, "Wrong size on SeqAnimDataInterface_IsCustomSupport");
-static_assert(offsetof(SeqAnimDataInterface_IsCustomSupport, ReturnValue) == 0x000000, "Member 'SeqAnimDataInterface_IsCustomSupport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_IsCustomSupport;
 
 // Function SequenceDialogue.SeqAnimDataInterface.SetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -327,10 +255,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_SetAnimDataFloat) == 0x000008, "Wrong alignment on SeqAnimDataInterface_SetAnimDataFloat");
-static_assert(sizeof(SeqAnimDataInterface_SetAnimDataFloat) == 0x000018, "Wrong size on SeqAnimDataInterface_SetAnimDataFloat");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'SeqAnimDataInterface_SetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataFloat, ReturnValue) == 0x000010, "Member 'SeqAnimDataInterface_SetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_SetAnimDataFloat;
 
 // Function SequenceDialogue.SeqAnimDataInterface.SetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -341,10 +266,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_SetAnimDataTransform) == 0x000008, "Wrong alignment on SeqAnimDataInterface_SetAnimDataTransform");
-static_assert(sizeof(SeqAnimDataInterface_SetAnimDataTransform) == 0x000058, "Wrong size on SeqAnimDataInterface_SetAnimDataTransform");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'SeqAnimDataInterface_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'SeqAnimDataInterface_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_SetAnimDataTransform;
 
 // Function SequenceDialogue.SeqAnimDataInterface.SetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -355,10 +277,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SeqAnimDataInterface_SetAnimDataVector) == 0x000008, "Wrong alignment on SeqAnimDataInterface_SetAnimDataVector");
-static_assert(sizeof(SeqAnimDataInterface_SetAnimDataVector) == 0x000058, "Wrong size on SeqAnimDataInterface_SetAnimDataVector");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataVector, VectorCurveData) == 0x000000, "Member 'SeqAnimDataInterface_SetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(SeqAnimDataInterface_SetAnimDataVector, ReturnValue) == 0x000050, "Member 'SeqAnimDataInterface_SetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAnimDataInterface_SetAnimDataVector;
 
 // Function SequenceDialogue.SeqAutoTransformInterface.BeginAutoTransform
 // 0x0004 (0x0004 - 0x0000)
@@ -367,9 +286,7 @@ struct SeqAutoTransformInterface_BeginAutoTransform final
 public:
 	float                                         TimeLength;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SeqAutoTransformInterface_BeginAutoTransform) == 0x000004, "Wrong alignment on SeqAutoTransformInterface_BeginAutoTransform");
-static_assert(sizeof(SeqAutoTransformInterface_BeginAutoTransform) == 0x000004, "Wrong size on SeqAutoTransformInterface_BeginAutoTransform");
-static_assert(offsetof(SeqAutoTransformInterface_BeginAutoTransform, TimeLength) == 0x000000, "Member 'SeqAutoTransformInterface_BeginAutoTransform::TimeLength' has a wrong offset!");
+DUMPER7_ASSERTS_SeqAutoTransformInterface_BeginAutoTransform;
 
 // Function SequenceDialogue.SeqQteAnimInterface.GetStateAnimAlpha
 // 0x0004 (0x0004 - 0x0000)
@@ -378,9 +295,7 @@ struct SeqQteAnimInterface_GetStateAnimAlpha final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SeqQteAnimInterface_GetStateAnimAlpha) == 0x000004, "Wrong alignment on SeqQteAnimInterface_GetStateAnimAlpha");
-static_assert(sizeof(SeqQteAnimInterface_GetStateAnimAlpha) == 0x000004, "Wrong size on SeqQteAnimInterface_GetStateAnimAlpha");
-static_assert(offsetof(SeqQteAnimInterface_GetStateAnimAlpha, ReturnValue) == 0x000000, "Member 'SeqQteAnimInterface_GetStateAnimAlpha::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqQteAnimInterface_GetStateAnimAlpha;
 
 // Function SequenceDialogue.SeqQteAnimInterface.SetStateAnimAlpha
 // 0x0004 (0x0004 - 0x0000)
@@ -389,9 +304,7 @@ struct SeqQteAnimInterface_SetStateAnimAlpha final
 public:
 	float                                         Alpha;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SeqQteAnimInterface_SetStateAnimAlpha) == 0x000004, "Wrong alignment on SeqQteAnimInterface_SetStateAnimAlpha");
-static_assert(sizeof(SeqQteAnimInterface_SetStateAnimAlpha) == 0x000004, "Wrong size on SeqQteAnimInterface_SetStateAnimAlpha");
-static_assert(offsetof(SeqQteAnimInterface_SetStateAnimAlpha, Alpha) == 0x000000, "Member 'SeqQteAnimInterface_SetStateAnimAlpha::Alpha' has a wrong offset!");
+DUMPER7_ASSERTS_SeqQteAnimInterface_SetStateAnimAlpha;
 
 }
 

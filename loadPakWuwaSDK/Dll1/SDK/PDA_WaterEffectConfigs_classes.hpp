@@ -33,22 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_WaterEffectConfigs_C">();
+		BP_STATIC_CLASS_IMPL("PDA_WaterEffectConfigs_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_WaterEffectConfigs_C")
 	}
 	static class UPDA_WaterEffectConfigs_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_WaterEffectConfigs_C>();
 	}
 };
-static_assert(alignof(UPDA_WaterEffectConfigs_C) == 0x000008, "Wrong alignment on UPDA_WaterEffectConfigs_C");
-static_assert(sizeof(UPDA_WaterEffectConfigs_C) == 0x000170, "Wrong size on UPDA_WaterEffectConfigs_C");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, TimeExistAfterDead) == 0x000038, "Member 'UPDA_WaterEffectConfigs_C::TimeExistAfterDead' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, FallJumpPositionFix) == 0x00003C, "Member 'UPDA_WaterEffectConfigs_C::FallJumpPositionFix' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, WaterEffectConfig) == 0x000040, "Member 'UPDA_WaterEffectConfigs_C::WaterEffectConfig' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, SwimIdleEffectRef) == 0x000090, "Member 'UPDA_WaterEffectConfigs_C::SwimIdleEffectRef' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, SwimNormalEffectRef) == 0x0000C0, "Member 'UPDA_WaterEffectConfigs_C::SwimNormalEffectRef' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, SwimFastEffectRef) == 0x0000F0, "Member 'UPDA_WaterEffectConfigs_C::SwimFastEffectRef' has a wrong offset!");
-static_assert(offsetof(UPDA_WaterEffectConfigs_C, MaterialEffectConfig) == 0x000120, "Member 'UPDA_WaterEffectConfigs_C::MaterialEffectConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_WaterEffectConfigs_C;
 
 }
 

@@ -28,16 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AndroidPermissionCallbackProxy">();
+		STATIC_CLASS_IMPL("AndroidPermissionCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AndroidPermissionCallbackProxy")
 	}
 	static class UAndroidPermissionCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAndroidPermissionCallbackProxy>();
 	}
 };
-static_assert(alignof(UAndroidPermissionCallbackProxy) == 0x000008, "Wrong alignment on UAndroidPermissionCallbackProxy");
-static_assert(sizeof(UAndroidPermissionCallbackProxy) == 0x000050, "Wrong size on UAndroidPermissionCallbackProxy");
-static_assert(offsetof(UAndroidPermissionCallbackProxy, OnPermissionsGrantedDynamicDelegate) == 0x000030, "Member 'UAndroidPermissionCallbackProxy::OnPermissionsGrantedDynamicDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UAndroidPermissionCallbackProxy;
 
 // Class AndroidPermission.AndroidPermissionFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -50,15 +52,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AndroidPermissionFunctionLibrary">();
+		STATIC_CLASS_IMPL("AndroidPermissionFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AndroidPermissionFunctionLibrary")
 	}
 	static class UAndroidPermissionFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAndroidPermissionFunctionLibrary>();
 	}
 };
-static_assert(alignof(UAndroidPermissionFunctionLibrary) == 0x000008, "Wrong alignment on UAndroidPermissionFunctionLibrary");
-static_assert(sizeof(UAndroidPermissionFunctionLibrary) == 0x000030, "Wrong size on UAndroidPermissionFunctionLibrary");
+DUMPER7_ASSERTS_UAndroidPermissionFunctionLibrary;
 
 }
 

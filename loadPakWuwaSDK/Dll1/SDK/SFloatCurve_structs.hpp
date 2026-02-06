@@ -21,9 +21,7 @@ struct FSFloatCurve final
 public:
 	class UCurveFloat*                            FloatCurve_7_359BA05547FEF437AB4D5FA2DFC1F098;     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSFloatCurve) == 0x000008, "Wrong alignment on FSFloatCurve");
-static_assert(sizeof(FSFloatCurve) == 0x000008, "Wrong size on FSFloatCurve");
-static_assert(offsetof(FSFloatCurve, FloatCurve_7_359BA05547FEF437AB4D5FA2DFC1F098) == 0x000000, "Member 'FSFloatCurve::FloatCurve_7_359BA05547FEF437AB4D5FA2DFC1F098' has a wrong offset!");
+DUMPER7_ASSERTS_FSFloatCurve;
 
 }
 

@@ -50,26 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KuroPortalCapture_C">();
+		BP_STATIC_CLASS_IMPL("BP_KuroPortalCapture_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KuroPortalCapture_C")
 	}
 	static class ABP_KuroPortalCapture_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_KuroPortalCapture_C>();
 	}
 };
-static_assert(alignof(ABP_KuroPortalCapture_C) == 0x000008, "Wrong alignment on ABP_KuroPortalCapture_C");
-static_assert(sizeof(ABP_KuroPortalCapture_C) == 0x000300, "Wrong size on ABP_KuroPortalCapture_C");
-static_assert(offsetof(ABP_KuroPortalCapture_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_KuroPortalCapture_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Arrow1) == 0x0002B8, "Member 'ABP_KuroPortalCapture_C::Arrow1' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Arrow) == 0x0002C0, "Member 'ABP_KuroPortalCapture_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Plane) == 0x0002C8, "Member 'ABP_KuroPortalCapture_C::Plane' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Scene) == 0x0002D0, "Member 'ABP_KuroPortalCapture_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Target) == 0x0002D8, "Member 'ABP_KuroPortalCapture_C::Target' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, offset) == 0x0002E0, "Member 'ABP_KuroPortalCapture_C::offset' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, EnableCamera) == 0x0002E4, "Member 'ABP_KuroPortalCapture_C::EnableCamera' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, RoleTeleport) == 0x0002E8, "Member 'ABP_KuroPortalCapture_C::RoleTeleport' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, PbdataId) == 0x0002F8, "Member 'ABP_KuroPortalCapture_C::PbdataId' has a wrong offset!");
-static_assert(offsetof(ABP_KuroPortalCapture_C, Hight) == 0x0002FC, "Member 'ABP_KuroPortalCapture_C::Hight' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_KuroPortalCapture_C;
 
 }
 

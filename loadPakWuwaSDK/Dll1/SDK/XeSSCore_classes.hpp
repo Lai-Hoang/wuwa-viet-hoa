@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"XeSSSettings">();
+		STATIC_CLASS_IMPL("XeSSSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"XeSSSettings")
 	}
 	static class UXeSSSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UXeSSSettings>();
 	}
 };
-static_assert(alignof(UXeSSSettings) == 0x000008, "Wrong alignment on UXeSSSettings");
-static_assert(sizeof(UXeSSSettings) == 0x000050, "Wrong size on UXeSSSettings");
-static_assert(offsetof(UXeSSSettings, bEnableXeSSInEditorViewports) == 0x000048, "Member 'UXeSSSettings::bEnableXeSSInEditorViewports' has a wrong offset!");
+DUMPER7_ASSERTS_UXeSSSettings;
 
 }
 

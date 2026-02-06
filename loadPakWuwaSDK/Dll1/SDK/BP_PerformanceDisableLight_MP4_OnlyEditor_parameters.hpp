@@ -22,10 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor) == 0x000004, "Wrong alignment on BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor");
-static_assert(sizeof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor) == 0x000008, "Wrong size on BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor");
-static_assert(offsetof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor, EntryPoint) == 0x000000, "Member 'BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_MP4_OnlyEditor_C_ExecuteUbergraph_BP_PerformanceDisableLight_MP4_OnlyEditor;
 
 // Function BP_PerformanceDisableLight_MP4_OnlyEditor.BP_PerformanceDisableLight_MP4_OnlyEditor_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +31,7 @@ struct BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick");
-static_assert(sizeof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick) == 0x000004, "Wrong size on BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick");
-static_assert(offsetof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_MP4_OnlyEditor_C_ReceiveTick;
 
 // Function BP_PerformanceDisableLight_MP4_OnlyEditor.BP_PerformanceDisableLight_MP4_OnlyEditor_C.DisableLightFun_MP4
 // 0x0020 (0x0020 - 0x0000)
@@ -46,10 +41,7 @@ public:
 	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4) == 0x000008, "Wrong alignment on BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4");
-static_assert(sizeof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4) == 0x000020, "Wrong size on BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4");
-static_assert(offsetof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4, CallFunc_Conv_FloatToString_ReturnValue) == 0x000000, "Member 'BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4::CallFunc_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4, CallFunc_Concat_StrStr_ReturnValue) == 0x000010, "Member 'BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_MP4_OnlyEditor_C_DisableLightFun_MP4;
 
 }
 

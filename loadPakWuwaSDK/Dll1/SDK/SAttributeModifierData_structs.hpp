@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EAttributeOperation_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "EAttributeTarget_structs.hpp"
+#include "EAttributeOperation_structs.hpp"
 
 
 namespace SDK
@@ -29,12 +29,7 @@ public:
 	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         值_8_9D0674CF4B00A4670325D0A7D3905AD3;             // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSAttributeModifierData) == 0x000008, "Wrong alignment on FSAttributeModifierData");
-static_assert(sizeof(FSAttributeModifierData) == 0x000040, "Wrong size on FSAttributeModifierData");
-static_assert(offsetof(FSAttributeModifierData, 属性类型_3_7BEBF8B74EAF67C7A7D7E3BBE77630E2) == 0x000000, "Member 'FSAttributeModifierData::属性类型_3_7BEBF8B74EAF67C7A7D7E3BBE77630E2' has a wrong offset!");
-static_assert(offsetof(FSAttributeModifierData, 操作对象_12_1D2BAF1F4F3839D4A70F51BA6E8DF6A4) == 0x000038, "Member 'FSAttributeModifierData::操作对象_12_1D2BAF1F4F3839D4A70F51BA6E8DF6A4' has a wrong offset!");
-static_assert(offsetof(FSAttributeModifierData, 操作_9_7EC999A94863F85C096996A3042BBB06) == 0x000039, "Member 'FSAttributeModifierData::操作_9_7EC999A94863F85C096996A3042BBB06' has a wrong offset!");
-static_assert(offsetof(FSAttributeModifierData, 值_8_9D0674CF4B00A4670325D0A7D3905AD3) == 0x00003C, "Member 'FSAttributeModifierData::值_8_9D0674CF4B00A4670325D0A7D3905AD3' has a wrong offset!");
+DUMPER7_ASSERTS_FSAttributeModifierData;
 
 }
 

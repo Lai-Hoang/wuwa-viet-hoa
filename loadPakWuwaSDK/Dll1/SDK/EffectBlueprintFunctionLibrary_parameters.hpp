@@ -24,10 +24,7 @@ public:
 	class UEffectViewComponent_C*                 view;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_RecycleEffect) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_RecycleEffect");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_RecycleEffect) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_RecycleEffect");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_RecycleEffect, view) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_RecycleEffect::view' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_RecycleEffect, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_RecycleEffect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_RecycleEffect;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.AddDebugLineFromPlayer
 // 0x0030 (0x0030 - 0x0000)
@@ -40,13 +37,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer) == 0x000030, "Wrong size on EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer, location) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer::location' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer, color) == 0x00000C, "Member 'EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer::color' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer, width) == 0x00001C, "Member 'EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer::width' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer, __WorldContext) == 0x000020, "Member 'EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer::__WorldContext' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer, ReturnValue) == 0x000028, "Member 'EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_AddDebugLineFromPlayer;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.ClearDebugDraw
 // 0x0008 (0x0008 - 0x0000)
@@ -55,9 +46,7 @@ struct EffectBlueprintFunctionLibrary_C_ClearDebugDraw final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_ClearDebugDraw) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_ClearDebugDraw");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_ClearDebugDraw) == 0x000008, "Wrong size on EffectBlueprintFunctionLibrary_C_ClearDebugDraw");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ClearDebugDraw, __WorldContext) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_ClearDebugDraw::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_ClearDebugDraw;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetMaterialControllerDataSync
 // 0x0028 (0x0028 - 0x0000)
@@ -71,12 +60,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync) == 0x000028, "Wrong size on EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync, entityId) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync::entityId' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync, materialDataPath) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync::materialDataPath' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync, isGroup) == 0x000018, "Member 'EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync::isGroup' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync, __WorldContext) == 0x000020, "Member 'EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetMaterialControllerDataSync;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.ValidateKuroAnimNotify
 // 0x0018 (0x0018 - 0x0000)
@@ -87,11 +71,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify) == 0x000018, "Wrong size on EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify, asset) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify::asset' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify::__WorldContext' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify, ReturnValue) == 0x000010, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotify;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.ValidateKuroAnimNotifyState
 // 0x0018 (0x0018 - 0x0000)
@@ -102,11 +82,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState) == 0x000018, "Wrong size on EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState, asset) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState::asset' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState::__WorldContext' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState, ReturnValue) == 0x000010, "Member 'EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_ValidateKuroAnimNotifyState;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetEffectSpawnLogEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -117,10 +93,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled, enabled) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled::enabled' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetEffectSpawnLogEnabled;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.BeginDebugDrawFoliageDetect
 // 0x0020 (0x0020 - 0x0000)
@@ -132,11 +105,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect) == 0x000020, "Wrong size on EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect, color) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect::color' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect, width) == 0x000010, "Member 'EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect::width' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect, __WorldContext) == 0x000018, "Member 'EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_BeginDebugDrawFoliageDetect;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.EndDebugDrawFoliageDetect
 // 0x0008 (0x0008 - 0x0000)
@@ -145,9 +114,7 @@ struct EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect) == 0x000008, "Wrong size on EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect, __WorldContext) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_EndDebugDrawFoliageDetect;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.RefreshFoliageDetectConfig
 // 0x0008 (0x0008 - 0x0000)
@@ -156,9 +123,7 @@ struct EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig) == 0x000008, "Wrong size on EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig, __WorldContext) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_RefreshFoliageDetectConfig;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetVisualizeCharacterWaterEffectTrace
 // 0x0010 (0x0010 - 0x0000)
@@ -169,10 +134,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetVisualizeCharacterWaterEffectTrace;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetEffectInPoolEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -183,10 +145,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetEffectInPoolEnabled;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetEffectOutPoolEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -197,10 +156,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetEffectOutPoolEnabled;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.EnableSceneObjectWaterEffectShowDebugTrace
 // 0x0010 (0x0010 - 0x0000)
@@ -211,10 +167,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_EnableSceneObjectWaterEffectShowDebugTrace;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.SetTsWriteTimeToCollectionEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -225,10 +178,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_SetTsWriteTimeToCollectionEnabled;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.EffectCgMode
 // 0x0010 (0x0010 - 0x0000)
@@ -239,10 +189,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_EffectCgMode) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_EffectCgMode");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_EffectCgMode) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_EffectCgMode");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_EffectCgMode, enable) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_EffectCgMode::enable' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_EffectCgMode, __WorldContext) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_EffectCgMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_EffectCgMode;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.GetScreenEffectSystem
 // 0x0010 (0x0010 - 0x0000)
@@ -252,10 +199,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_ScreenEffectSystem_C*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem) == 0x000010, "Wrong size on EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem, __WorldContext) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem::__WorldContext' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem, ReturnValue) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_GetScreenEffectSystem;
 
 // Function EffectBlueprintFunctionLibrary.EffectBlueprintFunctionLibrary_C.ChangeMaterialTextures
 // 0x0020 (0x0020 - 0x0000)
@@ -266,11 +210,7 @@ public:
 	class FString                                 assetPath1;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures) == 0x000008, "Wrong alignment on EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures");
-static_assert(sizeof(EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures) == 0x000020, "Wrong size on EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures, actor1) == 0x000000, "Member 'EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures::actor1' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures, assetPath1) == 0x000008, "Member 'EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures::assetPath1' has a wrong offset!");
-static_assert(offsetof(EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures, __WorldContext) == 0x000018, "Member 'EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_EffectBlueprintFunctionLibrary_C_ChangeMaterialTextures;
 
 }
 

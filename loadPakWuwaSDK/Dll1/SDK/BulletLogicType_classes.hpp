@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EBulletType_structs.hpp"
 #include "EBulletHitDirectionType_structs.hpp"
-#include "Engine_classes.hpp"
+#include "EBulletType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -49,34 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BulletLogicType_C">();
+		BP_STATIC_CLASS_IMPL("BulletLogicType_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletLogicType_C")
 	}
 	static class UBulletLogicType_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletLogicType_C>();
 	}
 };
-static_assert(alignof(UBulletLogicType_C) == 0x000008, "Wrong alignment on UBulletLogicType_C");
-static_assert(sizeof(UBulletLogicType_C) == 0x000090, "Wrong size on UBulletLogicType_C");
-static_assert(offsetof(UBulletLogicType_C, 次数为0时销毁) == 0x000038, "Member 'UBulletLogicType_C::次数为0时销毁' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 是否可以触发拼刀) == 0x000039, "Member 'UBulletLogicType_C::是否可以触发拼刀' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 是否可以触发极限闪避) == 0x00003A, "Member 'UBulletLogicType_C::是否可以触发极限闪避' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 拼刀忽略距离) == 0x00003B, "Member 'UBulletLogicType_C::拼刀忽略距离' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 拼刀忽略角度) == 0x00003C, "Member 'UBulletLogicType_C::拼刀忽略角度' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 触发前摇拼刀) == 0x00003D, "Member 'UBulletLogicType_C::触发前摇拼刀' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 是否可以触发对策) == 0x00003E, "Member 'UBulletLogicType_C::是否可以触发对策' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 子弹碰撞预设) == 0x000040, "Member 'UBulletLogicType_C::子弹碰撞预设' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 子弹碰撞障碍销毁) == 0x00004C, "Member 'UBulletLogicType_C::子弹碰撞障碍销毁' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 子弹碰撞单位销毁) == 0x00004D, "Member 'UBulletLogicType_C::子弹碰撞单位销毁' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 子弹类型) == 0x00004E, "Member 'UBulletLogicType_C::子弹类型' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 子弹受击类型角度判断) == 0x00004F, "Member 'UBulletLogicType_C::子弹受击类型角度判断' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 弹反通道) == 0x000050, "Member 'UBulletLogicType_C::弹反通道' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 开启水面交互) == 0x000054, "Member 'UBulletLogicType_C::开启水面交互' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 预设标签) == 0x000058, "Member 'UBulletLogicType_C::预设标签' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 只碰撞胶囊体) == 0x000078, "Member 'UBulletLogicType_C::只碰撞胶囊体' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 忽略水体) == 0x000088, "Member 'UBulletLogicType_C::忽略水体' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 冰冻时销毁) == 0x000089, "Member 'UBulletLogicType_C::冰冻时销毁' has a wrong offset!");
-static_assert(offsetof(UBulletLogicType_C, 开启空气墙交互) == 0x00008A, "Member 'UBulletLogicType_C::开启空气墙交互' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletLogicType_C;
 
 }
 

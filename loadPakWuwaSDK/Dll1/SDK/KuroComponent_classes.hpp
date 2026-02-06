@@ -20,6 +20,50 @@
 namespace SDK
 {
 
+// Class KuroComponent.KuroRegionShapeComponent
+// 0x0000 (0x0220 - 0x0220)
+class UKuroRegionShapeComponent : public USceneComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionShapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionShapeComponent")
+	}
+	static class UKuroRegionShapeComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionShapeComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionShapeComponent;
+
+// Class KuroComponent.KuroRegionSphereComponent
+// 0x0010 (0x0230 - 0x0220)
+class UKuroRegionSphereComponent final : public UKuroRegionShapeComponent
+{
+public:
+	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionSphereComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionSphereComponent")
+	}
+	static class UKuroRegionSphereComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionSphereComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionSphereComponent;
+
 // Class KuroComponent.GpuNpcAvoidComponent
 // 0x00B8 (0x0178 - 0x00C0)
 class UGpuNpcAvoidComponent final : public UActorComponent
@@ -37,19 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GpuNpcAvoidComponent">();
+		STATIC_CLASS_IMPL("GpuNpcAvoidComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GpuNpcAvoidComponent")
 	}
 	static class UGpuNpcAvoidComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGpuNpcAvoidComponent>();
 	}
 };
-static_assert(alignof(UGpuNpcAvoidComponent) == 0x000008, "Wrong alignment on UGpuNpcAvoidComponent");
-static_assert(sizeof(UGpuNpcAvoidComponent) == 0x000178, "Wrong size on UGpuNpcAvoidComponent");
-static_assert(offsetof(UGpuNpcAvoidComponent, GpuNpcCongifs) == 0x0000C0, "Member 'UGpuNpcAvoidComponent::GpuNpcCongifs' has a wrong offset!");
-static_assert(offsetof(UGpuNpcAvoidComponent, AvoidDistanceMin) == 0x0000D0, "Member 'UGpuNpcAvoidComponent::AvoidDistanceMin' has a wrong offset!");
-static_assert(offsetof(UGpuNpcAvoidComponent, AvoidDistanceMax) == 0x0000D4, "Member 'UGpuNpcAvoidComponent::AvoidDistanceMax' has a wrong offset!");
-static_assert(offsetof(UGpuNpcAvoidComponent, WatchingCharacter) == 0x0000D8, "Member 'UGpuNpcAvoidComponent::WatchingCharacter' has a wrong offset!");
+DUMPER7_ASSERTS_UGpuNpcAvoidComponent;
 
 // Class KuroComponent.GpuNpcDitherComponent
 // 0x00E0 (0x01A0 - 0x00C0)
@@ -75,26 +118,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GpuNpcDitherComponent">();
+		STATIC_CLASS_IMPL("GpuNpcDitherComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GpuNpcDitherComponent")
 	}
 	static class UGpuNpcDitherComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGpuNpcDitherComponent>();
 	}
 };
-static_assert(alignof(UGpuNpcDitherComponent) == 0x000010, "Wrong alignment on UGpuNpcDitherComponent");
-static_assert(sizeof(UGpuNpcDitherComponent) == 0x0001A0, "Wrong size on UGpuNpcDitherComponent");
-static_assert(offsetof(UGpuNpcDitherComponent, DitherCollisionTagName) == 0x0000C0, "Member 'UGpuNpcDitherComponent::DitherCollisionTagName' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, GpuNpcCollisionRadius) == 0x0000CC, "Member 'UGpuNpcDitherComponent::GpuNpcCollisionRadius' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, GpuNpcCollisionHeight) == 0x0000D0, "Member 'UGpuNpcDitherComponent::GpuNpcCollisionHeight' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, ExtraOverlapCheckDistance) == 0x0000D4, "Member 'UGpuNpcDitherComponent::ExtraOverlapCheckDistance' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, DitherExp) == 0x0000D8, "Member 'UGpuNpcDitherComponent::DitherExp' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, MaxTickInterval) == 0x0000DC, "Member 'UGpuNpcDitherComponent::MaxTickInterval' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, MinTickIntervalDist) == 0x0000E0, "Member 'UGpuNpcDitherComponent::MinTickIntervalDist' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, MaxTickIntervalDist) == 0x0000E4, "Member 'UGpuNpcDitherComponent::MaxTickIntervalDist' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, WatchingCharacter) == 0x0000E8, "Member 'UGpuNpcDitherComponent::WatchingCharacter' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, Gravity) == 0x0000F0, "Member 'UGpuNpcDitherComponent::Gravity' has a wrong offset!");
-static_assert(offsetof(UGpuNpcDitherComponent, NumCustomData) == 0x0000FC, "Member 'UGpuNpcDitherComponent::NumCustomData' has a wrong offset!");
+DUMPER7_ASSERTS_UGpuNpcDitherComponent;
 
 // Class KuroComponent.KuroAnimPerfTestComponent
 // 0x00B0 (0x0170 - 0x00C0)
@@ -129,30 +164,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimPerfTestComponent">();
+		STATIC_CLASS_IMPL("KuroAnimPerfTestComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimPerfTestComponent")
 	}
 	static class UKuroAnimPerfTestComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimPerfTestComponent>();
 	}
 };
-static_assert(alignof(UKuroAnimPerfTestComponent) == 0x000008, "Wrong alignment on UKuroAnimPerfTestComponent");
-static_assert(sizeof(UKuroAnimPerfTestComponent) == 0x000170, "Wrong size on UKuroAnimPerfTestComponent");
-static_assert(offsetof(UKuroAnimPerfTestComponent, NumSkeletalMeshActorsToGenerate) == 0x0000C0, "Member 'UKuroAnimPerfTestComponent::NumSkeletalMeshActorsToGenerate' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, BornFrom) == 0x0000C4, "Member 'UKuroAnimPerfTestComponent::BornFrom' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, SkelMeshActorBirthplace) == 0x0000C8, "Member 'UKuroAnimPerfTestComponent::SkelMeshActorBirthplace' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, GenMethod) == 0x0000F8, "Member 'UKuroAnimPerfTestComponent::GenMethod' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, LifeCycle) == 0x0000F9, "Member 'UKuroAnimPerfTestComponent::LifeCycle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, SkelMeshActorInterval) == 0x0000FC, "Member 'UKuroAnimPerfTestComponent::SkelMeshActorInterval' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, SkelMeshLOD) == 0x000100, "Member 'UKuroAnimPerfTestComponent::SkelMeshLOD' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, SkelMeshTemplate) == 0x000108, "Member 'UKuroAnimPerfTestComponent::SkelMeshTemplate' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, AnimTemplate) == 0x000110, "Member 'UKuroAnimPerfTestComponent::AnimTemplate' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, ActorsRandGenGroup) == 0x000118, "Member 'UKuroAnimPerfTestComponent::ActorsRandGenGroup' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, AnimSeqFilterMethod) == 0x000119, "Member 'UKuroAnimPerfTestComponent::AnimSeqFilterMethod' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, AnimSeqFilter) == 0x000120, "Member 'UKuroAnimPerfTestComponent::AnimSeqFilter' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, RandSkelMeshTemplates) == 0x000130, "Member 'UKuroAnimPerfTestComponent::RandSkelMeshTemplates' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, RandSkelMeshAniSeqs) == 0x000140, "Member 'UKuroAnimPerfTestComponent::RandSkelMeshAniSeqs' has a wrong offset!");
-static_assert(offsetof(UKuroAnimPerfTestComponent, GeneratedSkelMeshActors) == 0x000150, "Member 'UKuroAnimPerfTestComponent::GeneratedSkelMeshActors' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimPerfTestComponent;
 
 // Class KuroComponent.KuroChainComponent
 // 0x0110 (0x0670 - 0x0560)
@@ -191,7 +214,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroChainComponent">();
+		STATIC_CLASS_IMPL("KuroChainComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroChainComponent")
 	}
 	static class UKuroChainComponent* GetDefaultObj()
 	{
@@ -199,27 +226,32 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(UKuroChainComponent) == 0x000010, "Wrong alignment on UKuroChainComponent");
-static_assert(sizeof(UKuroChainComponent) == 0x000670, "Wrong size on UKuroChainComponent");
-static_assert(offsetof(UKuroChainComponent, ChainMesh) == 0x000560, "Member 'UKuroChainComponent::ChainMesh' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, Scale) == 0x000568, "Member 'UKuroChainComponent::Scale' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, Segments) == 0x000574, "Member 'UKuroChainComponent::Segments' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AdditiveRotation) == 0x000578, "Member 'UKuroChainComponent::AdditiveRotation' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, ChainLength) == 0x000584, "Member 'UKuroChainComponent::ChainLength' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, EndPoint) == 0x000588, "Member 'UKuroChainComponent::EndPoint' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachStart) == 0x000594, "Member 'UKuroChainComponent::AttachStart' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachStartTo) == 0x000598, "Member 'UKuroChainComponent::AttachStartTo' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachStartToSocket) == 0x0005C8, "Member 'UKuroChainComponent::AttachStartToSocket' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachEnd) == 0x0005D4, "Member 'UKuroChainComponent::AttachEnd' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachEndTo) == 0x0005D8, "Member 'UKuroChainComponent::AttachEndTo' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, AttachEndToSocket) == 0x000608, "Member 'UKuroChainComponent::AttachEndToSocket' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, Gravity) == 0x000614, "Member 'UKuroChainComponent::Gravity' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, Stiffness) == 0x000618, "Member 'UKuroChainComponent::Stiffness' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, SelfCollision) == 0x00061C, "Member 'UKuroChainComponent::SelfCollision' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, SelfCollisionWidth) == 0x000620, "Member 'UKuroChainComponent::SelfCollisionWidth' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, SelfCollisionThreshold) == 0x000624, "Member 'UKuroChainComponent::SelfCollisionThreshold' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, FrameSkip) == 0x000628, "Member 'UKuroChainComponent::FrameSkip' has a wrong offset!");
-static_assert(offsetof(UKuroChainComponent, InstanceComponent) == 0x000630, "Member 'UKuroChainComponent::InstanceComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroChainComponent;
+
+// Class KuroComponent.KuroRegionCylinderComponent
+// 0x0010 (0x0230 - 0x0220)
+class UKuroRegionCylinderComponent final : public UKuroRegionShapeComponent
+{
+public:
+	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         HalfHeight;                                        // 0x0224(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionCylinderComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionCylinderComponent")
+	}
+	static class UKuroRegionCylinderComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionCylinderComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionCylinderComponent;
 
 // Class KuroComponent.KuroCharacterAnimationComponent
 // 0x0150 (0x0210 - 0x00C0)
@@ -243,34 +275,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCharacterAnimationComponent">();
+		STATIC_CLASS_IMPL("KuroCharacterAnimationComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCharacterAnimationComponent")
 	}
 	static class UKuroCharacterAnimationComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCharacterAnimationComponent>();
 	}
 };
-static_assert(alignof(UKuroCharacterAnimationComponent) == 0x000008, "Wrong alignment on UKuroCharacterAnimationComponent");
-static_assert(sizeof(UKuroCharacterAnimationComponent) == 0x000210, "Wrong size on UKuroCharacterAnimationComponent");
-static_assert(offsetof(UKuroCharacterAnimationComponent, BufferTimeLength) == 0x0000C0, "Member 'UKuroCharacterAnimationComponent::BufferTimeLength' has a wrong offset!");
-static_assert(offsetof(UKuroCharacterAnimationComponent, BufferNowTime) == 0x0000C4, "Member 'UKuroCharacterAnimationComponent::BufferNowTime' has a wrong offset!");
-
-// Class KuroComponent.KuroRegionShapeComponent
-// 0x0000 (0x0220 - 0x0220)
-class UKuroRegionShapeComponent : public USceneComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroRegionShapeComponent">();
-	}
-	static class UKuroRegionShapeComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionShapeComponent>();
-	}
-};
-static_assert(alignof(UKuroRegionShapeComponent) == 0x000010, "Wrong alignment on UKuroRegionShapeComponent");
-static_assert(sizeof(UKuroRegionShapeComponent) == 0x000220, "Wrong size on UKuroRegionShapeComponent");
+DUMPER7_ASSERTS_UKuroCharacterAnimationComponent;
 
 // Class KuroComponent.KuroRegionBoxComponent
 // 0x0010 (0x0230 - 0x0220)
@@ -283,40 +299,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRegionBoxComponent">();
+		STATIC_CLASS_IMPL("KuroRegionBoxComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionBoxComponent")
 	}
 	static class UKuroRegionBoxComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroRegionBoxComponent>();
 	}
 };
-static_assert(alignof(UKuroRegionBoxComponent) == 0x000010, "Wrong alignment on UKuroRegionBoxComponent");
-static_assert(sizeof(UKuroRegionBoxComponent) == 0x000230, "Wrong size on UKuroRegionBoxComponent");
-static_assert(offsetof(UKuroRegionBoxComponent, BoxExtent) == 0x000220, "Member 'UKuroRegionBoxComponent::BoxExtent' has a wrong offset!");
-
-// Class KuroComponent.KuroRegionCylinderComponent
-// 0x0010 (0x0230 - 0x0220)
-class UKuroRegionCylinderComponent final : public UKuroRegionShapeComponent
-{
-public:
-	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         HalfHeight;                                        // 0x0224(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroRegionCylinderComponent">();
-	}
-	static class UKuroRegionCylinderComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionCylinderComponent>();
-	}
-};
-static_assert(alignof(UKuroRegionCylinderComponent) == 0x000010, "Wrong alignment on UKuroRegionCylinderComponent");
-static_assert(sizeof(UKuroRegionCylinderComponent) == 0x000230, "Wrong size on UKuroRegionCylinderComponent");
-static_assert(offsetof(UKuroRegionCylinderComponent, Radius) == 0x000220, "Member 'UKuroRegionCylinderComponent::Radius' has a wrong offset!");
-static_assert(offsetof(UKuroRegionCylinderComponent, HalfHeight) == 0x000224, "Member 'UKuroRegionCylinderComponent::HalfHeight' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroRegionBoxComponent;
 
 // Class KuroComponent.KuroRegionDetectComponent
 // 0x00A8 (0x0168 - 0x00C0)
@@ -341,17 +335,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRegionDetectComponent">();
+		STATIC_CLASS_IMPL("KuroRegionDetectComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionDetectComponent")
 	}
 	static class UKuroRegionDetectComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroRegionDetectComponent>();
 	}
 };
-static_assert(alignof(UKuroRegionDetectComponent) == 0x000008, "Wrong alignment on UKuroRegionDetectComponent");
-static_assert(sizeof(UKuroRegionDetectComponent) == 0x000168, "Wrong size on UKuroRegionDetectComponent");
-static_assert(offsetof(UKuroRegionDetectComponent, RegionMap) == 0x0000C8, "Member 'UKuroRegionDetectComponent::RegionMap' has a wrong offset!");
-static_assert(offsetof(UKuroRegionDetectComponent, RegionDetectMap) == 0x000118, "Member 'UKuroRegionDetectComponent::RegionDetectMap' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroRegionDetectComponent;
 
 // Class KuroComponent.KuroRegionEventBinder
 // 0x0020 (0x0050 - 0x0030)
@@ -364,17 +359,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRegionEventBinder">();
+		STATIC_CLASS_IMPL("KuroRegionEventBinder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionEventBinder")
 	}
 	static class UKuroRegionEventBinder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroRegionEventBinder>();
 	}
 };
-static_assert(alignof(UKuroRegionEventBinder) == 0x000008, "Wrong alignment on UKuroRegionEventBinder");
-static_assert(sizeof(UKuroRegionEventBinder) == 0x000050, "Wrong size on UKuroRegionEventBinder");
-static_assert(offsetof(UKuroRegionEventBinder, RegionName) == 0x000030, "Member 'UKuroRegionEventBinder::RegionName' has a wrong offset!");
-static_assert(offsetof(UKuroRegionEventBinder, Callback) == 0x000040, "Member 'UKuroRegionEventBinder::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroRegionEventBinder;
 
 // Class KuroComponent.KuroRegionSectorComponent
 // 0x0010 (0x0230 - 0x0220)
@@ -389,40 +385,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRegionSectorComponent">();
+		STATIC_CLASS_IMPL("KuroRegionSectorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionSectorComponent")
 	}
 	static class UKuroRegionSectorComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroRegionSectorComponent>();
 	}
 };
-static_assert(alignof(UKuroRegionSectorComponent) == 0x000010, "Wrong alignment on UKuroRegionSectorComponent");
-static_assert(sizeof(UKuroRegionSectorComponent) == 0x000230, "Wrong size on UKuroRegionSectorComponent");
-static_assert(offsetof(UKuroRegionSectorComponent, Radius) == 0x000220, "Member 'UKuroRegionSectorComponent::Radius' has a wrong offset!");
-static_assert(offsetof(UKuroRegionSectorComponent, Angle) == 0x000224, "Member 'UKuroRegionSectorComponent::Angle' has a wrong offset!");
-static_assert(offsetof(UKuroRegionSectorComponent, HalfHeight) == 0x000228, "Member 'UKuroRegionSectorComponent::HalfHeight' has a wrong offset!");
-
-// Class KuroComponent.KuroRegionSphereComponent
-// 0x0010 (0x0230 - 0x0220)
-class UKuroRegionSphereComponent final : public UKuroRegionShapeComponent
-{
-public:
-	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroRegionSphereComponent">();
-	}
-	static class UKuroRegionSphereComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionSphereComponent>();
-	}
-};
-static_assert(alignof(UKuroRegionSphereComponent) == 0x000010, "Wrong alignment on UKuroRegionSphereComponent");
-static_assert(sizeof(UKuroRegionSphereComponent) == 0x000230, "Wrong size on UKuroRegionSphereComponent");
-static_assert(offsetof(UKuroRegionSphereComponent, Radius) == 0x000220, "Member 'UKuroRegionSphereComponent::Radius' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroRegionSectorComponent;
 
 // Class KuroComponent.KuroSceneItemGuidePathComponent
 // 0x0058 (0x0118 - 0x00C0)
@@ -441,18 +415,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSceneItemGuidePathComponent">();
+		STATIC_CLASS_IMPL("KuroSceneItemGuidePathComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSceneItemGuidePathComponent")
 	}
 	static class UKuroSceneItemGuidePathComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSceneItemGuidePathComponent>();
 	}
 };
-static_assert(alignof(UKuroSceneItemGuidePathComponent) == 0x000008, "Wrong alignment on UKuroSceneItemGuidePathComponent");
-static_assert(sizeof(UKuroSceneItemGuidePathComponent) == 0x000118, "Wrong size on UKuroSceneItemGuidePathComponent");
-static_assert(offsetof(UKuroSceneItemGuidePathComponent, HasFinishTag) == 0x0000C0, "Member 'UKuroSceneItemGuidePathComponent::HasFinishTag' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemGuidePathComponent, HasActiveTag) == 0x0000C1, "Member 'UKuroSceneItemGuidePathComponent::HasActiveTag' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemGuidePathComponent, NiagaraComponent) == 0x0000C8, "Member 'UKuroSceneItemGuidePathComponent::NiagaraComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSceneItemGuidePathComponent;
 
 // Class KuroComponent.KuroSceneItemModelBufferComponent
 // 0x0150 (0x0210 - 0x00C0)
@@ -478,17 +452,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSceneItemModelBufferComponent">();
+		STATIC_CLASS_IMPL("KuroSceneItemModelBufferComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSceneItemModelBufferComponent")
 	}
 	static class UKuroSceneItemModelBufferComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSceneItemModelBufferComponent>();
 	}
 };
-static_assert(alignof(UKuroSceneItemModelBufferComponent) == 0x000008, "Wrong alignment on UKuroSceneItemModelBufferComponent");
-static_assert(sizeof(UKuroSceneItemModelBufferComponent) == 0x000210, "Wrong size on UKuroSceneItemModelBufferComponent");
-static_assert(offsetof(UKuroSceneItemModelBufferComponent, BufferTimeLength) == 0x0000C0, "Member 'UKuroSceneItemModelBufferComponent::BufferTimeLength' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemModelBufferComponent, BufferNowTime) == 0x0000C4, "Member 'UKuroSceneItemModelBufferComponent::BufferNowTime' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSceneItemModelBufferComponent;
 
 // Class KuroComponent.KuroSceneItemMoveComponent
 // 0x0220 (0x0320 - 0x0100)
@@ -555,31 +530,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSceneItemMoveComponent">();
+		STATIC_CLASS_IMPL("KuroSceneItemMoveComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSceneItemMoveComponent")
 	}
 	static class UKuroSceneItemMoveComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSceneItemMoveComponent>();
 	}
 };
-static_assert(alignof(UKuroSceneItemMoveComponent) == 0x000010, "Wrong alignment on UKuroSceneItemMoveComponent");
-static_assert(sizeof(UKuroSceneItemMoveComponent) == 0x000320, "Wrong size on UKuroSceneItemMoveComponent");
-static_assert(offsetof(UKuroSceneItemMoveComponent, CustomTimeDilation) == 0x000118, "Member 'UKuroSceneItemMoveComponent::CustomTimeDilation' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceUID) == 0x000120, "Member 'UKuroSceneItemMoveComponent::AvoidanceUID' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceGroup) == 0x000124, "Member 'UKuroSceneItemMoveComponent::AvoidanceGroup' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, GroupsToAvoid) == 0x000128, "Member 'UKuroSceneItemMoveComponent::GroupsToAvoid' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, GroupsToIgnore) == 0x00012C, "Member 'UKuroSceneItemMoveComponent::GroupsToIgnore' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceWeight) == 0x000130, "Member 'UKuroSceneItemMoveComponent::AvoidanceWeight' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceHeight) == 0x000134, "Member 'UKuroSceneItemMoveComponent::AvoidanceHeight' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceRadius) == 0x000138, "Member 'UKuroSceneItemMoveComponent::AvoidanceRadius' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, AvoidanceConsiderationRadius) == 0x00013C, "Member 'UKuroSceneItemMoveComponent::AvoidanceConsiderationRadius' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, SimpleMoveData) == 0x000168, "Member 'UKuroSceneItemMoveComponent::SimpleMoveData' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, SplineMoveData) == 0x000200, "Member 'UKuroSceneItemMoveComponent::SplineMoveData' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, OnStopCallback) == 0x000268, "Member 'UKuroSceneItemMoveComponent::OnStopCallback' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, OnMoveStopCallback) == 0x000278, "Member 'UKuroSceneItemMoveComponent::OnMoveStopCallback' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, OnArrivePointCallback) == 0x000288, "Member 'UKuroSceneItemMoveComponent::OnArrivePointCallback' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, OnRotateStopCallback) == 0x0002D0, "Member 'UKuroSceneItemMoveComponent::OnRotateStopCallback' has a wrong offset!");
-static_assert(offsetof(UKuroSceneItemMoveComponent, TargetRotationData) == 0x0002E0, "Member 'UKuroSceneItemMoveComponent::TargetRotationData' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSceneItemMoveComponent;
 
 // Class KuroComponent.KuroSplineChainComponent
 // 0x0030 (0x06A0 - 0x0670)
@@ -601,22 +563,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSplineChainComponent">();
+		STATIC_CLASS_IMPL("KuroSplineChainComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSplineChainComponent")
 	}
 	static class UKuroSplineChainComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSplineChainComponent>();
 	}
 };
-static_assert(alignof(UKuroSplineChainComponent) == 0x000010, "Wrong alignment on UKuroSplineChainComponent");
-static_assert(sizeof(UKuroSplineChainComponent) == 0x0006A0, "Wrong size on UKuroSplineChainComponent");
-static_assert(offsetof(UKuroSplineChainComponent, SplineMaxLength) == 0x000668, "Member 'UKuroSplineChainComponent::SplineMaxLength' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, MeshMinScale) == 0x00066C, "Member 'UKuroSplineChainComponent::MeshMinScale' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, MeshMaxScale) == 0x000670, "Member 'UKuroSplineChainComponent::MeshMaxScale' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, MeshXYScaleRatio) == 0x000674, "Member 'UKuroSplineChainComponent::MeshXYScaleRatio' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, SegmentLengthMinScale) == 0x000678, "Member 'UKuroSplineChainComponent::SegmentLengthMinScale' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, SegmentLengthMaxScale) == 0x00067C, "Member 'UKuroSplineChainComponent::SegmentLengthMaxScale' has a wrong offset!");
-static_assert(offsetof(UKuroSplineChainComponent, SplineComponent) == 0x000680, "Member 'UKuroSplineChainComponent::SplineComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSplineChainComponent;
 
 }
 

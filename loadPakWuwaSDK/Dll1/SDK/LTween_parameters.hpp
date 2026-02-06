@@ -26,10 +26,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ALTweenActor*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenActor_GetLTweenInstance) == 0x000008, "Wrong alignment on LTweenActor_GetLTweenInstance");
-static_assert(sizeof(LTweenActor_GetLTweenInstance) == 0x000010, "Wrong size on LTweenActor_GetLTweenInstance");
-static_assert(offsetof(LTweenActor_GetLTweenInstance, WorldContextObject) == 0x000000, "Member 'LTweenActor_GetLTweenInstance::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenActor_GetLTweenInstance, ReturnValue) == 0x000008, "Member 'LTweenActor_GetLTweenInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenActor_GetLTweenInstance;
 
 // Function LTween.LTweenActor.CustomTick
 // 0x0004 (0x0004 - 0x0000)
@@ -38,9 +35,7 @@ struct LTweenActor_CustomTick final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenActor_CustomTick) == 0x000004, "Wrong alignment on LTweenActor_CustomTick");
-static_assert(sizeof(LTweenActor_CustomTick) == 0x000004, "Wrong size on LTweenActor_CustomTick");
-static_assert(offsetof(LTweenActor_CustomTick, DeltaTime) == 0x000000, "Member 'LTweenActor_CustomTick::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenActor_CustomTick;
 
 // Function LTween.LTweenActor.KillAllTweens
 // 0x0001 (0x0001 - 0x0000)
@@ -49,9 +44,7 @@ struct LTweenActor_KillAllTweens final
 public:
 	bool                                          callComplete;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenActor_KillAllTweens) == 0x000001, "Wrong alignment on LTweenActor_KillAllTweens");
-static_assert(sizeof(LTweenActor_KillAllTweens) == 0x000001, "Wrong size on LTweenActor_KillAllTweens");
-static_assert(offsetof(LTweenActor_KillAllTweens, callComplete) == 0x000000, "Member 'LTweenActor_KillAllTweens::callComplete' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenActor_KillAllTweens;
 
 // Function LTween.LTweenActor.SetGlobalPlayRate
 // 0x0004 (0x0004 - 0x0000)
@@ -60,9 +53,7 @@ struct LTweenActor_SetGlobalPlayRate final
 public:
 	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenActor_SetGlobalPlayRate) == 0x000004, "Wrong alignment on LTweenActor_SetGlobalPlayRate");
-static_assert(sizeof(LTweenActor_SetGlobalPlayRate) == 0x000004, "Wrong size on LTweenActor_SetGlobalPlayRate");
-static_assert(offsetof(LTweenActor_SetGlobalPlayRate, NewPlayRate) == 0x000000, "Member 'LTweenActor_SetGlobalPlayRate::NewPlayRate' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenActor_SetGlobalPlayRate;
 
 // Function LTween.LTweenActor.GetGlobalPlayRate
 // 0x0004 (0x0004 - 0x0000)
@@ -71,9 +62,7 @@ struct LTweenActor_GetGlobalPlayRate final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenActor_GetGlobalPlayRate) == 0x000004, "Wrong alignment on LTweenActor_GetGlobalPlayRate");
-static_assert(sizeof(LTweenActor_GetGlobalPlayRate) == 0x000004, "Wrong size on LTweenActor_GetGlobalPlayRate");
-static_assert(offsetof(LTweenActor_GetGlobalPlayRate, ReturnValue) == 0x000000, "Member 'LTweenActor_GetGlobalPlayRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenActor_GetGlobalPlayRate;
 
 // Function LTween.LTweenBPLibrary.ArrayKillIfIsTweening
 // 0x0020 (0x0020 - 0x0000)
@@ -85,11 +74,7 @@ public:
 	bool                                          callComplete;                                      // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_ArrayKillIfIsTweening) == 0x000008, "Wrong alignment on LTweenBPLibrary_ArrayKillIfIsTweening");
-static_assert(sizeof(LTweenBPLibrary_ArrayKillIfIsTweening) == 0x000020, "Wrong size on LTweenBPLibrary_ArrayKillIfIsTweening");
-static_assert(offsetof(LTweenBPLibrary_ArrayKillIfIsTweening, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_ArrayKillIfIsTweening::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ArrayKillIfIsTweening, inTweenerArray) == 0x000008, "Member 'LTweenBPLibrary_ArrayKillIfIsTweening::inTweenerArray' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ArrayKillIfIsTweening, callComplete) == 0x000018, "Member 'LTweenBPLibrary_ArrayKillIfIsTweening::callComplete' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_ArrayKillIfIsTweening;
 
 // Function LTween.LTweenBPLibrary.ColorTo
 // 0x0050 (0x0050 - 0x0000)
@@ -106,16 +91,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_ColorTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_ColorTo");
-static_assert(sizeof(LTweenBPLibrary_ColorTo) == 0x000050, "Wrong size on LTweenBPLibrary_ColorTo");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_ColorTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, setter) == 0x000008, "Member 'LTweenBPLibrary_ColorTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_ColorTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, endValue) == 0x000034, "Member 'LTweenBPLibrary_ColorTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, duration) == 0x000038, "Member 'LTweenBPLibrary_ColorTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, delay) == 0x00003C, "Member 'LTweenBPLibrary_ColorTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, ease) == 0x000040, "Member 'LTweenBPLibrary_ColorTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_ColorTo, ReturnValue) == 0x000048, "Member 'LTweenBPLibrary_ColorTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_ColorTo;
 
 // Function LTween.LTweenBPLibrary.DelayCall
 // 0x0040 (0x0040 - 0x0000)
@@ -128,12 +104,7 @@ public:
 	TDelegate<void()>                             delayComplete;                                     // 0x0010(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_DelayCall) == 0x000008, "Wrong alignment on LTweenBPLibrary_DelayCall");
-static_assert(sizeof(LTweenBPLibrary_DelayCall) == 0x000040, "Wrong size on LTweenBPLibrary_DelayCall");
-static_assert(offsetof(LTweenBPLibrary_DelayCall, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_DelayCall::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayCall, delayTime) == 0x000008, "Member 'LTweenBPLibrary_DelayCall::delayTime' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayCall, delayComplete) == 0x000010, "Member 'LTweenBPLibrary_DelayCall::delayComplete' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayCall, ReturnValue) == 0x000038, "Member 'LTweenBPLibrary_DelayCall::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_DelayCall;
 
 // Function LTween.LTweenBPLibrary.DelayFrameCall
 // 0x0040 (0x0040 - 0x0000)
@@ -146,12 +117,7 @@ public:
 	TDelegate<void()>                             delayComplete;                                     // 0x0010(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_DelayFrameCall) == 0x000008, "Wrong alignment on LTweenBPLibrary_DelayFrameCall");
-static_assert(sizeof(LTweenBPLibrary_DelayFrameCall) == 0x000040, "Wrong size on LTweenBPLibrary_DelayFrameCall");
-static_assert(offsetof(LTweenBPLibrary_DelayFrameCall, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_DelayFrameCall::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayFrameCall, frameCount) == 0x000008, "Member 'LTweenBPLibrary_DelayFrameCall::frameCount' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayFrameCall, delayComplete) == 0x000010, "Member 'LTweenBPLibrary_DelayFrameCall::delayComplete' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_DelayFrameCall, ReturnValue) == 0x000038, "Member 'LTweenBPLibrary_DelayFrameCall::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_DelayFrameCall;
 
 // Function LTween.LTweenBPLibrary.FloatTo
 // 0x0050 (0x0050 - 0x0000)
@@ -168,16 +134,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_FloatTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_FloatTo");
-static_assert(sizeof(LTweenBPLibrary_FloatTo) == 0x000050, "Wrong size on LTweenBPLibrary_FloatTo");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_FloatTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, setter) == 0x000008, "Member 'LTweenBPLibrary_FloatTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_FloatTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, endValue) == 0x000034, "Member 'LTweenBPLibrary_FloatTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, duration) == 0x000038, "Member 'LTweenBPLibrary_FloatTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, delay) == 0x00003C, "Member 'LTweenBPLibrary_FloatTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, ease) == 0x000040, "Member 'LTweenBPLibrary_FloatTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_FloatTo, ReturnValue) == 0x000048, "Member 'LTweenBPLibrary_FloatTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_FloatTo;
 
 // Function LTween.LTweenBPLibrary.IntTo
 // 0x0050 (0x0050 - 0x0000)
@@ -194,16 +151,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_IntTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_IntTo");
-static_assert(sizeof(LTweenBPLibrary_IntTo) == 0x000050, "Wrong size on LTweenBPLibrary_IntTo");
-static_assert(offsetof(LTweenBPLibrary_IntTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_IntTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, setter) == 0x000008, "Member 'LTweenBPLibrary_IntTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_IntTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, endValue) == 0x000034, "Member 'LTweenBPLibrary_IntTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, duration) == 0x000038, "Member 'LTweenBPLibrary_IntTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, delay) == 0x00003C, "Member 'LTweenBPLibrary_IntTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, ease) == 0x000040, "Member 'LTweenBPLibrary_IntTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IntTo, ReturnValue) == 0x000048, "Member 'LTweenBPLibrary_IntTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_IntTo;
 
 // Function LTween.LTweenBPLibrary.IsTweening
 // 0x0018 (0x0018 - 0x0000)
@@ -215,11 +163,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_IsTweening) == 0x000008, "Wrong alignment on LTweenBPLibrary_IsTweening");
-static_assert(sizeof(LTweenBPLibrary_IsTweening) == 0x000018, "Wrong size on LTweenBPLibrary_IsTweening");
-static_assert(offsetof(LTweenBPLibrary_IsTweening, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_IsTweening::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IsTweening, inTweener) == 0x000008, "Member 'LTweenBPLibrary_IsTweening::inTweener' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_IsTweening, ReturnValue) == 0x000010, "Member 'LTweenBPLibrary_IsTweening::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_IsTweening;
 
 // Function LTween.LTweenBPLibrary.KillIfIsTweening
 // 0x0018 (0x0018 - 0x0000)
@@ -231,11 +175,7 @@ public:
 	bool                                          callComplete;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_KillIfIsTweening) == 0x000008, "Wrong alignment on LTweenBPLibrary_KillIfIsTweening");
-static_assert(sizeof(LTweenBPLibrary_KillIfIsTweening) == 0x000018, "Wrong size on LTweenBPLibrary_KillIfIsTweening");
-static_assert(offsetof(LTweenBPLibrary_KillIfIsTweening, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_KillIfIsTweening::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_KillIfIsTweening, inTweener) == 0x000008, "Member 'LTweenBPLibrary_KillIfIsTweening::inTweener' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_KillIfIsTweening, callComplete) == 0x000010, "Member 'LTweenBPLibrary_KillIfIsTweening::callComplete' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_KillIfIsTweening;
 
 // Function LTween.LTweenBPLibrary.LinearColorTo
 // 0x0068 (0x0068 - 0x0000)
@@ -252,16 +192,7 @@ public:
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LinearColorTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LinearColorTo");
-static_assert(sizeof(LTweenBPLibrary_LinearColorTo) == 0x000068, "Wrong size on LTweenBPLibrary_LinearColorTo");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_LinearColorTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, setter) == 0x000008, "Member 'LTweenBPLibrary_LinearColorTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_LinearColorTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, endValue) == 0x000040, "Member 'LTweenBPLibrary_LinearColorTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, duration) == 0x000050, "Member 'LTweenBPLibrary_LinearColorTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, delay) == 0x000054, "Member 'LTweenBPLibrary_LinearColorTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, ease) == 0x000058, "Member 'LTweenBPLibrary_LinearColorTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LinearColorTo, ReturnValue) == 0x000060, "Member 'LTweenBPLibrary_LinearColorTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LinearColorTo;
 
 // Function LTween.LTweenBPLibrary.LocalPositionTo
 // 0x0028 (0x0028 - 0x0000)
@@ -276,14 +207,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionTo");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionTo) == 0x000028, "Wrong size on LTweenBPLibrary_LocalPositionTo");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, duration) == 0x000014, "Member 'LTweenBPLibrary_LocalPositionTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, delay) == 0x000018, "Member 'LTweenBPLibrary_LocalPositionTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, ease) == 0x00001C, "Member 'LTweenBPLibrary_LocalPositionTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo, ReturnValue) == 0x000020, "Member 'LTweenBPLibrary_LocalPositionTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionTo;
 
 // Function LTween.LTweenBPLibrary.LocalPositionTo_Sweep
 // 0x00C0 (0x00C0 - 0x0000)
@@ -302,17 +226,7 @@ public:
 	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionTo_Sweep) == 0x0000C0, "Wrong size on LTweenBPLibrary_LocalPositionTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, sweepHitResult) == 0x000014, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, sweep) == 0x0000A8, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, teleport) == 0x0000A9, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, duration) == 0x0000AC, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, delay) == 0x0000B0, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, ease) == 0x0000B4, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionTo_Sweep, ReturnValue) == 0x0000B8, "Member 'LTweenBPLibrary_LocalPositionTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalPositionXTo
 // 0x0020 (0x0020 - 0x0000)
@@ -327,14 +241,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionXTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionXTo");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionXTo) == 0x000020, "Wrong size on LTweenBPLibrary_LocalPositionXTo");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionXTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionXTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionXTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, delay) == 0x000010, "Member 'LTweenBPLibrary_LocalPositionXTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, ease) == 0x000014, "Member 'LTweenBPLibrary_LocalPositionXTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_LocalPositionXTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionXTo;
 
 // Function LTween.LTweenBPLibrary.LocalPositionXTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -353,17 +260,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionXTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionXTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionXTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_LocalPositionXTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionXTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_LocalPositionXTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionXTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalPositionYTo
 // 0x0020 (0x0020 - 0x0000)
@@ -378,14 +275,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionYTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionYTo");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionYTo) == 0x000020, "Wrong size on LTweenBPLibrary_LocalPositionYTo");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionYTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionYTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionYTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, delay) == 0x000010, "Member 'LTweenBPLibrary_LocalPositionYTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, ease) == 0x000014, "Member 'LTweenBPLibrary_LocalPositionYTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_LocalPositionYTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionYTo;
 
 // Function LTween.LTweenBPLibrary.LocalPositionYTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -404,17 +294,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionYTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionYTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionYTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_LocalPositionYTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionYTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_LocalPositionYTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionYTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalPositionZTo
 // 0x0020 (0x0020 - 0x0000)
@@ -429,14 +309,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionZTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionZTo");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionZTo) == 0x000020, "Wrong size on LTweenBPLibrary_LocalPositionZTo");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionZTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionZTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionZTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, delay) == 0x000010, "Member 'LTweenBPLibrary_LocalPositionZTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, ease) == 0x000014, "Member 'LTweenBPLibrary_LocalPositionZTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_LocalPositionZTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionZTo;
 
 // Function LTween.LTweenBPLibrary.LocalPositionZTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -455,17 +328,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalPositionZTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalPositionZTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalPositionZTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_LocalPositionZTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalPositionZTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_LocalPositionZTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalPositionZTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalRotateEulerAngleTo
 // 0x0028 (0x0028 - 0x0000)
@@ -480,14 +343,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotateEulerAngleTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalRotateEulerAngleTo");
-static_assert(sizeof(LTweenBPLibrary_LocalRotateEulerAngleTo) == 0x000028, "Wrong size on LTweenBPLibrary_LocalRotateEulerAngleTo");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, eulerAngle) == 0x000008, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::eulerAngle' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, duration) == 0x000014, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, delay) == 0x000018, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, ease) == 0x00001C, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo, ReturnValue) == 0x000020, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotateEulerAngleTo;
 
 // Function LTween.LTweenBPLibrary.LocalRotateEulerAngleTo_Sweep
 // 0x00C0 (0x00C0 - 0x0000)
@@ -506,17 +362,7 @@ public:
 	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep) == 0x0000C0, "Wrong size on LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, eulerAngle) == 0x000008, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::eulerAngle' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, sweepHitResult) == 0x000014, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, sweep) == 0x0000A8, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, teleport) == 0x0000A9, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, duration) == 0x0000AC, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, delay) == 0x0000B0, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, ease) == 0x0000B4, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep, ReturnValue) == 0x0000B8, "Member 'LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotateEulerAngleTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalRotationQuaternionTo
 // 0x0040 (0x0040 - 0x0000)
@@ -533,14 +379,7 @@ public:
 	class ULTweener*                              ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotationQuaternionTo) == 0x000010, "Wrong alignment on LTweenBPLibrary_LocalRotationQuaternionTo");
-static_assert(sizeof(LTweenBPLibrary_LocalRotationQuaternionTo) == 0x000040, "Wrong size on LTweenBPLibrary_LocalRotationQuaternionTo");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, endValue) == 0x000010, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, duration) == 0x000020, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, delay) == 0x000024, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, ease) == 0x000028, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo, ReturnValue) == 0x000030, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotationQuaternionTo;
 
 // Function LTween.LTweenBPLibrary.LocalRotationQuaternionTo_Sweep
 // 0x00D0 (0x00D0 - 0x0000)
@@ -560,17 +399,7 @@ public:
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00C8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep) == 0x000010, "Wrong alignment on LTweenBPLibrary_LocalRotationQuaternionTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep) == 0x0000D0, "Wrong size on LTweenBPLibrary_LocalRotationQuaternionTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, endValue) == 0x000010, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, sweepHitResult) == 0x000020, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, sweep) == 0x0000B4, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, teleport) == 0x0000B5, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, duration) == 0x0000B8, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, delay) == 0x0000BC, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, ease) == 0x0000C0, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotationQuaternionTo_Sweep, ReturnValue) == 0x0000C8, "Member 'LTweenBPLibrary_LocalRotationQuaternionTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotationQuaternionTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalRotatorTo
 // 0x0030 (0x0030 - 0x0000)
@@ -587,15 +416,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotatorTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalRotatorTo");
-static_assert(sizeof(LTweenBPLibrary_LocalRotatorTo) == 0x000030, "Wrong size on LTweenBPLibrary_LocalRotatorTo");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotatorTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalRotatorTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, shortestPath) == 0x000014, "Member 'LTweenBPLibrary_LocalRotatorTo::shortestPath' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, duration) == 0x000018, "Member 'LTweenBPLibrary_LocalRotatorTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, delay) == 0x00001C, "Member 'LTweenBPLibrary_LocalRotatorTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, ease) == 0x000020, "Member 'LTweenBPLibrary_LocalRotatorTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo, ReturnValue) == 0x000028, "Member 'LTweenBPLibrary_LocalRotatorTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotatorTo;
 
 // Function LTween.LTweenBPLibrary.LocalRotatorTo_Sweep
 // 0x00C8 (0x00C8 - 0x0000)
@@ -616,18 +437,7 @@ public:
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalRotatorTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalRotatorTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_LocalRotatorTo_Sweep) == 0x0000C8, "Wrong size on LTweenBPLibrary_LocalRotatorTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, shortestPath) == 0x000014, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::shortestPath' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, sweepHitResult) == 0x000018, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, sweep) == 0x0000AC, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, teleport) == 0x0000AD, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, duration) == 0x0000B0, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, delay) == 0x0000B4, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, ease) == 0x0000B8, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalRotatorTo_Sweep, ReturnValue) == 0x0000C0, "Member 'LTweenBPLibrary_LocalRotatorTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalRotatorTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.LocalScaleTo
 // 0x0028 (0x0028 - 0x0000)
@@ -642,14 +452,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_LocalScaleTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_LocalScaleTo");
-static_assert(sizeof(LTweenBPLibrary_LocalScaleTo) == 0x000028, "Wrong size on LTweenBPLibrary_LocalScaleTo");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, target) == 0x000000, "Member 'LTweenBPLibrary_LocalScaleTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_LocalScaleTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, duration) == 0x000014, "Member 'LTweenBPLibrary_LocalScaleTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, delay) == 0x000018, "Member 'LTweenBPLibrary_LocalScaleTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, ease) == 0x00001C, "Member 'LTweenBPLibrary_LocalScaleTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_LocalScaleTo, ReturnValue) == 0x000020, "Member 'LTweenBPLibrary_LocalScaleTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_LocalScaleTo;
 
 // Function LTween.LTweenBPLibrary.MaterialScalarParameterTo
 // 0x0030 (0x0030 - 0x0000)
@@ -665,15 +468,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_MaterialScalarParameterTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_MaterialScalarParameterTo");
-static_assert(sizeof(LTweenBPLibrary_MaterialScalarParameterTo) == 0x000030, "Wrong size on LTweenBPLibrary_MaterialScalarParameterTo");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, target) == 0x000000, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, parameterName) == 0x000008, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::parameterName' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, endValue) == 0x000014, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, duration) == 0x000018, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, delay) == 0x00001C, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, ease) == 0x000020, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialScalarParameterTo, ReturnValue) == 0x000028, "Member 'LTweenBPLibrary_MaterialScalarParameterTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_MaterialScalarParameterTo;
 
 // Function LTween.LTweenBPLibrary.MaterialVectorParameterTo
 // 0x0038 (0x0038 - 0x0000)
@@ -689,15 +484,7 @@ public:
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_MaterialVectorParameterTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_MaterialVectorParameterTo");
-static_assert(sizeof(LTweenBPLibrary_MaterialVectorParameterTo) == 0x000038, "Wrong size on LTweenBPLibrary_MaterialVectorParameterTo");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, target) == 0x000000, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, parameterName) == 0x000008, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::parameterName' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, endValue) == 0x000014, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, duration) == 0x000024, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, delay) == 0x000028, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, ease) == 0x00002C, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MaterialVectorParameterTo, ReturnValue) == 0x000030, "Member 'LTweenBPLibrary_MaterialVectorParameterTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_MaterialVectorParameterTo;
 
 // Function LTween.LTweenBPLibrary.MeshMaterialScalarParameterTo
 // 0x0030 (0x0030 - 0x0000)
@@ -714,16 +501,7 @@ public:
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_MeshMaterialScalarParameterTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_MeshMaterialScalarParameterTo");
-static_assert(sizeof(LTweenBPLibrary_MeshMaterialScalarParameterTo) == 0x000030, "Wrong size on LTweenBPLibrary_MeshMaterialScalarParameterTo");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, target) == 0x000000, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, materialIndex) == 0x000008, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::materialIndex' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, parameterName) == 0x00000C, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::parameterName' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, endValue) == 0x000018, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, duration) == 0x00001C, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, delay) == 0x000020, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, ease) == 0x000024, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialScalarParameterTo, ReturnValue) == 0x000028, "Member 'LTweenBPLibrary_MeshMaterialScalarParameterTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_MeshMaterialScalarParameterTo;
 
 // Function LTween.LTweenBPLibrary.MeshMaterialVectorParameterTo
 // 0x0040 (0x0040 - 0x0000)
@@ -740,16 +518,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_MeshMaterialVectorParameterTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_MeshMaterialVectorParameterTo");
-static_assert(sizeof(LTweenBPLibrary_MeshMaterialVectorParameterTo) == 0x000040, "Wrong size on LTweenBPLibrary_MeshMaterialVectorParameterTo");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, target) == 0x000000, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, materialIndex) == 0x000008, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::materialIndex' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, parameterName) == 0x00000C, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::parameterName' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, endValue) == 0x000018, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, duration) == 0x000028, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, delay) == 0x00002C, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, ease) == 0x000030, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_MeshMaterialVectorParameterTo, ReturnValue) == 0x000038, "Member 'LTweenBPLibrary_MeshMaterialVectorParameterTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_MeshMaterialVectorParameterTo;
 
 // Function LTween.LTweenBPLibrary.QuaternionTo
 // 0x0070 (0x0070 - 0x0000)
@@ -767,16 +536,7 @@ public:
 	class ULTweener*                              ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_QuaternionTo) == 0x000010, "Wrong alignment on LTweenBPLibrary_QuaternionTo");
-static_assert(sizeof(LTweenBPLibrary_QuaternionTo) == 0x000070, "Wrong size on LTweenBPLibrary_QuaternionTo");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_QuaternionTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, setter) == 0x000008, "Member 'LTweenBPLibrary_QuaternionTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_QuaternionTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, endValue) == 0x000040, "Member 'LTweenBPLibrary_QuaternionTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, duration) == 0x000050, "Member 'LTweenBPLibrary_QuaternionTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, delay) == 0x000054, "Member 'LTweenBPLibrary_QuaternionTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, ease) == 0x000058, "Member 'LTweenBPLibrary_QuaternionTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_QuaternionTo, ReturnValue) == 0x000060, "Member 'LTweenBPLibrary_QuaternionTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_QuaternionTo;
 
 // Function LTween.LTweenBPLibrary.RegisterUpdateEvent
 // 0x0038 (0x0038 - 0x0000)
@@ -787,11 +547,7 @@ public:
 	TDelegate<void(float InProgress)>             update;                                            // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FLTweenDelegateHandleWrapper           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_RegisterUpdateEvent) == 0x000008, "Wrong alignment on LTweenBPLibrary_RegisterUpdateEvent");
-static_assert(sizeof(LTweenBPLibrary_RegisterUpdateEvent) == 0x000038, "Wrong size on LTweenBPLibrary_RegisterUpdateEvent");
-static_assert(offsetof(LTweenBPLibrary_RegisterUpdateEvent, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_RegisterUpdateEvent::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RegisterUpdateEvent, update) == 0x000008, "Member 'LTweenBPLibrary_RegisterUpdateEvent::update' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RegisterUpdateEvent, ReturnValue) == 0x000030, "Member 'LTweenBPLibrary_RegisterUpdateEvent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_RegisterUpdateEvent;
 
 // Function LTween.LTweenBPLibrary.RotatorTo
 // 0x0060 (0x0060 - 0x0000)
@@ -808,16 +564,7 @@ public:
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_RotatorTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_RotatorTo");
-static_assert(sizeof(LTweenBPLibrary_RotatorTo) == 0x000060, "Wrong size on LTweenBPLibrary_RotatorTo");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_RotatorTo::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, setter) == 0x000008, "Member 'LTweenBPLibrary_RotatorTo::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, startValue) == 0x000030, "Member 'LTweenBPLibrary_RotatorTo::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, endValue) == 0x00003C, "Member 'LTweenBPLibrary_RotatorTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, duration) == 0x000048, "Member 'LTweenBPLibrary_RotatorTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, delay) == 0x00004C, "Member 'LTweenBPLibrary_RotatorTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, ease) == 0x000050, "Member 'LTweenBPLibrary_RotatorTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_RotatorTo, ReturnValue) == 0x000058, "Member 'LTweenBPLibrary_RotatorTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_RotatorTo;
 
 // Function LTween.LTweenBPLibrary.UnregisterUpdateEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -827,10 +574,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLTweenDelegateHandleWrapper           delegateHandle;                                    // 0x0008(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_UnregisterUpdateEvent) == 0x000008, "Wrong alignment on LTweenBPLibrary_UnregisterUpdateEvent");
-static_assert(sizeof(LTweenBPLibrary_UnregisterUpdateEvent) == 0x000010, "Wrong size on LTweenBPLibrary_UnregisterUpdateEvent");
-static_assert(offsetof(LTweenBPLibrary_UnregisterUpdateEvent, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_UnregisterUpdateEvent::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_UnregisterUpdateEvent, delegateHandle) == 0x000008, "Member 'LTweenBPLibrary_UnregisterUpdateEvent::delegateHandle' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_UnregisterUpdateEvent;
 
 // Function LTween.LTweenBPLibrary.Vector2To
 // 0x0058 (0x0058 - 0x0000)
@@ -847,16 +591,7 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_Vector2To) == 0x000008, "Wrong alignment on LTweenBPLibrary_Vector2To");
-static_assert(sizeof(LTweenBPLibrary_Vector2To) == 0x000058, "Wrong size on LTweenBPLibrary_Vector2To");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_Vector2To::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, setter) == 0x000008, "Member 'LTweenBPLibrary_Vector2To::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, startValue) == 0x000030, "Member 'LTweenBPLibrary_Vector2To::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, endValue) == 0x000038, "Member 'LTweenBPLibrary_Vector2To::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, duration) == 0x000040, "Member 'LTweenBPLibrary_Vector2To::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, delay) == 0x000044, "Member 'LTweenBPLibrary_Vector2To::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, ease) == 0x000048, "Member 'LTweenBPLibrary_Vector2To::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector2To, ReturnValue) == 0x000050, "Member 'LTweenBPLibrary_Vector2To::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_Vector2To;
 
 // Function LTween.LTweenBPLibrary.Vector3To
 // 0x0060 (0x0060 - 0x0000)
@@ -873,16 +608,7 @@ public:
 	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_Vector3To) == 0x000008, "Wrong alignment on LTweenBPLibrary_Vector3To");
-static_assert(sizeof(LTweenBPLibrary_Vector3To) == 0x000060, "Wrong size on LTweenBPLibrary_Vector3To");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_Vector3To::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, setter) == 0x000008, "Member 'LTweenBPLibrary_Vector3To::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, startValue) == 0x000030, "Member 'LTweenBPLibrary_Vector3To::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, endValue) == 0x00003C, "Member 'LTweenBPLibrary_Vector3To::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, duration) == 0x000048, "Member 'LTweenBPLibrary_Vector3To::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, delay) == 0x00004C, "Member 'LTweenBPLibrary_Vector3To::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, ease) == 0x000050, "Member 'LTweenBPLibrary_Vector3To::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector3To, ReturnValue) == 0x000058, "Member 'LTweenBPLibrary_Vector3To::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_Vector3To;
 
 // Function LTween.LTweenBPLibrary.Vector4To
 // 0x0070 (0x0070 - 0x0000)
@@ -900,16 +626,7 @@ public:
 	class ULTweener*                              ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_Vector4To) == 0x000010, "Wrong alignment on LTweenBPLibrary_Vector4To");
-static_assert(sizeof(LTweenBPLibrary_Vector4To) == 0x000070, "Wrong size on LTweenBPLibrary_Vector4To");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_Vector4To::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, setter) == 0x000008, "Member 'LTweenBPLibrary_Vector4To::setter' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, startValue) == 0x000030, "Member 'LTweenBPLibrary_Vector4To::startValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, endValue) == 0x000040, "Member 'LTweenBPLibrary_Vector4To::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, duration) == 0x000050, "Member 'LTweenBPLibrary_Vector4To::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, delay) == 0x000054, "Member 'LTweenBPLibrary_Vector4To::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, ease) == 0x000058, "Member 'LTweenBPLibrary_Vector4To::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_Vector4To, ReturnValue) == 0x000060, "Member 'LTweenBPLibrary_Vector4To::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_Vector4To;
 
 // Function LTween.LTweenBPLibrary.VirtualCall
 // 0x0090 (0x0090 - 0x0000)
@@ -924,15 +641,7 @@ public:
 	TDelegate<void()>                             complete;                                          // 0x0060(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_VirtualCall) == 0x000008, "Wrong alignment on LTweenBPLibrary_VirtualCall");
-static_assert(sizeof(LTweenBPLibrary_VirtualCall) == 0x000090, "Wrong size on LTweenBPLibrary_VirtualCall");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, WorldContextObject) == 0x000000, "Member 'LTweenBPLibrary_VirtualCall::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, duration) == 0x000008, "Member 'LTweenBPLibrary_VirtualCall::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, delay) == 0x00000C, "Member 'LTweenBPLibrary_VirtualCall::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, start) == 0x000010, "Member 'LTweenBPLibrary_VirtualCall::start' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, update) == 0x000038, "Member 'LTweenBPLibrary_VirtualCall::update' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, complete) == 0x000060, "Member 'LTweenBPLibrary_VirtualCall::complete' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_VirtualCall, ReturnValue) == 0x000088, "Member 'LTweenBPLibrary_VirtualCall::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_VirtualCall;
 
 // Function LTween.LTweenBPLibrary.WorldPositionTo
 // 0x0028 (0x0028 - 0x0000)
@@ -947,14 +656,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionTo");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionTo) == 0x000028, "Wrong size on LTweenBPLibrary_WorldPositionTo");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, duration) == 0x000014, "Member 'LTweenBPLibrary_WorldPositionTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, delay) == 0x000018, "Member 'LTweenBPLibrary_WorldPositionTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, ease) == 0x00001C, "Member 'LTweenBPLibrary_WorldPositionTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo, ReturnValue) == 0x000020, "Member 'LTweenBPLibrary_WorldPositionTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionTo;
 
 // Function LTween.LTweenBPLibrary.WorldPositionTo_Sweep
 // 0x00C0 (0x00C0 - 0x0000)
@@ -973,17 +675,7 @@ public:
 	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionTo_Sweep) == 0x0000C0, "Wrong size on LTweenBPLibrary_WorldPositionTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, sweepHitResult) == 0x000014, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, sweep) == 0x0000A8, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, teleport) == 0x0000A9, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, duration) == 0x0000AC, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, delay) == 0x0000B0, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, ease) == 0x0000B4, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionTo_Sweep, ReturnValue) == 0x0000B8, "Member 'LTweenBPLibrary_WorldPositionTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldPositionXTo
 // 0x0020 (0x0020 - 0x0000)
@@ -998,14 +690,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionXTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionXTo");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionXTo) == 0x000020, "Wrong size on LTweenBPLibrary_WorldPositionXTo");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionXTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionXTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionXTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, delay) == 0x000010, "Member 'LTweenBPLibrary_WorldPositionXTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, ease) == 0x000014, "Member 'LTweenBPLibrary_WorldPositionXTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_WorldPositionXTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionXTo;
 
 // Function LTween.LTweenBPLibrary.WorldPositionXTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -1024,17 +709,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionXTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionXTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionXTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_WorldPositionXTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionXTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_WorldPositionXTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionXTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldPositionYTo
 // 0x0020 (0x0020 - 0x0000)
@@ -1049,14 +724,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionYTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionYTo");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionYTo) == 0x000020, "Wrong size on LTweenBPLibrary_WorldPositionYTo");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionYTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionYTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionYTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, delay) == 0x000010, "Member 'LTweenBPLibrary_WorldPositionYTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, ease) == 0x000014, "Member 'LTweenBPLibrary_WorldPositionYTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_WorldPositionYTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionYTo;
 
 // Function LTween.LTweenBPLibrary.WorldPositionYTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -1075,17 +743,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionYTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionYTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionYTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_WorldPositionYTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionYTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_WorldPositionYTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionYTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldPositionZTo
 // 0x0020 (0x0020 - 0x0000)
@@ -1100,14 +758,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionZTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionZTo");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionZTo) == 0x000020, "Wrong size on LTweenBPLibrary_WorldPositionZTo");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionZTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionZTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, duration) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionZTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, delay) == 0x000010, "Member 'LTweenBPLibrary_WorldPositionZTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, ease) == 0x000014, "Member 'LTweenBPLibrary_WorldPositionZTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo, ReturnValue) == 0x000018, "Member 'LTweenBPLibrary_WorldPositionZTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionZTo;
 
 // Function LTween.LTweenBPLibrary.WorldPositionZTo_Sweep
 // 0x00B8 (0x00B8 - 0x0000)
@@ -1126,17 +777,7 @@ public:
 	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldPositionZTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldPositionZTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldPositionZTo_Sweep) == 0x0000B8, "Wrong size on LTweenBPLibrary_WorldPositionZTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, sweepHitResult) == 0x00000C, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, sweep) == 0x0000A0, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, teleport) == 0x0000A1, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, duration) == 0x0000A4, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, delay) == 0x0000A8, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, ease) == 0x0000AC, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldPositionZTo_Sweep, ReturnValue) == 0x0000B0, "Member 'LTweenBPLibrary_WorldPositionZTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldPositionZTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldRotateEulerAngleTo
 // 0x0028 (0x0028 - 0x0000)
@@ -1151,14 +792,7 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotateEulerAngleTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldRotateEulerAngleTo");
-static_assert(sizeof(LTweenBPLibrary_WorldRotateEulerAngleTo) == 0x000028, "Wrong size on LTweenBPLibrary_WorldRotateEulerAngleTo");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, eulerAngle) == 0x000008, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::eulerAngle' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, duration) == 0x000014, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, delay) == 0x000018, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, ease) == 0x00001C, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo, ReturnValue) == 0x000020, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotateEulerAngleTo;
 
 // Function LTween.LTweenBPLibrary.WorldRotateEulerAngleTo_Sweep
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1177,17 +811,7 @@ public:
 	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep) == 0x0000C0, "Wrong size on LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, eulerAngle) == 0x000008, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::eulerAngle' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, sweepHitResult) == 0x000014, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, sweep) == 0x0000A8, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, teleport) == 0x0000A9, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, duration) == 0x0000AC, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, delay) == 0x0000B0, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, ease) == 0x0000B4, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep, ReturnValue) == 0x0000B8, "Member 'LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotateEulerAngleTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldRotationQuaternionTo
 // 0x0040 (0x0040 - 0x0000)
@@ -1204,14 +828,7 @@ public:
 	class ULTweener*                              ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotationQuaternionTo) == 0x000010, "Wrong alignment on LTweenBPLibrary_WorldRotationQuaternionTo");
-static_assert(sizeof(LTweenBPLibrary_WorldRotationQuaternionTo) == 0x000040, "Wrong size on LTweenBPLibrary_WorldRotationQuaternionTo");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, endValue) == 0x000010, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, duration) == 0x000020, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, delay) == 0x000024, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, ease) == 0x000028, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo, ReturnValue) == 0x000030, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotationQuaternionTo;
 
 // Function LTween.LTweenBPLibrary.WorldRotationQuaternionTo_Sweep
 // 0x00D0 (0x00D0 - 0x0000)
@@ -1231,17 +848,7 @@ public:
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00C8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep) == 0x000010, "Wrong alignment on LTweenBPLibrary_WorldRotationQuaternionTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep) == 0x0000D0, "Wrong size on LTweenBPLibrary_WorldRotationQuaternionTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, endValue) == 0x000010, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, sweepHitResult) == 0x000020, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, sweep) == 0x0000B4, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, teleport) == 0x0000B5, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, duration) == 0x0000B8, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, delay) == 0x0000BC, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, ease) == 0x0000C0, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotationQuaternionTo_Sweep, ReturnValue) == 0x0000C8, "Member 'LTweenBPLibrary_WorldRotationQuaternionTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotationQuaternionTo_Sweep;
 
 // Function LTween.LTweenBPLibrary.WorldRotatorTo
 // 0x0030 (0x0030 - 0x0000)
@@ -1258,15 +865,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotatorTo) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldRotatorTo");
-static_assert(sizeof(LTweenBPLibrary_WorldRotatorTo) == 0x000030, "Wrong size on LTweenBPLibrary_WorldRotatorTo");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotatorTo::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldRotatorTo::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, shortestPath) == 0x000014, "Member 'LTweenBPLibrary_WorldRotatorTo::shortestPath' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, duration) == 0x000018, "Member 'LTweenBPLibrary_WorldRotatorTo::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, delay) == 0x00001C, "Member 'LTweenBPLibrary_WorldRotatorTo::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, ease) == 0x000020, "Member 'LTweenBPLibrary_WorldRotatorTo::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo, ReturnValue) == 0x000028, "Member 'LTweenBPLibrary_WorldRotatorTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotatorTo;
 
 // Function LTween.LTweenBPLibrary.WorldRotatorTo_Sweep
 // 0x00C8 (0x00C8 - 0x0000)
@@ -1287,18 +886,7 @@ public:
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x00C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweenBPLibrary_WorldRotatorTo_Sweep) == 0x000008, "Wrong alignment on LTweenBPLibrary_WorldRotatorTo_Sweep");
-static_assert(sizeof(LTweenBPLibrary_WorldRotatorTo_Sweep) == 0x0000C8, "Wrong size on LTweenBPLibrary_WorldRotatorTo_Sweep");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, target) == 0x000000, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::target' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, endValue) == 0x000008, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::endValue' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, shortestPath) == 0x000014, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::shortestPath' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, sweepHitResult) == 0x000018, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::sweepHitResult' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, sweep) == 0x0000AC, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::sweep' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, teleport) == 0x0000AD, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::teleport' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, duration) == 0x0000B0, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::duration' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, delay) == 0x0000B4, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::delay' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, ease) == 0x0000B8, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::ease' has a wrong offset!");
-static_assert(offsetof(LTweenBPLibrary_WorldRotatorTo_Sweep, ReturnValue) == 0x0000C0, "Member 'LTweenBPLibrary_WorldRotatorTo_Sweep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweenBPLibrary_WorldRotatorTo_Sweep;
 
 // Function LTween.LTweener.GetLoopCount
 // 0x0004 (0x0004 - 0x0000)
@@ -1307,9 +895,7 @@ struct LTweener_GetLoopCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_GetLoopCount) == 0x000004, "Wrong alignment on LTweener_GetLoopCount");
-static_assert(sizeof(LTweener_GetLoopCount) == 0x000004, "Wrong size on LTweener_GetLoopCount");
-static_assert(offsetof(LTweener_GetLoopCount, ReturnValue) == 0x000000, "Member 'LTweener_GetLoopCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_GetLoopCount;
 
 // Function LTween.LTweener.Kill
 // 0x0001 (0x0001 - 0x0000)
@@ -1318,9 +904,7 @@ struct LTweener_Kill final
 public:
 	bool                                          callComplete;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_Kill) == 0x000001, "Wrong alignment on LTweener_Kill");
-static_assert(sizeof(LTweener_Kill) == 0x000001, "Wrong size on LTweener_Kill");
-static_assert(offsetof(LTweener_Kill, callComplete) == 0x000000, "Member 'LTweener_Kill::callComplete' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_Kill;
 
 // Function LTween.LTweener.OnComplete
 // 0x0030 (0x0030 - 0x0000)
@@ -1330,10 +914,7 @@ public:
 	TDelegate<void()>                             newComplete;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_OnComplete) == 0x000008, "Wrong alignment on LTweener_OnComplete");
-static_assert(sizeof(LTweener_OnComplete) == 0x000030, "Wrong size on LTweener_OnComplete");
-static_assert(offsetof(LTweener_OnComplete, newComplete) == 0x000000, "Member 'LTweener_OnComplete::newComplete' has a wrong offset!");
-static_assert(offsetof(LTweener_OnComplete, ReturnValue) == 0x000028, "Member 'LTweener_OnComplete::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_OnComplete;
 
 // Function LTween.LTweener.OnCycleComplete
 // 0x0030 (0x0030 - 0x0000)
@@ -1343,10 +924,7 @@ public:
 	TDelegate<void()>                             newCycleComplete;                                  // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_OnCycleComplete) == 0x000008, "Wrong alignment on LTweener_OnCycleComplete");
-static_assert(sizeof(LTweener_OnCycleComplete) == 0x000030, "Wrong size on LTweener_OnCycleComplete");
-static_assert(offsetof(LTweener_OnCycleComplete, newCycleComplete) == 0x000000, "Member 'LTweener_OnCycleComplete::newCycleComplete' has a wrong offset!");
-static_assert(offsetof(LTweener_OnCycleComplete, ReturnValue) == 0x000028, "Member 'LTweener_OnCycleComplete::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_OnCycleComplete;
 
 // Function LTween.LTweener.OnStart
 // 0x0030 (0x0030 - 0x0000)
@@ -1356,10 +934,7 @@ public:
 	TDelegate<void()>                             newStart;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_OnStart) == 0x000008, "Wrong alignment on LTweener_OnStart");
-static_assert(sizeof(LTweener_OnStart) == 0x000030, "Wrong size on LTweener_OnStart");
-static_assert(offsetof(LTweener_OnStart, newStart) == 0x000000, "Member 'LTweener_OnStart::newStart' has a wrong offset!");
-static_assert(offsetof(LTweener_OnStart, ReturnValue) == 0x000028, "Member 'LTweener_OnStart::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_OnStart;
 
 // Function LTween.LTweener.OnUpdate
 // 0x0030 (0x0030 - 0x0000)
@@ -1369,10 +944,7 @@ public:
 	TDelegate<void(float InProgress)>             newUpdate;                                         // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_OnUpdate) == 0x000008, "Wrong alignment on LTweener_OnUpdate");
-static_assert(sizeof(LTweener_OnUpdate) == 0x000030, "Wrong size on LTweener_OnUpdate");
-static_assert(offsetof(LTweener_OnUpdate, newUpdate) == 0x000000, "Member 'LTweener_OnUpdate::newUpdate' has a wrong offset!");
-static_assert(offsetof(LTweener_OnUpdate, ReturnValue) == 0x000028, "Member 'LTweener_OnUpdate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_OnUpdate;
 
 // Function LTween.LTweener.SetCurveFloat
 // 0x0010 (0x0010 - 0x0000)
@@ -1382,10 +954,7 @@ public:
 	class UCurveFloat*                            newCurveFloat;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetCurveFloat) == 0x000008, "Wrong alignment on LTweener_SetCurveFloat");
-static_assert(sizeof(LTweener_SetCurveFloat) == 0x000010, "Wrong size on LTweener_SetCurveFloat");
-static_assert(offsetof(LTweener_SetCurveFloat, newCurveFloat) == 0x000000, "Member 'LTweener_SetCurveFloat::newCurveFloat' has a wrong offset!");
-static_assert(offsetof(LTweener_SetCurveFloat, ReturnValue) == 0x000008, "Member 'LTweener_SetCurveFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetCurveFloat;
 
 // Function LTween.LTweener.SetDelay
 // 0x0010 (0x0010 - 0x0000)
@@ -1396,10 +965,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetDelay) == 0x000008, "Wrong alignment on LTweener_SetDelay");
-static_assert(sizeof(LTweener_SetDelay) == 0x000010, "Wrong size on LTweener_SetDelay");
-static_assert(offsetof(LTweener_SetDelay, newDelay) == 0x000000, "Member 'LTweener_SetDelay::newDelay' has a wrong offset!");
-static_assert(offsetof(LTweener_SetDelay, ReturnValue) == 0x000008, "Member 'LTweener_SetDelay::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetDelay;
 
 // Function LTween.LTweener.SetDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -1408,9 +974,7 @@ struct LTweener_SetDuration final
 public:
 	float                                         newDuration;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetDuration) == 0x000004, "Wrong alignment on LTweener_SetDuration");
-static_assert(sizeof(LTweener_SetDuration) == 0x000004, "Wrong size on LTweener_SetDuration");
-static_assert(offsetof(LTweener_SetDuration, newDuration) == 0x000000, "Member 'LTweener_SetDuration::newDuration' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetDuration;
 
 // Function LTween.LTweener.SetEase
 // 0x0010 (0x0010 - 0x0000)
@@ -1421,10 +985,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetEase) == 0x000008, "Wrong alignment on LTweener_SetEase");
-static_assert(sizeof(LTweener_SetEase) == 0x000010, "Wrong size on LTweener_SetEase");
-static_assert(offsetof(LTweener_SetEase, easetype) == 0x000000, "Member 'LTweener_SetEase::easetype' has a wrong offset!");
-static_assert(offsetof(LTweener_SetEase, ReturnValue) == 0x000008, "Member 'LTweener_SetEase::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetEase;
 
 // Function LTween.LTweener.SetEaseCurve
 // 0x0010 (0x0010 - 0x0000)
@@ -1434,10 +995,7 @@ public:
 	class UCurveFloat*                            newCurve;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetEaseCurve) == 0x000008, "Wrong alignment on LTweener_SetEaseCurve");
-static_assert(sizeof(LTweener_SetEaseCurve) == 0x000010, "Wrong size on LTweener_SetEaseCurve");
-static_assert(offsetof(LTweener_SetEaseCurve, newCurve) == 0x000000, "Member 'LTweener_SetEaseCurve::newCurve' has a wrong offset!");
-static_assert(offsetof(LTweener_SetEaseCurve, ReturnValue) == 0x000008, "Member 'LTweener_SetEaseCurve::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetEaseCurve;
 
 // Function LTween.LTweener.SetLoop
 // 0x0010 (0x0010 - 0x0000)
@@ -1449,11 +1007,7 @@ public:
 	int32                                         newLoopCount;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetLoop) == 0x000008, "Wrong alignment on LTweener_SetLoop");
-static_assert(sizeof(LTweener_SetLoop) == 0x000010, "Wrong size on LTweener_SetLoop");
-static_assert(offsetof(LTweener_SetLoop, newLoopType) == 0x000000, "Member 'LTweener_SetLoop::newLoopType' has a wrong offset!");
-static_assert(offsetof(LTweener_SetLoop, newLoopCount) == 0x000004, "Member 'LTweener_SetLoop::newLoopCount' has a wrong offset!");
-static_assert(offsetof(LTweener_SetLoop, ReturnValue) == 0x000008, "Member 'LTweener_SetLoop::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetLoop;
 
 // Function LTween.LTweener.SetLoopType
 // 0x0010 (0x0010 - 0x0000)
@@ -1464,10 +1018,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetLoopType) == 0x000008, "Wrong alignment on LTweener_SetLoopType");
-static_assert(sizeof(LTweener_SetLoopType) == 0x000010, "Wrong size on LTweener_SetLoopType");
-static_assert(offsetof(LTweener_SetLoopType, newLoopType) == 0x000000, "Member 'LTweener_SetLoopType::newLoopType' has a wrong offset!");
-static_assert(offsetof(LTweener_SetLoopType, ReturnValue) == 0x000008, "Member 'LTweener_SetLoopType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetLoopType;
 
 // Function LTween.LTweener.SetSpeed
 // 0x0010 (0x0010 - 0x0000)
@@ -1478,10 +1029,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULTweener*                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_SetSpeed) == 0x000008, "Wrong alignment on LTweener_SetSpeed");
-static_assert(sizeof(LTweener_SetSpeed) == 0x000010, "Wrong size on LTweener_SetSpeed");
-static_assert(offsetof(LTweener_SetSpeed, newSpeed) == 0x000000, "Member 'LTweener_SetSpeed::newSpeed' has a wrong offset!");
-static_assert(offsetof(LTweener_SetSpeed, ReturnValue) == 0x000008, "Member 'LTweener_SetSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_SetSpeed;
 
 // Function LTween.LTweener.GetLoopCycleCount
 // 0x0004 (0x0004 - 0x0000)
@@ -1490,9 +1038,7 @@ struct LTweener_GetLoopCycleCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_GetLoopCycleCount) == 0x000004, "Wrong alignment on LTweener_GetLoopCycleCount");
-static_assert(sizeof(LTweener_GetLoopCycleCount) == 0x000004, "Wrong size on LTweener_GetLoopCycleCount");
-static_assert(offsetof(LTweener_GetLoopCycleCount, ReturnValue) == 0x000000, "Member 'LTweener_GetLoopCycleCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_GetLoopCycleCount;
 
 // Function LTween.LTweener.GetSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -1501,9 +1047,7 @@ struct LTweener_GetSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LTweener_GetSpeed) == 0x000004, "Wrong alignment on LTweener_GetSpeed");
-static_assert(sizeof(LTweener_GetSpeed) == 0x000004, "Wrong size on LTweener_GetSpeed");
-static_assert(offsetof(LTweener_GetSpeed, ReturnValue) == 0x000000, "Member 'LTweener_GetSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LTweener_GetSpeed;
 
 }
 

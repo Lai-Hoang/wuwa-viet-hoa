@@ -28,7 +28,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"LogicDataBase_C">();
+		BP_STATIC_CLASS_IMPL("LogicDataBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LogicDataBase_C")
 	}
 	static class ULogicDataBase_C* GetDefaultObj()
 	{
@@ -36,9 +40,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(ULogicDataBase_C) == 0x000008, "Wrong alignment on ULogicDataBase_C");
-static_assert(sizeof(ULogicDataBase_C) == 0x000040, "Wrong size on ULogicDataBase_C");
-static_assert(offsetof(ULogicDataBase_C, ExecuteStage) == 0x000038, "Member 'ULogicDataBase_C::ExecuteStage' has a wrong offset!");
+DUMPER7_ASSERTS_ULogicDataBase_C;
 
 }
 

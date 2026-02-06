@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SWeaponMesh_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SWeaponMesh_structs.hpp"
 
 
 namespace SDK
@@ -30,13 +30,7 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        WeaponEffectPath_26_C519CEFC406FFC9E8723D093D62AF1A2; // 0x0038(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSWeaponSocketItem) == 0x000008, "Wrong alignment on FSWeaponSocketItem");
-static_assert(sizeof(FSWeaponSocketItem) == 0x000058, "Wrong size on FSWeaponSocketItem");
-static_assert(offsetof(FSWeaponSocketItem, Meshes_13_CE477C0240043F0E66DD39B32302A00B) == 0x000000, "Member 'FSWeaponSocketItem::Meshes_13_CE477C0240043F0E66DD39B32302A00B' has a wrong offset!");
-static_assert(offsetof(FSWeaponSocketItem, DropSocket_16_66E387994D25403F8861D892DAEE5132) == 0x000010, "Member 'FSWeaponSocketItem::DropSocket_16_66E387994D25403F8861D892DAEE5132' has a wrong offset!");
-static_assert(offsetof(FSWeaponSocketItem, DropVelocity_23_A26B05B541CF03CF69B531ABEA7D8051) == 0x00001C, "Member 'FSWeaponSocketItem::DropVelocity_23_A26B05B541CF03CF69B531ABEA7D8051' has a wrong offset!");
-static_assert(offsetof(FSWeaponSocketItem, Tag_19_2E69EBC5415BF14374317FB499A95B38) == 0x000028, "Member 'FSWeaponSocketItem::Tag_19_2E69EBC5415BF14374317FB499A95B38' has a wrong offset!");
-static_assert(offsetof(FSWeaponSocketItem, WeaponEffectPath_26_C519CEFC406FFC9E8723D093D62AF1A2) == 0x000038, "Member 'FSWeaponSocketItem::WeaponEffectPath_26_C519CEFC406FFC9E8723D093D62AF1A2' has a wrong offset!");
+DUMPER7_ASSERTS_FSWeaponSocketItem;
 
 }
 

@@ -21,9 +21,7 @@ struct AnimNotifyAddMotionVertexOffset_C_GetNotifyName final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 };
-static_assert(alignof(AnimNotifyAddMotionVertexOffset_C_GetNotifyName) == 0x000008, "Wrong alignment on AnimNotifyAddMotionVertexOffset_C_GetNotifyName");
-static_assert(sizeof(AnimNotifyAddMotionVertexOffset_C_GetNotifyName) == 0x000010, "Wrong size on AnimNotifyAddMotionVertexOffset_C_GetNotifyName");
-static_assert(offsetof(AnimNotifyAddMotionVertexOffset_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'AnimNotifyAddMotionVertexOffset_C_GetNotifyName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AnimNotifyAddMotionVertexOffset_C_GetNotifyName;
 
 }
 

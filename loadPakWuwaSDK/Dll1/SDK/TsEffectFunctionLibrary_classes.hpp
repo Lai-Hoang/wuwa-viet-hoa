@@ -47,15 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsEffectFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsEffectFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsEffectFunctionLibrary_C")
 	}
 	static class UTsEffectFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsEffectFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsEffectFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsEffectFunctionLibrary_C");
-static_assert(sizeof(UTsEffectFunctionLibrary_C) == 0x000030, "Wrong size on UTsEffectFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsEffectFunctionLibrary_C;
 
 }
 

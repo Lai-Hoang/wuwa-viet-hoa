@@ -31,19 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CounterAttackCameraData_C">();
+		BP_STATIC_CLASS_IMPL("CounterAttackCameraData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CounterAttackCameraData_C")
 	}
 	static class UCounterAttackCameraData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCounterAttackCameraData_C>();
 	}
 };
-static_assert(alignof(UCounterAttackCameraData_C) == 0x000008, "Wrong alignment on UCounterAttackCameraData_C");
-static_assert(sizeof(UCounterAttackCameraData_C) == 0x0001B8, "Wrong size on UCounterAttackCameraData_C");
-static_assert(offsetof(UCounterAttackCameraData_C, CameraData) == 0x000038, "Member 'UCounterAttackCameraData_C::CameraData' has a wrong offset!");
-static_assert(offsetof(UCounterAttackCameraData_C, AttackerTimeScale) == 0x000180, "Member 'UCounterAttackCameraData_C::AttackerTimeScale' has a wrong offset!");
-static_assert(offsetof(UCounterAttackCameraData_C, CameraShake) == 0x000198, "Member 'UCounterAttackCameraData_C::CameraShake' has a wrong offset!");
-static_assert(offsetof(UCounterAttackCameraData_C, VictimTimeScale) == 0x0001A0, "Member 'UCounterAttackCameraData_C::VictimTimeScale' has a wrong offset!");
+DUMPER7_ASSERTS_UCounterAttackCameraData_C;
 
 }
 

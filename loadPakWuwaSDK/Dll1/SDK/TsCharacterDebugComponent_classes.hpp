@@ -42,48 +42,36 @@ public:
 	int32                                         DebugInteractCount;                                // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetMovementDebug(bool newDebug);
-	void DrawErrorNavigationPaths();
-	void DrawDebugPatrolPoints();
-	void SetDebugRiseEnable(bool enable);
-	void ChangeClimbingTrace();
-	void ChangeUpArriveClimbTrace();
-	void ChangeVaultClimbTrace();
-	void ChangeEnterClimbTrace();
-	void ChangeNoTop();
-	void DebugDrawActivateArea();
-	void ActivateDebugSpeed(bool activate);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_TsCharacterDebugComponent(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ActivateDebugSpeed(bool activate);
+	void DebugDrawActivateArea();
+	void ChangeNoTop();
+	void ChangeEnterClimbTrace();
+	void ChangeVaultClimbTrace();
+	void ChangeUpArriveClimbTrace();
+	void ChangeClimbingTrace();
+	void SetDebugRiseEnable(bool enable);
+	void DrawDebugPatrolPoints();
+	void DrawErrorNavigationPaths();
+	void SetMovementDebug(bool newDebug);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsCharacterDebugComponent_C">();
+		BP_STATIC_CLASS_IMPL("TsCharacterDebugComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsCharacterDebugComponent_C")
 	}
 	static class UTsCharacterDebugComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsCharacterDebugComponent_C>();
 	}
 };
-static_assert(alignof(UTsCharacterDebugComponent_C) == 0x000008, "Wrong alignment on UTsCharacterDebugComponent_C");
-static_assert(sizeof(UTsCharacterDebugComponent_C) == 0x000118, "Wrong size on UTsCharacterDebugComponent_C");
-static_assert(offsetof(UTsCharacterDebugComponent_C, UberGraphFrame) == 0x0000C0, "Member 'UTsCharacterDebugComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, MaxFixSpeed) == 0x0000C8, "Member 'UTsCharacterDebugComponent_C::MaxFixSpeed' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, StaticInit) == 0x0000CC, "Member 'UTsCharacterDebugComponent_C::StaticInit' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, StaticAttrId) == 0x0000D0, "Member 'UTsCharacterDebugComponent_C::StaticAttrId' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, StaticAiId) == 0x0000D8, "Member 'UTsCharacterDebugComponent_C::StaticAiId' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, TestRiseSpeed) == 0x0000E8, "Member 'UTsCharacterDebugComponent_C::TestRiseSpeed' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, EnterClimbTrace) == 0x0000EC, "Member 'UTsCharacterDebugComponent_C::EnterClimbTrace' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, UpArriveClimbTrace) == 0x0000ED, "Member 'UTsCharacterDebugComponent_C::UpArriveClimbTrace' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, VaultClimbTrace) == 0x0000EE, "Member 'UTsCharacterDebugComponent_C::VaultClimbTrace' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, ClimbingTrace) == 0x0000EF, "Member 'UTsCharacterDebugComponent_C::ClimbingTrace' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, BehaviorTree) == 0x0000F0, "Member 'UTsCharacterDebugComponent_C::BehaviorTree' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, PatrolSpline) == 0x0000F8, "Member 'UTsCharacterDebugComponent_C::PatrolSpline' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, DebugEntityId) == 0x000100, "Member 'UTsCharacterDebugComponent_C::DebugEntityId' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, DebugCreatureId) == 0x000108, "Member 'UTsCharacterDebugComponent_C::DebugCreatureId' has a wrong offset!");
-static_assert(offsetof(UTsCharacterDebugComponent_C, DebugInteractCount) == 0x000110, "Member 'UTsCharacterDebugComponent_C::DebugInteractCount' has a wrong offset!");
+DUMPER7_ASSERTS_UTsCharacterDebugComponent_C;
 
 }
 

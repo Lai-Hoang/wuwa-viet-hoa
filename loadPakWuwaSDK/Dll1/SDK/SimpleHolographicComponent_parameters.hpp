@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "SMaterialParamCache_structs.hpp"
-#include "SMaterialControllerFloatParameter_structs.hpp"
-#include "KuroCurve_structs.hpp"
-#include "SHolographicMaterialsCache_structs.hpp"
-#include "SHolographicData_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "SMaterialControllerFloatParameter_structs.hpp"
+#include "SHolographicMaterialsCache_structs.hpp"
 #include "SMaterialControllerColorParameter_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SHolographicData_structs.hpp"
+#include "KuroCurve_structs.hpp"
 
 
 namespace SDK::Params
@@ -36,15 +36,7 @@ public:
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent) == 0x000004, "Wrong alignment on SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent");
-static_assert(sizeof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent) == 0x000010, "Wrong size on SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, EntryPoint) == 0x000000, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, CallFunc_Add_FloatFloat_ReturnValue) == 0x000008, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, K2Node_SwitchEnum_CmpSuccess) == 0x00000C, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, K2Node_SwitchEnum_CmpSuccess_1) == 0x00000D, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00000E, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x00000F, "Member 'SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_ExecuteUbergraph_SimpleHolographicComponent;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -53,9 +45,7 @@ struct SimpleHolographicComponent_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on SimpleHolographicComponent_C_ReceiveTick");
-static_assert(sizeof(SimpleHolographicComponent_C_ReceiveTick) == 0x000004, "Wrong size on SimpleHolographicComponent_C_ReceiveTick");
-static_assert(offsetof(SimpleHolographicComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'SimpleHolographicComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_ReceiveTick;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.CacheMaterialParameters
 // 0x0AA8 (0x0AA8 - 0x0000)
@@ -91,31 +81,7 @@ public:
 	uint8                                         Pad_A9D[0x3];                                      // 0x0A9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0AA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_CacheMaterialParameters) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_CacheMaterialParameters");
-static_assert(sizeof(SimpleHolographicComponent_C_CacheMaterialParameters) == 0x000AA8, "Wrong size on SimpleHolographicComponent_C_CacheMaterialParameters");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, floats) == 0x000000, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::floats' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, colors) == 0x000010, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::colors' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, material) == 0x000020, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::material' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, bReplaceMaterial) == 0x000028, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::bReplaceMaterial' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, index) == 0x00002C, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::index' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, result) == 0x000030, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::result' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, colorCaches) == 0x0000E0, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::colorCaches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, floatCaches) == 0x000130, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::floatCaches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, ___int_Array_Index_Variable) == 0x000180, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Array_Get_Item) == 0x000188, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Array_Length_ReturnValue) == 0x0007F8, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_K2_GetVectorParameterValue_ReturnValue) == 0x0007FC, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_K2_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Array_Length_ReturnValue_1) == 0x00080C, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, ___int_Loop_Counter_Variable) == 0x000810, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Less_IntInt_ReturnValue) == 0x000814, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Add_IntInt_ReturnValue) == 0x000818, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, ___int_Array_Index_Variable_1) == 0x00081C, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Array_Get_Item_1) == 0x000820, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_K2_GetScalarParameterValue_ReturnValue) == 0x0009E0, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_K2_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, K2Node_MakeStruct_SMaterialParamCache) == 0x0009E8, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::K2Node_MakeStruct_SMaterialParamCache' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, ___int_Loop_Counter_Variable_1) == 0x000A98, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Less_IntInt_ReturnValue_1) == 0x000A9C, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheMaterialParameters, CallFunc_Add_IntInt_ReturnValue_1) == 0x000AA0, "Member 'SimpleHolographicComponent_C_CacheMaterialParameters::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_CacheMaterialParameters;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.CacheAndReplace
 // 0x01F8 (0x01F8 - 0x0000)
@@ -138,21 +104,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMaterialParamCache                   CallFunc_CacheMaterialParameters_result;           // 0x0148(0x00B0)(HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_CacheAndReplace) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_CacheAndReplace");
-static_assert(sizeof(SimpleHolographicComponent_C_CacheAndReplace) == 0x0001F8, "Wrong size on SimpleHolographicComponent_C_CacheAndReplace");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, SHolographicData) == 0x000000, "Member 'SimpleHolographicComponent_C_CacheAndReplace::SHolographicData' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, self2) == 0x000060, "Member 'SimpleHolographicComponent_C_CacheAndReplace::self2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, ElementIndex) == 0x000068, "Member 'SimpleHolographicComponent_C_CacheAndReplace::ElementIndex' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, material) == 0x000070, "Member 'SimpleHolographicComponent_C_CacheAndReplace::material' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, ReturnValue) == 0x000078, "Member 'SimpleHolographicComponent_C_CacheAndReplace::ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CacheResult) == 0x000080, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CacheResult' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, ReplaceMaterial) == 0x000130, "Member 'SimpleHolographicComponent_C_CacheAndReplace::ReplaceMaterial' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_GetWorldFeatureLevel_ReturnValue) == 0x000138, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_GetWorldFeatureLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000139, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_BooleanAND_ReturnValue) == 0x00013A, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_IsValid_ReturnValue) == 0x00013B, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000140, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_CacheAndReplace, CallFunc_CacheMaterialParameters_result) == 0x000148, "Member 'SimpleHolographicComponent_C_CacheAndReplace::CallFunc_CacheMaterialParameters_result' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_CacheAndReplace;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.RevertMaterialParamters
 // 0x01D8 (0x01D8 - 0x0000)
@@ -187,30 +139,7 @@ public:
 	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_RevertMaterialParamters) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_RevertMaterialParamters");
-static_assert(sizeof(SimpleHolographicComponent_C_RevertMaterialParamters) == 0x0001D8, "Wrong size on SimpleHolographicComponent_C_RevertMaterialParamters");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, MaterialCache) == 0x000000, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::MaterialCache' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, result) == 0x0000B0, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::result' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, colorCaches) == 0x0000B8, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::colorCaches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, floatCaches) == 0x000108, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::floatCaches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, ___int_Loop_Counter_Variable) == 0x000158, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Keys_Keys) == 0x000160, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Add_IntInt_ReturnValue) == 0x000170, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Array_Length_ReturnValue) == 0x000174, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Keys_Keys_1) == 0x000178, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Keys_Keys_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Array_Length_ReturnValue_1) == 0x000188, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Less_IntInt_ReturnValue) == 0x00018C, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, ___int_Array_Index_Variable) == 0x000190, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Array_Get_Item) == 0x000194, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Find_Value) == 0x0001A0, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Find_ReturnValue) == 0x0001A4, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, ___int_Loop_Counter_Variable_1) == 0x0001A8, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, ___int_Array_Index_Variable_1) == 0x0001AC, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Less_IntInt_ReturnValue_1) == 0x0001B0, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Array_Get_Item_1) == 0x0001B4, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Find_Value_1) == 0x0001C0, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Map_Find_ReturnValue_1) == 0x0001D0, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RevertMaterialParamters, CallFunc_Add_IntInt_ReturnValue_1) == 0x0001D4, "Member 'SimpleHolographicComponent_C_RevertMaterialParamters::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_RevertMaterialParamters;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.RemoveNpcEffect
 // 0x0118 (0x0118 - 0x0000)
@@ -238,24 +167,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SimpleHolographicComponent_C_RemoveNpcEffect) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_RemoveNpcEffect");
-static_assert(sizeof(SimpleHolographicComponent_C_RemoveNpcEffect) == 0x000118, "Wrong size on SimpleHolographicComponent_C_RemoveNpcEffect");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, ___int_Loop_Counter_Variable) == 0x000000, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, ___int_Array_Index_Variable) == 0x000008, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, ___int_Array_Index_Variable_1) == 0x00000C, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, ___int_Loop_Counter_Variable_1) == 0x000010, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Map_Keys_Keys) == 0x000018, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Add_IntInt_ReturnValue_1) == 0x000028, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Array_Get_Item) == 0x000030, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Map_Find_Value) == 0x000038, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Map_Find_ReturnValue) == 0x000048, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Array_Length_ReturnValue) == 0x00004C, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Array_Get_Item_1) == 0x000058, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_RevertMaterialParamters_result) == 0x000108, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_RevertMaterialParamters_result' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Array_Length_ReturnValue_1) == 0x000110, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_RemoveNpcEffect, CallFunc_Less_IntInt_ReturnValue_1) == 0x000114, "Member 'SimpleHolographicComponent_C_RemoveNpcEffect::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_RemoveNpcEffect;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.UpdateMaterialsWithDa
 // 0x0BD0 (0x0BD0 - 0x0000)
@@ -298,36 +210,7 @@ public:
 	uint8                                         Pad_BC5[0x3];                                      // 0x0BC5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetValue_Float_ReturnValue;               // 0x0BC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_UpdateMaterialsWithDa) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_UpdateMaterialsWithDa");
-static_assert(sizeof(SimpleHolographicComponent_C_UpdateMaterialsWithDa) == 0x000BD0, "Wrong size on SimpleHolographicComponent_C_UpdateMaterialsWithDa");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, Materials) == 0x000000, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::Materials' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, SHolographicData) == 0x000010, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::SHolographicData' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, tempColor) == 0x000070, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::tempColor' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, tempFloat) == 0x000290, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::tempFloat' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Length_ReturnValue) == 0x000320, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Length_ReturnValue_1) == 0x000324, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Length_ReturnValue_2) == 0x000328, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Loop_Counter_Variable) == 0x00032C, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Less_IntInt_ReturnValue) == 0x000330, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Add_IntInt_ReturnValue) == 0x000334, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Array_Index_Variable) == 0x000338, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Loop_Counter_Variable_1) == 0x00033C, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Get_Item) == 0x000340, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Less_IntInt_ReturnValue_1) == 0x000500, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Add_IntInt_ReturnValue_1) == 0x000504, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___wildcard_Variable) == 0x000508, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Loop_Counter_Variable_2) == 0x00050C, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Less_IntInt_ReturnValue_2) == 0x000510, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Add_IntInt_ReturnValue_2) == 0x000514, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Array_Index_Variable_1) == 0x000518, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___wildcard_Variable_1) == 0x00051C, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___wildcard_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Get_Item_1) == 0x000530, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, ___int_Array_Index_Variable_2) == 0x000538, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::___int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_Array_Get_Item_2) == 0x000540, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, K2Node_SwitchEnum_CmpSuccess) == 0x000BB0, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_GetValue_LinearColor_ReturnValue) == 0x000BB4, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_GetValue_LinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, K2Node_SwitchEnum_CmpSuccess_1) == 0x000BC4, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_UpdateMaterialsWithDa, CallFunc_GetValue_Float_ReturnValue) == 0x000BC8, "Member 'SimpleHolographicComponent_C_UpdateMaterialsWithDa::CallFunc_GetValue_Float_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_UpdateMaterialsWithDa;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.EndEffect
 // 0x0001 (0x0001 - 0x0000)
@@ -336,9 +219,7 @@ struct SimpleHolographicComponent_C_EndEffect final
 public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SimpleHolographicComponent_C_EndEffect) == 0x000001, "Wrong alignment on SimpleHolographicComponent_C_EndEffect");
-static_assert(sizeof(SimpleHolographicComponent_C_EndEffect) == 0x000001, "Wrong size on SimpleHolographicComponent_C_EndEffect");
-static_assert(offsetof(SimpleHolographicComponent_C_EndEffect, K2Node_SwitchEnum_CmpSuccess) == 0x000000, "Member 'SimpleHolographicComponent_C_EndEffect::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_EndEffect;
 
 // Function SimpleHolographicComponent.SimpleHolographicComponent_C.StartEffect
 // 0x0210 (0x0210 - 0x0000)
@@ -391,44 +272,7 @@ public:
 	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SimpleHolographicComponent_C_StartEffect) == 0x000008, "Wrong alignment on SimpleHolographicComponent_C_StartEffect");
-static_assert(sizeof(SimpleHolographicComponent_C_StartEffect) == 0x000210, "Wrong size on SimpleHolographicComponent_C_StartEffect");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, tempMaterialCaches) == 0x000000, "Member 'SimpleHolographicComponent_C_StartEffect::tempMaterialCaches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, Caches) == 0x000010, "Member 'SimpleHolographicComponent_C_StartEffect::Caches' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___int_Loop_Counter_Variable) == 0x000020, "Member 'SimpleHolographicComponent_C_StartEffect::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___int_Loop_Counter_Variable_1) == 0x000024, "Member 'SimpleHolographicComponent_C_StartEffect::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___int_Array_Index_Variable) == 0x000030, "Member 'SimpleHolographicComponent_C_StartEffect::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___wildcard_Variable) == 0x000038, "Member 'SimpleHolographicComponent_C_StartEffect::___wildcard_Variable' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_GetOwner_ReturnValue) == 0x000098, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_IsValid_ReturnValue) == 0x0000A0, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x0000A8, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Length_ReturnValue) == 0x0000C0, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_IsVisible_ReturnValue) == 0x0000C4, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Less_IntInt_ReturnValue) == 0x0000C5, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, K2Node_DynamicCast_As_______) == 0x0000C8, "Member 'SimpleHolographicComponent_C_StartEffect::K2Node_DynamicCast_As_______' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'SimpleHolographicComponent_C_StartEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_GetMaterials_ReturnValue) == 0x0000D8, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Length_ReturnValue_1) == 0x0000E8, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000EC, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, K2Node_MakeStruct_SHolographicMaterialsCache) == 0x0000F0, "Member 'SimpleHolographicComponent_C_StartEffect::K2Node_MakeStruct_SHolographicMaterialsCache' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000100, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___int_Array_Index_Variable_1) == 0x000104, "Member 'SimpleHolographicComponent_C_StartEffect::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Get_Item_1) == 0x000108, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000110, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, K2Node_DynamicCast_As______) == 0x000118, "Member 'SimpleHolographicComponent_C_StartEffect::K2Node_DynamicCast_As______' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, K2Node_DynamicCast_bSuccess_1) == 0x000120, "Member 'SimpleHolographicComponent_C_StartEffect::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_IsValid_ReturnValue_1) == 0x000121, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, ___wildcard_Variable_1) == 0x000128, "Member 'SimpleHolographicComponent_C_StartEffect::___wildcard_Variable_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_CacheAndReplace_ReturnValue) == 0x000130, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_CacheAndReplace_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_CacheAndReplace_CacheResult) == 0x000138, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_CacheAndReplace_CacheResult' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Add_ReturnValue) == 0x0001E8, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_GetObjectName_ReturnValue) == 0x0001F0, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Add_ReturnValue_1) == 0x000200, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_EndsWith_ReturnValue) == 0x000204, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_EndsWith_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SimpleHolographicComponent_C_StartEffect, CallFunc_Array_Add_ReturnValue_2) == 0x000208, "Member 'SimpleHolographicComponent_C_StartEffect::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_SimpleHolographicComponent_C_StartEffect;
 
 }
 

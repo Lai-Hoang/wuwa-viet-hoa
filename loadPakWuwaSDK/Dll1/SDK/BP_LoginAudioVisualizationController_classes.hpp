@@ -49,32 +49,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LoginAudioVisualizationController_C">();
+		BP_STATIC_CLASS_IMPL("BP_LoginAudioVisualizationController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LoginAudioVisualizationController_C")
 	}
 	static class ABP_LoginAudioVisualizationController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LoginAudioVisualizationController_C>();
 	}
 };
-static_assert(alignof(ABP_LoginAudioVisualizationController_C) == 0x000008, "Wrong alignment on ABP_LoginAudioVisualizationController_C");
-static_assert(sizeof(ABP_LoginAudioVisualizationController_C) == 0x0002F8, "Wrong size on ABP_LoginAudioVisualizationController_C");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_LoginAudioVisualizationController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_LoginAudioVisualizationController_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, delta) == 0x0002C0, "Member 'ABP_LoginAudioVisualizationController_C::delta' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody1) == 0x0002C4, "Member 'ABP_LoginAudioVisualizationController_C::melody1' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody2) == 0x0002C8, "Member 'ABP_LoginAudioVisualizationController_C::melody2' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody1BurstThreshold) == 0x0002CC, "Member 'ABP_LoginAudioVisualizationController_C::melody1BurstThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody2BurstThreshold) == 0x0002D0, "Member 'ABP_LoginAudioVisualizationController_C::melody2BurstThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody1BurstSize) == 0x0002D4, "Member 'ABP_LoginAudioVisualizationController_C::melody1BurstSize' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody2BurstSize_) == 0x0002D8, "Member 'ABP_LoginAudioVisualizationController_C::melody2BurstSize_' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, LoginTrackAttSpeed) == 0x0002DC, "Member 'ABP_LoginAudioVisualizationController_C::LoginTrackAttSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, LoginTrackScale) == 0x0002E0, "Member 'ABP_LoginAudioVisualizationController_C::LoginTrackScale' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, LoginTrackSize) == 0x0002E4, "Member 'ABP_LoginAudioVisualizationController_C::LoginTrackSize' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody1Prev) == 0x0002E8, "Member 'ABP_LoginAudioVisualizationController_C::melody1Prev' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody2Prev) == 0x0002EC, "Member 'ABP_LoginAudioVisualizationController_C::melody2Prev' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody1Burst) == 0x0002F0, "Member 'ABP_LoginAudioVisualizationController_C::melody1Burst' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, melody2Burst) == 0x0002F1, "Member 'ABP_LoginAudioVisualizationController_C::melody2Burst' has a wrong offset!");
-static_assert(offsetof(ABP_LoginAudioVisualizationController_C, LoginTrackAccum) == 0x0002F4, "Member 'ABP_LoginAudioVisualizationController_C::LoginTrackAccum' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LoginAudioVisualizationController_C;
 
 }
 

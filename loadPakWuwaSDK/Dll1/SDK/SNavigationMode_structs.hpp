@@ -34,16 +34,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 RightActor_18_33C083EF4D84464594266BBA39C41413;    // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(FSNavigationMode) == 0x000008, "Wrong alignment on FSNavigationMode");
-static_assert(sizeof(FSNavigationMode) == 0x000040, "Wrong size on FSNavigationMode");
-static_assert(offsetof(FSNavigationMode, TopMode_2_2A60C94C4E76BE5EC2CA1D9876EEA5BD) == 0x000000, "Member 'FSNavigationMode::TopMode_2_2A60C94C4E76BE5EC2CA1D9876EEA5BD' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, TopActor_11_F014E9604A3BBA1A18D8F9B4878908F3) == 0x000008, "Member 'FSNavigationMode::TopActor_11_F014E9604A3BBA1A18D8F9B4878908F3' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, DownMode_12_9079FFBB4814018672326CA3579523AC) == 0x000010, "Member 'FSNavigationMode::DownMode_12_9079FFBB4814018672326CA3579523AC' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, DownActor_20_BDC3E88F4E320FECAB94BC87ECB5877B) == 0x000018, "Member 'FSNavigationMode::DownActor_20_BDC3E88F4E320FECAB94BC87ECB5877B' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, LeftMode_14_7CC7881F4F8F479A7574C5BAE4DAB485) == 0x000020, "Member 'FSNavigationMode::LeftMode_14_7CC7881F4F8F479A7574C5BAE4DAB485' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, LeftActor_19_F6DEAD7F49C30ADE27054AA68DCD1D3B) == 0x000028, "Member 'FSNavigationMode::LeftActor_19_F6DEAD7F49C30ADE27054AA68DCD1D3B' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, RightMode_16_960EF9BB4D316370DCEAB3A0981EF05F) == 0x000030, "Member 'FSNavigationMode::RightMode_16_960EF9BB4D316370DCEAB3A0981EF05F' has a wrong offset!");
-static_assert(offsetof(FSNavigationMode, RightActor_18_33C083EF4D84464594266BBA39C41413) == 0x000038, "Member 'FSNavigationMode::RightActor_18_33C083EF4D84464594266BBA39C41413' has a wrong offset!");
+DUMPER7_ASSERTS_FSNavigationMode;
 
 }
 

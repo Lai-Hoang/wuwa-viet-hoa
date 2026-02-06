@@ -31,19 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CounterAttackEffectData_C">();
+		BP_STATIC_CLASS_IMPL("CounterAttackEffectData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CounterAttackEffectData_C")
 	}
 	static class UCounterAttackEffectData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCounterAttackEffectData_C>();
 	}
 };
-static_assert(alignof(UCounterAttackEffectData_C) == 0x000008, "Wrong alignment on UCounterAttackEffectData_C");
-static_assert(sizeof(UCounterAttackEffectData_C) == 0x000078, "Wrong size on UCounterAttackEffectData_C");
-static_assert(offsetof(UCounterAttackEffectData_C, Pos) == 0x000038, "Member 'UCounterAttackEffectData_C::Pos' has a wrong offset!");
-static_assert(offsetof(UCounterAttackEffectData_C, Offset) == 0x00003C, "Member 'UCounterAttackEffectData_C::Offset' has a wrong offset!");
-static_assert(offsetof(UCounterAttackEffectData_C, Scale) == 0x000048, "Member 'UCounterAttackEffectData_C::Scale' has a wrong offset!");
-static_assert(offsetof(UCounterAttackEffectData_C, EffectDA) == 0x000058, "Member 'UCounterAttackEffectData_C::EffectDA' has a wrong offset!");
+DUMPER7_ASSERTS_UCounterAttackEffectData_C;
 
 }
 

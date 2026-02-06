@@ -38,19 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PerformanceDisableLight_MP4_OnlyEditor_C">();
+		BP_STATIC_CLASS_IMPL("BP_PerformanceDisableLight_MP4_OnlyEditor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PerformanceDisableLight_MP4_OnlyEditor_C")
 	}
 	static class ABP_PerformanceDisableLight_MP4_OnlyEditor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_PerformanceDisableLight_MP4_OnlyEditor_C>();
 	}
 };
-static_assert(alignof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C) == 0x000008, "Wrong alignment on ABP_PerformanceDisableLight_MP4_OnlyEditor_C");
-static_assert(sizeof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C) == 0x0002D8, "Wrong size on ABP_PerformanceDisableLight_MP4_OnlyEditor_C");
-static_assert(offsetof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_PerformanceDisableLight_MP4_OnlyEditor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_PerformanceDisableLight_MP4_OnlyEditor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C, LightIntensity_MP4) == 0x0002C0, "Member 'ABP_PerformanceDisableLight_MP4_OnlyEditor_C::LightIntensity_MP4' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_MP4_OnlyEditor_C, MainCommand) == 0x0002C8, "Member 'ABP_PerformanceDisableLight_MP4_OnlyEditor_C::MainCommand' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PerformanceDisableLight_MP4_OnlyEditor_C;
 
 }
 

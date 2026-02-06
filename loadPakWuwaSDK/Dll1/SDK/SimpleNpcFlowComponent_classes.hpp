@@ -30,18 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SimpleNpcFlowComponent_C">();
+		BP_STATIC_CLASS_IMPL("SimpleNpcFlowComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleNpcFlowComponent_C")
 	}
 	static class USimpleNpcFlowComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USimpleNpcFlowComponent_C>();
 	}
 };
-static_assert(alignof(USimpleNpcFlowComponent_C) == 0x000008, "Wrong alignment on USimpleNpcFlowComponent_C");
-static_assert(sizeof(USimpleNpcFlowComponent_C) == 0x0000F0, "Wrong size on USimpleNpcFlowComponent_C");
-static_assert(offsetof(USimpleNpcFlowComponent_C, NpcList) == 0x0000C0, "Member 'USimpleNpcFlowComponent_C::NpcList' has a wrong offset!");
-static_assert(offsetof(USimpleNpcFlowComponent_C, FlowList) == 0x0000D0, "Member 'USimpleNpcFlowComponent_C::FlowList' has a wrong offset!");
-static_assert(offsetof(USimpleNpcFlowComponent_C, CheckRange) == 0x0000E0, "Member 'USimpleNpcFlowComponent_C::CheckRange' has a wrong offset!");
+DUMPER7_ASSERTS_USimpleNpcFlowComponent_C;
 
 }
 

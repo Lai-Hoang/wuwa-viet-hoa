@@ -50,36 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KeepFollowingConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_KeepFollowingConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KeepFollowingConfig_C")
 	}
 	static class UBP_KeepFollowingConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_KeepFollowingConfig_C>();
 	}
 };
-static_assert(alignof(UBP_KeepFollowingConfig_C) == 0x000008, "Wrong alignment on UBP_KeepFollowingConfig_C");
-static_assert(sizeof(UBP_KeepFollowingConfig_C) == 0x0000A8, "Wrong size on UBP_KeepFollowingConfig_C");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 步行跟随方位向量) == 0x000038, "Member 'UBP_KeepFollowingConfig_C::步行跟随方位向量' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 跑步跟随方位向量) == 0x000040, "Member 'UBP_KeepFollowingConfig_C::跑步跟随方位向量' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 跟随变速范围) == 0x000048, "Member 'UBP_KeepFollowingConfig_C::跟随变速范围' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 是否启用位移修正) == 0x000050, "Member 'UBP_KeepFollowingConfig_C::是否启用位移修正' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 位移修正距离) == 0x000054, "Member 'UBP_KeepFollowingConfig_C::位移修正距离' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 保持站立距离) == 0x000058, "Member 'UBP_KeepFollowingConfig_C::保持站立距离' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 走跑状态分界速度) == 0x00005C, "Member 'UBP_KeepFollowingConfig_C::走跑状态分界速度' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 走跑分界速度浮动) == 0x000060, "Member 'UBP_KeepFollowingConfig_C::走跑分界速度浮动' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 跟随距离容差) == 0x000064, "Member 'UBP_KeepFollowingConfig_C::跟随距离容差' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 转向角度容差) == 0x000068, "Member 'UBP_KeepFollowingConfig_C::转向角度容差' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 最大转向持续时间) == 0x00006C, "Member 'UBP_KeepFollowingConfig_C::最大转向持续时间' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 变速加速度) == 0x000070, "Member 'UBP_KeepFollowingConfig_C::变速加速度' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 转向速度) == 0x000074, "Member 'UBP_KeepFollowingConfig_C::转向速度' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 高低差允许范围) == 0x000078, "Member 'UBP_KeepFollowingConfig_C::高低差允许范围' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, DebugDraw) == 0x00007C, "Member 'UBP_KeepFollowingConfig_C::DebugDraw' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 位移修正速度) == 0x000080, "Member 'UBP_KeepFollowingConfig_C::位移修正速度' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 是否启用超时传送) == 0x000084, "Member 'UBP_KeepFollowingConfig_C::是否启用超时传送' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 异常距离) == 0x000088, "Member 'UBP_KeepFollowingConfig_C::异常距离' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 超时时间) == 0x00008C, "Member 'UBP_KeepFollowingConfig_C::超时时间' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 传送特效buffID) == 0x000090, "Member 'UBP_KeepFollowingConfig_C::传送特效buffID' has a wrong offset!");
-static_assert(offsetof(UBP_KeepFollowingConfig_C, 被阻挡触发传送时间) == 0x0000A0, "Member 'UBP_KeepFollowingConfig_C::被阻挡触发传送时间' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_KeepFollowingConfig_C;
 
 }
 

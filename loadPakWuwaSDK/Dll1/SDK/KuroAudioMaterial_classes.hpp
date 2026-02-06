@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioMaterialSettings">();
+		STATIC_CLASS_IMPL("KuroAudioMaterialSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioMaterialSettings")
 	}
 	static class UKuroAudioMaterialSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAudioMaterialSettings>();
 	}
 };
-static_assert(alignof(UKuroAudioMaterialSettings) == 0x000008, "Wrong alignment on UKuroAudioMaterialSettings");
-static_assert(sizeof(UKuroAudioMaterialSettings) == 0x000090, "Wrong size on UKuroAudioMaterialSettings");
-static_assert(offsetof(UKuroAudioMaterialSettings, MatName2PhysMaterial) == 0x000030, "Member 'UKuroAudioMaterialSettings::MatName2PhysMaterial' has a wrong offset!");
-static_assert(offsetof(UKuroAudioMaterialSettings, FootstepAudioTextureMap) == 0x000040, "Member 'UKuroAudioMaterialSettings::FootstepAudioTextureMap' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAudioMaterialSettings;
 
 // Class KuroAudioMaterial.KuroAudioMaterialSubsystem
 // 0x0060 (0x0098 - 0x0038)
@@ -59,15 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioMaterialSubsystem">();
+		STATIC_CLASS_IMPL("KuroAudioMaterialSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioMaterialSubsystem")
 	}
 	static class UKuroAudioMaterialSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAudioMaterialSubsystem>();
 	}
 };
-static_assert(alignof(UKuroAudioMaterialSubsystem) == 0x000008, "Wrong alignment on UKuroAudioMaterialSubsystem");
-static_assert(sizeof(UKuroAudioMaterialSubsystem) == 0x000098, "Wrong size on UKuroAudioMaterialSubsystem");
+DUMPER7_ASSERTS_UKuroAudioMaterialSubsystem;
 
 }
 

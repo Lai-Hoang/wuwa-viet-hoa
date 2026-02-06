@@ -19,30 +19,30 @@ namespace SDK
 {
 
 // Class KuroInteractionEffect.KuroEnviInteractionComponent
-// 0x0120 (0x01E0 - 0x00C0)
+// 0x0170 (0x0230 - 0x00C0)
 class UKuroEnviInteractionComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bCalEnviInteractionData;                           // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RayFromOffset;                                     // 0x00CC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RayToOffset;                                       // 0x00D8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FrameCountToWaterTrace;                            // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateWaterEID;                                   // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpdateRainOcclusion;                              // 0x00E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSPModelCharacterData;                          // 0x00EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EB[0x1];                                       // 0x00EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ModelConfigId;                                     // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ModelStateId;                                      // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LinkNiagaraModeId;                                 // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, class UMaterialParameterCollection*> SPModelMPCMap;                                  // 0x00F8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bUseSPModelShiftColor;                             // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FSPModelSCPMap>            SPModelColorMap;                                   // 0x0150(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A0[0x10];                                     // 0x01A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTraceSphereElement*                    RainOcclusionTraceElement;                         // 0x01B0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1B8[0x28];                                     // 0x01B8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x10];                                      // 0x00C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bCalEnviInteractionData;                           // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RayFromOffset;                                     // 0x00D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RayToOffset;                                       // 0x00E0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrameCountToWaterTrace;                            // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateWaterEID;                                   // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateRainOcclusion;                              // 0x00F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSPModelCharacterData;                          // 0x00F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F3[0x1];                                       // 0x00F3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ModelConfigId;                                     // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ModelStateId;                                      // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LinkNiagaraModeId;                                 // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, class UMaterialParameterCollection*> SPModelMPCMap;                                  // 0x0100(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bUseSPModelShiftColor;                             // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FSPModelSCPMap>            SPModelColorMap;                                   // 0x0158(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A8[0x58];                                     // 0x01A8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTraceSphereElement*                    RainOcclusionTraceElement;                         // 0x0200(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_208[0x28];                                     // 0x0208(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FKuroEnviInteractionData GetEnviInteractionData();
@@ -55,29 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroEnviInteractionComponent">();
+		STATIC_CLASS_IMPL("KuroEnviInteractionComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroEnviInteractionComponent")
 	}
 	static class UKuroEnviInteractionComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroEnviInteractionComponent>();
 	}
 };
-static_assert(alignof(UKuroEnviInteractionComponent) == 0x000008, "Wrong alignment on UKuroEnviInteractionComponent");
-static_assert(sizeof(UKuroEnviInteractionComponent) == 0x0001E0, "Wrong size on UKuroEnviInteractionComponent");
-static_assert(offsetof(UKuroEnviInteractionComponent, bCalEnviInteractionData) == 0x0000C8, "Member 'UKuroEnviInteractionComponent::bCalEnviInteractionData' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, RayFromOffset) == 0x0000CC, "Member 'UKuroEnviInteractionComponent::RayFromOffset' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, RayToOffset) == 0x0000D8, "Member 'UKuroEnviInteractionComponent::RayToOffset' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, FrameCountToWaterTrace) == 0x0000E4, "Member 'UKuroEnviInteractionComponent::FrameCountToWaterTrace' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, bUpdateWaterEID) == 0x0000E8, "Member 'UKuroEnviInteractionComponent::bUpdateWaterEID' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, bUpdateRainOcclusion) == 0x0000E9, "Member 'UKuroEnviInteractionComponent::bUpdateRainOcclusion' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, bUseSPModelCharacterData) == 0x0000EA, "Member 'UKuroEnviInteractionComponent::bUseSPModelCharacterData' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, ModelConfigId) == 0x0000EC, "Member 'UKuroEnviInteractionComponent::ModelConfigId' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, ModelStateId) == 0x0000F0, "Member 'UKuroEnviInteractionComponent::ModelStateId' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, LinkNiagaraModeId) == 0x0000F4, "Member 'UKuroEnviInteractionComponent::LinkNiagaraModeId' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, SPModelMPCMap) == 0x0000F8, "Member 'UKuroEnviInteractionComponent::SPModelMPCMap' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, bUseSPModelShiftColor) == 0x000148, "Member 'UKuroEnviInteractionComponent::bUseSPModelShiftColor' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, SPModelColorMap) == 0x000150, "Member 'UKuroEnviInteractionComponent::SPModelColorMap' has a wrong offset!");
-static_assert(offsetof(UKuroEnviInteractionComponent, RainOcclusionTraceElement) == 0x0001B0, "Member 'UKuroEnviInteractionComponent::RainOcclusionTraceElement' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroEnviInteractionComponent;
 
 // Class KuroInteractionEffect.KuroInteractionEffectSystem
 // 0x02D8 (0x0310 - 0x0038)
@@ -98,24 +87,24 @@ public:
 	void RegisterNDIKuroRenderingEIComp(class UNiagaraComponent* InNiagaraComp, class UKuroEnviInteractionComponent* SourceEIComp);
 	void RegisterSPModelCharacterEIComp(class UNiagaraComponent* InNiagaraComp, class UKuroEnviInteractionComponent* SourceEIComp);
 	int32 SearchInteractionFoliage(const class FString& FoliageTypeName);
+	TArray<int32> SearchInteractionFoliageArray(const TArray<class FString>& FoliageTypeNames);
 	struct FSoftObjectPath SearchInteractionPlacementTriggerActor(class UStaticMesh* PlacementMesh);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroInteractionEffectSystem">();
+		STATIC_CLASS_IMPL("KuroInteractionEffectSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroInteractionEffectSystem")
 	}
 	static class UKuroInteractionEffectSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroInteractionEffectSystem>();
 	}
 };
-static_assert(alignof(UKuroInteractionEffectSystem) == 0x000010, "Wrong alignment on UKuroInteractionEffectSystem");
-static_assert(sizeof(UKuroInteractionEffectSystem) == 0x000310, "Wrong size on UKuroInteractionEffectSystem");
-static_assert(offsetof(UKuroInteractionEffectSystem, EnviInteractionCollections) == 0x000040, "Member 'UKuroInteractionEffectSystem::EnviInteractionCollections' has a wrong offset!");
-static_assert(offsetof(UKuroInteractionEffectSystem, SPModelEICompCollections) == 0x000090, "Member 'UKuroInteractionEffectSystem::SPModelEICompCollections' has a wrong offset!");
-static_assert(offsetof(UKuroInteractionEffectSystem, NDIKuroRenderingCollections) == 0x0000E0, "Member 'UKuroInteractionEffectSystem::NDIKuroRenderingCollections' has a wrong offset!");
-static_assert(offsetof(UKuroInteractionEffectSystem, WaterSimMPC) == 0x000280, "Member 'UKuroInteractionEffectSystem::WaterSimMPC' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroInteractionEffectSystem;
 
 }
 

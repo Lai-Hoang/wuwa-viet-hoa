@@ -27,13 +27,7 @@ public:
 	TArray<struct FSBulletGE>                     命中后对受击者应用GE类数组_67_E458D8E1493F8D819A7E20B99E5B22FB; // 0x0070(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSBulletGE>                     能量恢复类GE数组_71_C00C51364FB66C468E6A4EB504B46E45; // 0x0080(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSBulletDataExe) == 0x000008, "Wrong alignment on FSBulletDataExe");
-static_assert(sizeof(FSBulletDataExe) == 0x000090, "Wrong size on FSBulletDataExe");
-static_assert(offsetof(FSBulletDataExe, 命中执行逻辑_78_C30927A34DCA1A2C7C478699ED81A778) == 0x000000, "Member 'FSBulletDataExe::命中执行逻辑_78_C30927A34DCA1A2C7C478699ED81A778' has a wrong offset!");
-static_assert(offsetof(FSBulletDataExe, 更新执行逻辑_79_5D3406794A06E2934C9E80B62645C889) == 0x000030, "Member 'FSBulletDataExe::更新执行逻辑_79_5D3406794A06E2934C9E80B62645C889' has a wrong offset!");
-static_assert(offsetof(FSBulletDataExe, 命中后对攻击者应用GE类数组_66_7F183E6C47C13BA4E5A6BB93768BB022) == 0x000060, "Member 'FSBulletDataExe::命中后对攻击者应用GE类数组_66_7F183E6C47C13BA4E5A6BB93768BB022' has a wrong offset!");
-static_assert(offsetof(FSBulletDataExe, 命中后对受击者应用GE类数组_67_E458D8E1493F8D819A7E20B99E5B22FB) == 0x000070, "Member 'FSBulletDataExe::命中后对受击者应用GE类数组_67_E458D8E1493F8D819A7E20B99E5B22FB' has a wrong offset!");
-static_assert(offsetof(FSBulletDataExe, 能量恢复类GE数组_71_C00C51364FB66C468E6A4EB504B46E45) == 0x000080, "Member 'FSBulletDataExe::能量恢复类GE数组_71_C00C51364FB66C468E6A4EB504B46E45' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataExe;
 
 }
 

@@ -11,77 +11,60 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FloatingStaticMesh.BP_FloatingStaticMesh_C
-// 0x0158 (0x05B8 - 0x0460)
+// 0x0160 (0x0640 - 0x04E0)
 class ABP_FloatingStaticMesh_C final : public AKuroFloatingStaticMesh
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0460(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UKuroVirtualAttachmentParentComponent*  KuroVirtualAttachmentParent;                       // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMeshComp;                                    // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          使用材质参数;                                      // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, float>                      FloatParameters;                                   // 0x0488(0x0050)(Edit, BlueprintVisible)
-	TMap<class FName, struct FLinearColor>        ColorParameters;                                   // 0x04D8(0x0050)(Edit, BlueprintVisible)
-	struct FLinearColor                           EmissionDayColor;                                  // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EmissionColor;                                     // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseWholeDayEmission;                               // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class AActor*, struct FTransformDouble>  ChildActors;                                       // 0x0550(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	TArray<float>                                 CustomData;                                        // 0x05A0(0x0010)(Edit, BlueprintVisible)
-	bool                                          SpecialBlueprintActor;                             // 0x05B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          OverrideSuperFarActor;                             // 0x05B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bUseBoundsCalculateDistance;                       // 0x05B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          HiddenState;                                       // 0x05B3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          SyncHiddenStateToChildren;                         // 0x05B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UKuroVirtualAttachmentParentComponent*  KuroVirtualAttachmentParent;                       // 0x04E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMeshComp;                                    // 0x04F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          使用材质参数;                                      // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, float>                      FloatParameters;                                   // 0x0508(0x0050)(Edit, BlueprintVisible)
+	TMap<class FName, struct FLinearColor>        ColorParameters;                                   // 0x0558(0x0050)(Edit, BlueprintVisible)
+	struct FLinearColor                           EmissionDayColor;                                  // 0x05A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EmissionColor;                                     // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseWholeDayEmission;                               // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5C9[0x7];                                      // 0x05C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class AActor*, struct FTransformDouble>  ChildActors;                                       // 0x05D0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	TArray<float>                                 CustomData;                                        // 0x0620(0x0010)(Edit, BlueprintVisible)
+	bool                                          SpecialBlueprintActor;                             // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          OverrideSuperFarActor;                             // 0x0631(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          HiddenState;                                       // 0x0632(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetCustomData();
-	void RefreshChildActors();
-	void SetMaterialParams();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_FloatingStaticMesh(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
+	void SetMaterialParams();
+	void RefreshChildActors();
 	void CopyCustomPrimitiveData(class UStaticMeshComponent* Target);
+	void SetCustomData();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FloatingStaticMesh_C">();
+		BP_STATIC_CLASS_IMPL("BP_FloatingStaticMesh_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FloatingStaticMesh_C")
 	}
 	static class ABP_FloatingStaticMesh_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_FloatingStaticMesh_C>();
 	}
 };
-static_assert(alignof(ABP_FloatingStaticMesh_C) == 0x000008, "Wrong alignment on ABP_FloatingStaticMesh_C");
-static_assert(sizeof(ABP_FloatingStaticMesh_C) == 0x0005B8, "Wrong size on ABP_FloatingStaticMesh_C");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, UberGraphFrame) == 0x000460, "Member 'ABP_FloatingStaticMesh_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, KuroVirtualAttachmentParent) == 0x000468, "Member 'ABP_FloatingStaticMesh_C::KuroVirtualAttachmentParent' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, StaticMeshComp) == 0x000470, "Member 'ABP_FloatingStaticMesh_C::StaticMeshComp' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, Scene) == 0x000478, "Member 'ABP_FloatingStaticMesh_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, 使用材质参数) == 0x000480, "Member 'ABP_FloatingStaticMesh_C::使用材质参数' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, FloatParameters) == 0x000488, "Member 'ABP_FloatingStaticMesh_C::FloatParameters' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, ColorParameters) == 0x0004D8, "Member 'ABP_FloatingStaticMesh_C::ColorParameters' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, EmissionDayColor) == 0x000528, "Member 'ABP_FloatingStaticMesh_C::EmissionDayColor' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, EmissionColor) == 0x000538, "Member 'ABP_FloatingStaticMesh_C::EmissionColor' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, UseWholeDayEmission) == 0x000548, "Member 'ABP_FloatingStaticMesh_C::UseWholeDayEmission' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, ChildActors) == 0x000550, "Member 'ABP_FloatingStaticMesh_C::ChildActors' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, CustomData) == 0x0005A0, "Member 'ABP_FloatingStaticMesh_C::CustomData' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, SpecialBlueprintActor) == 0x0005B0, "Member 'ABP_FloatingStaticMesh_C::SpecialBlueprintActor' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, OverrideSuperFarActor) == 0x0005B1, "Member 'ABP_FloatingStaticMesh_C::OverrideSuperFarActor' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, bUseBoundsCalculateDistance) == 0x0005B2, "Member 'ABP_FloatingStaticMesh_C::bUseBoundsCalculateDistance' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, HiddenState) == 0x0005B3, "Member 'ABP_FloatingStaticMesh_C::HiddenState' has a wrong offset!");
-static_assert(offsetof(ABP_FloatingStaticMesh_C, SyncHiddenStateToChildren) == 0x0005B4, "Member 'ABP_FloatingStaticMesh_C::SyncHiddenStateToChildren' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_FloatingStaticMesh_C;
 
 }
 

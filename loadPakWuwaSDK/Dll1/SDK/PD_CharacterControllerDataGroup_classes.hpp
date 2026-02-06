@@ -28,18 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_CharacterControllerDataGroup_C">();
+		BP_STATIC_CLASS_IMPL("PD_CharacterControllerDataGroup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_CharacterControllerDataGroup_C")
 	}
 	static class UPD_CharacterControllerDataGroup_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_CharacterControllerDataGroup_C>();
 	}
 };
-static_assert(alignof(UPD_CharacterControllerDataGroup_C) == 0x000008, "Wrong alignment on UPD_CharacterControllerDataGroup_C");
-static_assert(sizeof(UPD_CharacterControllerDataGroup_C) == 0x000090, "Wrong size on UPD_CharacterControllerDataGroup_C");
-static_assert(offsetof(UPD_CharacterControllerDataGroup_C, DataMap) == 0x000038, "Member 'UPD_CharacterControllerDataGroup_C::DataMap' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerDataGroup_C, IgnoreTimeDilation) == 0x000088, "Member 'UPD_CharacterControllerDataGroup_C::IgnoreTimeDilation' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerDataGroup_C, CleanOriginEffect) == 0x000089, "Member 'UPD_CharacterControllerDataGroup_C::CleanOriginEffect' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_CharacterControllerDataGroup_C;
 
 }
 

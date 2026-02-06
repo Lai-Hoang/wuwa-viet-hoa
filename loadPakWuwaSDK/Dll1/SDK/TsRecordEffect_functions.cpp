@@ -17,65 +17,37 @@
 namespace SDK
 {
 
-// Function TsRecordEffect.TsRecordEffect_C.TryAddEffectView
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATsRecordEffect_C::TryAddEffectView()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "TryAddEffectView");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsRecordEffect.TsRecordEffect_C.OnStop
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsRecordEffect_C::OnStop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "OnStop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsRecordEffect.TsRecordEffect_C.OnPlay
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsRecordEffect_C::OnPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "OnPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsRecordEffect.TsRecordEffect_C.ReceiveEndPlay
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Function TsRecordEffect.TsRecordEffect_C.ExecuteUbergraph_TsRecordEffect
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsRecordEffect_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void ATsRecordEffect_C::ExecuteUbergraph_TsRecordEffect(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("TsRecordEffect_C", "ExecuteUbergraph_TsRecordEffect");
 
-	Params::TsRecordEffect_C_ReceiveEndPlay Parms{};
+	Params::TsRecordEffect_C_ExecuteUbergraph_TsRecordEffect Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsRecordEffect.TsRecordEffect_C.ReceiveBeginPlay
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+
+void ATsRecordEffect_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsRecordEffect_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -99,37 +71,65 @@ void ATsRecordEffect_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function TsRecordEffect.TsRecordEffect_C.ReceiveBeginPlay
+// Function TsRecordEffect.TsRecordEffect_C.ReceiveEndPlay
 // (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsRecordEffect_C::ReceiveBeginPlay()
+void ATsRecordEffect_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("TsRecordEffect_C", "ReceiveEndPlay");
+
+	Params::TsRecordEffect_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsRecordEffect.TsRecordEffect_C.OnPlay
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATsRecordEffect_C::OnPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsRecordEffect_C", "OnPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TsRecordEffect.TsRecordEffect_C.ExecuteUbergraph_TsRecordEffect
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsRecordEffect.TsRecordEffect_C.OnStop
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ATsRecordEffect_C::ExecuteUbergraph_TsRecordEffect(int32 EntryPoint)
+void ATsRecordEffect_C::OnStop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsRecordEffect_C", "ExecuteUbergraph_TsRecordEffect");
+		Func = Class->GetFunction("TsRecordEffect_C", "OnStop");
 
-	Params::TsRecordEffect_C_ExecuteUbergraph_TsRecordEffect Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function TsRecordEffect.TsRecordEffect_C.TryAddEffectView
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ATsRecordEffect_C::TryAddEffectView()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsRecordEffect_C", "TryAddEffectView");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

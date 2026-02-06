@@ -32,21 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SQLiteSettings">();
+		STATIC_CLASS_IMPL("SQLiteSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SQLiteSettings")
 	}
 	static class USQLiteSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USQLiteSettings>();
 	}
 };
-static_assert(alignof(USQLiteSettings) == 0x000008, "Wrong alignment on USQLiteSettings");
-static_assert(sizeof(USQLiteSettings) == 0x000048, "Wrong size on USQLiteSettings");
-static_assert(offsetof(USQLiteSettings, LookAsideSizeEach) == 0x000030, "Member 'USQLiteSettings::LookAsideSizeEach' has a wrong offset!");
-static_assert(offsetof(USQLiteSettings, LookAsideNumber) == 0x000034, "Member 'USQLiteSettings::LookAsideNumber' has a wrong offset!");
-static_assert(offsetof(USQLiteSettings, PageCacheSizeEach) == 0x000038, "Member 'USQLiteSettings::PageCacheSizeEach' has a wrong offset!");
-static_assert(offsetof(USQLiteSettings, PageCacheNumber) == 0x00003C, "Member 'USQLiteSettings::PageCacheNumber' has a wrong offset!");
-static_assert(offsetof(USQLiteSettings, EnableTrace) == 0x000040, "Member 'USQLiteSettings::EnableTrace' has a wrong offset!");
-static_assert(offsetof(USQLiteSettings, EnableDBFilePakInfo) == 0x000041, "Member 'USQLiteSettings::EnableDBFilePakInfo' has a wrong offset!");
+DUMPER7_ASSERTS_USQLiteSettings;
 
 }
 

@@ -22,10 +22,7 @@ public:
 	float                                         伤害数值_12_993133D549925E333C86C58608AACB1A;      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         属性Id_15_9324D91E44A8CDD2A972FEBAFFED5BE3;        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSDamageData) == 0x000004, "Wrong alignment on FSDamageData");
-static_assert(sizeof(FSDamageData) == 0x000008, "Wrong size on FSDamageData");
-static_assert(offsetof(FSDamageData, 伤害数值_12_993133D549925E333C86C58608AACB1A) == 0x000000, "Member 'FSDamageData::伤害数值_12_993133D549925E333C86C58608AACB1A' has a wrong offset!");
-static_assert(offsetof(FSDamageData, 属性Id_15_9324D91E44A8CDD2A972FEBAFFED5BE3) == 0x000004, "Member 'FSDamageData::属性Id_15_9324D91E44A8CDD2A972FEBAFFED5BE3' has a wrong offset!");
+DUMPER7_ASSERTS_FSDamageData;
 
 }
 

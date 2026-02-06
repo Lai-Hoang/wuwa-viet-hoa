@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WindowsDeviceProfileSelector_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "WindowsDeviceProfileSelector_structs.hpp"
 
 
 namespace SDK
@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WindowsDeviceProfileMatchingRules">();
+		STATIC_CLASS_IMPL("WindowsDeviceProfileMatchingRules")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WindowsDeviceProfileMatchingRules")
 	}
 	static class UWindowsDeviceProfileMatchingRules* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWindowsDeviceProfileMatchingRules>();
 	}
 };
-static_assert(alignof(UWindowsDeviceProfileMatchingRules) == 0x000008, "Wrong alignment on UWindowsDeviceProfileMatchingRules");
-static_assert(sizeof(UWindowsDeviceProfileMatchingRules) == 0x000040, "Wrong size on UWindowsDeviceProfileMatchingRules");
-static_assert(offsetof(UWindowsDeviceProfileMatchingRules, MatchProfile) == 0x000030, "Member 'UWindowsDeviceProfileMatchingRules::MatchProfile' has a wrong offset!");
+DUMPER7_ASSERTS_UWindowsDeviceProfileMatchingRules;
 
 }
 

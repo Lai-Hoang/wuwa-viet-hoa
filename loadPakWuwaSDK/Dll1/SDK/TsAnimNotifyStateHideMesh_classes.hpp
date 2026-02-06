@@ -29,28 +29,26 @@ public:
 	bool                                          Hide;                                              // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 
 public:
-	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
+	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateHideMesh_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateHideMesh_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateHideMesh_C")
 	}
 	static class UTsAnimNotifyStateHideMesh_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateHideMesh_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateHideMesh_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateHideMesh_C");
-static_assert(sizeof(UTsAnimNotifyStateHideMesh_C) == 0x000070, "Wrong size on UTsAnimNotifyStateHideMesh_C");
-static_assert(offsetof(UTsAnimNotifyStateHideMesh_C, ChildMeshName) == 0x000048, "Member 'UTsAnimNotifyStateHideMesh_C::ChildMeshName' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateHideMesh_C, HideChildren) == 0x000058, "Member 'UTsAnimNotifyStateHideMesh_C::HideChildren' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateHideMesh_C, HideChildrenActors) == 0x000059, "Member 'UTsAnimNotifyStateHideMesh_C::HideChildrenActors' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateHideMesh_C, EndEffect) == 0x000060, "Member 'UTsAnimNotifyStateHideMesh_C::EndEffect' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateHideMesh_C, Hide) == 0x000068, "Member 'UTsAnimNotifyStateHideMesh_C::Hide' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateHideMesh_C;
 
 }
 

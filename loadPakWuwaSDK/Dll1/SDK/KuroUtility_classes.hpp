@@ -34,17 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncLoadState">();
+		STATIC_CLASS_IMPL("AsyncLoadState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncLoadState")
 	}
 	static class UAsyncLoadState* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncLoadState>();
 	}
 };
-static_assert(alignof(UAsyncLoadState) == 0x000008, "Wrong alignment on UAsyncLoadState");
-static_assert(sizeof(UAsyncLoadState) == 0x000050, "Wrong size on UAsyncLoadState");
-static_assert(offsetof(UAsyncLoadState, ClassLoadedDelegate) == 0x000030, "Member 'UAsyncLoadState::ClassLoadedDelegate' has a wrong offset!");
-static_assert(offsetof(UAsyncLoadState, ObjectLoadedDelegate) == 0x000040, "Member 'UAsyncLoadState::ObjectLoadedDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncLoadState;
 
 // Class KuroUtility.HoldPreloadObject
 // 0x0060 (0x0090 - 0x0030)
@@ -67,17 +68,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoldPreloadObject">();
+		STATIC_CLASS_IMPL("HoldPreloadObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HoldPreloadObject")
 	}
 	static class UHoldPreloadObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHoldPreloadObject>();
 	}
 };
-static_assert(alignof(UHoldPreloadObject) == 0x000008, "Wrong alignment on UHoldPreloadObject");
-static_assert(sizeof(UHoldPreloadObject) == 0x000090, "Wrong size on UHoldPreloadObject");
-static_assert(offsetof(UHoldPreloadObject, CommonAssets) == 0x000030, "Member 'UHoldPreloadObject::CommonAssets' has a wrong offset!");
-static_assert(offsetof(UHoldPreloadObject, EntityAssetMap) == 0x000040, "Member 'UHoldPreloadObject::EntityAssetMap' has a wrong offset!");
+DUMPER7_ASSERTS_UHoldPreloadObject;
 
 // Class KuroUtility.KuroActor
 // 0x0000 (0x02B0 - 0x02B0)
@@ -90,15 +92,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroActor">();
+		STATIC_CLASS_IMPL("KuroActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActor")
 	}
 	static class AKuroActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroActor>();
 	}
 };
-static_assert(alignof(AKuroActor) == 0x000008, "Wrong alignment on AKuroActor");
-static_assert(sizeof(AKuroActor) == 0x0002B0, "Wrong size on AKuroActor");
+DUMPER7_ASSERTS_AKuroActor;
 
 // Class KuroUtility.KuroActorComponent
 // 0x0000 (0x00C0 - 0x00C0)
@@ -110,15 +115,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroActorComponent">();
+		STATIC_CLASS_IMPL("KuroActorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActorComponent")
 	}
 	static class UKuroActorComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroActorComponent>();
 	}
 };
-static_assert(alignof(UKuroActorComponent) == 0x000008, "Wrong alignment on UKuroActorComponent");
-static_assert(sizeof(UKuroActorComponent) == 0x0000C0, "Wrong size on UKuroActorComponent");
+DUMPER7_ASSERTS_UKuroActorComponent;
 
 // Class KuroUtility.KuroActorEventBinder
 // 0x0010 (0x0040 - 0x0030)
@@ -130,16 +138,47 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroActorEventBinder">();
+		STATIC_CLASS_IMPL("KuroActorEventBinder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActorEventBinder")
 	}
 	static class UKuroActorEventBinder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroActorEventBinder>();
 	}
 };
-static_assert(alignof(UKuroActorEventBinder) == 0x000008, "Wrong alignment on UKuroActorEventBinder");
-static_assert(sizeof(UKuroActorEventBinder) == 0x000040, "Wrong size on UKuroActorEventBinder");
-static_assert(offsetof(UKuroActorEventBinder, Callback) == 0x000030, "Member 'UKuroActorEventBinder::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroActorEventBinder;
+
+// Class KuroUtility.KuroActorLevelVolume
+// 0x00C8 (0x03B0 - 0x02E8)
+class AKuroActorLevelVolume final : public AVolume
+{
+public:
+	class FName                                   VolumeId;                                          // 0x02E8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TAPDUrl;                                           // 0x02F8(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSet<class FString>                           ExcludeActorType;                                  // 0x0308(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	TSet<class FString>                           ExcludeActorName;                                  // 0x0358(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	EActorPartitionVolumeType                     Type;                                              // 0x03A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroActorLevelVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActorLevelVolume")
+	}
+	static class AKuroActorLevelVolume* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroActorLevelVolume>();
+	}
+};
+DUMPER7_ASSERTS_AKuroActorLevelVolume;
 
 // Class KuroUtility.KuroActorManager
 // 0x0000 (0x0030 - 0x0030)
@@ -168,44 +207,48 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroActorManager">();
+		STATIC_CLASS_IMPL("KuroActorManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActorManager")
 	}
 	static class UKuroActorManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroActorManager>();
 	}
 };
-static_assert(alignof(UKuroActorManager) == 0x000008, "Wrong alignment on UKuroActorManager");
-static_assert(sizeof(UKuroActorManager) == 0x000030, "Wrong size on UKuroActorManager");
+DUMPER7_ASSERTS_UKuroActorManager;
 
 // Class KuroUtility.KuroActorPartitionVolume
-// 0x00B8 (0x03A0 - 0x02E8)
+// 0x00D0 (0x03B8 - 0x02E8)
 class AKuroActorPartitionVolume final : public AVolume
 {
 public:
 	class FName                                   VolumeId;                                          // 0x02E8(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EActorPartitionVolumeType                     Type;                                              // 0x02F4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2F5[0x3];                                      // 0x02F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class FString>                           ExcludeActorType;                                  // 0x02F8(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
-	TSet<class FString>                           ExcludeActorName;                                  // 0x0348(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BotURL;                                            // 0x02F8(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EActorPartitionVolumeType                     Type;                                              // 0x0308(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class FString>                           ExcludeActorType;                                  // 0x0310(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	TSet<class FString>                           ExcludeActorName;                                  // 0x0360(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3B0[0x8];                                      // 0x03B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroActorPartitionVolume">();
+		STATIC_CLASS_IMPL("KuroActorPartitionVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroActorPartitionVolume")
 	}
 	static class AKuroActorPartitionVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroActorPartitionVolume>();
 	}
 };
-static_assert(alignof(AKuroActorPartitionVolume) == 0x000008, "Wrong alignment on AKuroActorPartitionVolume");
-static_assert(sizeof(AKuroActorPartitionVolume) == 0x0003A0, "Wrong size on AKuroActorPartitionVolume");
-static_assert(offsetof(AKuroActorPartitionVolume, VolumeId) == 0x0002E8, "Member 'AKuroActorPartitionVolume::VolumeId' has a wrong offset!");
-static_assert(offsetof(AKuroActorPartitionVolume, Type) == 0x0002F4, "Member 'AKuroActorPartitionVolume::Type' has a wrong offset!");
-static_assert(offsetof(AKuroActorPartitionVolume, ExcludeActorType) == 0x0002F8, "Member 'AKuroActorPartitionVolume::ExcludeActorType' has a wrong offset!");
-static_assert(offsetof(AKuroActorPartitionVolume, ExcludeActorName) == 0x000348, "Member 'AKuroActorPartitionVolume::ExcludeActorName' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroActorPartitionVolume;
 
 // Class KuroUtility.KuroApplicationLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -221,15 +264,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroApplicationLibrary">();
+		STATIC_CLASS_IMPL("KuroApplicationLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroApplicationLibrary")
 	}
 	static class UKuroApplicationLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroApplicationLibrary>();
 	}
 };
-static_assert(alignof(UKuroApplicationLibrary) == 0x000008, "Wrong alignment on UKuroApplicationLibrary");
-static_assert(sizeof(UKuroApplicationLibrary) == 0x000030, "Wrong size on UKuroApplicationLibrary");
+DUMPER7_ASSERTS_UKuroApplicationLibrary;
 
 // Class KuroUtility.KuroBlockingVolume
 // 0x0010 (0x02F8 - 0x02E8)
@@ -242,16 +288,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBlockingVolume">();
+		STATIC_CLASS_IMPL("KuroBlockingVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBlockingVolume")
 	}
 	static class AKuroBlockingVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroBlockingVolume>();
 	}
 };
-static_assert(alignof(AKuroBlockingVolume) == 0x000008, "Wrong alignment on AKuroBlockingVolume");
-static_assert(sizeof(AKuroBlockingVolume) == 0x0002F8, "Wrong size on AKuroBlockingVolume");
-static_assert(offsetof(AKuroBlockingVolume, VolumeId) == 0x0002E8, "Member 'AKuroBlockingVolume::VolumeId' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroBlockingVolume;
 
 // Class KuroUtility.KuroBooleanEventBinder
 // 0x0010 (0x0040 - 0x0030)
@@ -263,16 +311,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBooleanEventBinder">();
+		STATIC_CLASS_IMPL("KuroBooleanEventBinder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBooleanEventBinder")
 	}
 	static class UKuroBooleanEventBinder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBooleanEventBinder>();
 	}
 };
-static_assert(alignof(UKuroBooleanEventBinder) == 0x000008, "Wrong alignment on UKuroBooleanEventBinder");
-static_assert(sizeof(UKuroBooleanEventBinder) == 0x000040, "Wrong size on UKuroBooleanEventBinder");
-static_assert(offsetof(UKuroBooleanEventBinder, Callback) == 0x000030, "Member 'UKuroBooleanEventBinder::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBooleanEventBinder;
 
 // Class KuroUtility.KuroBpDataAsset
 // 0x0000 (0x0038 - 0x0038)
@@ -281,15 +331,18 @@ class UKuroBpDataAsset : public UPrimaryDataAsset
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBpDataAsset">();
+		STATIC_CLASS_IMPL("KuroBpDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBpDataAsset")
 	}
 	static class UKuroBpDataAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBpDataAsset>();
 	}
 };
-static_assert(alignof(UKuroBpDataAsset) == 0x000008, "Wrong alignment on UKuroBpDataAsset");
-static_assert(sizeof(UKuroBpDataAsset) == 0x000038, "Wrong size on UKuroBpDataAsset");
+DUMPER7_ASSERTS_UKuroBpDataAsset;
 
 // Class KuroUtility.KuroBpDataAssetGroup
 // 0x0010 (0x0048 - 0x0038)
@@ -301,16 +354,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBpDataAssetGroup">();
+		STATIC_CLASS_IMPL("KuroBpDataAssetGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBpDataAssetGroup")
 	}
 	static class UKuroBpDataAssetGroup* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBpDataAssetGroup>();
 	}
 };
-static_assert(alignof(UKuroBpDataAssetGroup) == 0x000008, "Wrong alignment on UKuroBpDataAssetGroup");
-static_assert(sizeof(UKuroBpDataAssetGroup) == 0x000048, "Wrong size on UKuroBpDataAssetGroup");
-static_assert(offsetof(UKuroBpDataAssetGroup, Data) == 0x000038, "Member 'UKuroBpDataAssetGroup::Data' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBpDataAssetGroup;
 
 // Class KuroUtility.KuroStateMachineBase
 // 0x0070 (0x00A8 - 0x0038)
@@ -324,18 +379,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStateMachineBase">();
+		STATIC_CLASS_IMPL("KuroStateMachineBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStateMachineBase")
 	}
 	static class UKuroStateMachineBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStateMachineBase>();
 	}
 };
-static_assert(alignof(UKuroStateMachineBase) == 0x000008, "Wrong alignment on UKuroStateMachineBase");
-static_assert(sizeof(UKuroStateMachineBase) == 0x0000A8, "Wrong size on UKuroStateMachineBase");
-static_assert(offsetof(UKuroStateMachineBase, Name_0) == 0x000038, "Member 'UKuroStateMachineBase::Name_0' has a wrong offset!");
-static_assert(offsetof(UKuroStateMachineBase, Transitions) == 0x000048, "Member 'UKuroStateMachineBase::Transitions' has a wrong offset!");
-static_assert(offsetof(UKuroStateMachineBase, Children) == 0x000098, "Member 'UKuroStateMachineBase::Children' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroStateMachineBase;
 
 // Class KuroUtility.KuroStateMachineGroup
 // 0x0010 (0x0048 - 0x0038)
@@ -347,16 +402,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStateMachineGroup">();
+		STATIC_CLASS_IMPL("KuroStateMachineGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStateMachineGroup")
 	}
 	static class UKuroStateMachineGroup* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStateMachineGroup>();
 	}
 };
-static_assert(alignof(UKuroStateMachineGroup) == 0x000008, "Wrong alignment on UKuroStateMachineGroup");
-static_assert(sizeof(UKuroStateMachineGroup) == 0x000048, "Wrong size on UKuroStateMachineGroup");
-static_assert(offsetof(UKuroStateMachineGroup, StateMachineList) == 0x000038, "Member 'UKuroStateMachineGroup::StateMachineList' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroStateMachineGroup;
 
 // Class KuroUtility.KuroStateMachineConditionBase
 // 0x0000 (0x0038 - 0x0038)
@@ -365,15 +422,18 @@ class UKuroStateMachineConditionBase : public UPrimaryDataAsset
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStateMachineConditionBase">();
+		STATIC_CLASS_IMPL("KuroStateMachineConditionBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStateMachineConditionBase")
 	}
 	static class UKuroStateMachineConditionBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStateMachineConditionBase>();
 	}
 };
-static_assert(alignof(UKuroStateMachineConditionBase) == 0x000008, "Wrong alignment on UKuroStateMachineConditionBase");
-static_assert(sizeof(UKuroStateMachineConditionBase) == 0x000038, "Wrong size on UKuroStateMachineConditionBase");
+DUMPER7_ASSERTS_UKuroStateMachineConditionBase;
 
 // Class KuroUtility.KuroStateMachineConditionAnd
 // 0x0010 (0x0048 - 0x0038)
@@ -385,16 +445,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStateMachineConditionAnd">();
+		STATIC_CLASS_IMPL("KuroStateMachineConditionAnd")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStateMachineConditionAnd")
 	}
 	static class UKuroStateMachineConditionAnd* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStateMachineConditionAnd>();
 	}
 };
-static_assert(alignof(UKuroStateMachineConditionAnd) == 0x000008, "Wrong alignment on UKuroStateMachineConditionAnd");
-static_assert(sizeof(UKuroStateMachineConditionAnd) == 0x000048, "Wrong size on UKuroStateMachineConditionAnd");
-static_assert(offsetof(UKuroStateMachineConditionAnd, Conditions) == 0x000038, "Member 'UKuroStateMachineConditionAnd::Conditions' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroStateMachineConditionAnd;
 
 // Class KuroUtility.KuroStateMachineConditionOr
 // 0x0010 (0x0048 - 0x0038)
@@ -406,16 +468,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStateMachineConditionOr">();
+		STATIC_CLASS_IMPL("KuroStateMachineConditionOr")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStateMachineConditionOr")
 	}
 	static class UKuroStateMachineConditionOr* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStateMachineConditionOr>();
 	}
 };
-static_assert(alignof(UKuroStateMachineConditionOr) == 0x000008, "Wrong alignment on UKuroStateMachineConditionOr");
-static_assert(sizeof(UKuroStateMachineConditionOr) == 0x000048, "Wrong size on UKuroStateMachineConditionOr");
-static_assert(offsetof(UKuroStateMachineConditionOr, Conditions) == 0x000038, "Member 'UKuroStateMachineConditionOr::Conditions' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroStateMachineConditionOr;
 
 // Class KuroUtility.KuroCollectActorComponent
 // 0x0008 (0x00C8 - 0x00C0)
@@ -428,19 +492,24 @@ public:
 public:
 	static class AActor* GetActorWithTag(class FName Tag, ECollectActorType Type);
 
+	void AddCollectActorComponentInEditor();
+	void RemoveCollectActorComponentInEditor();
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCollectActorComponent">();
+		STATIC_CLASS_IMPL("KuroCollectActorComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCollectActorComponent")
 	}
 	static class UKuroCollectActorComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCollectActorComponent>();
 	}
 };
-static_assert(alignof(UKuroCollectActorComponent) == 0x000008, "Wrong alignment on UKuroCollectActorComponent");
-static_assert(sizeof(UKuroCollectActorComponent) == 0x0000C8, "Wrong size on UKuroCollectActorComponent");
-static_assert(offsetof(UKuroCollectActorComponent, CollectActorType) == 0x0000C0, "Member 'UKuroCollectActorComponent::CollectActorType' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCollectActorComponent;
 
 // Class KuroUtility.KuroCompressLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -453,15 +522,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCompressLibrary">();
+		STATIC_CLASS_IMPL("KuroCompressLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCompressLibrary")
 	}
 	static class UKuroCompressLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCompressLibrary>();
 	}
 };
-static_assert(alignof(UKuroCompressLibrary) == 0x000008, "Wrong alignment on UKuroCompressLibrary");
-static_assert(sizeof(UKuroCompressLibrary) == 0x000030, "Wrong size on UKuroCompressLibrary");
+DUMPER7_ASSERTS_UKuroCompressLibrary;
 
 // Class KuroUtility.KuroDemoInteractiveActor
 // 0x0000 (0x02B0 - 0x02B0)
@@ -470,15 +542,18 @@ class AKuroDemoInteractiveActor final : public AActor
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroDemoInteractiveActor">();
+		STATIC_CLASS_IMPL("KuroDemoInteractiveActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroDemoInteractiveActor")
 	}
 	static class AKuroDemoInteractiveActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroDemoInteractiveActor>();
 	}
 };
-static_assert(alignof(AKuroDemoInteractiveActor) == 0x000008, "Wrong alignment on AKuroDemoInteractiveActor");
-static_assert(sizeof(AKuroDemoInteractiveActor) == 0x0002B0, "Wrong size on AKuroDemoInteractiveActor");
+DUMPER7_ASSERTS_AKuroDemoInteractiveActor;
 
 // Class KuroUtility.KuroDemoInteractSubSystem
 // 0x0070 (0x00A8 - 0x0038)
@@ -495,18 +570,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroDemoInteractSubSystem">();
+		STATIC_CLASS_IMPL("KuroDemoInteractSubSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroDemoInteractSubSystem")
 	}
 	static class UKuroDemoInteractSubSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroDemoInteractSubSystem>();
 	}
 };
-static_assert(alignof(UKuroDemoInteractSubSystem) == 0x000008, "Wrong alignment on UKuroDemoInteractSubSystem");
-static_assert(sizeof(UKuroDemoInteractSubSystem) == 0x0000A8, "Wrong size on UKuroDemoInteractSubSystem");
-static_assert(offsetof(UKuroDemoInteractSubSystem, OnDemoInteractiveActorAdd) == 0x000038, "Member 'UKuroDemoInteractSubSystem::OnDemoInteractiveActorAdd' has a wrong offset!");
-static_assert(offsetof(UKuroDemoInteractSubSystem, OnDemoInteractiveActorRemove) == 0x000048, "Member 'UKuroDemoInteractSubSystem::OnDemoInteractiveActorRemove' has a wrong offset!");
-static_assert(offsetof(UKuroDemoInteractSubSystem, DemoInteractiveActorMap) == 0x000058, "Member 'UKuroDemoInteractSubSystem::DemoInteractiveActorMap' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroDemoInteractSubSystem;
 
 // Class KuroUtility.KuroEntityActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -519,16 +594,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroEntityActor">();
+		STATIC_CLASS_IMPL("KuroEntityActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroEntityActor")
 	}
 	static class AKuroEntityActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroEntityActor>();
 	}
 };
-static_assert(alignof(AKuroEntityActor) == 0x000008, "Wrong alignment on AKuroEntityActor");
-static_assert(sizeof(AKuroEntityActor) == 0x0002B8, "Wrong size on AKuroEntityActor");
-static_assert(offsetof(AKuroEntityActor, EntityId) == 0x0002B0, "Member 'AKuroEntityActor::EntityId' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroEntityActor;
 
 // Class KuroUtility.KuroIntEventBinder
 // 0x0010 (0x0040 - 0x0030)
@@ -540,16 +617,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroIntEventBinder">();
+		STATIC_CLASS_IMPL("KuroIntEventBinder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroIntEventBinder")
 	}
 	static class UKuroIntEventBinder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroIntEventBinder>();
 	}
 };
-static_assert(alignof(UKuroIntEventBinder) == 0x000008, "Wrong alignment on UKuroIntEventBinder");
-static_assert(sizeof(UKuroIntEventBinder) == 0x000040, "Wrong size on UKuroIntEventBinder");
-static_assert(offsetof(UKuroIntEventBinder, Callback) == 0x000030, "Member 'UKuroIntEventBinder::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroIntEventBinder;
 
 // Class KuroUtility.KuroJsStatsLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -558,15 +637,18 @@ class UKuroJsStatsLibrary final : public UBlueprintFunctionLibrary
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroJsStatsLibrary">();
+		STATIC_CLASS_IMPL("KuroJsStatsLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroJsStatsLibrary")
 	}
 	static class UKuroJsStatsLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroJsStatsLibrary>();
 	}
 };
-static_assert(alignof(UKuroJsStatsLibrary) == 0x000008, "Wrong alignment on UKuroJsStatsLibrary");
-static_assert(sizeof(UKuroJsStatsLibrary) == 0x000030, "Wrong size on UKuroJsStatsLibrary");
+DUMPER7_ASSERTS_UKuroJsStatsLibrary;
 
 // Class KuroUtility.KuroMathLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -581,15 +663,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMathLibrary">();
+		STATIC_CLASS_IMPL("KuroMathLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMathLibrary")
 	}
 	static class UKuroMathLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMathLibrary>();
 	}
 };
-static_assert(alignof(UKuroMathLibrary) == 0x000008, "Wrong alignment on UKuroMathLibrary");
-static_assert(sizeof(UKuroMathLibrary) == 0x000030, "Wrong size on UKuroMathLibrary");
+DUMPER7_ASSERTS_UKuroMathLibrary;
 
 // Class KuroUtility.KuroMemoryLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -601,15 +686,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMemoryLibrary">();
+		STATIC_CLASS_IMPL("KuroMemoryLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMemoryLibrary")
 	}
 	static class UKuroMemoryLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMemoryLibrary>();
 	}
 };
-static_assert(alignof(UKuroMemoryLibrary) == 0x000008, "Wrong alignment on UKuroMemoryLibrary");
-static_assert(sizeof(UKuroMemoryLibrary) == 0x000030, "Wrong size on UKuroMemoryLibrary");
+DUMPER7_ASSERTS_UKuroMemoryLibrary;
 
 // Class KuroUtility.KuroMeshTextureFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -633,15 +721,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMeshTextureFunctionLibrary">();
+		STATIC_CLASS_IMPL("KuroMeshTextureFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMeshTextureFunctionLibrary")
 	}
 	static class UKuroMeshTextureFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMeshTextureFunctionLibrary>();
 	}
 };
-static_assert(alignof(UKuroMeshTextureFunctionLibrary) == 0x000008, "Wrong alignment on UKuroMeshTextureFunctionLibrary");
-static_assert(sizeof(UKuroMeshTextureFunctionLibrary) == 0x000030, "Wrong size on UKuroMeshTextureFunctionLibrary");
+DUMPER7_ASSERTS_UKuroMeshTextureFunctionLibrary;
 
 // Class KuroUtility.KuroPerceptionEventBinder
 // 0x0010 (0x0040 - 0x0030)
@@ -653,16 +744,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPerceptionEventBinder">();
+		STATIC_CLASS_IMPL("KuroPerceptionEventBinder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPerceptionEventBinder")
 	}
 	static class UKuroPerceptionEventBinder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPerceptionEventBinder>();
 	}
 };
-static_assert(alignof(UKuroPerceptionEventBinder) == 0x000008, "Wrong alignment on UKuroPerceptionEventBinder");
-static_assert(sizeof(UKuroPerceptionEventBinder) == 0x000040, "Wrong size on UKuroPerceptionEventBinder");
-static_assert(offsetof(UKuroPerceptionEventBinder, Callback) == 0x000030, "Member 'UKuroPerceptionEventBinder::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroPerceptionEventBinder;
 
 // Class KuroUtility.KuroPhysicsLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -675,15 +768,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPhysicsLibrary">();
+		STATIC_CLASS_IMPL("KuroPhysicsLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPhysicsLibrary")
 	}
 	static class UKuroPhysicsLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPhysicsLibrary>();
 	}
 };
-static_assert(alignof(UKuroPhysicsLibrary) == 0x000008, "Wrong alignment on UKuroPhysicsLibrary");
-static_assert(sizeof(UKuroPhysicsLibrary) == 0x000030, "Wrong size on UKuroPhysicsLibrary");
+DUMPER7_ASSERTS_UKuroPhysicsLibrary;
 
 // Class KuroUtility.KuroPolypartition
 // 0x0000 (0x0030 - 0x0030)
@@ -695,15 +791,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPolypartition">();
+		STATIC_CLASS_IMPL("KuroPolypartition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPolypartition")
 	}
 	static class UKuroPolypartition* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPolypartition>();
 	}
 };
-static_assert(alignof(UKuroPolypartition) == 0x000008, "Wrong alignment on UKuroPolypartition");
-static_assert(sizeof(UKuroPolypartition) == 0x000030, "Wrong size on UKuroPolypartition");
+DUMPER7_ASSERTS_UKuroPolypartition;
 
 // Class KuroUtility.KuroSilenceGameMode
 // 0x0008 (0x03A8 - 0x03A0)
@@ -718,15 +817,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSilenceGameMode">();
+		STATIC_CLASS_IMPL("KuroSilenceGameMode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSilenceGameMode")
 	}
 	static class AKuroSilenceGameMode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroSilenceGameMode>();
 	}
 };
-static_assert(alignof(AKuroSilenceGameMode) == 0x000008, "Wrong alignment on AKuroSilenceGameMode");
-static_assert(sizeof(AKuroSilenceGameMode) == 0x0003A8, "Wrong size on AKuroSilenceGameMode");
+DUMPER7_ASSERTS_AKuroSilenceGameMode;
 
 // Class KuroUtility.KuroStaticAndroidLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -745,15 +847,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStaticAndroidLibrary">();
+		STATIC_CLASS_IMPL("KuroStaticAndroidLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStaticAndroidLibrary")
 	}
 	static class UKuroStaticAndroidLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStaticAndroidLibrary>();
 	}
 };
-static_assert(alignof(UKuroStaticAndroidLibrary) == 0x000008, "Wrong alignment on UKuroStaticAndroidLibrary");
-static_assert(sizeof(UKuroStaticAndroidLibrary) == 0x000030, "Wrong size on UKuroStaticAndroidLibrary");
+DUMPER7_ASSERTS_UKuroStaticAndroidLibrary;
 
 // Class KuroUtility.KuroStaticiOSLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -766,15 +871,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStaticiOSLibrary">();
+		STATIC_CLASS_IMPL("KuroStaticiOSLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStaticiOSLibrary")
 	}
 	static class UKuroStaticiOSLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStaticiOSLibrary>();
 	}
 };
-static_assert(alignof(UKuroStaticiOSLibrary) == 0x000008, "Wrong alignment on UKuroStaticiOSLibrary");
-static_assert(sizeof(UKuroStaticiOSLibrary) == 0x000030, "Wrong size on UKuroStaticiOSLibrary");
+DUMPER7_ASSERTS_UKuroStaticiOSLibrary;
 
 // Class KuroUtility.KuroStaticLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -894,6 +1002,9 @@ public:
 	static void SetActorModify(class AActor* Actor);
 	static void SetActorPermanent(class AActor* Actor, const bool bIsPermanent, const bool bWithAllChildren);
 	static void SetBaseAndSaveBaseLocation(class UCharacterMovementComponent* CharacterMovementComp, class UPrimitiveComponent* NewBase);
+	static void SetConsoleVariableWithCurrentPriority_Float(const class FString& InCVar, float InValue);
+	static void SetConsoleVariableWithCurrentPriority_Int(const class FString& InCVar, int32 InValue);
+	static void SetConsoleVariableWithCurrentPriority_String(const class FString& InCVar, const class FString& InValue);
 	static void SetCursorVisibility(bool visible);
 	static void SetEditorWidgetSkipTick(bool bSkipTick);
 	static void SetGameThreadAffinity(bool bIsInFighting);
@@ -923,15 +1034,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStaticLibrary">();
+		STATIC_CLASS_IMPL("KuroStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStaticLibrary")
 	}
 	static class UKuroStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStaticLibrary>();
 	}
 };
-static_assert(alignof(UKuroStaticLibrary) == 0x000008, "Wrong alignment on UKuroStaticLibrary");
-static_assert(sizeof(UKuroStaticLibrary) == 0x000030, "Wrong size on UKuroStaticLibrary");
+DUMPER7_ASSERTS_UKuroStaticLibrary;
 
 // Class KuroUtility.KuroFFXFSR3BlueprintLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -948,15 +1062,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFFXFSR3BlueprintLibrary">();
+		STATIC_CLASS_IMPL("KuroFFXFSR3BlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFFXFSR3BlueprintLibrary")
 	}
 	static class UKuroFFXFSR3BlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFFXFSR3BlueprintLibrary>();
 	}
 };
-static_assert(alignof(UKuroFFXFSR3BlueprintLibrary) == 0x000008, "Wrong alignment on UKuroFFXFSR3BlueprintLibrary");
-static_assert(sizeof(UKuroFFXFSR3BlueprintLibrary) == 0x000030, "Wrong size on UKuroFFXFSR3BlueprintLibrary");
+DUMPER7_ASSERTS_UKuroFFXFSR3BlueprintLibrary;
 
 // Class KuroUtility.KuroStaticPS5Library
 // 0x0000 (0x0030 - 0x0030)
@@ -1042,15 +1159,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroStaticPS5Library">();
+		STATIC_CLASS_IMPL("KuroStaticPS5Library")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStaticPS5Library")
 	}
 	static class UKuroStaticPS5Library* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroStaticPS5Library>();
 	}
 };
-static_assert(alignof(UKuroStaticPS5Library) == 0x000008, "Wrong alignment on UKuroStaticPS5Library");
-static_assert(sizeof(UKuroStaticPS5Library) == 0x000030, "Wrong size on UKuroStaticPS5Library");
+DUMPER7_ASSERTS_UKuroStaticPS5Library;
 
 // Class KuroUtility.KuroSubLevelVisibleSubsystem
 // 0x0088 (0x00C0 - 0x0038)
@@ -1070,15 +1190,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSubLevelVisibleSubsystem">();
+		STATIC_CLASS_IMPL("KuroSubLevelVisibleSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSubLevelVisibleSubsystem")
 	}
 	static class UKuroSubLevelVisibleSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSubLevelVisibleSubsystem>();
 	}
 };
-static_assert(alignof(UKuroSubLevelVisibleSubsystem) == 0x000008, "Wrong alignment on UKuroSubLevelVisibleSubsystem");
-static_assert(sizeof(UKuroSubLevelVisibleSubsystem) == 0x0000C0, "Wrong size on UKuroSubLevelVisibleSubsystem");
+DUMPER7_ASSERTS_UKuroSubLevelVisibleSubsystem;
 
 // Class KuroUtility.KuroTencentCOSLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -1104,15 +1227,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTencentCOSLibrary">();
+		STATIC_CLASS_IMPL("KuroTencentCOSLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTencentCOSLibrary")
 	}
 	static class UKuroTencentCOSLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTencentCOSLibrary>();
 	}
 };
-static_assert(alignof(UKuroTencentCOSLibrary) == 0x000008, "Wrong alignment on UKuroTencentCOSLibrary");
-static_assert(sizeof(UKuroTencentCOSLibrary) == 0x000030, "Wrong size on UKuroTencentCOSLibrary");
+DUMPER7_ASSERTS_UKuroTencentCOSLibrary;
 
 // Class KuroUtility.KuroTickableManager
 // 0x0018 (0x0048 - 0x0030)
@@ -1128,15 +1254,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTickableManager">();
+		STATIC_CLASS_IMPL("KuroTickableManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTickableManager")
 	}
 	static class UKuroTickableManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTickableManager>();
 	}
 };
-static_assert(alignof(UKuroTickableManager) == 0x000008, "Wrong alignment on UKuroTickableManager");
-static_assert(sizeof(UKuroTickableManager) == 0x000048, "Wrong size on UKuroTickableManager");
+DUMPER7_ASSERTS_UKuroTickableManager;
 
 // Class KuroUtility.KuroTriggerVolume
 // 0x0010 (0x02F8 - 0x02E8)
@@ -1149,16 +1278,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTriggerVolume">();
+		STATIC_CLASS_IMPL("KuroTriggerVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTriggerVolume")
 	}
 	static class AKuroTriggerVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroTriggerVolume>();
 	}
 };
-static_assert(alignof(AKuroTriggerVolume) == 0x000008, "Wrong alignment on AKuroTriggerVolume");
-static_assert(sizeof(AKuroTriggerVolume) == 0x0002F8, "Wrong size on AKuroTriggerVolume");
-static_assert(offsetof(AKuroTriggerVolume, VolumeId) == 0x0002E8, "Member 'AKuroTriggerVolume::VolumeId' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroTriggerVolume;
 
 // Class KuroUtility.KuroTriggerVolumeManager
 // 0x0070 (0x00A8 - 0x0038)
@@ -1175,18 +1306,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTriggerVolumeManager">();
+		STATIC_CLASS_IMPL("KuroTriggerVolumeManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTriggerVolumeManager")
 	}
 	static class UKuroTriggerVolumeManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTriggerVolumeManager>();
 	}
 };
-static_assert(alignof(UKuroTriggerVolumeManager) == 0x000008, "Wrong alignment on UKuroTriggerVolumeManager");
-static_assert(sizeof(UKuroTriggerVolumeManager) == 0x0000A8, "Wrong size on UKuroTriggerVolumeManager");
-static_assert(offsetof(UKuroTriggerVolumeManager, OnTriggerVolumeAddToSubsystem) == 0x000038, "Member 'UKuroTriggerVolumeManager::OnTriggerVolumeAddToSubsystem' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerVolumeManager, OnTriggerVolumeRemoveFromSubsystem) == 0x000048, "Member 'UKuroTriggerVolumeManager::OnTriggerVolumeRemoveFromSubsystem' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerVolumeManager, KuroTriggerVolumeMap) == 0x000058, "Member 'UKuroTriggerVolumeManager::KuroTriggerVolumeMap' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroTriggerVolumeManager;
 
 // Class KuroUtility.KuroWaterVolume
 // 0x0000 (0x02E8 - 0x02E8)
@@ -1195,15 +1326,18 @@ class AKuroWaterVolume final : public AVolume
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroWaterVolume">();
+		STATIC_CLASS_IMPL("KuroWaterVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroWaterVolume")
 	}
 	static class AKuroWaterVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroWaterVolume>();
 	}
 };
-static_assert(alignof(AKuroWaterVolume) == 0x000008, "Wrong alignment on AKuroWaterVolume");
-static_assert(sizeof(AKuroWaterVolume) == 0x0002E8, "Wrong size on AKuroWaterVolume");
+DUMPER7_ASSERTS_AKuroWaterVolume;
 
 // Class KuroUtility.LoadMapNotify
 // 0x0158 (0x0188 - 0x0030)
@@ -1228,15 +1362,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LoadMapNotify">();
+		STATIC_CLASS_IMPL("LoadMapNotify")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LoadMapNotify")
 	}
 	static class ULoadMapNotify* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULoadMapNotify>();
 	}
 };
-static_assert(alignof(ULoadMapNotify) == 0x000008, "Wrong alignment on ULoadMapNotify");
-static_assert(sizeof(ULoadMapNotify) == 0x000188, "Wrong size on ULoadMapNotify");
+DUMPER7_ASSERTS_ULoadMapNotify;
 
 // Class KuroUtility.KuroTickManager
 // 0x0080 (0x00B0 - 0x0030)
@@ -1264,15 +1401,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTickManager">();
+		STATIC_CLASS_IMPL("KuroTickManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTickManager")
 	}
 	static class UKuroTickManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTickManager>();
 	}
 };
-static_assert(alignof(UKuroTickManager) == 0x000008, "Wrong alignment on UKuroTickManager");
-static_assert(sizeof(UKuroTickManager) == 0x0000B0, "Wrong size on UKuroTickManager");
+DUMPER7_ASSERTS_UKuroTickManager;
 
 }
 

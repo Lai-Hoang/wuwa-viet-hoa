@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "StreamlineDLSSGBlueprint_structs.hpp"
+#include "Engine_classes.hpp"
 #include "StreamlineBlueprint_structs.hpp"
 
 
@@ -35,15 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StreamlineLibraryDLSSG">();
+		STATIC_CLASS_IMPL("StreamlineLibraryDLSSG")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StreamlineLibraryDLSSG")
 	}
 	static class UStreamlineLibraryDLSSG* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStreamlineLibraryDLSSG>();
 	}
 };
-static_assert(alignof(UStreamlineLibraryDLSSG) == 0x000008, "Wrong alignment on UStreamlineLibraryDLSSG");
-static_assert(sizeof(UStreamlineLibraryDLSSG) == 0x000030, "Wrong size on UStreamlineLibraryDLSSG");
+DUMPER7_ASSERTS_UStreamlineLibraryDLSSG;
 
 }
 

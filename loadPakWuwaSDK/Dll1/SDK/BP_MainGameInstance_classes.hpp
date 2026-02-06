@@ -37,18 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MainGameInstance_C">();
+		BP_STATIC_CLASS_IMPL("BP_MainGameInstance_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MainGameInstance_C")
 	}
 	static class UBP_MainGameInstance_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_MainGameInstance_C>();
 	}
 };
-static_assert(alignof(UBP_MainGameInstance_C) == 0x000008, "Wrong alignment on UBP_MainGameInstance_C");
-static_assert(sizeof(UBP_MainGameInstance_C) == 0x0001D0, "Wrong size on UBP_MainGameInstance_C");
-static_assert(offsetof(UBP_MainGameInstance_C, UberGraphFrame) == 0x0001B8, "Member 'UBP_MainGameInstance_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_MainGameInstance_C, 场景加载通知器) == 0x0001C0, "Member 'UBP_MainGameInstance_C::场景加载通知器' has a wrong offset!");
-static_assert(offsetof(UBP_MainGameInstance_C, IsStartFromLaunch) == 0x0001C8, "Member 'UBP_MainGameInstance_C::IsStartFromLaunch' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_MainGameInstance_C;
 
 }
 

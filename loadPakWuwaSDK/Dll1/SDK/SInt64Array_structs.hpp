@@ -21,9 +21,7 @@ struct FSInt64Array final
 public:
 	TArray<int64>                                 Value_3_9B2A497A42D6C94CD75B1680C8058A51;          // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSInt64Array) == 0x000008, "Wrong alignment on FSInt64Array");
-static_assert(sizeof(FSInt64Array) == 0x000010, "Wrong size on FSInt64Array");
-static_assert(offsetof(FSInt64Array, Value_3_9B2A497A42D6C94CD75B1680C8058A51) == 0x000000, "Member 'FSInt64Array::Value_3_9B2A497A42D6C94CD75B1680C8058A51' has a wrong offset!");
+DUMPER7_ASSERTS_FSInt64Array;
 
 }
 

@@ -23,10 +23,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      Material_8_6F264143458401D0D9A9388EAF15FE37;       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSNpcHookPartMaterial) == 0x000008, "Wrong alignment on FSNpcHookPartMaterial");
-static_assert(sizeof(FSNpcHookPartMaterial) == 0x000010, "Wrong size on FSNpcHookPartMaterial");
-static_assert(offsetof(FSNpcHookPartMaterial, SlotID_2_31F16DC847D7A09C3499B598AA094EB7) == 0x000000, "Member 'FSNpcHookPartMaterial::SlotID_2_31F16DC847D7A09C3499B598AA094EB7' has a wrong offset!");
-static_assert(offsetof(FSNpcHookPartMaterial, Material_8_6F264143458401D0D9A9388EAF15FE37) == 0x000008, "Member 'FSNpcHookPartMaterial::Material_8_6F264143458401D0D9A9388EAF15FE37' has a wrong offset!");
+DUMPER7_ASSERTS_FSNpcHookPartMaterial;
 
 }
 

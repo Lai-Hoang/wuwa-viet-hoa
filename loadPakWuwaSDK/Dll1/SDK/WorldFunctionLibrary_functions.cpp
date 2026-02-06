@@ -4568,33 +4568,6 @@ bool UWorldFunctionLibrary_C::IsPlayerFollowerEnable(class UObject* __WorldConte
 }
 
 
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWorldFunctionLibrary_C::SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerEnable");
-
-	Params::WorldFunctionLibrary_C_SetPlayerFollowerEnable Parms{};
-
-	Parms.enable = enable;
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollowerMotor
 // (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -4804,6 +4777,35 @@ void UWorldFunctionLibrary_C::ShowTipsByTextId(const class FString& textId, clas
 	Params::WorldFunctionLibrary_C_ShowTipsByTextId Parms{};
 
 	Parms.textId = std::move(textId);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EBPEEnableFollowShooter                 enableType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::SetPlayerFollowerEnable(bool enable, EBPEEnableFollowShooter enableType, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerEnable");
+
+	Params::WorldFunctionLibrary_C_SetPlayerFollowerEnable Parms{};
+
+	Parms.enable = enable;
+	Parms.enableType = enableType;
 	Parms.__WorldContext = __WorldContext;
 
 	auto Flgs = Func->FunctionFlags;

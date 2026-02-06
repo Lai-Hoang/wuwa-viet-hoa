@@ -56,7 +56,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsComponentBase">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsComponentBase")
 	}
 	static class UKuroFauxPhysicsComponentBase* GetDefaultObj()
 	{
@@ -64,13 +68,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(UKuroFauxPhysicsComponentBase) == 0x000010, "Wrong alignment on UKuroFauxPhysicsComponentBase");
-static_assert(sizeof(UKuroFauxPhysicsComponentBase) == 0x0002C0, "Wrong size on UKuroFauxPhysicsComponentBase");
-static_assert(offsetof(UKuroFauxPhysicsComponentBase, bStartDisabled) == 0x000218, "Member 'UKuroFauxPhysicsComponentBase::bStartDisabled' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsComponentBase, bIgnoreActorTimeDilation) == 0x000219, "Member 'UKuroFauxPhysicsComponentBase::bIgnoreActorTimeDilation' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsComponentBase, bStopVelocityWhenDisabled) == 0x00021A, "Member 'UKuroFauxPhysicsComponentBase::bStopVelocityWhenDisabled' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsComponentBase, PreventSleepFrameAfterWake) == 0x00021C, "Member 'UKuroFauxPhysicsComponentBase::PreventSleepFrameAfterWake' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsComponentBase, MaxStepTime) == 0x000220, "Member 'UKuroFauxPhysicsComponentBase::MaxStepTime' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsComponentBase;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsRotateComponentBase
 // 0x0010 (0x02D0 - 0x02C0)
@@ -86,19 +84,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsRotateComponentBase">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsRotateComponentBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsRotateComponentBase")
 	}
 	static class UKuroFauxPhysicsRotateComponentBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsRotateComponentBase>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsRotateComponentBase) == 0x000010, "Wrong alignment on UKuroFauxPhysicsRotateComponentBase");
-static_assert(sizeof(UKuroFauxPhysicsRotateComponentBase) == 0x0002D0, "Wrong size on UKuroFauxPhysicsRotateComponentBase");
-static_assert(offsetof(UKuroFauxPhysicsRotateComponentBase, Friction) == 0x0002B8, "Member 'UKuroFauxPhysicsRotateComponentBase::Friction' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsRotateComponentBase, TorqueBounds) == 0x0002BC, "Member 'UKuroFauxPhysicsRotateComponentBase::TorqueBounds' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsRotateComponentBase, ForceScalar) == 0x0002C0, "Member 'UKuroFauxPhysicsRotateComponentBase::ForceScalar' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsRotateComponentBase, SpringStrength) == 0x0002C4, "Member 'UKuroFauxPhysicsRotateComponentBase::SpringStrength' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsRotateComponentBase;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent
 // 0x0080 (0x0350 - 0x02D0)
@@ -129,24 +126,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsAxisRotateComponent">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsAxisRotateComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsAxisRotateComponent")
 	}
 	static class UKuroFauxPhysicsAxisRotateComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsAxisRotateComponent>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsAxisRotateComponent) == 0x000010, "Wrong alignment on UKuroFauxPhysicsAxisRotateComponent");
-static_assert(sizeof(UKuroFauxPhysicsAxisRotateComponent) == 0x000350, "Wrong size on UKuroFauxPhysicsAxisRotateComponent");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, LocalRotationAxis) == 0x0002D8, "Member 'UKuroFauxPhysicsAxisRotateComponent::LocalRotationAxis' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, bConstrain) == 0x0002E4, "Member 'UKuroFauxPhysicsAxisRotateComponent::bConstrain' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, ConstrainAngleMin) == 0x0002E8, "Member 'UKuroFauxPhysicsAxisRotateComponent::ConstrainAngleMin' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, ConstrainAngleMax) == 0x0002EC, "Member 'UKuroFauxPhysicsAxisRotateComponent::ConstrainAngleMax' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, ConstrainBounce) == 0x0002F0, "Member 'UKuroFauxPhysicsAxisRotateComponent::ConstrainBounce' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, ImpactMinStrength) == 0x0002F4, "Member 'UKuroFauxPhysicsAxisRotateComponent::ImpactMinStrength' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, MinTimeBetweenImpacts) == 0x0002F8, "Member 'UKuroFauxPhysicsAxisRotateComponent::MinTimeBetweenImpacts' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, OnMinConstraintHit) == 0x000300, "Member 'UKuroFauxPhysicsAxisRotateComponent::OnMinConstraintHit' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsAxisRotateComponent, OnMaxConstraintHit) == 0x000310, "Member 'UKuroFauxPhysicsAxisRotateComponent::OnMaxConstraintHit' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsAxisRotateComponent;
 
 // Class KuroFauxPhysics.KuroPrimitiveComponentVisualizer
 // 0x0020 (0x0550 - 0x0530)
@@ -166,15 +157,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPrimitiveComponentVisualizer">();
+		STATIC_CLASS_IMPL("KuroPrimitiveComponentVisualizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPrimitiveComponentVisualizer")
 	}
 	static class UKuroPrimitiveComponentVisualizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPrimitiveComponentVisualizer>();
 	}
 };
-static_assert(alignof(UKuroPrimitiveComponentVisualizer) == 0x000010, "Wrong alignment on UKuroPrimitiveComponentVisualizer");
-static_assert(sizeof(UKuroPrimitiveComponentVisualizer) == 0x000550, "Wrong size on UKuroPrimitiveComponentVisualizer");
+DUMPER7_ASSERTS_UKuroPrimitiveComponentVisualizer;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponentVisualizer
 // 0x0010 (0x0560 - 0x0550)
@@ -186,15 +180,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsAxisRotateComponentVisualizer">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsAxisRotateComponentVisualizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsAxisRotateComponentVisualizer")
 	}
 	static class UKuroFauxPhysicsAxisRotateComponentVisualizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsAxisRotateComponentVisualizer>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsAxisRotateComponentVisualizer) == 0x000010, "Wrong alignment on UKuroFauxPhysicsAxisRotateComponentVisualizer");
-static_assert(sizeof(UKuroFauxPhysicsAxisRotateComponentVisualizer) == 0x000560, "Wrong size on UKuroFauxPhysicsAxisRotateComponentVisualizer");
+DUMPER7_ASSERTS_UKuroFauxPhysicsAxisRotateComponentVisualizer;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsComponentDebug
 // 0x0010 (0x00D0 - 0x00C0)
@@ -206,15 +203,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsComponentDebug">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsComponentDebug")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsComponentDebug")
 	}
 	static class UKuroFauxPhysicsComponentDebug* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsComponentDebug>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsComponentDebug) == 0x000008, "Wrong alignment on UKuroFauxPhysicsComponentDebug");
-static_assert(sizeof(UKuroFauxPhysicsComponentDebug) == 0x0000D0, "Wrong size on UKuroFauxPhysicsComponentDebug");
+DUMPER7_ASSERTS_UKuroFauxPhysicsComponentDebug;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsConeRotateComponent
 // 0x0090 (0x0360 - 0x02D0)
@@ -235,22 +235,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsConeRotateComponent">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsConeRotateComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsConeRotateComponent")
 	}
 	static class UKuroFauxPhysicsConeRotateComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsConeRotateComponent>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsConeRotateComponent) == 0x000010, "Wrong alignment on UKuroFauxPhysicsConeRotateComponent");
-static_assert(sizeof(UKuroFauxPhysicsConeRotateComponent) == 0x000360, "Wrong size on UKuroFauxPhysicsConeRotateComponent");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, ConeAngle) == 0x000320, "Member 'UKuroFauxPhysicsConeRotateComponent::ConeAngle' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, LocalConeDirection) == 0x000324, "Member 'UKuroFauxPhysicsConeRotateComponent::LocalConeDirection' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, ConstrainBounce) == 0x000330, "Member 'UKuroFauxPhysicsConeRotateComponent::ConstrainBounce' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, bConstrainTwist) == 0x000334, "Member 'UKuroFauxPhysicsConeRotateComponent::bConstrainTwist' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, ImpactMinStrength) == 0x000338, "Member 'UKuroFauxPhysicsConeRotateComponent::ImpactMinStrength' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, MinTimeBetweenImpacts) == 0x00033C, "Member 'UKuroFauxPhysicsConeRotateComponent::MinTimeBetweenImpacts' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsConeRotateComponent, OnConstraintHit) == 0x000340, "Member 'UKuroFauxPhysicsConeRotateComponent::OnConstraintHit' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsConeRotateComponent;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsConeRotateComponentVisualizer
 // 0x0010 (0x0560 - 0x0550)
@@ -262,15 +258,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsConeRotateComponentVisualizer">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsConeRotateComponentVisualizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsConeRotateComponentVisualizer")
 	}
 	static class UKuroFauxPhysicsConeRotateComponentVisualizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsConeRotateComponentVisualizer>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsConeRotateComponentVisualizer) == 0x000010, "Wrong alignment on UKuroFauxPhysicsConeRotateComponentVisualizer");
-static_assert(sizeof(UKuroFauxPhysicsConeRotateComponentVisualizer) == 0x000560, "Wrong size on UKuroFauxPhysicsConeRotateComponentVisualizer");
+DUMPER7_ASSERTS_UKuroFauxPhysicsConeRotateComponentVisualizer;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsFreeRotateComponent
 // 0x0050 (0x0320 - 0x02D0)
@@ -284,16 +283,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsFreeRotateComponent">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsFreeRotateComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsFreeRotateComponent")
 	}
 	static class UKuroFauxPhysicsFreeRotateComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsFreeRotateComponent>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsFreeRotateComponent) == 0x000010, "Wrong alignment on UKuroFauxPhysicsFreeRotateComponent");
-static_assert(sizeof(UKuroFauxPhysicsFreeRotateComponent) == 0x000320, "Wrong size on UKuroFauxPhysicsFreeRotateComponent");
-static_assert(offsetof(UKuroFauxPhysicsFreeRotateComponent, ConstrainedAngularVelocityDegrees) == 0x000310, "Member 'UKuroFauxPhysicsFreeRotateComponent::ConstrainedAngularVelocityDegrees' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsFreeRotateComponent;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsFreeRotateComponentVisualizer
 // 0x0010 (0x0560 - 0x0550)
@@ -305,15 +306,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsFreeRotateComponentVisualizer">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsFreeRotateComponentVisualizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsFreeRotateComponentVisualizer")
 	}
 	static class UKuroFauxPhysicsFreeRotateComponentVisualizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsFreeRotateComponentVisualizer>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsFreeRotateComponentVisualizer) == 0x000010, "Wrong alignment on UKuroFauxPhysicsFreeRotateComponentVisualizer");
-static_assert(sizeof(UKuroFauxPhysicsFreeRotateComponentVisualizer) == 0x000560, "Wrong size on UKuroFauxPhysicsFreeRotateComponentVisualizer");
+DUMPER7_ASSERTS_UKuroFauxPhysicsFreeRotateComponentVisualizer;
 
 // Class KuroFauxPhysics.KuroVisualizedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -322,7 +326,11 @@ class IKuroVisualizedInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroVisualizedInterface">();
+		STATIC_CLASS_IMPL("KuroVisualizedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroVisualizedInterface")
 	}
 	static class IKuroVisualizedInterface* GetDefaultObj()
 	{
@@ -338,8 +346,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroVisualizedInterface) == 0x000001, "Wrong alignment on IKuroVisualizedInterface");
-static_assert(sizeof(IKuroVisualizedInterface) == 0x000001, "Wrong size on IKuroVisualizedInterface");
+DUMPER7_ASSERTS_IKuroVisualizedInterface;
 
 // Class KuroFauxPhysics.KuroVisualizerInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -348,7 +355,11 @@ class IKuroVisualizerInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroVisualizerInterface">();
+		STATIC_CLASS_IMPL("KuroVisualizerInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroVisualizerInterface")
 	}
 	static class IKuroVisualizerInterface* GetDefaultObj()
 	{
@@ -364,8 +375,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroVisualizerInterface) == 0x000001, "Wrong alignment on IKuroVisualizerInterface");
-static_assert(sizeof(IKuroVisualizerInterface) == 0x000001, "Wrong size on IKuroVisualizerInterface");
+DUMPER7_ASSERTS_IKuroVisualizerInterface;
 
 // Class KuroFauxPhysics.KuroAxisVisualizedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -374,7 +384,11 @@ class IKuroAxisVisualizedInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAxisVisualizedInterface">();
+		STATIC_CLASS_IMPL("KuroAxisVisualizedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAxisVisualizedInterface")
 	}
 	static class IKuroAxisVisualizedInterface* GetDefaultObj()
 	{
@@ -390,8 +404,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroAxisVisualizedInterface) == 0x000001, "Wrong alignment on IKuroAxisVisualizedInterface");
-static_assert(sizeof(IKuroAxisVisualizedInterface) == 0x000001, "Wrong size on IKuroAxisVisualizedInterface");
+DUMPER7_ASSERTS_IKuroAxisVisualizedInterface;
 
 // Class KuroFauxPhysics.KuroConeVisualizedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -400,7 +413,11 @@ class IKuroConeVisualizedInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroConeVisualizedInterface">();
+		STATIC_CLASS_IMPL("KuroConeVisualizedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroConeVisualizedInterface")
 	}
 	static class IKuroConeVisualizedInterface* GetDefaultObj()
 	{
@@ -416,8 +433,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroConeVisualizedInterface) == 0x000001, "Wrong alignment on IKuroConeVisualizedInterface");
-static_assert(sizeof(IKuroConeVisualizedInterface) == 0x000001, "Wrong size on IKuroConeVisualizedInterface");
+DUMPER7_ASSERTS_IKuroConeVisualizedInterface;
 
 // Class KuroFauxPhysics.KuroFreeVisualizedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -426,7 +442,11 @@ class IKuroFreeVisualizedInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFreeVisualizedInterface">();
+		STATIC_CLASS_IMPL("KuroFreeVisualizedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFreeVisualizedInterface")
 	}
 	static class IKuroFreeVisualizedInterface* GetDefaultObj()
 	{
@@ -442,8 +462,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroFreeVisualizedInterface) == 0x000001, "Wrong alignment on IKuroFreeVisualizedInterface");
-static_assert(sizeof(IKuroFreeVisualizedInterface) == 0x000001, "Wrong size on IKuroFreeVisualizedInterface");
+DUMPER7_ASSERTS_IKuroFreeVisualizedInterface;
 
 // Class KuroFauxPhysics.KuroPrimitiveVisualizedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -452,7 +471,11 @@ class IKuroPrimitiveVisualizedInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPrimitiveVisualizedInterface">();
+		STATIC_CLASS_IMPL("KuroPrimitiveVisualizedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPrimitiveVisualizedInterface")
 	}
 	static class IKuroPrimitiveVisualizedInterface* GetDefaultObj()
 	{
@@ -468,8 +491,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroPrimitiveVisualizedInterface) == 0x000001, "Wrong alignment on IKuroPrimitiveVisualizedInterface");
-static_assert(sizeof(IKuroPrimitiveVisualizedInterface) == 0x000001, "Wrong size on IKuroPrimitiveVisualizedInterface");
+DUMPER7_ASSERTS_IKuroPrimitiveVisualizedInterface;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent
 // 0x00A0 (0x0360 - 0x02C0)
@@ -496,24 +518,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsTrackTargetComponent">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsTrackTargetComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsTrackTargetComponent")
 	}
 	static class UKuroFauxPhysicsTrackTargetComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsTrackTargetComponent>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsTrackTargetComponent) == 0x000010, "Wrong alignment on UKuroFauxPhysicsTrackTargetComponent");
-static_assert(sizeof(UKuroFauxPhysicsTrackTargetComponent) == 0x000360, "Wrong size on UKuroFauxPhysicsTrackTargetComponent");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, PredictionFactor) == 0x0002C8, "Member 'UKuroFauxPhysicsTrackTargetComponent::PredictionFactor' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, InitLinearSpeed) == 0x0002CC, "Member 'UKuroFauxPhysicsTrackTargetComponent::InitLinearSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, StopTrackTargetDistance) == 0x0002D0, "Member 'UKuroFauxPhysicsTrackTargetComponent::StopTrackTargetDistance' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, OnStopTrackTarget) == 0x0002D8, "Member 'UKuroFauxPhysicsTrackTargetComponent::OnStopTrackTarget' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, CurrentLinearVelocity) == 0x0002E8, "Member 'UKuroFauxPhysicsTrackTargetComponent::CurrentLinearVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, MinTimeToIntercept) == 0x0002F4, "Member 'UKuroFauxPhysicsTrackTargetComponent::MinTimeToIntercept' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, MaxTimeToIntercept) == 0x0002F8, "Member 'UKuroFauxPhysicsTrackTargetComponent::MaxTimeToIntercept' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, ForwardOffsetRatio) == 0x0002FC, "Member 'UKuroFauxPhysicsTrackTargetComponent::ForwardOffsetRatio' has a wrong offset!");
-static_assert(offsetof(UKuroFauxPhysicsTrackTargetComponent, TrackMethod) == 0x000300, "Member 'UKuroFauxPhysicsTrackTargetComponent::TrackMethod' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroFauxPhysicsTrackTargetComponent;
 
 // Class KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponentVisualizer
 // 0x0010 (0x0560 - 0x0550)
@@ -525,15 +541,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroFauxPhysicsTrackTargetComponentVisualizer">();
+		STATIC_CLASS_IMPL("KuroFauxPhysicsTrackTargetComponentVisualizer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFauxPhysicsTrackTargetComponentVisualizer")
 	}
 	static class UKuroFauxPhysicsTrackTargetComponentVisualizer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroFauxPhysicsTrackTargetComponentVisualizer>();
 	}
 };
-static_assert(alignof(UKuroFauxPhysicsTrackTargetComponentVisualizer) == 0x000010, "Wrong alignment on UKuroFauxPhysicsTrackTargetComponentVisualizer");
-static_assert(sizeof(UKuroFauxPhysicsTrackTargetComponentVisualizer) == 0x000560, "Wrong size on UKuroFauxPhysicsTrackTargetComponentVisualizer");
+DUMPER7_ASSERTS_UKuroFauxPhysicsTrackTargetComponentVisualizer;
 
 }
 

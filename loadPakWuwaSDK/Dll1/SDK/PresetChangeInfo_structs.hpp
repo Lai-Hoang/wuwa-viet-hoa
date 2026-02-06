@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PresetSelection_structs.hpp"
 #include "Engine_structs.hpp"
+#include "PresetSelection_structs.hpp"
 
 
 namespace SDK
@@ -32,14 +32,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ChangeAfterTime_21_BF5A190D458432A5BC9B168EA48AE7ED; // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FPresetChangeInfo) == 0x000004, "Wrong alignment on FPresetChangeInfo");
-static_assert(sizeof(FPresetChangeInfo) == 0x000018, "Wrong size on FPresetChangeInfo");
-static_assert(offsetof(FPresetChangeInfo, ReloadSelected_25_165DD8E44AE6D7882C2F5ABE35BF41BA) == 0x000000, "Member 'FPresetChangeInfo::ReloadSelected_25_165DD8E44AE6D7882C2F5ABE35BF41BA' has a wrong offset!");
-static_assert(offsetof(FPresetChangeInfo, Selected_16_785F8D8944070D067940B8B6B53E25FC) == 0x000004, "Member 'FPresetChangeInfo::Selected_16_785F8D8944070D067940B8B6B53E25FC' has a wrong offset!");
-static_assert(offsetof(FPresetChangeInfo, Mode_17_A4BD793844A78E1A22E2778BB14BE206) == 0x000008, "Member 'FPresetChangeInfo::Mode_17_A4BD793844A78E1A22E2778BB14BE206' has a wrong offset!");
-static_assert(offsetof(FPresetChangeInfo, TransitionDuration_19_73F6782E4DE8FB03600ECFBBB894BC0B) == 0x00000C, "Member 'FPresetChangeInfo::TransitionDuration_19_73F6782E4DE8FB03600ECFBBB894BC0B' has a wrong offset!");
-static_assert(offsetof(FPresetChangeInfo, TransitionFunc_18_88BE11474DF134CA5C3E6190B2940A25) == 0x000010, "Member 'FPresetChangeInfo::TransitionFunc_18_88BE11474DF134CA5C3E6190B2940A25' has a wrong offset!");
-static_assert(offsetof(FPresetChangeInfo, ChangeAfterTime_21_BF5A190D458432A5BC9B168EA48AE7ED) == 0x000014, "Member 'FPresetChangeInfo::ChangeAfterTime_21_BF5A190D458432A5BC9B168EA48AE7ED' has a wrong offset!");
+DUMPER7_ASSERTS_FPresetChangeInfo;
 
 }
 

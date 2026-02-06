@@ -113,10 +113,7 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
 	class FString                                 Url;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaCaptureDevice) == 0x000008, "Wrong alignment on FMediaCaptureDevice");
-static_assert(sizeof(FMediaCaptureDevice) == 0x000028, "Wrong size on FMediaCaptureDevice");
-static_assert(offsetof(FMediaCaptureDevice, DisplayName) == 0x000000, "Member 'FMediaCaptureDevice::DisplayName' has a wrong offset!");
-static_assert(offsetof(FMediaCaptureDevice, Url) == 0x000018, "Member 'FMediaCaptureDevice::Url' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaCaptureDevice;
 
 // ScriptStruct MediaAssets.MediaSoundComponentSpectralData
 // 0x0008 (0x0008 - 0x0000)
@@ -126,10 +123,7 @@ public:
 	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaSoundComponentSpectralData) == 0x000004, "Wrong alignment on FMediaSoundComponentSpectralData");
-static_assert(sizeof(FMediaSoundComponentSpectralData) == 0x000008, "Wrong size on FMediaSoundComponentSpectralData");
-static_assert(offsetof(FMediaSoundComponentSpectralData, FrequencyHz) == 0x000000, "Member 'FMediaSoundComponentSpectralData::FrequencyHz' has a wrong offset!");
-static_assert(offsetof(FMediaSoundComponentSpectralData, Magnitude) == 0x000004, "Member 'FMediaSoundComponentSpectralData::Magnitude' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaSoundComponentSpectralData;
 
 }
 

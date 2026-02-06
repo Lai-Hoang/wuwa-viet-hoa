@@ -48,29 +48,7 @@ public:
 	class UCurveFloat*                            目标偏转速度分量Z变化曲线_66_B7C8268F449EFA19A5CD87BFAEC30785; // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                合外力_69_201020EA440C9B2F258218956E1EBD45;        // 0x0080(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletDataMove) == 0x000008, "Wrong alignment on FSBulletDataMove");
-static_assert(sizeof(FSBulletDataMove) == 0x000090, "Wrong size on FSBulletDataMove");
-static_assert(offsetof(FSBulletDataMove, 子弹跟随类型_2_126946AE4F4C7C4DED5920B2CDB6ADF3) == 0x000000, "Member 'FSBulletDataMove::子弹跟随类型_2_126946AE4F4C7C4DED5920B2CDB6ADF3' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 骨骼名_36_A0CC7E03462D3A3B7DA899B6FC4A3B47) == 0x000004, "Member 'FSBulletDataMove::骨骼名_36_A0CC7E03462D3A3B7DA899B6FC4A3B47' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 跟随骨骼面向发射_39_B592412A4241F96EE16AD08062EDDFB3) == 0x000010, "Member 'FSBulletDataMove::跟随骨骼面向发射_39_B592412A4241F96EE16AD08062EDDFB3' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 瞄准发射_46_2B3B53F3485263135D9D449C914400E1) == 0x000011, "Member 'FSBulletDataMove::瞄准发射_46_2B3B53F3485263135D9D449C914400E1' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 无限制追踪子弹_58_507F4D9541CB9FA96EAD699350CCCAD4) == 0x000012, "Member 'FSBulletDataMove::无限制追踪子弹_58_507F4D9541CB9FA96EAD699350CCCAD4' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 不改变朝向_71_B261D53346C0307102ABD9879E68D427) == 0x000013, "Member 'FSBulletDataMove::不改变朝向_71_B261D53346C0307102ABD9879E68D427' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 瞄准子弹最大射程_49_AADF854844165B090461409AF69152F4) == 0x000014, "Member 'FSBulletDataMove::瞄准子弹最大射程_49_AADF854844165B090461409AF69152F4' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 瞄准子弹最大偏转角度_51_8763E4C640A20B5A62DDC3BF30CE8A11) == 0x000018, "Member 'FSBulletDataMove::瞄准子弹最大偏转角度_51_8763E4C640A20B5A62DDC3BF30CE8A11' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 初始旋转是否面向目标_53_1B94C21E45F4EABFB7ABD49DEEA8DB2B) == 0x00001C, "Member 'FSBulletDataMove::初始旋转是否面向目标_53_1B94C21E45F4EABFB7ABD49DEEA8DB2B' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 初始旋转最大角度_56_F3BB20E24D9A9331837BF2B0F36EDD0E) == 0x000020, "Member 'FSBulletDataMove::初始旋转最大角度_56_F3BB20E24D9A9331837BF2B0F36EDD0E' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 初始速度_14_A1706DE24A202154162601B5A29C6EF3) == 0x000024, "Member 'FSBulletDataMove::初始速度_14_A1706DE24A202154162601B5A29C6EF3' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 速度变化曲线_17_B8430A774F944DA8CDB98E9A18B2AB42) == 0x000028, "Member 'FSBulletDataMove::速度变化曲线_17_B8430A774F944DA8CDB98E9A18B2AB42' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 初始速度方向_37_BE0EE92C47487F3307EB71AA1CAD4A39) == 0x000030, "Member 'FSBulletDataMove::初始速度方向_37_BE0EE92C47487F3307EB71AA1CAD4A39' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 方向偏转速度_43_5FB1E1B242378238DBF16A825CF918BA) == 0x00003C, "Member 'FSBulletDataMove::方向偏转速度_43_5FB1E1B242378238DBF16A825CF918BA' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 方向偏转速度变化曲线_44_387458284BE99FC058CD8A93EAF28739) == 0x000048, "Member 'FSBulletDataMove::方向偏转速度变化曲线_44_387458284BE99FC058CD8A93EAF28739' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 目标偏转速度_33_AAA274AF4AA228BBE471528345BE1E20) == 0x000050, "Member 'FSBulletDataMove::目标偏转速度_33_AAA274AF4AA228BBE471528345BE1E20' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 目标偏转速度变化曲线_29_A0D25D094C603DFD41AF4FA9BFAB310A) == 0x000058, "Member 'FSBulletDataMove::目标偏转速度变化曲线_29_A0D25D094C603DFD41AF4FA9BFAB310A' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 目标偏转速度分量_61_433710E048C4992DE45580821EA22A8C) == 0x000060, "Member 'FSBulletDataMove::目标偏转速度分量_61_433710E048C4992DE45580821EA22A8C' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 目标偏转速度分量Y变化曲线_64_DFA134CC4FA35195D440C4ADF9095F8B) == 0x000070, "Member 'FSBulletDataMove::目标偏转速度分量Y变化曲线_64_DFA134CC4FA35195D440C4ADF9095F8B' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 目标偏转速度分量Z变化曲线_66_B7C8268F449EFA19A5CD87BFAEC30785) == 0x000078, "Member 'FSBulletDataMove::目标偏转速度分量Z变化曲线_66_B7C8268F449EFA19A5CD87BFAEC30785' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMove, 合外力_69_201020EA440C9B2F258218956E1EBD45) == 0x000080, "Member 'FSBulletDataMove::合外力_69_201020EA440C9B2F258218956E1EBD45' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataMove;
 
 }
 

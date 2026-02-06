@@ -25,10 +25,7 @@ public:
 	struct FSCaughtTriggerInfo                    TriggerInfo_85_A2459AEA4EDE102B4C04E283261CE6DD;   // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FSCaughtBindingInfo                    BindingInfo_86_2B12580148B2C38CFD39E5966F7CCF1B;   // 0x0030(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCaughtInfo) == 0x000008, "Wrong alignment on FSCaughtInfo");
-static_assert(sizeof(FSCaughtInfo) == 0x0000F0, "Wrong size on FSCaughtInfo");
-static_assert(offsetof(FSCaughtInfo, TriggerInfo_85_A2459AEA4EDE102B4C04E283261CE6DD) == 0x000000, "Member 'FSCaughtInfo::TriggerInfo_85_A2459AEA4EDE102B4C04E283261CE6DD' has a wrong offset!");
-static_assert(offsetof(FSCaughtInfo, BindingInfo_86_2B12580148B2C38CFD39E5966F7CCF1B) == 0x000030, "Member 'FSCaughtInfo::BindingInfo_86_2B12580148B2C38CFD39E5966F7CCF1B' has a wrong offset!");
+DUMPER7_ASSERTS_FSCaughtInfo;
 
 }
 

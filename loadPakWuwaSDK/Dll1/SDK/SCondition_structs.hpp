@@ -24,11 +24,7 @@ public:
 	TMap<class FName, class FString>              参数组_43_7247EF4646519C36CC0D6082179995CD;        // 0x0010(0x0050)(Edit, BlueprintVisible)
 	class FText                                   描述_29_9A079BDC4A8FB8D1569BA6920FFA4C0F;          // 0x0060(0x0018)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSCondition) == 0x000008, "Wrong alignment on FSCondition");
-static_assert(sizeof(FSCondition) == 0x000078, "Wrong size on FSCondition");
-static_assert(offsetof(FSCondition, 条件ID_40_7903DF4A472964134AABB2BCB04746FD) == 0x000000, "Member 'FSCondition::条件ID_40_7903DF4A472964134AABB2BCB04746FD' has a wrong offset!");
-static_assert(offsetof(FSCondition, 参数组_43_7247EF4646519C36CC0D6082179995CD) == 0x000010, "Member 'FSCondition::参数组_43_7247EF4646519C36CC0D6082179995CD' has a wrong offset!");
-static_assert(offsetof(FSCondition, 描述_29_9A079BDC4A8FB8D1569BA6920FFA4C0F) == 0x000060, "Member 'FSCondition::描述_29_9A079BDC4A8FB8D1569BA6920FFA4C0F' has a wrong offset!");
+DUMPER7_ASSERTS_FSCondition;
 
 }
 

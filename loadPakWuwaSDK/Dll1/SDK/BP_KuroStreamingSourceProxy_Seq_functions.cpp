@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_KuroStreamingSourceProxy_Seq.BP_KuroStreamingSourceProxy_Seq_C.EditorTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_KuroStreamingSourceProxy_Seq_C::EditorTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KuroStreamingSourceProxy_Seq_C", "EditorTick");
-
-	Params::BP_KuroStreamingSourceProxy_Seq_C_EditorTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_KuroStreamingSourceProxy_Seq.BP_KuroStreamingSourceProxy_Seq_C.ExecuteUbergraph_BP_KuroStreamingSourceProxy_Seq
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void ABP_KuroStreamingSourceProxy_Seq_C::ExecuteUbergraph_BP_KuroStreamingSource
 	Params::BP_KuroStreamingSourceProxy_Seq_C_ExecuteUbergraph_BP_KuroStreamingSourceProxy_Seq Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_KuroStreamingSourceProxy_Seq.BP_KuroStreamingSourceProxy_Seq_C.EditorTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_KuroStreamingSourceProxy_Seq_C::EditorTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KuroStreamingSourceProxy_Seq_C", "EditorTick");
+
+	Params::BP_KuroStreamingSourceProxy_Seq_C_EditorTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SSequencesKeyFrames_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SSequencesKeyFrames_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SequenceData_Generated.BP_SequenceData_Generated_C
-// 0x0098 (0x00D0 - 0x0038)
+// 0x0158 (0x0190 - 0x0038)
 class UBP_SequenceData_Generated_C final : public UPrimaryDataAsset
 {
 public:
@@ -35,29 +35,27 @@ public:
 	TArray<class FName>                           BlendOutTags;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible)
 	TArray<class FString>                         PreloadUiArray;                                    // 0x00B8(0x0010)(Edit, BlueprintVisible)
 	bool                                          IsCustomizedFinalPos;                              // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   MalePlayerBP;                                      // 0x00D0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   FemalePlayerBP;                                    // 0x0100(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftObjectPtr<class USkeletalMesh>           MaleMesh;                                          // 0x0130(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftObjectPtr<class USkeletalMesh>           FemaleMesh;                                        // 0x0160(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SequenceData_Generated_C">();
+		BP_STATIC_CLASS_IMPL("BP_SequenceData_Generated_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SequenceData_Generated_C")
 	}
 	static class UBP_SequenceData_Generated_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SequenceData_Generated_C>();
 	}
 };
-static_assert(alignof(UBP_SequenceData_Generated_C) == 0x000008, "Wrong alignment on UBP_SequenceData_Generated_C");
-static_assert(sizeof(UBP_SequenceData_Generated_C) == 0x0000D0, "Wrong size on UBP_SequenceData_Generated_C");
-static_assert(offsetof(UBP_SequenceData_Generated_C, KeyFrames) == 0x000038, "Member 'UBP_SequenceData_Generated_C::KeyFrames' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, FinalPos) == 0x000048, "Member 'UBP_SequenceData_Generated_C::FinalPos' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BindingBP) == 0x000058, "Member 'UBP_SequenceData_Generated_C::BindingBP' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, IsFadeEnd) == 0x000068, "Member 'UBP_SequenceData_Generated_C::IsFadeEnd' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BlendInTag) == 0x000078, "Member 'UBP_SequenceData_Generated_C::BlendInTag' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BlendInTags) == 0x000088, "Member 'UBP_SequenceData_Generated_C::BlendInTags' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BlendOutTag) == 0x000098, "Member 'UBP_SequenceData_Generated_C::BlendOutTag' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BlendOutTags) == 0x0000A8, "Member 'UBP_SequenceData_Generated_C::BlendOutTags' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, PreloadUiArray) == 0x0000B8, "Member 'UBP_SequenceData_Generated_C::PreloadUiArray' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, IsCustomizedFinalPos) == 0x0000C8, "Member 'UBP_SequenceData_Generated_C::IsCustomizedFinalPos' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SequenceData_Generated_C;
 
 }
 

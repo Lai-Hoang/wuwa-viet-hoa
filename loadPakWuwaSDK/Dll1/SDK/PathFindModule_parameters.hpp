@@ -25,10 +25,7 @@ public:
 	EDataLayerState                               State;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(NavMeshPartitionDebugActor_OnDataLayerStateChanged) == 0x000008, "Wrong alignment on NavMeshPartitionDebugActor_OnDataLayerStateChanged");
-static_assert(sizeof(NavMeshPartitionDebugActor_OnDataLayerStateChanged) == 0x000010, "Wrong size on NavMeshPartitionDebugActor_OnDataLayerStateChanged");
-static_assert(offsetof(NavMeshPartitionDebugActor_OnDataLayerStateChanged, DataLayer) == 0x000000, "Member 'NavMeshPartitionDebugActor_OnDataLayerStateChanged::DataLayer' has a wrong offset!");
-static_assert(offsetof(NavMeshPartitionDebugActor_OnDataLayerStateChanged, State) == 0x000008, "Member 'NavMeshPartitionDebugActor_OnDataLayerStateChanged::State' has a wrong offset!");
+DUMPER7_ASSERTS_NavMeshPartitionDebugActor_OnDataLayerStateChanged;
 
 }
 

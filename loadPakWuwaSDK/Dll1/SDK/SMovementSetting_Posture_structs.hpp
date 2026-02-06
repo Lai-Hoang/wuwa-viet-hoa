@@ -24,10 +24,7 @@ public:
 	struct FSMovementSetting                      Standing_2_3EC2D8FC456F71707D0F52A3B41D18E8;       // 0x0000(0x0058)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMovementSetting                      Crouching_4_B5EEC12A49881CC4C0D187A7B972DA18;      // 0x0058(0x0058)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMovementSetting_Posture) == 0x000008, "Wrong alignment on FSMovementSetting_Posture");
-static_assert(sizeof(FSMovementSetting_Posture) == 0x0000B0, "Wrong size on FSMovementSetting_Posture");
-static_assert(offsetof(FSMovementSetting_Posture, Standing_2_3EC2D8FC456F71707D0F52A3B41D18E8) == 0x000000, "Member 'FSMovementSetting_Posture::Standing_2_3EC2D8FC456F71707D0F52A3B41D18E8' has a wrong offset!");
-static_assert(offsetof(FSMovementSetting_Posture, Crouching_4_B5EEC12A49881CC4C0D187A7B972DA18) == 0x000058, "Member 'FSMovementSetting_Posture::Crouching_4_B5EEC12A49881CC4C0D187A7B972DA18' has a wrong offset!");
+DUMPER7_ASSERTS_FSMovementSetting_Posture;
 
 }
 

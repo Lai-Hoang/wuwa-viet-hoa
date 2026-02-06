@@ -34,31 +34,26 @@ public:
 	TMap<class AActor*, float>                    HandleMap;                                         // 0x00C0(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, Transient, DisableEditOnInstance)
 
 public:
-	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
+	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSeqAnimNotifyStateAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsSeqAnimNotifyStateAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSeqAnimNotifyStateAudioEvent_C")
 	}
 	static class UTsSeqAnimNotifyStateAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsSeqAnimNotifyStateAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsSeqAnimNotifyStateAudioEvent_C) == 0x000008, "Wrong alignment on UTsSeqAnimNotifyStateAudioEvent_C");
-static_assert(sizeof(UTsSeqAnimNotifyStateAudioEvent_C) == 0x000110, "Wrong size on UTsSeqAnimNotifyStateAudioEvent_C");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, AudioEvent) == 0x000048, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, SocketName) == 0x000078, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::SocketName' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, Follow) == 0x000084, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::Follow' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, KeepAlive) == 0x000085, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::KeepAlive' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, FadeDuration) == 0x000088, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::FadeDuration' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, FadeCurve) == 0x00008C, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::FadeCurve' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, TrailingAudioEvent) == 0x000090, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::TrailingAudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyStateAudioEvent_C, HandleMap) == 0x0000C0, "Member 'UTsSeqAnimNotifyStateAudioEvent_C::HandleMap' has a wrong offset!");
+DUMPER7_ASSERTS_UTsSeqAnimNotifyStateAudioEvent_C;
 
 }
 

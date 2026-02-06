@@ -18,34 +18,35 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CustomDepthForToon.BP_CustomDepthForToon_C
-// 0x0010 (0x03C8 - 0x03B8)
+// 0x0010 (0x03D8 - 0x03C8)
 class ABP_CustomDepthForToon_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveDestroyed();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_CustomDepthForToon(int32 EntryPoint);
-	void DisableCustomDepthForToon();
+	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 	void EnableCustomDepthForToon();
+	void DisableCustomDepthForToon();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CustomDepthForToon_C">();
+		BP_STATIC_CLASS_IMPL("BP_CustomDepthForToon_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CustomDepthForToon_C")
 	}
 	static class ABP_CustomDepthForToon_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_CustomDepthForToon_C>();
 	}
 };
-static_assert(alignof(ABP_CustomDepthForToon_C) == 0x000008, "Wrong alignment on ABP_CustomDepthForToon_C");
-static_assert(sizeof(ABP_CustomDepthForToon_C) == 0x0003C8, "Wrong size on ABP_CustomDepthForToon_C");
-static_assert(offsetof(ABP_CustomDepthForToon_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_CustomDepthForToon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CustomDepthForToon_C, DefaultSceneRoot) == 0x0003C0, "Member 'ABP_CustomDepthForToon_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CustomDepthForToon_C;
 
 }
 

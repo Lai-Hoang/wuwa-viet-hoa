@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Nanzhu.ABP_Nanzhu_C
-// 0x0000 (0x2B730 - 0x2B730)
+// 0x0000 (0x2C170 - 0x2C170)
 class UABP_Nanzhu_C final : public UABP_BaseRole_C
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Nanzhu_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Nanzhu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Nanzhu_C")
 	}
 	static class UABP_Nanzhu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Nanzhu_C>();
 	}
 };
-static_assert(alignof(UABP_Nanzhu_C) == 0x000010, "Wrong alignment on UABP_Nanzhu_C");
-static_assert(sizeof(UABP_Nanzhu_C) == 0x02B730, "Wrong size on UABP_Nanzhu_C");
+DUMPER7_ASSERTS_UABP_Nanzhu_C;
 
 }
 

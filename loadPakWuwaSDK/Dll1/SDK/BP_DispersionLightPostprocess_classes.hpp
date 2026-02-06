@@ -72,50 +72,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DispersionLightPostprocess_C">();
+		BP_STATIC_CLASS_IMPL("BP_DispersionLightPostprocess_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DispersionLightPostprocess_C")
 	}
 	static class ABP_DispersionLightPostprocess_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_DispersionLightPostprocess_C>();
 	}
 };
-static_assert(alignof(ABP_DispersionLightPostprocess_C) == 0x000008, "Wrong alignment on ABP_DispersionLightPostprocess_C");
-static_assert(sizeof(ABP_DispersionLightPostprocess_C) == 0x000470, "Wrong size on ABP_DispersionLightPostprocess_C");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_DispersionLightPostprocess_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Arrow) == 0x0002B8, "Member 'ABP_DispersionLightPostprocess_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Sphere) == 0x0002C0, "Member 'ABP_DispersionLightPostprocess_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, KuroPostProcess) == 0x0002C8, "Member 'ABP_DispersionLightPostprocess_C::KuroPostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, MainMaterial) == 0x0002D0, "Member 'ABP_DispersionLightPostprocess_C::MainMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, AddMaterial) == 0x0002D8, "Member 'ABP_DispersionLightPostprocess_C::AddMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, MultyMaterial) == 0x0002E0, "Member 'ABP_DispersionLightPostprocess_C::MultyMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, BaseTexture) == 0x0002E8, "Member 'ABP_DispersionLightPostprocess_C::BaseTexture' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, BaseTexRGBA_Strength) == 0x0002F0, "Member 'ABP_DispersionLightPostprocess_C::BaseTexRGBA_Strength' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, LightColor) == 0x000300, "Member 'ABP_DispersionLightPostprocess_C::LightColor' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, LightShadowColor_Multi) == 0x000310, "Member 'ABP_DispersionLightPostprocess_C::LightShadowColor_Multi' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, LightIntensity) == 0x000320, "Member 'ABP_DispersionLightPostprocess_C::LightIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, LightShadowIntensity_Multi) == 0x000324, "Member 'ABP_DispersionLightPostprocess_C::LightShadowIntensity_Multi' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, ShadowProcess) == 0x000328, "Member 'ABP_DispersionLightPostprocess_C::ShadowProcess' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, ShadowWidth) == 0x00032C, "Member 'ABP_DispersionLightPostprocess_C::ShadowWidth' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, InnerRadius) == 0x000330, "Member 'ABP_DispersionLightPostprocess_C::InnerRadius' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, SecondOffset) == 0x000334, "Member 'ABP_DispersionLightPostprocess_C::SecondOffset' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, ThirdOffset) == 0x000338, "Member 'ABP_DispersionLightPostprocess_C::ThirdOffset' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, OffsetStrength) == 0x00033C, "Member 'ABP_DispersionLightPostprocess_C::OffsetStrength' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, U_Pos) == 0x000340, "Member 'ABP_DispersionLightPostprocess_C::U_Pos' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, V_Pos) == 0x000344, "Member 'ABP_DispersionLightPostprocess_C::V_Pos' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, U_Scale) == 0x000348, "Member 'ABP_DispersionLightPostprocess_C::U_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, V_Scale) == 0x00034C, "Member 'ABP_DispersionLightPostprocess_C::V_Scale' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, DynamicMaterial) == 0x000350, "Member 'ABP_DispersionLightPostprocess_C::DynamicMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, UseMultiBlend) == 0x000358, "Member 'ABP_DispersionLightPostprocess_C::UseMultiBlend' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Scalar_Parameters) == 0x000360, "Member 'ABP_DispersionLightPostprocess_C::Scalar_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Vector_Parameters) == 0x0003B0, "Member 'ABP_DispersionLightPostprocess_C::Vector_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Texture_Parameters) == 0x000400, "Member 'ABP_DispersionLightPostprocess_C::Texture_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, NoiseUSpeed) == 0x000450, "Member 'ABP_DispersionLightPostprocess_C::NoiseUSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, NoiseVSpeed) == 0x000454, "Member 'ABP_DispersionLightPostprocess_C::NoiseVSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, NoiseUVMulty) == 0x000458, "Member 'ABP_DispersionLightPostprocess_C::NoiseUVMulty' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, NoiseStrength) == 0x00045C, "Member 'ABP_DispersionLightPostprocess_C::NoiseStrength' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, NoiseTex) == 0x000460, "Member 'ABP_DispersionLightPostprocess_C::NoiseTex' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Reverse) == 0x000468, "Member 'ABP_DispersionLightPostprocess_C::Reverse' has a wrong offset!");
-static_assert(offsetof(ABP_DispersionLightPostprocess_C, Desaturation) == 0x00046C, "Member 'ABP_DispersionLightPostprocess_C::Desaturation' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_DispersionLightPostprocess_C;
 
 }
 

@@ -32,15 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VolcanoPipeWrapper">();
+		STATIC_CLASS_IMPL("VolcanoPipeWrapper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VolcanoPipeWrapper")
 	}
 	static class UVolcanoPipeWrapper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UVolcanoPipeWrapper>();
 	}
 };
-static_assert(alignof(UVolcanoPipeWrapper) == 0x000008, "Wrong alignment on UVolcanoPipeWrapper");
-static_assert(sizeof(UVolcanoPipeWrapper) == 0x000038, "Wrong size on UVolcanoPipeWrapper");
+DUMPER7_ASSERTS_UVolcanoPipeWrapper;
 
 }
 

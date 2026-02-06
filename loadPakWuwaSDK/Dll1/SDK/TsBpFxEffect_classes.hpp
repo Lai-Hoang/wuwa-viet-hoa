@@ -44,20 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsBpFxEffect_C">();
+		BP_STATIC_CLASS_IMPL("TsBpFxEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsBpFxEffect_C")
 	}
 	static class ATsBpFxEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsBpFxEffect_C>();
 	}
 };
-static_assert(alignof(ATsBpFxEffect_C) == 0x000008, "Wrong alignment on ATsBpFxEffect_C");
-static_assert(sizeof(ATsBpFxEffect_C) == 0x0002D0, "Wrong size on ATsBpFxEffect_C");
-static_assert(offsetof(ATsBpFxEffect_C, UberGraphFrame) == 0x0002B0, "Member 'ATsBpFxEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsBpFxEffect_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsBpFxEffect_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ATsBpFxEffect_C, RecorderShadow) == 0x0002C0, "Member 'ATsBpFxEffect_C::RecorderShadow' has a wrong offset!");
-static_assert(offsetof(ATsBpFxEffect_C, IsRecorderActor) == 0x0002C8, "Member 'ATsBpFxEffect_C::IsRecorderActor' has a wrong offset!");
-static_assert(offsetof(ATsBpFxEffect_C, RecordTime) == 0x0002CC, "Member 'ATsBpFxEffect_C::RecordTime' has a wrong offset!");
+DUMPER7_ASSERTS_ATsBpFxEffect_C;
 
 }
 

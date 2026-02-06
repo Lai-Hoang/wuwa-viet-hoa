@@ -10,43 +10,43 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MediaDissolveManagea.BP_MediaDissolveManagea_C
-// 0x0088 (0x0440 - 0x03B8)
+// 0x0088 (0x0450 - 0x03C8)
 class ABP_MediaDissolveManagea_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UKuroPostProcessComponent*              KuroPostProcess;                                   // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMediaSource*                           MainMediaSource;                                   // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMediaPlayer*                           MediaPlayer;                                       // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMediaTexture*                          MediaPlayerTex;                                    // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterial*                              PostMaterial;                                      // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Intensity;                                         // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MediaScale;                                        // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Opacity;                                           // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SphereSize;                                        // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Speed;                                             // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         OutSpeed;                                          // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CenterPos;                                         // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMaterialTick;                                    // 0x0418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsChangeSceneColorTint;                            // 0x0419(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Is_Open;                                           // 0x041A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Sphere_Or_Full_Screen;                             // 0x041B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41C[0x4];                                      // 0x041C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Name_0;                                            // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	float                                         FadeinTime;                                        // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOutTime;                                       // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsReadyToPlay;                                     // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UKuroPostProcessComponent*              KuroPostProcess;                                   // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMediaSource*                           MainMediaSource;                                   // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMediaPlayer*                           MediaPlayer;                                       // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMediaTexture*                          MediaPlayerTex;                                    // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterial*                              PostMaterial;                                      // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Intensity;                                         // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MediaScale;                                        // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Opacity;                                           // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SphereSize;                                        // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         OutSpeed;                                          // 0x041C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CenterPos;                                         // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMaterialTick;                                    // 0x0428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsChangeSceneColorTint;                            // 0x0429(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Is_Open;                                           // 0x042A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Sphere_Or_Full_Screen;                             // 0x042B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Name_0;                                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	float                                         FadeinTime;                                        // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeOutTime;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsReadyToPlay;                                     // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_MediaDissolveManagea(int32 EntryPoint);
@@ -66,38 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MediaDissolveManagea_C">();
+		BP_STATIC_CLASS_IMPL("BP_MediaDissolveManagea_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MediaDissolveManagea_C")
 	}
 	static class ABP_MediaDissolveManagea_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MediaDissolveManagea_C>();
 	}
 };
-static_assert(alignof(ABP_MediaDissolveManagea_C) == 0x000008, "Wrong alignment on ABP_MediaDissolveManagea_C");
-static_assert(sizeof(ABP_MediaDissolveManagea_C) == 0x000440, "Wrong size on ABP_MediaDissolveManagea_C");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_MediaDissolveManagea_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, KuroPostProcess) == 0x0003C0, "Member 'ABP_MediaDissolveManagea_C::KuroPostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, DefaultSceneRoot) == 0x0003C8, "Member 'ABP_MediaDissolveManagea_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, MainMediaSource) == 0x0003D0, "Member 'ABP_MediaDissolveManagea_C::MainMediaSource' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, MediaPlayer) == 0x0003D8, "Member 'ABP_MediaDissolveManagea_C::MediaPlayer' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, MediaPlayerTex) == 0x0003E0, "Member 'ABP_MediaDissolveManagea_C::MediaPlayerTex' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, PostMaterial) == 0x0003E8, "Member 'ABP_MediaDissolveManagea_C::PostMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, DynamicMaterialInstance) == 0x0003F0, "Member 'ABP_MediaDissolveManagea_C::DynamicMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Intensity) == 0x0003F8, "Member 'ABP_MediaDissolveManagea_C::Intensity' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, MediaScale) == 0x0003FC, "Member 'ABP_MediaDissolveManagea_C::MediaScale' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Opacity) == 0x000400, "Member 'ABP_MediaDissolveManagea_C::Opacity' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, SphereSize) == 0x000404, "Member 'ABP_MediaDissolveManagea_C::SphereSize' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Speed) == 0x000408, "Member 'ABP_MediaDissolveManagea_C::Speed' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, OutSpeed) == 0x00040C, "Member 'ABP_MediaDissolveManagea_C::OutSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, CenterPos) == 0x000410, "Member 'ABP_MediaDissolveManagea_C::CenterPos' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, IsMaterialTick) == 0x000418, "Member 'ABP_MediaDissolveManagea_C::IsMaterialTick' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, IsChangeSceneColorTint) == 0x000419, "Member 'ABP_MediaDissolveManagea_C::IsChangeSceneColorTint' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Is_Open) == 0x00041A, "Member 'ABP_MediaDissolveManagea_C::Is_Open' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Sphere_Or_Full_Screen) == 0x00041B, "Member 'ABP_MediaDissolveManagea_C::Sphere_Or_Full_Screen' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, Name_0) == 0x000420, "Member 'ABP_MediaDissolveManagea_C::Name_0' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, FadeinTime) == 0x000430, "Member 'ABP_MediaDissolveManagea_C::FadeinTime' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, FadeOutTime) == 0x000434, "Member 'ABP_MediaDissolveManagea_C::FadeOutTime' has a wrong offset!");
-static_assert(offsetof(ABP_MediaDissolveManagea_C, IsReadyToPlay) == 0x000438, "Member 'ABP_MediaDissolveManagea_C::IsReadyToPlay' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MediaDissolveManagea_C;
 
 }
 

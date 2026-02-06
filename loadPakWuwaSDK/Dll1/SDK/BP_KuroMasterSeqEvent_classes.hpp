@@ -68,23 +68,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KuroMasterSeqEvent_C">();
+		BP_STATIC_CLASS_IMPL("BP_KuroMasterSeqEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KuroMasterSeqEvent_C")
 	}
 	static class ABP_KuroMasterSeqEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_KuroMasterSeqEvent_C>();
 	}
 };
-static_assert(alignof(ABP_KuroMasterSeqEvent_C) == 0x000008, "Wrong alignment on ABP_KuroMasterSeqEvent_C");
-static_assert(sizeof(ABP_KuroMasterSeqEvent_C) == 0x0002E8, "Wrong size on ABP_KuroMasterSeqEvent_C");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_KuroMasterSeqEvent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_KuroMasterSeqEvent_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, ModifiedNearClipPlane) == 0x0002C0, "Member 'ABP_KuroMasterSeqEvent_C::ModifiedNearClipPlane' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, OnScreenShotFade) == 0x0002C8, "Member 'ABP_KuroMasterSeqEvent_C::OnScreenShotFade' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, DelayMerge) == 0x0002D8, "Member 'ABP_KuroMasterSeqEvent_C::DelayMerge' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, Icon透明度) == 0x0002DC, "Member 'ABP_KuroMasterSeqEvent_C::Icon透明度' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, Icon遮罩透明度) == 0x0002E0, "Member 'ABP_KuroMasterSeqEvent_C::Icon遮罩透明度' has a wrong offset!");
-static_assert(offsetof(ABP_KuroMasterSeqEvent_C, counter) == 0x0002E4, "Member 'ABP_KuroMasterSeqEvent_C::counter' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_KuroMasterSeqEvent_C;
 
 }
 

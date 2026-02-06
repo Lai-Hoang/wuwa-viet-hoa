@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "HoudiniNiagara_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "HoudiniNiagara_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,12 +28,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetAttributeIndexInArrayFromString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetAttributeIndexInArrayFromString");
-static_assert(sizeof(HoudiniPointCache_GetAttributeIndexInArrayFromString) == 0x000028, "Wrong size on HoudiniPointCache_GetAttributeIndexInArrayFromString");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexInArrayFromString, InAttribute) == 0x000000, "Member 'HoudiniPointCache_GetAttributeIndexInArrayFromString::InAttribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexInArrayFromString, InAttributeArray) == 0x000010, "Member 'HoudiniPointCache_GetAttributeIndexInArrayFromString::InAttributeArray' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexInArrayFromString, OutAttributeIndex) == 0x000020, "Member 'HoudiniPointCache_GetAttributeIndexInArrayFromString::OutAttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexInArrayFromString, ReturnValue) == 0x000024, "Member 'HoudiniPointCache_GetAttributeIndexInArrayFromString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetAttributeIndexInArrayFromString;
 
 // Function HoudiniNiagara.HoudiniPointCache.SetUseCustomCSVTitleRow
 // 0x0001 (0x0001 - 0x0000)
@@ -42,9 +37,7 @@ struct HoudiniPointCache_SetUseCustomCSVTitleRow final
 public:
 	bool                                          bInUseCustomCSVTitleRow;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_SetUseCustomCSVTitleRow) == 0x000001, "Wrong alignment on HoudiniPointCache_SetUseCustomCSVTitleRow");
-static_assert(sizeof(HoudiniPointCache_SetUseCustomCSVTitleRow) == 0x000001, "Wrong size on HoudiniPointCache_SetUseCustomCSVTitleRow");
-static_assert(offsetof(HoudiniPointCache_SetUseCustomCSVTitleRow, bInUseCustomCSVTitleRow) == 0x000000, "Member 'HoudiniPointCache_SetUseCustomCSVTitleRow::bInUseCustomCSVTitleRow' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_SetUseCustomCSVTitleRow;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetAttributeIndexFromString
 // 0x0018 (0x0018 - 0x0000)
@@ -56,11 +49,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetAttributeIndexFromString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetAttributeIndexFromString");
-static_assert(sizeof(HoudiniPointCache_GetAttributeIndexFromString) == 0x000018, "Wrong size on HoudiniPointCache_GetAttributeIndexFromString");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexFromString, Attribute) == 0x000000, "Member 'HoudiniPointCache_GetAttributeIndexFromString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexFromString, AttributeIndex) == 0x000010, "Member 'HoudiniPointCache_GetAttributeIndexFromString::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetAttributeIndexFromString, ReturnValue) == 0x000014, "Member 'HoudiniPointCache_GetAttributeIndexFromString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetAttributeIndexFromString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetColorValue
 // 0x0018 (0x0018 - 0x0000)
@@ -72,11 +61,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetColorValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetColorValue");
-static_assert(sizeof(HoudiniPointCache_GetColorValue) == 0x000018, "Wrong size on HoudiniPointCache_GetColorValue");
-static_assert(offsetof(HoudiniPointCache_GetColorValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetColorValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetColorValue, value) == 0x000004, "Member 'HoudiniPointCache_GetColorValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetColorValue, ReturnValue) == 0x000014, "Member 'HoudiniPointCache_GetColorValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetColorValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetFloatSampleData
 // 0x0010 (0x0010 - 0x0000)
@@ -85,9 +70,7 @@ struct HoudiniPointCache_GetFloatSampleData final
 public:
 	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetFloatSampleData) == 0x000008, "Wrong alignment on HoudiniPointCache_GetFloatSampleData");
-static_assert(sizeof(HoudiniPointCache_GetFloatSampleData) == 0x000010, "Wrong size on HoudiniPointCache_GetFloatSampleData");
-static_assert(offsetof(HoudiniPointCache_GetFloatSampleData, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetFloatSampleData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetFloatSampleData;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetFloatValue
 // 0x0010 (0x0010 - 0x0000)
@@ -100,12 +83,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetFloatValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetFloatValue");
-static_assert(sizeof(HoudiniPointCache_GetFloatValue) == 0x000010, "Wrong size on HoudiniPointCache_GetFloatValue");
-static_assert(offsetof(HoudiniPointCache_GetFloatValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetFloatValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValue, attrIndex) == 0x000004, "Member 'HoudiniPointCache_GetFloatValue::attrIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValue, value) == 0x000008, "Member 'HoudiniPointCache_GetFloatValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValue, ReturnValue) == 0x00000C, "Member 'HoudiniPointCache_GetFloatValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetFloatValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetFloatValueForString
 // 0x0020 (0x0020 - 0x0000)
@@ -119,12 +97,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetFloatValueForString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetFloatValueForString");
-static_assert(sizeof(HoudiniPointCache_GetFloatValueForString) == 0x000020, "Wrong size on HoudiniPointCache_GetFloatValueForString");
-static_assert(offsetof(HoudiniPointCache_GetFloatValueForString, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetFloatValueForString::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValueForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetFloatValueForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValueForString, value) == 0x000018, "Member 'HoudiniPointCache_GetFloatValueForString::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetFloatValueForString, ReturnValue) == 0x00001C, "Member 'HoudiniPointCache_GetFloatValueForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetFloatValueForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetImpulseValue
 // 0x000C (0x000C - 0x0000)
@@ -136,11 +109,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetImpulseValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetImpulseValue");
-static_assert(sizeof(HoudiniPointCache_GetImpulseValue) == 0x00000C, "Wrong size on HoudiniPointCache_GetImpulseValue");
-static_assert(offsetof(HoudiniPointCache_GetImpulseValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetImpulseValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetImpulseValue, value) == 0x000004, "Member 'HoudiniPointCache_GetImpulseValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetImpulseValue, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetImpulseValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetImpulseValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetLastPointIDToSpawnAtTime
 // 0x000C (0x000C - 0x0000)
@@ -152,11 +121,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetLastPointIDToSpawnAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetLastPointIDToSpawnAtTime");
-static_assert(sizeof(HoudiniPointCache_GetLastPointIDToSpawnAtTime) == 0x00000C, "Wrong size on HoudiniPointCache_GetLastPointIDToSpawnAtTime");
-static_assert(offsetof(HoudiniPointCache_GetLastPointIDToSpawnAtTime, time) == 0x000000, "Member 'HoudiniPointCache_GetLastPointIDToSpawnAtTime::time' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetLastPointIDToSpawnAtTime, lastID) == 0x000004, "Member 'HoudiniPointCache_GetLastPointIDToSpawnAtTime::lastID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetLastPointIDToSpawnAtTime, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetLastPointIDToSpawnAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetLastPointIDToSpawnAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetLastSampleIndexAtTime
 // 0x000C (0x000C - 0x0000)
@@ -168,11 +133,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetLastSampleIndexAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetLastSampleIndexAtTime");
-static_assert(sizeof(HoudiniPointCache_GetLastSampleIndexAtTime) == 0x00000C, "Wrong size on HoudiniPointCache_GetLastSampleIndexAtTime");
-static_assert(offsetof(HoudiniPointCache_GetLastSampleIndexAtTime, desiredTime) == 0x000000, "Member 'HoudiniPointCache_GetLastSampleIndexAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetLastSampleIndexAtTime, lastSampleIndex) == 0x000004, "Member 'HoudiniPointCache_GetLastSampleIndexAtTime::lastSampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetLastSampleIndexAtTime, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetLastSampleIndexAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetLastSampleIndexAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetLifeValues
 // 0x0010 (0x0010 - 0x0000)
@@ -181,9 +142,7 @@ struct HoudiniPointCache_GetLifeValues final
 public:
 	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetLifeValues) == 0x000008, "Wrong alignment on HoudiniPointCache_GetLifeValues");
-static_assert(sizeof(HoudiniPointCache_GetLifeValues) == 0x000010, "Wrong size on HoudiniPointCache_GetLifeValues");
-static_assert(offsetof(HoudiniPointCache_GetLifeValues, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetLifeValues::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetLifeValues;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetNormalValue
 // 0x0014 (0x0014 - 0x0000)
@@ -195,11 +154,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetNormalValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetNormalValue");
-static_assert(sizeof(HoudiniPointCache_GetNormalValue) == 0x000014, "Wrong size on HoudiniPointCache_GetNormalValue");
-static_assert(offsetof(HoudiniPointCache_GetNormalValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetNormalValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetNormalValue, value) == 0x000004, "Member 'HoudiniPointCache_GetNormalValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetNormalValue, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetNormalValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetNormalValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetNumberOfAttributes
 // 0x0004 (0x0004 - 0x0000)
@@ -208,9 +163,7 @@ struct HoudiniPointCache_GetNumberOfAttributes final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetNumberOfAttributes) == 0x000004, "Wrong alignment on HoudiniPointCache_GetNumberOfAttributes");
-static_assert(sizeof(HoudiniPointCache_GetNumberOfAttributes) == 0x000004, "Wrong size on HoudiniPointCache_GetNumberOfAttributes");
-static_assert(offsetof(HoudiniPointCache_GetNumberOfAttributes, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetNumberOfAttributes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetNumberOfAttributes;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetNumberOfPoints
 // 0x0004 (0x0004 - 0x0000)
@@ -219,9 +172,7 @@ struct HoudiniPointCache_GetNumberOfPoints final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetNumberOfPoints) == 0x000004, "Wrong alignment on HoudiniPointCache_GetNumberOfPoints");
-static_assert(sizeof(HoudiniPointCache_GetNumberOfPoints) == 0x000004, "Wrong size on HoudiniPointCache_GetNumberOfPoints");
-static_assert(offsetof(HoudiniPointCache_GetNumberOfPoints, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetNumberOfPoints::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetNumberOfPoints;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetNumberOfSamples
 // 0x0004 (0x0004 - 0x0000)
@@ -230,9 +181,7 @@ struct HoudiniPointCache_GetNumberOfSamples final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetNumberOfSamples) == 0x000004, "Wrong alignment on HoudiniPointCache_GetNumberOfSamples");
-static_assert(sizeof(HoudiniPointCache_GetNumberOfSamples) == 0x000004, "Wrong size on HoudiniPointCache_GetNumberOfSamples");
-static_assert(offsetof(HoudiniPointCache_GetNumberOfSamples, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetNumberOfSamples::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetNumberOfSamples;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointFloatValueAtTime
 // 0x0014 (0x0014 - 0x0000)
@@ -246,13 +195,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointFloatValueAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointFloatValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointFloatValueAtTime) == 0x000014, "Wrong size on HoudiniPointCache_GetPointFloatValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointFloatValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointFloatValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointFloatValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointFloatValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointFloatValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointFloatValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointFloatValueAtTime, Value) == 0x00000C, "Member 'HoudiniPointCache_GetPointFloatValueAtTime::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointFloatValueAtTime, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetPointFloatValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointFloatValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointIDsToSpawnAtTime
 // 0x0020 (0x0020 - 0x0000)
@@ -269,16 +212,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointIDsToSpawnAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointIDsToSpawnAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointIDsToSpawnAtTime) == 0x000020, "Wrong size on HoudiniPointCache_GetPointIDsToSpawnAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, desiredTime) == 0x000000, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, MinID) == 0x000004, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::MinID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, MaxID) == 0x000008, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::MaxID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, Count) == 0x00000C, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::Count' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, LastSpawnedPointID) == 0x000010, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::LastSpawnedPointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, LastSpawnTime) == 0x000014, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::LastSpawnTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, LastSpawnTimeRequest) == 0x000018, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::LastSpawnTimeRequest' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointIDsToSpawnAtTime, ReturnValue) == 0x00001C, "Member 'HoudiniPointCache_GetPointIDsToSpawnAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointIDsToSpawnAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointInt32ValueAtTime
 // 0x0014 (0x0014 - 0x0000)
@@ -292,13 +226,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointInt32ValueAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointInt32ValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointInt32ValueAtTime) == 0x000014, "Wrong size on HoudiniPointCache_GetPointInt32ValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointInt32ValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointInt32ValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointInt32ValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointInt32ValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointInt32ValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointInt32ValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointInt32ValueAtTime, Value) == 0x00000C, "Member 'HoudiniPointCache_GetPointInt32ValueAtTime::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointInt32ValueAtTime, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetPointInt32ValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointInt32ValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointLife
 // 0x000C (0x000C - 0x0000)
@@ -310,11 +238,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointLife) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointLife");
-static_assert(sizeof(HoudiniPointCache_GetPointLife) == 0x00000C, "Wrong size on HoudiniPointCache_GetPointLife");
-static_assert(offsetof(HoudiniPointCache_GetPointLife, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointLife::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointLife, Value) == 0x000004, "Member 'HoudiniPointCache_GetPointLife::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointLife, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetPointLife::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointLife;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointLifeAtTime
 // 0x0010 (0x0010 - 0x0000)
@@ -327,12 +251,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointLifeAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointLifeAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointLifeAtTime) == 0x000010, "Wrong size on HoudiniPointCache_GetPointLifeAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointLifeAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointLifeAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointLifeAtTime, DesiredTime) == 0x000004, "Member 'HoudiniPointCache_GetPointLifeAtTime::DesiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointLifeAtTime, Value) == 0x000008, "Member 'HoudiniPointCache_GetPointLifeAtTime::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointLifeAtTime, ReturnValue) == 0x00000C, "Member 'HoudiniPointCache_GetPointLifeAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointLifeAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointPositionAtTime
 // 0x0018 (0x0018 - 0x0000)
@@ -345,12 +264,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointPositionAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointPositionAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointPositionAtTime) == 0x000018, "Wrong size on HoudiniPointCache_GetPointPositionAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointPositionAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointPositionAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointPositionAtTime, desiredTime) == 0x000004, "Member 'HoudiniPointCache_GetPointPositionAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointPositionAtTime, Vector) == 0x000008, "Member 'HoudiniPointCache_GetPointPositionAtTime::Vector' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointPositionAtTime, ReturnValue) == 0x000014, "Member 'HoudiniPointCache_GetPointPositionAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointPositionAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointQuatValueAtTime
 // 0x0030 (0x0030 - 0x0000)
@@ -366,14 +280,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0xE];                                       // 0x0022(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointQuatValueAtTime) == 0x000010, "Wrong alignment on HoudiniPointCache_GetPointQuatValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointQuatValueAtTime) == 0x000030, "Wrong size on HoudiniPointCache_GetPointQuatValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, Quat) == 0x000010, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::Quat' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, DoHoudiniToUnrealConversion) == 0x000020, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::DoHoudiniToUnrealConversion' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTime, ReturnValue) == 0x000021, "Member 'HoudiniPointCache_GetPointQuatValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointQuatValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointQuatValueAtTimeForString
 // 0x0040 (0x0040 - 0x0000)
@@ -390,14 +297,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0xE];                                       // 0x0032(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointQuatValueAtTimeForString) == 0x000010, "Wrong alignment on HoudiniPointCache_GetPointQuatValueAtTimeForString");
-static_assert(sizeof(HoudiniPointCache_GetPointQuatValueAtTimeForString) == 0x000040, "Wrong size on HoudiniPointCache_GetPointQuatValueAtTimeForString");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, desiredTime) == 0x000018, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, Quat) == 0x000020, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::Quat' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, DoHoudiniToUnrealConversion) == 0x000030, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::DoHoudiniToUnrealConversion' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointQuatValueAtTimeForString, ReturnValue) == 0x000031, "Member 'HoudiniPointCache_GetPointQuatValueAtTimeForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointQuatValueAtTimeForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointType
 // 0x000C (0x000C - 0x0000)
@@ -409,11 +309,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointType) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointType");
-static_assert(sizeof(HoudiniPointCache_GetPointType) == 0x00000C, "Wrong size on HoudiniPointCache_GetPointType");
-static_assert(offsetof(HoudiniPointCache_GetPointType, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointType::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointType, Value) == 0x000004, "Member 'HoudiniPointCache_GetPointType::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointType, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetPointType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointType;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointTypes
 // 0x0010 (0x0010 - 0x0000)
@@ -422,9 +318,7 @@ struct HoudiniPointCache_GetPointTypes final
 public:
 	TArray<int32>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetPointTypes) == 0x000008, "Wrong alignment on HoudiniPointCache_GetPointTypes");
-static_assert(sizeof(HoudiniPointCache_GetPointTypes) == 0x000010, "Wrong size on HoudiniPointCache_GetPointTypes");
-static_assert(offsetof(HoudiniPointCache_GetPointTypes, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetPointTypes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointTypes;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointValueAtTime
 // 0x0014 (0x0014 - 0x0000)
@@ -438,13 +332,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointValueAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointValueAtTime) == 0x000014, "Wrong size on HoudiniPointCache_GetPointValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTime, Value) == 0x00000C, "Member 'HoudiniPointCache_GetPointValueAtTime::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTime, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetPointValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointValueAtTimeForString
 // 0x0028 (0x0028 - 0x0000)
@@ -459,13 +347,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointValueAtTimeForString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetPointValueAtTimeForString");
-static_assert(sizeof(HoudiniPointCache_GetPointValueAtTimeForString) == 0x000028, "Wrong size on HoudiniPointCache_GetPointValueAtTimeForString");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTimeForString, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointValueAtTimeForString::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTimeForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetPointValueAtTimeForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTimeForString, desiredTime) == 0x000018, "Member 'HoudiniPointCache_GetPointValueAtTimeForString::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTimeForString, Value) == 0x00001C, "Member 'HoudiniPointCache_GetPointValueAtTimeForString::Value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointValueAtTimeForString, ReturnValue) == 0x000020, "Member 'HoudiniPointCache_GetPointValueAtTimeForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointValueAtTimeForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointValueIndexes
 // 0x0010 (0x0010 - 0x0000)
@@ -474,9 +356,7 @@ struct HoudiniPointCache_GetPointValueIndexes final
 public:
 	TArray<struct FPointIndexes>                  ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetPointValueIndexes) == 0x000008, "Wrong alignment on HoudiniPointCache_GetPointValueIndexes");
-static_assert(sizeof(HoudiniPointCache_GetPointValueIndexes) == 0x000010, "Wrong size on HoudiniPointCache_GetPointValueIndexes");
-static_assert(offsetof(HoudiniPointCache_GetPointValueIndexes, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetPointValueIndexes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointValueIndexes;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointVector4ValueAtTime
 // 0x0030 (0x0030 - 0x0000)
@@ -491,13 +371,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointVector4ValueAtTime) == 0x000010, "Wrong alignment on HoudiniPointCache_GetPointVector4ValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointVector4ValueAtTime) == 0x000030, "Wrong size on HoudiniPointCache_GetPointVector4ValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointVector4ValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointVector4ValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointVector4ValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTime, Vector) == 0x000010, "Member 'HoudiniPointCache_GetPointVector4ValueAtTime::Vector' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTime, ReturnValue) == 0x000020, "Member 'HoudiniPointCache_GetPointVector4ValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointVector4ValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointVector4ValueAtTimeForString
 // 0x0040 (0x0040 - 0x0000)
@@ -513,13 +387,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointVector4ValueAtTimeForString) == 0x000010, "Wrong alignment on HoudiniPointCache_GetPointVector4ValueAtTimeForString");
-static_assert(sizeof(HoudiniPointCache_GetPointVector4ValueAtTimeForString) == 0x000040, "Wrong size on HoudiniPointCache_GetPointVector4ValueAtTimeForString");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTimeForString, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointVector4ValueAtTimeForString::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTimeForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetPointVector4ValueAtTimeForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTimeForString, desiredTime) == 0x000018, "Member 'HoudiniPointCache_GetPointVector4ValueAtTimeForString::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTimeForString, Vector) == 0x000020, "Member 'HoudiniPointCache_GetPointVector4ValueAtTimeForString::Vector' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVector4ValueAtTimeForString, ReturnValue) == 0x000030, "Member 'HoudiniPointCache_GetPointVector4ValueAtTimeForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointVector4ValueAtTimeForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointVectorValueAtTime
 // 0x001C (0x001C - 0x0000)
@@ -535,15 +403,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x001A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointVectorValueAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPointVectorValueAtTime");
-static_assert(sizeof(HoudiniPointCache_GetPointVectorValueAtTime) == 0x00001C, "Wrong size on HoudiniPointCache_GetPointVectorValueAtTime");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, AttributeIndex) == 0x000004, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::AttributeIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, desiredTime) == 0x000008, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, Vector) == 0x00000C, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::Vector' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, DoSwap) == 0x000018, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::DoSwap' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, DoScale) == 0x000019, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::DoScale' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTime, ReturnValue) == 0x00001A, "Member 'HoudiniPointCache_GetPointVectorValueAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointVectorValueAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPointVectorValueAtTimeForString
 // 0x0030 (0x0030 - 0x0000)
@@ -560,15 +420,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x002A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPointVectorValueAtTimeForString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetPointVectorValueAtTimeForString");
-static_assert(sizeof(HoudiniPointCache_GetPointVectorValueAtTimeForString) == 0x000030, "Wrong size on HoudiniPointCache_GetPointVectorValueAtTimeForString");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, PointID) == 0x000000, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, desiredTime) == 0x000018, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, Vector) == 0x00001C, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::Vector' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, DoSwap) == 0x000028, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::DoSwap' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, DoScale) == 0x000029, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::DoScale' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPointVectorValueAtTimeForString, ReturnValue) == 0x00002A, "Member 'HoudiniPointCache_GetPointVectorValueAtTimeForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPointVectorValueAtTimeForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetPositionValue
 // 0x0014 (0x0014 - 0x0000)
@@ -580,11 +432,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetPositionValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetPositionValue");
-static_assert(sizeof(HoudiniPointCache_GetPositionValue) == 0x000014, "Wrong size on HoudiniPointCache_GetPositionValue");
-static_assert(offsetof(HoudiniPointCache_GetPositionValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetPositionValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPositionValue, value) == 0x000004, "Member 'HoudiniPointCache_GetPositionValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetPositionValue, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetPositionValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetPositionValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetQuatValue
 // 0x0030 (0x0030 - 0x0000)
@@ -599,13 +447,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0xE];                                       // 0x0022(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetQuatValue) == 0x000010, "Wrong alignment on HoudiniPointCache_GetQuatValue");
-static_assert(sizeof(HoudiniPointCache_GetQuatValue) == 0x000030, "Wrong size on HoudiniPointCache_GetQuatValue");
-static_assert(offsetof(HoudiniPointCache_GetQuatValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetQuatValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValue, attrIndex) == 0x000004, "Member 'HoudiniPointCache_GetQuatValue::attrIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValue, value) == 0x000010, "Member 'HoudiniPointCache_GetQuatValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValue, DoHoudiniToUnrealConversion) == 0x000020, "Member 'HoudiniPointCache_GetQuatValue::DoHoudiniToUnrealConversion' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValue, ReturnValue) == 0x000021, "Member 'HoudiniPointCache_GetQuatValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetQuatValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetQuatValueForString
 // 0x0040 (0x0040 - 0x0000)
@@ -621,13 +463,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0xE];                                       // 0x0032(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetQuatValueForString) == 0x000010, "Wrong alignment on HoudiniPointCache_GetQuatValueForString");
-static_assert(sizeof(HoudiniPointCache_GetQuatValueForString) == 0x000040, "Wrong size on HoudiniPointCache_GetQuatValueForString");
-static_assert(offsetof(HoudiniPointCache_GetQuatValueForString, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetQuatValueForString::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValueForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetQuatValueForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValueForString, value) == 0x000020, "Member 'HoudiniPointCache_GetQuatValueForString::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValueForString, DoHoudiniToUnrealConversion) == 0x000030, "Member 'HoudiniPointCache_GetQuatValueForString::DoHoudiniToUnrealConversion' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetQuatValueForString, ReturnValue) == 0x000031, "Member 'HoudiniPointCache_GetQuatValueForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetQuatValueForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetSampleIndexesForPointAtTime
 // 0x0018 (0x0018 - 0x0000)
@@ -642,14 +478,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetSampleIndexesForPointAtTime) == 0x000004, "Wrong alignment on HoudiniPointCache_GetSampleIndexesForPointAtTime");
-static_assert(sizeof(HoudiniPointCache_GetSampleIndexesForPointAtTime) == 0x000018, "Wrong size on HoudiniPointCache_GetSampleIndexesForPointAtTime");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, PointID) == 0x000000, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::PointID' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, desiredTime) == 0x000004, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::desiredTime' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, PrevSampleIndex) == 0x000008, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::PrevSampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, NextSampleIndex) == 0x00000C, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::NextSampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, PrevWeight) == 0x000010, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::PrevWeight' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetSampleIndexesForPointAtTime, ReturnValue) == 0x000014, "Member 'HoudiniPointCache_GetSampleIndexesForPointAtTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetSampleIndexesForPointAtTime;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetSpawnTimes
 // 0x0010 (0x0010 - 0x0000)
@@ -658,9 +487,7 @@ struct HoudiniPointCache_GetSpawnTimes final
 public:
 	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetSpawnTimes) == 0x000008, "Wrong alignment on HoudiniPointCache_GetSpawnTimes");
-static_assert(sizeof(HoudiniPointCache_GetSpawnTimes) == 0x000010, "Wrong size on HoudiniPointCache_GetSpawnTimes");
-static_assert(offsetof(HoudiniPointCache_GetSpawnTimes, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetSpawnTimes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetSpawnTimes;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetSpecialAttributeIndexes
 // 0x0010 (0x0010 - 0x0000)
@@ -669,9 +496,7 @@ struct HoudiniPointCache_GetSpecialAttributeIndexes final
 public:
 	TArray<int32>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetSpecialAttributeIndexes) == 0x000008, "Wrong alignment on HoudiniPointCache_GetSpecialAttributeIndexes");
-static_assert(sizeof(HoudiniPointCache_GetSpecialAttributeIndexes) == 0x000010, "Wrong size on HoudiniPointCache_GetSpecialAttributeIndexes");
-static_assert(offsetof(HoudiniPointCache_GetSpecialAttributeIndexes, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetSpecialAttributeIndexes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetSpecialAttributeIndexes;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetTimeValue
 // 0x000C (0x000C - 0x0000)
@@ -683,11 +508,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetTimeValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetTimeValue");
-static_assert(sizeof(HoudiniPointCache_GetTimeValue) == 0x00000C, "Wrong size on HoudiniPointCache_GetTimeValue");
-static_assert(offsetof(HoudiniPointCache_GetTimeValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetTimeValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetTimeValue, value) == 0x000004, "Member 'HoudiniPointCache_GetTimeValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetTimeValue, ReturnValue) == 0x000008, "Member 'HoudiniPointCache_GetTimeValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetTimeValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetUseCustomCSVTitleRow
 // 0x0001 (0x0001 - 0x0000)
@@ -696,9 +517,7 @@ struct HoudiniPointCache_GetUseCustomCSVTitleRow final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniPointCache_GetUseCustomCSVTitleRow) == 0x000001, "Wrong alignment on HoudiniPointCache_GetUseCustomCSVTitleRow");
-static_assert(sizeof(HoudiniPointCache_GetUseCustomCSVTitleRow) == 0x000001, "Wrong size on HoudiniPointCache_GetUseCustomCSVTitleRow");
-static_assert(offsetof(HoudiniPointCache_GetUseCustomCSVTitleRow, ReturnValue) == 0x000000, "Member 'HoudiniPointCache_GetUseCustomCSVTitleRow::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetUseCustomCSVTitleRow;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetVector4Value
 // 0x0030 (0x0030 - 0x0000)
@@ -712,12 +531,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetVector4Value) == 0x000010, "Wrong alignment on HoudiniPointCache_GetVector4Value");
-static_assert(sizeof(HoudiniPointCache_GetVector4Value) == 0x000030, "Wrong size on HoudiniPointCache_GetVector4Value");
-static_assert(offsetof(HoudiniPointCache_GetVector4Value, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetVector4Value::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4Value, attrIndex) == 0x000004, "Member 'HoudiniPointCache_GetVector4Value::attrIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4Value, value) == 0x000010, "Member 'HoudiniPointCache_GetVector4Value::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4Value, ReturnValue) == 0x000020, "Member 'HoudiniPointCache_GetVector4Value::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetVector4Value;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetVector4ValueForString
 // 0x0040 (0x0040 - 0x0000)
@@ -732,12 +546,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0xF];                                       // 0x0031(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetVector4ValueForString) == 0x000010, "Wrong alignment on HoudiniPointCache_GetVector4ValueForString");
-static_assert(sizeof(HoudiniPointCache_GetVector4ValueForString) == 0x000040, "Wrong size on HoudiniPointCache_GetVector4ValueForString");
-static_assert(offsetof(HoudiniPointCache_GetVector4ValueForString, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetVector4ValueForString::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4ValueForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetVector4ValueForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4ValueForString, value) == 0x000020, "Member 'HoudiniPointCache_GetVector4ValueForString::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVector4ValueForString, ReturnValue) == 0x000030, "Member 'HoudiniPointCache_GetVector4ValueForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetVector4ValueForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetVectorValue
 // 0x0018 (0x0018 - 0x0000)
@@ -752,14 +561,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0016(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetVectorValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetVectorValue");
-static_assert(sizeof(HoudiniPointCache_GetVectorValue) == 0x000018, "Wrong size on HoudiniPointCache_GetVectorValue");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetVectorValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, attrIndex) == 0x000004, "Member 'HoudiniPointCache_GetVectorValue::attrIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, value) == 0x000008, "Member 'HoudiniPointCache_GetVectorValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, DoSwap) == 0x000014, "Member 'HoudiniPointCache_GetVectorValue::DoSwap' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, DoScale) == 0x000015, "Member 'HoudiniPointCache_GetVectorValue::DoScale' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValue, ReturnValue) == 0x000016, "Member 'HoudiniPointCache_GetVectorValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetVectorValue;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetVectorValueForString
 // 0x0028 (0x0028 - 0x0000)
@@ -775,14 +577,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0026(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_27[0x1];                                       // 0x0027(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetVectorValueForString) == 0x000008, "Wrong alignment on HoudiniPointCache_GetVectorValueForString");
-static_assert(sizeof(HoudiniPointCache_GetVectorValueForString) == 0x000028, "Wrong size on HoudiniPointCache_GetVectorValueForString");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetVectorValueForString::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, Attribute) == 0x000008, "Member 'HoudiniPointCache_GetVectorValueForString::Attribute' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, value) == 0x000018, "Member 'HoudiniPointCache_GetVectorValueForString::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, DoSwap) == 0x000024, "Member 'HoudiniPointCache_GetVectorValueForString::DoSwap' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, DoScale) == 0x000025, "Member 'HoudiniPointCache_GetVectorValueForString::DoScale' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVectorValueForString, ReturnValue) == 0x000026, "Member 'HoudiniPointCache_GetVectorValueForString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetVectorValueForString;
 
 // Function HoudiniNiagara.HoudiniPointCache.GetVelocityValue
 // 0x0014 (0x0014 - 0x0000)
@@ -794,11 +589,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoudiniPointCache_GetVelocityValue) == 0x000004, "Wrong alignment on HoudiniPointCache_GetVelocityValue");
-static_assert(sizeof(HoudiniPointCache_GetVelocityValue) == 0x000014, "Wrong size on HoudiniPointCache_GetVelocityValue");
-static_assert(offsetof(HoudiniPointCache_GetVelocityValue, sampleIndex) == 0x000000, "Member 'HoudiniPointCache_GetVelocityValue::sampleIndex' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVelocityValue, value) == 0x000004, "Member 'HoudiniPointCache_GetVelocityValue::value' has a wrong offset!");
-static_assert(offsetof(HoudiniPointCache_GetVelocityValue, ReturnValue) == 0x000010, "Member 'HoudiniPointCache_GetVelocityValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoudiniPointCache_GetVelocityValue;
 
 }
 

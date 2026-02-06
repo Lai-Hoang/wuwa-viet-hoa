@@ -24,10 +24,7 @@ public:
 	int32                                         X;                                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBuildingGridCellVector) == 0x000004, "Wrong alignment on FKuroBuildingGridCellVector");
-static_assert(sizeof(FKuroBuildingGridCellVector) == 0x000008, "Wrong size on FKuroBuildingGridCellVector");
-static_assert(offsetof(FKuroBuildingGridCellVector, X) == 0x000000, "Member 'FKuroBuildingGridCellVector::X' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridCellVector, Y) == 0x000004, "Member 'FKuroBuildingGridCellVector::Y' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBuildingGridCellVector;
 
 // ScriptStruct KuroBuildingGridSystem.KuroBuildingGridRaycastResult
 // 0x0060 (0x0060 - 0x0000)
@@ -45,16 +42,7 @@ public:
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Rotation;                                          // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBuildingGridRaycastResult) == 0x000010, "Wrong alignment on FKuroBuildingGridRaycastResult");
-static_assert(sizeof(FKuroBuildingGridRaycastResult) == 0x000060, "Wrong size on FKuroBuildingGridRaycastResult");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Grid) == 0x000000, "Member 'FKuroBuildingGridRaycastResult::Grid' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Target) == 0x000008, "Member 'FKuroBuildingGridRaycastResult::Target' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, RaycastTarget) == 0x000010, "Member 'FKuroBuildingGridRaycastResult::RaycastTarget' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, DegreeAlongNormal) == 0x000018, "Member 'FKuroBuildingGridRaycastResult::DegreeAlongNormal' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Coords) == 0x00001C, "Member 'FKuroBuildingGridRaycastResult::Coords' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Location) == 0x000028, "Member 'FKuroBuildingGridRaycastResult::Location' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Normal) == 0x000040, "Member 'FKuroBuildingGridRaycastResult::Normal' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Rotation) == 0x000050, "Member 'FKuroBuildingGridRaycastResult::Rotation' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBuildingGridRaycastResult;
 
 }
 

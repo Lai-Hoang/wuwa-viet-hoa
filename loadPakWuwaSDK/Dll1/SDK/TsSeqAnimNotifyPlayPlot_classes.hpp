@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSeqAnimNotifyPlayPlot_C">();
+		BP_STATIC_CLASS_IMPL("TsSeqAnimNotifyPlayPlot_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSeqAnimNotifyPlayPlot_C")
 	}
 	static class UTsSeqAnimNotifyPlayPlot_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsSeqAnimNotifyPlayPlot_C>();
 	}
 };
-static_assert(alignof(UTsSeqAnimNotifyPlayPlot_C) == 0x000008, "Wrong alignment on UTsSeqAnimNotifyPlayPlot_C");
-static_assert(sizeof(UTsSeqAnimNotifyPlayPlot_C) == 0x000058, "Wrong size on UTsSeqAnimNotifyPlayPlot_C");
-static_assert(offsetof(UTsSeqAnimNotifyPlayPlot_C, PlotName) == 0x000048, "Member 'UTsSeqAnimNotifyPlayPlot_C::PlotName' has a wrong offset!");
+DUMPER7_ASSERTS_UTsSeqAnimNotifyPlayPlot_C;
 
 }
 

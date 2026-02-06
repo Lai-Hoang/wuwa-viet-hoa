@@ -28,27 +28,26 @@ public:
 	int32                                         EntityId;                                          // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	int32 GetEntityId();
-	void ApplyEntityId(int32 EntityId_0);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_BaseItem(int32 EntryPoint);
+	void ApplyEntityId(int32 EntityId_0);
+	int32 GetEntityId();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseItem_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseItem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseItem_C")
 	}
 	static class ABP_BaseItem_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseItem_C>();
 	}
 };
-static_assert(alignof(ABP_BaseItem_C) == 0x000008, "Wrong alignment on ABP_BaseItem_C");
-static_assert(sizeof(ABP_BaseItem_C) == 0x0002E0, "Wrong size on ABP_BaseItem_C");
-static_assert(offsetof(ABP_BaseItem_C, UberGraphFrame_BP_BaseItem_C) == 0x0002C0, "Member 'ABP_BaseItem_C::UberGraphFrame_BP_BaseItem_C' has a wrong offset!");
-static_assert(offsetof(ABP_BaseItem_C, StaticMesh) == 0x0002C8, "Member 'ABP_BaseItem_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BaseItem_C, Scene) == 0x0002D0, "Member 'ABP_BaseItem_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_BaseItem_C, EntityId) == 0x0002D8, "Member 'ABP_BaseItem_C::EntityId' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseItem_C;
 
 }
 

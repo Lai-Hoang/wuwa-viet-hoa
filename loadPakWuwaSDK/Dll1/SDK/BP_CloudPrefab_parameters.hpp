@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -91,61 +91,7 @@ public:
 	bool                                          CallFunc_CurveProgress_stop;                       // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x035D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab");
-static_assert(sizeof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab) == 0x000360, "Wrong size on BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, EntryPoint) == 0x000000, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetParentActor_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetParentActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_AsBP_Cloud_Fu_Ben_New) == 0x000010, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_AsBP_Cloud_Fu_Ben_New' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_AsBP_Clouds) == 0x000020, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_AsBP_Clouds' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_bSuccess_1) == 0x000028, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds_1) == 0x00002C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds) == 0x000030, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue) == 0x000038, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item) == 0x000050, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_1) == 0x000058, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_1) == 0x000060, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_2) == 0x000061, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_2) == 0x000068, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_3) == 0x000070, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_3) == 0x000078, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_4) == 0x000079, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_4) == 0x000080, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_K2_SetTimer_ReturnValue) == 0x000088, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000094, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetWorld_ReturnValue) == 0x000098, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_5) == 0x0000A0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_OutCameraLocation) == 0x0000A8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_OutCameraLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_ReturnValue) == 0x0000C0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_bMove) == 0x0000C1, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_bMove' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_NewLocation) == 0x0000C8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_NewLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_SweepHitResult) == 0x0000E0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_ReturnValue) == 0x000174, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult) == 0x000178, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000210, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000218, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x000230, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_X) == 0x000248, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Y) == 0x000250, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Z) == 0x000258, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1) == 0x000260, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Abs_ReturnValue) == 0x0002F8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_2) == 0x000300, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Multiply_FloatFloat_ReturnValue) == 0x000318, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_3) == 0x000320, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000338, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue) == 0x00033C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_time) == 0x000340, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_time' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_Stop) == 0x000344, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_Stop' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000348, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x00034C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000350, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue_1) == 0x000354, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue_2) == 0x000358, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_CurveProgress_stop) == 0x00035C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_CurveProgress_stop' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BooleanOR_ReturnValue) == 0x00035D, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -154,9 +100,7 @@ struct BP_CloudPrefab_C_EditorTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_EditorTick) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_EditorTick");
-static_assert(sizeof(BP_CloudPrefab_C_EditorTick) == 0x000004, "Wrong size on BP_CloudPrefab_C_EditorTick");
-static_assert(offsetof(BP_CloudPrefab_C_EditorTick, DeltaSeconds) == 0x000000, "Member 'BP_CloudPrefab_C_EditorTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_EditorTick;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -165,9 +109,7 @@ struct BP_CloudPrefab_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_ReceiveTick");
-static_assert(sizeof(BP_CloudPrefab_C_ReceiveTick) == 0x000004, "Wrong size on BP_CloudPrefab_C_ReceiveTick");
-static_assert(offsetof(BP_CloudPrefab_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CloudPrefab_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_ReceiveTick;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.UserConstructionScript
 // 0x0088 (0x0088 - 0x0000)
@@ -200,27 +142,7 @@ public:
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_CreateDMI_ReturnValue_2;                  // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_UserConstructionScript");
-static_assert(sizeof(BP_CloudPrefab_C_UserConstructionScript) == 0x000088, "Wrong size on BP_CloudPrefab_C_UserConstructionScript");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, ___int_Loop_Counter_Variable) == 0x000000, "Member 'BP_CloudPrefab_C_UserConstructionScript::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, K2Node_MakeArray_Array) == 0x000020, "Member 'BP_CloudPrefab_C_UserConstructionScript::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_1) == 0x000030, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000034, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, K2Node_MakeArray_Array_1) == 0x000038, "Member 'BP_CloudPrefab_C_UserConstructionScript::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue_2) == 0x000048, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x00004C, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, ___int_Array_Index_Variable) == 0x000050, "Member 'BP_CloudPrefab_C_UserConstructionScript::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_Array_Get_Item) == 0x000058, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_1) == 0x000061, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_CreateDMI_ReturnValue) == 0x000068, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_CreateDMI_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_CreateDMI_ReturnValue_1) == 0x000070, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_CreateDMI_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_IsValid_ReturnValue_2) == 0x000078, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_UserConstructionScript, CallFunc_CreateDMI_ReturnValue_2) == 0x000080, "Member 'BP_CloudPrefab_C_UserConstructionScript::CallFunc_CreateDMI_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_UserConstructionScript;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.AddCloudRotation
 // 0x01F4 (0x01F4 - 0x0000)
@@ -242,20 +164,7 @@ public:
 	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult_1;  // 0x00CC(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FHitResult                             CallFunc_K2_AddRelativeRotation_SweepHitResult_2;  // 0x0160(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_CloudPrefab_C_AddCloudRotation) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_AddCloudRotation");
-static_assert(sizeof(BP_CloudPrefab_C_AddCloudRotation) == 0x0001F4, "Wrong size on BP_CloudPrefab_C_AddCloudRotation");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000000, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_MakeRotator_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_K2_AddRelativeRotation_SweepHitResult) == 0x000014, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_K2_AddRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x0000A8, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x0000AC, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_MakeRotator_ReturnValue_1) == 0x0000B0, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_MakeRotator_ReturnValue_2) == 0x0000BC, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_IsValid_ReturnValue_1) == 0x0000C8, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_IsValid_ReturnValue_2) == 0x0000C9, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_K2_AddRelativeRotation_SweepHitResult_1) == 0x0000CC, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_K2_AddRelativeRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_AddCloudRotation, CallFunc_K2_AddRelativeRotation_SweepHitResult_2) == 0x000160, "Member 'BP_CloudPrefab_C_AddCloudRotation::CallFunc_K2_AddRelativeRotation_SweepHitResult_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_AddCloudRotation;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Timer
 // 0x0024 (0x0024 - 0x0000)
@@ -277,19 +186,7 @@ public:
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_Timer) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_Timer");
-static_assert(sizeof(BP_CloudPrefab_C_Timer) == 0x000024, "Wrong size on BP_CloudPrefab_C_Timer");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, Forward) == 0x000000, "Member 'BP_CloudPrefab_C_Timer::Forward' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, DeltaTime) == 0x000004, "Member 'BP_CloudPrefab_C_Timer::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, Speed) == 0x000008, "Member 'BP_CloudPrefab_C_Timer::Speed' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, time) == 0x00000C, "Member 'BP_CloudPrefab_C_Timer::time' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, Stop_0) == 0x000010, "Member 'BP_CloudPrefab_C_Timer::Stop_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, Stoping) == 0x000011, "Member 'BP_CloudPrefab_C_Timer::Stoping' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_CloudPrefab_C_Timer::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_Timer::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000019, "Member 'BP_CloudPrefab_C_Timer::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_Add_FloatFloat_ReturnValue) == 0x00001C, "Member 'BP_CloudPrefab_C_Timer::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_Timer::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_Timer;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Cloud Initial
 // 0x0218 (0x0218 - 0x0000)
@@ -342,48 +239,7 @@ public:
 	struct FCloudParameters                       K2Node_MakeStruct_CloudParameters;                 // 0x0148(0x00C8)()
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudPrefab_C_Cloud_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Cloud_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Cloud_Initial) == 0x000218, "Wrong size on BP_CloudPrefab_C_Cloud_Initial");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___object_Variable) == 0x000000, "Member 'BP_CloudPrefab_C_Cloud_Initial::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___bool_Variable) == 0x00000C, "Member 'BP_CloudPrefab_C_Cloud_Initial::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue) == 0x000015, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_1) == 0x000016, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_Select_Default) == 0x000018, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_2) == 0x000020, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_3) == 0x000021, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_BooleanOR_ReturnValue) == 0x000022, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue) == 0x000024, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_1) == 0x000028, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item) == 0x00002C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_1) == 0x000034, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000038, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_2) == 0x00003C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_2) == 0x000040, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_3) == 0x000044, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_3) == 0x000048, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_4) == 0x000050, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_5) == 0x000058, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_6) == 0x000060, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue) == 0x000068, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue_1) == 0x000069, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_CreateDMI_ReturnValue) == 0x000070, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_CreateDMI_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_7) == 0x000078, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_7' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_8) == 0x000080, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_8' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_9) == 0x000088, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_9' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000090, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_FloatFloat_ReturnValue) == 0x000094, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_MakeRotator_ReturnValue) == 0x00009C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x0000A8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_1) == 0x00013C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_2) == 0x000140, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_4) == 0x000144, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_MakeStruct_CloudParameters) == 0x000148, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_MakeStruct_CloudParameters' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000210, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_Cloud_Initial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Single Cloud Parameters Initial
 // 0x01A0 (0x01A0 - 0x0000)
@@ -408,22 +264,7 @@ public:
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_1;           // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Single_Cloud_Parameters_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial) == 0x0001A0, "Wrong size on BP_CloudPrefab_C_Single_Cloud_Parameters_Initial");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, DMI_0) == 0x000000, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::DMI_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CloudStructParameter) == 0x000010, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CloudStructParameter' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, TransSortNumber_0) == 0x0000D8, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::TransSortNumber_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x0000DC, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x0000E0, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_MakeRotator_ReturnValue) == 0x0000E4, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000F0, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x0000F4, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_IsValid_ReturnValue) == 0x000188, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x00018C, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Not_PreBool_ReturnValue) == 0x000190, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue_1) == 0x000194, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000198, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_Single_Cloud_Parameters_Initial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Single Building Parameters Initial
 // 0x0100 (0x0100 - 0x0000)
@@ -445,19 +286,7 @@ public:
 	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_Single_Building_Parameters_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Single_Building_Parameters_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Single_Building_Parameters_Initial) == 0x000100, "Wrong size on BP_CloudPrefab_C_Single_Building_Parameters_Initial");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, DMI_0) == 0x000000, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::DMI_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CloudStructParameter) == 0x000010, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CloudStructParameter' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, TransSortNumber_0) == 0x000048, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::TransSortNumber_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x00004C, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000050, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_MakeRotator_ReturnValue) == 0x000054, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_SetStaticMesh_ReturnValue) == 0x000060, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000064, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_IsValid_ReturnValue) == 0x0000F8, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Building_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x0000FC, "Member 'BP_CloudPrefab_C_Single_Building_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_Single_Building_Parameters_Initial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Single POICloud Parameters Initial
 // 0x0120 (0x0120 - 0x0000)
@@ -486,26 +315,7 @@ public:
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x008C(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Single_POICloud_Parameters_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial) == 0x000120, "Wrong size on BP_CloudPrefab_C_Single_POICloud_Parameters_Initial");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, DMI_0) == 0x000000, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::DMI_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CloudStructParameter) == 0x000010, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CloudStructParameter' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, TransSortNumber_0) == 0x000050, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::TransSortNumber_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000054, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_SetStaticMesh_ReturnValue) == 0x000058, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_IsValid_ReturnValue) == 0x000059, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x00005C, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_SelectFloat_ReturnValue) == 0x000060, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Not_PreBool_ReturnValue) == 0x000064, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue_1) == 0x000068, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x00006C, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000070, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000074, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Add_FloatFloat_ReturnValue) == 0x000078, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x00007C, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_MakeRotator_ReturnValue) == 0x000080, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_POICloud_Parameters_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x00008C, "Member 'BP_CloudPrefab_C_Single_POICloud_Parameters_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_Single_POICloud_Parameters_Initial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.ShouldCloudMove
 // 0x00D8 (0x00D8 - 0x0000)
@@ -533,25 +343,7 @@ public:
 	double                                        CallFunc_D_FClamp_ReturnValue;                     // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_VLerp_ReturnValue;                      // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_ShouldCloudMove) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_ShouldCloudMove");
-static_assert(sizeof(BP_CloudPrefab_C_ShouldCloudMove) == 0x0000D8, "Wrong size on BP_CloudPrefab_C_ShouldCloudMove");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, InLocation) == 0x000000, "Member 'BP_CloudPrefab_C_ShouldCloudMove::InLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, bMove) == 0x000018, "Member 'BP_CloudPrefab_C_ShouldCloudMove::bMove' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, NewLocation) == 0x000020, "Member 'BP_CloudPrefab_C_ShouldCloudMove::NewLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_BreakVectorDouble_X) == 0x000038, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_BreakVectorDouble_Y) == 0x000040, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_BreakVectorDouble_Z) == 0x000048, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_FMax_ReturnValue) == 0x000050, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_MakeVectorDouble_ReturnValue) == 0x000058, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000070, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_MakeVector2DDouble_ReturnValue) == 0x000078, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_MakeVector2DDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_Divide_Vector2DFloat_ReturnValue) == 0x000088, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_Distance2D_ReturnValue) == 0x000098, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_Distance2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_Less_FloatFloat_ReturnValue) == 0x0000A0, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_Subtract_FloatFloat_ReturnValue) == 0x0000A8, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_Divide_FloatFloat_ReturnValue) == 0x0000B0, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_FClamp_ReturnValue) == 0x0000B8, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ShouldCloudMove, CallFunc_D_VLerp_ReturnValue) == 0x0000C0, "Member 'BP_CloudPrefab_C_ShouldCloudMove::CallFunc_D_VLerp_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_ShouldCloudMove;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideBigShapeMaterial
 // 0x0018 (0x0018 - 0x0000)
@@ -564,12 +356,7 @@ public:
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_OverrideBigShapeMaterial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_OverrideBigShapeMaterial");
-static_assert(sizeof(BP_CloudPrefab_C_OverrideBigShapeMaterial) == 0x000018, "Wrong size on BP_CloudPrefab_C_OverrideBigShapeMaterial");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, MaterialInstance) == 0x000000, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000009, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_OverrideBigShapeMaterial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideCloudTopMaterial
 // 0x0020 (0x0020 - 0x0000)
@@ -582,12 +369,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudPrefab_C_OverrideCloudTopMaterial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_OverrideCloudTopMaterial");
-static_assert(sizeof(BP_CloudPrefab_C_OverrideCloudTopMaterial) == 0x000020, "Wrong size on BP_CloudPrefab_C_OverrideCloudTopMaterial");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, MaterialInstance) == 0x000000, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_OverrideCloudTopMaterial;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.CurveProgress
 // 0x000C (0x000C - 0x0000)
@@ -600,12 +382,7 @@ public:
 	float                                         CallFunc_GetValue_Float_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudPrefab_C_CurveProgress) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_CurveProgress");
-static_assert(sizeof(BP_CloudPrefab_C_CurveProgress) == 0x00000C, "Wrong size on BP_CloudPrefab_C_CurveProgress");
-static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, stop) == 0x000000, "Member 'BP_CloudPrefab_C_CurveProgress::stop' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, curvestop) == 0x000001, "Member 'BP_CloudPrefab_C_CurveProgress::curvestop' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, CallFunc_GetValue_Float_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_CurveProgress::CallFunc_GetValue_Float_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, CallFunc_Add_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_CurveProgress::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_CurveProgress;
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideMountainMeshAndMaterial
 // 0x0028 (0x0028 - 0x0000)
@@ -624,18 +401,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_OverrideMountainMeshAndMaterial");
-static_assert(sizeof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial) == 0x000028, "Wrong size on BP_CloudPrefab_C_OverrideMountainMeshAndMaterial");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, MaterialInstance) == 0x000000, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::MaterialInstance' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000015, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue_1) == 0x000016, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_SetStaticMesh_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000022, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudPrefab_C_OverrideMountainMeshAndMaterial;
 
 }
 

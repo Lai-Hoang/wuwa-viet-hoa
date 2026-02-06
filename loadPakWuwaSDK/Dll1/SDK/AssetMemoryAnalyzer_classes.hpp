@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AssetMemoryAnalyzerSubsystem">();
+		STATIC_CLASS_IMPL("AssetMemoryAnalyzerSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AssetMemoryAnalyzerSubsystem")
 	}
 	static class UAssetMemoryAnalyzerSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAssetMemoryAnalyzerSubsystem>();
 	}
 };
-static_assert(alignof(UAssetMemoryAnalyzerSubsystem) == 0x000008, "Wrong alignment on UAssetMemoryAnalyzerSubsystem");
-static_assert(sizeof(UAssetMemoryAnalyzerSubsystem) == 0x000068, "Wrong size on UAssetMemoryAnalyzerSubsystem");
+DUMPER7_ASSERTS_UAssetMemoryAnalyzerSubsystem;
 
 }
 

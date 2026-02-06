@@ -16,8 +16,8 @@
 #include "SBulletDataEffect_structs.hpp"
 #include "SBulletDataTime_structs.hpp"
 #include "SBulletDataCollision_structs.hpp"
-#include "SBulletDataExe_structs.hpp"
 #include "SBulletDataScale_structs.hpp"
+#include "SBulletDataExe_structs.hpp"
 
 
 namespace SDK
@@ -39,17 +39,7 @@ public:
 	struct FSBulletDataScale                      缩放设置_8_CCC4E74E4B73C0919F5D7199EC68CDE9;       // 0x0298(0x0018)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSBulletDataChild>              子子弹_28_CDA2EA0842E35A54B3CC4480FB1B3962;        // 0x02B0(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSBulletDataMain) == 0x000008, "Wrong alignment on FSBulletDataMain");
-static_assert(sizeof(FSBulletDataMain) == 0x0002C0, "Wrong size on FSBulletDataMain");
-static_assert(offsetof(FSBulletDataMain, 子弹名称_24_A1A7201B4ADF90E01822548A0A9AC171) == 0x000000, "Member 'FSBulletDataMain::子弹名称_24_A1A7201B4ADF90E01822548A0A9AC171' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 基础设置_2_8BCB10694CE745643619B883EF6A23AA) == 0x000010, "Member 'FSBulletDataMain::基础设置_2_8BCB10694CE745643619B883EF6A23AA' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 移动设置_5_413344AA4ECA4F55169EDEB190C18458) == 0x0000E8, "Member 'FSBulletDataMain::移动设置_5_413344AA4ECA4F55169EDEB190C18458' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 效果设置_11_0C7DD99C4AA72FDAD83EC58E139456E2) == 0x000178, "Member 'FSBulletDataMain::效果设置_11_0C7DD99C4AA72FDAD83EC58E139456E2' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 时间膨胀_15_5A29465D4D74BF5AA3EB2DAFF81557B2) == 0x0001C0, "Member 'FSBulletDataMain::时间膨胀_15_5A29465D4D74BF5AA3EB2DAFF81557B2' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 碰撞设置_27_38DDFCB5499FBA71CD5166AA0CBBB1D6) == 0x0001F8, "Member 'FSBulletDataMain::碰撞设置_27_38DDFCB5499FBA71CD5166AA0CBBB1D6' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 执行逻辑_18_B4D398D24FAA4A7B01E9A98F7F6AD0B8) == 0x000208, "Member 'FSBulletDataMain::执行逻辑_18_B4D398D24FAA4A7B01E9A98F7F6AD0B8' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 缩放设置_8_CCC4E74E4B73C0919F5D7199EC68CDE9) == 0x000298, "Member 'FSBulletDataMain::缩放设置_8_CCC4E74E4B73C0919F5D7199EC68CDE9' has a wrong offset!");
-static_assert(offsetof(FSBulletDataMain, 子子弹_28_CDA2EA0842E35A54B3CC4480FB1B3962) == 0x0002B0, "Member 'FSBulletDataMain::子子弹_28_CDA2EA0842E35A54B3CC4480FB1B3962' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataMain;
 
 }
 

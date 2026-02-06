@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATsSkeletalObserver_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsSkeletalObserver_C", "ReceiveTick");
-
-	Params::TsSkeletalObserver_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function TsSkeletalObserver.TsSkeletalObserver_C.ExecuteUbergraph_TsSkeletalObserver
 // (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -57,6 +32,31 @@ void ATsSkeletalObserver_C::ExecuteUbergraph_TsSkeletalObserver(int32 EntryPoint
 	Params::TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsSkeletalObserver_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsSkeletalObserver_C", "ReceiveTick");
+
+	Params::TsSkeletalObserver_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

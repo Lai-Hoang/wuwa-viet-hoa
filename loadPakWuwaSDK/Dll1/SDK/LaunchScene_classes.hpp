@@ -25,22 +25,24 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_LaunchScene(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"LaunchScene_C">();
+		BP_STATIC_CLASS_IMPL("LaunchScene_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LaunchScene_C")
 	}
 	static class ALaunchScene_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALaunchScene_C>();
 	}
 };
-static_assert(alignof(ALaunchScene_C) == 0x000008, "Wrong alignment on ALaunchScene_C");
-static_assert(sizeof(ALaunchScene_C) == 0x0002C0, "Wrong size on ALaunchScene_C");
-static_assert(offsetof(ALaunchScene_C, UberGraphFrame) == 0x0002B8, "Member 'ALaunchScene_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_ALaunchScene_C;
 
 }
 

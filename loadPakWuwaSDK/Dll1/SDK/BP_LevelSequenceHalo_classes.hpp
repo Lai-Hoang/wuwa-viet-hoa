@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "E_BillboardMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "E_BillboardMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK
@@ -92,61 +92,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LevelSequenceHalo_C">();
+		BP_STATIC_CLASS_IMPL("BP_LevelSequenceHalo_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LevelSequenceHalo_C")
 	}
 	static class ABP_LevelSequenceHalo_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LevelSequenceHalo_C>();
 	}
 };
-static_assert(alignof(ABP_LevelSequenceHalo_C) == 0x000008, "Wrong alignment on ABP_LevelSequenceHalo_C");
-static_assert(sizeof(ABP_LevelSequenceHalo_C) == 0x0004B0, "Wrong size on ABP_LevelSequenceHalo_C");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_LevelSequenceHalo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Billboard) == 0x0002B8, "Member 'ABP_LevelSequenceHalo_C::Billboard' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, KuroHalo) == 0x0002C0, "Member 'ABP_LevelSequenceHalo_C::KuroHalo' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, DynamicMaterialInstance) == 0x0002C8, "Member 'ABP_LevelSequenceHalo_C::DynamicMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Enable) == 0x0002D0, "Member 'ABP_LevelSequenceHalo_C::Enable' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, bAcceptGI) == 0x0002D1, "Member 'ABP_LevelSequenceHalo_C::bAcceptGI' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, SizeScale) == 0x0002D4, "Member 'ABP_LevelSequenceHalo_C::SizeScale' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, IntensityScale) == 0x0002D8, "Member 'ABP_LevelSequenceHalo_C::IntensityScale' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightExponent) == 0x0002DC, "Member 'ABP_LevelSequenceHalo_C::LightExponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeStartRadius) == 0x0002E0, "Member 'ABP_LevelSequenceHalo_C::FadeStartRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeEndRadius) == 0x0002E4, "Member 'ABP_LevelSequenceHalo_C::FadeEndRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloComponent) == 0x0002E8, "Member 'ABP_LevelSequenceHalo_C::HaloComponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, DepthFadeDistance) == 0x0002F0, "Member 'ABP_LevelSequenceHalo_C::DepthFadeDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, AspectRatio) == 0x0002F4, "Member 'ABP_LevelSequenceHalo_C::AspectRatio' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FaceCameraMode) == 0x0002F8, "Member 'ABP_LevelSequenceHalo_C::FaceCameraMode' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloMesh) == 0x000300, "Member 'ABP_LevelSequenceHalo_C::HaloMesh' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawDistance) == 0x000308, "Member 'ABP_LevelSequenceHalo_C::MinDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawDistance) == 0x00030C, "Member 'ABP_LevelSequenceHalo_C::MaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawRange) == 0x000310, "Member 'ABP_LevelSequenceHalo_C::MinDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawRange) == 0x000314, "Member 'ABP_LevelSequenceHalo_C::MaxDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, UseShapeTex) == 0x000318, "Member 'ABP_LevelSequenceHalo_C::UseShapeTex' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, VolumeTex) == 0x000320, "Member 'ABP_LevelSequenceHalo_C::VolumeTex' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, VolumeTexUVSpeed) == 0x000328, "Member 'ABP_LevelSequenceHalo_C::VolumeTexUVSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloPointConfig) == 0x000338, "Member 'ABP_LevelSequenceHalo_C::HaloPointConfig' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, CurrentFeatureLevel) == 0x000340, "Member 'ABP_LevelSequenceHalo_C::CurrentFeatureLevel' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightIntensity) == 0x000344, "Member 'ABP_LevelSequenceHalo_C::LightIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightColor) == 0x000348, "Member 'ABP_LevelSequenceHalo_C::LightColor' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightAttenRadius) == 0x000358, "Member 'ABP_LevelSequenceHalo_C::LightAttenRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightFalloffExponent) == 0x00035C, "Member 'ABP_LevelSequenceHalo_C::LightFalloffExponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, TranslucentSortPriority) == 0x000360, "Member 'ABP_LevelSequenceHalo_C::TranslucentSortPriority' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, UseTranslucentMaterial) == 0x000364, "Member 'ABP_LevelSequenceHalo_C::UseTranslucentMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo) == 0x000368, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent) == 0x000370, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_DOF) == 0x000378, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_DOF' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Plus) == 0x000380, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Plus' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_Plus) == 0x000388, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_Plus' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_DOF_Plus) == 0x000390, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_DOF_Plus' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Scalar_Parameters) == 0x000398, "Member 'ABP_LevelSequenceHalo_C::Scalar_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Vector_Parameters) == 0x0003E8, "Member 'ABP_LevelSequenceHalo_C::Vector_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Texture_Parameters) == 0x000438, "Member 'ABP_LevelSequenceHalo_C::Texture_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, AcceptGI) == 0x000488, "Member 'ABP_LevelSequenceHalo_C::AcceptGI' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Use_DOF_Material) == 0x00048C, "Member 'ABP_LevelSequenceHalo_C::Use_DOF_Material' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, 移动端低画质以上生效) == 0x00048D, "Member 'ABP_LevelSequenceHalo_C::移动端低画质以上生效' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseTex) == 0x000490, "Member 'ABP_LevelSequenceHalo_C::NoiseTex' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseTexUV) == 0x000498, "Member 'ABP_LevelSequenceHalo_C::NoiseTexUV' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseStrength) == 0x0004A8, "Member 'ABP_LevelSequenceHalo_C::NoiseStrength' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelSequenceHalo_C;
 
 }
 

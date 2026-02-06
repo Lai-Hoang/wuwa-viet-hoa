@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BulletSceneInteraction_C">();
+		BP_STATIC_CLASS_IMPL("BulletSceneInteraction_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletSceneInteraction_C")
 	}
 	static class UBulletSceneInteraction_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletSceneInteraction_C>();
 	}
 };
-static_assert(alignof(UBulletSceneInteraction_C) == 0x000010, "Wrong alignment on UBulletSceneInteraction_C");
-static_assert(sizeof(UBulletSceneInteraction_C) == 0x000130, "Wrong size on UBulletSceneInteraction_C");
-static_assert(offsetof(UBulletSceneInteraction_C, WaterInteraction) == 0x000038, "Member 'UBulletSceneInteraction_C::WaterInteraction' has a wrong offset!");
-static_assert(offsetof(UBulletSceneInteraction_C, WaterEffect) == 0x000080, "Member 'UBulletSceneInteraction_C::WaterEffect' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletSceneInteraction_C;
 
 }
 

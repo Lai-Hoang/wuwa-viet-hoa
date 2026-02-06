@@ -109,13 +109,7 @@ public:
 	TArray<EKooSharpMonoTraceMask>                Test;                                              // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<EKooSharpMonoTraceMask>                Shipping;                                          // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKooSharpMonoTraceMaskRuntimeSettings) == 0x000008, "Wrong alignment on FKooSharpMonoTraceMaskRuntimeSettings");
-static_assert(sizeof(FKooSharpMonoTraceMaskRuntimeSettings) == 0x000050, "Wrong size on FKooSharpMonoTraceMaskRuntimeSettings");
-static_assert(offsetof(FKooSharpMonoTraceMaskRuntimeSettings, Debug) == 0x000000, "Member 'FKooSharpMonoTraceMaskRuntimeSettings::Debug' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceMaskRuntimeSettings, DebugGame) == 0x000010, "Member 'FKooSharpMonoTraceMaskRuntimeSettings::DebugGame' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceMaskRuntimeSettings, Development) == 0x000020, "Member 'FKooSharpMonoTraceMaskRuntimeSettings::Development' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceMaskRuntimeSettings, Test) == 0x000030, "Member 'FKooSharpMonoTraceMaskRuntimeSettings::Test' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceMaskRuntimeSettings, Shipping) == 0x000040, "Member 'FKooSharpMonoTraceMaskRuntimeSettings::Shipping' has a wrong offset!");
+DUMPER7_ASSERTS_FKooSharpMonoTraceMaskRuntimeSettings;
 
 // ScriptStruct Sharphereal.KooSharpMonoTraceLevelRuntimeSettings
 // 0x0005 (0x0005 - 0x0000)
@@ -128,13 +122,7 @@ public:
 	EKooSharpMonoTraceLevel                       Test;                                              // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EKooSharpMonoTraceLevel                       Shipping;                                          // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKooSharpMonoTraceLevelRuntimeSettings) == 0x000001, "Wrong alignment on FKooSharpMonoTraceLevelRuntimeSettings");
-static_assert(sizeof(FKooSharpMonoTraceLevelRuntimeSettings) == 0x000005, "Wrong size on FKooSharpMonoTraceLevelRuntimeSettings");
-static_assert(offsetof(FKooSharpMonoTraceLevelRuntimeSettings, Debug) == 0x000000, "Member 'FKooSharpMonoTraceLevelRuntimeSettings::Debug' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceLevelRuntimeSettings, DebugGame) == 0x000001, "Member 'FKooSharpMonoTraceLevelRuntimeSettings::DebugGame' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceLevelRuntimeSettings, Development) == 0x000002, "Member 'FKooSharpMonoTraceLevelRuntimeSettings::Development' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceLevelRuntimeSettings, Test) == 0x000003, "Member 'FKooSharpMonoTraceLevelRuntimeSettings::Test' has a wrong offset!");
-static_assert(offsetof(FKooSharpMonoTraceLevelRuntimeSettings, Shipping) == 0x000004, "Member 'FKooSharpMonoTraceLevelRuntimeSettings::Shipping' has a wrong offset!");
+DUMPER7_ASSERTS_FKooSharpMonoTraceLevelRuntimeSettings;
 
 }
 

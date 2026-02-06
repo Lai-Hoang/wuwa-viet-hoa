@@ -38,27 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RippleWater_Data_C">();
+		BP_STATIC_CLASS_IMPL("BP_RippleWater_Data_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RippleWater_Data_C")
 	}
 	static class UBP_RippleWater_Data_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_RippleWater_Data_C>();
 	}
 };
-static_assert(alignof(UBP_RippleWater_Data_C) == 0x000008, "Wrong alignment on UBP_RippleWater_Data_C");
-static_assert(sizeof(UBP_RippleWater_Data_C) == 0x000070, "Wrong size on UBP_RippleWater_Data_C");
-static_assert(offsetof(UBP_RippleWater_Data_C, Step) == 0x000038, "Member 'UBP_RippleWater_Data_C::Step' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, captureSize) == 0x00003C, "Member 'UBP_RippleWater_Data_C::captureSize' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, PlayerSize) == 0x000040, "Member 'UBP_RippleWater_Data_C::PlayerSize' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, RippleDistanceNormal) == 0x000044, "Member 'UBP_RippleWater_Data_C::RippleDistanceNormal' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, RippleDistanceFluo) == 0x000048, "Member 'UBP_RippleWater_Data_C::RippleDistanceFluo' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, SwimRippleOffset) == 0x00004C, "Member 'UBP_RippleWater_Data_C::SwimRippleOffset' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, ExtraRipplePoint1) == 0x000050, "Member 'UBP_RippleWater_Data_C::ExtraRipplePoint1' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, ExtraRipplePoint2) == 0x000058, "Member 'UBP_RippleWater_Data_C::ExtraRipplePoint2' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, PlayerSize_Mul) == 0x000060, "Member 'UBP_RippleWater_Data_C::PlayerSize_Mul' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, ExtraPlayerSize_Mul) == 0x000064, "Member 'UBP_RippleWater_Data_C::ExtraPlayerSize_Mul' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, RippleIntensity) == 0x000068, "Member 'UBP_RippleWater_Data_C::RippleIntensity' has a wrong offset!");
-static_assert(offsetof(UBP_RippleWater_Data_C, RippleAttenuation) == 0x00006C, "Member 'UBP_RippleWater_Data_C::RippleAttenuation' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_RippleWater_Data_C;
 
 }
 

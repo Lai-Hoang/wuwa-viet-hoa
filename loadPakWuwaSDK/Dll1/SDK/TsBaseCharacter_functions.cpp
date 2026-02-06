@@ -17,75 +17,21 @@
 namespace SDK
 {
 
-// Function TsBaseCharacter.TsBaseCharacter_C.GetEntityId
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ATsBaseCharacter_C::GetEntityId()
+void ATsBaseCharacter_C::ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "GetEntityId");
+		Func = Class->GetFunction("TsBaseCharacter_C", "ExecuteUbergraph_TsBaseCharacter");
 
-	Params::TsBaseCharacter_C_GetEntityId Parms{};
+	Params::TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter Parms{};
 
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TsBaseCharacter.TsBaseCharacter_C.BindGameplayEnableState
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool&                                   gameplayEnable                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-
-void ATsBaseCharacter_C::BindGameplayEnableState(bool& gameplayEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "BindGameplayEnableState");
-
-	Params::TsBaseCharacter_C_BindGameplayEnableState Parms{};
-
-	Parms.gameplayEnable = gameplayEnable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	gameplayEnable = Parms.gameplayEnable;
-}
-
-
-// Function TsBaseCharacter.TsBaseCharacter_C.SetDitherEffect
-// (Native, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   dither                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ECharacterDitherType                    ditherType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATsBaseCharacter_C::SetDitherEffect(float dither, ECharacterDitherType ditherType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "SetDitherEffect");
-
-	Params::TsBaseCharacter_C_SetDitherEffect Parms{};
-
-	Parms.dither = dither;
-	Parms.ditherType = ditherType;
+	Parms.EntryPoint = EntryPoint;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -96,15 +42,15 @@ void ATsBaseCharacter_C::SetDitherEffect(float dither, ECharacterDitherType dith
 }
 
 
-// Function TsBaseCharacter.TsBaseCharacter_C.Initialize
-// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Function TsBaseCharacter.TsBaseCharacter_C.ReceiveDestroyed
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ATsBaseCharacter_C::Initialize()
+void ATsBaseCharacter_C::ReceiveDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "Initialize");
+		Func = Class->GetFunction("TsBaseCharacter_C", "ReceiveDestroyed");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -115,21 +61,71 @@ void ATsBaseCharacter_C::Initialize()
 }
 
 
-// Function TsBaseCharacter.TsBaseCharacter_C.FightCommand
-// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Function TsBaseCharacter.TsBaseCharacter_C.K2_UpdateCustomMovement
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    isInAir                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsBaseCharacter_C::FightCommand(bool isInAir)
+void ATsBaseCharacter_C::K2_UpdateCustomMovement(float DeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "FightCommand");
+		Func = Class->GetFunction("TsBaseCharacter_C", "K2_UpdateCustomMovement");
 
-	Params::TsBaseCharacter_C_FightCommand Parms{};
+	Params::TsBaseCharacter_C_K2_UpdateCustomMovement Parms{};
 
-	Parms.isInAir = isInAir;
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.ReceiveUnpossessed
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*                      OldController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsBaseCharacter_C::ReceiveUnpossessed(class AController* OldController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "ReceiveUnpossessed");
+
+	Params::TsBaseCharacter_C_ReceiveUnpossessed Parms{};
+
+	Parms.OldController = OldController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.ReceivePossessed
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*                      NewController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsBaseCharacter_C::ReceivePossessed(class AController* NewController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "ReceivePossessed");
+
+	Params::TsBaseCharacter_C_ReceivePossessed Parms{};
+
+	Parms.NewController = NewController;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -171,21 +167,21 @@ void ATsBaseCharacter_C::K2_OnMovementModeChanged(EMovementMode PrevMovementMode
 }
 
 
-// Function TsBaseCharacter.TsBaseCharacter_C.ReceivePossessed
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Function TsBaseCharacter.TsBaseCharacter_C.FightCommand
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AController*                      NewController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isInAir                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ATsBaseCharacter_C::ReceivePossessed(class AController* NewController)
+void ATsBaseCharacter_C::FightCommand(bool isInAir)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "ReceivePossessed");
+		Func = Class->GetFunction("TsBaseCharacter_C", "FightCommand");
 
-	Params::TsBaseCharacter_C_ReceivePossessed Parms{};
+	Params::TsBaseCharacter_C_FightCommand Parms{};
 
-	Parms.NewController = NewController;
+	Parms.isInAir = isInAir;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -196,65 +192,15 @@ void ATsBaseCharacter_C::ReceivePossessed(class AController* NewController)
 }
 
 
-// Function TsBaseCharacter.TsBaseCharacter_C.ReceiveUnpossessed
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AController*                      OldController                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsBaseCharacter.TsBaseCharacter_C.Initialize
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
-void ATsBaseCharacter_C::ReceiveUnpossessed(class AController* OldController)
+void ATsBaseCharacter_C::Initialize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "ReceiveUnpossessed");
-
-	Params::TsBaseCharacter_C_ReceiveUnpossessed Parms{};
-
-	Parms.OldController = OldController;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsBaseCharacter.TsBaseCharacter_C.K2_UpdateCustomMovement
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATsBaseCharacter_C::K2_UpdateCustomMovement(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "K2_UpdateCustomMovement");
-
-	Params::TsBaseCharacter_C_K2_UpdateCustomMovement Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsBaseCharacter.TsBaseCharacter_C.ReceiveDestroyed
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsBaseCharacter_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("TsBaseCharacter_C", "Initialize");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -265,21 +211,23 @@ void ATsBaseCharacter_C::ReceiveDestroyed()
 }
 
 
-// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
-// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Function TsBaseCharacter.TsBaseCharacter_C.SetDitherEffect
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   dither                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECharacterDitherType                    ditherType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsBaseCharacter_C::ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint)
+void ATsBaseCharacter_C::SetDitherEffect(float dither, ECharacterDitherType ditherType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "ExecuteUbergraph_TsBaseCharacter");
+		Func = Class->GetFunction("TsBaseCharacter_C", "SetDitherEffect");
 
-	Params::TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter Parms{};
+	Params::TsBaseCharacter_C_SetDitherEffect Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.dither = dither;
+	Parms.ditherType = ditherType;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -287,6 +235,58 @@ void ATsBaseCharacter_C::ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.BindGameplayEnableState
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool&                                   gameplayEnable                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+
+void ATsBaseCharacter_C::BindGameplayEnableState(bool& gameplayEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "BindGameplayEnableState");
+
+	Params::TsBaseCharacter_C_BindGameplayEnableState Parms{};
+
+	Parms.gameplayEnable = gameplayEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	gameplayEnable = Parms.gameplayEnable;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.GetEntityId
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 ATsBaseCharacter_C::GetEntityId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "GetEntityId");
+
+	Params::TsBaseCharacter_C_GetEntityId Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

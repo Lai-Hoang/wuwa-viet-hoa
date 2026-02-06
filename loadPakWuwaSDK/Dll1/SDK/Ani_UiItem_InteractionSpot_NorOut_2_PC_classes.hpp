@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BlueprintGeneratedClass Ani_UiItem_InteractionSpot_NorOut_2_PC.SequenceDirector_C", true, "SequenceDirector_C">();
+		BP_STATIC_CLASS_IMPL_FULLNAME("BlueprintGeneratedClass Ani_UiItem_InteractionSpot_NorOut_2_PC.SequenceDirector_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequenceDirector_C")
 	}
 	static class Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C>();
 	}
 };
-static_assert(alignof(Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C) == 0x000008, "Wrong alignment on Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C");
-static_assert(sizeof(Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C) == 0x000050, "Wrong size on Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C");
-static_assert(offsetof(Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C, UberGraphFrame) == 0x000038, "Member 'Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C, AnimName) == 0x000040, "Member 'Ani_UiItem_InteractionSpot_NorOut_2_PC::USequenceDirector_C::AnimName' has a wrong offset!");
+DUMPER7_ASSERTS_Ani_UiItem_InteractionSpot_NorOut_2_PC__USequenceDirector_C;
 
 }
 

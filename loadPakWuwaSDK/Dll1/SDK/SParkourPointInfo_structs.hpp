@@ -26,12 +26,7 @@ public:
 	float                                         ModifiedTime_10_E7781AF5495CD335E79DFD97BCC449E6;  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BuffId_11_EED967C9485F0CD1FA3BAB8F9584E8D8;        // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSParkourPointInfo) == 0x000004, "Wrong alignment on FSParkourPointInfo");
-static_assert(sizeof(FSParkourPointInfo) == 0x000018, "Wrong size on FSParkourPointInfo");
-static_assert(offsetof(FSParkourPointInfo, Location_2_BC1A6D2B47024D0A9EF27D86230277C6) == 0x000000, "Member 'FSParkourPointInfo::Location_2_BC1A6D2B47024D0A9EF27D86230277C6' has a wrong offset!");
-static_assert(offsetof(FSParkourPointInfo, Radius_9_DED3FB254692D295D78650AC8E019DEB) == 0x00000C, "Member 'FSParkourPointInfo::Radius_9_DED3FB254692D295D78650AC8E019DEB' has a wrong offset!");
-static_assert(offsetof(FSParkourPointInfo, ModifiedTime_10_E7781AF5495CD335E79DFD97BCC449E6) == 0x000010, "Member 'FSParkourPointInfo::ModifiedTime_10_E7781AF5495CD335E79DFD97BCC449E6' has a wrong offset!");
-static_assert(offsetof(FSParkourPointInfo, BuffId_11_EED967C9485F0CD1FA3BAB8F9584E8D8) == 0x000014, "Member 'FSParkourPointInfo::BuffId_11_EED967C9485F0CD1FA3BAB8F9584E8D8' has a wrong offset!");
+DUMPER7_ASSERTS_FSParkourPointInfo;
 
 }
 

@@ -27,17 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ItemMaterialDataMap_C">();
+		BP_STATIC_CLASS_IMPL("ItemMaterialDataMap_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemMaterialDataMap_C")
 	}
 	static class AItemMaterialDataMap_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AItemMaterialDataMap_C>();
 	}
 };
-static_assert(alignof(AItemMaterialDataMap_C) == 0x000008, "Wrong alignment on AItemMaterialDataMap_C");
-static_assert(sizeof(AItemMaterialDataMap_C) == 0x000308, "Wrong size on AItemMaterialDataMap_C");
-static_assert(offsetof(AItemMaterialDataMap_C, DefaultSceneRoot) == 0x0002B0, "Member 'AItemMaterialDataMap_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AItemMaterialDataMap_C, Map) == 0x0002B8, "Member 'AItemMaterialDataMap_C::Map' has a wrong offset!");
+DUMPER7_ASSERTS_AItemMaterialDataMap_C;
 
 }
 

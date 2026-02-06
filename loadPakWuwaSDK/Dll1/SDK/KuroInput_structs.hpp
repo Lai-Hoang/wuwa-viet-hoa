@@ -56,13 +56,7 @@ public:
 	bool                                          IsHideCursorDuringCapture;                         // 0x001A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FInputModeReply) == 0x000008, "Wrong alignment on FInputModeReply");
-static_assert(sizeof(FInputModeReply) == 0x000020, "Wrong size on FInputModeReply");
-static_assert(offsetof(FInputModeReply, HandleID) == 0x000000, "Member 'FInputModeReply::HandleID' has a wrong offset!");
-static_assert(offsetof(FInputModeReply, Reason) == 0x000008, "Member 'FInputModeReply::Reason' has a wrong offset!");
-static_assert(offsetof(FInputModeReply, InputModeType) == 0x000018, "Member 'FInputModeReply::InputModeType' has a wrong offset!");
-static_assert(offsetof(FInputModeReply, IsLockMouseToViewport) == 0x000019, "Member 'FInputModeReply::IsLockMouseToViewport' has a wrong offset!");
-static_assert(offsetof(FInputModeReply, IsHideCursorDuringCapture) == 0x00001A, "Member 'FInputModeReply::IsHideCursorDuringCapture' has a wrong offset!");
+DUMPER7_ASSERTS_FInputModeReply;
 
 }
 

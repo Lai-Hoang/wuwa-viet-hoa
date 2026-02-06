@@ -28,12 +28,7 @@ public:
 	struct FSMotorRailMove_EnterRailCondition     EnterCondition_13_2A53346B4A2AA1CBA00E94BD88953A84; // 0x00AC(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMotorRailMove_ParabolaMove           ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB;   // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMoveConfig_SwitchRail) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig_SwitchRail");
-static_assert(sizeof(FSMotorRailMoveConfig_SwitchRail) == 0x0000D0, "Wrong size on FSMotorRailMoveConfig_SwitchRail");
-static_assert(offsetof(FSMotorRailMoveConfig_SwitchRail, CommonConfig_17_F1A630DB40B10CB8F8A0AA9BB53CFEAC) == 0x000000, "Member 'FSMotorRailMoveConfig_SwitchRail::CommonConfig_17_F1A630DB40B10CB8F8A0AA9BB53CFEAC' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_SwitchRail, SkillId_2_4CF6A94340F8923CD62993A0557161C6) == 0x0000A8, "Member 'FSMotorRailMoveConfig_SwitchRail::SkillId_2_4CF6A94340F8923CD62993A0557161C6' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_SwitchRail, EnterCondition_13_2A53346B4A2AA1CBA00E94BD88953A84) == 0x0000AC, "Member 'FSMotorRailMoveConfig_SwitchRail::EnterCondition_13_2A53346B4A2AA1CBA00E94BD88953A84' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_SwitchRail, ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB) == 0x0000C0, "Member 'FSMotorRailMoveConfig_SwitchRail::ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig_SwitchRail;
 
 }
 

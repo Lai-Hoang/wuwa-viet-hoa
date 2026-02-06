@@ -35,20 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Seq_Nvzhu_Final_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Seq_Nvzhu_Final_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Seq_Nvzhu_Final_C")
 	}
 	static class UABP_Seq_Nvzhu_Final_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Seq_Nvzhu_Final_C>();
 	}
 };
-static_assert(alignof(UABP_Seq_Nvzhu_Final_C) == 0x000010, "Wrong alignment on UABP_Seq_Nvzhu_Final_C");
-static_assert(sizeof(UABP_Seq_Nvzhu_Final_C) == 0x000970, "Wrong size on UABP_Seq_Nvzhu_Final_C");
-static_assert(offsetof(UABP_Seq_Nvzhu_Final_C, UberGraphFrame) == 0x000730, "Member 'UABP_Seq_Nvzhu_Final_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nvzhu_Final_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Seq_Nvzhu_Final_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nvzhu_Final_C, AnimGraphNode_LinkedAnimGraph_2) == 0x000770, "Member 'UABP_Seq_Nvzhu_Final_C::AnimGraphNode_LinkedAnimGraph_2' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nvzhu_Final_C, AnimGraphNode_LinkedAnimGraph_1) == 0x000818, "Member 'UABP_Seq_Nvzhu_Final_C::AnimGraphNode_LinkedAnimGraph_1' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nvzhu_Final_C, AnimGraphNode_LinkedAnimGraph) == 0x0008C0, "Member 'UABP_Seq_Nvzhu_Final_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Seq_Nvzhu_Final_C;
 
 }
 

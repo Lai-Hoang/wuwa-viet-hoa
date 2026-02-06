@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "SHolographicMaterialsCache_structs.hpp"
 #include "EHolographicState_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "SHolographicMaterialsCache_structs.hpp"
 
 
 namespace SDK
@@ -50,23 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SimpleHolographicComponent_C">();
+		BP_STATIC_CLASS_IMPL("SimpleHolographicComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SimpleHolographicComponent_C")
 	}
 	static class USimpleHolographicComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USimpleHolographicComponent_C>();
 	}
 };
-static_assert(alignof(USimpleHolographicComponent_C) == 0x000008, "Wrong alignment on USimpleHolographicComponent_C");
-static_assert(sizeof(USimpleHolographicComponent_C) == 0x000148, "Wrong size on USimpleHolographicComponent_C");
-static_assert(offsetof(USimpleHolographicComponent_C, UberGraphFrame) == 0x0000C0, "Member 'USimpleHolographicComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, OL_Materials) == 0x0000C8, "Member 'USimpleHolographicComponent_C::OL_Materials' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, Other_Materials) == 0x0000D8, "Member 'USimpleHolographicComponent_C::Other_Materials' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, DATA) == 0x0000E8, "Member 'USimpleHolographicComponent_C::DATA' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, TimeCounter) == 0x0000F0, "Member 'USimpleHolographicComponent_C::TimeCounter' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, State) == 0x0000F4, "Member 'USimpleHolographicComponent_C::State' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, bCached) == 0x0000F5, "Member 'USimpleHolographicComponent_C::bCached' has a wrong offset!");
-static_assert(offsetof(USimpleHolographicComponent_C, ComponentMaterialsCache) == 0x0000F8, "Member 'USimpleHolographicComponent_C::ComponentMaterialsCache' has a wrong offset!");
+DUMPER7_ASSERTS_USimpleHolographicComponent_C;
 
 }
 

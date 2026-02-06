@@ -467,22 +467,21 @@ bool UMovieSceneSection::IsLocked() const
 }
 
 
-// Function MovieScene.MovieSceneSequence.FindBindingByTag
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function MovieScene.MovieSceneSubSection.SetSequence
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMovieSceneObjectBindingID       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieSceneSequence*              Sequence                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(class FName InBindingName) const
+void UMovieSceneSubSection::SetSequence(class UMovieSceneSequence* Sequence)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSequence", "FindBindingByTag");
+		Func = Class->GetFunction("MovieSceneSubSection", "SetSequence");
 
-	Params::MovieSceneSequence_FindBindingByTag Parms{};
+	Params::MovieSceneSubSection_SetSequence Parms{};
 
-	Parms.InBindingName = InBindingName;
+	Parms.Sequence = Sequence;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -490,85 +489,22 @@ struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(class FN
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
-// Function MovieScene.MovieSceneSequence.FindBindingsByBothTags
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function MovieScene.MovieSceneSubSection.GetSequence
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// const TArray<class FName>&              InBindingNames                                         (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// const TArray<struct FMovieSceneObjectBindingID>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// class UMovieSceneSequence*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-const TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByBothTags(const TArray<class FName>& InBindingNames) const
+class UMovieSceneSequence* UMovieSceneSubSection::GetSequence() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSequence", "FindBindingsByBothTags");
+		Func = Class->GetFunction("MovieSceneSubSection", "GetSequence");
 
-	Params::MovieSceneSequence_FindBindingsByBothTags Parms{};
-
-	Parms.InBindingNames = std::move(InBindingNames);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieScene.MovieSceneSequence.FindBindingsByTag
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FMovieSceneObjectBindingID>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByTag(class FName InBindingName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSequence", "FindBindingsByTag");
-
-	Params::MovieSceneSequence_FindBindingsByTag Parms{};
-
-	Parms.InBindingName = InBindingName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieScene.MovieSceneSequence.HasBindingTag
-// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    IncludeSubSequence                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMovieSceneSequence::HasBindingTag(class FName InBindingName, bool IncludeSubSequence) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSequence", "HasBindingTag");
-
-	Params::MovieSceneSequence_HasBindingTag Parms{};
-
-	Parms.InBindingName = InBindingName;
-	Parms.IncludeSubSequence = IncludeSubSequence;
+	Params::MovieSceneSubSection_GetSequence Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1775,21 +1711,22 @@ bool UMovieSceneSequencePlayer::IsStopped() const
 }
 
 
-// Function MovieScene.MovieSceneSubSection.SetSequence
-// (Final, Native, Public, BlueprintCallable)
+// Function MovieScene.MovieSceneSequence.FindBindingByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UMovieSceneSequence*              Sequence                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMovieSceneObjectBindingID       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneSubSection::SetSequence(class UMovieSceneSequence* Sequence)
+struct FMovieSceneObjectBindingID UMovieSceneSequence::FindBindingByTag(class FName InBindingName) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSubSection", "SetSequence");
+		Func = Class->GetFunction("MovieSceneSequence", "FindBindingByTag");
 
-	Params::MovieSceneSubSection_SetSequence Parms{};
+	Params::MovieSceneSequence_FindBindingByTag Parms{};
 
-	Parms.Sequence = Sequence;
+	Parms.InBindingName = InBindingName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1797,22 +1734,199 @@ void UMovieSceneSubSection::SetSequence(class UMovieSceneSequence* Sequence)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function MovieScene.MovieSceneSubSection.GetSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function MovieScene.MovieSceneSequence.FindBindingsByBothTags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UMovieSceneSequence*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InBindingNames                                         (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<struct FMovieSceneObjectBindingID>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-class UMovieSceneSequence* UMovieSceneSubSection::GetSequence() const
+const TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByBothTags(const TArray<class FName>& InBindingNames) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneSubSection", "GetSequence");
+		Func = Class->GetFunction("MovieSceneSequence", "FindBindingsByBothTags");
 
-	Params::MovieSceneSubSection_GetSequence Parms{};
+	Params::MovieSceneSequence_FindBindingsByBothTags Parms{};
+
+	Parms.InBindingNames = std::move(InBindingNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.FindBindingsByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FMovieSceneObjectBindingID>ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<struct FMovieSceneObjectBindingID> UMovieSceneSequence::FindBindingsByTag(class FName InBindingName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "FindBindingsByTag");
+
+	Params::MovieSceneSequence_FindBindingsByTag Parms{};
+
+	Parms.InBindingName = InBindingName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.FindMasterTrackByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InTrackTagName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMovieSceneTrack*                 ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneTrack* UMovieSceneSequence::FindMasterTrackByTag(class FName InTrackTagName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "FindMasterTrackByTag");
+
+	Params::MovieSceneSequence_FindMasterTrackByTag Parms{};
+
+	Parms.InTrackTagName = InTrackTagName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.FindMasterTracksByBothTags
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class FName>&              InTrackTagNames                                        (ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const TArray<class UMovieSceneTrack*>   ReturnValue                                            (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+const TArray<class UMovieSceneTrack*> UMovieSceneSequence::FindMasterTracksByBothTags(const TArray<class FName>& InTrackTagNames) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "FindMasterTracksByBothTags");
+
+	Params::MovieSceneSequence_FindMasterTracksByBothTags Parms{};
+
+	Parms.InTrackTagNames = std::move(InTrackTagNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.FindMasterTracksByTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InTrackTagName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class UMovieSceneTrack*>   ReturnValue                                            (ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+const TArray<class UMovieSceneTrack*> UMovieSceneSequence::FindMasterTracksByTag(class FName InTrackTagName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "FindMasterTracksByTag");
+
+	Params::MovieSceneSequence_FindMasterTracksByTag Parms{};
+
+	Parms.InTrackTagName = InTrackTagName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.HasBindingTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InBindingName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    IncludeSubSequence                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneSequence::HasBindingTag(class FName InBindingName, bool IncludeSubSequence) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "HasBindingTag");
+
+	Params::MovieSceneSequence_HasBindingTag Parms{};
+
+	Parms.InBindingName = InBindingName;
+	Parms.IncludeSubSequence = IncludeSubSequence;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieSceneSequence.HasMasterTrackTag
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InTrackTagName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    IncludeSubSequence                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneSequence::HasMasterTrackTag(class FName InTrackTagName, bool IncludeSubSequence) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSequence", "HasMasterTrackTag");
+
+	Params::MovieSceneSequence_HasMasterTrackTag Parms{};
+
+	Parms.InTrackTagName = InTrackTagName;
+	Parms.IncludeSubSequence = IncludeSubSequence;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1945,6 +2059,31 @@ TArray<class FName> UMovieScene::AllTags() const
 		Func = Class->GetFunction("MovieScene", "AllTags");
 
 	Params::MovieScene_AllTags Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MovieScene.MovieScene.AllTrackTags
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UMovieScene::AllTrackTags() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieScene", "AllTrackTags");
+
+	Params::MovieScene_AllTrackTags Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

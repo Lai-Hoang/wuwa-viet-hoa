@@ -42,19 +42,23 @@ public:
 	static class ATsBaseCharacter_C* GetPassengerOnVehicle(int32 entityId, int32 seat, class UObject* __WorldContext);
 	static class ATsBaseVehicle_C* SummonAndRideMotorcycle(int32 entityId, const struct FTransform& seatTrans, int64 motorSkillId, class UObject* __WorldContext);
 	static void SetMotorAndroidInitParams(class UKuroVehicleMovementComponent* vehicleMove, class UObject* __WorldContext);
+	static bool NeedSimulateMotorIk(int32 entityId, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsVehicleBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsVehicleBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsVehicleBlueprintFunctionLibrary_C")
 	}
 	static class UTsVehicleBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsVehicleBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsVehicleBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsVehicleBlueprintFunctionLibrary_C");
-static_assert(sizeof(UTsVehicleBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UTsVehicleBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsVehicleBlueprintFunctionLibrary_C;
 
 }
 

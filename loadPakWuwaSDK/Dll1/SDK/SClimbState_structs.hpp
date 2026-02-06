@@ -27,11 +27,7 @@ public:
 	EEnterClimb                                   进入攀爬类型_8_D211FAB04D27509EA9932999F1D781BE;   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EExitClimb                                    退出攀爬类型_9_8B9158A24BC23A420DF19B967E76078B;   // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSClimbState) == 0x000001, "Wrong alignment on FSClimbState");
-static_assert(sizeof(FSClimbState) == 0x000003, "Wrong size on FSClimbState");
-static_assert(offsetof(FSClimbState, 攀爬状态_7_432161A7494334380B61199DFBFA95CA) == 0x000000, "Member 'FSClimbState::攀爬状态_7_432161A7494334380B61199DFBFA95CA' has a wrong offset!");
-static_assert(offsetof(FSClimbState, 进入攀爬类型_8_D211FAB04D27509EA9932999F1D781BE) == 0x000001, "Member 'FSClimbState::进入攀爬类型_8_D211FAB04D27509EA9932999F1D781BE' has a wrong offset!");
-static_assert(offsetof(FSClimbState, 退出攀爬类型_9_8B9158A24BC23A420DF19B967E76078B) == 0x000002, "Member 'FSClimbState::退出攀爬类型_9_8B9158A24BC23A420DF19B967E76078B' has a wrong offset!");
+DUMPER7_ASSERTS_FSClimbState;
 
 }
 

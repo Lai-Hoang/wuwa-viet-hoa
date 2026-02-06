@@ -10,33 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "BP_BaseVehicle_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_BaseVehicle_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C
-// 0x0070 (0x0760 - 0x06F0)
+// 0x0080 (0x0770 - 0x06F0)
 class ABP_Motor_BaseVehicle_C final : public ABP_BaseVehicle_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Motor_BaseVehicle_C;             // 0x06F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponent*                 OtherCase5;                                        // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 OtherCase4;                                        // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       SphereForInteraction2;                             // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       SphereForInteraction;                              // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CapsuleForTriggerAndBlock;                         // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CapsuleForDither;                                  // 0x0720(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 OtherCase3;                                        // 0x0728(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 OtherCase2;                                        // 0x0730(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 OtherCase1;                                        // 0x0738(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CapsuleForPhotograph;                              // 0x0740(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             技能表_用于加载_;                                  // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         虚化碰撞NPC半径;                                   // 0x0750(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_754[0x4];                                      // 0x0754(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            深度虚化值曲线;                                    // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_MotorObjTrailActor_C*               BP_MotorObjTrailActor2;                            // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_MotorObjTrailActor_C*               BP_MotorObjTrailActor;                             // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 OtherCase5;                                        // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 OtherCase4;                                        // 0x0710(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       SphereForInteraction2;                             // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       SphereForInteraction;                              // 0x0720(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      CapsuleForTriggerAndBlock;                         // 0x0728(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      CapsuleForDither;                                  // 0x0730(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 OtherCase3;                                        // 0x0738(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 OtherCase2;                                        // 0x0740(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 OtherCase1;                                        // 0x0748(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      CapsuleForPhotograph;                              // 0x0750(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             技能表_用于加载_;                                  // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         虚化碰撞NPC半径;                                   // 0x0760(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_764[0x4];                                      // 0x0764(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            深度虚化值曲线;                                    // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Motor_BaseVehicle(int32 EntryPoint);
@@ -49,29 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Motor_BaseVehicle_C">();
+		BP_STATIC_CLASS_IMPL("BP_Motor_BaseVehicle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Motor_BaseVehicle_C")
 	}
 	static class ABP_Motor_BaseVehicle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Motor_BaseVehicle_C>();
 	}
 };
-static_assert(alignof(ABP_Motor_BaseVehicle_C) == 0x000010, "Wrong alignment on ABP_Motor_BaseVehicle_C");
-static_assert(sizeof(ABP_Motor_BaseVehicle_C) == 0x000760, "Wrong size on ABP_Motor_BaseVehicle_C");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, UberGraphFrame_BP_Motor_BaseVehicle_C) == 0x0006F0, "Member 'ABP_Motor_BaseVehicle_C::UberGraphFrame_BP_Motor_BaseVehicle_C' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, OtherCase5) == 0x0006F8, "Member 'ABP_Motor_BaseVehicle_C::OtherCase5' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, OtherCase4) == 0x000700, "Member 'ABP_Motor_BaseVehicle_C::OtherCase4' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, SphereForInteraction2) == 0x000708, "Member 'ABP_Motor_BaseVehicle_C::SphereForInteraction2' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, SphereForInteraction) == 0x000710, "Member 'ABP_Motor_BaseVehicle_C::SphereForInteraction' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, CapsuleForTriggerAndBlock) == 0x000718, "Member 'ABP_Motor_BaseVehicle_C::CapsuleForTriggerAndBlock' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, CapsuleForDither) == 0x000720, "Member 'ABP_Motor_BaseVehicle_C::CapsuleForDither' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, OtherCase3) == 0x000728, "Member 'ABP_Motor_BaseVehicle_C::OtherCase3' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, OtherCase2) == 0x000730, "Member 'ABP_Motor_BaseVehicle_C::OtherCase2' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, OtherCase1) == 0x000738, "Member 'ABP_Motor_BaseVehicle_C::OtherCase1' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, CapsuleForPhotograph) == 0x000740, "Member 'ABP_Motor_BaseVehicle_C::CapsuleForPhotograph' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, 技能表_用于加载_) == 0x000748, "Member 'ABP_Motor_BaseVehicle_C::技能表_用于加载_' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, 虚化碰撞NPC半径) == 0x000750, "Member 'ABP_Motor_BaseVehicle_C::虚化碰撞NPC半径' has a wrong offset!");
-static_assert(offsetof(ABP_Motor_BaseVehicle_C, 深度虚化值曲线) == 0x000758, "Member 'ABP_Motor_BaseVehicle_C::深度虚化值曲线' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Motor_BaseVehicle_C;
 
 }
 

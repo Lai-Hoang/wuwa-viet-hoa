@@ -39,20 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_UiSceneRenderingComponent_C">();
+		BP_STATIC_CLASS_IMPL("BP_UiSceneRenderingComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_UiSceneRenderingComponent_C")
 	}
 	static class UBP_UiSceneRenderingComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_UiSceneRenderingComponent_C>();
 	}
 };
-static_assert(alignof(UBP_UiSceneRenderingComponent_C) == 0x000008, "Wrong alignment on UBP_UiSceneRenderingComponent_C");
-static_assert(sizeof(UBP_UiSceneRenderingComponent_C) == 0x0000F0, "Wrong size on UBP_UiSceneRenderingComponent_C");
-static_assert(offsetof(UBP_UiSceneRenderingComponent_C, UberGraphFrame) == 0x0000C0, "Member 'UBP_UiSceneRenderingComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_UiSceneRenderingComponent_C, BP_GlobalGI) == 0x0000C8, "Member 'UBP_UiSceneRenderingComponent_C::BP_GlobalGI' has a wrong offset!");
-static_assert(offsetof(UBP_UiSceneRenderingComponent_C, IsInUiSceneRenderingState) == 0x0000D0, "Member 'UBP_UiSceneRenderingComponent_C::IsInUiSceneRenderingState' has a wrong offset!");
-static_assert(offsetof(UBP_UiSceneRenderingComponent_C, CurUiScenePath) == 0x0000D8, "Member 'UBP_UiSceneRenderingComponent_C::CurUiScenePath' has a wrong offset!");
-static_assert(offsetof(UBP_UiSceneRenderingComponent_C, MainLightComponent) == 0x0000E8, "Member 'UBP_UiSceneRenderingComponent_C::MainLightComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_UiSceneRenderingComponent_C;
 
 }
 

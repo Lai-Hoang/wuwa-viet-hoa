@@ -23,15 +23,18 @@ class ABP_StartupPlayerController_C final : public ATsStartupPlayerController_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_StartupPlayerController_C">();
+		BP_STATIC_CLASS_IMPL("BP_StartupPlayerController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_StartupPlayerController_C")
 	}
 	static class ABP_StartupPlayerController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_StartupPlayerController_C>();
 	}
 };
-static_assert(alignof(ABP_StartupPlayerController_C) == 0x000008, "Wrong alignment on ABP_StartupPlayerController_C");
-static_assert(sizeof(ABP_StartupPlayerController_C) == 0x000788, "Wrong size on ABP_StartupPlayerController_C");
+DUMPER7_ASSERTS_ABP_StartupPlayerController_C;
 
 }
 

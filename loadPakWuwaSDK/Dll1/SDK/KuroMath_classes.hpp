@@ -37,15 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBitwiseLibrary">();
+		STATIC_CLASS_IMPL("KuroBitwiseLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBitwiseLibrary")
 	}
 	static class UKuroBitwiseLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBitwiseLibrary>();
 	}
 };
-static_assert(alignof(UKuroBitwiseLibrary) == 0x000008, "Wrong alignment on UKuroBitwiseLibrary");
-static_assert(sizeof(UKuroBitwiseLibrary) == 0x000030, "Wrong size on UKuroBitwiseLibrary");
+DUMPER7_ASSERTS_UKuroBitwiseLibrary;
 
 // Class KuroMath.KuroEasingLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -87,15 +90,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroEasingLibrary">();
+		STATIC_CLASS_IMPL("KuroEasingLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroEasingLibrary")
 	}
 	static class UKuroEasingLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroEasingLibrary>();
 	}
 };
-static_assert(alignof(UKuroEasingLibrary) == 0x000008, "Wrong alignment on UKuroEasingLibrary");
-static_assert(sizeof(UKuroEasingLibrary) == 0x000030, "Wrong size on UKuroEasingLibrary");
+DUMPER7_ASSERTS_UKuroEasingLibrary;
 
 // Class KuroMath.KuroSimplePolygonLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -109,15 +115,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSimplePolygonLibrary">();
+		STATIC_CLASS_IMPL("KuroSimplePolygonLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSimplePolygonLibrary")
 	}
 	static class UKuroSimplePolygonLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSimplePolygonLibrary>();
 	}
 };
-static_assert(alignof(UKuroSimplePolygonLibrary) == 0x000008, "Wrong alignment on UKuroSimplePolygonLibrary");
-static_assert(sizeof(UKuroSimplePolygonLibrary) == 0x000030, "Wrong size on UKuroSimplePolygonLibrary");
+DUMPER7_ASSERTS_UKuroSimplePolygonLibrary;
 
 // Class KuroMath.KuroPolygonListLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -139,15 +148,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPolygonListLibrary">();
+		STATIC_CLASS_IMPL("KuroPolygonListLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPolygonListLibrary")
 	}
 	static class UKuroPolygonListLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPolygonListLibrary>();
 	}
 };
-static_assert(alignof(UKuroPolygonListLibrary) == 0x000008, "Wrong alignment on UKuroPolygonListLibrary");
-static_assert(sizeof(UKuroPolygonListLibrary) == 0x000030, "Wrong size on UKuroPolygonListLibrary");
+DUMPER7_ASSERTS_UKuroPolygonListLibrary;
 
 // Class KuroMath.KuroPolygonLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -160,15 +172,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPolygonLibrary">();
+		STATIC_CLASS_IMPL("KuroPolygonLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPolygonLibrary")
 	}
 	static class UKuroPolygonLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPolygonLibrary>();
 	}
 };
-static_assert(alignof(UKuroPolygonLibrary) == 0x000008, "Wrong alignment on UKuroPolygonLibrary");
-static_assert(sizeof(UKuroPolygonLibrary) == 0x000030, "Wrong size on UKuroPolygonLibrary");
+DUMPER7_ASSERTS_UKuroPolygonLibrary;
 
 }
 

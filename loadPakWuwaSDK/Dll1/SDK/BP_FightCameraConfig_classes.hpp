@@ -12,19 +12,19 @@
 
 #include "EFightCameraDefault_structs.hpp"
 #include "SBaseCurve_structs.hpp"
-#include "EFightCameraAuto_structs.hpp"
-#include "EFightCameraGuide_structs.hpp"
-#include "EFightCameraInput_structs.hpp"
-#include "EFightCameraAdjust_structs.hpp"
-#include "SSettlementCamera_structs.hpp"
 #include "EFightCameraFocus_structs.hpp"
+#include "EFightCameraAdjust_structs.hpp"
+#include "EFightCameraAuto_structs.hpp"
+#include "EFightCameraInput_structs.hpp"
 #include "EFightCameraModify_structs.hpp"
+#include "EFightCameraGuide_structs.hpp"
 #include "EFightCameraExplore_structs.hpp"
 #include "EFightCameraDialogue_structs.hpp"
 #include "EFightCameraClimb_structs.hpp"
 #include "EFightCameraSidestep_structs.hpp"
 #include "EFightCameraHook_structs.hpp"
 #include "EFightCameraVehicle_structs.hpp"
+#include "SSettlementCamera_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -67,42 +67,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FightCameraConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_FightCameraConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FightCameraConfig_C")
 	}
 	static class UBP_FightCameraConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FightCameraConfig_C>();
 	}
 };
-static_assert(alignof(UBP_FightCameraConfig_C) == 0x000008, "Wrong alignment on UBP_FightCameraConfig_C");
-static_assert(sizeof(UBP_FightCameraConfig_C) == 0x0009C8, "Wrong size on UBP_FightCameraConfig_C");
-static_assert(offsetof(UBP_FightCameraConfig_C, 基础) == 0x000038, "Member 'UBP_FightCameraConfig_C::基础' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 基础曲线配置) == 0x000088, "Member 'UBP_FightCameraConfig_C::基础曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 技能修正) == 0x0000D8, "Member 'UBP_FightCameraConfig_C::技能修正' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 技能修正曲线配置) == 0x000128, "Member 'UBP_FightCameraConfig_C::技能修正曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 自动镜头) == 0x000178, "Member 'UBP_FightCameraConfig_C::自动镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 自动镜头曲线配置) == 0x0001C8, "Member 'UBP_FightCameraConfig_C::自动镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 锁定镜头) == 0x000218, "Member 'UBP_FightCameraConfig_C::锁定镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 锁定镜头曲线配置) == 0x000268, "Member 'UBP_FightCameraConfig_C::锁定镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 镜头输入) == 0x0002B8, "Member 'UBP_FightCameraConfig_C::镜头输入' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 镜头输入曲线配置) == 0x000308, "Member 'UBP_FightCameraConfig_C::镜头输入曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, Modify镜头) == 0x000358, "Member 'UBP_FightCameraConfig_C::Modify镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, Modify镜头曲线配置) == 0x0003A8, "Member 'UBP_FightCameraConfig_C::Modify镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 引导镜头) == 0x0003F8, "Member 'UBP_FightCameraConfig_C::引导镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 引导镜头曲线配置) == 0x000448, "Member 'UBP_FightCameraConfig_C::引导镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 跑图镜头) == 0x000498, "Member 'UBP_FightCameraConfig_C::跑图镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 跑图镜头曲线配置) == 0x0004E8, "Member 'UBP_FightCameraConfig_C::跑图镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 对话镜头) == 0x000538, "Member 'UBP_FightCameraConfig_C::对话镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 对话镜头曲线配置) == 0x000588, "Member 'UBP_FightCameraConfig_C::对话镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 攀爬镜头) == 0x0005D8, "Member 'UBP_FightCameraConfig_C::攀爬镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 攀爬镜头曲线配置) == 0x000628, "Member 'UBP_FightCameraConfig_C::攀爬镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 移动自动镜头) == 0x000678, "Member 'UBP_FightCameraConfig_C::移动自动镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 移动自动镜头曲线配置) == 0x0006C8, "Member 'UBP_FightCameraConfig_C::移动自动镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 钩锁镜头) == 0x000718, "Member 'UBP_FightCameraConfig_C::钩锁镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 钩锁镜头曲线配置) == 0x000768, "Member 'UBP_FightCameraConfig_C::钩锁镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 载具镜头) == 0x0007B8, "Member 'UBP_FightCameraConfig_C::载具镜头' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 载具镜头曲线配置) == 0x000808, "Member 'UBP_FightCameraConfig_C::载具镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 结算镜头) == 0x000858, "Member 'UBP_FightCameraConfig_C::结算镜头' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FightCameraConfig_C;
 
 }
 

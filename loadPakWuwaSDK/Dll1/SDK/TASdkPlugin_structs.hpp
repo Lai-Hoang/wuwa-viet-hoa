@@ -41,9 +41,7 @@ struct FSingleEvent final
 public:
 	TArray<uint8>                                 Utf8StringCode;                                    // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSingleEvent) == 0x000008, "Wrong alignment on FSingleEvent");
-static_assert(sizeof(FSingleEvent) == 0x000010, "Wrong size on FSingleEvent");
-static_assert(offsetof(FSingleEvent, Utf8StringCode) == 0x000000, "Member 'FSingleEvent::Utf8StringCode' has a wrong offset!");
+DUMPER7_ASSERTS_FSingleEvent;
 
 // ScriptStruct TASdkPlugin.CreateInstanceParam
 // 0x0090 (0x0090 - 0x0000)
@@ -78,24 +76,7 @@ public:
 	bool                                          bEnableCompressPlusOneLen;                         // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCreateInstanceParam) == 0x000008, "Wrong alignment on FCreateInstanceParam");
-static_assert(sizeof(FCreateInstanceParam) == 0x000090, "Wrong size on FCreateInstanceParam");
-static_assert(offsetof(FCreateInstanceParam, Index) == 0x000000, "Member 'FCreateInstanceParam::Index' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, ServerUrl) == 0x000008, "Member 'FCreateInstanceParam::ServerUrl' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, AppId) == 0x000018, "Member 'FCreateInstanceParam::AppId' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, DistinctId) == 0x000028, "Member 'FCreateInstanceParam::DistinctId' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, AccountId) == 0x000038, "Member 'FCreateInstanceParam::AccountId' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, LogDisplayName) == 0x000048, "Member 'FCreateInstanceParam::LogDisplayName' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, SaveDBPath) == 0x000058, "Member 'FCreateInstanceParam::SaveDBPath' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, MaxNumInBatch) == 0x000068, "Member 'FCreateInstanceParam::MaxNumInBatch' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, Mode) == 0x00006C, "Member 'FCreateInstanceParam::Mode' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, SaveMode) == 0x00006D, "Member 'FCreateInstanceParam::SaveMode' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, FlushTimeInterval) == 0x000070, "Member 'FCreateInstanceParam::FlushTimeInterval' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, ExitWaitTime) == 0x000078, "Member 'FCreateInstanceParam::ExitWaitTime' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, MaxPendingLog) == 0x00007C, "Member 'FCreateInstanceParam::MaxPendingLog' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, SendHttpTimeout) == 0x000080, "Member 'FCreateInstanceParam::SendHttpTimeout' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, CalibrateIntervalTime) == 0x000088, "Member 'FCreateInstanceParam::CalibrateIntervalTime' has a wrong offset!");
-static_assert(offsetof(FCreateInstanceParam, bEnableCompressPlusOneLen) == 0x00008D, "Member 'FCreateInstanceParam::bEnableCompressPlusOneLen' has a wrong offset!");
+DUMPER7_ASSERTS_FCreateInstanceParam;
 
 }
 

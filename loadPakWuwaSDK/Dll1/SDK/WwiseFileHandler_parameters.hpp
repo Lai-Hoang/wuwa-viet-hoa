@@ -25,10 +25,7 @@ public:
 	int32                                         MediaId;                                           // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(WwiseExternalSourceStatics_SetExternalSourceMediaById) == 0x000008, "Wrong alignment on WwiseExternalSourceStatics_SetExternalSourceMediaById");
-static_assert(sizeof(WwiseExternalSourceStatics_SetExternalSourceMediaById) == 0x000018, "Wrong size on WwiseExternalSourceStatics_SetExternalSourceMediaById");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaById, ExternalSourceName) == 0x000000, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaById::ExternalSourceName' has a wrong offset!");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaById, MediaId) == 0x000010, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaById::MediaId' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseExternalSourceStatics_SetExternalSourceMediaById;
 
 // Function WwiseFileHandler.WwiseExternalSourceStatics.SetExternalSourceMediaByName
 // 0x0020 (0x0020 - 0x0000)
@@ -38,10 +35,7 @@ public:
 	class FString                                 ExternalSourceName;                                // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 MediaName;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseExternalSourceStatics_SetExternalSourceMediaByName) == 0x000008, "Wrong alignment on WwiseExternalSourceStatics_SetExternalSourceMediaByName");
-static_assert(sizeof(WwiseExternalSourceStatics_SetExternalSourceMediaByName) == 0x000020, "Wrong size on WwiseExternalSourceStatics_SetExternalSourceMediaByName");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaByName, ExternalSourceName) == 0x000000, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaByName::ExternalSourceName' has a wrong offset!");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaByName, MediaName) == 0x000010, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaByName::MediaName' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseExternalSourceStatics_SetExternalSourceMediaByName;
 
 // Function WwiseFileHandler.WwiseExternalSourceStatics.SetExternalSourceMediaWithIds
 // 0x0008 (0x0008 - 0x0000)
@@ -51,10 +45,7 @@ public:
 	struct FAkUniqueID                            ExternalSourceCookie;                              // 0x0000(0x0004)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         MediaId;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WwiseExternalSourceStatics_SetExternalSourceMediaWithIds) == 0x000004, "Wrong alignment on WwiseExternalSourceStatics_SetExternalSourceMediaWithIds");
-static_assert(sizeof(WwiseExternalSourceStatics_SetExternalSourceMediaWithIds) == 0x000008, "Wrong size on WwiseExternalSourceStatics_SetExternalSourceMediaWithIds");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaWithIds, ExternalSourceCookie) == 0x000000, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaWithIds::ExternalSourceCookie' has a wrong offset!");
-static_assert(offsetof(WwiseExternalSourceStatics_SetExternalSourceMediaWithIds, MediaId) == 0x000004, "Member 'WwiseExternalSourceStatics_SetExternalSourceMediaWithIds::MediaId' has a wrong offset!");
+DUMPER7_ASSERTS_WwiseExternalSourceStatics_SetExternalSourceMediaWithIds;
 
 }
 

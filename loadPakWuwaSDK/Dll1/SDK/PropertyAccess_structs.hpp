@@ -87,14 +87,7 @@ public:
 	uint16                                        Flags;                                             // 0x0044(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessSegment) == 0x000008, "Wrong alignment on FPropertyAccessSegment");
-static_assert(sizeof(FPropertyAccessSegment) == 0x000048, "Wrong size on FPropertyAccessSegment");
-static_assert(offsetof(FPropertyAccessSegment, Name) == 0x000000, "Member 'FPropertyAccessSegment::Name' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessSegment, Struct) == 0x000010, "Member 'FPropertyAccessSegment::Struct' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessSegment, Property) == 0x000018, "Member 'FPropertyAccessSegment::Property' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessSegment, Function) == 0x000038, "Member 'FPropertyAccessSegment::Function' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessSegment, ArrayIndex) == 0x000040, "Member 'FPropertyAccessSegment::ArrayIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessSegment, Flags) == 0x000044, "Member 'FPropertyAccessSegment::Flags' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessSegment;
 
 // ScriptStruct PropertyAccess.PropertyAccessPath
 // 0x000C (0x000C - 0x0000)
@@ -106,10 +99,7 @@ public:
 	uint8                                         bHasEvents : 1;                                    // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessPath) == 0x000004, "Wrong alignment on FPropertyAccessPath");
-static_assert(sizeof(FPropertyAccessPath) == 0x00000C, "Wrong size on FPropertyAccessPath");
-static_assert(offsetof(FPropertyAccessPath, PathSegmentStartIndex) == 0x000000, "Member 'FPropertyAccessPath::PathSegmentStartIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessPath, PathSegmentCount) == 0x000004, "Member 'FPropertyAccessPath::PathSegmentCount' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessPath;
 
 // ScriptStruct PropertyAccess.PropertyAccessCopy
 // 0x0010 (0x0010 - 0x0000)
@@ -122,12 +112,7 @@ public:
 	EPropertyAccessCopyType                       Type;                                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessCopy) == 0x000004, "Wrong alignment on FPropertyAccessCopy");
-static_assert(sizeof(FPropertyAccessCopy) == 0x000010, "Wrong size on FPropertyAccessCopy");
-static_assert(offsetof(FPropertyAccessCopy, AccessIndex) == 0x000000, "Member 'FPropertyAccessCopy::AccessIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessCopy, DestAccessStartIndex) == 0x000004, "Member 'FPropertyAccessCopy::DestAccessStartIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessCopy, DestAccessEndIndex) == 0x000008, "Member 'FPropertyAccessCopy::DestAccessEndIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessCopy, Type) == 0x00000C, "Member 'FPropertyAccessCopy::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessCopy;
 
 // ScriptStruct PropertyAccess.PropertyAccessCopyBatch
 // 0x0010 (0x0010 - 0x0000)
@@ -136,9 +121,7 @@ struct FPropertyAccessCopyBatch final
 public:
 	TArray<struct FPropertyAccessCopy>            Copies;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FPropertyAccessCopyBatch) == 0x000008, "Wrong alignment on FPropertyAccessCopyBatch");
-static_assert(sizeof(FPropertyAccessCopyBatch) == 0x000010, "Wrong size on FPropertyAccessCopyBatch");
-static_assert(offsetof(FPropertyAccessCopyBatch, Copies) == 0x000000, "Member 'FPropertyAccessCopyBatch::Copies' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessCopyBatch;
 
 // ScriptStruct PropertyAccess.PropertyAccessIndirectionChain
 // 0x0030 (0x0030 - 0x0000)
@@ -151,12 +134,7 @@ public:
 	int32                                         EventId;                                           // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessIndirectionChain) == 0x000008, "Wrong alignment on FPropertyAccessIndirectionChain");
-static_assert(sizeof(FPropertyAccessIndirectionChain) == 0x000030, "Wrong size on FPropertyAccessIndirectionChain");
-static_assert(offsetof(FPropertyAccessIndirectionChain, Property) == 0x000000, "Member 'FPropertyAccessIndirectionChain::Property' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirectionChain, IndirectionStartIndex) == 0x000020, "Member 'FPropertyAccessIndirectionChain::IndirectionStartIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirectionChain, IndirectionEndIndex) == 0x000024, "Member 'FPropertyAccessIndirectionChain::IndirectionEndIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirectionChain, EventId) == 0x000028, "Member 'FPropertyAccessIndirectionChain::EventId' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessIndirectionChain;
 
 // ScriptStruct PropertyAccess.PropertyAccessIndirection
 // 0x0040 (0x0040 - 0x0000)
@@ -173,16 +151,7 @@ public:
 	EPropertyAccessIndirectionType                Type;                                              // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessIndirection) == 0x000008, "Wrong alignment on FPropertyAccessIndirection");
-static_assert(sizeof(FPropertyAccessIndirection) == 0x000040, "Wrong size on FPropertyAccessIndirection");
-static_assert(offsetof(FPropertyAccessIndirection, ArrayProperty) == 0x000000, "Member 'FPropertyAccessIndirection::ArrayProperty' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, Function) == 0x000020, "Member 'FPropertyAccessIndirection::Function' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, ReturnBufferSize) == 0x000028, "Member 'FPropertyAccessIndirection::ReturnBufferSize' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, ReturnBufferAlignment) == 0x00002C, "Member 'FPropertyAccessIndirection::ReturnBufferAlignment' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, ArrayIndex) == 0x000030, "Member 'FPropertyAccessIndirection::ArrayIndex' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, Offset) == 0x000034, "Member 'FPropertyAccessIndirection::Offset' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, ObjectType) == 0x000038, "Member 'FPropertyAccessIndirection::ObjectType' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessIndirection, Type) == 0x000039, "Member 'FPropertyAccessIndirection::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessIndirection;
 
 // ScriptStruct PropertyAccess.PropertyAccessLibrary
 // 0x00C8 (0x00C8 - 0x0000)
@@ -199,16 +168,7 @@ public:
 	TArray<int32>                                 EventAccessIndices;                                // 0x00A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPropertyAccessLibrary) == 0x000008, "Wrong alignment on FPropertyAccessLibrary");
-static_assert(sizeof(FPropertyAccessLibrary) == 0x0000C8, "Wrong size on FPropertyAccessLibrary");
-static_assert(offsetof(FPropertyAccessLibrary, PathSegments) == 0x000000, "Member 'FPropertyAccessLibrary::PathSegments' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, SrcPaths) == 0x000010, "Member 'FPropertyAccessLibrary::SrcPaths' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, DestPaths) == 0x000020, "Member 'FPropertyAccessLibrary::DestPaths' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, CopyBatches) == 0x000030, "Member 'FPropertyAccessLibrary::CopyBatches' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, SrcAccesses) == 0x000070, "Member 'FPropertyAccessLibrary::SrcAccesses' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, DestAccesses) == 0x000080, "Member 'FPropertyAccessLibrary::DestAccesses' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, Indirections) == 0x000090, "Member 'FPropertyAccessLibrary::Indirections' has a wrong offset!");
-static_assert(offsetof(FPropertyAccessLibrary, EventAccessIndices) == 0x0000A0, "Member 'FPropertyAccessLibrary::EventAccessIndices' has a wrong offset!");
+DUMPER7_ASSERTS_FPropertyAccessLibrary;
 
 }
 

@@ -31,18 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseHulu_Seq_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseHulu_Seq_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseHulu_Seq_C")
 	}
 	static class ABP_BaseHulu_Seq_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseHulu_Seq_C>();
 	}
 };
-static_assert(alignof(ABP_BaseHulu_Seq_C) == 0x000008, "Wrong alignment on ABP_BaseHulu_Seq_C");
-static_assert(sizeof(ABP_BaseHulu_Seq_C) == 0x0002C8, "Wrong size on ABP_BaseHulu_Seq_C");
-static_assert(offsetof(ABP_BaseHulu_Seq_C, SkeletalMeshComponent) == 0x0002B0, "Member 'ABP_BaseHulu_Seq_C::SkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(ABP_BaseHulu_Seq_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_BaseHulu_Seq_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_BaseHulu_Seq_C, HuluMesh) == 0x0002C0, "Member 'ABP_BaseHulu_Seq_C::HuluMesh' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseHulu_Seq_C;
 
 }
 

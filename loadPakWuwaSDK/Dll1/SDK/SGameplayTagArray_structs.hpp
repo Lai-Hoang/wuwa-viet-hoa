@@ -23,9 +23,7 @@ struct FSGameplayTagArray final
 public:
 	TArray<struct FGameplayTag>                   Value_4_9B2A497A42D6C94CD75B1680C8058A51;          // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSGameplayTagArray) == 0x000008, "Wrong alignment on FSGameplayTagArray");
-static_assert(sizeof(FSGameplayTagArray) == 0x000010, "Wrong size on FSGameplayTagArray");
-static_assert(offsetof(FSGameplayTagArray, Value_4_9B2A497A42D6C94CD75B1680C8058A51) == 0x000000, "Member 'FSGameplayTagArray::Value_4_9B2A497A42D6C94CD75B1680C8058A51' has a wrong offset!");
+DUMPER7_ASSERTS_FSGameplayTagArray;
 
 }
 

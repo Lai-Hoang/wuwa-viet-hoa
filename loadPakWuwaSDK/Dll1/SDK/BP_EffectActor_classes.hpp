@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "EEffectPlay_structs.hpp"
 #include "EEffectType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SEffectColorParameter_structs.hpp"
+#include "SEffectFloatParameter_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EEffectPlay_structs.hpp"
+#include "SEffectVectorParameter_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SEffectFloatParameter_structs.hpp"
-#include "SEffectVectorParameter_structs.hpp"
 
 
 namespace SDK
@@ -96,50 +96,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EffectActor_C">();
+		BP_STATIC_CLASS_IMPL("BP_EffectActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EffectActor_C")
 	}
 	static class ABP_EffectActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EffectActor_C>();
 	}
 };
-static_assert(alignof(ABP_EffectActor_C) == 0x000008, "Wrong alignment on ABP_EffectActor_C");
-static_assert(sizeof(ABP_EffectActor_C) == 0x0003E8, "Wrong size on ABP_EffectActor_C");
-static_assert(offsetof(ABP_EffectActor_C, UberGraphFrame) == 0x0002F0, "Member 'ABP_EffectActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, DefaultSceneRoot) == 0x0002F8, "Member 'ABP_EffectActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, EffectData) == 0x000300, "Member 'ABP_EffectActor_C::EffectData' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, DebugPrintOnConstruction) == 0x000320, "Member 'ABP_EffectActor_C::DebugPrintOnConstruction' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, EditorTickWithoutSelected) == 0x000321, "Member 'ABP_EffectActor_C::EditorTickWithoutSelected' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, EffectComponent) == 0x000324, "Member 'ABP_EffectActor_C::EffectComponent' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, PlayType) == 0x000328, "Member 'ABP_EffectActor_C::PlayType' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, EffectType) == 0x000329, "Member 'ABP_EffectActor_C::EffectType' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FirstTick) == 0x00032A, "Member 'ABP_EffectActor_C::FirstTick' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 使用特效参数) == 0x00032B, "Member 'ABP_EffectActor_C::使用特效参数' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 环境光影响强度覆盖) == 0x00032C, "Member 'ABP_EffectActor_C::环境光影响强度覆盖' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 用户参数Float) == 0x000330, "Member 'ABP_EffectActor_C::用户参数Float' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 用户参数Color) == 0x000340, "Member 'ABP_EffectActor_C::用户参数Color' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 用户参数Vector) == 0x000350, "Member 'ABP_EffectActor_C::用户参数Vector' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 材质参数Float) == 0x000360, "Member 'ABP_EffectActor_C::材质参数Float' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 材质参数Color) == 0x000370, "Member 'ABP_EffectActor_C::材质参数Color' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, 材质参数Float_Temp) == 0x000380, "Member 'ABP_EffectActor_C::材质参数Float_Temp' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, UsedInBossFight) == 0x000390, "Member 'ABP_EffectActor_C::UsedInBossFight' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, ShouldBePlaying) == 0x000391, "Member 'ABP_EffectActor_C::ShouldBePlaying' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, OpenVisibilityOptimize) == 0x000392, "Member 'ABP_EffectActor_C::OpenVisibilityOptimize' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, ForceStoppingTime) == 0x000393, "Member 'ABP_EffectActor_C::ForceStoppingTime' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, IgnoreStoppingTime) == 0x000394, "Member 'ABP_EffectActor_C::IgnoreStoppingTime' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, MobileOnly) == 0x000395, "Member 'ABP_EffectActor_C::MobileOnly' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, CustomProcess) == 0x000398, "Member 'ABP_EffectActor_C::CustomProcess' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, IsSimulateFromSequence) == 0x00039C, "Member 'ABP_EffectActor_C::IsSimulateFromSequence' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, IsPublicToSequence) == 0x00039D, "Member 'ABP_EffectActor_C::IsPublicToSequence' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameter0) == 0x0003A0, "Member 'ABP_EffectActor_C::FloatParameter0' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameter1) == 0x0003A4, "Member 'ABP_EffectActor_C::FloatParameter1' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameter2) == 0x0003A8, "Member 'ABP_EffectActor_C::FloatParameter2' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameterName0) == 0x0003B0, "Member 'ABP_EffectActor_C::FloatParameterName0' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameterName1) == 0x0003C0, "Member 'ABP_EffectActor_C::FloatParameterName1' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, FloatParameterName2) == 0x0003D0, "Member 'ABP_EffectActor_C::FloatParameterName2' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, EditorPlayType) == 0x0003E0, "Member 'ABP_EffectActor_C::EditorPlayType' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, VisibleInRaytracing) == 0x0003E1, "Member 'ABP_EffectActor_C::VisibleInRaytracing' has a wrong offset!");
-static_assert(offsetof(ABP_EffectActor_C, InUIScene) == 0x0003E2, "Member 'ABP_EffectActor_C::InUIScene' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EffectActor_C;
 
 }
 

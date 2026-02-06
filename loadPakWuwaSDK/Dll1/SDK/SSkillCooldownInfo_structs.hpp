@@ -38,21 +38,7 @@ public:
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGameplayTag>                   CdTags_48_8502F43749E48F6FFD3FA0AD331D0DC2;        // 0x0038(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSSkillCooldownInfo) == 0x000008, "Wrong alignment on FSSkillCooldownInfo");
-static_assert(sizeof(FSSkillCooldownInfo) == 0x000048, "Wrong size on FSSkillCooldownInfo");
-static_assert(offsetof(FSSkillCooldownInfo, CdTime_17_53AFB6144F31B1FC690BC4B495391CEC) == 0x000000, "Member 'FSSkillCooldownInfo::CdTime_17_53AFB6144F31B1FC690BC4B495391CEC' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, CdDelay_18_88077BCA45D7C83C6F9595BE90E19E91) == 0x000004, "Member 'FSSkillCooldownInfo::CdDelay_18_88077BCA45D7C83C6F9595BE90E19E91' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, IsShareAllCdSkill_16_0490446C45E16F9607CA3DA11969A16E) == 0x000008, "Member 'FSSkillCooldownInfo::IsShareAllCdSkill_16_0490446C45E16F9607CA3DA11969A16E' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, MaxCount_21_BE52BC1A408FD925BE8848A76E57F08D) == 0x00000C, "Member 'FSSkillCooldownInfo::MaxCount_21_BE52BC1A408FD925BE8848A76E57F08D' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, ShareGroupId_23_F1F57AFA439C48D1F17446B85631B005) == 0x000010, "Member 'FSSkillCooldownInfo::ShareGroupId_23_F1F57AFA439C48D1F17446B85631B005' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, SectionCount_31_F71122154E43E38C3F673ABA2F018785) == 0x000014, "Member 'FSSkillCooldownInfo::SectionCount_31_F71122154E43E38C3F673ABA2F018785' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, SectionRemaining_32_B8FF4E36428915E3484F2FBF5FC484ED) == 0x000018, "Member 'FSSkillCooldownInfo::SectionRemaining_32_B8FF4E36428915E3484F2FBF5FC484ED' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, NextSkillId_49_F3D3171641CEFF1E81E768AE04F83E49) == 0x000020, "Member 'FSSkillCooldownInfo::NextSkillId_49_F3D3171641CEFF1E81E768AE04F83E49' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, StartTime_26_C726665545379542EF1611A3601D3796) == 0x000028, "Member 'FSSkillCooldownInfo::StartTime_26_C726665545379542EF1611A3601D3796' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, StopTime_35_11B3875946A9CBDFB1443F8B5AC1E367) == 0x00002C, "Member 'FSSkillCooldownInfo::StopTime_35_11B3875946A9CBDFB1443F8B5AC1E367' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, IsReset_38_CA73D145447E07AA5E4619828AF561CD) == 0x000030, "Member 'FSSkillCooldownInfo::IsReset_38_CA73D145447E07AA5E4619828AF561CD' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, IsResetOnChangeRole_43_4E270B634727E782FF05A2897DEBE424) == 0x000031, "Member 'FSSkillCooldownInfo::IsResetOnChangeRole_43_4E270B634727E782FF05A2897DEBE424' has a wrong offset!");
-static_assert(offsetof(FSSkillCooldownInfo, CdTags_48_8502F43749E48F6FFD3FA0AD331D0DC2) == 0x000038, "Member 'FSSkillCooldownInfo::CdTags_48_8502F43749E48F6FFD3FA0AD331D0DC2' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillCooldownInfo;
 
 }
 

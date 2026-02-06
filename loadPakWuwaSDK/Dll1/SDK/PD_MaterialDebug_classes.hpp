@@ -30,19 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_MaterialDebug_C">();
+		BP_STATIC_CLASS_IMPL("PD_MaterialDebug_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_MaterialDebug_C")
 	}
 	static class UPD_MaterialDebug_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_MaterialDebug_C>();
 	}
 };
-static_assert(alignof(UPD_MaterialDebug_C) == 0x000008, "Wrong alignment on UPD_MaterialDebug_C");
-static_assert(sizeof(UPD_MaterialDebug_C) == 0x000178, "Wrong size on UPD_MaterialDebug_C");
-static_assert(offsetof(UPD_MaterialDebug_C, MaterialControllerList) == 0x000038, "Member 'UPD_MaterialDebug_C::MaterialControllerList' has a wrong offset!");
-static_assert(offsetof(UPD_MaterialDebug_C, Body) == 0x000088, "Member 'UPD_MaterialDebug_C::Body' has a wrong offset!");
-static_assert(offsetof(UPD_MaterialDebug_C, Weapon) == 0x0000D8, "Member 'UPD_MaterialDebug_C::Weapon' has a wrong offset!");
-static_assert(offsetof(UPD_MaterialDebug_C, Hulu) == 0x000128, "Member 'UPD_MaterialDebug_C::Hulu' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_MaterialDebug_C;
 
 }
 

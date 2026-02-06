@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveVector*                           缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1;   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletDataScale) == 0x000008, "Wrong alignment on FSBulletDataScale");
-static_assert(sizeof(FSBulletDataScale) == 0x000018, "Wrong size on FSBulletDataScale");
-static_assert(offsetof(FSBulletDataScale, 缩放倍率_7_06C9B76548AE06E63683EBB72FF80B72) == 0x000000, "Member 'FSBulletDataScale::缩放倍率_7_06C9B76548AE06E63683EBB72FF80B72' has a wrong offset!");
-static_assert(offsetof(FSBulletDataScale, 缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1) == 0x000010, "Member 'FSBulletDataScale::缩放倍率曲线_3_4F35AFEE45D6789ED2FD4FA147E399A1' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataScale;
 
 }
 

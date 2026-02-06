@@ -36,15 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPakKeyLibrary">();
+		STATIC_CLASS_IMPL("KuroPakKeyLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPakKeyLibrary")
 	}
 	static class UKuroPakKeyLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPakKeyLibrary>();
 	}
 };
-static_assert(alignof(UKuroPakKeyLibrary) == 0x000008, "Wrong alignment on UKuroPakKeyLibrary");
-static_assert(sizeof(UKuroPakKeyLibrary) == 0x000030, "Wrong size on UKuroPakKeyLibrary");
+DUMPER7_ASSERTS_UKuroPakKeyLibrary;
 
 // Class KuroPakKey.KuroPakKeySetting
 // 0x0018 (0x0048 - 0x0030)
@@ -59,18 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPakKeySetting">();
+		STATIC_CLASS_IMPL("KuroPakKeySetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPakKeySetting")
 	}
 	static class UKuroPakKeySetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPakKeySetting>();
 	}
 };
-static_assert(alignof(UKuroPakKeySetting) == 0x000008, "Wrong alignment on UKuroPakKeySetting");
-static_assert(sizeof(UKuroPakKeySetting) == 0x000048, "Wrong size on UKuroPakKeySetting");
-static_assert(offsetof(UKuroPakKeySetting, bNeedExternalKeys) == 0x000030, "Member 'UKuroPakKeySetting::bNeedExternalKeys' has a wrong offset!");
-static_assert(offsetof(UKuroPakKeySetting, UpdateCheckInterval) == 0x000034, "Member 'UKuroPakKeySetting::UpdateCheckInterval' has a wrong offset!");
-static_assert(offsetof(UKuroPakKeySetting, PakMountedEvents) == 0x000038, "Member 'UKuroPakKeySetting::PakMountedEvents' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroPakKeySetting;
 
 }
 

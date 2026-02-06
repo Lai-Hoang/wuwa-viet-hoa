@@ -27,14 +27,7 @@ public:
 	bool                                          CallFunc_BeginSkill_ReturnValue_1;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ContainsTag_ReturnValue;                  // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Nvzhu_C_FightCommand) == 0x000008, "Wrong alignment on BP_Nvzhu_C_FightCommand");
-static_assert(sizeof(BP_Nvzhu_C_FightCommand) == 0x000020, "Wrong size on BP_Nvzhu_C_FightCommand");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, isInAir) == 0x000000, "Member 'BP_Nvzhu_C_FightCommand::isInAir' has a wrong offset!");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, CallFunc_GetSkillTarget_ReturnValue) == 0x000008, "Member 'BP_Nvzhu_C_FightCommand::CallFunc_GetSkillTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, CallFunc_GetSkillTarget_ReturnValue_1) == 0x000010, "Member 'BP_Nvzhu_C_FightCommand::CallFunc_GetSkillTarget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, CallFunc_BeginSkill_ReturnValue) == 0x000018, "Member 'BP_Nvzhu_C_FightCommand::CallFunc_BeginSkill_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, CallFunc_BeginSkill_ReturnValue_1) == 0x000019, "Member 'BP_Nvzhu_C_FightCommand::CallFunc_BeginSkill_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Nvzhu_C_FightCommand, CallFunc_ContainsTag_ReturnValue) == 0x00001A, "Member 'BP_Nvzhu_C_FightCommand::CallFunc_ContainsTag_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Nvzhu_C_FightCommand;
 
 }
 

@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroDataTableFunctionLibrary">();
+		STATIC_CLASS_IMPL("KuroDataTableFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroDataTableFunctionLibrary")
 	}
 	static class UKuroDataTableFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroDataTableFunctionLibrary>();
 	}
 };
-static_assert(alignof(UKuroDataTableFunctionLibrary) == 0x000008, "Wrong alignment on UKuroDataTableFunctionLibrary");
-static_assert(sizeof(UKuroDataTableFunctionLibrary) == 0x000030, "Wrong size on UKuroDataTableFunctionLibrary");
+DUMPER7_ASSERTS_UKuroDataTableFunctionLibrary;
 
 }
 

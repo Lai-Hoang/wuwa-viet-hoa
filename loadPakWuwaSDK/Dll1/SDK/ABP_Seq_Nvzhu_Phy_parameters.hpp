@@ -27,12 +27,7 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaTimeX;                           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy) == 0x000004, "Wrong alignment on ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy");
-static_assert(sizeof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy) == 0x000010, "Wrong size on ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy, EntryPoint) == 0x000000, "Member 'ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy, CallFunc_ABPC_Seq_GetPhyValue_Value) == 0x000004, "Member 'ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy::CallFunc_ABPC_Seq_GetPhyValue_Value' has a wrong offset!");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy, CallFunc_ABPC_Seq_GetPhyValue_Phy) == 0x000008, "Member 'ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy::CallFunc_ABPC_Seq_GetPhyValue_Phy' has a wrong offset!");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy, K2Node_Event_DeltaTimeX) == 0x00000C, "Member 'ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy::K2Node_Event_DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Seq_Nvzhu_Phy_C_ExecuteUbergraph_ABP_Seq_Nvzhu_Phy;
 
 // Function ABP_Seq_Nvzhu_Phy.ABP_Seq_Nvzhu_Phy_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -41,9 +36,7 @@ struct ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Seq_Nvzhu_Phy_C_BlueprintUpdateAnimation;
 
 // Function ABP_Seq_Nvzhu_Phy.ABP_Seq_Nvzhu_Phy_C.AnimGraph
 // 0x0020 (0x0020 - 0x0000)
@@ -53,10 +46,7 @@ public:
 	struct FPoseLink                              InPose_0;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Seq_Nvzhu_Phy_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Seq_Nvzhu_Phy_C_AnimGraph");
-static_assert(sizeof(ABP_Seq_Nvzhu_Phy_C_AnimGraph) == 0x000020, "Wrong size on ABP_Seq_Nvzhu_Phy_C_AnimGraph");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_AnimGraph, InPose_0) == 0x000000, "Member 'ABP_Seq_Nvzhu_Phy_C_AnimGraph::InPose_0' has a wrong offset!");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_AnimGraph, AnimGraph_0) == 0x000010, "Member 'ABP_Seq_Nvzhu_Phy_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Seq_Nvzhu_Phy_C_AnimGraph;
 
 // Function ABP_Seq_Nvzhu_Phy.ABP_Seq_Nvzhu_Phy_C.PhyCloth
 // 0x0020 (0x0020 - 0x0000)
@@ -66,10 +56,7 @@ public:
 	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              PhyCloth_0;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Seq_Nvzhu_Phy_C_PhyCloth) == 0x000008, "Wrong alignment on ABP_Seq_Nvzhu_Phy_C_PhyCloth");
-static_assert(sizeof(ABP_Seq_Nvzhu_Phy_C_PhyCloth) == 0x000020, "Wrong size on ABP_Seq_Nvzhu_Phy_C_PhyCloth");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_PhyCloth, InPose) == 0x000000, "Member 'ABP_Seq_Nvzhu_Phy_C_PhyCloth::InPose' has a wrong offset!");
-static_assert(offsetof(ABP_Seq_Nvzhu_Phy_C_PhyCloth, PhyCloth_0) == 0x000010, "Member 'ABP_Seq_Nvzhu_Phy_C_PhyCloth::PhyCloth_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Seq_Nvzhu_Phy_C_PhyCloth;
 
 }
 

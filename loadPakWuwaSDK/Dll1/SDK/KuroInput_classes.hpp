@@ -51,15 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BasePlayerController">();
+		STATIC_CLASS_IMPL("BasePlayerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BasePlayerController")
 	}
 	static class ABasePlayerController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABasePlayerController>();
 	}
 };
-static_assert(alignof(ABasePlayerController) == 0x000008, "Wrong alignment on ABasePlayerController");
-static_assert(sizeof(ABasePlayerController) == 0x0006D0, "Wrong size on ABasePlayerController");
+DUMPER7_ASSERTS_ABasePlayerController;
 
 // Class KuroInput.KuroForceFeedbackEffect
 // 0x0020 (0x0078 - 0x0058)
@@ -76,19 +79,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroForceFeedbackEffect">();
+		STATIC_CLASS_IMPL("KuroForceFeedbackEffect")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroForceFeedbackEffect")
 	}
 	static class UKuroForceFeedbackEffect* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroForceFeedbackEffect>();
 	}
 };
-static_assert(alignof(UKuroForceFeedbackEffect) == 0x000008, "Wrong alignment on UKuroForceFeedbackEffect");
-static_assert(sizeof(UKuroForceFeedbackEffect) == 0x000078, "Wrong size on UKuroForceFeedbackEffect");
-static_assert(offsetof(UKuroForceFeedbackEffect, ColdDowm) == 0x000058, "Member 'UKuroForceFeedbackEffect::ColdDowm' has a wrong offset!");
-static_assert(offsetof(UKuroForceFeedbackEffect, Type) == 0x00005C, "Member 'UKuroForceFeedbackEffect::Type' has a wrong offset!");
-static_assert(offsetof(UKuroForceFeedbackEffect, Priority) == 0x000060, "Member 'UKuroForceFeedbackEffect::Priority' has a wrong offset!");
-static_assert(offsetof(UKuroForceFeedbackEffect, KuroGuid) == 0x000064, "Member 'UKuroForceFeedbackEffect::KuroGuid' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroForceFeedbackEffect;
 
 // Class KuroInput.KuroInputFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -107,15 +109,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroInputFunctionLibrary">();
+		STATIC_CLASS_IMPL("KuroInputFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroInputFunctionLibrary")
 	}
 	static class UKuroInputFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroInputFunctionLibrary>();
 	}
 };
-static_assert(alignof(UKuroInputFunctionLibrary) == 0x000008, "Wrong alignment on UKuroInputFunctionLibrary");
-static_assert(sizeof(UKuroInputFunctionLibrary) == 0x000030, "Wrong size on UKuroInputFunctionLibrary");
+DUMPER7_ASSERTS_UKuroInputFunctionLibrary;
 
 // Class KuroInput.KuroInputSetting
 // 0x0010 (0x0040 - 0x0030)
@@ -135,22 +140,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroInputSetting">();
+		STATIC_CLASS_IMPL("KuroInputSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroInputSetting")
 	}
 	static class UKuroInputSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroInputSetting>();
 	}
 };
-static_assert(alignof(UKuroInputSetting) == 0x000008, "Wrong alignment on UKuroInputSetting");
-static_assert(sizeof(UKuroInputSetting) == 0x000040, "Wrong size on UKuroInputSetting");
-static_assert(offsetof(UKuroInputSetting, FeedbackConfig) == 0x000030, "Member 'UKuroInputSetting::FeedbackConfig' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, GlobalFeedbackSize) == 0x000034, "Member 'UKuroInputSetting::GlobalFeedbackSize' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, IsUseSonyFeedback) == 0x000038, "Member 'UKuroInputSetting::IsUseSonyFeedback' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, DefaultInputMode) == 0x000039, "Member 'UKuroInputSetting::DefaultInputMode' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, IsDefaultLockMouseToViewport) == 0x00003A, "Member 'UKuroInputSetting::IsDefaultLockMouseToViewport' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, IsDefaultHideCursorDuringCapture) == 0x00003B, "Member 'UKuroInputSetting::IsDefaultHideCursorDuringCapture' has a wrong offset!");
-static_assert(offsetof(UKuroInputSetting, IsPrintDebugLog) == 0x00003C, "Member 'UKuroInputSetting::IsPrintDebugLog' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroInputSetting;
 
 }
 

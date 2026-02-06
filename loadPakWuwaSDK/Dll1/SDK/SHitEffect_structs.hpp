@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EHitAnim_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EVelocityCurveType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SHitWhirlpool_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SHitEffect.SHitEffect
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00A4 (0x00A4 - 0x0000)
 struct FSHitEffect final
 {
 public:
@@ -40,39 +40,18 @@ public:
 	float                                         上升标量_50_D13A3F10480B10C0AF74B8B876166E9A;      // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         弧顶标量_51_87A0628E4AB279D6431674B97DEA37F0;      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         下落标量_52_BA8EB7004757A4A6235D24AC8BE245AD;      // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                落地反弹_34_88FE3D3640F5D544CAB685854CEADD27;      // 0x0048(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         落地反弹上升重力标量_53_6792C67B4ED7CEDD49408BA8DF14C3B2; // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         落地反弹弧顶重力标量_54_AA0534354653084B802241A67FB89159; // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         落地反弹下落重力标量_55_BB52CA8844625D355234228DE9820B72; // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         落地反弹速度阈值_58_9E334D9847405C0081221AB2391D9776; // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         落地反弹时长_61_5D206DD54780F5632AEEDC86F35A8B5E;  // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSHitWhirlpool                         地面受击滞空_104_A62A966B46FE474D7153B3823A32BA5F; // 0x0068(0x001C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSHitWhirlpool                         空中受击滞空_106_2FB4F79849299BEE9382DA807188B19B; // 0x0084(0x001C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          到达弧顶清除速度_109_06549284478D89892FAABD9DE8BA39B7; // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                落地反弹_34_88FE3D3640F5D544CAB685854CEADD27;      // 0x004C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         落地反弹上升重力标量_53_6792C67B4ED7CEDD49408BA8DF14C3B2; // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         落地反弹弧顶重力标量_54_AA0534354653084B802241A67FB89159; // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         落地反弹下落重力标量_55_BB52CA8844625D355234228DE9820B72; // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         落地反弹速度阈值_58_9E334D9847405C0081221AB2391D9776; // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         落地反弹时长_61_5D206DD54780F5632AEEDC86F35A8B5E;  // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSHitWhirlpool                         地面受击滞空_104_A62A966B46FE474D7153B3823A32BA5F; // 0x006C(0x001C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSHitWhirlpool                         空中受击滞空_106_2FB4F79849299BEE9382DA807188B19B; // 0x0088(0x001C)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSHitEffect) == 0x000004, "Wrong alignment on FSHitEffect");
-static_assert(sizeof(FSHitEffect) == 0x0000A0, "Wrong size on FSHitEffect");
-static_assert(offsetof(FSHitEffect, 被击动作_2_2C0518244CBDC89ECC3256930A603440) == 0x000000, "Member 'FSHitEffect::被击动作_2_2C0518244CBDC89ECC3256930A603440' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 受击朝向Z轴偏转_67_1DCAF2EE49915FAA45C56AA244F472C3) == 0x000004, "Member 'FSHitEffect::受击朝向Z轴偏转_67_1DCAF2EE49915FAA45C56AA244F472C3' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 空中受击速度_21_DF5DD7794535ECE5B1D6BFB49F154466) == 0x000008, "Member 'FSHitEffect::空中受击速度_21_DF5DD7794535ECE5B1D6BFB49F154466' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 空中受击移动时间_73_3E61976A4875E917DE95B9B01D5455CA) == 0x000014, "Member 'FSHitEffect::空中受击移动时间_73_3E61976A4875E917DE95B9B01D5455CA' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 命中硬直时间_8_E7F34EE74ABAB6409054EDAFE79AFEF1) == 0x000018, "Member 'FSHitEffect::命中硬直时间_8_E7F34EE74ABAB6409054EDAFE79AFEF1' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击速度_19_7A9C2FDE41BCEB7ACDE408A0D6777C8F) == 0x00001C, "Member 'FSHitEffect::地面受击速度_19_7A9C2FDE41BCEB7ACDE408A0D6777C8F' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击移动时间_72_1C3AEA8C42A269D9C1C7B1AED1C5D637) == 0x000028, "Member 'FSHitEffect::地面受击移动时间_72_1C3AEA8C42A269D9C1C7B1AED1C5D637' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击移动曲线_93_2323D2F842EA7D7FB93CDE8EFF804ED8) == 0x00002C, "Member 'FSHitEffect::地面受击移动曲线_93_2323D2F842EA7D7FB93CDE8EFF804ED8' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击最大速度_78_BAD1F4754F8C428F44476CAB48D9AABD) == 0x000030, "Member 'FSHitEffect::地面受击最大速度_78_BAD1F4754F8C428F44476CAB48D9AABD' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击最小速度_80_EBBDF65E4A89BB26D0CE9A8320A23F04) == 0x000034, "Member 'FSHitEffect::地面受击最小速度_80_EBBDF65E4A89BB26D0CE9A8320A23F04' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 速度阈值_25_8328D81F475CE602D7ED4BAF60307905) == 0x000038, "Member 'FSHitEffect::速度阈值_25_8328D81F475CE602D7ED4BAF60307905' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 上升标量_50_D13A3F10480B10C0AF74B8B876166E9A) == 0x00003C, "Member 'FSHitEffect::上升标量_50_D13A3F10480B10C0AF74B8B876166E9A' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 弧顶标量_51_87A0628E4AB279D6431674B97DEA37F0) == 0x000040, "Member 'FSHitEffect::弧顶标量_51_87A0628E4AB279D6431674B97DEA37F0' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 下落标量_52_BA8EB7004757A4A6235D24AC8BE245AD) == 0x000044, "Member 'FSHitEffect::下落标量_52_BA8EB7004757A4A6235D24AC8BE245AD' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹_34_88FE3D3640F5D544CAB685854CEADD27) == 0x000048, "Member 'FSHitEffect::落地反弹_34_88FE3D3640F5D544CAB685854CEADD27' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹上升重力标量_53_6792C67B4ED7CEDD49408BA8DF14C3B2) == 0x000054, "Member 'FSHitEffect::落地反弹上升重力标量_53_6792C67B4ED7CEDD49408BA8DF14C3B2' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹弧顶重力标量_54_AA0534354653084B802241A67FB89159) == 0x000058, "Member 'FSHitEffect::落地反弹弧顶重力标量_54_AA0534354653084B802241A67FB89159' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹下落重力标量_55_BB52CA8844625D355234228DE9820B72) == 0x00005C, "Member 'FSHitEffect::落地反弹下落重力标量_55_BB52CA8844625D355234228DE9820B72' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹速度阈值_58_9E334D9847405C0081221AB2391D9776) == 0x000060, "Member 'FSHitEffect::落地反弹速度阈值_58_9E334D9847405C0081221AB2391D9776' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 落地反弹时长_61_5D206DD54780F5632AEEDC86F35A8B5E) == 0x000064, "Member 'FSHitEffect::落地反弹时长_61_5D206DD54780F5632AEEDC86F35A8B5E' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 地面受击滞空_104_A62A966B46FE474D7153B3823A32BA5F) == 0x000068, "Member 'FSHitEffect::地面受击滞空_104_A62A966B46FE474D7153B3823A32BA5F' has a wrong offset!");
-static_assert(offsetof(FSHitEffect, 空中受击滞空_106_2FB4F79849299BEE9382DA807188B19B) == 0x000084, "Member 'FSHitEffect::空中受击滞空_106_2FB4F79849299BEE9382DA807188B19B' has a wrong offset!");
+DUMPER7_ASSERTS_FSHitEffect;
 
 }
 

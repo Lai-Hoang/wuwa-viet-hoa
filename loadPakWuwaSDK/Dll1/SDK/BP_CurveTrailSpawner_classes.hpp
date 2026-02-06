@@ -33,18 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CurveTrailSpawner_C">();
+		BP_STATIC_CLASS_IMPL("BP_CurveTrailSpawner_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CurveTrailSpawner_C")
 	}
 	static class ABP_CurveTrailSpawner_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_CurveTrailSpawner_C>();
 	}
 };
-static_assert(alignof(ABP_CurveTrailSpawner_C) == 0x000008, "Wrong alignment on ABP_CurveTrailSpawner_C");
-static_assert(sizeof(ABP_CurveTrailSpawner_C) == 0x0002E0, "Wrong size on ABP_CurveTrailSpawner_C");
-static_assert(offsetof(ABP_CurveTrailSpawner_C, UberGraphFrame) == 0x0002C8, "Member 'ABP_CurveTrailSpawner_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CurveTrailSpawner_C, Billboard) == 0x0002D0, "Member 'ABP_CurveTrailSpawner_C::Billboard' has a wrong offset!");
-static_assert(offsetof(ABP_CurveTrailSpawner_C, Position) == 0x0002D8, "Member 'ABP_CurveTrailSpawner_C::Position' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CurveTrailSpawner_C;
 
 }
 

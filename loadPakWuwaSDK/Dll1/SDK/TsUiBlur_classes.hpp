@@ -32,18 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiBlur_C">();
+		BP_STATIC_CLASS_IMPL("TsUiBlur_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiBlur_C")
 	}
 	static class UTsUiBlur_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiBlur_C>();
 	}
 };
-static_assert(alignof(UTsUiBlur_C) == 0x000008, "Wrong alignment on UTsUiBlur_C");
-static_assert(sizeof(UTsUiBlur_C) == 0x000118, "Wrong size on UTsUiBlur_C");
-static_assert(offsetof(UTsUiBlur_C, OverrideItem) == 0x000100, "Member 'UTsUiBlur_C::OverrideItem' has a wrong offset!");
-static_assert(offsetof(UTsUiBlur_C, EnableUiBlur) == 0x000108, "Member 'UTsUiBlur_C::EnableUiBlur' has a wrong offset!");
-static_assert(offsetof(UTsUiBlur_C, ApplyItem) == 0x000110, "Member 'UTsUiBlur_C::ApplyItem' has a wrong offset!");
+DUMPER7_ASSERTS_UTsUiBlur_C;
 
 }
 

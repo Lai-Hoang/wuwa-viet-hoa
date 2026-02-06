@@ -29,14 +29,7 @@ public:
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FMax_ReturnValue;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Mascot_C_GetFixValue) == 0x000004, "Wrong alignment on BP_Mascot_C_GetFixValue");
-static_assert(sizeof(BP_Mascot_C_GetFixValue) == 0x000018, "Wrong size on BP_Mascot_C_GetFixValue");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, inValue) == 0x000000, "Member 'BP_Mascot_C_GetFixValue::inValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, FixValue) == 0x000004, "Member 'BP_Mascot_C_GetFixValue::FixValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_Mascot_C_GetFixValue::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, CallFunc_Abs_ReturnValue) == 0x00000C, "Member 'BP_Mascot_C_GetFixValue::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000010, "Member 'BP_Mascot_C_GetFixValue::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetFixValue, CallFunc_FMax_ReturnValue) == 0x000014, "Member 'BP_Mascot_C_GetFixValue::CallFunc_FMax_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetFixValue;
 
 // Function BP_Mascot.BP_Mascot_C.HasFixCurve
 // 0x0020 (0x0020 - 0x0000)
@@ -52,15 +45,7 @@ public:
 	bool                                          K2Node_SwitchName_CmpSuccess_2;                    // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchName_CmpSuccess_3;                    // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_HasFixCurve) == 0x000004, "Wrong alignment on BP_Mascot_C_HasFixCurve");
-static_assert(sizeof(BP_Mascot_C_HasFixCurve) == 0x000020, "Wrong size on BP_Mascot_C_HasFixCurve");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, CheckName) == 0x000000, "Member 'BP_Mascot_C_HasFixCurve::CheckName' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, Ret) == 0x00000C, "Member 'BP_Mascot_C_HasFixCurve::Ret' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, FixName) == 0x000010, "Member 'BP_Mascot_C_HasFixCurve::FixName' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, K2Node_SwitchName_CmpSuccess) == 0x00001C, "Member 'BP_Mascot_C_HasFixCurve::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, K2Node_SwitchName_CmpSuccess_1) == 0x00001D, "Member 'BP_Mascot_C_HasFixCurve::K2Node_SwitchName_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, K2Node_SwitchName_CmpSuccess_2) == 0x00001E, "Member 'BP_Mascot_C_HasFixCurve::K2Node_SwitchName_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_HasFixCurve, K2Node_SwitchName_CmpSuccess_3) == 0x00001F, "Member 'BP_Mascot_C_HasFixCurve::K2Node_SwitchName_CmpSuccess_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_HasFixCurve;
 
 // Function BP_Mascot.BP_Mascot_C.CalcAllCurve
 // 0x0100 (0x0100 - 0x0000)
@@ -98,34 +83,7 @@ public:
 	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_FMax_ReturnValue;                         // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Mascot_C_CalcAllCurve) == 0x000008, "Wrong alignment on BP_Mascot_C_CalcAllCurve");
-static_assert(sizeof(BP_Mascot_C_CalcAllCurve) == 0x000100, "Wrong size on BP_Mascot_C_CalcAllCurve");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, Ret) == 0x000000, "Member 'BP_Mascot_C_CalcAllCurve::Ret' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, RetFixCurve) == 0x000010, "Member 'BP_Mascot_C_CalcAllCurve::RetFixCurve' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, FixCurve) == 0x000020, "Member 'BP_Mascot_C_CalcAllCurve::FixCurve' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, ___int_Loop_Counter_Variable) == 0x000070, "Member 'BP_Mascot_C_CalcAllCurve::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Add_IntInt_ReturnValue) == 0x000074, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, ___int_Array_Index_Variable) == 0x000078, "Member 'BP_Mascot_C_CalcAllCurve::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, ___int_Array_Index_Variable_1) == 0x00007C, "Member 'BP_Mascot_C_CalcAllCurve::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, ___int_Loop_Counter_Variable_1) == 0x000080, "Member 'BP_Mascot_C_CalcAllCurve::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Add_IntInt_ReturnValue_1) == 0x000084, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Map_Keys_Keys) == 0x000088, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Array_Get_Item) == 0x000098, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Array_Length_ReturnValue) == 0x0000A4, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Map_Find_ReturnValue) == 0x0000AC, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Less_IntInt_ReturnValue) == 0x0000AD, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, K2Node_MakeStruct_NamedCurveValue) == 0x0000B0, "Member 'BP_Mascot_C_CalcAllCurve::K2Node_MakeStruct_NamedCurveValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Array_Add_ReturnValue) == 0x0000C0, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Array_Length_ReturnValue_1) == 0x0000C4, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Array_Get_Item_1) == 0x0000C8, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000D8, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_GetFixValue_FixValue) == 0x0000DC, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_GetFixValue_FixValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_HasFixCurve_Ret) == 0x0000E0, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_HasFixCurve_Ret' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_HasFixCurve_FixName) == 0x0000E4, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_HasFixCurve_FixName' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Map_Find_Value_1) == 0x0000F0, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_Map_Find_ReturnValue_1) == 0x0000F4, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve, CallFunc_FMax_ReturnValue) == 0x0000F8, "Member 'BP_Mascot_C_CalcAllCurve::CallFunc_FMax_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_CalcAllCurve;
 
 // Function BP_Mascot.BP_Mascot_C.CalcAllCurve_2
 // 0x00F8 (0x00F8 - 0x0000)
@@ -162,34 +120,7 @@ public:
 	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Mascot_C_CalcAllCurve_2) == 0x000008, "Wrong alignment on BP_Mascot_C_CalcAllCurve_2");
-static_assert(sizeof(BP_Mascot_C_CalcAllCurve_2) == 0x0000F8, "Wrong size on BP_Mascot_C_CalcAllCurve_2");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, Ret) == 0x000000, "Member 'BP_Mascot_C_CalcAllCurve_2::Ret' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, RetFixCurve) == 0x000010, "Member 'BP_Mascot_C_CalcAllCurve_2::RetFixCurve' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, FixCurve) == 0x000020, "Member 'BP_Mascot_C_CalcAllCurve_2::FixCurve' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, ___int_Loop_Counter_Variable) == 0x000070, "Member 'BP_Mascot_C_CalcAllCurve_2::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Add_IntInt_ReturnValue) == 0x000074, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, ___int_Array_Index_Variable) == 0x000078, "Member 'BP_Mascot_C_CalcAllCurve_2::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, ___int_Array_Index_Variable_1) == 0x00007C, "Member 'BP_Mascot_C_CalcAllCurve_2::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, ___int_Loop_Counter_Variable_1) == 0x000080, "Member 'BP_Mascot_C_CalcAllCurve_2::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Add_IntInt_ReturnValue_1) == 0x000084, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Map_Keys_Keys) == 0x000088, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Array_Get_Item) == 0x000098, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Array_Length_ReturnValue) == 0x0000A4, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Map_Find_Value) == 0x0000A8, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Map_Find_ReturnValue) == 0x0000AC, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Less_IntInt_ReturnValue) == 0x0000AD, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_GetValue_Float_ReturnValue) == 0x0000B0, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_GetValue_Float_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, K2Node_MakeStruct_NamedCurveValue) == 0x0000B4, "Member 'BP_Mascot_C_CalcAllCurve_2::K2Node_MakeStruct_NamedCurveValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Array_Length_ReturnValue_1) == 0x0000C8, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Array_Get_Item_1) == 0x0000CC, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000DC, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_HasFixCurve_Ret) == 0x0000DD, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_HasFixCurve_Ret' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_HasFixCurve_FixName) == 0x0000E0, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_HasFixCurve_FixName' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Map_Find_Value_1) == 0x0000EC, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Map_Find_ReturnValue_1) == 0x0000F0, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_CalcAllCurve_2, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000F4, "Member 'BP_Mascot_C_CalcAllCurve_2::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_CalcAllCurve_2;
 
 // Function BP_Mascot.BP_Mascot_C.SetAnimDataVector
 // 0x00C0 (0x00C0 - 0x0000)
@@ -216,24 +147,7 @@ public:
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x00B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_SetAnimDataVector) == 0x000008, "Wrong alignment on BP_Mascot_C_SetAnimDataVector");
-static_assert(sizeof(BP_Mascot_C_SetAnimDataVector) == 0x0000C0, "Wrong size on BP_Mascot_C_SetAnimDataVector");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_Mascot_C_SetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_Mascot_C_SetAnimDataVector::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, ___name_Variable) == 0x000054, "Member 'BP_Mascot_C_SetAnimDataVector::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, ___name_Variable_1) == 0x000060, "Member 'BP_Mascot_C_SetAnimDataVector::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_Map_Find_Value) == 0x00006C, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_Map_Find_ReturnValue) == 0x000078, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_Map_Find_Value_1) == 0x00007C, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_Map_Find_ReturnValue_1) == 0x000088, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_X) == 0x00008C, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_Y) == 0x000090, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_Z) == 0x000094, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_X_1) == 0x000098, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_Y_1) == 0x00009C, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_BreakVector_Z_1) == 0x0000A0, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_MakeRotator_ReturnValue) == 0x0000A4, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataVector, CallFunc_MakeRotator_ReturnValue_1) == 0x0000B0, "Member 'BP_Mascot_C_SetAnimDataVector::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_SetAnimDataVector;
 
 // Function BP_Mascot.BP_Mascot_C.SetAnimDataFloat
 // 0x0028 (0x0028 - 0x0000)
@@ -245,11 +159,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNamedCurveValue>               CallFunc_CalcAllCurve_2_Ret;                       // 0x0018(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_Mascot_C_SetAnimDataFloat) == 0x000008, "Wrong alignment on BP_Mascot_C_SetAnimDataFloat");
-static_assert(sizeof(BP_Mascot_C_SetAnimDataFloat) == 0x000028, "Wrong size on BP_Mascot_C_SetAnimDataFloat");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_Mascot_C_SetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_Mascot_C_SetAnimDataFloat::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataFloat, CallFunc_CalcAllCurve_2_Ret) == 0x000018, "Member 'BP_Mascot_C_SetAnimDataFloat::CallFunc_CalcAllCurve_2_Ret' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_SetAnimDataFloat;
 
 // Function BP_Mascot.BP_Mascot_C.GetSupportGroupNames
 // 0x0020 (0x0020 - 0x0000)
@@ -259,10 +169,7 @@ public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_Mascot_C_GetSupportGroupNames) == 0x000008, "Wrong alignment on BP_Mascot_C_GetSupportGroupNames");
-static_assert(sizeof(BP_Mascot_C_GetSupportGroupNames) == 0x000020, "Wrong size on BP_Mascot_C_GetSupportGroupNames");
-static_assert(offsetof(BP_Mascot_C_GetSupportGroupNames, ReturnValue) == 0x000000, "Member 'BP_Mascot_C_GetSupportGroupNames::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetSupportGroupNames, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_Mascot_C_GetSupportGroupNames::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetSupportGroupNames;
 
 // Function BP_Mascot.BP_Mascot_C.GetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -272,10 +179,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_GetAnimDataVector) == 0x000008, "Wrong alignment on BP_Mascot_C_GetAnimDataVector");
-static_assert(sizeof(BP_Mascot_C_GetAnimDataVector) == 0x000058, "Wrong size on BP_Mascot_C_GetAnimDataVector");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_Mascot_C_GetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_Mascot_C_GetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetAnimDataVector;
 
 // Function BP_Mascot.BP_Mascot_C.GetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -285,10 +189,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_GetAnimDataFloat) == 0x000008, "Wrong alignment on BP_Mascot_C_GetAnimDataFloat");
-static_assert(sizeof(BP_Mascot_C_GetAnimDataFloat) == 0x000018, "Wrong size on BP_Mascot_C_GetAnimDataFloat");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_Mascot_C_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_Mascot_C_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetAnimDataFloat;
 
 // Function BP_Mascot.BP_Mascot_C.SetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -298,10 +199,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_SetAnimDataTransform) == 0x000008, "Wrong alignment on BP_Mascot_C_SetAnimDataTransform");
-static_assert(sizeof(BP_Mascot_C_SetAnimDataTransform) == 0x000058, "Wrong size on BP_Mascot_C_SetAnimDataTransform");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_Mascot_C_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_Mascot_C_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_SetAnimDataTransform;
 
 // Function BP_Mascot.BP_Mascot_C.IsCustomSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -310,9 +208,7 @@ struct BP_Mascot_C_IsCustomSupport final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_IsCustomSupport) == 0x000001, "Wrong alignment on BP_Mascot_C_IsCustomSupport");
-static_assert(sizeof(BP_Mascot_C_IsCustomSupport) == 0x000001, "Wrong size on BP_Mascot_C_IsCustomSupport");
-static_assert(offsetof(BP_Mascot_C_IsCustomSupport, ReturnValue) == 0x000000, "Member 'BP_Mascot_C_IsCustomSupport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_IsCustomSupport;
 
 // Function BP_Mascot.BP_Mascot_C.GetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -322,10 +218,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_GetAnimDataTransform) == 0x000008, "Wrong alignment on BP_Mascot_C_GetAnimDataTransform");
-static_assert(sizeof(BP_Mascot_C_GetAnimDataTransform) == 0x000058, "Wrong size on BP_Mascot_C_GetAnimDataTransform");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_Mascot_C_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_Mascot_C_GetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetAnimDataTransform;
 
 // Function BP_Mascot.BP_Mascot_C.GetAddSpineValue
 // 0x000C (0x000C - 0x0000)
@@ -334,9 +227,7 @@ struct BP_Mascot_C_GetAddSpineValue final
 public:
 	struct FRotator                               AddSpine;                                          // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_GetAddSpineValue) == 0x000004, "Wrong alignment on BP_Mascot_C_GetAddSpineValue");
-static_assert(sizeof(BP_Mascot_C_GetAddSpineValue) == 0x00000C, "Wrong size on BP_Mascot_C_GetAddSpineValue");
-static_assert(offsetof(BP_Mascot_C_GetAddSpineValue, AddSpine) == 0x000000, "Member 'BP_Mascot_C_GetAddSpineValue::AddSpine' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetAddSpineValue;
 
 // Function BP_Mascot.BP_Mascot_C.GetAddSpineHeadValue
 // 0x0018 (0x0018 - 0x0000)
@@ -346,10 +237,7 @@ public:
 	struct FRotator                               AddSpineHead;                                      // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               NewLocalVar_0;                                     // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Mascot_C_GetAddSpineHeadValue) == 0x000004, "Wrong alignment on BP_Mascot_C_GetAddSpineHeadValue");
-static_assert(sizeof(BP_Mascot_C_GetAddSpineHeadValue) == 0x000018, "Wrong size on BP_Mascot_C_GetAddSpineHeadValue");
-static_assert(offsetof(BP_Mascot_C_GetAddSpineHeadValue, AddSpineHead) == 0x000000, "Member 'BP_Mascot_C_GetAddSpineHeadValue::AddSpineHead' has a wrong offset!");
-static_assert(offsetof(BP_Mascot_C_GetAddSpineHeadValue, NewLocalVar_0) == 0x00000C, "Member 'BP_Mascot_C_GetAddSpineHeadValue::NewLocalVar_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Mascot_C_GetAddSpineHeadValue;
 
 }
 

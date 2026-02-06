@@ -21,9 +21,7 @@ struct BPI_SeqAudio_C_GetSeqAudio final
 public:
 	class USeqAudio_Seq_V2_C*                     SeqAudio;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_SeqAudio_C_GetSeqAudio) == 0x000008, "Wrong alignment on BPI_SeqAudio_C_GetSeqAudio");
-static_assert(sizeof(BPI_SeqAudio_C_GetSeqAudio) == 0x000008, "Wrong size on BPI_SeqAudio_C_GetSeqAudio");
-static_assert(offsetof(BPI_SeqAudio_C_GetSeqAudio, SeqAudio) == 0x000000, "Member 'BPI_SeqAudio_C_GetSeqAudio::SeqAudio' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_SeqAudio_C_GetSeqAudio;
 
 }
 

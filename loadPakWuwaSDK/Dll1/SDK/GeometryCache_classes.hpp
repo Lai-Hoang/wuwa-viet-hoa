@@ -34,20 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCache">();
+		STATIC_CLASS_IMPL("GeometryCache")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCache")
 	}
 	static class UGeometryCache* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCache>();
 	}
 };
-static_assert(alignof(UGeometryCache) == 0x000008, "Wrong alignment on UGeometryCache");
-static_assert(sizeof(UGeometryCache) == 0x000078, "Wrong size on UGeometryCache");
-static_assert(offsetof(UGeometryCache, Materials) == 0x000038, "Member 'UGeometryCache::Materials' has a wrong offset!");
-static_assert(offsetof(UGeometryCache, Tracks) == 0x000048, "Member 'UGeometryCache::Tracks' has a wrong offset!");
-static_assert(offsetof(UGeometryCache, MaxNumVertices) == 0x000058, "Member 'UGeometryCache::MaxNumVertices' has a wrong offset!");
-static_assert(offsetof(UGeometryCache, StartFrame) == 0x000070, "Member 'UGeometryCache::StartFrame' has a wrong offset!");
-static_assert(offsetof(UGeometryCache, EndFrame) == 0x000074, "Member 'UGeometryCache::EndFrame' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCache;
 
 // Class GeometryCache.GeometryCacheActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -62,16 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheActor">();
+		STATIC_CLASS_IMPL("GeometryCacheActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheActor")
 	}
 	static class AGeometryCacheActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGeometryCacheActor>();
 	}
 };
-static_assert(alignof(AGeometryCacheActor) == 0x000008, "Wrong alignment on AGeometryCacheActor");
-static_assert(sizeof(AGeometryCacheActor) == 0x0002B8, "Wrong size on AGeometryCacheActor");
-static_assert(offsetof(AGeometryCacheActor, GeometryCacheComponent) == 0x0002B0, "Member 'AGeometryCacheActor::GeometryCacheComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AGeometryCacheActor;
 
 // Class GeometryCache.GeometryCacheCodecBase
 // 0x0010 (0x0040 - 0x0030)
@@ -83,16 +83,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheCodecBase">();
+		STATIC_CLASS_IMPL("GeometryCacheCodecBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheCodecBase")
 	}
 	static class UGeometryCacheCodecBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheCodecBase>();
 	}
 };
-static_assert(alignof(UGeometryCacheCodecBase) == 0x000008, "Wrong alignment on UGeometryCacheCodecBase");
-static_assert(sizeof(UGeometryCacheCodecBase) == 0x000040, "Wrong size on UGeometryCacheCodecBase");
-static_assert(offsetof(UGeometryCacheCodecBase, TopologyRanges) == 0x000030, "Member 'UGeometryCacheCodecBase::TopologyRanges' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheCodecBase;
 
 // Class GeometryCache.GeometryCacheCodecRaw
 // 0x0008 (0x0048 - 0x0040)
@@ -105,16 +107,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheCodecRaw">();
+		STATIC_CLASS_IMPL("GeometryCacheCodecRaw")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheCodecRaw")
 	}
 	static class UGeometryCacheCodecRaw* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheCodecRaw>();
 	}
 };
-static_assert(alignof(UGeometryCacheCodecRaw) == 0x000008, "Wrong alignment on UGeometryCacheCodecRaw");
-static_assert(sizeof(UGeometryCacheCodecRaw) == 0x000048, "Wrong size on UGeometryCacheCodecRaw");
-static_assert(offsetof(UGeometryCacheCodecRaw, DummyProperty) == 0x000040, "Member 'UGeometryCacheCodecRaw::DummyProperty' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheCodecRaw;
 
 // Class GeometryCache.GeometryCacheCodecV1
 // 0x0008 (0x0048 - 0x0040)
@@ -126,15 +130,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheCodecV1">();
+		STATIC_CLASS_IMPL("GeometryCacheCodecV1")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheCodecV1")
 	}
 	static class UGeometryCacheCodecV1* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheCodecV1>();
 	}
 };
-static_assert(alignof(UGeometryCacheCodecV1) == 0x000008, "Wrong alignment on UGeometryCacheCodecV1");
-static_assert(sizeof(UGeometryCacheCodecV1) == 0x000048, "Wrong size on UGeometryCacheCodecV1");
+DUMPER7_ASSERTS_UGeometryCacheCodecV1;
 
 // Class GeometryCache.GeometryCacheComponent
 // 0x0060 (0x05C0 - 0x0560)
@@ -180,24 +187,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheComponent">();
+		STATIC_CLASS_IMPL("GeometryCacheComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheComponent")
 	}
 	static class UGeometryCacheComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheComponent>();
 	}
 };
-static_assert(alignof(UGeometryCacheComponent) == 0x000010, "Wrong alignment on UGeometryCacheComponent");
-static_assert(sizeof(UGeometryCacheComponent) == 0x0005C0, "Wrong size on UGeometryCacheComponent");
-static_assert(offsetof(UGeometryCacheComponent, GeometryCache) == 0x000560, "Member 'UGeometryCacheComponent::GeometryCache' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, bRunning) == 0x000568, "Member 'UGeometryCacheComponent::bRunning' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, bLooping) == 0x000569, "Member 'UGeometryCacheComponent::bLooping' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, StartTimeOffset) == 0x00056C, "Member 'UGeometryCacheComponent::StartTimeOffset' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, PlaybackSpeed) == 0x000570, "Member 'UGeometryCacheComponent::PlaybackSpeed' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, NumTracks) == 0x000574, "Member 'UGeometryCacheComponent::NumTracks' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, ElapsedTime) == 0x000578, "Member 'UGeometryCacheComponent::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, Duration) == 0x0005AC, "Member 'UGeometryCacheComponent::Duration' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheComponent, bManualTick) == 0x0005B0, "Member 'UGeometryCacheComponent::bManualTick' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheComponent;
 
 // Class GeometryCache.GeometryCacheTrack
 // 0x0048 (0x0078 - 0x0030)
@@ -214,20 +215,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheTrack">();
+		STATIC_CLASS_IMPL("GeometryCacheTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheTrack")
 	}
 	static class UGeometryCacheTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheTrack>();
 	}
 };
-static_assert(alignof(UGeometryCacheTrack) == 0x000008, "Wrong alignment on UGeometryCacheTrack");
-static_assert(sizeof(UGeometryCacheTrack) == 0x000078, "Wrong size on UGeometryCacheTrack");
-static_assert(offsetof(UGeometryCacheTrack, Duration) == 0x000030, "Member 'UGeometryCacheTrack::Duration' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheTrack, MaxNumVertices) == 0x000034, "Member 'UGeometryCacheTrack::MaxNumVertices' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheTrack, LimitPosX) == 0x000038, "Member 'UGeometryCacheTrack::LimitPosX' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheTrack, LimitPosY) == 0x000040, "Member 'UGeometryCacheTrack::LimitPosY' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheTrack, LimitPosZ) == 0x000048, "Member 'UGeometryCacheTrack::LimitPosZ' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheTrack;
 
 // Class GeometryCache.GeometryCacheTrack_FlipbookAnimation
 // 0x0028 (0x00A0 - 0x0078)
@@ -243,16 +242,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheTrack_FlipbookAnimation">();
+		STATIC_CLASS_IMPL("GeometryCacheTrack_FlipbookAnimation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheTrack_FlipbookAnimation")
 	}
 	static class UGeometryCacheTrack_FlipbookAnimation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheTrack_FlipbookAnimation>();
 	}
 };
-static_assert(alignof(UGeometryCacheTrack_FlipbookAnimation) == 0x000008, "Wrong alignment on UGeometryCacheTrack_FlipbookAnimation");
-static_assert(sizeof(UGeometryCacheTrack_FlipbookAnimation) == 0x0000A0, "Wrong size on UGeometryCacheTrack_FlipbookAnimation");
-static_assert(offsetof(UGeometryCacheTrack_FlipbookAnimation, NumMeshSamples) == 0x000078, "Member 'UGeometryCacheTrack_FlipbookAnimation::NumMeshSamples' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheTrack_FlipbookAnimation;
 
 // Class GeometryCache.GeometryCacheTrackStreamable
 // 0x0078 (0x00F0 - 0x0078)
@@ -267,17 +268,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheTrackStreamable">();
+		STATIC_CLASS_IMPL("GeometryCacheTrackStreamable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheTrackStreamable")
 	}
 	static class UGeometryCacheTrackStreamable* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheTrackStreamable>();
 	}
 };
-static_assert(alignof(UGeometryCacheTrackStreamable) == 0x000008, "Wrong alignment on UGeometryCacheTrackStreamable");
-static_assert(sizeof(UGeometryCacheTrackStreamable) == 0x0000F0, "Wrong size on UGeometryCacheTrackStreamable");
-static_assert(offsetof(UGeometryCacheTrackStreamable, Codec) == 0x000078, "Member 'UGeometryCacheTrackStreamable::Codec' has a wrong offset!");
-static_assert(offsetof(UGeometryCacheTrackStreamable, StartSampleTime) == 0x0000E8, "Member 'UGeometryCacheTrackStreamable::StartSampleTime' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCacheTrackStreamable;
 
 // Class GeometryCache.GeometryCacheTrack_TransformAnimation
 // 0x00A8 (0x0120 - 0x0078)
@@ -292,15 +294,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheTrack_TransformAnimation">();
+		STATIC_CLASS_IMPL("GeometryCacheTrack_TransformAnimation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheTrack_TransformAnimation")
 	}
 	static class UGeometryCacheTrack_TransformAnimation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheTrack_TransformAnimation>();
 	}
 };
-static_assert(alignof(UGeometryCacheTrack_TransformAnimation) == 0x000008, "Wrong alignment on UGeometryCacheTrack_TransformAnimation");
-static_assert(sizeof(UGeometryCacheTrack_TransformAnimation) == 0x000120, "Wrong size on UGeometryCacheTrack_TransformAnimation");
+DUMPER7_ASSERTS_UGeometryCacheTrack_TransformAnimation;
 
 // Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation
 // 0x00A8 (0x0120 - 0x0078)
@@ -315,15 +320,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCacheTrack_TransformGroupAnimation">();
+		STATIC_CLASS_IMPL("GeometryCacheTrack_TransformGroupAnimation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCacheTrack_TransformGroupAnimation")
 	}
 	static class UGeometryCacheTrack_TransformGroupAnimation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCacheTrack_TransformGroupAnimation>();
 	}
 };
-static_assert(alignof(UGeometryCacheTrack_TransformGroupAnimation) == 0x000008, "Wrong alignment on UGeometryCacheTrack_TransformGroupAnimation");
-static_assert(sizeof(UGeometryCacheTrack_TransformGroupAnimation) == 0x000120, "Wrong size on UGeometryCacheTrack_TransformGroupAnimation");
+DUMPER7_ASSERTS_UGeometryCacheTrack_TransformGroupAnimation;
 
 }
 

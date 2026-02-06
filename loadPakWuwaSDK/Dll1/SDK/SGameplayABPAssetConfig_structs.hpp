@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   AnimInstance_5_F1DE92004F03AB630A5D1AAA05BB9CD2;   // 0x0008(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSGameplayABPAssetConfig) == 0x000008, "Wrong alignment on FSGameplayABPAssetConfig");
-static_assert(sizeof(FSGameplayABPAssetConfig) == 0x000038, "Wrong size on FSGameplayABPAssetConfig");
-static_assert(offsetof(FSGameplayABPAssetConfig, Type_2_8872C7DD4D6C758E01EAF585422CEA7F) == 0x000000, "Member 'FSGameplayABPAssetConfig::Type_2_8872C7DD4D6C758E01EAF585422CEA7F' has a wrong offset!");
-static_assert(offsetof(FSGameplayABPAssetConfig, AnimInstance_5_F1DE92004F03AB630A5D1AAA05BB9CD2) == 0x000008, "Member 'FSGameplayABPAssetConfig::AnimInstance_5_F1DE92004F03AB630A5D1AAA05BB9CD2' has a wrong offset!");
+DUMPER7_ASSERTS_FSGameplayABPAssetConfig;
 
 }
 

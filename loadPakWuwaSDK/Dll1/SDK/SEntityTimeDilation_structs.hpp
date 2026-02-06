@@ -22,10 +22,7 @@ public:
 	int32                                         SourceType_2_7A00487B42382CF835ABDFBE64BCA4BC;     // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         TimeDilation_5_D97E2AD7470877D2E84C079CDDB4F1A2;   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSEntityTimeDilation) == 0x000004, "Wrong alignment on FSEntityTimeDilation");
-static_assert(sizeof(FSEntityTimeDilation) == 0x000008, "Wrong size on FSEntityTimeDilation");
-static_assert(offsetof(FSEntityTimeDilation, SourceType_2_7A00487B42382CF835ABDFBE64BCA4BC) == 0x000000, "Member 'FSEntityTimeDilation::SourceType_2_7A00487B42382CF835ABDFBE64BCA4BC' has a wrong offset!");
-static_assert(offsetof(FSEntityTimeDilation, TimeDilation_5_D97E2AD7470877D2E84C079CDDB4F1A2) == 0x000004, "Member 'FSEntityTimeDilation::TimeDilation_5_D97E2AD7470877D2E84C079CDDB4F1A2' has a wrong offset!");
+DUMPER7_ASSERTS_FSEntityTimeDilation;
 
 }
 

@@ -40,23 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Switch_Seq_V2_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Switch_Seq_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Switch_Seq_V2_C")
 	}
 	static class UABP_Switch_Seq_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Switch_Seq_V2_C>();
 	}
 };
-static_assert(alignof(UABP_Switch_Seq_V2_C) == 0x000010, "Wrong alignment on UABP_Switch_Seq_V2_C");
-static_assert(sizeof(UABP_Switch_Seq_V2_C) == 0x000A50, "Wrong size on UABP_Switch_Seq_V2_C");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, UberGraphFrame) == 0x000730, "Member 'UABP_Switch_Seq_V2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_BlendListByBool) == 0x000770, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_PoseSnapshot) == 0x000820, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_PoseSnapshot' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_LinkedInputPose) == 0x0008D0, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, CachePose) == 0x000A08, "Member 'UABP_Switch_Seq_V2_C::CachePose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, EnableSwitchPose) == 0x000A48, "Member 'UABP_Switch_Seq_V2_C::EnableSwitchPose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, FalseBlendTime) == 0x000A4C, "Member 'UABP_Switch_Seq_V2_C::FalseBlendTime' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Switch_Seq_V2_C;
 
 }
 

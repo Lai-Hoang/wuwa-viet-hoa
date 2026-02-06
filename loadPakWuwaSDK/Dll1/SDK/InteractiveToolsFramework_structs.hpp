@@ -193,8 +193,7 @@ struct alignas(0x04) FBrushStampData final
 public:
 	uint8                                         Pad_0[0xB4];                                       // 0x0000(0x00B4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBrushStampData) == 0x000004, "Wrong alignment on FBrushStampData");
-static_assert(sizeof(FBrushStampData) == 0x0000B4, "Wrong size on FBrushStampData");
+DUMPER7_ASSERTS_FBrushStampData;
 
 // ScriptStruct InteractiveToolsFramework.BehaviorInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -204,9 +203,7 @@ public:
 	class UInputBehavior*                         Behavior;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x18];                                       // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBehaviorInfo) == 0x000008, "Wrong alignment on FBehaviorInfo");
-static_assert(sizeof(FBehaviorInfo) == 0x000020, "Wrong size on FBehaviorInfo");
-static_assert(offsetof(FBehaviorInfo, Behavior) == 0x000000, "Member 'FBehaviorInfo::Behavior' has a wrong offset!");
+DUMPER7_ASSERTS_FBehaviorInfo;
 
 // ScriptStruct InteractiveToolsFramework.InputRayHit
 // 0x0028 (0x0028 - 0x0000)
@@ -215,8 +212,7 @@ struct alignas(0x08) FInputRayHit final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FInputRayHit) == 0x000008, "Wrong alignment on FInputRayHit");
-static_assert(sizeof(FInputRayHit) == 0x000028, "Wrong size on FInputRayHit");
+DUMPER7_ASSERTS_FInputRayHit;
 
 // ScriptStruct InteractiveToolsFramework.ActiveGizmo
 // 0x0030 (0x0030 - 0x0000)
@@ -225,8 +221,7 @@ struct alignas(0x08) FActiveGizmo final
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FActiveGizmo) == 0x000008, "Wrong alignment on FActiveGizmo");
-static_assert(sizeof(FActiveGizmo) == 0x000030, "Wrong size on FActiveGizmo");
+DUMPER7_ASSERTS_FActiveGizmo;
 
 // ScriptStruct InteractiveToolsFramework.GizmoFloatParameterChange
 // 0x0008 (0x0008 - 0x0000)
@@ -236,10 +231,7 @@ public:
 	float                                         InitialValue;                                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CurrentValue;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGizmoFloatParameterChange) == 0x000004, "Wrong alignment on FGizmoFloatParameterChange");
-static_assert(sizeof(FGizmoFloatParameterChange) == 0x000008, "Wrong size on FGizmoFloatParameterChange");
-static_assert(offsetof(FGizmoFloatParameterChange, InitialValue) == 0x000000, "Member 'FGizmoFloatParameterChange::InitialValue' has a wrong offset!");
-static_assert(offsetof(FGizmoFloatParameterChange, CurrentValue) == 0x000004, "Member 'FGizmoFloatParameterChange::CurrentValue' has a wrong offset!");
+DUMPER7_ASSERTS_FGizmoFloatParameterChange;
 
 // ScriptStruct InteractiveToolsFramework.GizmoVec2ParameterChange
 // 0x0010 (0x0010 - 0x0000)
@@ -249,10 +241,7 @@ public:
 	struct FVector2D                              InitialValue;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              CurrentValue;                                      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGizmoVec2ParameterChange) == 0x000004, "Wrong alignment on FGizmoVec2ParameterChange");
-static_assert(sizeof(FGizmoVec2ParameterChange) == 0x000010, "Wrong size on FGizmoVec2ParameterChange");
-static_assert(offsetof(FGizmoVec2ParameterChange, InitialValue) == 0x000000, "Member 'FGizmoVec2ParameterChange::InitialValue' has a wrong offset!");
-static_assert(offsetof(FGizmoVec2ParameterChange, CurrentValue) == 0x000008, "Member 'FGizmoVec2ParameterChange::CurrentValue' has a wrong offset!");
+DUMPER7_ASSERTS_FGizmoVec2ParameterChange;
 
 }
 

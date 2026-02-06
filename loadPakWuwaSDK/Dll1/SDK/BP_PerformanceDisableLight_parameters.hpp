@@ -23,11 +23,7 @@ public:
 	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight) == 0x000004, "Wrong alignment on BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight");
-static_assert(sizeof(BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight) == 0x00000C, "Wrong size on BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight");
-static_assert(offsetof(BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight, EntryPoint) == 0x000000, "Member 'BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight, K2Node_Event_DeltaSeconds_1) == 0x000004, "Member 'BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_ExecuteUbergraph_BP_PerformanceDisableLight;
 
 // Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -36,9 +32,7 @@ struct BP_PerformanceDisableLight_C_EditorTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_C_EditorTick) == 0x000004, "Wrong alignment on BP_PerformanceDisableLight_C_EditorTick");
-static_assert(sizeof(BP_PerformanceDisableLight_C_EditorTick) == 0x000004, "Wrong size on BP_PerformanceDisableLight_C_EditorTick");
-static_assert(offsetof(BP_PerformanceDisableLight_C_EditorTick, DeltaSeconds) == 0x000000, "Member 'BP_PerformanceDisableLight_C_EditorTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_EditorTick;
 
 // Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -47,22 +41,55 @@ struct BP_PerformanceDisableLight_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_PerformanceDisableLight_C_ReceiveTick");
-static_assert(sizeof(BP_PerformanceDisableLight_C_ReceiveTick) == 0x000004, "Wrong size on BP_PerformanceDisableLight_C_ReceiveTick");
-static_assert(offsetof(BP_PerformanceDisableLight_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_PerformanceDisableLight_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_ReceiveTick;
 
-// Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.UserConstructionScript
-// 0x0002 (0x0002 - 0x0000)
-struct BP_PerformanceDisableLight_C_UserConstructionScript final
+// Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.DisableLightFun
+// 0x0030 (0x0030 - 0x0000)
+struct BP_PerformanceDisableLight_C_DisableLightFun final
 {
 public:
-	bool                                          CallFunc_IsWithEditor_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsWithEditor_ReturnValue_1;               // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_PerformanceDisableLight_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_PerformanceDisableLight_C_UserConstructionScript");
-static_assert(sizeof(BP_PerformanceDisableLight_C_UserConstructionScript) == 0x000002, "Wrong size on BP_PerformanceDisableLight_C_UserConstructionScript");
-static_assert(offsetof(BP_PerformanceDisableLight_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue) == 0x000000, "Member 'BP_PerformanceDisableLight_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PerformanceDisableLight_C_UserConstructionScript, CallFunc_IsWithEditor_ReturnValue_1) == 0x000001, "Member 'BP_PerformanceDisableLight_C_UserConstructionScript::CallFunc_IsWithEditor_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_DisableLightFun;
+
+// Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.DisableToonLightFun
+// 0x0030 (0x0030 - 0x0000)
+struct BP_PerformanceDisableLight_C_DisableToonLightFun final
+{
+public:
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_DisableToonLightFun;
+
+// Function BP_PerformanceDisableLight.BP_PerformanceDisableLight_C.TickFunction
+// 0x0088 (0x0088 - 0x0000)
+struct BP_PerformanceDisableLight_C_TickFunction final
+{
+public:
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue;           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_1;           // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_FloatToString_ReturnValue_1;         // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue_1;          // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue_1; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_FloatFloat_ReturnValue;          // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_FloatFloat_ReturnValue_1;        // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_PerformanceDisableLight_C_TickFunction;
 
 }
 

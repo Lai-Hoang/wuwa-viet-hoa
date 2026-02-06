@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"json2structBPLibrary">();
+		STATIC_CLASS_IMPL("json2structBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"json2structBPLibrary")
 	}
 	static class Ujson2structBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<Ujson2structBPLibrary>();
 	}
 };
-static_assert(alignof(Ujson2structBPLibrary) == 0x000008, "Wrong alignment on Ujson2structBPLibrary");
-static_assert(sizeof(Ujson2structBPLibrary) == 0x000030, "Wrong size on Ujson2structBPLibrary");
+DUMPER7_ASSERTS_Ujson2structBPLibrary;
 
 // Class json2struct.JsonAsyncNode
 // 0x0020 (0x0058 - 0x0038)
@@ -52,17 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JsonAsyncNode">();
+		STATIC_CLASS_IMPL("JsonAsyncNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JsonAsyncNode")
 	}
 	static class UJsonAsyncNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJsonAsyncNode>();
 	}
 };
-static_assert(alignof(UJsonAsyncNode) == 0x000008, "Wrong alignment on UJsonAsyncNode");
-static_assert(sizeof(UJsonAsyncNode) == 0x000058, "Wrong size on UJsonAsyncNode");
-static_assert(offsetof(UJsonAsyncNode, success) == 0x000038, "Member 'UJsonAsyncNode::success' has a wrong offset!");
-static_assert(offsetof(UJsonAsyncNode, fail) == 0x000048, "Member 'UJsonAsyncNode::fail' has a wrong offset!");
+DUMPER7_ASSERTS_UJsonAsyncNode;
 
 }
 

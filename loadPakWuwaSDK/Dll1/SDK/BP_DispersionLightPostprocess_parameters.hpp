@@ -26,11 +26,7 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess) == 0x000008, "Wrong alignment on BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess");
-static_assert(sizeof(BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess) == 0x000010, "Wrong size on BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess, EntryPoint) == 0x000000, "Member 'BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000008, "Member 'BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DispersionLightPostprocess_C_ExecuteUbergraph_BP_DispersionLightPostprocess;
 
 // Function BP_DispersionLightPostprocess.BP_DispersionLightPostprocess_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -39,9 +35,7 @@ struct BP_DispersionLightPostprocess_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DispersionLightPostprocess_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_DispersionLightPostprocess_C_ReceiveTick");
-static_assert(sizeof(BP_DispersionLightPostprocess_C_ReceiveTick) == 0x000004, "Wrong size on BP_DispersionLightPostprocess_C_ReceiveTick");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_DispersionLightPostprocess_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DispersionLightPostprocess_C_ReceiveTick;
 
 // Function BP_DispersionLightPostprocess.BP_DispersionLightPostprocess_C.UserConstructionScript
 // 0x0008 (0x0008 - 0x0000)
@@ -50,9 +44,7 @@ struct BP_DispersionLightPostprocess_C_UserConstructionScript final
 public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DispersionLightPostprocess_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_DispersionLightPostprocess_C_UserConstructionScript");
-static_assert(sizeof(BP_DispersionLightPostprocess_C_UserConstructionScript) == 0x000008, "Wrong size on BP_DispersionLightPostprocess_C_UserConstructionScript");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_UserConstructionScript, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000000, "Member 'BP_DispersionLightPostprocess_C_UserConstructionScript::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DispersionLightPostprocess_C_UserConstructionScript;
 
 // Function BP_DispersionLightPostprocess.BP_DispersionLightPostprocess_C.Update
 // 0x01C8 (0x01C8 - 0x0000)
@@ -98,44 +90,7 @@ public:
 	TArray<struct FWeightedBlendable>             K2Node_MakeArray_Array;                            // 0x01A8(0x0010)(ReferenceParm)
 	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x01B8(0x0010)()
 };
-static_assert(alignof(BP_DispersionLightPostprocess_C_Update) == 0x000008, "Wrong alignment on BP_DispersionLightPostprocess_C_Update");
-static_assert(sizeof(BP_DispersionLightPostprocess_C_Update) == 0x0001C8, "Wrong size on BP_DispersionLightPostprocess_C_Update");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable) == 0x000000, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_1) == 0x00000C, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_2) == 0x000018, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_3) == 0x000024, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_4) == 0x000030, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_5) == 0x00003C, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_6) == 0x000048, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_7) == 0x000054, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_8) == 0x000060, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_9) == 0x00006C, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_9' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_10) == 0x000078, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_10' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_11) == 0x000084, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_11' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_12) == 0x000090, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_12' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_13) == 0x00009C, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_13' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_14) == 0x0000A8, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_14' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_15) == 0x0000B4, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_15' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_16) == 0x0000C0, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_16' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_17) == 0x0000CC, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_17' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_18) == 0x0000D8, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_18' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_19) == 0x0000E4, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_19' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, ___name_Variable_20) == 0x0000F0, "Member 'BP_DispersionLightPostprocess_C_Update::___name_Variable_20' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, K2Node_MakeStruct_LinearColor) == 0x0000FC, "Member 'BP_DispersionLightPostprocess_C_Update::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_GetUpVector_ReturnValue) == 0x00010C, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000118, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_IsValid_ReturnValue) == 0x000128, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, K2Node_MakeStruct_LinearColor_1) == 0x00012C, "Member 'BP_DispersionLightPostprocess_C_Update::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000140, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000158, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000164, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x000168, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_GetForwardVector_ReturnValue) == 0x000178, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x000184, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, CallFunc_GetScaledSphereRadius_ReturnValue) == 0x000194, "Member 'BP_DispersionLightPostprocess_C_Update::CallFunc_GetScaledSphereRadius_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, K2Node_MakeStruct_WeightedBlendable) == 0x000198, "Member 'BP_DispersionLightPostprocess_C_Update::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, K2Node_MakeArray_Array) == 0x0001A8, "Member 'BP_DispersionLightPostprocess_C_Update::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_DispersionLightPostprocess_C_Update, K2Node_MakeStruct_WeightedBlendables) == 0x0001B8, "Member 'BP_DispersionLightPostprocess_C_Update::K2Node_MakeStruct_WeightedBlendables' has a wrong offset!");
+DUMPER7_ASSERTS_BP_DispersionLightPostprocess_C_Update;
 
 }
 

@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_EffectPaths_C">();
+		BP_STATIC_CLASS_IMPL("PDA_EffectPaths_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_EffectPaths_C")
 	}
 	static class UPDA_EffectPaths_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_EffectPaths_C>();
 	}
 };
-static_assert(alignof(UPDA_EffectPaths_C) == 0x000008, "Wrong alignment on UPDA_EffectPaths_C");
-static_assert(sizeof(UPDA_EffectPaths_C) == 0x000048, "Wrong size on UPDA_EffectPaths_C");
-static_assert(offsetof(UPDA_EffectPaths_C, BasePaths) == 0x000038, "Member 'UPDA_EffectPaths_C::BasePaths' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_EffectPaths_C;
 
 }
 

@@ -30,14 +30,7 @@ public:
 	TSoftObjectPtr<class UCurveFloat>             CommonCurve_19_44F9D203469BE7A60E24ADB686ADA8C7;   // 0x0040(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TMap<EUiCameraAnimationAttributeType, TSoftObjectPtr<class UCurveFloat>> CurveMap_18_E91232C14DEC2DBC6A8D0095520D6B42; // 0x0070(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSUiCameraAnimationBlendSettings) == 0x000008, "Wrong alignment on FSUiCameraAnimationBlendSettings");
-static_assert(sizeof(FSUiCameraAnimationBlendSettings) == 0x0000C0, "Wrong size on FSUiCameraAnimationBlendSettings");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, Time_22_7053BAF248A59E94C38F00A306B63101) == 0x000000, "Member 'FSUiCameraAnimationBlendSettings::Time_22_7053BAF248A59E94C38F00A306B63101' has a wrong offset!");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, LevelSequence_25_5D99E095429BB53DF159D793FD0BD747) == 0x000008, "Member 'FSUiCameraAnimationBlendSettings::LevelSequence_25_5D99E095429BB53DF159D793FD0BD747' has a wrong offset!");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, PlayRate_31_7AC61349415520400D3379A2FF509860) == 0x000038, "Member 'FSUiCameraAnimationBlendSettings::PlayRate_31_7AC61349415520400D3379A2FF509860' has a wrong offset!");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, bReverse_28_9221334F4855EC4C284F77AB4A7B8A50) == 0x00003C, "Member 'FSUiCameraAnimationBlendSettings::bReverse_28_9221334F4855EC4C284F77AB4A7B8A50' has a wrong offset!");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, CommonCurve_19_44F9D203469BE7A60E24ADB686ADA8C7) == 0x000040, "Member 'FSUiCameraAnimationBlendSettings::CommonCurve_19_44F9D203469BE7A60E24ADB686ADA8C7' has a wrong offset!");
-static_assert(offsetof(FSUiCameraAnimationBlendSettings, CurveMap_18_E91232C14DEC2DBC6A8D0095520D6B42) == 0x000070, "Member 'FSUiCameraAnimationBlendSettings::CurveMap_18_E91232C14DEC2DBC6A8D0095520D6B42' has a wrong offset!");
+DUMPER7_ASSERTS_FSUiCameraAnimationBlendSettings;
 
 }
 

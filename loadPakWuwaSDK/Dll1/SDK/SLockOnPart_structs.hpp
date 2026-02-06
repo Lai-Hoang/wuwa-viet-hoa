@@ -26,13 +26,7 @@ public:
 	class FString                                 AimPartBoneName_12_8F667B8D4DFC018C6589B2A33468AB3B; // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 EnablePartName_16_D5B4C3C9470814563A7A41A520AA135A; // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSLockOnPart) == 0x000008, "Wrong alignment on FSLockOnPart");
-static_assert(sizeof(FSLockOnPart) == 0x000038, "Wrong size on FSLockOnPart");
-static_assert(offsetof(FSLockOnPart, BoneName_2_048C9EF3448F15D7B3302ABCF21AA998) == 0x000000, "Member 'FSLockOnPart::BoneName_2_048C9EF3448F15D7B3302ABCF21AA998' has a wrong offset!");
-static_assert(offsetof(FSLockOnPart, SoftLockValid_9_45098E15418657B7C965318E86E94A01) == 0x000010, "Member 'FSLockOnPart::SoftLockValid_9_45098E15418657B7C965318E86E94A01' has a wrong offset!");
-static_assert(offsetof(FSLockOnPart, HardLockValid_7_166F80504483F02C033442B44C4A2494) == 0x000011, "Member 'FSLockOnPart::HardLockValid_7_166F80504483F02C033442B44C4A2494' has a wrong offset!");
-static_assert(offsetof(FSLockOnPart, AimPartBoneName_12_8F667B8D4DFC018C6589B2A33468AB3B) == 0x000018, "Member 'FSLockOnPart::AimPartBoneName_12_8F667B8D4DFC018C6589B2A33468AB3B' has a wrong offset!");
-static_assert(offsetof(FSLockOnPart, EnablePartName_16_D5B4C3C9470814563A7A41A520AA135A) == 0x000028, "Member 'FSLockOnPart::EnablePartName_16_D5B4C3C9470814563A7A41A520AA135A' has a wrong offset!");
+DUMPER7_ASSERTS_FSLockOnPart;
 
 }
 

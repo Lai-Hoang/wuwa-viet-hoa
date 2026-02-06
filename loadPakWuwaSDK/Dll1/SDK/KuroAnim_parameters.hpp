@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "KuroAnim_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,10 +27,7 @@ public:
 	float                                         Angle;                                             // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_AngleConversion) == 0x000004, "Wrong alignment on KuroAnimInstance_AngleConversion");
-static_assert(sizeof(KuroAnimInstance_AngleConversion) == 0x000008, "Wrong size on KuroAnimInstance_AngleConversion");
-static_assert(offsetof(KuroAnimInstance_AngleConversion, Angle) == 0x000000, "Member 'KuroAnimInstance_AngleConversion::Angle' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_AngleConversion, ReturnValue) == 0x000004, "Member 'KuroAnimInstance_AngleConversion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_AngleConversion;
 
 // Function KuroAnim.KuroAnimInstance.BindBooleanVarToActorTag
 // 0x0010 (0x0010 - 0x0000)
@@ -41,10 +38,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   Tag;                                               // 0x0004(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_BindBooleanVarToActorTag) == 0x000004, "Wrong alignment on KuroAnimInstance_BindBooleanVarToActorTag");
-static_assert(sizeof(KuroAnimInstance_BindBooleanVarToActorTag) == 0x000010, "Wrong size on KuroAnimInstance_BindBooleanVarToActorTag");
-static_assert(offsetof(KuroAnimInstance_BindBooleanVarToActorTag, BooleanVarRef) == 0x000000, "Member 'KuroAnimInstance_BindBooleanVarToActorTag::BooleanVarRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindBooleanVarToActorTag, Tag) == 0x000004, "Member 'KuroAnimInstance_BindBooleanVarToActorTag::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_BindBooleanVarToActorTag;
 
 // Function KuroAnim.KuroAnimInstance.BindBooleanVarToTag
 // 0x0010 (0x0010 - 0x0000)
@@ -55,10 +49,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTag                           Tag;                                               // 0x0004(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_BindBooleanVarToTag) == 0x000004, "Wrong alignment on KuroAnimInstance_BindBooleanVarToTag");
-static_assert(sizeof(KuroAnimInstance_BindBooleanVarToTag) == 0x000010, "Wrong size on KuroAnimInstance_BindBooleanVarToTag");
-static_assert(offsetof(KuroAnimInstance_BindBooleanVarToTag, BooleanVarRef) == 0x000000, "Member 'KuroAnimInstance_BindBooleanVarToTag::BooleanVarRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindBooleanVarToTag, Tag) == 0x000004, "Member 'KuroAnimInstance_BindBooleanVarToTag::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_BindBooleanVarToTag;
 
 // Function KuroAnim.KuroAnimInstance.BindComponentVarToAnimInstance
 // 0x0028 (0x0028 - 0x0000)
@@ -69,11 +60,7 @@ public:
 	class FString                                 ComponentVarName;                                  // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InstanceVarName;                                   // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_BindComponentVarToAnimInstance) == 0x000008, "Wrong alignment on KuroAnimInstance_BindComponentVarToAnimInstance");
-static_assert(sizeof(KuroAnimInstance_BindComponentVarToAnimInstance) == 0x000028, "Wrong size on KuroAnimInstance_BindComponentVarToAnimInstance");
-static_assert(offsetof(KuroAnimInstance_BindComponentVarToAnimInstance, Component) == 0x000000, "Member 'KuroAnimInstance_BindComponentVarToAnimInstance::Component' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindComponentVarToAnimInstance, ComponentVarName) == 0x000008, "Member 'KuroAnimInstance_BindComponentVarToAnimInstance::ComponentVarName' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindComponentVarToAnimInstance, InstanceVarName) == 0x000018, "Member 'KuroAnimInstance_BindComponentVarToAnimInstance::InstanceVarName' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_BindComponentVarToAnimInstance;
 
 // Function KuroAnim.KuroAnimInstance.BindEnumToRoleAnimInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -82,9 +69,7 @@ struct KuroAnimInstance_BindEnumToRoleAnimInstance final
 public:
 	class UObject*                                Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_BindEnumToRoleAnimInstance) == 0x000008, "Wrong alignment on KuroAnimInstance_BindEnumToRoleAnimInstance");
-static_assert(sizeof(KuroAnimInstance_BindEnumToRoleAnimInstance) == 0x000008, "Wrong size on KuroAnimInstance_BindEnumToRoleAnimInstance");
-static_assert(offsetof(KuroAnimInstance_BindEnumToRoleAnimInstance, Component) == 0x000000, "Member 'KuroAnimInstance_BindEnumToRoleAnimInstance::Component' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_BindEnumToRoleAnimInstance;
 
 // Function KuroAnim.KuroAnimInstance.BindVarToCharacter
 // 0x0040 (0x0040 - 0x0000)
@@ -99,14 +84,7 @@ public:
 	bool                                          bMoveBlockRef;                                     // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_BindVarToCharacter) == 0x000004, "Wrong alignment on KuroAnimInstance_BindVarToCharacter");
-static_assert(sizeof(KuroAnimInstance_BindVarToCharacter) == 0x000040, "Wrong size on KuroAnimInstance_BindVarToCharacter");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, VelocityRef) == 0x000000, "Member 'KuroAnimInstance_BindVarToCharacter::VelocityRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, ActorForwardVectorRef) == 0x00000C, "Member 'KuroAnimInstance_BindVarToCharacter::ActorForwardVectorRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, ActorRotationRef) == 0x000018, "Member 'KuroAnimInstance_BindVarToCharacter::ActorRotationRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, ControlRotationRef) == 0x000024, "Member 'KuroAnimInstance_BindVarToCharacter::ControlRotationRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, CurrentAccelerationRef) == 0x000030, "Member 'KuroAnimInstance_BindVarToCharacter::CurrentAccelerationRef' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_BindVarToCharacter, bMoveBlockRef) == 0x00003C, "Member 'KuroAnimInstance_BindVarToCharacter::bMoveBlockRef' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_BindVarToCharacter;
 
 // Function KuroAnim.KuroAnimInstance.CalculateAimMixed
 // 0x0028 (0x0028 - 0x0000)
@@ -118,12 +96,7 @@ public:
 	class ACharacter*                             Character;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_CalculateAimMixed) == 0x000008, "Wrong alignment on KuroAnimInstance_CalculateAimMixed");
-static_assert(sizeof(KuroAnimInstance_CalculateAimMixed) == 0x000028, "Wrong size on KuroAnimInstance_CalculateAimMixed");
-static_assert(offsetof(KuroAnimInstance_CalculateAimMixed, Speed) == 0x000000, "Member 'KuroAnimInstance_CalculateAimMixed::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateAimMixed, RoleRotator) == 0x00000C, "Member 'KuroAnimInstance_CalculateAimMixed::RoleRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateAimMixed, Character) == 0x000018, "Member 'KuroAnimInstance_CalculateAimMixed::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateAimMixed, ReturnValue) == 0x000020, "Member 'KuroAnimInstance_CalculateAimMixed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateAimMixed;
 
 // Function KuroAnim.KuroAnimInstance.CalculateRelativeAcceleration
 // 0x0040 (0x0040 - 0x0000)
@@ -138,13 +111,7 @@ public:
 	struct FVector                                ReturnValue;                                       // 0x0030(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_CalculateRelativeAcceleration) == 0x000008, "Wrong alignment on KuroAnimInstance_CalculateRelativeAcceleration");
-static_assert(sizeof(KuroAnimInstance_CalculateRelativeAcceleration) == 0x000040, "Wrong size on KuroAnimInstance_CalculateRelativeAcceleration");
-static_assert(offsetof(KuroAnimInstance_CalculateRelativeAcceleration, Speed) == 0x000000, "Member 'KuroAnimInstance_CalculateRelativeAcceleration::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateRelativeAcceleration, Acceleration) == 0x00000C, "Member 'KuroAnimInstance_CalculateRelativeAcceleration::Acceleration' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateRelativeAcceleration, RoleRotator) == 0x000018, "Member 'KuroAnimInstance_CalculateRelativeAcceleration::RoleRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateRelativeAcceleration, Character) == 0x000028, "Member 'KuroAnimInstance_CalculateRelativeAcceleration::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateRelativeAcceleration, ReturnValue) == 0x000030, "Member 'KuroAnimInstance_CalculateRelativeAcceleration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateRelativeAcceleration;
 
 // Function KuroAnim.KuroAnimInstance.CalculateSpeedMixed
 // 0x0058 (0x0058 - 0x0000)
@@ -163,17 +130,7 @@ public:
 	struct FVeloctiyBlend                         VelocityBlend;                                     // 0x0044(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_CalculateSpeedMixed) == 0x000008, "Wrong alignment on KuroAnimInstance_CalculateSpeedMixed");
-static_assert(sizeof(KuroAnimInstance_CalculateSpeedMixed) == 0x000058, "Wrong size on KuroAnimInstance_CalculateSpeedMixed");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, RoleRotator) == 0x000000, "Member 'KuroAnimInstance_CalculateSpeedMixed::RoleRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, AdditiveRotator) == 0x00000C, "Member 'KuroAnimInstance_CalculateSpeedMixed::AdditiveRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, Speed) == 0x000018, "Member 'KuroAnimInstance_CalculateSpeedMixed::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, Character) == 0x000028, "Member 'KuroAnimInstance_CalculateSpeedMixed::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, Curve) == 0x000030, "Member 'KuroAnimInstance_CalculateSpeedMixed::Curve' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, DeltaTime) == 0x000038, "Member 'KuroAnimInstance_CalculateSpeedMixed::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, CachedPercentFB) == 0x00003C, "Member 'KuroAnimInstance_CalculateSpeedMixed::CachedPercentFB' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, CachedPercentLR) == 0x000040, "Member 'KuroAnimInstance_CalculateSpeedMixed::CachedPercentLR' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateSpeedMixed, VelocityBlend) == 0x000044, "Member 'KuroAnimInstance_CalculateSpeedMixed::VelocityBlend' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateSpeedMixed;
 
 // Function KuroAnim.KuroAnimInstance.CalculateStandRate
 // 0x0028 (0x0028 - 0x0000)
@@ -190,38 +147,23 @@ public:
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_CalculateStandRate) == 0x000008, "Wrong alignment on KuroAnimInstance_CalculateStandRate");
-static_assert(sizeof(KuroAnimInstance_CalculateStandRate) == 0x000028, "Wrong size on KuroAnimInstance_CalculateStandRate");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, AngleToStepFrequency) == 0x000000, "Member 'KuroAnimInstance_CalculateStandRate::AngleToStepFrequency' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, Slop) == 0x000008, "Member 'KuroAnimInstance_CalculateStandRate::Slop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, Speed) == 0x00000C, "Member 'KuroAnimInstance_CalculateStandRate::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, AnimWalkSpeed) == 0x000010, "Member 'KuroAnimInstance_CalculateStandRate::AnimWalkSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, AnimRunSpeed) == 0x000014, "Member 'KuroAnimInstance_CalculateStandRate::AnimRunSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, SprintSpeed) == 0x000018, "Member 'KuroAnimInstance_CalculateStandRate::SprintSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, StepLengthMix) == 0x00001C, "Member 'KuroAnimInstance_CalculateStandRate::StepLengthMix' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStandRate, ReturnValue) == 0x000020, "Member 'KuroAnimInstance_CalculateStandRate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateStandRate;
 
 // Function KuroAnim.KuroAnimInstance.CalculateStepLengthMixed
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct KuroAnimInstance_CalculateStepLengthMixed final
 {
 public:
-	class UCurveFloat*                            AngleToStepLength;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            WalkCurve;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            RunCurve;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Speed;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Slop;                                              // 0x001C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             Character;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            AngleToStepLength;                                 // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            WalkCurve;                                         // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            RunCurve;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x0020(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Slop;                                              // 0x0024(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_CalculateStepLengthMixed) == 0x000008, "Wrong alignment on KuroAnimInstance_CalculateStepLengthMixed");
-static_assert(sizeof(KuroAnimInstance_CalculateStepLengthMixed) == 0x000028, "Wrong size on KuroAnimInstance_CalculateStepLengthMixed");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, AngleToStepLength) == 0x000000, "Member 'KuroAnimInstance_CalculateStepLengthMixed::AngleToStepLength' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, WalkCurve) == 0x000008, "Member 'KuroAnimInstance_CalculateStepLengthMixed::WalkCurve' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, RunCurve) == 0x000010, "Member 'KuroAnimInstance_CalculateStepLengthMixed::RunCurve' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, Speed) == 0x000018, "Member 'KuroAnimInstance_CalculateStepLengthMixed::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, Slop) == 0x00001C, "Member 'KuroAnimInstance_CalculateStepLengthMixed::Slop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateStepLengthMixed, ReturnValue) == 0x000020, "Member 'KuroAnimInstance_CalculateStepLengthMixed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateStepLengthMixed;
 
 // Function KuroAnim.KuroAnimInstance.CalculateWalkRunMixed
 // 0x0008 (0x0008 - 0x0000)
@@ -231,10 +173,7 @@ public:
 	int32                                         MoveState;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_CalculateWalkRunMixed) == 0x000004, "Wrong alignment on KuroAnimInstance_CalculateWalkRunMixed");
-static_assert(sizeof(KuroAnimInstance_CalculateWalkRunMixed) == 0x000008, "Wrong size on KuroAnimInstance_CalculateWalkRunMixed");
-static_assert(offsetof(KuroAnimInstance_CalculateWalkRunMixed, MoveState) == 0x000000, "Member 'KuroAnimInstance_CalculateWalkRunMixed::MoveState' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalculateWalkRunMixed, ReturnValue) == 0x000004, "Member 'KuroAnimInstance_CalculateWalkRunMixed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalculateWalkRunMixed;
 
 // Function KuroAnim.KuroAnimInstance.CalucateClimbOffset
 // 0x0090 (0x0090 - 0x0000)
@@ -259,24 +198,7 @@ public:
 	bool                                          bSuccess;                                          // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_CalucateClimbOffset) == 0x000008, "Wrong alignment on KuroAnimInstance_CalucateClimbOffset");
-static_assert(sizeof(KuroAnimInstance_CalucateClimbOffset) == 0x000090, "Wrong size on KuroAnimInstance_CalucateClimbOffset");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, Character) == 0x000000, "Member 'KuroAnimInstance_CalucateClimbOffset::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, IKDirection) == 0x000008, "Member 'KuroAnimInstance_CalucateClimbOffset::IKDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, OffsetRelativeLocation) == 0x000014, "Member 'KuroAnimInstance_CalucateClimbOffset::OffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, BoneLocation) == 0x000020, "Member 'KuroAnimInstance_CalucateClimbOffset::BoneLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, OffsetCorrection) == 0x00002C, "Member 'KuroAnimInstance_CalucateClimbOffset::OffsetCorrection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, TraceRadius) == 0x000030, "Member 'KuroAnimInstance_CalucateClimbOffset::TraceRadius' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, MeshWorldLocation) == 0x000034, "Member 'KuroAnimInstance_CalucateClimbOffset::MeshWorldLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, QuatInverse) == 0x000040, "Member 'KuroAnimInstance_CalucateClimbOffset::QuatInverse' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, CachedLocation) == 0x00004C, "Member 'KuroAnimInstance_CalucateClimbOffset::CachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, CachedNormal) == 0x000058, "Member 'KuroAnimInstance_CalucateClimbOffset::CachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, IKCurveValue) == 0x000064, "Member 'KuroAnimInstance_CalucateClimbOffset::IKCurveValue' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, ClimbRadius) == 0x000068, "Member 'KuroAnimInstance_CalucateClimbOffset::ClimbRadius' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, PrevFrameAlpha) == 0x00006C, "Member 'KuroAnimInstance_CalucateClimbOffset::PrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, OutOffset) == 0x000070, "Member 'KuroAnimInstance_CalucateClimbOffset::OutOffset' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, OutNormal) == 0x00007C, "Member 'KuroAnimInstance_CalucateClimbOffset::OutNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_CalucateClimbOffset, bSuccess) == 0x000088, "Member 'KuroAnimInstance_CalucateClimbOffset::bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_CalucateClimbOffset;
 
 // Function KuroAnim.KuroAnimInstance.ClimbIKProcess
 // 0x0150 (0x0150 - 0x0000)
@@ -320,41 +242,7 @@ public:
 	float                                         RHandPrevFrameAlpha;                               // 0x0148(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_ClimbIKProcess) == 0x000008, "Wrong alignment on KuroAnimInstance_ClimbIKProcess");
-static_assert(sizeof(KuroAnimInstance_ClimbIKProcess) == 0x000150, "Wrong size on KuroAnimInstance_ClimbIKProcess");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_ClimbIKProcess::AnimInstance' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, MeshWorldLocation) == 0x000008, "Member 'KuroAnimInstance_ClimbIKProcess::MeshWorldLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, QuatInverse) == 0x000014, "Member 'KuroAnimInstance_ClimbIKProcess::QuatInverse' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, IsClimbExitState) == 0x000020, "Member 'KuroAnimInstance_ClimbIKProcess::IsClimbExitState' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, OverallOffsetLocation) == 0x000024, "Member 'KuroAnimInstance_ClimbIKProcess::OverallOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, ClimbIK) == 0x000030, "Member 'KuroAnimInstance_ClimbIKProcess::ClimbIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, Character) == 0x000038, "Member 'KuroAnimInstance_ClimbIKProcess::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, Mesh) == 0x000040, "Member 'KuroAnimInstance_ClimbIKProcess::Mesh' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, ClimbRadius) == 0x000048, "Member 'KuroAnimInstance_ClimbIKProcess::ClimbRadius' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootOffsetRelativeLocation) == 0x00004C, "Member 'KuroAnimInstance_ClimbIKProcess::LFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootCachedLocation) == 0x000058, "Member 'KuroAnimInstance_ClimbIKProcess::LFootCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootCachedNormal) == 0x000064, "Member 'KuroAnimInstance_ClimbIKProcess::LFootCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootOffsetLocation) == 0x000070, "Member 'KuroAnimInstance_ClimbIKProcess::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootNormalDirection) == 0x00007C, "Member 'KuroAnimInstance_ClimbIKProcess::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LFootPrevFrameAlpha) == 0x000088, "Member 'KuroAnimInstance_ClimbIKProcess::LFootPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootOffsetRelativeLocation) == 0x00008C, "Member 'KuroAnimInstance_ClimbIKProcess::RFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootCachedLocation) == 0x000098, "Member 'KuroAnimInstance_ClimbIKProcess::RFootCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootCachedNormal) == 0x0000A4, "Member 'KuroAnimInstance_ClimbIKProcess::RFootCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootOffsetLocation) == 0x0000B0, "Member 'KuroAnimInstance_ClimbIKProcess::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootNormalDirection) == 0x0000BC, "Member 'KuroAnimInstance_ClimbIKProcess::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RFootPrevFrameAlpha) == 0x0000C8, "Member 'KuroAnimInstance_ClimbIKProcess::RFootPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandOffsetRelativeLocation) == 0x0000CC, "Member 'KuroAnimInstance_ClimbIKProcess::LHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandCachedLocation) == 0x0000D8, "Member 'KuroAnimInstance_ClimbIKProcess::LHandCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandCachedNormal) == 0x0000E4, "Member 'KuroAnimInstance_ClimbIKProcess::LHandCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandOffsetLocation) == 0x0000F0, "Member 'KuroAnimInstance_ClimbIKProcess::LHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandNormalDirection) == 0x0000FC, "Member 'KuroAnimInstance_ClimbIKProcess::LHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, LHandPrevFrameAlpha) == 0x000108, "Member 'KuroAnimInstance_ClimbIKProcess::LHandPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandOffsetRelativeLocation) == 0x00010C, "Member 'KuroAnimInstance_ClimbIKProcess::RHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandCachedLocation) == 0x000118, "Member 'KuroAnimInstance_ClimbIKProcess::RHandCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandCachedNormal) == 0x000124, "Member 'KuroAnimInstance_ClimbIKProcess::RHandCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandOffsetLocation) == 0x000130, "Member 'KuroAnimInstance_ClimbIKProcess::RHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandNormalDirection) == 0x00013C, "Member 'KuroAnimInstance_ClimbIKProcess::RHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_ClimbIKProcess, RHandPrevFrameAlpha) == 0x000148, "Member 'KuroAnimInstance_ClimbIKProcess::RHandPrevFrameAlpha' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_ClimbIKProcess;
 
 // Function KuroAnim.KuroAnimInstance.GetDebugAnimNodeString
 // 0x0010 (0x0010 - 0x0000)
@@ -363,9 +251,7 @@ struct KuroAnimInstance_GetDebugAnimNodeString final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_GetDebugAnimNodeString) == 0x000008, "Wrong alignment on KuroAnimInstance_GetDebugAnimNodeString");
-static_assert(sizeof(KuroAnimInstance_GetDebugAnimNodeString) == 0x000010, "Wrong size on KuroAnimInstance_GetDebugAnimNodeString");
-static_assert(offsetof(KuroAnimInstance_GetDebugAnimNodeString, ReturnValue) == 0x000000, "Member 'KuroAnimInstance_GetDebugAnimNodeString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_GetDebugAnimNodeString;
 
 // Function KuroAnim.KuroAnimInstance.GroundIKProcess
 // 0x0190 (0x0190 - 0x0000)
@@ -394,25 +280,7 @@ public:
 	bool                                          UseCurveFootLocation;                              // 0x0188(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_GroundIKProcess) == 0x000008, "Wrong alignment on KuroAnimInstance_GroundIKProcess");
-static_assert(sizeof(KuroAnimInstance_GroundIKProcess) == 0x000190, "Wrong size on KuroAnimInstance_GroundIKProcess");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, MeshWorldLocation) == 0x000000, "Member 'KuroAnimInstance_GroundIKProcess::MeshWorldLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, DegMovementSlop) == 0x00000C, "Member 'KuroAnimInstance_GroundIKProcess::DegMovementSlop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, Character) == 0x000010, "Member 'KuroAnimInstance_GroundIKProcess::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, Mesh) == 0x000018, "Member 'KuroAnimInstance_GroundIKProcess::Mesh' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, bUpHill) == 0x000020, "Member 'KuroAnimInstance_GroundIKProcess::bUpHill' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, bDownHill) == 0x000021, "Member 'KuroAnimInstance_GroundIKProcess::bDownHill' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, Speed) == 0x000024, "Member 'KuroAnimInstance_GroundIKProcess::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, HasMoveInput) == 0x000028, "Member 'KuroAnimInstance_GroundIKProcess::HasMoveInput' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, bLFootNeedIK) == 0x000029, "Member 'KuroAnimInstance_GroundIKProcess::bLFootNeedIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, LFootOffsetLocation) == 0x00002C, "Member 'KuroAnimInstance_GroundIKProcess::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, LFootNormalDirection) == 0x000038, "Member 'KuroAnimInstance_GroundIKProcess::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, LFootHitResult) == 0x000044, "Member 'KuroAnimInstance_GroundIKProcess::LFootHitResult' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, bRFootNeedIK) == 0x0000D8, "Member 'KuroAnimInstance_GroundIKProcess::bRFootNeedIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, RFootOffsetLocation) == 0x0000DC, "Member 'KuroAnimInstance_GroundIKProcess::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, RFootNormalDirection) == 0x0000E8, "Member 'KuroAnimInstance_GroundIKProcess::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, RFootHitResult) == 0x0000F4, "Member 'KuroAnimInstance_GroundIKProcess::RFootHitResult' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_GroundIKProcess, UseCurveFootLocation) == 0x000188, "Member 'KuroAnimInstance_GroundIKProcess::UseCurveFootLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_GroundIKProcess;
 
 // Function KuroAnim.KuroAnimInstance.IKInfoLerpProcess
 // 0x00EC (0x00EC - 0x0000)
@@ -441,29 +309,7 @@ public:
 	struct FVector                                RHandOffsetLocation;                               // 0x00D4(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                RHandNormalDirection;                              // 0x00E0(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_IKInfoLerpProcess) == 0x000004, "Wrong alignment on KuroAnimInstance_IKInfoLerpProcess");
-static_assert(sizeof(KuroAnimInstance_IKInfoLerpProcess) == 0x0000EC, "Wrong size on KuroAnimInstance_IKInfoLerpProcess");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, DeltaTime) == 0x000000, "Member 'KuroAnimInstance_IKInfoLerpProcess::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, HipLerpSpeed) == 0x000004, "Member 'KuroAnimInstance_IKInfoLerpProcess::HipLerpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, QuatInverse) == 0x000008, "Member 'KuroAnimInstance_IKInfoLerpProcess::QuatInverse' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, OverallOffsetLocation) == 0x000014, "Member 'KuroAnimInstance_IKInfoLerpProcess::OverallOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, OverallOffsetLocationBeUsed) == 0x000020, "Member 'KuroAnimInstance_IKInfoLerpProcess::OverallOffsetLocationBeUsed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LFootOffsetRelativeLocation) == 0x00002C, "Member 'KuroAnimInstance_IKInfoLerpProcess::LFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LFootNormalRelativeDirection) == 0x000038, "Member 'KuroAnimInstance_IKInfoLerpProcess::LFootNormalRelativeDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LFootOffsetLocation) == 0x000044, "Member 'KuroAnimInstance_IKInfoLerpProcess::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LFootNormalDirection) == 0x000050, "Member 'KuroAnimInstance_IKInfoLerpProcess::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RFootOffsetRelativeLocation) == 0x00005C, "Member 'KuroAnimInstance_IKInfoLerpProcess::RFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RFootNormalRelativeDirection) == 0x000068, "Member 'KuroAnimInstance_IKInfoLerpProcess::RFootNormalRelativeDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RFootOffsetLocation) == 0x000074, "Member 'KuroAnimInstance_IKInfoLerpProcess::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RFootNormalDirection) == 0x000080, "Member 'KuroAnimInstance_IKInfoLerpProcess::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LHandOffsetRelativeLocation) == 0x00008C, "Member 'KuroAnimInstance_IKInfoLerpProcess::LHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LHandNormalRelativeDirection) == 0x000098, "Member 'KuroAnimInstance_IKInfoLerpProcess::LHandNormalRelativeDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LHandOffsetLocation) == 0x0000A4, "Member 'KuroAnimInstance_IKInfoLerpProcess::LHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, LHandNormalDirection) == 0x0000B0, "Member 'KuroAnimInstance_IKInfoLerpProcess::LHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RHandOffsetRelativeLocation) == 0x0000BC, "Member 'KuroAnimInstance_IKInfoLerpProcess::RHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RHandNormalRelativeDirection) == 0x0000C8, "Member 'KuroAnimInstance_IKInfoLerpProcess::RHandNormalRelativeDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RHandOffsetLocation) == 0x0000D4, "Member 'KuroAnimInstance_IKInfoLerpProcess::RHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_IKInfoLerpProcess, RHandNormalDirection) == 0x0000E0, "Member 'KuroAnimInstance_IKInfoLerpProcess::RHandNormalDirection' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_IKInfoLerpProcess;
 
 // Function KuroAnim.KuroAnimInstance.InterpLeanAmountTo
 // 0x0020 (0x0020 - 0x0000)
@@ -476,13 +322,7 @@ public:
 	float                                         InterpSpeed;                                       // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLeanAmount                            ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_InterpLeanAmountTo) == 0x000004, "Wrong alignment on KuroAnimInstance_InterpLeanAmountTo");
-static_assert(sizeof(KuroAnimInstance_InterpLeanAmountTo) == 0x000020, "Wrong size on KuroAnimInstance_InterpLeanAmountTo");
-static_assert(offsetof(KuroAnimInstance_InterpLeanAmountTo, Current) == 0x000000, "Member 'KuroAnimInstance_InterpLeanAmountTo::Current' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_InterpLeanAmountTo, Target) == 0x000008, "Member 'KuroAnimInstance_InterpLeanAmountTo::Target' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_InterpLeanAmountTo, DeltaTime) == 0x000010, "Member 'KuroAnimInstance_InterpLeanAmountTo::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_InterpLeanAmountTo, InterpSpeed) == 0x000014, "Member 'KuroAnimInstance_InterpLeanAmountTo::InterpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_InterpLeanAmountTo, ReturnValue) == 0x000018, "Member 'KuroAnimInstance_InterpLeanAmountTo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_InterpLeanAmountTo;
 
 // Function KuroAnim.KuroAnimInstance.IsContainExtraRibbonAnims
 // 0x0004 (0x0004 - 0x0000)
@@ -491,9 +331,7 @@ struct KuroAnimInstance_IsContainExtraRibbonAnims final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_IsContainExtraRibbonAnims) == 0x000004, "Wrong alignment on KuroAnimInstance_IsContainExtraRibbonAnims");
-static_assert(sizeof(KuroAnimInstance_IsContainExtraRibbonAnims) == 0x000004, "Wrong size on KuroAnimInstance_IsContainExtraRibbonAnims");
-static_assert(offsetof(KuroAnimInstance_IsContainExtraRibbonAnims, ReturnValue) == 0x000000, "Member 'KuroAnimInstance_IsContainExtraRibbonAnims::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_IsContainExtraRibbonAnims;
 
 // Function KuroAnim.KuroAnimInstance.RegisterActor
 // 0x0008 (0x0008 - 0x0000)
@@ -502,9 +340,7 @@ struct KuroAnimInstance_RegisterActor final
 public:
 	class ACharacter*                             Character;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_RegisterActor) == 0x000008, "Wrong alignment on KuroAnimInstance_RegisterActor");
-static_assert(sizeof(KuroAnimInstance_RegisterActor) == 0x000008, "Wrong size on KuroAnimInstance_RegisterActor");
-static_assert(offsetof(KuroAnimInstance_RegisterActor, Character) == 0x000000, "Member 'KuroAnimInstance_RegisterActor::Character' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_RegisterActor;
 
 // Function KuroAnim.KuroAnimInstance.RegisterExtraFollowOwnerAnimInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -513,9 +349,7 @@ struct KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance final
 public:
 	class UAnimInstance*                          AnimInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance) == 0x000008, "Wrong alignment on KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance");
-static_assert(sizeof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance) == 0x000008, "Wrong size on KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance");
-static_assert(offsetof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance::AnimInstance' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance;
 
 // Function KuroAnim.KuroAnimInstance.ResigterExtraRibbenOwnerAnimInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -524,9 +358,7 @@ struct KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance final
 public:
 	class UAnimInstance*                          AnimInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance) == 0x000008, "Wrong alignment on KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance");
-static_assert(sizeof(KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance) == 0x000008, "Wrong size on KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance");
-static_assert(offsetof(KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance::AnimInstance' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance;
 
 // Function KuroAnim.KuroAnimInstance.SetBoneRotateToLocationInfoRunBegin
 // 0x0020 (0x0020 - 0x0000)
@@ -540,14 +372,7 @@ public:
 	float                                         TurnOffset;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LookUpOffset;                                      // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin) == 0x000004, "Wrong alignment on KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin");
-static_assert(sizeof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin) == 0x000020, "Wrong size on KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, TurnAngle) == 0x000000, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::TurnAngle' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, LookUpAngle) == 0x000004, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::LookUpAngle' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, TurnLimit) == 0x000008, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::TurnLimit' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, LookUpLimit) == 0x000010, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::LookUpLimit' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, TurnOffset) == 0x000018, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::TurnOffset' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin, LookUpOffset) == 0x00001C, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin::LookUpOffset' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_SetBoneRotateToLocationInfoRunBegin;
 
 // Function KuroAnim.KuroAnimInstance.SetBoneRotateToLocationInfoRunTick
 // 0x0008 (0x0008 - 0x0000)
@@ -557,10 +382,7 @@ public:
 	float                                         TurnAngle;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LookUpAngle;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_SetBoneRotateToLocationInfoRunTick) == 0x000004, "Wrong alignment on KuroAnimInstance_SetBoneRotateToLocationInfoRunTick");
-static_assert(sizeof(KuroAnimInstance_SetBoneRotateToLocationInfoRunTick) == 0x000008, "Wrong size on KuroAnimInstance_SetBoneRotateToLocationInfoRunTick");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunTick, TurnAngle) == 0x000000, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunTick::TurnAngle' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetBoneRotateToLocationInfoRunTick, LookUpAngle) == 0x000004, "Member 'KuroAnimInstance_SetBoneRotateToLocationInfoRunTick::LookUpAngle' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_SetBoneRotateToLocationInfoRunTick;
 
 // Function KuroAnim.KuroAnimInstance.SetDebugTraceType
 // 0x0002 (0x0002 - 0x0000)
@@ -570,10 +392,7 @@ public:
 	EDrawDebugTrace                               GroundTrace;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EDrawDebugTrace                               ClimbTrace;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_SetDebugTraceType) == 0x000001, "Wrong alignment on KuroAnimInstance_SetDebugTraceType");
-static_assert(sizeof(KuroAnimInstance_SetDebugTraceType) == 0x000002, "Wrong size on KuroAnimInstance_SetDebugTraceType");
-static_assert(offsetof(KuroAnimInstance_SetDebugTraceType, GroundTrace) == 0x000000, "Member 'KuroAnimInstance_SetDebugTraceType::GroundTrace' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetDebugTraceType, ClimbTrace) == 0x000001, "Member 'KuroAnimInstance_SetDebugTraceType::ClimbTrace' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_SetDebugTraceType;
 
 // Function KuroAnim.KuroAnimInstance.SetFootOffset
 // 0x00E0 (0x00E0 - 0x0000)
@@ -593,19 +412,7 @@ public:
 	struct FVector                                NormalDirection;                                   // 0x0040(0x000C)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             OutHitResult;                                      // 0x004C(0x0094)(Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_SetFootOffset) == 0x000008, "Wrong alignment on KuroAnimInstance_SetFootOffset");
-static_assert(sizeof(KuroAnimInstance_SetFootOffset) == 0x0000E0, "Wrong size on KuroAnimInstance_SetFootOffset");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, SkeletionAbsoluteLocation) == 0x000000, "Member 'KuroAnimInstance_SetFootOffset::SkeletionAbsoluteLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, IKDirection) == 0x00000C, "Member 'KuroAnimInstance_SetFootOffset::IKDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, BenchMarkDepth) == 0x000018, "Member 'KuroAnimInstance_SetFootOffset::BenchMarkDepth' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, RotationCorrectedDistance) == 0x00001C, "Member 'KuroAnimInstance_SetFootOffset::RotationCorrectedDistance' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, Character) == 0x000020, "Member 'KuroAnimInstance_SetFootOffset::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, Mesh) == 0x000028, "Member 'KuroAnimInstance_SetFootOffset::Mesh' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, HasMoveInput) == 0x000030, "Member 'KuroAnimInstance_SetFootOffset::HasMoveInput' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, bNeedIK) == 0x000031, "Member 'KuroAnimInstance_SetFootOffset::bNeedIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, OffsetLocation) == 0x000034, "Member 'KuroAnimInstance_SetFootOffset::OffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, NormalDirection) == 0x000040, "Member 'KuroAnimInstance_SetFootOffset::NormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_SetFootOffset, OutHitResult) == 0x00004C, "Member 'KuroAnimInstance_SetFootOffset::OutHitResult' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_SetFootOffset;
 
 // Function KuroAnim.KuroAnimInstance.UpdateABP
 // 0x0004 (0x0004 - 0x0000)
@@ -614,9 +421,7 @@ struct KuroAnimInstance_UpdateABP final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateABP) == 0x000004, "Wrong alignment on KuroAnimInstance_UpdateABP");
-static_assert(sizeof(KuroAnimInstance_UpdateABP) == 0x000004, "Wrong size on KuroAnimInstance_UpdateABP");
-static_assert(offsetof(KuroAnimInstance_UpdateABP, DeltaSeconds) == 0x000000, "Member 'KuroAnimInstance_UpdateABP::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateABP;
 
 // Function KuroAnim.KuroAnimInstance.UpdateAdditiveBlendInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -637,20 +442,7 @@ public:
 	struct FAdditiveBlendAlpha                    ArmR;                                              // 0x0058(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAdditiveBlendAlpha                    Leg;                                               // 0x0064(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateAdditiveBlendInfo) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateAdditiveBlendInfo");
-static_assert(sizeof(KuroAnimInstance_UpdateAdditiveBlendInfo) == 0x000070, "Wrong size on KuroAnimInstance_UpdateAdditiveBlendInfo");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::AnimInstance' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, bUsingAdditiveBlend) == 0x000008, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::bUsingAdditiveBlend' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, bUsingWholeBodyBlend) == 0x000009, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::bUsingWholeBodyBlend' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, AdditiveBlendAlpha) == 0x00000C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::AdditiveBlendAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Pelvis) == 0x000010, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Pelvis' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine) == 0x00001C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine1) == 0x000028, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine1' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine2) == 0x000034, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine2' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Head) == 0x000040, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Head' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmL) == 0x00004C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmL' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmR) == 0x000058, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmR' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Leg) == 0x000064, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Leg' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateAdditiveBlendInfo;
 
 // Function KuroAnim.KuroAnimInstance.UpdateBattleIdle
 // 0x0008 (0x0008 - 0x0000)
@@ -661,10 +453,7 @@ public:
 	bool                                          bBattleIdle;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_UpdateBattleIdle) == 0x000004, "Wrong alignment on KuroAnimInstance_UpdateBattleIdle");
-static_assert(sizeof(KuroAnimInstance_UpdateBattleIdle) == 0x000008, "Wrong size on KuroAnimInstance_UpdateBattleIdle");
-static_assert(offsetof(KuroAnimInstance_UpdateBattleIdle, BattleIdleTime) == 0x000000, "Member 'KuroAnimInstance_UpdateBattleIdle::BattleIdleTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateBattleIdle, bBattleIdle) == 0x000004, "Member 'KuroAnimInstance_UpdateBattleIdle::bBattleIdle' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateBattleIdle;
 
 // Function KuroAnim.KuroAnimInstance.UpdateCameraStateMoveInfo
 // 0x0060 (0x0060 - 0x0000)
@@ -684,19 +473,7 @@ public:
 	struct FRotator                               AimRotator;                                        // 0x0050(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         AimAngle;                                          // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateCameraStateMoveInfo) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateCameraStateMoveInfo");
-static_assert(sizeof(KuroAnimInstance_UpdateCameraStateMoveInfo) == 0x000060, "Wrong size on KuroAnimInstance_UpdateCameraStateMoveInfo");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, Speed) == 0x000000, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, Character) == 0x000010, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, RoleRotator) == 0x000018, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::RoleRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, Acceleration) == 0x000024, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::Acceleration' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, RotatorMixed) == 0x000030, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::RotatorMixed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, DeltaTime) == 0x000034, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, RelativeAcceleration) == 0x000038, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::RelativeAcceleration' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, LeanAmount) == 0x000044, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::LeanAmount' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, GroundLeanAmountLerpSpeed) == 0x00004C, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::GroundLeanAmountLerpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, AimRotator) == 0x000050, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::AimRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateCameraStateMoveInfo, AimAngle) == 0x00005C, "Member 'KuroAnimInstance_UpdateCameraStateMoveInfo::AimAngle' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateCameraStateMoveInfo;
 
 // Function KuroAnim.KuroAnimInstance.UpdateIKinfoInClimbState
 // 0x0158 (0x0158 - 0x0000)
@@ -744,46 +521,7 @@ public:
 	struct FVector                                RHandNormalDirection;                              // 0x0148(0x000C)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RHandPrevFrameAlpha;                               // 0x0154(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateIKinfoInClimbState) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateIKinfoInClimbState");
-static_assert(sizeof(KuroAnimInstance_UpdateIKinfoInClimbState) == 0x000158, "Wrong size on KuroAnimInstance_UpdateIKinfoInClimbState");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::AnimInstance' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, MeshWorldLocation) == 0x000008, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::MeshWorldLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, QuatInverse) == 0x000014, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::QuatInverse' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, OverallOffsetLocation) == 0x000020, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::OverallOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, ClimbIK) == 0x00002C, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::ClimbIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, FastClimbDirection) == 0x000030, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::FastClimbDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, IsFastClimbState) == 0x000034, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::IsFastClimbState' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, Character) == 0x000038, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, Mesh) == 0x000040, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::Mesh' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, HipLerpSpeed) == 0x000048, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::HipLerpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, Speed) == 0x00004C, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, HasMoveInput) == 0x000050, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::HasMoveInput' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, IsClimbExitState) == 0x000051, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::IsClimbExitState' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, ClimbRadius) == 0x000054, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::ClimbRadius' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootOffsetRelativeLocation) == 0x000058, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootCachedLocation) == 0x000064, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootCachedNormal) == 0x000070, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootOffsetLocation) == 0x00007C, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootNormalDirection) == 0x000088, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LFootPrevFrameAlpha) == 0x000094, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LFootPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootOffsetRelativeLocation) == 0x000098, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootCachedLocation) == 0x0000A4, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootCachedNormal) == 0x0000B0, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootOffsetLocation) == 0x0000BC, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootNormalDirection) == 0x0000C8, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RFootPrevFrameAlpha) == 0x0000D4, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RFootPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandOffsetRelativeLocation) == 0x0000D8, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandCachedLocation) == 0x0000E4, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandCachedNormal) == 0x0000F0, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandOffsetLocation) == 0x0000FC, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandNormalDirection) == 0x000108, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, LHandPrevFrameAlpha) == 0x000114, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::LHandPrevFrameAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandOffsetRelativeLocation) == 0x000118, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandOffsetRelativeLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandCachedLocation) == 0x000124, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandCachedLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandCachedNormal) == 0x000130, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandCachedNormal' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandOffsetLocation) == 0x00013C, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandNormalDirection) == 0x000148, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInClimbState, RHandPrevFrameAlpha) == 0x000154, "Member 'KuroAnimInstance_UpdateIKinfoInClimbState::RHandPrevFrameAlpha' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateIKinfoInClimbState;
 
 // Function KuroAnim.KuroAnimInstance.UpdateIKInfoInGroundState
 // 0x01B0 (0x01B0 - 0x0000)
@@ -820,30 +558,7 @@ public:
 	bool                                          UseCurveFootLocation;                              // 0x01AC(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAnimInstance_UpdateIKInfoInGroundState) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateIKInfoInGroundState");
-static_assert(sizeof(KuroAnimInstance_UpdateIKInfoInGroundState) == 0x0001B0, "Wrong size on KuroAnimInstance_UpdateIKInfoInGroundState");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, HasWallForward) == 0x000000, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::HasWallForward' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, MeshWorldLocation) == 0x000004, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::MeshWorldLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, IsMoving) == 0x000010, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::IsMoving' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, DegMovementSlop) == 0x000014, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::DegMovementSlop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, bUpHill) == 0x000018, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::bUpHill' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, bDownHill) == 0x000019, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::bDownHill' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, Character) == 0x000020, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, Mesh) == 0x000028, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::Mesh' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, Speed) == 0x000030, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, HasMoveInput) == 0x000034, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::HasMoveInput' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, RunWalkMix) == 0x000038, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::RunWalkMix' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, OverallOffsetLocation) == 0x00003C, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::OverallOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, HipLerpSpeed) == 0x000048, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::HipLerpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, bLFootNeedIK) == 0x00004C, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::bLFootNeedIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, LFootOffsetLocation) == 0x000050, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, LFootNormalDirection) == 0x00005C, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, LFootHitResult) == 0x000068, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::LFootHitResult' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, bRFootNeedIK) == 0x0000FC, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::bRFootNeedIK' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, RFootOffsetLocation) == 0x000100, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, RFootNormalDirection) == 0x00010C, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, RFootHitResult) == 0x000118, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::RFootHitResult' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoInGroundState, UseCurveFootLocation) == 0x0001AC, "Member 'KuroAnimInstance_UpdateIKInfoInGroundState::UseCurveFootLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateIKInfoInGroundState;
 
 // Function KuroAnim.KuroAnimInstance.UpdateIKinfoInOtherState
 // 0x0060 (0x0060 - 0x0000)
@@ -860,17 +575,7 @@ public:
 	struct FVector                                RHandNormalDirection;                              // 0x0050(0x000C)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HipLerpSpeed;                                      // 0x005C(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateIKinfoInOtherState) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateIKinfoInOtherState");
-static_assert(sizeof(KuroAnimInstance_UpdateIKinfoInOtherState) == 0x000060, "Wrong size on KuroAnimInstance_UpdateIKinfoInOtherState");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, Character) == 0x000000, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, OverallOffsetLocation) == 0x000008, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::OverallOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, LFootOffsetLocation) == 0x000014, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::LFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, LFootNormalDirection) == 0x000020, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::LFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, RFootOffsetLocation) == 0x00002C, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::RFootOffsetLocation' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, RFootNormalDirection) == 0x000038, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::RFootNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, LHandNormalDirection) == 0x000044, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::LHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, RHandNormalDirection) == 0x000050, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::RHandNormalDirection' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKinfoInOtherState, HipLerpSpeed) == 0x00005C, "Member 'KuroAnimInstance_UpdateIKinfoInOtherState::HipLerpSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateIKinfoInOtherState;
 
 // Function KuroAnim.KuroAnimInstance.UpdateIKInfoLocalValue
 // 0x0020 (0x0020 - 0x0000)
@@ -881,47 +586,30 @@ public:
 	struct FRotator                               MeshQuatInverse;                                   // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                MeshWorldLocation;                                 // 0x0014(0x000C)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateIKInfoLocalValue) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateIKInfoLocalValue");
-static_assert(sizeof(KuroAnimInstance_UpdateIKInfoLocalValue) == 0x000020, "Wrong size on KuroAnimInstance_UpdateIKInfoLocalValue");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoLocalValue, Character) == 0x000000, "Member 'KuroAnimInstance_UpdateIKInfoLocalValue::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoLocalValue, MeshQuatInverse) == 0x000008, "Member 'KuroAnimInstance_UpdateIKInfoLocalValue::MeshQuatInverse' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateIKInfoLocalValue, MeshWorldLocation) == 0x000014, "Member 'KuroAnimInstance_UpdateIKInfoLocalValue::MeshWorldLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateIKInfoLocalValue;
 
 // Function KuroAnim.KuroAnimInstance.UpdateMoveInfoMixed
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct KuroAnimInstance_UpdateMoveInfoMixed final
 {
 public:
-	float                                         WalkRunMixed;                                      // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaTime;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Slop;                                              // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            AngleToStepFrequency;                              // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            AngleToStepLength;                                 // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            WalkCurve;                                         // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            RunCurve;                                          // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpeedSize;                                         // 0x0030(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StepLengthMixed;                                   // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimWalkSpeed;                                     // 0x0038(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimRunSpeed;                                      // 0x003C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SprintSpeed;                                       // 0x0040(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StandRate;                                         // 0x0044(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ACharacter*                             Character;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WalkRunMixed;                                      // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x000C(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Slop;                                              // 0x0010(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            AngleToStepFrequency;                              // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            AngleToStepLength;                                 // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            WalkCurve;                                         // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            RunCurve;                                          // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpeedSize;                                         // 0x0038(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepLengthMixed;                                   // 0x003C(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimWalkSpeed;                                     // 0x0040(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimRunSpeed;                                      // 0x0044(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SprintSpeed;                                       // 0x0048(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StandRate;                                         // 0x004C(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateMoveInfoMixed) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateMoveInfoMixed");
-static_assert(sizeof(KuroAnimInstance_UpdateMoveInfoMixed) == 0x000048, "Wrong size on KuroAnimInstance_UpdateMoveInfoMixed");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, WalkRunMixed) == 0x000000, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::WalkRunMixed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, DeltaTime) == 0x000004, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, Slop) == 0x000008, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::Slop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, AngleToStepFrequency) == 0x000010, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::AngleToStepFrequency' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, AngleToStepLength) == 0x000018, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::AngleToStepLength' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, WalkCurve) == 0x000020, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::WalkCurve' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, RunCurve) == 0x000028, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::RunCurve' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, SpeedSize) == 0x000030, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::SpeedSize' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, StepLengthMixed) == 0x000034, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::StepLengthMixed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, AnimWalkSpeed) == 0x000038, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::AnimWalkSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, AnimRunSpeed) == 0x00003C, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::AnimRunSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, SprintSpeed) == 0x000040, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::SprintSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateMoveInfoMixed, StandRate) == 0x000044, "Member 'KuroAnimInstance_UpdateMoveInfoMixed::StandRate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateMoveInfoMixed;
 
 // Function KuroAnim.KuroAnimInstance.UpdateRoleInfo
 // 0x000F (0x000F - 0x0000)
@@ -944,23 +632,7 @@ public:
 	bool                                          StateAim;                                          // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          StateFace;                                         // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateRoleInfo) == 0x000001, "Wrong alignment on KuroAnimInstance_UpdateRoleInfo");
-static_assert(sizeof(KuroAnimInstance_UpdateRoleInfo) == 0x00000F, "Wrong size on KuroAnimInstance_UpdateRoleInfo");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateGround) == 0x000000, "Member 'KuroAnimInstance_UpdateRoleInfo::StateGround' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateGroundSprint) == 0x000001, "Member 'KuroAnimInstance_UpdateRoleInfo::StateGroundSprint' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateGroundWalk) == 0x000002, "Member 'KuroAnimInstance_UpdateRoleInfo::StateGroundWalk' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateGroundRun) == 0x000003, "Member 'KuroAnimInstance_UpdateRoleInfo::StateGroundRun' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateRunStop) == 0x000004, "Member 'KuroAnimInstance_UpdateRoleInfo::StateRunStop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateSprintStop) == 0x000005, "Member 'KuroAnimInstance_UpdateRoleInfo::StateSprintStop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateWalkStop) == 0x000006, "Member 'KuroAnimInstance_UpdateRoleInfo::StateWalkStop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, RunStop) == 0x000007, "Member 'KuroAnimInstance_UpdateRoleInfo::RunStop' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateClimb) == 0x000008, "Member 'KuroAnimInstance_UpdateRoleInfo::StateClimb' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateAir) == 0x000009, "Member 'KuroAnimInstance_UpdateRoleInfo::StateAir' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateAirGlide) == 0x00000A, "Member 'KuroAnimInstance_UpdateRoleInfo::StateAirGlide' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateWater) == 0x00000B, "Member 'KuroAnimInstance_UpdateRoleInfo::StateWater' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateView) == 0x00000C, "Member 'KuroAnimInstance_UpdateRoleInfo::StateView' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateAim) == 0x00000D, "Member 'KuroAnimInstance_UpdateRoleInfo::StateAim' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateRoleInfo, StateFace) == 0x00000E, "Member 'KuroAnimInstance_UpdateRoleInfo::StateFace' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateRoleInfo;
 
 // Function KuroAnim.KuroAnimInstance.UpdateSkillMoveInfo
 // 0x0090 (0x0090 - 0x0000)
@@ -985,23 +657,68 @@ public:
 	class AActor*                                 SkillTarget;                                       // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVectorDouble                          CachedActorLocation;                               // 0x0078(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimInstance_UpdateSkillMoveInfo) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateSkillMoveInfo");
-static_assert(sizeof(KuroAnimInstance_UpdateSkillMoveInfo) == 0x000090, "Wrong size on KuroAnimInstance_UpdateSkillMoveInfo");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, DeltaTime) == 0x000000, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, RoleRotator) == 0x000004, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::RoleRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, Speed) == 0x000010, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::Speed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, Character) == 0x000020, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::Character' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, RotatorMixed) == 0x000028, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::RotatorMixed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, Acceleration) == 0x00002C, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::Acceleration' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, RelativeAcceleration) == 0x000038, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::RelativeAcceleration' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, LeanAmount) == 0x000044, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::LeanAmount' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, GroundLeanAmountLerpSpeed) == 0x00004C, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::GroundLeanAmountLerpSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, AimRotator) == 0x000050, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::AimRotator' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, AimAngle) == 0x00005C, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::AimAngle' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, AimMoveMixed) == 0x000060, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::AimMoveMixed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, RotatorSpeed) == 0x000068, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::RotatorSpeed' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, SkillTarget) == 0x000070, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::SkillTarget' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateSkillMoveInfo, CachedActorLocation) == 0x000078, "Member 'KuroAnimInstance_UpdateSkillMoveInfo::CachedActorLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimInstance_UpdateSkillMoveInfo;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterEntity
+// 0x0010 (0x0010 - 0x0000)
+struct KuroAnimJsSubsystemProxy_RegisterEntity final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntityId;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_RegisterEntity;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateAnimInfoCsFunction
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimJsSubsystemProxy_RegisterUpdateAnimInfoCsFunction final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 EntityId)>               UpdateAnimInfoCsFunction;                          // 0x0008(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_RegisterUpdateAnimInfoCsFunction;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateMonsterInfoCsFunction
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimJsSubsystemProxy_RegisterUpdateMonsterInfoCsFunction final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 EntityId)>               UpdateAnimInfoCsFunction;                          // 0x0008(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_RegisterUpdateMonsterInfoCsFunction;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.RegisterUpdateNpcInfoCsFunction
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimJsSubsystemProxy_RegisterUpdateNpcInfoCsFunction final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 EntityId)>               UpdateAnimInfoCsFunction;                          // 0x0008(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_RegisterUpdateNpcInfoCsFunction;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.UnregisterEntity
+// 0x0010 (0x0010 - 0x0000)
+struct KuroAnimJsSubsystemProxy_UnregisterEntity final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntityId;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_UnregisterEntity;
+
+// Function KuroAnim.KuroAnimJsSubsystemProxy.UnregisterUpdateAnimInfoFunction
+// 0x0008 (0x0008 - 0x0000)
+struct KuroAnimJsSubsystemProxy_UnregisterUpdateAnimInfoFunction final
+{
+public:
+	const class UGameInstance*                    World;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroAnimJsSubsystemProxy_UnregisterUpdateAnimInfoFunction;
 
 // Function KuroAnim.KuroAnimLibrary.EndAnimNotifyStates
 // 0x0008 (0x0008 - 0x0000)
@@ -1010,9 +727,7 @@ struct KuroAnimLibrary_EndAnimNotifyStates final
 public:
 	class UAnimInstance*                          AnimInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimLibrary_EndAnimNotifyStates) == 0x000008, "Wrong alignment on KuroAnimLibrary_EndAnimNotifyStates");
-static_assert(sizeof(KuroAnimLibrary_EndAnimNotifyStates) == 0x000008, "Wrong size on KuroAnimLibrary_EndAnimNotifyStates");
-static_assert(offsetof(KuroAnimLibrary_EndAnimNotifyStates, AnimInstance) == 0x000000, "Member 'KuroAnimLibrary_EndAnimNotifyStates::AnimInstance' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimLibrary_EndAnimNotifyStates;
 
 // Function KuroAnim.KuroAnimLibrary.GetDefaultBoneComponentPoseByName
 // 0x0050 (0x0050 - 0x0000)
@@ -1024,11 +739,7 @@ public:
 	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0020(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName) == 0x000010, "Wrong alignment on KuroAnimLibrary_GetDefaultBoneComponentPoseByName");
-static_assert(sizeof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName) == 0x000050, "Wrong size on KuroAnimLibrary_GetDefaultBoneComponentPoseByName");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, SkelMeshComp) == 0x000000, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::SkelMeshComp' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, BoneName) == 0x000008, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::BoneName' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, ReturnValue) == 0x000020, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimLibrary_GetDefaultBoneComponentPoseByName;
 
 // Function KuroAnim.KuroAnimLibrary.GetDefaultBoneLocalPoseByName
 // 0x0050 (0x0050 - 0x0000)
@@ -1040,11 +751,7 @@ public:
 	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0020(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName) == 0x000010, "Wrong alignment on KuroAnimLibrary_GetDefaultBoneLocalPoseByName");
-static_assert(sizeof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName) == 0x000050, "Wrong size on KuroAnimLibrary_GetDefaultBoneLocalPoseByName");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, SkelMeshComp) == 0x000000, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::SkelMeshComp' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, BoneName) == 0x000008, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::BoneName' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, ReturnValue) == 0x000020, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimLibrary_GetDefaultBoneLocalPoseByName;
 
 // Function KuroAnim.KuroAnimLibrary.GetGameplayAbpPath
 // 0x0028 (0x0028 - 0x0000)
@@ -1055,11 +762,7 @@ public:
 	class FString                                 GameplayTypeName;                                  // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimLibrary_GetGameplayAbpPath) == 0x000008, "Wrong alignment on KuroAnimLibrary_GetGameplayAbpPath");
-static_assert(sizeof(KuroAnimLibrary_GetGameplayAbpPath) == 0x000028, "Wrong size on KuroAnimLibrary_GetGameplayAbpPath");
-static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, BaseAbp) == 0x000000, "Member 'KuroAnimLibrary_GetGameplayAbpPath::BaseAbp' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, GameplayTypeName) == 0x000008, "Member 'KuroAnimLibrary_GetGameplayAbpPath::GameplayTypeName' has a wrong offset!");
-static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, ReturnValue) == 0x000018, "Member 'KuroAnimLibrary_GetGameplayAbpPath::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimLibrary_GetGameplayAbpPath;
 
 // Function KuroAnim.KuroAnimMathLibrary.FindBetween
 // 0x0030 (0x0030 - 0x0000)
@@ -1071,11 +774,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_FindBetween) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_FindBetween");
-static_assert(sizeof(KuroAnimMathLibrary_FindBetween) == 0x000030, "Wrong size on KuroAnimMathLibrary_FindBetween");
-static_assert(offsetof(KuroAnimMathLibrary_FindBetween, V1) == 0x000000, "Member 'KuroAnimMathLibrary_FindBetween::V1' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_FindBetween, V2) == 0x00000C, "Member 'KuroAnimMathLibrary_FindBetween::V2' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_FindBetween, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_FindBetween::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_FindBetween;
 
 // Function KuroAnim.KuroAnimMathLibrary.LookQuat_ForwardFirst
 // 0x0030 (0x0030 - 0x0000)
@@ -1087,11 +786,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_LookQuat_ForwardFirst) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_LookQuat_ForwardFirst");
-static_assert(sizeof(KuroAnimMathLibrary_LookQuat_ForwardFirst) == 0x000030, "Wrong size on KuroAnimMathLibrary_LookQuat_ForwardFirst");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::Forward' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::Up' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_LookQuat_ForwardFirst;
 
 // Function KuroAnim.KuroAnimMathLibrary.LookQuat_UpFirst
 // 0x0030 (0x0030 - 0x0000)
@@ -1103,11 +798,7 @@ public:
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_LookQuat_UpFirst) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_LookQuat_UpFirst");
-static_assert(sizeof(KuroAnimMathLibrary_LookQuat_UpFirst) == 0x000030, "Wrong size on KuroAnimMathLibrary_LookQuat_UpFirst");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::Forward' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::Up' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_LookQuat_UpFirst;
 
 // Function KuroAnim.KuroAnimMathLibrary.LookRotation_ForwardFirst
 // 0x0024 (0x0024 - 0x0000)
@@ -1118,11 +809,7 @@ public:
 	struct FVector                                Up;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_LookRotation_ForwardFirst) == 0x000004, "Wrong alignment on KuroAnimMathLibrary_LookRotation_ForwardFirst");
-static_assert(sizeof(KuroAnimMathLibrary_LookRotation_ForwardFirst) == 0x000024, "Wrong size on KuroAnimMathLibrary_LookRotation_ForwardFirst");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_ForwardFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookRotation_ForwardFirst::Forward' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_ForwardFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookRotation_ForwardFirst::Up' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_ForwardFirst, ReturnValue) == 0x000018, "Member 'KuroAnimMathLibrary_LookRotation_ForwardFirst::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_LookRotation_ForwardFirst;
 
 // Function KuroAnim.KuroAnimMathLibrary.LookRotation_UpFirst
 // 0x0024 (0x0024 - 0x0000)
@@ -1133,11 +820,7 @@ public:
 	struct FVector                                Up;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_LookRotation_UpFirst) == 0x000004, "Wrong alignment on KuroAnimMathLibrary_LookRotation_UpFirst");
-static_assert(sizeof(KuroAnimMathLibrary_LookRotation_UpFirst) == 0x000024, "Wrong size on KuroAnimMathLibrary_LookRotation_UpFirst");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_UpFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookRotation_UpFirst::Forward' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_UpFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookRotation_UpFirst::Up' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_LookRotation_UpFirst, ReturnValue) == 0x000018, "Member 'KuroAnimMathLibrary_LookRotation_UpFirst::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_LookRotation_UpFirst;
 
 // Function KuroAnim.KuroAnimMathLibrary.Quat_FindBetween
 // 0x0024 (0x0024 - 0x0000)
@@ -1148,11 +831,7 @@ public:
 	struct FVector                                V2;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_Quat_FindBetween) == 0x000004, "Wrong alignment on KuroAnimMathLibrary_Quat_FindBetween");
-static_assert(sizeof(KuroAnimMathLibrary_Quat_FindBetween) == 0x000024, "Wrong size on KuroAnimMathLibrary_Quat_FindBetween");
-static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, V1) == 0x000000, "Member 'KuroAnimMathLibrary_Quat_FindBetween::V1' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, V2) == 0x00000C, "Member 'KuroAnimMathLibrary_Quat_FindBetween::V2' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, ReturnValue) == 0x000018, "Member 'KuroAnimMathLibrary_Quat_FindBetween::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_Quat_FindBetween;
 
 // Function KuroAnim.KuroAnimMathLibrary.Slerp
 // 0x0040 (0x0040 - 0x0000)
@@ -1165,12 +844,7 @@ public:
 	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAnimMathLibrary_Slerp) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_Slerp");
-static_assert(sizeof(KuroAnimMathLibrary_Slerp) == 0x000040, "Wrong size on KuroAnimMathLibrary_Slerp");
-static_assert(offsetof(KuroAnimMathLibrary_Slerp, From) == 0x000000, "Member 'KuroAnimMathLibrary_Slerp::From' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_Slerp, To) == 0x000010, "Member 'KuroAnimMathLibrary_Slerp::To' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_Slerp, Slerp_0) == 0x000020, "Member 'KuroAnimMathLibrary_Slerp::Slerp_0' has a wrong offset!");
-static_assert(offsetof(KuroAnimMathLibrary_Slerp, ReturnValue) == 0x000030, "Member 'KuroAnimMathLibrary_Slerp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAnimMathLibrary_Slerp;
 
 // Function KuroAnim.KuroTrackRecorder.GetMainGuid
 // 0x0010 (0x0010 - 0x0000)
@@ -1179,9 +853,7 @@ struct KuroTrackRecorder_GetMainGuid final
 public:
 	struct FGuid                                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTrackRecorder_GetMainGuid) == 0x000004, "Wrong alignment on KuroTrackRecorder_GetMainGuid");
-static_assert(sizeof(KuroTrackRecorder_GetMainGuid) == 0x000010, "Wrong size on KuroTrackRecorder_GetMainGuid");
-static_assert(offsetof(KuroTrackRecorder_GetMainGuid, ReturnValue) == 0x000000, "Member 'KuroTrackRecorder_GetMainGuid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTrackRecorder_GetMainGuid;
 
 // Function KuroAnim.KuroTrackRecorder.GetShadow
 // 0x0008 (0x0008 - 0x0000)
@@ -1190,9 +862,7 @@ struct KuroTrackRecorder_GetShadow final
 public:
 	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTrackRecorder_GetShadow) == 0x000008, "Wrong alignment on KuroTrackRecorder_GetShadow");
-static_assert(sizeof(KuroTrackRecorder_GetShadow) == 0x000008, "Wrong size on KuroTrackRecorder_GetShadow");
-static_assert(offsetof(KuroTrackRecorder_GetShadow, ReturnValue) == 0x000000, "Member 'KuroTrackRecorder_GetShadow::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTrackRecorder_GetShadow;
 
 // Function KuroAnim.KuroRecorderLibrary.ChangeAttachTrack
 // 0x0030 (0x0030 - 0x0000)
@@ -1205,12 +875,7 @@ public:
 	float                                         Time;                                              // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroRecorderLibrary_ChangeAttachTrack) == 0x000008, "Wrong alignment on KuroRecorderLibrary_ChangeAttachTrack");
-static_assert(sizeof(KuroRecorderLibrary_ChangeAttachTrack) == 0x000030, "Wrong size on KuroRecorderLibrary_ChangeAttachTrack");
-static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, TargetSequence) == 0x000000, "Member 'KuroRecorderLibrary_ChangeAttachTrack::TargetSequence' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, From) == 0x000008, "Member 'KuroRecorderLibrary_ChangeAttachTrack::From' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, To) == 0x000018, "Member 'KuroRecorderLibrary_ChangeAttachTrack::To' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, Time) == 0x000028, "Member 'KuroRecorderLibrary_ChangeAttachTrack::Time' has a wrong offset!");
+DUMPER7_ASSERTS_KuroRecorderLibrary_ChangeAttachTrack;
 
 // Function KuroAnim.KuroRecorderLibrary.CopyLevelSequence
 // 0x0100 (0x0100 - 0x0000)
@@ -1227,15 +892,7 @@ public:
 	struct FTransform                             StartTransform;                                    // 0x00C0(0x0030)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x00F0(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroRecorderLibrary_CopyLevelSequence) == 0x000010, "Wrong alignment on KuroRecorderLibrary_CopyLevelSequence");
-static_assert(sizeof(KuroRecorderLibrary_CopyLevelSequence) == 0x000100, "Wrong size on KuroRecorderLibrary_CopyLevelSequence");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, SourceSequence) == 0x000000, "Member 'KuroRecorderLibrary_CopyLevelSequence::SourceSequence' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, TargetSequence) == 0x000008, "Member 'KuroRecorderLibrary_CopyLevelSequence::TargetSequence' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, TimeOffset) == 0x000010, "Member 'KuroRecorderLibrary_CopyLevelSequence::TimeOffset' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, RetargetAttached) == 0x000018, "Member 'KuroRecorderLibrary_CopyLevelSequence::RetargetAttached' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, IgnoreClasses) == 0x000068, "Member 'KuroRecorderLibrary_CopyLevelSequence::IgnoreClasses' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, StartTransform) == 0x0000C0, "Member 'KuroRecorderLibrary_CopyLevelSequence::StartTransform' has a wrong offset!");
-static_assert(offsetof(KuroRecorderLibrary_CopyLevelSequence, ReturnValue) == 0x0000F0, "Member 'KuroRecorderLibrary_CopyLevelSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroRecorderLibrary_CopyLevelSequence;
 
 }
 

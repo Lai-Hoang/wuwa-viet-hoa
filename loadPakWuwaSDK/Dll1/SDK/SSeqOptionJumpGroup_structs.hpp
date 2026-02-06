@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSSeqJumpWithOption>            JumpGroup_6_2AB561364A2FD040E3954193212D6E4A;      // 0x0010(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSSeqOptionJumpGroup) == 0x000008, "Wrong alignment on FSSeqOptionJumpGroup");
-static_assert(sizeof(FSSeqOptionJumpGroup) == 0x000020, "Wrong size on FSSeqOptionJumpGroup");
-static_assert(offsetof(FSSeqOptionJumpGroup, SubtitleID_2_751D52924EC54591891BB597195B1594) == 0x000000, "Member 'FSSeqOptionJumpGroup::SubtitleID_2_751D52924EC54591891BB597195B1594' has a wrong offset!");
-static_assert(offsetof(FSSeqOptionJumpGroup, JumpGroup_6_2AB561364A2FD040E3954193212D6E4A) == 0x000010, "Member 'FSSeqOptionJumpGroup::JumpGroup_6_2AB561364A2FD040E3954193212D6E4A' has a wrong offset!");
+DUMPER7_ASSERTS_FSSeqOptionJumpGroup;
 
 }
 

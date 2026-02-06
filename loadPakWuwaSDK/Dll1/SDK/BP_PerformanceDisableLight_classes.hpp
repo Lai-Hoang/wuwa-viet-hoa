@@ -18,16 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PerformanceDisableLight.BP_PerformanceDisableLight_C
-// 0x0018 (0x03D0 - 0x03B8)
+// 0x0020 (0x03E8 - 0x03C8)
 class ABP_PerformanceDisableLight_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          DisableLight;                                      // 0x03C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          IsEnableDisable;                                   // 0x03C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsEnableToonDisable;                               // 0x03CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DisableToonLight;                                  // 0x03CB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         SceneLightIntensity;                               // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         ToonLightIntensity;                                // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableLight_Store;                                // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
+	bool                                          DisableLight;                                      // 0x03E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          DisableToonLight;                                  // 0x03E2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          DisableToonLight_Store;                            // 0x03E3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_PerformanceDisableLight(int32 EntryPoint);
@@ -38,25 +40,23 @@ public:
 	void UserConstructionScript();
 	void DisableLightFun();
 	void DisableToonLightFun();
+	void TickFunction();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PerformanceDisableLight_C">();
+		BP_STATIC_CLASS_IMPL("BP_PerformanceDisableLight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PerformanceDisableLight_C")
 	}
 	static class ABP_PerformanceDisableLight_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_PerformanceDisableLight_C>();
 	}
 };
-static_assert(alignof(ABP_PerformanceDisableLight_C) == 0x000008, "Wrong alignment on ABP_PerformanceDisableLight_C");
-static_assert(sizeof(ABP_PerformanceDisableLight_C) == 0x0003D0, "Wrong size on ABP_PerformanceDisableLight_C");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_PerformanceDisableLight_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, DefaultSceneRoot) == 0x0003C0, "Member 'ABP_PerformanceDisableLight_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, DisableLight) == 0x0003C8, "Member 'ABP_PerformanceDisableLight_C::DisableLight' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, IsEnableDisable) == 0x0003C9, "Member 'ABP_PerformanceDisableLight_C::IsEnableDisable' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, IsEnableToonDisable) == 0x0003CA, "Member 'ABP_PerformanceDisableLight_C::IsEnableToonDisable' has a wrong offset!");
-static_assert(offsetof(ABP_PerformanceDisableLight_C, DisableToonLight) == 0x0003CB, "Member 'ABP_PerformanceDisableLight_C::DisableToonLight' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PerformanceDisableLight_C;
 
 }
 

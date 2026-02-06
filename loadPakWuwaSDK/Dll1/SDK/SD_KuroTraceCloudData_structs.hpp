@@ -24,10 +24,7 @@ public:
 	float                                         Time_11_D813F8EE428B6087F3A15D82FC1E6761;          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           LightWeight_15_09329E09411BAFCD1338458E3F8AFC05;   // 0x0004(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSD_KuroTraceCloudData) == 0x000004, "Wrong alignment on FSD_KuroTraceCloudData");
-static_assert(sizeof(FSD_KuroTraceCloudData) == 0x000014, "Wrong size on FSD_KuroTraceCloudData");
-static_assert(offsetof(FSD_KuroTraceCloudData, Time_11_D813F8EE428B6087F3A15D82FC1E6761) == 0x000000, "Member 'FSD_KuroTraceCloudData::Time_11_D813F8EE428B6087F3A15D82FC1E6761' has a wrong offset!");
-static_assert(offsetof(FSD_KuroTraceCloudData, LightWeight_15_09329E09411BAFCD1338458E3F8AFC05) == 0x000004, "Member 'FSD_KuroTraceCloudData::LightWeight_15_09329E09411BAFCD1338458E3F8AFC05' has a wrong offset!");
+DUMPER7_ASSERTS_FSD_KuroTraceCloudData;
 
 }
 

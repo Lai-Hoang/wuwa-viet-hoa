@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -140,6 +140,15 @@ enum class EBulletOwnerType : uint8
 	EBulletOwnerType_MAX                     = 2,
 };
 
+// Enum KuroBullet.EKSC_BuffBulletInitTrans
+// NumValues: 0x0003
+enum class EKSC_BuffBulletInitTrans : uint8
+{
+	None                                     = 0,
+	World                                    = 1,
+	EKSC_MAX                                 = 2,
+};
+
 // Enum KuroBullet.EKuroBulletSkillDirection
 // NumValues: 0x0003
 enum class EKuroBulletSkillDirection : uint8
@@ -150,13 +159,25 @@ enum class EKuroBulletSkillDirection : uint8
 };
 
 // Enum KuroBullet.EKSC_BulletTarget
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EKSC_BulletTarget : uint8
 {
 	None                                     = 0,
 	NearestEnemy                             = 1,
-	EKSC_MAX                                 = 2,
+	FieldOfView                              = 2,
+	EKSC_MAX                                 = 3,
 };
+
+// ScriptStruct KuroBullet.KSC_SkillKuroBullet
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_SkillKuroBullet final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         BulletId;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_SkillKuroBullet;
 
 // ScriptStruct KuroBullet.KuroBulletDataBase
 // 0x0080 (0x0088 - 0x0008)
@@ -187,26 +208,7 @@ public:
 	bool                                          HitObstacle;                                       // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroBulletDataBase) == 0x000008, "Wrong alignment on FKuroBulletDataBase");
-static_assert(sizeof(FKuroBulletDataBase) == 0x000088, "Wrong size on FKuroBulletDataBase");
-static_assert(offsetof(FKuroBulletDataBase, Shape) == 0x000008, "Member 'FKuroBulletDataBase::Shape' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, Size) == 0x00000C, "Member 'FKuroBulletDataBase::Size' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, Rotation) == 0x000018, "Member 'FKuroBulletDataBase::Rotation' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, BornPositionStandard) == 0x000024, "Member 'FKuroBulletDataBase::BornPositionStandard' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, BornPosition) == 0x000028, "Member 'FKuroBulletDataBase::BornPosition' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, CenterOffset) == 0x000034, "Member 'FKuroBulletDataBase::CenterOffset' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, BornPositionRandom) == 0x000040, "Member 'FKuroBulletDataBase::BornPositionRandom' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, Duration) == 0x00004C, "Member 'FKuroBulletDataBase::Duration' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, CollisionActiveDuration) == 0x000050, "Member 'FKuroBulletDataBase::CollisionActiveDuration' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, CollisionActiveDelay) == 0x000054, "Member 'FKuroBulletDataBase::CollisionActiveDelay' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, HitType) == 0x000058, "Member 'FKuroBulletDataBase::HitType' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, BanHitTag) == 0x00005C, "Member 'FKuroBulletDataBase::BanHitTag' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, HitCountMax) == 0x000068, "Member 'FKuroBulletDataBase::HitCountMax' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, HitCountPerVictim) == 0x00006C, "Member 'FKuroBulletDataBase::HitCountPerVictim' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, Interval) == 0x000070, "Member 'FKuroBulletDataBase::Interval' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, DamageId) == 0x000078, "Member 'FKuroBulletDataBase::DamageId' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, StickGround) == 0x000080, "Member 'FKuroBulletDataBase::StickGround' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataBase, HitObstacle) == 0x000081, "Member 'FKuroBulletDataBase::HitObstacle' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletDataBase;
 
 // ScriptStruct KuroBullet.KuroBulletDataRender
 // 0x00E0 (0x00E8 - 0x0008)
@@ -221,13 +223,7 @@ public:
 	bool                                          bApplyHitMaterial;                                 // 0x00E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroBulletDataRender) == 0x000008, "Wrong alignment on FKuroBulletDataRender");
-static_assert(sizeof(FKuroBulletDataRender) == 0x0000E8, "Wrong size on FKuroBulletDataRender");
-static_assert(offsetof(FKuroBulletDataRender, EffectBullet) == 0x000008, "Member 'FKuroBulletDataRender::EffectBullet' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataRender, EffectBulletParams) == 0x000038, "Member 'FKuroBulletDataRender::EffectBulletParams' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataRender, bNotDestroyEffectImmediately) == 0x000088, "Member 'FKuroBulletDataRender::bNotDestroyEffectImmediately' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataRender, EffectOnHit) == 0x000090, "Member 'FKuroBulletDataRender::EffectOnHit' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataRender, bApplyHitMaterial) == 0x0000E0, "Member 'FKuroBulletDataRender::bApplyHitMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletDataRender;
 
 // ScriptStruct KuroBullet.KuroBulletDataMove
 // 0x0040 (0x0048 - 0x0008)
@@ -245,19 +241,10 @@ public:
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        TrackParams;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          InitVelocityKeepUp;                                // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          IsFollowSceneMove;                                 // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroBulletDataMove) == 0x000008, "Wrong alignment on FKuroBulletDataMove");
-static_assert(sizeof(FKuroBulletDataMove) == 0x000048, "Wrong size on FKuroBulletDataMove");
-static_assert(offsetof(FKuroBulletDataMove, FollowType) == 0x000008, "Member 'FKuroBulletDataMove::FollowType' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, InitVelocityDirStandard) == 0x000009, "Member 'FKuroBulletDataMove::InitVelocityDirStandard' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, InitVelocityRot) == 0x00000C, "Member 'FKuroBulletDataMove::InitVelocityRot' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, InitVelocityDirRandom) == 0x000018, "Member 'FKuroBulletDataMove::InitVelocityDirRandom' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, Speed) == 0x000024, "Member 'FKuroBulletDataMove::Speed' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, TrackTarget) == 0x000028, "Member 'FKuroBulletDataMove::TrackTarget' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, Trajectory) == 0x000029, "Member 'FKuroBulletDataMove::Trajectory' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, TrackParams) == 0x000030, "Member 'FKuroBulletDataMove::TrackParams' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataMove, InitVelocityKeepUp) == 0x000040, "Member 'FKuroBulletDataMove::InitVelocityKeepUp' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletDataMove;
 
 // ScriptStruct KuroBullet.KuroBulletDataLogic
 // 0x0028 (0x0030 - 0x0008)
@@ -270,12 +257,7 @@ public:
 	TArray<int64>                                 BuffIdToAttacker;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int64>                                 BuffIdToVictim;                                    // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBulletDataLogic) == 0x000008, "Wrong alignment on FKuroBulletDataLogic");
-static_assert(sizeof(FKuroBulletDataLogic) == 0x000030, "Wrong size on FKuroBulletDataLogic");
-static_assert(offsetof(FKuroBulletDataLogic, DestroyOnHitCharacter) == 0x000008, "Member 'FKuroBulletDataLogic::DestroyOnHitCharacter' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataLogic, DestroyOnHitObstacle) == 0x000009, "Member 'FKuroBulletDataLogic::DestroyOnHitObstacle' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataLogic, BuffIdToAttacker) == 0x000010, "Member 'FKuroBulletDataLogic::BuffIdToAttacker' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataLogic, BuffIdToVictim) == 0x000020, "Member 'FKuroBulletDataLogic::BuffIdToVictim' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletDataLogic;
 
 // ScriptStruct KuroBullet.KuroBulletDataChild
 // 0x0018 (0x0020 - 0x0008)
@@ -289,13 +271,7 @@ public:
 	EKuroBulletChildrenType                       Condition;                                         // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroBulletDataChild) == 0x000008, "Wrong alignment on FKuroBulletDataChild");
-static_assert(sizeof(FKuroBulletDataChild) == 0x000020, "Wrong size on FKuroBulletDataChild");
-static_assert(offsetof(FKuroBulletDataChild, BulletConfigId) == 0x000008, "Member 'FKuroBulletDataChild::BulletConfigId' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataChild, Delay) == 0x000010, "Member 'FKuroBulletDataChild::Delay' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataChild, Num) == 0x000014, "Member 'FKuroBulletDataChild::Num' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataChild, Interval) == 0x000018, "Member 'FKuroBulletDataChild::Interval' has a wrong offset!");
-static_assert(offsetof(FKuroBulletDataChild, Condition) == 0x00001C, "Member 'FKuroBulletDataChild::Condition' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletDataChild;
 
 // ScriptStruct KuroBullet.KuroBulletData
 // 0x0208 (0x0210 - 0x0008)
@@ -310,28 +286,7 @@ public:
 	struct FKuroBulletDataLogic                   Logic;                                             // 0x01D0(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TArray<struct FKuroBulletDataChild>           Children;                                          // 0x0200(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBulletData) == 0x000008, "Wrong alignment on FKuroBulletData");
-static_assert(sizeof(FKuroBulletData) == 0x000210, "Wrong size on FKuroBulletData");
-static_assert(offsetof(FKuroBulletData, Name) == 0x000008, "Member 'FKuroBulletData::Name' has a wrong offset!");
-static_assert(offsetof(FKuroBulletData, Base) == 0x000018, "Member 'FKuroBulletData::Base' has a wrong offset!");
-static_assert(offsetof(FKuroBulletData, Move) == 0x0000A0, "Member 'FKuroBulletData::Move' has a wrong offset!");
-static_assert(offsetof(FKuroBulletData, Render) == 0x0000E8, "Member 'FKuroBulletData::Render' has a wrong offset!");
-static_assert(offsetof(FKuroBulletData, Logic) == 0x0001D0, "Member 'FKuroBulletData::Logic' has a wrong offset!");
-static_assert(offsetof(FKuroBulletData, Children) == 0x000200, "Member 'FKuroBulletData::Children' has a wrong offset!");
-
-// ScriptStruct KuroBullet.KSC_SkillKuroBullet
-// 0x0010 (0x0010 - 0x0000)
-struct FKSC_SkillKuroBullet final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         BulletId;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKSC_SkillKuroBullet) == 0x000008, "Wrong alignment on FKSC_SkillKuroBullet");
-static_assert(sizeof(FKSC_SkillKuroBullet) == 0x000010, "Wrong size on FKSC_SkillKuroBullet");
-static_assert(offsetof(FKSC_SkillKuroBullet, Time) == 0x000000, "Member 'FKSC_SkillKuroBullet::Time' has a wrong offset!");
-static_assert(offsetof(FKSC_SkillKuroBullet, BulletId) == 0x000008, "Member 'FKSC_SkillKuroBullet::BulletId' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBulletData;
 
 }
 

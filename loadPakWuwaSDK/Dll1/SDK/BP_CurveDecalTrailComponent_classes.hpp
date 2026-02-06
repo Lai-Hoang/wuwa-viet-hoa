@@ -23,15 +23,18 @@ class UBP_CurveDecalTrailComponent_C final : public UKuroCurveTrailDecalComponen
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CurveDecalTrailComponent_C">();
+		BP_STATIC_CLASS_IMPL("BP_CurveDecalTrailComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CurveDecalTrailComponent_C")
 	}
 	static class UBP_CurveDecalTrailComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CurveDecalTrailComponent_C>();
 	}
 };
-static_assert(alignof(UBP_CurveDecalTrailComponent_C) == 0x000010, "Wrong alignment on UBP_CurveDecalTrailComponent_C");
-static_assert(sizeof(UBP_CurveDecalTrailComponent_C) == 0x0006E0, "Wrong size on UBP_CurveDecalTrailComponent_C");
+DUMPER7_ASSERTS_UBP_CurveDecalTrailComponent_C;
 
 }
 

@@ -9,29 +9,29 @@
 // FORWARD DECLARATIONS
 
 
-namespace Ani_UiItem_InteractionSpot_Select_2_PC { class USequenceDirector_C; }
-
-namespace KuroRenderingRuntimeBPPlugin { enum class ECharacterControllerUVSwitch : uint8; }
-
-namespace Ani_UiItem_AcquireIntro_start { class USequenceDirector_C; }
-
-namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
-
-namespace Ani_NPCActScroll_Start { class USequenceDirector_C; }
-
-namespace Ani_NPCActScroll_Close { class USequenceDirector_C; }
+namespace Ani_UiItem_InteractionSpot_Loop_2_PC { class USequenceDirector_C; }
 
 namespace Ani_UiItem_InteractionSpot_NorOut_2_PC { class USequenceDirector_C; }
 
-namespace Ani_UiItem_InteractionSpot_Loop_2_PC { class USequenceDirector_C; }
+namespace ECharacterControllerUVSwitch { enum class ECharacterControllerUVSwitch : uint8; }
 
 namespace Ani_UiItem_InteractionSpot_start_2_PC { class USequenceDirector_C; }
 
+namespace Ani_UiItem_AcquireIntro_Close { class USequenceDirector_C; }
+
+namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
+
+namespace Ani_NPCActScroll_Close { class USequenceDirector_C; }
+
+namespace Ani_UiItem_AcquireIntro_start { class USequenceDirector_C; }
+
 namespace Ani_UiItem_InteractionSpot_Setout_2_PC { class USequenceDirector_C; }
+
+namespace Ani_NPCActScroll_Start { class USequenceDirector_C; }
 
 namespace Ani_UiItem_AcquireIntro_Move { class USequenceDirector_C; }
 
-namespace Ani_UiItem_AcquireIntro_Close { class USequenceDirector_C; }
+namespace Ani_UiItem_InteractionSpot_Select_2_PC { class USequenceDirector_C; }
 
-namespace ECharacterControllerUVSwitch { enum class ECharacterControllerUVSwitch : uint8; }
+namespace KuroRenderingRuntimeBPPlugin { enum class ECharacterControllerUVSwitch : uint8; }
 

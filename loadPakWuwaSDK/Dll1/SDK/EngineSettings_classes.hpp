@@ -41,26 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConsoleSettings">();
+		STATIC_CLASS_IMPL("ConsoleSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConsoleSettings")
 	}
 	static class UConsoleSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConsoleSettings>();
 	}
 };
-static_assert(alignof(UConsoleSettings) == 0x000008, "Wrong alignment on UConsoleSettings");
-static_assert(sizeof(UConsoleSettings) == 0x000078, "Wrong size on UConsoleSettings");
-static_assert(offsetof(UConsoleSettings, MaxScrollbackSize) == 0x000030, "Member 'UConsoleSettings::MaxScrollbackSize' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, ManualAutoCompleteList) == 0x000038, "Member 'UConsoleSettings::ManualAutoCompleteList' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, AutoCompleteMapPaths) == 0x000048, "Member 'UConsoleSettings::AutoCompleteMapPaths' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, BackgroundOpacityPercentage) == 0x000058, "Member 'UConsoleSettings::BackgroundOpacityPercentage' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, bOrderTopToBottom) == 0x00005C, "Member 'UConsoleSettings::bOrderTopToBottom' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, bDisplayHelpInAutoComplete) == 0x00005D, "Member 'UConsoleSettings::bDisplayHelpInAutoComplete' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, InputColor) == 0x000060, "Member 'UConsoleSettings::InputColor' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, HistoryColor) == 0x000064, "Member 'UConsoleSettings::HistoryColor' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, AutoCompleteCommandColor) == 0x000068, "Member 'UConsoleSettings::AutoCompleteCommandColor' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, AutoCompleteCVarColor) == 0x00006C, "Member 'UConsoleSettings::AutoCompleteCVarColor' has a wrong offset!");
-static_assert(offsetof(UConsoleSettings, AutoCompleteFadedColor) == 0x000070, "Member 'UConsoleSettings::AutoCompleteFadedColor' has a wrong offset!");
+DUMPER7_ASSERTS_UConsoleSettings;
 
 // Class EngineSettings.GameMapsSettings
 // 0x0118 (0x0148 - 0x0030)
@@ -95,31 +87,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameMapsSettings">();
+		STATIC_CLASS_IMPL("GameMapsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameMapsSettings")
 	}
 	static class UGameMapsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameMapsSettings>();
 	}
 };
-static_assert(alignof(UGameMapsSettings) == 0x000008, "Wrong alignment on UGameMapsSettings");
-static_assert(sizeof(UGameMapsSettings) == 0x000148, "Wrong size on UGameMapsSettings");
-static_assert(offsetof(UGameMapsSettings, LocalMapOptions) == 0x000030, "Member 'UGameMapsSettings::LocalMapOptions' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, TransitionMap) == 0x000040, "Member 'UGameMapsSettings::TransitionMap' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, bUseSplitscreen) == 0x000060, "Member 'UGameMapsSettings::bUseSplitscreen' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, TwoPlayerSplitscreenLayout) == 0x000061, "Member 'UGameMapsSettings::TwoPlayerSplitscreenLayout' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, ThreePlayerSplitscreenLayout) == 0x000062, "Member 'UGameMapsSettings::ThreePlayerSplitscreenLayout' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, FourPlayerSplitscreenLayout) == 0x000063, "Member 'UGameMapsSettings::FourPlayerSplitscreenLayout' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, bOffsetPlayerGamepadIds) == 0x000064, "Member 'UGameMapsSettings::bOffsetPlayerGamepadIds' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GameInstanceClass) == 0x000068, "Member 'UGameMapsSettings::GameInstanceClass' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, LevelActorRegularConfigPath) == 0x000088, "Member 'UGameMapsSettings::LevelActorRegularConfigPath' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, PrefabLevelActorRegularConfigPath) == 0x000098, "Member 'UGameMapsSettings::PrefabLevelActorRegularConfigPath' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GameDefaultMap) == 0x0000A8, "Member 'UGameMapsSettings::GameDefaultMap' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, ServerDefaultMap) == 0x0000C8, "Member 'UGameMapsSettings::ServerDefaultMap' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GlobalDefaultGameMode) == 0x0000E8, "Member 'UGameMapsSettings::GlobalDefaultGameMode' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GlobalDefaultServerGameMode) == 0x000108, "Member 'UGameMapsSettings::GlobalDefaultServerGameMode' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GameModeMapPrefixes) == 0x000128, "Member 'UGameMapsSettings::GameModeMapPrefixes' has a wrong offset!");
-static_assert(offsetof(UGameMapsSettings, GameModeClassAliases) == 0x000138, "Member 'UGameMapsSettings::GameModeClassAliases' has a wrong offset!");
+DUMPER7_ASSERTS_UGameMapsSettings;
 
 // Class EngineSettings.GameNetworkManagerSettings
 // 0x0030 (0x0060 - 0x0030)
@@ -143,25 +122,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameNetworkManagerSettings">();
+		STATIC_CLASS_IMPL("GameNetworkManagerSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameNetworkManagerSettings")
 	}
 	static class UGameNetworkManagerSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameNetworkManagerSettings>();
 	}
 };
-static_assert(alignof(UGameNetworkManagerSettings) == 0x000008, "Wrong alignment on UGameNetworkManagerSettings");
-static_assert(sizeof(UGameNetworkManagerSettings) == 0x000060, "Wrong size on UGameNetworkManagerSettings");
-static_assert(offsetof(UGameNetworkManagerSettings, MinDynamicBandwidth) == 0x000030, "Member 'UGameNetworkManagerSettings::MinDynamicBandwidth' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, MaxDynamicBandwidth) == 0x000034, "Member 'UGameNetworkManagerSettings::MaxDynamicBandwidth' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, TotalNetBandwidth) == 0x000038, "Member 'UGameNetworkManagerSettings::TotalNetBandwidth' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, BadPingThreshold) == 0x00003C, "Member 'UGameNetworkManagerSettings::BadPingThreshold' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, StandbyRxCheatTime) == 0x000044, "Member 'UGameNetworkManagerSettings::StandbyRxCheatTime' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, StandbyTxCheatTime) == 0x000048, "Member 'UGameNetworkManagerSettings::StandbyTxCheatTime' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, PercentMissingForRxStandby) == 0x00004C, "Member 'UGameNetworkManagerSettings::PercentMissingForRxStandby' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, PercentMissingForTxStandby) == 0x000050, "Member 'UGameNetworkManagerSettings::PercentMissingForTxStandby' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, PercentForBadPing) == 0x000054, "Member 'UGameNetworkManagerSettings::PercentForBadPing' has a wrong offset!");
-static_assert(offsetof(UGameNetworkManagerSettings, JoinInProgressStandbyWaitTime) == 0x000058, "Member 'UGameNetworkManagerSettings::JoinInProgressStandbyWaitTime' has a wrong offset!");
+DUMPER7_ASSERTS_UGameNetworkManagerSettings;
 
 // Class EngineSettings.GameSessionSettings
 // 0x0010 (0x0040 - 0x0030)
@@ -176,17 +148,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameSessionSettings">();
+		STATIC_CLASS_IMPL("GameSessionSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameSessionSettings")
 	}
 	static class UGameSessionSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameSessionSettings>();
 	}
 };
-static_assert(alignof(UGameSessionSettings) == 0x000008, "Wrong alignment on UGameSessionSettings");
-static_assert(sizeof(UGameSessionSettings) == 0x000040, "Wrong size on UGameSessionSettings");
-static_assert(offsetof(UGameSessionSettings, MaxSpectators) == 0x000030, "Member 'UGameSessionSettings::MaxSpectators' has a wrong offset!");
-static_assert(offsetof(UGameSessionSettings, MaxPlayers) == 0x000034, "Member 'UGameSessionSettings::MaxPlayers' has a wrong offset!");
+DUMPER7_ASSERTS_UGameSessionSettings;
 
 // Class EngineSettings.GeneralEngineSettings
 // 0x0000 (0x0030 - 0x0030)
@@ -195,15 +168,18 @@ class UGeneralEngineSettings final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeneralEngineSettings">();
+		STATIC_CLASS_IMPL("GeneralEngineSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeneralEngineSettings")
 	}
 	static class UGeneralEngineSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeneralEngineSettings>();
 	}
 };
-static_assert(alignof(UGeneralEngineSettings) == 0x000008, "Wrong alignment on UGeneralEngineSettings");
-static_assert(sizeof(UGeneralEngineSettings) == 0x000030, "Wrong size on UGeneralEngineSettings");
+DUMPER7_ASSERTS_UGeneralEngineSettings;
 
 // Class EngineSettings.GeneralProjectSettings
 // 0x00E8 (0x0118 - 0x0030)
@@ -235,35 +211,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeneralProjectSettings">();
+		STATIC_CLASS_IMPL("GeneralProjectSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeneralProjectSettings")
 	}
 	static class UGeneralProjectSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeneralProjectSettings>();
 	}
 };
-static_assert(alignof(UGeneralProjectSettings) == 0x000008, "Wrong alignment on UGeneralProjectSettings");
-static_assert(sizeof(UGeneralProjectSettings) == 0x000118, "Wrong size on UGeneralProjectSettings");
-static_assert(offsetof(UGeneralProjectSettings, CompanyName) == 0x000030, "Member 'UGeneralProjectSettings::CompanyName' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, CompanyDistinguishedName) == 0x000040, "Member 'UGeneralProjectSettings::CompanyDistinguishedName' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, CopyrightNotice) == 0x000050, "Member 'UGeneralProjectSettings::CopyrightNotice' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, Description) == 0x000060, "Member 'UGeneralProjectSettings::Description' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, Homepage) == 0x000070, "Member 'UGeneralProjectSettings::Homepage' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, LicensingTerms) == 0x000080, "Member 'UGeneralProjectSettings::LicensingTerms' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, PrivacyPolicy) == 0x000090, "Member 'UGeneralProjectSettings::PrivacyPolicy' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectID) == 0x0000A0, "Member 'UGeneralProjectSettings::ProjectID' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectName) == 0x0000B0, "Member 'UGeneralProjectSettings::ProjectName' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectVersion) == 0x0000C0, "Member 'UGeneralProjectSettings::ProjectVersion' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, SupportContact) == 0x0000D0, "Member 'UGeneralProjectSettings::SupportContact' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectDisplayedTitle) == 0x0000E0, "Member 'UGeneralProjectSettings::ProjectDisplayedTitle' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, ProjectDebugTitleInfo) == 0x0000F8, "Member 'UGeneralProjectSettings::ProjectDebugTitleInfo' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bShouldWindowPreserveAspectRatio) == 0x000110, "Member 'UGeneralProjectSettings::bShouldWindowPreserveAspectRatio' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bUseBorderlessWindow) == 0x000111, "Member 'UGeneralProjectSettings::bUseBorderlessWindow' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bStartInVR) == 0x000112, "Member 'UGeneralProjectSettings::bStartInVR' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowWindowResize) == 0x000113, "Member 'UGeneralProjectSettings::bAllowWindowResize' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowClose) == 0x000114, "Member 'UGeneralProjectSettings::bAllowClose' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowMaximize) == 0x000115, "Member 'UGeneralProjectSettings::bAllowMaximize' has a wrong offset!");
-static_assert(offsetof(UGeneralProjectSettings, bAllowMinimize) == 0x000116, "Member 'UGeneralProjectSettings::bAllowMinimize' has a wrong offset!");
+DUMPER7_ASSERTS_UGeneralProjectSettings;
 
 // Class EngineSettings.HudSettings
 // 0x0018 (0x0048 - 0x0030)
@@ -277,16 +236,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HudSettings">();
+		STATIC_CLASS_IMPL("HudSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HudSettings")
 	}
 	static class UHudSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHudSettings>();
 	}
 };
-static_assert(alignof(UHudSettings) == 0x000008, "Wrong alignment on UHudSettings");
-static_assert(sizeof(UHudSettings) == 0x000048, "Wrong size on UHudSettings");
-static_assert(offsetof(UHudSettings, DebugDisplay) == 0x000038, "Member 'UHudSettings::DebugDisplay' has a wrong offset!");
+DUMPER7_ASSERTS_UHudSettings;
 
 }
 

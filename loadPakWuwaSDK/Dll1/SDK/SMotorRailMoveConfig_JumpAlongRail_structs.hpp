@@ -26,11 +26,7 @@ public:
 	int32                                         SkillId_2_4CF6A94340F8923CD62993A0557161C6;        // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMotorRailMove_ParabolaMove           ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB;   // 0x00AC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMoveConfig_JumpAlongRail) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig_JumpAlongRail");
-static_assert(sizeof(FSMotorRailMoveConfig_JumpAlongRail) == 0x0000C0, "Wrong size on FSMotorRailMoveConfig_JumpAlongRail");
-static_assert(offsetof(FSMotorRailMoveConfig_JumpAlongRail, CommonConfig_18_D659813B4714F4D55F09ACA3074662A3) == 0x000000, "Member 'FSMotorRailMoveConfig_JumpAlongRail::CommonConfig_18_D659813B4714F4D55F09ACA3074662A3' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_JumpAlongRail, SkillId_2_4CF6A94340F8923CD62993A0557161C6) == 0x0000A8, "Member 'FSMotorRailMoveConfig_JumpAlongRail::SkillId_2_4CF6A94340F8923CD62993A0557161C6' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_JumpAlongRail, ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB) == 0x0000AC, "Member 'FSMotorRailMoveConfig_JumpAlongRail::ParabolaMove_8_5D6F15F24DFF1F503106DE9346FD3CDB' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig_JumpAlongRail;
 
 }
 

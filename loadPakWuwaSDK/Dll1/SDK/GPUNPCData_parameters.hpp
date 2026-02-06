@@ -26,14 +26,7 @@ public:
 	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GPUNPCData_C_随机起始动画时间噪声贴图) == 0x000008, "Wrong alignment on GPUNPCData_C_随机起始动画时间噪声贴图");
-static_assert(sizeof(GPUNPCData_C_随机起始动画时间噪声贴图) == 0x000020, "Wrong size on GPUNPCData_C_随机起始动画时间噪声贴图");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, OutNoiseTex) == 0x000000, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::OutNoiseTex' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, OutNoiseIndex) == 0x000008, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::OutNoiseIndex' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, CallFunc_Subtract_IntInt_ReturnValue) == 0x000010, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, CallFunc_RandomIntegerInRange_ReturnValue) == 0x000014, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_随机起始动画时间噪声贴图, CallFunc_Array_Get_Item) == 0x000018, "Member 'GPUNPCData_C_随机起始动画时间噪声贴图::CallFunc_Array_Get_Item' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_随机起始动画时间噪声贴图;
 
 // Function GPUNPCData.GPUNPCData_C.生成MainMesh和SubMeshes
 // 0x0038 (0x0038 - 0x0000)
@@ -46,13 +39,7 @@ public:
 	TArray<class USkeletalMesh*>                  CallFunc_GetMeshesFromNPCSetupData_OutSubMeshes;   // 0x0020(0x0010)(ReferenceParm)
 	bool                                          CallFunc_HasSetSkeletalMesh_HasSet;                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GPUNPCData_C_生成MainMesh和SubMeshes) == 0x000008, "Wrong alignment on GPUNPCData_C_生成MainMesh和SubMeshes");
-static_assert(sizeof(GPUNPCData_C_生成MainMesh和SubMeshes) == 0x000038, "Wrong size on GPUNPCData_C_生成MainMesh和SubMeshes");
-static_assert(offsetof(GPUNPCData_C_生成MainMesh和SubMeshes, OutMainMesh) == 0x000000, "Member 'GPUNPCData_C_生成MainMesh和SubMeshes::OutMainMesh' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_生成MainMesh和SubMeshes, OutSubMeshes) == 0x000008, "Member 'GPUNPCData_C_生成MainMesh和SubMeshes::OutSubMeshes' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_生成MainMesh和SubMeshes, CallFunc_GetMeshesFromNPCSetupData_OutMainMesh) == 0x000018, "Member 'GPUNPCData_C_生成MainMesh和SubMeshes::CallFunc_GetMeshesFromNPCSetupData_OutMainMesh' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_生成MainMesh和SubMeshes, CallFunc_GetMeshesFromNPCSetupData_OutSubMeshes) == 0x000020, "Member 'GPUNPCData_C_生成MainMesh和SubMeshes::CallFunc_GetMeshesFromNPCSetupData_OutSubMeshes' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_生成MainMesh和SubMeshes, CallFunc_HasSetSkeletalMesh_HasSet) == 0x000030, "Member 'GPUNPCData_C_生成MainMesh和SubMeshes::CallFunc_HasSetSkeletalMesh_HasSet' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_生成MainMesh和SubMeshes;
 
 // Function GPUNPCData.GPUNPCData_C.HasSetSkeletalMesh
 // 0x0002 (0x0002 - 0x0000)
@@ -62,10 +49,7 @@ public:
 	bool                                          HasSet;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GPUNPCData_C_HasSetSkeletalMesh) == 0x000001, "Wrong alignment on GPUNPCData_C_HasSetSkeletalMesh");
-static_assert(sizeof(GPUNPCData_C_HasSetSkeletalMesh) == 0x000002, "Wrong size on GPUNPCData_C_HasSetSkeletalMesh");
-static_assert(offsetof(GPUNPCData_C_HasSetSkeletalMesh, HasSet) == 0x000000, "Member 'GPUNPCData_C_HasSetSkeletalMesh::HasSet' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_HasSetSkeletalMesh, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000001, "Member 'GPUNPCData_C_HasSetSkeletalMesh::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_HasSetSkeletalMesh;
 
 // Function GPUNPCData.GPUNPCData_C.GetMeshesFromNPCSetupData
 // 0x0028 (0x0028 - 0x0000)
@@ -76,11 +60,7 @@ public:
 	TArray<class USkeletalMesh*>                  OutSubMeshes;                                      // 0x0008(0x0010)(Parm, OutParm)
 	TArray<class USkeletalMesh*>                  SubMeshes;                                         // 0x0018(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(GPUNPCData_C_GetMeshesFromNPCSetupData) == 0x000008, "Wrong alignment on GPUNPCData_C_GetMeshesFromNPCSetupData");
-static_assert(sizeof(GPUNPCData_C_GetMeshesFromNPCSetupData) == 0x000028, "Wrong size on GPUNPCData_C_GetMeshesFromNPCSetupData");
-static_assert(offsetof(GPUNPCData_C_GetMeshesFromNPCSetupData, OutMainMesh) == 0x000000, "Member 'GPUNPCData_C_GetMeshesFromNPCSetupData::OutMainMesh' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMeshesFromNPCSetupData, OutSubMeshes) == 0x000008, "Member 'GPUNPCData_C_GetMeshesFromNPCSetupData::OutSubMeshes' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMeshesFromNPCSetupData, SubMeshes) == 0x000018, "Member 'GPUNPCData_C_GetMeshesFromNPCSetupData::SubMeshes' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_GetMeshesFromNPCSetupData;
 
 // Function GPUNPCData.GPUNPCData_C.GetMaxNumTracks
 // 0x0028 (0x0028 - 0x0000)
@@ -98,17 +78,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Max_ReturnValue;                          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GPUNPCData_C_GetMaxNumTracks) == 0x000008, "Wrong alignment on GPUNPCData_C_GetMaxNumTracks");
-static_assert(sizeof(GPUNPCData_C_GetMaxNumTracks) == 0x000028, "Wrong size on GPUNPCData_C_GetMaxNumTracks");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, OutMaxNumTracks) == 0x000000, "Member 'GPUNPCData_C_GetMaxNumTracks::OutMaxNumTracks' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, MaxNumTracks) == 0x000004, "Member 'GPUNPCData_C_GetMaxNumTracks::MaxNumTracks' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, ___int_Array_Index_Variable) == 0x000008, "Member 'GPUNPCData_C_GetMaxNumTracks::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, ___int_Loop_Counter_Variable) == 0x00000C, "Member 'GPUNPCData_C_GetMaxNumTracks::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'GPUNPCData_C_GetMaxNumTracks::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'GPUNPCData_C_GetMaxNumTracks::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, CallFunc_Array_Get_Item) == 0x000018, "Member 'GPUNPCData_C_GetMaxNumTracks::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'GPUNPCData_C_GetMaxNumTracks::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetMaxNumTracks, CallFunc_Max_ReturnValue) == 0x000024, "Member 'GPUNPCData_C_GetMaxNumTracks::CallFunc_Max_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_GetMaxNumTracks;
 
 // Function GPUNPCData.GPUNPCData_C.GetTotalNumFrames
 // 0x0028 (0x0028 - 0x0000)
@@ -126,17 +96,7 @@ public:
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GPUNPCData_C_GetTotalNumFrames) == 0x000008, "Wrong alignment on GPUNPCData_C_GetTotalNumFrames");
-static_assert(sizeof(GPUNPCData_C_GetTotalNumFrames) == 0x000028, "Wrong size on GPUNPCData_C_GetTotalNumFrames");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, OutTotalNumFrames) == 0x000000, "Member 'GPUNPCData_C_GetTotalNumFrames::OutTotalNumFrames' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, TotalNumFrames) == 0x000004, "Member 'GPUNPCData_C_GetTotalNumFrames::TotalNumFrames' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, ___int_Array_Index_Variable) == 0x000008, "Member 'GPUNPCData_C_GetTotalNumFrames::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, ___int_Loop_Counter_Variable) == 0x00000C, "Member 'GPUNPCData_C_GetTotalNumFrames::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'GPUNPCData_C_GetTotalNumFrames::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'GPUNPCData_C_GetTotalNumFrames::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, CallFunc_Array_Get_Item) == 0x000018, "Member 'GPUNPCData_C_GetTotalNumFrames::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'GPUNPCData_C_GetTotalNumFrames::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_GetTotalNumFrames, CallFunc_Add_IntInt_ReturnValue_1) == 0x000024, "Member 'GPUNPCData_C_GetTotalNumFrames::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_GetTotalNumFrames;
 
 // Function GPUNPCData.GPUNPCData_C.HasCombinedBakedBoneTexture
 // 0x0002 (0x0002 - 0x0000)
@@ -146,10 +106,7 @@ public:
 	bool                                          Result;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GPUNPCData_C_HasCombinedBakedBoneTexture) == 0x000001, "Wrong alignment on GPUNPCData_C_HasCombinedBakedBoneTexture");
-static_assert(sizeof(GPUNPCData_C_HasCombinedBakedBoneTexture) == 0x000002, "Wrong size on GPUNPCData_C_HasCombinedBakedBoneTexture");
-static_assert(offsetof(GPUNPCData_C_HasCombinedBakedBoneTexture, Result) == 0x000000, "Member 'GPUNPCData_C_HasCombinedBakedBoneTexture::Result' has a wrong offset!");
-static_assert(offsetof(GPUNPCData_C_HasCombinedBakedBoneTexture, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000001, "Member 'GPUNPCData_C_HasCombinedBakedBoneTexture::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GPUNPCData_C_HasCombinedBakedBoneTexture;
 
 }
 

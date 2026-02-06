@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "LTween_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "LTween_structs.hpp"
 
 
 namespace SDK
@@ -43,18 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenActor">();
+		STATIC_CLASS_IMPL("LTweenActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenActor")
 	}
 	static class ALTweenActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALTweenActor>();
 	}
 };
-static_assert(alignof(ALTweenActor) == 0x000008, "Wrong alignment on ALTweenActor");
-static_assert(sizeof(ALTweenActor) == 0x000310, "Wrong size on ALTweenActor");
-static_assert(offsetof(ALTweenActor, tweenerList) == 0x0002B0, "Member 'ALTweenActor::tweenerList' has a wrong offset!");
-static_assert(offsetof(ALTweenActor, reserveTweenerList) == 0x0002F8, "Member 'ALTweenActor::reserveTweenerList' has a wrong offset!");
-static_assert(offsetof(ALTweenActor, GlobalPlayRate) == 0x000308, "Member 'ALTweenActor::GlobalPlayRate' has a wrong offset!");
+DUMPER7_ASSERTS_ALTweenActor;
 
 // Class LTween.LTweenBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -115,15 +115,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenBPLibrary">();
+		STATIC_CLASS_IMPL("LTweenBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenBPLibrary")
 	}
 	static class ULTweenBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenBPLibrary>();
 	}
 };
-static_assert(alignof(ULTweenBPLibrary) == 0x000008, "Wrong alignment on ULTweenBPLibrary");
-static_assert(sizeof(ULTweenBPLibrary) == 0x000030, "Wrong size on ULTweenBPLibrary");
+DUMPER7_ASSERTS_ULTweenBPLibrary;
 
 // Class LTween.LTweener
 // 0x0108 (0x0138 - 0x0030)
@@ -161,18 +164,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweener">();
+		STATIC_CLASS_IMPL("LTweener")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweener")
 	}
 	static class ULTweener* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweener>();
 	}
 };
-static_assert(alignof(ULTweener) == 0x000008, "Wrong alignment on ULTweener");
-static_assert(sizeof(ULTweener) == 0x000138, "Wrong size on ULTweener");
-static_assert(offsetof(ULTweener, OnStartCallBack) == 0x0000A8, "Member 'ULTweener::OnStartCallBack' has a wrong offset!");
-static_assert(offsetof(ULTweener, OnUpdateCallBack) == 0x0000D0, "Member 'ULTweener::OnUpdateCallBack' has a wrong offset!");
-static_assert(offsetof(ULTweener, OnCompleteCallBack) == 0x0000F8, "Member 'ULTweener::OnCompleteCallBack' has a wrong offset!");
+DUMPER7_ASSERTS_ULTweener;
 
 // Class LTween.LTweenerColor
 // 0x0030 (0x0168 - 0x0138)
@@ -184,15 +187,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerColor">();
+		STATIC_CLASS_IMPL("LTweenerColor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerColor")
 	}
 	static class ULTweenerColor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerColor>();
 	}
 };
-static_assert(alignof(ULTweenerColor) == 0x000008, "Wrong alignment on ULTweenerColor");
-static_assert(sizeof(ULTweenerColor) == 0x000168, "Wrong size on ULTweenerColor");
+DUMPER7_ASSERTS_ULTweenerColor;
 
 // Class LTween.LTweenerFloat
 // 0x0030 (0x0168 - 0x0138)
@@ -204,15 +210,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerFloat">();
+		STATIC_CLASS_IMPL("LTweenerFloat")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerFloat")
 	}
 	static class ULTweenerFloat* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerFloat>();
 	}
 };
-static_assert(alignof(ULTweenerFloat) == 0x000008, "Wrong alignment on ULTweenerFloat");
-static_assert(sizeof(ULTweenerFloat) == 0x000168, "Wrong size on ULTweenerFloat");
+DUMPER7_ASSERTS_ULTweenerFloat;
 
 // Class LTween.LTweenerFrame
 // 0x0008 (0x0140 - 0x0138)
@@ -224,15 +233,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerFrame">();
+		STATIC_CLASS_IMPL("LTweenerFrame")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerFrame")
 	}
 	static class ULTweenerFrame* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerFrame>();
 	}
 };
-static_assert(alignof(ULTweenerFrame) == 0x000008, "Wrong alignment on ULTweenerFrame");
-static_assert(sizeof(ULTweenerFrame) == 0x000140, "Wrong size on ULTweenerFrame");
+DUMPER7_ASSERTS_ULTweenerFrame;
 
 // Class LTween.LTweenerInteger
 // 0x0030 (0x0168 - 0x0138)
@@ -244,15 +256,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerInteger">();
+		STATIC_CLASS_IMPL("LTweenerInteger")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerInteger")
 	}
 	static class ULTweenerInteger* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerInteger>();
 	}
 };
-static_assert(alignof(ULTweenerInteger) == 0x000008, "Wrong alignment on ULTweenerInteger");
-static_assert(sizeof(ULTweenerInteger) == 0x000168, "Wrong size on ULTweenerInteger");
+DUMPER7_ASSERTS_ULTweenerInteger;
 
 // Class LTween.LTweenerLinearColor
 // 0x0048 (0x0180 - 0x0138)
@@ -264,15 +279,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerLinearColor">();
+		STATIC_CLASS_IMPL("LTweenerLinearColor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerLinearColor")
 	}
 	static class ULTweenerLinearColor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerLinearColor>();
 	}
 };
-static_assert(alignof(ULTweenerLinearColor) == 0x000008, "Wrong alignment on ULTweenerLinearColor");
-static_assert(sizeof(ULTweenerLinearColor) == 0x000180, "Wrong size on ULTweenerLinearColor");
+DUMPER7_ASSERTS_ULTweenerLinearColor;
 
 // Class LTween.LTweenerMaterialScalar
 // 0x0030 (0x0168 - 0x0138)
@@ -284,15 +302,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerMaterialScalar">();
+		STATIC_CLASS_IMPL("LTweenerMaterialScalar")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerMaterialScalar")
 	}
 	static class ULTweenerMaterialScalar* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerMaterialScalar>();
 	}
 };
-static_assert(alignof(ULTweenerMaterialScalar) == 0x000008, "Wrong alignment on ULTweenerMaterialScalar");
-static_assert(sizeof(ULTweenerMaterialScalar) == 0x000168, "Wrong size on ULTweenerMaterialScalar");
+DUMPER7_ASSERTS_ULTweenerMaterialScalar;
 
 // Class LTween.LTweenerMaterialVector
 // 0x0050 (0x0188 - 0x0138)
@@ -304,15 +325,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerMaterialVector">();
+		STATIC_CLASS_IMPL("LTweenerMaterialVector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerMaterialVector")
 	}
 	static class ULTweenerMaterialVector* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerMaterialVector>();
 	}
 };
-static_assert(alignof(ULTweenerMaterialVector) == 0x000008, "Wrong alignment on ULTweenerMaterialVector");
-static_assert(sizeof(ULTweenerMaterialVector) == 0x000188, "Wrong size on ULTweenerMaterialVector");
+DUMPER7_ASSERTS_ULTweenerMaterialVector;
 
 // Class LTween.LTweenerPosition
 // 0x0058 (0x0190 - 0x0138)
@@ -324,15 +348,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerPosition">();
+		STATIC_CLASS_IMPL("LTweenerPosition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerPosition")
 	}
 	static class ULTweenerPosition* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerPosition>();
 	}
 };
-static_assert(alignof(ULTweenerPosition) == 0x000008, "Wrong alignment on ULTweenerPosition");
-static_assert(sizeof(ULTweenerPosition) == 0x000190, "Wrong size on ULTweenerPosition");
+DUMPER7_ASSERTS_ULTweenerPosition;
 
 // Class LTween.LTweenerQuaternion
 // 0x0048 (0x0180 - 0x0138)
@@ -344,15 +371,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerQuaternion">();
+		STATIC_CLASS_IMPL("LTweenerQuaternion")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerQuaternion")
 	}
 	static class ULTweenerQuaternion* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerQuaternion>();
 	}
 };
-static_assert(alignof(ULTweenerQuaternion) == 0x000008, "Wrong alignment on ULTweenerQuaternion");
-static_assert(sizeof(ULTweenerQuaternion) == 0x000180, "Wrong size on ULTweenerQuaternion");
+DUMPER7_ASSERTS_ULTweenerQuaternion;
 
 // Class LTween.LTweenerRotationEuler
 // 0x0058 (0x0190 - 0x0138)
@@ -364,15 +394,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerRotationEuler">();
+		STATIC_CLASS_IMPL("LTweenerRotationEuler")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerRotationEuler")
 	}
 	static class ULTweenerRotationEuler* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerRotationEuler>();
 	}
 };
-static_assert(alignof(ULTweenerRotationEuler) == 0x000008, "Wrong alignment on ULTweenerRotationEuler");
-static_assert(sizeof(ULTweenerRotationEuler) == 0x000190, "Wrong size on ULTweenerRotationEuler");
+DUMPER7_ASSERTS_ULTweenerRotationEuler;
 
 // Class LTween.LTweenerRotationQuat
 // 0x0068 (0x01A0 - 0x0138)
@@ -384,15 +417,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerRotationQuat">();
+		STATIC_CLASS_IMPL("LTweenerRotationQuat")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerRotationQuat")
 	}
 	static class ULTweenerRotationQuat* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerRotationQuat>();
 	}
 };
-static_assert(alignof(ULTweenerRotationQuat) == 0x000008, "Wrong alignment on ULTweenerRotationQuat");
-static_assert(sizeof(ULTweenerRotationQuat) == 0x0001A0, "Wrong size on ULTweenerRotationQuat");
+DUMPER7_ASSERTS_ULTweenerRotationQuat;
 
 // Class LTween.LTweenerRotator
 // 0x0040 (0x0178 - 0x0138)
@@ -404,15 +440,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerRotator">();
+		STATIC_CLASS_IMPL("LTweenerRotator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerRotator")
 	}
 	static class ULTweenerRotator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerRotator>();
 	}
 };
-static_assert(alignof(ULTweenerRotator) == 0x000008, "Wrong alignment on ULTweenerRotator");
-static_assert(sizeof(ULTweenerRotator) == 0x000178, "Wrong size on ULTweenerRotator");
+DUMPER7_ASSERTS_ULTweenerRotator;
 
 // Class LTween.LTweenerScale
 // 0x0040 (0x0178 - 0x0138)
@@ -424,15 +463,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerScale">();
+		STATIC_CLASS_IMPL("LTweenerScale")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerScale")
 	}
 	static class ULTweenerScale* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerScale>();
 	}
 };
-static_assert(alignof(ULTweenerScale) == 0x000008, "Wrong alignment on ULTweenerScale");
-static_assert(sizeof(ULTweenerScale) == 0x000178, "Wrong size on ULTweenerScale");
+DUMPER7_ASSERTS_ULTweenerScale;
 
 // Class LTween.LTweenerVector
 // 0x0040 (0x0178 - 0x0138)
@@ -444,15 +486,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerVector">();
+		STATIC_CLASS_IMPL("LTweenerVector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerVector")
 	}
 	static class ULTweenerVector* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerVector>();
 	}
 };
-static_assert(alignof(ULTweenerVector) == 0x000008, "Wrong alignment on ULTweenerVector");
-static_assert(sizeof(ULTweenerVector) == 0x000178, "Wrong size on ULTweenerVector");
+DUMPER7_ASSERTS_ULTweenerVector;
 
 // Class LTween.LTweenerVector2D
 // 0x0038 (0x0170 - 0x0138)
@@ -464,15 +509,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerVector2D">();
+		STATIC_CLASS_IMPL("LTweenerVector2D")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerVector2D")
 	}
 	static class ULTweenerVector2D* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerVector2D>();
 	}
 };
-static_assert(alignof(ULTweenerVector2D) == 0x000008, "Wrong alignment on ULTweenerVector2D");
-static_assert(sizeof(ULTweenerVector2D) == 0x000170, "Wrong size on ULTweenerVector2D");
+DUMPER7_ASSERTS_ULTweenerVector2D;
 
 // Class LTween.LTweenerVector4
 // 0x0048 (0x0180 - 0x0138)
@@ -484,15 +532,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerVector4">();
+		STATIC_CLASS_IMPL("LTweenerVector4")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerVector4")
 	}
 	static class ULTweenerVector4* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerVector4>();
 	}
 };
-static_assert(alignof(ULTweenerVector4) == 0x000008, "Wrong alignment on ULTweenerVector4");
-static_assert(sizeof(ULTweenerVector4) == 0x000180, "Wrong size on ULTweenerVector4");
+DUMPER7_ASSERTS_ULTweenerVector4;
 
 // Class LTween.LTweenerVirtual
 // 0x0000 (0x0138 - 0x0138)
@@ -501,15 +552,18 @@ class ULTweenerVirtual final : public ULTweener
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LTweenerVirtual">();
+		STATIC_CLASS_IMPL("LTweenerVirtual")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LTweenerVirtual")
 	}
 	static class ULTweenerVirtual* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULTweenerVirtual>();
 	}
 };
-static_assert(alignof(ULTweenerVirtual) == 0x000008, "Wrong alignment on ULTweenerVirtual");
-static_assert(sizeof(ULTweenerVirtual) == 0x000138, "Wrong size on ULTweenerVirtual");
+DUMPER7_ASSERTS_ULTweenerVirtual;
 
 }
 

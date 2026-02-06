@@ -23,9 +23,7 @@ struct XeLLBlueprintLibrary_GetFlashIndicatorEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetFlashIndicatorEnabled) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_GetFlashIndicatorEnabled");
-static_assert(sizeof(XeLLBlueprintLibrary_GetFlashIndicatorEnabled) == 0x000001, "Wrong size on XeLLBlueprintLibrary_GetFlashIndicatorEnabled");
-static_assert(offsetof(XeLLBlueprintLibrary_GetFlashIndicatorEnabled, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetFlashIndicatorEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetFlashIndicatorEnabled;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetGameLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +32,7 @@ struct XeLLBlueprintLibrary_GetGameLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetGameLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetGameLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetGameLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetGameLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetGameLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetGameLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetGameLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetGameToRenderLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -45,9 +41,7 @@ struct XeLLBlueprintLibrary_GetGameToRenderLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetGameToRenderLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetGameToRenderLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetGameToRenderLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetGameToRenderLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetGameToRenderLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetGameToRenderLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetGameToRenderLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetInputLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -56,9 +50,7 @@ struct XeLLBlueprintLibrary_GetInputLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetInputLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetInputLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetInputLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetInputLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetInputLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetInputLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetInputLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetLatencyMarkEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -67,9 +59,7 @@ struct XeLLBlueprintLibrary_GetLatencyMarkEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetLatencyMarkEnabled) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_GetLatencyMarkEnabled");
-static_assert(sizeof(XeLLBlueprintLibrary_GetLatencyMarkEnabled) == 0x000001, "Wrong size on XeLLBlueprintLibrary_GetLatencyMarkEnabled");
-static_assert(offsetof(XeLLBlueprintLibrary_GetLatencyMarkEnabled, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetLatencyMarkEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetLatencyMarkEnabled;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetPresentLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -78,9 +68,7 @@ struct XeLLBlueprintLibrary_GetPresentLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetPresentLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetPresentLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetPresentLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetPresentLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetPresentLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetPresentLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetPresentLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetRenderLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -89,9 +77,7 @@ struct XeLLBlueprintLibrary_GetRenderLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetRenderLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetRenderLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetRenderLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetRenderLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetRenderLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetRenderLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetRenderLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetRenderSubmitLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -100,9 +86,7 @@ struct XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetRenderSubmitLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetSimulationLatencyInMs
 // 0x0004 (0x0004 - 0x0000)
@@ -111,9 +95,7 @@ struct XeLLBlueprintLibrary_GetSimulationLatencyInMs final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetSimulationLatencyInMs) == 0x000004, "Wrong alignment on XeLLBlueprintLibrary_GetSimulationLatencyInMs");
-static_assert(sizeof(XeLLBlueprintLibrary_GetSimulationLatencyInMs) == 0x000004, "Wrong size on XeLLBlueprintLibrary_GetSimulationLatencyInMs");
-static_assert(offsetof(XeLLBlueprintLibrary_GetSimulationLatencyInMs, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetSimulationLatencyInMs::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetSimulationLatencyInMs;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetSupportedXeLLModes
 // 0x0010 (0x0010 - 0x0000)
@@ -122,9 +104,7 @@ struct XeLLBlueprintLibrary_GetSupportedXeLLModes final
 public:
 	TArray<EXeLLMode>                             ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetSupportedXeLLModes) == 0x000008, "Wrong alignment on XeLLBlueprintLibrary_GetSupportedXeLLModes");
-static_assert(sizeof(XeLLBlueprintLibrary_GetSupportedXeLLModes) == 0x000010, "Wrong size on XeLLBlueprintLibrary_GetSupportedXeLLModes");
-static_assert(offsetof(XeLLBlueprintLibrary_GetSupportedXeLLModes, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetSupportedXeLLModes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetSupportedXeLLModes;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.GetXeLLMode
 // 0x0001 (0x0001 - 0x0000)
@@ -133,9 +113,7 @@ struct XeLLBlueprintLibrary_GetXeLLMode final
 public:
 	EXeLLMode                                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_GetXeLLMode) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_GetXeLLMode");
-static_assert(sizeof(XeLLBlueprintLibrary_GetXeLLMode) == 0x000001, "Wrong size on XeLLBlueprintLibrary_GetXeLLMode");
-static_assert(offsetof(XeLLBlueprintLibrary_GetXeLLMode, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_GetXeLLMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_GetXeLLMode;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.IsXeLLSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -144,9 +122,7 @@ struct XeLLBlueprintLibrary_IsXeLLSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_IsXeLLSupported) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_IsXeLLSupported");
-static_assert(sizeof(XeLLBlueprintLibrary_IsXeLLSupported) == 0x000001, "Wrong size on XeLLBlueprintLibrary_IsXeLLSupported");
-static_assert(offsetof(XeLLBlueprintLibrary_IsXeLLSupported, ReturnValue) == 0x000000, "Member 'XeLLBlueprintLibrary_IsXeLLSupported::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_IsXeLLSupported;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.SetFlashIndicatorEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -155,9 +131,7 @@ struct XeLLBlueprintLibrary_SetFlashIndicatorEnabled final
 public:
 	bool                                          bEnabled;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_SetFlashIndicatorEnabled) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_SetFlashIndicatorEnabled");
-static_assert(sizeof(XeLLBlueprintLibrary_SetFlashIndicatorEnabled) == 0x000001, "Wrong size on XeLLBlueprintLibrary_SetFlashIndicatorEnabled");
-static_assert(offsetof(XeLLBlueprintLibrary_SetFlashIndicatorEnabled, bEnabled) == 0x000000, "Member 'XeLLBlueprintLibrary_SetFlashIndicatorEnabled::bEnabled' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_SetFlashIndicatorEnabled;
 
 // Function XeLLBlueprint.XeLLBlueprintLibrary.SetXeLLMode
 // 0x0001 (0x0001 - 0x0000)
@@ -166,9 +140,7 @@ struct XeLLBlueprintLibrary_SetXeLLMode final
 public:
 	EXeLLMode                                     Mode;                                              // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeLLBlueprintLibrary_SetXeLLMode) == 0x000001, "Wrong alignment on XeLLBlueprintLibrary_SetXeLLMode");
-static_assert(sizeof(XeLLBlueprintLibrary_SetXeLLMode) == 0x000001, "Wrong size on XeLLBlueprintLibrary_SetXeLLMode");
-static_assert(offsetof(XeLLBlueprintLibrary_SetXeLLMode, Mode) == 0x000000, "Member 'XeLLBlueprintLibrary_SetXeLLMode::Mode' has a wrong offset!");
+DUMPER7_ASSERTS_XeLLBlueprintLibrary_SetXeLLMode;
 
 }
 

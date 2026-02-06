@@ -43,26 +43,7 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue_2;              // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New) == 0x000008, "Wrong alignment on BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New");
-static_assert(sizeof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New) == 0x000080, "Wrong size on BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, EntryPoint) == 0x000000, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, K2Node_Event_DeltaSeconds_1) == 0x000004, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000008, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x000018, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetVectorParameterValue_ReturnValue_2) == 0x000028, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetVectorParameterValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetValidValue_ReturnValue) == 0x00003A, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue_2) == 0x00003B, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue_3) == 0x00003C, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue_4) == 0x00003D, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_RemoveDeadEffects_ReturnValue) == 0x000040, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_RemoveDeadEffects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_RemoveDeadEffects_ReturnValue_1) == 0x000050, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_RemoveDeadEffects_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_IsValid_ReturnValue_5) == 0x000060, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetValidValue_ReturnValue_1) == 0x000061, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetValidValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_RemoveDeadEffects_ReturnValue_2) == 0x000068, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_RemoveDeadEffects_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, K2Node_Event_DeltaSeconds) == 0x000078, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New, CallFunc_GetValidValue_ReturnValue_2) == 0x00007C, "Member 'BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New::CallFunc_GetValidValue_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_ExecuteUbergraph_BP_SplitScreen_New;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -71,9 +52,7 @@ struct BP_SplitScreen_New_C_EditorTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_EditorTick) == 0x000004, "Wrong alignment on BP_SplitScreen_New_C_EditorTick");
-static_assert(sizeof(BP_SplitScreen_New_C_EditorTick) == 0x000004, "Wrong size on BP_SplitScreen_New_C_EditorTick");
-static_assert(offsetof(BP_SplitScreen_New_C_EditorTick, DeltaSeconds) == 0x000000, "Member 'BP_SplitScreen_New_C_EditorTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_EditorTick;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -82,9 +61,7 @@ struct BP_SplitScreen_New_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SplitScreen_New_C_ReceiveTick");
-static_assert(sizeof(BP_SplitScreen_New_C_ReceiveTick) == 0x000004, "Wrong size on BP_SplitScreen_New_C_ReceiveTick");
-static_assert(offsetof(BP_SplitScreen_New_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SplitScreen_New_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_ReceiveTick;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.Start
 // 0x0028 (0x0028 - 0x0000)
@@ -98,14 +75,7 @@ public:
 	class UKuroMaterialControllerComponent*       CallFunc_AddComponentByClass_ReturnValue_2;        // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_InitKuroMaterialController_returnHandle_2; // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_Start) == 0x000008, "Wrong alignment on BP_SplitScreen_New_C_Start");
-static_assert(sizeof(BP_SplitScreen_New_C_Start) == 0x000028, "Wrong size on BP_SplitScreen_New_C_Start");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_AddComponentByClass_ReturnValue) == 0x000000, "Member 'BP_SplitScreen_New_C_Start::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_AddComponentByClass_ReturnValue_1) == 0x000008, "Member 'BP_SplitScreen_New_C_Start::CallFunc_AddComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_InitKuroMaterialController_returnHandle) == 0x000010, "Member 'BP_SplitScreen_New_C_Start::CallFunc_InitKuroMaterialController_returnHandle' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_InitKuroMaterialController_returnHandle_1) == 0x000014, "Member 'BP_SplitScreen_New_C_Start::CallFunc_InitKuroMaterialController_returnHandle_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_AddComponentByClass_ReturnValue_2) == 0x000018, "Member 'BP_SplitScreen_New_C_Start::CallFunc_AddComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_Start, CallFunc_InitKuroMaterialController_returnHandle_2) == 0x000020, "Member 'BP_SplitScreen_New_C_Start::CallFunc_InitKuroMaterialController_returnHandle_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_Start;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.InitKuroMaterialController
 // 0x0158 (0x0158 - 0x0000)
@@ -148,38 +118,7 @@ public:
 	uint8                                         Pad_142[0x2];                                      // 0x0142(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0144(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_InitKuroMaterialController) == 0x000008, "Wrong alignment on BP_SplitScreen_New_C_InitKuroMaterialController");
-static_assert(sizeof(BP_SplitScreen_New_C_InitKuroMaterialController) == 0x000158, "Wrong size on BP_SplitScreen_New_C_InitKuroMaterialController");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, KuroMaterialControllerComponent) == 0x000000, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::KuroMaterialControllerComponent' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CharacterActorComponent) == 0x000008, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CharacterActorComponent' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, PointLightComponent) == 0x000010, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::PointLightComponent' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, PointLight_Location) == 0x000018, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::PointLight_Location' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, PointLight_ToonLightColor) == 0x000024, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::PointLight_ToonLightColor' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, EyeLightSimulation_TongKong) == 0x000034, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::EyeLightSimulation_TongKong' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, EyeLightSimulation_YanBai) == 0x000044, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::EyeLightSimulation_YanBai' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, EyeLightSimulation_Color) == 0x000054, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::EyeLightSimulation_Color' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, E_LinkPos) == 0x000064, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::E_LinkPos' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, Channel0) == 0x000068, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::Channel0' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, Channel1) == 0x000069, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::Channel1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, Channel2) == 0x00006A, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::Channel2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, LightYaw) == 0x00006C, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::LightYaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, FaceLightYaw) == 0x000070, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, RoleId) == 0x000074, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::RoleId' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, returnHandle) == 0x000078, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::returnHandle' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, LocalHandle) == 0x00007C, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::LocalHandle' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000080, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000084, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_IsValid_ReturnValue) == 0x000118, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, K2Node_DynamicCast_AsBP_Base_Role_Seq_V2) == 0x000120, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::K2Node_DynamicCast_AsBP_Base_Role_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, K2Node_DynamicCast_bSuccess) == 0x000128, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_IsValid_ReturnValue_1) == 0x000129, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_AddEffect_ReturnValue) == 0x00012C, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_AddEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_GetComponentByClass_ReturnValue) == 0x000130, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_AddEffect_ReturnValue_1) == 0x000138, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_AddEffect_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_AddEffect_ReturnValue_2) == 0x00013C, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_AddEffect_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_GetValidValue_ReturnValue) == 0x000140, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_GetValidValue_ReturnValue_1) == 0x000141, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_GetValidValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_InitKuroMaterialController, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000144, "Member 'BP_SplitScreen_New_C_InitKuroMaterialController::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_InitKuroMaterialController;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.SetPosByViewSize
 // 0x0A50 (0x0A50 - 0x0000)
@@ -262,78 +201,7 @@ public:
 	struct FVector                                CallFunc_MakeVector_ReturnValue_5;                 // 0x09A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult_4;  // 0x09B4(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_SplitScreen_New_C_SetPosByViewSize) == 0x000010, "Wrong alignment on BP_SplitScreen_New_C_SetPosByViewSize");
-static_assert(sizeof(BP_SplitScreen_New_C_SetPosByViewSize) == 0x000A50, "Wrong size on BP_SplitScreen_New_C_SetPosByViewSize");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue) == 0x000000, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeTransform_ReturnValue) == 0x000010, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeTransform_ReturnValue_1) == 0x000040, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000070, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_GetRootComponent_ReturnValue_1) == 0x000078, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_GetRootComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000080, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_EqualEqual_ClassClass_ReturnValue_1) == 0x000081, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_EqualEqual_ClassClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_GetRootComponent_ReturnValue_2) == 0x000088, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_GetRootComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_EqualEqual_ClassClass_ReturnValue_2) == 0x000090, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_EqualEqual_ClassClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000094, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeTransform_ReturnValue_2) == 0x000130, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeTransform_SweepHitResult_1) == 0x000160, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeTransform_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_FindLookAtRotation_ReturnValue) == 0x0001F4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Roll) == 0x000200, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Pitch) == 0x000204, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Yaw) == 0x000208, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_FindLookAtRotation_ReturnValue_1) == 0x00020C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_FindLookAtRotation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeRotator_ReturnValue) == 0x000218, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Roll_1) == 0x000224, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Pitch_1) == 0x000228, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Yaw_1) == 0x00022C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000230, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeRotator_ReturnValue_1) == 0x0002C4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeRotation_SweepHitResult_1) == 0x0002D0, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_FindLookAtRotation_ReturnValue_2) == 0x000364, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_FindLookAtRotation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Roll_2) == 0x000370, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Pitch_2) == 0x000374, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Yaw_2) == 0x000378, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeRotator_ReturnValue_2) == 0x00037C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeRotation_SweepHitResult_2) == 0x000388, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeRotation_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeTransform_ReturnValue_3) == 0x000420, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeTransform_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeTransform_SweepHitResult_2) == 0x000450, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeTransform_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_FindLookAtRotation_ReturnValue_3) == 0x0004E4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_FindLookAtRotation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_FindLookAtRotation_ReturnValue_4) == 0x0004F0, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_FindLookAtRotation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Roll_3) == 0x0004FC, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Roll_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Pitch_3) == 0x000500, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Pitch_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Yaw_3) == 0x000504, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Yaw_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Roll_4) == 0x000508, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Roll_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Pitch_4) == 0x00050C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Pitch_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakRotator_Yaw_4) == 0x000510, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakRotator_Yaw_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeRotator_ReturnValue_3) == 0x000514, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeRotator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeRotator_ReturnValue_4) == 0x000520, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeRotator_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeRotation_SweepHitResult_3) == 0x00052C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeRotation_SweepHitResult_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeRotation_SweepHitResult_4) == 0x0005C0, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeRotation_SweepHitResult_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeTransform_SweepHitResult_3) == 0x000654, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeTransform_SweepHitResult_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_GetViewportSizeInLink_ViewportSize) == 0x0006E8, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_GetViewportSizeInLink_ViewportSize' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakVector2D_X) == 0x0006F0, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakVector2D_Y) == 0x0006F4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakVector2D_X_1) == 0x0006F8, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_BreakVector2D_Y_1) == 0x0006FC, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000700, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000704, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000708, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x00070C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000710, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x000714, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x000718, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x00071C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue_1) == 0x000720, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue_2) == 0x00072C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000738, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeLocation_SweepHitResult_1) == 0x0007CC, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_6) == 0x000860, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue_3) == 0x000864, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue_4) == 0x000870, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeLocation_SweepHitResult_2) == 0x00087C, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeLocation_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeLocation_SweepHitResult_3) == 0x000910, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeLocation_SweepHitResult_3' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_Multiply_FloatFloat_ReturnValue_7) == 0x0009A4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_Multiply_FloatFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_MakeVector_ReturnValue_5) == 0x0009A8, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_MakeVector_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetPosByViewSize, CallFunc_K2_SetRelativeLocation_SweepHitResult_4) == 0x0009B4, "Member 'BP_SplitScreen_New_C_SetPosByViewSize::CallFunc_K2_SetRelativeLocation_SweepHitResult_4' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_SetPosByViewSize;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.EulerToForward
 // 0x0014 (0x0014 - 0x0000)
@@ -344,11 +212,7 @@ public:
 	float                                         Yaw;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_EulerToForward) == 0x000004, "Wrong alignment on BP_SplitScreen_New_C_EulerToForward");
-static_assert(sizeof(BP_SplitScreen_New_C_EulerToForward) == 0x000014, "Wrong size on BP_SplitScreen_New_C_EulerToForward");
-static_assert(offsetof(BP_SplitScreen_New_C_EulerToForward, Pitch) == 0x000000, "Member 'BP_SplitScreen_New_C_EulerToForward::Pitch' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_EulerToForward, Yaw) == 0x000004, "Member 'BP_SplitScreen_New_C_EulerToForward::Yaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_EulerToForward, ReturnValue) == 0x000008, "Member 'BP_SplitScreen_New_C_EulerToForward::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_EulerToForward;
 
 // Function BP_SplitScreen_New.BP_SplitScreen_New_C.SetLightDirection
 // 0x0048 (0x0048 - 0x0000)
@@ -366,18 +230,7 @@ public:
 	struct FVector                                CallFunc_EulerToForward_ReturnValue;               // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_SplitScreen_New_C_SetLightDirection) == 0x000008, "Wrong alignment on BP_SplitScreen_New_C_SetLightDirection");
-static_assert(sizeof(BP_SplitScreen_New_C_SetLightDirection) == 0x000048, "Wrong size on BP_SplitScreen_New_C_SetLightDirection");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, Mesh) == 0x000000, "Member 'BP_SplitScreen_New_C_SetLightDirection::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, LightYaw) == 0x000008, "Member 'BP_SplitScreen_New_C_SetLightDirection::LightYaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, FaceLightYaw) == 0x00000C, "Member 'BP_SplitScreen_New_C_SetLightDirection::FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x000010, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_BreakRotator_Roll) == 0x00001C, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_BreakRotator_Pitch) == 0x000020, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_BreakRotator_Yaw) == 0x000024, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_Add_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_EulerToForward_ReturnValue) == 0x00002C, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_EulerToForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SplitScreen_New_C_SetLightDirection, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000038, "Member 'BP_SplitScreen_New_C_SetLightDirection::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SplitScreen_New_C_SetLightDirection;
 
 }
 

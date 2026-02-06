@@ -34,20 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TASaveConfig">();
+		STATIC_CLASS_IMPL("TASaveConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TASaveConfig")
 	}
 	static class UTASaveConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTASaveConfig>();
 	}
 };
-static_assert(alignof(UTASaveConfig) == 0x000008, "Wrong alignment on UTASaveConfig");
-static_assert(sizeof(UTASaveConfig) == 0x000070, "Wrong size on UTASaveConfig");
-static_assert(offsetof(UTASaveConfig, TrackState) == 0x000030, "Member 'UTASaveConfig::TrackState' has a wrong offset!");
-static_assert(offsetof(UTASaveConfig, DistinctID) == 0x000038, "Member 'UTASaveConfig::DistinctID' has a wrong offset!");
-static_assert(offsetof(UTASaveConfig, AccountID) == 0x000048, "Member 'UTASaveConfig::AccountID' has a wrong offset!");
-static_assert(offsetof(UTASaveConfig, SuperProperties) == 0x000058, "Member 'UTASaveConfig::SuperProperties' has a wrong offset!");
-static_assert(offsetof(UTASaveConfig, UserIndex) == 0x000068, "Member 'UTASaveConfig::UserIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UTASaveConfig;
 
 // Class TASdkPlugin.TASaveEvent
 // 0x0018 (0x0048 - 0x0030)
@@ -61,17 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TASaveEvent">();
+		STATIC_CLASS_IMPL("TASaveEvent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TASaveEvent")
 	}
 	static class UTASaveEvent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTASaveEvent>();
 	}
 };
-static_assert(alignof(UTASaveEvent) == 0x000008, "Wrong alignment on UTASaveEvent");
-static_assert(sizeof(UTASaveEvent) == 0x000048, "Wrong size on UTASaveEvent");
-static_assert(offsetof(UTASaveEvent, EventJsons) == 0x000030, "Member 'UTASaveEvent::EventJsons' has a wrong offset!");
-static_assert(offsetof(UTASaveEvent, UserIndex) == 0x000040, "Member 'UTASaveEvent::UserIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UTASaveEvent;
 
 // Class TASdkPlugin.TASaveEventV2
 // 0x0010 (0x0040 - 0x0030)
@@ -83,16 +82,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TASaveEventV2">();
+		STATIC_CLASS_IMPL("TASaveEventV2")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TASaveEventV2")
 	}
 	static class UTASaveEventV2* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTASaveEventV2>();
 	}
 };
-static_assert(alignof(UTASaveEventV2) == 0x000008, "Wrong alignment on UTASaveEventV2");
-static_assert(sizeof(UTASaveEventV2) == 0x000040, "Wrong size on UTASaveEventV2");
-static_assert(offsetof(UTASaveEventV2, EventsArray) == 0x000030, "Member 'UTASaveEventV2::EventsArray' has a wrong offset!");
+DUMPER7_ASSERTS_UTASaveEventV2;
 
 // Class TASdkPlugin.ThinkingAnalytics
 // 0x0000 (0x0030 - 0x0030)
@@ -148,15 +149,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ThinkingAnalytics">();
+		STATIC_CLASS_IMPL("ThinkingAnalytics")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ThinkingAnalytics")
 	}
 	static class UThinkingAnalytics* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UThinkingAnalytics>();
 	}
 };
-static_assert(alignof(UThinkingAnalytics) == 0x000008, "Wrong alignment on UThinkingAnalytics");
-static_assert(sizeof(UThinkingAnalytics) == 0x000030, "Wrong size on UThinkingAnalytics");
+DUMPER7_ASSERTS_UThinkingAnalytics;
 
 // Class TASdkPlugin.ThinkingAnalyticsSettings
 // 0x0068 (0x0098 - 0x0030)
@@ -179,25 +183,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ThinkingAnalyticsSettings">();
+		STATIC_CLASS_IMPL("ThinkingAnalyticsSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ThinkingAnalyticsSettings")
 	}
 	static class UThinkingAnalyticsSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UThinkingAnalyticsSettings>();
 	}
 };
-static_assert(alignof(UThinkingAnalyticsSettings) == 0x000008, "Wrong alignment on UThinkingAnalyticsSettings");
-static_assert(sizeof(UThinkingAnalyticsSettings) == 0x000098, "Wrong size on UThinkingAnalyticsSettings");
-static_assert(offsetof(UThinkingAnalyticsSettings, ServerUrl) == 0x000030, "Member 'UThinkingAnalyticsSettings::ServerUrl' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, AppID) == 0x000040, "Member 'UThinkingAnalyticsSettings::AppID' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, bEnableLog) == 0x000050, "Member 'UThinkingAnalyticsSettings::bEnableLog' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, bEnableEncrypt) == 0x000051, "Member 'UThinkingAnalyticsSettings::bEnableEncrypt' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, EncryptPublicKey) == 0x000058, "Member 'UThinkingAnalyticsSettings::EncryptPublicKey' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, EncryptVersion) == 0x000068, "Member 'UThinkingAnalyticsSettings::EncryptVersion' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, SymmetricEncryption) == 0x000070, "Member 'UThinkingAnalyticsSettings::SymmetricEncryption' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, AsymmetricEncryption) == 0x000080, "Member 'UThinkingAnalyticsSettings::AsymmetricEncryption' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, MaxNumInBatch) == 0x000090, "Member 'UThinkingAnalyticsSettings::MaxNumInBatch' has a wrong offset!");
-static_assert(offsetof(UThinkingAnalyticsSettings, FlushTimeInterval) == 0x000094, "Member 'UThinkingAnalyticsSettings::FlushTimeInterval' has a wrong offset!");
+DUMPER7_ASSERTS_UThinkingAnalyticsSettings;
 
 }
 

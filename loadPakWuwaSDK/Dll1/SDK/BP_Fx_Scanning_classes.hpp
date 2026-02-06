@@ -76,41 +76,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Fx_Scanning_C">();
+		BP_STATIC_CLASS_IMPL("BP_Fx_Scanning_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Fx_Scanning_C")
 	}
 	static class ABP_Fx_Scanning_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Fx_Scanning_C>();
 	}
 };
-static_assert(alignof(ABP_Fx_Scanning_C) == 0x000008, "Wrong alignment on ABP_Fx_Scanning_C");
-static_assert(sizeof(ABP_Fx_Scanning_C) == 0x000360, "Wrong size on ABP_Fx_Scanning_C");
-static_assert(offsetof(ABP_Fx_Scanning_C, UberGraphFrame_BP_Fx_Scanning_C) == 0x0002D0, "Member 'ABP_Fx_Scanning_C::UberGraphFrame_BP_Fx_Scanning_C' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, PostProcess) == 0x0002D8, "Member 'ABP_Fx_Scanning_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, Timeline_0_heiping_353B1A7A4A9CB64DD0E9F4A743D43275) == 0x0002E0, "Member 'ABP_Fx_Scanning_C::Timeline_0_heiping_353B1A7A4A9CB64DD0E9F4A743D43275' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, Timeline_0_LUT_353B1A7A4A9CB64DD0E9F4A743D43275) == 0x0002E4, "Member 'ABP_Fx_Scanning_C::Timeline_0_LUT_353B1A7A4A9CB64DD0E9F4A743D43275' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, Timeline_0__Direction_353B1A7A4A9CB64DD0E9F4A743D43275) == 0x0002E8, "Member 'ABP_Fx_Scanning_C::Timeline_0__Direction_353B1A7A4A9CB64DD0E9F4A743D43275' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, Timeline_0) == 0x0002F0, "Member 'ABP_Fx_Scanning_C::Timeline_0' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, __________51722C4C46877BE320D640A615DF102A) == 0x0002F8, "Member 'ABP_Fx_Scanning_C::__________51722C4C46877BE320D640A615DF102A' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ______Direction_51722C4C46877BE320D640A615DF102A) == 0x0002FC, "Member 'ABP_Fx_Scanning_C::______Direction_51722C4C46877BE320D640A615DF102A' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, 衰退范围) == 0x000300, "Member 'ABP_Fx_Scanning_C::衰退范围' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, __________4BA202604863CA55AF0FC0B49F86965B) == 0x000308, "Member 'ABP_Fx_Scanning_C::__________4BA202604863CA55AF0FC0B49F86965B' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ______Direction_4BA202604863CA55AF0FC0B49F86965B) == 0x00030C, "Member 'ABP_Fx_Scanning_C::______Direction_4BA202604863CA55AF0FC0B49F86965B' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, 轮廓强度) == 0x000310, "Member 'ABP_Fx_Scanning_C::轮廓强度' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ______NewTrack_0_F355743F48DC9EB377A77A9C1115080C) == 0x000318, "Member 'ABP_Fx_Scanning_C::______NewTrack_0_F355743F48DC9EB377A77A9C1115080C' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, _______Direction_F355743F48DC9EB377A77A9C1115080C) == 0x00031C, "Member 'ABP_Fx_Scanning_C::_______Direction_F355743F48DC9EB377A77A9C1115080C' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, 扫描带强度) == 0x000320, "Member 'ABP_Fx_Scanning_C::扫描带强度' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, _____NewTrack_0_06BB87C141833981013181AD8BBDFB4F) == 0x000328, "Member 'ABP_Fx_Scanning_C::_____NewTrack_0_06BB87C141833981013181AD8BBDFB4F' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ______Direction_06BB87C141833981013181AD8BBDFB4F) == 0x00032C, "Member 'ABP_Fx_Scanning_C::______Direction_06BB87C141833981013181AD8BBDFB4F' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, 扫描范围) == 0x000330, "Member 'ABP_Fx_Scanning_C::扫描范围' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ScanMaterial) == 0x000338, "Member 'ABP_Fx_Scanning_C::ScanMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, 反向) == 0x000340, "Member 'ABP_Fx_Scanning_C::反向' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, Play_Time) == 0x000344, "Member 'ABP_Fx_Scanning_C::Play_Time' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, ScanMaterialMID) == 0x000348, "Member 'ABP_Fx_Scanning_C::ScanMaterialMID' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, PlaySpeed) == 0x000350, "Member 'ABP_Fx_Scanning_C::PlaySpeed' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, StartTicking) == 0x000354, "Member 'ABP_Fx_Scanning_C::StartTicking' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, IsUsedForSeq) == 0x000355, "Member 'ABP_Fx_Scanning_C::IsUsedForSeq' has a wrong offset!");
-static_assert(offsetof(ABP_Fx_Scanning_C, SeqLifeCycle) == 0x000358, "Member 'ABP_Fx_Scanning_C::SeqLifeCycle' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Fx_Scanning_C;
 
 }
 

@@ -60,42 +60,7 @@ public:
 	float                                         自动镜头额外臂水平偏移_129_61E868F2409FCB59AEC798B8C55D92A9; // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         自动镜头额外臂水平偏移优先级_130_1A2AC7164FBFA3C22D4A8697D0BE5C1B; // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCamera_Setting) == 0x000008, "Wrong alignment on FSCamera_Setting");
-static_assert(sizeof(FSCamera_Setting) == 0x0000A8, "Wrong size on FSCamera_Setting");
-static_assert(offsetof(FSCamera_Setting, Type_88_23ED783447D86D6D38C085B47B77A25A) == 0x000000, "Member 'FSCamera_Setting::Type_88_23ED783447D86D6D38C085B47B77A25A' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, Tag_92_7ABDCAFE44668F3229C85DA930129F5F) == 0x000004, "Member 'FSCamera_Setting::Tag_92_7ABDCAFE44668F3229C85DA930129F5F' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 默认臂长_45_653D426740D8401BF0A1FF8AEAAB850F) == 0x000010, "Member 'FSCamera_Setting::默认臂长_45_653D426740D8401BF0A1FF8AEAAB850F' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 默认臂长优先级_47_E189C1CC4C8FA9DF000D72BD417C0008) == 0x000014, "Member 'FSCamera_Setting::默认臂长优先级_47_E189C1CC4C8FA9DF000D72BD417C0008' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最大臂长_35_0A36013D41DE1D97F48A79892F54D399) == 0x000018, "Member 'FSCamera_Setting::最大臂长_35_0A36013D41DE1D97F48A79892F54D399' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最大臂长优先级_49_0350A6DF47DE9F2E592E50A842951549) == 0x00001C, "Member 'FSCamera_Setting::最大臂长优先级_49_0350A6DF47DE9F2E592E50A842951549' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最小臂长_36_D0D6319247737E6963069D93B2176F17) == 0x000020, "Member 'FSCamera_Setting::最小臂长_36_D0D6319247737E6963069D93B2176F17' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最小臂长优先级_51_83A40C154240B10F251A5EBA88AE5A12) == 0x000024, "Member 'FSCamera_Setting::最小臂长优先级_51_83A40C154240B10F251A5EBA88AE5A12' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 叠加臂长_95_26BC40DB4D33462CB2FDC4AED23443F8) == 0x000028, "Member 'FSCamera_Setting::叠加臂长_95_26BC40DB4D33462CB2FDC4AED23443F8' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 镜头偏移_52_6F2F6AB94AC8D9718923D0ADD7DAFF47) == 0x00002C, "Member 'FSCamera_Setting::镜头偏移_52_6F2F6AB94AC8D9718923D0ADD7DAFF47' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 镜头偏移优先级_54_C6FB825140D2F91995F4C49CD065D85B) == 0x000038, "Member 'FSCamera_Setting::镜头偏移优先级_54_C6FB825140D2F91995F4C49CD065D85B' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 相机臂偏移_65_B77060264DBABDC4C003B5A9A7DCBF46) == 0x00003C, "Member 'FSCamera_Setting::相机臂偏移_65_B77060264DBABDC4C003B5A9A7DCBF46' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 相机臂偏移优先级_56_7DDB682442A77D72C4B8E8BF551AF342) == 0x000048, "Member 'FSCamera_Setting::相机臂偏移优先级_56_7DDB682442A77D72C4B8E8BF551AF342' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 进入状态相机延迟速度_75_C2A0D1F845135C780716B580F22AB43B) == 0x00004C, "Member 'FSCamera_Setting::进入状态相机延迟速度_75_C2A0D1F845135C780716B580F22AB43B' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 退出状态相机延迟速度_77_CFBA618A44F899DD6F211E8BE0B9AEE8) == 0x000050, "Member 'FSCamera_Setting::退出状态相机延迟速度_77_CFBA618A44F899DD6F211E8BE0B9AEE8' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 相机延迟速度优先级_59_4828AF8C48C0E68375B2B29A00E6E9F6) == 0x000054, "Member 'FSCamera_Setting::相机延迟速度优先级_59_4828AF8C48C0E68375B2B29A00E6E9F6' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最大延迟距离_61_4BAB5A94482395E42D3F0B8D270C6FD3) == 0x000058, "Member 'FSCamera_Setting::最大延迟距离_61_4BAB5A94482395E42D3F0B8D270C6FD3' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 最大延迟距离优先级_63_D3D96EE04D5E531FD9FE59B63C66831F) == 0x00005C, "Member 'FSCamera_Setting::最大延迟距离优先级_63_D3D96EE04D5E531FD9FE59B63C66831F' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, FOV_39_422894614EAA53AEC68885B99427E1C8) == 0x000060, "Member 'FSCamera_Setting::FOV_39_422894614EAA53AEC68885B99427E1C8' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, FOV优先级_64_06E7D99F47E434AE9E9FB68C0293F9F6) == 0x000064, "Member 'FSCamera_Setting::FOV优先级_64_06E7D99F47E434AE9E9FB68C0293F9F6' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, FadeInTime_72_B1812B7045BF2F8860B3159C6A284D38) == 0x000068, "Member 'FSCamera_Setting::FadeInTime_72_B1812B7045BF2F8860B3159C6A284D38' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, FadeOutTime_73_783905844B0D66788CAF1F99F055BF9F) == 0x00006C, "Member 'FSCamera_Setting::FadeOutTime_73_783905844B0D66788CAF1F99F055BF9F' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, AutoCamera_79_55370C1D4396F2DAAD47B184E65A1EC1) == 0x000070, "Member 'FSCamera_Setting::AutoCamera_79_55370C1D4396F2DAAD47B184E65A1EC1' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, ModifyCamera_81_BF0809474ADE2F01BAD4CC802C6F6528) == 0x000071, "Member 'FSCamera_Setting::ModifyCamera_81_BF0809474ADE2F01BAD4CC802C6F6528' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, AdjustCamera_83_0BBB8447450AFA6FA7D1DEB18882D13D) == 0x000072, "Member 'FSCamera_Setting::AdjustCamera_83_0BBB8447450AFA6FA7D1DEB18882D13D' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, FocusCamera_85_4CA16B0D4BC8B5EAD654F695D7DE6D17) == 0x000073, "Member 'FSCamera_Setting::FocusCamera_85_4CA16B0D4BC8B5EAD654F695D7DE6D17' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 自动偏转最大角速度_105_45536CE74AE8D0B981087C94B5C16360) == 0x000074, "Member 'FSCamera_Setting::自动偏转最大角速度_105_45536CE74AE8D0B981087C94B5C16360' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 是否启用自动俯仰角修正_107_B700466E4C6C0A240B5C03AEE8D974BD) == 0x000078, "Member 'FSCamera_Setting::是否启用自动俯仰角修正_107_B700466E4C6C0A240B5C03AEE8D974BD' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 自动俯仰角参数_114_323F454C4034D22B749586A3CCE1DE3E) == 0x000080, "Member 'FSCamera_Setting::自动俯仰角参数_114_323F454C4034D22B749586A3CCE1DE3E' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 自动俯仰角参数优先级_111_B430FA5D47B8DAD09C4B548959F91A9B) == 0x000090, "Member 'FSCamera_Setting::自动俯仰角参数优先级_111_B430FA5D47B8DAD09C4B548959F91A9B' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 锁定镜头偏角_117_0FEFB431493E9B14417280A1D2BF5C77) == 0x000094, "Member 'FSCamera_Setting::锁定镜头偏角_117_0FEFB431493E9B14417280A1D2BF5C77' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 锁定镜头偏角优先级_119_6A84FB254078B97CC5544497B2721D85) == 0x000098, "Member 'FSCamera_Setting::锁定镜头偏角优先级_119_6A84FB254078B97CC5544497B2721D85' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 自动镜头额外臂水平偏移_129_61E868F2409FCB59AEC798B8C55D92A9) == 0x00009C, "Member 'FSCamera_Setting::自动镜头额外臂水平偏移_129_61E868F2409FCB59AEC798B8C55D92A9' has a wrong offset!");
-static_assert(offsetof(FSCamera_Setting, 自动镜头额外臂水平偏移优先级_130_1A2AC7164FBFA3C22D4A8697D0BE5C1B) == 0x0000A0, "Member 'FSCamera_Setting::自动镜头额外臂水平偏移优先级_130_1A2AC7164FBFA3C22D4A8697D0BE5C1B' has a wrong offset!");
+DUMPER7_ASSERTS_FSCamera_Setting;
 
 }
 

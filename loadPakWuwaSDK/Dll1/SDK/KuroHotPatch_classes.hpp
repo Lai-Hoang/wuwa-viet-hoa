@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroHotPatch_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroHotPatch_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -40,15 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DownloaderProxy">();
+		STATIC_CLASS_IMPL("DownloaderProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DownloaderProxy")
 	}
 	static class UDownloaderProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDownloaderProxy>();
 	}
 };
-static_assert(alignof(UDownloaderProxy) == 0x000008, "Wrong alignment on UDownloaderProxy");
-static_assert(sizeof(UDownloaderProxy) == 0x0000D0, "Wrong size on UDownloaderProxy");
+DUMPER7_ASSERTS_UDownloaderProxy;
 
 // Class KuroHotPatch.KuroAppSetting
 // 0x0058 (0x0088 - 0x0030)
@@ -69,24 +72,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAppSetting">();
+		STATIC_CLASS_IMPL("KuroAppSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAppSetting")
 	}
 	static class UKuroAppSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAppSetting>();
 	}
 };
-static_assert(alignof(UKuroAppSetting) == 0x000008, "Wrong alignment on UKuroAppSetting");
-static_assert(sizeof(UKuroAppSetting) == 0x000088, "Wrong size on UKuroAppSetting");
-static_assert(offsetof(UKuroAppSetting, AppVersion) == 0x000030, "Member 'UKuroAppSetting::AppVersion' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, AppBuildNum) == 0x000040, "Member 'UKuroAppSetting::AppBuildNum' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, AppReleaseType) == 0x000050, "Member 'UKuroAppSetting::AppReleaseType' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, InternalUse) == 0x000060, "Member 'UKuroAppSetting::InternalUse' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, ParallelApp) == 0x000070, "Member 'UKuroAppSetting::ParallelApp' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, bLocalPackaging) == 0x000080, "Member 'UKuroAppSetting::bLocalPackaging' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, bNeedHotPatch) == 0x000081, "Member 'UKuroAppSetting::bNeedHotPatch' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, bSeparateVideo) == 0x000082, "Member 'UKuroAppSetting::bSeparateVideo' has a wrong offset!");
-static_assert(offsetof(UKuroAppSetting, bEnableOptionalPackage) == 0x000083, "Member 'UKuroAppSetting::bEnableOptionalPackage' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAppSetting;
 
 // Class KuroHotPatch.KuroCheckFiles
 // 0x0048 (0x0078 - 0x0030)
@@ -106,19 +103,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCheckFiles">();
+		STATIC_CLASS_IMPL("KuroCheckFiles")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCheckFiles")
 	}
 	static class UKuroCheckFiles* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCheckFiles>();
 	}
 };
-static_assert(alignof(UKuroCheckFiles) == 0x000008, "Wrong alignment on UKuroCheckFiles");
-static_assert(sizeof(UKuroCheckFiles) == 0x000078, "Wrong size on UKuroCheckFiles");
-static_assert(offsetof(UKuroCheckFiles, CheckList) == 0x000030, "Member 'UKuroCheckFiles::CheckList' has a wrong offset!");
-static_assert(offsetof(UKuroCheckFiles, TmpSuffix) == 0x000040, "Member 'UKuroCheckFiles::TmpSuffix' has a wrong offset!");
-static_assert(offsetof(UKuroCheckFiles, ProgressDelegate) == 0x000050, "Member 'UKuroCheckFiles::ProgressDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroCheckFiles, CompleteDelegate) == 0x000060, "Member 'UKuroCheckFiles::CompleteDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCheckFiles;
 
 // Class KuroHotPatch.KuroConfigPatcher
 // 0x0000 (0x0030 - 0x0030)
@@ -130,15 +126,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroConfigPatcher">();
+		STATIC_CLASS_IMPL("KuroConfigPatcher")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroConfigPatcher")
 	}
 	static class UKuroConfigPatcher* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroConfigPatcher>();
 	}
 };
-static_assert(alignof(UKuroConfigPatcher) == 0x000008, "Wrong alignment on UKuroConfigPatcher");
-static_assert(sizeof(UKuroConfigPatcher) == 0x000030, "Wrong size on UKuroConfigPatcher");
+DUMPER7_ASSERTS_UKuroConfigPatcher;
 
 // Class KuroHotPatch.KuroBinPatch
 // 0x0030 (0x0060 - 0x0030)
@@ -155,17 +154,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBinPatch">();
+		STATIC_CLASS_IMPL("KuroBinPatch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBinPatch")
 	}
 	static class UKuroBinPatch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBinPatch>();
 	}
 };
-static_assert(alignof(UKuroBinPatch) == 0x000008, "Wrong alignment on UKuroBinPatch");
-static_assert(sizeof(UKuroBinPatch) == 0x000060, "Wrong size on UKuroBinPatch");
-static_assert(offsetof(UKuroBinPatch, ProgressDelegate) == 0x000030, "Member 'UKuroBinPatch::ProgressDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroBinPatch, CompleteDelegate) == 0x000040, "Member 'UKuroBinPatch::CompleteDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBinPatch;
 
 // Class KuroHotPatch.KuroLauncherLibrary
 // 0x0050 (0x0080 - 0x0030)
@@ -221,16 +221,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLauncherLibrary">();
+		STATIC_CLASS_IMPL("KuroLauncherLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLauncherLibrary")
 	}
 	static class UKuroLauncherLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLauncherLibrary>();
 	}
 };
-static_assert(alignof(UKuroLauncherLibrary) == 0x000008, "Wrong alignment on UKuroLauncherLibrary");
-static_assert(sizeof(UKuroLauncherLibrary) == 0x000080, "Wrong size on UKuroLauncherLibrary");
-static_assert(offsetof(UKuroLauncherLibrary, PreloadBp) == 0x000030, "Member 'UKuroLauncherLibrary::PreloadBp' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLauncherLibrary;
 
 // Class KuroHotPatch.KuroPakMountStatic
 // 0x0000 (0x0030 - 0x0030)
@@ -260,15 +262,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPakMountStatic">();
+		STATIC_CLASS_IMPL("KuroPakMountStatic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPakMountStatic")
 	}
 	static class UKuroPakMountStatic* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPakMountStatic>();
 	}
 };
-static_assert(alignof(UKuroPakMountStatic) == 0x000008, "Wrong alignment on UKuroPakMountStatic");
-static_assert(sizeof(UKuroPakMountStatic) == 0x000030, "Wrong size on UKuroPakMountStatic");
+DUMPER7_ASSERTS_UKuroPakMountStatic;
 
 }
 

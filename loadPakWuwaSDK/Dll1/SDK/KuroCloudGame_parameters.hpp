@@ -21,9 +21,7 @@ struct KuroCloudGameWrapper_SendDataToPipeBinary final
 public:
 	class FString                                 Data;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCloudGameWrapper_SendDataToPipeBinary) == 0x000008, "Wrong alignment on KuroCloudGameWrapper_SendDataToPipeBinary");
-static_assert(sizeof(KuroCloudGameWrapper_SendDataToPipeBinary) == 0x000010, "Wrong size on KuroCloudGameWrapper_SendDataToPipeBinary");
-static_assert(offsetof(KuroCloudGameWrapper_SendDataToPipeBinary, Data) == 0x000000, "Member 'KuroCloudGameWrapper_SendDataToPipeBinary::Data' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCloudGameWrapper_SendDataToPipeBinary;
 
 // Function KuroCloudGame.KuroCloudGameWrapper.SendDataToPipeBinaryWithKey
 // 0x0020 (0x0020 - 0x0000)
@@ -33,10 +31,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Data;                                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCloudGameWrapper_SendDataToPipeBinaryWithKey) == 0x000008, "Wrong alignment on KuroCloudGameWrapper_SendDataToPipeBinaryWithKey");
-static_assert(sizeof(KuroCloudGameWrapper_SendDataToPipeBinaryWithKey) == 0x000020, "Wrong size on KuroCloudGameWrapper_SendDataToPipeBinaryWithKey");
-static_assert(offsetof(KuroCloudGameWrapper_SendDataToPipeBinaryWithKey, Key) == 0x000000, "Member 'KuroCloudGameWrapper_SendDataToPipeBinaryWithKey::Key' has a wrong offset!");
-static_assert(offsetof(KuroCloudGameWrapper_SendDataToPipeBinaryWithKey, Data) == 0x000010, "Member 'KuroCloudGameWrapper_SendDataToPipeBinaryWithKey::Data' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCloudGameWrapper_SendDataToPipeBinaryWithKey;
 
 }
 

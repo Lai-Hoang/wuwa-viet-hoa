@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -38,46 +38,37 @@ public:
 	int32                                         LodLevel;                                          // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void DebugSetNpcDitherValue(float value);
-	void HandleLoadedDaConfig(class UPD_NpcSetupData_C* daConfig1, bool isEditor);
-	void StopMontage();
-	void HideDialog();
-	bool TryPlayMontage(const class FString& montagePath);
-	void ShowDialog(const class FString& text1, float removeFrame1);
-	void ResetMeshLocation();
-	void SetDefaultCollision();
-	void FindFloor();
-	void LoadModel();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void EditorTick(float DeltaSeconds);
-	void EditorInit();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_TsSimpleNpc(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void EditorInit();
+	void EditorTick(float DeltaSeconds);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void LoadModel();
+	void FindFloor();
+	void SetDefaultCollision();
+	void ResetMeshLocation();
+	void ShowDialog(const class FString& text1, float removeFrame1);
+	bool TryPlayMontage(const class FString& montagePath);
+	void HideDialog();
+	void StopMontage();
+	void HandleLoadedDaConfig(class UPD_NpcSetupData_C* daConfig1, bool isEditor);
+	void DebugSetNpcDitherValue(float value);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSimpleNpc_C">();
+		BP_STATIC_CLASS_IMPL("TsSimpleNpc_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSimpleNpc_C")
 	}
 	static class ATsSimpleNpc_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsSimpleNpc_C>();
 	}
 };
-static_assert(alignof(ATsSimpleNpc_C) == 0x000008, "Wrong alignment on ATsSimpleNpc_C");
-static_assert(sizeof(ATsSimpleNpc_C) == 0x000308, "Wrong size on ATsSimpleNpc_C");
-static_assert(offsetof(ATsSimpleNpc_C, UberGraphFrame) == 0x0002B8, "Member 'ATsSimpleNpc_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, Mesh) == 0x0002C0, "Member 'ATsSimpleNpc_C::Mesh' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, CapsuleCollision) == 0x0002C8, "Member 'ATsSimpleNpc_C::CapsuleCollision' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, CharRenderingComponent) == 0x0002D0, "Member 'ATsSimpleNpc_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DA) == 0x0002D8, "Member 'ATsSimpleNpc_C::DA' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSunny) == 0x0002F8, "Member 'ATsSimpleNpc_C::DisappearOnSunny' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnCloudy) == 0x0002F9, "Member 'ATsSimpleNpc_C::DisappearOnCloudy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnRainy) == 0x0002FA, "Member 'ATsSimpleNpc_C::DisappearOnRainy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnThunderRain) == 0x0002FB, "Member 'ATsSimpleNpc_C::DisappearOnThunderRain' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSnowy) == 0x0002FC, "Member 'ATsSimpleNpc_C::DisappearOnSnowy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DebugDitherValue) == 0x000300, "Member 'ATsSimpleNpc_C::DebugDitherValue' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, LodLevel) == 0x000304, "Member 'ATsSimpleNpc_C::LodLevel' has a wrong offset!");
+DUMPER7_ASSERTS_ATsSimpleNpc_C;
 
 }
 

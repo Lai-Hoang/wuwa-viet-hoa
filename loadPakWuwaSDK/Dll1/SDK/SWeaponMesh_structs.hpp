@@ -24,11 +24,7 @@ public:
 	TSoftObjectPtr<class USkeletalMesh>           MeshSoftPtr_17_98C9B4294B35F8E0D704BD88964D513E;   // 0x0010(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftClassPtr<class UClass>                   AnimInstanceSoftPtr_27_CB59D54843156A87D50BC189CB2BA4EE; // 0x0040(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSWeaponMesh) == 0x000008, "Wrong alignment on FSWeaponMesh");
-static_assert(sizeof(FSWeaponMesh) == 0x000070, "Wrong size on FSWeaponMesh");
-static_assert(offsetof(FSWeaponMesh, SocketName_10_7E5A67CA419B3CCDB9F0EF8DAB3769BB) == 0x000000, "Member 'FSWeaponMesh::SocketName_10_7E5A67CA419B3CCDB9F0EF8DAB3769BB' has a wrong offset!");
-static_assert(offsetof(FSWeaponMesh, MeshSoftPtr_17_98C9B4294B35F8E0D704BD88964D513E) == 0x000010, "Member 'FSWeaponMesh::MeshSoftPtr_17_98C9B4294B35F8E0D704BD88964D513E' has a wrong offset!");
-static_assert(offsetof(FSWeaponMesh, AnimInstanceSoftPtr_27_CB59D54843156A87D50BC189CB2BA4EE) == 0x000040, "Member 'FSWeaponMesh::AnimInstanceSoftPtr_27_CB59D54843156A87D50BC189CB2BA4EE' has a wrong offset!");
+DUMPER7_ASSERTS_FSWeaponMesh;
 
 }
 

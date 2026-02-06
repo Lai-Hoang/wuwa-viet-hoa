@@ -27,11 +27,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	const class UKuroTriggerEffect*               TriggerEffect;                                     // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TriggerEffectBPLibrary_Play) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_Play");
-static_assert(sizeof(TriggerEffectBPLibrary_Play) == 0x000018, "Wrong size on TriggerEffectBPLibrary_Play");
-static_assert(offsetof(TriggerEffectBPLibrary_Play, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_Play::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_Play, TriggerSide) == 0x000008, "Member 'TriggerEffectBPLibrary_Play::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_Play, TriggerEffect) == 0x000010, "Member 'TriggerEffectBPLibrary_Play::TriggerEffect' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_Play;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.ResetPadColor
 // 0x0008 (0x0008 - 0x0000)
@@ -40,9 +36,7 @@ struct TriggerEffectBPLibrary_ResetPadColor final
 public:
 	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TriggerEffectBPLibrary_ResetPadColor) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_ResetPadColor");
-static_assert(sizeof(TriggerEffectBPLibrary_ResetPadColor) == 0x000008, "Wrong size on TriggerEffectBPLibrary_ResetPadColor");
-static_assert(offsetof(TriggerEffectBPLibrary_ResetPadColor, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_ResetPadColor::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_ResetPadColor;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.SetPadColor
 // 0x0010 (0x0010 - 0x0000)
@@ -53,10 +47,7 @@ public:
 	struct FColor                                 Color;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_SetPadColor) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_SetPadColor");
-static_assert(sizeof(TriggerEffectBPLibrary_SetPadColor) == 0x000010, "Wrong size on TriggerEffectBPLibrary_SetPadColor");
-static_assert(offsetof(TriggerEffectBPLibrary_SetPadColor, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_SetPadColor::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_SetPadColor, Color) == 0x000008, "Member 'TriggerEffectBPLibrary_SetPadColor::Color' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_SetPadColor;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.SetTriggerEffectState
 // 0x0010 (0x0010 - 0x0000)
@@ -67,10 +58,7 @@ public:
 	bool                                          bNewState;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_SetTriggerEffectState) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_SetTriggerEffectState");
-static_assert(sizeof(TriggerEffectBPLibrary_SetTriggerEffectState) == 0x000010, "Wrong size on TriggerEffectBPLibrary_SetTriggerEffectState");
-static_assert(offsetof(TriggerEffectBPLibrary_SetTriggerEffectState, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_SetTriggerEffectState::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_SetTriggerEffectState, bNewState) == 0x000008, "Member 'TriggerEffectBPLibrary_SetTriggerEffectState::bNewState' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_SetTriggerEffectState;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetFeedbackMode
 // 0x0010 (0x0010 - 0x0000)
@@ -86,15 +74,7 @@ public:
 	uint8                                         AnalogThreshold;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode) == 0x000010, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, Position) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::Position' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, Strength) == 0x000009, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::Strength' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, TriggerSide) == 0x00000A, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, ControllerType) == 0x00000B, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, bUseEffectForThreshold) == 0x00000C, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode, AnalogThreshold) == 0x00000D, "Member 'TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetFeedbackMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetMultipositionFeedbackMode
 // 0x0020 (0x0020 - 0x0000)
@@ -109,14 +89,7 @@ public:
 	uint8                                         AnalogThreshold;                                   // 0x001B(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode) == 0x000020, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, Strengths) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::Strengths' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, TriggerSide) == 0x000018, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, ControllerType) == 0x000019, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, bUseEffectForThreshold) == 0x00001A, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode, AnalogThreshold) == 0x00001B, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetMultipositionFeedbackMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetMultipositionVibrationMode
 // 0x0028 (0x0028 - 0x0000)
@@ -133,15 +106,7 @@ public:
 	uint8                                         AnalogThreshold;                                   // 0x0023(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode) == 0x000028, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, Frequency) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::Frequency' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, Amplitudes) == 0x000010, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::Amplitudes' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, TriggerSide) == 0x000020, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, ControllerType) == 0x000021, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, bUseEffectForThreshold) == 0x000022, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode, AnalogThreshold) == 0x000023, "Member 'TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetMultipositionVibrationMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetOffMode
 // 0x0010 (0x0010 - 0x0000)
@@ -153,11 +118,7 @@ public:
 	ETriggerEffectControllerType                  ControllerType;                                    // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetOffMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetOffMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetOffMode) == 0x000010, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetOffMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetOffMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetOffMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetOffMode, TriggerSide) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetOffMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetOffMode, ControllerType) == 0x000009, "Member 'TriggerEffectBPLibrary_TriggerEffectSetOffMode::ControllerType' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetOffMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetOffModeBothControllers
 // 0x0008 (0x0008 - 0x0000)
@@ -166,9 +127,7 @@ struct TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers final
 public:
 	const class APlayerController*                PlayerController;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers) == 0x000008, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetOffModeBothControllers;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetSlopeFeedbackMode
 // 0x0010 (0x0010 - 0x0000)
@@ -185,17 +144,7 @@ public:
 	bool                                          bUseEffectForThreshold;                            // 0x000E(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         AnalogThreshold;                                   // 0x000F(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode) == 0x000010, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, StartPosition) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::StartPosition' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, EndPosition) == 0x000009, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::EndPosition' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, StartStrength) == 0x00000A, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::StartStrength' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, EndStrength) == 0x00000B, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::EndStrength' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, TriggerSide) == 0x00000C, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, ControllerType) == 0x00000D, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, bUseEffectForThreshold) == 0x00000E, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode, AnalogThreshold) == 0x00000F, "Member 'TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetSlopeFeedbackMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetVibrationMode
 // 0x0010 (0x0010 - 0x0000)
@@ -212,16 +161,7 @@ public:
 	uint8                                         AnalogThreshold;                                   // 0x000E(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetVibrationMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode) == 0x000010, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetVibrationMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, Position) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::Position' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, Frequency) == 0x000009, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::Frequency' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, Amplitude) == 0x00000A, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::Amplitude' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, TriggerSide) == 0x00000B, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, ControllerType) == 0x00000C, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, bUseEffectForThreshold) == 0x00000D, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetVibrationMode, AnalogThreshold) == 0x00000E, "Member 'TriggerEffectBPLibrary_TriggerEffectSetVibrationMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetVibrationMode;
 
 // Function TriggerEffect.TriggerEffectBPLibrary.TriggerEffectSetWeaponMode
 // 0x0010 (0x0010 - 0x0000)
@@ -238,16 +178,7 @@ public:
 	uint8                                         AnalogThreshold;                                   // 0x000E(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode) == 0x000008, "Wrong alignment on TriggerEffectBPLibrary_TriggerEffectSetWeaponMode");
-static_assert(sizeof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode) == 0x000010, "Wrong size on TriggerEffectBPLibrary_TriggerEffectSetWeaponMode");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, PlayerController) == 0x000000, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::PlayerController' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, StartPosition) == 0x000008, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::StartPosition' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, EndPosition) == 0x000009, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::EndPosition' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, Strength) == 0x00000A, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::Strength' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, TriggerSide) == 0x00000B, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::TriggerSide' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, ControllerType) == 0x00000C, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::ControllerType' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, bUseEffectForThreshold) == 0x00000D, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(TriggerEffectBPLibrary_TriggerEffectSetWeaponMode, AnalogThreshold) == 0x00000E, "Member 'TriggerEffectBPLibrary_TriggerEffectSetWeaponMode::AnalogThreshold' has a wrong offset!");
+DUMPER7_ASSERTS_TriggerEffectBPLibrary_TriggerEffectSetWeaponMode;
 
 }
 

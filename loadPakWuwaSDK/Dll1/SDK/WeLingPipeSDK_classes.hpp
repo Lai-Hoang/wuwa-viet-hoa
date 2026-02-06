@@ -32,15 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PipeWrapper">();
+		STATIC_CLASS_IMPL("PipeWrapper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PipeWrapper")
 	}
 	static class UPipeWrapper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPipeWrapper>();
 	}
 };
-static_assert(alignof(UPipeWrapper) == 0x000008, "Wrong alignment on UPipeWrapper");
-static_assert(sizeof(UPipeWrapper) == 0x000030, "Wrong size on UPipeWrapper");
+DUMPER7_ASSERTS_UPipeWrapper;
 
 }
 

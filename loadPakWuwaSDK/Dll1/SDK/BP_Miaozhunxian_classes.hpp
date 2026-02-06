@@ -44,23 +44,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Miaozhunxian_C">();
+		BP_STATIC_CLASS_IMPL("BP_Miaozhunxian_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Miaozhunxian_C")
 	}
 	static class ABP_Miaozhunxian_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Miaozhunxian_C>();
 	}
 };
-static_assert(alignof(ABP_Miaozhunxian_C) == 0x000008, "Wrong alignment on ABP_Miaozhunxian_C");
-static_assert(sizeof(ABP_Miaozhunxian_C) == 0x0002F8, "Wrong size on ABP_Miaozhunxian_C");
-static_assert(offsetof(ABP_Miaozhunxian_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_Miaozhunxian_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, InstancedStaticMesh) == 0x0002B8, "Member 'ABP_Miaozhunxian_C::InstancedStaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, Spline) == 0x0002C0, "Member 'ABP_Miaozhunxian_C::Spline' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_Miaozhunxian_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, BasicStaticMesh) == 0x0002D0, "Member 'ABP_Miaozhunxian_C::BasicStaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, SamplingNum) == 0x0002D8, "Member 'ABP_Miaozhunxian_C::SamplingNum' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, BasicStaticMeshs) == 0x0002E0, "Member 'ABP_Miaozhunxian_C::BasicStaticMeshs' has a wrong offset!");
-static_assert(offsetof(ABP_Miaozhunxian_C, Showing) == 0x0002F0, "Member 'ABP_Miaozhunxian_C::Showing' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Miaozhunxian_C;
 
 }
 

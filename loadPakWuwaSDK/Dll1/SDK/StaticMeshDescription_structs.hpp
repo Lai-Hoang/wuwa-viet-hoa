@@ -27,13 +27,7 @@ public:
 	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FVector                                Scale;                                             // 0x002C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FUVMapSettings) == 0x000004, "Wrong alignment on FUVMapSettings");
-static_assert(sizeof(FUVMapSettings) == 0x000038, "Wrong size on FUVMapSettings");
-static_assert(offsetof(FUVMapSettings, Size) == 0x000000, "Member 'FUVMapSettings::Size' has a wrong offset!");
-static_assert(offsetof(FUVMapSettings, UVTile) == 0x00000C, "Member 'FUVMapSettings::UVTile' has a wrong offset!");
-static_assert(offsetof(FUVMapSettings, Position) == 0x000014, "Member 'FUVMapSettings::Position' has a wrong offset!");
-static_assert(offsetof(FUVMapSettings, Rotation) == 0x000020, "Member 'FUVMapSettings::Rotation' has a wrong offset!");
-static_assert(offsetof(FUVMapSettings, Scale) == 0x00002C, "Member 'FUVMapSettings::Scale' has a wrong offset!");
+DUMPER7_ASSERTS_FUVMapSettings;
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -50,31 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_SeqCustom_C">();
+		BP_STATIC_CLASS_IMPL("ABP_SeqCustom_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_SeqCustom_C")
 	}
 	static class UABP_SeqCustom_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_SeqCustom_C>();
 	}
 };
-static_assert(alignof(UABP_SeqCustom_C) == 0x000010, "Wrong alignment on UABP_SeqCustom_C");
-static_assert(sizeof(UABP_SeqCustom_C) == 0x000DE0, "Wrong size on UABP_SeqCustom_C");
-static_assert(offsetof(UABP_SeqCustom_C, UberGraphFrame) == 0x000730, "Member 'UABP_SeqCustom_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_SeqCustom_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Slot_4) == 0x000770, "Member 'UABP_SeqCustom_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Slot_3) == 0x0007D0, "Member 'UABP_SeqCustom_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_LinkedInputPose) == 0x000830, "Member 'UABP_SeqCustom_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Slot_2) == 0x000968, "Member 'UABP_SeqCustom_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_LocalToComponentSpace) == 0x0009C8, "Member 'UABP_SeqCustom_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_ComponentToLocalSpace) == 0x0009E8, "Member 'UABP_SeqCustom_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_KuroModifyBones) == 0x000A08, "Member 'UABP_SeqCustom_C::AnimGraphNode_KuroModifyBones' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_CurveSource) == 0x000B98, "Member 'UABP_SeqCustom_C::AnimGraphNode_CurveSource' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Slot_1) == 0x000BD8, "Member 'UABP_SeqCustom_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_CurveFix) == 0x000C38, "Member 'UABP_SeqCustom_C::AnimGraphNode_CurveFix' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_Slot) == 0x000C68, "Member 'UABP_SeqCustom_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_CombineCurves_1) == 0x000CC8, "Member 'UABP_SeqCustom_C::AnimGraphNode_CombineCurves_1' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, AnimGraphNode_CombineCurves) == 0x000D28, "Member 'UABP_SeqCustom_C::AnimGraphNode_CombineCurves' has a wrong offset!");
-static_assert(offsetof(UABP_SeqCustom_C, Vector_Curve_Data) == 0x000D88, "Member 'UABP_SeqCustom_C::Vector_Curve_Data' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_SeqCustom_C;
 
 }
 

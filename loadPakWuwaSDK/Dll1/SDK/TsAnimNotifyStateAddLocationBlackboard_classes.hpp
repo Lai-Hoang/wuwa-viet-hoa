@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EAnsBlackboardType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "EAnsBlackboardType_structs.hpp"
 
 
 namespace SDK
@@ -38,19 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateAddLocationBlackboard_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateAddLocationBlackboard_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateAddLocationBlackboard_C")
 	}
 	static class UTsAnimNotifyStateAddLocationBlackboard_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateAddLocationBlackboard_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateAddLocationBlackboard_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateAddLocationBlackboard_C");
-static_assert(sizeof(UTsAnimNotifyStateAddLocationBlackboard_C) == 0x000070, "Wrong size on UTsAnimNotifyStateAddLocationBlackboard_C");
-static_assert(offsetof(UTsAnimNotifyStateAddLocationBlackboard_C, Curve) == 0x000048, "Member 'UTsAnimNotifyStateAddLocationBlackboard_C::Curve' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAddLocationBlackboard_C, NeedChangeToFlying) == 0x000050, "Member 'UTsAnimNotifyStateAddLocationBlackboard_C::NeedChangeToFlying' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAddLocationBlackboard_C, AddLocationKey) == 0x000058, "Member 'UTsAnimNotifyStateAddLocationBlackboard_C::AddLocationKey' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAddLocationBlackboard_C, 黑板类型) == 0x000068, "Member 'UTsAnimNotifyStateAddLocationBlackboard_C::黑板类型' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateAddLocationBlackboard_C;
 
 }
 

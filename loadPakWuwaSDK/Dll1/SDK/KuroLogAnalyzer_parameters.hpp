@@ -21,9 +21,7 @@ struct KuroLogAnalyzerLibrary_Clear final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroLogAnalyzerLibrary_Clear) == 0x000001, "Wrong alignment on KuroLogAnalyzerLibrary_Clear");
-static_assert(sizeof(KuroLogAnalyzerLibrary_Clear) == 0x000001, "Wrong size on KuroLogAnalyzerLibrary_Clear");
-static_assert(offsetof(KuroLogAnalyzerLibrary_Clear, ReturnValue) == 0x000000, "Member 'KuroLogAnalyzerLibrary_Clear::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroLogAnalyzerLibrary_Clear;
 
 // Function KuroLogAnalyzer.KuroLogAnalyzerLibrary.Initialize
 // 0x0038 (0x0038 - 0x0000)
@@ -37,12 +35,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroLogAnalyzerLibrary_Initialize) == 0x000004, "Wrong alignment on KuroLogAnalyzerLibrary_Initialize");
-static_assert(sizeof(KuroLogAnalyzerLibrary_Initialize) == 0x000038, "Wrong size on KuroLogAnalyzerLibrary_Initialize");
-static_assert(offsetof(KuroLogAnalyzerLibrary_Initialize, InVerbosity) == 0x000000, "Member 'KuroLogAnalyzerLibrary_Initialize::InVerbosity' has a wrong offset!");
-static_assert(offsetof(KuroLogAnalyzerLibrary_Initialize, InLogDelegate) == 0x000008, "Member 'KuroLogAnalyzerLibrary_Initialize::InLogDelegate' has a wrong offset!");
-static_assert(offsetof(KuroLogAnalyzerLibrary_Initialize, InMessageMaxSize) == 0x000030, "Member 'KuroLogAnalyzerLibrary_Initialize::InMessageMaxSize' has a wrong offset!");
-static_assert(offsetof(KuroLogAnalyzerLibrary_Initialize, ReturnValue) == 0x000034, "Member 'KuroLogAnalyzerLibrary_Initialize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroLogAnalyzerLibrary_Initialize;
 
 // Function KuroLogAnalyzer.KuroLogAnalyzerLibrary.SetEnable
 // 0x0001 (0x0001 - 0x0000)
@@ -51,9 +44,7 @@ struct KuroLogAnalyzerLibrary_SetEnable final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroLogAnalyzerLibrary_SetEnable) == 0x000001, "Wrong alignment on KuroLogAnalyzerLibrary_SetEnable");
-static_assert(sizeof(KuroLogAnalyzerLibrary_SetEnable) == 0x000001, "Wrong size on KuroLogAnalyzerLibrary_SetEnable");
-static_assert(offsetof(KuroLogAnalyzerLibrary_SetEnable, bEnable) == 0x000000, "Member 'KuroLogAnalyzerLibrary_SetEnable::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroLogAnalyzerLibrary_SetEnable;
 
 }
 

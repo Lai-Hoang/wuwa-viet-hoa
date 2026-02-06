@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass AnimNotifyStateEffect.AnimNotifyStateEffect_C
-// 0x00D0 (0x0158 - 0x0088)
+// 0x00D8 (0x0160 - 0x0088)
 class UAnimNotifyStateEffect_C final : public UKuroEffectMakerANS
 {
 public:
@@ -46,8 +46,10 @@ public:
 	class FName                                   EffectSlotName;                                    // 0x0148(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsSyncEffectTimeScale;                             // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          NotRealAttach;                                     // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          DisableOnVehicle;                                  // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          TagCheckWithOwner;                                 // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IgnoreWhenEntityNotInit;                           // 0x0157(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisableOnVehicle;                                  // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          SyncEventTimeContinuous;                           // 0x0159(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	bool K2_ValidateAssets();
@@ -58,43 +60,25 @@ public:
 	void AttachEffectToWeapon(class USkeletalMeshComponent* meshComp, class AActor* outer, float effectHandle);
 	void Init();
 	void CheckRealAttach();
-	bool StopEffectInternal(class USkeletalMeshComponent* meshComp1, class UAnimSequenceBase* animation1, const class FString& reason);
+	bool StopEffectInternal(class USkeletalMeshComponent* meshComp, class UAnimSequenceBase* animation, const class FString& reason);
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyStateEffect_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyStateEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyStateEffect_C")
 	}
 	static class UAnimNotifyStateEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyStateEffect_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyStateEffect_C) == 0x000008, "Wrong alignment on UAnimNotifyStateEffect_C");
-static_assert(sizeof(UAnimNotifyStateEffect_C) == 0x000158, "Wrong size on UAnimNotifyStateEffect_C");
-static_assert(offsetof(UAnimNotifyStateEffect_C, UseSocketTransform) == 0x000088, "Member 'UAnimNotifyStateEffect_C::UseSocketTransform' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, UseClipboardTransform) == 0x000089, "Member 'UAnimNotifyStateEffect_C::UseClipboardTransform' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, DetachWhenSkillEnd) == 0x00008A, "Member 'UAnimNotifyStateEffect_C::DetachWhenSkillEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, WhenSkillEnd) == 0x00008B, "Member 'UAnimNotifyStateEffect_C::WhenSkillEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, FasterStop) == 0x00008C, "Member 'UAnimNotifyStateEffect_C::FasterStop' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, EffectDataAssetRef) == 0x000090, "Member 'UAnimNotifyStateEffect_C::EffectDataAssetRef' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, AutoDetachTime) == 0x0000C0, "Member 'UAnimNotifyStateEffect_C::AutoDetachTime' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, PlayOnEnd) == 0x0000C4, "Member 'UAnimNotifyStateEffect_C::PlayOnEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, WithOutTag) == 0x0000C8, "Member 'UAnimNotifyStateEffect_C::WithOutTag' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, NeedAnyTag) == 0x0000E8, "Member 'UAnimNotifyStateEffect_C::NeedAnyTag' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, PlayNeedTags) == 0x0000F0, "Member 'UAnimNotifyStateEffect_C::PlayNeedTags' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, IsWeaponEffect) == 0x000140, "Member 'UAnimNotifyStateEffect_C::IsWeaponEffect' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, RecycleWhenEnd) == 0x000141, "Member 'UAnimNotifyStateEffect_C::RecycleWhenEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, AlwaysLoop) == 0x000142, "Member 'UAnimNotifyStateEffect_C::AlwaysLoop' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, SyncEventTimeToEffectTime) == 0x000143, "Member 'UAnimNotifyStateEffect_C::SyncEventTimeToEffectTime' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, IgnoreWhenInvisible) == 0x000144, "Member 'UAnimNotifyStateEffect_C::IgnoreWhenInvisible' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, EffectSlotName) == 0x000148, "Member 'UAnimNotifyStateEffect_C::EffectSlotName' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, IsSyncEffectTimeScale) == 0x000154, "Member 'UAnimNotifyStateEffect_C::IsSyncEffectTimeScale' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, NotRealAttach) == 0x000155, "Member 'UAnimNotifyStateEffect_C::NotRealAttach' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, DisableOnVehicle) == 0x000156, "Member 'UAnimNotifyStateEffect_C::DisableOnVehicle' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateEffect_C, IgnoreWhenEntityNotInit) == 0x000157, "Member 'UAnimNotifyStateEffect_C::IgnoreWhenEntityNotInit' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotifyStateEffect_C;
 
 }
 

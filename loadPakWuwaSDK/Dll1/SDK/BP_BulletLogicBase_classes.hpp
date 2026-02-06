@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BulletLogicBase_C">();
+		BP_STATIC_CLASS_IMPL("BP_BulletLogicBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BulletLogicBase_C")
 	}
 	static class UBP_BulletLogicBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_BulletLogicBase_C>();
 	}
 };
-static_assert(alignof(UBP_BulletLogicBase_C) == 0x000008, "Wrong alignment on UBP_BulletLogicBase_C");
-static_assert(sizeof(UBP_BulletLogicBase_C) == 0x000030, "Wrong size on UBP_BulletLogicBase_C");
+DUMPER7_ASSERTS_UBP_BulletLogicBase_C;
 
 }
 

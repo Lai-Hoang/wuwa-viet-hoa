@@ -34,17 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateAddBuff_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateAddBuff_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateAddBuff_C")
 	}
 	static class UTsAnimNotifyStateAddBuff_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateAddBuff_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateAddBuff_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateAddBuff_C");
-static_assert(sizeof(UTsAnimNotifyStateAddBuff_C) == 0x000058, "Wrong size on UTsAnimNotifyStateAddBuff_C");
-static_assert(offsetof(UTsAnimNotifyStateAddBuff_C, BuffId) == 0x000048, "Member 'UTsAnimNotifyStateAddBuff_C::BuffId' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateAddBuff_C, 施加目标) == 0x000050, "Member 'UTsAnimNotifyStateAddBuff_C::施加目标' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateAddBuff_C;
 
 }
 

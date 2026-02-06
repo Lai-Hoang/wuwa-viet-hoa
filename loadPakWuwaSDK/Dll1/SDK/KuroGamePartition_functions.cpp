@@ -225,34 +225,6 @@ void UGamePartition::Remove(class AActor* Actor)
 }
 
 
-// Function KuroGamePartition.GamePartitionManager.GetGamePartition
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// EGamePartitionCellSizeType              CellSizeType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGamePartition*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGamePartition* UGamePartitionManager::GetGamePartition(EGamePartitionCellSizeType CellSizeType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GamePartitionManager", "GetGamePartition");
-
-	Params::GamePartitionManager_GetGamePartition Parms{};
-
-	Parms.CellSizeType = CellSizeType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function KuroGamePartition.GamePartitionSubsystem.GetGamePartition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

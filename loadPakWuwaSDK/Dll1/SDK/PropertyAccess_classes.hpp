@@ -23,7 +23,11 @@ class IPropertyAccess final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PropertyAccess">();
+		STATIC_CLASS_IMPL("PropertyAccess")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyAccess")
 	}
 	static class IPropertyAccess* GetDefaultObj()
 	{
@@ -39,8 +43,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IPropertyAccess) == 0x000001, "Wrong alignment on IPropertyAccess");
-static_assert(sizeof(IPropertyAccess) == 0x000001, "Wrong size on IPropertyAccess");
+DUMPER7_ASSERTS_IPropertyAccess;
 
 // Class PropertyAccess.PropertyEventBroadcaster
 // 0x0000 (0x0000 - 0x0000)
@@ -49,7 +52,11 @@ class IPropertyEventBroadcaster final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PropertyEventBroadcaster">();
+		STATIC_CLASS_IMPL("PropertyEventBroadcaster")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyEventBroadcaster")
 	}
 	static class IPropertyEventBroadcaster* GetDefaultObj()
 	{
@@ -65,8 +72,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IPropertyEventBroadcaster) == 0x000001, "Wrong alignment on IPropertyEventBroadcaster");
-static_assert(sizeof(IPropertyEventBroadcaster) == 0x000001, "Wrong size on IPropertyEventBroadcaster");
+DUMPER7_ASSERTS_IPropertyEventBroadcaster;
 
 // Class PropertyAccess.PropertyEventSubscriber
 // 0x0000 (0x0000 - 0x0000)
@@ -75,7 +81,11 @@ class IPropertyEventSubscriber final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PropertyEventSubscriber">();
+		STATIC_CLASS_IMPL("PropertyEventSubscriber")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PropertyEventSubscriber")
 	}
 	static class IPropertyEventSubscriber* GetDefaultObj()
 	{
@@ -91,8 +101,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IPropertyEventSubscriber) == 0x000001, "Wrong alignment on IPropertyEventSubscriber");
-static_assert(sizeof(IPropertyEventSubscriber) == 0x000001, "Wrong size on IPropertyEventSubscriber");
+DUMPER7_ASSERTS_IPropertyEventSubscriber;
 
 }
 

@@ -41,20 +41,7 @@ public:
 	TSoftObjectPtr<class UTexture2D>              图标路径_40_BD39BDD345649A4C97B642B598835ABC;      // 0x00C0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	EInteractionIconType                          交互图标类型_39_D22959BD4F2FA789D56E0EA12C7D8551;  // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSInteractionOption) == 0x000008, "Wrong alignment on FSInteractionOption");
-static_assert(sizeof(FSInteractionOption) == 0x0000F8, "Wrong size on FSInteractionOption");
-static_assert(offsetof(FSInteractionOption, 选项内容_6_BB7E47394FEDBDDE16F1F7AE28FA4CF6) == 0x000000, "Member 'FSInteractionOption::选项内容_6_BB7E47394FEDBDDE16F1F7AE28FA4CF6' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 类型_7_44C33AC74F5F6E12401F30BCFDE230F5) == 0x000018, "Member 'FSInteractionOption::类型_7_44C33AC74F5F6E12401F30BCFDE230F5' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 解锁条件组ID_24_8123B61940D1E4B372DC938BD076085D) == 0x00001C, "Member 'FSInteractionOption::解锁条件组ID_24_8123B61940D1E4B372DC938BD076085D' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 任务_10_B67D2C9F409F4224633A1DAC284FB7E5) == 0x000028, "Member 'FSInteractionOption::任务_10_B67D2C9F409F4224633A1DAC284FB7E5' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 剧情ID_15_52A80678441519A44E8BEC8EDA6A6773) == 0x000050, "Member 'FSInteractionOption::剧情ID_15_52A80678441519A44E8BEC8EDA6A6773' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 剧情资源_18_B781004D40F6F6F16FF9FD9A1C61E089) == 0x000060, "Member 'FSInteractionOption::剧情资源_18_B781004D40F6F6F16FF9FD9A1C61E089' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, Plot_32_3EE3D4E94D83169599EC2686B8A23708) == 0x000090, "Member 'FSInteractionOption::Plot_32_3EE3D4E94D83169599EC2686B8A23708' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 事件ID_21_0CAB7D6C47E37E736FF83B9FCBCD5203) == 0x0000A0, "Member 'FSInteractionOption::事件ID_21_0CAB7D6C47E37E736FF83B9FCBCD5203' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 是否关闭交互界面_26_EBEED9B44B15AE1DA0B338996A805C3F) == 0x0000AC, "Member 'FSInteractionOption::是否关闭交互界面_26_EBEED9B44B15AE1DA0B338996A805C3F' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 交互选项限制_29_EE158046445DDFDB8807C689EA8CB4CC) == 0x0000B0, "Member 'FSInteractionOption::交互选项限制_29_EE158046445DDFDB8807C689EA8CB4CC' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 图标路径_40_BD39BDD345649A4C97B642B598835ABC) == 0x0000C0, "Member 'FSInteractionOption::图标路径_40_BD39BDD345649A4C97B642B598835ABC' has a wrong offset!");
-static_assert(offsetof(FSInteractionOption, 交互图标类型_39_D22959BD4F2FA789D56E0EA12C7D8551) == 0x0000F0, "Member 'FSInteractionOption::交互图标类型_39_D22959BD4F2FA789D56E0EA12C7D8551' has a wrong offset!");
+DUMPER7_ASSERTS_FSInteractionOption;
 
 }
 

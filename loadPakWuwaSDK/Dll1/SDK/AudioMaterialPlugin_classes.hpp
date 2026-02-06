@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioGlobalSystem">();
+		STATIC_CLASS_IMPL("AudioGlobalSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioGlobalSystem")
 	}
 	static class UAudioGlobalSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioGlobalSystem>();
 	}
 };
-static_assert(alignof(UAudioGlobalSystem) == 0x000008, "Wrong alignment on UAudioGlobalSystem");
-static_assert(sizeof(UAudioGlobalSystem) == 0x000048, "Wrong size on UAudioGlobalSystem");
-static_assert(offsetof(UAudioGlobalSystem, AudioComponents) == 0x000030, "Member 'UAudioGlobalSystem::AudioComponents' has a wrong offset!");
-static_assert(offsetof(UAudioGlobalSystem, bOpenLogging) == 0x000040, "Member 'UAudioGlobalSystem::bOpenLogging' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioGlobalSystem;
 
 // Class AudioMaterialPlugin.AudioMaterialCookBlueprint
 // 0x0000 (0x0030 - 0x0030)
@@ -48,15 +49,18 @@ class UAudioMaterialCookBlueprint final : public UBlueprintFunctionLibrary
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialCookBlueprint">();
+		STATIC_CLASS_IMPL("AudioMaterialCookBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialCookBlueprint")
 	}
 	static class UAudioMaterialCookBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialCookBlueprint>();
 	}
 };
-static_assert(alignof(UAudioMaterialCookBlueprint) == 0x000008, "Wrong alignment on UAudioMaterialCookBlueprint");
-static_assert(sizeof(UAudioMaterialCookBlueprint) == 0x000030, "Wrong size on UAudioMaterialCookBlueprint");
+DUMPER7_ASSERTS_UAudioMaterialCookBlueprint;
 
 // Class AudioMaterialPlugin.AudioMaterialBlueprint
 // 0x0000 (0x0030 - 0x0030)
@@ -68,15 +72,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialBlueprint">();
+		STATIC_CLASS_IMPL("AudioMaterialBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialBlueprint")
 	}
 	static class UAudioMaterialBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioMaterialBlueprint>();
 	}
 };
-static_assert(alignof(UAudioMaterialBlueprint) == 0x000008, "Wrong alignment on UAudioMaterialBlueprint");
-static_assert(sizeof(UAudioMaterialBlueprint) == 0x000030, "Wrong size on UAudioMaterialBlueprint");
+DUMPER7_ASSERTS_UAudioMaterialBlueprint;
 
 // Class AudioMaterialPlugin.AudioMaterialPartitionActor
 // 0x0008 (0x02C0 - 0x02B8)
@@ -88,16 +95,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioMaterialPartitionActor">();
+		STATIC_CLASS_IMPL("AudioMaterialPartitionActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioMaterialPartitionActor")
 	}
 	static class AAudioMaterialPartitionActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AAudioMaterialPartitionActor>();
 	}
 };
-static_assert(alignof(AAudioMaterialPartitionActor) == 0x000008, "Wrong alignment on AAudioMaterialPartitionActor");
-static_assert(sizeof(AAudioMaterialPartitionActor) == 0x0002C0, "Wrong size on AAudioMaterialPartitionActor");
-static_assert(offsetof(AAudioMaterialPartitionActor, AudioMaterialComp) == 0x0002B8, "Member 'AAudioMaterialPartitionActor::AudioMaterialComp' has a wrong offset!");
+DUMPER7_ASSERTS_AAudioMaterialPartitionActor;
 
 }
 

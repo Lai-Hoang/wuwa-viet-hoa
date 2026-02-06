@@ -24,9 +24,7 @@ struct KuroFauxPhysicsComponentBase_AddComponentTickBlocker final
 public:
 	struct FKuroInstigator                        DisableInstigator;                                 // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_AddComponentTickBlocker) == 0x000008, "Wrong alignment on KuroFauxPhysicsComponentBase_AddComponentTickBlocker");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_AddComponentTickBlocker) == 0x000038, "Wrong size on KuroFauxPhysicsComponentBase_AddComponentTickBlocker");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_AddComponentTickBlocker, DisableInstigator) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_AddComponentTickBlocker::DisableInstigator' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_AddComponentTickBlocker;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.AddDisabler
 // 0x0038 (0x0038 - 0x0000)
@@ -35,9 +33,7 @@ struct KuroFauxPhysicsComponentBase_AddDisabler final
 public:
 	struct FKuroInstigator                        DisableInstigator;                                 // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_AddDisabler) == 0x000008, "Wrong alignment on KuroFauxPhysicsComponentBase_AddDisabler");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_AddDisabler) == 0x000038, "Wrong size on KuroFauxPhysicsComponentBase_AddDisabler");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_AddDisabler, DisableInstigator) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_AddDisabler::DisableInstigator' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_AddDisabler;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.ApplyForce
 // 0x0018 (0x0018 - 0x0000)
@@ -47,10 +43,7 @@ public:
 	struct FVector                                Origin;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Force;                                             // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_ApplyForce) == 0x000004, "Wrong alignment on KuroFauxPhysicsComponentBase_ApplyForce");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_ApplyForce) == 0x000018, "Wrong size on KuroFauxPhysicsComponentBase_ApplyForce");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyForce, Origin) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_ApplyForce::Origin' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyForce, Force) == 0x00000C, "Member 'KuroFauxPhysicsComponentBase_ApplyForce::Force' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_ApplyForce;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.ApplyImpulse
 // 0x0018 (0x0018 - 0x0000)
@@ -60,10 +53,7 @@ public:
 	struct FVector                                Origin;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Impulse;                                           // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_ApplyImpulse) == 0x000004, "Wrong alignment on KuroFauxPhysicsComponentBase_ApplyImpulse");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_ApplyImpulse) == 0x000018, "Wrong size on KuroFauxPhysicsComponentBase_ApplyImpulse");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyImpulse, Origin) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_ApplyImpulse::Origin' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyImpulse, Impulse) == 0x00000C, "Member 'KuroFauxPhysicsComponentBase_ApplyImpulse::Impulse' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_ApplyImpulse;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.ApplyMovement
 // 0x0018 (0x0018 - 0x0000)
@@ -73,10 +63,7 @@ public:
 	struct FVector                                Origin;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Movement;                                          // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_ApplyMovement) == 0x000004, "Wrong alignment on KuroFauxPhysicsComponentBase_ApplyMovement");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_ApplyMovement) == 0x000018, "Wrong size on KuroFauxPhysicsComponentBase_ApplyMovement");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyMovement, Origin) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_ApplyMovement::Origin' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_ApplyMovement, Movement) == 0x00000C, "Member 'KuroFauxPhysicsComponentBase_ApplyMovement::Movement' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_ApplyMovement;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.RemoveComponentTickBlocker
 // 0x0038 (0x0038 - 0x0000)
@@ -85,9 +72,7 @@ struct KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker final
 public:
 	struct FKuroInstigator                        DisableInstigator;                                 // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker) == 0x000008, "Wrong alignment on KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker) == 0x000038, "Wrong size on KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker, DisableInstigator) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker::DisableInstigator' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_RemoveComponentTickBlocker;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.RemoveDisabler
 // 0x0038 (0x0038 - 0x0000)
@@ -96,9 +81,7 @@ struct KuroFauxPhysicsComponentBase_RemoveDisabler final
 public:
 	struct FKuroInstigator                        DisableInstigator;                                 // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_RemoveDisabler) == 0x000008, "Wrong alignment on KuroFauxPhysicsComponentBase_RemoveDisabler");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_RemoveDisabler) == 0x000038, "Wrong size on KuroFauxPhysicsComponentBase_RemoveDisabler");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_RemoveDisabler, DisableInstigator) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_RemoveDisabler::DisableInstigator' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_RemoveDisabler;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.CanSleep
 // 0x0001 (0x0001 - 0x0000)
@@ -107,9 +90,7 @@ struct KuroFauxPhysicsComponentBase_CanSleep final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_CanSleep) == 0x000001, "Wrong alignment on KuroFauxPhysicsComponentBase_CanSleep");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_CanSleep) == 0x000001, "Wrong size on KuroFauxPhysicsComponentBase_CanSleep");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_CanSleep, ReturnValue) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_CanSleep::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_CanSleep;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.HasFauxPhysicsControl
 // 0x0001 (0x0001 - 0x0000)
@@ -118,9 +99,7 @@ struct KuroFauxPhysicsComponentBase_HasFauxPhysicsControl final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_HasFauxPhysicsControl) == 0x000001, "Wrong alignment on KuroFauxPhysicsComponentBase_HasFauxPhysicsControl");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_HasFauxPhysicsControl) == 0x000001, "Wrong size on KuroFauxPhysicsComponentBase_HasFauxPhysicsControl");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_HasFauxPhysicsControl, ReturnValue) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_HasFauxPhysicsControl::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_HasFauxPhysicsControl;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.IsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -129,9 +108,7 @@ struct KuroFauxPhysicsComponentBase_IsEnabled final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_IsEnabled) == 0x000001, "Wrong alignment on KuroFauxPhysicsComponentBase_IsEnabled");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_IsEnabled) == 0x000001, "Wrong size on KuroFauxPhysicsComponentBase_IsEnabled");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_IsEnabled, ReturnValue) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_IsEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_IsEnabled;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsComponentBase.IsSleeping
 // 0x0001 (0x0001 - 0x0000)
@@ -140,9 +117,7 @@ struct KuroFauxPhysicsComponentBase_IsSleeping final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsComponentBase_IsSleeping) == 0x000001, "Wrong alignment on KuroFauxPhysicsComponentBase_IsSleeping");
-static_assert(sizeof(KuroFauxPhysicsComponentBase_IsSleeping) == 0x000001, "Wrong size on KuroFauxPhysicsComponentBase_IsSleeping");
-static_assert(offsetof(KuroFauxPhysicsComponentBase_IsSleeping, ReturnValue) == 0x000000, "Member 'KuroFauxPhysicsComponentBase_IsSleeping::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsComponentBase_IsSleeping;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent.ApplyAngularForce
 // 0x0004 (0x0004 - 0x0000)
@@ -151,9 +126,7 @@ struct KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce final
 public:
 	float                                         AngularForceRadians;                               // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce) == 0x000004, "Wrong alignment on KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce");
-static_assert(sizeof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce) == 0x000004, "Wrong size on KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce");
-static_assert(offsetof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce, AngularForceRadians) == 0x000000, "Member 'KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce::AngularForceRadians' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsAxisRotateComponent_ApplyAngularForce;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent.ApplyAngularImpulse
 // 0x0004 (0x0004 - 0x0000)
@@ -162,9 +135,7 @@ struct KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse final
 public:
 	float                                         AngularImpulseRadians;                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse) == 0x000004, "Wrong alignment on KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse");
-static_assert(sizeof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse) == 0x000004, "Wrong size on KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse");
-static_assert(offsetof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse, AngularImpulseRadians) == 0x000000, "Member 'KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse::AngularImpulseRadians' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsAxisRotateComponent_ApplyAngularImpulse;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent.ApplyAngularMovement
 // 0x0004 (0x0004 - 0x0000)
@@ -173,9 +144,7 @@ struct KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement final
 public:
 	float                                         AngleRadians;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement) == 0x000004, "Wrong alignment on KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement");
-static_assert(sizeof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement) == 0x000004, "Wrong size on KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement");
-static_assert(offsetof(KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement, AngleRadians) == 0x000000, "Member 'KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement::AngleRadians' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsAxisRotateComponent_ApplyAngularMovement;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsAxisRotateComponent.GetCurrentAlphaBetweenConstraints
 // 0x0004 (0x0004 - 0x0000)
@@ -184,9 +153,7 @@ struct KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints fina
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints) == 0x000004, "Wrong alignment on KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints");
-static_assert(sizeof(KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints) == 0x000004, "Wrong size on KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints");
-static_assert(offsetof(KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints, ReturnValue) == 0x000000, "Member 'KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsAxisRotateComponent_GetCurrentAlphaBetweenConstraints;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawArc
 // 0x004C (0x004C - 0x0000)
@@ -206,19 +173,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x0049(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawArc) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawArc");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawArc) == 0x00004C, "Wrong size on KuroPrimitiveComponentVisualizer_DrawArc");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Base) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Base' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Angle) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Angle' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Radius) == 0x000010, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Radius' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Direction) == 0x000014, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Direction' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Color) == 0x000020, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Thickness) == 0x000030, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Normal) == 0x000034, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Normal' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, Sections) == 0x000040, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::Sections' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, InnerRadius) == 0x000044, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::InnerRadius' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, bDrawSides) == 0x000048, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::bDrawSides' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArc, DepthPriority) == 0x000049, "Member 'KuroPrimitiveComponentVisualizer_DrawArc::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawArc;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawArrow
 // 0x0034 (0x0034 - 0x0000)
@@ -234,15 +189,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x0031(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawArrow) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawArrow");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawArrow) == 0x000034, "Wrong size on KuroPrimitiveComponentVisualizer_DrawArrow");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, Start) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::Start' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, End) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::End' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, Color) == 0x000018, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, ArrowSize) == 0x000028, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::ArrowSize' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, Thickness) == 0x00002C, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, bScreenSpace) == 0x000030, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::bScreenSpace' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawArrow, DepthPriority) == 0x000031, "Member 'KuroPrimitiveComponentVisualizer_DrawArrow::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawArrow;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawCircle
 // 0x0038 (0x0038 - 0x0000)
@@ -258,15 +205,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x0034(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawCircle) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawCircle");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawCircle) == 0x000038, "Wrong size on KuroPrimitiveComponentVisualizer_DrawCircle");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, Origin) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::Origin' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, Radius) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::Radius' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, Color) == 0x000010, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, Thickness) == 0x000020, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, Normal) == 0x000024, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::Normal' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, LineSegments) == 0x000030, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::LineSegments' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawCircle, DepthPriority) == 0x000034, "Member 'KuroPrimitiveComponentVisualizer_DrawCircle::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawCircle;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawDashedLine
 // 0x0040 (0x0040 - 0x0000)
@@ -285,17 +224,7 @@ public:
 	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DepthBias;                                         // 0x003C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawDashedLine) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawDashedLine");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawDashedLine) == 0x000040, "Wrong size on KuroPrimitiveComponentVisualizer_DrawDashedLine");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, Start) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::Start' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, End) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::End' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, Color) == 0x000018, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, DashSize) == 0x000028, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::DashSize' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, Thickness) == 0x00002C, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, bScreenSpace) == 0x000030, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::bScreenSpace' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, MaxDashes) == 0x000034, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::MaxDashes' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, DepthPriority) == 0x000038, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::DepthPriority' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawDashedLine, DepthBias) == 0x00003C, "Member 'KuroPrimitiveComponentVisualizer_DrawDashedLine::DepthBias' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawDashedLine;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawLine
 // 0x0030 (0x0030 - 0x0000)
@@ -310,14 +239,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x002D(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawLine) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawLine");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawLine) == 0x000030, "Wrong size on KuroPrimitiveComponentVisualizer_DrawLine");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, Start) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::Start' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, End) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::End' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, Color) == 0x000018, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, Thickness) == 0x000028, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, bScreenSpace) == 0x00002C, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::bScreenSpace' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawLine, DepthPriority) == 0x00002D, "Member 'KuroPrimitiveComponentVisualizer_DrawLine::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawLine;
 
 // Function KuroFauxPhysics.KuroPrimitiveComponentVisualizer.DrawWireSphere
 // 0x002C (0x002C - 0x0000)
@@ -332,14 +254,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x0028(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrimitiveComponentVisualizer_DrawWireSphere) == 0x000004, "Wrong alignment on KuroPrimitiveComponentVisualizer_DrawWireSphere");
-static_assert(sizeof(KuroPrimitiveComponentVisualizer_DrawWireSphere) == 0x00002C, "Wrong size on KuroPrimitiveComponentVisualizer_DrawWireSphere");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, Base) == 0x000000, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::Base' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, Radius) == 0x00000C, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::Radius' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, Color) == 0x000010, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::Color' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, Thickness) == 0x000020, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::Thickness' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, NumSides) == 0x000024, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::NumSides' has a wrong offset!");
-static_assert(offsetof(KuroPrimitiveComponentVisualizer_DrawWireSphere, DepthPriority) == 0x000028, "Member 'KuroPrimitiveComponentVisualizer_DrawWireSphere::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrimitiveComponentVisualizer_DrawWireSphere;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent.CustomGetDirection
 // 0x0034 (0x0034 - 0x0000)
@@ -352,13 +267,7 @@ public:
 	float                                         SpeedB;                                            // 0x0024(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x0028(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection) == 0x000004, "Wrong alignment on KuroFauxPhysicsTrackTargetComponent_CustomGetDirection");
-static_assert(sizeof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection) == 0x000034, "Wrong size on KuroFauxPhysicsTrackTargetComponent_CustomGetDirection");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection, PosA) == 0x000000, "Member 'KuroFauxPhysicsTrackTargetComponent_CustomGetDirection::PosA' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection, VelA) == 0x00000C, "Member 'KuroFauxPhysicsTrackTargetComponent_CustomGetDirection::VelA' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection, PosB) == 0x000018, "Member 'KuroFauxPhysicsTrackTargetComponent_CustomGetDirection::PosB' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection, SpeedB) == 0x000024, "Member 'KuroFauxPhysicsTrackTargetComponent_CustomGetDirection::SpeedB' has a wrong offset!");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_CustomGetDirection, ReturnValue) == 0x000028, "Member 'KuroFauxPhysicsTrackTargetComponent_CustomGetDirection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsTrackTargetComponent_CustomGetDirection;
 
 // Function KuroFauxPhysics.KuroFauxPhysicsTrackTargetComponent.StartTrackTarget
 // 0x0008 (0x0008 - 0x0000)
@@ -367,9 +276,7 @@ struct KuroFauxPhysicsTrackTargetComponent_StartTrackTarget final
 public:
 	class APawn*                                  Target;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFauxPhysicsTrackTargetComponent_StartTrackTarget) == 0x000008, "Wrong alignment on KuroFauxPhysicsTrackTargetComponent_StartTrackTarget");
-static_assert(sizeof(KuroFauxPhysicsTrackTargetComponent_StartTrackTarget) == 0x000008, "Wrong size on KuroFauxPhysicsTrackTargetComponent_StartTrackTarget");
-static_assert(offsetof(KuroFauxPhysicsTrackTargetComponent_StartTrackTarget, Target) == 0x000000, "Member 'KuroFauxPhysicsTrackTargetComponent_StartTrackTarget::Target' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFauxPhysicsTrackTargetComponent_StartTrackTarget;
 
 }
 

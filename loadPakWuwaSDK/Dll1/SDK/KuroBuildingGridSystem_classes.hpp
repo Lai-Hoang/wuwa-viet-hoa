@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
 #include "KuroBuildingGridSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
@@ -42,19 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGrid">();
+		STATIC_CLASS_IMPL("KuroBuildingGrid")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGrid")
 	}
 	static class AKuroBuildingGrid* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroBuildingGrid>();
 	}
 };
-static_assert(alignof(AKuroBuildingGrid) == 0x000010, "Wrong alignment on AKuroBuildingGrid");
-static_assert(sizeof(AKuroBuildingGrid) == 0x000400, "Wrong size on AKuroBuildingGrid");
-static_assert(offsetof(AKuroBuildingGrid, RenderingComp) == 0x0002B0, "Member 'AKuroBuildingGrid::RenderingComp' has a wrong offset!");
-static_assert(offsetof(AKuroBuildingGrid, GridSize) == 0x0002B8, "Member 'AKuroBuildingGrid::GridSize' has a wrong offset!");
-static_assert(offsetof(AKuroBuildingGrid, BlockCoords) == 0x0002C0, "Member 'AKuroBuildingGrid::BlockCoords' has a wrong offset!");
-static_assert(offsetof(AKuroBuildingGrid, BuildingGridSpawnGuid) == 0x0002D0, "Member 'AKuroBuildingGrid::BuildingGridSpawnGuid' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroBuildingGrid;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridPersistentPlaceholder
 // 0x0008 (0x0038 - 0x0030)
@@ -66,15 +65,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridPersistentPlaceholder">();
+		STATIC_CLASS_IMPL("KuroBuildingGridPersistentPlaceholder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridPersistentPlaceholder")
 	}
 	static class UKuroBuildingGridPersistentPlaceholder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBuildingGridPersistentPlaceholder>();
 	}
 };
-static_assert(alignof(UKuroBuildingGridPersistentPlaceholder) == 0x000008, "Wrong alignment on UKuroBuildingGridPersistentPlaceholder");
-static_assert(sizeof(UKuroBuildingGridPersistentPlaceholder) == 0x000038, "Wrong size on UKuroBuildingGridPersistentPlaceholder");
+DUMPER7_ASSERTS_UKuroBuildingGridPersistentPlaceholder;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridPlaceholderComponent
 // 0x0010 (0x00D0 - 0x00C0)
@@ -87,16 +89,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridPlaceholderComponent">();
+		STATIC_CLASS_IMPL("KuroBuildingGridPlaceholderComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridPlaceholderComponent")
 	}
 	static class UKuroBuildingGridPlaceholderComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBuildingGridPlaceholderComponent>();
 	}
 };
-static_assert(alignof(UKuroBuildingGridPlaceholderComponent) == 0x000008, "Wrong alignment on UKuroBuildingGridPlaceholderComponent");
-static_assert(sizeof(UKuroBuildingGridPlaceholderComponent) == 0x0000D0, "Wrong size on UKuroBuildingGridPlaceholderComponent");
-static_assert(offsetof(UKuroBuildingGridPlaceholderComponent, GridSize) == 0x0000C8, "Member 'UKuroBuildingGridPlaceholderComponent::GridSize' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBuildingGridPlaceholderComponent;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridPlaceholderInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -113,7 +117,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridPlaceholderInterface">();
+		STATIC_CLASS_IMPL("KuroBuildingGridPlaceholderInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridPlaceholderInterface")
 	}
 	static class IKuroBuildingGridPlaceholderInterface* GetDefaultObj()
 	{
@@ -129,8 +137,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IKuroBuildingGridPlaceholderInterface) == 0x000001, "Wrong alignment on IKuroBuildingGridPlaceholderInterface");
-static_assert(sizeof(IKuroBuildingGridPlaceholderInterface) == 0x000001, "Wrong size on IKuroBuildingGridPlaceholderInterface");
+DUMPER7_ASSERTS_IKuroBuildingGridPlaceholderInterface;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridRenderingComponent
 // 0x0010 (0x0590 - 0x0580)
@@ -142,15 +149,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridRenderingComponent">();
+		STATIC_CLASS_IMPL("KuroBuildingGridRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridRenderingComponent")
 	}
 	static class UKuroBuildingGridRenderingComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBuildingGridRenderingComponent>();
 	}
 };
-static_assert(alignof(UKuroBuildingGridRenderingComponent) == 0x000010, "Wrong alignment on UKuroBuildingGridRenderingComponent");
-static_assert(sizeof(UKuroBuildingGridRenderingComponent) == 0x000590, "Wrong size on UKuroBuildingGridRenderingComponent");
+DUMPER7_ASSERTS_UKuroBuildingGridRenderingComponent;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridSettings
 // 0x0008 (0x0050 - 0x0048)
@@ -163,17 +173,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridSettings">();
+		STATIC_CLASS_IMPL("KuroBuildingGridSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridSettings")
 	}
 	static class UKuroBuildingGridSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBuildingGridSettings>();
 	}
 };
-static_assert(alignof(UKuroBuildingGridSettings) == 0x000008, "Wrong alignment on UKuroBuildingGridSettings");
-static_assert(sizeof(UKuroBuildingGridSettings) == 0x000050, "Wrong size on UKuroBuildingGridSettings");
-static_assert(offsetof(UKuroBuildingGridSettings, CellSize) == 0x000048, "Member 'UKuroBuildingGridSettings::CellSize' has a wrong offset!");
-static_assert(offsetof(UKuroBuildingGridSettings, Threshold) == 0x00004C, "Member 'UKuroBuildingGridSettings::Threshold' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBuildingGridSettings;
 
 // Class KuroBuildingGridSystem.KuroBuildingGridSubsystem
 // 0x0058 (0x0090 - 0x0038)
@@ -193,16 +204,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBuildingGridSubsystem">();
+		STATIC_CLASS_IMPL("KuroBuildingGridSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBuildingGridSubsystem")
 	}
 	static class UKuroBuildingGridSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBuildingGridSubsystem>();
 	}
 };
-static_assert(alignof(UKuroBuildingGridSubsystem) == 0x000008, "Wrong alignment on UKuroBuildingGridSubsystem");
-static_assert(sizeof(UKuroBuildingGridSubsystem) == 0x000090, "Wrong size on UKuroBuildingGridSubsystem");
-static_assert(offsetof(UKuroBuildingGridSubsystem, PersistentPlaceholder) == 0x000088, "Member 'UKuroBuildingGridSubsystem::PersistentPlaceholder' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBuildingGridSubsystem;
 
 }
 

@@ -25,10 +25,7 @@ public:
 	struct FLinearColor                           LowGrayColor;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           HighGrayColor;                                     // 0x0010(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSPModelShiftColorParameter) == 0x000004, "Wrong alignment on FSPModelShiftColorParameter");
-static_assert(sizeof(FSPModelShiftColorParameter) == 0x000020, "Wrong size on FSPModelShiftColorParameter");
-static_assert(offsetof(FSPModelShiftColorParameter, LowGrayColor) == 0x000000, "Member 'FSPModelShiftColorParameter::LowGrayColor' has a wrong offset!");
-static_assert(offsetof(FSPModelShiftColorParameter, HighGrayColor) == 0x000010, "Member 'FSPModelShiftColorParameter::HighGrayColor' has a wrong offset!");
+DUMPER7_ASSERTS_FSPModelShiftColorParameter;
 
 // ScriptStruct KuroInteractionEffect.SPModelSCPMap
 // 0x0050 (0x0050 - 0x0000)
@@ -37,9 +34,17 @@ struct FSPModelSCPMap final
 public:
 	TMap<int32, struct FSPModelShiftColorParameter> ModelColorMap;                                   // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSPModelSCPMap) == 0x000008, "Wrong alignment on FSPModelSCPMap");
-static_assert(sizeof(FSPModelSCPMap) == 0x000050, "Wrong size on FSPModelSCPMap");
-static_assert(offsetof(FSPModelSCPMap, ModelColorMap) == 0x000000, "Member 'FSPModelSCPMap::ModelColorMap' has a wrong offset!");
+DUMPER7_ASSERTS_FSPModelSCPMap;
+
+// ScriptStruct KuroInteractionEffect.KuroInteractionPlacementTriggerActor
+// 0x0060 (0x0068 - 0x0008)
+struct FKuroInteractionPlacementTriggerActor final : public FTableRowBase
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             PlacementStaticMesh;                               // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UStaticMesh>             TriggerStaticMesh;                                 // 0x0038(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroInteractionPlacementTriggerActor;
 
 // ScriptStruct KuroInteractionEffect.KuroInteractionEffectTraceFoliage
 // 0x0050 (0x0058 - 0x0008)
@@ -54,27 +59,7 @@ public:
 	struct FVector                                PlayerSpawnOffset;                                 // 0x0048(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroInteractionEffectTraceFoliage) == 0x000008, "Wrong alignment on FKuroInteractionEffectTraceFoliage");
-static_assert(sizeof(FKuroInteractionEffectTraceFoliage) == 0x000058, "Wrong size on FKuroInteractionEffectTraceFoliage");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, FoliageMesh) == 0x000008, "Member 'FKuroInteractionEffectTraceFoliage::FoliageMesh' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, SpawnNum) == 0x000038, "Member 'FKuroInteractionEffectTraceFoliage::SpawnNum' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, HeightClamp) == 0x00003C, "Member 'FKuroInteractionEffectTraceFoliage::HeightClamp' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, Weight) == 0x000040, "Member 'FKuroInteractionEffectTraceFoliage::Weight' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, TypeIndex) == 0x000044, "Member 'FKuroInteractionEffectTraceFoliage::TypeIndex' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionEffectTraceFoliage, PlayerSpawnOffset) == 0x000048, "Member 'FKuroInteractionEffectTraceFoliage::PlayerSpawnOffset' has a wrong offset!");
-
-// ScriptStruct KuroInteractionEffect.KuroInteractionPlacementTriggerActor
-// 0x0060 (0x0068 - 0x0008)
-struct FKuroInteractionPlacementTriggerActor final : public FTableRowBase
-{
-public:
-	TSoftObjectPtr<class UStaticMesh>             PlacementStaticMesh;                               // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UStaticMesh>             TriggerStaticMesh;                                 // 0x0038(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKuroInteractionPlacementTriggerActor) == 0x000008, "Wrong alignment on FKuroInteractionPlacementTriggerActor");
-static_assert(sizeof(FKuroInteractionPlacementTriggerActor) == 0x000068, "Wrong size on FKuroInteractionPlacementTriggerActor");
-static_assert(offsetof(FKuroInteractionPlacementTriggerActor, PlacementStaticMesh) == 0x000008, "Member 'FKuroInteractionPlacementTriggerActor::PlacementStaticMesh' has a wrong offset!");
-static_assert(offsetof(FKuroInteractionPlacementTriggerActor, TriggerStaticMesh) == 0x000038, "Member 'FKuroInteractionPlacementTriggerActor::TriggerStaticMesh' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroInteractionEffectTraceFoliage;
 
 // ScriptStruct KuroInteractionEffect.KuroBushInteractionEffectParameter
 // 0x0060 (0x0068 - 0x0008)
@@ -91,17 +76,7 @@ public:
 	float                                         SoaringSpawnSizeScale;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnCountScale;                            // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBushInteractionEffectParameter) == 0x000008, "Wrong alignment on FKuroBushInteractionEffectParameter");
-static_assert(sizeof(FKuroBushInteractionEffectParameter) == 0x000068, "Wrong size on FKuroBushInteractionEffectParameter");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, BushStaticMesh) == 0x000008, "Member 'FKuroBushInteractionEffectParameter::BushStaticMesh' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SpawnCountScale) == 0x000038, "Member 'FKuroBushInteractionEffectParameter::SpawnCountScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SpawnSizeScale) == 0x00003C, "Member 'FKuroBushInteractionEffectParameter::SpawnSizeScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SpawnBoxExtent) == 0x000040, "Member 'FKuroBushInteractionEffectParameter::SpawnBoxExtent' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SpawnBoxOffset) == 0x00004C, "Member 'FKuroBushInteractionEffectParameter::SpawnBoxOffset' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, UVIndexBegin) == 0x000058, "Member 'FKuroBushInteractionEffectParameter::UVIndexBegin' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, UVIndexEnd) == 0x00005C, "Member 'FKuroBushInteractionEffectParameter::UVIndexEnd' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SoaringSpawnSizeScale) == 0x000060, "Member 'FKuroBushInteractionEffectParameter::SoaringSpawnSizeScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushInteractionEffectParameter, SoaringSpawnCountScale) == 0x000064, "Member 'FKuroBushInteractionEffectParameter::SoaringSpawnCountScale' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBushInteractionEffectParameter;
 
 // ScriptStruct KuroInteractionEffect.KuroLinkNiagaraParameter
 // 0x0048 (0x0050 - 0x0008)
@@ -115,14 +90,7 @@ public:
 	struct FLinearColor                           LinkColor1;                                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           LinkColor2;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroLinkNiagaraParameter) == 0x000008, "Wrong alignment on FKuroLinkNiagaraParameter");
-static_assert(sizeof(FKuroLinkNiagaraParameter) == 0x000050, "Wrong size on FKuroLinkNiagaraParameter");
-static_assert(offsetof(FKuroLinkNiagaraParameter, Desc) == 0x000008, "Member 'FKuroLinkNiagaraParameter::Desc' has a wrong offset!");
-static_assert(offsetof(FKuroLinkNiagaraParameter, ModelConfigId) == 0x000018, "Member 'FKuroLinkNiagaraParameter::ModelConfigId' has a wrong offset!");
-static_assert(offsetof(FKuroLinkNiagaraParameter, ModeId) == 0x00001C, "Member 'FKuroLinkNiagaraParameter::ModeId' has a wrong offset!");
-static_assert(offsetof(FKuroLinkNiagaraParameter, LinkColor0) == 0x000020, "Member 'FKuroLinkNiagaraParameter::LinkColor0' has a wrong offset!");
-static_assert(offsetof(FKuroLinkNiagaraParameter, LinkColor1) == 0x000030, "Member 'FKuroLinkNiagaraParameter::LinkColor1' has a wrong offset!");
-static_assert(offsetof(FKuroLinkNiagaraParameter, LinkColor2) == 0x000040, "Member 'FKuroLinkNiagaraParameter::LinkColor2' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroLinkNiagaraParameter;
 
 // ScriptStruct KuroInteractionEffect.KuroBushIEParameter
 // 0x0030 (0x0030 - 0x0000)
@@ -138,19 +106,10 @@ public:
 	float                                         SoaringSpawnSizeScale;                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnCountScale;                            // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroBushIEParameter) == 0x000004, "Wrong alignment on FKuroBushIEParameter");
-static_assert(sizeof(FKuroBushIEParameter) == 0x000030, "Wrong size on FKuroBushIEParameter");
-static_assert(offsetof(FKuroBushIEParameter, SpawnCountScale) == 0x000000, "Member 'FKuroBushIEParameter::SpawnCountScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, SpawnSizeScale) == 0x000004, "Member 'FKuroBushIEParameter::SpawnSizeScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, SpawnBoxExtent) == 0x000008, "Member 'FKuroBushIEParameter::SpawnBoxExtent' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, SpawnBoxOffset) == 0x000014, "Member 'FKuroBushIEParameter::SpawnBoxOffset' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, UVIndexBegin) == 0x000020, "Member 'FKuroBushIEParameter::UVIndexBegin' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, UVIndexEnd) == 0x000024, "Member 'FKuroBushIEParameter::UVIndexEnd' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, SoaringSpawnSizeScale) == 0x000028, "Member 'FKuroBushIEParameter::SoaringSpawnSizeScale' has a wrong offset!");
-static_assert(offsetof(FKuroBushIEParameter, SoaringSpawnCountScale) == 0x00002C, "Member 'FKuroBushIEParameter::SoaringSpawnCountScale' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBushIEParameter;
 
 // ScriptStruct KuroInteractionEffect.KuroEnviInteractionData
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct FKuroEnviInteractionData final
 {
 public:
@@ -162,50 +121,28 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPhysicalMaterial*                      HitPhysicMaterial;                                 // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         HitPhysicMaterialArray;                            // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         CapsuleToBlock;                                    // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleToWater;                                    // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WaterDepth;                                        // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WaterType;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHideOnBush;                                       // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHitAudioShrub;                                    // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   AudioShrubFirstMaterialName;                       // 0x004C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMeshComponent*                   AudioShrubStaticMeshComp;                          // 0x0058(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TriggerHitPoint;                                   // 0x0060(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HitBushLUTIndex;                                   // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  HitBushActor;                                      // 0x0070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroBushIEParameter                   BushIEParam;                                       // 0x0078(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          OverlapTriggerMesh;                                // 0x00A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                OverlapTriggerParam0;                              // 0x00AC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTouchBlackWave;                                   // 0x00B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         HitTagArray;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         CapsuleToBlock;                                    // 0x0048(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleToWater;                                    // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WaterDepth;                                        // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         WaterType;                                         // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHideOnBush;                                       // 0x0058(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHitAudioShrub;                                    // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AudioShrubFirstMaterialName;                       // 0x005C(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMeshComponent*                   AudioShrubStaticMeshComp;                          // 0x0068(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TriggerHitPoint;                                   // 0x0070(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HitBushLUTIndex;                                   // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  HitBushActor;                                      // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroBushIEParameter                   BushIEParam;                                       // 0x0088(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          OverlapTriggerMesh;                                // 0x00B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitWaterLocationWithOffset;                        // 0x00BC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OverlapTriggerParam0;                              // 0x00BC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTouchBlackWave;                                   // 0x00C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HitWaterLocationWithOffset;                        // 0x00CC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEnviInteractionData) == 0x000008, "Wrong alignment on FKuroEnviInteractionData");
-static_assert(sizeof(FKuroEnviInteractionData) == 0x0000C8, "Wrong size on FKuroEnviInteractionData");
-static_assert(offsetof(FKuroEnviInteractionData, bInWater) == 0x000000, "Member 'FKuroEnviInteractionData::bInWater' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, bTraceWater) == 0x000001, "Member 'FKuroEnviInteractionData::bTraceWater' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitWaterLocation) == 0x000004, "Member 'FKuroEnviInteractionData::HitWaterLocation' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitWaterNormal) == 0x000010, "Member 'FKuroEnviInteractionData::HitWaterNormal' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitPhysicMaterial) == 0x000020, "Member 'FKuroEnviInteractionData::HitPhysicMaterial' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitPhysicMaterialArray) == 0x000028, "Member 'FKuroEnviInteractionData::HitPhysicMaterialArray' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, CapsuleToBlock) == 0x000038, "Member 'FKuroEnviInteractionData::CapsuleToBlock' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, CapsuleToWater) == 0x00003C, "Member 'FKuroEnviInteractionData::CapsuleToWater' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, WaterDepth) == 0x000040, "Member 'FKuroEnviInteractionData::WaterDepth' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, WaterType) == 0x000044, "Member 'FKuroEnviInteractionData::WaterType' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, bHideOnBush) == 0x000048, "Member 'FKuroEnviInteractionData::bHideOnBush' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, bHitAudioShrub) == 0x000049, "Member 'FKuroEnviInteractionData::bHitAudioShrub' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, AudioShrubFirstMaterialName) == 0x00004C, "Member 'FKuroEnviInteractionData::AudioShrubFirstMaterialName' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, AudioShrubStaticMeshComp) == 0x000058, "Member 'FKuroEnviInteractionData::AudioShrubStaticMeshComp' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, TriggerHitPoint) == 0x000060, "Member 'FKuroEnviInteractionData::TriggerHitPoint' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitBushLUTIndex) == 0x00006C, "Member 'FKuroEnviInteractionData::HitBushLUTIndex' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitBushActor) == 0x000070, "Member 'FKuroEnviInteractionData::HitBushActor' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, BushIEParam) == 0x000078, "Member 'FKuroEnviInteractionData::BushIEParam' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, OverlapTriggerMesh) == 0x0000A8, "Member 'FKuroEnviInteractionData::OverlapTriggerMesh' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, OverlapTriggerParam0) == 0x0000AC, "Member 'FKuroEnviInteractionData::OverlapTriggerParam0' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, bTouchBlackWave) == 0x0000B8, "Member 'FKuroEnviInteractionData::bTouchBlackWave' has a wrong offset!");
-static_assert(offsetof(FKuroEnviInteractionData, HitWaterLocationWithOffset) == 0x0000BC, "Member 'FKuroEnviInteractionData::HitWaterLocationWithOffset' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEnviInteractionData;
 
 }
 

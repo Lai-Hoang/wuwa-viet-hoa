@@ -26,11 +26,7 @@ public:
 	class FString                                 VarName_10_A09BA16F4649635DAD0B82A1AD6C5480;       // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	int32                                         Id_11_A42E97914BB6CAEACDAEBAB0B64B7F6C;            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSAiLevelVar) == 0x000008, "Wrong alignment on FSAiLevelVar");
-static_assert(sizeof(FSAiLevelVar) == 0x000020, "Wrong size on FSAiLevelVar");
-static_assert(offsetof(FSAiLevelVar, VarSource_2_7D4E606B4F3F802047DC58A511FF494D) == 0x000000, "Member 'FSAiLevelVar::VarSource_2_7D4E606B4F3F802047DC58A511FF494D' has a wrong offset!");
-static_assert(offsetof(FSAiLevelVar, VarName_10_A09BA16F4649635DAD0B82A1AD6C5480) == 0x000008, "Member 'FSAiLevelVar::VarName_10_A09BA16F4649635DAD0B82A1AD6C5480' has a wrong offset!");
-static_assert(offsetof(FSAiLevelVar, Id_11_A42E97914BB6CAEACDAEBAB0B64B7F6C) == 0x000018, "Member 'FSAiLevelVar::Id_11_A42E97914BB6CAEACDAEBAB0B64B7F6C' has a wrong offset!");
+DUMPER7_ASSERTS_FSAiLevelVar;
 
 }
 

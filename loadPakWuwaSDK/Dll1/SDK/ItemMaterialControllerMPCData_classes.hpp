@@ -28,17 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ItemMaterialControllerMPCData_C">();
+		BP_STATIC_CLASS_IMPL("ItemMaterialControllerMPCData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ItemMaterialControllerMPCData_C")
 	}
 	static class UItemMaterialControllerMPCData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UItemMaterialControllerMPCData_C>();
 	}
 };
-static_assert(alignof(UItemMaterialControllerMPCData_C) == 0x000008, "Wrong alignment on UItemMaterialControllerMPCData_C");
-static_assert(sizeof(UItemMaterialControllerMPCData_C) == 0x0000D8, "Wrong size on UItemMaterialControllerMPCData_C");
-static_assert(offsetof(UItemMaterialControllerMPCData_C, Vector) == 0x000038, "Member 'UItemMaterialControllerMPCData_C::Vector' has a wrong offset!");
-static_assert(offsetof(UItemMaterialControllerMPCData_C, Scalar) == 0x000088, "Member 'UItemMaterialControllerMPCData_C::Scalar' has a wrong offset!");
+DUMPER7_ASSERTS_UItemMaterialControllerMPCData_C;
 
 }
 

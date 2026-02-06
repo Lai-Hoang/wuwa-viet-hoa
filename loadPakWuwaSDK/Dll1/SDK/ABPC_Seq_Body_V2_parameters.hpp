@@ -17,86 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.ProcessEye
-// 0x00DC (0x00DC - 0x0000)
-struct ABPC_Seq_Body_V2_C_ProcessEye final
-{
-public:
-	struct FVector                                EyeLookAt;                                         // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AngleScale;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue;                 // 0x001C(0x0010)(NoDestructor)
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_1;               // 0x0040(0x0010)(NoDestructor)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_2;               // 0x0058(0x0010)(NoDestructor)
-	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_3;               // 0x006C(0x0010)(NoDestructor)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_4;               // 0x0084(0x0010)(NoDestructor)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_5;               // 0x0094(0x0010)(NoDestructor)
-	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_6;               // 0x00B4(0x0010)(NoDestructor)
-	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_7;               // 0x00C4(0x0010)(NoDestructor)
-	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABPC_Seq_Body_V2_C_ProcessEye) == 0x000004, "Wrong alignment on ABPC_Seq_Body_V2_C_ProcessEye");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_ProcessEye) == 0x0000DC, "Wrong size on ABPC_Seq_Body_V2_C_ProcessEye");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, EyeLookAt) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::EyeLookAt' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, AngleScale) == 0x00000C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::AngleScale' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_BreakVector_X) == 0x000010, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_BreakVector_Y) == 0x000014, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_BreakVector_Z) == 0x000018, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue) == 0x00001C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Abs_ReturnValue) == 0x00002C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000030, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Abs_ReturnValue_1) == 0x000034, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000038, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue) == 0x00003C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_1) == 0x000040, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_1) == 0x000050, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000054, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_2) == 0x000058, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_FClamp_ReturnValue) == 0x000068, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_3) == 0x00006C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_2) == 0x00007C, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_3) == 0x000080, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_4) == 0x000084, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_5) == 0x000094, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_4) == 0x0000A4, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_5) == 0x0000A8, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0000AC, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_FClamp_ReturnValue_1) == 0x0000B0, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_6) == 0x0000B4, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_7) == 0x0000C4, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_6) == 0x0000D4, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_ProcessEye, CallFunc_Array_Add_ReturnValue_7) == 0x0000D8, "Member 'ABPC_Seq_Body_V2_C_ProcessEye::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
-
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.SetAnimDataFloatByOwner
-// 0x0010 (0x0010 - 0x0000)
-struct ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner final
-{
-public:
-	TArray<struct FNamedCurveValue>               InCurves;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner) == 0x000008, "Wrong alignment on ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner) == 0x000010, "Wrong size on ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner, InCurves) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner::InCurves' has a wrong offset!");
-
 // Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.SetAnimDataVectorByOwner
 // 0x0458 (0x0458 - 0x0000)
 struct ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner final
@@ -261,168 +181,55 @@ public:
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_17;               // 0x043C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue_18;               // 0x0448(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner) == 0x000008, "Wrong alignment on ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner) == 0x000458, "Wrong size on ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, VectorMap) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::VectorMap' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, NewLocalVar_0) == 0x000050, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable) == 0x00005C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_1) == 0x000068, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value) == 0x000074, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue) == 0x000080, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_1) == 0x000084, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_1) == 0x000090, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X) == 0x000094, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y) == 0x000098, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z) == 0x00009C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_1) == 0x0000A0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_1) == 0x0000A4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_1) == 0x0000A8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue) == 0x0000AC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_1) == 0x0000B8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_2) == 0x0000C4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_3) == 0x0000D0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_2) == 0x0000DC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_2) == 0x0000E8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_3) == 0x0000EC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_3) == 0x0000F8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_2) == 0x0000FC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_2) == 0x000100, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_2) == 0x000104, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_3) == 0x000108, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_3) == 0x00010C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_3) == 0x000110, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_2) == 0x000114, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_3) == 0x000120, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_4) == 0x00012C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_5) == 0x000138, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_4) == 0x000144, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_4) == 0x000150, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_5) == 0x000154, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_5) == 0x000160, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_4) == 0x000164, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_4) == 0x000168, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_4) == 0x00016C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_5) == 0x000170, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_5) == 0x000174, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_5) == 0x000178, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_4) == 0x00017C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_5) == 0x000188, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_6) == 0x000194, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_7) == 0x0001A0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_6) == 0x0001AC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_6) == 0x0001B8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_7) == 0x0001BC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_7) == 0x0001C8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_6) == 0x0001CC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_6) == 0x0001D0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_6) == 0x0001D4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_7) == 0x0001D8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_7) == 0x0001DC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_7) == 0x0001E0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_6) == 0x0001E4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_7) == 0x0001F0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_8) == 0x0001FC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_9) == 0x000208, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_8) == 0x000214, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_8) == 0x000220, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_9) == 0x000224, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_9) == 0x000230, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_8) == 0x000234, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_8) == 0x000238, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_8) == 0x00023C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_9) == 0x000240, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_9) == 0x000244, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_9) == 0x000248, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_8) == 0x00024C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_9) == 0x000258, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_10) == 0x000264, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_11) == 0x000270, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_10) == 0x00027C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_10) == 0x000288, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_11) == 0x00028C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_11) == 0x000298, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_10) == 0x00029C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_10) == 0x0002A0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_10) == 0x0002A4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_11) == 0x0002A8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_11) == 0x0002AC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_11) == 0x0002B0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_10) == 0x0002B4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_11) == 0x0002C0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_12) == 0x0002CC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_13) == 0x0002D8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_12) == 0x0002E4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_12) == 0x0002F0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_13) == 0x0002F4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_13) == 0x000300, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_12) == 0x000304, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_12) == 0x000308, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_12) == 0x00030C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_13) == 0x000310, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_13) == 0x000314, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_13) == 0x000318, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_12) == 0x00031C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_13) == 0x000328, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_14) == 0x000334, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_15) == 0x000340, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_14) == 0x00034C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_14) == 0x000358, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_15) == 0x00035C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_15) == 0x000368, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_14) == 0x00036C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_14) == 0x000370, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_14) == 0x000374, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_14) == 0x000378, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_16) == 0x000384, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_17) == 0x000390, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_16) == 0x00039C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_16) == 0x0003A8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_17) == 0x0003AC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_17) == 0x0003B8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_15) == 0x0003BC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_15) == 0x0003C0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_15) == 0x0003C4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_16) == 0x0003C8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_16) == 0x0003CC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_16) == 0x0003D0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_15) == 0x0003D4, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_16) == 0x0003E0, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_18) == 0x0003EC, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, ___name_Variable_19) == 0x0003F8, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::___name_Variable_19' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_18) == 0x000404, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_18) == 0x000410, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_Value_19) == 0x000414, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_Value_19' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_Map_Find_ReturnValue_19) == 0x000420, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_Map_Find_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_17) == 0x000424, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_17) == 0x000428, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_17) == 0x00042C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_X_18) == 0x000430, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_X_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Y_18) == 0x000434, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Y_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_BreakVector_Z_18) == 0x000438, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_BreakVector_Z_18' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_17) == 0x00043C, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner, CallFunc_MakeRotator_ReturnValue_18) == 0x000448, "Member 'ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner::CallFunc_MakeRotator_ReturnValue_18' has a wrong offset!");
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner;
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetBindingName
-// 0x000C (0x000C - 0x0000)
-struct ABPC_Seq_Body_V2_C_GetBindingName final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABPC_Seq_Body_V2_C_GetBindingName) == 0x000004, "Wrong alignment on ABPC_Seq_Body_V2_C_GetBindingName");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_GetBindingName) == 0x00000C, "Wrong size on ABPC_Seq_Body_V2_C_GetBindingName");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_GetBindingName, ReturnValue) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_GetBindingName::ReturnValue' has a wrong offset!");
-
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetCurves
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.SetAnimDataFloatByOwner
 // 0x0010 (0x0010 - 0x0000)
-struct ABPC_Seq_Body_V2_C_GetCurves final
+struct ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner final
 {
 public:
-	TArray<struct FNamedCurveValue>               OutValues;                                         // 0x0000(0x0010)(Parm, OutParm)
+	TArray<struct FNamedCurveValue>               InCurves;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(ABPC_Seq_Body_V2_C_GetCurves) == 0x000008, "Wrong alignment on ABPC_Seq_Body_V2_C_GetCurves");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_GetCurves) == 0x000010, "Wrong size on ABPC_Seq_Body_V2_C_GetCurves");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_GetCurves, OutValues) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_GetCurves::OutValues' has a wrong offset!");
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_SetAnimDataFloatByOwner;
+
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.ProcessEye
+// 0x00DC (0x00DC - 0x0000)
+struct ABPC_Seq_Body_V2_C_ProcessEye final
+{
+public:
+	struct FVector                                EyeLookAt;                                         // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AngleScale;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue;                 // 0x001C(0x0010)(NoDestructor)
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Abs_ReturnValue_1;                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_1;               // 0x0040(0x0010)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_2;               // 0x0058(0x0010)(NoDestructor)
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_3;               // 0x006C(0x0010)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_4;               // 0x0084(0x0010)(NoDestructor)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_5;               // 0x0094(0x0010)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_6;               // 0x00B4(0x0010)(NoDestructor)
+	struct FNamedCurveValue                       K2Node_MakeStruct_NamedCurveValue_7;               // 0x00C4(0x0010)(NoDestructor)
+	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_ProcessEye;
 
 // Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetCurveValue
 // 0x0010 (0x0010 - 0x0000)
@@ -432,10 +239,25 @@ public:
 	class FName                                   CurveName;                                         // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABPC_Seq_Body_V2_C_GetCurveValue) == 0x000004, "Wrong alignment on ABPC_Seq_Body_V2_C_GetCurveValue");
-static_assert(sizeof(ABPC_Seq_Body_V2_C_GetCurveValue) == 0x000010, "Wrong size on ABPC_Seq_Body_V2_C_GetCurveValue");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_GetCurveValue, CurveName) == 0x000000, "Member 'ABPC_Seq_Body_V2_C_GetCurveValue::CurveName' has a wrong offset!");
-static_assert(offsetof(ABPC_Seq_Body_V2_C_GetCurveValue, ReturnValue) == 0x00000C, "Member 'ABPC_Seq_Body_V2_C_GetCurveValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_GetCurveValue;
+
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetCurves
+// 0x0010 (0x0010 - 0x0000)
+struct ABPC_Seq_Body_V2_C_GetCurves final
+{
+public:
+	TArray<struct FNamedCurveValue>               OutValues;                                         // 0x0000(0x0010)(Parm, OutParm)
+};
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_GetCurves;
+
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetBindingName
+// 0x000C (0x000C - 0x0000)
+struct ABPC_Seq_Body_V2_C_GetBindingName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABPC_Seq_Body_V2_C_GetBindingName;
 
 }
 

@@ -24,12 +24,7 @@ public:
 	TSoftObjectPtr<class UAnimMontage>            CommonAnim_15_096800F6476616C34CD8068FFA6EBC97;    // 0x0020(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UAnimMontage>            BaseAnim_16_D973E6654697AC360C067FB167A392FD;      // 0x0050(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSSkillMontage) == 0x000008, "Wrong alignment on FSSkillMontage");
-static_assert(sizeof(FSSkillMontage) == 0x000080, "Wrong size on FSSkillMontage");
-static_assert(offsetof(FSSkillMontage, CharacterPath_8_D0435E9745FB9026F725938D086C3287) == 0x000000, "Member 'FSSkillMontage::CharacterPath_8_D0435E9745FB9026F725938D086C3287' has a wrong offset!");
-static_assert(offsetof(FSSkillMontage, MontageName_7_331ECD0F41A7717BD13633951405B3FD) == 0x000010, "Member 'FSSkillMontage::MontageName_7_331ECD0F41A7717BD13633951405B3FD' has a wrong offset!");
-static_assert(offsetof(FSSkillMontage, CommonAnim_15_096800F6476616C34CD8068FFA6EBC97) == 0x000020, "Member 'FSSkillMontage::CommonAnim_15_096800F6476616C34CD8068FFA6EBC97' has a wrong offset!");
-static_assert(offsetof(FSSkillMontage, BaseAnim_16_D973E6654697AC360C067FB167A392FD) == 0x000050, "Member 'FSSkillMontage::BaseAnim_16_D973E6654697AC360C067FB167A392FD' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillMontage;
 
 }
 

@@ -18,15 +18,13 @@ namespace SDK::Params
 {
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.GetEnviInteractionData
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct KuroEnviInteractionComponent_GetEnviInteractionData final
 {
 public:
-	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x00C8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x00D8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroEnviInteractionComponent_GetEnviInteractionData) == 0x000008, "Wrong alignment on KuroEnviInteractionComponent_GetEnviInteractionData");
-static_assert(sizeof(KuroEnviInteractionComponent_GetEnviInteractionData) == 0x0000C8, "Wrong size on KuroEnviInteractionComponent_GetEnviInteractionData");
-static_assert(offsetof(KuroEnviInteractionComponent_GetEnviInteractionData, ReturnValue) == 0x000000, "Member 'KuroEnviInteractionComponent_GetEnviInteractionData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroEnviInteractionComponent_GetEnviInteractionData;
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.GetRainWalkOcclusionParam
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct KuroEnviInteractionComponent_GetRainWalkOcclusionParam final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroEnviInteractionComponent_GetRainWalkOcclusionParam) == 0x000004, "Wrong alignment on KuroEnviInteractionComponent_GetRainWalkOcclusionParam");
-static_assert(sizeof(KuroEnviInteractionComponent_GetRainWalkOcclusionParam) == 0x000004, "Wrong size on KuroEnviInteractionComponent_GetRainWalkOcclusionParam");
-static_assert(offsetof(KuroEnviInteractionComponent_GetRainWalkOcclusionParam, ReturnValue) == 0x000000, "Member 'KuroEnviInteractionComponent_GetRainWalkOcclusionParam::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroEnviInteractionComponent_GetRainWalkOcclusionParam;
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.SetDecalCompShiftColor
 // 0x0008 (0x0008 - 0x0000)
@@ -46,9 +42,7 @@ struct KuroEnviInteractionComponent_SetDecalCompShiftColor final
 public:
 	class UDecalComponent*                        DecalComponent;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroEnviInteractionComponent_SetDecalCompShiftColor) == 0x000008, "Wrong alignment on KuroEnviInteractionComponent_SetDecalCompShiftColor");
-static_assert(sizeof(KuroEnviInteractionComponent_SetDecalCompShiftColor) == 0x000008, "Wrong size on KuroEnviInteractionComponent_SetDecalCompShiftColor");
-static_assert(offsetof(KuroEnviInteractionComponent_SetDecalCompShiftColor, DecalComponent) == 0x000000, "Member 'KuroEnviInteractionComponent_SetDecalCompShiftColor::DecalComponent' has a wrong offset!");
+DUMPER7_ASSERTS_KuroEnviInteractionComponent_SetDecalCompShiftColor;
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.SetNiagaraCompShiftColor
 // 0x0008 (0x0008 - 0x0000)
@@ -57,9 +51,7 @@ struct KuroEnviInteractionComponent_SetNiagaraCompShiftColor final
 public:
 	class UNiagaraComponent*                      NiagaraComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroEnviInteractionComponent_SetNiagaraCompShiftColor) == 0x000008, "Wrong alignment on KuroEnviInteractionComponent_SetNiagaraCompShiftColor");
-static_assert(sizeof(KuroEnviInteractionComponent_SetNiagaraCompShiftColor) == 0x000008, "Wrong size on KuroEnviInteractionComponent_SetNiagaraCompShiftColor");
-static_assert(offsetof(KuroEnviInteractionComponent_SetNiagaraCompShiftColor, NiagaraComponent) == 0x000000, "Member 'KuroEnviInteractionComponent_SetNiagaraCompShiftColor::NiagaraComponent' has a wrong offset!");
+DUMPER7_ASSERTS_KuroEnviInteractionComponent_SetNiagaraCompShiftColor;
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.UpdateRainOcclusion
 // 0x0020 (0x0020 - 0x0000)
@@ -72,12 +64,7 @@ public:
 	double                                        Frame;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroEnviInteractionComponent_UpdateRainOcclusion) == 0x000008, "Wrong alignment on KuroEnviInteractionComponent_UpdateRainOcclusion");
-static_assert(sizeof(KuroEnviInteractionComponent_UpdateRainOcclusion) == 0x000020, "Wrong size on KuroEnviInteractionComponent_UpdateRainOcclusion");
-static_assert(offsetof(KuroEnviInteractionComponent_UpdateRainOcclusion, Result) == 0x000000, "Member 'KuroEnviInteractionComponent_UpdateRainOcclusion::Result' has a wrong offset!");
-static_assert(offsetof(KuroEnviInteractionComponent_UpdateRainOcclusion, Element) == 0x000008, "Member 'KuroEnviInteractionComponent_UpdateRainOcclusion::Element' has a wrong offset!");
-static_assert(offsetof(KuroEnviInteractionComponent_UpdateRainOcclusion, Frame) == 0x000010, "Member 'KuroEnviInteractionComponent_UpdateRainOcclusion::Frame' has a wrong offset!");
-static_assert(offsetof(KuroEnviInteractionComponent_UpdateRainOcclusion, Index_0) == 0x000018, "Member 'KuroEnviInteractionComponent_UpdateRainOcclusion::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroEnviInteractionComponent_UpdateRainOcclusion;
 
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.GetKuroInteractionEffectSystem
 // 0x0010 (0x0010 - 0x0000)
@@ -87,10 +74,7 @@ public:
 	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKuroInteractionEffectSystem*           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInteractionEffectSystem_GetKuroInteractionEffectSystem) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_GetKuroInteractionEffectSystem");
-static_assert(sizeof(KuroInteractionEffectSystem_GetKuroInteractionEffectSystem) == 0x000010, "Wrong size on KuroInteractionEffectSystem_GetKuroInteractionEffectSystem");
-static_assert(offsetof(KuroInteractionEffectSystem_GetKuroInteractionEffectSystem, World) == 0x000000, "Member 'KuroInteractionEffectSystem_GetKuroInteractionEffectSystem::World' has a wrong offset!");
-static_assert(offsetof(KuroInteractionEffectSystem_GetKuroInteractionEffectSystem, ReturnValue) == 0x000008, "Member 'KuroInteractionEffectSystem_GetKuroInteractionEffectSystem::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_GetKuroInteractionEffectSystem;
 
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.RegisterNDIKuroRenderingEIComp
 // 0x0010 (0x0010 - 0x0000)
@@ -100,10 +84,7 @@ public:
 	class UNiagaraComponent*                      InNiagaraComp;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKuroEnviInteractionComponent*          SourceEIComp;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp");
-static_assert(sizeof(KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp) == 0x000010, "Wrong size on KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp");
-static_assert(offsetof(KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp, InNiagaraComp) == 0x000000, "Member 'KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp::InNiagaraComp' has a wrong offset!");
-static_assert(offsetof(KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp, SourceEIComp) == 0x000008, "Member 'KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp::SourceEIComp' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_RegisterNDIKuroRenderingEIComp;
 
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.RegisterSPModelCharacterEIComp
 // 0x0010 (0x0010 - 0x0000)
@@ -113,10 +94,7 @@ public:
 	class UNiagaraComponent*                      InNiagaraComp;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKuroEnviInteractionComponent*          SourceEIComp;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp");
-static_assert(sizeof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp) == 0x000010, "Wrong size on KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp");
-static_assert(offsetof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp, InNiagaraComp) == 0x000000, "Member 'KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp::InNiagaraComp' has a wrong offset!");
-static_assert(offsetof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp, SourceEIComp) == 0x000008, "Member 'KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp::SourceEIComp' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp;
 
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionFoliage
 // 0x0018 (0x0018 - 0x0000)
@@ -127,10 +105,17 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroInteractionEffectSystem_SearchInteractionFoliage) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_SearchInteractionFoliage");
-static_assert(sizeof(KuroInteractionEffectSystem_SearchInteractionFoliage) == 0x000018, "Wrong size on KuroInteractionEffectSystem_SearchInteractionFoliage");
-static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionFoliage, FoliageTypeName) == 0x000000, "Member 'KuroInteractionEffectSystem_SearchInteractionFoliage::FoliageTypeName' has a wrong offset!");
-static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionFoliage, ReturnValue) == 0x000010, "Member 'KuroInteractionEffectSystem_SearchInteractionFoliage::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_SearchInteractionFoliage;
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionFoliageArray
+// 0x0020 (0x0020 - 0x0000)
+struct KuroInteractionEffectSystem_SearchInteractionFoliageArray final
+{
+public:
+	TArray<class FString>                         FoliageTypeNames;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_SearchInteractionFoliageArray;
 
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionPlacementTriggerActor
 // 0x0028 (0x0028 - 0x0000)
@@ -140,10 +125,7 @@ public:
 	class UStaticMesh*                            PlacementMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor");
-static_assert(sizeof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor) == 0x000028, "Wrong size on KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor");
-static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor, PlacementMesh) == 0x000000, "Member 'KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor::PlacementMesh' has a wrong offset!");
-static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor, ReturnValue) == 0x000008, "Member 'KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor;
 
 }
 

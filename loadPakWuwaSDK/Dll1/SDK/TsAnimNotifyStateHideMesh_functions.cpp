@@ -17,36 +17,6 @@
 namespace SDK
 {
 
-// Function TsAnimNotifyStateHideMesh.TsAnimNotifyStateHideMesh_C.K2_NotifyEnd
-// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UTsAnimNotifyStateHideMesh_C::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsAnimNotifyStateHideMesh_C", "K2_NotifyEnd");
-
-	Params::TsAnimNotifyStateHideMesh_C_K2_NotifyEnd Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TsAnimNotifyStateHideMesh.TsAnimNotifyStateHideMesh_C.K2_NotifyBegin
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -67,6 +37,36 @@ bool UTsAnimNotifyStateHideMesh_C::K2_NotifyBegin(class USkeletalMeshComponent* 
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 	Parms.TotalDuration = TotalDuration;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsAnimNotifyStateHideMesh.TsAnimNotifyStateHideMesh_C.K2_NotifyEnd
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTsAnimNotifyStateHideMesh_C::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsAnimNotifyStateHideMesh_C", "K2_NotifyEnd");
+
+	Params::TsAnimNotifyStateHideMesh_C_K2_NotifyEnd Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

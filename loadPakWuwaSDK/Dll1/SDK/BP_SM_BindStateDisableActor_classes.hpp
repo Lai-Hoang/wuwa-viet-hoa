@@ -23,15 +23,18 @@ class UBP_SM_BindStateDisableActor_C final : public UASMBindState
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_BindStateDisableActor_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_BindStateDisableActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_BindStateDisableActor_C")
 	}
 	static class UBP_SM_BindStateDisableActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_BindStateDisableActor_C>();
 	}
 };
-static_assert(alignof(UBP_SM_BindStateDisableActor_C) == 0x000008, "Wrong alignment on UBP_SM_BindStateDisableActor_C");
-static_assert(sizeof(UBP_SM_BindStateDisableActor_C) == 0x000030, "Wrong size on UBP_SM_BindStateDisableActor_C");
+DUMPER7_ASSERTS_UBP_SM_BindStateDisableActor_C;
 
 }
 

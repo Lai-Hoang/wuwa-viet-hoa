@@ -55,15 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsMeshAnimBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsMeshAnimBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsMeshAnimBlueprintFunctionLibrary_C")
 	}
 	static class UTsMeshAnimBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsMeshAnimBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsMeshAnimBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsMeshAnimBlueprintFunctionLibrary_C");
-static_assert(sizeof(UTsMeshAnimBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UTsMeshAnimBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsMeshAnimBlueprintFunctionLibrary_C;
 
 }
 

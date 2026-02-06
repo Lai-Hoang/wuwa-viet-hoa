@@ -21,9 +21,7 @@ struct DeviceHandle_GetPidAndVidArray final
 public:
 	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DeviceHandle_GetPidAndVidArray) == 0x000008, "Wrong alignment on DeviceHandle_GetPidAndVidArray");
-static_assert(sizeof(DeviceHandle_GetPidAndVidArray) == 0x000010, "Wrong size on DeviceHandle_GetPidAndVidArray");
-static_assert(offsetof(DeviceHandle_GetPidAndVidArray, ReturnValue) == 0x000000, "Member 'DeviceHandle_GetPidAndVidArray::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DeviceHandle_GetPidAndVidArray;
 
 // Function KuroDevice.KuroDeviceBPLibrary.FindAllDeviceVidAndPid
 // 0x0018 (0x0018 - 0x0000)
@@ -34,10 +32,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroDeviceBPLibrary_FindAllDeviceVidAndPid) == 0x000008, "Wrong alignment on KuroDeviceBPLibrary_FindAllDeviceVidAndPid");
-static_assert(sizeof(KuroDeviceBPLibrary_FindAllDeviceVidAndPid) == 0x000018, "Wrong size on KuroDeviceBPLibrary_FindAllDeviceVidAndPid");
-static_assert(offsetof(KuroDeviceBPLibrary_FindAllDeviceVidAndPid, DevicePathList) == 0x000000, "Member 'KuroDeviceBPLibrary_FindAllDeviceVidAndPid::DevicePathList' has a wrong offset!");
-static_assert(offsetof(KuroDeviceBPLibrary_FindAllDeviceVidAndPid, ReturnValue) == 0x000010, "Member 'KuroDeviceBPLibrary_FindAllDeviceVidAndPid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDeviceBPLibrary_FindAllDeviceVidAndPid;
 
 // Function KuroDevice.KuroDeviceBPLibrary.NewDeviceHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -47,10 +42,7 @@ public:
 	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDeviceHandle*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroDeviceBPLibrary_NewDeviceHandle) == 0x000008, "Wrong alignment on KuroDeviceBPLibrary_NewDeviceHandle");
-static_assert(sizeof(KuroDeviceBPLibrary_NewDeviceHandle) == 0x000010, "Wrong size on KuroDeviceBPLibrary_NewDeviceHandle");
-static_assert(offsetof(KuroDeviceBPLibrary_NewDeviceHandle, Outer_0) == 0x000000, "Member 'KuroDeviceBPLibrary_NewDeviceHandle::Outer_0' has a wrong offset!");
-static_assert(offsetof(KuroDeviceBPLibrary_NewDeviceHandle, ReturnValue) == 0x000008, "Member 'KuroDeviceBPLibrary_NewDeviceHandle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDeviceBPLibrary_NewDeviceHandle;
 
 }
 

@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WeatherPreset_C">();
+		BP_STATIC_CLASS_IMPL("WeatherPreset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WeatherPreset_C")
 	}
 	static class UWeatherPreset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWeatherPreset_C>();
 	}
 };
-static_assert(alignof(UWeatherPreset_C) == 0x000008, "Wrong alignment on UWeatherPreset_C");
-static_assert(sizeof(UWeatherPreset_C) == 0x0000A0, "Wrong size on UWeatherPreset_C");
-static_assert(offsetof(UWeatherPreset_C, Data) == 0x000030, "Member 'UWeatherPreset_C::Data' has a wrong offset!");
+DUMPER7_ASSERTS_UWeatherPreset_C;
 
 }
 

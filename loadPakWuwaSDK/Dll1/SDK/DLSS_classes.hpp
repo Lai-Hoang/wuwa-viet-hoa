@@ -32,20 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DLSSOverrideSettings">();
+		STATIC_CLASS_IMPL("DLSSOverrideSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DLSSOverrideSettings")
 	}
 	static class UDLSSOverrideSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDLSSOverrideSettings>();
 	}
 };
-static_assert(alignof(UDLSSOverrideSettings) == 0x000008, "Wrong alignment on UDLSSOverrideSettings");
-static_assert(sizeof(UDLSSOverrideSettings) == 0x000038, "Wrong size on UDLSSOverrideSettings");
-static_assert(offsetof(UDLSSOverrideSettings, EnableDLSSInEditorViewportsOverride) == 0x000030, "Member 'UDLSSOverrideSettings::EnableDLSSInEditorViewportsOverride' has a wrong offset!");
-static_assert(offsetof(UDLSSOverrideSettings, EnableScreenpercentageManipulationInDLSSEditorViewportsOverride) == 0x000031, "Member 'UDLSSOverrideSettings::EnableScreenpercentageManipulationInDLSSEditorViewportsOverride' has a wrong offset!");
-static_assert(offsetof(UDLSSOverrideSettings, EnableDLSSInPlayInEditorViewportsOverride) == 0x000032, "Member 'UDLSSOverrideSettings::EnableDLSSInPlayInEditorViewportsOverride' has a wrong offset!");
-static_assert(offsetof(UDLSSOverrideSettings, bShowDLSSIncompatiblePluginsToolsWarnings) == 0x000033, "Member 'UDLSSOverrideSettings::bShowDLSSIncompatiblePluginsToolsWarnings' has a wrong offset!");
-static_assert(offsetof(UDLSSOverrideSettings, ShowDLSSSDebugOnScreenMessages) == 0x000034, "Member 'UDLSSOverrideSettings::ShowDLSSSDebugOnScreenMessages' has a wrong offset!");
+DUMPER7_ASSERTS_UDLSSOverrideSettings;
 
 // Class DLSS.DLSSSettings
 // 0x0038 (0x0068 - 0x0030)
@@ -77,33 +75,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DLSSSettings">();
+		STATIC_CLASS_IMPL("DLSSSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DLSSSettings")
 	}
 	static class UDLSSSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDLSSSettings>();
 	}
 };
-static_assert(alignof(UDLSSSettings) == 0x000008, "Wrong alignment on UDLSSSettings");
-static_assert(sizeof(UDLSSSettings) == 0x000068, "Wrong size on UDLSSSettings");
-static_assert(offsetof(UDLSSSettings, bEnableDLSSD3D12) == 0x000030, "Member 'UDLSSSettings::bEnableDLSSD3D12' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bEnableDLSSD3D11) == 0x000031, "Member 'UDLSSSettings::bEnableDLSSD3D11' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bEnableDLSSVulkan) == 0x000032, "Member 'UDLSSSettings::bEnableDLSSVulkan' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bEnableDLSSInEditorViewports) == 0x000033, "Member 'UDLSSSettings::bEnableDLSSInEditorViewports' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bEnableScreenpercentageManipulationInDLSSEditorViewports) == 0x000034, "Member 'UDLSSSettings::bEnableScreenpercentageManipulationInDLSSEditorViewports' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bEnableDLSSInPlayInEditorViewports) == 0x000035, "Member 'UDLSSSettings::bEnableDLSSInPlayInEditorViewports' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bShowDLSSSDebugOnScreenMessages) == 0x000036, "Member 'UDLSSSettings::bShowDLSSSDebugOnScreenMessages' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, GenericDLSSBinaryPath) == 0x000038, "Member 'UDLSSSettings::GenericDLSSBinaryPath' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bGenericDLSSBinaryExists) == 0x000048, "Member 'UDLSSSettings::bGenericDLSSBinaryExists' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, NVIDIANGXApplicationId) == 0x00004C, "Member 'UDLSSSettings::NVIDIANGXApplicationId' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, CustomDLSSBinaryPath) == 0x000050, "Member 'UDLSSSettings::CustomDLSSBinaryPath' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bCustomDLSSBinaryExists) == 0x000060, "Member 'UDLSSSettings::bCustomDLSSBinaryExists' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, bAllowOTAUpdate) == 0x000061, "Member 'UDLSSSettings::bAllowOTAUpdate' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, DLAAPreset) == 0x000062, "Member 'UDLSSSettings::DLAAPreset' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, DLSSQualityPreset) == 0x000064, "Member 'UDLSSSettings::DLSSQualityPreset' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, DLSSBalancedPreset) == 0x000065, "Member 'UDLSSSettings::DLSSBalancedPreset' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, DLSSPerformancePreset) == 0x000066, "Member 'UDLSSSettings::DLSSPerformancePreset' has a wrong offset!");
-static_assert(offsetof(UDLSSSettings, DLSSUltraPerformancePreset) == 0x000067, "Member 'UDLSSSettings::DLSSUltraPerformancePreset' has a wrong offset!");
+DUMPER7_ASSERTS_UDLSSSettings;
 
 }
 

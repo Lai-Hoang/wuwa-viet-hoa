@@ -33,22 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SplitScreenCharacterData_C">();
+		BP_STATIC_CLASS_IMPL("BP_SplitScreenCharacterData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SplitScreenCharacterData_C")
 	}
 	static class UBP_SplitScreenCharacterData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SplitScreenCharacterData_C>();
 	}
 };
-static_assert(alignof(UBP_SplitScreenCharacterData_C) == 0x000008, "Wrong alignment on UBP_SplitScreenCharacterData_C");
-static_assert(sizeof(UBP_SplitScreenCharacterData_C) == 0x000080, "Wrong size on UBP_SplitScreenCharacterData_C");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, CharacterActorClass) == 0x000038, "Member 'UBP_SplitScreenCharacterData_C::CharacterActorClass' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, Cos_Pose_AnimSequence) == 0x000040, "Member 'UBP_SplitScreenCharacterData_C::Cos_Pose_AnimSequence' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, PointLight_Location) == 0x000048, "Member 'UBP_SplitScreenCharacterData_C::PointLight_Location' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, PointLight_Color) == 0x000054, "Member 'UBP_SplitScreenCharacterData_C::PointLight_Color' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, EyeLightSimulation_Color) == 0x000064, "Member 'UBP_SplitScreenCharacterData_C::EyeLightSimulation_Color' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, LightYaw) == 0x000074, "Member 'UBP_SplitScreenCharacterData_C::LightYaw' has a wrong offset!");
-static_assert(offsetof(UBP_SplitScreenCharacterData_C, FaceLightYaw) == 0x000078, "Member 'UBP_SplitScreenCharacterData_C::FaceLightYaw' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SplitScreenCharacterData_C;
 
 }
 

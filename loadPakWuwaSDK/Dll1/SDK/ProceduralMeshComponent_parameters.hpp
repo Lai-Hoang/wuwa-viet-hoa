@@ -24,9 +24,7 @@ struct ProceduralMeshComponent_AddCollisionConvexMesh final
 public:
 	TArray<struct FVector>                        ConvexVerts;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ProceduralMeshComponent_AddCollisionConvexMesh) == 0x000008, "Wrong alignment on ProceduralMeshComponent_AddCollisionConvexMesh");
-static_assert(sizeof(ProceduralMeshComponent_AddCollisionConvexMesh) == 0x000010, "Wrong size on ProceduralMeshComponent_AddCollisionConvexMesh");
-static_assert(offsetof(ProceduralMeshComponent_AddCollisionConvexMesh, ConvexVerts) == 0x000000, "Member 'ProceduralMeshComponent_AddCollisionConvexMesh::ConvexVerts' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_AddCollisionConvexMesh;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.ClearMeshSection
 // 0x0004 (0x0004 - 0x0000)
@@ -35,9 +33,7 @@ struct ProceduralMeshComponent_ClearMeshSection final
 public:
 	int32                                         SectionIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ProceduralMeshComponent_ClearMeshSection) == 0x000004, "Wrong alignment on ProceduralMeshComponent_ClearMeshSection");
-static_assert(sizeof(ProceduralMeshComponent_ClearMeshSection) == 0x000004, "Wrong size on ProceduralMeshComponent_ClearMeshSection");
-static_assert(offsetof(ProceduralMeshComponent_ClearMeshSection, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_ClearMeshSection::SectionIndex' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_ClearMeshSection;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection
 // 0x0070 (0x0070 - 0x0000)
@@ -55,16 +51,7 @@ public:
 	bool                                          bCreateCollision;                                  // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ProceduralMeshComponent_CreateMeshSection) == 0x000008, "Wrong alignment on ProceduralMeshComponent_CreateMeshSection");
-static_assert(sizeof(ProceduralMeshComponent_CreateMeshSection) == 0x000070, "Wrong size on ProceduralMeshComponent_CreateMeshSection");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_CreateMeshSection::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, Vertices) == 0x000008, "Member 'ProceduralMeshComponent_CreateMeshSection::Vertices' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, Triangles) == 0x000018, "Member 'ProceduralMeshComponent_CreateMeshSection::Triangles' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, Normals) == 0x000028, "Member 'ProceduralMeshComponent_CreateMeshSection::Normals' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, UV0) == 0x000038, "Member 'ProceduralMeshComponent_CreateMeshSection::UV0' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, VertexColors) == 0x000048, "Member 'ProceduralMeshComponent_CreateMeshSection::VertexColors' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, Tangents) == 0x000058, "Member 'ProceduralMeshComponent_CreateMeshSection::Tangents' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection, bCreateCollision) == 0x000068, "Member 'ProceduralMeshComponent_CreateMeshSection::bCreateCollision' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_CreateMeshSection;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.CreateMeshSection_LinearColor
 // 0x00A0 (0x00A0 - 0x0000)
@@ -85,19 +72,7 @@ public:
 	bool                                          bCreateCollision;                                  // 0x0098(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ProceduralMeshComponent_CreateMeshSection_LinearColor) == 0x000008, "Wrong alignment on ProceduralMeshComponent_CreateMeshSection_LinearColor");
-static_assert(sizeof(ProceduralMeshComponent_CreateMeshSection_LinearColor) == 0x0000A0, "Wrong size on ProceduralMeshComponent_CreateMeshSection_LinearColor");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, Vertices) == 0x000008, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::Vertices' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, Triangles) == 0x000018, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::Triangles' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, Normals) == 0x000028, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::Normals' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, UV0) == 0x000038, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::UV0' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, UV1) == 0x000048, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::UV1' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, UV2) == 0x000058, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::UV2' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, UV3) == 0x000068, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::UV3' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, VertexColors) == 0x000078, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::VertexColors' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, Tangents) == 0x000088, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::Tangents' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_CreateMeshSection_LinearColor, bCreateCollision) == 0x000098, "Member 'ProceduralMeshComponent_CreateMeshSection_LinearColor::bCreateCollision' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_CreateMeshSection_LinearColor;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.KuroCreateMeshSection
 // 0x00E0 (0x00E0 - 0x0000)
@@ -122,23 +97,7 @@ public:
 	bool                                          bCreateCollision;                                  // 0x00D8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ProceduralMeshComponent_KuroCreateMeshSection) == 0x000008, "Wrong alignment on ProceduralMeshComponent_KuroCreateMeshSection");
-static_assert(sizeof(ProceduralMeshComponent_KuroCreateMeshSection) == 0x0000E0, "Wrong size on ProceduralMeshComponent_KuroCreateMeshSection");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, Vertices) == 0x000008, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::Vertices' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, Triangles) == 0x000018, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::Triangles' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, Normals) == 0x000028, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::Normals' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV0) == 0x000038, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV0' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV1) == 0x000048, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV1' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV2) == 0x000058, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV2' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV3) == 0x000068, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV3' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV4) == 0x000078, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV4' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV5) == 0x000088, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV5' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV6) == 0x000098, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV6' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, UV7) == 0x0000A8, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::UV7' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, VertexColors) == 0x0000B8, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::VertexColors' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, Tangents) == 0x0000C8, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::Tangents' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_KuroCreateMeshSection, bCreateCollision) == 0x0000D8, "Member 'ProceduralMeshComponent_KuroCreateMeshSection::bCreateCollision' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_KuroCreateMeshSection;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.SetMeshSectionVisible
 // 0x0008 (0x0008 - 0x0000)
@@ -149,10 +108,7 @@ public:
 	bool                                          bNewVisibility;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ProceduralMeshComponent_SetMeshSectionVisible) == 0x000004, "Wrong alignment on ProceduralMeshComponent_SetMeshSectionVisible");
-static_assert(sizeof(ProceduralMeshComponent_SetMeshSectionVisible) == 0x000008, "Wrong size on ProceduralMeshComponent_SetMeshSectionVisible");
-static_assert(offsetof(ProceduralMeshComponent_SetMeshSectionVisible, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_SetMeshSectionVisible::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_SetMeshSectionVisible, bNewVisibility) == 0x000004, "Member 'ProceduralMeshComponent_SetMeshSectionVisible::bNewVisibility' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_SetMeshSectionVisible;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection
 // 0x0058 (0x0058 - 0x0000)
@@ -167,14 +123,7 @@ public:
 	TArray<struct FColor>                         VertexColors;                                      // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0048(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ProceduralMeshComponent_UpdateMeshSection) == 0x000008, "Wrong alignment on ProceduralMeshComponent_UpdateMeshSection");
-static_assert(sizeof(ProceduralMeshComponent_UpdateMeshSection) == 0x000058, "Wrong size on ProceduralMeshComponent_UpdateMeshSection");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_UpdateMeshSection::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, Vertices) == 0x000008, "Member 'ProceduralMeshComponent_UpdateMeshSection::Vertices' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, Normals) == 0x000018, "Member 'ProceduralMeshComponent_UpdateMeshSection::Normals' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, UV0) == 0x000028, "Member 'ProceduralMeshComponent_UpdateMeshSection::UV0' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, VertexColors) == 0x000038, "Member 'ProceduralMeshComponent_UpdateMeshSection::VertexColors' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection, Tangents) == 0x000048, "Member 'ProceduralMeshComponent_UpdateMeshSection::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_UpdateMeshSection;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.UpdateMeshSection_LinearColor
 // 0x0088 (0x0088 - 0x0000)
@@ -192,17 +141,7 @@ public:
 	TArray<struct FLinearColor>                   VertexColors;                                      // 0x0068(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0078(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ProceduralMeshComponent_UpdateMeshSection_LinearColor) == 0x000008, "Wrong alignment on ProceduralMeshComponent_UpdateMeshSection_LinearColor");
-static_assert(sizeof(ProceduralMeshComponent_UpdateMeshSection_LinearColor) == 0x000088, "Wrong size on ProceduralMeshComponent_UpdateMeshSection_LinearColor");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, Vertices) == 0x000008, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::Vertices' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, Normals) == 0x000018, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::Normals' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, UV0) == 0x000028, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::UV0' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, UV1) == 0x000038, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::UV1' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, UV2) == 0x000048, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::UV2' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, UV3) == 0x000058, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::UV3' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, VertexColors) == 0x000068, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::VertexColors' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_UpdateMeshSection_LinearColor, Tangents) == 0x000078, "Member 'ProceduralMeshComponent_UpdateMeshSection_LinearColor::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_UpdateMeshSection_LinearColor;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.GetNumSections
 // 0x0004 (0x0004 - 0x0000)
@@ -211,9 +150,7 @@ struct ProceduralMeshComponent_GetNumSections final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ProceduralMeshComponent_GetNumSections) == 0x000004, "Wrong alignment on ProceduralMeshComponent_GetNumSections");
-static_assert(sizeof(ProceduralMeshComponent_GetNumSections) == 0x000004, "Wrong size on ProceduralMeshComponent_GetNumSections");
-static_assert(offsetof(ProceduralMeshComponent_GetNumSections, ReturnValue) == 0x000000, "Member 'ProceduralMeshComponent_GetNumSections::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_GetNumSections;
 
 // Function ProceduralMeshComponent.ProceduralMeshComponent.IsMeshSectionVisible
 // 0x0008 (0x0008 - 0x0000)
@@ -224,10 +161,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ProceduralMeshComponent_IsMeshSectionVisible) == 0x000004, "Wrong alignment on ProceduralMeshComponent_IsMeshSectionVisible");
-static_assert(sizeof(ProceduralMeshComponent_IsMeshSectionVisible) == 0x000008, "Wrong size on ProceduralMeshComponent_IsMeshSectionVisible");
-static_assert(offsetof(ProceduralMeshComponent_IsMeshSectionVisible, SectionIndex) == 0x000000, "Member 'ProceduralMeshComponent_IsMeshSectionVisible::SectionIndex' has a wrong offset!");
-static_assert(offsetof(ProceduralMeshComponent_IsMeshSectionVisible, ReturnValue) == 0x000004, "Member 'ProceduralMeshComponent_IsMeshSectionVisible::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ProceduralMeshComponent_IsMeshSectionVisible;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CalculateTangentsForMesh
 // 0x0050 (0x0050 - 0x0000)
@@ -240,13 +174,7 @@ public:
 	TArray<struct FVector>                        Normals;                                           // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_CalculateTangentsForMesh) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_CalculateTangentsForMesh");
-static_assert(sizeof(KismetProceduralMeshLibrary_CalculateTangentsForMesh) == 0x000050, "Wrong size on KismetProceduralMeshLibrary_CalculateTangentsForMesh");
-static_assert(offsetof(KismetProceduralMeshLibrary_CalculateTangentsForMesh, Vertices) == 0x000000, "Member 'KismetProceduralMeshLibrary_CalculateTangentsForMesh::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CalculateTangentsForMesh, Triangles) == 0x000010, "Member 'KismetProceduralMeshLibrary_CalculateTangentsForMesh::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CalculateTangentsForMesh, UVs) == 0x000020, "Member 'KismetProceduralMeshLibrary_CalculateTangentsForMesh::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CalculateTangentsForMesh, Normals) == 0x000030, "Member 'KismetProceduralMeshLibrary_CalculateTangentsForMesh::Normals' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CalculateTangentsForMesh, Tangents) == 0x000040, "Member 'KismetProceduralMeshLibrary_CalculateTangentsForMesh::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_CalculateTangentsForMesh;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.ConvertQuadToTriangles
 // 0x0020 (0x0020 - 0x0000)
@@ -259,13 +187,7 @@ public:
 	int32                                         Vert2;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Vert3;                                             // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_ConvertQuadToTriangles) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_ConvertQuadToTriangles");
-static_assert(sizeof(KismetProceduralMeshLibrary_ConvertQuadToTriangles) == 0x000020, "Wrong size on KismetProceduralMeshLibrary_ConvertQuadToTriangles");
-static_assert(offsetof(KismetProceduralMeshLibrary_ConvertQuadToTriangles, Triangles) == 0x000000, "Member 'KismetProceduralMeshLibrary_ConvertQuadToTriangles::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_ConvertQuadToTriangles, Vert0) == 0x000010, "Member 'KismetProceduralMeshLibrary_ConvertQuadToTriangles::Vert0' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_ConvertQuadToTriangles, Vert1) == 0x000014, "Member 'KismetProceduralMeshLibrary_ConvertQuadToTriangles::Vert1' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_ConvertQuadToTriangles, Vert2) == 0x000018, "Member 'KismetProceduralMeshLibrary_ConvertQuadToTriangles::Vert2' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_ConvertQuadToTriangles, Vert3) == 0x00001C, "Member 'KismetProceduralMeshLibrary_ConvertQuadToTriangles::Vert3' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_ConvertQuadToTriangles;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CopyProceduralMeshFromStaticMeshComponent
 // 0x0020 (0x0020 - 0x0000)
@@ -279,12 +201,7 @@ public:
 	bool                                          bCreateCollision;                                  // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent");
-static_assert(sizeof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent) == 0x000020, "Wrong size on KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent");
-static_assert(offsetof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent, StaticMeshComponent) == 0x000000, "Member 'KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent::StaticMeshComponent' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent, LODIndex) == 0x000008, "Member 'KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent::LODIndex' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent, ProcMeshComponent) == 0x000010, "Member 'KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent::ProcMeshComponent' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent, bCreateCollision) == 0x000018, "Member 'KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent::bCreateCollision' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_CopyProceduralMeshFromStaticMeshComponent;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshSplit
 // 0x0050 (0x0050 - 0x0000)
@@ -300,15 +217,7 @@ public:
 	float                                         GridSpacing;                                       // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KismetProceduralMeshLibrary_CreateGridMeshSplit) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_CreateGridMeshSplit");
-static_assert(sizeof(KismetProceduralMeshLibrary_CreateGridMeshSplit) == 0x000050, "Wrong size on KismetProceduralMeshLibrary_CreateGridMeshSplit");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, NumX) == 0x000000, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::NumX' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, NumY) == 0x000004, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::NumY' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, Triangles) == 0x000008, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, Vertices) == 0x000018, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, UVs) == 0x000028, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, UV1s) == 0x000038, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::UV1s' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshSplit, GridSpacing) == 0x000048, "Member 'KismetProceduralMeshLibrary_CreateGridMeshSplit::GridSpacing' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_CreateGridMeshSplit;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshTriangles
 // 0x0020 (0x0020 - 0x0000)
@@ -321,12 +230,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 Triangles;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_CreateGridMeshTriangles) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_CreateGridMeshTriangles");
-static_assert(sizeof(KismetProceduralMeshLibrary_CreateGridMeshTriangles) == 0x000020, "Wrong size on KismetProceduralMeshLibrary_CreateGridMeshTriangles");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshTriangles, NumX) == 0x000000, "Member 'KismetProceduralMeshLibrary_CreateGridMeshTriangles::NumX' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshTriangles, NumY) == 0x000004, "Member 'KismetProceduralMeshLibrary_CreateGridMeshTriangles::NumY' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshTriangles, bWinding) == 0x000008, "Member 'KismetProceduralMeshLibrary_CreateGridMeshTriangles::bWinding' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshTriangles, Triangles) == 0x000010, "Member 'KismetProceduralMeshLibrary_CreateGridMeshTriangles::Triangles' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_CreateGridMeshTriangles;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.CreateGridMeshWelded
 // 0x0040 (0x0040 - 0x0000)
@@ -341,14 +245,7 @@ public:
 	float                                         GridSpacing;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KismetProceduralMeshLibrary_CreateGridMeshWelded) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_CreateGridMeshWelded");
-static_assert(sizeof(KismetProceduralMeshLibrary_CreateGridMeshWelded) == 0x000040, "Wrong size on KismetProceduralMeshLibrary_CreateGridMeshWelded");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, NumX) == 0x000000, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::NumX' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, NumY) == 0x000004, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::NumY' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, Triangles) == 0x000008, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, Vertices) == 0x000018, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, UVs) == 0x000028, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_CreateGridMeshWelded, GridSpacing) == 0x000038, "Member 'KismetProceduralMeshLibrary_CreateGridMeshWelded::GridSpacing' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_CreateGridMeshWelded;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.GenerateBoxMesh
 // 0x0060 (0x0060 - 0x0000)
@@ -363,14 +260,7 @@ public:
 	TArray<struct FVector2D>                      UVs;                                               // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_GenerateBoxMesh) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_GenerateBoxMesh");
-static_assert(sizeof(KismetProceduralMeshLibrary_GenerateBoxMesh) == 0x000060, "Wrong size on KismetProceduralMeshLibrary_GenerateBoxMesh");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, BoxRadius) == 0x000000, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::BoxRadius' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, Vertices) == 0x000010, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, Triangles) == 0x000020, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, Normals) == 0x000030, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::Normals' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, UVs) == 0x000040, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GenerateBoxMesh, Tangents) == 0x000050, "Member 'KismetProceduralMeshLibrary_GenerateBoxMesh::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_GenerateBoxMesh;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.GetSectionFromProceduralMesh
 // 0x0060 (0x0060 - 0x0000)
@@ -386,15 +276,7 @@ public:
 	TArray<struct FVector2D>                      UVs;                                               // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_GetSectionFromProceduralMesh");
-static_assert(sizeof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh) == 0x000060, "Wrong size on KismetProceduralMeshLibrary_GetSectionFromProceduralMesh");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, InProcMesh) == 0x000000, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::InProcMesh' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, SectionIndex) == 0x000008, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::SectionIndex' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, Vertices) == 0x000010, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, Triangles) == 0x000020, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, Normals) == 0x000030, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::Normals' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, UVs) == 0x000040, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromProceduralMesh, Tangents) == 0x000050, "Member 'KismetProceduralMeshLibrary_GetSectionFromProceduralMesh::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_GetSectionFromProceduralMesh;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.GetSectionFromStaticMesh
 // 0x0060 (0x0060 - 0x0000)
@@ -410,16 +292,7 @@ public:
 	TArray<struct FVector2D>                      UVs;                                               // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FProcMeshTangent>               Tangents;                                          // 0x0050(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_GetSectionFromStaticMesh");
-static_assert(sizeof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh) == 0x000060, "Wrong size on KismetProceduralMeshLibrary_GetSectionFromStaticMesh");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, InMesh) == 0x000000, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::InMesh' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, LODIndex) == 0x000008, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::LODIndex' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, SectionIndex) == 0x00000C, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::SectionIndex' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, Vertices) == 0x000010, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::Vertices' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, Triangles) == 0x000020, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::Triangles' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, Normals) == 0x000030, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::Normals' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, UVs) == 0x000040, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::UVs' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_GetSectionFromStaticMesh, Tangents) == 0x000050, "Member 'KismetProceduralMeshLibrary_GetSectionFromStaticMesh::Tangents' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_GetSectionFromStaticMesh;
 
 // Function ProceduralMeshComponent.KismetProceduralMeshLibrary.SliceProceduralMesh
 // 0x0040 (0x0040 - 0x0000)
@@ -436,15 +309,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     CapMaterial;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KismetProceduralMeshLibrary_SliceProceduralMesh) == 0x000008, "Wrong alignment on KismetProceduralMeshLibrary_SliceProceduralMesh");
-static_assert(sizeof(KismetProceduralMeshLibrary_SliceProceduralMesh) == 0x000040, "Wrong size on KismetProceduralMeshLibrary_SliceProceduralMesh");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, InProcMesh) == 0x000000, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::InProcMesh' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, PlanePosition) == 0x000008, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::PlanePosition' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, PlaneNormal) == 0x000014, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::PlaneNormal' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, bCreateOtherHalf) == 0x000020, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::bCreateOtherHalf' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, OutOtherHalfProcMesh) == 0x000028, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::OutOtherHalfProcMesh' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, CapOption) == 0x000030, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::CapOption' has a wrong offset!");
-static_assert(offsetof(KismetProceduralMeshLibrary_SliceProceduralMesh, CapMaterial) == 0x000038, "Member 'KismetProceduralMeshLibrary_SliceProceduralMesh::CapMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_KismetProceduralMeshLibrary_SliceProceduralMesh;
 
 }
 

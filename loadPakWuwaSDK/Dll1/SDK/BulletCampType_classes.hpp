@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BulletCampType_C">();
+		BP_STATIC_CLASS_IMPL("BulletCampType_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletCampType_C")
 	}
 	static class UBulletCampType_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletCampType_C>();
 	}
 };
-static_assert(alignof(UBulletCampType_C) == 0x000008, "Wrong alignment on UBulletCampType_C");
-static_assert(sizeof(UBulletCampType_C) == 0x000040, "Wrong size on UBulletCampType_C");
-static_assert(offsetof(UBulletCampType_C, 阵营) == 0x000038, "Member 'UBulletCampType_C::阵营' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletCampType_C;
 
 }
 

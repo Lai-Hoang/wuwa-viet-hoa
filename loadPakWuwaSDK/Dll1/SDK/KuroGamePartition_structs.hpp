@@ -38,7 +38,7 @@ enum class ESubGamePartitionObjectType : uint8
 // NumValues: 0x0004
 enum class EMainGamePartitionObjectType : uint16
 {
-	KuroNomal                                = 1,
+	KuroNormal                               = 1,
 	KuroDestructible                         = 64,
 	PhysicsInteractionActor                  = 4096,
 	EMainGamePartitionObjectType_MAX         = 4097,
@@ -57,14 +57,7 @@ public:
 	int32                                         Type;                                              // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SubType;                                           // 0x0054(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGamePartitionObject) == 0x000008, "Wrong alignment on FGamePartitionObject");
-static_assert(sizeof(FGamePartitionObject) == 0x000058, "Wrong size on FGamePartitionObject");
-static_assert(offsetof(FGamePartitionObject, Actor) == 0x000000, "Member 'FGamePartitionObject::Actor' has a wrong offset!");
-static_assert(offsetof(FGamePartitionObject, Location) == 0x000018, "Member 'FGamePartitionObject::Location' has a wrong offset!");
-static_assert(offsetof(FGamePartitionObject, Bounds) == 0x000030, "Member 'FGamePartitionObject::Bounds' has a wrong offset!");
-static_assert(offsetof(FGamePartitionObject, ObjectID) == 0x00004C, "Member 'FGamePartitionObject::ObjectID' has a wrong offset!");
-static_assert(offsetof(FGamePartitionObject, Type) == 0x000050, "Member 'FGamePartitionObject::Type' has a wrong offset!");
-static_assert(offsetof(FGamePartitionObject, SubType) == 0x000054, "Member 'FGamePartitionObject::SubType' has a wrong offset!");
+DUMPER7_ASSERTS_FGamePartitionObject;
 
 }
 

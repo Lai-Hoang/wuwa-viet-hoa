@@ -23,11 +23,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_ManagerBase_C_初始化) == 0x000008, "Wrong alignment on BP_ManagerBase_C_初始化");
-static_assert(sizeof(BP_ManagerBase_C_初始化) == 0x000010, "Wrong size on BP_ManagerBase_C_初始化");
-static_assert(offsetof(BP_ManagerBase_C_初始化, 游戏实例_0) == 0x000000, "Member 'BP_ManagerBase_C_初始化::游戏实例_0' has a wrong offset!");
-static_assert(offsetof(BP_ManagerBase_C_初始化, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_ManagerBase_C_初始化::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ManagerBase_C_初始化, CallFunc_Not_PreBool_ReturnValue) == 0x000009, "Member 'BP_ManagerBase_C_初始化::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ManagerBase_C_初始化;
 
 }
 

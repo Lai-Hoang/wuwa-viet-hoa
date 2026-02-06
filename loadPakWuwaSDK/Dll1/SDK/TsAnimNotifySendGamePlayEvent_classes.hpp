@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifySendGamePlayEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifySendGamePlayEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifySendGamePlayEvent_C")
 	}
 	static class UTsAnimNotifySendGamePlayEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifySendGamePlayEvent_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifySendGamePlayEvent_C) == 0x000008, "Wrong alignment on UTsAnimNotifySendGamePlayEvent_C");
-static_assert(sizeof(UTsAnimNotifySendGamePlayEvent_C) == 0x000058, "Wrong size on UTsAnimNotifySendGamePlayEvent_C");
-static_assert(offsetof(UTsAnimNotifySendGamePlayEvent_C, 事件Tag) == 0x000048, "Member 'UTsAnimNotifySendGamePlayEvent_C::事件Tag' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifySendGamePlayEvent_C;
 
 }
 

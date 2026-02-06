@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.FeedStart
-// 0x000C (0x000C - 0x0000)
-struct BPI_AnimalEcological_C_FeedStart final
-{
-public:
-	struct FGameplayTag                           GameplayTag;                                       // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_AnimalEcological_C_FeedStart) == 0x000004, "Wrong alignment on BPI_AnimalEcological_C_FeedStart");
-static_assert(sizeof(BPI_AnimalEcological_C_FeedStart) == 0x00000C, "Wrong size on BPI_AnimalEcological_C_FeedStart");
-static_assert(offsetof(BPI_AnimalEcological_C_FeedStart, GameplayTag) == 0x000000, "Member 'BPI_AnimalEcological_C_FeedStart::GameplayTag' has a wrong offset!");
-
 // Function BPI_AnimalEcological.BPI_AnimalEcological_C.GetCurrentActionTime
 // 0x0004 (0x0004 - 0x0000)
 struct BPI_AnimalEcological_C_GetCurrentActionTime final
@@ -34,9 +23,16 @@ struct BPI_AnimalEcological_C_GetCurrentActionTime final
 public:
 	float                                         ActionTime;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_AnimalEcological_C_GetCurrentActionTime) == 0x000004, "Wrong alignment on BPI_AnimalEcological_C_GetCurrentActionTime");
-static_assert(sizeof(BPI_AnimalEcological_C_GetCurrentActionTime) == 0x000004, "Wrong size on BPI_AnimalEcological_C_GetCurrentActionTime");
-static_assert(offsetof(BPI_AnimalEcological_C_GetCurrentActionTime, ActionTime) == 0x000000, "Member 'BPI_AnimalEcological_C_GetCurrentActionTime::ActionTime' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_AnimalEcological_C_GetCurrentActionTime;
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.FeedStart
+// 0x000C (0x000C - 0x0000)
+struct BPI_AnimalEcological_C_FeedStart final
+{
+public:
+	struct FGameplayTag                           GameplayTag;                                       // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_AnimalEcological_C_FeedStart;
 
 }
 

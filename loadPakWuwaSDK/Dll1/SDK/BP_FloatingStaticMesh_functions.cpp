@@ -17,43 +17,35 @@
 namespace SDK
 {
 
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.SetCustomData
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.ExecuteUbergraph_BP_FloatingStaticMesh
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_FloatingStaticMesh_C::SetCustomData()
+void ABP_FloatingStaticMesh_C::ExecuteUbergraph_BP_FloatingStaticMesh(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "SetCustomData");
+		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "ExecuteUbergraph_BP_FloatingStaticMesh");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_FloatingStaticMesh_C_ExecuteUbergraph_BP_FloatingStaticMesh Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.RefreshChildActors
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_FloatingStaticMesh_C::RefreshChildActors()
+void ABP_FloatingStaticMesh_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "RefreshChildActors");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.SetMaterialParams
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_FloatingStaticMesh_C::SetMaterialParams()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "SetMaterialParams");
+		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -73,57 +65,31 @@ void ABP_FloatingStaticMesh_C::UserConstructionScript()
 }
 
 
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.SetMaterialParams
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_FloatingStaticMesh_C::ReceiveBeginPlay()
+void ABP_FloatingStaticMesh_C::SetMaterialParams()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "SetMaterialParams");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.RefreshChildActors
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_FloatingStaticMesh_C::ReceiveTick(float DeltaSeconds)
+void ABP_FloatingStaticMesh_C::RefreshChildActors()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "RefreshChildActors");
 
-	Params::BP_FloatingStaticMesh_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.ExecuteUbergraph_BP_FloatingStaticMesh
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FloatingStaticMesh_C::ExecuteUbergraph_BP_FloatingStaticMesh(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "ExecuteUbergraph_BP_FloatingStaticMesh");
-
-	Params::BP_FloatingStaticMesh_C_ExecuteUbergraph_BP_FloatingStaticMesh Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -144,6 +110,20 @@ void ABP_FloatingStaticMesh_C::CopyCustomPrimitiveData(class UStaticMeshComponen
 	Parms.Target = Target;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FloatingStaticMesh.BP_FloatingStaticMesh_C.SetCustomData
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FloatingStaticMesh_C::SetCustomData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FloatingStaticMesh_C", "SetCustomData");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

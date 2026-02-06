@@ -66,10 +66,7 @@ public:
 	struct FVector                                Offset;                                            // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Extent;                                            // 0x000C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNavCollisionBox) == 0x000004, "Wrong alignment on FNavCollisionBox");
-static_assert(sizeof(FNavCollisionBox) == 0x000018, "Wrong size on FNavCollisionBox");
-static_assert(offsetof(FNavCollisionBox, Offset) == 0x000000, "Member 'FNavCollisionBox::Offset' has a wrong offset!");
-static_assert(offsetof(FNavCollisionBox, Extent) == 0x00000C, "Member 'FNavCollisionBox::Extent' has a wrong offset!");
+DUMPER7_ASSERTS_FNavCollisionBox;
 
 // ScriptStruct NavigationSystem.NavCollisionCylinder
 // 0x0014 (0x0014 - 0x0000)
@@ -80,11 +77,7 @@ public:
 	float                                         Radius;                                            // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Height;                                            // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNavCollisionCylinder) == 0x000004, "Wrong alignment on FNavCollisionCylinder");
-static_assert(sizeof(FNavCollisionCylinder) == 0x000014, "Wrong size on FNavCollisionCylinder");
-static_assert(offsetof(FNavCollisionCylinder, Offset) == 0x000000, "Member 'FNavCollisionCylinder::Offset' has a wrong offset!");
-static_assert(offsetof(FNavCollisionCylinder, Radius) == 0x00000C, "Member 'FNavCollisionCylinder::Radius' has a wrong offset!");
-static_assert(offsetof(FNavCollisionCylinder, Height) == 0x000010, "Member 'FNavCollisionCylinder::Height' has a wrong offset!");
+DUMPER7_ASSERTS_FNavCollisionCylinder;
 
 // ScriptStruct NavigationSystem.SupportedAreaData
 // 0x0020 (0x0020 - 0x0000)
@@ -96,11 +89,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 AreaClass;                                         // 0x0018(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSupportedAreaData) == 0x000008, "Wrong alignment on FSupportedAreaData");
-static_assert(sizeof(FSupportedAreaData) == 0x000020, "Wrong size on FSupportedAreaData");
-static_assert(offsetof(FSupportedAreaData, AreaClassName) == 0x000000, "Member 'FSupportedAreaData::AreaClassName' has a wrong offset!");
-static_assert(offsetof(FSupportedAreaData, AreaID) == 0x000010, "Member 'FSupportedAreaData::AreaID' has a wrong offset!");
-static_assert(offsetof(FSupportedAreaData, AreaClass) == 0x000018, "Member 'FSupportedAreaData::AreaClass' has a wrong offset!");
+DUMPER7_ASSERTS_FSupportedAreaData;
 
 // ScriptStruct NavigationSystem.NavGraphNode
 // 0x0018 (0x0018 - 0x0000)
@@ -110,9 +99,7 @@ public:
 	class UObject*                                Owner;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavGraphNode) == 0x000008, "Wrong alignment on FNavGraphNode");
-static_assert(sizeof(FNavGraphNode) == 0x000018, "Wrong size on FNavGraphNode");
-static_assert(offsetof(FNavGraphNode, Owner) == 0x000000, "Member 'FNavGraphNode::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_FNavGraphNode;
 
 // ScriptStruct NavigationSystem.NavGraphEdge
 // 0x0018 (0x0018 - 0x0000)
@@ -121,8 +108,7 @@ struct alignas(0x08) FNavGraphEdge final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavGraphEdge) == 0x000008, "Wrong alignment on FNavGraphEdge");
-static_assert(sizeof(FNavGraphEdge) == 0x000018, "Wrong size on FNavGraphEdge");
+DUMPER7_ASSERTS_FNavGraphEdge;
 
 // ScriptStruct NavigationSystem.NavigationFilterFlags
 // 0x0004 (0x0004 - 0x0000)
@@ -147,8 +133,7 @@ public:
 	uint8                                         bNavFlag15 : 1;                                    // 0x0001(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavigationFilterFlags) == 0x000004, "Wrong alignment on FNavigationFilterFlags");
-static_assert(sizeof(FNavigationFilterFlags) == 0x000004, "Wrong size on FNavigationFilterFlags");
+DUMPER7_ASSERTS_FNavigationFilterFlags;
 
 // ScriptStruct NavigationSystem.NavigationFilterArea
 // 0x0018 (0x0018 - 0x0000)
@@ -163,11 +148,7 @@ public:
 	uint8                                         bOverrideEnteringCost : 1;                         // 0x0010(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavigationFilterArea) == 0x000008, "Wrong alignment on FNavigationFilterArea");
-static_assert(sizeof(FNavigationFilterArea) == 0x000018, "Wrong size on FNavigationFilterArea");
-static_assert(offsetof(FNavigationFilterArea, AreaClass) == 0x000000, "Member 'FNavigationFilterArea::AreaClass' has a wrong offset!");
-static_assert(offsetof(FNavigationFilterArea, TravelCostOverride) == 0x000008, "Member 'FNavigationFilterArea::TravelCostOverride' has a wrong offset!");
-static_assert(offsetof(FNavigationFilterArea, EnteringCostOverride) == 0x00000C, "Member 'FNavigationFilterArea::EnteringCostOverride' has a wrong offset!");
+DUMPER7_ASSERTS_FNavigationFilterArea;
 
 // ScriptStruct NavigationSystem.NavBatchProjectionResult
 // 0x0020 (0x0020 - 0x0000)
@@ -178,10 +159,7 @@ public:
 	bool                                          bResult;                                           // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavBatchProjectionResult) == 0x000008, "Wrong alignment on FNavBatchProjectionResult");
-static_assert(sizeof(FNavBatchProjectionResult) == 0x000020, "Wrong size on FNavBatchProjectionResult");
-static_assert(offsetof(FNavBatchProjectionResult, OutLocation) == 0x000000, "Member 'FNavBatchProjectionResult::OutLocation' has a wrong offset!");
-static_assert(offsetof(FNavBatchProjectionResult, bResult) == 0x000018, "Member 'FNavBatchProjectionResult::bResult' has a wrong offset!");
+DUMPER7_ASSERTS_FNavBatchProjectionResult;
 
 // ScriptStruct NavigationSystem.NavLinkCustomInstanceData
 // 0x0008 (0x0070 - 0x0068)
@@ -191,9 +169,7 @@ public:
 	uint32                                        NavLinkUserId;                                     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNavLinkCustomInstanceData) == 0x000008, "Wrong alignment on FNavLinkCustomInstanceData");
-static_assert(sizeof(FNavLinkCustomInstanceData) == 0x000070, "Wrong size on FNavLinkCustomInstanceData");
-static_assert(offsetof(FNavLinkCustomInstanceData, NavLinkUserId) == 0x000068, "Member 'FNavLinkCustomInstanceData::NavLinkUserId' has a wrong offset!");
+DUMPER7_ASSERTS_FNavLinkCustomInstanceData;
 
 // ScriptStruct NavigationSystem.RecastNavMeshGenerationProperties
 // 0x0044 (0x0044 - 0x0000)
@@ -229,25 +205,7 @@ public:
 	uint8                                         bFixedTilePoolSize : 1;                            // 0x0041(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRecastNavMeshGenerationProperties) == 0x000004, "Wrong alignment on FRecastNavMeshGenerationProperties");
-static_assert(sizeof(FRecastNavMeshGenerationProperties) == 0x000044, "Wrong size on FRecastNavMeshGenerationProperties");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, TilePoolSize) == 0x000000, "Member 'FRecastNavMeshGenerationProperties::TilePoolSize' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, TileSizeUU) == 0x000004, "Member 'FRecastNavMeshGenerationProperties::TileSizeUU' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, CellSize) == 0x000008, "Member 'FRecastNavMeshGenerationProperties::CellSize' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, CellHeight) == 0x00000C, "Member 'FRecastNavMeshGenerationProperties::CellHeight' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, AgentRadius) == 0x000010, "Member 'FRecastNavMeshGenerationProperties::AgentRadius' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, AgentHeight) == 0x000014, "Member 'FRecastNavMeshGenerationProperties::AgentHeight' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, AgentMaxSlope) == 0x000018, "Member 'FRecastNavMeshGenerationProperties::AgentMaxSlope' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, AgentMaxStepHeight) == 0x00001C, "Member 'FRecastNavMeshGenerationProperties::AgentMaxStepHeight' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, MinRegionArea) == 0x000020, "Member 'FRecastNavMeshGenerationProperties::MinRegionArea' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, MergeRegionSize) == 0x000024, "Member 'FRecastNavMeshGenerationProperties::MergeRegionSize' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, MaxSimplificationError) == 0x000028, "Member 'FRecastNavMeshGenerationProperties::MaxSimplificationError' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, DetailSampleDist) == 0x00002C, "Member 'FRecastNavMeshGenerationProperties::DetailSampleDist' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, TileNumberHardLimit) == 0x000030, "Member 'FRecastNavMeshGenerationProperties::TileNumberHardLimit' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, RegionPartitioning) == 0x000034, "Member 'FRecastNavMeshGenerationProperties::RegionPartitioning' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, LayerPartitioning) == 0x000035, "Member 'FRecastNavMeshGenerationProperties::LayerPartitioning' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, RegionChunkSplits) == 0x000038, "Member 'FRecastNavMeshGenerationProperties::RegionChunkSplits' has a wrong offset!");
-static_assert(offsetof(FRecastNavMeshGenerationProperties, LayerChunkSplits) == 0x00003C, "Member 'FRecastNavMeshGenerationProperties::LayerChunkSplits' has a wrong offset!");
+DUMPER7_ASSERTS_FRecastNavMeshGenerationProperties;
 
 }
 

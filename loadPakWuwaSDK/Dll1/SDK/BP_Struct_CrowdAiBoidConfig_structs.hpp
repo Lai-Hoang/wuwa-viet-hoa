@@ -45,29 +45,7 @@ public:
 	TMap<class UKuroMaterialControllerDataAsset*, int32> 材质贴图DA配置_67_9EC1E1564C67A36FBBC7A4B2D94E0125; // 0x00D8(0x0050)(Edit, BlueprintVisible)
 	class UGPUNPCData_C*                          GpuNpcDa_40_DA17B74640BA73DA4E2381A4F8C423E7;      // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FBP_Struct_CrowdAiBoidConfig) == 0x000010, "Wrong alignment on FBP_Struct_CrowdAiBoidConfig");
-static_assert(sizeof(FBP_Struct_CrowdAiBoidConfig) == 0x000130, "Wrong size on FBP_Struct_CrowdAiBoidConfig");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 半径_7_5007D5404659FE6AAD8969AB23DB6B3B) == 0x000000, "Member 'FBP_Struct_CrowdAiBoidConfig::半径_7_5007D5404659FE6AAD8969AB23DB6B3B' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 半高_8_53FD5AFE4D2C78FF2EE279BF3C8EA0C8) == 0x000004, "Member 'FBP_Struct_CrowdAiBoidConfig::半高_8_53FD5AFE4D2C78FF2EE279BF3C8EA0C8' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 相对变换_46_EC5A9E1146C85BDCB40CBF889C3F07BD) == 0x000010, "Member 'FBP_Struct_CrowdAiBoidConfig::相对变换_46_EC5A9E1146C85BDCB40CBF889C3F07BD' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 最大速度_9_992B9A0D4BD7747EB526118527D18C7F) == 0x000040, "Member 'FBP_Struct_CrowdAiBoidConfig::最大速度_9_992B9A0D4BD7747EB526118527D18C7F' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 最大加速度_11_BE9E5AA049C6DE0A115C1FABBCF8A9C7) == 0x000044, "Member 'FBP_Struct_CrowdAiBoidConfig::最大加速度_11_BE9E5AA049C6DE0A115C1FABBCF8A9C7' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 移动半径缩放系数_53_95FCBF3B4EC9BBB3335BC9A473992817) == 0x000048, "Member 'FBP_Struct_CrowdAiBoidConfig::移动半径缩放系数_53_95FCBF3B4EC9BBB3335BC9A473992817' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 地面转向摩擦力_13_F8DBED9B46B9A6577A1FB098002AA3C7) == 0x00004C, "Member 'FBP_Struct_CrowdAiBoidConfig::地面转向摩擦力_13_F8DBED9B46B9A6577A1FB098002AA3C7' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 转向插值速度_15_9F1D271A40720687EBC4CABD621A3B27) == 0x000050, "Member 'FBP_Struct_CrowdAiBoidConfig::转向插值速度_15_9F1D271A40720687EBC4CABD621A3B27' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 转向触发阈值速度_17_BC586E5B4C5353896CEA79BFBE2E3F33) == 0x000054, "Member 'FBP_Struct_CrowdAiBoidConfig::转向触发阈值速度_17_BC586E5B4C5353896CEA79BFBE2E3F33' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 斥力额外半径_47_138429BC4123AE54DF91859F9B59CB4D) == 0x000058, "Member 'FBP_Struct_CrowdAiBoidConfig::斥力额外半径_47_138429BC4123AE54DF91859F9B59CB4D' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 移动斥力额外半径缩放系数_52_051727824B85EFB0C22D2E8BAA264E58) == 0x00005C, "Member 'FBP_Struct_CrowdAiBoidConfig::移动斥力额外半径缩放系数_52_051727824B85EFB0C22D2E8BAA264E58' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 临近目标减速距离_21_15D6589A46432B66AF91AF8394DEE2FB) == 0x000060, "Member 'FBP_Struct_CrowdAiBoidConfig::临近目标减速距离_21_15D6589A46432B66AF91AF8394DEE2FB' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 边界空气墙距离_23_7C991B224CD23978F61EAA988D0FDFCF) == 0x000064, "Member 'FBP_Struct_CrowdAiBoidConfig::边界空气墙距离_23_7C991B224CD23978F61EAA988D0FDFCF' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 额外探测距离_25_BCA99FDC48E5C916CCDD24AA98AB37EC) == 0x000068, "Member 'FBP_Struct_CrowdAiBoidConfig::额外探测距离_25_BCA99FDC48E5C916CCDD24AA98AB37EC' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 待机表演最小冷却时间_73_591B1AFF41A8CD1CD0DD8E83DD9FB65D) == 0x00006C, "Member 'FBP_Struct_CrowdAiBoidConfig::待机表演最小冷却时间_73_591B1AFF41A8CD1CD0DD8E83DD9FB65D' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 待机表演最大冷却时间_75_952B2EAB4BFB2346B21646BC7255B1DC) == 0x000070, "Member 'FBP_Struct_CrowdAiBoidConfig::待机表演最大冷却时间_75_952B2EAB4BFB2346B21646BC7255B1DC' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 待机表演最大比例_78_144686D64ABF9E3D59666E8A86028987) == 0x000074, "Member 'FBP_Struct_CrowdAiBoidConfig::待机表演最大比例_78_144686D64ABF9E3D59666E8A86028987' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 状态配置_69_6C441FB54AFF2B6890EA7F9C546CC9C8) == 0x000078, "Member 'FBP_Struct_CrowdAiBoidConfig::状态配置_69_6C441FB54AFF2B6890EA7F9C546CC9C8' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 动画配置_62_8DEBA2C04151634ED74D398B50E2F39A) == 0x0000C8, "Member 'FBP_Struct_CrowdAiBoidConfig::动画配置_62_8DEBA2C04151634ED74D398B50E2F39A' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, 材质贴图DA配置_67_9EC1E1564C67A36FBBC7A4B2D94E0125) == 0x0000D8, "Member 'FBP_Struct_CrowdAiBoidConfig::材质贴图DA配置_67_9EC1E1564C67A36FBBC7A4B2D94E0125' has a wrong offset!");
-static_assert(offsetof(FBP_Struct_CrowdAiBoidConfig, GpuNpcDa_40_DA17B74640BA73DA4E2381A4F8C423E7) == 0x000128, "Member 'FBP_Struct_CrowdAiBoidConfig::GpuNpcDa_40_DA17B74640BA73DA4E2381A4F8C423E7' has a wrong offset!");
+DUMPER7_ASSERTS_FBP_Struct_CrowdAiBoidConfig;
 
 }
 

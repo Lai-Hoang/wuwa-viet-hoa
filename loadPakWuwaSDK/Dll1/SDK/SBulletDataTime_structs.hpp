@@ -26,11 +26,7 @@ public:
 	struct FSTimeScale                            攻击顿帧_9_4DD306D7471FB55EBE1CFE9EF7DE479C;       // 0x0008(0x0018)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSTimeScale                            受击顿帧_10_EA8FC4B84E94603ADE21D487F73FE019;      // 0x0020(0x0018)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletDataTime) == 0x000008, "Wrong alignment on FSBulletDataTime");
-static_assert(sizeof(FSBulletDataTime) == 0x000038, "Wrong size on FSBulletDataTime");
-static_assert(offsetof(FSBulletDataTime, 是否受顿帧影响_11_70214E954FB3BADC741AF48FBE764009) == 0x000000, "Member 'FSBulletDataTime::是否受顿帧影响_11_70214E954FB3BADC741AF48FBE764009' has a wrong offset!");
-static_assert(offsetof(FSBulletDataTime, 攻击顿帧_9_4DD306D7471FB55EBE1CFE9EF7DE479C) == 0x000008, "Member 'FSBulletDataTime::攻击顿帧_9_4DD306D7471FB55EBE1CFE9EF7DE479C' has a wrong offset!");
-static_assert(offsetof(FSBulletDataTime, 受击顿帧_10_EA8FC4B84E94603ADE21D487F73FE019) == 0x000020, "Member 'FSBulletDataTime::受击顿帧_10_EA8FC4B84E94603ADE21D487F73FE019' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataTime;
 
 }
 

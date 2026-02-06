@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseConcurrencySettings">();
+		STATIC_CLASS_IMPL("WwiseConcurrencySettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseConcurrencySettings")
 	}
 	static class UWwiseConcurrencySettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseConcurrencySettings>();
 	}
 };
-static_assert(alignof(UWwiseConcurrencySettings) == 0x000008, "Wrong alignment on UWwiseConcurrencySettings");
-static_assert(sizeof(UWwiseConcurrencySettings) == 0x000038, "Wrong size on UWwiseConcurrencySettings");
-static_assert(offsetof(UWwiseConcurrencySettings, bStopEnqueueWhenClosing) == 0x000030, "Member 'UWwiseConcurrencySettings::bStopEnqueueWhenClosing' has a wrong offset!");
+DUMPER7_ASSERTS_UWwiseConcurrencySettings;
 
 }
 

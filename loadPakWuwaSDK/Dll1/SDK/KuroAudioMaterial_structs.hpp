@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   FootstepTextureName;                               // 0x0004(0x000C)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroAudioMaterialInfo) == 0x000004, "Wrong alignment on FKuroAudioMaterialInfo");
-static_assert(sizeof(FKuroAudioMaterialInfo) == 0x000010, "Wrong size on FKuroAudioMaterialInfo");
-static_assert(offsetof(FKuroAudioMaterialInfo, SurfaceType) == 0x000000, "Member 'FKuroAudioMaterialInfo::SurfaceType' has a wrong offset!");
-static_assert(offsetof(FKuroAudioMaterialInfo, FootstepTextureName) == 0x000004, "Member 'FKuroAudioMaterialInfo::FootstepTextureName' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroAudioMaterialInfo;
 
 // ScriptStruct KuroAudioMaterial.KuroMatName2PhysMaterial
 // 0x0018 (0x0018 - 0x0000)
@@ -38,10 +35,7 @@ public:
 	class FName                                   MaterialName;                                      // 0x0000(0x000C)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   PhysicalMaterialName;                              // 0x000C(0x000C)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroMatName2PhysMaterial) == 0x000004, "Wrong alignment on FKuroMatName2PhysMaterial");
-static_assert(sizeof(FKuroMatName2PhysMaterial) == 0x000018, "Wrong size on FKuroMatName2PhysMaterial");
-static_assert(offsetof(FKuroMatName2PhysMaterial, MaterialName) == 0x000000, "Member 'FKuroMatName2PhysMaterial::MaterialName' has a wrong offset!");
-static_assert(offsetof(FKuroMatName2PhysMaterial, PhysicalMaterialName) == 0x00000C, "Member 'FKuroMatName2PhysMaterial::PhysicalMaterialName' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroMatName2PhysMaterial;
 
 }
 

@@ -21,16 +21,20 @@ namespace SDK
 class IBPI_Animation_C final
 {
 public:
-	void InterfaceManipulateInteractDirection(float 角度);
-	void InterfaceFixHookDirect(const struct FVector& Offset);
-	void InterfaceSimulateJump(float Speed);
-	void ClimbDash();
 	void InterfaceJumpPressed(float* Speed);
+	void ClimbDash();
+	void InterfaceSimulateJump(float Speed);
+	void InterfaceFixHookDirect(const struct FVector& Offset);
+	void InterfaceManipulateInteractDirection(float 角度);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPI_Animation_C">();
+		BP_STATIC_CLASS_IMPL("BPI_Animation_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPI_Animation_C")
 	}
 	static class IBPI_Animation_C* GetDefaultObj()
 	{
@@ -46,8 +50,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBPI_Animation_C) == 0x000001, "Wrong alignment on IBPI_Animation_C");
-static_assert(sizeof(IBPI_Animation_C) == 0x000001, "Wrong size on IBPI_Animation_C");
+DUMPER7_ASSERTS_IBPI_Animation_C;
 
 }
 

@@ -8704,6 +8704,33 @@ void UTsGameplayBlueprintFunctionLibrary_C::StopCableWayMove(int32 id, class UOb
 }
 
 
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.QuantumDiffusionInteract
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsGameplayBlueprintFunctionLibrary_C::QuantumDiffusionInteract(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "QuantumDiffusionInteract");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_QuantumDiffusionInteract Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetCurrentTargetPilotSkeletalMeshComponent
 // (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -8719,6 +8746,36 @@ class USkeletalMeshComponent* UTsGameplayBlueprintFunctionLibrary_C::GetCurrentT
 		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "GetCurrentTargetPilotSkeletalMeshComponent");
 
 	Params::TsGameplayBlueprintFunctionLibrary_C_GetCurrentTargetPilotSkeletalMeshComponent Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.FixHookTargetEntityId
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UTsGameplayBlueprintFunctionLibrary_C::FixHookTargetEntityId(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "FixHookTargetEntityId");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_FixHookTargetEntityId Parms{};
 
 	Parms.entityId = entityId;
 	Parms.__WorldContext = __WorldContext;
@@ -8777,63 +8834,6 @@ bool UTsGameplayBlueprintFunctionLibrary_C::GetPilotThrowIsDisableInterrupt(clas
 
 	Params::TsGameplayBlueprintFunctionLibrary_C_GetPilotThrowIsDisableInterrupt Parms{};
 
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.OpenPilotThrowGameplayCamera
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   targetEntityId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsGameplayBlueprintFunctionLibrary_C::OpenPilotThrowGameplayCamera(int32 targetEntityId, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "OpenPilotThrowGameplayCamera");
-
-	Params::TsGameplayBlueprintFunctionLibrary_C_OpenPilotThrowGameplayCamera Parms{};
-
-	Parms.targetEntityId = targetEntityId;
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.FixHookTargetEntityId
-// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-int32 UTsGameplayBlueprintFunctionLibrary_C::FixHookTargetEntityId(int32 entityId, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "FixHookTargetEntityId");
-
-	Params::TsGameplayBlueprintFunctionLibrary_C_FixHookTargetEntityId Parms{};
-
-	Parms.entityId = entityId;
 	Parms.__WorldContext = __WorldContext;
 
 	auto Flgs = Func->FunctionFlags;
@@ -8986,6 +8986,58 @@ void UTsGameplayBlueprintFunctionLibrary_C::LevelFlowPlayLevelSequence(const cla
 }
 
 
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.OpenPilotThrowGameplayCamera
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   targetEntityId                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsGameplayBlueprintFunctionLibrary_C::OpenPilotThrowGameplayCamera(int32 targetEntityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "OpenPilotThrowGameplayCamera");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_OpenPilotThrowGameplayCamera Parms{};
+
+	Parms.targetEntityId = targetEntityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GuessJokerNpcTurnToIdlePerform
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsGameplayBlueprintFunctionLibrary_C::GuessJokerNpcTurnToIdlePerform(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "GuessJokerNpcTurnToIdlePerform");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_GuessJokerNpcTurnToIdlePerform Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetPilotCurrentInRangePoint
 // (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -9011,6 +9063,95 @@ struct FVectorDouble UTsGameplayBlueprintFunctionLibrary_C::GetPilotCurrentInRan
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetHookOverrideSpeed
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UTsGameplayBlueprintFunctionLibrary_C::GetHookOverrideSpeed(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "GetHookOverrideSpeed");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_GetHookOverrideSpeed Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetVehicleCatapultUnitRisingTime
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float UTsGameplayBlueprintFunctionLibrary_C::GetVehicleCatapultUnitRisingTime(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "GetVehicleCatapultUnitRisingTime");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_GetVehicleCatapultUnitRisingTime Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.SetGameplayCueEffectForceRecycle
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   cueId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsGameplayBlueprintFunctionLibrary_C::SetGameplayCueEffectForceRecycle(int32 entityId, int64 cueId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "SetGameplayCueEffectForceRecycle");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_SetGameplayCueEffectForceRecycle Parms{};
+
+	Parms.entityId = entityId;
+	Parms.cueId = cueId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

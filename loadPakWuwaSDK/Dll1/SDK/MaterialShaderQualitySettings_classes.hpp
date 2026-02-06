@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialShaderQualitySettings">();
+		STATIC_CLASS_IMPL("MaterialShaderQualitySettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialShaderQualitySettings")
 	}
 	static class UMaterialShaderQualitySettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialShaderQualitySettings>();
 	}
 };
-static_assert(alignof(UMaterialShaderQualitySettings) == 0x000008, "Wrong alignment on UMaterialShaderQualitySettings");
-static_assert(sizeof(UMaterialShaderQualitySettings) == 0x000080, "Wrong size on UMaterialShaderQualitySettings");
-static_assert(offsetof(UMaterialShaderQualitySettings, ForwardSettingMap) == 0x000030, "Member 'UMaterialShaderQualitySettings::ForwardSettingMap' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialShaderQualitySettings;
 
 // Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
 // 0x0038 (0x0068 - 0x0030)
@@ -49,16 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ShaderPlatformQualitySettings">();
+		STATIC_CLASS_IMPL("ShaderPlatformQualitySettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ShaderPlatformQualitySettings")
 	}
 	static class UShaderPlatformQualitySettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UShaderPlatformQualitySettings>();
 	}
 };
-static_assert(alignof(UShaderPlatformQualitySettings) == 0x000008, "Wrong alignment on UShaderPlatformQualitySettings");
-static_assert(sizeof(UShaderPlatformQualitySettings) == 0x000068, "Wrong size on UShaderPlatformQualitySettings");
-static_assert(offsetof(UShaderPlatformQualitySettings, QualityOverrides) == 0x000030, "Member 'UShaderPlatformQualitySettings::QualityOverrides' has a wrong offset!");
+DUMPER7_ASSERTS_UShaderPlatformQualitySettings;
 
 }
 

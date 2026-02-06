@@ -27,12 +27,7 @@ public:
 	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxBlockingTimeOut_12_4E20551042E4D1513A1B98AE895654DD; // 0x00A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMove_CommonConfig) == 0x000008, "Wrong alignment on FSMotorRailMove_CommonConfig");
-static_assert(sizeof(FSMotorRailMove_CommonConfig) == 0x0000A8, "Wrong size on FSMotorRailMove_CommonConfig");
-static_assert(offsetof(FSMotorRailMove_CommonConfig, ModifyVehicleTagsOnEnter_4_6329554D4511A400F44ADDA8504A5324) == 0x000000, "Member 'FSMotorRailMove_CommonConfig::ModifyVehicleTagsOnEnter_4_6329554D4511A400F44ADDA8504A5324' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_CommonConfig, ModifyVehicleTagsOnExit_6_500075C2411021FF63FC909F9C2A3D27) == 0x000050, "Member 'FSMotorRailMove_CommonConfig::ModifyVehicleTagsOnExit_6_500075C2411021FF63FC909F9C2A3D27' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_CommonConfig, EnableBlockingCheck_15_294B0AA846A3F259B800DD94B61EA108) == 0x0000A0, "Member 'FSMotorRailMove_CommonConfig::EnableBlockingCheck_15_294B0AA846A3F259B800DD94B61EA108' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_CommonConfig, MaxBlockingTimeOut_12_4E20551042E4D1513A1B98AE895654DD) == 0x0000A4, "Member 'FSMotorRailMove_CommonConfig::MaxBlockingTimeOut_12_4E20551042E4D1513A1B98AE895654DD' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMove_CommonConfig;
 
 }
 

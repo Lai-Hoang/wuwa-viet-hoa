@@ -17,153 +17,55 @@
 namespace SDK
 {
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.SetMovementDebug
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ExecuteUbergraph_TsCharacterDebugComponent
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    newDebug                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTsCharacterDebugComponent_C::SetMovementDebug(bool newDebug)
+void UTsCharacterDebugComponent_C::ExecuteUbergraph_TsCharacterDebugComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "SetMovementDebug");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ExecuteUbergraph_TsCharacterDebugComponent");
 
-	Params::TsCharacterDebugComponent_C_SetMovementDebug Parms{};
+	Params::TsCharacterDebugComponent_C_ExecuteUbergraph_TsCharacterDebugComponent Parms{};
 
-	Parms.newDebug = newDebug;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DrawErrorNavigationPaths
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::DrawErrorNavigationPaths()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DrawErrorNavigationPaths");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DrawDebugPatrolPoints
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::DrawDebugPatrolPoints()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DrawDebugPatrolPoints");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.SetDebugRiseEnable
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ReceiveTick
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTsCharacterDebugComponent_C::SetDebugRiseEnable(bool enable)
+void UTsCharacterDebugComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "SetDebugRiseEnable");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ReceiveTick");
 
-	Params::TsCharacterDebugComponent_C_SetDebugRiseEnable Parms{};
+	Params::TsCharacterDebugComponent_C_ReceiveTick Parms{};
 
-	Parms.enable = enable;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeClimbingTrace
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void UTsCharacterDebugComponent_C::ChangeClimbingTrace()
+void UTsCharacterDebugComponent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeClimbingTrace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeUpArriveClimbTrace
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::ChangeUpArriveClimbTrace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeUpArriveClimbTrace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeVaultClimbTrace
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::ChangeVaultClimbTrace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeVaultClimbTrace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeEnterClimbTrace
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::ChangeEnterClimbTrace()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeEnterClimbTrace");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeNoTop
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::ChangeNoTop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeNoTop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DebugDrawActivateArea
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UTsCharacterDebugComponent_C::DebugDrawActivateArea()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DebugDrawActivateArea");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -189,55 +91,153 @@ void UTsCharacterDebugComponent_C::ActivateDebugSpeed(bool activate)
 }
 
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DebugDrawActivateArea
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UTsCharacterDebugComponent_C::ReceiveBeginPlay()
+void UTsCharacterDebugComponent_C::DebugDrawActivateArea()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DebugDrawActivateArea");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ReceiveTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeNoTop
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UTsCharacterDebugComponent_C::ReceiveTick(float DeltaSeconds)
+void UTsCharacterDebugComponent_C::ChangeNoTop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ReceiveTick");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeNoTop");
 
-	Params::TsCharacterDebugComponent_C_ReceiveTick Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.DeltaSeconds = DeltaSeconds;
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeEnterClimbTrace
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTsCharacterDebugComponent_C::ChangeEnterClimbTrace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeEnterClimbTrace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeVaultClimbTrace
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTsCharacterDebugComponent_C::ChangeVaultClimbTrace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeVaultClimbTrace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeUpArriveClimbTrace
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTsCharacterDebugComponent_C::ChangeUpArriveClimbTrace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeUpArriveClimbTrace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ChangeClimbingTrace
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTsCharacterDebugComponent_C::ChangeClimbingTrace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ChangeClimbingTrace");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.SetDebugRiseEnable
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
+
+void UTsCharacterDebugComponent_C::SetDebugRiseEnable(bool enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "SetDebugRiseEnable");
+
+	Params::TsCharacterDebugComponent_C_SetDebugRiseEnable Parms{};
+
+	Parms.enable = enable;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.ExecuteUbergraph_TsCharacterDebugComponent
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DrawDebugPatrolPoints
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UTsCharacterDebugComponent_C::ExecuteUbergraph_TsCharacterDebugComponent(int32 EntryPoint)
+void UTsCharacterDebugComponent_C::DrawDebugPatrolPoints()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsCharacterDebugComponent_C", "ExecuteUbergraph_TsCharacterDebugComponent");
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DrawDebugPatrolPoints");
 
-	Params::TsCharacterDebugComponent_C_ExecuteUbergraph_TsCharacterDebugComponent Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.DrawErrorNavigationPaths
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UTsCharacterDebugComponent_C::DrawErrorNavigationPaths()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "DrawErrorNavigationPaths");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsCharacterDebugComponent.TsCharacterDebugComponent_C.SetMovementDebug
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    newDebug                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UTsCharacterDebugComponent_C::SetMovementDebug(bool newDebug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsCharacterDebugComponent_C", "SetMovementDebug");
+
+	Params::TsCharacterDebugComponent_C_SetMovementDebug Parms{};
+
+	Parms.newDebug = newDebug;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

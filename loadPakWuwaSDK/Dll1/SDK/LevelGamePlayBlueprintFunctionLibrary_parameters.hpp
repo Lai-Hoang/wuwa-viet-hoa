@@ -23,9 +23,7 @@ struct LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects) == 0x000008, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects, __WorldContext) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_ClearAllScanEffects;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.SceneInteractionBind
 // 0x0030 (0x0030 - 0x0000)
@@ -37,12 +35,7 @@ public:
 	class FString                                 eventName;                                         // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind) == 0x000030, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind, actor) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind::actor' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind, seqName) == 0x000008, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind::seqName' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind, eventName) == 0x000018, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind::eventName' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind, __WorldContext) == 0x000028, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_SceneInteractionBind;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.GetScanMaxDistance
 // 0x0010 (0x0010 - 0x0000)
@@ -52,10 +45,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance) == 0x000010, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance, __WorldContext) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance, ReturnValue) == 0x000008, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_GetScanMaxDistance;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.GetScanInteractionEffectMaxDistance
 // 0x0010 (0x0010 - 0x0000)
@@ -65,10 +55,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance) == 0x000010, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance, __WorldContext) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance, ReturnValue) == 0x000008, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_GetScanInteractionEffectMaxDistance;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.ApplyScanEffect
 // 0x0020 (0x0020 - 0x0000)
@@ -81,12 +68,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect) == 0x000020, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect, inActor) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect::inActor' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect, type) == 0x000008, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect::type' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect, __WorldContext) == 0x000010, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect, ReturnValue) == 0x000018, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_ApplyScanEffect;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.DifferenceSelectedActorsSplines
 // 0x0018 (0x0018 - 0x0000)
@@ -96,10 +78,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKuroGeometryGeneralPolygonList        ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines) == 0x000018, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines, __WorldContext) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines, ReturnValue) == 0x000008, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_DifferenceSelectedActorsSplines;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.GetPolygonListFromSplines
 // 0x0028 (0x0028 - 0x0000)
@@ -110,11 +89,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKuroGeometryGeneralPolygonList        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines) == 0x000028, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines, splines) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines::splines' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines, __WorldContext) == 0x000010, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines, ReturnValue) == 0x000018, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_GetPolygonListFromSplines;
 
 // Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.PolygonsOpenPathsDifferenceViaSplines
 // 0x0040 (0x0040 - 0x0000)
@@ -130,15 +105,36 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FKuroGeometryGeneralPolygonList        ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines) == 0x000008, "Wrong alignment on LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines");
-static_assert(sizeof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines) == 0x000040, "Wrong size on LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, subjects) == 0x000000, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::subjects' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, openPaths) == 0x000010, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::openPaths' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, strokeWidth) == 0x000020, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::strokeWidth' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, joinType) == 0x000024, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::joinType' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, endType) == 0x000025, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::endType' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, __WorldContext) == 0x000028, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::__WorldContext' has a wrong offset!");
-static_assert(offsetof(LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines, ReturnValue) == 0x000030, "Member 'LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_PolygonsOpenPathsDifferenceViaSplines;
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.UseNewScanSystem
+// 0x0010 (0x0010 - 0x0000)
+struct LevelGamePlayBlueprintFunctionLibrary_C_UseNewScanSystem final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_UseNewScanSystem;
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.StartScan
+// 0x0008 (0x0008 - 0x0000)
+struct LevelGamePlayBlueprintFunctionLibrary_C_StartScan final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_StartScan;
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.GenFurniturePrefabIcon
+// 0x0018 (0x0018 - 0x0000)
+struct LevelGamePlayBlueprintFunctionLibrary_C_GenFurniturePrefabIcon final
+{
+public:
+	class FString                                 path;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_LevelGamePlayBlueprintFunctionLibrary_C_GenFurniturePrefabIcon;
 
 }
 

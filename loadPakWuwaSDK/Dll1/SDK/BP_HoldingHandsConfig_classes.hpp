@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -69,55 +69,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HoldingHandsConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_HoldingHandsConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HoldingHandsConfig_C")
 	}
 	static class UBP_HoldingHandsConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_HoldingHandsConfig_C>();
 	}
 };
-static_assert(alignof(UBP_HoldingHandsConfig_C) == 0x000008, "Wrong alignment on UBP_HoldingHandsConfig_C");
-static_assert(sizeof(UBP_HoldingHandsConfig_C) == 0x0001B0, "Wrong size on UBP_HoldingHandsConfig_C");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请中) == 0x000038, "Member 'UBP_HoldingHandsConfig_C::邀请中' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手中) == 0x000058, "Member 'UBP_HoldingHandsConfig_C::牵手中' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 被牵手中) == 0x000078, "Member 'UBP_HoldingHandsConfig_C::被牵手中' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手范围内) == 0x000098, "Member 'UBP_HoldingHandsConfig_C::牵手范围内' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手禁止) == 0x0000A8, "Member 'UBP_HoldingHandsConfig_C::牵手禁止' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 超时终止时长) == 0x0000C8, "Member 'UBP_HoldingHandsConfig_C::超时终止时长' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 进出牵手阻尼) == 0x0000CC, "Member 'UBP_HoldingHandsConfig_C::进出牵手阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 跑步速度缩放) == 0x0000D0, "Member 'UBP_HoldingHandsConfig_C::跑步速度缩放' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手点阻尼) == 0x0000D4, "Member 'UBP_HoldingHandsConfig_C::牵手点阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 长按退出时长) == 0x0000D8, "Member 'UBP_HoldingHandsConfig_C::长按退出时长' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手点偏转角范围) == 0x0000DC, "Member 'UBP_HoldingHandsConfig_C::牵手点偏转角范围' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手点俯仰角范围) == 0x0000EC, "Member 'UBP_HoldingHandsConfig_C::牵手点俯仰角范围' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 肩部偏转角范围) == 0x0000FC, "Member 'UBP_HoldingHandsConfig_C::肩部偏转角范围' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 肩部俯仰角范围) == 0x00010C, "Member 'UBP_HoldingHandsConfig_C::肩部俯仰角范围' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围内额外角度) == 0x00011C, "Member 'UBP_HoldingHandsConfig_C::范围内额外角度' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围外可达距离缩放) == 0x000120, "Member 'UBP_HoldingHandsConfig_C::范围外可达距离缩放' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围内可达距离缩放) == 0x000124, "Member 'UBP_HoldingHandsConfig_C::范围内可达距离缩放' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围外牵手点最大距离) == 0x000128, "Member 'UBP_HoldingHandsConfig_C::范围外牵手点最大距离' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围内牵手点最大距离) == 0x00012C, "Member 'UBP_HoldingHandsConfig_C::范围内牵手点最大距离' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 跟随配置) == 0x000130, "Member 'UBP_HoldingHandsConfig_C::跟随配置' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, Debug) == 0x000160, "Member 'UBP_HoldingHandsConfig_C::Debug' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 跑步最大旋转速度) == 0x000164, "Member 'UBP_HoldingHandsConfig_C::跑步最大旋转速度' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 走路最大旋转速度) == 0x000168, "Member 'UBP_HoldingHandsConfig_C::走路最大旋转速度' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手者碰撞优先级) == 0x00016C, "Member 'UBP_HoldingHandsConfig_C::牵手者碰撞优先级' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 被牵手者碰撞优先级) == 0x000170, "Member 'UBP_HoldingHandsConfig_C::被牵手者碰撞优先级' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手者质量) == 0x000174, "Member 'UBP_HoldingHandsConfig_C::牵手者质量' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 被牵手者质量) == 0x000178, "Member 'UBP_HoldingHandsConfig_C::被牵手者质量' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请距离) == 0x00017C, "Member 'UBP_HoldingHandsConfig_C::邀请距离' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请距离容差) == 0x000180, "Member 'UBP_HoldingHandsConfig_C::邀请距离容差' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请结束距离) == 0x000184, "Member 'UBP_HoldingHandsConfig_C::邀请结束距离' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请结束距离容差) == 0x000188, "Member 'UBP_HoldingHandsConfig_C::邀请结束距离容差' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请结束移动速度) == 0x00018C, "Member 'UBP_HoldingHandsConfig_C::邀请结束移动速度' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请旋转速度) == 0x000190, "Member 'UBP_HoldingHandsConfig_C::邀请旋转速度' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 邀请时牵手点阻尼) == 0x000194, "Member 'UBP_HoldingHandsConfig_C::邀请时牵手点阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 手掌最小夹角) == 0x000198, "Member 'UBP_HoldingHandsConfig_C::手掌最小夹角' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 牵手者牵手点位置缩放) == 0x00019C, "Member 'UBP_HoldingHandsConfig_C::牵手者牵手点位置缩放' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 被牵手者牵手点位置缩放) == 0x0001A0, "Member 'UBP_HoldingHandsConfig_C::被牵手者牵手点位置缩放' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 贴合距离) == 0x0001A4, "Member 'UBP_HoldingHandsConfig_C::贴合距离' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围外肩部最大高度差) == 0x0001A8, "Member 'UBP_HoldingHandsConfig_C::范围外肩部最大高度差' has a wrong offset!");
-static_assert(offsetof(UBP_HoldingHandsConfig_C, 范围内肩部最大高度差) == 0x0001AC, "Member 'UBP_HoldingHandsConfig_C::范围内肩部最大高度差' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_HoldingHandsConfig_C;
 
 }
 

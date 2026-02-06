@@ -780,5 +780,35 @@ void UDataTableUtil_C::GetDataTableOnEditor(const class FString& path, class UOb
 		*Return = Parms.Return;
 }
 
+
+// Function DataTableUtil.DataTableUtil_C.LoadDecorationConfig
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Row                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bSucc                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FSDecorationConfig*              result                                                 (Parm, OutParm, HasGetValueTypeHash)
+
+void UDataTableUtil_C::LoadDecorationConfig(const class FString& Row, class UObject* __WorldContext, bool* bSucc, struct FSDecorationConfig* result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataTableUtil_C", "LoadDecorationConfig");
+
+	Params::DataTableUtil_C_LoadDecorationConfig Parms{};
+
+	Parms.Row = std::move(Row);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (bSucc != nullptr)
+		*bSucc = Parms.bSucc;
+
+	if (result != nullptr)
+		*result = std::move(Parms.result);
+}
+
 }
 

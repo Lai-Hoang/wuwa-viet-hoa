@@ -40,26 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LGUITexturePackerImporterData">();
+		STATIC_CLASS_IMPL("LGUITexturePackerImporterData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LGUITexturePackerImporterData")
 	}
 	static class ULGUITexturePackerImporterData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULGUITexturePackerImporterData>();
 	}
 };
-static_assert(alignof(ULGUITexturePackerImporterData) == 0x000008, "Wrong alignment on ULGUITexturePackerImporterData");
-static_assert(sizeof(ULGUITexturePackerImporterData) == 0x000190, "Wrong size on ULGUITexturePackerImporterData");
-static_assert(offsetof(ULGUITexturePackerImporterData, Version) == 0x000030, "Member 'ULGUITexturePackerImporterData::Version' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, Sprites) == 0x000040, "Member 'ULGUITexturePackerImporterData::Sprites' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, AtlasTextures) == 0x000050, "Member 'ULGUITexturePackerImporterData::AtlasTextures' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SoftAtlasTextures) == 0x000060, "Member 'ULGUITexturePackerImporterData::SoftAtlasTextures' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteAtlasTextureMap) == 0x000070, "Member 'ULGUITexturePackerImporterData::SpriteAtlasTextureMap' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteInfoMap) == 0x0000C0, "Member 'ULGUITexturePackerImporterData::SpriteInfoMap' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteFrameInfoMap) == 0x000110, "Member 'ULGUITexturePackerImporterData::SpriteFrameInfoMap' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteDatas) == 0x000160, "Member 'ULGUITexturePackerImporterData::SpriteDatas' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, MaxTextureSize) == 0x000174, "Member 'ULGUITexturePackerImporterData::MaxTextureSize' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, bCanAddToDynamicAtlas) == 0x000178, "Member 'ULGUITexturePackerImporterData::bCanAddToDynamicAtlas' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, CustomDynamicAtlasTag) == 0x000180, "Member 'ULGUITexturePackerImporterData::CustomDynamicAtlasTag' has a wrong offset!");
+DUMPER7_ASSERTS_ULGUITexturePackerImporterData;
 
 // Class LGUI_TexturePackerImporter.LGUITexturePackerSpriteData
 // 0x00E8 (0x0118 - 0x0030)
@@ -89,31 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LGUITexturePackerSpriteData">();
+		STATIC_CLASS_IMPL("LGUITexturePackerSpriteData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LGUITexturePackerSpriteData")
 	}
 	static class ULGUITexturePackerSpriteData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULGUITexturePackerSpriteData>();
 	}
 };
-static_assert(alignof(ULGUITexturePackerSpriteData) == 0x000008, "Wrong alignment on ULGUITexturePackerSpriteData");
-static_assert(sizeof(ULGUITexturePackerSpriteData) == 0x000118, "Wrong size on ULGUITexturePackerSpriteData");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderLeft) == 0x000032, "Member 'ULGUITexturePackerSpriteData::BorderLeft' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderRight) == 0x000034, "Member 'ULGUITexturePackerSpriteData::BorderRight' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderTop) == 0x000036, "Member 'ULGUITexturePackerSpriteData::BorderTop' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderBottom) == 0x000038, "Member 'ULGUITexturePackerSpriteData::BorderBottom' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, StartLeft) == 0x00003A, "Member 'ULGUITexturePackerSpriteData::StartLeft' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, EndRight) == 0x00003C, "Member 'ULGUITexturePackerSpriteData::EndRight' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, EndTop) == 0x00003E, "Member 'ULGUITexturePackerSpriteData::EndTop' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, StartBottom) == 0x000040, "Member 'ULGUITexturePackerSpriteData::StartBottom' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderHorizontalArray) == 0x000048, "Member 'ULGUITexturePackerSpriteData::BorderHorizontalArray' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, BorderVerticalArray) == 0x000058, "Member 'ULGUITexturePackerSpriteData::BorderVerticalArray' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetX) == 0x000068, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetX' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetY) == 0x00006C, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetY' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, Importer) == 0x000070, "Member 'ULGUITexturePackerSpriteData::Importer' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, Texture2D) == 0x000078, "Member 'ULGUITexturePackerSpriteData::Texture2D' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, CacheSpriteInfo) == 0x000080, "Member 'ULGUITexturePackerSpriteData::CacheSpriteInfo' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, Version) == 0x000110, "Member 'ULGUITexturePackerSpriteData::Version' has a wrong offset!");
+DUMPER7_ASSERTS_ULGUITexturePackerSpriteData;
 
 }
 

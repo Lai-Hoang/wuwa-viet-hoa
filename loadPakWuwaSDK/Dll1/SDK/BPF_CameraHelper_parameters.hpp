@@ -32,15 +32,7 @@ public:
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransformDouble                       CallFunc_D_K2_GetComponentToWorld_ReturnValue;     // 0x0070(0x0040)(IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPF_CameraHelper_C_GetCameraTransform) == 0x000010, "Wrong alignment on BPF_CameraHelper_C_GetCameraTransform");
-static_assert(sizeof(BPF_CameraHelper_C_GetCameraTransform) == 0x0000B0, "Wrong size on BPF_CameraHelper_C_GetCameraTransform");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, PlayerIndex) == 0x000000, "Member 'BPF_CameraHelper_C_GetCameraTransform::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, __WorldContext) == 0x000008, "Member 'BPF_CameraHelper_C_GetCameraTransform::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, Success) == 0x000010, "Member 'BPF_CameraHelper_C_GetCameraTransform::Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, Transform) == 0x000020, "Member 'BPF_CameraHelper_C_GetCameraTransform::Transform' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000060, "Member 'BPF_CameraHelper_C_GetCameraTransform::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BPF_CameraHelper_C_GetCameraTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraTransform, CallFunc_D_K2_GetComponentToWorld_ReturnValue) == 0x000070, "Member 'BPF_CameraHelper_C_GetCameraTransform::CallFunc_D_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPF_CameraHelper_C_GetCameraTransform;
 
 // Function BPF_CameraHelper.BPF_CameraHelper_C.GetCameraLocation
 // 0x00B0 (0x00B0 - 0x0000)
@@ -60,17 +52,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransformDouble_Rotation;            // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransformDouble_Scale;               // 0x00A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPF_CameraHelper_C_GetCameraLocation) == 0x000010, "Wrong alignment on BPF_CameraHelper_C_GetCameraLocation");
-static_assert(sizeof(BPF_CameraHelper_C_GetCameraLocation) == 0x0000B0, "Wrong size on BPF_CameraHelper_C_GetCameraLocation");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, PlayerIndex) == 0x000000, "Member 'BPF_CameraHelper_C_GetCameraLocation::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, __WorldContext) == 0x000008, "Member 'BPF_CameraHelper_C_GetCameraLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, Success) == 0x000010, "Member 'BPF_CameraHelper_C_GetCameraLocation::Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, Location) == 0x000018, "Member 'BPF_CameraHelper_C_GetCameraLocation::Location' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, CallFunc_GetCameraTransform_Success) == 0x000030, "Member 'BPF_CameraHelper_C_GetCameraLocation::CallFunc_GetCameraTransform_Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, CallFunc_GetCameraTransform_Transform) == 0x000040, "Member 'BPF_CameraHelper_C_GetCameraLocation::CallFunc_GetCameraTransform_Transform' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, CallFunc_BreakTransformDouble_Location) == 0x000080, "Member 'BPF_CameraHelper_C_GetCameraLocation::CallFunc_BreakTransformDouble_Location' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, CallFunc_BreakTransformDouble_Rotation) == 0x000098, "Member 'BPF_CameraHelper_C_GetCameraLocation::CallFunc_BreakTransformDouble_Rotation' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraLocation, CallFunc_BreakTransformDouble_Scale) == 0x0000A4, "Member 'BPF_CameraHelper_C_GetCameraLocation::CallFunc_BreakTransformDouble_Scale' has a wrong offset!");
+DUMPER7_ASSERTS_BPF_CameraHelper_C_GetCameraLocation;
 
 // Function BPF_CameraHelper.BPF_CameraHelper_C.GetCameraRotator
 // 0x00A0 (0x00A0 - 0x0000)
@@ -90,17 +72,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransformDouble_Rotation;            // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransformDouble_Scale;               // 0x0094(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPF_CameraHelper_C_GetCameraRotator) == 0x000010, "Wrong alignment on BPF_CameraHelper_C_GetCameraRotator");
-static_assert(sizeof(BPF_CameraHelper_C_GetCameraRotator) == 0x0000A0, "Wrong size on BPF_CameraHelper_C_GetCameraRotator");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, PlayerIndex) == 0x000000, "Member 'BPF_CameraHelper_C_GetCameraRotator::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, __WorldContext) == 0x000008, "Member 'BPF_CameraHelper_C_GetCameraRotator::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, Success) == 0x000010, "Member 'BPF_CameraHelper_C_GetCameraRotator::Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, Rotator) == 0x000014, "Member 'BPF_CameraHelper_C_GetCameraRotator::Rotator' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, CallFunc_GetCameraTransform_Success) == 0x000020, "Member 'BPF_CameraHelper_C_GetCameraRotator::CallFunc_GetCameraTransform_Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, CallFunc_GetCameraTransform_Transform) == 0x000030, "Member 'BPF_CameraHelper_C_GetCameraRotator::CallFunc_GetCameraTransform_Transform' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, CallFunc_BreakTransformDouble_Location) == 0x000070, "Member 'BPF_CameraHelper_C_GetCameraRotator::CallFunc_BreakTransformDouble_Location' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, CallFunc_BreakTransformDouble_Rotation) == 0x000088, "Member 'BPF_CameraHelper_C_GetCameraRotator::CallFunc_BreakTransformDouble_Rotation' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_GetCameraRotator, CallFunc_BreakTransformDouble_Scale) == 0x000094, "Member 'BPF_CameraHelper_C_GetCameraRotator::CallFunc_BreakTransformDouble_Scale' has a wrong offset!");
+DUMPER7_ASSERTS_BPF_CameraHelper_C_GetCameraRotator;
 
 // Function BPF_CameraHelper.BPF_CameraHelper_C.D_GetCameraLocation
 // 0x00B0 (0x00B0 - 0x0000)
@@ -120,17 +92,7 @@ public:
 	struct FRotator                               CallFunc_BreakTransformDouble_Rotation;            // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransformDouble_Scale;               // 0x00A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPF_CameraHelper_C_D_GetCameraLocation) == 0x000010, "Wrong alignment on BPF_CameraHelper_C_D_GetCameraLocation");
-static_assert(sizeof(BPF_CameraHelper_C_D_GetCameraLocation) == 0x0000B0, "Wrong size on BPF_CameraHelper_C_D_GetCameraLocation");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, PlayerIndex) == 0x000000, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, __WorldContext) == 0x000008, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, Success) == 0x000010, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, Location) == 0x000018, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::Location' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, CallFunc_D_GetCameraTransform_Success) == 0x000030, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::CallFunc_D_GetCameraTransform_Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, CallFunc_D_GetCameraTransform_Transform) == 0x000040, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::CallFunc_D_GetCameraTransform_Transform' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, CallFunc_BreakTransformDouble_Location) == 0x000080, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::CallFunc_BreakTransformDouble_Location' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, CallFunc_BreakTransformDouble_Rotation) == 0x000098, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::CallFunc_BreakTransformDouble_Rotation' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraLocation, CallFunc_BreakTransformDouble_Scale) == 0x0000A4, "Member 'BPF_CameraHelper_C_D_GetCameraLocation::CallFunc_BreakTransformDouble_Scale' has a wrong offset!");
+DUMPER7_ASSERTS_BPF_CameraHelper_C_D_GetCameraLocation;
 
 // Function BPF_CameraHelper.BPF_CameraHelper_C.D_GetCameraTransform
 // 0x00B0 (0x00B0 - 0x0000)
@@ -148,15 +110,7 @@ public:
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransformDouble                       CallFunc_D_K2_GetComponentToWorld_ReturnValue;     // 0x0070(0x0040)(IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPF_CameraHelper_C_D_GetCameraTransform) == 0x000010, "Wrong alignment on BPF_CameraHelper_C_D_GetCameraTransform");
-static_assert(sizeof(BPF_CameraHelper_C_D_GetCameraTransform) == 0x0000B0, "Wrong size on BPF_CameraHelper_C_D_GetCameraTransform");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, PlayerIndex) == 0x000000, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, __WorldContext) == 0x000008, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, Success) == 0x000010, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::Success' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, Transform) == 0x000020, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::Transform' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000060, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPF_CameraHelper_C_D_GetCameraTransform, CallFunc_D_K2_GetComponentToWorld_ReturnValue) == 0x000070, "Member 'BPF_CameraHelper_C_D_GetCameraTransform::CallFunc_D_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPF_CameraHelper_C_D_GetCameraTransform;
 
 }
 

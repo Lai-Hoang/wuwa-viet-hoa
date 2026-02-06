@@ -24,10 +24,7 @@ public:
 	struct FTransform                             子弹拖尾特效位置相对偏移_14_2E3A6E4448144B115E7CAE807ACAE393; // 0x0000(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
 	float                                         子弹拖尾特效相对击中或发出时延迟销毁时间_15_A82DF1A045E818BCED3A31998AB0B35D; // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletTailEffect) == 0x000010, "Wrong alignment on FSBulletTailEffect");
-static_assert(sizeof(FSBulletTailEffect) == 0x000040, "Wrong size on FSBulletTailEffect");
-static_assert(offsetof(FSBulletTailEffect, 子弹拖尾特效位置相对偏移_14_2E3A6E4448144B115E7CAE807ACAE393) == 0x000000, "Member 'FSBulletTailEffect::子弹拖尾特效位置相对偏移_14_2E3A6E4448144B115E7CAE807ACAE393' has a wrong offset!");
-static_assert(offsetof(FSBulletTailEffect, 子弹拖尾特效相对击中或发出时延迟销毁时间_15_A82DF1A045E818BCED3A31998AB0B35D) == 0x000030, "Member 'FSBulletTailEffect::子弹拖尾特效相对击中或发出时延迟销毁时间_15_A82DF1A045E818BCED3A31998AB0B35D' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletTailEffect;
 
 }
 

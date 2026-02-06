@@ -39,19 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"GPUNPCData_C">();
+		BP_STATIC_CLASS_IMPL("GPUNPCData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GPUNPCData_C")
 	}
 	static class UGPUNPCData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGPUNPCData_C>();
 	}
 };
-static_assert(alignof(UGPUNPCData_C) == 0x000008, "Wrong alignment on UGPUNPCData_C");
-static_assert(sizeof(UGPUNPCData_C) == 0x000068, "Wrong size on UGPUNPCData_C");
-static_assert(offsetof(UGPUNPCData_C, SkeletalMesh) == 0x000048, "Member 'UGPUNPCData_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(UGPUNPCData_C, NpcSetupData) == 0x000050, "Member 'UGPUNPCData_C::NpcSetupData' has a wrong offset!");
-static_assert(offsetof(UGPUNPCData_C, Combined_Texture) == 0x000058, "Member 'UGPUNPCData_C::Combined_Texture' has a wrong offset!");
-static_assert(offsetof(UGPUNPCData_C, BakedBoneMontageInfoAsset) == 0x000060, "Member 'UGPUNPCData_C::BakedBoneMontageInfoAsset' has a wrong offset!");
+DUMPER7_ASSERTS_UGPUNPCData_C;
 
 }
 

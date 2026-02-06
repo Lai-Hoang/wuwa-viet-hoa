@@ -22,10 +22,7 @@ public:
 	class FString                                 FilePath;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FileContent;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FReadFileData) == 0x000008, "Wrong alignment on FReadFileData");
-static_assert(sizeof(FReadFileData) == 0x000020, "Wrong size on FReadFileData");
-static_assert(offsetof(FReadFileData, FilePath) == 0x000000, "Member 'FReadFileData::FilePath' has a wrong offset!");
-static_assert(offsetof(FReadFileData, FileContent) == 0x000010, "Member 'FReadFileData::FileContent' has a wrong offset!");
+DUMPER7_ASSERTS_FReadFileData;
 
 }
 

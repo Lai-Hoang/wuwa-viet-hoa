@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyClearCharInput_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyClearCharInput_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyClearCharInput_C")
 	}
 	static class UTsAnimNotifyClearCharInput_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyClearCharInput_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyClearCharInput_C) == 0x000008, "Wrong alignment on UTsAnimNotifyClearCharInput_C");
-static_assert(sizeof(UTsAnimNotifyClearCharInput_C) == 0x000048, "Wrong size on UTsAnimNotifyClearCharInput_C");
+DUMPER7_ASSERTS_UTsAnimNotifyClearCharInput_C;
 
 }
 

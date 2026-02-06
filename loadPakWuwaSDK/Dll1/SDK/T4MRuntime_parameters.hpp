@@ -21,9 +21,7 @@ struct T4MLandscapeComponent_GenerateLandscapeLayerParams final
 public:
 	bool                                          bMarkRenderStateDirty;                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(T4MLandscapeComponent_GenerateLandscapeLayerParams) == 0x000001, "Wrong alignment on T4MLandscapeComponent_GenerateLandscapeLayerParams");
-static_assert(sizeof(T4MLandscapeComponent_GenerateLandscapeLayerParams) == 0x000001, "Wrong size on T4MLandscapeComponent_GenerateLandscapeLayerParams");
-static_assert(offsetof(T4MLandscapeComponent_GenerateLandscapeLayerParams, bMarkRenderStateDirty) == 0x000000, "Member 'T4MLandscapeComponent_GenerateLandscapeLayerParams::bMarkRenderStateDirty' has a wrong offset!");
+DUMPER7_ASSERTS_T4MLandscapeComponent_GenerateLandscapeLayerParams;
 
 }
 

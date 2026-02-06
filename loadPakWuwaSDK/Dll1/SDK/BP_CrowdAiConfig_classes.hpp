@@ -55,41 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CrowdAiConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_CrowdAiConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CrowdAiConfig_C")
 	}
 	static class UBP_CrowdAiConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CrowdAiConfig_C>();
 	}
 };
-static_assert(alignof(UBP_CrowdAiConfig_C) == 0x000008, "Wrong alignment on UBP_CrowdAiConfig_C");
-static_assert(sizeof(UBP_CrowdAiConfig_C) == 0x0000B0, "Wrong size on UBP_CrowdAiConfig_C");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 启用Navmesh贴地修正) == 0x000038, "Member 'UBP_CrowdAiConfig_C::启用Navmesh贴地修正' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 分组最大距离) == 0x00003C, "Member 'UBP_CrowdAiConfig_C::分组最大距离' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, Boid种类配置) == 0x000040, "Member 'UBP_CrowdAiConfig_C::Boid种类配置' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 启用传送) == 0x000050, "Member 'UBP_CrowdAiConfig_C::启用传送' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 传送最小计数时间) == 0x000054, "Member 'UBP_CrowdAiConfig_C::传送最小计数时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 传送最大计数时间) == 0x000058, "Member 'UBP_CrowdAiConfig_C::传送最大计数时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 传送目标最大半径) == 0x00005C, "Member 'UBP_CrowdAiConfig_C::传送目标最大半径' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 传送目标最小半径) == 0x000060, "Member 'UBP_CrowdAiConfig_C::传送目标最小半径' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 玩家移动半径) == 0x000064, "Member 'UBP_CrowdAiConfig_C::玩家移动半径' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 玩家待机半径) == 0x000068, "Member 'UBP_CrowdAiConfig_C::玩家待机半径' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 玩家半径变化时间) == 0x00006C, "Member 'UBP_CrowdAiConfig_C::玩家半径变化时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 启用跟随区域限制) == 0x000070, "Member 'UBP_CrowdAiConfig_C::启用跟随区域限制' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 停驻最小目标距离) == 0x000074, "Member 'UBP_CrowdAiConfig_C::停驻最小目标距离' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 触发传送最小垂直距离) == 0x000078, "Member 'UBP_CrowdAiConfig_C::触发传送最小垂直距离' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 触发传送最小水平距离) == 0x00007C, "Member 'UBP_CrowdAiConfig_C::触发传送最小水平距离' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 暂停传送最大水平速度) == 0x000080, "Member 'UBP_CrowdAiConfig_C::暂停传送最大水平速度' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 最大尝试寻点次数) == 0x000084, "Member 'UBP_CrowdAiConfig_C::最大尝试寻点次数' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 跟随扇形区域夹角) == 0x000088, "Member 'UBP_CrowdAiConfig_C::跟随扇形区域夹角' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 跟随扇形区域两边长度) == 0x00008C, "Member 'UBP_CrowdAiConfig_C::跟随扇形区域两边长度' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 跟随扇形区域底边半长) == 0x000090, "Member 'UBP_CrowdAiConfig_C::跟随扇形区域底边半长' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 跟随扇形区域底边距离) == 0x000094, "Member 'UBP_CrowdAiConfig_C::跟随扇形区域底边距离' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 停驻计时时间) == 0x000098, "Member 'UBP_CrowdAiConfig_C::停驻计时时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 停驻最大速度) == 0x00009C, "Member 'UBP_CrowdAiConfig_C::停驻最大速度' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 出生最大随机延迟时间) == 0x0000A0, "Member 'UBP_CrowdAiConfig_C::出生最大随机延迟时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 销毁最大随机延迟时间) == 0x0000A4, "Member 'UBP_CrowdAiConfig_C::销毁最大随机延迟时间' has a wrong offset!");
-static_assert(offsetof(UBP_CrowdAiConfig_C, 组寻路间隔) == 0x0000A8, "Member 'UBP_CrowdAiConfig_C::组寻路间隔' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_CrowdAiConfig_C;
 
 }
 

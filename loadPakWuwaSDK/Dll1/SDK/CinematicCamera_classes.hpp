@@ -36,24 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CameraRig_Crane">();
+		STATIC_CLASS_IMPL("CameraRig_Crane")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRig_Crane")
 	}
 	static class ACameraRig_Crane* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ACameraRig_Crane>();
 	}
 };
-static_assert(alignof(ACameraRig_Crane) == 0x000008, "Wrong alignment on ACameraRig_Crane");
-static_assert(sizeof(ACameraRig_Crane) == 0x0002E0, "Wrong size on ACameraRig_Crane");
-static_assert(offsetof(ACameraRig_Crane, CranePitch) == 0x0002B0, "Member 'ACameraRig_Crane::CranePitch' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, CraneYaw) == 0x0002B4, "Member 'ACameraRig_Crane::CraneYaw' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, CraneArmLength) == 0x0002B8, "Member 'ACameraRig_Crane::CraneArmLength' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, bLockMountPitch) == 0x0002BC, "Member 'ACameraRig_Crane::bLockMountPitch' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, bLockMountYaw) == 0x0002BD, "Member 'ACameraRig_Crane::bLockMountYaw' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, TransformComponent) == 0x0002C0, "Member 'ACameraRig_Crane::TransformComponent' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, CraneYawControl) == 0x0002C8, "Member 'ACameraRig_Crane::CraneYawControl' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, CranePitchControl) == 0x0002D0, "Member 'ACameraRig_Crane::CranePitchControl' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Crane, CraneCameraMount) == 0x0002D8, "Member 'ACameraRig_Crane::CraneCameraMount' has a wrong offset!");
+DUMPER7_ASSERTS_ACameraRig_Crane;
 
 // Class CinematicCamera.CameraRig_Rail
 // 0x0020 (0x02D0 - 0x02B0)
@@ -73,28 +67,26 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CameraRig_Rail">();
+		STATIC_CLASS_IMPL("CameraRig_Rail")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraRig_Rail")
 	}
 	static class ACameraRig_Rail* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ACameraRig_Rail>();
 	}
 };
-static_assert(alignof(ACameraRig_Rail) == 0x000008, "Wrong alignment on ACameraRig_Rail");
-static_assert(sizeof(ACameraRig_Rail) == 0x0002D0, "Wrong size on ACameraRig_Rail");
-static_assert(offsetof(ACameraRig_Rail, CurrentPositionOnRail) == 0x0002B0, "Member 'ACameraRig_Rail::CurrentPositionOnRail' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Rail, bLockOrientationToRail) == 0x0002B4, "Member 'ACameraRig_Rail::bLockOrientationToRail' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Rail, TransformComponent) == 0x0002B8, "Member 'ACameraRig_Rail::TransformComponent' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Rail, RailSplineComponent) == 0x0002C0, "Member 'ACameraRig_Rail::RailSplineComponent' has a wrong offset!");
-static_assert(offsetof(ACameraRig_Rail, RailCameraMount) == 0x0002C8, "Member 'ACameraRig_Rail::RailCameraMount' has a wrong offset!");
+DUMPER7_ASSERTS_ACameraRig_Rail;
 
 // Class CinematicCamera.CineCameraActor
-// 0x0070 (0x0C60 - 0x0BF0)
+// 0x0070 (0x0C80 - 0x0C10)
 class ACineCameraActor : public ACameraActor
 {
 public:
-	struct FCameraLookatTrackingSettings          LookatTrackingSettings;                            // 0x0BF0(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C48[0x18];                                     // 0x0C48(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCameraLookatTrackingSettings          LookatTrackingSettings;                            // 0x0C10(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C68[0x18];                                     // 0x0C68(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UCineCameraComponent* GetCineCameraComponent() const;
@@ -102,40 +94,42 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CineCameraActor">();
+		STATIC_CLASS_IMPL("CineCameraActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CineCameraActor")
 	}
 	static class ACineCameraActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ACineCameraActor>();
 	}
 };
-static_assert(alignof(ACineCameraActor) == 0x000010, "Wrong alignment on ACineCameraActor");
-static_assert(sizeof(ACineCameraActor) == 0x000C60, "Wrong size on ACineCameraActor");
-static_assert(offsetof(ACineCameraActor, LookatTrackingSettings) == 0x000BF0, "Member 'ACineCameraActor::LookatTrackingSettings' has a wrong offset!");
+DUMPER7_ASSERTS_ACineCameraActor;
 
 // Class CinematicCamera.CineCameraComponent
-// 0x0110 (0x0CB0 - 0x0BA0)
+// 0x0110 (0x0CD0 - 0x0BC0)
 class UCineCameraComponent final : public UCameraComponent
 {
 public:
-	struct FCameraFilmbackSettings                FilmbackSettings;                                  // 0x0BA0(0x000C)(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFilmbackSettings                Filmback;                                          // 0x0BAC(0x000C)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraLensSettings                    LensSettings;                                      // 0x0BB8(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraFocusSettings                   FocusSettings;                                     // 0x0BD0(0x0060)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         CurrentFocalLength;                                // 0x0C30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentFocalLengthExtra;                           // 0x0C34(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentAperture;                                   // 0x0C38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentFocalRegion;                                // 0x0C3C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentFocusDistance;                              // 0x0C40(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C44[0xC];                                      // 0x0C44(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNamedFilmbackPreset>           FilmbackPresets;                                   // 0x0C50(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FNamedLensPreset>               LensPresets;                                       // 0x0C60(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
-	class FString                                 DefaultFilmbackPresetName;                         // 0x0C70(0x0010)(ZeroConstructor, Config, Deprecated, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 DefaultFilmbackPreset;                             // 0x0C80(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 DefaultLensPresetName;                             // 0x0C90(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DefaultLensFocalLength;                            // 0x0CA0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DefaultLensFStop;                                  // 0x0CA4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_CA8[0x8];                                      // 0x0CA8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCameraFilmbackSettings                FilmbackSettings;                                  // 0x0BC0(0x000C)(Deprecated, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFilmbackSettings                Filmback;                                          // 0x0BCC(0x000C)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraLensSettings                    LensSettings;                                      // 0x0BD8(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraFocusSettings                   FocusSettings;                                     // 0x0BF0(0x0060)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         CurrentFocalLength;                                // 0x0C50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentFocalLengthExtra;                           // 0x0C54(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentAperture;                                   // 0x0C58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentFocalRegion;                                // 0x0C5C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentFocusDistance;                              // 0x0C60(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C64[0xC];                                      // 0x0C64(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNamedFilmbackPreset>           FilmbackPresets;                                   // 0x0C70(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FNamedLensPreset>               LensPresets;                                       // 0x0C80(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
+	class FString                                 DefaultFilmbackPresetName;                         // 0x0C90(0x0010)(ZeroConstructor, Config, Deprecated, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 DefaultFilmbackPreset;                             // 0x0CA0(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 DefaultLensPresetName;                             // 0x0CB0(0x0010)(ZeroConstructor, Config, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DefaultLensFocalLength;                            // 0x0CC0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DefaultLensFStop;                                  // 0x0CC4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_CC8[0x8];                                      // 0x0CC8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static TArray<struct FNamedFilmbackPreset> GetFilmbackPresetsCopy();
@@ -155,31 +149,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CineCameraComponent">();
+		STATIC_CLASS_IMPL("CineCameraComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CineCameraComponent")
 	}
 	static class UCineCameraComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCineCameraComponent>();
 	}
 };
-static_assert(alignof(UCineCameraComponent) == 0x000010, "Wrong alignment on UCineCameraComponent");
-static_assert(sizeof(UCineCameraComponent) == 0x000CB0, "Wrong size on UCineCameraComponent");
-static_assert(offsetof(UCineCameraComponent, FilmbackSettings) == 0x000BA0, "Member 'UCineCameraComponent::FilmbackSettings' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, Filmback) == 0x000BAC, "Member 'UCineCameraComponent::Filmback' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, LensSettings) == 0x000BB8, "Member 'UCineCameraComponent::LensSettings' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, FocusSettings) == 0x000BD0, "Member 'UCineCameraComponent::FocusSettings' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, CurrentFocalLength) == 0x000C30, "Member 'UCineCameraComponent::CurrentFocalLength' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, CurrentFocalLengthExtra) == 0x000C34, "Member 'UCineCameraComponent::CurrentFocalLengthExtra' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, CurrentAperture) == 0x000C38, "Member 'UCineCameraComponent::CurrentAperture' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, CurrentFocalRegion) == 0x000C3C, "Member 'UCineCameraComponent::CurrentFocalRegion' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, CurrentFocusDistance) == 0x000C40, "Member 'UCineCameraComponent::CurrentFocusDistance' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, FilmbackPresets) == 0x000C50, "Member 'UCineCameraComponent::FilmbackPresets' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, LensPresets) == 0x000C60, "Member 'UCineCameraComponent::LensPresets' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, DefaultFilmbackPresetName) == 0x000C70, "Member 'UCineCameraComponent::DefaultFilmbackPresetName' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, DefaultFilmbackPreset) == 0x000C80, "Member 'UCineCameraComponent::DefaultFilmbackPreset' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, DefaultLensPresetName) == 0x000C90, "Member 'UCineCameraComponent::DefaultLensPresetName' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, DefaultLensFocalLength) == 0x000CA0, "Member 'UCineCameraComponent::DefaultLensFocalLength' has a wrong offset!");
-static_assert(offsetof(UCineCameraComponent, DefaultLensFStop) == 0x000CA4, "Member 'UCineCameraComponent::DefaultLensFStop' has a wrong offset!");
+DUMPER7_ASSERTS_UCineCameraComponent;
 
 }
 

@@ -24,12 +24,7 @@ public:
 	float                                         MinSpeedAlongRail_13_06ABCFCE41EA5450989BB481BC3759EE; // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MaxSpeedAlongRail_12_2E2AD3FC4BCFD857E3DC72895B429626; // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMove_ParabolaMove) == 0x000004, "Wrong alignment on FSMotorRailMove_ParabolaMove");
-static_assert(sizeof(FSMotorRailMove_ParabolaMove) == 0x000010, "Wrong size on FSMotorRailMove_ParabolaMove");
-static_assert(offsetof(FSMotorRailMove_ParabolaMove, GravityAccelerationAbs_2_8C6D9E804025E9B2617482A17E5B56BF) == 0x000000, "Member 'FSMotorRailMove_ParabolaMove::GravityAccelerationAbs_2_8C6D9E804025E9B2617482A17E5B56BF' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_ParabolaMove, Duration_4_A807F2444CCCF8CA9053E3BE52C3BA01) == 0x000004, "Member 'FSMotorRailMove_ParabolaMove::Duration_4_A807F2444CCCF8CA9053E3BE52C3BA01' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_ParabolaMove, MinSpeedAlongRail_13_06ABCFCE41EA5450989BB481BC3759EE) == 0x000008, "Member 'FSMotorRailMove_ParabolaMove::MinSpeedAlongRail_13_06ABCFCE41EA5450989BB481BC3759EE' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_ParabolaMove, MaxSpeedAlongRail_12_2E2AD3FC4BCFD857E3DC72895B429626) == 0x00000C, "Member 'FSMotorRailMove_ParabolaMove::MaxSpeedAlongRail_12_2E2AD3FC4BCFD857E3DC72895B429626' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMove_ParabolaMove;
 
 }
 

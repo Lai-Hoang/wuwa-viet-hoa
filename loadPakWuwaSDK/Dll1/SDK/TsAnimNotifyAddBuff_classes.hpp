@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyAddBuff_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyAddBuff_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyAddBuff_C")
 	}
 	static class UTsAnimNotifyAddBuff_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyAddBuff_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyAddBuff_C) == 0x000008, "Wrong alignment on UTsAnimNotifyAddBuff_C");
-static_assert(sizeof(UTsAnimNotifyAddBuff_C) == 0x000050, "Wrong size on UTsAnimNotifyAddBuff_C");
-static_assert(offsetof(UTsAnimNotifyAddBuff_C, BuffId) == 0x000048, "Member 'UTsAnimNotifyAddBuff_C::BuffId' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyAddBuff_C;
 
 }
 

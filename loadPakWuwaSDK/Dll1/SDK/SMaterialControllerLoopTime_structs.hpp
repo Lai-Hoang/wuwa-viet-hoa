@@ -23,11 +23,7 @@ public:
 	float                                         Loop_23_A9391DC74BDC68E6124245910E060D3C;          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         End_24_21B7494C4AD588EBDC96B18A4CD69845;           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMaterialControllerLoopTime) == 0x000004, "Wrong alignment on FSMaterialControllerLoopTime");
-static_assert(sizeof(FSMaterialControllerLoopTime) == 0x00000C, "Wrong size on FSMaterialControllerLoopTime");
-static_assert(offsetof(FSMaterialControllerLoopTime, Start_22_B06A1F774CAA9C5F13C71E87B7CCB6C2) == 0x000000, "Member 'FSMaterialControllerLoopTime::Start_22_B06A1F774CAA9C5F13C71E87B7CCB6C2' has a wrong offset!");
-static_assert(offsetof(FSMaterialControllerLoopTime, Loop_23_A9391DC74BDC68E6124245910E060D3C) == 0x000004, "Member 'FSMaterialControllerLoopTime::Loop_23_A9391DC74BDC68E6124245910E060D3C' has a wrong offset!");
-static_assert(offsetof(FSMaterialControllerLoopTime, End_24_21B7494C4AD588EBDC96B18A4CD69845) == 0x000008, "Member 'FSMaterialControllerLoopTime::End_24_21B7494C4AD588EBDC96B18A4CD69845' has a wrong offset!");
+DUMPER7_ASSERTS_FSMaterialControllerLoopTime;
 
 }
 

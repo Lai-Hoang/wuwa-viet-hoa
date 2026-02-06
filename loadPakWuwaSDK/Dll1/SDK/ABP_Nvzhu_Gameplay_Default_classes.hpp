@@ -32,17 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Nvzhu_Gameplay_Default_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Nvzhu_Gameplay_Default_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Nvzhu_Gameplay_Default_C")
 	}
 	static class UABP_Nvzhu_Gameplay_Default_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Nvzhu_Gameplay_Default_C>();
 	}
 };
-static_assert(alignof(UABP_Nvzhu_Gameplay_Default_C) == 0x000010, "Wrong alignment on UABP_Nvzhu_Gameplay_Default_C");
-static_assert(sizeof(UABP_Nvzhu_Gameplay_Default_C) == 0x000770, "Wrong size on UABP_Nvzhu_Gameplay_Default_C");
-static_assert(offsetof(UABP_Nvzhu_Gameplay_Default_C, UberGraphFrame) == 0x000730, "Member 'UABP_Nvzhu_Gameplay_Default_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Nvzhu_Gameplay_Default_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Nvzhu_Gameplay_Default_C::AnimGraphNode_Root' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Nvzhu_Gameplay_Default_C;
 
 }
 

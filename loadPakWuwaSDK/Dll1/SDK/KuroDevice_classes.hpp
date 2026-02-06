@@ -34,18 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DeviceHandle">();
+		STATIC_CLASS_IMPL("DeviceHandle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DeviceHandle")
 	}
 	static class UDeviceHandle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDeviceHandle>();
 	}
 };
-static_assert(alignof(UDeviceHandle) == 0x000008, "Wrong alignment on UDeviceHandle");
-static_assert(sizeof(UDeviceHandle) == 0x000060, "Wrong size on UDeviceHandle");
-static_assert(offsetof(UDeviceHandle, OnConnectionChanged) == 0x000030, "Member 'UDeviceHandle::OnConnectionChanged' has a wrong offset!");
-static_assert(offsetof(UDeviceHandle, PidAndVidArray) == 0x000040, "Member 'UDeviceHandle::PidAndVidArray' has a wrong offset!");
-static_assert(offsetof(UDeviceHandle, DevicePathArray) == 0x000050, "Member 'UDeviceHandle::DevicePathArray' has a wrong offset!");
+DUMPER7_ASSERTS_UDeviceHandle;
 
 // Class KuroDevice.KuroDeviceBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -58,15 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroDeviceBPLibrary">();
+		STATIC_CLASS_IMPL("KuroDeviceBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroDeviceBPLibrary")
 	}
 	static class UKuroDeviceBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroDeviceBPLibrary>();
 	}
 };
-static_assert(alignof(UKuroDeviceBPLibrary) == 0x000008, "Wrong alignment on UKuroDeviceBPLibrary");
-static_assert(sizeof(UKuroDeviceBPLibrary) == 0x000030, "Wrong size on UKuroDeviceBPLibrary");
+DUMPER7_ASSERTS_UKuroDeviceBPLibrary;
 
 }
 

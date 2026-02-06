@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "KuroSceneModifier_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -28,16 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSceneMatModifyDataAsset">();
+		STATIC_CLASS_IMPL("KuroSceneMatModifyDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSceneMatModifyDataAsset")
 	}
 	static class UKuroSceneMatModifyDataAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSceneMatModifyDataAsset>();
 	}
 };
-static_assert(alignof(UKuroSceneMatModifyDataAsset) == 0x000008, "Wrong alignment on UKuroSceneMatModifyDataAsset");
-static_assert(sizeof(UKuroSceneMatModifyDataAsset) == 0x000098, "Wrong size on UKuroSceneMatModifyDataAsset");
-static_assert(offsetof(UKuroSceneMatModifyDataAsset, MatModifyData) == 0x000038, "Member 'UKuroSceneMatModifyDataAsset::MatModifyData' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSceneMatModifyDataAsset;
 
 // Class KuroSceneModifier.KuroSceneModifierSubsystem
 // 0x0118 (0x0150 - 0x0038)
@@ -57,17 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSceneModifierSubsystem">();
+		STATIC_CLASS_IMPL("KuroSceneModifierSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSceneModifierSubsystem")
 	}
 	static class UKuroSceneModifierSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSceneModifierSubsystem>();
 	}
 };
-static_assert(alignof(UKuroSceneModifierSubsystem) == 0x000010, "Wrong alignment on UKuroSceneModifierSubsystem");
-static_assert(sizeof(UKuroSceneModifierSubsystem) == 0x000150, "Wrong size on UKuroSceneModifierSubsystem");
-static_assert(offsetof(UKuroSceneModifierSubsystem, ConsideredDataLayers) == 0x000040, "Member 'UKuroSceneModifierSubsystem::ConsideredDataLayers' has a wrong offset!");
-static_assert(offsetof(UKuroSceneModifierSubsystem, AllModifiedLevels) == 0x0000E0, "Member 'UKuroSceneModifierSubsystem::AllModifiedLevels' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSceneModifierSubsystem;
 
 }
 

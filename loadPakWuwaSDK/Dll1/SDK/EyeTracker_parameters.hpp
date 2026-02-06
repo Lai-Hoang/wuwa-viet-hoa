@@ -25,10 +25,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(EyeTrackerFunctionLibrary_GetGazeData) == 0x000004, "Wrong alignment on EyeTrackerFunctionLibrary_GetGazeData");
-static_assert(sizeof(EyeTrackerFunctionLibrary_GetGazeData) == 0x00002C, "Wrong size on EyeTrackerFunctionLibrary_GetGazeData");
-static_assert(offsetof(EyeTrackerFunctionLibrary_GetGazeData, OutGazeData) == 0x000000, "Member 'EyeTrackerFunctionLibrary_GetGazeData::OutGazeData' has a wrong offset!");
-static_assert(offsetof(EyeTrackerFunctionLibrary_GetGazeData, ReturnValue) == 0x000028, "Member 'EyeTrackerFunctionLibrary_GetGazeData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EyeTrackerFunctionLibrary_GetGazeData;
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData
 // 0x0044 (0x0044 - 0x0000)
@@ -39,10 +36,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(EyeTrackerFunctionLibrary_GetStereoGazeData) == 0x000004, "Wrong alignment on EyeTrackerFunctionLibrary_GetStereoGazeData");
-static_assert(sizeof(EyeTrackerFunctionLibrary_GetStereoGazeData) == 0x000044, "Wrong size on EyeTrackerFunctionLibrary_GetStereoGazeData");
-static_assert(offsetof(EyeTrackerFunctionLibrary_GetStereoGazeData, OutGazeData) == 0x000000, "Member 'EyeTrackerFunctionLibrary_GetStereoGazeData::OutGazeData' has a wrong offset!");
-static_assert(offsetof(EyeTrackerFunctionLibrary_GetStereoGazeData, ReturnValue) == 0x000040, "Member 'EyeTrackerFunctionLibrary_GetStereoGazeData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EyeTrackerFunctionLibrary_GetStereoGazeData;
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected
 // 0x0001 (0x0001 - 0x0000)
@@ -51,9 +45,7 @@ struct EyeTrackerFunctionLibrary_IsEyeTrackerConnected final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EyeTrackerFunctionLibrary_IsEyeTrackerConnected) == 0x000001, "Wrong alignment on EyeTrackerFunctionLibrary_IsEyeTrackerConnected");
-static_assert(sizeof(EyeTrackerFunctionLibrary_IsEyeTrackerConnected) == 0x000001, "Wrong size on EyeTrackerFunctionLibrary_IsEyeTrackerConnected");
-static_assert(offsetof(EyeTrackerFunctionLibrary_IsEyeTrackerConnected, ReturnValue) == 0x000000, "Member 'EyeTrackerFunctionLibrary_IsEyeTrackerConnected::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EyeTrackerFunctionLibrary_IsEyeTrackerConnected;
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable
 // 0x0001 (0x0001 - 0x0000)
@@ -62,9 +54,7 @@ struct EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable) == 0x000001, "Wrong alignment on EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable");
-static_assert(sizeof(EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable) == 0x000001, "Wrong size on EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable");
-static_assert(offsetof(EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable, ReturnValue) == 0x000000, "Member 'EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_EyeTrackerFunctionLibrary_IsStereoGazeDataAvailable;
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer
 // 0x0008 (0x0008 - 0x0000)
@@ -73,9 +63,7 @@ struct EyeTrackerFunctionLibrary_SetEyeTrackedPlayer final
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EyeTrackerFunctionLibrary_SetEyeTrackedPlayer) == 0x000008, "Wrong alignment on EyeTrackerFunctionLibrary_SetEyeTrackedPlayer");
-static_assert(sizeof(EyeTrackerFunctionLibrary_SetEyeTrackedPlayer) == 0x000008, "Wrong size on EyeTrackerFunctionLibrary_SetEyeTrackedPlayer");
-static_assert(offsetof(EyeTrackerFunctionLibrary_SetEyeTrackedPlayer, PlayerController) == 0x000000, "Member 'EyeTrackerFunctionLibrary_SetEyeTrackedPlayer::PlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_EyeTrackerFunctionLibrary_SetEyeTrackedPlayer;
 
 }
 

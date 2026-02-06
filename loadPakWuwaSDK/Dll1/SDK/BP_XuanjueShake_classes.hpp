@@ -23,15 +23,18 @@ class UBP_XuanjueShake_C final : public UMatineeCameraShake
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_XuanjueShake_C">();
+		BP_STATIC_CLASS_IMPL("BP_XuanjueShake_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_XuanjueShake_C")
 	}
 	static class UBP_XuanjueShake_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_XuanjueShake_C>();
 	}
 };
-static_assert(alignof(UBP_XuanjueShake_C) == 0x000010, "Wrong alignment on UBP_XuanjueShake_C");
-static_assert(sizeof(UBP_XuanjueShake_C) == 0x0001A0, "Wrong size on UBP_XuanjueShake_C");
+DUMPER7_ASSERTS_UBP_XuanjueShake_C;
 
 }
 

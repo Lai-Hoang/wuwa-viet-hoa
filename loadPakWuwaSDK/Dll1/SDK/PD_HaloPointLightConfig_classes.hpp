@@ -35,23 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_HaloPointLightConfig_C">();
+		BP_STATIC_CLASS_IMPL("PD_HaloPointLightConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_HaloPointLightConfig_C")
 	}
 	static class UPD_HaloPointLightConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_HaloPointLightConfig_C>();
 	}
 };
-static_assert(alignof(UPD_HaloPointLightConfig_C) == 0x000010, "Wrong alignment on UPD_HaloPointLightConfig_C");
-static_assert(sizeof(UPD_HaloPointLightConfig_C) == 0x0000C0, "Wrong size on UPD_HaloPointLightConfig_C");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, PC_Halo_Type1) == 0x000040, "Member 'UPD_HaloPointLightConfig_C::PC_Halo_Type1' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, PC_Halo_Type2) == 0x000050, "Member 'UPD_HaloPointLightConfig_C::PC_Halo_Type2' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, PC_Halo_Type3) == 0x000060, "Member 'UPD_HaloPointLightConfig_C::PC_Halo_Type3' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, PC_Halo_Type4) == 0x000070, "Member 'UPD_HaloPointLightConfig_C::PC_Halo_Type4' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, Mobile_Halo_Type1) == 0x000080, "Member 'UPD_HaloPointLightConfig_C::Mobile_Halo_Type1' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, Mobile_Halo_Type2) == 0x000090, "Member 'UPD_HaloPointLightConfig_C::Mobile_Halo_Type2' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, Mobile_Halo_Type3) == 0x0000A0, "Member 'UPD_HaloPointLightConfig_C::Mobile_Halo_Type3' has a wrong offset!");
-static_assert(offsetof(UPD_HaloPointLightConfig_C, Mobile_Halo_Type4) == 0x0000B0, "Member 'UPD_HaloPointLightConfig_C::Mobile_Halo_Type4' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_HaloPointLightConfig_C;
 
 }
 

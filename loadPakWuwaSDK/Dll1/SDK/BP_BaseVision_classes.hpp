@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "TsBaseCharacter_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "TsBaseCharacter_classes.hpp"
 
 
 namespace SDK
@@ -41,20 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseVision_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseVision_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseVision_C")
 	}
 	static class ABP_BaseVision_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseVision_C>();
 	}
 };
-static_assert(alignof(ABP_BaseVision_C) == 0x000010, "Wrong alignment on ABP_BaseVision_C");
-static_assert(sizeof(ABP_BaseVision_C) == 0x000780, "Wrong size on ABP_BaseVision_C");
-static_assert(offsetof(ABP_BaseVision_C, UberGraphFrame_BP_BaseVision_C) == 0x000758, "Member 'ABP_BaseVision_C::UberGraphFrame_BP_BaseVision_C' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像放大比例) == 0x000760, "Member 'ABP_BaseVision_C::显像放大比例' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像缩小比例) == 0x00076C, "Member 'ABP_BaseVision_C::显像缩小比例' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像时是否需要打开可视化) == 0x000778, "Member 'ABP_BaseVision_C::显像时是否需要打开可视化' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像时是否需要特殊pose) == 0x000779, "Member 'ABP_BaseVision_C::显像时是否需要特殊pose' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseVision_C;
 
 }
 

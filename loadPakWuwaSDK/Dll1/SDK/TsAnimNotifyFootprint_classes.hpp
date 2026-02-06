@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyFootprint_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyFootprint_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyFootprint_C")
 	}
 	static class UTsAnimNotifyFootprint_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyFootprint_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyFootprint_C) == 0x000008, "Wrong alignment on UTsAnimNotifyFootprint_C");
-static_assert(sizeof(UTsAnimNotifyFootprint_C) == 0x000050, "Wrong size on UTsAnimNotifyFootprint_C");
-static_assert(offsetof(UTsAnimNotifyFootprint_C, IsLeftFoot) == 0x000048, "Member 'UTsAnimNotifyFootprint_C::IsLeftFoot' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyFootprint_C;
 
 }
 

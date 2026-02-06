@@ -32,22 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CameraDrivenAutoFlightData_C">();
+		BP_STATIC_CLASS_IMPL("BP_CameraDrivenAutoFlightData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CameraDrivenAutoFlightData_C")
 	}
 	static class UBP_CameraDrivenAutoFlightData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CameraDrivenAutoFlightData_C>();
 	}
 };
-static_assert(alignof(UBP_CameraDrivenAutoFlightData_C) == 0x000008, "Wrong alignment on UBP_CameraDrivenAutoFlightData_C");
-static_assert(sizeof(UBP_CameraDrivenAutoFlightData_C) == 0x000058, "Wrong size on UBP_CameraDrivenAutoFlightData_C");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶开始时间) == 0x000038, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶开始时间' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶启动输入) == 0x00003C, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶启动输入' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶完成角度) == 0x000040, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶完成角度' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶归正角度Min) == 0x000044, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶归正角度Min' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶归正角度Max) == 0x000048, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶归正角度Max' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶归正角度模拟输入Min) == 0x00004C, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶归正角度模拟输入Min' has a wrong offset!");
-static_assert(offsetof(UBP_CameraDrivenAutoFlightData_C, 自动驾驶归正角度模拟输入Max) == 0x000050, "Member 'UBP_CameraDrivenAutoFlightData_C::自动驾驶归正角度模拟输入Max' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_CameraDrivenAutoFlightData_C;
 
 }
 

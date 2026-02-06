@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_Nvzhu_Seq_V2.BP_Nvzhu_Seq_V2_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void ABP_Nvzhu_Seq_V2_C::UserConstructionScript()
 {

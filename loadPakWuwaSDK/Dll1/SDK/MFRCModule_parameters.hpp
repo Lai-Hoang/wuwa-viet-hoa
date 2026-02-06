@@ -21,9 +21,7 @@ struct MFRCActor_EnableDepthMotion final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_EnableDepthMotion) == 0x000001, "Wrong alignment on MFRCActor_EnableDepthMotion");
-static_assert(sizeof(MFRCActor_EnableDepthMotion) == 0x000001, "Wrong size on MFRCActor_EnableDepthMotion");
-static_assert(offsetof(MFRCActor_EnableDepthMotion, Enable) == 0x000000, "Member 'MFRCActor_EnableDepthMotion::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_EnableDepthMotion;
 
 // Function MFRCModule.MFRCActor.EnableDrawDebugTexture
 // 0x0001 (0x0001 - 0x0000)
@@ -32,9 +30,7 @@ struct MFRCActor_EnableDrawDebugTexture final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_EnableDrawDebugTexture) == 0x000001, "Wrong alignment on MFRCActor_EnableDrawDebugTexture");
-static_assert(sizeof(MFRCActor_EnableDrawDebugTexture) == 0x000001, "Wrong size on MFRCActor_EnableDrawDebugTexture");
-static_assert(offsetof(MFRCActor_EnableDrawDebugTexture, Enable) == 0x000000, "Member 'MFRCActor_EnableDrawDebugTexture::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_EnableDrawDebugTexture;
 
 // Function MFRCModule.MFRCActor.EnableSplitUI
 // 0x0001 (0x0001 - 0x0000)
@@ -43,9 +39,7 @@ struct MFRCActor_EnableSplitUI final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_EnableSplitUI) == 0x000001, "Wrong alignment on MFRCActor_EnableSplitUI");
-static_assert(sizeof(MFRCActor_EnableSplitUI) == 0x000001, "Wrong size on MFRCActor_EnableSplitUI");
-static_assert(offsetof(MFRCActor_EnableSplitUI, Enable) == 0x000000, "Member 'MFRCActor_EnableSplitUI::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_EnableSplitUI;
 
 // Function MFRCModule.MFRCActor.IsEnableDepthMotion
 // 0x0001 (0x0001 - 0x0000)
@@ -54,9 +48,7 @@ struct MFRCActor_IsEnableDepthMotion final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_IsEnableDepthMotion) == 0x000001, "Wrong alignment on MFRCActor_IsEnableDepthMotion");
-static_assert(sizeof(MFRCActor_IsEnableDepthMotion) == 0x000001, "Wrong size on MFRCActor_IsEnableDepthMotion");
-static_assert(offsetof(MFRCActor_IsEnableDepthMotion, ReturnValue) == 0x000000, "Member 'MFRCActor_IsEnableDepthMotion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_IsEnableDepthMotion;
 
 // Function MFRCModule.MFRCActor.IsEnableSplitUI
 // 0x0001 (0x0001 - 0x0000)
@@ -65,9 +57,7 @@ struct MFRCActor_IsEnableSplitUI final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_IsEnableSplitUI) == 0x000001, "Wrong alignment on MFRCActor_IsEnableSplitUI");
-static_assert(sizeof(MFRCActor_IsEnableSplitUI) == 0x000001, "Wrong size on MFRCActor_IsEnableSplitUI");
-static_assert(offsetof(MFRCActor_IsEnableSplitUI, ReturnValue) == 0x000000, "Member 'MFRCActor_IsEnableSplitUI::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_IsEnableSplitUI;
 
 // Function MFRCModule.MFRCActor.IsUseFramebufferColor
 // 0x0001 (0x0001 - 0x0000)
@@ -76,9 +66,7 @@ struct MFRCActor_IsUseFramebufferColor final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_IsUseFramebufferColor) == 0x000001, "Wrong alignment on MFRCActor_IsUseFramebufferColor");
-static_assert(sizeof(MFRCActor_IsUseFramebufferColor) == 0x000001, "Wrong size on MFRCActor_IsUseFramebufferColor");
-static_assert(offsetof(MFRCActor_IsUseFramebufferColor, ReturnValue) == 0x000000, "Member 'MFRCActor_IsUseFramebufferColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_IsUseFramebufferColor;
 
 // Function MFRCModule.MFRCActor.UseFrameBuffer
 // 0x0001 (0x0001 - 0x0000)
@@ -87,9 +75,7 @@ struct MFRCActor_UseFrameBuffer final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MFRCActor_UseFrameBuffer) == 0x000001, "Wrong alignment on MFRCActor_UseFrameBuffer");
-static_assert(sizeof(MFRCActor_UseFrameBuffer) == 0x000001, "Wrong size on MFRCActor_UseFrameBuffer");
-static_assert(offsetof(MFRCActor_UseFrameBuffer, Enable) == 0x000000, "Member 'MFRCActor_UseFrameBuffer::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_MFRCActor_UseFrameBuffer;
 
 }
 

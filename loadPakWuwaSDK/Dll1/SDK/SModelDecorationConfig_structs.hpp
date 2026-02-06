@@ -25,11 +25,7 @@ public:
 	struct FTransform                             Transform_5_D5FB56E94DB8B07C32C25FB5FFBE50AE;      // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
 	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh_8_F58B41EB40ED76B40BB3CA920B0B58DB;   // 0x0040(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSModelDecorationConfig) == 0x000010, "Wrong alignment on FSModelDecorationConfig");
-static_assert(sizeof(FSModelDecorationConfig) == 0x000070, "Wrong size on FSModelDecorationConfig");
-static_assert(offsetof(FSModelDecorationConfig, SocketName_9_732CC00348A5405A1B5B2193F186F032) == 0x000000, "Member 'FSModelDecorationConfig::SocketName_9_732CC00348A5405A1B5B2193F186F032' has a wrong offset!");
-static_assert(offsetof(FSModelDecorationConfig, Transform_5_D5FB56E94DB8B07C32C25FB5FFBE50AE) == 0x000010, "Member 'FSModelDecorationConfig::Transform_5_D5FB56E94DB8B07C32C25FB5FFBE50AE' has a wrong offset!");
-static_assert(offsetof(FSModelDecorationConfig, SkeletalMesh_8_F58B41EB40ED76B40BB3CA920B0B58DB) == 0x000040, "Member 'FSModelDecorationConfig::SkeletalMesh_8_F58B41EB40ED76B40BB3CA920B0B58DB' has a wrong offset!");
+DUMPER7_ASSERTS_FSModelDecorationConfig;
 
 }
 

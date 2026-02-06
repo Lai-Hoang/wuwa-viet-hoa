@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -39,28 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SkiConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_SkiConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SkiConfig_C")
 	}
 	static class UBP_SkiConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SkiConfig_C>();
 	}
 };
-static_assert(alignof(UBP_SkiConfig_C) == 0x000008, "Wrong alignment on UBP_SkiConfig_C");
-static_assert(sizeof(UBP_SkiConfig_C) == 0x000088, "Wrong size on UBP_SkiConfig_C");
-static_assert(offsetof(UBP_SkiConfig_C, 初始速度) == 0x000038, "Member 'UBP_SkiConfig_C::初始速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 转向速度) == 0x00003C, "Member 'UBP_SkiConfig_C::转向速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 基础加速度) == 0x000040, "Member 'UBP_SkiConfig_C::基础加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 基础减速度) == 0x000044, "Member 'UBP_SkiConfig_C::基础减速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 基础目标速度) == 0x000048, "Member 'UBP_SkiConfig_C::基础目标速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 斜坡额外加速度) == 0x00004C, "Member 'UBP_SkiConfig_C::斜坡额外加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 斜坡额外目标速度) == 0x000050, "Member 'UBP_SkiConfig_C::斜坡额外目标速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 忽视阶梯高度) == 0x000054, "Member 'UBP_SkiConfig_C::忽视阶梯高度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 跳跃转向速度系数) == 0x000058, "Member 'UBP_SkiConfig_C::跳跃转向速度系数' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 跳跃滞空缩放系数) == 0x00005C, "Member 'UBP_SkiConfig_C::跳跃滞空缩放系数' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 跳跃高度缩放系数) == 0x000060, "Member 'UBP_SkiConfig_C::跳跃高度缩放系数' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 跳跃下落最大平面速度) == 0x000064, "Member 'UBP_SkiConfig_C::跳跃下落最大平面速度' has a wrong offset!");
-static_assert(offsetof(UBP_SkiConfig_C, 期间Tag) == 0x000068, "Member 'UBP_SkiConfig_C::期间Tag' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SkiConfig_C;
 
 }
 

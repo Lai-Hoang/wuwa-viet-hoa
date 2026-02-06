@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SAiLevelVar_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "ECharacterState_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "SAiConditions_structs.hpp"
 
 
@@ -26,9 +26,7 @@ struct TsAiController_C_ExecuteUbergraph_TsAiController final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_ExecuteUbergraph_TsAiController) == 0x000004, "Wrong alignment on TsAiController_C_ExecuteUbergraph_TsAiController");
-static_assert(sizeof(TsAiController_C_ExecuteUbergraph_TsAiController) == 0x000004, "Wrong size on TsAiController_C_ExecuteUbergraph_TsAiController");
-static_assert(offsetof(TsAiController_C_ExecuteUbergraph_TsAiController, EntryPoint) == 0x000000, "Member 'TsAiController_C_ExecuteUbergraph_TsAiController::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_ExecuteUbergraph_TsAiController;
 
 // Function TsAiController.TsAiController_C.ActivateSkillGroup
 // 0x0008 (0x0008 - 0x0000)
@@ -38,10 +36,7 @@ public:
 	int32                                         skillGroupIndex;                                   // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          activate;                                          // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_ActivateSkillGroup) == 0x000004, "Wrong alignment on TsAiController_C_ActivateSkillGroup");
-static_assert(sizeof(TsAiController_C_ActivateSkillGroup) == 0x000008, "Wrong size on TsAiController_C_ActivateSkillGroup");
-static_assert(offsetof(TsAiController_C_ActivateSkillGroup, skillGroupIndex) == 0x000000, "Member 'TsAiController_C_ActivateSkillGroup::skillGroupIndex' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_ActivateSkillGroup, activate) == 0x000004, "Member 'TsAiController_C_ActivateSkillGroup::activate' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_ActivateSkillGroup;
 
 // Function TsAiController.TsAiController_C.AddSkillCd
 // 0x0008 (0x0008 - 0x0000)
@@ -51,10 +46,7 @@ public:
 	int32                                         skillInfoId;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         cdAdd;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddSkillCd) == 0x000004, "Wrong alignment on TsAiController_C_AddSkillCd");
-static_assert(sizeof(TsAiController_C_AddSkillCd) == 0x000008, "Wrong size on TsAiController_C_AddSkillCd");
-static_assert(offsetof(TsAiController_C_AddSkillCd, skillInfoId) == 0x000000, "Member 'TsAiController_C_AddSkillCd::skillInfoId' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddSkillCd, cdAdd) == 0x000004, "Member 'TsAiController_C_AddSkillCd::cdAdd' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddSkillCd;
 
 // Function TsAiController.TsAiController_C.SetBattleWanderTime
 // 0x0008 (0x0008 - 0x0000)
@@ -64,10 +56,7 @@ public:
 	float                                         min_0;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	float                                         max_0;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetBattleWanderTime) == 0x000004, "Wrong alignment on TsAiController_C_SetBattleWanderTime");
-static_assert(sizeof(TsAiController_C_SetBattleWanderTime) == 0x000008, "Wrong size on TsAiController_C_SetBattleWanderTime");
-static_assert(offsetof(TsAiController_C_SetBattleWanderTime, min_0) == 0x000000, "Member 'TsAiController_C_SetBattleWanderTime::min_0' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetBattleWanderTime, max_0) == 0x000004, "Member 'TsAiController_C_SetBattleWanderTime::max_0' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetBattleWanderTime;
 
 // Function TsAiController.TsAiController_C.AddComplicatedEventBinder
 // 0x00C0 (0x00C0 - 0x0000)
@@ -77,10 +66,7 @@ public:
 	struct FSAiConditions                         conditions;                                        // 0x0000(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class UKuroBooleanEventBinder*                eventBinder;                                       // 0x00B8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddComplicatedEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddComplicatedEventBinder");
-static_assert(sizeof(TsAiController_C_AddComplicatedEventBinder) == 0x0000C0, "Wrong size on TsAiController_C_AddComplicatedEventBinder");
-static_assert(offsetof(TsAiController_C_AddComplicatedEventBinder, conditions) == 0x000000, "Member 'TsAiController_C_AddComplicatedEventBinder::conditions' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddComplicatedEventBinder, eventBinder) == 0x0000B8, "Member 'TsAiController_C_AddComplicatedEventBinder::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddComplicatedEventBinder;
 
 // Function TsAiController.TsAiController_C.GetDebugText
 // 0x0018 (0x0018 - 0x0000)
@@ -89,9 +75,7 @@ struct TsAiController_C_GetDebugText final
 public:
 	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(TsAiController_C_GetDebugText) == 0x000008, "Wrong alignment on TsAiController_C_GetDebugText");
-static_assert(sizeof(TsAiController_C_GetDebugText) == 0x000018, "Wrong size on TsAiController_C_GetDebugText");
-static_assert(offsetof(TsAiController_C_GetDebugText, ReturnValue) == 0x000000, "Member 'TsAiController_C_GetDebugText::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_GetDebugText;
 
 // Function TsAiController.TsAiController_C.ChangeHatred
 // 0x000C (0x000C - 0x0000)
@@ -102,11 +86,7 @@ public:
 	float                                         rate;                                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	float                                         abs;                                               // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_ChangeHatred) == 0x000004, "Wrong alignment on TsAiController_C_ChangeHatred");
-static_assert(sizeof(TsAiController_C_ChangeHatred) == 0x00000C, "Wrong size on TsAiController_C_ChangeHatred");
-static_assert(offsetof(TsAiController_C_ChangeHatred, entityId) == 0x000000, "Member 'TsAiController_C_ChangeHatred::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_ChangeHatred, rate) == 0x000004, "Member 'TsAiController_C_ChangeHatred::rate' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_ChangeHatred, abs) == 0x000008, "Member 'TsAiController_C_ChangeHatred::abs' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_ChangeHatred;
 
 // Function TsAiController.TsAiController_C.ClearHatred
 // 0x0004 (0x0004 - 0x0000)
@@ -115,9 +95,7 @@ struct TsAiController_C_ClearHatred final
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_ClearHatred) == 0x000004, "Wrong alignment on TsAiController_C_ClearHatred");
-static_assert(sizeof(TsAiController_C_ClearHatred) == 0x000004, "Wrong size on TsAiController_C_ClearHatred");
-static_assert(offsetof(TsAiController_C_ClearHatred, entityId) == 0x000000, "Member 'TsAiController_C_ClearHatred::entityId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_ClearHatred;
 
 // Function TsAiController.TsAiController_C.SetBattleWanderIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -126,9 +104,7 @@ struct TsAiController_C_SetBattleWanderIndex final
 public:
 	int32                                         index;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetBattleWanderIndex) == 0x000004, "Wrong alignment on TsAiController_C_SetBattleWanderIndex");
-static_assert(sizeof(TsAiController_C_SetBattleWanderIndex) == 0x000004, "Wrong size on TsAiController_C_SetBattleWanderIndex");
-static_assert(offsetof(TsAiController_C_SetBattleWanderIndex, index) == 0x000000, "Member 'TsAiController_C_SetBattleWanderIndex::index' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetBattleWanderIndex;
 
 // Function TsAiController.TsAiController_C.AddBattleWanderEndTime
 // 0x0004 (0x0004 - 0x0000)
@@ -137,9 +113,7 @@ struct TsAiController_C_AddBattleWanderEndTime final
 public:
 	float                                         addTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddBattleWanderEndTime) == 0x000004, "Wrong alignment on TsAiController_C_AddBattleWanderEndTime");
-static_assert(sizeof(TsAiController_C_AddBattleWanderEndTime) == 0x000004, "Wrong size on TsAiController_C_AddBattleWanderEndTime");
-static_assert(offsetof(TsAiController_C_AddBattleWanderEndTime, addTime) == 0x000000, "Member 'TsAiController_C_AddBattleWanderEndTime::addTime' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddBattleWanderEndTime;
 
 // Function TsAiController.TsAiController_C.TestChangeAi
 // 0x0010 (0x0010 - 0x0000)
@@ -148,9 +122,7 @@ struct TsAiController_C_TestChangeAi final
 public:
 	class FString                                 id;                                                // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_TestChangeAi) == 0x000008, "Wrong alignment on TsAiController_C_TestChangeAi");
-static_assert(sizeof(TsAiController_C_TestChangeAi) == 0x000010, "Wrong size on TsAiController_C_TestChangeAi");
-static_assert(offsetof(TsAiController_C_TestChangeAi, id) == 0x000000, "Member 'TsAiController_C_TestChangeAi::id' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_TestChangeAi;
 
 // Function TsAiController.TsAiController_C.AicApplyBuff
 // 0x0008 (0x0008 - 0x0000)
@@ -159,9 +131,7 @@ struct TsAiController_C_AicApplyBuff final
 public:
 	int64                                         buffId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AicApplyBuff) == 0x000008, "Wrong alignment on TsAiController_C_AicApplyBuff");
-static_assert(sizeof(TsAiController_C_AicApplyBuff) == 0x000008, "Wrong size on TsAiController_C_AicApplyBuff");
-static_assert(offsetof(TsAiController_C_AicApplyBuff, buffId) == 0x000000, "Member 'TsAiController_C_AicApplyBuff::buffId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AicApplyBuff;
 
 // Function TsAiController.TsAiController_C.AicRemoveBuff
 // 0x0008 (0x0008 - 0x0000)
@@ -170,9 +140,7 @@ struct TsAiController_C_AicRemoveBuff final
 public:
 	int64                                         buffId;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AicRemoveBuff) == 0x000008, "Wrong alignment on TsAiController_C_AicRemoveBuff");
-static_assert(sizeof(TsAiController_C_AicRemoveBuff) == 0x000008, "Wrong size on TsAiController_C_AicRemoveBuff");
-static_assert(offsetof(TsAiController_C_AicRemoveBuff, buffId) == 0x000000, "Member 'TsAiController_C_AicRemoveBuff::buffId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AicRemoveBuff;
 
 // Function TsAiController.TsAiController_C.AicAddTag
 // 0x000C (0x000C - 0x0000)
@@ -181,9 +149,7 @@ struct TsAiController_C_AicAddTag final
 public:
 	struct FGameplayTag                           tag;                                               // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AicAddTag) == 0x000004, "Wrong alignment on TsAiController_C_AicAddTag");
-static_assert(sizeof(TsAiController_C_AicAddTag) == 0x00000C, "Wrong size on TsAiController_C_AicAddTag");
-static_assert(offsetof(TsAiController_C_AicAddTag, tag) == 0x000000, "Member 'TsAiController_C_AicAddTag::tag' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AicAddTag;
 
 // Function TsAiController.TsAiController_C.AicRemoveTag
 // 0x000C (0x000C - 0x0000)
@@ -192,9 +158,7 @@ struct TsAiController_C_AicRemoveTag final
 public:
 	struct FGameplayTag                           tag;                                               // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AicRemoveTag) == 0x000004, "Wrong alignment on TsAiController_C_AicRemoveTag");
-static_assert(sizeof(TsAiController_C_AicRemoveTag) == 0x00000C, "Wrong size on TsAiController_C_AicRemoveTag");
-static_assert(offsetof(TsAiController_C_AicRemoveTag, tag) == 0x000000, "Member 'TsAiController_C_AicRemoveTag::tag' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AicRemoveTag;
 
 // Function TsAiController.TsAiController_C.SetAiEnable
 // 0x0018 (0x0018 - 0x0000)
@@ -205,10 +169,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 key;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetAiEnable) == 0x000008, "Wrong alignment on TsAiController_C_SetAiEnable");
-static_assert(sizeof(TsAiController_C_SetAiEnable) == 0x000018, "Wrong size on TsAiController_C_SetAiEnable");
-static_assert(offsetof(TsAiController_C_SetAiEnable, enable) == 0x000000, "Member 'TsAiController_C_SetAiEnable::enable' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetAiEnable, key) == 0x000008, "Member 'TsAiController_C_SetAiEnable::key' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetAiEnable;
 
 // Function TsAiController.TsAiController_C.LogReport
 // 0x0004 (0x0004 - 0x0000)
@@ -217,9 +178,7 @@ struct TsAiController_C_LogReport final
 public:
 	int32                                         logId;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_LogReport) == 0x000004, "Wrong alignment on TsAiController_C_LogReport");
-static_assert(sizeof(TsAiController_C_LogReport) == 0x000004, "Wrong size on TsAiController_C_LogReport");
-static_assert(offsetof(TsAiController_C_LogReport, logId) == 0x000000, "Member 'TsAiController_C_LogReport::logId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_LogReport;
 
 // Function TsAiController.TsAiController_C.SetAiSenseEnable
 // 0x0008 (0x0008 - 0x0000)
@@ -229,10 +188,7 @@ public:
 	int32                                         index;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          enable;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(TsAiController_C_SetAiSenseEnable) == 0x000004, "Wrong alignment on TsAiController_C_SetAiSenseEnable");
-static_assert(sizeof(TsAiController_C_SetAiSenseEnable) == 0x000008, "Wrong size on TsAiController_C_SetAiSenseEnable");
-static_assert(offsetof(TsAiController_C_SetAiSenseEnable, index) == 0x000000, "Member 'TsAiController_C_SetAiSenseEnable::index' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetAiSenseEnable, enable) == 0x000004, "Member 'TsAiController_C_SetAiSenseEnable::enable' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetAiSenseEnable;
 
 // Function TsAiController.TsAiController_C.AddOrRemoveAiSense
 // 0x0008 (0x0008 - 0x0000)
@@ -242,10 +198,7 @@ public:
 	int32                                         aiSenseId;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          add;                                               // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(TsAiController_C_AddOrRemoveAiSense) == 0x000004, "Wrong alignment on TsAiController_C_AddOrRemoveAiSense");
-static_assert(sizeof(TsAiController_C_AddOrRemoveAiSense) == 0x000008, "Wrong size on TsAiController_C_AddOrRemoveAiSense");
-static_assert(offsetof(TsAiController_C_AddOrRemoveAiSense, aiSenseId) == 0x000000, "Member 'TsAiController_C_AddOrRemoveAiSense::aiSenseId' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddOrRemoveAiSense, add) == 0x000004, "Member 'TsAiController_C_AddOrRemoveAiSense::add' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddOrRemoveAiSense;
 
 // Function TsAiController.TsAiController_C.EnableAiSenseByType
 // 0x0008 (0x0008 - 0x0000)
@@ -255,10 +208,7 @@ public:
 	int32                                         type;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          enable;                                            // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(TsAiController_C_EnableAiSenseByType) == 0x000004, "Wrong alignment on TsAiController_C_EnableAiSenseByType");
-static_assert(sizeof(TsAiController_C_EnableAiSenseByType) == 0x000008, "Wrong size on TsAiController_C_EnableAiSenseByType");
-static_assert(offsetof(TsAiController_C_EnableAiSenseByType, type) == 0x000000, "Member 'TsAiController_C_EnableAiSenseByType::type' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_EnableAiSenseByType, enable) == 0x000004, "Member 'TsAiController_C_EnableAiSenseByType::enable' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_EnableAiSenseByType;
 
 // Function TsAiController.TsAiController_C.AddHateEventBinder
 // 0x0008 (0x0008 - 0x0000)
@@ -267,9 +217,7 @@ struct TsAiController_C_AddHateEventBinder final
 public:
 	class UKuroPerceptionEventBinder*             handler1;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddHateEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddHateEventBinder");
-static_assert(sizeof(TsAiController_C_AddHateEventBinder) == 0x000008, "Wrong size on TsAiController_C_AddHateEventBinder");
-static_assert(offsetof(TsAiController_C_AddHateEventBinder, handler1) == 0x000000, "Member 'TsAiController_C_AddHateEventBinder::handler1' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddHateEventBinder;
 
 // Function TsAiController.TsAiController_C.AddPerceptionEventBinder
 // 0x0008 (0x0008 - 0x0000)
@@ -278,9 +226,7 @@ struct TsAiController_C_AddPerceptionEventBinder final
 public:
 	class UKuroPerceptionEventBinder*             handler;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddPerceptionEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddPerceptionEventBinder");
-static_assert(sizeof(TsAiController_C_AddPerceptionEventBinder) == 0x000008, "Wrong size on TsAiController_C_AddPerceptionEventBinder");
-static_assert(offsetof(TsAiController_C_AddPerceptionEventBinder, handler) == 0x000000, "Member 'TsAiController_C_AddPerceptionEventBinder::handler' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddPerceptionEventBinder;
 
 // Function TsAiController.TsAiController_C.AddHateOutRangeEventBinder
 // 0x0008 (0x0008 - 0x0000)
@@ -289,9 +235,7 @@ struct TsAiController_C_AddHateOutRangeEventBinder final
 public:
 	class UKuroPerceptionEventBinder*             handler;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddHateOutRangeEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddHateOutRangeEventBinder");
-static_assert(sizeof(TsAiController_C_AddHateOutRangeEventBinder) == 0x000008, "Wrong size on TsAiController_C_AddHateOutRangeEventBinder");
-static_assert(offsetof(TsAiController_C_AddHateOutRangeEventBinder, handler) == 0x000000, "Member 'TsAiController_C_AddHateOutRangeEventBinder::handler' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddHateOutRangeEventBinder;
 
 // Function TsAiController.TsAiController_C.SetPerceptionEventState
 // 0x0003 (0x0003 - 0x0000)
@@ -302,11 +246,7 @@ public:
 	bool                                          includeEnemy;                                      // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	bool                                          includeNeutral;                                    // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(TsAiController_C_SetPerceptionEventState) == 0x000001, "Wrong alignment on TsAiController_C_SetPerceptionEventState");
-static_assert(sizeof(TsAiController_C_SetPerceptionEventState) == 0x000003, "Wrong size on TsAiController_C_SetPerceptionEventState");
-static_assert(offsetof(TsAiController_C_SetPerceptionEventState, includeFriend) == 0x000000, "Member 'TsAiController_C_SetPerceptionEventState::includeFriend' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetPerceptionEventState, includeEnemy) == 0x000001, "Member 'TsAiController_C_SetPerceptionEventState::includeEnemy' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetPerceptionEventState, includeNeutral) == 0x000002, "Member 'TsAiController_C_SetPerceptionEventState::includeNeutral' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetPerceptionEventState;
 
 // Function TsAiController.TsAiController_C.AddSceneItemDestroyEventBinder
 // 0x0010 (0x0010 - 0x0000)
@@ -317,10 +257,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroActorEventBinder*                  eventBinder;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddSceneItemDestroyEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddSceneItemDestroyEventBinder");
-static_assert(sizeof(TsAiController_C_AddSceneItemDestroyEventBinder) == 0x000010, "Wrong size on TsAiController_C_AddSceneItemDestroyEventBinder");
-static_assert(offsetof(TsAiController_C_AddSceneItemDestroyEventBinder, distance) == 0x000000, "Member 'TsAiController_C_AddSceneItemDestroyEventBinder::distance' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddSceneItemDestroyEventBinder, eventBinder) == 0x000008, "Member 'TsAiController_C_AddSceneItemDestroyEventBinder::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddSceneItemDestroyEventBinder;
 
 // Function TsAiController.TsAiController_C.SetAiHateConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -329,9 +266,7 @@ struct TsAiController_C_SetAiHateConfig final
 public:
 	class FString                                 configId;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetAiHateConfig) == 0x000008, "Wrong alignment on TsAiController_C_SetAiHateConfig");
-static_assert(sizeof(TsAiController_C_SetAiHateConfig) == 0x000010, "Wrong size on TsAiController_C_SetAiHateConfig");
-static_assert(offsetof(TsAiController_C_SetAiHateConfig, configId) == 0x000000, "Member 'TsAiController_C_SetAiHateConfig::configId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetAiHateConfig;
 
 // Function TsAiController.TsAiController_C.AddAlertEventBinder
 // 0x0008 (0x0008 - 0x0000)
@@ -340,9 +275,7 @@ struct TsAiController_C_AddAlertEventBinder final
 public:
 	class UKuroBooleanEventBinder*                eventBinder;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddAlertEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddAlertEventBinder");
-static_assert(sizeof(TsAiController_C_AddAlertEventBinder) == 0x000008, "Wrong size on TsAiController_C_AddAlertEventBinder");
-static_assert(offsetof(TsAiController_C_AddAlertEventBinder, eventBinder) == 0x000000, "Member 'TsAiController_C_AddAlertEventBinder::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddAlertEventBinder;
 
 // Function TsAiController.TsAiController_C.SetAiAlertConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -351,9 +284,7 @@ struct TsAiController_C_SetAiAlertConfig final
 public:
 	class FString                                 configId;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetAiAlertConfig) == 0x000008, "Wrong alignment on TsAiController_C_SetAiAlertConfig");
-static_assert(sizeof(TsAiController_C_SetAiAlertConfig) == 0x000010, "Wrong size on TsAiController_C_SetAiAlertConfig");
-static_assert(offsetof(TsAiController_C_SetAiAlertConfig, configId) == 0x000000, "Member 'TsAiController_C_SetAiAlertConfig::configId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetAiAlertConfig;
 
 // Function TsAiController.TsAiController_C.GetCoolDownDone
 // 0x0008 (0x0008 - 0x0000)
@@ -363,10 +294,7 @@ public:
 	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_GetCoolDownDone) == 0x000004, "Wrong alignment on TsAiController_C_GetCoolDownDone");
-static_assert(sizeof(TsAiController_C_GetCoolDownDone) == 0x000008, "Wrong size on TsAiController_C_GetCoolDownDone");
-static_assert(offsetof(TsAiController_C_GetCoolDownDone, id) == 0x000000, "Member 'TsAiController_C_GetCoolDownDone::id' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_GetCoolDownDone, ReturnValue) == 0x000004, "Member 'TsAiController_C_GetCoolDownDone::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_GetCoolDownDone;
 
 // Function TsAiController.TsAiController_C.GetCoolDownRemainTime
 // 0x0008 (0x0008 - 0x0000)
@@ -376,10 +304,7 @@ public:
 	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_GetCoolDownRemainTime) == 0x000004, "Wrong alignment on TsAiController_C_GetCoolDownRemainTime");
-static_assert(sizeof(TsAiController_C_GetCoolDownRemainTime) == 0x000008, "Wrong size on TsAiController_C_GetCoolDownRemainTime");
-static_assert(offsetof(TsAiController_C_GetCoolDownRemainTime, id) == 0x000000, "Member 'TsAiController_C_GetCoolDownRemainTime::id' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_GetCoolDownRemainTime, ReturnValue) == 0x000004, "Member 'TsAiController_C_GetCoolDownRemainTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_GetCoolDownRemainTime;
 
 // Function TsAiController.TsAiController_C.SetCoolDown
 // 0x0008 (0x0008 - 0x0000)
@@ -389,10 +314,7 @@ public:
 	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         cd;                                                // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_SetCoolDown) == 0x000004, "Wrong alignment on TsAiController_C_SetCoolDown");
-static_assert(sizeof(TsAiController_C_SetCoolDown) == 0x000008, "Wrong size on TsAiController_C_SetCoolDown");
-static_assert(offsetof(TsAiController_C_SetCoolDown, id) == 0x000000, "Member 'TsAiController_C_SetCoolDown::id' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_SetCoolDown, cd) == 0x000004, "Member 'TsAiController_C_SetCoolDown::cd' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_SetCoolDown;
 
 // Function TsAiController.TsAiController_C.InitCooldownEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -403,10 +325,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroBooleanEventBinder*                eventBinder;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_InitCooldownEvent) == 0x000008, "Wrong alignment on TsAiController_C_InitCooldownEvent");
-static_assert(sizeof(TsAiController_C_InitCooldownEvent) == 0x000010, "Wrong size on TsAiController_C_InitCooldownEvent");
-static_assert(offsetof(TsAiController_C_InitCooldownEvent, id) == 0x000000, "Member 'TsAiController_C_InitCooldownEvent::id' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_InitCooldownEvent, eventBinder) == 0x000008, "Member 'TsAiController_C_InitCooldownEvent::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_InitCooldownEvent;
 
 // Function TsAiController.TsAiController_C.StartCooldownTimer
 // 0x0008 (0x0008 - 0x0000)
@@ -416,10 +335,7 @@ public:
 	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         duration;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_StartCooldownTimer) == 0x000004, "Wrong alignment on TsAiController_C_StartCooldownTimer");
-static_assert(sizeof(TsAiController_C_StartCooldownTimer) == 0x000008, "Wrong size on TsAiController_C_StartCooldownTimer");
-static_assert(offsetof(TsAiController_C_StartCooldownTimer, id) == 0x000000, "Member 'TsAiController_C_StartCooldownTimer::id' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_StartCooldownTimer, duration) == 0x000004, "Member 'TsAiController_C_StartCooldownTimer::duration' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_StartCooldownTimer;
 
 // Function TsAiController.TsAiController_C.逻辑主控
 // 0x0001 (0x0001 - 0x0000)
@@ -428,9 +344,7 @@ struct TsAiController_C_逻辑主控 final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_逻辑主控) == 0x000001, "Wrong alignment on TsAiController_C_逻辑主控");
-static_assert(sizeof(TsAiController_C_逻辑主控) == 0x000001, "Wrong size on TsAiController_C_逻辑主控");
-static_assert(offsetof(TsAiController_C_逻辑主控, ReturnValue) == 0x000000, "Member 'TsAiController_C_逻辑主控::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_逻辑主控;
 
 // Function TsAiController.TsAiController_C.移动主控
 // 0x0001 (0x0001 - 0x0000)
@@ -439,9 +353,7 @@ struct TsAiController_C_移动主控 final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_移动主控) == 0x000001, "Wrong alignment on TsAiController_C_移动主控");
-static_assert(sizeof(TsAiController_C_移动主控) == 0x000001, "Wrong size on TsAiController_C_移动主控");
-static_assert(offsetof(TsAiController_C_移动主控, ReturnValue) == 0x000000, "Member 'TsAiController_C_移动主控::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_移动主控;
 
 // Function TsAiController.TsAiController_C.状态切换时
 // 0x0003 (0x0003 - 0x0000)
@@ -452,11 +364,7 @@ public:
 	ECharacterState                               newState;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          isAutonomousProxy;                                 // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_状态切换时) == 0x000001, "Wrong alignment on TsAiController_C_状态切换时");
-static_assert(sizeof(TsAiController_C_状态切换时) == 0x000003, "Wrong size on TsAiController_C_状态切换时");
-static_assert(offsetof(TsAiController_C_状态切换时, oldState) == 0x000000, "Member 'TsAiController_C_状态切换时::oldState' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_状态切换时, newState) == 0x000001, "Member 'TsAiController_C_状态切换时::newState' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_状态切换时, isAutonomousProxy) == 0x000002, "Member 'TsAiController_C_状态切换时::isAutonomousProxy' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_状态切换时;
 
 // Function TsAiController.TsAiController_C.检查状态机状态
 // 0x0018 (0x0018 - 0x0000)
@@ -466,10 +374,7 @@ public:
 	TArray<class FString>                         states;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiController_C_检查状态机状态) == 0x000008, "Wrong alignment on TsAiController_C_检查状态机状态");
-static_assert(sizeof(TsAiController_C_检查状态机状态) == 0x000018, "Wrong size on TsAiController_C_检查状态机状态");
-static_assert(offsetof(TsAiController_C_检查状态机状态, states) == 0x000000, "Member 'TsAiController_C_检查状态机状态::states' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_检查状态机状态, ReturnValue) == 0x000010, "Member 'TsAiController_C_检查状态机状态::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_检查状态机状态;
 
 // Function TsAiController.TsAiController_C.切换状态机状态
 // 0x0010 (0x0010 - 0x0000)
@@ -478,9 +383,7 @@ struct TsAiController_C_切换状态机状态 final
 public:
 	TArray<class FString>                         states;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(TsAiController_C_切换状态机状态) == 0x000008, "Wrong alignment on TsAiController_C_切换状态机状态");
-static_assert(sizeof(TsAiController_C_切换状态机状态) == 0x000010, "Wrong size on TsAiController_C_切换状态机状态");
-static_assert(offsetof(TsAiController_C_切换状态机状态, states) == 0x000000, "Member 'TsAiController_C_切换状态机状态::states' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_切换状态机状态;
 
 // Function TsAiController.TsAiController_C.GetDebugStateMachine
 // 0x0010 (0x0010 - 0x0000)
@@ -489,9 +392,7 @@ struct TsAiController_C_GetDebugStateMachine final
 public:
 	TArray<class FText>                           output;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(TsAiController_C_GetDebugStateMachine) == 0x000008, "Wrong alignment on TsAiController_C_GetDebugStateMachine");
-static_assert(sizeof(TsAiController_C_GetDebugStateMachine) == 0x000010, "Wrong size on TsAiController_C_GetDebugStateMachine");
-static_assert(offsetof(TsAiController_C_GetDebugStateMachine, output) == 0x000000, "Member 'TsAiController_C_GetDebugStateMachine::output' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_GetDebugStateMachine;
 
 // Function TsAiController.TsAiController_C.AicApplyBuffToTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -502,10 +403,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         buffId;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AicApplyBuffToTarget) == 0x000008, "Wrong alignment on TsAiController_C_AicApplyBuffToTarget");
-static_assert(sizeof(TsAiController_C_AicApplyBuffToTarget) == 0x000010, "Wrong size on TsAiController_C_AicApplyBuffToTarget");
-static_assert(offsetof(TsAiController_C_AicApplyBuffToTarget, targetId) == 0x000000, "Member 'TsAiController_C_AicApplyBuffToTarget::targetId' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AicApplyBuffToTarget, buffId) == 0x000008, "Member 'TsAiController_C_AicApplyBuffToTarget::buffId' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AicApplyBuffToTarget;
 
 // Function TsAiController.TsAiController_C.AddLevelVarBoolEventBinder
 // 0x0028 (0x0028 - 0x0000)
@@ -515,10 +413,7 @@ public:
 	struct FSAiLevelVar                           levelVar;                                          // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UKuroBooleanEventBinder*                eventBinder;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddLevelVarBoolEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddLevelVarBoolEventBinder");
-static_assert(sizeof(TsAiController_C_AddLevelVarBoolEventBinder) == 0x000028, "Wrong size on TsAiController_C_AddLevelVarBoolEventBinder");
-static_assert(offsetof(TsAiController_C_AddLevelVarBoolEventBinder, levelVar) == 0x000000, "Member 'TsAiController_C_AddLevelVarBoolEventBinder::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddLevelVarBoolEventBinder, eventBinder) == 0x000020, "Member 'TsAiController_C_AddLevelVarBoolEventBinder::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddLevelVarBoolEventBinder;
 
 // Function TsAiController.TsAiController_C.AddLevelVarIntEventBinder
 // 0x0028 (0x0028 - 0x0000)
@@ -528,10 +423,7 @@ public:
 	struct FSAiLevelVar                           levelVar;                                          // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UKuroIntEventBinder*                    eventBinder;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiController_C_AddLevelVarIntEventBinder) == 0x000008, "Wrong alignment on TsAiController_C_AddLevelVarIntEventBinder");
-static_assert(sizeof(TsAiController_C_AddLevelVarIntEventBinder) == 0x000028, "Wrong size on TsAiController_C_AddLevelVarIntEventBinder");
-static_assert(offsetof(TsAiController_C_AddLevelVarIntEventBinder, levelVar) == 0x000000, "Member 'TsAiController_C_AddLevelVarIntEventBinder::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiController_C_AddLevelVarIntEventBinder, eventBinder) == 0x000020, "Member 'TsAiController_C_AddLevelVarIntEventBinder::eventBinder' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiController_C_AddLevelVarIntEventBinder;
 
 }
 

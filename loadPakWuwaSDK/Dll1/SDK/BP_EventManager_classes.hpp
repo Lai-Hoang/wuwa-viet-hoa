@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "SHitInformation_structs.hpp"
-#include "ECharacterState_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ECaughtResultType_structs.hpp"
+#include "ECharacterState_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "BP_ManagerBase_classes.hpp"
 
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EventManager.BP_EventManager_C
-// 0x0200 (0x0248 - 0x0048)
+// 0x0220 (0x0268 - 0x0048)
 class UBP_EventManager_C final : public UBP_ManagerBase_C
 {
 public:
@@ -58,51 +58,24 @@ public:
 	TMulticastInlineDelegate<void(const struct FVectorDouble& OriginPoint, class UBP_SceneBattleInteract_C* Config, int32 Id)> 武器交互场景时; // 0x0218(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(int32 EntityId, const struct FGameplayTag& TargetTag)> 当浮游炮瞄准可以自动开炮时; // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(const class FString& MusicEventType)> 音乐节拍事件触发时;          // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              当触发结算镜头时;                                  // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              当触发相机注视时;                                  // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EventManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_EventManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EventManager_C")
 	}
 	static class UBP_EventManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_EventManager_C>();
 	}
 };
-static_assert(alignof(UBP_EventManager_C) == 0x000008, "Wrong alignment on UBP_EventManager_C");
-static_assert(sizeof(UBP_EventManager_C) == 0x000248, "Wrong size on UBP_EventManager_C");
-static_assert(offsetof(UBP_EventManager_C, 界面生命周期改变) == 0x000048, "Member 'UBP_EventManager_C::界面生命周期改变' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当有角色受击时) == 0x000058, "Member 'UBP_EventManager_C::当有角色受击时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当解密界面打开时) == 0x000068, "Member 'UBP_EventManager_C::当解密界面打开时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 删除实体) == 0x000078, "Member 'UBP_EventManager_C::删除实体' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, WorldDoneNotify) == 0x000088, "Member 'UBP_EventManager_C::WorldDoneNotify' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 增加实体) == 0x000098, "Member 'UBP_EventManager_C::增加实体' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当换人完成时) == 0x0000A8, "Member 'UBP_EventManager_C::当换人完成时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 子弹命中前) == 0x0000B8, "Member 'UBP_EventManager_C::子弹命中前' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 角色部位血量变化时) == 0x0000C8, "Member 'UBP_EventManager_C::角色部位血量变化时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 角色部位弱点打击时) == 0x0000D8, "Member 'UBP_EventManager_C::角色部位弱点打击时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, AI巡逻达到样条点) == 0x0000E8, "Member 'UBP_EventManager_C::AI巡逻达到样条点' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 被控物广播) == 0x0000F8, "Member 'UBP_EventManager_C::被控物广播' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, CaughtEntity) == 0x000108, "Member 'UBP_EventManager_C::CaughtEntity' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 角色状态切换时) == 0x000118, "Member 'UBP_EventManager_C::角色状态切换时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当触发对策事件时) == 0x000128, "Member 'UBP_EventManager_C::当触发对策事件时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当有角色死亡时) == 0x000138, "Member 'UBP_EventManager_C::当有角色死亡时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 小队战斗状态改变时) == 0x000148, "Member 'UBP_EventManager_C::小队战斗状态改变时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 小队技能目标改变时) == 0x000158, "Member 'UBP_EventManager_C::小队技能目标改变时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 抓取目标成功时) == 0x000168, "Member 'UBP_EventManager_C::抓取目标成功时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 材质播放结束时) == 0x000178, "Member 'UBP_EventManager_C::材质播放结束时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当编队更新时) == 0x000188, "Member 'UBP_EventManager_C::当编队更新时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, OnEnterPhotograph) == 0x000198, "Member 'UBP_EventManager_C::OnEnterPhotograph' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, OnExitPhotograph) == 0x0001A8, "Member 'UBP_EventManager_C::OnExitPhotograph' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 被控物撞到水面时) == 0x0001B8, "Member 'UBP_EventManager_C::被控物撞到水面时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 开始吸取污染物) == 0x0001C8, "Member 'UBP_EventManager_C::开始吸取污染物' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 停止吸取污染物) == 0x0001D8, "Member 'UBP_EventManager_C::停止吸取污染物' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当捕鱼船创建时) == 0x0001E8, "Member 'UBP_EventManager_C::当捕鱼船创建时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 子弹撞到水面时) == 0x0001F8, "Member 'UBP_EventManager_C::子弹撞到水面时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当有角色复活时) == 0x000208, "Member 'UBP_EventManager_C::当有角色复活时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 武器交互场景时) == 0x000218, "Member 'UBP_EventManager_C::武器交互场景时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 当浮游炮瞄准可以自动开炮时) == 0x000228, "Member 'UBP_EventManager_C::当浮游炮瞄准可以自动开炮时' has a wrong offset!");
-static_assert(offsetof(UBP_EventManager_C, 音乐节拍事件触发时) == 0x000238, "Member 'UBP_EventManager_C::音乐节拍事件触发时' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_EventManager_C;
 
 }
 

@@ -21,9 +21,7 @@ struct BPI_CreatureInterface_C_GetEntityId final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_CreatureInterface_C_GetEntityId) == 0x000004, "Wrong alignment on BPI_CreatureInterface_C_GetEntityId");
-static_assert(sizeof(BPI_CreatureInterface_C_GetEntityId) == 0x000004, "Wrong size on BPI_CreatureInterface_C_GetEntityId");
-static_assert(offsetof(BPI_CreatureInterface_C_GetEntityId, ReturnValue) == 0x000000, "Member 'BPI_CreatureInterface_C_GetEntityId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_CreatureInterface_C_GetEntityId;
 
 }
 

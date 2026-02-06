@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum ECommandType.ECommandType
-// NumValues: 0x000D
+// NumValues: 0x000E
 enum class ECommandType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -30,7 +30,8 @@ enum class ECommandType : uint8
 	NewEnumerator8                           = 9,
 	NewEnumerator10                          = 10,
 	NewEnumerator11                          = 11,
-	ECommandType_MAX                         = 12,
+	NewEnumerator12                          = 12,
+	ECommandType_MAX                         = 13,
 };
 
 }

@@ -23,7 +23,8 @@ class UCrashSightSetting final : public UObject
 public:
 	bool                                          bNeedUploadLog;                                    // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInternational;                                    // 0x0031(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIOSInitCrashHandler;                              // 0x0032(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AndroidAppID;                                      // 0x0038(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AndroidUploadURL;                                  // 0x0048(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 IOSAppID;                                          // 0x0058(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -32,21 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CrashSightSetting">();
+		STATIC_CLASS_IMPL("CrashSightSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CrashSightSetting")
 	}
 	static class UCrashSightSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCrashSightSetting>();
 	}
 };
-static_assert(alignof(UCrashSightSetting) == 0x000008, "Wrong alignment on UCrashSightSetting");
-static_assert(sizeof(UCrashSightSetting) == 0x000078, "Wrong size on UCrashSightSetting");
-static_assert(offsetof(UCrashSightSetting, bNeedUploadLog) == 0x000030, "Member 'UCrashSightSetting::bNeedUploadLog' has a wrong offset!");
-static_assert(offsetof(UCrashSightSetting, bInternational) == 0x000031, "Member 'UCrashSightSetting::bInternational' has a wrong offset!");
-static_assert(offsetof(UCrashSightSetting, AndroidAppID) == 0x000038, "Member 'UCrashSightSetting::AndroidAppID' has a wrong offset!");
-static_assert(offsetof(UCrashSightSetting, AndroidUploadURL) == 0x000048, "Member 'UCrashSightSetting::AndroidUploadURL' has a wrong offset!");
-static_assert(offsetof(UCrashSightSetting, IOSAppID) == 0x000058, "Member 'UCrashSightSetting::IOSAppID' has a wrong offset!");
-static_assert(offsetof(UCrashSightSetting, IOSUploadURL) == 0x000068, "Member 'UCrashSightSetting::IOSUploadURL' has a wrong offset!");
+DUMPER7_ASSERTS_UCrashSightSetting;
 
 }
 

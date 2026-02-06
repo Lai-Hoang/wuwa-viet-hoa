@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -31,14 +31,7 @@ public:
 	EKuroFeatureLevel                             CallFunc_GetWorldFeatureLevel_ReturnValue;         // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight) == 0x000008, "Wrong alignment on BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight");
-static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight) == 0x000040, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, EntryPoint) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, K2Node_Event_DeltaSeconds) == 0x000038, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, CallFunc_GetWorldFeatureLevel_ReturnValue) == 0x00003C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::CallFunc_GetWorldFeatureLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00003D, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_VolumetricFogDistFalloff_PointLight_C_ExecuteUbergraph_BP_VolumetricFogDistFalloff_PointLight;
 
 // Function BP_VolumetricFogDistFalloff_PointLight.BP_VolumetricFogDistFalloff_PointLight_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -47,9 +40,7 @@ struct BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick");
-static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick) == 0x000004, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_VolumetricFogDistFalloff_PointLight_C_ReceiveTick;
 
 // Function BP_VolumetricFogDistFalloff_PointLight.BP_VolumetricFogDistFalloff_PointLight_C.UserConstructionScript
 // 0x0002 (0x0002 - 0x0000)
@@ -59,10 +50,7 @@ public:
 	EKuroFeatureLevel                             CallFunc_GetWorldFeatureLevel_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript");
-static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript) == 0x000002, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript, CallFunc_GetWorldFeatureLevel_ReturnValue) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript::CallFunc_GetWorldFeatureLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript;
 
 // Function BP_VolumetricFogDistFalloff_PointLight.BP_VolumetricFogDistFalloff_PointLight_C.PointFunction
 // 0x00A8 (0x00A8 - 0x0000)
@@ -95,28 +83,7 @@ public:
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_GetCameraLocation_ReturnValue;          // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction) == 0x000008, "Wrong alignment on BP_VolumetricFogDistFalloff_PointLight_C_PointFunction");
-static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction) == 0x0000A8, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_PointFunction");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetWorld_ReturnValue) == 0x000008, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000010, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_IsGame_ReturnValue) == 0x000011, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_IsGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x00001C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000024, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000028, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_Vector_Distance_ReturnValue) == 0x000040, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000048, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Less_FloatFloat_ReturnValue) == 0x00004C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_IsEditor_ReturnValue) == 0x00004D, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000050, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x00005C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000068, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000070, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetPlayerController_ReturnValue) == 0x000088, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_GetCameraLocation_ReturnValue) == 0x000090, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_GetCameraLocation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_VolumetricFogDistFalloff_PointLight_C_PointFunction;
 
 }
 

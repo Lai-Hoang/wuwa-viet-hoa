@@ -27,12 +27,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_BoostCPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_BoostCPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_BoostCPU) == 0x00000C, "Wrong size on KuroPerformanceBPLibrary_BoostCPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostCPU, FrequencyPercentage) == 0x000000, "Member 'KuroPerformanceBPLibrary_BoostCPU::FrequencyPercentage' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostCPU, BoostDurationInMilliSecond) == 0x000004, "Member 'KuroPerformanceBPLibrary_BoostCPU::BoostDurationInMilliSecond' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostCPU, bBoostMemory) == 0x000008, "Member 'KuroPerformanceBPLibrary_BoostCPU::bBoostMemory' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostCPU, ReturnValue) == 0x000009, "Member 'KuroPerformanceBPLibrary_BoostCPU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_BoostCPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.BoostGPU
 // 0x000C (0x000C - 0x0000)
@@ -45,12 +40,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_BoostGPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_BoostGPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_BoostGPU) == 0x00000C, "Wrong size on KuroPerformanceBPLibrary_BoostGPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostGPU, FrequencyPercentage) == 0x000000, "Member 'KuroPerformanceBPLibrary_BoostGPU::FrequencyPercentage' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostGPU, BoostDurationInMilliSecond) == 0x000004, "Member 'KuroPerformanceBPLibrary_BoostGPU::BoostDurationInMilliSecond' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostGPU, bBoostMemory) == 0x000008, "Member 'KuroPerformanceBPLibrary_BoostGPU::bBoostMemory' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_BoostGPU, ReturnValue) == 0x000009, "Member 'KuroPerformanceBPLibrary_BoostGPU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_BoostGPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetBoostFlags
 // 0x0003 (0x0003 - 0x0000)
@@ -61,11 +51,7 @@ public:
 	bool                                          bWithMemory;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EKuroBoostFlags                               ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetBoostFlags) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_GetBoostFlags");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetBoostFlags) == 0x000003, "Wrong size on KuroPerformanceBPLibrary_GetBoostFlags");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetBoostFlags, bCPU) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetBoostFlags::bCPU' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetBoostFlags, bWithMemory) == 0x000001, "Member 'KuroPerformanceBPLibrary_GetBoostFlags::bWithMemory' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetBoostFlags, ReturnValue) == 0x000002, "Member 'KuroPerformanceBPLibrary_GetBoostFlags::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetBoostFlags;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetCurrentActivePerformanceAdaptiveModuleName
 // 0x0010 (0x0010 - 0x0000)
@@ -74,9 +60,7 @@ struct KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName fi
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName) == 0x000008, "Wrong alignment on KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetCurrentActivePerformanceAdaptiveModuleName;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetCurrentAndroidDeviceRequireAdaptiveModule
 // 0x0004 (0x0004 - 0x0000)
@@ -85,9 +69,7 @@ struct KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule fin
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetCurrentAndroidDeviceRequireAdaptiveModule;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetCurrentTemperatureData
 // 0x0028 (0x0028 - 0x0000)
@@ -96,9 +78,7 @@ struct KuroPerformanceBPLibrary_GetCurrentTemperatureData final
 public:
 	TDelegate<void(bool bResult, float CurrentTemperature, float TempBudget)> Delegate;              // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetCurrentTemperatureData) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetCurrentTemperatureData");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetCurrentTemperatureData) == 0x000028, "Wrong size on KuroPerformanceBPLibrary_GetCurrentTemperatureData");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetCurrentTemperatureData, Delegate) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetCurrentTemperatureData::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetCurrentTemperatureData;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetInitReturnMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -107,9 +87,7 @@ struct KuroPerformanceBPLibrary_GetInitReturnMessage final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetInitReturnMessage) == 0x000008, "Wrong alignment on KuroPerformanceBPLibrary_GetInitReturnMessage");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetInitReturnMessage) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_GetInitReturnMessage");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetInitReturnMessage, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetInitReturnMessage::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetInitReturnMessage;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetMaxBoostDurationInSecondForCPU
 // 0x0004 (0x0004 - 0x0000)
@@ -118,9 +96,7 @@ struct KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForCPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetMaxBoostDurationInSecondForGPU
 // 0x0004 (0x0004 - 0x0000)
@@ -129,9 +105,7 @@ struct KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetMaxBoostDurationInSecondForGPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetPerformanceAdaptiveStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -140,9 +114,7 @@ struct KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus final
 public:
 	EKuroModuleStatus                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetPerformanceAdaptiveStatus;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetRegisterGameThreadId
 // 0x0004 (0x0004 - 0x0000)
@@ -151,9 +123,7 @@ struct KuroPerformanceBPLibrary_GetRegisterGameThreadId final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetRegisterGameThreadId) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetRegisterGameThreadId");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetRegisterGameThreadId) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetRegisterGameThreadId");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetRegisterGameThreadId, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetRegisterGameThreadId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetRegisterGameThreadId;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetRegisterRenderThreadId
 // 0x0004 (0x0004 - 0x0000)
@@ -162,9 +132,7 @@ struct KuroPerformanceBPLibrary_GetRegisterRenderThreadId final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetRegisterRenderThreadId) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetRegisterRenderThreadId");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetRegisterRenderThreadId) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetRegisterRenderThreadId");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetRegisterRenderThreadId, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetRegisterRenderThreadId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetRegisterRenderThreadId;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetRegisterRHIThreadId
 // 0x0004 (0x0004 - 0x0000)
@@ -173,9 +141,7 @@ struct KuroPerformanceBPLibrary_GetRegisterRHIThreadId final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetRegisterRHIThreadId) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetRegisterRHIThreadId");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetRegisterRHIThreadId) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_GetRegisterRHIThreadId");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetRegisterRHIThreadId, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetRegisterRHIThreadId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetRegisterRHIThreadId;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetSupportedBoostFlag
 // 0x0001 (0x0001 - 0x0000)
@@ -184,9 +150,7 @@ struct KuroPerformanceBPLibrary_GetSupportedBoostFlag final
 public:
 	EKuroBoostFlags                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetSupportedBoostFlag) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_GetSupportedBoostFlag");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetSupportedBoostFlag) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_GetSupportedBoostFlag");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetSupportedBoostFlag, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetSupportedBoostFlag::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetSupportedBoostFlag;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.GetTickedPerformanceReportAndAdvice
 // 0x0028 (0x0028 - 0x0000)
@@ -195,9 +159,7 @@ struct KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice final
 public:
 	TDelegate<void(const struct FKuroPerformanceReport& PerformanceReport)> ReportDelegate;          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice");
-static_assert(sizeof(KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice) == 0x000028, "Wrong size on KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice");
-static_assert(offsetof(KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice, ReportDelegate) == 0x000000, "Member 'KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice::ReportDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_GetTickedPerformanceReportAndAdvice;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.InitGameConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -208,10 +170,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_InitGameConfig) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_InitGameConfig");
-static_assert(sizeof(KuroPerformanceBPLibrary_InitGameConfig) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_InitGameConfig");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfig, GameConfig) == 0x000000, "Member 'KuroPerformanceBPLibrary_InitGameConfig::GameConfig' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfig, ReturnValue) == 0x00000C, "Member 'KuroPerformanceBPLibrary_InitGameConfig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_InitGameConfig;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.InitGameConfigFPS
 // 0x0008 (0x0008 - 0x0000)
@@ -222,10 +181,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_InitGameConfigFPS) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_InitGameConfigFPS");
-static_assert(sizeof(KuroPerformanceBPLibrary_InitGameConfigFPS) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_InitGameConfigFPS");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfigFPS, FPS) == 0x000000, "Member 'KuroPerformanceBPLibrary_InitGameConfigFPS::FPS' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfigFPS, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_InitGameConfigFPS::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_InitGameConfigFPS;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.InitGameConfigSceneTransition
 // 0x0002 (0x0002 - 0x0000)
@@ -235,10 +191,7 @@ public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_InitGameConfigSceneTransition) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_InitGameConfigSceneTransition");
-static_assert(sizeof(KuroPerformanceBPLibrary_InitGameConfigSceneTransition) == 0x000002, "Wrong size on KuroPerformanceBPLibrary_InitGameConfigSceneTransition");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfigSceneTransition, Enable) == 0x000000, "Member 'KuroPerformanceBPLibrary_InitGameConfigSceneTransition::Enable' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_InitGameConfigSceneTransition, ReturnValue) == 0x000001, "Member 'KuroPerformanceBPLibrary_InitGameConfigSceneTransition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_InitGameConfigSceneTransition;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.IsPerformanceAdaptiveInitialize
 // 0x0001 (0x0001 - 0x0000)
@@ -247,9 +200,7 @@ struct KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize");
-static_assert(sizeof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize");
-static_assert(offsetof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_IsPerformanceAdaptiveInitialize;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.IsPerformanceAdaptiveRunning
 // 0x0001 (0x0001 - 0x0000)
@@ -258,9 +209,7 @@ struct KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning");
-static_assert(sizeof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning");
-static_assert(offsetof(KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_IsPerformanceAdaptiveRunning;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.IsPredictCPUWorkloadSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -269,9 +218,7 @@ struct KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported");
-static_assert(sizeof(KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported");
-static_assert(offsetof(KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_IsPredictCPUWorkloadSupported;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.IsPredictGPUWorkloadSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -280,9 +227,7 @@ struct KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported");
-static_assert(sizeof(KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported");
-static_assert(offsetof(KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_IsPredictGPUWorkloadSupported;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.PredictWorkload
 // 0x000C (0x000C - 0x0000)
@@ -294,11 +239,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_PredictWorkload) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_PredictWorkload");
-static_assert(sizeof(KuroPerformanceBPLibrary_PredictWorkload) == 0x00000C, "Wrong size on KuroPerformanceBPLibrary_PredictWorkload");
-static_assert(offsetof(KuroPerformanceBPLibrary_PredictWorkload, CPULoadScale) == 0x000000, "Member 'KuroPerformanceBPLibrary_PredictWorkload::CPULoadScale' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_PredictWorkload, GPULoadScale) == 0x000004, "Member 'KuroPerformanceBPLibrary_PredictWorkload::GPULoadScale' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_PredictWorkload, ReturnValue) == 0x000008, "Member 'KuroPerformanceBPLibrary_PredictWorkload::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_PredictWorkload;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.QueryBoostCPU
 // 0x0010 (0x0010 - 0x0000)
@@ -307,9 +248,7 @@ struct KuroPerformanceBPLibrary_QueryBoostCPU final
 public:
 	struct FKuroBoostQueryResult                  BoostQueryResult;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_QueryBoostCPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_QueryBoostCPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_QueryBoostCPU) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_QueryBoostCPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_QueryBoostCPU, BoostQueryResult) == 0x000000, "Member 'KuroPerformanceBPLibrary_QueryBoostCPU::BoostQueryResult' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_QueryBoostCPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.QueryBoostGPU
 // 0x0010 (0x0010 - 0x0000)
@@ -318,9 +257,7 @@ struct KuroPerformanceBPLibrary_QueryBoostGPU final
 public:
 	struct FKuroBoostQueryResult                  BoostQueryResult;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_QueryBoostGPU) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_QueryBoostGPU");
-static_assert(sizeof(KuroPerformanceBPLibrary_QueryBoostGPU) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_QueryBoostGPU");
-static_assert(offsetof(KuroPerformanceBPLibrary_QueryBoostGPU, BoostQueryResult) == 0x000000, "Member 'KuroPerformanceBPLibrary_QueryBoostGPU::BoostQueryResult' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_QueryBoostGPU;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.RegisterCriticalThreads
 // 0x0010 (0x0010 - 0x0000)
@@ -333,12 +270,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_RegisterCriticalThreads) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_RegisterCriticalThreads");
-static_assert(sizeof(KuroPerformanceBPLibrary_RegisterCriticalThreads) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_RegisterCriticalThreads");
-static_assert(offsetof(KuroPerformanceBPLibrary_RegisterCriticalThreads, GameTid) == 0x000000, "Member 'KuroPerformanceBPLibrary_RegisterCriticalThreads::GameTid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_RegisterCriticalThreads, RenderTid) == 0x000004, "Member 'KuroPerformanceBPLibrary_RegisterCriticalThreads::RenderTid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_RegisterCriticalThreads, RHITid) == 0x000008, "Member 'KuroPerformanceBPLibrary_RegisterCriticalThreads::RHITid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_RegisterCriticalThreads, ReturnValue) == 0x00000C, "Member 'KuroPerformanceBPLibrary_RegisterCriticalThreads::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_RegisterCriticalThreads;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.SetForeground
 // 0x0002 (0x0002 - 0x0000)
@@ -348,10 +280,7 @@ public:
 	bool                                          bForeGround;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_SetForeground) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_SetForeground");
-static_assert(sizeof(KuroPerformanceBPLibrary_SetForeground) == 0x000002, "Wrong size on KuroPerformanceBPLibrary_SetForeground");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetForeground, bForeGround) == 0x000000, "Member 'KuroPerformanceBPLibrary_SetForeground::bForeGround' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetForeground, ReturnValue) == 0x000001, "Member 'KuroPerformanceBPLibrary_SetForeground::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_SetForeground;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.SetPerformanceAdaptiveStatus
 // 0x0001 (0x0001 - 0x0000)
@@ -360,9 +289,7 @@ struct KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus final
 public:
 	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus");
-static_assert(sizeof(KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus) == 0x000001, "Wrong size on KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus, bEnable) == 0x000000, "Member 'KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus::bEnable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_SetPerformanceAdaptiveStatus;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.SetTargetFPS
 // 0x000C (0x000C - 0x0000)
@@ -374,11 +301,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_SetTargetFPS) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_SetTargetFPS");
-static_assert(sizeof(KuroPerformanceBPLibrary_SetTargetFPS) == 0x00000C, "Wrong size on KuroPerformanceBPLibrary_SetTargetFPS");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetTargetFPS, FPS) == 0x000000, "Member 'KuroPerformanceBPLibrary_SetTargetFPS::FPS' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetTargetFPS, ThreadId) == 0x000004, "Member 'KuroPerformanceBPLibrary_SetTargetFPS::ThreadId' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_SetTargetFPS, ReturnValue) == 0x000008, "Member 'KuroPerformanceBPLibrary_SetTargetFPS::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_SetTargetFPS;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.StartPerformanceAdaptiveService
 // 0x0008 (0x0008 - 0x0000)
@@ -389,10 +312,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_StartPerformanceAdaptiveService) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_StartPerformanceAdaptiveService");
-static_assert(sizeof(KuroPerformanceBPLibrary_StartPerformanceAdaptiveService) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_StartPerformanceAdaptiveService");
-static_assert(offsetof(KuroPerformanceBPLibrary_StartPerformanceAdaptiveService, EServiceFlags) == 0x000000, "Member 'KuroPerformanceBPLibrary_StartPerformanceAdaptiveService::EServiceFlags' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_StartPerformanceAdaptiveService, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_StartPerformanceAdaptiveService::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_StartPerformanceAdaptiveService;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.StartService
 // 0x0008 (0x0008 - 0x0000)
@@ -403,10 +323,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_StartService) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_StartService");
-static_assert(sizeof(KuroPerformanceBPLibrary_StartService) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_StartService");
-static_assert(offsetof(KuroPerformanceBPLibrary_StartService, Service) == 0x000000, "Member 'KuroPerformanceBPLibrary_StartService::Service' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_StartService, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_StartService::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_StartService;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.StopPerformanceAdaptiveService
 // 0x0008 (0x0008 - 0x0000)
@@ -417,10 +334,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_StopPerformanceAdaptiveService) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_StopPerformanceAdaptiveService");
-static_assert(sizeof(KuroPerformanceBPLibrary_StopPerformanceAdaptiveService) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_StopPerformanceAdaptiveService");
-static_assert(offsetof(KuroPerformanceBPLibrary_StopPerformanceAdaptiveService, EServiceFlags) == 0x000000, "Member 'KuroPerformanceBPLibrary_StopPerformanceAdaptiveService::EServiceFlags' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_StopPerformanceAdaptiveService, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_StopPerformanceAdaptiveService::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_StopPerformanceAdaptiveService;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.StopService
 // 0x0008 (0x0008 - 0x0000)
@@ -431,10 +345,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_StopService) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_StopService");
-static_assert(sizeof(KuroPerformanceBPLibrary_StopService) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_StopService");
-static_assert(offsetof(KuroPerformanceBPLibrary_StopService, Service) == 0x000000, "Member 'KuroPerformanceBPLibrary_StopService::Service' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_StopService, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_StopService::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_StopService;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.SyncRenderingFrameID
 // 0x0008 (0x0008 - 0x0000)
@@ -445,10 +356,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_SyncRenderingFrameID) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_SyncRenderingFrameID");
-static_assert(sizeof(KuroPerformanceBPLibrary_SyncRenderingFrameID) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_SyncRenderingFrameID");
-static_assert(offsetof(KuroPerformanceBPLibrary_SyncRenderingFrameID, FrameId) == 0x000000, "Member 'KuroPerformanceBPLibrary_SyncRenderingFrameID::FrameId' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_SyncRenderingFrameID, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_SyncRenderingFrameID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_SyncRenderingFrameID;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.Tick
 // 0x0004 (0x0004 - 0x0000)
@@ -457,9 +365,7 @@ struct KuroPerformanceBPLibrary_Tick final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_Tick) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_Tick");
-static_assert(sizeof(KuroPerformanceBPLibrary_Tick) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_Tick");
-static_assert(offsetof(KuroPerformanceBPLibrary_Tick, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_Tick::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_Tick;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.TickPerformanceReport
 // 0x0004 (0x0004 - 0x0000)
@@ -468,9 +374,7 @@ struct KuroPerformanceBPLibrary_TickPerformanceReport final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_TickPerformanceReport) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_TickPerformanceReport");
-static_assert(sizeof(KuroPerformanceBPLibrary_TickPerformanceReport) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_TickPerformanceReport");
-static_assert(offsetof(KuroPerformanceBPLibrary_TickPerformanceReport, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_TickPerformanceReport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_TickPerformanceReport;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.TickPerfReport
 // 0x0004 (0x0004 - 0x0000)
@@ -479,9 +383,7 @@ struct KuroPerformanceBPLibrary_TickPerfReport final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_TickPerfReport) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_TickPerfReport");
-static_assert(sizeof(KuroPerformanceBPLibrary_TickPerfReport) == 0x000004, "Wrong size on KuroPerformanceBPLibrary_TickPerfReport");
-static_assert(offsetof(KuroPerformanceBPLibrary_TickPerfReport, ReturnValue) == 0x000000, "Member 'KuroPerformanceBPLibrary_TickPerfReport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_TickPerfReport;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.UnregisterCriticalThreads
 // 0x0010 (0x0010 - 0x0000)
@@ -494,12 +396,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_UnregisterCriticalThreads) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_UnregisterCriticalThreads");
-static_assert(sizeof(KuroPerformanceBPLibrary_UnregisterCriticalThreads) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_UnregisterCriticalThreads");
-static_assert(offsetof(KuroPerformanceBPLibrary_UnregisterCriticalThreads, GameTid) == 0x000000, "Member 'KuroPerformanceBPLibrary_UnregisterCriticalThreads::GameTid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UnregisterCriticalThreads, RenderTid) == 0x000004, "Member 'KuroPerformanceBPLibrary_UnregisterCriticalThreads::RenderTid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UnregisterCriticalThreads, RHITid) == 0x000008, "Member 'KuroPerformanceBPLibrary_UnregisterCriticalThreads::RHITid' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UnregisterCriticalThreads, ReturnValue) == 0x00000C, "Member 'KuroPerformanceBPLibrary_UnregisterCriticalThreads::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_UnregisterCriticalThreads;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.UpdateGameConfig
 // 0x0010 (0x0010 - 0x0000)
@@ -510,10 +407,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_UpdateGameConfig) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_UpdateGameConfig");
-static_assert(sizeof(KuroPerformanceBPLibrary_UpdateGameConfig) == 0x000010, "Wrong size on KuroPerformanceBPLibrary_UpdateGameConfig");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfig, GameConfig) == 0x000000, "Member 'KuroPerformanceBPLibrary_UpdateGameConfig::GameConfig' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfig, ReturnValue) == 0x00000C, "Member 'KuroPerformanceBPLibrary_UpdateGameConfig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_UpdateGameConfig;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.UpdateGameConfigFPS
 // 0x0008 (0x0008 - 0x0000)
@@ -524,10 +418,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPerformanceBPLibrary_UpdateGameConfigFPS) == 0x000004, "Wrong alignment on KuroPerformanceBPLibrary_UpdateGameConfigFPS");
-static_assert(sizeof(KuroPerformanceBPLibrary_UpdateGameConfigFPS) == 0x000008, "Wrong size on KuroPerformanceBPLibrary_UpdateGameConfigFPS");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfigFPS, FPS) == 0x000000, "Member 'KuroPerformanceBPLibrary_UpdateGameConfigFPS::FPS' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfigFPS, ReturnValue) == 0x000004, "Member 'KuroPerformanceBPLibrary_UpdateGameConfigFPS::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_UpdateGameConfigFPS;
 
 // Function KuroPerformance.KuroPerformanceBPLibrary.UpdateGameConfigSceneTransition
 // 0x0002 (0x0002 - 0x0000)
@@ -537,10 +428,7 @@ public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition) == 0x000001, "Wrong alignment on KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition");
-static_assert(sizeof(KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition) == 0x000002, "Wrong size on KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition, Enable) == 0x000000, "Member 'KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition::Enable' has a wrong offset!");
-static_assert(offsetof(KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition, ReturnValue) == 0x000001, "Member 'KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPerformanceBPLibrary_UpdateGameConfigSceneTransition;
 
 }
 

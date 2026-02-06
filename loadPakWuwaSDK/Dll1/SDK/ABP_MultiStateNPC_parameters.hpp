@@ -10,293 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "ECharState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ECharState_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceJumpPressed
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_MultiStateNPC_C_InterfaceJumpPressed final
-{
-public:
-	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_InterfaceJumpPressed) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_InterfaceJumpPressed");
-static_assert(sizeof(ABP_MultiStateNPC_C_InterfaceJumpPressed) == 0x000004, "Wrong size on ABP_MultiStateNPC_C_InterfaceJumpPressed");
-static_assert(offsetof(ABP_MultiStateNPC_C_InterfaceJumpPressed, Speed) == 0x000000, "Member 'ABP_MultiStateNPC_C_InterfaceJumpPressed::Speed' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.基础层
-// 0x0010 (0x0010 - 0x0000)
-struct ABP_MultiStateNPC_C_基础层 final
-{
-public:
-	struct FPoseLink                              基础层_0;                                          // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_基础层) == 0x000008, "Wrong alignment on ABP_MultiStateNPC_C_基础层");
-static_assert(sizeof(ABP_MultiStateNPC_C_基础层) == 0x000010, "Wrong size on ABP_MultiStateNPC_C_基础层");
-static_assert(offsetof(ABP_MultiStateNPC_C_基础层, 基础层_0) == 0x000000, "Member 'ABP_MultiStateNPC_C_基础层::基础层_0' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct ABP_MultiStateNPC_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_MultiStateNPC_C_AnimGraph");
-static_assert(sizeof(ABP_MultiStateNPC_C_AnimGraph) == 0x000010, "Wrong size on ABP_MultiStateNPC_C_AnimGraph");
-static_assert(offsetof(ABP_MultiStateNPC_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_MultiStateNPC_C_AnimGraph::AnimGraph_0' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色状态
-// 0x0001 (0x0001 - 0x0000)
-struct ABP_MultiStateNPC_C_更新角色状态 final
-{
-public:
-	bool                                          CallFunc_GetAndResetNoTransitionSwitch_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_更新角色状态) == 0x000001, "Wrong alignment on ABP_MultiStateNPC_C_更新角色状态");
-static_assert(sizeof(ABP_MultiStateNPC_C_更新角色状态) == 0x000001, "Wrong size on ABP_MultiStateNPC_C_更新角色状态");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色状态, CallFunc_GetAndResetNoTransitionSwitch_ReturnValue) == 0x000000, "Member 'ABP_MultiStateNPC_C_更新角色状态::CallFunc_GetAndResetNoTransitionSwitch_ReturnValue' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新眨眼
-// 0x0024 (0x0024 - 0x0000)
-struct ABP_MultiStateNPC_C_更新眨眼 final
-{
-public:
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeSeconds_ReturnValue_2;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_更新眨眼) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_更新眨眼");
-static_assert(sizeof(ABP_MultiStateNPC_C_更新眨眼) == 0x000024, "Wrong size on ABP_MultiStateNPC_C_更新眨眼");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000000, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_GetTimeSeconds_ReturnValue) == 0x000004, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_Add_FloatFloat_ReturnValue) == 0x000008, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_RandomFloatInRange_ReturnValue) == 0x00000C, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000010, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_GetTimeSeconds_ReturnValue_1) == 0x000014, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_GetTimeSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000018, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_GetTimeSeconds_ReturnValue_2) == 0x00001C, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_GetTimeSeconds_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新眨眼, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000020, "Member 'ABP_MultiStateNPC_C_更新眨眼::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.HasInputRotate
-// 0x004C (0x004C - 0x0000)
-struct ABP_MultiStateNPC_C_HasInputRotate final
-{
-public:
-	bool                                          Output_Get;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         原地旋转偏差角;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          是否需要原地转身;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetInputRotator_ReturnValue;              // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_HasInputRotate) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_HasInputRotate");
-static_assert(sizeof(ABP_MultiStateNPC_C_HasInputRotate) == 0x00004C, "Wrong size on ABP_MultiStateNPC_C_HasInputRotate");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, Output_Get) == 0x000000, "Member 'ABP_MultiStateNPC_C_HasInputRotate::Output_Get' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, 原地旋转偏差角) == 0x000004, "Member 'ABP_MultiStateNPC_C_HasInputRotate::原地旋转偏差角' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, 是否需要原地转身) == 0x000008, "Member 'ABP_MultiStateNPC_C_HasInputRotate::是否需要原地转身' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Abs_ReturnValue) == 0x00000C, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000010, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000011, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000014, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x000018, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Add_FloatFloat_ReturnValue) == 0x00001C, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Less_FloatFloat_ReturnValue) == 0x000020, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Roll) == 0x000024, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Pitch) == 0x000028, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Yaw) == 0x00002C, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_GetInputRotator_ReturnValue) == 0x000030, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_GetInputRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Roll_1) == 0x00003C, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Pitch_1) == 0x000040, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_BreakRotator_Yaw_1) == 0x000044, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_HasInputRotate, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000048, "Member 'ABP_MultiStateNPC_C_HasInputRotate::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.是否AI驱动
-// 0x0002 (0x0002 - 0x0000)
-struct ABP_MultiStateNPC_C_是否AI驱动 final
-{
-public:
-	bool                                          Result;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsAiDriver_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_是否AI驱动) == 0x000001, "Wrong alignment on ABP_MultiStateNPC_C_是否AI驱动");
-static_assert(sizeof(ABP_MultiStateNPC_C_是否AI驱动) == 0x000002, "Wrong size on ABP_MultiStateNPC_C_是否AI驱动");
-static_assert(offsetof(ABP_MultiStateNPC_C_是否AI驱动, Result) == 0x000000, "Member 'ABP_MultiStateNPC_C_是否AI驱动::Result' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_是否AI驱动, CallFunc_IsAiDriver_ReturnValue) == 0x000001, "Member 'ABP_MultiStateNPC_C_是否AI驱动::CallFunc_IsAiDriver_ReturnValue' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色转身
-// 0x0054 (0x0054 - 0x0000)
-struct ABP_MultiStateNPC_C_更新角色转身 final
-{
-public:
-	bool                                          CallFunc_HasInputRotate_Output_Get;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanNAND_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanNAND_ReturnValue_1;                // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsNpcTurning_ReturnValue;                 // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_CanResponseInput_ReturnValue;             // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_GetInputRotator_ReturnValue;              // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_更新角色转身) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_更新角色转身");
-static_assert(sizeof(ABP_MultiStateNPC_C_更新角色转身) == 0x000054, "Wrong size on ABP_MultiStateNPC_C_更新角色转身");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_HasInputRotate_Output_Get) == 0x000000, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_HasInputRotate_Output_Get' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Percent_FloatFloat_ReturnValue) == 0x000004, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000008, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Roll) == 0x000014, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Pitch) == 0x000018, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Yaw) == 0x00001C, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000020, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Add_FloatFloat_ReturnValue) == 0x000024, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Less_FloatFloat_ReturnValue) == 0x000028, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BooleanAND_ReturnValue) == 0x000029, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00002C, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x000030, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000031, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BooleanNAND_ReturnValue) == 0x000032, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BooleanNAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BooleanNAND_ReturnValue_1) == 0x000033, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BooleanNAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_IsNpcTurning_ReturnValue) == 0x000034, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_IsNpcTurning_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Not_PreBool_ReturnValue) == 0x000035, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_CanResponseInput_ReturnValue) == 0x000036, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_CanResponseInput_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_GetInputRotator_ReturnValue) == 0x000038, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_GetInputRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Roll_1) == 0x000044, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Pitch_1) == 0x000048, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_BreakRotator_Yaw_1) == 0x00004C, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色转身, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000050, "Member 'ABP_MultiStateNPC_C_更新角色转身::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色移动
-// 0x001C (0x001C - 0x0000)
-struct ABP_MultiStateNPC_C_更新角色移动 final
-{
-public:
-	bool                                          CallFunc_HasKuroRootMotionAnim_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetCurrentAcceleration_ReturnValue;       // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharState                                    CallFunc_GetCharUnifiedMoveState_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMoveInput_ReturnValue;                 // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetSpeed_ReturnValue;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasMoveInputOrTickIntervalAndModelBuffer_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_更新角色移动) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_更新角色移动");
-static_assert(sizeof(ABP_MultiStateNPC_C_更新角色移动) == 0x00001C, "Wrong size on ABP_MultiStateNPC_C_更新角色移动");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_HasKuroRootMotionAnim_ReturnValue) == 0x000000, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_HasKuroRootMotionAnim_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_GetCurrentAcceleration_ReturnValue) == 0x000004, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_GetCurrentAcceleration_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_GetCharUnifiedMoveState_ReturnValue) == 0x000010, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_GetCharUnifiedMoveState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, K2Node_SwitchEnum_CmpSuccess) == 0x000011, "Member 'ABP_MultiStateNPC_C_更新角色移动::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_HasMoveInput_ReturnValue) == 0x000012, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_HasMoveInput_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_GetSpeed_ReturnValue) == 0x000014, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_GetSpeed_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_HasMoveInputOrTickIntervalAndModelBuffer_ReturnValue) == 0x000018, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_HasMoveInputOrTickIntervalAndModelBuffer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_BooleanAND_ReturnValue) == 0x000019, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新角色移动, CallFunc_BooleanOR_ReturnValue) == 0x00001A, "Member 'ABP_MultiStateNPC_C_更新角色移动::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新视线
-// 0x000C (0x000C - 0x0000)
-struct ABP_MultiStateNPC_C_更新视线 final
-{
-public:
-	struct FVector                                CallFunc_GetSightDirect_ReturnValue;               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_更新视线) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_更新视线");
-static_assert(sizeof(ABP_MultiStateNPC_C_更新视线) == 0x00000C, "Wrong size on ABP_MultiStateNPC_C_更新视线");
-static_assert(offsetof(ABP_MultiStateNPC_C_更新视线, CallFunc_GetSightDirect_ReturnValue) == 0x000000, "Member 'ABP_MultiStateNPC_C_更新视线::CallFunc_GetSightDirect_ReturnValue' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceManipulateInteractDirection
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection final
-{
-public:
-	float                                         角度;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection");
-static_assert(sizeof(ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection) == 0x000004, "Wrong size on ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection");
-static_assert(offsetof(ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection, 角度) == 0x000000, "Member 'ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection::角度' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceFixHookDirect
-// 0x000C (0x000C - 0x0000)
-struct ABP_MultiStateNPC_C_InterfaceFixHookDirect final
-{
-public:
-	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_InterfaceFixHookDirect) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_InterfaceFixHookDirect");
-static_assert(sizeof(ABP_MultiStateNPC_C_InterfaceFixHookDirect) == 0x00000C, "Wrong size on ABP_MultiStateNPC_C_InterfaceFixHookDirect");
-static_assert(offsetof(ABP_MultiStateNPC_C_InterfaceFixHookDirect, Offset) == 0x000000, "Member 'ABP_MultiStateNPC_C_InterfaceFixHookDirect::Offset' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceSimulateJump
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_MultiStateNPC_C_InterfaceSimulateJump final
-{
-public:
-	float                                         Speed;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_InterfaceSimulateJump) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_InterfaceSimulateJump");
-static_assert(sizeof(ABP_MultiStateNPC_C_InterfaceSimulateJump) == 0x000004, "Wrong size on ABP_MultiStateNPC_C_InterfaceSimulateJump");
-static_assert(offsetof(ABP_MultiStateNPC_C_InterfaceSimulateJump, Speed) == 0x000000, "Member 'ABP_MultiStateNPC_C_InterfaceSimulateJump::Speed' has a wrong offset!");
-
-// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.BlueprintUpdateAnimation
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_MultiStateNPC_C_BlueprintUpdateAnimation final
-{
-public:
-	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_MultiStateNPC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_MultiStateNPC_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_MultiStateNPC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_MultiStateNPC_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_MultiStateNPC_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_MultiStateNPC_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
 
 // Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.ExecuteUbergraph_ABP_MultiStateNPC
 // 0x0090 (0x0090 - 0x0000)
@@ -367,62 +87,202 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x008E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC) == 0x000008, "Wrong alignment on ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC");
-static_assert(sizeof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC) == 0x000090, "Wrong size on ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, EntryPoint) == 0x000000, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000004, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000005, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000006, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000007, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue) == 0x000008, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00000C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x00000D, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue_1) == 0x000010, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x000014, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x000018, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_2) == 0x00001C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_BooleanAND_ReturnValue) == 0x00001D, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_Not_PreBool_ReturnValue) == 0x00001E, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1) == 0x000020, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_BooleanAND_ReturnValue_1) == 0x000024, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_3) == 0x000025, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_5) == 0x000026, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_6) == 0x000027, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2) == 0x000028, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_3) == 0x00002C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_4) == 0x000030, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_5) == 0x000031, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_Event___) == 0x000034, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_Event___' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_Event_Offset) == 0x000038, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_Event_Offset' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_7) == 0x000044, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_8) == 0x000045, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_4) == 0x000048, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_Less_FloatFloat_ReturnValue) == 0x00004C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_BooleanOR_ReturnValue) == 0x00004D, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_5) == 0x000050, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x000054, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_BooleanOR_ReturnValue_1) == 0x000055, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_9) == 0x000056, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_10) == 0x000057, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_11) == 0x000058, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_12) == 0x000059, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_13) == 0x00005A, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_14) == 0x00005B, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_15) == 0x00005C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x000060, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_Event_Speed) == 0x000064, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_Event_Speed' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000068, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_DynamicCast_AsBP_Base_NPC) == 0x000078, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_DynamicCast_AsBP_Base_NPC' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, K2Node_Event_DeltaTimeX) == 0x000084, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_IsValid_ReturnValue_1) == 0x000088, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_NotEqual_FloatFloat_ReturnValue) == 0x000089, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_NotEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_16) == 0x00008A, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x00008B, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_EqualEqual_IntInt_ReturnValue_17) == 0x00008C, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_EqualEqual_IntInt_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_Not_PreBool_ReturnValue_1) == 0x00008D, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x00008E, "Member 'ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_ExecuteUbergraph_ABP_MultiStateNPC;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_MultiStateNPC_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_BlueprintUpdateAnimation;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceSimulateJump
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_MultiStateNPC_C_InterfaceSimulateJump final
+{
+public:
+	float                                         Speed;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_InterfaceSimulateJump;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceFixHookDirect
+// 0x000C (0x000C - 0x0000)
+struct ABP_MultiStateNPC_C_InterfaceFixHookDirect final
+{
+public:
+	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_InterfaceFixHookDirect;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceManipulateInteractDirection
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection final
+{
+public:
+	float                                         角度;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_InterfaceManipulateInteractDirection;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新视线
+// 0x000C (0x000C - 0x0000)
+struct ABP_MultiStateNPC_C_更新视线 final
+{
+public:
+	struct FVector                                CallFunc_GetSightDirect_ReturnValue;               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_更新视线;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色移动
+// 0x001C (0x001C - 0x0000)
+struct ABP_MultiStateNPC_C_更新角色移动 final
+{
+public:
+	bool                                          CallFunc_HasKuroRootMotionAnim_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetCurrentAcceleration_ReturnValue;       // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharState                                    CallFunc_GetCharUnifiedMoveState_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMoveInput_ReturnValue;                 // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetSpeed_ReturnValue;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasMoveInputOrTickIntervalAndModelBuffer_ReturnValue; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_更新角色移动;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色转身
+// 0x0054 (0x0054 - 0x0000)
+struct ABP_MultiStateNPC_C_更新角色转身 final
+{
+public:
+	bool                                          CallFunc_HasInputRotate_Output_Get;                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanNAND_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanNAND_ReturnValue_1;                // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsNpcTurning_ReturnValue;                 // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_CanResponseInput_ReturnValue;             // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_GetInputRotator_ReturnValue;              // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_更新角色转身;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.是否AI驱动
+// 0x0002 (0x0002 - 0x0000)
+struct ABP_MultiStateNPC_C_是否AI驱动 final
+{
+public:
+	bool                                          Result;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsAiDriver_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_是否AI驱动;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.HasInputRotate
+// 0x004C (0x004C - 0x0000)
+struct ABP_MultiStateNPC_C_HasInputRotate final
+{
+public:
+	bool                                          Output_Get;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         原地旋转偏差角;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          是否需要原地转身;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetInputRotator_ReturnValue;              // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_HasInputRotate;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新眨眼
+// 0x0024 (0x0024 - 0x0000)
+struct ABP_MultiStateNPC_C_更新眨眼 final
+{
+public:
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeSeconds_ReturnValue_2;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_更新眨眼;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.更新角色状态
+// 0x0001 (0x0001 - 0x0000)
+struct ABP_MultiStateNPC_C_更新角色状态 final
+{
+public:
+	bool                                          CallFunc_GetAndResetNoTransitionSwitch_ReturnValue; // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_更新角色状态;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct ABP_MultiStateNPC_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_AnimGraph;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.基础层
+// 0x0010 (0x0010 - 0x0000)
+struct ABP_MultiStateNPC_C_基础层 final
+{
+public:
+	struct FPoseLink                              基础层_0;                                          // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_基础层;
+
+// Function ABP_MultiStateNPC.ABP_MultiStateNPC_C.InterfaceJumpPressed
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_MultiStateNPC_C_InterfaceJumpPressed final
+{
+public:
+	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_MultiStateNPC_C_InterfaceJumpPressed;
 
 }
 

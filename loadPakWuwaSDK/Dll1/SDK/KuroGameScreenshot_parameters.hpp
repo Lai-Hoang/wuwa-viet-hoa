@@ -23,9 +23,7 @@ struct GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted final
 public:
 	bool                                          IsGranted;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted) == 0x000001, "Wrong alignment on GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted");
-static_assert(sizeof(GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted) == 0x000001, "Wrong size on GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted");
-static_assert(offsetof(GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted, IsGranted) == 0x000000, "Member 'GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted::IsGranted' has a wrong offset!");
+DUMPER7_ASSERTS_GameScreenshotTask_OnIOSPhotoLibraryAuthorizationCompleted;
 
 // Function KuroGameScreenshot.GameScreenshotTask.OnScreenshotCaptured
 // 0x0018 (0x0018 - 0x0000)
@@ -36,11 +34,7 @@ public:
 	int32                                         Height;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FColor>                         Colors;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameScreenshotTask_OnScreenshotCaptured) == 0x000008, "Wrong alignment on GameScreenshotTask_OnScreenshotCaptured");
-static_assert(sizeof(GameScreenshotTask_OnScreenshotCaptured) == 0x000018, "Wrong size on GameScreenshotTask_OnScreenshotCaptured");
-static_assert(offsetof(GameScreenshotTask_OnScreenshotCaptured, Width) == 0x000000, "Member 'GameScreenshotTask_OnScreenshotCaptured::Width' has a wrong offset!");
-static_assert(offsetof(GameScreenshotTask_OnScreenshotCaptured, Height) == 0x000004, "Member 'GameScreenshotTask_OnScreenshotCaptured::Height' has a wrong offset!");
-static_assert(offsetof(GameScreenshotTask_OnScreenshotCaptured, Colors) == 0x000008, "Member 'GameScreenshotTask_OnScreenshotCaptured::Colors' has a wrong offset!");
+DUMPER7_ASSERTS_GameScreenshotTask_OnScreenshotCaptured;
 
 // Function KuroGameScreenshot.GameScreenshotTask.OnScreenshotCompressed
 // 0x0010 (0x0010 - 0x0000)
@@ -49,9 +43,7 @@ struct GameScreenshotTask_OnScreenshotCompressed final
 public:
 	TArray<uint8>                                 CompressedBitMap;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameScreenshotTask_OnScreenshotCompressed) == 0x000008, "Wrong alignment on GameScreenshotTask_OnScreenshotCompressed");
-static_assert(sizeof(GameScreenshotTask_OnScreenshotCompressed) == 0x000010, "Wrong size on GameScreenshotTask_OnScreenshotCompressed");
-static_assert(offsetof(GameScreenshotTask_OnScreenshotCompressed, CompressedBitMap) == 0x000000, "Member 'GameScreenshotTask_OnScreenshotCompressed::CompressedBitMap' has a wrong offset!");
+DUMPER7_ASSERTS_GameScreenshotTask_OnScreenshotCompressed;
 
 // Function KuroGameScreenshot.GameScreenshotTask.TakeScreenshot
 // 0x0001 (0x0001 - 0x0000)
@@ -60,9 +52,7 @@ struct GameScreenshotTask_TakeScreenshot final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GameScreenshotTask_TakeScreenshot) == 0x000001, "Wrong alignment on GameScreenshotTask_TakeScreenshot");
-static_assert(sizeof(GameScreenshotTask_TakeScreenshot) == 0x000001, "Wrong size on GameScreenshotTask_TakeScreenshot");
-static_assert(offsetof(GameScreenshotTask_TakeScreenshot, ReturnValue) == 0x000000, "Member 'GameScreenshotTask_TakeScreenshot::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GameScreenshotTask_TakeScreenshot;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.CompressConvertColorsToBitmap
 // 0x0028 (0x0028 - 0x0000)
@@ -74,12 +64,7 @@ public:
 	TArray<struct FColor>                         Colors;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 BitMap;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap) == 0x000028, "Wrong size on KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap, Width) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap::Width' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap, Height) == 0x000004, "Member 'KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap::Height' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap, Colors) == 0x000008, "Member 'KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap::Colors' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap, BitMap) == 0x000018, "Member 'KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap::BitMap' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.ConvertColorsToBitmap
 // 0x0028 (0x0028 - 0x0000)
@@ -91,12 +76,7 @@ public:
 	TArray<struct FColor>                         Colors;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 BitMap;                                            // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_ConvertColorsToBitmap");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap) == 0x000028, "Wrong size on KuroGameScreenshotBPLibrary_ConvertColorsToBitmap");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap, Width) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_ConvertColorsToBitmap::Width' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap, Height) == 0x000004, "Member 'KuroGameScreenshotBPLibrary_ConvertColorsToBitmap::Height' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap, Colors) == 0x000008, "Member 'KuroGameScreenshotBPLibrary_ConvertColorsToBitmap::Colors' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_ConvertColorsToBitmap, BitMap) == 0x000018, "Member 'KuroGameScreenshotBPLibrary_ConvertColorsToBitmap::BitMap' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_ConvertColorsToBitmap;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.IsPhotoLibraryAuthorized
 // 0x0001 (0x0001 - 0x0000)
@@ -105,9 +85,7 @@ struct KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized) == 0x000001, "Wrong alignment on KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized) == 0x000001, "Wrong size on KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized, ReturnValue) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_IsPhotoLibraryAuthorized;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.PrepareTakeScreenshot
 // 0x0040 (0x0040 - 0x0000)
@@ -124,16 +102,7 @@ public:
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameScreenshotTask*                    ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_PrepareTakeScreenshot");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot) == 0x000040, "Wrong size on KuroGameScreenshotBPLibrary_PrepareTakeScreenshot");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, Outer_0) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::Outer_0' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, InFilename) == 0x000008, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::InFilename' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, MinCaptureRegion) == 0x000018, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::MinCaptureRegion' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, MaxCaptureRegion) == 0x000020, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::MaxCaptureRegion' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, ScreenshotResolutionX) == 0x000028, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::ScreenshotResolutionX' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, ScreenshotResolutionY) == 0x00002C, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::ScreenshotResolutionY' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, SaveFile) == 0x000030, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::SaveFile' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_PrepareTakeScreenshot, ReturnValue) == 0x000038, "Member 'KuroGameScreenshotBPLibrary_PrepareTakeScreenshot::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_PrepareTakeScreenshot;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.SaveColorArrayToAndroidAlbum
 // 0x0018 (0x0018 - 0x0000)
@@ -144,11 +113,7 @@ public:
 	int32                                         Height;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 BitMap;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum) == 0x000018, "Wrong size on KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum, Width) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum::Width' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum, Height) == 0x000004, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum::Height' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum, BitMap) == 0x000008, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum::BitMap' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_SaveColorArrayToAndroidAlbum;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.SaveColorArrayToIosAlbum
 // 0x0018 (0x0018 - 0x0000)
@@ -159,11 +124,7 @@ public:
 	int32                                         Height;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FColor>                         Colors;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum) == 0x000018, "Wrong size on KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum, Width) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum::Width' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum, Height) == 0x000004, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum::Height' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum, Colors) == 0x000008, "Member 'KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum::Colors' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_SaveColorArrayToIosAlbum;
 
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.SaveScreenshot
 // 0x0028 (0x0028 - 0x0000)
@@ -175,12 +136,7 @@ public:
 	int32                                         Height;                                            // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FColor>                         Colors;                                            // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameScreenshotBPLibrary_SaveScreenshot) == 0x000008, "Wrong alignment on KuroGameScreenshotBPLibrary_SaveScreenshot");
-static_assert(sizeof(KuroGameScreenshotBPLibrary_SaveScreenshot) == 0x000028, "Wrong size on KuroGameScreenshotBPLibrary_SaveScreenshot");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveScreenshot, FilePath) == 0x000000, "Member 'KuroGameScreenshotBPLibrary_SaveScreenshot::FilePath' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveScreenshot, Width) == 0x000010, "Member 'KuroGameScreenshotBPLibrary_SaveScreenshot::Width' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveScreenshot, Height) == 0x000014, "Member 'KuroGameScreenshotBPLibrary_SaveScreenshot::Height' has a wrong offset!");
-static_assert(offsetof(KuroGameScreenshotBPLibrary_SaveScreenshot, Colors) == 0x000018, "Member 'KuroGameScreenshotBPLibrary_SaveScreenshot::Colors' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameScreenshotBPLibrary_SaveScreenshot;
 
 }
 

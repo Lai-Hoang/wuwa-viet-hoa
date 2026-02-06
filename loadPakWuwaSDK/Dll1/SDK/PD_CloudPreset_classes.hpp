@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PD_CloudPreset.PD_CloudPreset_C
-// 0x1200 (0x1238 - 0x0038)
+// 0x12F0 (0x1328 - 0x0038)
 class UPD_CloudPreset_C final : public UPrimaryDataAsset
 {
 public:
@@ -117,115 +117,27 @@ public:
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       星海BOSS一阶;                                      // 0x11A8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       星海BOSS二阶;                                      // 0x11D8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       拉海洛初见;                                        // 0x1208(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       罗伊红色极光;                                      // 0x1238(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       日灵棺解密前;                                      // 0x1268(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       日灵棺解密后;                                      // 0x1298(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       高达Boss一阶;                                      // 0x12C8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       高达Boss三阶;                                      // 0x12F8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_CloudPreset_C">();
+		BP_STATIC_CLASS_IMPL("PD_CloudPreset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_CloudPreset_C")
 	}
 	static class UPD_CloudPreset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_CloudPreset_C>();
 	}
 };
-static_assert(alignof(UPD_CloudPreset_C) == 0x000008, "Wrong alignment on UPD_CloudPreset_C");
-static_assert(sizeof(UPD_CloudPreset_C) == 0x001238, "Wrong size on UPD_CloudPreset_C");
-static_assert(offsetof(UPD_CloudPreset_C, 天城) == 0x000038, "Member 'UPD_CloudPreset_C::天城' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 遗落原乡) == 0x000068, "Member 'UPD_CloudPreset_C::遗落原乡' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无光之森) == 0x000098, "Member 'UPD_CloudPreset_C::无光之森' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 中曲台地) == 0x0000C8, "Member 'UPD_CloudPreset_C::中曲台地' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 登录界面) == 0x0000F8, "Member 'UPD_CloudPreset_C::登录界面' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区沉寂态) == 0x000128, "Member 'UPD_CloudPreset_C::无音区沉寂态' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区01) == 0x000158, "Member 'UPD_CloudPreset_C::无音区01' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 怨鸟泽) == 0x000188, "Member 'UPD_CloudPreset_C::怨鸟泽' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 原画测试专用云) == 0x0001B8, "Member 'UPD_CloudPreset_C::原画测试专用云' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区02) == 0x0001E8, "Member 'UPD_CloudPreset_C::无音区02' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区03) == 0x000218, "Member 'UPD_CloudPreset_C::无音区03' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区04) == 0x000248, "Member 'UPD_CloudPreset_C::无音区04' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 无音区05) == 0x000278, "Member 'UPD_CloudPreset_C::无音区05' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 漩涡云) == 0x0002A8, "Member 'UPD_CloudPreset_C::漩涡云' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 鸣潮天气) == 0x0002D8, "Member 'UPD_CloudPreset_C::鸣潮天气' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 阴天异象) == 0x000308, "Member 'UPD_CloudPreset_C::阴天异象' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黄昏异象) == 0x000338, "Member 'UPD_CloudPreset_C::黄昏异象' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 夜晚异象) == 0x000368, "Member 'UPD_CloudPreset_C::夜晚异象' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 乘宵山异象) == 0x000398, "Member 'UPD_CloudPreset_C::乘宵山异象' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 乘宵山) == 0x0003C8, "Member 'UPD_CloudPreset_C::乘宵山' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑海岸上层) == 0x0003F8, "Member 'UPD_CloudPreset_C::黑海岸上层' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑海岸下层) == 0x000428, "Member 'UPD_CloudPreset_C::黑海岸下层' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑海岸夜晚) == 0x000458, "Member 'UPD_CloudPreset_C::黑海岸夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 肉鸽月亮01) == 0x000488, "Member 'UPD_CloudPreset_C::肉鸽月亮01' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 肉鸽月亮02) == 0x0004B8, "Member 'UPD_CloudPreset_C::肉鸽月亮02' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 肉鸽月亮03) == 0x0004E8, "Member 'UPD_CloudPreset_C::肉鸽月亮03' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 肉鸽月亮04) == 0x000518, "Member 'UPD_CloudPreset_C::肉鸽月亮04' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黎娜汐塔) == 0x000548, "Member 'UPD_CloudPreset_C::黎娜汐塔' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 帕尔米罗墓地) == 0x000578, "Member 'UPD_CloudPreset_C::帕尔米罗墓地' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 槲生半岛) == 0x0005A8, "Member 'UPD_CloudPreset_C::槲生半岛' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄萨莱海脊永夜解密前) == 0x0005D8, "Member 'UPD_CloudPreset_C::狄萨莱海脊永夜解密前' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄萨莱海脊永夜解密后) == 0x000608, "Member 'UPD_CloudPreset_C::狄萨莱海脊永夜解密后' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 金库上层) == 0x000638, "Member 'UPD_CloudPreset_C::金库上层' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 肉鸽月亮05) == 0x000668, "Member 'UPD_CloudPreset_C::肉鸽月亮05' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑海岸天气_阴) == 0x000698, "Member 'UPD_CloudPreset_C::黑海岸天气_阴' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狂欢节) == 0x0006C8, "Member 'UPD_CloudPreset_C::狂欢节' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 槲生半岛解密后) == 0x0006F8, "Member 'UPD_CloudPreset_C::槲生半岛解密后' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 云海区) == 0x000728, "Member 'UPD_CloudPreset_C::云海区' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 罗墓岛夜晚) == 0x000758, "Member 'UPD_CloudPreset_C::罗墓岛夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黎娜汐塔阴) == 0x000788, "Member 'UPD_CloudPreset_C::黎娜汐塔阴' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 金库上解密后) == 0x0007B8, "Member 'UPD_CloudPreset_C::金库上解密后' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 费洛洛出场) == 0x0007E8, "Member 'UPD_CloudPreset_C::费洛洛出场' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 彩虹天气) == 0x000818, "Member 'UPD_CloudPreset_C::彩虹天气' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 颠倒塔白天) == 0x000848, "Member 'UPD_CloudPreset_C::颠倒塔白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 颠倒塔夜晚) == 0x000878, "Member 'UPD_CloudPreset_C::颠倒塔夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 颠倒塔流星) == 0x0008A8, "Member 'UPD_CloudPreset_C::颠倒塔流星' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 七丘) == 0x0008D8, "Member 'UPD_CloudPreset_C::七丘' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 七丘阴天) == 0x000908, "Member 'UPD_CloudPreset_C::七丘阴天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 残破竞技场) == 0x000938, "Member 'UPD_CloudPreset_C::残破竞技场' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 尖刺山) == 0x000968, "Member 'UPD_CloudPreset_C::尖刺山' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 观测塔) == 0x000998, "Member 'UPD_CloudPreset_C::观测塔' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 初见七丘) == 0x0009C8, "Member 'UPD_CloudPreset_C::初见七丘' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 七丘夜晚) == 0x0009F8, "Member 'UPD_CloudPreset_C::七丘夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地白天) == 0x000A28, "Member 'UPD_CloudPreset_C::狄斯台地白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地夜晚) == 0x000A58, "Member 'UPD_CloudPreset_C::狄斯台地夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地日月同辉) == 0x000A88, "Member 'UPD_CloudPreset_C::狄斯台地日月同辉' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地烈日天空) == 0x000AB8, "Member 'UPD_CloudPreset_C::狄斯台地烈日天空' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地受蚀地) == 0x000AE8, "Member 'UPD_CloudPreset_C::狄斯台地受蚀地' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 狄斯台地月相) == 0x000B18, "Member 'UPD_CloudPreset_C::狄斯台地月相' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑潮侵蚀) == 0x000B48, "Member 'UPD_CloudPreset_C::黑潮侵蚀' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑潮内表世界) == 0x000B78, "Member 'UPD_CloudPreset_C::黑潮内表世界' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑潮内里世界) == 0x000BA8, "Member 'UPD_CloudPreset_C::黑潮内里世界' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 光路幻境) == 0x000BD8, "Member 'UPD_CloudPreset_C::光路幻境' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 巡游天国) == 0x000C08, "Member 'UPD_CloudPreset_C::巡游天国' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 隐海试验场) == 0x000C38, "Member 'UPD_CloudPreset_C::隐海试验场' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 失亡彼岸) == 0x000C68, "Member 'UPD_CloudPreset_C::失亡彼岸' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑潮风暴) == 0x000C98, "Member 'UPD_CloudPreset_C::黑潮风暴' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 黑潮风暴加强) == 0x000CC8, "Member 'UPD_CloudPreset_C::黑潮风暴加强' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 烈阳天气) == 0x000CF8, "Member 'UPD_CloudPreset_C::烈阳天气' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 总督日月同辉) == 0x000D28, "Member 'UPD_CloudPreset_C::总督日月同辉' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 穗波白天) == 0x000D58, "Member 'UPD_CloudPreset_C::穗波白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 穗波夜晚) == 0x000D88, "Member 'UPD_CloudPreset_C::穗波夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 穗波枯山水) == 0x000DB8, "Member 'UPD_CloudPreset_C::穗波枯山水' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 穗波阴天) == 0x000DE8, "Member 'UPD_CloudPreset_C::穗波阴天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 安全点白天) == 0x000E18, "Member 'UPD_CloudPreset_C::安全点白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 安全点夜晚) == 0x000E48, "Member 'UPD_CloudPreset_C::安全点夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 拉海落白天) == 0x000E78, "Member 'UPD_CloudPreset_C::拉海落白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 拉海洛夜晚) == 0x000EA8, "Member 'UPD_CloudPreset_C::拉海洛夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 磁暴前置) == 0x000ED8, "Member 'UPD_CloudPreset_C::磁暴前置' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 磁暴后置) == 0x000F08, "Member 'UPD_CloudPreset_C::磁暴后置' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 星门Boss) == 0x000F38, "Member 'UPD_CloudPreset_C::星门Boss' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 坠落炉芯) == 0x000F68, "Member 'UPD_CloudPreset_C::坠落炉芯' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 炉芯内部) == 0x000F98, "Member 'UPD_CloudPreset_C::炉芯内部' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 炉芯领主) == 0x000FC8, "Member 'UPD_CloudPreset_C::炉芯领主' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 浮光林白天) == 0x000FF8, "Member 'UPD_CloudPreset_C::浮光林白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 浮光林夜晚) == 0x001028, "Member 'UPD_CloudPreset_C::浮光林夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 拉海洛阴天) == 0x001058, "Member 'UPD_CloudPreset_C::拉海洛阴天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 梵高) == 0x001088, "Member 'UPD_CloudPreset_C::梵高' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 不渲染BP_Cloud控制的云) == 0x0010B8, "Member 'UPD_CloudPreset_C::不渲染BP_Cloud控制的云' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 罗伊白天) == 0x0010E8, "Member 'UPD_CloudPreset_C::罗伊白天' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 罗伊夜晚) == 0x001118, "Member 'UPD_CloudPreset_C::罗伊夜晚' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 罗伊极光) == 0x001148, "Member 'UPD_CloudPreset_C::罗伊极光' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 罗伊初见) == 0x001178, "Member 'UPD_CloudPreset_C::罗伊初见' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 星海BOSS一阶) == 0x0011A8, "Member 'UPD_CloudPreset_C::星海BOSS一阶' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 星海BOSS二阶) == 0x0011D8, "Member 'UPD_CloudPreset_C::星海BOSS二阶' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 拉海洛初见) == 0x001208, "Member 'UPD_CloudPreset_C::拉海洛初见' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_CloudPreset_C;
 
 }
 

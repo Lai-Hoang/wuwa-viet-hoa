@@ -12,8 +12,8 @@
 
 #include "SAiRaceStrategyCorrectionByDistance_structs.hpp"
 #include "SAiRaceStrategyCorrectionBySpeed_structs.hpp"
-#include "SAiRaceStrategyMultiParamFunction_structs.hpp"
 #include "SAiRaceStrategyCorrectionByTime_structs.hpp"
+#include "SAiRaceStrategyMultiParamFunction_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -37,22 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AIRaceStrategy_C">();
+		BP_STATIC_CLASS_IMPL("BP_AIRaceStrategy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AIRaceStrategy_C")
 	}
 	static class UBP_AIRaceStrategy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AIRaceStrategy_C>();
 	}
 };
-static_assert(alignof(UBP_AIRaceStrategy_C) == 0x000008, "Wrong alignment on UBP_AIRaceStrategy_C");
-static_assert(sizeof(UBP_AIRaceStrategy_C) == 0x0000A8, "Wrong size on UBP_AIRaceStrategy_C");
-static_assert(offsetof(UBP_AIRaceStrategy_C, DefaultSpeed) == 0x000038, "Member 'UBP_AIRaceStrategy_C::DefaultSpeed' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, DefaultAcceleration) == 0x00003C, "Member 'UBP_AIRaceStrategy_C::DefaultAcceleration' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, DefaultDeceleration) == 0x000040, "Member 'UBP_AIRaceStrategy_C::DefaultDeceleration' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, CorrectionByDistanceConfig) == 0x000048, "Member 'UBP_AIRaceStrategy_C::CorrectionByDistanceConfig' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, CorrectionBySpeedConfig) == 0x000060, "Member 'UBP_AIRaceStrategy_C::CorrectionBySpeedConfig' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, CorrectionByTimeConfig) == 0x000088, "Member 'UBP_AIRaceStrategy_C::CorrectionByTimeConfig' has a wrong offset!");
-static_assert(offsetof(UBP_AIRaceStrategy_C, CalcTargetSpeedConfig) == 0x0000A0, "Member 'UBP_AIRaceStrategy_C::CalcTargetSpeedConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AIRaceStrategy_C;
 
 }
 

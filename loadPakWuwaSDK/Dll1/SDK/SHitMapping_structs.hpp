@@ -26,11 +26,7 @@ public:
 	TArray<EHitAnim>                              映射表_7_863BA6364A352F1602BB8193FCE02157;         // 0x0008(0x0010)(Edit, BlueprintVisible)
 	class FString                                 备注_11_2A5388E94C1111570A398ABF9EA38FE5;          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSHitMapping) == 0x000008, "Wrong alignment on FSHitMapping");
-static_assert(sizeof(FSHitMapping) == 0x000028, "Wrong size on FSHitMapping");
-static_assert(offsetof(FSHitMapping, ID_2_9EF5C6E14C5D4265AF775BAFFE88C075) == 0x000000, "Member 'FSHitMapping::ID_2_9EF5C6E14C5D4265AF775BAFFE88C075' has a wrong offset!");
-static_assert(offsetof(FSHitMapping, 映射表_7_863BA6364A352F1602BB8193FCE02157) == 0x000008, "Member 'FSHitMapping::映射表_7_863BA6364A352F1602BB8193FCE02157' has a wrong offset!");
-static_assert(offsetof(FSHitMapping, 备注_11_2A5388E94C1111570A398ABF9EA38FE5) == 0x000018, "Member 'FSHitMapping::备注_11_2A5388E94C1111570A398ABF9EA38FE5' has a wrong offset!");
+DUMPER7_ASSERTS_FSHitMapping;
 
 }
 

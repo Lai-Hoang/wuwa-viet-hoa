@@ -17,15 +17,35 @@
 namespace SDK
 {
 
-// Function BP_MovePathLine.BP_MovePathLine_C.贴地处理
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MovePathLine.BP_MovePathLine_C.ExecuteUbergraph_BP_MovePathLine
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_MovePathLine_C::贴地处理()
+void ABP_MovePathLine_C::ExecuteUbergraph_BP_MovePathLine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MovePathLine_C", "贴地处理");
+		Func = Class->GetFunction("BP_MovePathLine_C", "ExecuteUbergraph_BP_MovePathLine");
+
+	Params::BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MovePathLine.BP_MovePathLine_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_MovePathLine_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MovePathLine_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -45,37 +65,17 @@ void ABP_MovePathLine_C::Save()
 }
 
 
-// Function BP_MovePathLine.BP_MovePathLine_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_MovePathLine.BP_MovePathLine_C.贴地处理
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MovePathLine_C::ReceiveBeginPlay()
+void ABP_MovePathLine_C::贴地处理()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MovePathLine_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_MovePathLine_C", "贴地处理");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_MovePathLine.BP_MovePathLine_C.ExecuteUbergraph_BP_MovePathLine
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_MovePathLine_C::ExecuteUbergraph_BP_MovePathLine(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MovePathLine_C", "ExecuteUbergraph_BP_MovePathLine");
-
-	Params::BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

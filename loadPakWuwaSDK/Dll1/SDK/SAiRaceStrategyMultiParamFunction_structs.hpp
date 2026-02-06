@@ -23,9 +23,7 @@ struct FSAiRaceStrategyMultiParamFunction final
 public:
 	EAiRaceStrategyMultiParamFuncType             FunctionType_13_780AD2874E0DAA48699883AC137C4F7A;  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSAiRaceStrategyMultiParamFunction) == 0x000001, "Wrong alignment on FSAiRaceStrategyMultiParamFunction");
-static_assert(sizeof(FSAiRaceStrategyMultiParamFunction) == 0x000001, "Wrong size on FSAiRaceStrategyMultiParamFunction");
-static_assert(offsetof(FSAiRaceStrategyMultiParamFunction, FunctionType_13_780AD2874E0DAA48699883AC137C4F7A) == 0x000000, "Member 'FSAiRaceStrategyMultiParamFunction::FunctionType_13_780AD2874E0DAA48699883AC137C4F7A' has a wrong offset!");
+DUMPER7_ASSERTS_FSAiRaceStrategyMultiParamFunction;
 
 }
 

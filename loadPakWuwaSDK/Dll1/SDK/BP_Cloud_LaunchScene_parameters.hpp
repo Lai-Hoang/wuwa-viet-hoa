@@ -24,11 +24,7 @@ public:
 	class ABP_CloudPrefab_C*                      K2Node_DynamicCast_AsBP_Cloud_Prefab;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene) == 0x000008, "Wrong alignment on BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene");
-static_assert(sizeof(BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene) == 0x000018, "Wrong size on BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene");
-static_assert(offsetof(BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene, EntryPoint) == 0x000000, "Member 'BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x000008, "Member 'BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cloud_LaunchScene_C_ExecuteUbergraph_BP_Cloud_LaunchScene;
 
 }
 

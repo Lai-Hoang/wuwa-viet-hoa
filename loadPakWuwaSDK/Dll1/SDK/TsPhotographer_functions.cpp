@@ -17,101 +17,113 @@
 namespace SDK
 {
 
-// Function TsPhotographer.TsPhotographer_C.RefreshDitherEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATsPhotographer_C::RefreshDitherEffect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "RefreshDitherEffect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsPhotographer.TsPhotographer_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATsPhotographer_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsPhotographer.TsPhotographer_C.ExecuteUbergraph_TsPhotographer
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsPhotographer_C::SetPlayerSourceLocation(const struct FVector& location)
+void ATsPhotographer_C::ExecuteUbergraph_TsPhotographer(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "SetPlayerSourceLocation");
+		Func = Class->GetFunction("TsPhotographer_C", "ExecuteUbergraph_TsPhotographer");
 
-	Params::TsPhotographer_C_SetPlayerSourceLocation Parms{};
+	Params::TsPhotographer_C_ExecuteUbergraph_TsPhotographer Parms{};
 
-	Parms.location = std::move(location);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.AddSourcePitchInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsPhotographer.TsPhotographer_C.ReceiveTick
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsPhotographer_C::AddSourcePitchInput(float pitch)
+void ATsPhotographer_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "AddSourcePitchInput");
+		Func = Class->GetFunction("TsPhotographer_C", "ReceiveTick");
 
-	Params::TsPhotographer_C_AddSourcePitchInput Parms{};
+	Params::TsPhotographer_C_ReceiveTick Parms{};
 
-	Parms.pitch = pitch;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.ResetCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsPhotographer.TsPhotographer_C.ReceiveDestroyed
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ATsPhotographer_C::ResetCamera()
+void ATsPhotographer_C::ReceiveDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "ResetCamera");
+		Func = Class->GetFunction("TsPhotographer_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.GetFov
+// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   yaw                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+
+void ATsPhotographer_C::AddSourceYawInput(float yaw)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsPhotographer_C", "AddSourceYawInput");
+
+	Params::TsPhotographer_C_AddSourceYawInput Parms{};
+
+	Parms.yaw = yaw;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FTransform&                transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+
+void ATsPhotographer_C::SetCameraInitializeTransform(const struct FTransform& transform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsPhotographer_C", "SetCameraInitializeTransform");
+
+	Params::TsPhotographer_C_SetCameraInitializeTransform Parms{};
+
+	Parms.transform = std::move(transform);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 
-float ATsPhotographer_C::GetFov()
+struct FTransform ATsPhotographer_C::GetCameraInitializeTransform()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "GetFov");
+		Func = Class->GetFunction("TsPhotographer_C", "GetCameraInitializeTransform");
 
-	Params::TsPhotographer_C_GetFov Parms{};
+	Params::TsPhotographer_C_GetCameraInitializeTransform Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -139,19 +151,19 @@ void ATsPhotographer_C::SetFov(float length)
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
+// Function TsPhotographer.TsPhotographer_C.GetFov
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-struct FTransform ATsPhotographer_C::GetCameraInitializeTransform()
+float ATsPhotographer_C::GetFov()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "GetCameraInitializeTransform");
+		Func = Class->GetFunction("TsPhotographer_C", "GetFov");
 
-	Params::TsPhotographer_C_GetCameraInitializeTransform Parms{};
+	Params::TsPhotographer_C_GetFov Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -159,97 +171,85 @@ struct FTransform ATsPhotographer_C::GetCameraInitializeTransform()
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
+// Function TsPhotographer.TsPhotographer_C.ResetCamera
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FTransform&                transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 
-void ATsPhotographer_C::SetCameraInitializeTransform(const struct FTransform& transform)
+void ATsPhotographer_C::ResetCamera()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "SetCameraInitializeTransform");
-
-	Params::TsPhotographer_C_SetCameraInitializeTransform Parms{};
-
-	Parms.transform = std::move(transform);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   yaw                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-
-void ATsPhotographer_C::AddSourceYawInput(float yaw)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "AddSourceYawInput");
-
-	Params::TsPhotographer_C_AddSourceYawInput Parms{};
-
-	Parms.yaw = yaw;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TsPhotographer.TsPhotographer_C.ReceiveDestroyed
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsPhotographer_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("TsPhotographer_C", "ResetCamera");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.ReceiveTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function TsPhotographer.TsPhotographer_C.AddSourcePitchInput
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   pitch                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-void ATsPhotographer_C::ReceiveTick(float DeltaSeconds)
+void ATsPhotographer_C::AddSourcePitchInput(float pitch)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "ReceiveTick");
+		Func = Class->GetFunction("TsPhotographer_C", "AddSourcePitchInput");
 
-	Params::TsPhotographer_C_ReceiveTick Parms{};
+	Params::TsPhotographer_C_AddSourcePitchInput Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.pitch = pitch;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsPhotographer.TsPhotographer_C.ExecuteUbergraph_TsPhotographer
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
-void ATsPhotographer_C::ExecuteUbergraph_TsPhotographer(int32 EntryPoint)
+void ATsPhotographer_C::SetPlayerSourceLocation(const struct FVector& location)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsPhotographer_C", "ExecuteUbergraph_TsPhotographer");
+		Func = Class->GetFunction("TsPhotographer_C", "SetPlayerSourceLocation");
 
-	Params::TsPhotographer_C_ExecuteUbergraph_TsPhotographer Parms{};
+	Params::TsPhotographer_C_SetPlayerSourceLocation Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.location = std::move(location);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsPhotographer.TsPhotographer_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ATsPhotographer_C::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsPhotographer_C", "Initialize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function TsPhotographer.TsPhotographer_C.RefreshDitherEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ATsPhotographer_C::RefreshDitherEffect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsPhotographer_C", "RefreshDitherEffect");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

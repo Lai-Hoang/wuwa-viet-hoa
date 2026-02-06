@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateEnterWaterMoveOffset_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateEnterWaterMoveOffset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateEnterWaterMoveOffset_C")
 	}
 	static class UTsAnimNotifyStateEnterWaterMoveOffset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateEnterWaterMoveOffset_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateEnterWaterMoveOffset_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateEnterWaterMoveOffset_C");
-static_assert(sizeof(UTsAnimNotifyStateEnterWaterMoveOffset_C) == 0x000050, "Wrong size on UTsAnimNotifyStateEnterWaterMoveOffset_C");
-static_assert(offsetof(UTsAnimNotifyStateEnterWaterMoveOffset_C, EnterWaterVelocityZ) == 0x000048, "Member 'UTsAnimNotifyStateEnterWaterMoveOffset_C::EnterWaterVelocityZ' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateEnterWaterMoveOffset_C;
 
 }
 

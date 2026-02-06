@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ECharacterControllerCaseType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "ECharacterBodySpecifiedType_structs.hpp"
-#include "ECharacterSlotSpecifiedType_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
+#include "ECharacterBodySpecifiedType_structs.hpp"
+#include "ECharacterControllerCaseType_structs.hpp"
+#include "ECharacterDitherType_structs.hpp"
+#include "ECharacterSlotSpecifiedType_structs.hpp"
 
 
 namespace SDK
@@ -41,97 +41,90 @@ public:
 	bool                                          ProxyRenderTrail;                                  // 0x010A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	float QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor);
-	bool GetInAudioShr();
-	void TempRecoverDither();
-	void TempRemoveDither();
-	void SetDitherUseHeadMaskHideEffect(bool enable);
-	void SetShouldCastShadow(bool castShadow);
-	float GetOpacityConsiderVisibility();
-	void SetEffectGroupProgress(float progress, int32 groupHandleId);
-	void AddFloatUpdateParamPermanentByIndexV2(class FName name, float value, class FName bodyName, float materialIndex);
-	class FName GetSkeletalMeshComponentBodyName(class USkeletalMeshComponent* skeletalComp);
-	void RemoveExternalMaterialReplaceV2(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
-	void SetMaterialReplaceV2(class UMaterialInterface* material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
-	void SetMaterialPropertyColorV2(class FName name, const struct FLinearColor& value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
-	void SetMaterialPropertyFloatV2(class FName name, float value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
-	bool ShouldTickAfterGoDown();
-	void RefreshMaterialController();
-	void SetDitherApplyHeadsOnly();
-	void SetDitherApplyAll();
-	float AddMaterialControllerDataGroupWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject);
-	float AddMaterialControllerDataWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject, class UObject* userData);
-	void SetStarScarEnergy(float value);
+	void ExecuteUbergraph_CharRenderingComponent(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void Init(ECharacterRenderingType renderType);
+	void RemoveMaterialControllerData(int32 handle1);
+	int32 AddMaterialControllerData(class UObject* data);
+	void ResetAllRenderingState();
+	void RemoveMaterialControllerDataWithEnding(int32 handle);
+	int32 AddMaterialControllerDataGroup(class UObject* data);
+	void RemoveMaterialControllerDataGroup(int32 handle);
+	bool CheckInit();
+	void SetDebug(bool value);
+	class UPD_MaterialDebug_C* GetDebugInfo();
+	void AddComponent(const class FString& skelName, class UMeshComponent* skeletalComp);
+	void RemoveComponent(const class FString& skelName);
+	void OnFinalizedLevelSequence();
+	void SetMaterialPropertyFloat(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, float value);
+	void SetMaterialPropertyColor(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, const struct FLinearColor& value);
+	void SetCapsuleDither(float value);
+	void SetDitherEffect(float ditherRate, ECharacterDitherType ditherType);
+	void RemoveMaterialControllerDataGroupWithEnding(int32 handle);
+	float QuickInitAndAddDataGroup(class UObject* data, class ASkeletalMeshActor* meshActor);
+	void AddComponentByCase(ECharacterControllerCaseType caseType, class UMeshComponent* skeletalComp);
+	float QuickInitAndAddDataWithMeshComponent(class UObject* data, class UMeshComponent* meshComponent);
+	bool GetInWater(float depthThreshold);
+	void SetEffectProgress(float progress, int32 handleId);
+	void RemoveComponentByCase(ECharacterControllerCaseType caseType);
+	void SetBodyEffectOpacity(float opacity);
+	float QuickInitAndAddDataGroupWithMeshComponent(class UObject* data, class UMeshComponent* meshComponent);
+	void SetDecalShadowEnabled(bool enable);
+	void DisableAllShadowByDecalShadowComponent();
+	void AddComponentForDecalShadow(const class FString& name, class UPrimitiveComponent* comp);
+	void RemoveComponentFromDecalShadow(const class FString& name);
+	void ReceiveSeqTick(float deltaSeconds);
+	void SetLogicOwner(class AActor* owner);
+	float GetTimeDilation();
+	void SetRealtimeShadowEnabled(bool enable);
+	void SetDecalShadowOpacity(float opacity);
+	void SetRealtimeShadowOpacity(float opacity);
+	void Destroy();
+	void SetDisableFightDither(bool disable);
+	void AddComponentInnerV2(const class FString& skelName1, class UMeshComponent* skeletalComp1, bool useEmptyMaterial);
+	void RemoveComponentInnerV2(const class FString& skelName);
+	void SetEffectPause(int32 handle, bool paused);
 	class USkeletalMeshComponent* GetSkeletalMeshComponent(const class FString& skelName);
 	void AddComponentWithEmptyMaterial(const class FString& skelName, class UMeshComponent* skeletalComp);
-	void SetEffectPause(int32 handle, bool paused);
-	void RemoveComponentInnerV2(const class FString& skelName);
-	void AddComponentInnerV2(const class FString& skelName1, class UMeshComponent* skeletalComp1, bool useEmptyMaterial);
-	void SetDisableFightDither(bool disable);
-	void Destroy();
-	void SetRealtimeShadowOpacity(float opacity);
-	void SetDecalShadowOpacity(float opacity);
-	void SetRealtimeShadowEnabled(bool enable);
-	float GetTimeDilation();
-	void SetLogicOwner(class AActor* owner);
-	void ReceiveSeqTick(float deltaSeconds);
-	void RemoveComponentFromDecalShadow(const class FString& name);
-	void AddComponentForDecalShadow(const class FString& name, class UPrimitiveComponent* comp);
-	void DisableAllShadowByDecalShadowComponent();
-	void SetDecalShadowEnabled(bool enable);
-	float QuickInitAndAddDataGroupWithMeshComponent(class UObject* data, class UMeshComponent* meshComponent);
-	void SetBodyEffectOpacity(float opacity);
-	void RemoveComponentByCase(ECharacterControllerCaseType caseType);
-	void SetEffectProgress(float progress, int32 handleId);
-	bool GetInWater(float depthThreshold);
-	float QuickInitAndAddDataWithMeshComponent(class UObject* data, class UMeshComponent* meshComponent);
-	void AddComponentByCase(ECharacterControllerCaseType caseType, class UMeshComponent* skeletalComp);
-	float QuickInitAndAddDataGroup(class UObject* data, class ASkeletalMeshActor* meshActor);
-	void RemoveMaterialControllerDataGroupWithEnding(int32 handle);
-	void SetDitherEffect(float ditherRate, ECharacterDitherType ditherType);
-	void SetCapsuleDither(float value);
-	void SetMaterialPropertyColor(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, const struct FLinearColor& value);
-	void SetMaterialPropertyFloat(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, float value);
-	void RemoveComponent(const class FString& skelName);
-	void AddComponent(const class FString& skelName, class UMeshComponent* skeletalComp);
-	class UPD_MaterialDebug_C* GetDebugInfo();
-	void SetDebug(bool value);
-	bool CheckInit();
-	void RemoveMaterialControllerDataGroup(int32 handle);
-	int32 AddMaterialControllerDataGroup(class UObject* data);
-	void RemoveMaterialControllerDataWithEnding(int32 handle);
-	void ResetAllRenderingState();
-	int32 AddMaterialControllerData(class UObject* data);
-	void RemoveMaterialControllerData(int32 handle1);
-	void Init(ECharacterRenderingType renderType);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_CharRenderingComponent(int32 EntryPoint);
-	void OnFinalizedLevelSequence();
+	void SetStarScarEnergy(float value);
+	float AddMaterialControllerDataWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject, class UObject* userData);
+	float AddMaterialControllerDataGroupWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject);
+	void SetDitherApplyAll();
+	void SetDitherApplyHeadsOnly();
+	void RefreshMaterialController();
+	bool ShouldTickAfterGoDown();
+	void SetMaterialPropertyFloatV2(class FName name, float value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
+	void SetMaterialPropertyColorV2(class FName name, const struct FLinearColor& value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
+	void SetMaterialReplaceV2(class UMaterialInterface* material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
+	void RemoveExternalMaterialReplaceV2(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
+	class FName GetSkeletalMeshComponentBodyName(class USkeletalMeshComponent* skeletalComp);
+	void AddFloatUpdateParamPermanentByIndexV2(class FName name, float value, class FName bodyName, float materialIndex);
+	void SetEffectGroupProgress(float progress, int32 groupHandleId);
+	float GetOpacityConsiderVisibility();
+	void SetShouldCastShadow(bool castShadow);
+	void SetDitherUseHeadMaskHideEffect(bool enable);
+	void TempRemoveDither();
+	void TempRecoverDither();
+	bool GetInAudioShr();
+	float QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CharRenderingComponent_C">();
+		BP_STATIC_CLASS_IMPL("CharRenderingComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CharRenderingComponent_C")
 	}
 	static class UCharRenderingComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCharRenderingComponent_C>();
 	}
 };
-static_assert(alignof(UCharRenderingComponent_C) == 0x000008, "Wrong alignment on UCharRenderingComponent_C");
-static_assert(sizeof(UCharRenderingComponent_C) == 0x000110, "Wrong size on UCharRenderingComponent_C");
-static_assert(offsetof(UCharRenderingComponent_C, UberGraphFrame) == 0x0000D8, "Member 'UCharRenderingComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, InteractionConfig) == 0x0000E0, "Member 'UCharRenderingComponent_C::InteractionConfig' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, DecalShadowConfig) == 0x0000E8, "Member 'UCharRenderingComponent_C::DecalShadowConfig' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, MonsterUseBodyEffect) == 0x0000F0, "Member 'UCharRenderingComponent_C::MonsterUseBodyEffect' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, UseProxy) == 0x0000F1, "Member 'UCharRenderingComponent_C::UseProxy' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, DitherRemap) == 0x0000F4, "Member 'UCharRenderingComponent_C::DitherRemap' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, ProxyMaterialsOverride) == 0x0000F8, "Member 'UCharRenderingComponent_C::ProxyMaterialsOverride' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderInMainPass) == 0x000108, "Member 'UCharRenderingComponent_C::ProxyRenderInMainPass' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderShadow) == 0x000109, "Member 'UCharRenderingComponent_C::ProxyRenderShadow' has a wrong offset!");
-static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderTrail) == 0x00010A, "Member 'UCharRenderingComponent_C::ProxyRenderTrail' has a wrong offset!");
+DUMPER7_ASSERTS_UCharRenderingComponent_C;
 
 }
 

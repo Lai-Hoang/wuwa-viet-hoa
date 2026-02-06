@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "SD_KuroTraceCloudData_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -20,15 +20,17 @@ namespace SDK::Params
 {
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ExecuteUbergraph_BP_KuroVolumeCloud_Global
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ___bool_Has_Been_Initd_Variable;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          ___bool_IsClosed_Variable;                         // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0028)(ZeroConstructor)
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,22 +42,10 @@ public:
 	bool                                          CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue; // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EBP_EWorldType                                CallFunc_GetWorldType_ReturnValue;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000060, "Wrong size on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, EntryPoint) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue) == 0x000038, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_Event_EndPlayReason) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue_1) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue_2) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameQualitySettingLevel_ReturnValue) == 0x000058, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameQualitySettingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue) == 0x00005D, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_IsValid_ReturnValue) == 0x00005E, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_IsValid_ReturnValue_1) == 0x00005F, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -64,9 +54,7 @@ struct BP_KuroVolumeCloud_Global_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ReceiveEndPlay");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_KuroVolumeCloud_Global_C_ReceiveEndPlay");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_ReceiveEndPlay;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -75,9 +63,7 @@ struct BP_KuroVolumeCloud_Global_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ReceiveTick");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ReceiveTick) == 0x000004, "Wrong size on BP_KuroVolumeCloud_Global_C_ReceiveTick");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_ReceiveTick;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UserConstructionScript
 // 0x0050 (0x0050 - 0x0000)
@@ -89,11 +75,7 @@ public:
 	struct FTransform                             ___struct_Variable;                                // 0x0010(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 	class UChildActorComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UserConstructionScript");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UserConstructionScript) == 0x000050, "Wrong size on BP_KuroVolumeCloud_Global_C_UserConstructionScript");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UserConstructionScript, Editor_Type) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UserConstructionScript::Editor_Type' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UserConstructionScript, ___struct_Variable) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_UserConstructionScript::___struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_UserConstructionScript;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudTransform
 // 0x0180 (0x0180 - 0x0000)
@@ -121,25 +103,7 @@ public:
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x0154(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_2;   // 0x0164(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform) == 0x000010, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudTransform");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform) == 0x000180, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudTransform");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, Editor_Type) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::Editor_Type' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CastResult) == 0x000001, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CastResult' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, ___name_Variable) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, ___name_Variable_1) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, ___name_Variable_2) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, ___name_Variable_3) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_D_GetTransform_ReturnValue) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_D_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000080, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_TransformDoubleToTransform_ReturnValue) == 0x0000A0, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_TransformDoubleToTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_VectorDoubleToLinearColor_ReturnValue) == 0x0000D0, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_VectorDoubleToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_TransformToMatrix_ReturnValue) == 0x0000E0, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_TransformToMatrix_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Matrix_GetScaledAxes_X) == 0x000120, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Matrix_GetScaledAxes_X' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Matrix_GetScaledAxes_Y) == 0x00012C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Matrix_GetScaledAxes_Y' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Matrix_GetScaledAxes_Z) == 0x000138, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Matrix_GetScaledAxes_Z' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000144, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x000154, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudTransform, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x000164, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudTransform::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_UpdateCloudTransform;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudLighting
 // 0x00B0 (0x00B0 - 0x0000)
@@ -173,32 +137,7 @@ public:
 	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ___float_Variable_2;                               // 0x00A8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudLighting");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting) == 0x0000B0, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudLighting");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___float_Variable) == 0x00000C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_1) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_2) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_3) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_4) == 0x000034, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_5) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___float_Variable_1) == 0x00004C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___float_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___name_Variable_6) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___name_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_GetVectorParameterValue_ReturnValue) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_GetFloatValue_ReturnValue) == 0x00006C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_GetFloatValue_ReturnValue_1) == 0x000070, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_GetFloatValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_D_GetWorldDeltaSeconds_ReturnValue) == 0x000078, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_D_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000080, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000084, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_GetFloatValue_ReturnValue_2) == 0x000088, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_GetFloatValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Add_FloatFloat_ReturnValue) == 0x00008C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000090, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Fraction_ReturnValue) == 0x000094, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Fraction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000098, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00009C, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x0000A0, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0000A4, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudLighting, ___float_Variable_2) == 0x0000A8, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudLighting::___float_Variable_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_UpdateCloudLighting;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.GetLerpGIData
 // 0x00F8 (0x00F8 - 0x0000)
@@ -233,35 +172,10 @@ public:
 	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSD_KuroTraceCloudData                 K2Node_MakeStruct_SD_KuroTraceCloudData_1;         // 0x00E4(0x0014)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_GetLerpGIData) == 0x000004, "Wrong alignment on BP_KuroVolumeCloud_Global_C_GetLerpGIData");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_GetLerpGIData) == 0x0000F8, "Wrong size on BP_KuroVolumeCloud_Global_C_GetLerpGIData");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, Time) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::Time' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, LerpData_0) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::LerpData_0' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, ___int_Array_Index_Variable) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Subtract_IntInt_ReturnValue) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Get_Item) == 0x000024, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, ___int_Loop_Counter_Variable) == 0x000038, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Get_Item_1) == 0x00003C, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Add_IntInt_ReturnValue) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Length_ReturnValue) == 0x000054, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Get_Item_2) == 0x000058, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00006C, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Get_Item_3) == 0x000070, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000084, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_MapRangeClamped_ReturnValue) == 0x000088, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_SelectInt_ReturnValue) == 0x00008C, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_LinearColorLerp_ReturnValue) == 0x000090, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Get_Item_4) == 0x0000A0, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, K2Node_MakeStruct_SD_KuroTraceCloudData) == 0x0000B4, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::K2Node_MakeStruct_SD_KuroTraceCloudData' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_MapRangeClamped_ReturnValue_1) == 0x0000C8, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_MapRangeClamped_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Array_Length_ReturnValue_1) == 0x0000CC, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_LinearColorLerp_ReturnValue_1) == 0x0000D0, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_LinearColorLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000E0, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, K2Node_MakeStruct_SD_KuroTraceCloudData_1) == 0x0000E4, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::K2Node_MakeStruct_SD_KuroTraceCloudData_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_GetLerpGIData;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.Update
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct BP_KuroVolumeCloud_Global_C_Update final
 {
 public:
@@ -322,71 +236,16 @@ public:
 	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBP_EWorldType                                CallFunc_GetWorldType_ReturnValue;                 // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C2[0x6];                                      // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C3[0x5];                                      // 0x01C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_As______;                       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_As______;                       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_Update) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_Update");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_Update) == 0x0001E8, "Wrong size on BP_KuroVolumeCloud_Global_C_Update");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CamPos) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_Update::CamPos' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, temp) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_Update::temp' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, C) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_Update::C' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, B) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_Update::B' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, A) == 0x000034, "Member 'BP_KuroVolumeCloud_Global_C_Update::A' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, Editor) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_Update::Editor' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, NewLocalVar_0) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_Update::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___int_Variable) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_Update::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___bool_Variable) == 0x000060, "Member 'BP_KuroVolumeCloud_Global_C_Update::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___float_Variable) == 0x000064, "Member 'BP_KuroVolumeCloud_Global_C_Update::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000068, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x000074, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000080, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000088, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable_1) == 0x0000A0, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x0000B0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Add_FloatFloat_ReturnValue) == 0x0000C8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Vector_Distance_ReturnValue) == 0x0000D0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetPlayerPawn_ReturnValue) == 0x0000D8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_MapRangeClamped_ReturnValue) == 0x0000E0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x0000E8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Subtract_FloatFloat_ReturnValue) == 0x000100, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000108, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_IsValid_ReturnValue) == 0x00010C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000110, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000114, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000124, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000128, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default) == 0x00012C, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000138, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00013C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00013D, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_GetWorldDeltaSeconds_ReturnValue) == 0x000140, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x000148, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00014C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default_1) == 0x000150, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x000154, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000164, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_LinearColorFloat_ReturnValue_1) == 0x000174, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_LinearColorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Add_LinearColorLinearColor_ReturnValue) == 0x000184, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Add_LinearColorLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_R) == 0x000194, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_G) == 0x000198, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_B) == 0x00019C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_A) == 0x0001A0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue) == 0x0001A4, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue_1) == 0x0001A8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue_2) == 0x0001AC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_MakeColor_ReturnValue) == 0x0001B0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetWorldType_ReturnValue) == 0x0001C0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetWorldType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001C1, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetMaterial_ReturnValue) == 0x0001C8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0001D0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_As______) == 0x0001D8, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_As______' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_bSuccess) == 0x0001E0, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_IsValid_ReturnValue_1) == 0x0001E1, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_Update;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.CheckNeed Update
 // 0x0050 (0x0050 - 0x0000)
@@ -410,22 +269,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_CheckNeed_Update");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update) == 0x000050, "Wrong size on BP_KuroVolumeCloud_Global_C_CheckNeed_Update");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000005, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue) == 0x000006, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_GetMaterial_ReturnValue) == 0x000020, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000030, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue_1) == 0x000049, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_1) == 0x00004A, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_2) == 0x00004B, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_3) == 0x00004C, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_Not_PreBool_ReturnValue) == 0x00004D, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_CheckNeed_Update;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.CleanMID
 // 0x0020 (0x0020 - 0x0000)
@@ -437,12 +281,7 @@ public:
 	class UMaterialInstanceDynamic*               K2Node_DynamicCast_As______;                       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_CleanMID) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_CleanMID");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_CleanMID) == 0x000020, "Wrong size on BP_KuroVolumeCloud_Global_C_CleanMID");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, CallFunc_GetMaterial_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, CallFunc_GetMaterial_ReturnValue_1) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::CallFunc_GetMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, K2Node_DynamicCast_As______) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::K2Node_DynamicCast_As______' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_CleanMID;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRate
 // 0x0001 (0x0001 - 0x0000)
@@ -451,9 +290,7 @@ struct BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate final
 public:
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate) == 0x000001, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate) == 0x000001, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate, K2Node_SwitchInteger_CmpSuccess) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate;
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRateLocal
 // 0x000C (0x000C - 0x0000)
@@ -468,14 +305,7 @@ public:
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal) == 0x000004, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal) == 0x00000C, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_BooleanAND_ReturnValue) == 0x000009, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, K2Node_SwitchInteger_CmpSuccess) == 0x00000A, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_Not_PreBool_ReturnValue) == 0x00000B, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal;
 
 }
 

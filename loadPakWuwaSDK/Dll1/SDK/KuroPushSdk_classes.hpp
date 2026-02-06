@@ -28,17 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPushObject">();
+		STATIC_CLASS_IMPL("KuroPushObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPushObject")
 	}
 	static class UKuroPushObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPushObject>();
 	}
 };
-static_assert(alignof(UKuroPushObject) == 0x000008, "Wrong alignment on UKuroPushObject");
-static_assert(sizeof(UKuroPushObject) == 0x000050, "Wrong size on UKuroPushObject");
-static_assert(offsetof(UKuroPushObject, PushSdkMessageBluePrintDelegate) == 0x000030, "Member 'UKuroPushObject::PushSdkMessageBluePrintDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroPushObject, AllowedNotificationsDelegate) == 0x000040, "Member 'UKuroPushObject::AllowedNotificationsDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroPushObject;
 
 // Class KuroPushSdk.KuroPushSdkStaticLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -83,15 +84,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPushSdkStaticLibrary">();
+		STATIC_CLASS_IMPL("KuroPushSdkStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPushSdkStaticLibrary")
 	}
 	static class UKuroPushSdkStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPushSdkStaticLibrary>();
 	}
 };
-static_assert(alignof(UKuroPushSdkStaticLibrary) == 0x000008, "Wrong alignment on UKuroPushSdkStaticLibrary");
-static_assert(sizeof(UKuroPushSdkStaticLibrary) == 0x000030, "Wrong size on UKuroPushSdkStaticLibrary");
+DUMPER7_ASSERTS_UKuroPushSdkStaticLibrary;
 
 }
 

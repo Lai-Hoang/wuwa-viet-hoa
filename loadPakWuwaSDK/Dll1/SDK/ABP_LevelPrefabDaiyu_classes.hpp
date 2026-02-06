@@ -60,35 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_LevelPrefabDaiyu_C">();
+		BP_STATIC_CLASS_IMPL("ABP_LevelPrefabDaiyu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_LevelPrefabDaiyu_C")
 	}
 	static class UABP_LevelPrefabDaiyu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_LevelPrefabDaiyu_C>();
 	}
 };
-static_assert(alignof(UABP_LevelPrefabDaiyu_C) == 0x000010, "Wrong alignment on UABP_LevelPrefabDaiyu_C");
-static_assert(sizeof(UABP_LevelPrefabDaiyu_C) == 0x000FA0, "Wrong size on UABP_LevelPrefabDaiyu_C");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, UberGraphFrame) == 0x000820, "Member 'UABP_LevelPrefabDaiyu_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_Root) == 0x000828, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_Slot) == 0x000860, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult_5) == 0x0008C0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult_4) == 0x0008E8, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult_3) == 0x000910, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult_2) == 0x000938, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult_1) == 0x000960, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_TransitionResult) == 0x000988, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_SequencePlayer_3) == 0x0009B0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_StateResult_3) == 0x000A88, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_SequencePlayer_2) == 0x000AC0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_StateResult_2) == 0x000B98, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_SequencePlayer_1) == 0x000BD0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_StateResult_1) == 0x000CA8, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_SequencePlayer) == 0x000CE0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_StateResult) == 0x000DB8, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, AnimGraphNode_StateMachine) == 0x000DF0, "Member 'UABP_LevelPrefabDaiyu_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, State) == 0x000F88, "Member 'UABP_LevelPrefabDaiyu_C::State' has a wrong offset!");
-static_assert(offsetof(UABP_LevelPrefabDaiyu_C, PlayRate) == 0x000F98, "Member 'UABP_LevelPrefabDaiyu_C::PlayRate' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_LevelPrefabDaiyu_C;
 
 }
 

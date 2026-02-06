@@ -23,15 +23,18 @@ class UAudioAnalyzerAsset : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioAnalyzerAsset">();
+		STATIC_CLASS_IMPL("AudioAnalyzerAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioAnalyzerAsset")
 	}
 	static class UAudioAnalyzerAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioAnalyzerAsset>();
 	}
 };
-static_assert(alignof(UAudioAnalyzerAsset) == 0x000008, "Wrong alignment on UAudioAnalyzerAsset");
-static_assert(sizeof(UAudioAnalyzerAsset) == 0x000030, "Wrong size on UAudioAnalyzerAsset");
+DUMPER7_ASSERTS_UAudioAnalyzerAsset;
 
 // Class AudioAnalyzer.AudioAnalyzerNRTSettings
 // 0x0000 (0x0030 - 0x0030)
@@ -40,15 +43,18 @@ class UAudioAnalyzerNRTSettings : public UAudioAnalyzerAsset
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioAnalyzerNRTSettings">();
+		STATIC_CLASS_IMPL("AudioAnalyzerNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioAnalyzerNRTSettings")
 	}
 	static class UAudioAnalyzerNRTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioAnalyzerNRTSettings>();
 	}
 };
-static_assert(alignof(UAudioAnalyzerNRTSettings) == 0x000008, "Wrong alignment on UAudioAnalyzerNRTSettings");
-static_assert(sizeof(UAudioAnalyzerNRTSettings) == 0x000030, "Wrong size on UAudioAnalyzerNRTSettings");
+DUMPER7_ASSERTS_UAudioAnalyzerNRTSettings;
 
 // Class AudioAnalyzer.AudioAnalyzerNRT
 // 0x0050 (0x0080 - 0x0030)
@@ -62,17 +68,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioAnalyzerNRT">();
+		STATIC_CLASS_IMPL("AudioAnalyzerNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioAnalyzerNRT")
 	}
 	static class UAudioAnalyzerNRT* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioAnalyzerNRT>();
 	}
 };
-static_assert(alignof(UAudioAnalyzerNRT) == 0x000008, "Wrong alignment on UAudioAnalyzerNRT");
-static_assert(sizeof(UAudioAnalyzerNRT) == 0x000080, "Wrong size on UAudioAnalyzerNRT");
-static_assert(offsetof(UAudioAnalyzerNRT, Sound) == 0x000030, "Member 'UAudioAnalyzerNRT::Sound' has a wrong offset!");
-static_assert(offsetof(UAudioAnalyzerNRT, DurationInSeconds) == 0x000038, "Member 'UAudioAnalyzerNRT::DurationInSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_UAudioAnalyzerNRT;
 
 }
 

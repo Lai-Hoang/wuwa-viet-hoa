@@ -29,18 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BasePlatform_C">();
+		BP_STATIC_CLASS_IMPL("BP_BasePlatform_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BasePlatform_C")
 	}
 	static class ABP_BasePlatform_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BasePlatform_C>();
 	}
 };
-static_assert(alignof(ABP_BasePlatform_C) == 0x000008, "Wrong alignment on ABP_BasePlatform_C");
-static_assert(sizeof(ABP_BasePlatform_C) == 0x0002C8, "Wrong size on ABP_BasePlatform_C");
-static_assert(offsetof(ABP_BasePlatform_C, DefaultSceneRoot) == 0x0002B0, "Member 'ABP_BasePlatform_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_BasePlatform_C, LeaveSphereRadius) == 0x0002B8, "Member 'ABP_BasePlatform_C::LeaveSphereRadius' has a wrong offset!");
-static_assert(offsetof(ABP_BasePlatform_C, LeaveSphereCenter) == 0x0002BC, "Member 'ABP_BasePlatform_C::LeaveSphereCenter' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BasePlatform_C;
 
 }
 

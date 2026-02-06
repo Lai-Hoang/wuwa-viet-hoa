@@ -40,41 +40,32 @@ public:
 	float                                         FloatPar_End;                                      // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Timer(float* ElapsedTime);
-	void MaterialParameterGradient(float DeltalTime);
-	void SeyLogicallyShowForAllChildren();
-	void SeyLogicallyHiddenForAllChildren();
-	void EditorValidCheck();
-	void IsEditor(bool* IsEditor_0);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds_0);
 	void ExecuteUbergraph_BP_KuroISMGroup(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds_0);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
+	void IsEditor(bool* IsEditor_0);
+	void EditorValidCheck();
+	void SeyLogicallyHiddenForAllChildren();
+	void SeyLogicallyShowForAllChildren();
+	void MaterialParameterGradient(float DeltalTime);
+	void Timer(float* ElapsedTime);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KuroISMGroup_C">();
+		BP_STATIC_CLASS_IMPL("BP_KuroISMGroup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KuroISMGroup_C")
 	}
 	static class ABP_KuroISMGroup_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_KuroISMGroup_C>();
 	}
 };
-static_assert(alignof(ABP_KuroISMGroup_C) == 0x000008, "Wrong alignment on ABP_KuroISMGroup_C");
-static_assert(sizeof(ABP_KuroISMGroup_C) == 0x0002F0, "Wrong size on ABP_KuroISMGroup_C");
-static_assert(offsetof(ABP_KuroISMGroup_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_KuroISMGroup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_KuroISMGroup_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, HideLogicallyOnBeginPlay) == 0x0002C0, "Member 'ABP_KuroISMGroup_C::HideLogicallyOnBeginPlay' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, DitherProgress) == 0x0002C4, "Member 'ABP_KuroISMGroup_C::DitherProgress' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, Duration) == 0x0002C8, "Member 'ABP_KuroISMGroup_C::Duration' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, IsTick) == 0x0002CC, "Member 'ABP_KuroISMGroup_C::IsTick' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, DeltaSeconds) == 0x0002D0, "Member 'ABP_KuroISMGroup_C::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, Time) == 0x0002D4, "Member 'ABP_KuroISMGroup_C::Time' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, IsShow) == 0x0002D8, "Member 'ABP_KuroISMGroup_C::IsShow' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, ParameterName) == 0x0002DC, "Member 'ABP_KuroISMGroup_C::ParameterName' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, FloatPar_Start) == 0x0002E8, "Member 'ABP_KuroISMGroup_C::FloatPar_Start' has a wrong offset!");
-static_assert(offsetof(ABP_KuroISMGroup_C, FloatPar_End) == 0x0002EC, "Member 'ABP_KuroISMGroup_C::FloatPar_End' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_KuroISMGroup_C;
 
 }
 

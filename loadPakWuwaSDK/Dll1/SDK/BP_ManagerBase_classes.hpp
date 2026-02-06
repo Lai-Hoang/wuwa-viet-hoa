@@ -26,24 +26,24 @@ public:
 	class UBP_EventManager_C*                     事件管理器;                                        // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnLeaveWorld();
 	void 初始化(class UBP_MainGameInstance_C* 游戏实例_0);
+	void OnLeaveWorld();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ManagerBase_C">();
+		BP_STATIC_CLASS_IMPL("BP_ManagerBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ManagerBase_C")
 	}
 	static class UBP_ManagerBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ManagerBase_C>();
 	}
 };
-static_assert(alignof(UBP_ManagerBase_C) == 0x000008, "Wrong alignment on UBP_ManagerBase_C");
-static_assert(sizeof(UBP_ManagerBase_C) == 0x000048, "Wrong size on UBP_ManagerBase_C");
-static_assert(offsetof(UBP_ManagerBase_C, 游戏实例) == 0x000030, "Member 'UBP_ManagerBase_C::游戏实例' has a wrong offset!");
-static_assert(offsetof(UBP_ManagerBase_C, 界面管理器) == 0x000038, "Member 'UBP_ManagerBase_C::界面管理器' has a wrong offset!");
-static_assert(offsetof(UBP_ManagerBase_C, 事件管理器) == 0x000040, "Member 'UBP_ManagerBase_C::事件管理器' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ManagerBase_C;
 
 }
 

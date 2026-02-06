@@ -29,18 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_HitMeshData_C">();
+		BP_STATIC_CLASS_IMPL("PDA_HitMeshData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_HitMeshData_C")
 	}
 	static class UPDA_HitMeshData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_HitMeshData_C>();
 	}
 };
-static_assert(alignof(UPDA_HitMeshData_C) == 0x000010, "Wrong alignment on UPDA_HitMeshData_C");
-static_assert(sizeof(UPDA_HitMeshData_C) == 0x000080, "Wrong size on UPDA_HitMeshData_C");
-static_assert(offsetof(UPDA_HitMeshData_C, HitSkeletalMesh) == 0x000038, "Member 'UPDA_HitMeshData_C::HitSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(UPDA_HitMeshData_C, HitSkeletalMeshTransform) == 0x000040, "Member 'UPDA_HitMeshData_C::HitSkeletalMeshTransform' has a wrong offset!");
-static_assert(offsetof(UPDA_HitMeshData_C, LastTime) == 0x000070, "Member 'UPDA_HitMeshData_C::LastTime' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_HitMeshData_C;
 
 }
 

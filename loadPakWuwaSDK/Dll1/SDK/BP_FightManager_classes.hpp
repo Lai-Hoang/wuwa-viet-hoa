@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ERelation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_ManagerBase_classes.hpp"
 #include "ECamp_structs.hpp"
+#include "ERelation_structs.hpp"
 
 
 namespace SDK
@@ -63,33 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FightManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_FightManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FightManager_C")
 	}
 	static class UBP_FightManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FightManager_C>();
 	}
 };
-static_assert(alignof(UBP_FightManager_C) == 0x000008, "Wrong alignment on UBP_FightManager_C");
-static_assert(sizeof(UBP_FightManager_C) == 0x0001F0, "Wrong size on UBP_FightManager_C");
-static_assert(offsetof(UBP_FightManager_C, UberGraphFrame) == 0x000048, "Member 'UBP_FightManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 角色管理器) == 0x000050, "Member 'UBP_FightManager_C::角色管理器' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 初始化完成) == 0x000058, "Member 'UBP_FightManager_C::初始化完成' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 三消触发) == 0x000060, "Member 'UBP_FightManager_C::三消触发' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 击飞触发) == 0x000070, "Member 'UBP_FightManager_C::击飞触发' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 破白条触发) == 0x000080, "Member 'UBP_FightManager_C::破白条触发' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 三红触发) == 0x000090, "Member 'UBP_FightManager_C::三红触发' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 阵营关系数据) == 0x0000A0, "Member 'UBP_FightManager_C::阵营关系数据' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 队伍角色加载完成) == 0x0000A8, "Member 'UBP_FightManager_C::队伍角色加载完成' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, BPai数组) == 0x0000B8, "Member 'UBP_FightManager_C::BPai数组' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 怪物临时BPAI数组) == 0x000108, "Member 'UBP_FightManager_C::怪物临时BPAI数组' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 场景加载完成) == 0x000118, "Member 'UBP_FightManager_C::场景加载完成' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, Debug的对象集合) == 0x000120, "Member 'UBP_FightManager_C::Debug的对象集合' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 添加Debug的FightAttribute) == 0x000170, "Member 'UBP_FightManager_C::添加Debug的FightAttribute' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 删除Debug的FightAttribute) == 0x000180, "Member 'UBP_FightManager_C::删除Debug的FightAttribute' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 站位怪物数量) == 0x000190, "Member 'UBP_FightManager_C::站位怪物数量' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 受击类型覆盖表) == 0x0001E0, "Member 'UBP_FightManager_C::受击类型覆盖表' has a wrong offset!");
-static_assert(offsetof(UBP_FightManager_C, 攻击位数量) == 0x0001E8, "Member 'UBP_FightManager_C::攻击位数量' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FightManager_C;
 
 }
 

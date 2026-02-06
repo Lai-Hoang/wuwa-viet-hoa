@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "SMotorRailMoveConfig_SwitchRail_structs.hpp"
 #include "SMotorRailMoveConfig_Basic_structs.hpp"
+#include "SMotorRailMoveConfig_JumpOffRail_structs.hpp"
 #include "SMotorRailMoveConfig_DirectlyEnterRail_structs.hpp"
 #include "SMotorRailMoveConfig_AccelerateAlongRail_structs.hpp"
 #include "SMotorRailMoveConfig_JumpToRail_structs.hpp"
-#include "SMotorRailMoveConfig_SwitchRail_structs.hpp"
-#include "SMotorRailMoveConfig_JumpOffRail_structs.hpp"
 #include "SMotorRailMoveConfig_JumpAlongRail_structs.hpp"
 
 
@@ -50,23 +50,7 @@ public:
 	uint8                                         Pad_749[0x7];                                      // 0x0749(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSMotorRailMoveConfig_JumpAlongRail    JumpAlongRailConfig_56_1522AB8242F3E35D9A49BABC3648E43F; // 0x0750(0x00C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMoveConfig) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig");
-static_assert(sizeof(FSMotorRailMoveConfig) == 0x000810, "Wrong size on FSMotorRailMoveConfig");
-static_assert(offsetof(FSMotorRailMoveConfig, Remarks_66_61226226400DF46B9C56739A979D825C) == 0x000000, "Member 'FSMotorRailMoveConfig::Remarks_66_61226226400DF46B9C56739A979D825C' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableBasicConfig_57_05FC935D4BA607ABF80F30BA9B3D4026) == 0x000010, "Member 'FSMotorRailMoveConfig::EnableBasicConfig_57_05FC935D4BA607ABF80F30BA9B3D4026' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, BasicConfig_37_E90D29F947B49591D26BE2A63F4BF4C6) == 0x000018, "Member 'FSMotorRailMoveConfig::BasicConfig_37_E90D29F947B49591D26BE2A63F4BF4C6' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableDirectlyEnterRailConfig_58_52A576E64A909B4F2CB00EA4D554F05C) == 0x000348, "Member 'FSMotorRailMoveConfig::EnableDirectlyEnterRailConfig_58_52A576E64A909B4F2CB00EA4D554F05C' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, DirectlyEnterRailConfig_17_CA9F5A134A04B3936561CC8E0EF7C5E5) == 0x000350, "Member 'FSMotorRailMoveConfig::DirectlyEnterRailConfig_17_CA9F5A134A04B3936561CC8E0EF7C5E5' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableAccelerateAlongRailConfig_59_9BC211044F5AD2CCF39744A2A4C70F45) == 0x000418, "Member 'FSMotorRailMoveConfig::EnableAccelerateAlongRailConfig_59_9BC211044F5AD2CCF39744A2A4C70F45' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, AccelerateAlongRailConfig_20_D36F0CAC43B7497C993AFEA3A2827C3F) == 0x000420, "Member 'FSMotorRailMoveConfig::AccelerateAlongRailConfig_20_D36F0CAC43B7497C993AFEA3A2827C3F' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableJumpToRailConfig_60_13A1ED344C80AEB5C202769FC46DE299) == 0x0004D0, "Member 'FSMotorRailMoveConfig::EnableJumpToRailConfig_60_13A1ED344C80AEB5C202769FC46DE299' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, JumpToRailConfig_48_758FB7564D905B225EB9B3818DDCBCE3) == 0x0004D8, "Member 'FSMotorRailMoveConfig::JumpToRailConfig_48_758FB7564D905B225EB9B3818DDCBCE3' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableSwitchRailConfig_61_6676B4C9472C7B4225EBD0ABA8BD7E8F) == 0x0005A8, "Member 'FSMotorRailMoveConfig::EnableSwitchRailConfig_61_6676B4C9472C7B4225EBD0ABA8BD7E8F' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, SwitchRailConfig_67_6AE9F4154C75DC15FCABC9BCB7736526) == 0x0005B0, "Member 'FSMotorRailMoveConfig::SwitchRailConfig_67_6AE9F4154C75DC15FCABC9BCB7736526' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableJumpOffRailConfig_62_7CB29D3648DCD63CE33FF3A86380C4B7) == 0x000680, "Member 'FSMotorRailMoveConfig::EnableJumpOffRailConfig_62_7CB29D3648DCD63CE33FF3A86380C4B7' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, JumpOffRailConfig_55_BA210A764409F1B60E667D8BADF96E29) == 0x000688, "Member 'FSMotorRailMoveConfig::JumpOffRailConfig_55_BA210A764409F1B60E667D8BADF96E29' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, EnableJumpAlongRailConfig_63_2B38C2DC4AE05F16E49782AC1148CC4C) == 0x000748, "Member 'FSMotorRailMoveConfig::EnableJumpAlongRailConfig_63_2B38C2DC4AE05F16E49782AC1148CC4C' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig, JumpAlongRailConfig_56_1522AB8242F3E35D9A49BABC3648E43F) == 0x000750, "Member 'FSMotorRailMoveConfig::JumpAlongRailConfig_56_1522AB8242F3E35D9A49BABC3648E43F' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig;
 
 }
 

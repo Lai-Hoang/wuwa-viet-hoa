@@ -28,15 +28,7 @@ public:
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Order_20_DECB754B45CE78FBECB317B81273ABE0;         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSServerInfo) == 0x000008, "Wrong alignment on FSServerInfo");
-static_assert(sizeof(FSServerInfo) == 0x000048, "Wrong size on FSServerInfo");
-static_assert(offsetof(FSServerInfo, IP_2_2BD8E1694ED8A660FC6CD285369CA184) == 0x000000, "Member 'FSServerInfo::IP_2_2BD8E1694ED8A660FC6CD285369CA184' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Port_6_DC9B6B1D457C3645C6305D9A5924E500) == 0x000010, "Member 'FSServerInfo::Port_6_DC9B6B1D457C3645C6305D9A5924E500' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Name_4_16B8FFB349319220FF06AD9C0F3F66F0) == 0x000020, "Member 'FSServerInfo::Name_4_16B8FFB349319220FF06AD9C0F3F66F0' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Stream_9_685F05CF44A399E8DE4B2E8ED9075589) == 0x000030, "Member 'FSServerInfo::Stream_9_685F05CF44A399E8DE4B2E8ED9075589' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Editor_16_9A8D71F649547E4468D379AF5CFDFA99) == 0x000040, "Member 'FSServerInfo::Editor_16_9A8D71F649547E4468D379AF5CFDFA99' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Package_17_30D563B244651B2C7D330F848819F2CF) == 0x000041, "Member 'FSServerInfo::Package_17_30D563B244651B2C7D330F848819F2CF' has a wrong offset!");
-static_assert(offsetof(FSServerInfo, Order_20_DECB754B45CE78FBECB317B81273ABE0) == 0x000044, "Member 'FSServerInfo::Order_20_DECB754B45CE78FBECB317B81273ABE0' has a wrong offset!");
+DUMPER7_ASSERTS_FSServerInfo;
 
 }
 

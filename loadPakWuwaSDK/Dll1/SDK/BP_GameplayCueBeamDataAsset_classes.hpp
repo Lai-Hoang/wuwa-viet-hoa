@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SVectorArray_structs.hpp"
 #include "KuroUtility_classes.hpp"
+#include "SVectorArray_structs.hpp"
 
 
 namespace SDK
@@ -28,17 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_GameplayCueBeamDataAsset_C">();
+		BP_STATIC_CLASS_IMPL("BP_GameplayCueBeamDataAsset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_GameplayCueBeamDataAsset_C")
 	}
 	static class UBP_GameplayCueBeamDataAsset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_GameplayCueBeamDataAsset_C>();
 	}
 };
-static_assert(alignof(UBP_GameplayCueBeamDataAsset_C) == 0x000008, "Wrong alignment on UBP_GameplayCueBeamDataAsset_C");
-static_assert(sizeof(UBP_GameplayCueBeamDataAsset_C) == 0x000058, "Wrong size on UBP_GameplayCueBeamDataAsset_C");
-static_assert(offsetof(UBP_GameplayCueBeamDataAsset_C, TimeLine) == 0x000038, "Member 'UBP_GameplayCueBeamDataAsset_C::TimeLine' has a wrong offset!");
-static_assert(offsetof(UBP_GameplayCueBeamDataAsset_C, PointPositions) == 0x000048, "Member 'UBP_GameplayCueBeamDataAsset_C::PointPositions' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_GameplayCueBeamDataAsset_C;
 
 }
 

@@ -17,128 +17,55 @@
 namespace SDK
 {
 
-// Function BP_LightsGroup.BP_LightsGroup_C.LightsColorChange
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_LightsGroup.BP_LightsGroup_C.ExecuteUbergraph_BP_LightsGroup
+// (Final, UbergraphFunction)
 // Parameters:
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FLinearColor&              ColorOriginal_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FLinearColor&              ColorTarget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LightsGroup_C::LightsColorChange(float ElapsedTime, const struct FLinearColor& ColorOriginal_0, const struct FLinearColor& ColorTarget_0)
+void ABP_LightsGroup_C::ExecuteUbergraph_BP_LightsGroup(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "LightsColorChange");
+		Func = Class->GetFunction("BP_LightsGroup_C", "ExecuteUbergraph_BP_LightsGroup");
 
-	Params::BP_LightsGroup_C_LightsColorChange Parms{};
+	Params::BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup Parms{};
 
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.ColorOriginal_0 = std::move(ColorOriginal_0);
-	Parms.ColorTarget_0 = std::move(ColorTarget_0);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsColorChange
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_LightsGroup_C::ToggleLightsColorChange()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "ToggleLightsColorChange");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_LightsGroup.BP_LightsGroup_C.GetLightsIntensity
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_LightsGroup_C::GetLightsIntensity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "GetLightsIntensity");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_LightsGroup.BP_LightsGroup_C.Timer
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// float*                                  ElapsedTime                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LightsGroup_C::Timer(float* ElapsedTime)
+void ABP_LightsGroup_C::ReceiveTick(float DeltaSeconds_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "Timer");
+		Func = Class->GetFunction("BP_LightsGroup_C", "ReceiveTick");
 
-	Params::BP_LightsGroup_C_Timer Parms{};
+	Params::BP_LightsGroup_C_ReceiveTick Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ElapsedTime != nullptr)
-		*ElapsedTime = Parms.ElapsedTime;
-}
-
-
-// Function BP_LightsGroup.BP_LightsGroup_C.TurnOnLights
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_LightsGroup_C::TurnOnLights(float ElapsedTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "TurnOnLights");
-
-	Params::BP_LightsGroup_C_TurnOnLights Parms{};
-
-	Parms.ElapsedTime = ElapsedTime;
+	Parms.DeltaSeconds_0 = DeltaSeconds_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_LightsGroup.BP_LightsGroup_C.TurnOffLights
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_LightsGroup_C::TurnOffLights(float ElapsedTime)
+void ABP_LightsGroup_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "TurnOffLights");
-
-	Params::BP_LightsGroup_C_TurnOffLights Parms{};
-
-	Parms.ElapsedTime = ElapsedTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsIntensity
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_LightsGroup_C::ToggleLightsIntensity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "ToggleLightsIntensity");
+		Func = Class->GetFunction("BP_LightsGroup_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -164,55 +91,128 @@ void ABP_LightsGroup_C::ToggleLights(bool inEnable)
 }
 
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsIntensity
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_LightsGroup_C::ReceiveBeginPlay()
+void ABP_LightsGroup_C::ToggleLightsIntensity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_LightsGroup_C", "ToggleLightsIntensity");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_LightsGroup.BP_LightsGroup_C.TurnOffLights
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LightsGroup_C::ReceiveTick(float DeltaSeconds_0)
+void ABP_LightsGroup_C::TurnOffLights(float ElapsedTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_LightsGroup_C", "TurnOffLights");
 
-	Params::BP_LightsGroup_C_ReceiveTick Parms{};
+	Params::BP_LightsGroup_C_TurnOffLights Parms{};
 
-	Parms.DeltaSeconds_0 = DeltaSeconds_0;
+	Parms.ElapsedTime = ElapsedTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ExecuteUbergraph_BP_LightsGroup
-// (Final, UbergraphFunction)
+// Function BP_LightsGroup.BP_LightsGroup_C.TurnOnLights
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_LightsGroup_C::ExecuteUbergraph_BP_LightsGroup(int32 EntryPoint)
+void ABP_LightsGroup_C::TurnOnLights(float ElapsedTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LightsGroup_C", "ExecuteUbergraph_BP_LightsGroup");
+		Func = Class->GetFunction("BP_LightsGroup_C", "TurnOnLights");
 
-	Params::BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup Parms{};
+	Params::BP_LightsGroup_C_TurnOnLights Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.ElapsedTime = ElapsedTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_LightsGroup.BP_LightsGroup_C.Timer
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float*                                  ElapsedTime                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LightsGroup_C::Timer(float* ElapsedTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LightsGroup_C", "Timer");
+
+	Params::BP_LightsGroup_C_Timer Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ElapsedTime != nullptr)
+		*ElapsedTime = Parms.ElapsedTime;
+}
+
+
+// Function BP_LightsGroup.BP_LightsGroup_C.GetLightsIntensity
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_LightsGroup_C::GetLightsIntensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LightsGroup_C", "GetLightsIntensity");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsColorChange
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_LightsGroup_C::ToggleLightsColorChange()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LightsGroup_C", "ToggleLightsColorChange");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_LightsGroup.BP_LightsGroup_C.LightsColorChange
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              ColorOriginal_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              ColorTarget_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LightsGroup_C::LightsColorChange(float ElapsedTime, const struct FLinearColor& ColorOriginal_0, const struct FLinearColor& ColorTarget_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LightsGroup_C", "LightsColorChange");
+
+	Params::BP_LightsGroup_C_LightsColorChange Parms{};
+
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.ColorOriginal_0 = std::move(ColorOriginal_0);
+	Parms.ColorTarget_0 = std::move(ColorTarget_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -23,9 +23,7 @@ struct FKuroMovieSceneGamepadForceFeedbackTemplate final : public FMovieSceneEva
 public:
 	class UKuroMovieSceneGamepadForceFeedbackSection* Section;                                       // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FKuroMovieSceneGamepadForceFeedbackTemplate) == 0x000008, "Wrong alignment on FKuroMovieSceneGamepadForceFeedbackTemplate");
-static_assert(sizeof(FKuroMovieSceneGamepadForceFeedbackTemplate) == 0x000028, "Wrong size on FKuroMovieSceneGamepadForceFeedbackTemplate");
-static_assert(offsetof(FKuroMovieSceneGamepadForceFeedbackTemplate, Section) == 0x000020, "Member 'FKuroMovieSceneGamepadForceFeedbackTemplate::Section' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroMovieSceneGamepadForceFeedbackTemplate;
 
 }
 

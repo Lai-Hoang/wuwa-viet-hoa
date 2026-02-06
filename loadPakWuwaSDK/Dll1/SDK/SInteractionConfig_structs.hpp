@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EInteractionType_structs.hpp"
-#include "EinteractionIconType_structs.hpp"
 #include "SInteractionOption_structs.hpp"
+#include "EinteractionIconType_structs.hpp"
 
 
 namespace SDK
@@ -39,21 +39,7 @@ public:
 	EInteractionIconType                          图标类型_56_5BD4272C4CDE347B3BF3F9B2F8C339F8;      // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          是否添加离开选项_62_0436215F4BFF973DA373549A94F80073; // 0x00C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSInteractionConfig) == 0x000008, "Wrong alignment on FSInteractionConfig");
-static_assert(sizeof(FSInteractionConfig) == 0x0000D0, "Wrong size on FSInteractionConfig");
-static_assert(offsetof(FSInteractionConfig, ID_4_F9D5FFCE46F084732D40B49A6F053687) == 0x000000, "Member 'FSInteractionConfig::ID_4_F9D5FFCE46F084732D40B49A6F053687' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 组ID_5_3111FA634A367F5A70DB2CB2A658C436) == 0x00000C, "Member 'FSInteractionConfig::组ID_5_3111FA634A367F5A70DB2CB2A658C436' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 是否自动触发_36_D34FAEBF47B7898E83B1568C585CDE24) == 0x000018, "Member 'FSInteractionConfig::是否自动触发_36_D34FAEBF47B7898E83B1568C585CDE24' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互类型_38_BD474D7141B0B292CEE92588A0EF2E58) == 0x000019, "Member 'FSInteractionConfig::交互类型_38_BD474D7141B0B292CEE92588A0EF2E58' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互选项组_22_DB990F374D01D0FE67F5A1B342DF1C32) == 0x000020, "Member 'FSInteractionConfig::交互选项组_22_DB990F374D01D0FE67F5A1B342DF1C32' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互SequenceNetwrokID_27_29037D1E46BC732D0B3D9EA288DE4047) == 0x000030, "Member 'FSInteractionConfig::交互SequenceNetwrokID_27_29037D1E46BC732D0B3D9EA288DE4047' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互SequenceNetwrok_30_E2599AD641680E23E4F7D08AC3C225B1) == 0x000040, "Member 'FSInteractionConfig::交互SequenceNetwrok_30_E2599AD641680E23E4F7D08AC3C225B1' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互条件组ID_41_5423E110401331C3592FCD87B650AD11) == 0x000070, "Member 'FSInteractionConfig::交互条件组ID_41_5423E110401331C3592FCD87B650AD11' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 交互范围_48_86DCB60F408A5E0AB4BAD9A2DE77121A) == 0x00007C, "Member 'FSInteractionConfig::交互范围_48_86DCB60F408A5E0AB4BAD9A2DE77121A' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 描述_45_874B9EC0499BA148D53476908C19B16D) == 0x000080, "Member 'FSInteractionConfig::描述_45_874B9EC0499BA148D53476908C19B16D' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 图标路径_66_AB597BB24BCC2666DCB35CAA23CA4B88) == 0x000098, "Member 'FSInteractionConfig::图标路径_66_AB597BB24BCC2666DCB35CAA23CA4B88' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 图标类型_56_5BD4272C4CDE347B3BF3F9B2F8C339F8) == 0x0000C8, "Member 'FSInteractionConfig::图标类型_56_5BD4272C4CDE347B3BF3F9B2F8C339F8' has a wrong offset!");
-static_assert(offsetof(FSInteractionConfig, 是否添加离开选项_62_0436215F4BFF973DA373549A94F80073) == 0x0000C9, "Member 'FSInteractionConfig::是否添加离开选项_62_0436215F4BFF973DA373549A94F80073' has a wrong offset!");
+DUMPER7_ASSERTS_FSInteractionConfig;
 
 }
 

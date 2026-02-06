@@ -23,9 +23,7 @@ struct TemplateSequenceActor_SetBinding final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequenceActor_SetBinding) == 0x000008, "Wrong alignment on TemplateSequenceActor_SetBinding");
-static_assert(sizeof(TemplateSequenceActor_SetBinding) == 0x000008, "Wrong size on TemplateSequenceActor_SetBinding");
-static_assert(offsetof(TemplateSequenceActor_SetBinding, Actor) == 0x000000, "Member 'TemplateSequenceActor_SetBinding::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequenceActor_SetBinding;
 
 // Function TemplateSequence.TemplateSequenceActor.SetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -34,9 +32,7 @@ struct TemplateSequenceActor_SetSequence final
 public:
 	class UTemplateSequence*                      InSequence;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequenceActor_SetSequence) == 0x000008, "Wrong alignment on TemplateSequenceActor_SetSequence");
-static_assert(sizeof(TemplateSequenceActor_SetSequence) == 0x000008, "Wrong size on TemplateSequenceActor_SetSequence");
-static_assert(offsetof(TemplateSequenceActor_SetSequence, InSequence) == 0x000000, "Member 'TemplateSequenceActor_SetSequence::InSequence' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequenceActor_SetSequence;
 
 // Function TemplateSequence.TemplateSequenceActor.GetSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -45,9 +41,7 @@ struct TemplateSequenceActor_GetSequence final
 public:
 	class UTemplateSequence*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequenceActor_GetSequence) == 0x000008, "Wrong alignment on TemplateSequenceActor_GetSequence");
-static_assert(sizeof(TemplateSequenceActor_GetSequence) == 0x000008, "Wrong size on TemplateSequenceActor_GetSequence");
-static_assert(offsetof(TemplateSequenceActor_GetSequence, ReturnValue) == 0x000000, "Member 'TemplateSequenceActor_GetSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequenceActor_GetSequence;
 
 // Function TemplateSequence.TemplateSequenceActor.GetSequencePlayer
 // 0x0008 (0x0008 - 0x0000)
@@ -56,9 +50,7 @@ struct TemplateSequenceActor_GetSequencePlayer final
 public:
 	class UTemplateSequencePlayer*                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequenceActor_GetSequencePlayer) == 0x000008, "Wrong alignment on TemplateSequenceActor_GetSequencePlayer");
-static_assert(sizeof(TemplateSequenceActor_GetSequencePlayer) == 0x000008, "Wrong size on TemplateSequenceActor_GetSequencePlayer");
-static_assert(offsetof(TemplateSequenceActor_GetSequencePlayer, ReturnValue) == 0x000000, "Member 'TemplateSequenceActor_GetSequencePlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequenceActor_GetSequencePlayer;
 
 // Function TemplateSequence.TemplateSequenceActor.LoadSequence
 // 0x0008 (0x0008 - 0x0000)
@@ -67,9 +59,7 @@ struct TemplateSequenceActor_LoadSequence final
 public:
 	class UTemplateSequence*                      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequenceActor_LoadSequence) == 0x000008, "Wrong alignment on TemplateSequenceActor_LoadSequence");
-static_assert(sizeof(TemplateSequenceActor_LoadSequence) == 0x000008, "Wrong size on TemplateSequenceActor_LoadSequence");
-static_assert(offsetof(TemplateSequenceActor_LoadSequence, ReturnValue) == 0x000000, "Member 'TemplateSequenceActor_LoadSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequenceActor_LoadSequence;
 
 // Function TemplateSequence.TemplateSequencePlayer.CreateTemplateSequencePlayer
 // 0x0038 (0x0038 - 0x0000)
@@ -83,13 +73,7 @@ public:
 	class ATemplateSequenceActor*                 OutActor;                                          // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTemplateSequencePlayer*                ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TemplateSequencePlayer_CreateTemplateSequencePlayer) == 0x000008, "Wrong alignment on TemplateSequencePlayer_CreateTemplateSequencePlayer");
-static_assert(sizeof(TemplateSequencePlayer_CreateTemplateSequencePlayer) == 0x000038, "Wrong size on TemplateSequencePlayer_CreateTemplateSequencePlayer");
-static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, WorldContextObject) == 0x000000, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, TemplateSequence) == 0x000008, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::TemplateSequence' has a wrong offset!");
-static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, Settings) == 0x000010, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::Settings' has a wrong offset!");
-static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, OutActor) == 0x000028, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::OutActor' has a wrong offset!");
-static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, ReturnValue) == 0x000030, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TemplateSequencePlayer_CreateTemplateSequencePlayer;
 
 }
 

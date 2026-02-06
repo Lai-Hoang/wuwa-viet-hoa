@@ -33,16 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CommandService">();
+		STATIC_CLASS_IMPL("CommandService")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CommandService")
 	}
 	static class UCommandService* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCommandService>();
 	}
 };
-static_assert(alignof(UCommandService) == 0x000010, "Wrong alignment on UCommandService");
-static_assert(sizeof(UCommandService) == 0x000070, "Wrong size on UCommandService");
-static_assert(offsetof(UCommandService, OnReceivedCommand) == 0x000030, "Member 'UCommandService::OnReceivedCommand' has a wrong offset!");
+DUMPER7_ASSERTS_UCommandService;
 
 // Class KuroEditorRuntime.EditorRuntimeOperations
 // 0x0000 (0x0030 - 0x0030)
@@ -60,15 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"EditorRuntimeOperations">();
+		STATIC_CLASS_IMPL("EditorRuntimeOperations")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EditorRuntimeOperations")
 	}
 	static class UEditorRuntimeOperations* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEditorRuntimeOperations>();
 	}
 };
-static_assert(alignof(UEditorRuntimeOperations) == 0x000008, "Wrong alignment on UEditorRuntimeOperations");
-static_assert(sizeof(UEditorRuntimeOperations) == 0x000030, "Wrong size on UEditorRuntimeOperations");
+DUMPER7_ASSERTS_UEditorRuntimeOperations;
 
 }
 

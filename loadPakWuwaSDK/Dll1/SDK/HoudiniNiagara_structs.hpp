@@ -55,9 +55,7 @@ struct FPointIndexes final
 public:
 	TArray<int32>                                 SampleIndexes;                                     // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPointIndexes) == 0x000008, "Wrong alignment on FPointIndexes");
-static_assert(sizeof(FPointIndexes) == 0x000010, "Wrong size on FPointIndexes");
-static_assert(offsetof(FPointIndexes, SampleIndexes) == 0x000000, "Member 'FPointIndexes::SampleIndexes' has a wrong offset!");
+DUMPER7_ASSERTS_FPointIndexes;
 
 // ScriptStruct HoudiniNiagara.HoudiniEvent
 // 0x0048 (0x0048 - 0x0000)
@@ -74,17 +72,7 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0034(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Type;                                              // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniEvent) == 0x000004, "Wrong alignment on FHoudiniEvent");
-static_assert(sizeof(FHoudiniEvent) == 0x000048, "Wrong size on FHoudiniEvent");
-static_assert(offsetof(FHoudiniEvent, Position) == 0x000000, "Member 'FHoudiniEvent::Position' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Normal) == 0x00000C, "Member 'FHoudiniEvent::Normal' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Impulse) == 0x000018, "Member 'FHoudiniEvent::Impulse' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Velocity) == 0x00001C, "Member 'FHoudiniEvent::Velocity' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, PointID) == 0x000028, "Member 'FHoudiniEvent::PointID' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Time) == 0x00002C, "Member 'FHoudiniEvent::Time' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Life) == 0x000030, "Member 'FHoudiniEvent::Life' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Color) == 0x000034, "Member 'FHoudiniEvent::Color' has a wrong offset!");
-static_assert(offsetof(FHoudiniEvent, Type) == 0x000044, "Member 'FHoudiniEvent::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniEvent;
 
 }
 

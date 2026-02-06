@@ -28,16 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BTComposite_ParallelNode">();
+		STATIC_CLASS_IMPL("BTComposite_ParallelNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BTComposite_ParallelNode")
 	}
 	static class UBTComposite_ParallelNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBTComposite_ParallelNode>();
 	}
 };
-static_assert(alignof(UBTComposite_ParallelNode) == 0x000008, "Wrong alignment on UBTComposite_ParallelNode");
-static_assert(sizeof(UBTComposite_ParallelNode) == 0x0000A0, "Wrong size on UBTComposite_ParallelNode");
-static_assert(offsetof(UBTComposite_ParallelNode, Test) == 0x000098, "Member 'UBTComposite_ParallelNode::Test' has a wrong offset!");
+DUMPER7_ASSERTS_UBTComposite_ParallelNode;
 
 // Class KuroAI.BTComposite_Random
 // 0x0030 (0x00C8 - 0x0098)
@@ -52,19 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BTComposite_Random">();
+		STATIC_CLASS_IMPL("BTComposite_Random")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BTComposite_Random")
 	}
 	static class UBTComposite_Random* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBTComposite_Random>();
 	}
 };
-static_assert(alignof(UBTComposite_Random) == 0x000008, "Wrong alignment on UBTComposite_Random");
-static_assert(sizeof(UBTComposite_Random) == 0x0000C8, "Wrong size on UBTComposite_Random");
-static_assert(offsetof(UBTComposite_Random, Weights) == 0x000098, "Member 'UBTComposite_Random::Weights' has a wrong offset!");
-static_assert(offsetof(UBTComposite_Random, WeightIncrements) == 0x0000A8, "Member 'UBTComposite_Random::WeightIncrements' has a wrong offset!");
-static_assert(offsetof(UBTComposite_Random, ResetTime) == 0x0000B8, "Member 'UBTComposite_Random::ResetTime' has a wrong offset!");
-static_assert(offsetof(UBTComposite_Random, Key) == 0x0000BC, "Member 'UBTComposite_Random::Key' has a wrong offset!");
+DUMPER7_ASSERTS_UBTComposite_Random;
 
 // Class KuroAI.BTDecorator_ForceFailure
 // 0x0000 (0x0070 - 0x0070)
@@ -73,15 +74,18 @@ class UBTDecorator_ForceFailure final : public UBTDecorator
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BTDecorator_ForceFailure">();
+		STATIC_CLASS_IMPL("BTDecorator_ForceFailure")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BTDecorator_ForceFailure")
 	}
 	static class UBTDecorator_ForceFailure* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBTDecorator_ForceFailure>();
 	}
 };
-static_assert(alignof(UBTDecorator_ForceFailure) == 0x000008, "Wrong alignment on UBTDecorator_ForceFailure");
-static_assert(sizeof(UBTDecorator_ForceFailure) == 0x000070, "Wrong size on UBTDecorator_ForceFailure");
+DUMPER7_ASSERTS_UBTDecorator_ForceFailure;
 
 // Class KuroAI.KuroAILibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -94,15 +98,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAILibrary">();
+		STATIC_CLASS_IMPL("KuroAILibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAILibrary")
 	}
 	static class UKuroAILibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAILibrary>();
 	}
 };
-static_assert(alignof(UKuroAILibrary) == 0x000008, "Wrong alignment on UKuroAILibrary");
-static_assert(sizeof(UKuroAILibrary) == 0x000030, "Wrong size on UKuroAILibrary");
+DUMPER7_ASSERTS_UKuroAILibrary;
 
 }
 

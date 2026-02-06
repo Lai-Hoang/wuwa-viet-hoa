@@ -54,37 +54,7 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SeqCustomComp_C_ProcessEye) == 0x000004, "Wrong alignment on SeqCustomComp_C_ProcessEye");
-static_assert(sizeof(SeqCustomComp_C_ProcessEye) == 0x0000DC, "Wrong size on SeqCustomComp_C_ProcessEye");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, EyeLookAt) == 0x000000, "Member 'SeqCustomComp_C_ProcessEye::EyeLookAt' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, AngleScale) == 0x00000C, "Member 'SeqCustomComp_C_ProcessEye::AngleScale' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_BreakVector_X) == 0x000010, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_BreakVector_Y) == 0x000014, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_BreakVector_Z) == 0x000018, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Abs_ReturnValue) == 0x00001C, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000020, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Abs_ReturnValue_1) == 0x000024, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000028, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x00002C, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_FClamp_ReturnValue) == 0x000030, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue) == 0x000034, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_1) == 0x000044, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_2) == 0x000054, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_2' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_3) == 0x000064, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_3' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue) == 0x000074, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_1) == 0x000078, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_4) == 0x00007C, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_4' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_2) == 0x00008C, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_5) == 0x000090, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_5' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_3) == 0x0000A0, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_4) == 0x0000A4, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_5) == 0x0000A8, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0000AC, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_FClamp_ReturnValue_1) == 0x0000B0, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_6) == 0x0000B4, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_6' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, K2Node_MakeStruct_NamedCurveValue_7) == 0x0000C4, "Member 'SeqCustomComp_C_ProcessEye::K2Node_MakeStruct_NamedCurveValue_7' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_6) == 0x0000D4, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_ProcessEye, CallFunc_Array_Add_ReturnValue_7) == 0x0000D8, "Member 'SeqCustomComp_C_ProcessEye::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
+DUMPER7_ASSERTS_SeqCustomComp_C_ProcessEye;
 
 // Function SeqCustomComp.SeqCustomComp_C.Set Vector Data
 // 0x0070 (0x0070 - 0x0000)
@@ -96,12 +66,7 @@ public:
 	struct FVector                                CallFunc_Map_Find_Value;                           // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SeqCustomComp_C_Set_Vector_Data) == 0x000008, "Wrong alignment on SeqCustomComp_C_Set_Vector_Data");
-static_assert(sizeof(SeqCustomComp_C_Set_Vector_Data) == 0x000070, "Wrong size on SeqCustomComp_C_Set_Vector_Data");
-static_assert(offsetof(SeqCustomComp_C_Set_Vector_Data, Name_0) == 0x000000, "Member 'SeqCustomComp_C_Set_Vector_Data::Name_0' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_Set_Vector_Data, ___name_Variable) == 0x000050, "Member 'SeqCustomComp_C_Set_Vector_Data::___name_Variable' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_Set_Vector_Data, CallFunc_Map_Find_Value) == 0x00005C, "Member 'SeqCustomComp_C_Set_Vector_Data::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_Set_Vector_Data, CallFunc_Map_Find_ReturnValue) == 0x000068, "Member 'SeqCustomComp_C_Set_Vector_Data::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqCustomComp_C_Set_Vector_Data;
 
 // Function SeqCustomComp.SeqCustomComp_C.GetCurveValue
 // 0x0010 (0x0010 - 0x0000)
@@ -111,10 +76,7 @@ public:
 	class FName                                   CurveName;                                         // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SeqCustomComp_C_GetCurveValue) == 0x000004, "Wrong alignment on SeqCustomComp_C_GetCurveValue");
-static_assert(sizeof(SeqCustomComp_C_GetCurveValue) == 0x000010, "Wrong size on SeqCustomComp_C_GetCurveValue");
-static_assert(offsetof(SeqCustomComp_C_GetCurveValue, CurveName) == 0x000000, "Member 'SeqCustomComp_C_GetCurveValue::CurveName' has a wrong offset!");
-static_assert(offsetof(SeqCustomComp_C_GetCurveValue, ReturnValue) == 0x00000C, "Member 'SeqCustomComp_C_GetCurveValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqCustomComp_C_GetCurveValue;
 
 // Function SeqCustomComp.SeqCustomComp_C.GetCurves
 // 0x0010 (0x0010 - 0x0000)
@@ -123,9 +85,7 @@ struct SeqCustomComp_C_GetCurves final
 public:
 	TArray<struct FNamedCurveValue>               OutValues;                                         // 0x0000(0x0010)(Parm, OutParm)
 };
-static_assert(alignof(SeqCustomComp_C_GetCurves) == 0x000008, "Wrong alignment on SeqCustomComp_C_GetCurves");
-static_assert(sizeof(SeqCustomComp_C_GetCurves) == 0x000010, "Wrong size on SeqCustomComp_C_GetCurves");
-static_assert(offsetof(SeqCustomComp_C_GetCurves, OutValues) == 0x000000, "Member 'SeqCustomComp_C_GetCurves::OutValues' has a wrong offset!");
+DUMPER7_ASSERTS_SeqCustomComp_C_GetCurves;
 
 // Function SeqCustomComp.SeqCustomComp_C.GetBindingName
 // 0x000C (0x000C - 0x0000)
@@ -134,9 +94,7 @@ struct SeqCustomComp_C_GetBindingName final
 public:
 	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SeqCustomComp_C_GetBindingName) == 0x000004, "Wrong alignment on SeqCustomComp_C_GetBindingName");
-static_assert(sizeof(SeqCustomComp_C_GetBindingName) == 0x00000C, "Wrong size on SeqCustomComp_C_GetBindingName");
-static_assert(offsetof(SeqCustomComp_C_GetBindingName, ReturnValue) == 0x000000, "Member 'SeqCustomComp_C_GetBindingName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SeqCustomComp_C_GetBindingName;
 
 }
 

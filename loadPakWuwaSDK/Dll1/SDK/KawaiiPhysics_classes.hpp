@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KawaiiPhysicsConfig">();
+		STATIC_CLASS_IMPL("KawaiiPhysicsConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KawaiiPhysicsConfig")
 	}
 	static class UKawaiiPhysicsConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKawaiiPhysicsConfig>();
 	}
 };
-static_assert(alignof(UKawaiiPhysicsConfig) == 0x000008, "Wrong alignment on UKawaiiPhysicsConfig");
-static_assert(sizeof(UKawaiiPhysicsConfig) == 0x000038, "Wrong size on UKawaiiPhysicsConfig");
-static_assert(offsetof(UKawaiiPhysicsConfig, bEnableSimulate) == 0x000030, "Member 'UKawaiiPhysicsConfig::bEnableSimulate' has a wrong offset!");
-static_assert(offsetof(UKawaiiPhysicsConfig, SimulateAllowLOD) == 0x000034, "Member 'UKawaiiPhysicsConfig::SimulateAllowLOD' has a wrong offset!");
+DUMPER7_ASSERTS_UKawaiiPhysicsConfig;
 
 // Class KawaiiPhysics.KawaiiPhysicsLimitsDataAsset
 // 0x0030 (0x0068 - 0x0038)
@@ -54,18 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KawaiiPhysicsLimitsDataAsset">();
+		STATIC_CLASS_IMPL("KawaiiPhysicsLimitsDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KawaiiPhysicsLimitsDataAsset")
 	}
 	static class UKawaiiPhysicsLimitsDataAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKawaiiPhysicsLimitsDataAsset>();
 	}
 };
-static_assert(alignof(UKawaiiPhysicsLimitsDataAsset) == 0x000008, "Wrong alignment on UKawaiiPhysicsLimitsDataAsset");
-static_assert(sizeof(UKawaiiPhysicsLimitsDataAsset) == 0x000068, "Wrong size on UKawaiiPhysicsLimitsDataAsset");
-static_assert(offsetof(UKawaiiPhysicsLimitsDataAsset, SphericalLimits) == 0x000038, "Member 'UKawaiiPhysicsLimitsDataAsset::SphericalLimits' has a wrong offset!");
-static_assert(offsetof(UKawaiiPhysicsLimitsDataAsset, CapsuleLimits) == 0x000048, "Member 'UKawaiiPhysicsLimitsDataAsset::CapsuleLimits' has a wrong offset!");
-static_assert(offsetof(UKawaiiPhysicsLimitsDataAsset, PlanarLimits) == 0x000058, "Member 'UKawaiiPhysicsLimitsDataAsset::PlanarLimits' has a wrong offset!");
+DUMPER7_ASSERTS_UKawaiiPhysicsLimitsDataAsset;
 
 }
 

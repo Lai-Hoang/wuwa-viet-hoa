@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function BP_RippleSwim.BP_RippleSwim_C.ExecuteUbergraph_BP_RippleSwim
-// 0x0F80 (0x0F80 - 0x0000)
+// 0x0FA0 (0x0FA0 - 0x0000)
 struct BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim final
 {
 public:
@@ -323,602 +323,198 @@ public:
 	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0878(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_4; // 0x0880(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_4;     // 0x0890(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x0891(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0892(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_893[0x1];                                      // 0x0893(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Variable_3;                                 // 0x0894(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0898(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0899(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x089A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x089B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x089C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x08A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8A1[0x7];                                      // 0x08A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         ___object_Variable;                                // 0x08A8(0x0010)(ConstParm, ReferenceParm)
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_11;        // 0x08B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UKuroEnviInteractionComponent*          CallFunc_GetComponentByClass_ReturnValue_3;        // 0x08C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x08C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8C9[0x7];                                      // 0x08C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroEnviInteractionData               CallFunc_GetEnviInteractionData_ReturnValue;       // 0x08D0(0x00C8)(ContainsInstancedReference)
-	float                                         CallFunc_Abs_ReturnValue;                          // 0x0998(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x099C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_99D[0x3];                                      // 0x099D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_CheckAndSetPos_LastRippleTime;            // 0x09A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x09A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_2;            // 0x09A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x09A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A7[0x1];                                      // 0x09A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_12;        // 0x09A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_4;        // 0x09B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_5; // 0x09B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_5;     // 0x09C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9C9[0x3];                                      // 0x09C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector2D_X_4;                        // 0x09CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_4;                        // 0x09D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9D4[0x4];                                      // 0x09D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_13;        // 0x09D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_14;        // 0x09E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_4;           // 0x09E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_K2_AddActorWorldOffset_SweepHitResult;  // 0x0A00(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_A94[0x4];                                      // 0x0A94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0A98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0AA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0AA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_3; // 0x0AB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_4; // 0x0AB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_5; // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_6; // 0x0AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_ReturnValue_5;                   // 0x0AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0AD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AD2[0x6];                                      // 0x0AD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0AD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0AF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AF4[0x4];                                      // 0x0AF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_15;        // 0x0AF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_5;                        // 0x0B00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_5;                        // 0x0B04(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_5;           // 0x0B08(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             ___struct_Variable;                                // 0x0B20(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	class UChildActorComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0B50(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_6;                        // 0x0B58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_6;                        // 0x0B5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor_4;                   // 0x0B60(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize2D_ReturnValue;                      // 0x0B70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x0B74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0B78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B79[0x3];                                      // 0x0B79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_Normal2D_ReturnValue;                     // 0x0B7C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue;       // 0x0B84(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_1;     // 0x0B8C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B94[0x4];                                      // 0x0B94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_13;        // 0x0B98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_ReturnValue_6;                   // 0x0BA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BA1[0x7];                                      // 0x0BA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_6;      // 0x0BA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_10;                // 0x0BC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BC1[0x3];                                      // 0x0BC1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_2;     // 0x0BC4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_D_Greater_FloatFloat_ReturnValue_4;       // 0x0BCC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BCD[0x3];                                      // 0x0BCD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_14;        // 0x0BD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_5;        // 0x0BD8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_7;      // 0x0BE0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_6; // 0x0BF8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_6;     // 0x0C08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C09[0x3];                                      // 0x0C09(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0C0C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_7; // 0x0C18(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_7;     // 0x0C28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C29[0x3];                                      // 0x0C29(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0C2C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0C38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_891[0x7];                                      // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_5; // 0x0898(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_5;     // 0x08A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x08A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_2;          // 0x08AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x08AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x08AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x08AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8AE[0x2];                                      // 0x08AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Variable_3;                                 // 0x08B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x08B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8B5[0x3];                                      // 0x08B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x08B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x08BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8BD[0x3];                                      // 0x08BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         ___object_Variable;                                // 0x08C0(0x0010)(ConstParm, ReferenceParm)
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_11;        // 0x08D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UKuroEnviInteractionComponent*          CallFunc_GetComponentByClass_ReturnValue_3;        // 0x08D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x08E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8E1[0x7];                                      // 0x08E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroEnviInteractionData               CallFunc_GetEnviInteractionData_ReturnValue;       // 0x08E8(0x00D8)(ContainsInstancedReference)
+	float                                         CallFunc_Abs_ReturnValue;                          // 0x09C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x09C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9C5[0x3];                                      // 0x09C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_CheckAndSetPos_LastRippleTime;            // 0x09C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x09CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue_2;            // 0x09CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x09CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9CF[0x1];                                      // 0x09CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_12;        // 0x09D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_4;        // 0x09D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_6; // 0x09E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_6;     // 0x09F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9F1[0x3];                                      // 0x09F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector2D_X_4;                        // 0x09F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_4;                        // 0x09F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9FC[0x4];                                      // 0x09FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_13;        // 0x0A00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_14;        // 0x0A08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_4;           // 0x0A10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_D_K2_AddActorWorldOffset_SweepHitResult;  // 0x0A28(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_ABC[0x4];                                      // 0x0ABC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0AD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_3; // 0x0AD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_4; // 0x0AE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_5; // 0x0AE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_6; // 0x0AF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_ReturnValue_5;                   // 0x0AF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x0AF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AFA[0x6];                                      // 0x0AFA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0B00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0B18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1C[0x4];                                      // 0x0B1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_15;        // 0x0B20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_5;                        // 0x0B28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_5;                        // 0x0B2C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_5;           // 0x0B30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B48[0x8];                                      // 0x0B48(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ___struct_Variable;                                // 0x0B50(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	class UChildActorComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0B80(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_6;                        // 0x0B88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_6;                        // 0x0B8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor_4;                   // 0x0B90(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSize2D_ReturnValue;                      // 0x0BA0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x0BA4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0BA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BA9[0x3];                                      // 0x0BA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Normal2D_ReturnValue;                     // 0x0BAC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue;       // 0x0BB4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_1;     // 0x0BBC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC4[0x4];                                      // 0x0BC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_13;        // 0x0BC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_ReturnValue_6;                   // 0x0BD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD1[0x7];                                      // 0x0BD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_6;      // 0x0BD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0BF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BF1[0x3];                                      // 0x0BF1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_2;     // 0x0BF4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_D_Greater_FloatFloat_ReturnValue_4;       // 0x0BFC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BFD[0x3];                                      // 0x0BFD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_14;        // 0x0C00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_5;        // 0x0C08(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_7;      // 0x0C10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_7; // 0x0C28(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_7;     // 0x0C38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_C39[0x3];                                      // 0x0C39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X_2;                          // 0x0C3C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_2;                          // 0x0C40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_2;                          // 0x0C44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_11;                // 0x0C48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C49[0x3];                                      // 0x0C49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x0C4C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C54[0x4];                                      // 0x0C54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_8; // 0x0C58(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_8;     // 0x0C68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0C69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C6A[0x2];                                      // 0x0C6A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue_5;            // 0x0C6C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0C78(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0C88(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_3;     // 0x0C94(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_4;     // 0x0C9C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Multiply_Vector2DVector2D_ReturnValue;    // 0x0CA4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_Add_Vector2DFloat_ReturnValue;            // 0x0CAC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_X_7;                        // 0x0CB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_7;                        // 0x0CB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CBC[0x4];                                      // 0x0CBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_16;        // 0x0CC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_17;        // 0x0CC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_6;           // 0x0CD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue;           // 0x0CE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue_6;            // 0x0D00(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_D_Greater_FloatFloat_ReturnValue_5;       // 0x0D0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D0D[0x3];                                      // 0x0D0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue_1;    // 0x0D10(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue_1;   // 0x0D20(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0D2C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D2D[0x3];                                      // 0x0D2D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Vector_Distance2D_ReturnValue;            // 0x0D30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Vector_Distance2D_ReturnValue_1;          // 0x0D34(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x0D38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x0D39(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_12;                // 0x0D3A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_13;                // 0x0D3B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x0D3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x0D3D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D3E[0x2];                                      // 0x0D3E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_GetCharacterGravityDirect_ReturnValue;    // 0x0D40(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue;       // 0x0D58(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue_1;     // 0x0D70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_15;        // 0x0D88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_8;      // 0x0D90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_Subtract_VectorVector_ReturnValue;      // 0x0DA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue_1;         // 0x0DC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_LineTraceSingle_OutHit;                 // 0x0DD8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_D_LineTraceSingle_ReturnValue;            // 0x0E6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0E6D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0E6E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E6F[0x1];                                      // 0x0E6F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0E70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0E74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0E78(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0E84(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0E90(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0E9C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0EA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0EB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0EB8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0EC0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0ECC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0ED0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0ED4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0EE0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0EEC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0EF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0EF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0EF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0EFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0F00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F04[0x4];                                      // 0x0F04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_16;        // 0x0F08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0F10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F14[0x4];                                      // 0x0F14(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_6;        // 0x0F18(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x0F20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F24[0x4];                                      // 0x0F24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_9; // 0x0F28(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_9;     // 0x0F38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F39[0x3];                                      // 0x0F39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0F3C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_10; // 0x0F40(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_10;    // 0x0F50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x0F51(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F52[0x2];                                      // 0x0F52(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Variable_4;                                 // 0x0F54(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_14;                // 0x0F58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F59[0x3];                                      // 0x0F59(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0F5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_5;         // 0x0F60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0F61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F62[0x2];                                      // 0x0F62(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0F64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0F68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0F6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x0F70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0C3C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_8; // 0x0C48(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_8;     // 0x0C58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C59[0x3];                                      // 0x0C59(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0C5C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0C68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C69[0x3];                                      // 0x0C69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X_2;                          // 0x0C6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_2;                          // 0x0C70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_2;                          // 0x0C74(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_9; // 0x0C78(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_9;     // 0x0C88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C89[0x3];                                      // 0x0C89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x0C8C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x0C94(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C95[0x3];                                      // 0x0C95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue_5;            // 0x0C98(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0CA4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0CB4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_3;     // 0x0CC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Multiply_Vector2DFloat_ReturnValue_4;     // 0x0CC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Multiply_Vector2DVector2D_ReturnValue;    // 0x0CD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_Add_Vector2DFloat_ReturnValue;            // 0x0CD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_X_7;                        // 0x0CE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_7;                        // 0x0CE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_16;        // 0x0CE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_17;        // 0x0CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_6;           // 0x0CF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue;           // 0x0D10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue_6;            // 0x0D28(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_D_Greater_FloatFloat_ReturnValue_5;       // 0x0D34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D35[0x3];                                      // 0x0D35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue_1;    // 0x0D38(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue_1;   // 0x0D48(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0D54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D55[0x3];                                      // 0x0D55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Vector_Distance2D_ReturnValue;            // 0x0D58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Vector_Distance2D_ReturnValue_1;          // 0x0D5C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x0D60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x0D61(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_10;                // 0x0D62(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_11;                // 0x0D63(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x0D64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x0D65(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D66[0x2];                                      // 0x0D66(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_GetCharacterGravityDirect_ReturnValue;    // 0x0D68(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue;       // 0x0D80(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue_1;     // 0x0D98(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_15;        // 0x0DB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_8;      // 0x0DB8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_Subtract_VectorVector_ReturnValue;      // 0x0DD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue_1;         // 0x0DE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_D_LineTraceSingle_OutHit;                 // 0x0E00(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_D_LineTraceSingle_ReturnValue;            // 0x0E94(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0E95(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0E96(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E97[0x1];                                      // 0x0E97(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0E98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0E9C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0EA0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0EAC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0EB8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0EC4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0ED0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0ED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0EE0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0EE8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0EF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0EF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0EFC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0F08(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0F14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0F18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0F1C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0F20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0F24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0F28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2C[0x4];                                      // 0x0F2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_16;        // 0x0F30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0F38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F3C[0x4];                                      // 0x0F3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_6;        // 0x0F40(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x0F48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F4C[0x4];                                      // 0x0F4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_10; // 0x0F50(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_10;    // 0x0F60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F61[0x3];                                      // 0x0F61(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0F64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_11; // 0x0F68(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_11;    // 0x0F78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_7;                  // 0x0F79(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F7A[0x2];                                      // 0x0F7A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Variable_4;                                 // 0x0F7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_5;         // 0x0F80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F81[0x3];                                      // 0x0F81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0F84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0F88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F89[0x3];                                      // 0x0F89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0F8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0F90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_2;             // 0x0F94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_3;             // 0x0F98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim) == 0x000010, "Wrong alignment on BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim");
-static_assert(sizeof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim) == 0x000F80, "Wrong size on BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, EntryPoint) == 0x000000, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000008, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000018, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000020, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000030, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetGameUserSettings_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetGameQualitySettingLevel_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetGameQualitySettingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Array_Index_Variable) == 0x000044, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_IntInt_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToString_ReturnValue) == 0x000050, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue) == 0x000060, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_StringToName_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue) == 0x000084, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_ImpactPoint_3) == 0x000090, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_ImpactPoint_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Config_3) == 0x0000A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Config_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_OriginPoint_3) == 0x0000B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_OriginPoint_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Id_3) == 0x0000C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Id_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Choose_Available_Point_AvailblePoint) == 0x0000D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Choose_Available_Point_AvailblePoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_2) == 0x0000E8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x0000F0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue) == 0x000108, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_1) == 0x000109, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsCurrentPlatformPC_ReturnValue) == 0x00010A, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsCurrentPlatformPC_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_3) == 0x000110, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000118, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_1) == 0x000120, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_1) == 0x000130, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_2) == 0x000138, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_2) == 0x000148, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_3) == 0x000150, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_3) == 0x000160, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Array_Index_Variable_1) == 0x000164, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000168, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000178, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_StringToName_ReturnValue_1) == 0x000188, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_StringToName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_1) == 0x000194, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_4) == 0x0001A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_DynamicCast_AsTs_Base_Character) == 0x0001A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_DynamicCast_bSuccess) == 0x0001B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_SwitchInteger_CmpSuccess) == 0x0001B1, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetInWater_ReturnValue) == 0x0001B2, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetInWater_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x0001B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x0001C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcTexCoord_TexCoord) == 0x0001C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcTexCoord_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_X) == 0x0001D4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Y) == 0x0001D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Z) == 0x0001DC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVector2D_ReturnValue) == 0x0001E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcTexCoord_TexCoord_1) == 0x0001E8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcTexCoord_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_VectorToString_ReturnValue) == 0x0001F8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_VectorToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_X_1) == 0x000208, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Y_1) == 0x00020C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Z_1) == 0x000210, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000218, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVector2D_ReturnValue_1) == 0x000228, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000230, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_Event_DeltaSeconds) == 0x000240, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Conv_FloatToString_ReturnValue) == 0x000248, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Conv_FloatToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_FloatFloat_ReturnValue) == 0x000258, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000260, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue) == 0x000270, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_ImpactPoint_2) == 0x000278, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_ImpactPoint_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Config_2) == 0x000290, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Config_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_OriginPoint_2) == 0x000298, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_OriginPoint_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Id_2) == 0x0002B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Id_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Choose_Available_Point_AvailblePoint_1) == 0x0002B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Choose_Available_Point_AvailblePoint_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_X) == 0x0002D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Y) == 0x0002D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Z) == 0x0002E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue) == 0x0002E8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Add_ReturnValue) == 0x000300, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000304, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue) == 0x000308, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue) == 0x00030C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000310, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Max_ReturnValue) == 0x000314, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_1) == 0x000318, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_IntInt_ReturnValue) == 0x00031C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPointsV3_Vaild) == 0x00031D, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPointsV3_Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPointsV3_P_0) == 0x000320, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPointsV3_P_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPointsV3_P_1) == 0x000328, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPointsV3_P_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPointsV3_P_2) == 0x000330, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPointsV3_P_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPointsV3_P_3) == 0x000338, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPointsV3_P_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000340, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_5) == 0x000348, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CatmullRomPoints_CurveList) == 0x000350, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CatmullRomPoints_CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000360, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Get_Item) == 0x000378, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_X_1) == 0x000380, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Y_1) == 0x000388, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Z_1) == 0x000390, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X) == 0x000398, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y) == 0x00039C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_2) == 0x0003A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_2) == 0x0003A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_3) == 0x0003B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x0003B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_1) == 0x0003D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_2) == 0x0003D1, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_6) == 0x0003D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_2) == 0x0003E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcTexCoord2D_TexCoord) == 0x0003F8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcTexCoord2D_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_1) == 0x000400, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_1) == 0x000404, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_MakeStruct_LinearColor) == 0x000408, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_2) == 0x000418, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_3) == 0x000419, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_3) == 0x00041C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000420, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Loop_Counter_Variable) == 0x000424, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_IntInt_ReturnValue_1) == 0x000428, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue) == 0x00042C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_4) == 0x000430, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000434, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_Has_Been_Initd_Variable) == 0x000438, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_5) == 0x00043C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x000440, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000444, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcDistance2D_Distance) == 0x000448, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcDistance2D_Distance' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_6) == 0x000450, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Loop_Counter_Variable_1) == 0x000454, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000458, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_1) == 0x00045C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_IsClosed_Variable) == 0x000460, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_4) == 0x000468, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_7) == 0x000470, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue_1) == 0x000474, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x000478, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x00047C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcDistance2D_Distance_1) == 0x000480, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcDistance2D_Distance_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_5) == 0x000488, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetBpEventManager_ReturnValue) == 0x000490, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetBpEventManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_DynamicCast_AsBP_Event_Manager) == 0x000498, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_DynamicCast_AsBP_Event_Manager' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_DynamicCast_bSuccess_1) == 0x0004A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_ImpactPoint_1) == 0x0004A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_ImpactPoint_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Config_1) == 0x0004C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Config_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_OriginPoint_1) == 0x0004C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_OriginPoint_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Id_1) == 0x0004E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Id_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Choose_Available_Point_AvailblePoint_2) == 0x0004E8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Choose_Available_Point_AvailblePoint_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_SwitchInteger_CmpSuccess_1) == 0x000500, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_SwitchInteger_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_Has_Been_Initd_Variable_1) == 0x000501, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_SwitchInteger_CmpSuccess_2) == 0x000502, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_SwitchInteger_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_ImpactPoint) == 0x000508, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Config) == 0x000520, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Config' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_OriginPoint) == 0x000528, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_OriginPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CustomEvent_Id) == 0x000540, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CustomEvent_Id' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Choose_Available_Point_AvailblePoint_3) == 0x000548, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Choose_Available_Point_AvailblePoint_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_X_2) == 0x000560, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Y_2) == 0x000568, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Z_2) == 0x000570, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Add_ReturnValue_1) == 0x000578, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x00057C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_IsClosed_Variable_1) == 0x00057D, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x000580, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_7) == 0x000588, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_3) == 0x000590, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_3) == 0x0005A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_X_3) == 0x0005B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_X_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Y_3) == 0x0005B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Z_3) == 0x0005C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Z_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_4) == 0x0005C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Subtract_FloatFloat_ReturnValue) == 0x0005D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_8) == 0x0005D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_4) == 0x0005E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue_2) == 0x0005F8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_4) == 0x0005F9, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_5) == 0x0005FA, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Variable) == 0x0005FC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000600, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToString_ReturnValue_2) == 0x000608, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_6) == 0x000618, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000620, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Add_FloatFloat_ReturnValue) == 0x000630, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_StringToName_ReturnValue_2) == 0x000638, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_StringToName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000644, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_2) == 0x000648, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_MakeStruct_LinearColor_1) == 0x000654, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000664, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_2) == 0x000668, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_8) == 0x00066C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_9) == 0x000670, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x000674, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000678, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcDistance2D_Distance_2) == 0x000680, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcDistance2D_Distance_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x000688, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_Has_Been_Initd_Variable_2) == 0x000689, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_Has_Been_Initd_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_7) == 0x000690, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_10) == 0x000698, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_8) == 0x0006A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x0006A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___bool_IsClosed_Variable_2) == 0x0006AC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___bool_IsClosed_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcDistance2D_Distance_3) == 0x0006B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcDistance2D_Distance_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0006B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_9) == 0x0006C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CatmullRomPointsFromLists_CurveList) == 0x0006C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CatmullRomPointsFromLists_CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_5) == 0x0006D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Get_Item_1) == 0x0006F0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_X_4) == 0x0006F8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_X_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Y_4) == 0x000700, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Y_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVectorDouble_Z_4) == 0x000708, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVectorDouble_Z_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_2) == 0x000710, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_2) == 0x000714, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_2) == 0x000718, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_9) == 0x000730, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_10) == 0x000738, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcTexCoord2D_TexCoord_1) == 0x000740, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcTexCoord2D_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_3) == 0x000748, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_3) == 0x000760, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_3) == 0x000764, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_MakeStruct_LinearColor_2) == 0x000768, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Length_ReturnValue_11) == 0x000778, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Length_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_IntInt_ReturnValue_2) == 0x00077C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_CreateDelegate_OutputDelegate) == 0x000780, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToFloat_ReturnValue_2) == 0x0007A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Compare_New_Point_Weapon_2_Vaild) == 0x0007AC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Compare_New_Point_Weapon_2_Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue_3) == 0x0007AD, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Compare_New_Point_Weapon_2_Vaild_1) == 0x0007AE, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Compare_New_Point_Weapon_2_Vaild_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Compare_New_Point_Weapon_2_Vaild_2) == 0x0007AF, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Compare_New_Point_Weapon_2_Vaild_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Compare_New_Point_Weapon_0_Vaild) == 0x0007B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Compare_New_Point_Weapon_0_Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Compare_New_Point_Weapon_1_Vaild) == 0x0007B1, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Compare_New_Point_Weapon_1_Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Variable_1) == 0x0007B4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CalcDistance2D_Distance_4) == 0x0007B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CalcDistance2D_Distance_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue_4) == 0x0007C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_IntFloat_ReturnValue_1) == 0x0007C4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_IntFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_11) == 0x0007C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0007D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Add_VectorFloat_ReturnValue) == 0x0007D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Add_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_3) == 0x0007F0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Variable_2) == 0x0007F4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_IntFloat_ReturnValue_2) == 0x0007F8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_IntFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_IntToString_ReturnValue_3) == 0x000800, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_IntToString_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_12) == 0x000810, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Concat_StrStr_ReturnValue_6) == 0x000818, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Concat_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Add_FloatFloat_ReturnValue_1) == 0x000828, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_StringToName_ReturnValue_3) == 0x000830, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_StringToName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x00083C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_3) == 0x000840, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_MakeStruct_LinearColor_3) == 0x00084C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_MakeStruct_LinearColor_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_LessEqual_IntInt_ReturnValue_2) == 0x00085C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_LessEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_4) == 0x000860, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_4) == 0x000864, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_10) == 0x000870, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000878, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_4) == 0x000880, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_4) == 0x000890, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000891, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_6) == 0x000892, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Variable_3) == 0x000894, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue) == 0x000898, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_1) == 0x000899, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_LessEqual_IntInt_ReturnValue_3) == 0x00089A, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_LessEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_7) == 0x00089B, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_5) == 0x00089C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_FloatFloat_ReturnValue) == 0x0008A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___object_Variable) == 0x0008A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_11) == 0x0008B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_3) == 0x0008C0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsValid_ReturnValue_1) == 0x0008C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetEnviInteractionData_ReturnValue) == 0x0008D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetEnviInteractionData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Abs_ReturnValue) == 0x000998, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x00099C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CheckAndSetPos_LastRippleTime) == 0x0009A0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CheckAndSetPos_LastRippleTime' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_8) == 0x0009A4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Less_FloatFloat_ReturnValue_2) == 0x0009A5, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Less_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_Event_EndPlayReason) == 0x0009A6, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_12) == 0x0009A8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_4) == 0x0009B0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_5) == 0x0009B8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_5) == 0x0009C8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_4) == 0x0009CC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_4) == 0x0009D0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_13) == 0x0009D8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_14) == 0x0009E0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_4) == 0x0009E8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_AddActorWorldOffset_SweepHitResult) == 0x000A00, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_AddActorWorldOffset_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000A98, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000AA0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000AA8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_3) == 0x000AB0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_4) == 0x000AB8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_5) == 0x000AC0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_CreateDynamicMaterialInstance_ReturnValue_6) == 0x000AC8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_CreateDynamicMaterialInstance_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_5) == 0x000AD0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_9) == 0x000AD1, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000AD8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000AF0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_15) == 0x000AF8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_5) == 0x000B00, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_5) == 0x000B04, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_5) == 0x000B08, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___struct_Variable) == 0x000B20, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_AddComponent_ReturnValue) == 0x000B50, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_6) == 0x000B58, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_6) == 0x000B5C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, K2Node_MakeStruct_LinearColor_4) == 0x000B60, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::K2Node_MakeStruct_LinearColor_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_VSize2D_ReturnValue) == 0x000B70, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x000B74, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x000B78, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Normal2D_ReturnValue) == 0x000B7C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DFloat_ReturnValue) == 0x000B84, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DFloat_ReturnValue_1) == 0x000B8C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_13) == 0x000B98, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_IsEditor_ReturnValue_6) == 0x000BA0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_IsEditor_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_6) == 0x000BA8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_10) == 0x000BC0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DFloat_ReturnValue_2) == 0x000BC4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue_4) == 0x000BCC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_14) == 0x000BD0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_5) == 0x000BD8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_7) == 0x000BE0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_6) == 0x000BF8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_6) == 0x000C08, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000C0C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_7) == 0x000C18, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_7) == 0x000C28, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000C2C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_2) == 0x000C38, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_X_2) == 0x000C3C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Y_2) == 0x000C40, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector_Z_2) == 0x000C44, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_11) == 0x000C48, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVector2D_ReturnValue_2) == 0x000C4C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_8) == 0x000C58, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_8) == 0x000C68, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_3) == 0x000C69, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_5) == 0x000C6C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000C78, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000C88, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DFloat_ReturnValue_3) == 0x000C94, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DFloat_ReturnValue_4) == 0x000C9C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_Vector2DVector2D_ReturnValue) == 0x000CA4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_Vector2DFloat_ReturnValue) == 0x000CAC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_X_7) == 0x000CB4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_X_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakVector2D_Y_7) == 0x000CB8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakVector2D_Y_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_16) == 0x000CC0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_FloatToDouble_ReturnValue_17) == 0x000CC8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_FloatToDouble_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeVectorDouble_ReturnValue_6) == 0x000CD0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeVectorDouble_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Add_VectorVector_ReturnValue) == 0x000CE8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_MakeLiteralName_ReturnValue_6) == 0x000D00, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_MakeLiteralName_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Greater_FloatFloat_ReturnValue_5) == 0x000D0C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Greater_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x000D10, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Conv_LinearColorToVector_ReturnValue_1) == 0x000D20, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Conv_LinearColorToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000D2C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Vector_Distance2D_ReturnValue) == 0x000D30, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Vector_Distance2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Vector_Distance2D_ReturnValue_1) == 0x000D34, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Vector_Distance2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_FloatFloat_ReturnValue_3) == 0x000D38, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Greater_FloatFloat_ReturnValue_4) == 0x000D39, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Greater_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_12) == 0x000D3A, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_13) == 0x000D3B, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_4) == 0x000D3C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_5) == 0x000D3D, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetCharacterGravityDirect_ReturnValue) == 0x000D40, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetCharacterGravityDirect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Multiply_VectorFloat_ReturnValue) == 0x000D58, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Multiply_VectorFloat_ReturnValue_1) == 0x000D70, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_15) == 0x000D88, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_K2_GetActorLocation_ReturnValue_8) == 0x000D90, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_K2_GetActorLocation_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Subtract_VectorVector_ReturnValue) == 0x000DA8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_Add_VectorVector_ReturnValue_1) == 0x000DC0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_LineTraceSingle_OutHit) == 0x000DD8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_D_LineTraceSingle_ReturnValue) == 0x000E6C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_D_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_bBlockingHit) == 0x000E6D, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_bInitialOverlap) == 0x000E6E, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_Time) == 0x000E70, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_Distance) == 0x000E74, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_Location) == 0x000E78, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_ImpactPoint) == 0x000E84, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_Normal) == 0x000E90, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_ImpactNormal) == 0x000E9C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_PhysMat) == 0x000EA8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_HitActor) == 0x000EB0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_HitComponent) == 0x000EB8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_HitBoneName) == 0x000EC0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_HitItem) == 0x000ECC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_FaceIndex) == 0x000ED0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_TraceStart) == 0x000ED4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BreakHitResult_TraceEnd) == 0x000EE0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000EEC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000EF0, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x000EF4, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_FClamp_ReturnValue) == 0x000EF8, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x000EFC, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000F00, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetPlayerCharacter_ReturnValue_16) == 0x000F08, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetPlayerCharacter_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000F10, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_GetComponentByClass_ReturnValue_6) == 0x000F18, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_GetComponentByClass_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_FClamp_ReturnValue_1) == 0x000F20, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_9) == 0x000F28, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_9) == 0x000F38, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000F3C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_self_CastInput_10) == 0x000F40, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_self_CastInput_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_HasMatchingGameplayTag_ReturnValue_10) == 0x000F50, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_HasMatchingGameplayTag_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanOR_ReturnValue_6) == 0x000F51, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanOR_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, ___int_Variable_4) == 0x000F54, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::___int_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_BooleanAND_ReturnValue_14) == 0x000F58, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_BooleanAND_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_Add_ReturnValue_2) == 0x000F5C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Array_IsValidIndex_ReturnValue_5) == 0x000F60, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Array_IsValidIndex_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_LessEqual_IntInt_ReturnValue_4) == 0x000F61, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_LessEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_IntInt_ReturnValue_6) == 0x000F64, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000F68, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x000F6C, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x000F70, "Member 'BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_ExecuteUbergraph_BP_RippleSwim;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -927,9 +523,7 @@ struct BP_RippleSwim_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_RippleSwim_C_ReceiveEndPlay");
-static_assert(sizeof(BP_RippleSwim_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_RippleSwim_C_ReceiveEndPlay");
-static_assert(offsetof(BP_RippleSwim_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_RippleSwim_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_ReceiveEndPlay;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.TestHitEvent
 // 0x0040 (0x0040 - 0x0000)
@@ -941,12 +535,7 @@ public:
 	struct FVectorDouble                          OriginPoint;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_TestHitEvent) == 0x000008, "Wrong alignment on BP_RippleSwim_C_TestHitEvent");
-static_assert(sizeof(BP_RippleSwim_C_TestHitEvent) == 0x000040, "Wrong size on BP_RippleSwim_C_TestHitEvent");
-static_assert(offsetof(BP_RippleSwim_C_TestHitEvent, ImpactPoint) == 0x000000, "Member 'BP_RippleSwim_C_TestHitEvent::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TestHitEvent, Config) == 0x000018, "Member 'BP_RippleSwim_C_TestHitEvent::Config' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TestHitEvent, OriginPoint) == 0x000020, "Member 'BP_RippleSwim_C_TestHitEvent::OriginPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TestHitEvent, Id) == 0x000038, "Member 'BP_RippleSwim_C_TestHitEvent::Id' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_TestHitEvent;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.OnBulletHitPos
 // 0x0040 (0x0040 - 0x0000)
@@ -958,12 +547,7 @@ public:
 	struct FVectorDouble                          OriginPoint;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_OnBulletHitPos) == 0x000008, "Wrong alignment on BP_RippleSwim_C_OnBulletHitPos");
-static_assert(sizeof(BP_RippleSwim_C_OnBulletHitPos) == 0x000040, "Wrong size on BP_RippleSwim_C_OnBulletHitPos");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitPos, ImpactPoint) == 0x000000, "Member 'BP_RippleSwim_C_OnBulletHitPos::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitPos, Config) == 0x000018, "Member 'BP_RippleSwim_C_OnBulletHitPos::Config' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitPos, OriginPoint) == 0x000020, "Member 'BP_RippleSwim_C_OnBulletHitPos::OriginPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitPos, Id) == 0x000038, "Member 'BP_RippleSwim_C_OnBulletHitPos::Id' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_OnBulletHitPos;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.BulletHitPos
 // 0x0040 (0x0040 - 0x0000)
@@ -975,12 +559,7 @@ public:
 	struct FVectorDouble                          OriginPoint;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_BulletHitPos) == 0x000008, "Wrong alignment on BP_RippleSwim_C_BulletHitPos");
-static_assert(sizeof(BP_RippleSwim_C_BulletHitPos) == 0x000040, "Wrong size on BP_RippleSwim_C_BulletHitPos");
-static_assert(offsetof(BP_RippleSwim_C_BulletHitPos, ImpactPoint) == 0x000000, "Member 'BP_RippleSwim_C_BulletHitPos::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_BulletHitPos, Config) == 0x000018, "Member 'BP_RippleSwim_C_BulletHitPos::Config' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_BulletHitPos, OriginPoint) == 0x000020, "Member 'BP_RippleSwim_C_BulletHitPos::OriginPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_BulletHitPos, Id) == 0x000038, "Member 'BP_RippleSwim_C_BulletHitPos::Id' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_BulletHitPos;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.OnBulletHitWater
 // 0x0040 (0x0040 - 0x0000)
@@ -992,12 +571,7 @@ public:
 	struct FVectorDouble                          OriginPoint;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_OnBulletHitWater) == 0x000008, "Wrong alignment on BP_RippleSwim_C_OnBulletHitWater");
-static_assert(sizeof(BP_RippleSwim_C_OnBulletHitWater) == 0x000040, "Wrong size on BP_RippleSwim_C_OnBulletHitWater");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitWater, ImpactPoint) == 0x000000, "Member 'BP_RippleSwim_C_OnBulletHitWater::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitWater, Config) == 0x000018, "Member 'BP_RippleSwim_C_OnBulletHitWater::Config' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitWater, OriginPoint) == 0x000020, "Member 'BP_RippleSwim_C_OnBulletHitWater::OriginPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_OnBulletHitWater, Id) == 0x000038, "Member 'BP_RippleSwim_C_OnBulletHitWater::Id' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_OnBulletHitWater;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -1006,9 +580,7 @@ struct BP_RippleSwim_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_RippleSwim_C_ReceiveTick");
-static_assert(sizeof(BP_RippleSwim_C_ReceiveTick) == 0x000004, "Wrong size on BP_RippleSwim_C_ReceiveTick");
-static_assert(offsetof(BP_RippleSwim_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_RippleSwim_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_ReceiveTick;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.UserConstructionScript
 // 0x0001 (0x0001 - 0x0000)
@@ -1017,9 +589,7 @@ struct BP_RippleSwim_C_UserConstructionScript final
 public:
 	bool                                          CallFunc_IsCurrentPlatformPC_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_UserConstructionScript) == 0x000001, "Wrong alignment on BP_RippleSwim_C_UserConstructionScript");
-static_assert(sizeof(BP_RippleSwim_C_UserConstructionScript) == 0x000001, "Wrong size on BP_RippleSwim_C_UserConstructionScript");
-static_assert(offsetof(BP_RippleSwim_C_UserConstructionScript, CallFunc_IsCurrentPlatformPC_ReturnValue) == 0x000000, "Member 'BP_RippleSwim_C_UserConstructionScript::CallFunc_IsCurrentPlatformPC_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_UserConstructionScript;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.AboveWater
 // 0x0058 (0x0058 - 0x0000)
@@ -1040,19 +610,7 @@ public:
 	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_AboveWater) == 0x000008, "Wrong alignment on BP_RippleSwim_C_AboveWater");
-static_assert(sizeof(BP_RippleSwim_C_AboveWater) == 0x000058, "Wrong size on BP_RippleSwim_C_AboveWater");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, Location) == 0x000000, "Member 'BP_RippleSwim_C_AboveWater::Location' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, bAboveWater) == 0x00000C, "Member 'BP_RippleSwim_C_AboveWater::bAboveWater' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVector_X) == 0x000010, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVector_Y) == 0x000014, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVector_Z) == 0x000018, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVectorDouble_X) == 0x000038, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVectorDouble_Y) == 0x000040, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_BreakVectorDouble_Z) == 0x000048, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000050, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_AboveWater, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000054, "Member 'BP_RippleSwim_C_AboveWater::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_AboveWater;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.SetWaterRippleData
 // 0x0018 (0x0018 - 0x0000)
@@ -1062,10 +620,7 @@ public:
 	class UBP_RippleWater_Data_C*                 InputPin;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_SetWaterRippleData) == 0x000008, "Wrong alignment on BP_RippleSwim_C_SetWaterRippleData");
-static_assert(sizeof(BP_RippleSwim_C_SetWaterRippleData) == 0x000018, "Wrong size on BP_RippleSwim_C_SetWaterRippleData");
-static_assert(offsetof(BP_RippleSwim_C_SetWaterRippleData, InputPin) == 0x000000, "Member 'BP_RippleSwim_C_SetWaterRippleData::InputPin' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_SetWaterRippleData, CallFunc_MakeLiteralName_ReturnValue) == 0x000008, "Member 'BP_RippleSwim_C_SetWaterRippleData::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_SetWaterRippleData;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.CalcTexCoord
 // 0x00B0 (0x00B0 - 0x0000)
@@ -1087,22 +642,7 @@ public:
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_CalcTexCoord) == 0x000008, "Wrong alignment on BP_RippleSwim_C_CalcTexCoord");
-static_assert(sizeof(BP_RippleSwim_C_CalcTexCoord) == 0x0000B0, "Wrong size on BP_RippleSwim_C_CalcTexCoord");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, RippleCenter) == 0x000000, "Member 'BP_RippleSwim_C_CalcTexCoord::RippleCenter' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, RipplePointLocation) == 0x000018, "Member 'BP_RippleSwim_C_CalcTexCoord::RipplePointLocation' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CaptureSize) == 0x000030, "Member 'BP_RippleSwim_C_CalcTexCoord::CaptureSize' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, TexCoord) == 0x000034, "Member 'BP_RippleSwim_C_CalcTexCoord::TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_D_Subtract_VectorVector_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_D_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000058, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_D_Divide_VectorFloat_ReturnValue) == 0x000060, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_D_Divide_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_Add_VectorFloat_ReturnValue) == 0x000084, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_Add_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_BreakVector_X) == 0x000090, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_BreakVector_Y) == 0x000094, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_BreakVector_Z) == 0x000098, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00009C, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord, CallFunc_MakeVector_ReturnValue) == 0x0000A0, "Member 'BP_RippleSwim_C_CalcTexCoord::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_CalcTexCoord;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Change Ripple Preset
 // 0x0030 (0x0030 - 0x0000)
@@ -1117,15 +657,7 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Change_Ripple_Preset) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Change_Ripple_Preset");
-static_assert(sizeof(BP_RippleSwim_C_Change_Ripple_Preset) == 0x000030, "Wrong size on BP_RippleSwim_C_Change_Ripple_Preset");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, NewRippleState) == 0x000000, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::NewRippleState' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, CallFunc_BreakVector2D_X) == 0x000008, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, CallFunc_BreakVector2D_Y) == 0x00000C, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, CallFunc_BreakVector2D_X_1) == 0x000010, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, CallFunc_BreakVector2D_Y_1) == 0x000014, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, K2Node_MakeStruct_LinearColor) == 0x000018, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Change_Ripple_Preset, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000028, "Member 'BP_RippleSwim_C_Change_Ripple_Preset::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Change_Ripple_Preset;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Choose Available Point
 // 0x0058 (0x0058 - 0x0000)
@@ -1138,13 +670,7 @@ public:
 	struct FVectorDouble                          AvailblePoint_0;                                   // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Choose_Available_Point) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Choose_Available_Point");
-static_assert(sizeof(BP_RippleSwim_C_Choose_Available_Point) == 0x000058, "Wrong size on BP_RippleSwim_C_Choose_Available_Point");
-static_assert(offsetof(BP_RippleSwim_C_Choose_Available_Point, CollisionPoint) == 0x000000, "Member 'BP_RippleSwim_C_Choose_Available_Point::CollisionPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Choose_Available_Point, WeaponPoint) == 0x000018, "Member 'BP_RippleSwim_C_Choose_Available_Point::WeaponPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Choose_Available_Point, ConfigDA) == 0x000030, "Member 'BP_RippleSwim_C_Choose_Available_Point::ConfigDA' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Choose_Available_Point, AvailblePoint_0) == 0x000038, "Member 'BP_RippleSwim_C_Choose_Available_Point::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Choose_Available_Point, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000050, "Member 'BP_RippleSwim_C_Choose_Available_Point::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Choose_Available_Point;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.CalcDistance2D
 // 0x0098 (0x0098 - 0x0000)
@@ -1167,23 +693,7 @@ public:
 	double                                        CallFunc_D_Add_FloatFloat_ReturnValue;             // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_D_Sqrt_ReturnValue;                       // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_CalcDistance2D) == 0x000008, "Wrong alignment on BP_RippleSwim_C_CalcDistance2D");
-static_assert(sizeof(BP_RippleSwim_C_CalcDistance2D) == 0x000098, "Wrong size on BP_RippleSwim_C_CalcDistance2D");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, V1) == 0x000000, "Member 'BP_RippleSwim_C_CalcDistance2D::V1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, V2) == 0x000018, "Member 'BP_RippleSwim_C_CalcDistance2D::V2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, Distance_0) == 0x000030, "Member 'BP_RippleSwim_C_CalcDistance2D::Distance_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_X) == 0x000038, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_Y) == 0x000040, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_Z) == 0x000048, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_X_1) == 0x000050, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_Y_1) == 0x000058, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_BreakVectorDouble_Z_1) == 0x000060, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Subtract_FloatFloat_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Subtract_FloatFloat_ReturnValue_1) == 0x000070, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Square_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Square_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Square_ReturnValue_1) == 0x000080, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Square_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Add_FloatFloat_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcDistance2D, CallFunc_D_Sqrt_ReturnValue) == 0x000090, "Member 'BP_RippleSwim_C_CalcDistance2D::CallFunc_D_Sqrt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_CalcDistance2D;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.CatmullRom
 // 0x00D0 (0x00D0 - 0x0000)
@@ -1232,44 +742,7 @@ public:
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_CatmullRom) == 0x000008, "Wrong alignment on BP_RippleSwim_C_CatmullRom");
-static_assert(sizeof(BP_RippleSwim_C_CatmullRom) == 0x0000D0, "Wrong size on BP_RippleSwim_C_CatmullRom");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, PointList) == 0x000000, "Member 'BP_RippleSwim_C_CatmullRom::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, StepCount) == 0x000010, "Member 'BP_RippleSwim_C_CatmullRom::StepCount' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, Vaild) == 0x000014, "Member 'BP_RippleSwim_C_CatmullRom::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CurveList) == 0x000018, "Member 'BP_RippleSwim_C_CatmullRom::CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, ResultList) == 0x000028, "Member 'BP_RippleSwim_C_CatmullRom::ResultList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CurveStep) == 0x000038, "Member 'BP_RippleSwim_C_CatmullRom::CurveStep' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, Points) == 0x000040, "Member 'BP_RippleSwim_C_CatmullRom::Points' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, P3) == 0x000050, "Member 'BP_RippleSwim_C_CatmullRom::P3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, P2) == 0x000058, "Member 'BP_RippleSwim_C_CatmullRom::P2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, P1) == 0x000060, "Member 'BP_RippleSwim_C_CatmullRom::P1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, P0) == 0x000068, "Member 'BP_RippleSwim_C_CatmullRom::P0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000074, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_X) == 0x00007C, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_Y) == 0x000080, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000084, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_X_1) == 0x000088, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_Y_1) == 0x00008C, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_X_2) == 0x000090, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_Y_2) == 0x000094, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_X_3) == 0x000098, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_X_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_BreakVector2D_Y_3) == 0x00009C, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_BreakVector2D_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000A0, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0000A1, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, ___int_Variable) == 0x0000A4, "Member 'BP_RippleSwim_C_CatmullRom::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x0000A8, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0000AC, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, K2Node_MathExpression_ReturnValue) == 0x0000B0, "Member 'BP_RippleSwim_C_CatmullRom::K2Node_MathExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, K2Node_MathExpression_ReturnValue_1) == 0x0000B4, "Member 'BP_RippleSwim_C_CatmullRom::K2Node_MathExpression_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000B8, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_MakeVector2D_ReturnValue) == 0x0000BC, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_Add_ReturnValue) == 0x0000C4, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Add_IntInt_ReturnValue) == 0x0000C8, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x0000CC, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CatmullRom, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0000CD, "Member 'BP_RippleSwim_C_CatmullRom::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_CatmullRom;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.GetPoints
 // 0x0098 (0x0098 - 0x0000)
@@ -1301,28 +774,7 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_GetPoints) == 0x000008, "Wrong alignment on BP_RippleSwim_C_GetPoints");
-static_assert(sizeof(BP_RippleSwim_C_GetPoints) == 0x000098, "Wrong size on BP_RippleSwim_C_GetPoints");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, PointList) == 0x000000, "Member 'BP_RippleSwim_C_GetPoints::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, Vaild) == 0x000010, "Member 'BP_RippleSwim_C_GetPoints::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P_0) == 0x000014, "Member 'BP_RippleSwim_C_GetPoints::P_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P_1) == 0x00001C, "Member 'BP_RippleSwim_C_GetPoints::P_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P_2) == 0x000024, "Member 'BP_RippleSwim_C_GetPoints::P_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P_3) == 0x00002C, "Member 'BP_RippleSwim_C_GetPoints::P_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, NewLocalVar_0) == 0x000034, "Member 'BP_RippleSwim_C_GetPoints::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, ResultList) == 0x000040, "Member 'BP_RippleSwim_C_GetPoints::ResultList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CurveStep) == 0x000050, "Member 'BP_RippleSwim_C_GetPoints::CurveStep' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, Points) == 0x000058, "Member 'BP_RippleSwim_C_GetPoints::Points' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P3) == 0x000068, "Member 'BP_RippleSwim_C_GetPoints::P3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P2) == 0x000070, "Member 'BP_RippleSwim_C_GetPoints::P2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P1) == 0x000078, "Member 'BP_RippleSwim_C_GetPoints::P1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, P0) == 0x000080, "Member 'BP_RippleSwim_C_GetPoints::P0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x000089, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x00008A, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_Array_Length_ReturnValue) == 0x00008C, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000090, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPoints, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x000091, "Member 'BP_RippleSwim_C_GetPoints::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_GetPoints;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.GetPointsV3
 // 0x0150 (0x0150 - 0x0000)
@@ -1376,48 +828,7 @@ public:
 	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue_7;         // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_3;               // 0x0144(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_GetPointsV3) == 0x000008, "Wrong alignment on BP_RippleSwim_C_GetPointsV3");
-static_assert(sizeof(BP_RippleSwim_C_GetPointsV3) == 0x000150, "Wrong size on BP_RippleSwim_C_GetPointsV3");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, PointList) == 0x000000, "Member 'BP_RippleSwim_C_GetPointsV3::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, Vaild) == 0x000010, "Member 'BP_RippleSwim_C_GetPointsV3::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P_0) == 0x000014, "Member 'BP_RippleSwim_C_GetPointsV3::P_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P_1) == 0x00001C, "Member 'BP_RippleSwim_C_GetPointsV3::P_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P_2) == 0x000024, "Member 'BP_RippleSwim_C_GetPointsV3::P_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P_3) == 0x00002C, "Member 'BP_RippleSwim_C_GetPointsV3::P_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P3) == 0x000038, "Member 'BP_RippleSwim_C_GetPointsV3::P3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P2) == 0x000050, "Member 'BP_RippleSwim_C_GetPointsV3::P2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P1) == 0x000068, "Member 'BP_RippleSwim_C_GetPointsV3::P1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, P0) == 0x000080, "Member 'BP_RippleSwim_C_GetPointsV3::P0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_X) == 0x000098, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Y) == 0x0000A0, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Z) == 0x0000A8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x0000B0, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x0000B4, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000B8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_MakeVector2D_ReturnValue) == 0x0000BC, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0000C4, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x0000C5, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0000C6, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Array_Length_ReturnValue) == 0x0000C8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0000CC, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_X_1) == 0x0000D0, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Y_1) == 0x0000D8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Z_1) == 0x0000E0, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_2) == 0x0000E8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_3) == 0x0000EC, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_MakeVector2D_ReturnValue_1) == 0x0000F0, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_X_2) == 0x0000F8, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Y_2) == 0x000100, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Z_2) == 0x000108, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_4) == 0x000110, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_X_3) == 0x000118, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_X_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Y_3) == 0x000120, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_BreakVectorDouble_Z_3) == 0x000128, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_BreakVectorDouble_Z_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_5) == 0x000130, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_6) == 0x000134, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_MakeVector2D_ReturnValue_2) == 0x000138, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_Conv_DoubleToFloat_ReturnValue_7) == 0x000140, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_Conv_DoubleToFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_GetPointsV3, CallFunc_MakeVector2D_ReturnValue_3) == 0x000144, "Member 'BP_RippleSwim_C_GetPointsV3::CallFunc_MakeVector2D_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_GetPointsV3;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.CalcTexCoord2D
 // 0x0088 (0x0088 - 0x0000)
@@ -1443,25 +854,7 @@ public:
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x007C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_CalcTexCoord2D) == 0x000008, "Wrong alignment on BP_RippleSwim_C_CalcTexCoord2D");
-static_assert(sizeof(BP_RippleSwim_C_CalcTexCoord2D) == 0x000088, "Wrong size on BP_RippleSwim_C_CalcTexCoord2D");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, RippleCenter) == 0x000000, "Member 'BP_RippleSwim_C_CalcTexCoord2D::RippleCenter' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, RipplePointLocation) == 0x000018, "Member 'BP_RippleSwim_C_CalcTexCoord2D::RipplePointLocation' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CaptureSize) == 0x000020, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CaptureSize' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, TexCoord) == 0x000024, "Member 'BP_RippleSwim_C_CalcTexCoord2D::TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x00004C, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_MakeVector2D_ReturnValue) == 0x000050, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000058, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Divide_Vector2DFloat_ReturnValue) == 0x000060, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Add_Vector2DFloat_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Add_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_BreakVector2D_X) == 0x000070, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_BreakVector2D_Y) == 0x000074, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CalcTexCoord2D, CallFunc_MakeVector2D_ReturnValue_1) == 0x00007C, "Member 'BP_RippleSwim_C_CalcTexCoord2D::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_CalcTexCoord2D;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Calc Catmull Weapon 0
 // 0x01D8 (0x01D8 - 0x0000)
@@ -1530,62 +923,7 @@ public:
 	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Calc_Catmull_Weapon_0) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Calc_Catmull_Weapon_0");
-static_assert(sizeof(BP_RippleSwim_C_Calc_Catmull_Weapon_0) == 0x0001D8, "Wrong size on BP_RippleSwim_C_Calc_Catmull_Weapon_0");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, BulletConfig_0) == 0x000000, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::BulletConfig_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, AvailblePoint_0) == 0x000008, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, PointList) == 0x000020, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_MakeVectorDouble_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, ___int_Array_Index_Variable) == 0x000060, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Conv_IntToString_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Concat_StrStr_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Conv_StringToName_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_MakeLiteralName_ReturnValue) == 0x000094, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, ___int_Loop_Counter_Variable) == 0x0000A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_Add_ReturnValue) == 0x0000A4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, ___int_Variable) == 0x0000AC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_CatmullRomPointsFromLists_CurveList) == 0x0000B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_CatmullRomPointsFromLists_CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000C8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_Get_Item) == 0x0000CC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_Length_ReturnValue) == 0x0000D4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_X) == 0x0000D8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_Y) == 0x0000DC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Less_IntInt_ReturnValue) == 0x0000E0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x0000E8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x0000F0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_LastIndex_ReturnValue) == 0x0000F8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000FC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_Length_ReturnValue_1) == 0x000100, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Subtract_IntInt_ReturnValue) == 0x000104, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Array_Length_ReturnValue_2) == 0x000108, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00010C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Greater_IntInt_ReturnValue) == 0x00010D, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_IsEditor_ReturnValue) == 0x00010E, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BooleanAND_ReturnValue) == 0x00010F, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000110, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_IsEditor_ReturnValue_1) == 0x000118, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_IsEditor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000120, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_CalcTexCoord2D_TexCoord) == 0x000138, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_CalcTexCoord2D_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BooleanAND_ReturnValue_1) == 0x000140, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_X_1) == 0x000144, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_Y_1) == 0x000148, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, K2Node_MakeStruct_LinearColor) == 0x00014C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_CalcTexCoord2D_TexCoord_1) == 0x00015C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_CalcTexCoord2D_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_X_2) == 0x000164, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVector2D_Y_2) == 0x000168, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000170, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, K2Node_MakeStruct_LinearColor_1) == 0x000178, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000188, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_X_1) == 0x0001A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_Y_1) == 0x0001A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_BreakVectorDouble_Z_1) == 0x0001B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x0001B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_0, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0001D0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_0::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Calc_Catmull_Weapon_0;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Compare New Point Weapon 0
 // 0x0050 (0x0050 - 0x0000)
@@ -1609,20 +947,7 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_CalcDistance2D_Distance;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Compare_New_Point_Weapon_0) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Compare_New_Point_Weapon_0");
-static_assert(sizeof(BP_RippleSwim_C_Compare_New_Point_Weapon_0) == 0x000050, "Wrong size on BP_RippleSwim_C_Compare_New_Point_Weapon_0");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, V2) == 0x000000, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::V2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, Vaild) == 0x000018, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Array_Add_ReturnValue) == 0x00001C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Array_Add_ReturnValue_1) == 0x000020, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000028, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x000030, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_D_Greater_FloatFloat_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_D_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_D_Greater_FloatFloat_ReturnValue_1) == 0x000039, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_D_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000044, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_0, CallFunc_CalcDistance2D_Distance) == 0x000048, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_0::CallFunc_CalcDistance2D_Distance' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Compare_New_Point_Weapon_0;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Calc Catmull Weapon 1
 // 0x01D8 (0x01D8 - 0x0000)
@@ -1691,62 +1016,7 @@ public:
 	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Calc_Catmull_Weapon_1) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Calc_Catmull_Weapon_1");
-static_assert(sizeof(BP_RippleSwim_C_Calc_Catmull_Weapon_1) == 0x0001D8, "Wrong size on BP_RippleSwim_C_Calc_Catmull_Weapon_1");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, BulletConfig_0) == 0x000000, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::BulletConfig_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, AvailblePoint_0) == 0x000008, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, PointList) == 0x000020, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_MakeVectorDouble_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, ___int_Array_Index_Variable) == 0x000060, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Conv_IntToString_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Concat_StrStr_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Conv_StringToName_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_MakeLiteralName_ReturnValue) == 0x000094, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, ___int_Loop_Counter_Variable) == 0x0000A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_Add_ReturnValue) == 0x0000A4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, ___int_Variable) == 0x0000AC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_CatmullRomPointsFromLists_CurveList) == 0x0000B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_CatmullRomPointsFromLists_CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000C8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_Get_Item) == 0x0000CC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_Length_ReturnValue) == 0x0000D4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_X) == 0x0000D8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_Y) == 0x0000DC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Less_IntInt_ReturnValue) == 0x0000E0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x0000E8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x0000F0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_LastIndex_ReturnValue) == 0x0000F8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000FC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_Length_ReturnValue_1) == 0x000100, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Subtract_IntInt_ReturnValue) == 0x000104, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Array_Length_ReturnValue_2) == 0x000108, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00010C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Greater_IntInt_ReturnValue) == 0x00010D, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_IsEditor_ReturnValue) == 0x00010E, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BooleanAND_ReturnValue) == 0x00010F, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000110, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_IsEditor_ReturnValue_1) == 0x000118, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_IsEditor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000120, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_CalcTexCoord2D_TexCoord) == 0x000138, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_CalcTexCoord2D_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BooleanAND_ReturnValue_1) == 0x000140, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_X_1) == 0x000144, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_Y_1) == 0x000148, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, K2Node_MakeStruct_LinearColor) == 0x00014C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_CalcTexCoord2D_TexCoord_1) == 0x00015C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_CalcTexCoord2D_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_X_2) == 0x000164, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVector2D_Y_2) == 0x000168, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000170, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, K2Node_MakeStruct_LinearColor_1) == 0x000178, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000188, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_X_1) == 0x0001A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_Y_1) == 0x0001A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_BreakVectorDouble_Z_1) == 0x0001B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x0001B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_1, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0001D0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_1::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Calc_Catmull_Weapon_1;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Compare New Point Weapon 1
 // 0x0050 (0x0050 - 0x0000)
@@ -1770,20 +1040,7 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_CalcDistance2D_Distance;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Compare_New_Point_Weapon_1) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Compare_New_Point_Weapon_1");
-static_assert(sizeof(BP_RippleSwim_C_Compare_New_Point_Weapon_1) == 0x000050, "Wrong size on BP_RippleSwim_C_Compare_New_Point_Weapon_1");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, V2) == 0x000000, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::V2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, Vaild) == 0x000018, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Array_Add_ReturnValue) == 0x00001C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Array_Add_ReturnValue_1) == 0x000020, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000028, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x000030, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_D_Greater_FloatFloat_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_D_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_D_Greater_FloatFloat_ReturnValue_1) == 0x000039, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_D_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000044, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_1, CallFunc_CalcDistance2D_Distance) == 0x000048, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_1::CallFunc_CalcDistance2D_Distance' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Compare_New_Point_Weapon_1;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Calc Catmull Weapon 2
 // 0x01D8 (0x01D8 - 0x0000)
@@ -1852,62 +1109,7 @@ public:
 	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Calc_Catmull_Weapon_2) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Calc_Catmull_Weapon_2");
-static_assert(sizeof(BP_RippleSwim_C_Calc_Catmull_Weapon_2) == 0x0001D8, "Wrong size on BP_RippleSwim_C_Calc_Catmull_Weapon_2");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, BulletConfig_0) == 0x000000, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::BulletConfig_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, AvailblePoint_0) == 0x000008, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, PointList) == 0x000020, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_MakeVectorDouble_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, ___int_Array_Index_Variable) == 0x000060, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Conv_IntToString_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Concat_StrStr_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Conv_StringToName_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_MakeLiteralName_ReturnValue) == 0x000094, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, ___int_Loop_Counter_Variable) == 0x0000A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_Add_ReturnValue) == 0x0000A4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, ___int_Variable) == 0x0000AC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_CatmullRomPointsFromLists_CurveList) == 0x0000B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_CatmullRomPointsFromLists_CurveList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000C8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_Get_Item) == 0x0000CC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_Length_ReturnValue) == 0x0000D4, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_X) == 0x0000D8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_Y) == 0x0000DC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Less_IntInt_ReturnValue) == 0x0000E0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x0000E8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x0000F0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_LastIndex_ReturnValue) == 0x0000F8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000FC, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_Length_ReturnValue_1) == 0x000100, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Subtract_IntInt_ReturnValue) == 0x000104, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Array_Length_ReturnValue_2) == 0x000108, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00010C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Greater_IntInt_ReturnValue) == 0x00010D, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_IsEditor_ReturnValue) == 0x00010E, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BooleanAND_ReturnValue) == 0x00010F, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000110, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_IsEditor_ReturnValue_1) == 0x000118, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_IsEditor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000120, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_CalcTexCoord2D_TexCoord) == 0x000138, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_CalcTexCoord2D_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BooleanAND_ReturnValue_1) == 0x000140, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_X_1) == 0x000144, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_Y_1) == 0x000148, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, K2Node_MakeStruct_LinearColor) == 0x00014C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_CalcTexCoord2D_TexCoord_1) == 0x00015C, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_CalcTexCoord2D_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_X_2) == 0x000164, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVector2D_Y_2) == 0x000168, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000170, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, K2Node_MakeStruct_LinearColor_1) == 0x000178, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000188, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_X_1) == 0x0001A0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_Y_1) == 0x0001A8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_BreakVectorDouble_Z_1) == 0x0001B0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_BreakVectorDouble_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x0001B8, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Catmull_Weapon_2, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0001D0, "Member 'BP_RippleSwim_C_Calc_Catmull_Weapon_2::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Calc_Catmull_Weapon_2;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Compare New Point Weapon 2
 // 0x0050 (0x0050 - 0x0000)
@@ -1931,20 +1133,7 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_CalcDistance2D_Distance;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Compare_New_Point_Weapon_2) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Compare_New_Point_Weapon_2");
-static_assert(sizeof(BP_RippleSwim_C_Compare_New_Point_Weapon_2) == 0x000050, "Wrong size on BP_RippleSwim_C_Compare_New_Point_Weapon_2");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, V2) == 0x000000, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::V2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, Vaild) == 0x000018, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::Vaild' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Array_Add_ReturnValue) == 0x00001C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Array_Add_ReturnValue_1) == 0x000020, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000028, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x000030, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_D_Greater_FloatFloat_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_D_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_D_Greater_FloatFloat_ReturnValue_1) == 0x000039, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_D_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Subtract_IntInt_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000044, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Compare_New_Point_Weapon_2, CallFunc_CalcDistance2D_Distance) == 0x000048, "Member 'BP_RippleSwim_C_Compare_New_Point_Weapon_2::CallFunc_CalcDistance2D_Distance' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Compare_New_Point_Weapon_2;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Calc Capsule Weapon 2
 // 0x00E8 (0x00E8 - 0x0000)
@@ -1982,33 +1171,7 @@ public:
 	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Calc_Capsule_Weapon_2) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Calc_Capsule_Weapon_2");
-static_assert(sizeof(BP_RippleSwim_C_Calc_Capsule_Weapon_2) == 0x0000E8, "Wrong size on BP_RippleSwim_C_Calc_Capsule_Weapon_2");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, BulletConfig_0) == 0x000000, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::BulletConfig_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, AvailblePoint_0) == 0x000008, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, PointList) == 0x000020, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000030, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Array_Add_ReturnValue) == 0x000058, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_CalcTexCoord_TexCoord) == 0x00005C, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_CalcTexCoord_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_X) == 0x000068, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_Y) == 0x00006C, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_Z) == 0x000070, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000078, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, K2Node_MakeStruct_LinearColor) == 0x000080, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000090, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Array_LastIndex_ReturnValue) == 0x0000A8, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Array_Add_ReturnValue_1) == 0x0000AC, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0000B0, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000B4, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_IsEditor_ReturnValue) == 0x0000B8, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_CalcTexCoord_TexCoord_1) == 0x0000BC, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_CalcTexCoord_TexCoord_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_X_1) == 0x0000C8, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_Y_1) == 0x0000CC, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BreakVector_Z_1) == 0x0000D0, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, CallFunc_BooleanAND_ReturnValue) == 0x0000D4, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Capsule_Weapon_2, K2Node_MakeStruct_LinearColor_1) == 0x0000D8, "Member 'BP_RippleSwim_C_Calc_Capsule_Weapon_2::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Calc_Capsule_Weapon_2;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Calc Circle Weapon 2
 // 0x0090 (0x0090 - 0x0000)
@@ -2030,22 +1193,7 @@ public:
 	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_RippleSwim_C_Calc_Circle_Weapon_2) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Calc_Circle_Weapon_2");
-static_assert(sizeof(BP_RippleSwim_C_Calc_Circle_Weapon_2) == 0x000090, "Wrong size on BP_RippleSwim_C_Calc_Circle_Weapon_2");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, BulletConfig_0) == 0x000000, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::BulletConfig_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, AvailblePoint_0) == 0x000008, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::AvailblePoint_0' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, PointList) == 0x000020, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::PointList' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000030, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_CalcTexCoord_TexCoord) == 0x000050, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_CalcTexCoord_TexCoord' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_BreakVector_X) == 0x00005C, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_BreakVector_Y) == 0x000060, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_BreakVector_Z) == 0x000064, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, K2Node_MakeStruct_LinearColor) == 0x000068, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, K2Node_MakeStruct_LinearColor_1) == 0x000078, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_IsEditor_ReturnValue) == 0x00008C, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Calc_Circle_Weapon_2, CallFunc_BooleanAND_ReturnValue) == 0x00008D, "Member 'BP_RippleSwim_C_Calc_Circle_Weapon_2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Calc_Circle_Weapon_2;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.TexcoordToPosition
 // 0x0088 (0x0088 - 0x0000)
@@ -2071,25 +1219,7 @@ public:
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x007C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_TexcoordToPosition) == 0x000008, "Wrong alignment on BP_RippleSwim_C_TexcoordToPosition");
-static_assert(sizeof(BP_RippleSwim_C_TexcoordToPosition) == 0x000088, "Wrong size on BP_RippleSwim_C_TexcoordToPosition");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, RippleCenter) == 0x000000, "Member 'BP_RippleSwim_C_TexcoordToPosition::RippleCenter' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, RippleUV) == 0x000018, "Member 'BP_RippleSwim_C_TexcoordToPosition::RippleUV' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CaptureSize) == 0x000020, "Member 'BP_RippleSwim_C_TexcoordToPosition::CaptureSize' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, Position) == 0x000024, "Member 'BP_RippleSwim_C_TexcoordToPosition::Position' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Subtract_Vector2DVector2D_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Subtract_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000050, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Multiply_Vector2DFloat_ReturnValue) == 0x000054, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Multiply_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x00005C, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_MakeVector2D_ReturnValue) == 0x000060, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Add_Vector2DVector2D_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Add_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_BreakVector2D_X) == 0x000070, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_BreakVector2D_Y) == 0x000074, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000078, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_TexcoordToPosition, CallFunc_MakeVector2D_ReturnValue_1) == 0x00007C, "Member 'BP_RippleSwim_C_TexcoordToPosition::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_TexcoordToPosition;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.SetOldRipple
 // 0x000C (0x000C - 0x0000)
@@ -2098,9 +1228,7 @@ struct BP_RippleSwim_C_SetOldRipple final
 public:
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_SetOldRipple) == 0x000004, "Wrong alignment on BP_RippleSwim_C_SetOldRipple");
-static_assert(sizeof(BP_RippleSwim_C_SetOldRipple) == 0x00000C, "Wrong size on BP_RippleSwim_C_SetOldRipple");
-static_assert(offsetof(BP_RippleSwim_C_SetOldRipple, CallFunc_MakeLiteralName_ReturnValue) == 0x000000, "Member 'BP_RippleSwim_C_SetOldRipple::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_SetOldRipple;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.SetNewRipple
 // 0x000C (0x000C - 0x0000)
@@ -2109,9 +1237,7 @@ struct BP_RippleSwim_C_SetNewRipple final
 public:
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_SetNewRipple) == 0x000004, "Wrong alignment on BP_RippleSwim_C_SetNewRipple");
-static_assert(sizeof(BP_RippleSwim_C_SetNewRipple) == 0x00000C, "Wrong size on BP_RippleSwim_C_SetNewRipple");
-static_assert(offsetof(BP_RippleSwim_C_SetNewRipple, CallFunc_MakeLiteralName_ReturnValue) == 0x000000, "Member 'BP_RippleSwim_C_SetNewRipple::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_SetNewRipple;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Set Bullet Data
 // 0x0008 (0x0008 - 0x0000)
@@ -2120,12 +1246,10 @@ struct BP_RippleSwim_C_Set_Bullet_Data final
 public:
 	class UBP_SceneBattleInteract_C*              Config;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Set_Bullet_Data) == 0x000008, "Wrong alignment on BP_RippleSwim_C_Set_Bullet_Data");
-static_assert(sizeof(BP_RippleSwim_C_Set_Bullet_Data) == 0x000008, "Wrong size on BP_RippleSwim_C_Set_Bullet_Data");
-static_assert(offsetof(BP_RippleSwim_C_Set_Bullet_Data, Config) == 0x000000, "Member 'BP_RippleSwim_C_Set_Bullet_Data::Config' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Set_Bullet_Data;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.CheckAndSetPos
-// 0x0548 (0x0548 - 0x0000)
+// 0x0558 (0x0558 - 0x0000)
 struct BP_RippleSwim_C_CheckAndSetPos final
 {
 public:
@@ -2144,8 +1268,7 @@ public:
 	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVectorDouble                          CallFunc_GetCharacterGravityDirect_ReturnValue;    // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue;       // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_Multiply_VectorFloat_ReturnValue_1;     // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2198,7 +1321,7 @@ public:
 	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue;             // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharacter*                             CallFunc_GetPlayerCharacter_ReturnValue_4;         // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue_2;      // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2215,197 +1338,75 @@ public:
 	class UAbilitySystemComponent*                CallFunc_GetComponentByClass_ReturnValue_2;        // 0x02A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_3; // 0x02A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_3;     // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_4; // 0x02C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_4;     // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_5; // 0x02D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_5;     // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x02E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2EB[0x1];                                      // 0x02EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector2D_X_1;                        // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F5[0x3];                                      // 0x02F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_2;         // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B9[0x3];                                      // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector2D_X_1;                        // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y_1;                        // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_4; // 0x02C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_4;     // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_2;         // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_3;         // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_5; // 0x02F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_5;     // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_3;         // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_K2_AddActorWorldOffset_SweepHitResult;  // 0x0330(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x03C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x03C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x03C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3C9[0x7];                                      // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         ___object_Variable;                                // 0x03D0(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x03E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_LineTraceSingle_OutHit;                 // 0x03EC(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_D_LineTraceSingle_ReturnValue;            // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_481[0x3];                                      // 0x0481(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X;                            // 0x0484(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x048C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0490(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0499(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49A[0x2];                                      // 0x049A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x049C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x04A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x04A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x04B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x04BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x04C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x04E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x04F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x04FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0500(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0504(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0510(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x051C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0520(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0524(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x052C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue_2;                     // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x0534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x0308(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_D_K2_AddActorWorldOffset_SweepHitResult;  // 0x0324(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_6; // 0x03C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_6;     // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D2[0x2];                                      // 0x03D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x03D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3E1[0x3];                                      // 0x03E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector_X;                            // 0x03E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x03E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x03EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3F1[0x3];                                      // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x03F4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x03FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x03FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x03FE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_5;                  // 0x03FF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_6;                  // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         ___object_Variable;                                // 0x0408(0x0010)(ConstParm, ReferenceParm)
+	struct FHitResult                             CallFunc_D_LineTraceSingle_OutHit;                 // 0x0418(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_D_LineTraceSingle_ReturnValue;            // 0x04AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x04AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x04AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4AF[0x1];                                      // 0x04AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x04B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x04B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x04C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x04D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x04DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x04E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x04F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0500(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x050C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0510(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0514(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0520(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x052C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0538(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue_1;                     // 0x053C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue_2;                     // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x054C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0550(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_CheckAndSetPos) == 0x000008, "Wrong alignment on BP_RippleSwim_C_CheckAndSetPos");
-static_assert(sizeof(BP_RippleSwim_C_CheckAndSetPos) == 0x000548, "Wrong size on BP_RippleSwim_C_CheckAndSetPos");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, DeltaSeconds) == 0x000000, "Member 'BP_RippleSwim_C_CheckAndSetPos::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, LastRippleTime) == 0x000004, "Member 'BP_RippleSwim_C_CheckAndSetPos::LastRippleTime' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000008, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000010, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000038, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000048, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput_1) == 0x000050, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue_1) == 0x000060, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue) == 0x000061, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000064, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Add_FloatFloat_ReturnValue) == 0x000068, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue) == 0x00006C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetCharacterGravityDirect_ReturnValue) == 0x000070, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetCharacterGravityDirect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_Multiply_VectorFloat_ReturnValue) == 0x000088, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_Multiply_VectorFloat_ReturnValue_1) == 0x0000A0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_Subtract_VectorVector_ReturnValue) == 0x0000B8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_Add_VectorVector_ReturnValue) == 0x0000D0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue_2) == 0x0000E8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_FClamp_ReturnValue) == 0x0000F0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, K2Node_DynamicCast_AsTs_Base_Character) == 0x0000F8, "Member 'BP_RippleSwim_C_CheckAndSetPos::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, K2Node_DynamicCast_bSuccess) == 0x000100, "Member 'BP_RippleSwim_C_CheckAndSetPos::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000104, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetInWater_ReturnValue) == 0x000108, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetInWater_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_MakeLiteralName_ReturnValue) == 0x00010C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000118, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000128, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x00012C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Vector_Distance2D_ReturnValue) == 0x000138, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Vector_Distance2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00013C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_MakeLiteralName_ReturnValue_1) == 0x000140, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_K2_GetActorLocation_ReturnValue_1) == 0x000150, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x000168, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000178, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_LinearColorToVector_ReturnValue_1) == 0x000184, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_LinearColorToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue_3) == 0x000190, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Vector_Distance2D_ReturnValue_1) == 0x000198, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Vector_Distance2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetComponentByClass_ReturnValue_1) == 0x0001A0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x0001A8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput_2) == 0x0001B0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue_2) == 0x0001C0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Not_PreBool_ReturnValue) == 0x0001C1, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x0001C4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x0001C8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DFloat_ReturnValue) == 0x0001CC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DFloat_ReturnValue_1) == 0x0001D4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DVector2D_ReturnValue) == 0x0001DC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DFloat_ReturnValue_2) == 0x0001E4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Add_Vector2DFloat_ReturnValue) == 0x0001EC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Add_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector2D_X) == 0x0001F4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector2D_Y) == 0x0001F8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000200, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_FloatToDouble_ReturnValue_1) == 0x000208, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_FloatToDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_IsEditor_ReturnValue) == 0x000210, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_MakeVectorDouble_ReturnValue) == 0x000218, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue_1) == 0x000230, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue_4) == 0x000238, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_K2_GetActorLocation_ReturnValue_2) == 0x000240, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_Add_VectorVector_ReturnValue_1) == 0x000258, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_VSize2D_ReturnValue) == 0x000270, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_VSize2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x000274, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Normal2D_ReturnValue) == 0x000278, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x000280, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DFloat_ReturnValue_3) == 0x000284, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_Vector2DFloat_ReturnValue_4) == 0x00028C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_Vector2DFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetPlayerCharacter_ReturnValue_5) == 0x000298, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetPlayerCharacter_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_GetComponentByClass_ReturnValue_2) == 0x0002A0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput_3) == 0x0002A8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue_3) == 0x0002B8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput_4) == 0x0002C0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue_4) == 0x0002D0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_self_CastInput_5) == 0x0002D8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_self_CastInput_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_HasMatchingGameplayTag_ReturnValue_5) == 0x0002E8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_HasMatchingGameplayTag_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue_1) == 0x0002E9, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue_2) == 0x0002EA, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector2D_X_1) == 0x0002EC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector2D_Y_1) == 0x0002F0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue_2) == 0x0002F4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_FloatToDouble_ReturnValue_2) == 0x0002F8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_FloatToDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue_3) == 0x000300, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Conv_FloatToDouble_ReturnValue_3) == 0x000308, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Conv_FloatToDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue_3) == 0x000310, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x000318, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_K2_AddActorWorldOffset_SweepHitResult) == 0x000330, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_K2_AddActorWorldOffset_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue_4) == 0x0003C4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x0003C5, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanAND_ReturnValue_5) == 0x0003C6, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue_4) == 0x0003C7, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BooleanOR_ReturnValue_5) == 0x0003C8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, ___object_Variable) == 0x0003D0, "Member 'BP_RippleSwim_C_CheckAndSetPos::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0003E0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_LineTraceSingle_OutHit) == 0x0003EC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_D_LineTraceSingle_ReturnValue) == 0x000480, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_D_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector_X) == 0x000484, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector_Y) == 0x000488, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakVector_Z) == 0x00048C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_MakeVector2D_ReturnValue) == 0x000490, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_bBlockingHit) == 0x000498, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_bInitialOverlap) == 0x000499, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_Time) == 0x00049C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_Distance) == 0x0004A0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_Location) == 0x0004A4, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_ImpactPoint) == 0x0004B0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_Normal) == 0x0004BC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_ImpactNormal) == 0x0004C8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_PhysMat) == 0x0004D8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_HitActor) == 0x0004E0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_HitComponent) == 0x0004E8, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_HitBoneName) == 0x0004F0, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_HitItem) == 0x0004FC, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_FaceIndex) == 0x000500, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_TraceStart) == 0x000504, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_BreakHitResult_TraceEnd) == 0x000510, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x00051C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x000520, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x000524, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000528, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_FClamp_ReturnValue_1) == 0x00052C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_FClamp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_FClamp_ReturnValue_2) == 0x000530, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_FClamp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Subtract_FloatFloat_ReturnValue_3) == 0x000534, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Subtract_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Lerp_ReturnValue) == 0x000538, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00053C, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_CheckAndSetPos, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000540, "Member 'BP_RippleSwim_C_CheckAndSetPos::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_CheckAndSetPos;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Ripple Simulation
 // 0x0020 (0x0020 - 0x0000)
@@ -2417,12 +1418,7 @@ public:
 	float                                         CallFunc_BreakVector2D_Y;                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Ripple_Simulation) == 0x000004, "Wrong alignment on BP_RippleSwim_C_Ripple_Simulation");
-static_assert(sizeof(BP_RippleSwim_C_Ripple_Simulation) == 0x000020, "Wrong size on BP_RippleSwim_C_Ripple_Simulation");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Simulation, CallFunc_Divide_Vector2DFloat_ReturnValue) == 0x000000, "Member 'BP_RippleSwim_C_Ripple_Simulation::CallFunc_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Simulation, CallFunc_BreakVector2D_X) == 0x000008, "Member 'BP_RippleSwim_C_Ripple_Simulation::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Simulation, CallFunc_BreakVector2D_Y) == 0x00000C, "Member 'BP_RippleSwim_C_Ripple_Simulation::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Simulation, K2Node_MakeStruct_LinearColor) == 0x000010, "Member 'BP_RippleSwim_C_Ripple_Simulation::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Ripple_Simulation;
 
 // Function BP_RippleSwim.BP_RippleSwim_C.Ripple Stamp
 // 0x006C (0x006C - 0x0000)
@@ -2442,20 +1438,7 @@ public:
 	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x004C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_2;                   // 0x005C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_RippleSwim_C_Ripple_Stamp) == 0x000004, "Wrong alignment on BP_RippleSwim_C_Ripple_Stamp");
-static_assert(sizeof(BP_RippleSwim_C_Ripple_Stamp) == 0x00006C, "Wrong size on BP_RippleSwim_C_Ripple_Stamp");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_Divide_Vector2DFloat_ReturnValue) == 0x000000, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_X) == 0x000008, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_Y) == 0x00000C, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_X_1) == 0x000010, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_X_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_Y_1) == 0x000014, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, K2Node_MakeStruct_LinearColor) == 0x000018, "Member 'BP_RippleSwim_C_Ripple_Stamp::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_X_2) == 0x000028, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_X_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_BreakVector2D_Y_2) == 0x00002C, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_BreakVector2D_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, K2Node_MakeStruct_LinearColor_1) == 0x000030, "Member 'BP_RippleSwim_C_Ripple_Stamp::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_MakeLiteralName_ReturnValue) == 0x000040, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, CallFunc_GetVectorParameterValue_ReturnValue) == 0x00004C, "Member 'BP_RippleSwim_C_Ripple_Stamp::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RippleSwim_C_Ripple_Stamp, K2Node_MakeStruct_LinearColor_2) == 0x00005C, "Member 'BP_RippleSwim_C_Ripple_Stamp::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_RippleSwim_C_Ripple_Stamp;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FFXFSR3Settings_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FFXFSR3Settings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -82,62 +82,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FFXFSR3Settings">();
+		STATIC_CLASS_IMPL("FFXFSR3Settings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FFXFSR3Settings")
 	}
 	static class UFFXFSR3Settings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFFXFSR3Settings>();
 	}
 };
-static_assert(alignof(UFFXFSR3Settings) == 0x000008, "Wrong alignment on UFFXFSR3Settings");
-static_assert(sizeof(UFFXFSR3Settings) == 0x0000E0, "Wrong size on UFFXFSR3Settings");
-static_assert(offsetof(UFFXFSR3Settings, bEnabled) == 0x000048, "Member 'UFFXFSR3Settings::bEnabled' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bAutoExposure) == 0x000049, "Member 'UFFXFSR3Settings::bAutoExposure' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bEnabledInEditorViewport) == 0x00004A, "Member 'UFFXFSR3Settings::bEnabledInEditorViewport' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bUseSSRExperimentalDenoiser) == 0x00004B, "Member 'UFFXFSR3Settings::bUseSSRExperimentalDenoiser' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bRHIBackend) == 0x00004C, "Member 'UFFXFSR3Settings::bRHIBackend' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bD3D12Backend) == 0x00004D, "Member 'UFFXFSR3Settings::bD3D12Backend' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bFrameGenEnabled) == 0x00004E, "Member 'UFFXFSR3Settings::bFrameGenEnabled' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bCaptureDebugUI) == 0x00004F, "Member 'UFFXFSR3Settings::bCaptureDebugUI' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bUpdateGlobalFrameTime) == 0x000050, "Member 'UFFXFSR3Settings::bUpdateGlobalFrameTime' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bModifySlateDeltaTime) == 0x000051, "Member 'UFFXFSR3Settings::bModifySlateDeltaTime' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, UIMode) == 0x000054, "Member 'UFFXFSR3Settings::UIMode' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bUseDistortionTexture) == 0x000058, "Member 'UFFXFSR3Settings::bUseDistortionTexture' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bD3D12AsyncInterpolation) == 0x000059, "Member 'UFFXFSR3Settings::bD3D12AsyncInterpolation' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bD3D12AsyncPresent) == 0x00005A, "Member 'UFFXFSR3Settings::bD3D12AsyncPresent' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, PaceMode) == 0x00005C, "Member 'UFFXFSR3Settings::PaceMode' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, QualityMode) == 0x000060, "Member 'UFFXFSR3Settings::QualityMode' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, HistoryFormat) == 0x000064, "Member 'UFFXFSR3Settings::HistoryFormat' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, DeDither) == 0x000068, "Member 'UFFXFSR3Settings::DeDither' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, Sharpness) == 0x00006C, "Member 'UFFXFSR3Settings::Sharpness' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bAdjustMipBias) == 0x000070, "Member 'UFFXFSR3Settings::bAdjustMipBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bForceVertexDeformationOutputsVelocity) == 0x000071, "Member 'UFFXFSR3Settings::bForceVertexDeformationOutputsVelocity' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ForceLandscapeHISMMobility) == 0x000074, "Member 'UFFXFSR3Settings::ForceLandscapeHISMMobility' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, VelocityFactor) == 0x000078, "Member 'UFFXFSR3Settings::VelocityFactor' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bReactiveMask) == 0x00007C, "Member 'UFFXFSR3Settings::bReactiveMask' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReflectionScale) == 0x000080, "Member 'UFFXFSR3Settings::ReflectionScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReflectionLuminanceBias) == 0x000084, "Member 'UFFXFSR3Settings::ReflectionLuminanceBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, RoughnessScale) == 0x000088, "Member 'UFFXFSR3Settings::RoughnessScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, RoughnessBias) == 0x00008C, "Member 'UFFXFSR3Settings::RoughnessBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, RoughnessMaxDistance) == 0x000090, "Member 'UFFXFSR3Settings::RoughnessMaxDistance' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bReactiveMaskRoughnessForceMaxDistance) == 0x000094, "Member 'UFFXFSR3Settings::bReactiveMaskRoughnessForceMaxDistance' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, TranslucencyBias) == 0x000098, "Member 'UFFXFSR3Settings::TranslucencyBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, TranslucencyLuminanceBias) == 0x00009C, "Member 'UFFXFSR3Settings::TranslucencyLuminanceBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, TranslucencyMaxDistance) == 0x0000A0, "Member 'UFFXFSR3Settings::TranslucencyMaxDistance' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveShadingModelID) == 0x0000A4, "Member 'UFFXFSR3Settings::ReactiveShadingModelID' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ForceReactiveMaterialValue) == 0x0000A8, "Member 'UFFXFSR3Settings::ForceReactiveMaterialValue' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveHistoryTranslucencyBias) == 0x0000AC, "Member 'UFFXFSR3Settings::ReactiveHistoryTranslucencyBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveHistoryTranslucencyLumaBias) == 0x0000B0, "Member 'UFFXFSR3Settings::ReactiveHistoryTranslucencyLumaBias' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, PreDOFTranslucencyScale) == 0x0000B4, "Member 'UFFXFSR3Settings::PreDOFTranslucencyScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, bPreDOFTranslucencyMax) == 0x0000B8, "Member 'UFFXFSR3Settings::bPreDOFTranslucencyMax' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveMaskDeferredDecalScale) == 0x0000BC, "Member 'UFFXFSR3Settings::ReactiveMaskDeferredDecalScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveHistoryDeferredDecalScale) == 0x0000C0, "Member 'UFFXFSR3Settings::ReactiveHistoryDeferredDecalScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveMaskTAAResponsiveValue) == 0x0000C4, "Member 'UFFXFSR3Settings::ReactiveMaskTAAResponsiveValue' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveHistoryTAAResponsiveValue) == 0x0000C8, "Member 'UFFXFSR3Settings::ReactiveHistoryTAAResponsiveValue' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveMaskCustomStencilScale) == 0x0000CC, "Member 'UFFXFSR3Settings::ReactiveMaskCustomStencilScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, ReactiveHistoryCustomStencilScale) == 0x0000D0, "Member 'UFFXFSR3Settings::ReactiveHistoryCustomStencilScale' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, CustomStencilMask) == 0x0000D4, "Member 'UFFXFSR3Settings::CustomStencilMask' has a wrong offset!");
-static_assert(offsetof(UFFXFSR3Settings, CustomStencilShift) == 0x0000D8, "Member 'UFFXFSR3Settings::CustomStencilShift' has a wrong offset!");
+DUMPER7_ASSERTS_UFFXFSR3Settings;
 
 // Class FFXFSR3Settings.FFXFSR3CookConfig
 // 0x0010 (0x0058 - 0x0048)
@@ -149,16 +105,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"FFXFSR3CookConfig">();
+		STATIC_CLASS_IMPL("FFXFSR3CookConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"FFXFSR3CookConfig")
 	}
 	static class UFFXFSR3CookConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UFFXFSR3CookConfig>();
 	}
 };
-static_assert(alignof(UFFXFSR3CookConfig) == 0x000008, "Wrong alignment on UFFXFSR3CookConfig");
-static_assert(sizeof(UFFXFSR3CookConfig) == 0x000058, "Wrong size on UFFXFSR3CookConfig");
-static_assert(offsetof(UFFXFSR3CookConfig, CookPlatformBlackList) == 0x000048, "Member 'UFFXFSR3CookConfig::CookPlatformBlackList' has a wrong offset!");
+DUMPER7_ASSERTS_UFFXFSR3CookConfig;
 
 }
 

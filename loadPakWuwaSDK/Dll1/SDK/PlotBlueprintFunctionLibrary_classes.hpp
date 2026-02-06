@@ -62,15 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PlotBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("PlotBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlotBlueprintFunctionLibrary_C")
 	}
 	static class UPlotBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlotBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UPlotBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UPlotBlueprintFunctionLibrary_C");
-static_assert(sizeof(UPlotBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UPlotBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UPlotBlueprintFunctionLibrary_C;
 
 }
 

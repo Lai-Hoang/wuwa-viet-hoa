@@ -25,10 +25,7 @@ public:
 	struct FSMotorRailMove_CommonConfig           CommonConfig_34_F49B940E408D432EC6A29A97561FA81A;  // 0x0000(0x00A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FSMotorRailMove_LinearMove             LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A;     // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMoveConfig_AccelerateAlongRail) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig_AccelerateAlongRail");
-static_assert(sizeof(FSMotorRailMoveConfig_AccelerateAlongRail) == 0x0000B0, "Wrong size on FSMotorRailMoveConfig_AccelerateAlongRail");
-static_assert(offsetof(FSMotorRailMoveConfig_AccelerateAlongRail, CommonConfig_34_F49B940E408D432EC6A29A97561FA81A) == 0x000000, "Member 'FSMotorRailMoveConfig_AccelerateAlongRail::CommonConfig_34_F49B940E408D432EC6A29A97561FA81A' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_AccelerateAlongRail, LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A) == 0x0000A8, "Member 'FSMotorRailMoveConfig_AccelerateAlongRail::LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig_AccelerateAlongRail;
 
 }
 

@@ -25,22 +25,24 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnLevelShown();
 	void ExecuteUbergraph_TsTowerDefenseEventActor(int32 EntryPoint);
+	void OnLevelShown();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsTowerDefenseEventActor_C">();
+		BP_STATIC_CLASS_IMPL("TsTowerDefenseEventActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsTowerDefenseEventActor_C")
 	}
 	static class ATsTowerDefenseEventActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsTowerDefenseEventActor_C>();
 	}
 };
-static_assert(alignof(ATsTowerDefenseEventActor_C) == 0x000008, "Wrong alignment on ATsTowerDefenseEventActor_C");
-static_assert(sizeof(ATsTowerDefenseEventActor_C) == 0x000380, "Wrong size on ATsTowerDefenseEventActor_C");
-static_assert(offsetof(ATsTowerDefenseEventActor_C, UberGraphFrame) == 0x000378, "Member 'ATsTowerDefenseEventActor_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_ATsTowerDefenseEventActor_C;
 
 }
 

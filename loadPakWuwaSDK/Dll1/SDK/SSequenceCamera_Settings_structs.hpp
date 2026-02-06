@@ -33,17 +33,7 @@ public:
 	float                                         SpecificSequenceTime_33_90C52F1D4FA038826487E38A87172200; // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NeedWaitInPlot_35_49D73852467CA210EEA195B25F9D020E; // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSSequenceCamera_Settings) == 0x000008, "Wrong alignment on FSSequenceCamera_Settings");
-static_assert(sizeof(FSSequenceCamera_Settings) == 0x000038, "Wrong size on FSSequenceCamera_Settings");
-static_assert(offsetof(FSSequenceCamera_Settings, BlendInTime_2_50F2599845E2A9F7984AB6BD60A09C9C) == 0x000000, "Member 'FSSequenceCamera_Settings::BlendInTime_2_50F2599845E2A9F7984AB6BD60A09C9C' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, BlendOutTime_4_B229F83544CCA82D68E7B9867CC519D0) == 0x000004, "Member 'FSSequenceCamera_Settings::BlendOutTime_4_B229F83544CCA82D68E7B9867CC519D0' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, CameraSequence_11_EA0F02DF4948AFF0A951AB8E0F790CEC) == 0x000008, "Member 'FSSequenceCamera_Settings::CameraSequence_11_EA0F02DF4948AFF0A951AB8E0F790CEC' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, IsHideHud_13_3FD8AC824B783C3AC1386394935251D1) == 0x000010, "Member 'FSSequenceCamera_Settings::IsHideHud_13_3FD8AC824B783C3AC1386394935251D1' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, VisibleChild_26_E1BC75D64F4C322DD3D258A5F6B6F888) == 0x000018, "Member 'FSSequenceCamera_Settings::VisibleChild_26_E1BC75D64F4C322DD3D258A5F6B6F888' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, HideHudTime_28_D37870A24D62DBDE4DBCD593374C8C9B) == 0x000028, "Member 'FSSequenceCamera_Settings::HideHudTime_28_D37870A24D62DBDE4DBCD593374C8C9B' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, EnableSpecificSequenceTime_30_C30B0DDE4FC51270656237A7AC01DAEA) == 0x00002C, "Member 'FSSequenceCamera_Settings::EnableSpecificSequenceTime_30_C30B0DDE4FC51270656237A7AC01DAEA' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, SpecificSequenceTime_33_90C52F1D4FA038826487E38A87172200) == 0x000030, "Member 'FSSequenceCamera_Settings::SpecificSequenceTime_33_90C52F1D4FA038826487E38A87172200' has a wrong offset!");
-static_assert(offsetof(FSSequenceCamera_Settings, NeedWaitInPlot_35_49D73852467CA210EEA195B25F9D020E) == 0x000034, "Member 'FSSequenceCamera_Settings::NeedWaitInPlot_35_49D73852467CA210EEA195B25F9D020E' has a wrong offset!");
+DUMPER7_ASSERTS_FSSequenceCamera_Settings;
 
 }
 

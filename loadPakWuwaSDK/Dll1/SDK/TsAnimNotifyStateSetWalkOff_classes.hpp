@@ -29,15 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateSetWalkOff_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateSetWalkOff_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateSetWalkOff_C")
 	}
 	static class UTsAnimNotifyStateSetWalkOff_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateSetWalkOff_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateSetWalkOff_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateSetWalkOff_C");
-static_assert(sizeof(UTsAnimNotifyStateSetWalkOff_C) == 0x000048, "Wrong size on UTsAnimNotifyStateSetWalkOff_C");
+DUMPER7_ASSERTS_UTsAnimNotifyStateSetWalkOff_C;
 
 }
 

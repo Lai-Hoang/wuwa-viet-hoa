@@ -12,23 +12,23 @@
 
 #include "Engine_structs.hpp"
 #include "SSkillInfo_structs.hpp"
-#include "EAimViewState_structs.hpp"
 #include "KuroGAS_classes.hpp"
 #include "EPawnChannel_structs.hpp"
+#include "EAimViewState_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Base.GA_Base_C
-// 0x01C0 (0x0588 - 0x03C8)
+// 0x01C8 (0x0590 - 0x03C8)
 class UGA_Base_C : public UBaseGameplayAbility
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FSSkillInfo                            当前技能数据;                                      // 0x03D0(0x01A0)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 当前技能数据名;                                    // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         SkillId;                                           // 0x0580(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillInfo                            当前技能数据;                                      // 0x03D0(0x01A8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 当前技能数据名;                                    // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         SkillId;                                           // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Base(int32 EntryPoint);
@@ -130,19 +130,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"GA_Base_C">();
+		BP_STATIC_CLASS_IMPL("GA_Base_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GA_Base_C")
 	}
 	static class UGA_Base_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGA_Base_C>();
 	}
 };
-static_assert(alignof(UGA_Base_C) == 0x000008, "Wrong alignment on UGA_Base_C");
-static_assert(sizeof(UGA_Base_C) == 0x000588, "Wrong size on UGA_Base_C");
-static_assert(offsetof(UGA_Base_C, UberGraphFrame) == 0x0003C8, "Member 'UGA_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Base_C, 当前技能数据) == 0x0003D0, "Member 'UGA_Base_C::当前技能数据' has a wrong offset!");
-static_assert(offsetof(UGA_Base_C, 当前技能数据名) == 0x000570, "Member 'UGA_Base_C::当前技能数据名' has a wrong offset!");
-static_assert(offsetof(UGA_Base_C, SkillId) == 0x000580, "Member 'UGA_Base_C::SkillId' has a wrong offset!");
+DUMPER7_ASSERTS_UGA_Base_C;
 
 }
 

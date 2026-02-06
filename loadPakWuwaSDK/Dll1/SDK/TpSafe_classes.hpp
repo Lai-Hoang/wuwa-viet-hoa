@@ -28,17 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TpSafeSetting">();
+		STATIC_CLASS_IMPL("TpSafeSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TpSafeSetting")
 	}
 	static class UTpSafeSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTpSafeSetting>();
 	}
 };
-static_assert(alignof(UTpSafeSetting) == 0x000008, "Wrong alignment on UTpSafeSetting");
-static_assert(sizeof(UTpSafeSetting) == 0x000038, "Wrong size on UTpSafeSetting");
-static_assert(offsetof(UTpSafeSetting, Enable) == 0x000030, "Member 'UTpSafeSetting::Enable' has a wrong offset!");
-static_assert(offsetof(UTpSafeSetting, ForceEnableOnSteamDeck) == 0x000031, "Member 'UTpSafeSetting::ForceEnableOnSteamDeck' has a wrong offset!");
+DUMPER7_ASSERTS_UTpSafeSetting;
 
 }
 

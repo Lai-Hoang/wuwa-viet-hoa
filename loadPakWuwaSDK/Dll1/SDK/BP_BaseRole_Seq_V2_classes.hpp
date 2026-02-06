@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C
-// 0x00C8 (0x03D8 - 0x0310)
+// 0x00F8 (0x0408 - 0x0310)
 class ABP_BaseRole_Seq_V2_C : public APawn
 {
 public:
@@ -45,6 +45,7 @@ public:
 	bool                                          ToonLightChan1;                                    // 0x0386(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	bool                                          ToonLightChan2;                                    // 0x0387(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	TMap<class FName, struct FTransform>          CustomData;                                        // 0x0388(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TSoftObjectPtr<class USkeletalMesh>           MeshRef;                                           // 0x03D8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_BaseRole_Seq_V2(int32 EntryPoint);
@@ -80,36 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseRole_Seq_V2_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseRole_Seq_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseRole_Seq_V2_C")
 	}
 	static class ABP_BaseRole_Seq_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseRole_Seq_V2_C>();
 	}
 };
-static_assert(alignof(ABP_BaseRole_Seq_V2_C) == 0x000008, "Wrong alignment on ABP_BaseRole_Seq_V2_C");
-static_assert(sizeof(ABP_BaseRole_Seq_V2_C) == 0x0003D8, "Wrong size on ABP_BaseRole_Seq_V2_C");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, UberGraphFrame) == 0x000310, "Member 'ABP_BaseRole_Seq_V2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, SeqAudio_Seq_V2) == 0x000318, "Member 'ABP_BaseRole_Seq_V2_C::SeqAudio_Seq_V2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, Hulu) == 0x000320, "Member 'ABP_BaseRole_Seq_V2_C::Hulu' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ABPC_Body_V2) == 0x000328, "Member 'ABP_BaseRole_Seq_V2_C::ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, SkeletalMeshComponent0) == 0x000330, "Member 'ABP_BaseRole_Seq_V2_C::SkeletalMeshComponent0' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, DefaultSceneRoot) == 0x000338, "Member 'ABP_BaseRole_Seq_V2_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, TalkID) == 0x000340, "Member 'ABP_BaseRole_Seq_V2_C::TalkID' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, BindingTag) == 0x000344, "Member 'ABP_BaseRole_Seq_V2_C::BindingTag' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, HuluFX_Handle) == 0x000350, "Member 'ABP_BaseRole_Seq_V2_C::HuluFX_Handle' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CharFX_Group_Handle) == 0x000354, "Member 'ABP_BaseRole_Seq_V2_C::CharFX_Group_Handle' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CharFX_Handle) == 0x000358, "Member 'ABP_BaseRole_Seq_V2_C::CharFX_Handle' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, DataGroup) == 0x000360, "Member 'ABP_BaseRole_Seq_V2_C::DataGroup' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, Data) == 0x000368, "Member 'ABP_BaseRole_Seq_V2_C::Data' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, BPScanning) == 0x000370, "Member 'ABP_BaseRole_Seq_V2_C::BPScanning' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CharRenderingComponent) == 0x000378, "Member 'ABP_BaseRole_Seq_V2_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, TalkID_SP) == 0x000380, "Member 'ABP_BaseRole_Seq_V2_C::TalkID_SP' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, EnableKeyLightChan) == 0x000384, "Member 'ABP_BaseRole_Seq_V2_C::EnableKeyLightChan' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan0) == 0x000385, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan0' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan1) == 0x000386, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan2) == 0x000387, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CustomData) == 0x000388, "Member 'ABP_BaseRole_Seq_V2_C::CustomData' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRole_Seq_V2_C;
 
 }
 

@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK
@@ -43,22 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_VolumetricFogDistFalloff_RectLight_C">();
+		BP_STATIC_CLASS_IMPL("BP_VolumetricFogDistFalloff_RectLight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_VolumetricFogDistFalloff_RectLight_C")
 	}
 	static class ABP_VolumetricFogDistFalloff_RectLight_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_VolumetricFogDistFalloff_RectLight_C>();
 	}
 };
-static_assert(alignof(ABP_VolumetricFogDistFalloff_RectLight_C) == 0x000008, "Wrong alignment on ABP_VolumetricFogDistFalloff_RectLight_C");
-static_assert(sizeof(ABP_VolumetricFogDistFalloff_RectLight_C) == 0x000300, "Wrong size on ABP_VolumetricFogDistFalloff_RectLight_C");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, UberGraphFrame) == 0x0002C8, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, VolumetricFogIntensity) == 0x0002D0, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::VolumetricFogIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, brightness) == 0x0002D4, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::brightness' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, CameraVector) == 0x0002D8, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::CameraVector' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, currentDistance) == 0x0002F0, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::currentDistance' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, DistanceEnd) == 0x0002F4, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::DistanceEnd' has a wrong offset!");
-static_assert(offsetof(ABP_VolumetricFogDistFalloff_RectLight_C, DistanceStart) == 0x0002F8, "Member 'ABP_VolumetricFogDistFalloff_RectLight_C::DistanceStart' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_VolumetricFogDistFalloff_RectLight_C;
 
 }
 

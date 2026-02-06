@@ -51,7 +51,7 @@ public:
 	struct FVector CalculateRelativeAcceleration(const struct FVector& Speed, const struct FVector& Acceleration, const struct FRotator& RoleRotator, class ACharacter* Character);
 	void CalculateSpeedMixed(const struct FRotator& RoleRotator, const struct FRotator& AdditiveRotator, const struct FVector& Speed, class ACharacter* Character, class UCurveFloat*& Curve, const float& DeltaTime, float& CachedPercentFB, float& CachedPercentLR, struct FVeloctiyBlend& VelocityBlend);
 	float CalculateStandRate(class UCurveFloat*& AngleToStepFrequency, const float& Slop, const float& Speed, const float& AnimWalkSpeed, const float& AnimRunSpeed, const float& SprintSpeed, const float& StepLengthMix);
-	float CalculateStepLengthMixed(class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& Speed, const float& Slop);
+	float CalculateStepLengthMixed(class ACharacter* Character, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& Speed, const float& Slop);
 	float CalculateWalkRunMixed(const int32& MoveState);
 	void CalucateClimbOffset(class ACharacter*& Character, const struct FVector& IKDirection, const struct FVector& OffsetRelativeLocation, const struct FVector& BoneLocation, float OffsetCorrection, float TraceRadius, const struct FVector& MeshWorldLocation, const struct FRotator& QuatInverse, struct FVector& CachedLocation, struct FVector& CachedNormal, const float& IKCurveValue, const float& ClimbRadius, float& PrevFrameAlpha, struct FVector* OutOffset, struct FVector* OutNormal, bool* bSuccess);
 	void ClimbIKProcess(class UAnimInstance* AnimInstance, const struct FVector& MeshWorldLocation, const struct FRotator& QuatInverse, const bool& IsClimbExitState, struct FVector& OverallOffsetLocation, float& ClimbIK, class ACharacter*& Character, class USkeletalMeshComponent*& Mesh, const float& ClimbRadius, const struct FVector& LFootOffsetRelativeLocation, struct FVector& LFootCachedLocation, struct FVector& LFootCachedNormal, struct FVector& LFootOffsetLocation, struct FVector& LFootNormalDirection, float& LFootPrevFrameAlpha, const struct FVector& RFootOffsetRelativeLocation, struct FVector& RFootCachedLocation, struct FVector& RFootCachedNormal, struct FVector& RFootOffsetLocation, struct FVector& RFootNormalDirection, float& RFootPrevFrameAlpha, const struct FVector& LHandOffsetRelativeLocation, struct FVector& LHandCachedLocation, struct FVector& LHandCachedNormal, struct FVector& LHandOffsetLocation, struct FVector& LHandNormalDirection, float& LHandPrevFrameAlpha, const struct FVector& RHandOffsetRelativeLocation, struct FVector& RHandCachedLocation, struct FVector& RHandCachedNormal, struct FVector& RHandOffsetLocation, struct FVector& RHandNormalDirection, float& RHandPrevFrameAlpha);
@@ -84,14 +84,18 @@ public:
 	void UpdateIKInfoInGroundState(const bool& HasWallForward, const struct FVector& MeshWorldLocation, const bool& IsMoving, const float& DegMovementSlop, bool& bUpHill, bool& bDownHill, class ACharacter*& Character, class USkeletalMeshComponent*& Mesh, const float& Speed, const bool& HasMoveInput, const float& RunWalkMix, struct FVector& OverallOffsetLocation, float& HipLerpSpeed, bool& bLFootNeedIK, struct FVector& LFootOffsetLocation, struct FVector& LFootNormalDirection, struct FHitResult& LFootHitResult, bool& bRFootNeedIK, struct FVector& RFootOffsetLocation, struct FVector& RFootNormalDirection, struct FHitResult& RFootHitResult, bool UseCurveFootLocation);
 	void UpdateIKinfoInOtherState(class ACharacter*& Character, struct FVector& OverallOffsetLocation, struct FVector& LFootOffsetLocation, struct FVector& LFootNormalDirection, struct FVector& RFootOffsetLocation, struct FVector& RFootNormalDirection, struct FVector& LHandNormalDirection, struct FVector& RHandNormalDirection, float& HipLerpSpeed);
 	void UpdateIKInfoLocalValue(class ACharacter* Character, struct FRotator& MeshQuatInverse, struct FVector& MeshWorldLocation);
-	void UpdateMoveInfoMixed(float& WalkRunMixed, const float& DeltaTime, const float& Slop, class UCurveFloat*& AngleToStepFrequency, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& SpeedSize, float& StepLengthMixed, const float& AnimWalkSpeed, const float& AnimRunSpeed, const float& SprintSpeed, float& StandRate);
+	void UpdateMoveInfoMixed(class ACharacter*& Character, float& WalkRunMixed, const float& DeltaTime, const float& Slop, class UCurveFloat*& AngleToStepFrequency, class UCurveFloat*& AngleToStepLength, class UCurveFloat*& WalkCurve, class UCurveFloat*& RunCurve, const float& SpeedSize, float& StepLengthMixed, const float& AnimWalkSpeed, const float& AnimRunSpeed, const float& SprintSpeed, float& StandRate);
 	void UpdateRoleInfo(bool& StateGround, bool& StateGroundSprint, bool& StateGroundWalk, bool& StateGroundRun, bool& StateRunStop, bool& StateSprintStop, bool& StateWalkStop, bool& RunStop, bool& StateClimb, bool& StateAir, bool& StateAirGlide, bool& StateWater, bool& StateView, bool& StateAim, bool& StateFace);
 	void UpdateSkillMoveInfo(const float& DeltaTime, const struct FRotator& RoleRotator, const struct FVector& Speed, class ACharacter*& Character, float& RotatorMixed, const struct FVector& Acceleration, struct FVector& RelativeAcceleration, struct FLeanAmount& LeanAmount, const float& GroundLeanAmountLerpSpeed, const struct FRotator& AimRotator, float& AimAngle, struct FVector2D& AimMoveMixed, const float& RotatorSpeed, class AActor* SkillTarget, const struct FVectorDouble& CachedActorLocation);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstance">();
+		STATIC_CLASS_IMPL("KuroAnimInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstance")
 	}
 	static class UKuroAnimInstance* GetDefaultObj()
 	{
@@ -99,17 +103,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(UKuroAnimInstance) == 0x000010, "Wrong alignment on UKuroAnimInstance");
-static_assert(sizeof(UKuroAnimInstance) == 0x000820, "Wrong size on UKuroAnimInstance");
-static_assert(offsetof(UKuroAnimInstance, TurnLimitForBoneRotateAnimNode) == 0x000798, "Member 'UKuroAnimInstance::TurnLimitForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, LookUpLimitForBoneRotateAnimNode) == 0x0007A0, "Member 'UKuroAnimInstance::LookUpLimitForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, bRollBackToOriginForBoneRotateAnimNode) == 0x0007A8, "Member 'UKuroAnimInstance::bRollBackToOriginForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, bStopForBoneRotateAnimNode) == 0x0007A9, "Member 'UKuroAnimInstance::bStopForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, TurnAngleForBoneRotateAnimNode) == 0x0007AC, "Member 'UKuroAnimInstance::TurnAngleForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, LookUpAngleForBoneRotateAnimNode) == 0x0007B0, "Member 'UKuroAnimInstance::LookUpAngleForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, TurnOffsetForBoneRotateAnimNode) == 0x0007B4, "Member 'UKuroAnimInstance::TurnOffsetForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, LookUpOffsetForBoneRotateAnimNode) == 0x0007B8, "Member 'UKuroAnimInstance::LookUpOffsetForBoneRotateAnimNode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstance, ExtraRibbonAnims) == 0x0007C0, "Member 'UKuroAnimInstance::ExtraRibbonAnims' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstance;
 
 // Class KuroAnim.KuroAnimInstanceChar
 // 0x0120 (0x0940 - 0x0820)
@@ -143,30 +137,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstanceChar">();
+		STATIC_CLASS_IMPL("KuroAnimInstanceChar")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstanceChar")
 	}
 	static class UKuroAnimInstanceChar* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstanceChar>();
 	}
 };
-static_assert(alignof(UKuroAnimInstanceChar) == 0x000010, "Wrong alignment on UKuroAnimInstanceChar");
-static_assert(sizeof(UKuroAnimInstanceChar) == 0x000940, "Wrong size on UKuroAnimInstanceChar");
-static_assert(offsetof(UKuroAnimInstanceChar, LogicParams) == 0x000818, "Member 'UKuroAnimInstanceChar::LogicParams' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, BaseCharacter) == 0x000820, "Member 'UKuroAnimInstanceChar::BaseCharacter' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, DeltaTime) == 0x000830, "Member 'UKuroAnimInstanceChar::DeltaTime' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, EntityId) == 0x000834, "Member 'UKuroAnimInstanceChar::EntityId' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, bIsAutonomousProxy) == 0x000838, "Member 'UKuroAnimInstanceChar::bIsAutonomousProxy' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, Velocity) == 0x00083C, "Member 'UKuroAnimInstanceChar::Velocity' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, bIsMovedLocation) == 0x000854, "Member 'UKuroAnimInstanceChar::bIsMovedLocation' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, Acceleration) == 0x000870, "Member 'UKuroAnimInstanceChar::Acceleration' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, ActorForward) == 0x00087C, "Member 'UKuroAnimInstanceChar::ActorForward' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, OnJumpSpeed) == 0x00088C, "Member 'UKuroAnimInstanceChar::OnJumpSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, bStunned) == 0x000890, "Member 'UKuroAnimInstanceChar::bStunned' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, LowerBodyRotator) == 0x0008C0, "Member 'UKuroAnimInstanceChar::LowerBodyRotator' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, LocationProxy) == 0x0008D0, "Member 'UKuroAnimInstanceChar::LocationProxy' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, CachedBones) == 0x0008E8, "Member 'UKuroAnimInstanceChar::CachedBones' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceChar, SightLockMode) == 0x000938, "Member 'UKuroAnimInstanceChar::SightLockMode' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstanceChar;
 
 // Class KuroAnim.KuroAdjustableBoxComponent
 // 0x0030 (0x0580 - 0x0550)
@@ -183,20 +165,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAdjustableBoxComponent">();
+		STATIC_CLASS_IMPL("KuroAdjustableBoxComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAdjustableBoxComponent")
 	}
 	static class UKuroAdjustableBoxComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAdjustableBoxComponent>();
 	}
 };
-static_assert(alignof(UKuroAdjustableBoxComponent) == 0x000010, "Wrong alignment on UKuroAdjustableBoxComponent");
-static_assert(sizeof(UKuroAdjustableBoxComponent) == 0x000580, "Wrong size on UKuroAdjustableBoxComponent");
-static_assert(offsetof(UKuroAdjustableBoxComponent, BindSocketNames) == 0x000550, "Member 'UKuroAdjustableBoxComponent::BindSocketNames' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableBoxComponent, AddExtent) == 0x000560, "Member 'UKuroAdjustableBoxComponent::AddExtent' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableBoxComponent, MinExtent) == 0x000564, "Member 'UKuroAdjustableBoxComponent::MinExtent' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableBoxComponent, MaxExtent) == 0x000568, "Member 'UKuroAdjustableBoxComponent::MaxExtent' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableBoxComponent, AdjustBoxType) == 0x00056C, "Member 'UKuroAdjustableBoxComponent::AdjustBoxType' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAdjustableBoxComponent;
 
 // Class KuroAnim.KuroAnimInstanceNpc
 // 0x0030 (0x0970 - 0x0940)
@@ -227,33 +207,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstanceNpc">();
+		STATIC_CLASS_IMPL("KuroAnimInstanceNpc")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstanceNpc")
 	}
 	static class UKuroAnimInstanceNpc* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstanceNpc>();
 	}
 };
-static_assert(alignof(UKuroAnimInstanceNpc) == 0x000010, "Wrong alignment on UKuroAnimInstanceNpc");
-static_assert(sizeof(UKuroAnimInstanceNpc) == 0x000970, "Wrong size on UKuroAnimInstanceNpc");
-static_assert(offsetof(UKuroAnimInstanceNpc, SightDirection) == 0x000940, "Member 'UKuroAnimInstanceNpc::SightDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, SightAlpha) == 0x00094C, "Member 'UKuroAnimInstanceNpc::SightAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, CameraModeType) == 0x000950, "Member 'UKuroAnimInstanceNpc::CameraModeType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bIsBeingCaptured) == 0x000954, "Member 'UKuroAnimInstanceNpc::bIsBeingCaptured' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bPlayKnockUpAnim) == 0x000955, "Member 'UKuroAnimInstanceNpc::bPlayKnockUpAnim' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bHeadIKReturnToOrigin) == 0x000956, "Member 'UKuroAnimInstanceNpc::bHeadIKReturnToOrigin' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, CharacterMoveStateType) == 0x000957, "Member 'UKuroAnimInstanceNpc::CharacterMoveStateType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, CharacterPositionStateType) == 0x000958, "Member 'UKuroAnimInstanceNpc::CharacterPositionStateType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, MovementDirection) == 0x000959, "Member 'UKuroAnimInstanceNpc::MovementDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, WalkingPosture) == 0x00095A, "Member 'UKuroAnimInstanceNpc::WalkingPosture' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, UpdateDeltaSeconds) == 0x00095C, "Member 'UKuroAnimInstanceNpc::UpdateDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, WorldDeltaSeconds) == 0x000960, "Member 'UKuroAnimInstanceNpc::WorldDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bIdleThreeState) == 0x000964, "Member 'UKuroAnimInstanceNpc::bIdleThreeState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bCommonDebugState) == 0x000965, "Member 'UKuroAnimInstanceNpc::bCommonDebugState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bInAirState) == 0x000966, "Member 'UKuroAnimInstanceNpc::bInAirState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bLowerHalfUniversalFusionState) == 0x000967, "Member 'UKuroAnimInstanceNpc::bLowerHalfUniversalFusionState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bInBattleState) == 0x000968, "Member 'UKuroAnimInstanceNpc::bInBattleState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceNpc, bPlayEnterBattleState) == 0x000969, "Member 'UKuroAnimInstanceNpc::bPlayEnterBattleState' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstanceNpc;
 
 // Class KuroAnim.KuroAdjustableCapsuleComponent
 // 0x0040 (0x0590 - 0x0550)
@@ -270,20 +235,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAdjustableCapsuleComponent">();
+		STATIC_CLASS_IMPL("KuroAdjustableCapsuleComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAdjustableCapsuleComponent")
 	}
 	static class UKuroAdjustableCapsuleComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAdjustableCapsuleComponent>();
 	}
 };
-static_assert(alignof(UKuroAdjustableCapsuleComponent) == 0x000010, "Wrong alignment on UKuroAdjustableCapsuleComponent");
-static_assert(sizeof(UKuroAdjustableCapsuleComponent) == 0x000590, "Wrong size on UKuroAdjustableCapsuleComponent");
-static_assert(offsetof(UKuroAdjustableCapsuleComponent, BindSocketNames) == 0x000548, "Member 'UKuroAdjustableCapsuleComponent::BindSocketNames' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableCapsuleComponent, AddRadius) == 0x000558, "Member 'UKuroAdjustableCapsuleComponent::AddRadius' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableCapsuleComponent, MinRadius) == 0x00055C, "Member 'UKuroAdjustableCapsuleComponent::MinRadius' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableCapsuleComponent, MaxRadius) == 0x000560, "Member 'UKuroAdjustableCapsuleComponent::MaxRadius' has a wrong offset!");
-static_assert(offsetof(UKuroAdjustableCapsuleComponent, AdjustCapsuleType) == 0x000564, "Member 'UKuroAdjustableCapsuleComponent::AdjustCapsuleType' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAdjustableCapsuleComponent;
 
 // Class KuroAnim.KuroAnimInstancePhyCloth
 // 0x0040 (0x0770 - 0x0730)
@@ -298,17 +261,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstancePhyCloth">();
+		STATIC_CLASS_IMPL("KuroAnimInstancePhyCloth")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstancePhyCloth")
 	}
 	static class UKuroAnimInstancePhyCloth* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstancePhyCloth>();
 	}
 };
-static_assert(alignof(UKuroAnimInstancePhyCloth) == 0x000010, "Wrong alignment on UKuroAnimInstancePhyCloth");
-static_assert(sizeof(UKuroAnimInstancePhyCloth) == 0x000770, "Wrong size on UKuroAnimInstancePhyCloth");
-static_assert(offsetof(UKuroAnimInstancePhyCloth, bEnableFormSwitch) == 0x000730, "Member 'UKuroAnimInstancePhyCloth::bEnableFormSwitch' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstancePhyCloth, FormSkelMeshRefs) == 0x000738, "Member 'UKuroAnimInstancePhyCloth::FormSkelMeshRefs' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstancePhyCloth;
 
 // Class KuroAnim.KuroAnimConfig
 // 0x0008 (0x0038 - 0x0030)
@@ -321,17 +285,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimConfig">();
+		STATIC_CLASS_IMPL("KuroAnimConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimConfig")
 	}
 	static class UKuroAnimConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimConfig>();
 	}
 };
-static_assert(alignof(UKuroAnimConfig) == 0x000008, "Wrong alignment on UKuroAnimConfig");
-static_assert(sizeof(UKuroAnimConfig) == 0x000038, "Wrong size on UKuroAnimConfig");
-static_assert(offsetof(UKuroAnimConfig, DefaultFootOffset) == 0x000030, "Member 'UKuroAnimConfig::DefaultFootOffset' has a wrong offset!");
-static_assert(offsetof(UKuroAnimConfig, DefaultHighHeelsOffset) == 0x000034, "Member 'UKuroAnimConfig::DefaultHighHeelsOffset' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimConfig;
 
 // Class KuroAnim.KuroAnimInstanceMonster
 // 0x0060 (0x09A0 - 0x0940)
@@ -369,40 +334,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstanceMonster">();
+		STATIC_CLASS_IMPL("KuroAnimInstanceMonster")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstanceMonster")
 	}
 	static class UKuroAnimInstanceMonster* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstanceMonster>();
 	}
 };
-static_assert(alignof(UKuroAnimInstanceMonster) == 0x000010, "Wrong alignment on UKuroAnimInstanceMonster");
-static_assert(sizeof(UKuroAnimInstanceMonster) == 0x0009A0, "Wrong size on UKuroAnimInstanceMonster");
-static_assert(offsetof(UKuroAnimInstanceMonster, HitBonesList) == 0x000940, "Member 'UKuroAnimInstanceMonster::HitBonesList' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, SightDirection) == 0x000950, "Member 'UKuroAnimInstanceMonster::SightDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, SightAlpha) == 0x00095C, "Member 'UKuroAnimInstanceMonster::SightAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, SightDirectionRightAngle) == 0x000960, "Member 'UKuroAnimInstanceMonster::SightDirectionRightAngle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, SightDirectionUpAngle) == 0x000964, "Member 'UKuroAnimInstanceMonster::SightDirectionUpAngle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, HateLocation) == 0x000968, "Member 'UKuroAnimInstanceMonster::HateLocation' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bIsBeingCaptured) == 0x000974, "Member 'UKuroAnimInstanceMonster::bIsBeingCaptured' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bPlayKnockUpAnim) == 0x000975, "Member 'UKuroAnimInstanceMonster::bPlayKnockUpAnim' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bHeadIKReturnToOrigin) == 0x000976, "Member 'UKuroAnimInstanceMonster::bHeadIKReturnToOrigin' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, CharacterMoveStateType) == 0x000977, "Member 'UKuroAnimInstanceMonster::CharacterMoveStateType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, CharacterPositionStateType) == 0x000978, "Member 'UKuroAnimInstanceMonster::CharacterPositionStateType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bAcceptNewHit) == 0x000979, "Member 'UKuroAnimInstanceMonster::bAcceptNewHit' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bEnterFk) == 0x00097A, "Member 'UKuroAnimInstanceMonster::bEnterFk' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bHitInAir) == 0x00097B, "Member 'UKuroAnimInstanceMonster::bHitInAir' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, HitAnimType) == 0x00097C, "Member 'UKuroAnimInstanceMonster::HitAnimType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, MovementDirection) == 0x000980, "Member 'UKuroAnimInstanceMonster::MovementDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, WalkingPosture) == 0x000981, "Member 'UKuroAnimInstanceMonster::WalkingPosture' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, UpdateDeltaSeconds) == 0x000984, "Member 'UKuroAnimInstanceMonster::UpdateDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, WorldDeltaSeconds) == 0x000988, "Member 'UKuroAnimInstanceMonster::WorldDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bIdleThreeState) == 0x00098C, "Member 'UKuroAnimInstanceMonster::bIdleThreeState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bCommonDebugState) == 0x00098D, "Member 'UKuroAnimInstanceMonster::bCommonDebugState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bInAirState) == 0x00098E, "Member 'UKuroAnimInstanceMonster::bInAirState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bLowerHalfUniversalFusionState) == 0x00098F, "Member 'UKuroAnimInstanceMonster::bLowerHalfUniversalFusionState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bInBattleState) == 0x000990, "Member 'UKuroAnimInstanceMonster::bInBattleState' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceMonster, bPlayEnterBattleState) == 0x000991, "Member 'UKuroAnimInstanceMonster::bPlayEnterBattleState' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstanceMonster;
 
 // Class KuroAnim.KuroAnimInstanceRole
 // 0x0340 (0x0C80 - 0x0940)
@@ -594,176 +537,21 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstanceRole">();
+		STATIC_CLASS_IMPL("KuroAnimInstanceRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstanceRole")
 	}
 	static class UKuroAnimInstanceRole* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstanceRole>();
 	}
 };
-static_assert(alignof(UKuroAnimInstanceRole) == 0x000010, "Wrong alignment on UKuroAnimInstanceRole");
-static_assert(sizeof(UKuroAnimInstanceRole) == 0x000C80, "Wrong size on UKuroAnimInstanceRole");
-static_assert(offsetof(UKuroAnimInstanceRole, ValidPerformanceIndexes) == 0x000940, "Member 'UKuroAnimInstanceRole::ValidPerformanceIndexes' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, FloorSpeed) == 0x000950, "Member 'UKuroAnimInstanceRole::FloorSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bCanbeInterrupt) == 0x000970, "Member 'UKuroAnimInstanceRole::bCanbeInterrupt' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bMoveBlock) == 0x000971, "Member 'UKuroAnimInstanceRole::bMoveBlock' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, TimeSeconds) == 0x000974, "Member 'UKuroAnimInstanceRole::TimeSeconds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bIsNotNPC) == 0x00097C, "Member 'UKuroAnimInstanceRole::bIsNotNPC' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ChangeRoleCount) == 0x000980, "Member 'UKuroAnimInstanceRole::ChangeRoleCount' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bHasNPCTag) == 0x000985, "Member 'UKuroAnimInstanceRole::bHasNPCTag' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bIsGoingToMove) == 0x000986, "Member 'UKuroAnimInstanceRole::bIsGoingToMove' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, TurnMix) == 0x00098C, "Member 'UKuroAnimInstanceRole::TurnMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SpeedMix) == 0x000990, "Member 'UKuroAnimInstanceRole::SpeedMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LerpSpeedAlpha) == 0x0009A0, "Member 'UKuroAnimInstanceRole::LerpSpeedAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AimMoveMix) == 0x0009A4, "Member 'UKuroAnimInstanceRole::AimMoveMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LocalAccel) == 0x0009AC, "Member 'UKuroAnimInstanceRole::LocalAccel' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LeanAmount) == 0x0009B8, "Member 'UKuroAnimInstanceRole::LeanAmount' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, MoveDirection) == 0x0009C0, "Member 'UKuroAnimInstanceRole::MoveDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, GroundMovePlayRate) == 0x0009C4, "Member 'UKuroAnimInstanceRole::GroundMovePlayRate' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, WalkRunMix) == 0x0009C8, "Member 'UKuroAnimInstanceRole::WalkRunMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, StepSizeMix) == 0x0009CC, "Member 'UKuroAnimInstanceRole::StepSizeMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AccelLerpMix) == 0x0009D0, "Member 'UKuroAnimInstanceRole::AccelLerpMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AimYaw) == 0x0009E0, "Member 'UKuroAnimInstanceRole::AimYaw' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AimPitch) == 0x0009E4, "Member 'UKuroAnimInstanceRole::AimPitch' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bIsFightStand) == 0x0009E8, "Member 'UKuroAnimInstanceRole::bIsFightStand' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, MoveMix) == 0x0009EC, "Member 'UKuroAnimInstanceRole::MoveMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, CachePercentLR) == 0x0009F4, "Member 'UKuroAnimInstanceRole::CachePercentLR' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, CachePercentFB) == 0x0009F8, "Member 'UKuroAnimInstanceRole::CachePercentFB' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, StandTurnType) == 0x0009FC, "Member 'UKuroAnimInstanceRole::StandTurnType' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LandSpeedIndex) == 0x000A00, "Member 'UKuroAnimInstanceRole::LandSpeedIndex' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, FallingSpeed) == 0x000A04, "Member 'UKuroAnimInstanceRole::FallingSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ForecastLandWeight) == 0x000A08, "Member 'UKuroAnimInstanceRole::ForecastLandWeight' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AirVelocity) == 0x000A0C, "Member 'UKuroAnimInstanceRole::AirVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AirTargetYaw) == 0x000A18, "Member 'UKuroAnimInstanceRole::AirTargetYaw' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, GlideMix) == 0x000A1C, "Member 'UKuroAnimInstanceRole::GlideMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SlideMix) == 0x000A28, "Member 'UKuroAnimInstanceRole::SlideMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AirSlideMix) == 0x000A44, "Member 'UKuroAnimInstanceRole::AirSlideMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, HookRopeMix) == 0x000A50, "Member 'UKuroAnimInstanceRole::HookRopeMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, HookRopeSucceedSpeed) == 0x000A5C, "Member 'UKuroAnimInstanceRole::HookRopeSucceedSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, JumpMix) == 0x000A60, "Member 'UKuroAnimInstanceRole::JumpMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SwimRootOffset) == 0x000A64, "Member 'UKuroAnimInstanceRole::SwimRootOffset' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SwimAccelOffset) == 0x000A70, "Member 'UKuroAnimInstanceRole::SwimAccelOffset' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SwimAccelOffsetReal) == 0x000A74, "Member 'UKuroAnimInstanceRole::SwimAccelOffsetReal' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SwimMix) == 0x000A78, "Member 'UKuroAnimInstanceRole::SwimMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, FastClimbMix) == 0x000A7C, "Member 'UKuroAnimInstanceRole::FastClimbMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ClimbBrakeMix) == 0x000A80, "Member 'UKuroAnimInstanceRole::ClimbBrakeMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bIsClimbMoving) == 0x000A84, "Member 'UKuroAnimInstanceRole::bIsClimbMoving' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ClimbRadius) == 0x000A88, "Member 'UKuroAnimInstanceRole::ClimbRadius' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ClimbDirection) == 0x000A8C, "Member 'UKuroAnimInstanceRole::ClimbDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ValidClimbDirection) == 0x000A90, "Member 'UKuroAnimInstanceRole::ValidClimbDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, IKMode) == 0x000A94, "Member 'UKuroAnimInstanceRole::IKMode' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bIKNoLerp) == 0x000A95, "Member 'UKuroAnimInstanceRole::bIKNoLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ComprehensiveRotator) == 0x000A98, "Member 'UKuroAnimInstanceRole::ComprehensiveRotator' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BeHitStandardizedDirect) == 0x000AA4, "Member 'UKuroAnimInstanceRole::BeHitStandardizedDirect' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BeHitSocketLocation) == 0x000AB0, "Member 'UKuroAnimInstanceRole::BeHitSocketLocation' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SightLockAlpha) == 0x000ABC, "Member 'UKuroAnimInstanceRole::SightLockAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SightLockDirect) == 0x000AC0, "Member 'UKuroAnimInstanceRole::SightLockDirect' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bInAimShotEnd) == 0x000ACC, "Member 'UKuroAnimInstanceRole::bInAimShotEnd' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AimYawMix) == 0x000AD0, "Member 'UKuroAnimInstanceRole::AimYawMix' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, FreezeCountDown) == 0x000AD4, "Member 'UKuroAnimInstanceRole::FreezeCountDown' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateStop) == 0x000AD8, "Member 'UKuroAnimInstanceRole::bStateStop' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateSprintStop) == 0x000AD9, "Member 'UKuroAnimInstanceRole::bStateSprintStop' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateRunStop) == 0x000ADA, "Member 'UKuroAnimInstanceRole::bStateRunStop' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateWalkStop) == 0x000ADB, "Member 'UKuroAnimInstanceRole::bStateWalkStop' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateGround) == 0x000ADC, "Member 'UKuroAnimInstanceRole::bStateGround' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateStand) == 0x000ADD, "Member 'UKuroAnimInstanceRole::bStateStand' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateGroundSprint) == 0x000ADE, "Member 'UKuroAnimInstanceRole::bStateGroundSprint' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateGroundRun) == 0x000ADF, "Member 'UKuroAnimInstanceRole::bStateGroundRun' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateGroundWalk) == 0x000AE0, "Member 'UKuroAnimInstanceRole::bStateGroundWalk' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateClimb) == 0x000AE1, "Member 'UKuroAnimInstanceRole::bStateClimb' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAir) == 0x000AE2, "Member 'UKuroAnimInstanceRole::bStateAir' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateSki) == 0x000AE3, "Member 'UKuroAnimInstanceRole::bStateSki' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateNormalSki) == 0x000AE4, "Member 'UKuroAnimInstanceRole::bStateNormalSki' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirSlide) == 0x000AE5, "Member 'UKuroAnimInstanceRole::bStateAirSlide' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirGlide) == 0x000AE6, "Member 'UKuroAnimInstanceRole::bStateAirGlide' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateWater) == 0x000AE7, "Member 'UKuroAnimInstanceRole::bStateWater' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateSkill) == 0x000AE8, "Member 'UKuroAnimInstanceRole::bStateSkill' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLockDirection) == 0x000AE9, "Member 'UKuroAnimInstanceRole::bStateLockDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAimDirection) == 0x000AEA, "Member 'UKuroAnimInstanceRole::bStateAimDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateFaceDirection) == 0x000AEB, "Member 'UKuroAnimInstanceRole::bStateFaceDirection' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateBeHit) == 0x000AEC, "Member 'UKuroAnimInstanceRole::bStateBeHit' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateHitPush) == 0x000AED, "Member 'UKuroAnimInstanceRole::bStateHitPush' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateBeHitFly) == 0x000AEE, "Member 'UKuroAnimInstanceRole::bStateBeHitFly' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateDying) == 0x000AEF, "Member 'UKuroAnimInstanceRole::bStateDying' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateDrown) == 0x000AF0, "Member 'UKuroAnimInstanceRole::bStateDrown' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateInBattle) == 0x000AF1, "Member 'UKuroAnimInstanceRole::bStateInBattle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateEnterBattle) == 0x000AF2, "Member 'UKuroAnimInstanceRole::bStateEnterBattle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateKeepSprint) == 0x000AF3, "Member 'UKuroAnimInstanceRole::bStateKeepSprint' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateFastSwim) == 0x000AF4, "Member 'UKuroAnimInstanceRole::bStateFastSwim' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateSit) == 0x000AF5, "Member 'UKuroAnimInstanceRole::bStateSit' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateOverlapBaseAnim) == 0x000AF6, "Member 'UKuroAnimInstanceRole::bStateOverlapBaseAnim' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bUseAdditive) == 0x000AF7, "Member 'UKuroAnimInstanceRole::bUseAdditive' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bUseOverlapLayerAdditive) == 0x000AF8, "Member 'UKuroAnimInstanceRole::bUseOverlapLayerAdditive' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLowerRightTurnBlending) == 0x000AF9, "Member 'UKuroAnimInstanceRole::bStateLowerRightTurnBlending' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLowerBlending) == 0x000AFA, "Member 'UKuroAnimInstanceRole::bStateLowerBlending' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateWholeBodyBlend) == 0x000AFB, "Member 'UKuroAnimInstanceRole::bStateWholeBodyBlend' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateUseSpecialStateMachine) == 0x000AFC, "Member 'UKuroAnimInstanceRole::bStateUseSpecialStateMachine' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateFastBlend) == 0x000AFD, "Member 'UKuroAnimInstanceRole::bStateFastBlend' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bUseArmAdditive) == 0x000AFE, "Member 'UKuroAnimInstanceRole::bUseArmAdditive' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLeftArmBlend) == 0x000AFF, "Member 'UKuroAnimInstanceRole::bStateLeftArmBlend' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateRightArmBlend) == 0x000B00, "Member 'UKuroAnimInstanceRole::bStateRightArmBlend' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LowerBlendAlpha) == 0x000B04, "Member 'UKuroAnimInstanceRole::LowerBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaPelvis) == 0x000B08, "Member 'UKuroAnimInstanceRole::BlendAlphaPelvis' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaSpine) == 0x000B14, "Member 'UKuroAnimInstanceRole::BlendAlphaSpine' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaSpine1) == 0x000B20, "Member 'UKuroAnimInstanceRole::BlendAlphaSpine1' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaSpine2) == 0x000B2C, "Member 'UKuroAnimInstanceRole::BlendAlphaSpine2' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaHead) == 0x000B38, "Member 'UKuroAnimInstanceRole::BlendAlphaHead' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaArmL) == 0x000B44, "Member 'UKuroAnimInstanceRole::BlendAlphaArmL' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaArmR) == 0x000B50, "Member 'UKuroAnimInstanceRole::BlendAlphaArmR' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, BlendAlphaLeg) == 0x000B5C, "Member 'UKuroAnimInstanceRole::BlendAlphaLeg' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateCast) == 0x000B68, "Member 'UKuroAnimInstanceRole::bStateCast' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateCastThrowing) == 0x000B69, "Member 'UKuroAnimInstanceRole::bStateCastThrowing' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateCastSelecting) == 0x000B6A, "Member 'UKuroAnimInstanceRole::bStateCastSelecting' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateCastCasting) == 0x000B6B, "Member 'UKuroAnimInstanceRole::bStateCastCasting' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateMoveShot) == 0x000B6C, "Member 'UKuroAnimInstanceRole::bStateMoveShot' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateHoldShot) == 0x000B6D, "Member 'UKuroAnimInstanceRole::bStateHoldShot' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAiming) == 0x000B6E, "Member 'UKuroAnimInstanceRole::bStateAiming' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateGeneralAiming) == 0x000B6F, "Member 'UKuroAnimInstanceRole::bStateGeneralAiming' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateShotNotify) == 0x000B70, "Member 'UKuroAnimInstanceRole::bStateShotNotify' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateFixHook) == 0x000B71, "Member 'UKuroAnimInstanceRole::bStateFixHook' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirNormalShot) == 0x000B72, "Member 'UKuroAnimInstanceRole::bStateAirNormalShot' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirNormalShotLeft) == 0x000B73, "Member 'UKuroAnimInstanceRole::bStateAirNormalShotLeft' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirNormalShotRight) == 0x000B74, "Member 'UKuroAnimInstanceRole::bStateAirNormalShotRight' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateAirNormalShotFall) == 0x000B75, "Member 'UKuroAnimInstanceRole::bStateAirNormalShotFall' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateBurst) == 0x000B76, "Member 'UKuroAnimInstanceRole::bStateBurst' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateInBurst) == 0x000B77, "Member 'UKuroAnimInstanceRole::bStateInBurst' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLimitForward) == 0x000B78, "Member 'UKuroAnimInstanceRole::bStateLimitForward' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStateLimitBackward) == 0x000B79, "Member 'UKuroAnimInstanceRole::bStateLimitBackward' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bLandRollWhenDying) == 0x000B7A, "Member 'UKuroAnimInstanceRole::bLandRollWhenDying' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bCaught) == 0x000B7B, "Member 'UKuroAnimInstanceRole::bCaught' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bRagDollQuit) == 0x000B7C, "Member 'UKuroAnimInstanceRole::bRagDollQuit' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ExpresionAlpha) == 0x000B80, "Member 'UKuroAnimInstanceRole::ExpresionAlpha' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bEpresion) == 0x000B8C, "Member 'UKuroAnimInstanceRole::bEpresion' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, PerformanceCountDown) == 0x000B90, "Member 'UKuroAnimInstanceRole::PerformanceCountDown' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bPerformance) == 0x000B94, "Member 'UKuroAnimInstanceRole::bPerformance' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, PerformanceIndex) == 0x000B98, "Member 'UKuroAnimInstanceRole::PerformanceIndex' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bAllowPerformance) == 0x000B9C, "Member 'UKuroAnimInstanceRole::bAllowPerformance' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bAcceptNewSkill) == 0x000B9D, "Member 'UKuroAnimInstanceRole::bAcceptNewSkill' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bStageMotionSki) == 0x000BA4, "Member 'UKuroAnimInstanceRole::bStageMotionSki' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bHugeItemPull) == 0x000BA5, "Member 'UKuroAnimInstanceRole::bHugeItemPull' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, bHugeItemPullAngle) == 0x000BA6, "Member 'UKuroAnimInstanceRole::bHugeItemPullAngle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SizeToCharHeightMap) == 0x000BA8, "Member 'UKuroAnimInstanceRole::SizeToCharHeightMap' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, LandSpeedThresholds) == 0x000BF8, "Member 'UKuroAnimInstanceRole::LandSpeedThresholds' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SpeedMixLerp) == 0x000C00, "Member 'UKuroAnimInstanceRole::SpeedMixLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, GroundLeanLerp) == 0x000C04, "Member 'UKuroAnimInstanceRole::GroundLeanLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AnimWalkSpeed) == 0x000C08, "Member 'UKuroAnimInstanceRole::AnimWalkSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AnimRunSpeed) == 0x000C0C, "Member 'UKuroAnimInstanceRole::AnimRunSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AnimSprintSpeed) == 0x000C10, "Member 'UKuroAnimInstanceRole::AnimSprintSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AirLeanLerp) == 0x000C14, "Member 'UKuroAnimInstanceRole::AirLeanLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, JumpMixLerp) == 0x000C18, "Member 'UKuroAnimInstanceRole::JumpMixLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SlideRotateLerp) == 0x000C1C, "Member 'UKuroAnimInstanceRole::SlideRotateLerp' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, SlideRotateLerp2) == 0x000C20, "Member 'UKuroAnimInstanceRole::SlideRotateLerp2' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, StandWalkStepCurve) == 0x000C28, "Member 'UKuroAnimInstanceRole::StandWalkStepCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, StandRunStepCurve) == 0x000C30, "Member 'UKuroAnimInstanceRole::StandRunStepCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, ForecastLandCurve) == 0x000C38, "Member 'UKuroAnimInstanceRole::ForecastLandCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, RelativeSpeedBlendCurve) == 0x000C40, "Member 'UKuroAnimInstanceRole::RelativeSpeedBlendCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AirLeanCurve) == 0x000C48, "Member 'UKuroAnimInstanceRole::AirLeanCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AngelToStepLengthCurve) == 0x000C50, "Member 'UKuroAnimInstanceRole::AngelToStepLengthCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, AngleToStepFrequencyCurve) == 0x000C58, "Member 'UKuroAnimInstanceRole::AngleToStepFrequencyCurve' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceRole, FkMaterialControllerData) == 0x000C60, "Member 'UKuroAnimInstanceRole::FkMaterialControllerData' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstanceRole;
 
 // Class KuroAnim.AbpLogicParams
-// 0x0170 (0x01A0 - 0x0030)
+// 0x0180 (0x01B0 - 0x0030)
 class UAbpLogicParams final : public UObject
 {
 public:
@@ -833,93 +621,77 @@ public:
 	bool                                          bDisableBlink;                                     // 0x0190(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSwingState;                                       // 0x0191(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESwingStateType                               SwingStateType;                                    // 0x0192(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_193[0xD];                                      // 0x0193(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_193[0x1];                                      // 0x0193(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                FloatingLocalDirectionRef;                         // 0x0194(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FloatingMoveMixRef;                                // 0x01A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A4[0xC];                                      // 0x01A4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbpLogicParams">();
+		STATIC_CLASS_IMPL("AbpLogicParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbpLogicParams")
 	}
 	static class UAbpLogicParams* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbpLogicParams>();
 	}
 };
-static_assert(alignof(UAbpLogicParams) == 0x000010, "Wrong alignment on UAbpLogicParams");
-static_assert(sizeof(UAbpLogicParams) == 0x0001A0, "Wrong size on UAbpLogicParams");
-static_assert(offsetof(UAbpLogicParams, AcceptedNewBeHitRef) == 0x000030, "Member 'UAbpLogicParams::AcceptedNewBeHitRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BeHitAnimRef) == 0x000034, "Member 'UAbpLogicParams::BeHitAnimRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, EnterFkRef) == 0x000038, "Member 'UAbpLogicParams::EnterFkRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, DoubleHitInAirRef) == 0x000039, "Member 'UAbpLogicParams::DoubleHitInAirRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BeHitDirectRef) == 0x00003C, "Member 'UAbpLogicParams::BeHitDirectRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BeHitLocationRef) == 0x000048, "Member 'UAbpLogicParams::BeHitLocationRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BeHitSocketNameRef) == 0x000054, "Member 'UAbpLogicParams::BeHitSocketNameRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BeHitBoneRef) == 0x000060, "Member 'UAbpLogicParams::BeHitBoneRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, CharMoveStateRef) == 0x00006C, "Member 'UAbpLogicParams::CharMoveStateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, CharPositionStateRef) == 0x00006D, "Member 'UAbpLogicParams::CharPositionStateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, CharCameraStateRef) == 0x00006E, "Member 'UAbpLogicParams::CharCameraStateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, BattleIdleTimeRef) == 0x000070, "Member 'UAbpLogicParams::BattleIdleTimeRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, DegMovementSlopeRef) == 0x000074, "Member 'UAbpLogicParams::DegMovementSlopeRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SightDirectRef) == 0x000078, "Member 'UAbpLogicParams::SightDirectRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, RagQuitStateRef) == 0x000084, "Member 'UAbpLogicParams::RagQuitStateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, IsJumpRef) == 0x000085, "Member 'UAbpLogicParams::IsJumpRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, AccelerationRef) == 0x000088, "Member 'UAbpLogicParams::AccelerationRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, IsMovingRef) == 0x000094, "Member 'UAbpLogicParams::IsMovingRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SpeedRef) == 0x000098, "Member 'UAbpLogicParams::SpeedRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, InputDirectRef) == 0x00009C, "Member 'UAbpLogicParams::InputDirectRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, InputRotatorRef) == 0x0000A8, "Member 'UAbpLogicParams::InputRotatorRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, IsFallingIntoWaterRef) == 0x0000B4, "Member 'UAbpLogicParams::IsFallingIntoWaterRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, GroundedTimeRef) == 0x0000B8, "Member 'UAbpLogicParams::GroundedTimeRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, HasMoveInputRef) == 0x0000BC, "Member 'UAbpLogicParams::HasMoveInputRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, ClimbInfoRef) == 0x0000C0, "Member 'UAbpLogicParams::ClimbInfoRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, ClimbStateRef) == 0x0000D0, "Member 'UAbpLogicParams::ClimbStateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, ClimbOnWallAngleRef) == 0x0000D4, "Member 'UAbpLogicParams::ClimbOnWallAngleRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SprintSwimOffsetRef) == 0x0000D8, "Member 'UAbpLogicParams::SprintSwimOffsetRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SprintSwimOffsetLerpSpeedRef) == 0x0000DC, "Member 'UAbpLogicParams::SprintSwimOffsetLerpSpeedRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SlideForwardRef) == 0x0000E0, "Member 'UAbpLogicParams::SlideForwardRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SlideSwitchThisFrameRef) == 0x0000EC, "Member 'UAbpLogicParams::SlideSwitchThisFrameRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SlideStandModeRef) == 0x0000ED, "Member 'UAbpLogicParams::SlideStandModeRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, JumpUpRateRef) == 0x0000F0, "Member 'UAbpLogicParams::JumpUpRateRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, ForceExitStateStopRef) == 0x0000F4, "Member 'UAbpLogicParams::ForceExitStateStopRef' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SkillTarget) == 0x0000F8, "Member 'UAbpLogicParams::SkillTarget' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, HateTarget) == 0x000100, "Member 'UAbpLogicParams::HateTarget' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, LastActiveSkillTime) == 0x000108, "Member 'UAbpLogicParams::LastActiveSkillTime' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SitDownDirect) == 0x00010C, "Member 'UAbpLogicParams::SitDownDirect' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, StandUpDirect) == 0x000110, "Member 'UAbpLogicParams::StandUpDirect' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bSitDown) == 0x000114, "Member 'UAbpLogicParams::bSitDown' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SitDownType) == 0x000118, "Member 'UAbpLogicParams::SitDownType' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, IsOnVehicle) == 0x00011C, "Member 'UAbpLogicParams::IsOnVehicle' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, IsLeavingVehicle) == 0x00011D, "Member 'UAbpLogicParams::IsLeavingVehicle' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, VehicleType) == 0x000120, "Member 'UAbpLogicParams::VehicleType' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bIsInPerformingPlot) == 0x000124, "Member 'UAbpLogicParams::bIsInPerformingPlot' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bIsInSequence) == 0x000125, "Member 'UAbpLogicParams::bIsInSequence' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bIsInSplineMove) == 0x000126, "Member 'UAbpLogicParams::bIsInSplineMove' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bIsInUiCamera) == 0x000127, "Member 'UAbpLogicParams::bIsInUiCamera' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, LeftHandIKTargetCS) == 0x000130, "Member 'UAbpLogicParams::LeftHandIKTargetCS' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, RightHandIKTargetCS) == 0x000160, "Member 'UAbpLogicParams::RightHandIKTargetCS' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bDisableBlink) == 0x000190, "Member 'UAbpLogicParams::bDisableBlink' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, bSwingState) == 0x000191, "Member 'UAbpLogicParams::bSwingState' has a wrong offset!");
-static_assert(offsetof(UAbpLogicParams, SwingStateType) == 0x000192, "Member 'UAbpLogicParams::SwingStateType' has a wrong offset!");
+DUMPER7_ASSERTS_UAbpLogicParams;
 
 // Class KuroAnim.KuroAnimJsSubsystem
-// 0x00B0 (0x00E8 - 0x0038)
+// 0x0100 (0x0138 - 0x0038)
 class UKuroAnimJsSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_38[0xB0];                                      // 0x0038(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x100];                                     // 0x0038(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimJsSubsystem">();
+		STATIC_CLASS_IMPL("KuroAnimJsSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimJsSubsystem")
 	}
 	static class UKuroAnimJsSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimJsSubsystem>();
 	}
 };
-static_assert(alignof(UKuroAnimJsSubsystem) == 0x000008, "Wrong alignment on UKuroAnimJsSubsystem");
-static_assert(sizeof(UKuroAnimJsSubsystem) == 0x0000E8, "Wrong size on UKuroAnimJsSubsystem");
+DUMPER7_ASSERTS_UKuroAnimJsSubsystem;
+
+// Class KuroAnim.KuroAnimJsSubsystemProxy
+// 0x0000 (0x0030 - 0x0030)
+class UKuroAnimJsSubsystemProxy final : public UObject
+{
+public:
+	static void RegisterEntity(const class UGameInstance* World, int32 EntityId);
+	static void RegisterUpdateAnimInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction);
+	static void RegisterUpdateMonsterInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction);
+	static void RegisterUpdateNpcInfoCsFunction(const class UGameInstance* World, TDelegate<void(int32 EntityId)> UpdateAnimInfoCsFunction);
+	static void UnregisterEntity(const class UGameInstance* World, int32 EntityId);
+	static void UnregisterUpdateAnimInfoFunction(const class UGameInstance* World);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroAnimJsSubsystemProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimJsSubsystemProxy")
+	}
+	static class UKuroAnimJsSubsystemProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroAnimJsSubsystemProxy>();
+	}
+};
+DUMPER7_ASSERTS_UKuroAnimJsSubsystemProxy;
 
 // Class KuroAnim.KuroAnimLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -934,15 +706,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimLibrary">();
+		STATIC_CLASS_IMPL("KuroAnimLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimLibrary")
 	}
 	static class UKuroAnimLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimLibrary>();
 	}
 };
-static_assert(alignof(UKuroAnimLibrary) == 0x000008, "Wrong alignment on UKuroAnimLibrary");
-static_assert(sizeof(UKuroAnimLibrary) == 0x000030, "Wrong size on UKuroAnimLibrary");
+DUMPER7_ASSERTS_UKuroAnimLibrary;
 
 // Class KuroAnim.KuroAnimMathLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -960,15 +735,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimMathLibrary">();
+		STATIC_CLASS_IMPL("KuroAnimMathLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimMathLibrary")
 	}
 	static class UKuroAnimMathLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimMathLibrary>();
 	}
 };
-static_assert(alignof(UKuroAnimMathLibrary) == 0x000008, "Wrong alignment on UKuroAnimMathLibrary");
-static_assert(sizeof(UKuroAnimMathLibrary) == 0x000030, "Wrong size on UKuroAnimMathLibrary");
+DUMPER7_ASSERTS_UKuroAnimMathLibrary;
 
 // Class KuroAnim.MotorWheelDisplayInfoObject
 // 0x0010 (0x0040 - 0x0030)
@@ -980,16 +758,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MotorWheelDisplayInfoObject">();
+		STATIC_CLASS_IMPL("MotorWheelDisplayInfoObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotorWheelDisplayInfoObject")
 	}
 	static class UMotorWheelDisplayInfoObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMotorWheelDisplayInfoObject>();
 	}
 };
-static_assert(alignof(UMotorWheelDisplayInfoObject) == 0x000008, "Wrong alignment on UMotorWheelDisplayInfoObject");
-static_assert(sizeof(UMotorWheelDisplayInfoObject) == 0x000040, "Wrong size on UMotorWheelDisplayInfoObject");
-static_assert(offsetof(UMotorWheelDisplayInfoObject, DisplayInfos) == 0x000030, "Member 'UMotorWheelDisplayInfoObject::DisplayInfos' has a wrong offset!");
+DUMPER7_ASSERTS_UMotorWheelDisplayInfoObject;
 
 // Class KuroAnim.KuroTrackRecorder
 // 0x00F0 (0x0120 - 0x0030)
@@ -1005,15 +785,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTrackRecorder">();
+		STATIC_CLASS_IMPL("KuroTrackRecorder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTrackRecorder")
 	}
 	static class UKuroTrackRecorder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTrackRecorder>();
 	}
 };
-static_assert(alignof(UKuroTrackRecorder) == 0x000008, "Wrong alignment on UKuroTrackRecorder");
-static_assert(sizeof(UKuroTrackRecorder) == 0x000120, "Wrong size on UKuroTrackRecorder");
+DUMPER7_ASSERTS_UKuroTrackRecorder;
 
 // Class KuroAnim.KuroCameraRecorder
 // 0x0008 (0x0128 - 0x0120)
@@ -1025,15 +808,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCameraRecorder">();
+		STATIC_CLASS_IMPL("KuroCameraRecorder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCameraRecorder")
 	}
 	static class UKuroCameraRecorder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCameraRecorder>();
 	}
 };
-static_assert(alignof(UKuroCameraRecorder) == 0x000008, "Wrong alignment on UKuroCameraRecorder");
-static_assert(sizeof(UKuroCameraRecorder) == 0x000128, "Wrong size on UKuroCameraRecorder");
+DUMPER7_ASSERTS_UKuroCameraRecorder;
 
 // Class KuroAnim.KuroCameraShake
 // 0x0030 (0x01D0 - 0x01A0)
@@ -1054,20 +840,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCameraShake">();
+		STATIC_CLASS_IMPL("KuroCameraShake")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCameraShake")
 	}
 	static class UKuroCameraShake* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCameraShake>();
 	}
 };
-static_assert(alignof(UKuroCameraShake) == 0x000010, "Wrong alignment on UKuroCameraShake");
-static_assert(sizeof(UKuroCameraShake) == 0x0001D0, "Wrong size on UKuroCameraShake");
-static_assert(offsetof(UKuroCameraShake, BlendInMode) == 0x000198, "Member 'UKuroCameraShake::BlendInMode' has a wrong offset!");
-static_assert(offsetof(UKuroCameraShake, BlendInCustomCurve) == 0x0001A0, "Member 'UKuroCameraShake::BlendInCustomCurve' has a wrong offset!");
-static_assert(offsetof(UKuroCameraShake, BlendOutMode) == 0x0001A8, "Member 'UKuroCameraShake::BlendOutMode' has a wrong offset!");
-static_assert(offsetof(UKuroCameraShake, BlendOutCustomCurve) == 0x0001B0, "Member 'UKuroCameraShake::BlendOutCustomCurve' has a wrong offset!");
-static_assert(offsetof(UKuroCameraShake, BlendCurveVector) == 0x0001C0, "Member 'UKuroCameraShake::BlendCurveVector' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCameraShake;
 
 // Class KuroAnim.KuroCharacterRecorder
 // 0x0010 (0x0130 - 0x0120)
@@ -1084,20 +868,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCharacterRecorder">();
+		STATIC_CLASS_IMPL("KuroCharacterRecorder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCharacterRecorder")
 	}
 	static class UKuroCharacterRecorder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCharacterRecorder>();
 	}
 };
-static_assert(alignof(UKuroCharacterRecorder) == 0x000008, "Wrong alignment on UKuroCharacterRecorder");
-static_assert(sizeof(UKuroCharacterRecorder) == 0x000130, "Wrong size on UKuroCharacterRecorder");
-static_assert(offsetof(UKuroCharacterRecorder, bUseClone) == 0x000120, "Member 'UKuroCharacterRecorder::bUseClone' has a wrong offset!");
-static_assert(offsetof(UKuroCharacterRecorder, bRecordSkeletalMeshAnimSeq) == 0x000121, "Member 'UKuroCharacterRecorder::bRecordSkeletalMeshAnimSeq' has a wrong offset!");
-static_assert(offsetof(UKuroCharacterRecorder, bComponentPossessable) == 0x000122, "Member 'UKuroCharacterRecorder::bComponentPossessable' has a wrong offset!");
-static_assert(offsetof(UKuroCharacterRecorder, bActorPossessable) == 0x000123, "Member 'UKuroCharacterRecorder::bActorPossessable' has a wrong offset!");
-static_assert(offsetof(UKuroCharacterRecorder, BaseBlueprint) == 0x000128, "Member 'UKuroCharacterRecorder::BaseBlueprint' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCharacterRecorder;
 
 // Class KuroAnim.KuroEffectRecorder
 // 0x0000 (0x0120 - 0x0120)
@@ -1106,15 +888,18 @@ class UKuroEffectRecorder final : public UKuroTrackRecorder
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroEffectRecorder">();
+		STATIC_CLASS_IMPL("KuroEffectRecorder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroEffectRecorder")
 	}
 	static class UKuroEffectRecorder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroEffectRecorder>();
 	}
 };
-static_assert(alignof(UKuroEffectRecorder) == 0x000008, "Wrong alignment on UKuroEffectRecorder");
-static_assert(sizeof(UKuroEffectRecorder) == 0x000120, "Wrong size on UKuroEffectRecorder");
+DUMPER7_ASSERTS_UKuroEffectRecorder;
 
 // Class KuroAnim.KuroMeshRecorder
 // 0x0000 (0x0120 - 0x0120)
@@ -1123,15 +908,18 @@ class UKuroMeshRecorder final : public UKuroTrackRecorder
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMeshRecorder">();
+		STATIC_CLASS_IMPL("KuroMeshRecorder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMeshRecorder")
 	}
 	static class UKuroMeshRecorder* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMeshRecorder>();
 	}
 };
-static_assert(alignof(UKuroMeshRecorder) == 0x000008, "Wrong alignment on UKuroMeshRecorder");
-static_assert(sizeof(UKuroMeshRecorder) == 0x000120, "Wrong size on UKuroMeshRecorder");
+DUMPER7_ASSERTS_UKuroMeshRecorder;
 
 // Class KuroAnim.KuroRecordCharacter
 // 0x0068 (0x0318 - 0x02B0)
@@ -1155,28 +943,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRecordCharacter">();
+		STATIC_CLASS_IMPL("KuroRecordCharacter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRecordCharacter")
 	}
 	static class AKuroRecordCharacter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroRecordCharacter>();
 	}
 };
-static_assert(alignof(AKuroRecordCharacter) == 0x000008, "Wrong alignment on AKuroRecordCharacter");
-static_assert(sizeof(AKuroRecordCharacter) == 0x000318, "Wrong size on AKuroRecordCharacter");
-static_assert(offsetof(AKuroRecordCharacter, MainScene) == 0x0002B0, "Member 'AKuroRecordCharacter::MainScene' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh0) == 0x0002B8, "Member 'AKuroRecordCharacter::SubMesh0' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh1) == 0x0002C0, "Member 'AKuroRecordCharacter::SubMesh1' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh2) == 0x0002C8, "Member 'AKuroRecordCharacter::SubMesh2' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh3) == 0x0002D0, "Member 'AKuroRecordCharacter::SubMesh3' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh4) == 0x0002D8, "Member 'AKuroRecordCharacter::SubMesh4' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh5) == 0x0002E0, "Member 'AKuroRecordCharacter::SubMesh5' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh6) == 0x0002E8, "Member 'AKuroRecordCharacter::SubMesh6' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh7) == 0x0002F0, "Member 'AKuroRecordCharacter::SubMesh7' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh8) == 0x0002F8, "Member 'AKuroRecordCharacter::SubMesh8' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh9) == 0x000300, "Member 'AKuroRecordCharacter::SubMesh9' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh10) == 0x000308, "Member 'AKuroRecordCharacter::SubMesh10' has a wrong offset!");
-static_assert(offsetof(AKuroRecordCharacter, SubMesh11) == 0x000310, "Member 'AKuroRecordCharacter::SubMesh11' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroRecordCharacter;
 
 // Class KuroAnim.KuroRecordEffect
 // 0x0000 (0x02B0 - 0x02B0)
@@ -1191,15 +969,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRecordEffect">();
+		STATIC_CLASS_IMPL("KuroRecordEffect")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRecordEffect")
 	}
 	static class AKuroRecordEffect* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroRecordEffect>();
 	}
 };
-static_assert(alignof(AKuroRecordEffect) == 0x000008, "Wrong alignment on AKuroRecordEffect");
-static_assert(sizeof(AKuroRecordEffect) == 0x0002B0, "Wrong size on AKuroRecordEffect");
+DUMPER7_ASSERTS_AKuroRecordEffect;
 
 // Class KuroAnim.KuroRecorderLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -1212,15 +993,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroRecorderLibrary">();
+		STATIC_CLASS_IMPL("KuroRecorderLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRecorderLibrary")
 	}
 	static class UKuroRecorderLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroRecorderLibrary>();
 	}
 };
-static_assert(alignof(UKuroRecorderLibrary) == 0x000008, "Wrong alignment on UKuroRecorderLibrary");
-static_assert(sizeof(UKuroRecorderLibrary) == 0x000030, "Wrong size on UKuroRecorderLibrary");
+DUMPER7_ASSERTS_UKuroRecorderLibrary;
 
 }
 

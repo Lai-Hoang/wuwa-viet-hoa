@@ -827,15 +827,15 @@ void ABP_GlobalGI_C::UpdateFlowmapSkybox()
 }
 
 
-// Function BP_GlobalGI.BP_GlobalGI_C.UpdateMisc
+// Function BP_GlobalGI.BP_GlobalGI_C.Update Misc
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_GlobalGI_C::UpdateMisc()
+void ABP_GlobalGI_C::Update_Misc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_GlobalGI_C", "UpdateMisc");
+		Func = Class->GetFunction("BP_GlobalGI_C", "Update Misc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1175,6 +1175,20 @@ void ABP_GlobalGI_C::UpdateEditor()
 }
 
 
+// Function BP_GlobalGI.BP_GlobalGI_C.UpdateFrozen
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GlobalGI_C::UpdateFrozen()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlobalGI_C", "UpdateFrozen");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_GlobalGI.BP_GlobalGI_C.UpdateOcean
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1226,6 +1240,34 @@ void ABP_GlobalGI_C::UpdateOriginSkyAtmosphere()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_GlobalGI_C", "UpdateOriginSkyAtmosphere");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GlobalGI.BP_GlobalGI_C.Set GIControlParamToGlobalShaderParam
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_GlobalGI_C::Set_GIControlParamToGlobalShaderParam()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlobalGI_C", "Set GIControlParamToGlobalShaderParam");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_GlobalGI.BP_GlobalGI_C.UpdateCharacterRootPos
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_GlobalGI_C::UpdateCharacterRootPos()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlobalGI_C", "UpdateCharacterRootPos");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

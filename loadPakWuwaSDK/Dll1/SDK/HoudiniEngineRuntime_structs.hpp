@@ -476,6 +476,23 @@ enum class EHoudiniRuntimeSettingsSessionType : uint8
 	HRSST_MAX                                = 4,
 };
 
+// ScriptStruct HoudiniEngineRuntime.HoudiniOutputObjectIdentifier
+// 0x0040 (0x0040 - 0x0000)
+struct FHoudiniOutputObjectIdentifier final
+{
+public:
+	int32                                         ObjectId;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GeoId;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PartId;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SplitIdentifier;                                   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PartName;                                          // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PrimitiveIndex;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PointIndex;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FHoudiniOutputObjectIdentifier;
+
 // ScriptStruct HoudiniEngineRuntime.HoudiniCurveOutputProperties
 // 0x000C (0x000C - 0x0000)
 struct FHoudiniCurveOutputProperties final
@@ -489,13 +506,7 @@ public:
 	EHoudiniCurveMethod                           CurveMethod;                                       // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniCurveOutputProperties) == 0x000004, "Wrong alignment on FHoudiniCurveOutputProperties");
-static_assert(sizeof(FHoudiniCurveOutputProperties) == 0x00000C, "Wrong size on FHoudiniCurveOutputProperties");
-static_assert(offsetof(FHoudiniCurveOutputProperties, CurveOutputType) == 0x000000, "Member 'FHoudiniCurveOutputProperties::CurveOutputType' has a wrong offset!");
-static_assert(offsetof(FHoudiniCurveOutputProperties, NumPoints) == 0x000004, "Member 'FHoudiniCurveOutputProperties::NumPoints' has a wrong offset!");
-static_assert(offsetof(FHoudiniCurveOutputProperties, bClosed) == 0x000008, "Member 'FHoudiniCurveOutputProperties::bClosed' has a wrong offset!");
-static_assert(offsetof(FHoudiniCurveOutputProperties, CurveType) == 0x000009, "Member 'FHoudiniCurveOutputProperties::CurveType' has a wrong offset!");
-static_assert(offsetof(FHoudiniCurveOutputProperties, CurveMethod) == 0x00000A, "Member 'FHoudiniCurveOutputProperties::CurveMethod' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniCurveOutputProperties;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniOutputObject
 // 0x00F8 (0x00F8 - 0x0000)
@@ -517,20 +528,7 @@ public:
 	TMap<class FString, class FString>            CachedAttributes;                                  // 0x0058(0x0050)(NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            CachedTokens;                                      // 0x00A8(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniOutputObject) == 0x000008, "Wrong alignment on FHoudiniOutputObject");
-static_assert(sizeof(FHoudiniOutputObject) == 0x0000F8, "Wrong size on FHoudiniOutputObject");
-static_assert(offsetof(FHoudiniOutputObject, OutputObject) == 0x000000, "Member 'FHoudiniOutputObject::OutputObject' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, OutputComponent) == 0x000008, "Member 'FHoudiniOutputObject::OutputComponent' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, ProxyObject) == 0x000010, "Member 'FHoudiniOutputObject::ProxyObject' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, ProxyComponent) == 0x000018, "Member 'FHoudiniOutputObject::ProxyComponent' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, bProxyIsCurrent) == 0x000020, "Member 'FHoudiniOutputObject::bProxyIsCurrent' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, bIsImplicit) == 0x000021, "Member 'FHoudiniOutputObject::bIsImplicit' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, bIsGeometryCollectionPiece) == 0x000022, "Member 'FHoudiniOutputObject::bIsGeometryCollectionPiece' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, GeometryCollectionPieceName) == 0x000028, "Member 'FHoudiniOutputObject::GeometryCollectionPieceName' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, BakeName) == 0x000038, "Member 'FHoudiniOutputObject::BakeName' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, CurveOutputProperty) == 0x000048, "Member 'FHoudiniOutputObject::CurveOutputProperty' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, CachedAttributes) == 0x000058, "Member 'FHoudiniOutputObject::CachedAttributes' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObject, CachedTokens) == 0x0000A8, "Member 'FHoudiniOutputObject::CachedTokens' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniOutputObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniAssetBlueprintOutput
 // 0x0100 (0x0100 - 0x0000)
@@ -541,35 +539,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHoudiniOutputObject                   OutputObject;                                      // 0x0008(0x00F8)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniAssetBlueprintOutput) == 0x000008, "Wrong alignment on FHoudiniAssetBlueprintOutput");
-static_assert(sizeof(FHoudiniAssetBlueprintOutput) == 0x000100, "Wrong size on FHoudiniAssetBlueprintOutput");
-static_assert(offsetof(FHoudiniAssetBlueprintOutput, OutputIndex) == 0x000000, "Member 'FHoudiniAssetBlueprintOutput::OutputIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintOutput, OutputObject) == 0x000008, "Member 'FHoudiniAssetBlueprintOutput::OutputObject' has a wrong offset!");
-
-// ScriptStruct HoudiniEngineRuntime.HoudiniOutputObjectIdentifier
-// 0x0040 (0x0040 - 0x0000)
-struct FHoudiniOutputObjectIdentifier final
-{
-public:
-	int32                                         ObjectId;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GeoId;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PartId;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SplitIdentifier;                                   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PartName;                                          // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PrimitiveIndex;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PointIndex;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FHoudiniOutputObjectIdentifier) == 0x000008, "Wrong alignment on FHoudiniOutputObjectIdentifier");
-static_assert(sizeof(FHoudiniOutputObjectIdentifier) == 0x000040, "Wrong size on FHoudiniOutputObjectIdentifier");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, ObjectId) == 0x000000, "Member 'FHoudiniOutputObjectIdentifier::ObjectId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, GeoId) == 0x000004, "Member 'FHoudiniOutputObjectIdentifier::GeoId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartId) == 0x000008, "Member 'FHoudiniOutputObjectIdentifier::PartId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, SplitIdentifier) == 0x000010, "Member 'FHoudiniOutputObjectIdentifier::SplitIdentifier' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartName) == 0x000020, "Member 'FHoudiniOutputObjectIdentifier::PartName' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PrimitiveIndex) == 0x000030, "Member 'FHoudiniOutputObjectIdentifier::PrimitiveIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PointIndex) == 0x000034, "Member 'FHoudiniOutputObjectIdentifier::PointIndex' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniAssetBlueprintOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniAssetBlueprintInstanceData
 // 0x00B8 (0x0120 - 0x0068)
@@ -598,27 +568,7 @@ public:
 	TMap<struct FHoudiniOutputObjectIdentifier, struct FHoudiniAssetBlueprintOutput> Outputs;        // 0x00C0(0x0050)(NativeAccessSpecifierPublic)
 	TArray<class UHoudiniInput*>                  Inputs;                                            // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniAssetBlueprintInstanceData) == 0x000008, "Wrong alignment on FHoudiniAssetBlueprintInstanceData");
-static_assert(sizeof(FHoudiniAssetBlueprintInstanceData) == 0x000120, "Wrong size on FHoudiniAssetBlueprintInstanceData");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, HoudiniAsset) == 0x000068, "Member 'FHoudiniAssetBlueprintInstanceData::HoudiniAsset' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, AssetId) == 0x000070, "Member 'FHoudiniAssetBlueprintInstanceData::AssetId' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, AssetState) == 0x000074, "Member 'FHoudiniAssetBlueprintInstanceData::AssetState' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, SubAssetIndex) == 0x000078, "Member 'FHoudiniAssetBlueprintInstanceData::SubAssetIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, AssetCookCount) == 0x00007C, "Member 'FHoudiniAssetBlueprintInstanceData::AssetCookCount' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bHasBeenLoaded) == 0x000080, "Member 'FHoudiniAssetBlueprintInstanceData::bHasBeenLoaded' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bHasBeenDuplicated) == 0x000081, "Member 'FHoudiniAssetBlueprintInstanceData::bHasBeenDuplicated' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bPendingDelete) == 0x000082, "Member 'FHoudiniAssetBlueprintInstanceData::bPendingDelete' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bRecookRequested) == 0x000083, "Member 'FHoudiniAssetBlueprintInstanceData::bRecookRequested' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bRebuildRequested) == 0x000084, "Member 'FHoudiniAssetBlueprintInstanceData::bRebuildRequested' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bEnableCooking) == 0x000085, "Member 'FHoudiniAssetBlueprintInstanceData::bEnableCooking' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bForceNeedUpdate) == 0x000086, "Member 'FHoudiniAssetBlueprintInstanceData::bForceNeedUpdate' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bLastCookSuccess) == 0x000087, "Member 'FHoudiniAssetBlueprintInstanceData::bLastCookSuccess' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, ComponentGUID) == 0x000088, "Member 'FHoudiniAssetBlueprintInstanceData::ComponentGUID' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, HapiGUID) == 0x000098, "Member 'FHoudiniAssetBlueprintInstanceData::HapiGUID' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, bRegisteredComponentTemplate) == 0x0000A8, "Member 'FHoudiniAssetBlueprintInstanceData::bRegisteredComponentTemplate' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, SourceName) == 0x0000B0, "Member 'FHoudiniAssetBlueprintInstanceData::SourceName' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, Outputs) == 0x0000C0, "Member 'FHoudiniAssetBlueprintInstanceData::Outputs' has a wrong offset!");
-static_assert(offsetof(FHoudiniAssetBlueprintInstanceData, Inputs) == 0x000110, "Member 'FHoudiniAssetBlueprintInstanceData::Inputs' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniAssetBlueprintInstanceData;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGenericAttribute
 // 0x0050 (0x0050 - 0x0000)
@@ -636,16 +586,7 @@ public:
 	TArray<int64>                                 IntValues;                                         // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class FString>                         StringValues;                                      // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniGenericAttribute) == 0x000008, "Wrong alignment on FHoudiniGenericAttribute");
-static_assert(sizeof(FHoudiniGenericAttribute) == 0x000050, "Wrong size on FHoudiniGenericAttribute");
-static_assert(offsetof(FHoudiniGenericAttribute, AttributeName) == 0x000000, "Member 'FHoudiniGenericAttribute::AttributeName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, AttributeType) == 0x000010, "Member 'FHoudiniGenericAttribute::AttributeType' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, AttributeOwner) == 0x000011, "Member 'FHoudiniGenericAttribute::AttributeOwner' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, AttributeCount) == 0x000014, "Member 'FHoudiniGenericAttribute::AttributeCount' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, AttributeTupleSize) == 0x000018, "Member 'FHoudiniGenericAttribute::AttributeTupleSize' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, DoubleValues) == 0x000020, "Member 'FHoudiniGenericAttribute::DoubleValues' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, IntValues) == 0x000030, "Member 'FHoudiniGenericAttribute::IntValues' has a wrong offset!");
-static_assert(offsetof(FHoudiniGenericAttribute, StringValues) == 0x000040, "Member 'FHoudiniGenericAttribute::StringValues' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniGenericAttribute;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGenericAttributeChangedProperty
 // 0x0098 (0x0098 - 0x0000)
@@ -655,9 +596,7 @@ public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x90];                                       // 0x0008(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniGenericAttributeChangedProperty) == 0x000008, "Wrong alignment on FHoudiniGenericAttributeChangedProperty");
-static_assert(sizeof(FHoudiniGenericAttributeChangedProperty) == 0x000098, "Wrong size on FHoudiniGenericAttributeChangedProperty");
-static_assert(offsetof(FHoudiniGenericAttributeChangedProperty, Object) == 0x000000, "Member 'FHoudiniGenericAttributeChangedProperty::Object' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniGenericAttributeChangedProperty;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniMeshSocket
 // 0x0060 (0x0060 - 0x0000)
@@ -666,8 +605,7 @@ struct alignas(0x10) FHoudiniMeshSocket final
 public:
 	uint8                                         Pad_0[0x60];                                       // 0x0000(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniMeshSocket) == 0x000010, "Wrong alignment on FHoudiniMeshSocket");
-static_assert(sizeof(FHoudiniMeshSocket) == 0x000060, "Wrong size on FHoudiniMeshSocket");
+DUMPER7_ASSERTS_FHoudiniMeshSocket;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGeoPartObject
 // 0x0230 (0x0230 - 0x0000)
@@ -707,34 +645,7 @@ public:
 	uint8                                         Pad_DC[0x144];                                     // 0x00DC(0x0144)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FHoudiniMeshSocket>             AllMeshSockets;                                    // 0x0220(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniGeoPartObject) == 0x000010, "Wrong alignment on FHoudiniGeoPartObject");
-static_assert(sizeof(FHoudiniGeoPartObject) == 0x000230, "Wrong size on FHoudiniGeoPartObject");
-static_assert(offsetof(FHoudiniGeoPartObject, AssetId) == 0x000000, "Member 'FHoudiniGeoPartObject::AssetId' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, AssetName) == 0x000008, "Member 'FHoudiniGeoPartObject::AssetName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, ObjectId) == 0x000018, "Member 'FHoudiniGeoPartObject::ObjectId' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, ObjectName) == 0x000020, "Member 'FHoudiniGeoPartObject::ObjectName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, GeoId) == 0x000030, "Member 'FHoudiniGeoPartObject::GeoId' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, PartId) == 0x000034, "Member 'FHoudiniGeoPartObject::PartId' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, PartName) == 0x000038, "Member 'FHoudiniGeoPartObject::PartName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasCustomPartName) == 0x000048, "Member 'FHoudiniGeoPartObject::bHasCustomPartName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, SplitGroups) == 0x000050, "Member 'FHoudiniGeoPartObject::SplitGroups' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, TransformMatrix) == 0x000060, "Member 'FHoudiniGeoPartObject::TransformMatrix' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, NodePath) == 0x000090, "Member 'FHoudiniGeoPartObject::NodePath' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, Type) == 0x0000A0, "Member 'FHoudiniGeoPartObject::Type' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, InstancerType) == 0x0000A1, "Member 'FHoudiniGeoPartObject::InstancerType' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, VolumeName) == 0x0000A8, "Member 'FHoudiniGeoPartObject::VolumeName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasEditLayers) == 0x0000B8, "Member 'FHoudiniGeoPartObject::bHasEditLayers' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, VolumeLayerName) == 0x0000C0, "Member 'FHoudiniGeoPartObject::VolumeLayerName' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, VolumeTileIndex) == 0x0000D0, "Member 'FHoudiniGeoPartObject::VolumeTileIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bIsVisible) == 0x0000D4, "Member 'FHoudiniGeoPartObject::bIsVisible' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bIsEditable) == 0x0000D5, "Member 'FHoudiniGeoPartObject::bIsEditable' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bIsTemplated) == 0x0000D6, "Member 'FHoudiniGeoPartObject::bIsTemplated' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bIsInstanced) == 0x0000D7, "Member 'FHoudiniGeoPartObject::bIsInstanced' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasGeoChanged) == 0x0000D8, "Member 'FHoudiniGeoPartObject::bHasGeoChanged' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasPartChanged) == 0x0000D9, "Member 'FHoudiniGeoPartObject::bHasPartChanged' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasTransformChanged) == 0x0000DA, "Member 'FHoudiniGeoPartObject::bHasTransformChanged' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, bHasMaterialsChanged) == 0x0000DB, "Member 'FHoudiniGeoPartObject::bHasMaterialsChanged' has a wrong offset!");
-static_assert(offsetof(FHoudiniGeoPartObject, AllMeshSockets) == 0x000220, "Member 'FHoudiniGeoPartObject::AllMeshSockets' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniGeoPartObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniCurveInfo
 // 0x001C (0x001C - 0x0000)
@@ -743,8 +654,7 @@ struct alignas(0x04) FHoudiniCurveInfo final
 public:
 	uint8                                         Pad_0[0x1C];                                       // 0x0000(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniCurveInfo) == 0x000004, "Wrong alignment on FHoudiniCurveInfo");
-static_assert(sizeof(FHoudiniCurveInfo) == 0x00001C, "Wrong size on FHoudiniCurveInfo");
+DUMPER7_ASSERTS_FHoudiniCurveInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniVolumeInfo
 // 0x0080 (0x0080 - 0x0000)
@@ -753,8 +663,7 @@ struct alignas(0x10) FHoudiniVolumeInfo final
 public:
 	uint8                                         Pad_0[0x80];                                       // 0x0000(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniVolumeInfo) == 0x000010, "Wrong alignment on FHoudiniVolumeInfo");
-static_assert(sizeof(FHoudiniVolumeInfo) == 0x000080, "Wrong size on FHoudiniVolumeInfo");
+DUMPER7_ASSERTS_FHoudiniVolumeInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniPartInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -763,8 +672,7 @@ struct alignas(0x08) FHoudiniPartInfo final
 public:
 	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniPartInfo) == 0x000008, "Wrong alignment on FHoudiniPartInfo");
-static_assert(sizeof(FHoudiniPartInfo) == 0x000048, "Wrong size on FHoudiniPartInfo");
+DUMPER7_ASSERTS_FHoudiniPartInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniGeoInfo
 // 0x0030 (0x0030 - 0x0000)
@@ -773,8 +681,7 @@ struct alignas(0x08) FHoudiniGeoInfo final
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniGeoInfo) == 0x000008, "Wrong alignment on FHoudiniGeoInfo");
-static_assert(sizeof(FHoudiniGeoInfo) == 0x000030, "Wrong size on FHoudiniGeoInfo");
+DUMPER7_ASSERTS_FHoudiniGeoInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniObjectInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -783,8 +690,7 @@ struct alignas(0x08) FHoudiniObjectInfo final
 public:
 	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniObjectInfo) == 0x000008, "Wrong alignment on FHoudiniObjectInfo");
-static_assert(sizeof(FHoudiniObjectInfo) == 0x000028, "Wrong size on FHoudiniObjectInfo");
+DUMPER7_ASSERTS_FHoudiniObjectInfo;
 
 // ScriptStruct HoudiniEngineRuntime.KuroHDAMeshInputConfig
 // 0x000E (0x000E - 0x0000)
@@ -806,21 +712,7 @@ public:
 	bool                                          KuroAssetTags;                                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x1];                                        // 0x000D(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroHDAMeshInputConfig) == 0x000001, "Wrong alignment on FKuroHDAMeshInputConfig");
-static_assert(sizeof(FKuroHDAMeshInputConfig) == 0x00000E, "Wrong size on FKuroHDAMeshInputConfig");
-static_assert(offsetof(FKuroHDAMeshInputConfig, CombineMesh) == 0x000000, "Member 'FKuroHDAMeshInputConfig::CombineMesh' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, UVS) == 0x000001, "Member 'FKuroHDAMeshInputConfig::UVS' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Normals) == 0x000002, "Member 'FKuroHDAMeshInputConfig::Normals' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Tangent) == 0x000003, "Member 'FKuroHDAMeshInputConfig::Tangent' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Binomal) == 0x000004, "Member 'FKuroHDAMeshInputConfig::Binomal' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, VertexColor) == 0x000005, "Member 'FKuroHDAMeshInputConfig::VertexColor' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, SmoothingMask) == 0x000006, "Member 'FKuroHDAMeshInputConfig::SmoothingMask' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Material) == 0x000007, "Member 'FKuroHDAMeshInputConfig::Material' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Lightmap) == 0x000008, "Member 'FKuroHDAMeshInputConfig::Lightmap' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, MeshName) == 0x000009, "Member 'FKuroHDAMeshInputConfig::MeshName' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, SourceFile) == 0x00000A, "Member 'FKuroHDAMeshInputConfig::SourceFile' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, Tags) == 0x00000B, "Member 'FKuroHDAMeshInputConfig::Tags' has a wrong offset!");
-static_assert(offsetof(FKuroHDAMeshInputConfig, KuroAssetTags) == 0x00000C, "Member 'FKuroHDAMeshInputConfig::KuroAssetTags' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroHDAMeshInputConfig;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBrushInfo
 // 0x0070 (0x0070 - 0x0000)
@@ -837,14 +729,7 @@ public:
 	uint64                                        CachedSurfaceHash;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniBrushInfo) == 0x000010, "Wrong alignment on FHoudiniBrushInfo");
-static_assert(sizeof(FHoudiniBrushInfo) == 0x000070, "Wrong size on FHoudiniBrushInfo");
-static_assert(offsetof(FHoudiniBrushInfo, BrushActor) == 0x000000, "Member 'FHoudiniBrushInfo::BrushActor' has a wrong offset!");
-static_assert(offsetof(FHoudiniBrushInfo, CachedTransform) == 0x000010, "Member 'FHoudiniBrushInfo::CachedTransform' has a wrong offset!");
-static_assert(offsetof(FHoudiniBrushInfo, CachedOrigin) == 0x000040, "Member 'FHoudiniBrushInfo::CachedOrigin' has a wrong offset!");
-static_assert(offsetof(FHoudiniBrushInfo, CachedExtent) == 0x00004C, "Member 'FHoudiniBrushInfo::CachedExtent' has a wrong offset!");
-static_assert(offsetof(FHoudiniBrushInfo, CachedBrushType) == 0x000058, "Member 'FHoudiniBrushInfo::CachedBrushType' has a wrong offset!");
-static_assert(offsetof(FHoudiniBrushInfo, CachedSurfaceHash) == 0x000060, "Member 'FHoudiniBrushInfo::CachedSurfaceHash' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniBrushInfo;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutputObjectIdentifier
 // 0x0018 (0x0018 - 0x0000)
@@ -855,10 +740,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SplitIdentifier;                                   // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniBakedOutputObjectIdentifier) == 0x000008, "Wrong alignment on FHoudiniBakedOutputObjectIdentifier");
-static_assert(sizeof(FHoudiniBakedOutputObjectIdentifier) == 0x000018, "Wrong size on FHoudiniBakedOutputObjectIdentifier");
-static_assert(offsetof(FHoudiniBakedOutputObjectIdentifier, PartId) == 0x000000, "Member 'FHoudiniBakedOutputObjectIdentifier::PartId' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObjectIdentifier, SplitIdentifier) == 0x000008, "Member 'FHoudiniBakedOutputObjectIdentifier::SplitIdentifier' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniBakedOutputObjectIdentifier;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutputObject
 // 0x00C0 (0x00C0 - 0x0000)
@@ -875,16 +757,7 @@ public:
 	TArray<class FString>                         InstancedComponents;                               // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class FName, class FString>              LandscapeLayers;                                   // 0x0070(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniBakedOutputObject) == 0x000008, "Wrong alignment on FHoudiniBakedOutputObject");
-static_assert(sizeof(FHoudiniBakedOutputObject) == 0x0000C0, "Wrong size on FHoudiniBakedOutputObject");
-static_assert(offsetof(FHoudiniBakedOutputObject, Actor) == 0x000000, "Member 'FHoudiniBakedOutputObject::Actor' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, Blueprint) == 0x000010, "Member 'FHoudiniBakedOutputObject::Blueprint' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, ActorBakeName) == 0x000020, "Member 'FHoudiniBakedOutputObject::ActorBakeName' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, BakedObject) == 0x000030, "Member 'FHoudiniBakedOutputObject::BakedObject' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, BakedComponent) == 0x000040, "Member 'FHoudiniBakedOutputObject::BakedComponent' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, InstancedActors) == 0x000050, "Member 'FHoudiniBakedOutputObject::InstancedActors' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, InstancedComponents) == 0x000060, "Member 'FHoudiniBakedOutputObject::InstancedComponents' has a wrong offset!");
-static_assert(offsetof(FHoudiniBakedOutputObject, LandscapeLayers) == 0x000070, "Member 'FHoudiniBakedOutputObject::LandscapeLayers' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniBakedOutputObject;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniBakedOutput
 // 0x0050 (0x0050 - 0x0000)
@@ -893,9 +766,7 @@ struct FHoudiniBakedOutput final
 public:
 	TMap<struct FHoudiniBakedOutputObjectIdentifier, struct FHoudiniBakedOutputObject> BakedOutputObjects; // 0x0000(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniBakedOutput) == 0x000008, "Wrong alignment on FHoudiniBakedOutput");
-static_assert(sizeof(FHoudiniBakedOutput) == 0x000050, "Wrong size on FHoudiniBakedOutput");
-static_assert(offsetof(FHoudiniBakedOutput, BakedOutputObjects) == 0x000000, "Member 'FHoudiniBakedOutput::BakedOutputObjects' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniBakedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniInstancedOutput
 // 0x0090 (0x0090 - 0x0000)
@@ -914,17 +785,7 @@ public:
 	bool                                          bStale;                                            // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FHoudiniInstancedOutput) == 0x000008, "Wrong alignment on FHoudiniInstancedOutput");
-static_assert(sizeof(FHoudiniInstancedOutput) == 0x000090, "Wrong size on FHoudiniInstancedOutput");
-static_assert(offsetof(FHoudiniInstancedOutput, OriginalObject) == 0x000000, "Member 'FHoudiniInstancedOutput::OriginalObject' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, OriginalObjectIndex) == 0x000030, "Member 'FHoudiniInstancedOutput::OriginalObjectIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, OriginalTransforms) == 0x000038, "Member 'FHoudiniInstancedOutput::OriginalTransforms' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, VariationObjects) == 0x000048, "Member 'FHoudiniInstancedOutput::VariationObjects' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, VariationTransformOffsets) == 0x000058, "Member 'FHoudiniInstancedOutput::VariationTransformOffsets' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, TransformVariationIndices) == 0x000068, "Member 'FHoudiniInstancedOutput::TransformVariationIndices' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, OriginalInstanceIndices) == 0x000078, "Member 'FHoudiniInstancedOutput::OriginalInstanceIndices' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, bChanged) == 0x000088, "Member 'FHoudiniInstancedOutput::bChanged' has a wrong offset!");
-static_assert(offsetof(FHoudiniInstancedOutput, bStale) == 0x000089, "Member 'FHoudiniInstancedOutput::bStale' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniInstancedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniPDGWorkResultObjectBakedOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -933,9 +794,7 @@ struct FHoudiniPDGWorkResultObjectBakedOutput final
 public:
 	TArray<struct FHoudiniBakedOutput>            BakedOutputs;                                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniPDGWorkResultObjectBakedOutput) == 0x000008, "Wrong alignment on FHoudiniPDGWorkResultObjectBakedOutput");
-static_assert(sizeof(FHoudiniPDGWorkResultObjectBakedOutput) == 0x000010, "Wrong size on FHoudiniPDGWorkResultObjectBakedOutput");
-static_assert(offsetof(FHoudiniPDGWorkResultObjectBakedOutput, BakedOutputs) == 0x000000, "Member 'FHoudiniPDGWorkResultObjectBakedOutput::BakedOutputs' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniPDGWorkResultObjectBakedOutput;
 
 // ScriptStruct HoudiniEngineRuntime.WorkItemTallyBase
 // 0x0008 (0x0008 - 0x0000)
@@ -944,8 +803,7 @@ struct alignas(0x08) FWorkItemTallyBase
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FWorkItemTallyBase) == 0x000008, "Wrong alignment on FWorkItemTallyBase");
-static_assert(sizeof(FWorkItemTallyBase) == 0x000008, "Wrong size on FWorkItemTallyBase");
+DUMPER7_ASSERTS_FWorkItemTallyBase;
 
 // ScriptStruct HoudiniEngineRuntime.AggregatedWorkItemTally
 // 0x0020 (0x0028 - 0x0008)
@@ -961,15 +819,7 @@ public:
 	int32                                         CookCancelledWorkItems;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAggregatedWorkItemTally) == 0x000008, "Wrong alignment on FAggregatedWorkItemTally");
-static_assert(sizeof(FAggregatedWorkItemTally) == 0x000028, "Wrong size on FAggregatedWorkItemTally");
-static_assert(offsetof(FAggregatedWorkItemTally, TotalWorkItems) == 0x000008, "Member 'FAggregatedWorkItemTally::TotalWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, WaitingWorkItems) == 0x00000C, "Member 'FAggregatedWorkItemTally::WaitingWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, ScheduledWorkItems) == 0x000010, "Member 'FAggregatedWorkItemTally::ScheduledWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, CookingWorkItems) == 0x000014, "Member 'FAggregatedWorkItemTally::CookingWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, CookedWorkItems) == 0x000018, "Member 'FAggregatedWorkItemTally::CookedWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, ErroredWorkItems) == 0x00001C, "Member 'FAggregatedWorkItemTally::ErroredWorkItems' has a wrong offset!");
-static_assert(offsetof(FAggregatedWorkItemTally, CookCancelledWorkItems) == 0x000020, "Member 'FAggregatedWorkItemTally::CookCancelledWorkItems' has a wrong offset!");
+DUMPER7_ASSERTS_FAggregatedWorkItemTally;
 
 // ScriptStruct HoudiniEngineRuntime.WorkItemTally
 // 0x0230 (0x0238 - 0x0008)
@@ -984,15 +834,7 @@ public:
 	TSet<int32>                                   ErroredWorkItems;                                  // 0x0198(0x0050)(Protected, NativeAccessSpecifierProtected)
 	TSet<int32>                                   CookCancelledWorkItems;                            // 0x01E8(0x0050)(Protected, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FWorkItemTally) == 0x000008, "Wrong alignment on FWorkItemTally");
-static_assert(sizeof(FWorkItemTally) == 0x000238, "Wrong size on FWorkItemTally");
-static_assert(offsetof(FWorkItemTally, AllWorkItems) == 0x000008, "Member 'FWorkItemTally::AllWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, WaitingWorkItems) == 0x000058, "Member 'FWorkItemTally::WaitingWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, ScheduledWorkItems) == 0x0000A8, "Member 'FWorkItemTally::ScheduledWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, CookingWorkItems) == 0x0000F8, "Member 'FWorkItemTally::CookingWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, CookedWorkItems) == 0x000148, "Member 'FWorkItemTally::CookedWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, ErroredWorkItems) == 0x000198, "Member 'FWorkItemTally::ErroredWorkItems' has a wrong offset!");
-static_assert(offsetof(FWorkItemTally, CookCancelledWorkItems) == 0x0001E8, "Member 'FWorkItemTally::CookCancelledWorkItems' has a wrong offset!");
+DUMPER7_ASSERTS_FWorkItemTally;
 
 // ScriptStruct HoudiniEngineRuntime.OutputActorOwner
 // 0x0010 (0x0010 - 0x0000)
@@ -1002,9 +844,7 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 OutputActor;                                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FOutputActorOwner) == 0x000008, "Wrong alignment on FOutputActorOwner");
-static_assert(sizeof(FOutputActorOwner) == 0x000010, "Wrong size on FOutputActorOwner");
-static_assert(offsetof(FOutputActorOwner, OutputActor) == 0x000008, "Member 'FOutputActorOwner::OutputActor' has a wrong offset!");
+DUMPER7_ASSERTS_FOutputActorOwner;
 
 // ScriptStruct HoudiniEngineRuntime.TOPWorkResultObject
 // 0x0058 (0x0058 - 0x0000)
@@ -1022,15 +862,7 @@ public:
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOutputActorOwner                      OutputActorOwner;                                  // 0x0048(0x0010)(NonTransactional, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FTOPWorkResultObject) == 0x000008, "Wrong alignment on FTOPWorkResultObject");
-static_assert(sizeof(FTOPWorkResultObject) == 0x000058, "Wrong size on FTOPWorkResultObject");
-static_assert(offsetof(FTOPWorkResultObject, Name) == 0x000008, "Member 'FTOPWorkResultObject::Name' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, FilePath) == 0x000018, "Member 'FTOPWorkResultObject::FilePath' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, State) == 0x000028, "Member 'FTOPWorkResultObject::State' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, WorkItemResultInfoIndex) == 0x00002C, "Member 'FTOPWorkResultObject::WorkItemResultInfoIndex' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, ResultOutputs) == 0x000030, "Member 'FTOPWorkResultObject::ResultOutputs' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, bAutoBakedSinceLastLoad) == 0x000040, "Member 'FTOPWorkResultObject::bAutoBakedSinceLastLoad' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResultObject, OutputActorOwner) == 0x000048, "Member 'FTOPWorkResultObject::OutputActorOwner' has a wrong offset!");
+DUMPER7_ASSERTS_FTOPWorkResultObject;
 
 // ScriptStruct HoudiniEngineRuntime.TOPWorkResult
 // 0x0018 (0x0018 - 0x0000)
@@ -1041,11 +873,7 @@ public:
 	int32                                         WorkItemID;                                        // 0x0004(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FTOPWorkResultObject>           ResultObjects;                                     // 0x0008(0x0010)(ZeroConstructor, NonTransactional, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTOPWorkResult) == 0x000008, "Wrong alignment on FTOPWorkResult");
-static_assert(sizeof(FTOPWorkResult) == 0x000018, "Wrong size on FTOPWorkResult");
-static_assert(offsetof(FTOPWorkResult, WorkItemIndex) == 0x000000, "Member 'FTOPWorkResult::WorkItemIndex' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResult, WorkItemID) == 0x000004, "Member 'FTOPWorkResult::WorkItemID' has a wrong offset!");
-static_assert(offsetof(FTOPWorkResult, ResultObjects) == 0x000008, "Member 'FTOPWorkResult::ResultObjects' has a wrong offset!");
+DUMPER7_ASSERTS_FTOPWorkResult;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniStaticMeshGenerationProperties
 // 0x01C8 (0x01C8 - 0x0000)
@@ -1068,17 +896,7 @@ public:
 	class UFoliageType_InstancedStaticMesh*       GeneratedFoliageDefaultSettings;                   // 0x01B0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UAssetUserData*>                 GeneratedAssetUserData;                            // 0x01B8(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniStaticMeshGenerationProperties) == 0x000008, "Wrong alignment on FHoudiniStaticMeshGenerationProperties");
-static_assert(sizeof(FHoudiniStaticMeshGenerationProperties) == 0x0001C8, "Wrong size on FHoudiniStaticMeshGenerationProperties");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedPhysMaterial) == 0x000008, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedPhysMaterial' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, DefaultBodyInstance) == 0x000010, "Member 'FHoudiniStaticMeshGenerationProperties::DefaultBodyInstance' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedCollisionTraceFlag) == 0x000188, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedCollisionTraceFlag' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedLightMapResolution) == 0x00018C, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedLightMapResolution' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedWalkableSlopeOverride) == 0x000190, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedWalkableSlopeOverride' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedLightMapCoordinateIndex) == 0x0001A0, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedLightMapCoordinateIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedStreamingDistanceMultiplier) == 0x0001A8, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedStreamingDistanceMultiplier' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedFoliageDefaultSettings) == 0x0001B0, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedFoliageDefaultSettings' has a wrong offset!");
-static_assert(offsetof(FHoudiniStaticMeshGenerationProperties, GeneratedAssetUserData) == 0x0001B8, "Member 'FHoudiniStaticMeshGenerationProperties::GeneratedAssetUserData' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniStaticMeshGenerationProperties;
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniSplineComponentInstanceData
 // 0x0030 (0x0098 - 0x0068)
@@ -1089,11 +907,7 @@ public:
 	TArray<struct FVector>                        DisplayPoints;                                     // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 DisplayPointIndexDivider;                          // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHoudiniSplineComponentInstanceData) == 0x000008, "Wrong alignment on FHoudiniSplineComponentInstanceData");
-static_assert(sizeof(FHoudiniSplineComponentInstanceData) == 0x000098, "Wrong size on FHoudiniSplineComponentInstanceData");
-static_assert(offsetof(FHoudiniSplineComponentInstanceData, CurvePoints) == 0x000068, "Member 'FHoudiniSplineComponentInstanceData::CurvePoints' has a wrong offset!");
-static_assert(offsetof(FHoudiniSplineComponentInstanceData, DisplayPoints) == 0x000078, "Member 'FHoudiniSplineComponentInstanceData::DisplayPoints' has a wrong offset!");
-static_assert(offsetof(FHoudiniSplineComponentInstanceData, DisplayPointIndexDivider) == 0x000088, "Member 'FHoudiniSplineComponentInstanceData::DisplayPointIndexDivider' has a wrong offset!");
+DUMPER7_ASSERTS_FHoudiniSplineComponentInstanceData;
 
 }
 

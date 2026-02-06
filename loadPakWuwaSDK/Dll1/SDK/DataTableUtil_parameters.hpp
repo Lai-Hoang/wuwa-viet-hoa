@@ -10,14 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "SCharacterFightInfo_structs.hpp"
-#include "SSceneUITagConfig_structs.hpp"
+#include "SSceneDecorationConfig_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SWeaponSocketItem_structs.hpp"
-#include "SAiWeaponSocket_structs.hpp"
+#include "SDecorationConfig_structs.hpp"
 #include "SWeaponSocket_structs.hpp"
-#include "SSceneDecorationConfig_structs.hpp"
+#include "SAiWeaponSocket_structs.hpp"
+#include "SSceneUITagConfig_structs.hpp"
+#include "SModelConfig_structs.hpp"
 #include "SManipulateConfig_structs.hpp"
+#include "SCharacterFightInfo_structs.hpp"
 #include "SSkillMontage_structs.hpp"
 #include "SParkourConfig_structs.hpp"
 #include "SCamp_structs.hpp"
@@ -33,7 +35,6 @@
 #include "SSequencesNetwork_structs.hpp"
 #include "SVisionData_structs.hpp"
 #include "SServerInfo_structs.hpp"
-#include "SModelConfig_structs.hpp"
 #include "SRoleQualityInfo_structs.hpp"
 
 
@@ -55,18 +56,10 @@ public:
 	struct FSRoleQualityInfo                      CallFunc_GetDataTableRowFromName_OutRow;           // 0x00B0(0x0080)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadRoleQualityInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadRoleQualityInfo");
-static_assert(sizeof(DataTableUtil_C_LoadRoleQualityInfo) == 0x000138, "Wrong size on DataTableUtil_C_LoadRoleQualityInfo");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, Row) == 0x000000, "Member 'DataTableUtil_C_LoadRoleQualityInfo::Row' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadRoleQualityInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, bSucc) == 0x000018, "Member 'DataTableUtil_C_LoadRoleQualityInfo::bSucc' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, result) == 0x000020, "Member 'DataTableUtil_C_LoadRoleQualityInfo::result' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x0000A0, "Member 'DataTableUtil_C_LoadRoleQualityInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000B0, "Member 'DataTableUtil_C_LoadRoleQualityInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadRoleQualityInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000130, "Member 'DataTableUtil_C_LoadRoleQualityInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadRoleQualityInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadModelConfig
-// 0x08E8 (0x08E8 - 0x0000)
+// 0x0918 (0x0918 - 0x0000)
 struct DataTableUtil_C_LoadModelConfig final
 {
 public:
@@ -74,21 +67,13 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSucc;                                             // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSModelConfig                          result;                                            // 0x0020(0x0458)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0478(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSModelConfig                          CallFunc_GetDataTableRowFromName_OutRow;           // 0x0488(0x0458)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x08E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSModelConfig                          result;                                            // 0x0020(0x0470)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0490(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSModelConfig                          CallFunc_GetDataTableRowFromName_OutRow;           // 0x04A0(0x0470)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadModelConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadModelConfig");
-static_assert(sizeof(DataTableUtil_C_LoadModelConfig) == 0x0008E8, "Wrong size on DataTableUtil_C_LoadModelConfig");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, Row) == 0x000000, "Member 'DataTableUtil_C_LoadModelConfig::Row' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadModelConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, bSucc) == 0x000018, "Member 'DataTableUtil_C_LoadModelConfig::bSucc' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, result) == 0x000020, "Member 'DataTableUtil_C_LoadModelConfig::result' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x000478, "Member 'DataTableUtil_C_LoadModelConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000488, "Member 'DataTableUtil_C_LoadModelConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadModelConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0008E0, "Member 'DataTableUtil_C_LoadModelConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadModelConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadServerInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -112,21 +97,7 @@ public:
 	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DataTableUtil_C_LoadServerInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadServerInfo");
-static_assert(sizeof(DataTableUtil_C_LoadServerInfo) == 0x0000B0, "Wrong size on DataTableUtil_C_LoadServerInfo");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, __WorldContext) == 0x000000, "Member 'DataTableUtil_C_LoadServerInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, NewParam) == 0x000008, "Member 'DataTableUtil_C_LoadServerInfo::NewParam' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, ServerInfoList) == 0x000018, "Member 'DataTableUtil_C_LoadServerInfo::ServerInfoList' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, ___int_Array_Index_Variable) == 0x000028, "Member 'DataTableUtil_C_LoadServerInfo::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, ___int_Loop_Counter_Variable) == 0x00002C, "Member 'DataTableUtil_C_LoadServerInfo::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_Array_Get_Item) == 0x00004C, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x000060, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000A8, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadServerInfo, CallFunc_Array_Add_ReturnValue) == 0x0000AC, "Member 'DataTableUtil_C_LoadServerInfo::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadServerInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadVisionInfo
 // 0x0160 (0x0160 - 0x0000)
@@ -142,15 +113,7 @@ public:
 	struct FSVisionData                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x00C0(0x0098)(ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadVisionInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadVisionInfo");
-static_assert(sizeof(DataTableUtil_C_LoadVisionInfo) == 0x000160, "Wrong size on DataTableUtil_C_LoadVisionInfo");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, phantomId) == 0x000000, "Member 'DataTableUtil_C_LoadVisionInfo::phantomId' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadVisionInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, visionConfig) == 0x000018, "Member 'DataTableUtil_C_LoadVisionInfo::visionConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, found) == 0x0000B0, "Member 'DataTableUtil_C_LoadVisionInfo::found' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x0000B4, "Member 'DataTableUtil_C_LoadVisionInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000C0, "Member 'DataTableUtil_C_LoadVisionInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadVisionInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000158, "Member 'DataTableUtil_C_LoadVisionInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadVisionInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadSeqNetworksInfo
 // 0x0138 (0x0138 - 0x0000)
@@ -167,16 +130,7 @@ public:
 	struct FSSequencesNetwork                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x00B0(0x0080)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadSeqNetworksInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadSeqNetworksInfo");
-static_assert(sizeof(DataTableUtil_C_LoadSeqNetworksInfo) == 0x000138, "Wrong size on DataTableUtil_C_LoadSeqNetworksInfo");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, inSeqNetwork) == 0x000000, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::inSeqNetwork' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, inRow) == 0x000008, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, __WorldContext) == 0x000018, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, outInfo) == 0x000020, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::outInfo' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, outIsFound) == 0x0000A0, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::outIsFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x0000A4, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000B0, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSeqNetworksInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000130, "Member 'DataTableUtil_C_LoadSeqNetworksInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadSeqNetworksInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadGmOrderInfo
 // 0x0028 (0x0028 - 0x0000)
@@ -187,11 +141,7 @@ public:
 	TArray<struct FSGMOrderInfo>                  gmInfoList1;                                       // 0x0008(0x0010)(Parm, OutParm)
 	TArray<struct FSGMOrderInfo>                  gmInfoList;                                        // 0x0018(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(DataTableUtil_C_LoadGmOrderInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadGmOrderInfo");
-static_assert(sizeof(DataTableUtil_C_LoadGmOrderInfo) == 0x000028, "Wrong size on DataTableUtil_C_LoadGmOrderInfo");
-static_assert(offsetof(DataTableUtil_C_LoadGmOrderInfo, __WorldContext) == 0x000000, "Member 'DataTableUtil_C_LoadGmOrderInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadGmOrderInfo, gmInfoList1) == 0x000008, "Member 'DataTableUtil_C_LoadGmOrderInfo::gmInfoList1' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadGmOrderInfo, gmInfoList) == 0x000018, "Member 'DataTableUtil_C_LoadGmOrderInfo::gmInfoList' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadGmOrderInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadConditionGroupInfo
 // 0x00D0 (0x00D0 - 0x0000)
@@ -207,15 +157,7 @@ public:
 	struct FSConditionGroup                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0050)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadConditionGroupInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadConditionGroupInfo");
-static_assert(sizeof(DataTableUtil_C_LoadConditionGroupInfo) == 0x0000D0, "Wrong size on DataTableUtil_C_LoadConditionGroupInfo");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, inRow) == 0x000000, "Member 'DataTableUtil_C_LoadConditionGroupInfo::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadConditionGroupInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, outConfig) == 0x000018, "Member 'DataTableUtil_C_LoadConditionGroupInfo::outConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, outFound) == 0x000068, "Member 'DataTableUtil_C_LoadConditionGroupInfo::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x00006C, "Member 'DataTableUtil_C_LoadConditionGroupInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x000078, "Member 'DataTableUtil_C_LoadConditionGroupInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadConditionGroupInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'DataTableUtil_C_LoadConditionGroupInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadConditionGroupInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadCipherInfo
 // 0x00E0 (0x00E0 - 0x0000)
@@ -231,15 +173,7 @@ public:
 	struct FSCipherGameplay                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x0080(0x0058)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadCipherInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadCipherInfo");
-static_assert(sizeof(DataTableUtil_C_LoadCipherInfo) == 0x0000E0, "Wrong size on DataTableUtil_C_LoadCipherInfo");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, inRow) == 0x000000, "Member 'DataTableUtil_C_LoadCipherInfo::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadCipherInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, outConfig) == 0x000018, "Member 'DataTableUtil_C_LoadCipherInfo::outConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, outFound) == 0x000070, "Member 'DataTableUtil_C_LoadCipherInfo::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x000074, "Member 'DataTableUtil_C_LoadCipherInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x000080, "Member 'DataTableUtil_C_LoadCipherInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCipherInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000D8, "Member 'DataTableUtil_C_LoadCipherInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadCipherInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadInteractionConfig
 // 0x01D0 (0x01D0 - 0x0000)
@@ -255,39 +189,23 @@ public:
 	struct FSInteractionConfig                    CallFunc_GetDataTableRowFromName_OutRow;           // 0x00F8(0x00D0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadInteractionConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadInteractionConfig");
-static_assert(sizeof(DataTableUtil_C_LoadInteractionConfig) == 0x0001D0, "Wrong size on DataTableUtil_C_LoadInteractionConfig");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, inRow) == 0x000000, "Member 'DataTableUtil_C_LoadInteractionConfig::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadInteractionConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, ouConfig) == 0x000018, "Member 'DataTableUtil_C_LoadInteractionConfig::ouConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, outFound) == 0x0000E8, "Member 'DataTableUtil_C_LoadInteractionConfig::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x0000EC, "Member 'DataTableUtil_C_LoadInteractionConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000F8, "Member 'DataTableUtil_C_LoadInteractionConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadInteractionConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0001C8, "Member 'DataTableUtil_C_LoadInteractionConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadInteractionConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadUiCameraAnimationSettings
-// 0x0380 (0x0380 - 0x0000)
+// 0x03B0 (0x03B0 - 0x0000)
 struct DataTableUtil_C_LoadUiCameraAnimationSettings final
 {
 public:
 	class FString                                 RowName;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSUiCameraAnimationSettings            ReturnValue;                                       // 0x0018(0x01A8)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
-	bool                                          bFound;                                            // 0x01C0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x01C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSUiCameraAnimationSettings            CallFunc_GetDataTableRowFromName_OutRow;           // 0x01D0(0x01A8)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSUiCameraAnimationSettings            ReturnValue;                                       // 0x0018(0x01C0)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	bool                                          bFound;                                            // 0x01D8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x01DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSUiCameraAnimationSettings            CallFunc_GetDataTableRowFromName_OutRow;           // 0x01E8(0x01C0)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadUiCameraAnimationSettings) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadUiCameraAnimationSettings");
-static_assert(sizeof(DataTableUtil_C_LoadUiCameraAnimationSettings) == 0x000380, "Wrong size on DataTableUtil_C_LoadUiCameraAnimationSettings");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, ReturnValue) == 0x000018, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, bFound) == 0x0001C0, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::bFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, CallFunc_Conv_StringToName_ReturnValue) == 0x0001C4, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x0001D0, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000378, "Member 'DataTableUtil_C_LoadUiCameraAnimationSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadUiCameraAnimationSettings;
 
 // Function DataTableUtil.DataTableUtil_C.LoadUiCameraAnimationBlendSettings
 // 0x01B0 (0x01B0 - 0x0000)
@@ -303,15 +221,7 @@ public:
 	struct FSUiCameraAnimationBlendSettings       CallFunc_GetDataTableRowFromName_OutRow;           // 0x00E8(0x00C0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadUiCameraAnimationBlendSettings");
-static_assert(sizeof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings) == 0x0001B0, "Wrong size on DataTableUtil_C_LoadUiCameraAnimationBlendSettings");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, ReturnValue) == 0x000018, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, bFound) == 0x0000D8, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::bFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, CallFunc_Conv_StringToName_ReturnValue) == 0x0000DC, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000E8, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadUiCameraAnimationBlendSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0001A8, "Member 'DataTableUtil_C_LoadUiCameraAnimationBlendSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadUiCameraAnimationBlendSettings;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAIConfig
 // 0x00D0 (0x00D0 - 0x0000)
@@ -327,15 +237,7 @@ public:
 	struct FSAIConfig                             CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0050)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadAIConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAIConfig");
-static_assert(sizeof(DataTableUtil_C_LoadAIConfig) == 0x0000D0, "Wrong size on DataTableUtil_C_LoadAIConfig");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, inConfigId) == 0x000000, "Member 'DataTableUtil_C_LoadAIConfig::inConfigId' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadAIConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, Out_Row) == 0x000018, "Member 'DataTableUtil_C_LoadAIConfig::Out_Row' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, outFound) == 0x000068, "Member 'DataTableUtil_C_LoadAIConfig::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x00006C, "Member 'DataTableUtil_C_LoadAIConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000078, "Member 'DataTableUtil_C_LoadAIConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAIConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'DataTableUtil_C_LoadAIConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAIConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadCampConfig
 // 0x0080 (0x0080 - 0x0000)
@@ -360,21 +262,7 @@ public:
 	struct FSCamp                                 CallFunc_GetDataTableRowFromName_OutRow;           // 0x0068(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadCampConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadCampConfig");
-static_assert(sizeof(DataTableUtil_C_LoadCampConfig) == 0x000080, "Wrong size on DataTableUtil_C_LoadCampConfig");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CampNum) == 0x000000, "Member 'DataTableUtil_C_LoadCampConfig::CampNum' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, __WorldContext) == 0x000008, "Member 'DataTableUtil_C_LoadCampConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CampInfo) == 0x000010, "Member 'DataTableUtil_C_LoadCampConfig::CampInfo' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, Found) == 0x000020, "Member 'DataTableUtil_C_LoadCampConfig::Found' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, NewLocalVar_2) == 0x000024, "Member 'DataTableUtil_C_LoadCampConfig::NewLocalVar_2' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, NewLocalVar_1) == 0x000030, "Member 'DataTableUtil_C_LoadCampConfig::NewLocalVar_1' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, NewLocalVar_0) == 0x000040, "Member 'DataTableUtil_C_LoadCampConfig::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_Conv_IntToByte_ReturnValue) == 0x000041, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_GetValidValue_ReturnValue) == 0x000042, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000048, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x000058, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000068, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCampConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000078, "Member 'DataTableUtil_C_LoadCampConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadCampConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadHitMapConfig
 // 0x0090 (0x0090 - 0x0000)
@@ -393,16 +281,7 @@ public:
 	struct FSHitMapping                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x0060(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadHitMapConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadHitMapConfig");
-static_assert(sizeof(DataTableUtil_C_LoadHitMapConfig) == 0x000090, "Wrong size on DataTableUtil_C_LoadHitMapConfig");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, MapId) == 0x000000, "Member 'DataTableUtil_C_LoadHitMapConfig::MapId' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, __WorldContext) == 0x000008, "Member 'DataTableUtil_C_LoadHitMapConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, result) == 0x000010, "Member 'DataTableUtil_C_LoadHitMapConfig::result' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, found) == 0x000038, "Member 'DataTableUtil_C_LoadHitMapConfig::found' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, CallFunc_Conv_IntToString_ReturnValue) == 0x000040, "Member 'DataTableUtil_C_LoadHitMapConfig::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x000050, "Member 'DataTableUtil_C_LoadHitMapConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000060, "Member 'DataTableUtil_C_LoadHitMapConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadHitMapConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000088, "Member 'DataTableUtil_C_LoadHitMapConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadHitMapConfig;
 
 // Function DataTableUtil.DataTableUtil_C.GetCampNum
 // 0x0018 (0x0018 - 0x0000)
@@ -416,13 +295,7 @@ public:
 	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DataTableUtil_C_GetCampNum) == 0x000008, "Wrong alignment on DataTableUtil_C_GetCampNum");
-static_assert(sizeof(DataTableUtil_C_GetCampNum) == 0x000018, "Wrong size on DataTableUtil_C_GetCampNum");
-static_assert(offsetof(DataTableUtil_C_GetCampNum, Camp) == 0x000000, "Member 'DataTableUtil_C_GetCampNum::Camp' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetCampNum, __WorldContext) == 0x000008, "Member 'DataTableUtil_C_GetCampNum::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetCampNum, Num) == 0x000010, "Member 'DataTableUtil_C_GetCampNum::Num' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetCampNum, CallFunc_Conv_IntToByte_ReturnValue) == 0x000011, "Member 'DataTableUtil_C_GetCampNum::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetCampNum, CallFunc_GetValidValue_ReturnValue) == 0x000012, "Member 'DataTableUtil_C_GetCampNum::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_GetCampNum;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAllCampConfigs
 // 0x0078 (0x0078 - 0x0000)
@@ -446,21 +319,7 @@ public:
 	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DataTableUtil_C_LoadAllCampConfigs) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAllCampConfigs");
-static_assert(sizeof(DataTableUtil_C_LoadAllCampConfigs) == 0x000078, "Wrong size on DataTableUtil_C_LoadAllCampConfigs");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, __WorldContext) == 0x000000, "Member 'DataTableUtil_C_LoadAllCampConfigs::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, ReturnValue) == 0x000008, "Member 'DataTableUtil_C_LoadAllCampConfigs::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, Result1) == 0x000018, "Member 'DataTableUtil_C_LoadAllCampConfigs::Result1' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, ___int_Array_Index_Variable) == 0x000028, "Member 'DataTableUtil_C_LoadAllCampConfigs::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, ___int_Loop_Counter_Variable) == 0x00002C, "Member 'DataTableUtil_C_LoadAllCampConfigs::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_Add_IntInt_ReturnValue) == 0x000030, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000038, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_Array_Get_Item) == 0x00004C, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_GetDataTableRowFromName_OutRow) == 0x000060, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000070, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllCampConfigs, CallFunc_Array_Add_ReturnValue) == 0x000074, "Member 'DataTableUtil_C_LoadAllCampConfigs::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAllCampConfigs;
 
 // Function DataTableUtil.DataTableUtil_C.LoadParkourConfig
 // 0x0208 (0x0208 - 0x0000)
@@ -476,14 +335,7 @@ public:
 	struct FSParkourConfig                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0110(0x00F0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadParkourConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadParkourConfig");
-static_assert(sizeof(DataTableUtil_C_LoadParkourConfig) == 0x000208, "Wrong size on DataTableUtil_C_LoadParkourConfig");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadParkourConfig::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadParkourConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, 输出行) == 0x000018, "Member 'DataTableUtil_C_LoadParkourConfig::输出行' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, found) == 0x000108, "Member 'DataTableUtil_C_LoadParkourConfig::found' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000110, "Member 'DataTableUtil_C_LoadParkourConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadParkourConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000200, "Member 'DataTableUtil_C_LoadParkourConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadParkourConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAllSkillMontages
 // 0x0028 (0x0028 - 0x0000)
@@ -494,11 +346,7 @@ public:
 	TArray<struct FSSkillMontage>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 	TArray<struct FSSkillMontage>                 Result1;                                           // 0x0018(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(DataTableUtil_C_LoadAllSkillMontages) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAllSkillMontages");
-static_assert(sizeof(DataTableUtil_C_LoadAllSkillMontages) == 0x000028, "Wrong size on DataTableUtil_C_LoadAllSkillMontages");
-static_assert(offsetof(DataTableUtil_C_LoadAllSkillMontages, __WorldContext) == 0x000000, "Member 'DataTableUtil_C_LoadAllSkillMontages::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllSkillMontages, ReturnValue) == 0x000008, "Member 'DataTableUtil_C_LoadAllSkillMontages::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllSkillMontages, Result1) == 0x000018, "Member 'DataTableUtil_C_LoadAllSkillMontages::Result1' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAllSkillMontages;
 
 // Function DataTableUtil.DataTableUtil_C.LoadCharacterFightInfo
 // 0x0598 (0x0598 - 0x0000)
@@ -515,16 +363,7 @@ public:
 	struct FSCharacterFightInfo                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x02E0(0x02B0)(ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadCharacterFightInfo) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadCharacterFightInfo");
-static_assert(sizeof(DataTableUtil_C_LoadCharacterFightInfo) == 0x000598, "Wrong size on DataTableUtil_C_LoadCharacterFightInfo");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, CharacterFightInfo) == 0x000000, "Member 'DataTableUtil_C_LoadCharacterFightInfo::CharacterFightInfo' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, CharacterResourcePath) == 0x000008, "Member 'DataTableUtil_C_LoadCharacterFightInfo::CharacterResourcePath' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, __WorldContext) == 0x000018, "Member 'DataTableUtil_C_LoadCharacterFightInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, outInfo) == 0x000020, "Member 'DataTableUtil_C_LoadCharacterFightInfo::outInfo' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, outIsFound) == 0x0002D0, "Member 'DataTableUtil_C_LoadCharacterFightInfo::outIsFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, CallFunc_Conv_StringToName_ReturnValue) == 0x0002D4, "Member 'DataTableUtil_C_LoadCharacterFightInfo::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0002E0, "Member 'DataTableUtil_C_LoadCharacterFightInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadCharacterFightInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000590, "Member 'DataTableUtil_C_LoadCharacterFightInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadCharacterFightInfo;
 
 // Function DataTableUtil.DataTableUtil_C.LoadManipulatePrecastConfig
 // 0x0080 (0x0080 - 0x0000)
@@ -540,15 +379,7 @@ public:
 	struct FSManipulateConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0050(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadManipulatePrecastConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadManipulatePrecastConfig");
-static_assert(sizeof(DataTableUtil_C_LoadManipulatePrecastConfig) == 0x000080, "Wrong size on DataTableUtil_C_LoadManipulatePrecastConfig");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, inRow) == 0x000000, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, outConfig) == 0x000018, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::outConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, outFound) == 0x000040, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x000044, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000050, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulatePrecastConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000078, "Member 'DataTableUtil_C_LoadManipulatePrecastConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadManipulatePrecastConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadManipulateItemConfig
 // 0x0080 (0x0080 - 0x0000)
@@ -564,15 +395,7 @@ public:
 	struct FSManipulateConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0050(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadManipulateItemConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadManipulateItemConfig");
-static_assert(sizeof(DataTableUtil_C_LoadManipulateItemConfig) == 0x000080, "Wrong size on DataTableUtil_C_LoadManipulateItemConfig");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, inRow) == 0x000000, "Member 'DataTableUtil_C_LoadManipulateItemConfig::inRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadManipulateItemConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, outConfig) == 0x000018, "Member 'DataTableUtil_C_LoadManipulateItemConfig::outConfig' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, outFound) == 0x000040, "Member 'DataTableUtil_C_LoadManipulateItemConfig::outFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x000044, "Member 'DataTableUtil_C_LoadManipulateItemConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000050, "Member 'DataTableUtil_C_LoadManipulateItemConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadManipulateItemConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000078, "Member 'DataTableUtil_C_LoadManipulateItemConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadManipulateItemConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadSceneDecorationConfig
 // 0x0090 (0x0090 - 0x0000)
@@ -588,15 +411,7 @@ public:
 	struct FSSceneDecorationConfig                CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x0030)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadSceneDecorationConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadSceneDecorationConfig");
-static_assert(sizeof(DataTableUtil_C_LoadSceneDecorationConfig) == 0x000090, "Wrong size on DataTableUtil_C_LoadSceneDecorationConfig");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, ReturnValue) == 0x000018, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, bFound) == 0x000048, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::bFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x00004C, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneDecorationConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000088, "Member 'DataTableUtil_C_LoadSceneDecorationConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadSceneDecorationConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadSceneUITagConfig
 // 0x0050 (0x0050 - 0x0000)
@@ -612,15 +427,7 @@ public:
 	struct FSSceneUITagConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadSceneUITagConfig) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadSceneUITagConfig");
-static_assert(sizeof(DataTableUtil_C_LoadSceneUITagConfig) == 0x000050, "Wrong size on DataTableUtil_C_LoadSceneUITagConfig");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadSceneUITagConfig::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadSceneUITagConfig::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, ReturnValue) == 0x000018, "Member 'DataTableUtil_C_LoadSceneUITagConfig::ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, bFound) == 0x000028, "Member 'DataTableUtil_C_LoadSceneUITagConfig::bFound' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, CallFunc_Conv_StringToName_ReturnValue) == 0x00002C, "Member 'DataTableUtil_C_LoadSceneUITagConfig::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, CallFunc_GetDataTableRowFromName_OutRow) == 0x000038, "Member 'DataTableUtil_C_LoadSceneUITagConfig::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadSceneUITagConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000048, "Member 'DataTableUtil_C_LoadSceneUITagConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadSceneUITagConfig;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAllAiWeaponSockets
 // 0x0150 (0x0150 - 0x0000)
@@ -644,22 +451,7 @@ public:
 	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DataTableUtil_C_LoadAllAiWeaponSockets) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAllAiWeaponSockets");
-static_assert(sizeof(DataTableUtil_C_LoadAllAiWeaponSockets) == 0x000150, "Wrong size on DataTableUtil_C_LoadAllAiWeaponSockets");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, __WorldContext) == 0x000000, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, Sockets) == 0x000008, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::Sockets' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, AllSocket) == 0x000058, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::AllSocket' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, ___int_Array_Index_Variable) == 0x0000A8, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, ___int_Loop_Counter_Variable) == 0x0000AC, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_GetDataTableRowNames_OutRowNames) == 0x0000B8, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Array_Get_Item) == 0x0000C8, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Array_Length_ReturnValue) == 0x0000D4, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000D8, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000130, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Less_IntInt_ReturnValue) == 0x000131, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Conv_NameToString_ReturnValue) == 0x000138, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAllAiWeaponSockets, CallFunc_Conv_StringToInt_ReturnValue) == 0x000148, "Member 'DataTableUtil_C_LoadAllAiWeaponSockets::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAllAiWeaponSockets;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAiWeaponSocket
 // 0x00D0 (0x00D0 - 0x0000)
@@ -673,13 +465,7 @@ public:
 	struct FSAiWeaponSocket                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x0070(0x0058)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadAiWeaponSocket) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAiWeaponSocket");
-static_assert(sizeof(DataTableUtil_C_LoadAiWeaponSocket) == 0x0000D0, "Wrong size on DataTableUtil_C_LoadAiWeaponSocket");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocket, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadAiWeaponSocket::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocket, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadAiWeaponSocket::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocket, Out_Row) == 0x000018, "Member 'DataTableUtil_C_LoadAiWeaponSocket::Out_Row' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocket, CallFunc_GetDataTableRowFromName_OutRow) == 0x000070, "Member 'DataTableUtil_C_LoadAiWeaponSocket::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocket, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'DataTableUtil_C_LoadAiWeaponSocket::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAiWeaponSocket;
 
 // Function DataTableUtil.DataTableUtil_C.LoadAiWeaponSocketConfigs
 // 0x0130 (0x0130 - 0x0000)
@@ -696,16 +482,7 @@ public:
 	struct FSWeaponSocket                         CallFunc_Map_Find_Value;                           // 0x00D0(0x0058)(HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_LoadAiWeaponSocketConfigs) == 0x000008, "Wrong alignment on DataTableUtil_C_LoadAiWeaponSocketConfigs");
-static_assert(sizeof(DataTableUtil_C_LoadAiWeaponSocketConfigs) == 0x000130, "Wrong size on DataTableUtil_C_LoadAiWeaponSocketConfigs");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, RowName) == 0x000000, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::RowName' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, Key) == 0x00000C, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::Key' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, Weapon) == 0x000018, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::Weapon' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, CallFunc_GetDataTableRowFromName_OutRow) == 0x000070, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000C8, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, CallFunc_Map_Find_Value) == 0x0000D0, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_LoadAiWeaponSocketConfigs, CallFunc_Map_Find_ReturnValue) == 0x000128, "Member 'DataTableUtil_C_LoadAiWeaponSocketConfigs::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_LoadAiWeaponSocketConfigs;
 
 // Function DataTableUtil.DataTableUtil_C.GetDataTableOnEditor
 // 0x0098 (0x0098 - 0x0000)
@@ -730,22 +507,24 @@ public:
 	class UDataTable*                             K2Node_DynamicCast_As____;                         // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DataTableUtil_C_GetDataTableOnEditor) == 0x000008, "Wrong alignment on DataTableUtil_C_GetDataTableOnEditor");
-static_assert(sizeof(DataTableUtil_C_GetDataTableOnEditor) == 0x000098, "Wrong size on DataTableUtil_C_GetDataTableOnEditor");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, path) == 0x000000, "Member 'DataTableUtil_C_GetDataTableOnEditor::path' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, __WorldContext) == 0x000010, "Member 'DataTableUtil_C_GetDataTableOnEditor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, Return) == 0x000018, "Member 'DataTableUtil_C_GetDataTableOnEditor::Return' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_GetAssetRegistry_ReturnValue) == 0x000020, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_GetAssetRegistry_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_FindSubstring_ReturnValue) == 0x000030, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_FindSubstring_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_Left_ReturnValue) == 0x000038, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_Left_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_Concat_StrStr_ReturnValue) == 0x000048, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_Conv_StringToName_ReturnValue) == 0x000058, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_GetAssetsByPackageName_OutAssetData) == 0x000068, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_GetAssetsByPackageName_OutAssetData' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_GetAssetsByPackageName_ReturnValue) == 0x000078, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_GetAssetsByPackageName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000079, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, CallFunc_GetAsset_ReturnValue) == 0x000080, "Member 'DataTableUtil_C_GetDataTableOnEditor::CallFunc_GetAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, K2Node_DynamicCast_As____) == 0x000088, "Member 'DataTableUtil_C_GetDataTableOnEditor::K2Node_DynamicCast_As____' has a wrong offset!");
-static_assert(offsetof(DataTableUtil_C_GetDataTableOnEditor, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'DataTableUtil_C_GetDataTableOnEditor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_DataTableUtil_C_GetDataTableOnEditor;
+
+// Function DataTableUtil.DataTableUtil_C.LoadDecorationConfig
+// 0x0148 (0x0148 - 0x0000)
+struct DataTableUtil_C_LoadDecorationConfig final
+{
+public:
+	class FString                                 Row;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSucc;                                             // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSDecorationConfig                     result;                                            // 0x0020(0x0088)(Parm, OutParm, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSDecorationConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x00B8(0x0088)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_DataTableUtil_C_LoadDecorationConfig;
 
 }
 

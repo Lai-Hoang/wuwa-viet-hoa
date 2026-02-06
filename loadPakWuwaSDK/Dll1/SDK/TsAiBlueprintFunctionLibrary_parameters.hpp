@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EQuestStepState_structs.hpp"
 #include "SAiLevelVar_structs.hpp"
+#include "EQuestStepState_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
@@ -29,12 +29,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EQuestStepState                               ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetQuestState) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetQuestState");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetQuestState) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetQuestState");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetQuestState, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetQuestState::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetQuestState, questId) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_GetQuestState::questId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetQuestState, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetQuestState::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetQuestState, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetQuestState::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetQuestState;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetDistanceByPlayer
 // 0x0018 (0x0018 - 0x0000)
@@ -46,11 +41,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetDistanceByPlayer;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.CheckPlayerGameplayTag
 // 0x0020 (0x0020 - 0x0000)
@@ -62,12 +53,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag) == 0x000020, "Wrong size on TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag, tag) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag::tag' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag, __WorldContext) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag, ReturnValue) == 0x000018, "Member 'TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_CheckPlayerGameplayTag;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.RestartBehaviorTree
 // 0x0010 (0x0010 - 0x0000)
@@ -78,10 +64,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_RestartBehaviorTree;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.SetAiEnabled
 // 0x0020 (0x0020 - 0x0000)
@@ -94,12 +77,7 @@ public:
 	class FString                                 key;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_SetAiEnabled");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled) == 0x000020, "Wrong size on TsAiBlueprintFunctionLibrary_C_SetAiEnabled");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_SetAiEnabled::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled, value) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_SetAiEnabled::value' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled, key) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_SetAiEnabled::key' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetAiEnabled, __WorldContext) == 0x000018, "Member 'TsAiBlueprintFunctionLibrary_C_SetAiEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_SetAiEnabled;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.NeedCheckPlayerImpact
 // 0x0018 (0x0018 - 0x0000)
@@ -111,11 +89,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerImpact;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.NeedCheckPlayerAttack
 // 0x0018 (0x0018 - 0x0000)
@@ -127,11 +101,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_NeedCheckPlayerAttack;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.UpdateInteractionComponent
 // 0x0010 (0x0010 - 0x0000)
@@ -142,10 +112,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_UpdateInteractionComponent;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerAttack
 // 0x0010 (0x0010 - 0x0000)
@@ -156,10 +123,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttack) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerAttack");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttack) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerAttack");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttack, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttack::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttack, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttack::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerAttack;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerImpact
 // 0x0010 (0x0010 - 0x0000)
@@ -170,10 +134,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpact) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerImpact");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpact) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerImpact");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpact, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpact::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpact, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpact::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerImpact;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.IsAiDriver
 // 0x0018 (0x0018 - 0x0000)
@@ -185,11 +146,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_IsAiDriver) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_IsAiDriver");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_IsAiDriver) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_IsAiDriver");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_IsAiDriver, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_IsAiDriver::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_IsAiDriver, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_IsAiDriver::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_IsAiDriver, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_IsAiDriver::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_IsAiDriver;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetRoleActor
 // 0x0018 (0x0018 - 0x0000)
@@ -201,11 +158,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetRoleActor) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetRoleActor");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetRoleActor) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetRoleActor");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetRoleActor, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetRoleActor::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetRoleActor, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetRoleActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetRoleActor, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetRoleActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetRoleActor;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.SetFollowData
 // 0x0020 (0x0020 - 0x0000)
@@ -219,12 +172,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_SetFollowData) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_SetFollowData");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_SetFollowData) == 0x000020, "Wrong size on TsAiBlueprintFunctionLibrary_C_SetFollowData");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetFollowData, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_SetFollowData::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetFollowData, target) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_SetFollowData::target' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetFollowData, type) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_SetFollowData::type' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_SetFollowData, __WorldContext) == 0x000018, "Member 'TsAiBlueprintFunctionLibrary_C_SetFollowData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_SetFollowData;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetFollowActor
 // 0x0020 (0x0020 - 0x0000)
@@ -236,11 +184,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetFollowActor) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetFollowActor");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetFollowActor) == 0x000020, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetFollowActor");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetFollowActor, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetFollowActor::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetFollowActor, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetFollowActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetFollowActor, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetFollowActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetFollowActor;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.Reset
 // 0x0010 (0x0010 - 0x0000)
@@ -251,11 +195,7 @@ public:
 	float                                         targetEntityId;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_Reset) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_Reset");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_Reset) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_Reset");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_Reset, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_Reset::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_Reset, targetEntityId) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_Reset::targetEntityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_Reset, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_Reset::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_Reset;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetToRoleDistance
 // 0x0018 (0x0018 - 0x0000)
@@ -267,11 +207,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetToRoleDistance) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetToRoleDistance");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetToRoleDistance) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetToRoleDistance");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetToRoleDistance, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetToRoleDistance::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetToRoleDistance, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetToRoleDistance::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetToRoleDistance, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetToRoleDistance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetToRoleDistance;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetSummonType
 // 0x0018 (0x0018 - 0x0000)
@@ -283,11 +219,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetSummonType) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetSummonType");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetSummonType) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetSummonType");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetSummonType, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetSummonType::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetSummonType, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetSummonType::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetSummonType, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetSummonType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetSummonType;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.TsLogInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -297,10 +229,7 @@ public:
 	class FString                                 text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_TsLogInfo) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_TsLogInfo");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_TsLogInfo) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_TsLogInfo");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_TsLogInfo, text) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_TsLogInfo::text' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_TsLogInfo, __WorldContext) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_TsLogInfo::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_TsLogInfo;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerAttackEnd
 // 0x0010 (0x0010 - 0x0000)
@@ -311,10 +240,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerAttackEnd;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerImpactEnd
 // 0x0010 (0x0010 - 0x0000)
@@ -325,10 +251,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerImpactEnd;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerAttackBegin
 // 0x0010 (0x0010 - 0x0000)
@@ -339,10 +262,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerAttackBegin;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.OnPlayerImpactBegin
 // 0x0010 (0x0010 - 0x0000)
@@ -353,10 +273,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_OnPlayerImpactBegin;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.UpdateNpcPerformData
 // 0x0018 (0x0018 - 0x0000)
@@ -371,14 +288,7 @@ public:
 	float                                         strength;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, isAttacked1) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::isAttacked1' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, isImpacted) == 0x000005, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::isImpacted' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, direction) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::direction' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, strength) == 0x00000C, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::strength' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData, __WorldContext) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_UpdateNpcPerformData;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetLevelIntVar
 // 0x0030 (0x0030 - 0x0000)
@@ -389,11 +299,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetLevelIntVar) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetLevelIntVar");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetLevelIntVar) == 0x000030, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetLevelIntVar");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelIntVar, levelVar) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelIntVar::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelIntVar, __WorldContext) == 0x000020, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelIntVar::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelIntVar, ReturnValue) == 0x000028, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelIntVar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetLevelIntVar;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetLevelStringVar
 // 0x0038 (0x0038 - 0x0000)
@@ -404,11 +310,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetLevelStringVar) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetLevelStringVar");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetLevelStringVar) == 0x000038, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetLevelStringVar");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelStringVar, levelVar) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelStringVar::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelStringVar, __WorldContext) == 0x000020, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelStringVar::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelStringVar, ReturnValue) == 0x000028, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelStringVar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetLevelStringVar;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetLevelFloatVar
 // 0x0030 (0x0030 - 0x0000)
@@ -419,11 +321,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar) == 0x000030, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar, levelVar) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar, __WorldContext) == 0x000020, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar, ReturnValue) == 0x000028, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetLevelFloatVar;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetLevelPosVar
 // 0x0038 (0x0038 - 0x0000)
@@ -434,11 +332,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ReturnValue;                                       // 0x0028(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetLevelPosVar) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetLevelPosVar");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetLevelPosVar) == 0x000038, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetLevelPosVar");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelPosVar, levelVar) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelPosVar::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelPosVar, __WorldContext) == 0x000020, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelPosVar::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelPosVar, ReturnValue) == 0x000028, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelPosVar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetLevelPosVar;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetLevelBoolVar
 // 0x0030 (0x0030 - 0x0000)
@@ -449,11 +343,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar) == 0x000030, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar, levelVar) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar::levelVar' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar, __WorldContext) == 0x000020, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar, ReturnValue) == 0x000028, "Member 'TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetLevelBoolVar;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.UpdateNpcStateData
 // 0x0010 (0x0010 - 0x0000)
@@ -464,11 +354,7 @@ public:
 	int32                                         animState;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData) == 0x000010, "Wrong size on TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData, animState) == 0x000004, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData::animState' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_UpdateNpcStateData;
 
 // Function TsAiBlueprintFunctionLibrary.TsAiBlueprintFunctionLibrary_C.GetAndResetNoTransitionSwitch
 // 0x0018 (0x0018 - 0x0000)
@@ -480,11 +366,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch) == 0x000008, "Wrong alignment on TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch");
-static_assert(sizeof(TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch) == 0x000018, "Wrong size on TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch, entityId) == 0x000000, "Member 'TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch::entityId' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch, __WorldContext) == 0x000008, "Member 'TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch, ReturnValue) == 0x000010, "Member 'TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAiBlueprintFunctionLibrary_C_GetAndResetNoTransitionSwitch;
 
 }
 

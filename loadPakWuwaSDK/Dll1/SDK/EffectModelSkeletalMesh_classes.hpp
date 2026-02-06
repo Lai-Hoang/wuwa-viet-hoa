@@ -17,21 +17,24 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass EffectModelSkeletalMesh.EffectModelSkeletalMesh_C
-// 0x0000 (0x0598 - 0x0598)
+// 0x0000 (0x0638 - 0x0638)
 class UEffectModelSkeletalMesh_C final : public UEffectModelSkeletalMesh
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectModelSkeletalMesh_C">();
+		BP_STATIC_CLASS_IMPL("EffectModelSkeletalMesh_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelSkeletalMesh_C")
 	}
 	static class UEffectModelSkeletalMesh_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectModelSkeletalMesh_C>();
 	}
 };
-static_assert(alignof(UEffectModelSkeletalMesh_C) == 0x000008, "Wrong alignment on UEffectModelSkeletalMesh_C");
-static_assert(sizeof(UEffectModelSkeletalMesh_C) == 0x000598, "Wrong size on UEffectModelSkeletalMesh_C");
+DUMPER7_ASSERTS_UEffectModelSkeletalMesh_C;
 
 }
 

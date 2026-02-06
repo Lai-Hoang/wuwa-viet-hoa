@@ -25,13 +25,7 @@ public:
 	int64                                         Size;                                              // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 HashString;                                        // 0x0038(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroRequestDownloadInfo) == 0x000008, "Wrong alignment on FKuroRequestDownloadInfo");
-static_assert(sizeof(FKuroRequestDownloadInfo) == 0x000048, "Wrong size on FKuroRequestDownloadInfo");
-static_assert(offsetof(FKuroRequestDownloadInfo, FileName) == 0x000000, "Member 'FKuroRequestDownloadInfo::FileName' has a wrong offset!");
-static_assert(offsetof(FKuroRequestDownloadInfo, Url) == 0x000010, "Member 'FKuroRequestDownloadInfo::Url' has a wrong offset!");
-static_assert(offsetof(FKuroRequestDownloadInfo, SavePath) == 0x000020, "Member 'FKuroRequestDownloadInfo::SavePath' has a wrong offset!");
-static_assert(offsetof(FKuroRequestDownloadInfo, Size) == 0x000030, "Member 'FKuroRequestDownloadInfo::Size' has a wrong offset!");
-static_assert(offsetof(FKuroRequestDownloadInfo, HashString) == 0x000038, "Member 'FKuroRequestDownloadInfo::HashString' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroRequestDownloadInfo;
 
 }
 

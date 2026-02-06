@@ -47,15 +47,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DLSSLibrary">();
+		STATIC_CLASS_IMPL("DLSSLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DLSSLibrary")
 	}
 	static class UDLSSLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDLSSLibrary>();
 	}
 };
-static_assert(alignof(UDLSSLibrary) == 0x000008, "Wrong alignment on UDLSSLibrary");
-static_assert(sizeof(UDLSSLibrary) == 0x000030, "Wrong size on UDLSSLibrary");
+DUMPER7_ASSERTS_UDLSSLibrary;
 
 }
 

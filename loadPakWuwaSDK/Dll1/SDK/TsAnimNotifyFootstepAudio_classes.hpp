@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyFootstepAudio_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyFootstepAudio_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyFootstepAudio_C")
 	}
 	static class UTsAnimNotifyFootstepAudio_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyFootstepAudio_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyFootstepAudio_C) == 0x000008, "Wrong alignment on UTsAnimNotifyFootstepAudio_C");
-static_assert(sizeof(UTsAnimNotifyFootstepAudio_C) == 0x000050, "Wrong size on UTsAnimNotifyFootstepAudio_C");
-static_assert(offsetof(UTsAnimNotifyFootstepAudio_C, Variant) == 0x000048, "Member 'UTsAnimNotifyFootstepAudio_C::Variant' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyFootstepAudio_C;
 
 }
 

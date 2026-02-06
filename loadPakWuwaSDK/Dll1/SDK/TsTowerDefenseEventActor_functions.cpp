@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function TsTowerDefenseEventActor.TsTowerDefenseEventActor_C.OnLevelShown
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ATsTowerDefenseEventActor_C::OnLevelShown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsTowerDefenseEventActor_C", "OnLevelShown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function TsTowerDefenseEventActor.TsTowerDefenseEventActor_C.ExecuteUbergraph_TsTowerDefenseEventActor
 // (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -48,6 +34,20 @@ void ATsTowerDefenseEventActor_C::ExecuteUbergraph_TsTowerDefenseEventActor(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsTowerDefenseEventActor.TsTowerDefenseEventActor_C.OnLevelShown
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATsTowerDefenseEventActor_C::OnLevelShown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsTowerDefenseEventActor_C", "OnLevelShown");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

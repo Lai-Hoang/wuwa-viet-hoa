@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "ECharacterControllerType_structs.hpp"
-#include "ECharacterBodySpecifiedType_structs.hpp"
 #include "ECharacterMeshPart_structs.hpp"
-#include "ECharacterSlotSpecifiedType_structs.hpp"
+#include "ECharacterBodySpecifiedType_structs.hpp"
 #include "SMaterialControllerFloatGroup_structs.hpp"
+#include "ECharacterSlotSpecifiedType_structs.hpp"
 #include "ECharacterControllerApplyType_structs.hpp"
 #include "SMaterialControllerLoopTime_structs.hpp"
 #include "ECharacterControllerChannelSwitch_structs.hpp"
@@ -30,103 +30,102 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PD_CharacterControllerData.PD_CharacterControllerData_C
-// 0x4A48 (0x4C70 - 0x0228)
+// 0x4A40 (0x4CA0 - 0x0260)
 class UPD_CharacterControllerData_C final : public UKuroMaterialControllerDataAsset
 {
 public:
-	ECharacterControllerType                      DataType;                                          // 0x0228(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterBodySpecifiedType                   SpecifiedBodyType;                                 // 0x0229(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<ECharacterMeshPart>                    SpecifiedParts;                                    // 0x0230(0x0010)(Edit, BlueprintVisible)
-	ECharacterSlotSpecifiedType                   SpecifiedSlotType;                                 // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterControllerApplyType                 MaterialModifyType;                                // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_242[0x6];                                      // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     ReplaceMaterial;                                   // 0x0248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseRim;                                            // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UseOutline;                                        // 0x0251(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UseDissolve;                                       // 0x0252(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_253[0x1];                                      // 0x0253(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerLoopTime           LoopTime;                                          // 0x0254(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RimRevertProperty;                                 // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	bool                                          RimUseTex;                                         // 0x0261(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ECharacterControllerChannelSwitch             RimChannel;                                        // 0x0262(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_263[0x5];                                      // 0x0263(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerFloatGroup         RimRange;                                          // 0x0268(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerColorGroup         RimColor;                                          // 0x0418(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          OutlineRevertProperty;                             // 0x0A78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	bool                                          OutlineUseTex;                                     // 0x0A79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A7A[0x6];                                      // 0x0A7A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerFloatGroup         OutlineWidth;                                      // 0x0A80(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerColorGroup         OutlineColor;                                      // 0x0C30(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          DissolveRevertProperty;                            // 0x1290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	ECharacterControllerChannelSwitch             DissolveChannel;                                   // 0x1291(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1292[0x6];                                     // 0x1292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerFloatGroup         DissolveProgress;                                  // 0x1298(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerColorGroup         DissolveColor;                                     // 0x1448(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         DissolveColorIntensity;                            // 0x1AA8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          UseTextureSample;                                  // 0x1C58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          TextureSampleRevertProperty;                       // 0x1C59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UseAlphaToMask;                                    // 0x1C5A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C5B[0x5];                                     // 0x1C5B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             MaskTexture;                                       // 0x1C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         Rotation;                                          // 0x1C68(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	ECharacterControllerUVSwitch::ECharacterControllerUVSwitch UVSelection;                          // 0x1E18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E19[0x7];                                     // 0x1E19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerColorGroup         TextureScaleAndOffset;                             // 0x1E20(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerColorGroup         TextureSpeed;                                      // 0x2480(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerColorGroup         TextureColorTint;                                  // 0x2AE0(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         OutlineIntensity;                                  // 0x3140(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          UseOuterOutlineEffect;                             // 0x32F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          MobileUseDifferentMaterial;                        // 0x32F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_32F2[0x6];                                     // 0x32F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     ReplaceMaterialMobile;                             // 0x32F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RevertMaterial;                                    // 0x3300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	bool                                          UseParameterModify;                                // 0x3301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3302[0x6];                                     // 0x3302(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSMaterialControllerFloatParameter> FloatParameters;                               // 0x3308(0x0010)(Edit, BlueprintVisible)
-	bool                                          UseColor;                                          // 0x3318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          ColorRevertProperty;                               // 0x3319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	bool                                          BaseUseTex;                                        // 0x331A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_331B[0x5];                                     // 0x331B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerColorGroup         BaseColor;                                         // 0x3320(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         BaseColorIntensity;                                // 0x3980(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          EmissionUseTex;                                    // 0x3B30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B31[0x7];                                     // 0x3B31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerColorGroup         EmissionColor;                                     // 0x3B38(0x0660)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         EmissionIntensity;                                 // 0x4198(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<struct FSMaterialControllerColorParameter> ColorParameters;                               // 0x4348(0x0010)(Edit, BlueprintVisible)
-	bool                                          UseCustomMaterialEffect;                           // 0x4358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CustomRevertProperty;                              // 0x4359(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	uint8                                         Pad_435A[0x6];                                     // 0x435A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSMaterialControllerFloatParameter> CustomFloatParameters;                         // 0x4360(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FSMaterialControllerColorParameter> CustomColorParameters;                         // 0x4370(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TArray<struct FSMaterialControllerTextureParameter> CustomTextureParameters;                     // 0x4380(0x0010)(Edit, BlueprintVisible)
-	bool                                          UseMotionOffset;                                   // 0x4390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          MotionOffsetRevertProperty;                        // 0x4391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	uint8                                         Pad_4392[0x2];                                     // 0x4392(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MotionOffsetLength;                                // 0x4394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MotionAffectVertexRange;                           // 0x4398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_439C[0x4];                                     // 0x439C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         WeaponCases;                                       // 0x43A0(0x0010)(Edit, BlueprintVisible)
-	bool                                          IgnoreTimeDilation;                                // 0x43B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          HiddenAfterEffect;                                 // 0x43B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43B2[0x6];                                     // 0x43B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerFloatGroup         DissolveSmooth;                                    // 0x43B8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSMaterialControllerFloatGroup         MotionNoiseSpeed;                                  // 0x4568(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          UseDitherEffect;                                   // 0x4718(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DitherRevertProperty;                              // 0x4719(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	uint8                                         Pad_471A[0x6];                                     // 0x471A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMaterialControllerFloatGroup         DitherValue;                                       // 0x4720(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<class FString>                         OtherCases;                                        // 0x48D0(0x0010)(Edit, BlueprintVisible)
-	struct FSMaterialControllerFloatGroup         RimIntensity;                                      // 0x48E0(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<class FString>                         CustomPartNames;                                   // 0x4A90(0x0010)(Edit, BlueprintVisible)
-	struct FSMaterialControllerFloatGroup         TextureMaskRange;                                  // 0x4AA0(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          MaskOriginEffect;                                  // 0x4C50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UpdateAtLeastOneFrame;                             // 0x4C51(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4C52[0x6];                                     // 0x4C52(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         CustomExcludePartNames;                            // 0x4C58(0x0010)(Edit, BlueprintVisible)
-	bool                                          ForceUpdateOnAdd;                                  // 0x4C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
-	bool                                          ForceBattleMask;                                   // 0x4C69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	ECharacterControllerType                      DataType;                                          // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterBodySpecifiedType                   SpecifiedBodyType;                                 // 0x0261(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_262[0x6];                                      // 0x0262(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<ECharacterMeshPart>                    SpecifiedParts;                                    // 0x0268(0x0010)(Edit, BlueprintVisible)
+	ECharacterSlotSpecifiedType                   SpecifiedSlotType;                                 // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterControllerApplyType                 MaterialModifyType;                                // 0x0279(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27A[0x6];                                      // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     ReplaceMaterial;                                   // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     ReplaceMaterialMobile;                             // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RevertMaterial;                                    // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          UseRim;                                            // 0x0291(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseOutline;                                        // 0x0292(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          OutlineRevertProperty;                             // 0x0293(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          UseDissolve;                                       // 0x0294(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_295[0x3];                                      // 0x0295(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerLoopTime           LoopTime;                                          // 0x0298(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RimRevertProperty;                                 // 0x02A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          RimUseTex;                                         // 0x02A5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ECharacterControllerChannelSwitch             RimChannel;                                        // 0x02A6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A7[0x1];                                      // 0x02A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerFloatGroup         RimRange;                                          // 0x02A8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerColorGroup         RimColor;                                          // 0x0458(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          OutlineUseTex;                                     // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AB9[0x7];                                      // 0x0AB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerFloatGroup         OutlineWidth;                                      // 0x0AC0(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerColorGroup         OutlineColor;                                      // 0x0C70(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          DissolveRevertProperty;                            // 0x12D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	ECharacterControllerChannelSwitch             DissolveChannel;                                   // 0x12D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12D2[0x6];                                     // 0x12D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerFloatGroup         DissolveProgress;                                  // 0x12D8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerColorGroup         DissolveColor;                                     // 0x1488(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         DissolveColorIntensity;                            // 0x1AE8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          UseTextureSample;                                  // 0x1C98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          TextureSampleRevertProperty;                       // 0x1C99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseAlphaToMask;                                    // 0x1C9A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C9B[0x5];                                     // 0x1C9B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             MaskTexture;                                       // 0x1CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         Rotation;                                          // 0x1CA8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	ECharacterControllerUVSwitch::ECharacterControllerUVSwitch UVSelection;                          // 0x1E58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E59[0x7];                                     // 0x1E59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerColorGroup         TextureScaleAndOffset;                             // 0x1E60(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerColorGroup         TextureSpeed;                                      // 0x24C0(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerColorGroup         TextureColorTint;                                  // 0x2B20(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         OutlineIntensity;                                  // 0x3180(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          UseOuterOutlineEffect;                             // 0x3330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseParameterModify;                                // 0x3331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3332[0x6];                                     // 0x3332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSMaterialControllerFloatParameter> FloatParameters;                               // 0x3338(0x0010)(Edit, BlueprintVisible)
+	bool                                          UseColor;                                          // 0x3348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ColorRevertProperty;                               // 0x3349(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          BaseUseTex;                                        // 0x334A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_334B[0x5];                                     // 0x334B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerColorGroup         BaseColor;                                         // 0x3350(0x0660)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         BaseColorIntensity;                                // 0x39B0(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          EmissionUseTex;                                    // 0x3B60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3B61[0x7];                                     // 0x3B61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerColorGroup         EmissionColor;                                     // 0x3B68(0x0660)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         EmissionIntensity;                                 // 0x41C8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<struct FSMaterialControllerColorParameter> ColorParameters;                               // 0x4378(0x0010)(Edit, BlueprintVisible)
+	bool                                          UseCustomMaterialEffect;                           // 0x4388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CustomRevertProperty;                              // 0x4389(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	uint8                                         Pad_438A[0x6];                                     // 0x438A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSMaterialControllerFloatParameter> CustomFloatParameters;                         // 0x4390(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSMaterialControllerColorParameter> CustomColorParameters;                         // 0x43A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TArray<struct FSMaterialControllerTextureParameter> CustomTextureParameters;                     // 0x43B0(0x0010)(Edit, BlueprintVisible)
+	bool                                          UseMotionOffset;                                   // 0x43C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          MotionOffsetRevertProperty;                        // 0x43C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	uint8                                         Pad_43C2[0x2];                                     // 0x43C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MotionOffsetLength;                                // 0x43C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MotionAffectVertexRange;                           // 0x43C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43CC[0x4];                                     // 0x43CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         WeaponCases;                                       // 0x43D0(0x0010)(Edit, BlueprintVisible)
+	bool                                          IgnoreTimeDilation;                                // 0x43E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          HiddenAfterEffect;                                 // 0x43E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_43E2[0x6];                                     // 0x43E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerFloatGroup         DissolveSmooth;                                    // 0x43E8(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSMaterialControllerFloatGroup         MotionNoiseSpeed;                                  // 0x4598(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          UseDitherEffect;                                   // 0x4748(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DitherRevertProperty;                              // 0x4749(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	uint8                                         Pad_474A[0x6];                                     // 0x474A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMaterialControllerFloatGroup         DitherValue;                                       // 0x4750(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class FString>                         OtherCases;                                        // 0x4900(0x0010)(Edit, BlueprintVisible)
+	struct FSMaterialControllerFloatGroup         RimIntensity;                                      // 0x4910(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class FString>                         CustomPartNames;                                   // 0x4AC0(0x0010)(Edit, BlueprintVisible)
+	struct FSMaterialControllerFloatGroup         TextureMaskRange;                                  // 0x4AD0(0x01B0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          MaskOriginEffect;                                  // 0x4C80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UpdateAtLeastOneFrame;                             // 0x4C81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4C82[0x6];                                     // 0x4C82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         CustomExcludePartNames;                            // 0x4C88(0x0010)(Edit, BlueprintVisible)
+	bool                                          ForceUpdateOnAdd;                                  // 0x4C98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          ForceBattleMask;                                   // 0x4C99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          MobileUseDifferentMaterial;                        // 0x4C9A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay)
 
 public:
 	void InitCache();
@@ -134,90 +133,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_CharacterControllerData_C">();
+		BP_STATIC_CLASS_IMPL("PD_CharacterControllerData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_CharacterControllerData_C")
 	}
 	static class UPD_CharacterControllerData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_CharacterControllerData_C>();
 	}
 };
-static_assert(alignof(UPD_CharacterControllerData_C) == 0x000008, "Wrong alignment on UPD_CharacterControllerData_C");
-static_assert(sizeof(UPD_CharacterControllerData_C) == 0x004C70, "Wrong size on UPD_CharacterControllerData_C");
-static_assert(offsetof(UPD_CharacterControllerData_C, DataType) == 0x000228, "Member 'UPD_CharacterControllerData_C::DataType' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, SpecifiedBodyType) == 0x000229, "Member 'UPD_CharacterControllerData_C::SpecifiedBodyType' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, SpecifiedParts) == 0x000230, "Member 'UPD_CharacterControllerData_C::SpecifiedParts' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, SpecifiedSlotType) == 0x000240, "Member 'UPD_CharacterControllerData_C::SpecifiedSlotType' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MaterialModifyType) == 0x000241, "Member 'UPD_CharacterControllerData_C::MaterialModifyType' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ReplaceMaterial) == 0x000248, "Member 'UPD_CharacterControllerData_C::ReplaceMaterial' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseRim) == 0x000250, "Member 'UPD_CharacterControllerData_C::UseRim' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseOutline) == 0x000251, "Member 'UPD_CharacterControllerData_C::UseOutline' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseDissolve) == 0x000252, "Member 'UPD_CharacterControllerData_C::UseDissolve' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, LoopTime) == 0x000254, "Member 'UPD_CharacterControllerData_C::LoopTime' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimRevertProperty) == 0x000260, "Member 'UPD_CharacterControllerData_C::RimRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimUseTex) == 0x000261, "Member 'UPD_CharacterControllerData_C::RimUseTex' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimChannel) == 0x000262, "Member 'UPD_CharacterControllerData_C::RimChannel' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimRange) == 0x000268, "Member 'UPD_CharacterControllerData_C::RimRange' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimColor) == 0x000418, "Member 'UPD_CharacterControllerData_C::RimColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OutlineRevertProperty) == 0x000A78, "Member 'UPD_CharacterControllerData_C::OutlineRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OutlineUseTex) == 0x000A79, "Member 'UPD_CharacterControllerData_C::OutlineUseTex' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OutlineWidth) == 0x000A80, "Member 'UPD_CharacterControllerData_C::OutlineWidth' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OutlineColor) == 0x000C30, "Member 'UPD_CharacterControllerData_C::OutlineColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveRevertProperty) == 0x001290, "Member 'UPD_CharacterControllerData_C::DissolveRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveChannel) == 0x001291, "Member 'UPD_CharacterControllerData_C::DissolveChannel' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveProgress) == 0x001298, "Member 'UPD_CharacterControllerData_C::DissolveProgress' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveColor) == 0x001448, "Member 'UPD_CharacterControllerData_C::DissolveColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveColorIntensity) == 0x001AA8, "Member 'UPD_CharacterControllerData_C::DissolveColorIntensity' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseTextureSample) == 0x001C58, "Member 'UPD_CharacterControllerData_C::UseTextureSample' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, TextureSampleRevertProperty) == 0x001C59, "Member 'UPD_CharacterControllerData_C::TextureSampleRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseAlphaToMask) == 0x001C5A, "Member 'UPD_CharacterControllerData_C::UseAlphaToMask' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MaskTexture) == 0x001C60, "Member 'UPD_CharacterControllerData_C::MaskTexture' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, Rotation) == 0x001C68, "Member 'UPD_CharacterControllerData_C::Rotation' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UVSelection) == 0x001E18, "Member 'UPD_CharacterControllerData_C::UVSelection' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, TextureScaleAndOffset) == 0x001E20, "Member 'UPD_CharacterControllerData_C::TextureScaleAndOffset' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, TextureSpeed) == 0x002480, "Member 'UPD_CharacterControllerData_C::TextureSpeed' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, TextureColorTint) == 0x002AE0, "Member 'UPD_CharacterControllerData_C::TextureColorTint' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OutlineIntensity) == 0x003140, "Member 'UPD_CharacterControllerData_C::OutlineIntensity' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseOuterOutlineEffect) == 0x0032F0, "Member 'UPD_CharacterControllerData_C::UseOuterOutlineEffect' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MobileUseDifferentMaterial) == 0x0032F1, "Member 'UPD_CharacterControllerData_C::MobileUseDifferentMaterial' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ReplaceMaterialMobile) == 0x0032F8, "Member 'UPD_CharacterControllerData_C::ReplaceMaterialMobile' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RevertMaterial) == 0x003300, "Member 'UPD_CharacterControllerData_C::RevertMaterial' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseParameterModify) == 0x003301, "Member 'UPD_CharacterControllerData_C::UseParameterModify' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, FloatParameters) == 0x003308, "Member 'UPD_CharacterControllerData_C::FloatParameters' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseColor) == 0x003318, "Member 'UPD_CharacterControllerData_C::UseColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ColorRevertProperty) == 0x003319, "Member 'UPD_CharacterControllerData_C::ColorRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, BaseUseTex) == 0x00331A, "Member 'UPD_CharacterControllerData_C::BaseUseTex' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, BaseColor) == 0x003320, "Member 'UPD_CharacterControllerData_C::BaseColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, BaseColorIntensity) == 0x003980, "Member 'UPD_CharacterControllerData_C::BaseColorIntensity' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, EmissionUseTex) == 0x003B30, "Member 'UPD_CharacterControllerData_C::EmissionUseTex' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, EmissionColor) == 0x003B38, "Member 'UPD_CharacterControllerData_C::EmissionColor' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, EmissionIntensity) == 0x004198, "Member 'UPD_CharacterControllerData_C::EmissionIntensity' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ColorParameters) == 0x004348, "Member 'UPD_CharacterControllerData_C::ColorParameters' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseCustomMaterialEffect) == 0x004358, "Member 'UPD_CharacterControllerData_C::UseCustomMaterialEffect' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomRevertProperty) == 0x004359, "Member 'UPD_CharacterControllerData_C::CustomRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomFloatParameters) == 0x004360, "Member 'UPD_CharacterControllerData_C::CustomFloatParameters' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomColorParameters) == 0x004370, "Member 'UPD_CharacterControllerData_C::CustomColorParameters' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomTextureParameters) == 0x004380, "Member 'UPD_CharacterControllerData_C::CustomTextureParameters' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseMotionOffset) == 0x004390, "Member 'UPD_CharacterControllerData_C::UseMotionOffset' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MotionOffsetRevertProperty) == 0x004391, "Member 'UPD_CharacterControllerData_C::MotionOffsetRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MotionOffsetLength) == 0x004394, "Member 'UPD_CharacterControllerData_C::MotionOffsetLength' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MotionAffectVertexRange) == 0x004398, "Member 'UPD_CharacterControllerData_C::MotionAffectVertexRange' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, WeaponCases) == 0x0043A0, "Member 'UPD_CharacterControllerData_C::WeaponCases' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, IgnoreTimeDilation) == 0x0043B0, "Member 'UPD_CharacterControllerData_C::IgnoreTimeDilation' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, HiddenAfterEffect) == 0x0043B1, "Member 'UPD_CharacterControllerData_C::HiddenAfterEffect' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DissolveSmooth) == 0x0043B8, "Member 'UPD_CharacterControllerData_C::DissolveSmooth' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MotionNoiseSpeed) == 0x004568, "Member 'UPD_CharacterControllerData_C::MotionNoiseSpeed' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UseDitherEffect) == 0x004718, "Member 'UPD_CharacterControllerData_C::UseDitherEffect' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DitherRevertProperty) == 0x004719, "Member 'UPD_CharacterControllerData_C::DitherRevertProperty' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, DitherValue) == 0x004720, "Member 'UPD_CharacterControllerData_C::DitherValue' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, OtherCases) == 0x0048D0, "Member 'UPD_CharacterControllerData_C::OtherCases' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, RimIntensity) == 0x0048E0, "Member 'UPD_CharacterControllerData_C::RimIntensity' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomPartNames) == 0x004A90, "Member 'UPD_CharacterControllerData_C::CustomPartNames' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, TextureMaskRange) == 0x004AA0, "Member 'UPD_CharacterControllerData_C::TextureMaskRange' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, MaskOriginEffect) == 0x004C50, "Member 'UPD_CharacterControllerData_C::MaskOriginEffect' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, UpdateAtLeastOneFrame) == 0x004C51, "Member 'UPD_CharacterControllerData_C::UpdateAtLeastOneFrame' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, CustomExcludePartNames) == 0x004C58, "Member 'UPD_CharacterControllerData_C::CustomExcludePartNames' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ForceUpdateOnAdd) == 0x004C68, "Member 'UPD_CharacterControllerData_C::ForceUpdateOnAdd' has a wrong offset!");
-static_assert(offsetof(UPD_CharacterControllerData_C, ForceBattleMask) == 0x004C69, "Member 'UPD_CharacterControllerData_C::ForceBattleMask' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_CharacterControllerData_C;
 
 }
 

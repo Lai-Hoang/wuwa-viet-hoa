@@ -32,18 +32,7 @@ public:
 	int32                                         IntValue_38_4C0671064B56516F4EF7BA9C37A3F18A;      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsClientVariable_27_4F9202CC4BF93335C2D83DBA16047507; // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSVarRefContext) == 0x000008, "Wrong alignment on FSVarRefContext");
-static_assert(sizeof(FSVarRefContext) == 0x000068, "Wrong size on FSVarRefContext");
-static_assert(offsetof(FSVarRefContext, Type_24_1DA19796453718C4F6046AA7DAD248E9) == 0x000000, "Member 'FSVarRefContext::Type_24_1DA19796453718C4F6046AA7DAD248E9' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, VarRefSource_21_30EBD7954A68543D9507668105946D4E) == 0x000010, "Member 'FSVarRefContext::VarRefSource_21_30EBD7954A68543D9507668105946D4E' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, VarRefType_22_387552474272BE6FF46D9C9A8F4A39B6) == 0x000020, "Member 'FSVarRefContext::VarRefType_22_387552474272BE6FF46D9C9A8F4A39B6' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, RefId_9_FEDF41FD442646FFB008D09D00966D22) == 0x000030, "Member 'FSVarRefContext::RefId_9_FEDF41FD442646FFB008D09D00966D22' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, Key_14_4F3208CB4AA09A8A69DC6598BE58C852) == 0x000038, "Member 'FSVarRefContext::Key_14_4F3208CB4AA09A8A69DC6598BE58C852' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, StringValue_28_2FA3ABA049BDA532750201B80E1D8733) == 0x000048, "Member 'FSVarRefContext::StringValue_28_2FA3ABA049BDA532750201B80E1D8733' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, BoolValue_32_704AD1264CB586B5ADC2FD8E0E6CFE6C) == 0x000058, "Member 'FSVarRefContext::BoolValue_32_704AD1264CB586B5ADC2FD8E0E6CFE6C' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, FloatValue_34_94A077494570AC394828DD9B775BB10F) == 0x00005C, "Member 'FSVarRefContext::FloatValue_34_94A077494570AC394828DD9B775BB10F' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, IntValue_38_4C0671064B56516F4EF7BA9C37A3F18A) == 0x000060, "Member 'FSVarRefContext::IntValue_38_4C0671064B56516F4EF7BA9C37A3F18A' has a wrong offset!");
-static_assert(offsetof(FSVarRefContext, IsClientVariable_27_4F9202CC4BF93335C2D83DBA16047507) == 0x000064, "Member 'FSVarRefContext::IsClientVariable_27_4F9202CC4BF93335C2D83DBA16047507' has a wrong offset!");
+DUMPER7_ASSERTS_FSVarRefContext;
 
 }
 

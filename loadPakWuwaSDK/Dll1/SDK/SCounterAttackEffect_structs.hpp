@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "STimeScale_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SCounterAttackCamera_structs.hpp"
 
 
@@ -32,16 +32,7 @@ public:
 	struct FVector                                特效Scale_37_08A427AC437DDBD705AEF2B077179D8D;     // 0x01AC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         特效位置_35_1D5B0F3C441A914C46D58DAC4534A59D;      // 0x01B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCounterAttackEffect) == 0x000008, "Wrong alignment on FSCounterAttackEffect");
-static_assert(sizeof(FSCounterAttackEffect) == 0x0001C0, "Wrong size on FSCounterAttackEffect");
-static_assert(offsetof(FSCounterAttackEffect, 震屏_11_EEEA36B24F75390CEC3F36BA67C669D7) == 0x000000, "Member 'FSCounterAttackEffect::震屏_11_EEEA36B24F75390CEC3F36BA67C669D7' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 特效DA_28_E912DA174A85EE8197655AAAC07888DF) == 0x000008, "Member 'FSCounterAttackEffect::特效DA_28_E912DA174A85EE8197655AAAC07888DF' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 攻击者顿帧_8_80559D36464FD5475E917BAC4FE062CC) == 0x000028, "Member 'FSCounterAttackEffect::攻击者顿帧_8_80559D36464FD5475E917BAC4FE062CC' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 被击者顿帧_9_F11C62E14C6173ED373F4AAD2A58F602) == 0x000040, "Member 'FSCounterAttackEffect::被击者顿帧_9_F11C62E14C6173ED373F4AAD2A58F602' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 摄像机设置_22_C8DCC6334CC8719B0F1C4C893E61B1F7) == 0x000058, "Member 'FSCounterAttackEffect::摄像机设置_22_C8DCC6334CC8719B0F1C4C893E61B1F7' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 特效Offset_36_5292F3DA4E57DAEEB942BFA129C18926) == 0x0001A0, "Member 'FSCounterAttackEffect::特效Offset_36_5292F3DA4E57DAEEB942BFA129C18926' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 特效Scale_37_08A427AC437DDBD705AEF2B077179D8D) == 0x0001AC, "Member 'FSCounterAttackEffect::特效Scale_37_08A427AC437DDBD705AEF2B077179D8D' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackEffect, 特效位置_35_1D5B0F3C441A914C46D58DAC4534A59D) == 0x0001B8, "Member 'FSCounterAttackEffect::特效位置_35_1D5B0F3C441A914C46D58DAC4534A59D' has a wrong offset!");
+DUMPER7_ASSERTS_FSCounterAttackEffect;
 
 }
 

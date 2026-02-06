@@ -23,15 +23,18 @@ class ABP_BaseVehicle_C : public ATsBaseVehicle_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BaseVehicle_C">();
+		BP_STATIC_CLASS_IMPL("BP_BaseVehicle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BaseVehicle_C")
 	}
 	static class ABP_BaseVehicle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BaseVehicle_C>();
 	}
 };
-static_assert(alignof(ABP_BaseVehicle_C) == 0x000010, "Wrong alignment on ABP_BaseVehicle_C");
-static_assert(sizeof(ABP_BaseVehicle_C) == 0x0006F0, "Wrong size on ABP_BaseVehicle_C");
+DUMPER7_ASSERTS_ABP_BaseVehicle_C;
 
 }
 

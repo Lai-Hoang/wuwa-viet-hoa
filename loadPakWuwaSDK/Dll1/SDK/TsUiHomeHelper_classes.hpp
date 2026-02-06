@@ -23,15 +23,18 @@ class UTsUiHomeHelper_C final : public ULGUIBehaviour
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiHomeHelper_C">();
+		BP_STATIC_CLASS_IMPL("TsUiHomeHelper_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiHomeHelper_C")
 	}
 	static class UTsUiHomeHelper_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiHomeHelper_C>();
 	}
 };
-static_assert(alignof(UTsUiHomeHelper_C) == 0x000008, "Wrong alignment on UTsUiHomeHelper_C");
-static_assert(sizeof(UTsUiHomeHelper_C) == 0x000100, "Wrong size on UTsUiHomeHelper_C");
+DUMPER7_ASSERTS_UTsUiHomeHelper_C;
 
 }
 

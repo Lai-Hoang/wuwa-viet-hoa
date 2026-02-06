@@ -17,15 +17,35 @@
 namespace SDK
 {
 
-// Function BP_BasePathLine.BP_BasePathLine_C.Save
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_BasePathLine.BP_BasePathLine_C.ExecuteUbergraph_BP_BasePathLine
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_BasePathLine_C::Save()
+void ABP_BasePathLine_C::ExecuteUbergraph_BP_BasePathLine(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePathLine_C", "Save");
+		Func = Class->GetFunction("BP_BasePathLine_C", "ExecuteUbergraph_BP_BasePathLine");
+
+	Params::BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePathLine.BP_BasePathLine_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_BasePathLine_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePathLine_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -45,37 +65,17 @@ void ABP_BasePathLine_C::贴地处理()
 }
 
 
-// Function BP_BasePathLine.BP_BasePathLine_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_BasePathLine.BP_BasePathLine_C.Save
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_BasePathLine_C::ReceiveBeginPlay()
+void ABP_BasePathLine_C::Save()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePathLine_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_BasePathLine_C", "Save");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BasePathLine.BP_BasePathLine_C.ExecuteUbergraph_BP_BasePathLine
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BasePathLine_C::ExecuteUbergraph_BP_BasePathLine(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePathLine_C", "ExecuteUbergraph_BP_BasePathLine");
-
-	Params::BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

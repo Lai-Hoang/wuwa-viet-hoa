@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RawInputFunctionLibrary">();
+		STATIC_CLASS_IMPL("RawInputFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RawInputFunctionLibrary")
 	}
 	static class URawInputFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URawInputFunctionLibrary>();
 	}
 };
-static_assert(alignof(URawInputFunctionLibrary) == 0x000008, "Wrong alignment on URawInputFunctionLibrary");
-static_assert(sizeof(URawInputFunctionLibrary) == 0x000030, "Wrong size on URawInputFunctionLibrary");
+DUMPER7_ASSERTS_URawInputFunctionLibrary;
 
 // Class RawInput.RawInputSettings
 // 0x0020 (0x0068 - 0x0048)
@@ -55,21 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RawInputSettings">();
+		STATIC_CLASS_IMPL("RawInputSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RawInputSettings")
 	}
 	static class URawInputSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URawInputSettings>();
 	}
 };
-static_assert(alignof(URawInputSettings) == 0x000008, "Wrong alignment on URawInputSettings");
-static_assert(sizeof(URawInputSettings) == 0x000068, "Wrong size on URawInputSettings");
-static_assert(offsetof(URawInputSettings, DeviceConfigurations) == 0x000048, "Member 'URawInputSettings::DeviceConfigurations' has a wrong offset!");
-static_assert(offsetof(URawInputSettings, bRegisterDefaultDevice) == 0x000058, "Member 'URawInputSettings::bRegisterDefaultDevice' has a wrong offset!");
-static_assert(offsetof(URawInputSettings, AxisTolerance) == 0x00005C, "Member 'URawInputSettings::AxisTolerance' has a wrong offset!");
-static_assert(offsetof(URawInputSettings, bPrintButtonLog) == 0x000060, "Member 'URawInputSettings::bPrintButtonLog' has a wrong offset!");
-static_assert(offsetof(URawInputSettings, bPrintAxisLog) == 0x000061, "Member 'URawInputSettings::bPrintAxisLog' has a wrong offset!");
-static_assert(offsetof(URawInputSettings, bPrintAxisButtonLog) == 0x000062, "Member 'URawInputSettings::bPrintAxisButtonLog' has a wrong offset!");
+DUMPER7_ASSERTS_URawInputSettings;
 
 }
 

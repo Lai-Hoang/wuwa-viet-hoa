@@ -46,33 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PilotThrowGameplaySetting_C">();
+		BP_STATIC_CLASS_IMPL("BP_PilotThrowGameplaySetting_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PilotThrowGameplaySetting_C")
 	}
 	static class UBP_PilotThrowGameplaySetting_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_PilotThrowGameplaySetting_C>();
 	}
 };
-static_assert(alignof(UBP_PilotThrowGameplaySetting_C) == 0x000008, "Wrong alignment on UBP_PilotThrowGameplaySetting_C");
-static_assert(sizeof(UBP_PilotThrowGameplaySetting_C) == 0x000100, "Wrong size on UBP_PilotThrowGameplaySetting_C");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, DebugMode) == 0x000038, "Member 'UBP_PilotThrowGameplaySetting_C::DebugMode' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 初速度仰角) == 0x00003C, "Member 'UBP_PilotThrowGameplaySetting_C::初速度仰角' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 初速度) == 0x000040, "Member 'UBP_PilotThrowGameplaySetting_C::初速度' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 射线检测半径) == 0x000044, "Member 'UBP_PilotThrowGameplaySetting_C::射线检测半径' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 重力加速度) == 0x000048, "Member 'UBP_PilotThrowGameplaySetting_C::重力加速度' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 样条特效) == 0x000050, "Member 'UBP_PilotThrowGameplaySetting_C::样条特效' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 终点特效) == 0x000080, "Member 'UBP_PilotThrowGameplaySetting_C::终点特效' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 触屏移动系数) == 0x0000B0, "Member 'UBP_PilotThrowGameplaySetting_C::触屏移动系数' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, PC移动系数) == 0x0000B8, "Member 'UBP_PilotThrowGameplaySetting_C::PC移动系数' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 手柄移动系数) == 0x0000C0, "Member 'UBP_PilotThrowGameplaySetting_C::手柄移动系数' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 目标点高亮距离) == 0x0000C8, "Member 'UBP_PilotThrowGameplaySetting_C::目标点高亮距离' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 边缘超出角度) == 0x0000CC, "Member 'UBP_PilotThrowGameplaySetting_C::边缘超出角度' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, Ui缩放) == 0x0000D0, "Member 'UBP_PilotThrowGameplaySetting_C::Ui缩放' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 铁驭旋转偏移) == 0x0000D4, "Member 'UBP_PilotThrowGameplaySetting_C::铁驭旋转偏移' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 手柄震动配置) == 0x0000D8, "Member 'UBP_PilotThrowGameplaySetting_C::手柄震动配置' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 抛物线起点偏移) == 0x0000E0, "Member 'UBP_PilotThrowGameplaySetting_C::抛物线起点偏移' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 启动镜头插值) == 0x0000F8, "Member 'UBP_PilotThrowGameplaySetting_C::启动镜头插值' has a wrong offset!");
-static_assert(offsetof(UBP_PilotThrowGameplaySetting_C, 自动投掷转状态延迟) == 0x0000FC, "Member 'UBP_PilotThrowGameplaySetting_C::自动投掷转状态延迟' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_PilotThrowGameplaySetting_C;
 
 }
 

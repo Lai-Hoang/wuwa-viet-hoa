@@ -24,10 +24,7 @@ public:
 	TMap<class FName, float>                      FloatParameters_6_C8FCA36747ABBDC6C0AC8CA52270E0CE; // 0x0000(0x0050)(Edit, BlueprintVisible)
 	TMap<class FName, struct FLinearColor>        ColorParameters_8_04C633C74B91B7086190F8ACF68E9555; // 0x0050(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSScreenEffectExtraState) == 0x000008, "Wrong alignment on FSScreenEffectExtraState");
-static_assert(sizeof(FSScreenEffectExtraState) == 0x0000A0, "Wrong size on FSScreenEffectExtraState");
-static_assert(offsetof(FSScreenEffectExtraState, FloatParameters_6_C8FCA36747ABBDC6C0AC8CA52270E0CE) == 0x000000, "Member 'FSScreenEffectExtraState::FloatParameters_6_C8FCA36747ABBDC6C0AC8CA52270E0CE' has a wrong offset!");
-static_assert(offsetof(FSScreenEffectExtraState, ColorParameters_8_04C633C74B91B7086190F8ACF68E9555) == 0x000050, "Member 'FSScreenEffectExtraState::ColorParameters_8_04C633C74B91B7086190F8ACF68E9555' has a wrong offset!");
+DUMPER7_ASSERTS_FSScreenEffectExtraState;
 
 }
 

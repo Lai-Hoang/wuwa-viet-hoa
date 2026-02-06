@@ -30,20 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_DecalShadowConfig_C">();
+		BP_STATIC_CLASS_IMPL("PDA_DecalShadowConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_DecalShadowConfig_C")
 	}
 	static class UPDA_DecalShadowConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_DecalShadowConfig_C>();
 	}
 };
-static_assert(alignof(UPDA_DecalShadowConfig_C) == 0x000008, "Wrong alignment on UPDA_DecalShadowConfig_C");
-static_assert(sizeof(UPDA_DecalShadowConfig_C) == 0x000050, "Wrong size on UPDA_DecalShadowConfig_C");
-static_assert(offsetof(UPDA_DecalShadowConfig_C, DecalShadowMaterial) == 0x000038, "Member 'UPDA_DecalShadowConfig_C::DecalShadowMaterial' has a wrong offset!");
-static_assert(offsetof(UPDA_DecalShadowConfig_C, DecalBoxScaleHori) == 0x000040, "Member 'UPDA_DecalShadowConfig_C::DecalBoxScaleHori' has a wrong offset!");
-static_assert(offsetof(UPDA_DecalShadowConfig_C, DecalBoxScaleVerti) == 0x000044, "Member 'UPDA_DecalShadowConfig_C::DecalBoxScaleVerti' has a wrong offset!");
-static_assert(offsetof(UPDA_DecalShadowConfig_C, ZDistanceFadeFactor) == 0x000048, "Member 'UPDA_DecalShadowConfig_C::ZDistanceFadeFactor' has a wrong offset!");
-static_assert(offsetof(UPDA_DecalShadowConfig_C, ZDistanceFadePower) == 0x00004C, "Member 'UPDA_DecalShadowConfig_C::ZDistanceFadePower' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_DecalShadowConfig_C;
 
 }
 

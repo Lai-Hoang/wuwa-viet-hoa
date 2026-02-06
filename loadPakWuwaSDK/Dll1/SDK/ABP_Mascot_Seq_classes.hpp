@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
+#include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -20,30 +21,32 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Mascot_Seq.ABP_Mascot_Seq_C
-// 0x0860 (0x0F90 - 0x0730)
+// 0x0A40 (0x1170 - 0x0730)
 class UABP_Mascot_Seq_C final : public UAnimInstance
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0770(0x0138)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x08A8(0x0060)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0908(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x0928(0x0128)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0A50(0x0128)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0B78(0x0020)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0B98(0x00D8)()
-	struct FAnimNode_CurveSource                  AnimGraphNode_CurveSource;                         // 0x0C70(0x0040)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0CB0(0x0060)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0D10(0x0060)()
-	struct FAnimNode_CurveFix                     AnimGraphNode_CurveFix;                            // 0x0D70(0x0030)()
-	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace;            // 0x0DA0(0x01B8)()
-	struct FRotator                               Add_Spine;                                         // 0x0F58(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               Add_Spine_Head;                                    // 0x0F64(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Enable_AimOffset;                                  // 0x0F70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F71[0x7];                                      // 0x0F71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAimOffsetBlendSpace*                   AimOffset;                                         // 0x0F78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              LookXY;                                            // 0x0F80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0738(0x0138)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0870(0x0060)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x08D0(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x08F0(0x0128)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0A18(0x0128)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0B40(0x0020)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0B60(0x00D8)()
+	struct FAnimNode_CurveSource                  AnimGraphNode_CurveSource;                         // 0x0C38(0x0040)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0C78(0x0060)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0CD8(0x0060)()
+	struct FAnimNode_CurveFix                     AnimGraphNode_CurveFix;                            // 0x0D38(0x0030)()
+	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace;            // 0x0D68(0x01B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0F20(0x0038)()
+	struct FAnimNode_KuroModifyBones              AnimGraphNode_KuroModifyBones;                     // 0x0F58(0x0190)()
+	struct FRotator                               Add_Spine;                                         // 0x10E8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Spine_Head;                                    // 0x10F4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Enable_AimOffset;                                  // 0x1100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1101[0x7];                                     // 0x1101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAimOffsetBlendSpace*                   AimOffset;                                         // 0x1108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              LookXY;                                            // 0x1110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FTransform>          Vector_Curve_Data;                                 // 0x1118(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_ABP_Mascot_Seq(int32 EntryPoint);
@@ -53,34 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Mascot_Seq_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Mascot_Seq_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Mascot_Seq_C")
 	}
 	static class UABP_Mascot_Seq_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Mascot_Seq_C>();
 	}
 };
-static_assert(alignof(UABP_Mascot_Seq_C) == 0x000010, "Wrong alignment on UABP_Mascot_Seq_C");
-static_assert(sizeof(UABP_Mascot_Seq_C) == 0x000F90, "Wrong size on UABP_Mascot_Seq_C");
-static_assert(offsetof(UABP_Mascot_Seq_C, UberGraphFrame) == 0x000730, "Member 'UABP_Mascot_Seq_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_LinkedInputPose) == 0x000770, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_Slot_2) == 0x0008A8, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_LocalToComponentSpace) == 0x000908, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_ModifyBone_1) == 0x000928, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_ModifyBone) == 0x000A50, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_ComponentToLocalSpace) == 0x000B78, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_ApplyAdditive) == 0x000B98, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_CurveSource) == 0x000C70, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_CurveSource' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_Slot_1) == 0x000CB0, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_Slot) == 0x000D10, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_CurveFix) == 0x000D70, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_CurveFix' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AnimGraphNode_RotationOffsetBlendSpace) == 0x000DA0, "Member 'UABP_Mascot_Seq_C::AnimGraphNode_RotationOffsetBlendSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, Add_Spine) == 0x000F58, "Member 'UABP_Mascot_Seq_C::Add_Spine' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, Add_Spine_Head) == 0x000F64, "Member 'UABP_Mascot_Seq_C::Add_Spine_Head' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, Enable_AimOffset) == 0x000F70, "Member 'UABP_Mascot_Seq_C::Enable_AimOffset' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, AimOffset) == 0x000F78, "Member 'UABP_Mascot_Seq_C::AimOffset' has a wrong offset!");
-static_assert(offsetof(UABP_Mascot_Seq_C, LookXY) == 0x000F80, "Member 'UABP_Mascot_Seq_C::LookXY' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Mascot_Seq_C;
 
 }
 

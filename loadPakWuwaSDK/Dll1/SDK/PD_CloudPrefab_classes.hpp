@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_CloudPrefab_C">();
+		BP_STATIC_CLASS_IMPL("PD_CloudPrefab_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_CloudPrefab_C")
 	}
 	static class UPD_CloudPrefab_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_CloudPrefab_C>();
 	}
 };
-static_assert(alignof(UPD_CloudPrefab_C) == 0x000008, "Wrong alignment on UPD_CloudPrefab_C");
-static_assert(sizeof(UPD_CloudPrefab_C) == 0x0001A8, "Wrong size on UPD_CloudPrefab_C");
-static_assert(offsetof(UPD_CloudPrefab_C, PrefebBP) == 0x0001A0, "Member 'UPD_CloudPrefab_C::PrefebBP' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_CloudPrefab_C;
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "MediaAssets_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "MediaAssets_classes.hpp"
 
 
 namespace SDK
@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ImgMediaSource">();
+		STATIC_CLASS_IMPL("ImgMediaSource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ImgMediaSource")
 	}
 	static class UImgMediaSource* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UImgMediaSource>();
 	}
 };
-static_assert(alignof(UImgMediaSource) == 0x000008, "Wrong alignment on UImgMediaSource");
-static_assert(sizeof(UImgMediaSource) == 0x0000C0, "Wrong size on UImgMediaSource");
-static_assert(offsetof(UImgMediaSource, FrameRateOverride) == 0x000098, "Member 'UImgMediaSource::FrameRateOverride' has a wrong offset!");
-static_assert(offsetof(UImgMediaSource, ProxyOverride) == 0x0000A0, "Member 'UImgMediaSource::ProxyOverride' has a wrong offset!");
-static_assert(offsetof(UImgMediaSource, SequencePath) == 0x0000B0, "Member 'UImgMediaSource::SequencePath' has a wrong offset!");
+DUMPER7_ASSERTS_UImgMediaSource;
 
 }
 

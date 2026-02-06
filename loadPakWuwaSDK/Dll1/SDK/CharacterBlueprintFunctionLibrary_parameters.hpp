@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SEntityTimeDilation_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ESelfCenteredMode_structs.hpp"
+#include "SEntityTimeDilation_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,14 +31,7 @@ public:
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch) == 0x000028, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, character) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::character' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, compName) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::compName' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, isBlockPawn) == 0x000018, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::isBlockPawn' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, isBulletDetect) == 0x000019, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::isBulletDetect' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, isBlockCamera) == 0x00001A, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::isBlockCamera' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch, __WorldContext) == 0x000020, "Member 'CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetPartCollisionSwitch;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterActorByEntityId
 // 0x0018 (0x0018 - 0x0000)
@@ -50,11 +43,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ATsBaseCharacter_C*                     ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId::id' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetCharacterActorByEntityId;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.CharacterOperationRecord
 // 0x0010 (0x0010 - 0x0000)
@@ -65,10 +54,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord, open) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord::open' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_CharacterOperationRecord;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SaveCharacterOperationRecord
 // 0x0010 (0x0010 - 0x0000)
@@ -78,10 +64,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SaveCharacterOperationRecord;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetOperationRecordCount
 // 0x0010 (0x0010 - 0x0000)
@@ -91,10 +74,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetOperationRecordCount;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.CleanupOperationRecord
 // 0x0008 (0x0008 - 0x0000)
@@ -103,9 +83,7 @@ struct CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord) == 0x000008, "Wrong size on CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_CleanupOperationRecord;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetHalfLengthRecord
 // 0x0010 (0x0010 - 0x0000)
@@ -116,10 +94,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord, sideLenHalf) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord::sideLenHalf' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetHalfLengthRecord;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetStatisticsOpen
 // 0x0010 (0x0010 - 0x0000)
@@ -129,10 +104,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetStatisticsOpen;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.ResetPartCollisionSwitch
 // 0x0020 (0x0020 - 0x0000)
@@ -143,11 +115,7 @@ public:
 	class FString                                 compName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch) == 0x000020, "Wrong size on CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch, character) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch::character' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch, compName) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch::compName' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch, __WorldContext) == 0x000018, "Member 'CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_ResetPartCollisionSwitch;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.TestLeaveSplineMove
 // 0x0010 (0x0010 - 0x0000)
@@ -157,10 +125,7 @@ public:
 	class ATsBaseCharacter_C*                     actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove, actor) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove::actor' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_TestLeaveSplineMove;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCurrentAttacker
 // 0x0010 (0x0010 - 0x0000)
@@ -171,10 +136,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker, index) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker::index' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetCurrentAttacker;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetItemsReset
 // 0x0010 (0x0010 - 0x0000)
@@ -184,10 +146,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetItemsReset) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetItemsReset");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetItemsReset) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetItemsReset");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetItemsReset, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetItemsReset::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetItemsReset, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetItemsReset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetItemsReset;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetSubItemsListView
 // 0x0020 (0x0020 - 0x0000)
@@ -199,12 +158,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetSubItemsListView");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView) == 0x000020, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetSubItemsListView");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView, startIndex) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetSubItemsListView::startIndex' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView, length) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_GetSubItemsListView::length' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetSubItemsListView::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSubItemsListView, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_GetSubItemsListView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetSubItemsListView;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetItemListViewCount
 // 0x0010 (0x0010 - 0x0000)
@@ -214,10 +168,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetItemListViewCount) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetItemListViewCount");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetItemListViewCount) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetItemListViewCount");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetItemListViewCount, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetItemListViewCount::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetItemListViewCount, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetItemListViewCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetItemListViewCount;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCombatStarted
 // 0x0020 (0x0020 - 0x0000)
@@ -237,18 +188,7 @@ public:
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCombatStarted");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted) == 0x000020, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCombatStarted");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, started) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::started' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, attackerIndex1) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::attackerIndex1' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, targetIndex1) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::targetIndex1' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isDamage) == 0x00000C, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isDamage' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isCure) == 0x00000D, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isCure' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isSkillUsed) == 0x00000E, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isSkillUsed' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isState) == 0x00000F, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isState' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isKill) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isKill' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, isReborn) == 0x000011, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::isReborn' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCombatStarted, __WorldContext) == 0x000018, "Member 'CharacterBlueprintFunctionLibrary_C_SetCombatStarted::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetCombatStarted;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetTypeOpen
 // 0x0010 (0x0010 - 0x0000)
@@ -264,15 +204,7 @@ public:
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetTypeOpen");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetTypeOpen");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isDamage) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isDamage' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isCure) == 0x000001, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isCure' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isSkillUsed) == 0x000002, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isSkillUsed' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isState) == 0x000003, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isState' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isKill) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isKill' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, isReborn) == 0x000005, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::isReborn' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetTypeOpen, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetTypeOpen::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetTypeOpen;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetTargetCombatEntities
 // 0x0018 (0x0018 - 0x0000)
@@ -282,10 +214,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetTargetCombatEntities;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetAttackerCombatEntities
 // 0x0018 (0x0018 - 0x0000)
@@ -295,10 +224,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetAttackerCombatEntities;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCurrentTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -309,10 +235,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCurrentTarget) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCurrentTarget");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCurrentTarget) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCurrentTarget");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCurrentTarget, index) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCurrentTarget::index' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCurrentTarget, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCurrentTarget::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetCurrentTarget;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.OnItemsResetFinished
 // 0x0008 (0x0008 - 0x0000)
@@ -321,9 +244,7 @@ struct CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished) == 0x000008, "Wrong size on CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_OnItemsResetFinished;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetBaseCharacterTransform
 // 0x0050 (0x0050 - 0x0000)
@@ -334,10 +255,7 @@ public:
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransformDouble                       ReturnValue;                                       // 0x0010(0x0040)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform) == 0x000010, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform) == 0x000050, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetBaseCharacterTransform;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetActorExtraSkeletalMeshComponent
 // 0x0018 (0x0018 - 0x0000)
@@ -349,11 +267,7 @@ public:
 	class USkeletalMeshComponent*                 skeletalMeshComponent;                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent, entityId) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent::entityId' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent, skeletalMeshComponent) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent::skeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent, __WorldContext) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetActorExtraSkeletalMeshComponent;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.CanCharacterMonsterOrSummonedDisplayEffect
 // 0x0018 (0x0018 - 0x0000)
@@ -364,11 +278,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect, owner) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect::owner' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_CanCharacterMonsterOrSummonedDisplayEffect;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.DetachFromHost
 // 0x0010 (0x0010 - 0x0000)
@@ -381,12 +291,7 @@ public:
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_DetachFromHost) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_DetachFromHost");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_DetachFromHost) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_DetachFromHost");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DetachFromHost, id1) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_DetachFromHost::id1' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DetachFromHost, isDetachFollower) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_DetachFromHost::isDetachFollower' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DetachFromHost, isRecursion) == 0x000005, "Member 'CharacterBlueprintFunctionLibrary_C_DetachFromHost::isRecursion' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DetachFromHost, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_DetachFromHost::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_DetachFromHost;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterGravityDirect
 // 0x0020 (0x0020 - 0x0000)
@@ -396,10 +301,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect) == 0x000020, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetCharacterGravityDirect;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterGravityUp
 // 0x0020 (0x0020 - 0x0000)
@@ -409,10 +311,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp) == 0x000020, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetCharacterGravityUp;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetGravityDirect
 // 0x0028 (0x0028 - 0x0000)
@@ -424,11 +323,7 @@ public:
 	struct FVectorDouble                          gravityDirect;                                     // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetGravityDirect) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetGravityDirect");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetGravityDirect) == 0x000028, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetGravityDirect");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetGravityDirect, entityId) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetGravityDirect::entityId' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetGravityDirect, gravityDirect) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetGravityDirect::gravityDirect' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetGravityDirect, __WorldContext) == 0x000020, "Member 'CharacterBlueprintFunctionLibrary_C_SetGravityDirect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetGravityDirect;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.EnableSelfCentered
 // 0x0018 (0x0018 - 0x0000)
@@ -442,12 +337,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_EnableSelfCentered");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_EnableSelfCentered");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered, selfCenteredMode) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_EnableSelfCentered::selfCenteredMode' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered, timeDilation) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_EnableSelfCentered::timeDilation' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered, duration1) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_EnableSelfCentered::duration1' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_EnableSelfCentered, __WorldContext) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_EnableSelfCentered::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_EnableSelfCentered;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.DisableSelfCentered
 // 0x0010 (0x0010 - 0x0000)
@@ -458,10 +348,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_DisableSelfCentered) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_DisableSelfCentered");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_DisableSelfCentered) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_DisableSelfCentered");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DisableSelfCentered, selfCenteredMode) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_DisableSelfCentered::selfCenteredMode' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_DisableSelfCentered, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_DisableSelfCentered::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_DisableSelfCentered;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetEntityForeverTimeDilation
 // 0x0018 (0x0018 - 0x0000)
@@ -473,11 +360,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSEntityTimeDilation                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation, entityId) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation::entityId' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetEntityForeverTimeDilation;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetSelfCenteredMode
 // 0x0010 (0x0010 - 0x0000)
@@ -487,10 +370,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESelfCenteredMode                             ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetSelfCenteredMode;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetSelfCenteredTimeDilation
 // 0x0010 (0x0010 - 0x0000)
@@ -500,10 +380,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetSelfCenteredTimeDilation;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetInverseSelfCenteredTimeDilation
 // 0x0010 (0x0010 - 0x0000)
@@ -513,10 +390,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetInverseSelfCenteredTimeDilation;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.IsSelfCenteredModeEnabled
 // 0x0018 (0x0018 - 0x0000)
@@ -528,11 +402,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled) == 0x000018, "Wrong size on CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled, selfCenteredMode) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled::selfCenteredMode' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled, ReturnValue) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_IsSelfCenteredModeEnabled;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.IsAnySelfCenteredModeEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -542,10 +412,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetPlanarReflectionShowPlayers
 // 0x0010 (0x0010 - 0x0000)
@@ -555,10 +422,7 @@ public:
 	class UPlanarReflectionComponent*             comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers, comp) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers::comp' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterDirectlySightLockEnableState
 // 0x0010 (0x0010 - 0x0000)
@@ -570,11 +434,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::id' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, bEnable) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::bEnable' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.RestoreSightLockBoneLimit
 // 0x0010 (0x0010 - 0x0000)
@@ -585,10 +445,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit::id' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit;
 
 // Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterSightLockBoneLimit
 // 0x0038 (0x0038 - 0x0000)
@@ -605,17 +462,31 @@ public:
 	struct FVector                                upAxisInSightBone;                                 // 0x0024(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit");
-static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit) == 0x000038, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::id' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, yawMin) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::yawMin' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, yawMax) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::yawMax' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, pitchMin) == 0x00000C, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::pitchMin' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, pitchMax) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::pitchMax' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, assistLimit) == 0x000014, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::assistLimit' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, sightDirectInSightBone) == 0x000018, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::sightDirectInSightBone' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, upAxisInSightBone) == 0x000024, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::upAxisInSightBone' has a wrong offset!");
-static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, __WorldContext) == 0x000030, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit;
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterMovementModeInfo
+// 0x0020 (0x0020 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_GetCharacterMovementModeInfo final
+{
+public:
+	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetCharacterMovementModeInfo;
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.GetCharacterMovementStateInfo
+// 0x0020 (0x0020 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_GetCharacterMovementStateInfo final
+{
+public:
+	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_CharacterBlueprintFunctionLibrary_C_GetCharacterMovementStateInfo;
 
 }
 

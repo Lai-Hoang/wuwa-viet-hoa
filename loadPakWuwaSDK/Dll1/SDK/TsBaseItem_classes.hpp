@@ -26,24 +26,25 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetTagDebugStrings();
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_TsBaseItem(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	class FString GetTagDebugStrings();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsBaseItem_C">();
+		BP_STATIC_CLASS_IMPL("TsBaseItem_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsBaseItem_C")
 	}
 	static class ATsBaseItem_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsBaseItem_C>();
 	}
 };
-static_assert(alignof(ATsBaseItem_C) == 0x000008, "Wrong alignment on ATsBaseItem_C");
-static_assert(sizeof(ATsBaseItem_C) == 0x0002C0, "Wrong size on ATsBaseItem_C");
-static_assert(offsetof(ATsBaseItem_C, UberGraphFrame) == 0x0002B0, "Member 'ATsBaseItem_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsBaseItem_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsBaseItem_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ATsBaseItem_C;
 
 }
 

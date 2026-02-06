@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "SGEData_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "KuroGAS_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "SGEData_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,11 +31,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_添加标签) == 0x000008, "Wrong alignment on BPL_Fight_C_添加标签");
-static_assert(sizeof(BPL_Fight_C_添加标签) == 0x000020, "Wrong size on BPL_Fight_C_添加标签");
-static_assert(offsetof(BPL_Fight_C_添加标签, 角色) == 0x000000, "Member 'BPL_Fight_C_添加标签::角色' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_添加标签, 标签) == 0x000008, "Member 'BPL_Fight_C_添加标签::标签' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_添加标签, __WorldContext) == 0x000018, "Member 'BPL_Fight_C_添加标签::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_添加标签;
 
 // Function BPL_Fight.BPL_Fight_C.清除标签
 // 0x0020 (0x0020 - 0x0000)
@@ -47,11 +43,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_清除标签) == 0x000008, "Wrong alignment on BPL_Fight_C_清除标签");
-static_assert(sizeof(BPL_Fight_C_清除标签) == 0x000020, "Wrong size on BPL_Fight_C_清除标签");
-static_assert(offsetof(BPL_Fight_C_清除标签, 角色) == 0x000000, "Member 'BPL_Fight_C_清除标签::角色' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_清除标签, 标签) == 0x000008, "Member 'BPL_Fight_C_清除标签::标签' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_清除标签, __WorldContext) == 0x000018, "Member 'BPL_Fight_C_清除标签::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_清除标签;
 
 // Function BPL_Fight.BPL_Fight_C.是否有标签
 // 0x0040 (0x0040 - 0x0000)
@@ -69,16 +61,7 @@ public:
 	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_Fight_C_是否有标签) == 0x000008, "Wrong alignment on BPL_Fight_C_是否有标签");
-static_assert(sizeof(BPL_Fight_C_是否有标签) == 0x000040, "Wrong size on BPL_Fight_C_是否有标签");
-static_assert(offsetof(BPL_Fight_C_是否有标签, 角色) == 0x000000, "Member 'BPL_Fight_C_是否有标签::角色' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, 标签) == 0x000008, "Member 'BPL_Fight_C_是否有标签::标签' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, __WorldContext) == 0x000018, "Member 'BPL_Fight_C_是否有标签::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, ReturnValue) == 0x000020, "Member 'BPL_Fight_C_是否有标签::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BPL_Fight_C_是否有标签::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, CallFunc_IsValid_ReturnValue_1) == 0x000022, "Member 'BPL_Fight_C_是否有标签::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000028, "Member 'BPL_Fight_C_是否有标签::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_是否有标签, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000038, "Member 'BPL_Fight_C_是否有标签::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_是否有标签;
 
 // Function BPL_Fight.BPL_Fight_C.获取游戏实例
 // 0x0028 (0x0028 - 0x0000)
@@ -91,13 +74,7 @@ public:
 	class UBP_MainGameInstance_C*                 K2Node_DynamicCast_AsBP_Main_Game_Instance;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_Fight_C_获取游戏实例) == 0x000008, "Wrong alignment on BPL_Fight_C_获取游戏实例");
-static_assert(sizeof(BPL_Fight_C_获取游戏实例) == 0x000028, "Wrong size on BPL_Fight_C_获取游戏实例");
-static_assert(offsetof(BPL_Fight_C_获取游戏实例, __WorldContext) == 0x000000, "Member 'BPL_Fight_C_获取游戏实例::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取游戏实例, AsBP_Main_Game_Instance) == 0x000008, "Member 'BPL_Fight_C_获取游戏实例::AsBP_Main_Game_Instance' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取游戏实例, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'BPL_Fight_C_获取游戏实例::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取游戏实例, K2Node_DynamicCast_AsBP_Main_Game_Instance) == 0x000018, "Member 'BPL_Fight_C_获取游戏实例::K2Node_DynamicCast_AsBP_Main_Game_Instance' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取游戏实例, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BPL_Fight_C_获取游戏实例::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_获取游戏实例;
 
 // Function BPL_Fight.BPL_Fight_C.获取Actor周围坐标点
 // 0x00C0 (0x00C0 - 0x0000)
@@ -121,22 +98,7 @@ public:
 	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue;           // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_获取Actor周围坐标点) == 0x000008, "Wrong alignment on BPL_Fight_C_获取Actor周围坐标点");
-static_assert(sizeof(BPL_Fight_C_获取Actor周围坐标点) == 0x0000C0, "Wrong size on BPL_Fight_C_获取Actor周围坐标点");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, Actor) == 0x000000, "Member 'BPL_Fight_C_获取Actor周围坐标点::Actor' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, 旋转) == 0x000008, "Member 'BPL_Fight_C_获取Actor周围坐标点::旋转' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, 仰角) == 0x00000C, "Member 'BPL_Fight_C_获取Actor周围坐标点::仰角' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, 长度) == 0x000010, "Member 'BPL_Fight_C_获取Actor周围坐标点::长度' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, __WorldContext) == 0x000018, "Member 'BPL_Fight_C_获取Actor周围坐标点::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, 坐标点) == 0x000020, "Member 'BPL_Fight_C_获取Actor周围坐标点::坐标点' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000038, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000050, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_MakeVector_ReturnValue) == 0x00005C, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_RotateAngleAxis_ReturnValue) == 0x000068, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_RotateAngleAxis_ReturnValue_1) == 0x000074, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_RotateAngleAxis_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000080, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000090, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取Actor周围坐标点, CallFunc_D_Add_VectorVector_ReturnValue) == 0x0000A8, "Member 'BPL_Fight_C_获取Actor周围坐标点::CallFunc_D_Add_VectorVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_获取Actor周围坐标点;
 
 // Function BPL_Fight.BPL_Fight_C.射线检测
 // 0x01A8 (0x01A8 - 0x0000)
@@ -161,24 +123,7 @@ public:
 	struct FHitResult                             CallFunc_D_LineTraceSingle_OutHit;                 // 0x0110(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_D_LineTraceSingle_ReturnValue;            // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_Fight_C_射线检测) == 0x000008, "Wrong alignment on BPL_Fight_C_射线检测");
-static_assert(sizeof(BPL_Fight_C_射线检测) == 0x0001A8, "Wrong size on BPL_Fight_C_射线检测");
-static_assert(offsetof(BPL_Fight_C_射线检测, Context) == 0x000000, "Member 'BPL_Fight_C_射线检测::Context' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, Start) == 0x000008, "Member 'BPL_Fight_C_射线检测::Start' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, End) == 0x000020, "Member 'BPL_Fight_C_射线检测::End' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, TraceChannel) == 0x000038, "Member 'BPL_Fight_C_射线检测::TraceChannel' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, bTraceComplex) == 0x000039, "Member 'BPL_Fight_C_射线检测::bTraceComplex' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, DrawDebugType) == 0x00003A, "Member 'BPL_Fight_C_射线检测::DrawDebugType' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, bIgnoreSelf) == 0x00003B, "Member 'BPL_Fight_C_射线检测::bIgnoreSelf' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, TraceColor) == 0x00003C, "Member 'BPL_Fight_C_射线检测::TraceColor' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, TraceHitColor) == 0x00004C, "Member 'BPL_Fight_C_射线检测::TraceHitColor' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, DrawTime) == 0x00005C, "Member 'BPL_Fight_C_射线检测::DrawTime' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, __WorldContext) == 0x000060, "Member 'BPL_Fight_C_射线检测::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, OutHit) == 0x000068, "Member 'BPL_Fight_C_射线检测::OutHit' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, ReturnValue) == 0x0000FC, "Member 'BPL_Fight_C_射线检测::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, ___object_Variable) == 0x000100, "Member 'BPL_Fight_C_射线检测::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, CallFunc_D_LineTraceSingle_OutHit) == 0x000110, "Member 'BPL_Fight_C_射线检测::CallFunc_D_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_射线检测, CallFunc_D_LineTraceSingle_ReturnValue) == 0x0001A4, "Member 'BPL_Fight_C_射线检测::CallFunc_D_LineTraceSingle_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_射线检测;
 
 // Function BPL_Fight.BPL_Fight_C.角度转化
 // 0x0028 (0x0028 - 0x0000)
@@ -195,16 +140,7 @@ public:
 	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_Fight_C_角度转化) == 0x000008, "Wrong alignment on BPL_Fight_C_角度转化");
-static_assert(sizeof(BPL_Fight_C_角度转化) == 0x000028, "Wrong size on BPL_Fight_C_角度转化");
-static_assert(offsetof(BPL_Fight_C_角度转化, Input) == 0x000000, "Member 'BPL_Fight_C_角度转化::Input' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, __WorldContext) == 0x000008, "Member 'BPL_Fight_C_角度转化::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, Output) == 0x000010, "Member 'BPL_Fight_C_角度转化::Output' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, Tmp) == 0x000014, "Member 'BPL_Fight_C_角度转化::Tmp' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, CallFunc_Add_FloatFloat_ReturnValue) == 0x000018, "Member 'BPL_Fight_C_角度转化::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00001C, "Member 'BPL_Fight_C_角度转化::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, CallFunc_Less_FloatFloat_ReturnValue) == 0x000020, "Member 'BPL_Fight_C_角度转化::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_角度转化, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000021, "Member 'BPL_Fight_C_角度转化::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_角度转化;
 
 // Function BPL_Fight.BPL_Fight_C.计算曲线值
 // 0x0030 (0x0030 - 0x0000)
@@ -222,18 +158,7 @@ public:
 	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_计算曲线值) == 0x000008, "Wrong alignment on BPL_Fight_C_计算曲线值");
-static_assert(sizeof(BPL_Fight_C_计算曲线值) == 0x000030, "Wrong size on BPL_Fight_C_计算曲线值");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, 已经过时间) == 0x000000, "Member 'BPL_Fight_C_计算曲线值::已经过时间' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, 总时间) == 0x000004, "Member 'BPL_Fight_C_计算曲线值::总时间' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, 曲线) == 0x000008, "Member 'BPL_Fight_C_计算曲线值::曲线' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, __WorldContext) == 0x000010, "Member 'BPL_Fight_C_计算曲线值::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, 百分比) == 0x000018, "Member 'BPL_Fight_C_计算曲线值::百分比' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00001C, "Member 'BPL_Fight_C_计算曲线值::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, CallFunc_GetTimeRange_MinTime) == 0x000020, "Member 'BPL_Fight_C_计算曲线值::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, CallFunc_GetTimeRange_MaxTime) == 0x000024, "Member 'BPL_Fight_C_计算曲线值::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, CallFunc_MapRangeClamped_ReturnValue) == 0x000028, "Member 'BPL_Fight_C_计算曲线值::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算曲线值, CallFunc_GetFloatValue_ReturnValue) == 0x00002C, "Member 'BPL_Fight_C_计算曲线值::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_计算曲线值;
 
 // Function BPL_Fight.BPL_Fight_C.计算向量曲线值
 // 0x0040 (0x0040 - 0x0000)
@@ -251,18 +176,7 @@ public:
 	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetVectorValue_ReturnValue;               // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_计算向量曲线值) == 0x000008, "Wrong alignment on BPL_Fight_C_计算向量曲线值");
-static_assert(sizeof(BPL_Fight_C_计算向量曲线值) == 0x000040, "Wrong size on BPL_Fight_C_计算向量曲线值");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, 已经经过时间) == 0x000000, "Member 'BPL_Fight_C_计算向量曲线值::已经经过时间' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, 总时间) == 0x000004, "Member 'BPL_Fight_C_计算向量曲线值::总时间' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, 向量曲线) == 0x000008, "Member 'BPL_Fight_C_计算向量曲线值::向量曲线' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, __WorldContext) == 0x000010, "Member 'BPL_Fight_C_计算向量曲线值::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, 向量值) == 0x000018, "Member 'BPL_Fight_C_计算向量曲线值::向量值' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, CallFunc_GetTimeRange_MinTime) == 0x000024, "Member 'BPL_Fight_C_计算向量曲线值::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, CallFunc_GetTimeRange_MaxTime) == 0x000028, "Member 'BPL_Fight_C_计算向量曲线值::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00002C, "Member 'BPL_Fight_C_计算向量曲线值::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, CallFunc_MapRangeClamped_ReturnValue) == 0x000030, "Member 'BPL_Fight_C_计算向量曲线值::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_计算向量曲线值, CallFunc_GetVectorValue_ReturnValue) == 0x000034, "Member 'BPL_Fight_C_计算向量曲线值::CallFunc_GetVectorValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_计算向量曲线值;
 
 // Function BPL_Fight.BPL_Fight_C.获取目标周围坐标点
 // 0x00C0 (0x00C0 - 0x0000)
@@ -287,23 +201,7 @@ public:
 	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          CallFunc_D_Add_VectorVector_ReturnValue;           // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_获取目标周围坐标点) == 0x000008, "Wrong alignment on BPL_Fight_C_获取目标周围坐标点");
-static_assert(sizeof(BPL_Fight_C_获取目标周围坐标点) == 0x0000C0, "Wrong size on BPL_Fight_C_获取目标周围坐标点");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 目标旋转) == 0x000000, "Member 'BPL_Fight_C_获取目标周围坐标点::目标旋转' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 目标坐标) == 0x000010, "Member 'BPL_Fight_C_获取目标周围坐标点::目标坐标' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 旋转) == 0x000028, "Member 'BPL_Fight_C_获取目标周围坐标点::旋转' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 仰角) == 0x00002C, "Member 'BPL_Fight_C_获取目标周围坐标点::仰角' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 长度) == 0x000030, "Member 'BPL_Fight_C_获取目标周围坐标点::长度' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, __WorldContext) == 0x000038, "Member 'BPL_Fight_C_获取目标周围坐标点::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 坐标点) == 0x000040, "Member 'BPL_Fight_C_获取目标周围坐标点::坐标点' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 旋转1) == 0x000058, "Member 'BPL_Fight_C_获取目标周围坐标点::旋转1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, 长度2) == 0x00005C, "Member 'BPL_Fight_C_获取目标周围坐标点::长度2' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_MakeVector_ReturnValue) == 0x000060, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_RotateAngleAxis_ReturnValue) == 0x00006C, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_RotateAngleAxis_ReturnValue_1) == 0x000078, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_RotateAngleAxis_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_GreaterGreater_VectorRotator_ReturnValue) == 0x000084, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_GreaterGreater_VectorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000090, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_获取目标周围坐标点, CallFunc_D_Add_VectorVector_ReturnValue) == 0x0000A8, "Member 'BPL_Fight_C_获取目标周围坐标点::CallFunc_D_Add_VectorVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_获取目标周围坐标点;
 
 // Function BPL_Fight.BPL_Fight_C.设置材质效果
 // 0x0020 (0x0020 - 0x0000)
@@ -316,13 +214,7 @@ public:
 	int32                                         Handle;                                            // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AddMaterialControllerData_ReturnValue;    // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_设置材质效果) == 0x000008, "Wrong alignment on BPL_Fight_C_设置材质效果");
-static_assert(sizeof(BPL_Fight_C_设置材质效果) == 0x000020, "Wrong size on BPL_Fight_C_设置材质效果");
-static_assert(offsetof(BPL_Fight_C_设置材质效果, 设置对象) == 0x000000, "Member 'BPL_Fight_C_设置材质效果::设置对象' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_设置材质效果, 材质配置) == 0x000008, "Member 'BPL_Fight_C_设置材质效果::材质配置' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_设置材质效果, __WorldContext) == 0x000010, "Member 'BPL_Fight_C_设置材质效果::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_设置材质效果, Handle) == 0x000018, "Member 'BPL_Fight_C_设置材质效果::Handle' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_设置材质效果, CallFunc_AddMaterialControllerData_ReturnValue) == 0x00001C, "Member 'BPL_Fight_C_设置材质效果::CallFunc_AddMaterialControllerData_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_设置材质效果;
 
 // Function BPL_Fight.BPL_Fight_C.删除材质效果
 // 0x0018 (0x0018 - 0x0000)
@@ -335,12 +227,7 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_删除材质效果) == 0x000008, "Wrong alignment on BPL_Fight_C_删除材质效果");
-static_assert(sizeof(BPL_Fight_C_删除材质效果) == 0x000018, "Wrong size on BPL_Fight_C_删除材质效果");
-static_assert(offsetof(BPL_Fight_C_删除材质效果, 设置对象_) == 0x000000, "Member 'BPL_Fight_C_删除材质效果::设置对象_' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_删除材质效果, Handle_) == 0x000008, "Member 'BPL_Fight_C_删除材质效果::Handle_' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_删除材质效果, PlayWithEnd) == 0x00000C, "Member 'BPL_Fight_C_删除材质效果::PlayWithEnd' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_删除材质效果, __WorldContext) == 0x000010, "Member 'BPL_Fight_C_删除材质效果::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_删除材质效果;
 
 // Function BPL_Fight.BPL_Fight_C.反应伤害倍率计算
 // 0x0040 (0x0040 - 0x0000)
@@ -363,23 +250,7 @@ public:
 	float                                         CallFunc_Add_FloatFloat_ReturnValue_4;             // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue_5;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_反应伤害倍率计算) == 0x000008, "Wrong alignment on BPL_Fight_C_反应伤害倍率计算");
-static_assert(sizeof(BPL_Fight_C_反应伤害倍率计算) == 0x000040, "Wrong size on BPL_Fight_C_反应伤害倍率计算");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, 角色1反应精通) == 0x000000, "Member 'BPL_Fight_C_反应伤害倍率计算::角色1反应精通' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, 角色2反应精通) == 0x000004, "Member 'BPL_Fight_C_反应伤害倍率计算::角色2反应精通' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, __WorldContext) == 0x000008, "Member 'BPL_Fight_C_反应伤害倍率计算::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, Result) == 0x000010, "Member 'BPL_Fight_C_反应伤害倍率计算::Result' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, DAMAGE_CONSTANT7_0) == 0x000014, "Member 'BPL_Fight_C_反应伤害倍率计算::DAMAGE_CONSTANT7_0' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, DAMAGE_CONSTANT8_0) == 0x000018, "Member 'BPL_Fight_C_反应伤害倍率计算::DAMAGE_CONSTANT8_0' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, DAMAGE_CONSTANT9_0) == 0x00001C, "Member 'BPL_Fight_C_反应伤害倍率计算::DAMAGE_CONSTANT9_0' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue) == 0x000020, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000024, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000028, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue_2) == 0x00002C, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue_3) == 0x000030, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x000034, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue_4) == 0x000038, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_反应伤害倍率计算, CallFunc_Add_FloatFloat_ReturnValue_5) == 0x00003C, "Member 'BPL_Fight_C_反应伤害倍率计算::CallFunc_Add_FloatFloat_ReturnValue_5' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_反应伤害倍率计算;
 
 // Function BPL_Fight.BPL_Fight_C.使用GE
 // 0x01D0 (0x01D0 - 0x0000)
@@ -434,48 +305,7 @@ public:
 	struct FGameplayEffectContextHandle           CallFunc_GetEffectContext_ReturnValue;             // 0x01B0(0x0018)()
 	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectSpecToTarget_ReturnValue; // 0x01C8(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_Fight_C_使用GE) == 0x000008, "Wrong alignment on BPL_Fight_C_使用GE");
-static_assert(sizeof(BPL_Fight_C_使用GE) == 0x0001D0, "Wrong size on BPL_Fight_C_使用GE");
-static_assert(offsetof(BPL_Fight_C_使用GE, 使用者) == 0x000000, "Member 'BPL_Fight_C_使用GE::使用者' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, 目标) == 0x000008, "Member 'BPL_Fight_C_使用GE::目标' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, GE的等级) == 0x000010, "Member 'BPL_Fight_C_使用GE::GE的等级' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, 添加AssetTags) == 0x000018, "Member 'BPL_Fight_C_使用GE::添加AssetTags' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, 添加GrantedTags) == 0x000038, "Member 'BPL_Fight_C_使用GE::添加GrantedTags' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, 层数) == 0x000058, "Member 'BPL_Fight_C_使用GE::层数' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, Duration) == 0x00005C, "Member 'BPL_Fight_C_使用GE::Duration' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, GE的类型) == 0x000060, "Member 'BPL_Fight_C_使用GE::GE的类型' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, GE的参数) == 0x000068, "Member 'BPL_Fight_C_使用GE::GE的参数' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, __WorldContext) == 0x000078, "Member 'BPL_Fight_C_使用GE::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, ActiveHandle) == 0x000080, "Member 'BPL_Fight_C_使用GE::ActiveHandle' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, OutgoingSpec) == 0x000088, "Member 'BPL_Fight_C_使用GE::OutgoingSpec' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, 执行GE数据) == 0x000098, "Member 'BPL_Fight_C_使用GE::执行GE数据' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, ___int_Array_Index_Variable) == 0x0000D8, "Member 'BPL_Fight_C_使用GE::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_IsValid_ReturnValue) == 0x0000DC, "Member 'BPL_Fight_C_使用GE::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_IsValid_ReturnValue_1) == 0x0000DD, "Member 'BPL_Fight_C_使用GE::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Not_PreBool_ReturnValue) == 0x0000DE, "Member 'BPL_Fight_C_使用GE::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000DF, "Member 'BPL_Fight_C_使用GE::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_BooleanOR_ReturnValue) == 0x0000E0, "Member 'BPL_Fight_C_使用GE::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Array_Get_Item) == 0x0000E4, "Member 'BPL_Fight_C_使用GE::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Array_Length_ReturnValue) == 0x0000F4, "Member 'BPL_Fight_C_使用GE::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_AssignTagSetByCallerMagnitude_ReturnValue) == 0x0000F8, "Member 'BPL_Fight_C_使用GE::CallFunc_AssignTagSetByCallerMagnitude_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000108, "Member 'BPL_Fight_C_使用GE::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000110, "Member 'BPL_Fight_C_使用GE::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_GetAbilitySystemComponent_ReturnValue_1) == 0x000118, "Member 'BPL_Fight_C_使用GE::CallFunc_GetAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Conv_IntToFloat_ReturnValue_1) == 0x000120, "Member 'BPL_Fight_C_使用GE::CallFunc_Conv_IntToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_MakeOutgoingSpec_ReturnValue) == 0x000128, "Member 'BPL_Fight_C_使用GE::CallFunc_MakeOutgoingSpec_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_GetAbilitySystemComponent_ReturnValue_2) == 0x000138, "Member 'BPL_Fight_C_使用GE::CallFunc_GetAbilitySystemComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_GetAbilitySystemComponent_ReturnValue_3) == 0x000140, "Member 'BPL_Fight_C_使用GE::CallFunc_GetAbilitySystemComponent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_MakeOutgoingSpec_ReturnValue_1) == 0x000148, "Member 'BPL_Fight_C_使用GE::CallFunc_MakeOutgoingSpec_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_SetDuration_ReturnValue) == 0x000158, "Member 'BPL_Fight_C_使用GE::CallFunc_SetDuration_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000168, "Member 'BPL_Fight_C_使用GE::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, ___int_Loop_Counter_Variable) == 0x00016C, "Member 'BPL_Fight_C_使用GE::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_AddAssetTags_ReturnValue) == 0x000170, "Member 'BPL_Fight_C_使用GE::CallFunc_AddAssetTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Less_IntInt_ReturnValue) == 0x000180, "Member 'BPL_Fight_C_使用GE::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_AddGrantedTags_ReturnValue) == 0x000188, "Member 'BPL_Fight_C_使用GE::CallFunc_AddGrantedTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_SetStackCount_ReturnValue) == 0x000198, "Member 'BPL_Fight_C_使用GE::CallFunc_SetStackCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_Add_IntInt_ReturnValue) == 0x0001A8, "Member 'BPL_Fight_C_使用GE::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_GetEffectContext_ReturnValue) == 0x0001B0, "Member 'BPL_Fight_C_使用GE::CallFunc_GetEffectContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_Fight_C_使用GE, CallFunc_BP_ApplyGameplayEffectSpecToTarget_ReturnValue) == 0x0001C8, "Member 'BPL_Fight_C_使用GE::CallFunc_BP_ApplyGameplayEffectSpecToTarget_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_Fight_C_使用GE;
 
 }
 

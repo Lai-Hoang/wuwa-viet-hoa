@@ -24,11 +24,7 @@ public:
 	class ULGUIPointerEventData*                  K2Node_Event_eventData_1;                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ULGUIPointerEventData*                  K2Node_Event_eventData;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener) == 0x000008, "Wrong alignment on TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener");
-static_assert(sizeof(TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener) == 0x000018, "Wrong size on TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener, EntryPoint) == 0x000000, "Member 'TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener, K2Node_Event_eventData_1) == 0x000008, "Member 'TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener::K2Node_Event_eventData_1' has a wrong offset!");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener, K2Node_Event_eventData) == 0x000010, "Member 'TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener::K2Node_Event_eventData' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationBehaviorListener_C_ExecuteUbergraph_TsUiNavigationBehaviorListener;
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyNavigationSelectBP
 // 0x0008 (0x0008 - 0x0000)
@@ -37,9 +33,7 @@ struct TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP final
 public:
 	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP) == 0x000008, "Wrong alignment on TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP");
-static_assert(sizeof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP) == 0x000008, "Wrong size on TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP, eventData) == 0x000000, "Member 'TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP::eventData' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationBehaviorListener_C_OnNotifyNavigationSelectBP;
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyNavigationEnterBP
 // 0x0008 (0x0008 - 0x0000)
@@ -48,9 +42,7 @@ struct TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP final
 public:
 	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP) == 0x000008, "Wrong alignment on TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP");
-static_assert(sizeof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP) == 0x000008, "Wrong size on TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP, eventData) == 0x000000, "Member 'TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP::eventData' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationBehaviorListener_C_OnNotifyNavigationEnterBP;
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnCheckCanSetNavigationBP
 // 0x0001 (0x0001 - 0x0000)
@@ -59,9 +51,7 @@ struct TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP) == 0x000001, "Wrong alignment on TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP");
-static_assert(sizeof(TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP) == 0x000001, "Wrong size on TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP, ReturnValue) == 0x000000, "Member 'TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP;
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnCheckLoopScrollChangeNavigationBP
 // 0x0001 (0x0001 - 0x0000)
@@ -70,9 +60,7 @@ struct TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP fina
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP) == 0x000001, "Wrong alignment on TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP");
-static_assert(sizeof(TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP) == 0x000001, "Wrong size on TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP");
-static_assert(offsetof(TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP, ReturnValue) == 0x000000, "Member 'TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP;
 
 }
 

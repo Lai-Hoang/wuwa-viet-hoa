@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "EBulletShape_structs.hpp"
 #include "EPositionStandard_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EBulletRelativeDir_structs.hpp"
+#include "EBulletShape_structs.hpp"
 #include "EBulletBaseSpecificParam_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "EBulletRelativeDir_structs.hpp"
 #include "EHitType_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "EBulletSyncType_structs.hpp"
 #include "EHitActorType_structs.hpp"
 
@@ -25,7 +25,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SReBulletDataBase.SReBulletDataBase
-// 0x01F8 (0x01F8 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct FSReBulletDataBase final
 {
 public:
@@ -49,92 +49,47 @@ public:
 	TSoftObjectPtr<class UBulletCampType_C>       命中判定类型预设_100_0284D2914DF1A55CB1EA6D9EE0856AC1; // 0x00C8(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FGameplayTag                           命中判定Tag_140_77363CB34CB7C6DD5FA88F8182F7339C;  // 0x00F8(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           禁止命中Tag_143_11ABDBB945535F2612AE9189CFEC8E5A;  // 0x0104(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	int32                                         命中个数_28_52A1F8274748611B8C4962B309B69457;      // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         每个单位总作用次数_56_1FEFDE264B66A9C9C9C9B9800033D67B; // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         总作用次数限制_33_EA71BCA94D2C6BCCF97003BEBDC6C2E2; // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         作用间隔_36_8134E2B14D8D1F8B430258A8E555159E;      // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          作用间隔基于个体_146_A56136064C33F412B3C80DB14392B778; // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          共享父子弹次数_125_D60BAB26414413F8C857D1B3CF89BC6E; // 0x0121(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_122[0x2];                                      // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   被击效果_45_2278D44D41BBF9D30462AAA17F3D3034;      // 0x0124(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           多被击效果_178_F44D388742236DC55B3FB287A4D628DF;   // 0x0130(0x0010)(Edit, BlueprintVisible)
-	class FName                                   弱点被击效果_95_9F2E7F0E46043F5B09ABA990AD3170E9;  // 0x0140(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           多弱点被击效果_179_FAAD35894C504EFDFE3AA9AB5227A340; // 0x0150(0x0010)(Edit, BlueprintVisible)
-	EBulletRelativeDir                            子弹受击方向_55_603F74B64825C94FACF0D4BA7D9C29CB;  // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         伤害ID_69_A90E631B445077C5F9ED76B9AB745B60;        // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int64>                                 多伤害ID_171_D049230243F78BE963F48B8C75A00990;     // 0x0170(0x0010)(Edit, BlueprintVisible)
-	struct FRotator                               子弹攻击方向_51_2BA10CE54278AA51E4022396A6CD0C8D;  // 0x0180(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          技能结束是否销毁子弹_54_5311975346FDEA78A27AC994D85137AA; // 0x018C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_18D[0x3];                                      // 0x018D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  子弹允许生成Tag_68_592578584A71778A7A91D0A565DAC833; // 0x0190(0x0020)(Edit, BlueprintVisible)
-	struct FGameplayTagContainer                  子弹禁止生成Tag_67_423488F04620BAD806FAF0801B42F5F8; // 0x01B0(0x0020)(Edit, BlueprintVisible)
-	bool                                          是否持续碰撞_71_A59F8E5D46062662CCA2E398F8FCAB45;  // 0x01D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          是否贴地子弹_77_432EB70C4B5D2C12EDA71FB70A989C8A;  // 0x01D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          是否贴水面_181_0D092076412071B517B844A00EAFAF48;   // 0x01D2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          不跟随移动平台_184_7E22662D4FC19599593332AB2C87B335; // 0x01D3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          不适配坡度_133_C89F1FAE417BB4F10D7691B3747104E2;   // 0x01D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D5[0x3];                                      // 0x01D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         贴地探测距离_154_419CD78E470029A2EC9579A6D7D9BFB6; // 0x01D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBulletSyncType                               网络同步类型_129_8DB648D54285ED4BE9E54E9C3ADC5BF3; // 0x01DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRandomVictim_189_C54434884CD5C32C5BA99C81F04466A6; // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         命中个数_28_52A1F8274748611B8C4962B309B69457;      // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         每个单位总作用次数_56_1FEFDE264B66A9C9C9C9B9800033D67B; // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         总作用次数限制_33_EA71BCA94D2C6BCCF97003BEBDC6C2E2; // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         作用间隔_36_8134E2B14D8D1F8B430258A8E555159E;      // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          作用间隔基于个体_146_A56136064C33F412B3C80DB14392B778; // 0x0124(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          共享父子弹次数_125_D60BAB26414413F8C857D1B3CF89BC6E; // 0x0125(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_126[0x2];                                      // 0x0126(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   被击效果_45_2278D44D41BBF9D30462AAA17F3D3034;      // 0x0128(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           多被击效果_178_F44D388742236DC55B3FB287A4D628DF;   // 0x0138(0x0010)(Edit, BlueprintVisible)
+	class FName                                   弱点被击效果_95_9F2E7F0E46043F5B09ABA990AD3170E9;  // 0x0148(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           多弱点被击效果_179_FAAD35894C504EFDFE3AA9AB5227A340; // 0x0158(0x0010)(Edit, BlueprintVisible)
+	EBulletRelativeDir                            子弹受击方向_55_603F74B64825C94FACF0D4BA7D9C29CB;  // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         伤害ID_69_A90E631B445077C5F9ED76B9AB745B60;        // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int64>                                 多伤害ID_171_D049230243F78BE963F48B8C75A00990;     // 0x0178(0x0010)(Edit, BlueprintVisible)
+	struct FRotator                               子弹攻击方向_51_2BA10CE54278AA51E4022396A6CD0C8D;  // 0x0188(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          技能结束是否销毁子弹_54_5311975346FDEA78A27AC994D85137AA; // 0x0194(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_195[0x3];                                      // 0x0195(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  子弹允许生成Tag_68_592578584A71778A7A91D0A565DAC833; // 0x0198(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  子弹禁止生成Tag_67_423488F04620BAD806FAF0801B42F5F8; // 0x01B8(0x0020)(Edit, BlueprintVisible)
+	bool                                          是否持续碰撞_71_A59F8E5D46062662CCA2E398F8FCAB45;  // 0x01D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          是否贴地子弹_77_432EB70C4B5D2C12EDA71FB70A989C8A;  // 0x01D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          是否贴水面_181_0D092076412071B517B844A00EAFAF48;   // 0x01DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          不跟随移动平台_184_7E22662D4FC19599593332AB2C87B335; // 0x01DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          不适配坡度_133_C89F1FAE417BB4F10D7691B3747104E2;   // 0x01DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1DD[0x3];                                      // 0x01DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           子弹标签_137_C6EA52AA4721C4CF3F2E1BA1F0D2F726;     // 0x01E0(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	bool                                          是否响应材质受击音效_151_142A23A94BEF7AFE2F217FB7416C4334; // 0x01EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Debug显示子弹进度_156_D4E36872499839BF6138ADAA32496CE1; // 0x01ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          大范围子弹对场景物件生效_164_3E8EBB934C204AF6B6C1FE9B888388DF; // 0x01EE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	EHitActorType                                 命中实体类型_167_31F8814047388333D40D34B02DFED54A; // 0x01EF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         大范围子弹检测方式_187_D8DF119748F8BB7EB6E5DD8E67F79EC9; // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         贴地探测距离_154_419CD78E470029A2EC9579A6D7D9BFB6; // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBulletSyncType                               网络同步类型_129_8DB648D54285ED4BE9E54E9C3ADC5BF3; // 0x01E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           子弹标签_137_C6EA52AA4721C4CF3F2E1BA1F0D2F726;     // 0x01E8(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	bool                                          是否响应材质受击音效_151_142A23A94BEF7AFE2F217FB7416C4334; // 0x01F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Debug显示子弹进度_156_D4E36872499839BF6138ADAA32496CE1; // 0x01F5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          大范围子弹对场景物件生效_164_3E8EBB934C204AF6B6C1FE9B888388DF; // 0x01F6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHitActorType                                 命中实体类型_167_31F8814047388333D40D34B02DFED54A; // 0x01F7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         大范围子弹检测方式_187_D8DF119748F8BB7EB6E5DD8E67F79EC9; // 0x01F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataBase) == 0x000008, "Wrong alignment on FSReBulletDataBase");
-static_assert(sizeof(FSReBulletDataBase) == 0x0001F8, "Wrong size on FSReBulletDataBase");
-static_assert(offsetof(FSReBulletDataBase, 子弹形状_2_79DD8853421793BB64AFC1AF40E367EE) == 0x000000, "Member 'FSReBulletDataBase::子弹形状_2_79DD8853421793BB64AFC1AF40E367EE' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 初始大小_5_20B4BE8C45D99EC9E986E48B5BB303EE) == 0x000004, "Member 'FSReBulletDataBase::初始大小_5_20B4BE8C45D99EC9E986E48B5BB303EE' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 特殊参数_123_7453369241137B68A8E673AA37FDFC18) == 0x000010, "Member 'FSReBulletDataBase::特殊参数_123_7453369241137B68A8E673AA37FDFC18' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 出生位置基准_8_BD79827C450EFB110B11198C8A8FCAA8) == 0x000060, "Member 'FSReBulletDataBase::出生位置基准_8_BD79827C450EFB110B11198C8A8FCAA8' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 攻击者黑板Key值_92_237DD84E497DB43FDFFED38BFC4A5D43) == 0x000068, "Member 'FSReBulletDataBase::攻击者黑板Key值_92_237DD84E497DB43FDFFED38BFC4A5D43' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 出生位置偏移_12_7E09FBFA49BE728EEAE1F39AE0851831) == 0x000078, "Member 'FSReBulletDataBase::出生位置偏移_12_7E09FBFA49BE728EEAE1F39AE0851831' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 中心位置偏移_80_910CA0754D5712F4D7C0B8B83D57BD8B) == 0x000084, "Member 'FSReBulletDataBase::中心位置偏移_80_910CA0754D5712F4D7C0B8B83D57BD8B' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 出生位置随机_117_60CA46C64F15476435842C89FEB1C8B5) == 0x000090, "Member 'FSReBulletDataBase::出生位置随机_117_60CA46C64F15476435842C89FEB1C8B5' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 初始旋转_15_EE7D686A47A7F5824099D895C938DC55) == 0x00009C, "Member 'FSReBulletDataBase::初始旋转_15_EE7D686A47A7F5824099D895C938DC55' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 限制生成距离_74_67D64DFB4C0CC460E4F965B8D04B4612) == 0x0000A8, "Member 'FSReBulletDataBase::限制生成距离_74_67D64DFB4C0CC460E4F965B8D04B4612' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 持续时间_18_8EB6B2FF445DD6D79FD82D928A55431B) == 0x0000B4, "Member 'FSReBulletDataBase::持续时间_18_8EB6B2FF445DD6D79FD82D928A55431B' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 碰撞判定时长_20_1E72387F468BC7C6C337728C506430A9) == 0x0000B8, "Member 'FSReBulletDataBase::碰撞判定时长_20_1E72387F468BC7C6C337728C506430A9' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 碰撞判定延迟_22_D319AB88498C5FCE04E005AFED795227) == 0x0000BC, "Member 'FSReBulletDataBase::碰撞判定延迟_22_D319AB88498C5FCE04E005AFED795227' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 命中判定类型_25_A30D3C954729471E4163ECA75EFB3051) == 0x0000C0, "Member 'FSReBulletDataBase::命中判定类型_25_A30D3C954729471E4163ECA75EFB3051' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 命中判定类型预设_100_0284D2914DF1A55CB1EA6D9EE0856AC1) == 0x0000C8, "Member 'FSReBulletDataBase::命中判定类型预设_100_0284D2914DF1A55CB1EA6D9EE0856AC1' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 命中判定Tag_140_77363CB34CB7C6DD5FA88F8182F7339C) == 0x0000F8, "Member 'FSReBulletDataBase::命中判定Tag_140_77363CB34CB7C6DD5FA88F8182F7339C' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 禁止命中Tag_143_11ABDBB945535F2612AE9189CFEC8E5A) == 0x000104, "Member 'FSReBulletDataBase::禁止命中Tag_143_11ABDBB945535F2612AE9189CFEC8E5A' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 命中个数_28_52A1F8274748611B8C4962B309B69457) == 0x000110, "Member 'FSReBulletDataBase::命中个数_28_52A1F8274748611B8C4962B309B69457' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 每个单位总作用次数_56_1FEFDE264B66A9C9C9C9B9800033D67B) == 0x000114, "Member 'FSReBulletDataBase::每个单位总作用次数_56_1FEFDE264B66A9C9C9C9B9800033D67B' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 总作用次数限制_33_EA71BCA94D2C6BCCF97003BEBDC6C2E2) == 0x000118, "Member 'FSReBulletDataBase::总作用次数限制_33_EA71BCA94D2C6BCCF97003BEBDC6C2E2' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 作用间隔_36_8134E2B14D8D1F8B430258A8E555159E) == 0x00011C, "Member 'FSReBulletDataBase::作用间隔_36_8134E2B14D8D1F8B430258A8E555159E' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 作用间隔基于个体_146_A56136064C33F412B3C80DB14392B778) == 0x000120, "Member 'FSReBulletDataBase::作用间隔基于个体_146_A56136064C33F412B3C80DB14392B778' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 共享父子弹次数_125_D60BAB26414413F8C857D1B3CF89BC6E) == 0x000121, "Member 'FSReBulletDataBase::共享父子弹次数_125_D60BAB26414413F8C857D1B3CF89BC6E' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 被击效果_45_2278D44D41BBF9D30462AAA17F3D3034) == 0x000124, "Member 'FSReBulletDataBase::被击效果_45_2278D44D41BBF9D30462AAA17F3D3034' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 多被击效果_178_F44D388742236DC55B3FB287A4D628DF) == 0x000130, "Member 'FSReBulletDataBase::多被击效果_178_F44D388742236DC55B3FB287A4D628DF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 弱点被击效果_95_9F2E7F0E46043F5B09ABA990AD3170E9) == 0x000140, "Member 'FSReBulletDataBase::弱点被击效果_95_9F2E7F0E46043F5B09ABA990AD3170E9' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 多弱点被击效果_179_FAAD35894C504EFDFE3AA9AB5227A340) == 0x000150, "Member 'FSReBulletDataBase::多弱点被击效果_179_FAAD35894C504EFDFE3AA9AB5227A340' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 子弹受击方向_55_603F74B64825C94FACF0D4BA7D9C29CB) == 0x000160, "Member 'FSReBulletDataBase::子弹受击方向_55_603F74B64825C94FACF0D4BA7D9C29CB' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 伤害ID_69_A90E631B445077C5F9ED76B9AB745B60) == 0x000168, "Member 'FSReBulletDataBase::伤害ID_69_A90E631B445077C5F9ED76B9AB745B60' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 多伤害ID_171_D049230243F78BE963F48B8C75A00990) == 0x000170, "Member 'FSReBulletDataBase::多伤害ID_171_D049230243F78BE963F48B8C75A00990' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 子弹攻击方向_51_2BA10CE54278AA51E4022396A6CD0C8D) == 0x000180, "Member 'FSReBulletDataBase::子弹攻击方向_51_2BA10CE54278AA51E4022396A6CD0C8D' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 技能结束是否销毁子弹_54_5311975346FDEA78A27AC994D85137AA) == 0x00018C, "Member 'FSReBulletDataBase::技能结束是否销毁子弹_54_5311975346FDEA78A27AC994D85137AA' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 子弹允许生成Tag_68_592578584A71778A7A91D0A565DAC833) == 0x000190, "Member 'FSReBulletDataBase::子弹允许生成Tag_68_592578584A71778A7A91D0A565DAC833' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 子弹禁止生成Tag_67_423488F04620BAD806FAF0801B42F5F8) == 0x0001B0, "Member 'FSReBulletDataBase::子弹禁止生成Tag_67_423488F04620BAD806FAF0801B42F5F8' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 是否持续碰撞_71_A59F8E5D46062662CCA2E398F8FCAB45) == 0x0001D0, "Member 'FSReBulletDataBase::是否持续碰撞_71_A59F8E5D46062662CCA2E398F8FCAB45' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 是否贴地子弹_77_432EB70C4B5D2C12EDA71FB70A989C8A) == 0x0001D1, "Member 'FSReBulletDataBase::是否贴地子弹_77_432EB70C4B5D2C12EDA71FB70A989C8A' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 是否贴水面_181_0D092076412071B517B844A00EAFAF48) == 0x0001D2, "Member 'FSReBulletDataBase::是否贴水面_181_0D092076412071B517B844A00EAFAF48' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 不跟随移动平台_184_7E22662D4FC19599593332AB2C87B335) == 0x0001D3, "Member 'FSReBulletDataBase::不跟随移动平台_184_7E22662D4FC19599593332AB2C87B335' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 不适配坡度_133_C89F1FAE417BB4F10D7691B3747104E2) == 0x0001D4, "Member 'FSReBulletDataBase::不适配坡度_133_C89F1FAE417BB4F10D7691B3747104E2' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 贴地探测距离_154_419CD78E470029A2EC9579A6D7D9BFB6) == 0x0001D8, "Member 'FSReBulletDataBase::贴地探测距离_154_419CD78E470029A2EC9579A6D7D9BFB6' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 网络同步类型_129_8DB648D54285ED4BE9E54E9C3ADC5BF3) == 0x0001DC, "Member 'FSReBulletDataBase::网络同步类型_129_8DB648D54285ED4BE9E54E9C3ADC5BF3' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 子弹标签_137_C6EA52AA4721C4CF3F2E1BA1F0D2F726) == 0x0001E0, "Member 'FSReBulletDataBase::子弹标签_137_C6EA52AA4721C4CF3F2E1BA1F0D2F726' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 是否响应材质受击音效_151_142A23A94BEF7AFE2F217FB7416C4334) == 0x0001EC, "Member 'FSReBulletDataBase::是否响应材质受击音效_151_142A23A94BEF7AFE2F217FB7416C4334' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, Debug显示子弹进度_156_D4E36872499839BF6138ADAA32496CE1) == 0x0001ED, "Member 'FSReBulletDataBase::Debug显示子弹进度_156_D4E36872499839BF6138ADAA32496CE1' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 大范围子弹对场景物件生效_164_3E8EBB934C204AF6B6C1FE9B888388DF) == 0x0001EE, "Member 'FSReBulletDataBase::大范围子弹对场景物件生效_164_3E8EBB934C204AF6B6C1FE9B888388DF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 命中实体类型_167_31F8814047388333D40D34B02DFED54A) == 0x0001EF, "Member 'FSReBulletDataBase::命中实体类型_167_31F8814047388333D40D34B02DFED54A' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataBase, 大范围子弹检测方式_187_D8DF119748F8BB7EB6E5DD8E67F79EC9) == 0x0001F0, "Member 'FSReBulletDataBase::大范围子弹检测方式_187_D8DF119748F8BB7EB6E5DD8E67F79EC9' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataBase;
 
 }
 

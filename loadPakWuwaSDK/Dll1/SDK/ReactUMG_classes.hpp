@@ -31,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ReactWidget">();
+		STATIC_CLASS_IMPL("ReactWidget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ReactWidget")
 	}
 	static class UReactWidget* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UReactWidget>();
 	}
 };
-static_assert(alignof(UReactWidget) == 0x000008, "Wrong alignment on UReactWidget");
-static_assert(sizeof(UReactWidget) == 0x000308, "Wrong size on UReactWidget");
+DUMPER7_ASSERTS_UReactWidget;
 
 // Class ReactUMG.UMGManager
 // 0x0000 (0x0030 - 0x0030)
@@ -54,15 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"UMGManager">();
+		STATIC_CLASS_IMPL("UMGManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"UMGManager")
 	}
 	static class UUMGManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UUMGManager>();
 	}
 };
-static_assert(alignof(UUMGManager) == 0x000008, "Wrong alignment on UUMGManager");
-static_assert(sizeof(UUMGManager) == 0x000030, "Wrong size on UUMGManager");
+DUMPER7_ASSERTS_UUMGManager;
 
 }
 

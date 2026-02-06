@@ -32,7 +32,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SE_ControllerInterface_C">();
+		BP_STATIC_CLASS_IMPL("SE_ControllerInterface_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SE_ControllerInterface_C")
 	}
 	static class ISE_ControllerInterface_C* GetDefaultObj()
 	{
@@ -48,8 +52,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ISE_ControllerInterface_C) == 0x000001, "Wrong alignment on ISE_ControllerInterface_C");
-static_assert(sizeof(ISE_ControllerInterface_C) == 0x000001, "Wrong size on ISE_ControllerInterface_C");
+DUMPER7_ASSERTS_ISE_ControllerInterface_C;
 
 }
 

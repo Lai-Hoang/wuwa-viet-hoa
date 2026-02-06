@@ -31,16 +31,7 @@ public:
 	int32                                         任务详细信息_52_AD80EB174F1FBA9BA40A27A2DB308228;  // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          是否可联机_51_623231A7452FAC803B3879BD2857FFEC;    // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSQuest) == 0x000008, "Wrong alignment on FSQuest");
-static_assert(sizeof(FSQuest) == 0x000028, "Wrong size on FSQuest");
-static_assert(offsetof(FSQuest, ID_56_0FF0336441941D8CDD474BB0C0F6A03D) == 0x000000, "Member 'FSQuest::ID_56_0FF0336441941D8CDD474BB0C0F6A03D' has a wrong offset!");
-static_assert(offsetof(FSQuest, 任务名称_53_59AED228401FF0B93173EFAFF65F6618) == 0x000004, "Member 'FSQuest::任务名称_53_59AED228401FF0B93173EFAFF65F6618' has a wrong offset!");
-static_assert(offsetof(FSQuest, 任务KEY_48_AD95229F4164D1C78B215B96E79700D1) == 0x000008, "Member 'FSQuest::任务KEY_48_AD95229F4164D1C78B215B96E79700D1' has a wrong offset!");
-static_assert(offsetof(FSQuest, 任务类型_21_D2AB5BD943FE39E0B57CB583308EC876) == 0x000018, "Member 'FSQuest::任务类型_21_D2AB5BD943FE39E0B57CB583308EC876' has a wrong offset!");
-static_assert(offsetof(FSQuest, 是否可重复_43_67F5ED074F81A6051829C9BACE8B58CD) == 0x000019, "Member 'FSQuest::是否可重复_43_67F5ED074F81A6051829C9BACE8B58CD' has a wrong offset!");
-static_assert(offsetof(FSQuest, 是否完成_24_7B4C96A243CDF65C6B8CEC8ACE19E7D6) == 0x00001A, "Member 'FSQuest::是否完成_24_7B4C96A243CDF65C6B8CEC8ACE19E7D6' has a wrong offset!");
-static_assert(offsetof(FSQuest, 任务详细信息_52_AD80EB174F1FBA9BA40A27A2DB308228) == 0x00001C, "Member 'FSQuest::任务详细信息_52_AD80EB174F1FBA9BA40A27A2DB308228' has a wrong offset!");
-static_assert(offsetof(FSQuest, 是否可联机_51_623231A7452FAC803B3879BD2857FFEC) == 0x000020, "Member 'FSQuest::是否可联机_51_623231A7452FAC803B3879BD2857FFEC' has a wrong offset!");
+DUMPER7_ASSERTS_FSQuest;
 
 }
 

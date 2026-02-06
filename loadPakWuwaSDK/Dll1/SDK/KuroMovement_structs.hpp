@@ -94,28 +94,7 @@ public:
 	EMovementMode                                 MovementMode;                                      // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3D[0x7];                                       // 0x003D(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBaseRecord) == 0x000004, "Wrong alignment on FBaseRecord");
-static_assert(sizeof(FBaseRecord) == 0x000044, "Wrong size on FBaseRecord");
-static_assert(offsetof(FBaseRecord, ActorLocation) == 0x000000, "Member 'FBaseRecord::ActorLocation' has a wrong offset!");
-static_assert(offsetof(FBaseRecord, ActorRotation) == 0x00000C, "Member 'FBaseRecord::ActorRotation' has a wrong offset!");
-static_assert(offsetof(FBaseRecord, MeshLocation) == 0x000018, "Member 'FBaseRecord::MeshLocation' has a wrong offset!");
-static_assert(offsetof(FBaseRecord, CustomVector01) == 0x000024, "Member 'FBaseRecord::CustomVector01' has a wrong offset!");
-static_assert(offsetof(FBaseRecord, CustomVector02) == 0x000030, "Member 'FBaseRecord::CustomVector02' has a wrong offset!");
-static_assert(offsetof(FBaseRecord, MovementMode) == 0x00003C, "Member 'FBaseRecord::MovementMode' has a wrong offset!");
-
-// ScriptStruct KuroMovement.DebugModifyRecord
-// 0x0058 (0x0058 - 0x0000)
-struct FDebugModifyRecord final
-{
-public:
-	class FString                                 Context;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBaseRecord                            Record;                                            // 0x0010(0x0044)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDebugModifyRecord) == 0x000008, "Wrong alignment on FDebugModifyRecord");
-static_assert(sizeof(FDebugModifyRecord) == 0x000058, "Wrong size on FDebugModifyRecord");
-static_assert(offsetof(FDebugModifyRecord, Context) == 0x000000, "Member 'FDebugModifyRecord::Context' has a wrong offset!");
-static_assert(offsetof(FDebugModifyRecord, Record) == 0x000010, "Member 'FDebugModifyRecord::Record' has a wrong offset!");
+DUMPER7_ASSERTS_FBaseRecord;
 
 // ScriptStruct KuroMovement.OverlapActorRecord
 // 0x0018 (0x0018 - 0x0000)
@@ -128,11 +107,18 @@ public:
 	bool                                          EnterOverlap;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOverlapActorRecord) == 0x000008, "Wrong alignment on FOverlapActorRecord");
-static_assert(sizeof(FOverlapActorRecord) == 0x000018, "Wrong size on FOverlapActorRecord");
-static_assert(offsetof(FOverlapActorRecord, Area) == 0x000000, "Member 'FOverlapActorRecord::Area' has a wrong offset!");
-static_assert(offsetof(FOverlapActorRecord, Actor) == 0x000008, "Member 'FOverlapActorRecord::Actor' has a wrong offset!");
-static_assert(offsetof(FOverlapActorRecord, EnterOverlap) == 0x000010, "Member 'FOverlapActorRecord::EnterOverlap' has a wrong offset!");
+DUMPER7_ASSERTS_FOverlapActorRecord;
+
+// ScriptStruct KuroMovement.DebugModifyRecord
+// 0x0058 (0x0058 - 0x0000)
+struct FDebugModifyRecord final
+{
+public:
+	class FString                                 Context;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBaseRecord                            Record;                                            // 0x0010(0x0044)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDebugModifyRecord;
 
 // ScriptStruct KuroMovement.DebugTickGroupRecord
 // 0x0058 (0x0058 - 0x0000)
@@ -143,10 +129,7 @@ public:
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FDebugModifyRecord>             ModifyRecords;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDebugTickGroupRecord) == 0x000008, "Wrong alignment on FDebugTickGroupRecord");
-static_assert(sizeof(FDebugTickGroupRecord) == 0x000058, "Wrong size on FDebugTickGroupRecord");
-static_assert(offsetof(FDebugTickGroupRecord, Record) == 0x000000, "Member 'FDebugTickGroupRecord::Record' has a wrong offset!");
-static_assert(offsetof(FDebugTickGroupRecord, ModifyRecords) == 0x000048, "Member 'FDebugTickGroupRecord::ModifyRecords' has a wrong offset!");
+DUMPER7_ASSERTS_FDebugTickGroupRecord;
 
 // ScriptStruct KuroMovement.SingleFrameDebugInfo
 // 0x0108 (0x0108 - 0x0000)
@@ -158,11 +141,7 @@ public:
 	struct FDebugTickGroupRecord                  PositionTickEnd;                                   // 0x0060(0x0058)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TMap<ETickingGroup, struct FDebugTickGroupRecord> TickGroupDebugPositionInfo;                    // 0x00B8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSingleFrameDebugInfo) == 0x000008, "Wrong alignment on FSingleFrameDebugInfo");
-static_assert(sizeof(FSingleFrameDebugInfo) == 0x000108, "Wrong size on FSingleFrameDebugInfo");
-static_assert(offsetof(FSingleFrameDebugInfo, TickStartRecord) == 0x000008, "Member 'FSingleFrameDebugInfo::TickStartRecord' has a wrong offset!");
-static_assert(offsetof(FSingleFrameDebugInfo, PositionTickEnd) == 0x000060, "Member 'FSingleFrameDebugInfo::PositionTickEnd' has a wrong offset!");
-static_assert(offsetof(FSingleFrameDebugInfo, TickGroupDebugPositionInfo) == 0x0000B8, "Member 'FSingleFrameDebugInfo::TickGroupDebugPositionInfo' has a wrong offset!");
+DUMPER7_ASSERTS_FSingleFrameDebugInfo;
 
 }
 

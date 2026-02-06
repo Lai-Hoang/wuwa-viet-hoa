@@ -23,9 +23,7 @@ struct TsActionHandle_C_OnPressAction final
 public:
 	struct FKey                                   key;                                               // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsActionHandle_C_OnPressAction) == 0x000008, "Wrong alignment on TsActionHandle_C_OnPressAction");
-static_assert(sizeof(TsActionHandle_C_OnPressAction) == 0x000020, "Wrong size on TsActionHandle_C_OnPressAction");
-static_assert(offsetof(TsActionHandle_C_OnPressAction, key) == 0x000000, "Member 'TsActionHandle_C_OnPressAction::key' has a wrong offset!");
+DUMPER7_ASSERTS_TsActionHandle_C_OnPressAction;
 
 // Function TsActionHandle.TsActionHandle_C.OnReleaseAction
 // 0x0020 (0x0020 - 0x0000)
@@ -34,9 +32,7 @@ struct TsActionHandle_C_OnReleaseAction final
 public:
 	struct FKey                                   key;                                               // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsActionHandle_C_OnReleaseAction) == 0x000008, "Wrong alignment on TsActionHandle_C_OnReleaseAction");
-static_assert(sizeof(TsActionHandle_C_OnReleaseAction) == 0x000020, "Wrong size on TsActionHandle_C_OnReleaseAction");
-static_assert(offsetof(TsActionHandle_C_OnReleaseAction, key) == 0x000000, "Member 'TsActionHandle_C_OnReleaseAction::key' has a wrong offset!");
+DUMPER7_ASSERTS_TsActionHandle_C_OnReleaseAction;
 
 }
 

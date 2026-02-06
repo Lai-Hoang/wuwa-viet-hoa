@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroiOSDelegateStaticLibrary">();
+		STATIC_CLASS_IMPL("KuroiOSDelegateStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroiOSDelegateStaticLibrary")
 	}
 	static class UKuroiOSDelegateStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroiOSDelegateStaticLibrary>();
 	}
 };
-static_assert(alignof(UKuroiOSDelegateStaticLibrary) == 0x000008, "Wrong alignment on UKuroiOSDelegateStaticLibrary");
-static_assert(sizeof(UKuroiOSDelegateStaticLibrary) == 0x000030, "Wrong size on UKuroiOSDelegateStaticLibrary");
+DUMPER7_ASSERTS_UKuroiOSDelegateStaticLibrary;
 
 }
 

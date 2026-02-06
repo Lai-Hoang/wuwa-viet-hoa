@@ -43,15 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("EffectBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectBlueprintFunctionLibrary_C")
 	}
 	static class UEffectBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UEffectBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UEffectBlueprintFunctionLibrary_C");
-static_assert(sizeof(UEffectBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UEffectBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UEffectBlueprintFunctionLibrary_C;
 
 }
 

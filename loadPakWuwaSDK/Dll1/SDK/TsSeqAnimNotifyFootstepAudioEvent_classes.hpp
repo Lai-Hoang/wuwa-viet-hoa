@@ -36,19 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSeqAnimNotifyFootstepAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsSeqAnimNotifyFootstepAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSeqAnimNotifyFootstepAudioEvent_C")
 	}
 	static class UTsSeqAnimNotifyFootstepAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsSeqAnimNotifyFootstepAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsSeqAnimNotifyFootstepAudioEvent_C) == 0x000008, "Wrong alignment on UTsSeqAnimNotifyFootstepAudioEvent_C");
-static_assert(sizeof(UTsSeqAnimNotifyFootstepAudioEvent_C) == 0x0000D8, "Wrong size on UTsSeqAnimNotifyFootstepAudioEvent_C");
-static_assert(offsetof(UTsSeqAnimNotifyFootstepAudioEvent_C, Variant) == 0x000048, "Member 'UTsSeqAnimNotifyFootstepAudioEvent_C::Variant' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyFootstepAudioEvent_C, FootstepEvent) == 0x000050, "Member 'UTsSeqAnimNotifyFootstepAudioEvent_C::FootstepEvent' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyFootstepAudioEvent_C, FootTraceElement) == 0x000080, "Member 'UTsSeqAnimNotifyFootstepAudioEvent_C::FootTraceElement' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyFootstepAudioEvent_C, FootstepVariantMap) == 0x000088, "Member 'UTsSeqAnimNotifyFootstepAudioEvent_C::FootstepVariantMap' has a wrong offset!");
+DUMPER7_ASSERTS_UTsSeqAnimNotifyFootstepAudioEvent_C;
 
 }
 

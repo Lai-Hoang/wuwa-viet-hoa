@@ -23,9 +23,7 @@ struct FSWeaponSocket final
 public:
 	struct FSWeaponSocketItem                     Weapon_16_CE477C0240043F0E66DD39B32302A00B;        // 0x0000(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 };
-static_assert(alignof(FSWeaponSocket) == 0x000008, "Wrong alignment on FSWeaponSocket");
-static_assert(sizeof(FSWeaponSocket) == 0x000058, "Wrong size on FSWeaponSocket");
-static_assert(offsetof(FSWeaponSocket, Weapon_16_CE477C0240043F0E66DD39B32302A00B) == 0x000000, "Member 'FSWeaponSocket::Weapon_16_CE477C0240043F0E66DD39B32302A00B' has a wrong offset!");
+DUMPER7_ASSERTS_FSWeaponSocket;
 
 }
 

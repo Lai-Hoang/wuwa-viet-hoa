@@ -23,10 +23,7 @@ public:
 	bool                                          ForceDisableOpacityMicromapsInput;                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(OMMBlueprintLibrary_RecreateStaticRaytracedMeshes) == 0x000008, "Wrong alignment on OMMBlueprintLibrary_RecreateStaticRaytracedMeshes");
-static_assert(sizeof(OMMBlueprintLibrary_RecreateStaticRaytracedMeshes) == 0x000010, "Wrong size on OMMBlueprintLibrary_RecreateStaticRaytracedMeshes");
-static_assert(offsetof(OMMBlueprintLibrary_RecreateStaticRaytracedMeshes, WorldContextObject) == 0x000000, "Member 'OMMBlueprintLibrary_RecreateStaticRaytracedMeshes::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(OMMBlueprintLibrary_RecreateStaticRaytracedMeshes, ForceDisableOpacityMicromapsInput) == 0x000008, "Member 'OMMBlueprintLibrary_RecreateStaticRaytracedMeshes::ForceDisableOpacityMicromapsInput' has a wrong offset!");
+DUMPER7_ASSERTS_OMMBlueprintLibrary_RecreateStaticRaytracedMeshes;
 
 }
 

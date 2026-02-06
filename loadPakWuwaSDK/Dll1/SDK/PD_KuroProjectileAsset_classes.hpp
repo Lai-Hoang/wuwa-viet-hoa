@@ -35,25 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_KuroProjectileAsset_C">();
+		BP_STATIC_CLASS_IMPL("PD_KuroProjectileAsset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_KuroProjectileAsset_C")
 	}
 	static class UPD_KuroProjectileAsset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_KuroProjectileAsset_C>();
 	}
 };
-static_assert(alignof(UPD_KuroProjectileAsset_C) == 0x000008, "Wrong alignment on UPD_KuroProjectileAsset_C");
-static_assert(sizeof(UPD_KuroProjectileAsset_C) == 0x000068, "Wrong size on UPD_KuroProjectileAsset_C");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, DistanceRocordMesh) == 0x000038, "Member 'UPD_KuroProjectileAsset_C::DistanceRocordMesh' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, DisplayDistancePerRecord) == 0x000040, "Member 'UPD_KuroProjectileAsset_C::DisplayDistancePerRecord' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, MaxPlaceCount) == 0x000044, "Member 'UPD_KuroProjectileAsset_C::MaxPlaceCount' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, RecordDeltaAngle) == 0x000048, "Member 'UPD_KuroProjectileAsset_C::RecordDeltaAngle' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, TargetDeltaAngle) == 0x00004C, "Member 'UPD_KuroProjectileAsset_C::TargetDeltaAngle' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, TargetSize) == 0x000050, "Member 'UPD_KuroProjectileAsset_C::TargetSize' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, TargetThreshold) == 0x000054, "Member 'UPD_KuroProjectileAsset_C::TargetThreshold' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, AnimationSpeed) == 0x000058, "Member 'UPD_KuroProjectileAsset_C::AnimationSpeed' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, RecordSize) == 0x00005C, "Member 'UPD_KuroProjectileAsset_C::RecordSize' has a wrong offset!");
-static_assert(offsetof(UPD_KuroProjectileAsset_C, TargetDecalMat) == 0x000060, "Member 'UPD_KuroProjectileAsset_C::TargetDecalMat' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_KuroProjectileAsset_C;
 
 }
 

@@ -25,11 +25,7 @@ public:
 	TArray<struct FSSequencesNetwrokNode>         ProcessSequences_23_860AAF8B440C329B6E464C9DE16ADF63; // 0x0060(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSSequencesNetwrokNode>         EndSequences_25_9875B20F4E97233313A01EBFF06291C0;  // 0x0070(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSSequencesNetwork) == 0x000008, "Wrong alignment on FSSequencesNetwork");
-static_assert(sizeof(FSSequencesNetwork) == 0x000080, "Wrong size on FSSequencesNetwork");
-static_assert(offsetof(FSSequencesNetwork, StartSequence_22_7CEC1512457C3CCF0821E1B8234E3CBD) == 0x000000, "Member 'FSSequencesNetwork::StartSequence_22_7CEC1512457C3CCF0821E1B8234E3CBD' has a wrong offset!");
-static_assert(offsetof(FSSequencesNetwork, ProcessSequences_23_860AAF8B440C329B6E464C9DE16ADF63) == 0x000060, "Member 'FSSequencesNetwork::ProcessSequences_23_860AAF8B440C329B6E464C9DE16ADF63' has a wrong offset!");
-static_assert(offsetof(FSSequencesNetwork, EndSequences_25_9875B20F4E97233313A01EBFF06291C0) == 0x000070, "Member 'FSSequencesNetwork::EndSequences_25_9875B20F4E97233313A01EBFF06291C0' has a wrong offset!");
+DUMPER7_ASSERTS_FSSequencesNetwork;
 
 }
 

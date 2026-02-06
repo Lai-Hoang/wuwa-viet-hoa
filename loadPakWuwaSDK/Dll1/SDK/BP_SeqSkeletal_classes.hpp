@@ -45,22 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SeqSkeletal_C">();
+		BP_STATIC_CLASS_IMPL("BP_SeqSkeletal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SeqSkeletal_C")
 	}
 	static class ABP_SeqSkeletal_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SeqSkeletal_C>();
 	}
 };
-static_assert(alignof(ABP_SeqSkeletal_C) == 0x000008, "Wrong alignment on ABP_SeqSkeletal_C");
-static_assert(sizeof(ABP_SeqSkeletal_C) == 0x0002E0, "Wrong size on ABP_SeqSkeletal_C");
-static_assert(offsetof(ABP_SeqSkeletal_C, SeqAudio_Seq_V2) == 0x0002B0, "Member 'ABP_SeqSkeletal_C::SeqAudio_Seq_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, SkeletalMesh) == 0x0002B8, "Member 'ABP_SeqSkeletal_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, DefaultSceneRoot) == 0x0002C0, "Member 'ABP_SeqSkeletal_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, ABPC_Body_V2) == 0x0002C8, "Member 'ABP_SeqSkeletal_C::ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, Mesh) == 0x0002D0, "Member 'ABP_SeqSkeletal_C::Mesh' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, TalkID) == 0x0002D8, "Member 'ABP_SeqSkeletal_C::TalkID' has a wrong offset!");
-static_assert(offsetof(ABP_SeqSkeletal_C, TalkID_SP) == 0x0002DC, "Member 'ABP_SeqSkeletal_C::TalkID_SP' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SeqSkeletal_C;
 
 }
 

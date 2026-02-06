@@ -28,12 +28,7 @@ public:
 	TArray<EMotorPropertyName>                    VarNames_22_18D71FBA4AFF37F1036A8FB8A2A57595;      // 0x0028(0x0010)(Edit, BlueprintVisible)
 	class UMotorcycleConfigs*                     Configs_14_1524DC404518C9428668418F0CDFA74F;       // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorConfigs) == 0x000008, "Wrong alignment on FSMotorConfigs");
-static_assert(sizeof(FSMotorConfigs) == 0x000040, "Wrong size on FSMotorConfigs");
-static_assert(offsetof(FSMotorConfigs, ActivateTags_19_754BA53141F06C1BA15B91A4300F42D0) == 0x000000, "Member 'FSMotorConfigs::ActivateTags_19_754BA53141F06C1BA15B91A4300F42D0' has a wrong offset!");
-static_assert(offsetof(FSMotorConfigs, Priority_2_2D3485674CA741DB82978BAC57359693) == 0x000020, "Member 'FSMotorConfigs::Priority_2_2D3485674CA741DB82978BAC57359693' has a wrong offset!");
-static_assert(offsetof(FSMotorConfigs, VarNames_22_18D71FBA4AFF37F1036A8FB8A2A57595) == 0x000028, "Member 'FSMotorConfigs::VarNames_22_18D71FBA4AFF37F1036A8FB8A2A57595' has a wrong offset!");
-static_assert(offsetof(FSMotorConfigs, Configs_14_1524DC404518C9428668418F0CDFA74F) == 0x000038, "Member 'FSMotorConfigs::Configs_14_1524DC404518C9428668418F0CDFA74F' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorConfigs;
 
 }
 

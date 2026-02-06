@@ -226,8 +226,10 @@ void ABP_Cinematics_Tick_C::SetActorLight(class AActor* InActor, float LightYaw,
 // bool                                    isDestroyed                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    IsHideNpcMesh_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    IsHideNpcEffect_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   HideDistance_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    BasisBoneName_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_Cinematics_Tick_C::UpdateMeshAndEffectState(class AActor* InActor, bool IsHideMesh_0, bool IsHideEffect_0, bool isDestroyed, bool IsHideNpcMesh_0, bool IsHideNpcEffect_0)
+void ABP_Cinematics_Tick_C::UpdateMeshAndEffectState(class AActor* InActor, bool IsHideMesh_0, bool IsHideEffect_0, bool isDestroyed, bool IsHideNpcMesh_0, bool IsHideNpcEffect_0, float HideDistance_0, const class FString& BasisBoneName_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -242,6 +244,8 @@ void ABP_Cinematics_Tick_C::UpdateMeshAndEffectState(class AActor* InActor, bool
 	Parms.isDestroyed = isDestroyed;
 	Parms.IsHideNpcMesh_0 = IsHideNpcMesh_0;
 	Parms.IsHideNpcEffect_0 = IsHideNpcEffect_0;
+	Parms.HideDistance_0 = HideDistance_0;
+	Parms.BasisBoneName_0 = std::move(BasisBoneName_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

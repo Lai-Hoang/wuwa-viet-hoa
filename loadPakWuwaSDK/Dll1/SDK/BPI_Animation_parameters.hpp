@@ -16,27 +16,14 @@
 namespace SDK::Params
 {
 
-// Function BPI_Animation.BPI_Animation_C.InterfaceManipulateInteractDirection
+// Function BPI_Animation.BPI_Animation_C.InterfaceJumpPressed
 // 0x0004 (0x0004 - 0x0000)
-struct BPI_Animation_C_InterfaceManipulateInteractDirection final
+struct BPI_Animation_C_InterfaceJumpPressed final
 {
 public:
-	float                                         角度;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_Animation_C_InterfaceManipulateInteractDirection) == 0x000004, "Wrong alignment on BPI_Animation_C_InterfaceManipulateInteractDirection");
-static_assert(sizeof(BPI_Animation_C_InterfaceManipulateInteractDirection) == 0x000004, "Wrong size on BPI_Animation_C_InterfaceManipulateInteractDirection");
-static_assert(offsetof(BPI_Animation_C_InterfaceManipulateInteractDirection, 角度) == 0x000000, "Member 'BPI_Animation_C_InterfaceManipulateInteractDirection::角度' has a wrong offset!");
-
-// Function BPI_Animation.BPI_Animation_C.InterfaceFixHookDirect
-// 0x000C (0x000C - 0x0000)
-struct BPI_Animation_C_InterfaceFixHookDirect final
-{
-public:
-	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_Animation_C_InterfaceFixHookDirect) == 0x000004, "Wrong alignment on BPI_Animation_C_InterfaceFixHookDirect");
-static_assert(sizeof(BPI_Animation_C_InterfaceFixHookDirect) == 0x00000C, "Wrong size on BPI_Animation_C_InterfaceFixHookDirect");
-static_assert(offsetof(BPI_Animation_C_InterfaceFixHookDirect, Offset) == 0x000000, "Member 'BPI_Animation_C_InterfaceFixHookDirect::Offset' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_Animation_C_InterfaceJumpPressed;
 
 // Function BPI_Animation.BPI_Animation_C.InterfaceSimulateJump
 // 0x0004 (0x0004 - 0x0000)
@@ -45,20 +32,25 @@ struct BPI_Animation_C_InterfaceSimulateJump final
 public:
 	float                                         Speed;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_Animation_C_InterfaceSimulateJump) == 0x000004, "Wrong alignment on BPI_Animation_C_InterfaceSimulateJump");
-static_assert(sizeof(BPI_Animation_C_InterfaceSimulateJump) == 0x000004, "Wrong size on BPI_Animation_C_InterfaceSimulateJump");
-static_assert(offsetof(BPI_Animation_C_InterfaceSimulateJump, Speed) == 0x000000, "Member 'BPI_Animation_C_InterfaceSimulateJump::Speed' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_Animation_C_InterfaceSimulateJump;
 
-// Function BPI_Animation.BPI_Animation_C.InterfaceJumpPressed
-// 0x0004 (0x0004 - 0x0000)
-struct BPI_Animation_C_InterfaceJumpPressed final
+// Function BPI_Animation.BPI_Animation_C.InterfaceFixHookDirect
+// 0x000C (0x000C - 0x0000)
+struct BPI_Animation_C_InterfaceFixHookDirect final
 {
 public:
-	float                                         Speed;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Offset;                                            // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_Animation_C_InterfaceJumpPressed) == 0x000004, "Wrong alignment on BPI_Animation_C_InterfaceJumpPressed");
-static_assert(sizeof(BPI_Animation_C_InterfaceJumpPressed) == 0x000004, "Wrong size on BPI_Animation_C_InterfaceJumpPressed");
-static_assert(offsetof(BPI_Animation_C_InterfaceJumpPressed, Speed) == 0x000000, "Member 'BPI_Animation_C_InterfaceJumpPressed::Speed' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_Animation_C_InterfaceFixHookDirect;
+
+// Function BPI_Animation.BPI_Animation_C.InterfaceManipulateInteractDirection
+// 0x0004 (0x0004 - 0x0000)
+struct BPI_Animation_C_InterfaceManipulateInteractDirection final
+{
+public:
+	float                                         角度;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BPI_Animation_C_InterfaceManipulateInteractDirection;
 
 }
 

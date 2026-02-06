@@ -14,71 +14,14 @@
 namespace SDK::Params
 {
 
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcMesh
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideMesh
 // 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh final
+struct TsHideActorBlueprintFunctionLibrary_C_HideMesh final
 {
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh::__WorldContext' has a wrong offset!");
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcEffect
-// 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect::__WorldContext' has a wrong offset!");
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcEffect
-// 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect::__WorldContext' has a wrong offset!");
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcMesh
-// 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh::__WorldContext' has a wrong offset!");
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowEffect
-// 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_ShowEffect final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_ShowEffect) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_ShowEffect");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_ShowEffect) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_ShowEffect");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_ShowEffect, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_ShowEffect::__WorldContext' has a wrong offset!");
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowMesh
-// 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_ShowMesh final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_ShowMesh) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_ShowMesh");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_ShowMesh) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_ShowMesh");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_ShowMesh, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_ShowMesh::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_HideMesh;
 
 // Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -87,20 +30,81 @@ struct TsHideActorBlueprintFunctionLibrary_C_HideEffect final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_HideEffect) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_HideEffect");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_HideEffect) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_HideEffect");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_HideEffect, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_HideEffect::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_HideEffect;
 
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideMesh
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowMesh
 // 0x0008 (0x0008 - 0x0000)
-struct TsHideActorBlueprintFunctionLibrary_C_HideMesh final
+struct TsHideActorBlueprintFunctionLibrary_C_ShowMesh final
 {
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHideActorBlueprintFunctionLibrary_C_HideMesh) == 0x000008, "Wrong alignment on TsHideActorBlueprintFunctionLibrary_C_HideMesh");
-static_assert(sizeof(TsHideActorBlueprintFunctionLibrary_C_HideMesh) == 0x000008, "Wrong size on TsHideActorBlueprintFunctionLibrary_C_HideMesh");
-static_assert(offsetof(TsHideActorBlueprintFunctionLibrary_C_HideMesh, __WorldContext) == 0x000000, "Member 'TsHideActorBlueprintFunctionLibrary_C_HideMesh::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_ShowMesh;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowEffect
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_ShowEffect final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_ShowEffect;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcMesh
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcEffect
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcEffect
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcMesh
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.SetHideParameter
+// 0x0018 (0x0018 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_SetHideParameter final
+{
+public:
+	float                                         distance;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   boneName;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_SetHideParameter;
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ResetHideParameter
+// 0x0008 (0x0008 - 0x0000)
+struct TsHideActorBlueprintFunctionLibrary_C_ResetHideParameter final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsHideActorBlueprintFunctionLibrary_C_ResetHideParameter;
 
 }
 

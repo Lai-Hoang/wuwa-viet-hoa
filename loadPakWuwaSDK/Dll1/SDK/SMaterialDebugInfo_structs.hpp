@@ -22,10 +22,7 @@ public:
 	class FName                                   CurrentController_12_2DDB34D04D78595E991CD3983A91307E; // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   RenderingContent_14_9A17FA904A414F758E94049ECF493F1C; // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMaterialDebugInfo) == 0x000004, "Wrong alignment on FSMaterialDebugInfo");
-static_assert(sizeof(FSMaterialDebugInfo) == 0x000018, "Wrong size on FSMaterialDebugInfo");
-static_assert(offsetof(FSMaterialDebugInfo, CurrentController_12_2DDB34D04D78595E991CD3983A91307E) == 0x000000, "Member 'FSMaterialDebugInfo::CurrentController_12_2DDB34D04D78595E991CD3983A91307E' has a wrong offset!");
-static_assert(offsetof(FSMaterialDebugInfo, RenderingContent_14_9A17FA904A414F758E94049ECF493F1C) == 0x00000C, "Member 'FSMaterialDebugInfo::RenderingContent_14_9A17FA904A414F758E94049ECF493F1C' has a wrong offset!");
+DUMPER7_ASSERTS_FSMaterialDebugInfo;
 
 }
 

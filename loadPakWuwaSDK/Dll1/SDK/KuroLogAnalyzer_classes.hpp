@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLogAnalyzerLibrary">();
+		STATIC_CLASS_IMPL("KuroLogAnalyzerLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLogAnalyzerLibrary")
 	}
 	static class UKuroLogAnalyzerLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLogAnalyzerLibrary>();
 	}
 };
-static_assert(alignof(UKuroLogAnalyzerLibrary) == 0x000008, "Wrong alignment on UKuroLogAnalyzerLibrary");
-static_assert(sizeof(UKuroLogAnalyzerLibrary) == 0x000030, "Wrong size on UKuroLogAnalyzerLibrary");
+DUMPER7_ASSERTS_UKuroLogAnalyzerLibrary;
 
 }
 

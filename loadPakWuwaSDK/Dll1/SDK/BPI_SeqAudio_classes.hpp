@@ -26,7 +26,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPI_SeqAudio_C">();
+		BP_STATIC_CLASS_IMPL("BPI_SeqAudio_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPI_SeqAudio_C")
 	}
 	static class IBPI_SeqAudio_C* GetDefaultObj()
 	{
@@ -42,8 +46,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBPI_SeqAudio_C) == 0x000001, "Wrong alignment on IBPI_SeqAudio_C");
-static_assert(sizeof(IBPI_SeqAudio_C) == 0x000001, "Wrong size on IBPI_SeqAudio_C");
+DUMPER7_ASSERTS_IBPI_SeqAudio_C;
 
 }
 

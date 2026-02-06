@@ -22,10 +22,7 @@ public:
 	int32                                         Height;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Width;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDeviceResolution) == 0x000004, "Wrong alignment on FDeviceResolution");
-static_assert(sizeof(FDeviceResolution) == 0x000008, "Wrong size on FDeviceResolution");
-static_assert(offsetof(FDeviceResolution, Height) == 0x000000, "Member 'FDeviceResolution::Height' has a wrong offset!");
-static_assert(offsetof(FDeviceResolution, Width) == 0x000004, "Member 'FDeviceResolution::Width' has a wrong offset!");
+DUMPER7_ASSERTS_FDeviceResolution;
 
 // ScriptStruct KuroCloudGame.ScreenResolution
 // 0x0008 (0x0008 - 0x0000)
@@ -35,10 +32,7 @@ public:
 	int32                                         Height;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Width;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FScreenResolution) == 0x000004, "Wrong alignment on FScreenResolution");
-static_assert(sizeof(FScreenResolution) == 0x000008, "Wrong size on FScreenResolution");
-static_assert(offsetof(FScreenResolution, Height) == 0x000000, "Member 'FScreenResolution::Height' has a wrong offset!");
-static_assert(offsetof(FScreenResolution, Width) == 0x000004, "Member 'FScreenResolution::Width' has a wrong offset!");
+DUMPER7_ASSERTS_FScreenResolution;
 
 // ScriptStruct KuroCloudGame.LoginInfo
 // 0x0048 (0x0048 - 0x0000)
@@ -52,13 +46,7 @@ public:
 	class FString                                 Uid;                                               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 UserName;                                          // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLoginInfo) == 0x000008, "Wrong alignment on FLoginInfo");
-static_assert(sizeof(FLoginInfo) == 0x000048, "Wrong size on FLoginInfo");
-static_assert(offsetof(FLoginInfo, DeviceId) == 0x000000, "Member 'FLoginInfo::DeviceId' has a wrong offset!");
-static_assert(offsetof(FLoginInfo, LoginCode) == 0x000010, "Member 'FLoginInfo::LoginCode' has a wrong offset!");
-static_assert(offsetof(FLoginInfo, Token) == 0x000018, "Member 'FLoginInfo::Token' has a wrong offset!");
-static_assert(offsetof(FLoginInfo, Uid) == 0x000028, "Member 'FLoginInfo::Uid' has a wrong offset!");
-static_assert(offsetof(FLoginInfo, UserName) == 0x000038, "Member 'FLoginInfo::UserName' has a wrong offset!");
+DUMPER7_ASSERTS_FLoginInfo;
 
 // ScriptStruct KuroCloudGame.LoginPreLaunchStruct
 // 0x0090 (0x0090 - 0x0000)
@@ -74,16 +62,7 @@ public:
 	struct FScreenResolution                      ScreenResolution;                                  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLoginInfo                             LoginInfo;                                         // 0x0048(0x0048)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLoginPreLaunchStruct) == 0x000008, "Wrong alignment on FLoginPreLaunchStruct");
-static_assert(sizeof(FLoginPreLaunchStruct) == 0x000090, "Wrong size on FLoginPreLaunchStruct");
-static_assert(offsetof(FLoginPreLaunchStruct, Device) == 0x000000, "Member 'FLoginPreLaunchStruct::Device' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, Platform) == 0x000010, "Member 'FLoginPreLaunchStruct::Platform' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, Dpi) == 0x000020, "Member 'FLoginPreLaunchStruct::Dpi' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, Fps) == 0x000024, "Member 'FLoginPreLaunchStruct::Fps' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, TraceId) == 0x000028, "Member 'FLoginPreLaunchStruct::TraceId' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, DeviceResolution) == 0x000038, "Member 'FLoginPreLaunchStruct::DeviceResolution' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, ScreenResolution) == 0x000040, "Member 'FLoginPreLaunchStruct::ScreenResolution' has a wrong offset!");
-static_assert(offsetof(FLoginPreLaunchStruct, LoginInfo) == 0x000048, "Member 'FLoginPreLaunchStruct::LoginInfo' has a wrong offset!");
+DUMPER7_ASSERTS_FLoginPreLaunchStruct;
 
 // ScriptStruct KuroCloudGame.VirtualKeyBoardStruct
 // 0x0010 (0x0010 - 0x0000)
@@ -92,9 +71,7 @@ struct FVirtualKeyBoardStruct final
 public:
 	class FString                                 Context;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FVirtualKeyBoardStruct) == 0x000008, "Wrong alignment on FVirtualKeyBoardStruct");
-static_assert(sizeof(FVirtualKeyBoardStruct) == 0x000010, "Wrong size on FVirtualKeyBoardStruct");
-static_assert(offsetof(FVirtualKeyBoardStruct, Context) == 0x000000, "Member 'FVirtualKeyBoardStruct::Context' has a wrong offset!");
+DUMPER7_ASSERTS_FVirtualKeyBoardStruct;
 
 // ScriptStruct KuroCloudGame.ClipBoardCopyStruct
 // 0x0010 (0x0010 - 0x0000)
@@ -103,9 +80,7 @@ struct FClipBoardCopyStruct final
 public:
 	class FString                                 CopyText;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FClipBoardCopyStruct) == 0x000008, "Wrong alignment on FClipBoardCopyStruct");
-static_assert(sizeof(FClipBoardCopyStruct) == 0x000010, "Wrong size on FClipBoardCopyStruct");
-static_assert(offsetof(FClipBoardCopyStruct, CopyText) == 0x000000, "Member 'FClipBoardCopyStruct::CopyText' has a wrong offset!");
+DUMPER7_ASSERTS_FClipBoardCopyStruct;
 
 }
 

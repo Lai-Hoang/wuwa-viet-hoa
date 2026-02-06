@@ -17,23 +17,23 @@
 namespace SDK
 {
 
-// Function BP_BaseItem.BP_BaseItem_C.GetEntityId
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_BaseItem.BP_BaseItem_C.ExecuteUbergraph_BP_BaseItem
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ABP_BaseItem_C::GetEntityId()
+void ABP_BaseItem_C::ExecuteUbergraph_BP_BaseItem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseItem_C", "GetEntityId");
+		Func = Class->GetFunction("BP_BaseItem_C", "ExecuteUbergraph_BP_BaseItem");
 
-	Params::BP_BaseItem_C_GetEntityId Parms{};
+	Params::BP_BaseItem_C_ExecuteUbergraph_BP_BaseItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -57,6 +57,26 @@ void ABP_BaseItem_C::ApplyEntityId(int32 EntityId_0)
 }
 
 
+// Function BP_BaseItem.BP_BaseItem_C.GetEntityId
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 ABP_BaseItem_C::GetEntityId()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseItem_C", "GetEntityId");
+
+	Params::BP_BaseItem_C_GetEntityId Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_BaseItem.BP_BaseItem_C.ReceiveBeginPlay
 // (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -68,26 +88,6 @@ void ABP_BaseItem_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_BaseItem_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BaseItem.BP_BaseItem_C.ExecuteUbergraph_BP_BaseItem
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BaseItem_C::ExecuteUbergraph_BP_BaseItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseItem_C", "ExecuteUbergraph_BP_BaseItem");
-
-	Params::BP_BaseItem_C_ExecuteUbergraph_BP_BaseItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_classes.hpp"
 #include "E_SE_PlayOrder_structs.hpp"
 #include "E_SE_RootType_structs.hpp"
-#include "SScreenEffectExtraState_structs.hpp"
-#include "Engine_classes.hpp"
 #include "KuroCurve_structs.hpp"
+#include "SScreenEffectExtraState_structs.hpp"
 
 
 namespace SDK
@@ -56,38 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectScreenPlayData_C">();
+		BP_STATIC_CLASS_IMPL("EffectScreenPlayData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectScreenPlayData_C")
 	}
 	static class UEffectScreenPlayData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectScreenPlayData_C>();
 	}
 };
-static_assert(alignof(UEffectScreenPlayData_C) == 0x000008, "Wrong alignment on UEffectScreenPlayData_C");
-static_assert(sizeof(UEffectScreenPlayData_C) == 0x000158, "Wrong size on UEffectScreenPlayData_C");
-static_assert(offsetof(UEffectScreenPlayData_C, Start) == 0x000038, "Member 'UEffectScreenPlayData_C::Start' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, Loop) == 0x00003C, "Member 'UEffectScreenPlayData_C::Loop' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, End) == 0x000040, "Member 'UEffectScreenPlayData_C::End' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, PlayOrderType) == 0x000044, "Member 'UEffectScreenPlayData_C::PlayOrderType' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, LGUIPrefab) == 0x000048, "Member 'UEffectScreenPlayData_C::LGUIPrefab' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bStopByCall) == 0x000050, "Member 'UEffectScreenPlayData_C::bStopByCall' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bNormalizeTime) == 0x000051, "Member 'UEffectScreenPlayData_C::bNormalizeTime' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, Order) == 0x000054, "Member 'UEffectScreenPlayData_C::Order' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, fadeSpeed) == 0x000058, "Member 'UEffectScreenPlayData_C::fadeSpeed' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bUsedForSequence) == 0x00005C, "Member 'UEffectScreenPlayData_C::bUsedForSequence' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, RootType) == 0x00005D, "Member 'UEffectScreenPlayData_C::RootType' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bAutoDestroy) == 0x00005E, "Member 'UEffectScreenPlayData_C::bAutoDestroy' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bUseAudio) == 0x00005F, "Member 'UEffectScreenPlayData_C::bUseAudio' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, AudioEvent) == 0x000060, "Member 'UEffectScreenPlayData_C::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, AudioEventEnd) == 0x000068, "Member 'UEffectScreenPlayData_C::AudioEventEnd' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, AudioEventEndDelay) == 0x000070, "Member 'UEffectScreenPlayData_C::AudioEventEndDelay' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, ConsoleCommandOnBegin) == 0x000078, "Member 'UEffectScreenPlayData_C::ConsoleCommandOnBegin' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, ConsoleCommandOnEnd) == 0x000088, "Member 'UEffectScreenPlayData_C::ConsoleCommandOnEnd' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, LinearColorParameter) == 0x000098, "Member 'UEffectScreenPlayData_C::LinearColorParameter' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, FloatParameter) == 0x0000E8, "Member 'UEffectScreenPlayData_C::FloatParameter' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, EffectTweenSpeed) == 0x000138, "Member 'UEffectScreenPlayData_C::EffectTweenSpeed' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, ExtraStates) == 0x000140, "Member 'UEffectScreenPlayData_C::ExtraStates' has a wrong offset!");
-static_assert(offsetof(UEffectScreenPlayData_C, bStartLoopEndByCurve) == 0x000150, "Member 'UEffectScreenPlayData_C::bStartLoopEndByCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UEffectScreenPlayData_C;
 
 }
 

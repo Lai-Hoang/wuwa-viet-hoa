@@ -39,15 +39,7 @@ public:
 	int32                                         Text;                                              // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Video;                                             // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaPlayerTrackOptions) == 0x000004, "Wrong alignment on FMediaPlayerTrackOptions");
-static_assert(sizeof(FMediaPlayerTrackOptions) == 0x00001C, "Wrong size on FMediaPlayerTrackOptions");
-static_assert(offsetof(FMediaPlayerTrackOptions, Audio) == 0x000000, "Member 'FMediaPlayerTrackOptions::Audio' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Caption) == 0x000004, "Member 'FMediaPlayerTrackOptions::Caption' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Metadata) == 0x000008, "Member 'FMediaPlayerTrackOptions::Metadata' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Script) == 0x00000C, "Member 'FMediaPlayerTrackOptions::Script' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Subtitle) == 0x000010, "Member 'FMediaPlayerTrackOptions::Subtitle' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Text) == 0x000014, "Member 'FMediaPlayerTrackOptions::Text' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, Video) == 0x000018, "Member 'FMediaPlayerTrackOptions::Video' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaPlayerTrackOptions;
 
 // ScriptStruct MediaUtils.MediaPlayerOptions
 // 0x0030 (0x0030 - 0x0000)
@@ -61,12 +53,7 @@ public:
 	EMediaPlayerOptionBooleanOverride             Loop;                                              // 0x0029(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FMediaPlayerOptions) == 0x000008, "Wrong alignment on FMediaPlayerOptions");
-static_assert(sizeof(FMediaPlayerOptions) == 0x000030, "Wrong size on FMediaPlayerOptions");
-static_assert(offsetof(FMediaPlayerOptions, Tracks) == 0x000000, "Member 'FMediaPlayerOptions::Tracks' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerOptions, SeekTime) == 0x000020, "Member 'FMediaPlayerOptions::SeekTime' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerOptions, PlayOnOpen) == 0x000028, "Member 'FMediaPlayerOptions::PlayOnOpen' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerOptions, Loop) == 0x000029, "Member 'FMediaPlayerOptions::Loop' has a wrong offset!");
+DUMPER7_ASSERTS_FMediaPlayerOptions;
 
 }
 

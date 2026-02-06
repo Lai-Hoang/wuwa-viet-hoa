@@ -31,16 +31,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime) == 0x000008, "Wrong alignment on BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime");
-static_assert(sizeof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime) == 0x000030, "Wrong size on BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, EntryPoint) == 0x000000, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, K2Node_Event_DeltaTime) == 0x000004, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, K2Node_Event_EndPlayReason) == 0x000008, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000010, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, CallFunc_GetKuroGlobalGIActor_ReturnValue) == 0x000018, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::CallFunc_GetKuroGlobalGIActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, K2Node_DynamicCast_AsBP_Global_GI) == 0x000020, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::K2Node_DynamicCast_AsBP_Global_GI' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime, CallFunc_IsValid_ReturnValue) == 0x000029, "Member 'BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ControlTodTime_C_ExecuteUbergraph_BP_ControlTodTime;
 
 // Function BP_ControlTodTime.BP_ControlTodTime_C.DoUpdate
 // 0x0004 (0x0004 - 0x0000)
@@ -49,9 +40,7 @@ struct BP_ControlTodTime_C_DoUpdate final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ControlTodTime_C_DoUpdate) == 0x000004, "Wrong alignment on BP_ControlTodTime_C_DoUpdate");
-static_assert(sizeof(BP_ControlTodTime_C_DoUpdate) == 0x000004, "Wrong size on BP_ControlTodTime_C_DoUpdate");
-static_assert(offsetof(BP_ControlTodTime_C_DoUpdate, DeltaTime) == 0x000000, "Member 'BP_ControlTodTime_C_DoUpdate::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ControlTodTime_C_DoUpdate;
 
 // Function BP_ControlTodTime.BP_ControlTodTime_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -60,9 +49,7 @@ struct BP_ControlTodTime_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ControlTodTime_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_ControlTodTime_C_ReceiveEndPlay");
-static_assert(sizeof(BP_ControlTodTime_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_ControlTodTime_C_ReceiveEndPlay");
-static_assert(offsetof(BP_ControlTodTime_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_ControlTodTime_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ControlTodTime_C_ReceiveEndPlay;
 
 // Function BP_ControlTodTime.BP_ControlTodTime_C.Update
 // 0x0020 (0x0020 - 0x0000)
@@ -75,13 +62,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_ControlTodTime_C_Update) == 0x000008, "Wrong alignment on BP_ControlTodTime_C_Update");
-static_assert(sizeof(BP_ControlTodTime_C_Update) == 0x000020, "Wrong size on BP_ControlTodTime_C_Update");
-static_assert(offsetof(BP_ControlTodTime_C_Update, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000000, "Member 'BP_ControlTodTime_C_Update::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_Update, CallFunc_GetKuroGlobalGIActor_ReturnValue) == 0x000008, "Member 'BP_ControlTodTime_C_Update::CallFunc_GetKuroGlobalGIActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_Update, K2Node_DynamicCast_AsBP_Global_GI) == 0x000010, "Member 'BP_ControlTodTime_C_Update::K2Node_DynamicCast_AsBP_Global_GI' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_Update, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_ControlTodTime_C_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ControlTodTime_C_Update, CallFunc_IsValid_ReturnValue) == 0x000019, "Member 'BP_ControlTodTime_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ControlTodTime_C_Update;
 
 }
 

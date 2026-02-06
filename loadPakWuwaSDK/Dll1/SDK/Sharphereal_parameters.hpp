@@ -29,14 +29,7 @@ public:
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameInstance*                          GameInstance;                                      // 0x0048(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_CallCSharpFunction) == 0x000008, "Wrong alignment on CSharpBlueprintFunctionLibrary_CallCSharpFunction");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_CallCSharpFunction) == 0x000050, "Wrong size on CSharpBlueprintFunctionLibrary_CallCSharpFunction");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, ImageName) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::ImageName' has a wrong offset!");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, NameSpaceName) == 0x000010, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::NameSpaceName' has a wrong offset!");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, ClassName) == 0x000020, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::ClassName' has a wrong offset!");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, MethodName) == 0x000030, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::MethodName' has a wrong offset!");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, ParamsCount) == 0x000040, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::ParamsCount' has a wrong offset!");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_CallCSharpFunction, GameInstance) == 0x000048, "Member 'CSharpBlueprintFunctionLibrary_CallCSharpFunction::GameInstance' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_CallCSharpFunction;
 
 // Function Sharphereal.CSharpBlueprintFunctionLibrary.HasCSharpEnvironmentInitialized
 // 0x0001 (0x0001 - 0x0000)
@@ -45,9 +38,7 @@ struct CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized) == 0x000001, "Wrong alignment on CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized) == 0x000001, "Wrong size on CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized, ReturnValue) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_HasCSharpEnvironmentInitialized;
 
 // Function Sharphereal.CSharpBlueprintFunctionLibrary.HasSharpherealModuleGreyBoxHit
 // 0x0001 (0x0001 - 0x0000)
@@ -56,9 +47,7 @@ struct CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit) == 0x000001, "Wrong alignment on CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit) == 0x000001, "Wrong size on CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit, ReturnValue) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_HasSharpherealModuleGreyBoxHit;
 
 // Function Sharphereal.CSharpBlueprintFunctionLibrary.HasSharpherealModuleStartup
 // 0x0001 (0x0001 - 0x0000)
@@ -67,9 +56,7 @@ struct CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup) == 0x000001, "Wrong alignment on CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup) == 0x000001, "Wrong size on CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup, ReturnValue) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_HasSharpherealModuleStartup;
 
 // Function Sharphereal.CSharpBlueprintFunctionLibrary.IsPureCSharpEnvironment
 // 0x0001 (0x0001 - 0x0000)
@@ -78,9 +65,7 @@ struct CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment) == 0x000001, "Wrong alignment on CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment) == 0x000001, "Wrong size on CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment, ReturnValue) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_IsPureCSharpEnvironment;
 
 // Function Sharphereal.CSharpBlueprintFunctionLibrary.Test2
 // 0x0001 (0x0001 - 0x0000)
@@ -89,9 +74,7 @@ struct CSharpBlueprintFunctionLibrary_Test2 final
 public:
 	ETestEnumInt32BlueprintType                   TestEnumInt32BlueprintType;                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(CSharpBlueprintFunctionLibrary_Test2) == 0x000001, "Wrong alignment on CSharpBlueprintFunctionLibrary_Test2");
-static_assert(sizeof(CSharpBlueprintFunctionLibrary_Test2) == 0x000001, "Wrong size on CSharpBlueprintFunctionLibrary_Test2");
-static_assert(offsetof(CSharpBlueprintFunctionLibrary_Test2, TestEnumInt32BlueprintType) == 0x000000, "Member 'CSharpBlueprintFunctionLibrary_Test2::TestEnumInt32BlueprintType' has a wrong offset!");
+DUMPER7_ASSERTS_CSharpBlueprintFunctionLibrary_Test2;
 
 // Function Sharphereal.JsBridgetBlueprintFunctionLibrary.CSharpCallJavascript
 // 0x0018 (0x0018 - 0x0000)
@@ -104,12 +87,7 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	uint64                                        ParameterBufferPtr;                                // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript) == 0x000008, "Wrong alignment on JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript");
-static_assert(sizeof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript) == 0x000018, "Wrong size on JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript");
-static_assert(offsetof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript, EventId) == 0x000000, "Member 'JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript::EventId' has a wrong offset!");
-static_assert(offsetof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript, TargetId) == 0x000004, "Member 'JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript::TargetId' has a wrong offset!");
-static_assert(offsetof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript, ParameterCount) == 0x000008, "Member 'JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript::ParameterCount' has a wrong offset!");
-static_assert(offsetof(JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript, ParameterBufferPtr) == 0x000010, "Member 'JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript::ParameterBufferPtr' has a wrong offset!");
+DUMPER7_ASSERTS_JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript;
 
 }
 

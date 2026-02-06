@@ -28,18 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_ActionResetPart_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_ActionResetPart_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_ActionResetPart_C")
 	}
 	static class UBP_SM_ActionResetPart_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_ActionResetPart_C>();
 	}
 };
-static_assert(alignof(UBP_SM_ActionResetPart_C) == 0x000008, "Wrong alignment on UBP_SM_ActionResetPart_C");
-static_assert(sizeof(UBP_SM_ActionResetPart_C) == 0x000048, "Wrong size on UBP_SM_ActionResetPart_C");
-static_assert(offsetof(UBP_SM_ActionResetPart_C, 部位名) == 0x000030, "Member 'UBP_SM_ActionResetPart_C::部位名' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ActionResetPart_C, 重置激活) == 0x000040, "Member 'UBP_SM_ActionResetPart_C::重置激活' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ActionResetPart_C, 重置血量) == 0x000041, "Member 'UBP_SM_ActionResetPart_C::重置血量' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_ActionResetPart_C;
 
 }
 

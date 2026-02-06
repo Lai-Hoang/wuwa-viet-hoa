@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_SE_PlayState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SE_ControllerBase_classes.hpp"
-#include "E_SE_PlayState_structs.hpp"
 
 
 namespace SDK
@@ -42,18 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SE_UISpriteController_C">();
+		BP_STATIC_CLASS_IMPL("SE_UISpriteController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SE_UISpriteController_C")
 	}
 	static class USE_UISpriteController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USE_UISpriteController_C>();
 	}
 };
-static_assert(alignof(USE_UISpriteController_C) == 0x000008, "Wrong alignment on USE_UISpriteController_C");
-static_assert(sizeof(USE_UISpriteController_C) == 0x0000E8, "Wrong size on USE_UISpriteController_C");
-static_assert(offsetof(USE_UISpriteController_C, UberGraphFrame_SE_UISpriteController_C) == 0x0000C8, "Member 'USE_UISpriteController_C::UberGraphFrame_SE_UISpriteController_C' has a wrong offset!");
-static_assert(offsetof(USE_UISpriteController_C, Data) == 0x0000D0, "Member 'USE_UISpriteController_C::Data' has a wrong offset!");
-static_assert(offsetof(USE_UISpriteController_C, CachedMaterial) == 0x0000D8, "Member 'USE_UISpriteController_C::CachedMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_USE_UISpriteController_C;
 
 }
 

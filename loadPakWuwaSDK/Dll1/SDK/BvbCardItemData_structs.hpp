@@ -28,14 +28,7 @@ public:
 	class FString                                 CardDesc_17_2A7DED6048DA336B8764808C8D0E52D0;      // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FBvbEffectItemData>             EffectList_13_2434410D4C73BBD038D1DF9D2DCED3F8;    // 0x0050(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FBvbCardItemData) == 0x000008, "Wrong alignment on FBvbCardItemData");
-static_assert(sizeof(FBvbCardItemData) == 0x000060, "Wrong size on FBvbCardItemData");
-static_assert(offsetof(FBvbCardItemData, CardName_2_09B4CC7448616448DF60BCA1177648BB) == 0x000000, "Member 'FBvbCardItemData::CardName_2_09B4CC7448616448DF60BCA1177648BB' has a wrong offset!");
-static_assert(offsetof(FBvbCardItemData, Cost_4_A13B9873411C67FD0CCD79ABCF506D50) == 0x000010, "Member 'FBvbCardItemData::Cost_4_A13B9873411C67FD0CCD79ABCF506D50' has a wrong offset!");
-static_assert(offsetof(FBvbCardItemData, Element_6_30627EB24686A109F674BDB43452CFB7) == 0x000020, "Member 'FBvbCardItemData::Element_6_30627EB24686A109F674BDB43452CFB7' has a wrong offset!");
-static_assert(offsetof(FBvbCardItemData, Power_9_873E1257441A0E7FBE2FA5BCF34570DC) == 0x000030, "Member 'FBvbCardItemData::Power_9_873E1257441A0E7FBE2FA5BCF34570DC' has a wrong offset!");
-static_assert(offsetof(FBvbCardItemData, CardDesc_17_2A7DED6048DA336B8764808C8D0E52D0) == 0x000040, "Member 'FBvbCardItemData::CardDesc_17_2A7DED6048DA336B8764808C8D0E52D0' has a wrong offset!");
-static_assert(offsetof(FBvbCardItemData, EffectList_13_2434410D4C73BBD038D1DF9D2DCED3F8) == 0x000050, "Member 'FBvbCardItemData::EffectList_13_2434410D4C73BBD038D1DF9D2DCED3F8' has a wrong offset!");
+DUMPER7_ASSERTS_FBvbCardItemData;
 
 }
 

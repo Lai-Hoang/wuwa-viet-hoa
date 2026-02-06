@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "SVisionData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SReBulletDataMain_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SCaughtInfo_structs.hpp"
-#include "EMovementDirection_structs.hpp"
 #include "SCharacterPart_structs.hpp"
+#include "SVisionData_structs.hpp"
+#include "EMovementDirection_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SSkillInfo_structs.hpp"
 #include "SEffectData_structs.hpp"
 #include "SAttributeModifierData_structs.hpp"
@@ -44,15 +44,7 @@ public:
 	struct FVectorDouble                          CallFunc_D_InverseTransformDirection_ReturnValue;  // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_GetLocalWind) == 0x000010, "Wrong alignment on BPL_CharacterUtility_C_GetLocalWind");
-static_assert(sizeof(BPL_CharacterUtility_C_GetLocalWind) == 0x0000A0, "Wrong size on BPL_CharacterUtility_C_GetLocalWind");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, AnimInstance) == 0x000000, "Member 'BPL_CharacterUtility_C_GetLocalWind::AnimInstance' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, __WorldContext) == 0x000008, "Member 'BPL_CharacterUtility_C_GetLocalWind::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, LocalWind) == 0x000010, "Member 'BPL_CharacterUtility_C_GetLocalWind::LocalWind' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_GetOwningComponent_ReturnValue) == 0x000020, "Member 'BPL_CharacterUtility_C_GetLocalWind::CallFunc_GetOwningComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_D_K2_GetComponentToWorld_ReturnValue) == 0x000030, "Member 'BPL_CharacterUtility_C_GetLocalWind::CallFunc_D_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_D_InverseTransformDirection_ReturnValue) == 0x000070, "Member 'BPL_CharacterUtility_C_GetLocalWind::CallFunc_D_InverseTransformDirection_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000088, "Member 'BPL_CharacterUtility_C_GetLocalWind::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_GetLocalWind;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetMovementSettings
 // 0x0CC0 (0x0CC0 - 0x0000)
@@ -69,15 +61,7 @@ public:
 	struct FSMovementSetting_State                CallFunc_GetDataTableRowFromName_OutRow;           // 0x0670(0x0648)(NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0CB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetMovementSettings) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetMovementSettings");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetMovementSettings) == 0x000CC0, "Wrong size on BPL_CharacterUtility_C_DtGetMovementSettings");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, ReturnValue) == 0x000668, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x000670, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000CB8, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetMovementSettings;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetBulletData
 // 0x05B0 (0x05B0 - 0x0000)
@@ -94,43 +78,26 @@ public:
 	struct FSBulletDataMain                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x02E8(0x02C0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetBulletData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetBulletData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetBulletData) == 0x0005B0, "Wrong size on BPL_CharacterUtility_C_DtGetBulletData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetBulletData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetBulletData::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetBulletData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetBulletData::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, ReturnValue) == 0x0002E0, "Member 'BPL_CharacterUtility_C_DtGetBulletData::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, CallFunc_GetDataTableRowFromName_OutRow) == 0x0002E8, "Member 'BPL_CharacterUtility_C_DtGetBulletData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBulletData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0005A8, "Member 'BPL_CharacterUtility_C_DtGetBulletData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetBulletData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetHitEffect
-// 0x0168 (0x0168 - 0x0000)
+// 0x0170 (0x0170 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetHitEffect final
 {
 public:
 	class UDataTable*                             dataTable;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   rowName;                                           // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSHitEffect                            backData;                                          // 0x0014(0x00A0)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSHitEffect                            backData;                                          // 0x0014(0x00A4)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x00B8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSHitEffect                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x00C4(0x00A0)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSHitEffect                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x00C4(0x00A4)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetHitEffect) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetHitEffect");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetHitEffect) == 0x000168, "Wrong size on BPL_CharacterUtility_C_DtGetHitEffect");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, backData) == 0x000014, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::backData' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, __WorldContext) == 0x0000B8, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, ReturnValue) == 0x0000C0, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000C4, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetHitEffect, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000164, "Member 'BPL_CharacterUtility_C_DtGetHitEffect::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetHitEffect;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetSkillInfo
-// 0x0370 (0x0370 - 0x0000)
+// 0x0380 (0x0380 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetSkillInfo final
 {
 public:
@@ -138,23 +105,14 @@ public:
 	class FName                                   rowName;                                           // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillInfo                            data;                                              // 0x0020(0x01A0)(Parm, OutParm, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x01C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSSkillInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x01C8(0x01A0)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0369(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSSkillInfo                            data;                                              // 0x0020(0x01A8)(Parm, OutParm, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x01C8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSSkillInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x01D0(0x01A8)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0379(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetSkillInfo) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetSkillInfo");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetSkillInfo) == 0x000370, "Wrong size on BPL_CharacterUtility_C_DtGetSkillInfo");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, ReturnValue) == 0x0001C0, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0001C8, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000368, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetSkillInfo, CallFunc_IsValid_ReturnValue) == 0x000369, "Member 'BPL_CharacterUtility_C_DtGetSkillInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetSkillInfo;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetDamageData
 // 0x0038 (0x0038 - 0x0000)
@@ -171,15 +129,7 @@ public:
 	struct FSDamageData                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x002C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetDamageData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetDamageData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetDamageData) == 0x000038, "Wrong size on BPL_CharacterUtility_C_DtGetDamageData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetDamageData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetDamageData::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetDamageData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetDamageData::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, ReturnValue) == 0x000028, "Member 'BPL_CharacterUtility_C_DtGetDamageData::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, CallFunc_GetDataTableRowFromName_OutRow) == 0x00002C, "Member 'BPL_CharacterUtility_C_DtGetDamageData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetDamageData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000034, "Member 'BPL_CharacterUtility_C_DtGetDamageData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetDamageData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetAttributeModifierData
 // 0x00B0 (0x00B0 - 0x0000)
@@ -196,15 +146,7 @@ public:
 	struct FSAttributeModifierData                CallFunc_GetDataTableRowFromName_OutRow;           // 0x0068(0x0040)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetAttributeModifierData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetAttributeModifierData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetAttributeModifierData) == 0x0000B0, "Wrong size on BPL_CharacterUtility_C_DtGetAttributeModifierData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, ReturnValue) == 0x000060, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, CallFunc_GetDataTableRowFromName_OutRow) == 0x000068, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAttributeModifierData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0000A8, "Member 'BPL_CharacterUtility_C_DtGetAttributeModifierData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetAttributeModifierData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetEffectData
 // 0x0050 (0x0050 - 0x0000)
@@ -221,18 +163,10 @@ public:
 	struct FSEffectData                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x0038(0x0010)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetEffectData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetEffectData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetEffectData) == 0x000050, "Wrong size on BPL_CharacterUtility_C_DtGetEffectData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetEffectData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetEffectData::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetEffectData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetEffectData::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, ReturnValue) == 0x000030, "Member 'BPL_CharacterUtility_C_DtGetEffectData::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, CallFunc_GetDataTableRowFromName_OutRow) == 0x000038, "Member 'BPL_CharacterUtility_C_DtGetEffectData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetEffectData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000048, "Member 'BPL_CharacterUtility_C_DtGetEffectData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetEffectData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetNewBulletData
-// 0x0FA0 (0x0FA0 - 0x0000)
+// 0x0FB0 (0x0FB0 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetNewBulletData final
 {
 public:
@@ -240,24 +174,16 @@ public:
 	class FName                                   rowName;                                           // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSReBulletDataMain                     data;                                              // 0x0020(0x07B8)(Parm, OutParm, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x07D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7D9[0x7];                                      // 0x07D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSReBulletDataMain                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x07E0(0x07B8)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0F98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSReBulletDataMain                     data;                                              // 0x0020(0x07C0)(Parm, OutParm, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x07E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7E1[0x7];                                      // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSReBulletDataMain                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x07E8(0x07C0)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0FA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetNewBulletData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetNewBulletData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetNewBulletData) == 0x000FA0, "Wrong size on BPL_CharacterUtility_C_DtGetNewBulletData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, ReturnValue) == 0x0007D8, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, CallFunc_GetDataTableRowFromName_OutRow) == 0x0007E0, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetNewBulletData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000F98, "Member 'BPL_CharacterUtility_C_DtGetNewBulletData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetNewBulletData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetAllSkillInfos
-// 0x0210 (0x0210 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetAllSkillInfos final
 {
 public:
@@ -270,31 +196,16 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSSkillInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x01A0)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSSkillInfo                            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x01A8)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetAllSkillInfos) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetAllSkillInfos");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetAllSkillInfos) == 0x000210, "Wrong size on BPL_CharacterUtility_C_DtGetAllSkillInfos");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, __WorldContext) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, NewParam) == 0x000010, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::NewParam' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, SkillInfos) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::SkillInfos' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000030, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, ___int_Array_Index_Variable) == 0x000040, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0001F8, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, ___int_Loop_Counter_Variable) == 0x0001FC, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_Less_IntInt_ReturnValue) == 0x000200, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_Add_IntInt_ReturnValue) == 0x000204, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllSkillInfos, CallFunc_Array_Add_ReturnValue) == 0x000208, "Member 'BPL_CharacterUtility_C_DtGetAllSkillInfos::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetAllSkillInfos;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetAllCharacterPartDatas
 // 0x0188 (0x0188 - 0x0000)
@@ -319,22 +230,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetAllCharacterPartDatas");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas) == 0x000188, "Wrong size on BPL_CharacterUtility_C_DtGetAllCharacterPartDatas");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, partArrayRef) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::partArrayRef' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CharacterPartDatas) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CharacterPartDatas' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000030, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, ___int_Array_Index_Variable) == 0x000040, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000170, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, ___int_Loop_Counter_Variable) == 0x000174, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_Less_IntInt_ReturnValue) == 0x000178, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_Add_IntInt_ReturnValue) == 0x00017C, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllCharacterPartDatas, CallFunc_Array_Add_ReturnValue) == 0x000180, "Member 'BPL_CharacterUtility_C_DtGetAllCharacterPartDatas::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetAllCharacterPartDatas;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.GetInputMovementDirection
 // 0x0028 (0x0028 - 0x0000)
@@ -348,13 +244,7 @@ public:
 	struct FVector                                Vect;                                              // 0x0014(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMovementDirection                            CallFunc_GetMonsterMoveDirection_ReturnValue;      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_GetInputMovementDirection) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_GetInputMovementDirection");
-static_assert(sizeof(BPL_CharacterUtility_C_GetInputMovementDirection) == 0x000028, "Wrong size on BPL_CharacterUtility_C_GetInputMovementDirection");
-static_assert(offsetof(BPL_CharacterUtility_C_GetInputMovementDirection, BaseChar) == 0x000000, "Member 'BPL_CharacterUtility_C_GetInputMovementDirection::BaseChar' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetInputMovementDirection, __WorldContext) == 0x000008, "Member 'BPL_CharacterUtility_C_GetInputMovementDirection::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetInputMovementDirection, ReturnValue) == 0x000010, "Member 'BPL_CharacterUtility_C_GetInputMovementDirection::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetInputMovementDirection, Vect) == 0x000014, "Member 'BPL_CharacterUtility_C_GetInputMovementDirection::Vect' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetInputMovementDirection, CallFunc_GetMonsterMoveDirection_ReturnValue) == 0x000020, "Member 'BPL_CharacterUtility_C_GetInputMovementDirection::CallFunc_GetMonsterMoveDirection_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_GetInputMovementDirection;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetVisionInfo
 // 0x0160 (0x0160 - 0x0000)
@@ -371,15 +261,7 @@ public:
 	struct FSVisionData                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x00C0(0x0098)(ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetVisionInfo) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetVisionInfo");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetVisionInfo) == 0x000160, "Wrong size on BPL_CharacterUtility_C_DtGetVisionInfo");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, ReturnValue) == 0x0000B8, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000C0, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetVisionInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000158, "Member 'BPL_CharacterUtility_C_DtGetVisionInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetVisionInfo;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetCaughtInfo
 // 0x0210 (0x0210 - 0x0000)
@@ -396,18 +278,10 @@ public:
 	struct FSCaughtInfo                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x0118(0x00F0)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetCaughtInfo) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetCaughtInfo");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetCaughtInfo) == 0x000210, "Wrong size on BPL_CharacterUtility_C_DtGetCaughtInfo");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::rowName' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, ReturnValue) == 0x000110, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x000118, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetCaughtInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000208, "Member 'BPL_CharacterUtility_C_DtGetCaughtInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetCaughtInfo;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetAllBulletData
-// 0x0828 (0x0828 - 0x0000)
+// 0x0830 (0x0830 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetAllBulletData final
 {
 public:
@@ -420,31 +294,16 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSReBulletDataMain                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x07B8)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_811[0x3];                                      // 0x0811(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0814(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSReBulletDataMain                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0058(0x07C0)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_819[0x3];                                      // 0x0819(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x081C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0820(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x081C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0820(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_821[0x3];                                      // 0x0821(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0824(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0828(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetAllBulletData) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetAllBulletData");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetAllBulletData) == 0x000828, "Wrong size on BPL_CharacterUtility_C_DtGetAllBulletData");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::dataTable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, __WorldContext) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, NewParam) == 0x000010, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::NewParam' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, bulletDataList) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::bulletDataList' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_GetDataTableRowNames_OutRowNames) == 0x000030, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, ___int_Array_Index_Variable) == 0x000040, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_Array_Length_ReturnValue) == 0x000044, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_Array_Get_Item) == 0x000048, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_GetDataTableRowFromName_OutRow) == 0x000058, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000810, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, ___int_Loop_Counter_Variable) == 0x000814, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_Less_IntInt_ReturnValue) == 0x000818, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_Add_IntInt_ReturnValue) == 0x00081C, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetAllBulletData, CallFunc_Array_Add_ReturnValue) == 0x000820, "Member 'BPL_CharacterUtility_C_DtGetAllBulletData::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetAllBulletData;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetBlockObjectType
 // 0x0038 (0x0038 - 0x0000)
@@ -456,12 +315,7 @@ public:
 	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BPL_CharacterUtility_C_DtGetBlockObjectType) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetBlockObjectType");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetBlockObjectType) == 0x000038, "Wrong size on BPL_CharacterUtility_C_DtGetBlockObjectType");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBlockObjectType, __WorldContext) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetBlockObjectType::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBlockObjectType, value) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetBlockObjectType::value' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBlockObjectType, ObjectTypes) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetBlockObjectType::ObjectTypes' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetBlockObjectType, K2Node_MakeArray_Array) == 0x000028, "Member 'BPL_CharacterUtility_C_DtGetBlockObjectType::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_DtGetBlockObjectType;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.UpdatePhysicsClothSimulateEnable
 // 0x0038 (0x0038 - 0x0000)
@@ -479,16 +333,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable");
-static_assert(sizeof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable) == 0x000038, "Wrong size on BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, AnimInstance) == 0x000000, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::AnimInstance' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, SrcSimulateEnable) == 0x000008, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::SrcSimulateEnable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, __WorldContext) == 0x000010, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, DstSimulateEnable) == 0x000018, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::DstSimulateEnable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000020, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, K2Node_DynamicCast_AsTs_Base_Character) == 0x000028, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_UpdatePhysicsClothSimulateEnable;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.GetTypeQuery
 // 0x0038 (0x0038 - 0x0000)
@@ -500,12 +345,7 @@ public:
 	TArray<EObjectTypeQuery>                      TypeQuerys;                                        // 0x0018(0x0010)(Edit, BlueprintVisible)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BPL_CharacterUtility_C_GetTypeQuery) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_GetTypeQuery");
-static_assert(sizeof(BPL_CharacterUtility_C_GetTypeQuery) == 0x000038, "Wrong size on BPL_CharacterUtility_C_GetTypeQuery");
-static_assert(offsetof(BPL_CharacterUtility_C_GetTypeQuery, __WorldContext) == 0x000000, "Member 'BPL_CharacterUtility_C_GetTypeQuery::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetTypeQuery, NewParam) == 0x000008, "Member 'BPL_CharacterUtility_C_GetTypeQuery::NewParam' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetTypeQuery, TypeQuerys) == 0x000018, "Member 'BPL_CharacterUtility_C_GetTypeQuery::TypeQuerys' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_GetTypeQuery, K2Node_MakeArray_Array) == 0x000028, "Member 'BPL_CharacterUtility_C_GetTypeQuery::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_GetTypeQuery;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.UpdateCachePoseEnable
 // 0x0038 (0x0038 - 0x0000)
@@ -522,15 +362,7 @@ public:
 	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BPL_CharacterUtility_C_UpdateCachePoseEnable) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_UpdateCachePoseEnable");
-static_assert(sizeof(BPL_CharacterUtility_C_UpdateCachePoseEnable) == 0x000038, "Wrong size on BPL_CharacterUtility_C_UpdateCachePoseEnable");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, Target) == 0x000000, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::Target' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, __WorldContext) == 0x000008, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, CachePoseEnable) == 0x000010, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::CachePoseEnable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000018, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, K2Node_DynamicCast_AsTs_Base_Character) == 0x000028, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_UpdateCachePoseEnable, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BPL_CharacterUtility_C_UpdateCachePoseEnable::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_UpdateCachePoseEnable;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.CheckSimpleNpc
 // 0x0058 (0x0058 - 0x0000)
@@ -551,20 +383,7 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPL_CharacterUtility_C_CheckSimpleNpc) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_CheckSimpleNpc");
-static_assert(sizeof(BPL_CharacterUtility_C_CheckSimpleNpc) == 0x000058, "Wrong size on BPL_CharacterUtility_C_CheckSimpleNpc");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, __WorldContext) == 0x000000, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, ReturnValues) == 0x000008, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::ReturnValues' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, Result) == 0x000018, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::Result' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_GetAllActorsOfClass_OutActors) == 0x000028, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, ___int_Array_Index_Variable) == 0x000038, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_Array_Get_Item) == 0x000040, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, ___int_Loop_Counter_Variable) == 0x000048, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_CheckSkeletalMeshComponentAnim_ReturnValue) == 0x00004C, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_CheckSkeletalMeshComponentAnim_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_Less_IntInt_ReturnValue) == 0x00004D, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_Add_IntInt_ReturnValue) == 0x000050, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckSimpleNpc, CallFunc_Array_Add_ReturnValue) == 0x000054, "Member 'BPL_CharacterUtility_C_CheckSimpleNpc::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_CheckSimpleNpc;
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.CheckNpcSetupTools
 // 0x0028 (0x0028 - 0x0000)
@@ -575,11 +394,7 @@ public:
 	TArray<class AActor*>                         ReturnValues;                                      // 0x0008(0x0010)(Parm, OutParm)
 	TArray<class AActor*>                         Result;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 };
-static_assert(alignof(BPL_CharacterUtility_C_CheckNpcSetupTools) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_CheckNpcSetupTools");
-static_assert(sizeof(BPL_CharacterUtility_C_CheckNpcSetupTools) == 0x000028, "Wrong size on BPL_CharacterUtility_C_CheckNpcSetupTools");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckNpcSetupTools, __WorldContext) == 0x000000, "Member 'BPL_CharacterUtility_C_CheckNpcSetupTools::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckNpcSetupTools, ReturnValues) == 0x000008, "Member 'BPL_CharacterUtility_C_CheckNpcSetupTools::ReturnValues' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_CheckNpcSetupTools, Result) == 0x000018, "Member 'BPL_CharacterUtility_C_CheckNpcSetupTools::Result' has a wrong offset!");
+DUMPER7_ASSERTS_BPL_CharacterUtility_C_CheckNpcSetupTools;
 
 }
 

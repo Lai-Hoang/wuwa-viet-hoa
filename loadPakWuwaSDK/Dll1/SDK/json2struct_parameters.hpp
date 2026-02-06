@@ -26,11 +26,7 @@ public:
 	EJson2structParseResult                       ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(json2structBPLibrary_json2structBP) == 0x000008, "Wrong alignment on json2structBPLibrary_json2structBP");
-static_assert(sizeof(json2structBPLibrary_json2structBP) == 0x000020, "Wrong size on json2structBPLibrary_json2structBP");
-static_assert(offsetof(json2structBPLibrary_json2structBP, Out) == 0x000000, "Member 'json2structBPLibrary_json2structBP::Out' has a wrong offset!");
-static_assert(offsetof(json2structBPLibrary_json2structBP, json) == 0x000008, "Member 'json2structBPLibrary_json2structBP::json' has a wrong offset!");
-static_assert(offsetof(json2structBPLibrary_json2structBP, ReturnValue) == 0x000018, "Member 'json2structBPLibrary_json2structBP::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_json2structBPLibrary_json2structBP;
 
 // Function json2struct.json2structBPLibrary.WriteStructBP
 // 0x0070 (0x0070 - 0x0000)
@@ -43,12 +39,7 @@ public:
 	EJson2structParseResult                       ReturnValue;                                       // 0x0068(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(json2structBPLibrary_WriteStructBP) == 0x000008, "Wrong alignment on json2structBPLibrary_WriteStructBP");
-static_assert(sizeof(json2structBPLibrary_WriteStructBP) == 0x000070, "Wrong size on json2structBPLibrary_WriteStructBP");
-static_assert(offsetof(json2structBPLibrary_WriteStructBP, inStruct) == 0x000000, "Member 'json2structBPLibrary_WriteStructBP::inStruct' has a wrong offset!");
-static_assert(offsetof(json2structBPLibrary_WriteStructBP, filter) == 0x000008, "Member 'json2structBPLibrary_WriteStructBP::filter' has a wrong offset!");
-static_assert(offsetof(json2structBPLibrary_WriteStructBP, Json) == 0x000058, "Member 'json2structBPLibrary_WriteStructBP::Json' has a wrong offset!");
-static_assert(offsetof(json2structBPLibrary_WriteStructBP, ReturnValue) == 0x000068, "Member 'json2structBPLibrary_WriteStructBP::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_json2structBPLibrary_WriteStructBP;
 
 // Function json2struct.JsonAsyncNode.json2structUrl
 // 0x0030 (0x0030 - 0x0000)
@@ -60,12 +51,7 @@ public:
 	const class UObject*                          WC;                                                // 0x0020(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UJsonAsyncNode*                         ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(JsonAsyncNode_json2structUrl) == 0x000008, "Wrong alignment on JsonAsyncNode_json2structUrl");
-static_assert(sizeof(JsonAsyncNode_json2structUrl) == 0x000030, "Wrong size on JsonAsyncNode_json2structUrl");
-static_assert(offsetof(JsonAsyncNode_json2structUrl, URL) == 0x000000, "Member 'JsonAsyncNode_json2structUrl::URL' has a wrong offset!");
-static_assert(offsetof(JsonAsyncNode_json2structUrl, requestJson) == 0x000010, "Member 'JsonAsyncNode_json2structUrl::requestJson' has a wrong offset!");
-static_assert(offsetof(JsonAsyncNode_json2structUrl, WC) == 0x000020, "Member 'JsonAsyncNode_json2structUrl::WC' has a wrong offset!");
-static_assert(offsetof(JsonAsyncNode_json2structUrl, ReturnValue) == 0x000028, "Member 'JsonAsyncNode_json2structUrl::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_JsonAsyncNode_json2structUrl;
 
 }
 

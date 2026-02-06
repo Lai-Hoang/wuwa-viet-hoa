@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"GlobalBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("GlobalBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GlobalBlueprintFunctionLibrary_C")
 	}
 	static class UGlobalBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGlobalBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UGlobalBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UGlobalBlueprintFunctionLibrary_C");
-static_assert(sizeof(UGlobalBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UGlobalBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UGlobalBlueprintFunctionLibrary_C;
 
 }
 

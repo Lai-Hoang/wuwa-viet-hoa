@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_CustomDepthForToon_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CustomDepthForToon_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_CustomDepthForToon_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CustomDepthForToon_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.ExecuteUbergraph_BP_CustomDepthForToon
 // (Final, UbergraphFunction)
 // Parameters:
@@ -65,15 +37,29 @@ void ABP_CustomDepthForToon_C::ExecuteUbergraph_BP_CustomDepthForToon(int32 Entr
 }
 
 
-// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.DisableCustomDepthForToon
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_CustomDepthForToon_C::DisableCustomDepthForToon()
+void ABP_CustomDepthForToon_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CustomDepthForToon_C", "DisableCustomDepthForToon");
+		Func = Class->GetFunction("BP_CustomDepthForToon_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_CustomDepthForToon_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CustomDepthForToon_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,6 +74,20 @@ void ABP_CustomDepthForToon_C::EnableCustomDepthForToon()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_CustomDepthForToon_C", "EnableCustomDepthForToon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CustomDepthForToon.BP_CustomDepthForToon_C.DisableCustomDepthForToon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CustomDepthForToon_C::DisableCustomDepthForToon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CustomDepthForToon_C", "DisableCustomDepthForToon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

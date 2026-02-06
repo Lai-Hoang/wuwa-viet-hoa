@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function ABP_Mascot_Seq.ABP_Mascot_Seq_C.ExecuteUbergraph_ABP_Mascot_Seq
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SNavigationMode_structs.hpp"
 #include "LGUI_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EHotKeyNameStateType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SNavigationMode_structs.hpp"
 #include "SNavigationCursor_structs.hpp"
 
 
@@ -71,40 +71,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiNavigationBehaviorListener_C">();
+		BP_STATIC_CLASS_IMPL("TsUiNavigationBehaviorListener_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiNavigationBehaviorListener_C")
 	}
 	static class UTsUiNavigationBehaviorListener_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiNavigationBehaviorListener_C>();
 	}
 };
-static_assert(alignof(UTsUiNavigationBehaviorListener_C) == 0x000008, "Wrong alignment on UTsUiNavigationBehaviorListener_C");
-static_assert(sizeof(UTsUiNavigationBehaviorListener_C) == 0x0002B0, "Wrong size on UTsUiNavigationBehaviorListener_C");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, UberGraphFrame) == 0x000108, "Member 'UTsUiNavigationBehaviorListener_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, GroupName) == 0x000110, "Member 'UTsUiNavigationBehaviorListener_C::GroupName' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, LayoutActor) == 0x000120, "Member 'UTsUiNavigationBehaviorListener_C::LayoutActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, TagArray) == 0x000128, "Member 'UTsUiNavigationBehaviorListener_C::TagArray' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ShieldHotKeyIndexArray) == 0x000138, "Member 'UTsUiNavigationBehaviorListener_C::ShieldHotKeyIndexArray' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ScrollViewActor) == 0x000148, "Member 'UTsUiNavigationBehaviorListener_C::ScrollViewActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, HotKeyTipsTextIdMap) == 0x000150, "Member 'UTsUiNavigationBehaviorListener_C::HotKeyTipsTextIdMap' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, InsideGroupActor) == 0x0001A0, "Member 'UTsUiNavigationBehaviorListener_C::InsideGroupActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ClickPivot) == 0x0001A8, "Member 'UTsUiNavigationBehaviorListener_C::ClickPivot' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, NavigationMode) == 0x0001B0, "Member 'UTsUiNavigationBehaviorListener_C::NavigationMode' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, Cursor) == 0x0001F0, "Member 'UTsUiNavigationBehaviorListener_C::Cursor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ScrollbarIndex) == 0x0001FC, "Member 'UTsUiNavigationBehaviorListener_C::ScrollbarIndex' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, InteractiveTag) == 0x000200, "Member 'UTsUiNavigationBehaviorListener_C::InteractiveTag' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, DynamicTag) == 0x000210, "Member 'UTsUiNavigationBehaviorListener_C::DynamicTag' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, InsideActorMap) == 0x000220, "Member 'UTsUiNavigationBehaviorListener_C::InsideActorMap' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, OpenAdsorbed) == 0x000270, "Member 'UTsUiNavigationBehaviorListener_C::OpenAdsorbed' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, AdsorbedDistance) == 0x000274, "Member 'UTsUiNavigationBehaviorListener_C::AdsorbedDistance' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, AdsorbedPivot) == 0x000278, "Member 'UTsUiNavigationBehaviorListener_C::AdsorbedPivot' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, GridBaseActor) == 0x000280, "Member 'UTsUiNavigationBehaviorListener_C::GridBaseActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ExitTagPriority) == 0x000288, "Member 'UTsUiNavigationBehaviorListener_C::ExitTagPriority' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, IsUsePool) == 0x00028C, "Member 'UTsUiNavigationBehaviorListener_C::IsUsePool' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, InteractiveParam) == 0x000290, "Member 'UTsUiNavigationBehaviorListener_C::InteractiveParam' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, NavigateTolerance) == 0x0002A0, "Member 'UTsUiNavigationBehaviorListener_C::NavigateTolerance' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, NavigateToleranceReverse) == 0x0002A4, "Member 'UTsUiNavigationBehaviorListener_C::NavigateToleranceReverse' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationBehaviorListener_C, IsUseDrag) == 0x0002A8, "Member 'UTsUiNavigationBehaviorListener_C::IsUseDrag' has a wrong offset!");
+DUMPER7_ASSERTS_UTsUiNavigationBehaviorListener_C;
 
 }
 

@@ -30,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavigationPartitionPath">();
+		STATIC_CLASS_IMPL("NavigationPartitionPath")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavigationPartitionPath")
 	}
 	static class UNavigationPartitionPath* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNavigationPartitionPath>();
 	}
 };
-static_assert(alignof(UNavigationPartitionPath) == 0x000008, "Wrong alignment on UNavigationPartitionPath");
-static_assert(sizeof(UNavigationPartitionPath) == 0x000068, "Wrong size on UNavigationPartitionPath");
+DUMPER7_ASSERTS_UNavigationPartitionPath;
 
 // Class PathFindModule.KuroNavigationSetting
 // 0x0030 (0x0060 - 0x0030)
@@ -59,24 +62,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroNavigationSetting">();
+		STATIC_CLASS_IMPL("KuroNavigationSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroNavigationSetting")
 	}
 	static class UKuroNavigationSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroNavigationSetting>();
 	}
 };
-static_assert(alignof(UKuroNavigationSetting) == 0x000008, "Wrong alignment on UKuroNavigationSetting");
-static_assert(sizeof(UKuroNavigationSetting) == 0x000060, "Wrong size on UKuroNavigationSetting");
-static_assert(offsetof(UKuroNavigationSetting, MaxPathPoints) == 0x000030, "Member 'UKuroNavigationSetting::MaxPathPoints' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, MaxPathPolygen) == 0x000034, "Member 'UKuroNavigationSetting::MaxPathPolygen' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, SmoothStepSize) == 0x000038, "Member 'UKuroNavigationSetting::SmoothStepSize' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, CloseXZRadius) == 0x00003C, "Member 'UKuroNavigationSetting::CloseXZRadius' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, CloseHeight) == 0x000040, "Member 'UKuroNavigationSetting::CloseHeight' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, MaxOfflineHeight) == 0x000044, "Member 'UKuroNavigationSetting::MaxOfflineHeight' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, DefaultWorldHeight) == 0x000048, "Member 'UKuroNavigationSetting::DefaultWorldHeight' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, MaxWalkableError) == 0x00004C, "Member 'UKuroNavigationSetting::MaxWalkableError' has a wrong offset!");
-static_assert(offsetof(UKuroNavigationSetting, FinderHalfExtent) == 0x000050, "Member 'UKuroNavigationSetting::FinderHalfExtent' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroNavigationSetting;
 
 // Class PathFindModule.NavigationPartitionSystem
 // 0x0030 (0x0060 - 0x0030)
@@ -90,16 +87,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavigationPartitionSystem">();
+		STATIC_CLASS_IMPL("NavigationPartitionSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavigationPartitionSystem")
 	}
 	static class UNavigationPartitionSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNavigationPartitionSystem>();
 	}
 };
-static_assert(alignof(UNavigationPartitionSystem) == 0x000008, "Wrong alignment on UNavigationPartitionSystem");
-static_assert(sizeof(UNavigationPartitionSystem) == 0x000060, "Wrong size on UNavigationPartitionSystem");
-static_assert(offsetof(UNavigationPartitionSystem, OwnerWorld) == 0x000050, "Member 'UNavigationPartitionSystem::OwnerWorld' has a wrong offset!");
+DUMPER7_ASSERTS_UNavigationPartitionSystem;
 
 // Class PathFindModule.NavMeshPartitionDebugActor
 // 0x0078 (0x0328 - 0x02B0)
@@ -123,16 +122,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavMeshPartitionDebugActor">();
+		STATIC_CLASS_IMPL("NavMeshPartitionDebugActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavMeshPartitionDebugActor")
 	}
 	static class ANavMeshPartitionDebugActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ANavMeshPartitionDebugActor>();
 	}
 };
-static_assert(alignof(ANavMeshPartitionDebugActor) == 0x000008, "Wrong alignment on ANavMeshPartitionDebugActor");
-static_assert(sizeof(ANavMeshPartitionDebugActor) == 0x000328, "Wrong size on ANavMeshPartitionDebugActor");
-static_assert(offsetof(ANavMeshPartitionDebugActor, RenderingComp) == 0x000320, "Member 'ANavMeshPartitionDebugActor::RenderingComp' has a wrong offset!");
+DUMPER7_ASSERTS_ANavMeshPartitionDebugActor;
 
 // Class PathFindModule.KuroNavMeshPartitionDebugInfo
 // 0x0050 (0x0300 - 0x02B0)
@@ -144,16 +145,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroNavMeshPartitionDebugInfo">();
+		STATIC_CLASS_IMPL("KuroNavMeshPartitionDebugInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroNavMeshPartitionDebugInfo")
 	}
 	static class AKuroNavMeshPartitionDebugInfo* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroNavMeshPartitionDebugInfo>();
 	}
 };
-static_assert(alignof(AKuroNavMeshPartitionDebugInfo) == 0x000008, "Wrong alignment on AKuroNavMeshPartitionDebugInfo");
-static_assert(sizeof(AKuroNavMeshPartitionDebugInfo) == 0x000300, "Wrong size on AKuroNavMeshPartitionDebugInfo");
-static_assert(offsetof(AKuroNavMeshPartitionDebugInfo, DataLayerLabel2InfoMap) == 0x0002B0, "Member 'AKuroNavMeshPartitionDebugInfo::DataLayerLabel2InfoMap' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroNavMeshPartitionDebugInfo;
 
 // Class PathFindModule.NavMeshPartitionRenderingComponent
 // 0x0000 (0x0540 - 0x0540)
@@ -162,15 +165,18 @@ class UNavMeshPartitionRenderingComponent final : public UNavMeshRenderingCompon
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavMeshPartitionRenderingComponent">();
+		STATIC_CLASS_IMPL("NavMeshPartitionRenderingComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavMeshPartitionRenderingComponent")
 	}
 	static class UNavMeshPartitionRenderingComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNavMeshPartitionRenderingComponent>();
 	}
 };
-static_assert(alignof(UNavMeshPartitionRenderingComponent) == 0x000010, "Wrong alignment on UNavMeshPartitionRenderingComponent");
-static_assert(sizeof(UNavMeshPartitionRenderingComponent) == 0x000540, "Wrong size on UNavMeshPartitionRenderingComponent");
+DUMPER7_ASSERTS_UNavMeshPartitionRenderingComponent;
 
 }
 

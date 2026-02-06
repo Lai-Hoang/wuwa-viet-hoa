@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TimeOfDayPreset_C">();
+		BP_STATIC_CLASS_IMPL("TimeOfDayPreset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TimeOfDayPreset_C")
 	}
 	static class UTimeOfDayPreset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTimeOfDayPreset_C>();
 	}
 };
-static_assert(alignof(UTimeOfDayPreset_C) == 0x000008, "Wrong alignment on UTimeOfDayPreset_C");
-static_assert(sizeof(UTimeOfDayPreset_C) == 0x0000D8, "Wrong size on UTimeOfDayPreset_C");
-static_assert(offsetof(UTimeOfDayPreset_C, Data) == 0x000030, "Member 'UTimeOfDayPreset_C::Data' has a wrong offset!");
+DUMPER7_ASSERTS_UTimeOfDayPreset_C;
 
 }
 

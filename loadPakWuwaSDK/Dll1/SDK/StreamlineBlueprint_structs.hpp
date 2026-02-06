@@ -64,11 +64,7 @@ public:
 	int32                                         Minor;                                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Build;                                             // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStreamlineVersion) == 0x000004, "Wrong alignment on FStreamlineVersion");
-static_assert(sizeof(FStreamlineVersion) == 0x00000C, "Wrong size on FStreamlineVersion");
-static_assert(offsetof(FStreamlineVersion, Major) == 0x000000, "Member 'FStreamlineVersion::Major' has a wrong offset!");
-static_assert(offsetof(FStreamlineVersion, Minor) == 0x000004, "Member 'FStreamlineVersion::Minor' has a wrong offset!");
-static_assert(offsetof(FStreamlineVersion, Build) == 0x000008, "Member 'FStreamlineVersion::Build' has a wrong offset!");
+DUMPER7_ASSERTS_FStreamlineVersion;
 
 // ScriptStruct StreamlineBlueprint.StreamlineFeatureRequirements
 // 0x0034 (0x0034 - 0x0000)
@@ -83,14 +79,7 @@ public:
 	struct FStreamlineVersion                     RequiredDriverVersion;                             // 0x001C(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FStreamlineVersion                     DetectedDriverVersion;                             // 0x0028(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FStreamlineFeatureRequirements) == 0x000004, "Wrong alignment on FStreamlineFeatureRequirements");
-static_assert(sizeof(FStreamlineFeatureRequirements) == 0x000034, "Wrong size on FStreamlineFeatureRequirements");
-static_assert(offsetof(FStreamlineFeatureRequirements, Support) == 0x000000, "Member 'FStreamlineFeatureRequirements::Support' has a wrong offset!");
-static_assert(offsetof(FStreamlineFeatureRequirements, Requirements) == 0x000001, "Member 'FStreamlineFeatureRequirements::Requirements' has a wrong offset!");
-static_assert(offsetof(FStreamlineFeatureRequirements, RequiredOperatingSystemVersion) == 0x000004, "Member 'FStreamlineFeatureRequirements::RequiredOperatingSystemVersion' has a wrong offset!");
-static_assert(offsetof(FStreamlineFeatureRequirements, DetectedOperatingSystemVersion) == 0x000010, "Member 'FStreamlineFeatureRequirements::DetectedOperatingSystemVersion' has a wrong offset!");
-static_assert(offsetof(FStreamlineFeatureRequirements, RequiredDriverVersion) == 0x00001C, "Member 'FStreamlineFeatureRequirements::RequiredDriverVersion' has a wrong offset!");
-static_assert(offsetof(FStreamlineFeatureRequirements, DetectedDriverVersion) == 0x000028, "Member 'FStreamlineFeatureRequirements::DetectedDriverVersion' has a wrong offset!");
+DUMPER7_ASSERTS_FStreamlineFeatureRequirements;
 
 }
 

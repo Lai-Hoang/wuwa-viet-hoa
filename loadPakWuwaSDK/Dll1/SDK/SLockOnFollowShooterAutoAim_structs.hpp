@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "SLockOnFollowShooterAttachmentRule_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "SLockOnFollowShooterAttachmentRule_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct SLockOnFollowShooterAutoAim.SLockOnFollowShooterAutoAim
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct FSLockOnFollowShooterAutoAim final
 {
 public:
@@ -32,19 +32,10 @@ public:
 	TMap<struct FGameplayTag, struct FSLockOnFollowShooterAttachmentRule> MapAttachToFollowingWhileHasTag_40_501678644E2861378C53A38BE7FC906C; // 0x0028(0x0050)(Edit, BlueprintVisible)
 	struct FGameplayTagContainer                  StopUpdateRotationWhileHasTags_44_FFCFBF5546CA7E6390E228B5730C959E; // 0x0078(0x0020)(Edit, BlueprintVisible)
 	int32                                         AutoShootSkillId_51_F8F3320343357D34F1CB2BB3EA3BFECE; // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           ShouldAimAtLockOnTargetTag_54_D3DC48CE43C6417564C9EE8D96801EC6; // 0x009C(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  HideWhileHasTags_61_BC86D81644457123C502B78C3B5A1C9F; // 0x00A0(0x0020)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSLockOnFollowShooterAutoAim) == 0x000008, "Wrong alignment on FSLockOnFollowShooterAutoAim");
-static_assert(sizeof(FSLockOnFollowShooterAutoAim) == 0x0000A8, "Wrong size on FSLockOnFollowShooterAutoAim");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, ShouldAimAtLockOnTargetName_47_1FA7D2E646A7BAA2001FEEA53E5B30FF) == 0x000000, "Member 'FSLockOnFollowShooterAutoAim::ShouldAimAtLockOnTargetName_47_1FA7D2E646A7BAA2001FEEA53E5B30FF' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, RotationInterpSpeed_5_978DCCB2495B4D90C6C480B110D84340) == 0x00000C, "Member 'FSLockOnFollowShooterAutoAim::RotationInterpSpeed_5_978DCCB2495B4D90C6C480B110D84340' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, AutoShootAngle_7_3A5850CD434FE130701B71863631FFF9) == 0x000010, "Member 'FSLockOnFollowShooterAutoAim::AutoShootAngle_7_3A5850CD434FE130701B71863631FFF9' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, AutoShootGapTime_9_FD49C84B4097B6D82B99F48C83D6E23D) == 0x000014, "Member 'FSLockOnFollowShooterAutoAim::AutoShootGapTime_9_FD49C84B4097B6D82B99F48C83D6E23D' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, RotateOffset_25_B755E5A440C6EE9A454FC3B771C1ADE3) == 0x000018, "Member 'FSLockOnFollowShooterAutoAim::RotateOffset_25_B755E5A440C6EE9A454FC3B771C1ADE3' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, MapAttachToFollowingWhileHasTag_40_501678644E2861378C53A38BE7FC906C) == 0x000028, "Member 'FSLockOnFollowShooterAutoAim::MapAttachToFollowingWhileHasTag_40_501678644E2861378C53A38BE7FC906C' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, StopUpdateRotationWhileHasTags_44_FFCFBF5546CA7E6390E228B5730C959E) == 0x000078, "Member 'FSLockOnFollowShooterAutoAim::StopUpdateRotationWhileHasTags_44_FFCFBF5546CA7E6390E228B5730C959E' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, AutoShootSkillId_51_F8F3320343357D34F1CB2BB3EA3BFECE) == 0x000098, "Member 'FSLockOnFollowShooterAutoAim::AutoShootSkillId_51_F8F3320343357D34F1CB2BB3EA3BFECE' has a wrong offset!");
-static_assert(offsetof(FSLockOnFollowShooterAutoAim, ShouldAimAtLockOnTargetTag_54_D3DC48CE43C6417564C9EE8D96801EC6) == 0x00009C, "Member 'FSLockOnFollowShooterAutoAim::ShouldAimAtLockOnTargetTag_54_D3DC48CE43C6417564C9EE8D96801EC6' has a wrong offset!");
+DUMPER7_ASSERTS_FSLockOnFollowShooterAutoAim;
 
 }
 

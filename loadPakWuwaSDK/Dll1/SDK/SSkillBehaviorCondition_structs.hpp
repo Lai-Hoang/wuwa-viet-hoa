@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "ESkillBehaviorConditionType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "ESkillBehaviorComparisonLogic_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -38,21 +38,7 @@ public:
 	bool                                          AnyTag_67_51D28A91427519B4E10E76B922EE7E9B;        // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Reverse_35_73079DDF426EC7983ADE55B35FEC138A;       // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSSkillBehaviorCondition) == 0x000008, "Wrong alignment on FSSkillBehaviorCondition");
-static_assert(sizeof(FSSkillBehaviorCondition) == 0x000048, "Wrong size on FSSkillBehaviorCondition");
-static_assert(offsetof(FSSkillBehaviorCondition, ConditionType_31_FDE61D77427DCD4BC0F2A7AA3D27695C) == 0x000000, "Member 'FSSkillBehaviorCondition::ConditionType_31_FDE61D77427DCD4BC0F2A7AA3D27695C' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, IgnoreZ_37_F6CCC57746F2CC2ECC2C2C8B8697BAE3) == 0x000001, "Member 'FSSkillBehaviorCondition::IgnoreZ_37_F6CCC57746F2CC2ECC2C2C8B8697BAE3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, Sign_72_F5B15D704A9FA4243D4D888D6E838352) == 0x000002, "Member 'FSSkillBehaviorCondition::Sign_72_F5B15D704A9FA4243D4D888D6E838352' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, ComparisonLogic_41_BFD626EA4ADC6ECB646CA6B4C474889C) == 0x000003, "Member 'FSSkillBehaviorCondition::ComparisonLogic_41_BFD626EA4ADC6ECB646CA6B4C474889C' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, Value_45_2649759445759C286E73938D5318AA99) == 0x000004, "Member 'FSSkillBehaviorCondition::Value_45_2649759445759C286E73938D5318AA99' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, RangeL_47_7B13704A41AF164405A70085BB8683AB) == 0x000008, "Member 'FSSkillBehaviorCondition::RangeL_47_7B13704A41AF164405A70085BB8683AB' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, RangeR_49_6D00959F40FAE4F69CAF15A1F177BDD9) == 0x00000C, "Member 'FSSkillBehaviorCondition::RangeR_49_6D00959F40FAE4F69CAF15A1F177BDD9' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, AttributeId1_57_B049A05E4E70C63D62BE2BA6A045D0AB) == 0x000010, "Member 'FSSkillBehaviorCondition::AttributeId1_57_B049A05E4E70C63D62BE2BA6A045D0AB' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, AttributeId2_55_F810A3BA4E7646BDF7859F8D04BC9E20) == 0x000014, "Member 'FSSkillBehaviorCondition::AttributeId2_55_F810A3BA4E7646BDF7859F8D04BC9E20' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, AttributeRate_61_C001B3DF4577447AB9519DA1B72FF66F) == 0x000018, "Member 'FSSkillBehaviorCondition::AttributeRate_61_C001B3DF4577447AB9519DA1B72FF66F' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, TagToCheck_64_464EE5B34705853741899A9D4F266404) == 0x000020, "Member 'FSSkillBehaviorCondition::TagToCheck_64_464EE5B34705853741899A9D4F266404' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, AnyTag_67_51D28A91427519B4E10E76B922EE7E9B) == 0x000040, "Member 'FSSkillBehaviorCondition::AnyTag_67_51D28A91427519B4E10E76B922EE7E9B' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorCondition, Reverse_35_73079DDF426EC7983ADE55B35FEC138A) == 0x000041, "Member 'FSSkillBehaviorCondition::Reverse_35_73079DDF426EC7983ADE55B35FEC138A' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehaviorCondition;
 
 }
 

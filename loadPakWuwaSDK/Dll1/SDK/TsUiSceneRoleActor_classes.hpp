@@ -26,24 +26,25 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool IsShowUiWepaonEffect();
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_TsUiSceneRoleActor(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	bool IsShowUiWepaonEffect();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiSceneRoleActor_C">();
+		BP_STATIC_CLASS_IMPL("TsUiSceneRoleActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiSceneRoleActor_C")
 	}
 	static class ATsUiSceneRoleActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsUiSceneRoleActor_C>();
 	}
 };
-static_assert(alignof(ATsUiSceneRoleActor_C) == 0x000008, "Wrong alignment on ATsUiSceneRoleActor_C");
-static_assert(sizeof(ATsUiSceneRoleActor_C) == 0x0002C0, "Wrong size on ATsUiSceneRoleActor_C");
-static_assert(offsetof(ATsUiSceneRoleActor_C, UberGraphFrame) == 0x0002B0, "Member 'ATsUiSceneRoleActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsUiSceneRoleActor_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsUiSceneRoleActor_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ATsUiSceneRoleActor_C;
 
 }
 

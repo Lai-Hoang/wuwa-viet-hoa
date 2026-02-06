@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EBulletHitDirectionType_structs.hpp"
-#include "EBulletShape_structs.hpp"
-#include "EBulletType_structs.hpp"
-#include "EBulletRelativeDir_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EBulletShape_structs.hpp"
+#include "EBulletRelativeDir_structs.hpp"
+#include "EBulletHitDirectionType_structs.hpp"
+#include "EBulletType_structs.hpp"
 
 
 namespace SDK
@@ -52,29 +52,7 @@ public:
 	EBulletType                                   子弹类型_73_BFD55CE442753BB9618300882D87CA00;      // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EBulletHitDirectionType                       受击角度判定类型_77_59AD3BDC43DA22F553476EBD51838A37; // 0x00D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletDataBase) == 0x000008, "Wrong alignment on FSBulletDataBase");
-static_assert(sizeof(FSBulletDataBase) == 0x0000D8, "Wrong size on FSBulletDataBase");
-static_assert(offsetof(FSBulletDataBase, 子弹形状_37_163507704688CCD50D27218C16540C99) == 0x000000, "Member 'FSBulletDataBase::子弹形状_37_163507704688CCD50D27218C16540C99' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 子弹模型_84_775F62D54C48B4DA6199FC9551477370) == 0x000008, "Member 'FSBulletDataBase::子弹模型_84_775F62D54C48B4DA6199FC9551477370' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 初始大小_46_745A508A4869B2AFD5D40A94FDF9B5B7) == 0x000038, "Member 'FSBulletDataBase::初始大小_46_745A508A4869B2AFD5D40A94FDF9B5B7' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 初始位置_43_4551FF54411CB6FCF61CA0AA60311B33) == 0x000044, "Member 'FSBulletDataBase::初始位置_43_4551FF54411CB6FCF61CA0AA60311B33' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 初始旋转_45_B8311DCC4745B3A3E278D9933EBB4123) == 0x000050, "Member 'FSBulletDataBase::初始旋转_45_B8311DCC4745B3A3E278D9933EBB4123' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 持续时间_18_24D1E9D240CDF841F231A7BC172BE62B) == 0x00005C, "Member 'FSBulletDataBase::持续时间_18_24D1E9D240CDF841F231A7BC172BE62B' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 命中个数_21_702C573145B228C10F87B6A50F209D77) == 0x000060, "Member 'FSBulletDataBase::命中个数_21_702C573145B228C10F87B6A50F209D77' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 作用次数_50_129615074C909D27AFB972A43D70BCCE) == 0x000064, "Member 'FSBulletDataBase::作用次数_50_129615074C909D27AFB972A43D70BCCE' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 被极限闪避后销毁_66_47451A38436917D6321F95B4347FA180) == 0x000068, "Member 'FSBulletDataBase::被极限闪避后销毁_66_47451A38436917D6321F95B4347FA180' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 被击效果_33_D6D500E44E99AFE8C582C88386F0E214) == 0x00006C, "Member 'FSBulletDataBase::被击效果_33_D6D500E44E99AFE8C582C88386F0E214' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 作用间隔_49_507890BD4FA51EBDABE61AB4419DEF5A) == 0x000078, "Member 'FSBulletDataBase::作用间隔_49_507890BD4FA51EBDABE61AB4419DEF5A' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 受击类型_48_7999A5904174EE9A3D537E97DA5A25A7) == 0x00007C, "Member 'FSBulletDataBase::受击类型_48_7999A5904174EE9A3D537E97DA5A25A7' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 执行效果ID_40_EA58969D48F456A97E8CE6AEDFDC75C4) == 0x000080, "Member 'FSBulletDataBase::执行效果ID_40_EA58969D48F456A97E8CE6AEDFDC75C4' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 子弹攻击方向_30_680F7E674296C94FF0865B90E67900D2) == 0x000084, "Member 'FSBulletDataBase::子弹攻击方向_30_680F7E674296C94FF0865B90E67900D2' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 技能结束是否销毁子弹_52_A859E0EB424FCEF4ED27F2B8A465BB54) == 0x000090, "Member 'FSBulletDataBase::技能结束是否销毁子弹_52_A859E0EB424FCEF4ED27F2B8A465BB54' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 伤害类型_57_65B272444E161D957E09B0A08AA48AA1) == 0x000094, "Member 'FSBulletDataBase::伤害类型_57_65B272444E161D957E09B0A08AA48AA1' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 是否可以触发极限闪避_59_20C34F46433480E2169A34B3A415A960) == 0x000098, "Member 'FSBulletDataBase::是否可以触发极限闪避_59_20C34F46433480E2169A34B3A415A960' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 是否触发拼刀_64_E032975C4A9D50CE75618A800ACFA3E7) == 0x000099, "Member 'FSBulletDataBase::是否触发拼刀_64_E032975C4A9D50CE75618A800ACFA3E7' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 攻击者震屏_85_F21440BC4D9EBE6DF710719707C9B057) == 0x0000A0, "Member 'FSBulletDataBase::攻击者震屏_85_F21440BC4D9EBE6DF710719707C9B057' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 子弹类型_73_BFD55CE442753BB9618300882D87CA00) == 0x0000D0, "Member 'FSBulletDataBase::子弹类型_73_BFD55CE442753BB9618300882D87CA00' has a wrong offset!");
-static_assert(offsetof(FSBulletDataBase, 受击角度判定类型_77_59AD3BDC43DA22F553476EBD51838A37) == 0x0000D1, "Member 'FSBulletDataBase::受击角度判定类型_77_59AD3BDC43DA22F553476EBD51838A37' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataBase;
 
 }
 

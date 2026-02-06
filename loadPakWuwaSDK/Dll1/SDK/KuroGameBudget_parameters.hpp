@@ -16,178 +16,14 @@
 namespace SDK::Params
 {
 
-// Function KuroGameBudget.KuroGameBudgetBlueprintDefine.Initialize
-// 0x0010 (0x0010 - 0x0000)
-struct KuroGameBudgetBlueprintDefine_Initialize final
-{
-public:
-	TArray<struct FGameBudgetBlueprintGroupConfig> GroupConfigs;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroGameBudgetBlueprintDefine_Initialize) == 0x000008, "Wrong alignment on KuroGameBudgetBlueprintDefine_Initialize");
-static_assert(sizeof(KuroGameBudgetBlueprintDefine_Initialize) == 0x000010, "Wrong size on KuroGameBudgetBlueprintDefine_Initialize");
-static_assert(offsetof(KuroGameBudgetBlueprintDefine_Initialize, GroupConfigs) == 0x000000, "Member 'KuroGameBudgetBlueprintDefine_Initialize::GroupConfigs' has a wrong offset!");
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
+// Function KuroGameBudget.KuroGameBudgetComponent.OnEnvInteractChanged
 // 0x0001 (0x0001 - 0x0000)
-struct KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType final
+struct KuroGameBudgetComponent_OnEnvInteractChanged final
 {
 public:
-	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType) == 0x000001, "Wrong alignment on KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType");
-static_assert(sizeof(KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType) == 0x000001, "Wrong size on KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType");
-static_assert(offsetof(KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType, InOverrideGroupType) == 0x000000, "Member 'KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType::InOverrideGroupType' has a wrong offset!");
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
-// 0x0010 (0x0010 - 0x0000)
-struct KuroGameBudgetBlueprintActor_UpdateOverrideBounds final
-{
-public:
-	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroGameBudgetBlueprintActor_UpdateOverrideBounds) == 0x000008, "Wrong alignment on KuroGameBudgetBlueprintActor_UpdateOverrideBounds");
-static_assert(sizeof(KuroGameBudgetBlueprintActor_UpdateOverrideBounds) == 0x000010, "Wrong size on KuroGameBudgetBlueprintActor_UpdateOverrideBounds");
-static_assert(offsetof(KuroGameBudgetBlueprintActor_UpdateOverrideBounds, InActors) == 0x000000, "Member 'KuroGameBudgetBlueprintActor_UpdateOverrideBounds::InActors' has a wrong offset!");
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
-// 0x0050 (0x0050 - 0x0000)
-struct KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet final
-{
-public:
-	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet) == 0x000008, "Wrong alignment on KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet");
-static_assert(sizeof(KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet) == 0x000050, "Wrong size on KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet");
-static_assert(offsetof(KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet, InActors) == 0x000000, "Member 'KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet::InActors' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.AfterTickOutside
-// 0x0004 (0x0004 - 0x0000)
-struct GameBudgetAllocator_AfterTickOutside final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_AfterTickOutside) == 0x000004, "Wrong alignment on GameBudgetAllocator_AfterTickOutside");
-static_assert(sizeof(GameBudgetAllocator_AfterTickOutside) == 0x000004, "Wrong size on GameBudgetAllocator_AfterTickOutside");
-static_assert(offsetof(GameBudgetAllocator_AfterTickOutside, DeltaSeconds) == 0x000000, "Member 'GameBudgetAllocator_AfterTickOutside::DeltaSeconds' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetCenterActor
-// 0x0008 (0x0008 - 0x0000)
-struct GameBudgetAllocator_SetCenterActor final
-{
-public:
-	class AActor*                                 CenterActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetCenterActor) == 0x000008, "Wrong alignment on GameBudgetAllocator_SetCenterActor");
-static_assert(sizeof(GameBudgetAllocator_SetCenterActor) == 0x000008, "Wrong size on GameBudgetAllocator_SetCenterActor");
-static_assert(offsetof(GameBudgetAllocator_SetCenterActor, CenterActor) == 0x000000, "Member 'GameBudgetAllocator_SetCenterActor::CenterActor' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetDefaultTickIntervalDetailConfig
-// 0x0080 (0x0080 - 0x0000)
-struct GameBudgetAllocator_SetDefaultTickIntervalDetailConfig final
-{
-public:
-	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x0078)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint32                                        MaxTickInterval;                                   // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionStartSize;                            // 0x007C(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionIntervalSize;                         // 0x007E(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig) == 0x000004, "Wrong alignment on GameBudgetAllocator_SetDefaultTickIntervalDetailConfig");
-static_assert(sizeof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig) == 0x000080, "Wrong size on GameBudgetAllocator_SetDefaultTickIntervalDetailConfig");
-static_assert(offsetof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig, Config) == 0x000000, "Member 'GameBudgetAllocator_SetDefaultTickIntervalDetailConfig::Config' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig, MaxTickInterval) == 0x000078, "Member 'GameBudgetAllocator_SetDefaultTickIntervalDetailConfig::MaxTickInterval' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig, TickReductionStartSize) == 0x00007C, "Member 'GameBudgetAllocator_SetDefaultTickIntervalDetailConfig::TickReductionStartSize' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetDefaultTickIntervalDetailConfig, TickReductionIntervalSize) == 0x00007E, "Member 'GameBudgetAllocator_SetDefaultTickIntervalDetailConfig::TickReductionIntervalSize' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetGlobalMode
-// 0x0001 (0x0001 - 0x0000)
-struct GameBudgetAllocator_SetGlobalMode final
-{
-public:
-	EGameBudgetAllocatorGlobalMode                Mode;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetGlobalMode) == 0x000001, "Wrong alignment on GameBudgetAllocator_SetGlobalMode");
-static_assert(sizeof(GameBudgetAllocator_SetGlobalMode) == 0x000001, "Wrong size on GameBudgetAllocator_SetGlobalMode");
-static_assert(offsetof(GameBudgetAllocator_SetGlobalMode, Mode) == 0x000000, "Member 'GameBudgetAllocator_SetGlobalMode::Mode' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetGroupConfig
-// 0x0084 (0x0084 - 0x0000)
-struct GameBudgetAllocator_SetGroupConfig final
-{
-public:
-	class FName                                   GroupName;                                         // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x000C(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetGroupConfig) == 0x000004, "Wrong alignment on GameBudgetAllocator_SetGroupConfig");
-static_assert(sizeof(GameBudgetAllocator_SetGroupConfig) == 0x000084, "Wrong size on GameBudgetAllocator_SetGroupConfig");
-static_assert(offsetof(GameBudgetAllocator_SetGroupConfig, GroupName) == 0x000000, "Member 'GameBudgetAllocator_SetGroupConfig::GroupName' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetGroupConfig, Config) == 0x00000C, "Member 'GameBudgetAllocator_SetGroupConfig::Config' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetMaximumFrameRate
-// 0x0004 (0x0004 - 0x0000)
-struct GameBudgetAllocator_SetMaximumFrameRate final
-{
-public:
-	uint32                                        MaxFPS;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetMaximumFrameRate) == 0x000004, "Wrong alignment on GameBudgetAllocator_SetMaximumFrameRate");
-static_assert(sizeof(GameBudgetAllocator_SetMaximumFrameRate) == 0x000004, "Wrong size on GameBudgetAllocator_SetMaximumFrameRate");
-static_assert(offsetof(GameBudgetAllocator_SetMaximumFrameRate, MaxFPS) == 0x000000, "Member 'GameBudgetAllocator_SetMaximumFrameRate::MaxFPS' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetPauseFrame
-// 0x0008 (0x0008 - 0x0000)
-struct GameBudgetAllocator_SetPauseFrame final
-{
-public:
-	uint64                                        Frame;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetPauseFrame) == 0x000008, "Wrong alignment on GameBudgetAllocator_SetPauseFrame");
-static_assert(sizeof(GameBudgetAllocator_SetPauseFrame) == 0x000008, "Wrong size on GameBudgetAllocator_SetPauseFrame");
-static_assert(offsetof(GameBudgetAllocator_SetPauseFrame, Frame) == 0x000000, "Member 'GameBudgetAllocator_SetPauseFrame::Frame' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.SetTickIntervalDetailConfig
-// 0x0084 (0x0084 - 0x0000)
-struct GameBudgetAllocator_SetTickIntervalDetailConfig final
-{
-public:
-	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x0078)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	EGameBudgetAllocatorGlobalMode                GlobalMode;                                        // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameBudgetAllocatorActorMode                 ActorMode;                                         // 0x0079(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxTickInterval;                                   // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionStartSize;                            // 0x0080(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionIntervalSize;                         // 0x0082(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_SetTickIntervalDetailConfig) == 0x000004, "Wrong alignment on GameBudgetAllocator_SetTickIntervalDetailConfig");
-static_assert(sizeof(GameBudgetAllocator_SetTickIntervalDetailConfig) == 0x000084, "Wrong size on GameBudgetAllocator_SetTickIntervalDetailConfig");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, Config) == 0x000000, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::Config' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, GlobalMode) == 0x000078, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::GlobalMode' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, ActorMode) == 0x000079, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::ActorMode' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, MaxTickInterval) == 0x00007C, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::MaxTickInterval' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, TickReductionStartSize) == 0x000080, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::TickReductionStartSize' has a wrong offset!");
-static_assert(offsetof(GameBudgetAllocator_SetTickIntervalDetailConfig, TickReductionIntervalSize) == 0x000082, "Member 'GameBudgetAllocator_SetTickIntervalDetailConfig::TickReductionIntervalSize' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.TickOutside
-// 0x0004 (0x0004 - 0x0000)
-struct GameBudgetAllocator_TickOutside final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_TickOutside) == 0x000004, "Wrong alignment on GameBudgetAllocator_TickOutside");
-static_assert(sizeof(GameBudgetAllocator_TickOutside) == 0x000004, "Wrong size on GameBudgetAllocator_TickOutside");
-static_assert(offsetof(GameBudgetAllocator_TickOutside, DeltaSeconds) == 0x000000, "Member 'GameBudgetAllocator_TickOutside::DeltaSeconds' has a wrong offset!");
-
-// Function KuroGameBudget.GameBudgetAllocator.UpdateMinUpdateFIFOBudgetTime
-// 0x0004 (0x0004 - 0x0000)
-struct GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime) == 0x000004, "Wrong alignment on GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime");
-static_assert(sizeof(GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime) == 0x000004, "Wrong size on GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime");
-static_assert(offsetof(GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime, Time) == 0x000000, "Member 'GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime::Time' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameBudgetComponent_OnEnvInteractChanged;
 
 // Function KuroGameBudget.KuroGameBudgetComponent.OverrideGameBudgetGroupType
 // 0x0001 (0x0001 - 0x0000)
@@ -196,9 +32,7 @@ struct KuroGameBudgetComponent_OverrideGameBudgetGroupType final
 public:
 	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameBudgetComponent_OverrideGameBudgetGroupType) == 0x000001, "Wrong alignment on KuroGameBudgetComponent_OverrideGameBudgetGroupType");
-static_assert(sizeof(KuroGameBudgetComponent_OverrideGameBudgetGroupType) == 0x000001, "Wrong size on KuroGameBudgetComponent_OverrideGameBudgetGroupType");
-static_assert(offsetof(KuroGameBudgetComponent_OverrideGameBudgetGroupType, InOverrideGroupType) == 0x000000, "Member 'KuroGameBudgetComponent_OverrideGameBudgetGroupType::InOverrideGroupType' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameBudgetComponent_OverrideGameBudgetGroupType;
 
 // Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBounds
 // 0x0010 (0x0010 - 0x0000)
@@ -207,9 +41,7 @@ struct KuroGameBudgetComponent_UpdateOverrideBounds final
 public:
 	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameBudgetComponent_UpdateOverrideBounds) == 0x000008, "Wrong alignment on KuroGameBudgetComponent_UpdateOverrideBounds");
-static_assert(sizeof(KuroGameBudgetComponent_UpdateOverrideBounds) == 0x000010, "Wrong size on KuroGameBudgetComponent_UpdateOverrideBounds");
-static_assert(offsetof(KuroGameBudgetComponent_UpdateOverrideBounds, InActors) == 0x000000, "Member 'KuroGameBudgetComponent_UpdateOverrideBounds::InActors' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBounds;
 
 // Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBoundsFromSet
 // 0x0050 (0x0050 - 0x0000)
@@ -218,9 +50,186 @@ struct KuroGameBudgetComponent_UpdateOverrideBoundsFromSet final
 public:
 	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroGameBudgetComponent_UpdateOverrideBoundsFromSet) == 0x000008, "Wrong alignment on KuroGameBudgetComponent_UpdateOverrideBoundsFromSet");
-static_assert(sizeof(KuroGameBudgetComponent_UpdateOverrideBoundsFromSet) == 0x000050, "Wrong size on KuroGameBudgetComponent_UpdateOverrideBoundsFromSet");
-static_assert(offsetof(KuroGameBudgetComponent_UpdateOverrideBoundsFromSet, InActors) == 0x000000, "Member 'KuroGameBudgetComponent_UpdateOverrideBoundsFromSet::InActors' has a wrong offset!");
+DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBoundsFromSet;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnEnvInteractChanged
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetBlueprintActor_OnEnvInteractChanged final
+{
+public:
+	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OnEnvInteractChanged;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType final
+{
+public:
+	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
+// 0x0010 (0x0010 - 0x0000)
+struct KuroGameBudgetBlueprintActor_UpdateOverrideBounds final
+{
+public:
+	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBounds;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
+// 0x0050 (0x0050 - 0x0000)
+struct KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet final
+{
+public:
+	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet;
+
+// Function KuroGameBudget.GameBudgetAllocator.AfterTickOutside
+// 0x0004 (0x0004 - 0x0000)
+struct GameBudgetAllocator_AfterTickOutside final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_AfterTickOutside;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetCenterActor
+// 0x0008 (0x0008 - 0x0000)
+struct GameBudgetAllocator_SetCenterActor final
+{
+public:
+	class AActor*                                 CenterActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetCenterActor;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetDefaultTickIntervalDetailConfig
+// 0x00D8 (0x00D8 - 0x0000)
+struct GameBudgetAllocator_SetDefaultTickIntervalDetailConfig final
+{
+public:
+	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint32                                        MaxTickInterval;                                   // 0x00D0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionStartSize;                            // 0x00D4(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionIntervalSize;                         // 0x00D6(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetDefaultTickIntervalDetailConfig;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetDefaultTickIntervalDetailScreenRadiusConfig
+// 0x00D8 (0x00D8 - 0x0000)
+struct GameBudgetAllocator_SetDefaultTickIntervalDetailScreenRadiusConfig final
+{
+public:
+	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TickReductionStartScreenRatio;                     // 0x00D0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TickReductionIntervalScreenRatio;                  // 0x00D4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetDefaultTickIntervalDetailScreenRadiusConfig;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetGlobalMode
+// 0x0001 (0x0001 - 0x0000)
+struct GameBudgetAllocator_SetGlobalMode final
+{
+public:
+	EGameBudgetAllocatorGlobalMode                Mode;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetGlobalMode;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetGroupConfig
+// 0x00DC (0x00DC - 0x0000)
+struct GameBudgetAllocator_SetGroupConfig final
+{
+public:
+	class FName                                   GroupName;                                         // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x000C(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetGroupConfig;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetMaximumFrameRate
+// 0x0004 (0x0004 - 0x0000)
+struct GameBudgetAllocator_SetMaximumFrameRate final
+{
+public:
+	uint32                                        MaxFPS;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetMaximumFrameRate;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetPauseFrame
+// 0x0008 (0x0008 - 0x0000)
+struct GameBudgetAllocator_SetPauseFrame final
+{
+public:
+	uint64                                        Frame;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetPauseFrame;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetTickIntervalDetailConfig
+// 0x00DC (0x00DC - 0x0000)
+struct GameBudgetAllocator_SetTickIntervalDetailConfig final
+{
+public:
+	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	EGameBudgetAllocatorGlobalMode                GlobalMode;                                        // 0x00D0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameBudgetAllocatorActorMode                 ActorMode;                                         // 0x00D1(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxTickInterval;                                   // 0x00D4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionStartSize;                            // 0x00D8(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionIntervalSize;                         // 0x00DA(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetTickIntervalDetailConfig;
+
+// Function KuroGameBudget.GameBudgetAllocator.SetTickIntervalDetailScreenRadiusConfig
+// 0x00DC (0x00DC - 0x0000)
+struct GameBudgetAllocator_SetTickIntervalDetailScreenRadiusConfig final
+{
+public:
+	struct FGameBudgetAllocatorGroupConfig        Config;                                            // 0x0000(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	EGameBudgetAllocatorGlobalMode                GlobalMode;                                        // 0x00D0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameBudgetAllocatorActorMode                 ActorMode;                                         // 0x00D1(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TickReductionStartScreenRatio;                     // 0x00D4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TickReductionIntervalScreenRatio;                  // 0x00D8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_SetTickIntervalDetailScreenRadiusConfig;
+
+// Function KuroGameBudget.GameBudgetAllocator.TickOutside
+// 0x0004 (0x0004 - 0x0000)
+struct GameBudgetAllocator_TickOutside final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_TickOutside;
+
+// Function KuroGameBudget.GameBudgetAllocator.UpdateMinUpdateFIFOBudgetTime
+// 0x0004 (0x0004 - 0x0000)
+struct GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintDefine.Initialize
+// 0x0010 (0x0010 - 0x0000)
+struct KuroGameBudgetBlueprintDefine_Initialize final
+{
+public:
+	TArray<struct FGameBudgetBlueprintGroupConfig> GroupConfigs;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintDefine_Initialize;
+
+// Function KuroGameBudget.KuroGameBudgetSubSystem.SetEnvInteractChange
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetSubSystem_SetEnvInteractChange final
+{
+public:
+	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetSubSystem_SetEnvInteractChange;
 
 }
 

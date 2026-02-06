@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SeqAudio_Seq_V2_C">();
+		BP_STATIC_CLASS_IMPL("SeqAudio_Seq_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SeqAudio_Seq_V2_C")
 	}
 	static class USeqAudio_Seq_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USeqAudio_Seq_V2_C>();
 	}
 };
-static_assert(alignof(USeqAudio_Seq_V2_C) == 0x000008, "Wrong alignment on USeqAudio_Seq_V2_C");
-static_assert(sizeof(USeqAudio_Seq_V2_C) == 0x0000C8, "Wrong size on USeqAudio_Seq_V2_C");
-static_assert(offsetof(USeqAudio_Seq_V2_C, UseAudioSeq) == 0x0000C0, "Member 'USeqAudio_Seq_V2_C::UseAudioSeq' has a wrong offset!");
+DUMPER7_ASSERTS_USeqAudio_Seq_V2_C;
 
 }
 

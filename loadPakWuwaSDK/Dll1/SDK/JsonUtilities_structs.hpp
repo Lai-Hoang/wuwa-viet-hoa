@@ -22,9 +22,7 @@ public:
 	class FString                                 JsonString;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FJsonObjectWrapper) == 0x000008, "Wrong alignment on FJsonObjectWrapper");
-static_assert(sizeof(FJsonObjectWrapper) == 0x000020, "Wrong size on FJsonObjectWrapper");
-static_assert(offsetof(FJsonObjectWrapper, JsonString) == 0x000000, "Member 'FJsonObjectWrapper::JsonString' has a wrong offset!");
+DUMPER7_ASSERTS_FJsonObjectWrapper;
 
 }
 

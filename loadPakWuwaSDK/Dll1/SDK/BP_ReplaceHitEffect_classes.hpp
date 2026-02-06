@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "STimeScale_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -34,22 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ReplaceHitEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_ReplaceHitEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ReplaceHitEffect_C")
 	}
 	static class UBP_ReplaceHitEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ReplaceHitEffect_C>();
 	}
 };
-static_assert(alignof(UBP_ReplaceHitEffect_C) == 0x000008, "Wrong alignment on UBP_ReplaceHitEffect_C");
-static_assert(sizeof(UBP_ReplaceHitEffect_C) == 0x000128, "Wrong size on UBP_ReplaceHitEffect_C");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 震屏) == 0x000038, "Member 'UBP_ReplaceHitEffect_C::震屏' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 受击特效) == 0x000068, "Member 'UBP_ReplaceHitEffect_C::受击特效' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 受击音效) == 0x000098, "Member 'UBP_ReplaceHitEffect_C::受击音效' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 命中特效) == 0x0000C8, "Member 'UBP_ReplaceHitEffect_C::命中特效' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 替换近战子弹顿帧) == 0x0000F8, "Member 'UBP_ReplaceHitEffect_C::替换近战子弹顿帧' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 顿帧) == 0x000100, "Member 'UBP_ReplaceHitEffect_C::顿帧' has a wrong offset!");
-static_assert(offsetof(UBP_ReplaceHitEffect_C, 不替换的部位) == 0x000118, "Member 'UBP_ReplaceHitEffect_C::不替换的部位' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_ReplaceHitEffect_C;
 
 }
 

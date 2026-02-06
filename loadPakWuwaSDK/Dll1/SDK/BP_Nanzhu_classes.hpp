@@ -10,24 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "TsBaseCharacter_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_Base_Nanzhu_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Nanzhu.BP_Nanzhu_C
-// 0x0030 (0x0790 - 0x0760)
-class ABP_Nanzhu_C final : public ATsBaseCharacter_C
+// 0x0000 (0x0790 - 0x0790)
+class ABP_Nanzhu_C final : public ABP_Base_Nanzhu_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Nanzhu_C;                        // 0x0758(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UKuroAdjustableCapsuleComponent*        Bip001LThighTwist;                                 // 0x0760(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroAdjustableCapsuleComponent*        Bip001RThighTwist;                                 // 0x0768(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UKuroAdjustableCapsuleComponent*        Bip001Spine2;                                      // 0x0770(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 WeaponCase1;                                       // 0x0778(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 WeaponCase0;                                       // 0x0780(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Nanzhu_C;                        // 0x0788(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_Nanzhu(int32 EntryPoint);
@@ -37,21 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Nanzhu_C">();
+		BP_STATIC_CLASS_IMPL("BP_Nanzhu_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Nanzhu_C")
 	}
 	static class ABP_Nanzhu_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Nanzhu_C>();
 	}
 };
-static_assert(alignof(ABP_Nanzhu_C) == 0x000010, "Wrong alignment on ABP_Nanzhu_C");
-static_assert(sizeof(ABP_Nanzhu_C) == 0x000790, "Wrong size on ABP_Nanzhu_C");
-static_assert(offsetof(ABP_Nanzhu_C, UberGraphFrame_BP_Nanzhu_C) == 0x000758, "Member 'ABP_Nanzhu_C::UberGraphFrame_BP_Nanzhu_C' has a wrong offset!");
-static_assert(offsetof(ABP_Nanzhu_C, Bip001LThighTwist) == 0x000760, "Member 'ABP_Nanzhu_C::Bip001LThighTwist' has a wrong offset!");
-static_assert(offsetof(ABP_Nanzhu_C, Bip001RThighTwist) == 0x000768, "Member 'ABP_Nanzhu_C::Bip001RThighTwist' has a wrong offset!");
-static_assert(offsetof(ABP_Nanzhu_C, Bip001Spine2) == 0x000770, "Member 'ABP_Nanzhu_C::Bip001Spine2' has a wrong offset!");
-static_assert(offsetof(ABP_Nanzhu_C, WeaponCase1) == 0x000778, "Member 'ABP_Nanzhu_C::WeaponCase1' has a wrong offset!");
-static_assert(offsetof(ABP_Nanzhu_C, WeaponCase0) == 0x000780, "Member 'ABP_Nanzhu_C::WeaponCase0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Nanzhu_C;
 
 }
 

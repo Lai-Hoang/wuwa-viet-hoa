@@ -29,29 +29,27 @@ public:
 	float                                         SpawnInterval;                                     // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	bool K2_ValidateAssets();
-	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
+	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
+	bool K2_ValidateAssets();
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyStateGhost_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyStateGhost_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyStateGhost_C")
 	}
 	static class UAnimNotifyStateGhost_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyStateGhost_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyStateGhost_C) == 0x000008, "Wrong alignment on UAnimNotifyStateGhost_C");
-static_assert(sizeof(UAnimNotifyStateGhost_C) == 0x000088, "Wrong size on UAnimNotifyStateGhost_C");
-static_assert(offsetof(UAnimNotifyStateGhost_C, SpawnRate) == 0x000048, "Member 'UAnimNotifyStateGhost_C::SpawnRate' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateGhost_C, GhostLifeTime) == 0x00004C, "Member 'UAnimNotifyStateGhost_C::GhostLifeTime' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateGhost_C, EffectDataAssetRef) == 0x000050, "Member 'UAnimNotifyStateGhost_C::EffectDataAssetRef' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateGhost_C, UseSpawnRate) == 0x000080, "Member 'UAnimNotifyStateGhost_C::UseSpawnRate' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateGhost_C, SpawnInterval) == 0x000084, "Member 'UAnimNotifyStateGhost_C::SpawnInterval' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotifyStateGhost_C;
 
 }
 

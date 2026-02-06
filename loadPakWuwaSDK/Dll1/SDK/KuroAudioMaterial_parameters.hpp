@@ -26,10 +26,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ReturnValue;                                       // 0x0004(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAudioMaterialSettings_GetFootstepTextureName) == 0x000004, "Wrong alignment on KuroAudioMaterialSettings_GetFootstepTextureName");
-static_assert(sizeof(KuroAudioMaterialSettings_GetFootstepTextureName) == 0x000010, "Wrong size on KuroAudioMaterialSettings_GetFootstepTextureName");
-static_assert(offsetof(KuroAudioMaterialSettings_GetFootstepTextureName, SurfaceType) == 0x000000, "Member 'KuroAudioMaterialSettings_GetFootstepTextureName::SurfaceType' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSettings_GetFootstepTextureName, ReturnValue) == 0x000004, "Member 'KuroAudioMaterialSettings_GetFootstepTextureName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAudioMaterialSettings_GetFootstepTextureName;
 
 // Function KuroAudioMaterial.KuroAudioMaterialSubsystem.QueryInsideAnyFoliageInstance
 // 0x0040 (0x0040 - 0x0000)
@@ -44,13 +41,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance) == 0x000008, "Wrong alignment on KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance");
-static_assert(sizeof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance) == 0x000040, "Wrong size on KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance, InQueryLocation) == 0x000000, "Member 'KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance::InQueryLocation' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance, OutInstancedNames) == 0x000018, "Member 'KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance::OutInstancedNames' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance, OutPhysicalMaterial) == 0x000028, "Member 'KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance::OutPhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance, OutStaicMeshComponent) == 0x000030, "Member 'KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance::OutStaicMeshComponent' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance, ReturnValue) == 0x000038, "Member 'KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAudioMaterialSubsystem_QueryInsideAnyFoliageInstance;
 
 // Function KuroAudioMaterial.KuroAudioMaterialSubsystem.QueryOverlapAnyFoliageInstance
 // 0x0040 (0x0040 - 0x0000)
@@ -64,13 +55,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance) == 0x000008, "Wrong alignment on KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance");
-static_assert(sizeof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance) == 0x000040, "Wrong size on KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance, InQueryBounds) == 0x000000, "Member 'KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance::InQueryBounds' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance, OutInstancedNames) == 0x00001C, "Member 'KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance::OutInstancedNames' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance, OutPhysicalMaterial) == 0x000028, "Member 'KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance::OutPhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance, OutStaicMeshComponent) == 0x000030, "Member 'KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance::OutStaicMeshComponent' has a wrong offset!");
-static_assert(offsetof(KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance, ReturnValue) == 0x000038, "Member 'KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAudioMaterialSubsystem_QueryOverlapAnyFoliageInstance;
 
 }
 

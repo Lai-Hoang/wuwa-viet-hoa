@@ -24,11 +24,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BlackboardKey_20_7646422D4796E9134AE08E984D1F68A9; // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSSkillBehaviorBullet) == 0x000008, "Wrong alignment on FSSkillBehaviorBullet");
-static_assert(sizeof(FSSkillBehaviorBullet) == 0x000028, "Wrong size on FSSkillBehaviorBullet");
-static_assert(offsetof(FSSkillBehaviorBullet, bulletRowName_15_E1264B954C05799310C2CA8F2AA41295) == 0x000000, "Member 'FSSkillBehaviorBullet::bulletRowName_15_E1264B954C05799310C2CA8F2AA41295' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBullet, bulletCount_17_C760AE4F44AC5EA2E83EE287AC1E2986) == 0x000010, "Member 'FSSkillBehaviorBullet::bulletCount_17_C760AE4F44AC5EA2E83EE287AC1E2986' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBullet, BlackboardKey_20_7646422D4796E9134AE08E984D1F68A9) == 0x000018, "Member 'FSSkillBehaviorBullet::BlackboardKey_20_7646422D4796E9134AE08E984D1F68A9' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehaviorBullet;
 
 }
 

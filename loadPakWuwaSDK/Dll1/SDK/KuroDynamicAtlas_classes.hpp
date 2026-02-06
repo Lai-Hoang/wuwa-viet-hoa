@@ -30,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicAtlasBlueprintLibrary">();
+		STATIC_CLASS_IMPL("DynamicAtlasBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicAtlasBlueprintLibrary")
 	}
 	static class UDynamicAtlasBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicAtlasBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UDynamicAtlasBlueprintLibrary) == 0x000008, "Wrong alignment on UDynamicAtlasBlueprintLibrary");
-static_assert(sizeof(UDynamicAtlasBlueprintLibrary) == 0x000030, "Wrong size on UDynamicAtlasBlueprintLibrary");
+DUMPER7_ASSERTS_UDynamicAtlasBlueprintLibrary;
 
 }
 

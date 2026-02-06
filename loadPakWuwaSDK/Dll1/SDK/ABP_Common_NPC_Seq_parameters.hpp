@@ -41,22 +41,7 @@ public:
 	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetCurveValue_ReturnValue;                // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq) == 0x000008, "Wrong alignment on ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq");
-static_assert(sizeof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq) == 0x0000B8, "Wrong size on ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, EntryPoint) == 0x000000, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, K2Node_Event_DeltaTimeX) == 0x000004, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetOwningActor_ReturnValue) == 0x000008, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, K2Node_DynamicCast_AsSeq_Anim_Data_Interface) == 0x000010, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::K2Node_DynamicCast_AsSeq_Anim_Data_Interface' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetOuterObject_ReturnValue) == 0x000028, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetAnimDataTransform_FloatCurveData) == 0x000030, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetAnimDataTransform_FloatCurveData' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetAnimDataTransform_ReturnValue) == 0x000080, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetAnimDataTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetOuterObject_ReturnValue_1) == 0x000088, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetOuterObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, K2Node_DynamicCast_AsABPC_Seq_Interface) == 0x000090, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::K2Node_DynamicCast_AsABPC_Seq_Interface' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, K2Node_DynamicCast_bSuccess_1) == 0x0000A0, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetABPC_Body_V2_ABPC_Body_V2) == 0x0000A8, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetABPC_Body_V2_ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_IsValid_ReturnValue) == 0x0000B0, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq, CallFunc_GetCurveValue_ReturnValue) == 0x0000B4, "Member 'ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Common_NPC_Seq_C_ExecuteUbergraph_ABP_Common_NPC_Seq;
 
 // Function ABP_Common_NPC_Seq.ABP_Common_NPC_Seq_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -65,9 +50,7 @@ struct ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Common_NPC_Seq_C_BlueprintUpdateAnimation;
 
 // Function ABP_Common_NPC_Seq.ABP_Common_NPC_Seq_C.AnimGraph
 // 0x0020 (0x0020 - 0x0000)
@@ -77,10 +60,7 @@ public:
 	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_Common_NPC_Seq_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Common_NPC_Seq_C_AnimGraph");
-static_assert(sizeof(ABP_Common_NPC_Seq_C_AnimGraph) == 0x000020, "Wrong size on ABP_Common_NPC_Seq_C_AnimGraph");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_AnimGraph, InPose) == 0x000000, "Member 'ABP_Common_NPC_Seq_C_AnimGraph::InPose' has a wrong offset!");
-static_assert(offsetof(ABP_Common_NPC_Seq_C_AnimGraph, AnimGraph_0) == 0x000010, "Member 'ABP_Common_NPC_Seq_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Common_NPC_Seq_C_AnimGraph;
 
 }
 

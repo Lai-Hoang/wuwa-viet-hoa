@@ -34,24 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_GlobalRenderDataReference_C">();
+		BP_STATIC_CLASS_IMPL("PDA_GlobalRenderDataReference_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_GlobalRenderDataReference_C")
 	}
 	static class UPDA_GlobalRenderDataReference_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_GlobalRenderDataReference_C>();
 	}
 };
-static_assert(alignof(UPDA_GlobalRenderDataReference_C) == 0x000008, "Wrong alignment on UPDA_GlobalRenderDataReference_C");
-static_assert(sizeof(UPDA_GlobalRenderDataReference_C) == 0x000080, "Wrong size on UPDA_GlobalRenderDataReference_C");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, GlobalShaderParameters) == 0x000038, "Member 'UPDA_GlobalRenderDataReference_C::GlobalShaderParameters' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, SceneInteractionShaderParameters) == 0x000040, "Member 'UPDA_GlobalRenderDataReference_C::SceneInteractionShaderParameters' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, GlobalLensFlareConfig) == 0x000048, "Member 'UPDA_GlobalRenderDataReference_C::GlobalLensFlareConfig' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, MPC_ShowBrightness) == 0x000050, "Member 'UPDA_GlobalRenderDataReference_C::MPC_ShowBrightness' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, DefaultDecalShadow) == 0x000058, "Member 'UPDA_GlobalRenderDataReference_C::DefaultDecalShadow' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, EyesParameters) == 0x000060, "Member 'UPDA_GlobalRenderDataReference_C::EyesParameters' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, EmptyMaterial) == 0x000068, "Member 'UPDA_GlobalRenderDataReference_C::EmptyMaterial' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, MPC_ShowColorSetting) == 0x000070, "Member 'UPDA_GlobalRenderDataReference_C::MPC_ShowColorSetting' has a wrong offset!");
-static_assert(offsetof(UPDA_GlobalRenderDataReference_C, MPC_GroundFogMask) == 0x000078, "Member 'UPDA_GlobalRenderDataReference_C::MPC_GroundFogMask' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_GlobalRenderDataReference_C;
 
 }
 

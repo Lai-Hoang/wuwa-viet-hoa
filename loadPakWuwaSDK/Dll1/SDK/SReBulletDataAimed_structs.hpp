@@ -26,13 +26,7 @@ public:
 	float                                         瞄准子弹最大偏转角度_7_4645C8D64B50E8D9F9B55A91F57FD559; // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         瞄准子弹最大射程_13_5C2253DC4F4F6F13671D6A9F890670AA; // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataAimed) == 0x000004, "Wrong alignment on FSReBulletDataAimed");
-static_assert(sizeof(FSReBulletDataAimed) == 0x00000C, "Wrong size on FSReBulletDataAimed");
-static_assert(offsetof(FSReBulletDataAimed, 跟随骨骼发射_1_EDF3B49D4A4F1572C28D0DBE5CDA30B4) == 0x000000, "Member 'FSReBulletDataAimed::跟随骨骼发射_1_EDF3B49D4A4F1572C28D0DBE5CDA30B4' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataAimed, 初始旋转是否面向目标_10_0775BC104F88C1D140EE57A2084A416F) == 0x000001, "Member 'FSReBulletDataAimed::初始旋转是否面向目标_10_0775BC104F88C1D140EE57A2084A416F' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataAimed, 瞄准发射_3_518D28A24735A585BADF948D07975F83) == 0x000002, "Member 'FSReBulletDataAimed::瞄准发射_3_518D28A24735A585BADF948D07975F83' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataAimed, 瞄准子弹最大偏转角度_7_4645C8D64B50E8D9F9B55A91F57FD559) == 0x000004, "Member 'FSReBulletDataAimed::瞄准子弹最大偏转角度_7_4645C8D64B50E8D9F9B55A91F57FD559' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataAimed, 瞄准子弹最大射程_13_5C2253DC4F4F6F13671D6A9F890670AA) == 0x000008, "Member 'FSReBulletDataAimed::瞄准子弹最大射程_13_5C2253DC4F4F6F13671D6A9F890670AA' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataAimed;
 
 }
 

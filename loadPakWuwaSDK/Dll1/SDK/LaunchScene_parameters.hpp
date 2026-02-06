@@ -25,12 +25,7 @@ public:
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue_1;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LaunchScene_C_ExecuteUbergraph_LaunchScene) == 0x000008, "Wrong alignment on LaunchScene_C_ExecuteUbergraph_LaunchScene");
-static_assert(sizeof(LaunchScene_C_ExecuteUbergraph_LaunchScene) == 0x000018, "Wrong size on LaunchScene_C_ExecuteUbergraph_LaunchScene");
-static_assert(offsetof(LaunchScene_C_ExecuteUbergraph_LaunchScene, EntryPoint) == 0x000000, "Member 'LaunchScene_C_ExecuteUbergraph_LaunchScene::EntryPoint' has a wrong offset!");
-static_assert(offsetof(LaunchScene_C_ExecuteUbergraph_LaunchScene, CallFunc_IsPureCSharpEnvironment_ReturnValue) == 0x000004, "Member 'LaunchScene_C_ExecuteUbergraph_LaunchScene::CallFunc_IsPureCSharpEnvironment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LaunchScene_C_ExecuteUbergraph_LaunchScene, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'LaunchScene_C_ExecuteUbergraph_LaunchScene::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LaunchScene_C_ExecuteUbergraph_LaunchScene, CallFunc_GetGameInstance_ReturnValue_1) == 0x000010, "Member 'LaunchScene_C_ExecuteUbergraph_LaunchScene::CallFunc_GetGameInstance_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_LaunchScene_C_ExecuteUbergraph_LaunchScene;
 
 }
 

@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "SCameraDebugTool_ControllerModification_structs.hpp"
-#include "ECameraGravityMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SCameraDebugTool_ControllerModification_structs.hpp"
 #include "SCameraDebugTool_CameraModeInfo_structs.hpp"
+#include "ECameraGravityMode_structs.hpp"
 #include "SCameraDebugTool_SubCameraModification_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "SSequenceCamera_Settings_structs.hpp"
 #include "EAimAssistMode_structs.hpp"
 #include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
-#include "SSequenceCamera_Settings_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "SCameraModifier_Condition_structs.hpp"
 #include "SCameraModifier_Settings_structs.hpp"
 #include "SBaseCurve_structs.hpp"
-#include "SCameraModifier_Condition_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
-#include "ECustomCameraMode_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ECustomCameraMode_structs.hpp"
 
 
 namespace SDK::Params
@@ -38,10 +38,7 @@ public:
 	class APawn*                                  pawn;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_OnPossess) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_OnPossess");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_OnPossess) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_OnPossess");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_OnPossess, pawn) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_OnPossess::pawn' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_OnPossess, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_OnPossess::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_OnPossess;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraMode
 // 0x0010 (0x0010 - 0x0000)
@@ -51,10 +48,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECustomCameraMode                             ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraMode) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraMode, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraMode::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraMode, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetCameraRotation
 // 0x0018 (0x0018 - 0x0000)
@@ -65,10 +59,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetCameraRotation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetCameraRotation");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetCameraRotation) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_SetCameraRotation");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraRotation, rotator) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraRotation::rotator' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraRotation, __WorldContext) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraRotation::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetCameraRotation;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetTargetSocketLocation
 // 0x0020 (0x0020 - 0x0000)
@@ -78,10 +69,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetTargetSocketLocation;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetWidgetCameraBlendParams
 // 0x0038 (0x0038 - 0x0000)
@@ -105,20 +93,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams) == 0x000038, "Wrong size on CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, blendTime) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::blendTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, blendFunction) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::blendFunction' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, blendExp) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::blendExp' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, blendLocation) == 0x00000C, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::blendLocation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, isRelativeLocation) == 0x00000D, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::isRelativeLocation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, overrideLocation) == 0x00000E, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::overrideLocation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, newLocation) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::newLocation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, blendRotation) == 0x00001C, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::blendRotation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, isRelativeRotation) == 0x00001D, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::isRelativeRotation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, overrideRotation) == 0x00001E, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::overrideRotation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, newRotation) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::newRotation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams, __WorldContext) == 0x000030, "Member 'CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetWidgetCameraBlendParams;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetFightCameraLocation
 // 0x0020 (0x0020 - 0x0000)
@@ -128,10 +103,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetFightCameraLocation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetFightCameraLocation");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetFightCameraLocation) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_GetFightCameraLocation");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraLocation, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraLocation, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetFightCameraLocation;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetFightCameraFollow
 // 0x0010 (0x0010 - 0x0000)
@@ -142,10 +114,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetFightCameraFollow) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetFightCameraFollow");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetFightCameraFollow) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetFightCameraFollow");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetFightCameraFollow, follow) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetFightCameraFollow::follow' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetFightCameraFollow, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetFightCameraFollow::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetFightCameraFollow;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ResetFightCameraPitchAndArmLength
 // 0x0008 (0x0008 - 0x0000)
@@ -154,9 +123,7 @@ struct CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ResetFightCameraPitchAndArmLength;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnterCameraExplore
 // 0x0038 (0x0038 - 0x0000)
@@ -173,16 +140,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnterCameraExplore");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore) == 0x000038, "Wrong size on CameraBlueprintFunctionLibrary_C_EnterCameraExplore");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, id) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::id' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, lookAt1) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::lookAt1' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, lookAt2) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::lookAt2' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, prepTime) == 0x00001C, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::prepTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, fadeDistance) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::fadeDistance' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, armLengthMin) == 0x000024, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::armLengthMin' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, armLengthMax) == 0x000028, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::armLengthMax' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraExplore, __WorldContext) == 0x000030, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraExplore::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnterCameraExplore;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitCameraExplore
 // 0x0010 (0x0010 - 0x0000)
@@ -193,10 +151,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitCameraExplore) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitCameraExplore");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitCameraExplore) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitCameraExplore");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraExplore, id) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraExplore::id' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraExplore, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraExplore::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitCameraExplore;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnterSequenceDialogue
 // 0x0010 (0x0010 - 0x0000)
@@ -206,10 +161,7 @@ public:
 	class AActor*                                 target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue, target) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue::target' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnterSequenceDialogue;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitSequenceDialogue
 // 0x0008 (0x0008 - 0x0000)
@@ -218,9 +170,7 @@ struct CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitSequenceDialogue;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnterCameraMode
 // 0x0018 (0x0018 - 0x0000)
@@ -235,13 +185,7 @@ public:
 	float                                         blendExp;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnterCameraMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnterCameraMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnterCameraMode) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_EnterCameraMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraMode, cameraMode) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraMode::cameraMode' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraMode, blendTime) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraMode::blendTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraMode, blendFunction) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraMode::blendFunction' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraMode, blendExp) == 0x00000C, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraMode::blendExp' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterCameraMode, __WorldContext) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_EnterCameraMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnterCameraMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitCameraMode
 // 0x0018 (0x0018 - 0x0000)
@@ -256,13 +200,7 @@ public:
 	float                                         blendExp;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitCameraMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitCameraMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitCameraMode) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitCameraMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraMode, cameraMode) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraMode::cameraMode' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraMode, blendTime) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraMode::blendTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraMode, blendFunction) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraMode::blendFunction' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraMode, blendExp) == 0x00000C, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraMode::blendExp' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraMode, __WorldContext) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitCameraMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ReloadCameraConfig
 // 0x0008 (0x0008 - 0x0000)
@@ -271,9 +209,7 @@ struct CameraBlueprintFunctionLibrary_C_ReloadCameraConfig final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ReloadCameraConfig) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ReloadCameraConfig");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ReloadCameraConfig) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ReloadCameraConfig");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ReloadCameraConfig, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ReloadCameraConfig::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ReloadCameraConfig;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetFightCameraActor
 // 0x0010 (0x0010 - 0x0000)
@@ -283,10 +219,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACameraActor*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetFightCameraActor) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetFightCameraActor");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetFightCameraActor) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetFightCameraActor");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraActor, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraActor, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetFightCameraActor;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.PlayCameraOrbital
 // 0x0030 (0x0030 - 0x0000)
@@ -300,14 +233,7 @@ public:
 	float                                         blendOutTime1;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_PlayCameraOrbital");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital) == 0x000030, "Wrong size on CameraBlueprintFunctionLibrary_C_PlayCameraOrbital");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, levelSequence) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::levelSequence' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, startLocation1) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::startLocation1' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, endLocation1) == 0x000014, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::endLocation1' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, blendInTime1) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::blendInTime1' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, blendOutTime1) == 0x000024, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::blendOutTime1' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraOrbital, __WorldContext) == 0x000028, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraOrbital::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_PlayCameraOrbital;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.StopCameraOrbital
 // 0x0008 (0x0008 - 0x0000)
@@ -316,9 +242,7 @@ struct CameraBlueprintFunctionLibrary_C_StopCameraOrbital final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_StopCameraOrbital) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_StopCameraOrbital");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_StopCameraOrbital) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_StopCameraOrbital");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_StopCameraOrbital, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_StopCameraOrbital::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_StopCameraOrbital;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.IsRoleOnCameraRight
 // 0x0010 (0x0010 - 0x0000)
@@ -328,10 +252,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_IsRoleOnCameraRight;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetAimAssistMode
 // 0x0010 (0x0010 - 0x0000)
@@ -342,10 +263,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetAimAssistMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetAimAssistMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetAimAssistMode) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetAimAssistMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetAimAssistMode, mode) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetAimAssistMode::mode' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetAimAssistMode, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetAimAssistMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetAimAssistMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetIsCameraTargetInScreen
 // 0x0010 (0x0010 - 0x0000)
@@ -355,10 +273,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetIsCameraTargetInScreen;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitSpecialGameplayCamera
 // 0x0008 (0x0008 - 0x0000)
@@ -367,9 +282,7 @@ struct CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ApplyCameraModify
 // 0x0180 (0x0180 - 0x0000)
@@ -393,22 +306,7 @@ public:
 	TArray<struct FSCameraModifier_Condition>     cameraModifierContions;                            // 0x0168(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UObject*                                __WorldContext;                                    // 0x0178(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ApplyCameraModify");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify) == 0x000180, "Wrong size on CameraBlueprintFunctionLibrary_C_ApplyCameraModify");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, tag) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::tag' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, duration) == 0x00000C, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::duration' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, blendInTime) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::blendInTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, blendOutTime) == 0x000014, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::blendOutTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, breakBlendOutTime) == 0x000018, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::breakBlendOutTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, cameraModifySettings) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::cameraModifySettings' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, montage) == 0x000138, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::montage' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, blendInCurve) == 0x000140, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::blendInCurve' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, blendOutCurve) == 0x000148, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::blendOutCurve' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, cameraAttachSocket) == 0x000150, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::cameraAttachSocket' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, entityId) == 0x000160, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::entityId' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, cameraEffectiveClientType) == 0x000164, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::cameraEffectiveClientType' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, cameraModifierContions) == 0x000168, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::cameraModifierContions' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraModify, __WorldContext) == 0x000178, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraModify::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ApplyCameraModify;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetSequenceCameraActor
 // 0x0010 (0x0010 - 0x0000)
@@ -418,10 +316,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetSequenceCameraActor;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetWidgetCameraActor
 // 0x0010 (0x0010 - 0x0000)
@@ -431,10 +326,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACameraActor*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetWidgetCameraActor;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnterSpecialGameplayCamera
 // 0x0018 (0x0018 - 0x0000)
@@ -446,11 +338,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ACameraActor*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera, gameplayId) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera::gameplayId' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera, ReturnValue) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnterSpecialGameplayCamera;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitSpecialGameplayCamera2
 // 0x0008 (0x0008 - 0x0000)
@@ -459,9 +347,7 @@ struct CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2 final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.PlayCameraSequence
 // 0x0098 (0x0098 - 0x0000)
@@ -488,24 +374,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_PlayCameraSequence");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence) == 0x000098, "Wrong size on CameraBlueprintFunctionLibrary_C_PlayCameraSequence");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, 生效客户端) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::生效客户端' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, entityId) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::entityId' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, settings) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::settings' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, resetLockOnCamera) == 0x000040, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::resetLockOnCamera' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, additiveRotation) == 0x000044, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::additiveRotation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, cameraAttachSocket) == 0x000050, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::cameraAttachSocket' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, cameraDetectSocket) == 0x000060, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::cameraDetectSocket' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, extraSphereLocation) == 0x000070, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::extraSphereLocation' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, extraDetectSphereRadius) == 0x00007C, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::extraDetectSphereRadius' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, isShowExtraSphere) == 0x000080, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::isShowExtraSphere' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, isIgnoreCharacterCollision) == 0x000081, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::isIgnoreCharacterCollision' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, disableMovementInput) == 0x000082, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::disableMovementInput' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, disableLookAtInput) == 0x000083, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::disableLookAtInput' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, disableMotionBlur) == 0x000084, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::disableMotionBlur' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, __WorldContext) == 0x000088, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlayCameraSequence, ReturnValue) == 0x000090, "Member 'CameraBlueprintFunctionLibrary_C_PlayCameraSequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_PlayCameraSequence;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.IsTargetSocketLocationValid
 // 0x0010 (0x0010 - 0x0000)
@@ -515,10 +384,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_IsTargetSocketLocationValid;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetFightCameraRotation
 // 0x0018 (0x0018 - 0x0000)
@@ -528,10 +394,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetFightCameraRotation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetFightCameraRotation");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetFightCameraRotation) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_GetFightCameraRotation");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraRotation, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraRotation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetFightCameraRotation, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetFightCameraRotation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetFightCameraRotation;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetAimAssistModeByKey
 // 0x0020 (0x0020 - 0x0000)
@@ -543,11 +406,7 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey, key) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey::key' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey, mode) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey::mode' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey, __WorldContext) == 0x000018, "Member 'CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetAimAssistModeByKey;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ClearAimAssistModeByKey
 // 0x0018 (0x0018 - 0x0000)
@@ -557,10 +416,7 @@ public:
 	class FString                                 key;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey, key) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey::key' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey, __WorldContext) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ClearAimAssistModeByKey;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetCameraDebugToolEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -571,10 +427,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled, inEnable) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled::inEnable' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetCameraDebugToolEnabled;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawCameraCollision
 // 0x0008 (0x0008 - 0x0000)
@@ -583,9 +436,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraCollision;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawSpringArm
 // 0x0008 (0x0008 - 0x0000)
@@ -594,9 +445,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArm;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawFocusTargetLine
 // 0x0008 (0x0008 - 0x0000)
@@ -605,9 +454,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawFocusTargetLine;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawSpringArmEdgeRange
 // 0x0008 (0x0008 - 0x0000)
@@ -616,9 +463,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRa
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSpringArmEdgeRange;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawLockCameraMoveLine
 // 0x0008 (0x0008 - 0x0000)
@@ -627,9 +472,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveL
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawLockCameraMoveLine;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawSettlementCamera
 // 0x0008 (0x0008 - 0x0000)
@@ -638,9 +481,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamer
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawSettlementCamera;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetDebugDesiredCameraProps
 // 0x0058 (0x0058 - 0x0000)
@@ -650,10 +491,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps) == 0x000058, "Wrong size on CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetDebugDesiredCameraProps;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetSubCameraModifications
 // 0x0018 (0x0018 - 0x0000)
@@ -663,10 +501,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSCameraDebugTool_SubCameraModification> ReturnValue;                              // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetSubCameraModifications) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetSubCameraModifications");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetSubCameraModifications) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_GetSubCameraModifications");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetSubCameraModifications, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetSubCameraModifications::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetSubCameraModifications, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetSubCameraModifications::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetSubCameraModifications;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetControllerModifications
 // 0x0018 (0x0018 - 0x0000)
@@ -676,10 +511,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSCameraDebugTool_ControllerModification> ReturnValue;                             // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetControllerModifications) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetControllerModifications");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetControllerModifications) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_GetControllerModifications");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetControllerModifications, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetControllerModifications::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetControllerModifications, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetControllerModifications::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetControllerModifications;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCamereModeInfo
 // 0x0090 (0x0090 - 0x0000)
@@ -689,10 +521,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSCameraDebugTool_CameraModeInfo       ReturnValue;                                       // 0x0008(0x0088)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCamereModeInfo) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCamereModeInfo");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCamereModeInfo) == 0x000090, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCamereModeInfo");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCamereModeInfo, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCamereModeInfo::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCamereModeInfo, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCamereModeInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCamereModeInfo;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.PlaySettlementCamera
 // 0x0008 (0x0008 - 0x0000)
@@ -701,9 +530,7 @@ struct CameraBlueprintFunctionLibrary_C_PlaySettlementCamera final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_PlaySettlementCamera) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_PlaySettlementCamera");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_PlaySettlementCamera) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_PlaySettlementCamera");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_PlaySettlementCamera, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_PlaySettlementCamera::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_PlaySettlementCamera;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetSequenceCameraCollisionState
 // 0x0010 (0x0010 - 0x0000)
@@ -714,10 +541,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState, bEnable) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState::bEnable' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetSequenceCameraCollisionState;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugToolDrawCameraZone
 // 0x0008 (0x0008 - 0x0000)
@@ -726,9 +550,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone fina
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugToolDrawCameraZone;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetXRayState
 // 0x0010 (0x0010 - 0x0000)
@@ -739,10 +561,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetXRayState) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetXRayState");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetXRayState) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetXRayState");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetXRayState, isEnable) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetXRayState::isEnable' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetXRayState, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetXRayState::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetXRayState;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetUiCameraDebugToolEnabled
 // 0x0010 (0x0010 - 0x0000)
@@ -753,10 +572,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled, enabled) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled::enabled' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetUiCameraDebugToolEnabled;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchUiCameraDtSync
 // 0x0008 (0x0008 - 0x0000)
@@ -765,9 +581,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchUiCameraDtSync;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetDebugToolUiCameraProps
 // 0x0058 (0x0058 - 0x0000)
@@ -777,10 +591,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<class FString, class FString>            ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps) == 0x000058, "Wrong size on CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetDebugToolUiCameraProps;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchUiCameraArmLengthSync
 // 0x0008 (0x0008 - 0x0000)
@@ -789,9 +600,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchUiCameraArmLengthSync;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.OnDebugToolUiCameraArmLengthInputChanged
 // 0x0018 (0x0018 - 0x0000)
@@ -801,10 +610,7 @@ public:
 	class FString                                 armLengthStr;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged, armLengthStr) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged::armLengthStr' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged, __WorldContext) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_OnDebugToolUiCameraArmLengthInputChanged;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SetCameraGravityMode
 // 0x0028 (0x0028 - 0x0000)
@@ -816,11 +622,7 @@ public:
 	struct FVectorDouble                          gravityDirect;                                     // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SetCameraGravityMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SetCameraGravityMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SetCameraGravityMode) == 0x000028, "Wrong size on CameraBlueprintFunctionLibrary_C_SetCameraGravityMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraGravityMode, gravityMode) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraGravityMode::gravityMode' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraGravityMode, gravityDirect) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraGravityMode::gravityDirect' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SetCameraGravityMode, __WorldContext) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_SetCameraGravityMode::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SetCameraGravityMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraGravityMode
 // 0x0010 (0x0010 - 0x0000)
@@ -830,10 +632,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECameraGravityMode                            ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraGravityMode) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraGravityMode");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraGravityMode) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraGravityMode");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityMode, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityMode::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityMode, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraGravityMode;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraGravityDirect
 // 0x0020 (0x0020 - 0x0000)
@@ -843,10 +642,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraGravityDirect;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraGravityUp
 // 0x0020 (0x0020 - 0x0000)
@@ -856,10 +652,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraGravityUp) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraGravityUp");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraGravityUp) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraGravityUp");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityUp, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityUp::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraGravityUp, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraGravityUp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraGravityUp;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraRotationInGravity
 // 0x0018 (0x0018 - 0x0000)
@@ -869,10 +662,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraRotationInGravity;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetPlayerLocationInGravity
 // 0x0020 (0x0020 - 0x0000)
@@ -882,10 +672,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity) == 0x000020, "Wrong size on CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetPlayerLocationInGravity;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetPlayerRotatorInGravity
 // 0x0018 (0x0018 - 0x0000)
@@ -895,10 +682,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetPlayerRotatorInGravity;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.SwitchCameraDebugRotatorEnabled
 // 0x0008 (0x0008 - 0x0000)
@@ -907,9 +691,7 @@ struct CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_SwitchCameraDebugRotatorEnabled;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ApplyCameraGuide
 // 0x0038 (0x0038 - 0x0000)
@@ -929,18 +711,7 @@ public:
 	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ApplyCameraGuide");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide) == 0x000038, "Wrong size on CameraBlueprintFunctionLibrary_C_ApplyCameraGuide");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, lookAt) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::lookAt' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, fadeInTime) == 0x00000C, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::fadeInTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, stayTime) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::stayTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, fadeOutTime) == 0x000014, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::fadeOutTime' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, lockCameraInput) == 0x000018, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::lockCameraInput' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, endPosition) == 0x00001C, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::endPosition' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, fov) == 0x000028, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::fov' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, ignoreAdjustYaw) == 0x00002C, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::ignoreAdjustYaw' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, staticCamera) == 0x00002D, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::staticCamera' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ApplyCameraGuide, __WorldContext) == 0x000030, "Member 'CameraBlueprintFunctionLibrary_C_ApplyCameraGuide::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ApplyCameraGuide;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.ExitCameraGuide
 // 0x0008 (0x0008 - 0x0000)
@@ -949,9 +720,7 @@ struct CameraBlueprintFunctionLibrary_C_ExitCameraGuide final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_ExitCameraGuide) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_ExitCameraGuide");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_ExitCameraGuide) == 0x000008, "Wrong size on CameraBlueprintFunctionLibrary_C_ExitCameraGuide");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_ExitCameraGuide, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_ExitCameraGuide::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitCameraGuide;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnableCameraSpecificLockTarget
 // 0x0018 (0x0018 - 0x0000)
@@ -963,12 +732,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget) == 0x000018, "Wrong size on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget, entityId) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget::entityId' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget, priority) == 0x000004, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget::priority' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget, ReturnValue) == 0x000010, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockTarget;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.DisableCameraSpecificLockOnTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -979,10 +743,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget, id) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget::id' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget, __WorldContext) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_DisableCameraSpecificLockOnTarget;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.IsCameraSpecificLockEnable
 // 0x0010 (0x0010 - 0x0000)
@@ -992,10 +753,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_IsCameraSpecificLockEnable;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.GetCameraSpecificLockEntityId
 // 0x0010 (0x0010 - 0x0000)
@@ -1005,10 +763,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnableCameraSpecificLockLocation
 // 0x0030 (0x0030 - 0x0000)
@@ -1021,12 +776,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation");
-static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation) == 0x000030, "Wrong size on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, location) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::location' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, priority) == 0x000018, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::priority' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, __WorldContext) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, ReturnValue) == 0x000028, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation;
 
 }
 

@@ -56,15 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PerfSightHelper">();
+		STATIC_CLASS_IMPL("PerfSightHelper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PerfSightHelper")
 	}
 	static class UPerfSightHelper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPerfSightHelper>();
 	}
 };
-static_assert(alignof(UPerfSightHelper) == 0x000008, "Wrong alignment on UPerfSightHelper");
-static_assert(sizeof(UPerfSightHelper) == 0x000030, "Wrong size on UPerfSightHelper");
+DUMPER7_ASSERTS_UPerfSightHelper;
 
 }
 

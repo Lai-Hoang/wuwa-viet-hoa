@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SLockOnConfig_structs.hpp"
+#include "Engine_classes.hpp"
 #include "SPartHitEffect_structs.hpp"
 #include "SAimPart_structs.hpp"
 #include "SLockOnPart_structs.hpp"
-#include "Engine_classes.hpp"
+#include "SLockOnConfig_structs.hpp"
 
 
 namespace SDK
@@ -36,22 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PartHitEffect_C">();
+		BP_STATIC_CLASS_IMPL("BP_PartHitEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PartHitEffect_C")
 	}
 	static class UBP_PartHitEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_PartHitEffect_C>();
 	}
 };
-static_assert(alignof(UBP_PartHitEffect_C) == 0x000008, "Wrong alignment on UBP_PartHitEffect_C");
-static_assert(sizeof(UBP_PartHitEffect_C) == 0x000088, "Wrong size on UBP_PartHitEffect_C");
-static_assert(offsetof(UBP_PartHitEffect_C, PartCollision) == 0x000038, "Member 'UBP_PartHitEffect_C::PartCollision' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, AimParts) == 0x000048, "Member 'UBP_PartHitEffect_C::AimParts' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, LockOnParts) == 0x000058, "Member 'UBP_PartHitEffect_C::LockOnParts' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, StartHideDistance) == 0x000068, "Member 'UBP_PartHitEffect_C::StartHideDistance' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, CompleteHideDistance) == 0x00006C, "Member 'UBP_PartHitEffect_C::CompleteHideDistance' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, StartDitherValue) == 0x000070, "Member 'UBP_PartHitEffect_C::StartDitherValue' has a wrong offset!");
-static_assert(offsetof(UBP_PartHitEffect_C, LockOnConfig) == 0x000074, "Member 'UBP_PartHitEffect_C::LockOnConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_PartHitEffect_C;
 
 }
 

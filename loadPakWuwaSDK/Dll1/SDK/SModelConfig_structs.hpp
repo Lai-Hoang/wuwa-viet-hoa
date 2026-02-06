@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "EBodyType_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "SNiagaraParam_structs.hpp"
 #include "ESceneInteractionEffect_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "SModelDecorationConfig_structs.hpp"
 
 
@@ -23,7 +23,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SModelConfig.SModelConfig
-// 0x0458 (0x0458 - 0x0000)
+// 0x0470 (0x0470 - 0x0000)
 struct FSModelConfig final
 {
 public:
@@ -60,38 +60,9 @@ public:
 	bool                                          隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E;     // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSModelDecorationConfig>        UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66; // 0x0448(0x0010)(Edit, BlueprintVisible)
+	struct FVectorDouble                          骑摩托位置偏移_227_0AE5EA214B3BBB512F12BEB1B085ED58; // 0x0458(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSModelConfig) == 0x000008, "Wrong alignment on FSModelConfig");
-static_assert(sizeof(FSModelConfig) == 0x000458, "Wrong size on FSModelConfig");
-static_assert(offsetof(FSModelConfig, ID_3_6A014D4F486091DDAF9D4D9D32B8C4FF) == 0x000000, "Member 'FSModelConfig::ID_3_6A014D4F486091DDAF9D4D9D32B8C4FF' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 蓝图_164_769F290B4EFC164B65A1599B535666B6) == 0x000008, "Member 'FSModelConfig::蓝图_164_769F290B4EFC164B65A1599B535666B6' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 网格体_168_BEB7464046E518BA05D4C799C3CC4633) == 0x000038, "Member 'FSModelConfig::网格体_168_BEB7464046E518BA05D4C799C3CC4633' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 子网格体_196_D82578F34F1E4A691036E99B5FB78226) == 0x000068, "Member 'FSModelConfig::子网格体_196_D82578F34F1E4A691036E99B5FB78226' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, DA_177_AB8FDE124B35121D6F1FCF9EB0CD09AD) == 0x000078, "Member 'FSModelConfig::DA_177_AB8FDE124B35121D6F1FCF9EB0CD09AD' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 动画蓝图_171_0392CD7E4090222C990267BFB07ACCFA) == 0x000098, "Member 'FSModelConfig::动画蓝图_171_0392CD7E4090222C990267BFB07ACCFA' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 描述_17_8069323C48DE6851BB6B6788D1B95952) == 0x0000C8, "Member 'FSModelConfig::描述_17_8069323C48DE6851BB6B6788D1B95952' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 动画列表_133_D11B6EF248DEB4226B6CF2A98A882A05) == 0x0000D8, "Member 'FSModelConfig::动画列表_133_D11B6EF248DEB4226B6CF2A98A882A05' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, BattleSockets_63_FB5D6DAC483A857CFEEDEFACB2756F1D) == 0x000128, "Member 'FSModelConfig::BattleSockets_63_FB5D6DAC483A857CFEEDEFACB2756F1D' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, NormalSockets_64_AE83EB754176514E8D8DAE8521A609ED) == 0x000138, "Member 'FSModelConfig::NormalSockets_64_AE83EB754176514E8D8DAE8521A609ED' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 静态网格体列表_132_071970D4433C2225A287F4BF6673DE4F) == 0x000148, "Member 'FSModelConfig::静态网格体列表_132_071970D4433C2225A287F4BF6673DE4F' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 常驻特效列表_130_465C46E24D4666BB95A752AF0B533A8B) == 0x000198, "Member 'FSModelConfig::常驻特效列表_130_465C46E24D4666BB95A752AF0B533A8B' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 变化特效列表_131_0C1F295C46E6663CA7B5A6B7B1D7D4F9) == 0x0001E8, "Member 'FSModelConfig::变化特效列表_131_0C1F295C46E6663CA7B5A6B7B1D7D4F9' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 通用特效常驻参数_113_79874DD14ED056D882E1019173BE819F) == 0x000238, "Member 'FSModelConfig::通用特效常驻参数_113_79874DD14ED056D882E1019173BE819F' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 通用特效变化参数_114_35E165954D765F21271E5F8EFB23007D) == 0x000288, "Member 'FSModelConfig::通用特效变化参数_114_35E165954D765F21271E5F8EFB23007D' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 场景交互物_142_56A2D5ED420A09047B55538B0A789828) == 0x0002D8, "Member 'FSModelConfig::场景交互物_142_56A2D5ED420A09047B55538B0A789828' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 场景交互物状态列表_144_70E5A0E44592B5CC8C81789E5CBAF975) == 0x0002F8, "Member 'FSModelConfig::场景交互物状态列表_144_70E5A0E44592B5CC8C81789E5CBAF975' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 场景交互物特效列表_160_269D1C9D465A43640E572894290F2EA9) == 0x000348, "Member 'FSModelConfig::场景交互物特效列表_160_269D1C9D465A43640E572894290F2EA9' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, IsHiddenWithCamera_180_E4B768F74ED8490D4EF4F7AC52E7AF3E) == 0x000398, "Member 'FSModelConfig::IsHiddenWithCamera_180_E4B768F74ED8490D4EF4F7AC52E7AF3E' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, ModelAlpha_184_38E22542455C4F4C5E1EDE82183BF375) == 0x00039C, "Member 'FSModelConfig::ModelAlpha_184_38E22542455C4F4C5E1EDE82183BF375' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 名字Z偏移_188_E8CB9C9A43F04B2BF247FD9E233CBE80) == 0x0003A0, "Member 'FSModelConfig::名字Z偏移_188_E8CB9C9A43F04B2BF247FD9E233CBE80' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 注释时的抬升角度_192_4AFA30A74F0864E1CEE43B930EDB3B36) == 0x0003A4, "Member 'FSModelConfig::注释时的抬升角度_192_4AFA30A74F0864E1CEE43B930EDB3B36' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 体型类型_199_997203F4416F68DB877D96A595F2AC51) == 0x0003A8, "Member 'FSModelConfig::体型类型_199_997203F4416F68DB877D96A595F2AC51' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 主角蓝透_201_B2B40294482FF0B8641BE98CCAA2E7BC) == 0x0003A9, "Member 'FSModelConfig::主角蓝透_201_B2B40294482FF0B8641BE98CCAA2E7BC' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 特效替换表_204_A2EA47D943B31ED94A4BA0B89DECD92C) == 0x0003B0, "Member 'FSModelConfig::特效替换表_204_A2EA47D943B31ED94A4BA0B89DECD92C' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 蒙太奇替换表_207_9CC9815B4071F7C6F225B0ABCAB34DE9) == 0x0003E0, "Member 'FSModelConfig::蒙太奇替换表_207_9CC9815B4071F7C6F225B0ABCAB34DE9' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 声骸掉落替换模型_210_C07454AB4CE78EE2B04E7D8DD3993DE5) == 0x000410, "Member 'FSModelConfig::声骸掉落替换模型_210_C07454AB4CE78EE2B04E7D8DD3993DE5' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, 隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E) == 0x000440, "Member 'FSModelConfig::隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E' has a wrong offset!");
-static_assert(offsetof(FSModelConfig, UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66) == 0x000448, "Member 'FSModelConfig::UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66' has a wrong offset!");
+DUMPER7_ASSERTS_FSModelConfig;
 
 }
 

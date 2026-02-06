@@ -23,9 +23,7 @@ struct ABPC_Seq_MascotInterface_C_GetAddSpineValue final
 public:
 	struct FRotator                               AddSpine;                                          // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABPC_Seq_MascotInterface_C_GetAddSpineValue) == 0x000004, "Wrong alignment on ABPC_Seq_MascotInterface_C_GetAddSpineValue");
-static_assert(sizeof(ABPC_Seq_MascotInterface_C_GetAddSpineValue) == 0x00000C, "Wrong size on ABPC_Seq_MascotInterface_C_GetAddSpineValue");
-static_assert(offsetof(ABPC_Seq_MascotInterface_C_GetAddSpineValue, AddSpine) == 0x000000, "Member 'ABPC_Seq_MascotInterface_C_GetAddSpineValue::AddSpine' has a wrong offset!");
+DUMPER7_ASSERTS_ABPC_Seq_MascotInterface_C_GetAddSpineValue;
 
 // Function ABPC_Seq_MascotInterface.ABPC_Seq_MascotInterface_C.GetAddSpineHeadValue
 // 0x000C (0x000C - 0x0000)
@@ -34,9 +32,7 @@ struct ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue final
 public:
 	struct FRotator                               AddSpineHead;                                      // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue) == 0x000004, "Wrong alignment on ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue");
-static_assert(sizeof(ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue) == 0x00000C, "Wrong size on ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue");
-static_assert(offsetof(ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue, AddSpineHead) == 0x000000, "Member 'ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue::AddSpineHead' has a wrong offset!");
+DUMPER7_ASSERTS_ABPC_Seq_MascotInterface_C_GetAddSpineHeadValue;
 
 }
 

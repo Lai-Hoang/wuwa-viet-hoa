@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct TsSkeletalObserver_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsSkeletalObserver_C_ReceiveTick) == 0x000004, "Wrong alignment on TsSkeletalObserver_C_ReceiveTick");
-static_assert(sizeof(TsSkeletalObserver_C_ReceiveTick) == 0x000004, "Wrong size on TsSkeletalObserver_C_ReceiveTick");
-static_assert(offsetof(TsSkeletalObserver_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'TsSkeletalObserver_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function TsSkeletalObserver.TsSkeletalObserver_C.ExecuteUbergraph_TsSkeletalObserver
 // 0x0008 (0x0008 - 0x0000)
 struct TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver final
@@ -33,10 +22,16 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver) == 0x000004, "Wrong alignment on TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver");
-static_assert(sizeof(TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver) == 0x000008, "Wrong size on TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver");
-static_assert(offsetof(TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver, EntryPoint) == 0x000000, "Member 'TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver;
+
+// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct TsSkeletalObserver_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsSkeletalObserver_C_ReceiveTick;
 
 }
 

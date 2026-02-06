@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateResponseSignal_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateResponseSignal_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateResponseSignal_C")
 	}
 	static class UTsAnimNotifyStateResponseSignal_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateResponseSignal_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateResponseSignal_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateResponseSignal_C");
-static_assert(sizeof(UTsAnimNotifyStateResponseSignal_C) == 0x000050, "Wrong size on UTsAnimNotifyStateResponseSignal_C");
-static_assert(offsetof(UTsAnimNotifyStateResponseSignal_C, Signal) == 0x000048, "Member 'UTsAnimNotifyStateResponseSignal_C::Signal' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateResponseSignal_C;
 
 }
 

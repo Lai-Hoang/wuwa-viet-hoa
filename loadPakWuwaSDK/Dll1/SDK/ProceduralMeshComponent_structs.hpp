@@ -35,10 +35,7 @@ public:
 	bool                                          bFlipTangentY;                                     // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FProcMeshTangent) == 0x000004, "Wrong alignment on FProcMeshTangent");
-static_assert(sizeof(FProcMeshTangent) == 0x000010, "Wrong size on FProcMeshTangent");
-static_assert(offsetof(FProcMeshTangent, TangentX) == 0x000000, "Member 'FProcMeshTangent::TangentX' has a wrong offset!");
-static_assert(offsetof(FProcMeshTangent, bFlipTangentY) == 0x00000C, "Member 'FProcMeshTangent::bFlipTangentY' has a wrong offset!");
+DUMPER7_ASSERTS_FProcMeshTangent;
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshVertex
 // 0x006C (0x006C - 0x0000)
@@ -58,20 +55,7 @@ public:
 	struct FVector2D                              UV6;                                               // 0x005C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UV7;                                               // 0x0064(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FProcMeshVertex) == 0x000004, "Wrong alignment on FProcMeshVertex");
-static_assert(sizeof(FProcMeshVertex) == 0x00006C, "Wrong size on FProcMeshVertex");
-static_assert(offsetof(FProcMeshVertex, Position) == 0x000000, "Member 'FProcMeshVertex::Position' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, Normal) == 0x00000C, "Member 'FProcMeshVertex::Normal' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, Tangent) == 0x000018, "Member 'FProcMeshVertex::Tangent' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, Color) == 0x000028, "Member 'FProcMeshVertex::Color' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV0) == 0x00002C, "Member 'FProcMeshVertex::UV0' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV1) == 0x000034, "Member 'FProcMeshVertex::UV1' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV2) == 0x00003C, "Member 'FProcMeshVertex::UV2' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV3) == 0x000044, "Member 'FProcMeshVertex::UV3' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV4) == 0x00004C, "Member 'FProcMeshVertex::UV4' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV5) == 0x000054, "Member 'FProcMeshVertex::UV5' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV6) == 0x00005C, "Member 'FProcMeshVertex::UV6' has a wrong offset!");
-static_assert(offsetof(FProcMeshVertex, UV7) == 0x000064, "Member 'FProcMeshVertex::UV7' has a wrong offset!");
+DUMPER7_ASSERTS_FProcMeshVertex;
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshSection
 // 0x0040 (0x0040 - 0x0000)
@@ -85,13 +69,7 @@ public:
 	bool                                          bSectionVisible;                                   // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FProcMeshSection) == 0x000008, "Wrong alignment on FProcMeshSection");
-static_assert(sizeof(FProcMeshSection) == 0x000040, "Wrong size on FProcMeshSection");
-static_assert(offsetof(FProcMeshSection, ProcVertexBuffer) == 0x000000, "Member 'FProcMeshSection::ProcVertexBuffer' has a wrong offset!");
-static_assert(offsetof(FProcMeshSection, ProcIndexBuffer) == 0x000010, "Member 'FProcMeshSection::ProcIndexBuffer' has a wrong offset!");
-static_assert(offsetof(FProcMeshSection, SectionLocalBox) == 0x000020, "Member 'FProcMeshSection::SectionLocalBox' has a wrong offset!");
-static_assert(offsetof(FProcMeshSection, bEnableCollision) == 0x00003C, "Member 'FProcMeshSection::bEnableCollision' has a wrong offset!");
-static_assert(offsetof(FProcMeshSection, bSectionVisible) == 0x00003D, "Member 'FProcMeshSection::bSectionVisible' has a wrong offset!");
+DUMPER7_ASSERTS_FProcMeshSection;
 
 }
 

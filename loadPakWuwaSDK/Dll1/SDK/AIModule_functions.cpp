@@ -17,272 +17,6 @@
 namespace SDK
 {
 
-// Function AIModule.AIPerceptionComponent.ForgetAll
-// (Final, Native, Public, BlueprintCallable)
-
-void UAIPerceptionComponent::ForgetAll()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "ForgetAll");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetActorsPerception
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FActorPerceptionBlueprintInfo*   Info                                                   (Parm, OutParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FActorPerceptionBlueprintInfo* Info)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetActorsPerception");
-
-	Params::AIPerceptionComponent_GetActorsPerception Parms{};
-
-	Parms.Actor = Actor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Info != nullptr)
-		*Info = std::move(Parms.Info);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.AIPerceptionComponent.OnOwnerEndPlay
-// (Final, Native, Public)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EEndPlayReason                          EndPlayReason                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "OnOwnerEndPlay");
-
-	Params::AIPerceptionComponent_OnOwnerEndPlay Parms{};
-
-	Parms.Actor = Actor;
-	Parms.EndPlayReason = EndPlayReason;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate
-// (Final, Native, Public, BlueprintCallable)
-
-void UAIPerceptionComponent::RequestStimuliListenerUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "RequestStimuliListenerUpdate");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.AIPerceptionComponent.SetSenseEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UAISense>             SenseClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::SetSenseEnabled(TSubclassOf<class UAISense> SenseClass, const bool bEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "SetSenseEnabled");
-
-	Params::AIPerceptionComponent_SetSenseEnabled Parms{};
-
-	Parms.SenseClass = SenseClass;
-	Parms.bEnable = bEnable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::GetCurrentlyPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetCurrentlyPerceivedActors");
-
-	Params::AIPerceptionComponent_GetCurrentlyPerceivedActors Parms{};
-
-	Parms.SenseToUse = SenseToUse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutActors != nullptr)
-		*OutActors = std::move(Parms.OutActors);
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::GetKnownPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetKnownPerceivedActors");
-
-	Params::AIPerceptionComponent_GetKnownPerceivedActors Parms{};
-
-	Parms.SenseToUse = SenseToUse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutActors != nullptr)
-		*OutActors = std::move(Parms.OutActors);
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedActors
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::GetPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedActors");
-
-	Params::AIPerceptionComponent_GetPerceivedActors Parms{};
-
-	Parms.SenseToUse = SenseToUse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutActors != nullptr)
-		*OutActors = std::move(Parms.OutActors);
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* OutActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedHostileActors");
-
-	Params::AIPerceptionComponent_GetPerceivedHostileActors Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutActors != nullptr)
-		*OutActors = std::move(Parms.OutActors);
-}
-
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const TSubclassOf<class UAISense>       SenseToUse                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UAIPerceptionComponent::GetPerceivedHostileActorsBySense(const TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedHostileActorsBySense");
-
-	Params::AIPerceptionComponent_GetPerceivedHostileActorsBySense Parms{};
-
-	Parms.SenseToUse = SenseToUse;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutActors != nullptr)
-		*OutActors = std::move(Parms.OutActors);
-}
-
-
 // Function AIModule.AIController.ClaimTaskResource
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1346,38 +1080,107 @@ void UAIBlueprintHelperLibrary::UnlockAIResourcesWithAnimation(class UAnimInstan
 }
 
 
-// Function AIModule.AISense_Hearing.ReportNoiseEvent
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
 // Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   NoiseLocation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Loudness                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           Instigator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   MaxRange                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             Tag                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  ResultingActorsSet                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, class FName Tag)
+void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AISense_Hearing", "ReportNoiseEvent");
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideActorsSet");
 
-	Params::AISense_Hearing_ReportNoiseEvent Parms{};
+	Params::EnvQueryContext_BlueprintBase_ProvideActorsSet Parms{};
 
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.NoiseLocation = std::move(NoiseLocation);
-	Parms.Loudness = Loudness;
-	Parms.Instigator = Instigator;
-	Parms.MaxRange = MaxRange;
-	Parms.Tag = Tag;
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
 
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
+	UObject::ProcessEvent(Func, &Parms);
 
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
+	if (ResultingActorsSet != nullptr)
+		*ResultingActorsSet = std::move(Parms.ResultingActorsSet);
+}
 
-	Func->FunctionFlags = Flgs;
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>*                 ResultingLocationSet                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideLocationsSet");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideLocationsSet Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingLocationSet != nullptr)
+		*ResultingLocationSet = std::move(Parms.ResultingLocationSet);
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
+// (Event, Public, HasOutParams, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor**                          ResultingActor                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleActor");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideSingleActor Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingActor != nullptr)
+		*ResultingActor = Parms.ResultingActor;
+}
+
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
+// (Event, Public, HasOutParams, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector*                         ResultingLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleLocation");
+
+	Params::EnvQueryContext_BlueprintBase_ProvideSingleLocation Parms{};
+
+	Parms.QuerierObject = QuerierObject;
+	Parms.QuerierActor = QuerierActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ResultingLocation != nullptr)
+		*ResultingLocation = std::move(Parms.ResultingLocation);
 }
 
 
@@ -1405,6 +1208,272 @@ void UAIAsyncTaskBlueprintProxy::OnMoveCompleted(const struct FAIRequestID& Requ
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AIPerceptionComponent.ForgetAll
+// (Final, Native, Public, BlueprintCallable)
+
+void UAIPerceptionComponent::ForgetAll()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "ForgetAll");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetActorsPerception
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FActorPerceptionBlueprintInfo*   Info                                                   (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAIPerceptionComponent::GetActorsPerception(class AActor* Actor, struct FActorPerceptionBlueprintInfo* Info)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetActorsPerception");
+
+	Params::AIPerceptionComponent_GetActorsPerception Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Info != nullptr)
+		*Info = std::move(Parms.Info);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.AIPerceptionComponent.OnOwnerEndPlay
+// (Final, Native, Public)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEndPlayReason                          EndPlayReason                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::OnOwnerEndPlay(class AActor* Actor, EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "OnOwnerEndPlay");
+
+	Params::AIPerceptionComponent_OnOwnerEndPlay Parms{};
+
+	Parms.Actor = Actor;
+	Parms.EndPlayReason = EndPlayReason;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AIPerceptionComponent.RequestStimuliListenerUpdate
+// (Final, Native, Public, BlueprintCallable)
+
+void UAIPerceptionComponent::RequestStimuliListenerUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "RequestStimuliListenerUpdate");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AIPerceptionComponent.SetSenseEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UAISense>             SenseClass                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEnable                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::SetSenseEnabled(TSubclassOf<class UAISense> SenseClass, const bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "SetSenseEnabled");
+
+	Params::AIPerceptionComponent_SetSenseEnabled Parms{};
+
+	Parms.SenseClass = SenseClass;
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::GetCurrentlyPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetCurrentlyPerceivedActors");
+
+	Params::AIPerceptionComponent_GetCurrentlyPerceivedActors Parms{};
+
+	Parms.SenseToUse = SenseToUse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::GetKnownPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetKnownPerceivedActors");
+
+	Params::AIPerceptionComponent_GetKnownPerceivedActors Parms{};
+
+	Parms.SenseToUse = SenseToUse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedActors
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TSubclassOf<class UAISense>             SenseToUse                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::GetPerceivedActors(TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedActors");
+
+	Params::AIPerceptionComponent_GetPerceivedActors Parms{};
+
+	Parms.SenseToUse = SenseToUse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::GetPerceivedHostileActors(TArray<class AActor*>* OutActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedHostileActors");
+
+	Params::AIPerceptionComponent_GetPerceivedHostileActors Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
+}
+
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TSubclassOf<class UAISense>       SenseToUse                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  OutActors                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UAIPerceptionComponent::GetPerceivedHostileActorsBySense(const TSubclassOf<class UAISense> SenseToUse, TArray<class AActor*>* OutActors) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AIPerceptionComponent", "GetPerceivedHostileActorsBySense");
+
+	Params::AIPerceptionComponent_GetPerceivedHostileActorsBySense Parms{};
+
+	Parms.SenseToUse = SenseToUse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutActors != nullptr)
+		*OutActors = std::move(Parms.OutActors);
 }
 
 
@@ -1637,42 +1706,6 @@ void UAIPerceptionSystem::ReportEvent(class UAISenseEvent* PerceptionEvent)
 }
 
 
-// Function AIModule.EnvQueryManager.RunEQSQuery
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEnvQuery*                        QueryTemplate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          Querier                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EEnvQueryRunMode                        RunMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSubclassOf<class UEnvQueryInstanceBlueprintWrapper>WrapperClass                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEnvQueryInstanceBlueprintWrapper*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UObject* WorldContextObject, class UEnvQuery* QueryTemplate, class UObject* Querier, EEnvQueryRunMode RunMode, TSubclassOf<class UEnvQueryInstanceBlueprintWrapper> WrapperClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("EnvQueryManager", "RunEQSQuery");
-
-	Params::EnvQueryManager_RunEQSQuery Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QueryTemplate = QueryTemplate;
-	Parms.Querier = Querier;
-	Parms.RunMode = RunMode;
-	Parms.WrapperClass = WrapperClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AIModule.AISense_Blueprint.K2_OnNewPawn
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -1869,6 +1902,41 @@ void UAISense_Damage::ReportDamageEvent(class UObject* WorldContextObject, class
 }
 
 
+// Function AIModule.AISense_Hearing.ReportNoiseEvent
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   NoiseLocation                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Loudness                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Instigator                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxRange                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             Tag                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAISense_Hearing::ReportNoiseEvent(class UObject* WorldContextObject, const struct FVector& NoiseLocation, float Loudness, class AActor* Instigator, float MaxRange, class FName Tag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AISense_Hearing", "ReportNoiseEvent");
+
+	Params::AISense_Hearing_ReportNoiseEvent Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.NoiseLocation = std::move(NoiseLocation);
+	Parms.Loudness = Loudness;
+	Parms.Instigator = Instigator;
+	Parms.MaxRange = MaxRange;
+	Parms.Tag = Tag;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function AIModule.AISense_Prediction.RequestControllerPredictionEvent
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1924,6 +1992,120 @@ void UAISense_Prediction::RequestPawnPredictionEvent(class APawn* Requestor, cla
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AISystem.AIIgnorePlayers
+// (Exec, Native, Public)
+
+void UAISystem::AIIgnorePlayers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AISystem", "AIIgnorePlayers");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AISystem.AILoggingVerbose
+// (Exec, Native, Public)
+
+void UAISystem::AILoggingVerbose()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AISystem", "AILoggingVerbose");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.AITask_MoveTo.AIMoveTo
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AAIController*                    Controller                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   GoalLocation                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           GoalActor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AcceptanceRadius                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAIOptionFlag                           StopOnOverlap                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAIOptionFlag                           AcceptPartialPath                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUsePathfinding                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bLockAILogic                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseContinuosGoalTracking                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAIOptionFlag                           ProjectGoalOnNavigation                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAITask_MoveTo*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, const struct FVector& GoalLocation, class AActor* GoalActor, float AcceptanceRadius, EAIOptionFlag StopOnOverlap, EAIOptionFlag AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuosGoalTracking, EAIOptionFlag ProjectGoalOnNavigation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AITask_MoveTo", "AIMoveTo");
+
+	Params::AITask_MoveTo_AIMoveTo Parms{};
+
+	Parms.Controller = Controller;
+	Parms.GoalLocation = std::move(GoalLocation);
+	Parms.GoalActor = GoalActor;
+	Parms.AcceptanceRadius = AcceptanceRadius;
+	Parms.StopOnOverlap = StopOnOverlap;
+	Parms.AcceptPartialPath = AcceptPartialPath;
+	Parms.bUsePathfinding = bUsePathfinding;
+	Parms.bLockAILogic = bLockAILogic;
+	Parms.bUseContinuosGoalTracking = bUseContinuosGoalTracking;
+	Parms.ProjectGoalOnNavigation = ProjectGoalOnNavigation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.AITask_RunEQS.RunEQS
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AAIController*                    Controller                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEnvQuery*                        QueryTemplate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAITask_RunEQS*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, class UEnvQuery* QueryTemplate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AITask_RunEQS", "RunEQS");
+
+	Params::AITask_RunEQS_RunEQS Parms{};
+
+	Parms.Controller = Controller;
+	Parms.QueryTemplate = QueryTemplate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -2033,367 +2215,6 @@ bool UBrainComponent::IsRunning() const
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.AISystem.AIIgnorePlayers
-// (Exec, Native, Public)
-
-void UAISystem::AIIgnorePlayers()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AISystem", "AIIgnorePlayers");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.AISystem.AILoggingVerbose
-// (Exec, Native, Public)
-
-void UAISystem::AILoggingVerbose()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AISystem", "AILoggingVerbose");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Extent                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent, const struct FRotator& Rotation, const int32 Radius2D, const float Height, bool bRebuildGrids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForBox");
-
-	Params::NavLocalGridManager_AddLocalNavigationGridForBox Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Location = std::move(Location);
-	Parms.Extent = std::move(Extent);
-	Parms.Rotation = std::move(Rotation);
-	Parms.Radius2D = Radius2D;
-	Parms.Height = Height;
-	Parms.bRebuildGrids = bRebuildGrids;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CapsuleRadius                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CapsuleHalfHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldContextObject, const struct FVector& Location, float CapsuleRadius, float CapsuleHalfHeight, const int32 Radius2D, const float Height, bool bRebuildGrids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForCapsule");
-
-	Params::NavLocalGridManager_AddLocalNavigationGridForCapsule Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Location = std::move(Location);
-	Parms.CapsuleRadius = CapsuleRadius;
-	Parms.CapsuleHalfHeight = CapsuleHalfHeight;
-	Parms.Radius2D = Radius2D;
-	Parms.Height = Height;
-	Parms.bRebuildGrids = bRebuildGrids;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldContextObject, const struct FVector& Location, const int32 Radius2D, const float Height, bool bRebuildGrids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForPoint");
-
-	Params::NavLocalGridManager_AddLocalNavigationGridForPoint Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Location = std::move(Location);
-	Parms.Radius2D = Radius2D;
-	Parms.Height = Height;
-	Parms.bRebuildGrids = bRebuildGrids;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TArray<struct FVector>&           Locations                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldContextObject, const TArray<struct FVector>& Locations, const int32 Radius2D, const float Height, bool bRebuildGrids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForPoints");
-
-	Params::NavLocalGridManager_AddLocalNavigationGridForPoints Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Locations = std::move(Locations);
-	Parms.Radius2D = Radius2D;
-	Parms.Height = Height;
-	Parms.bRebuildGrids = bRebuildGrids;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Start                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   End                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>*                 PathPoints                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<struct FVector>* PathPoints)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "FindLocalNavigationGridPath");
-
-	Params::NavLocalGridManager_FindLocalNavigationGridPath Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Start = std::move(Start);
-	Parms.End = std::move(End);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (PathPoints != nullptr)
-		*PathPoints = std::move(Parms.PathPoints);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   GridId                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContextObject, int32 GridId, bool bRebuildGrids)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "RemoveLocalNavigationGrid");
-
-	Params::NavLocalGridManager_RemoveLocalNavigationGrid Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.GridId = GridId;
-	Parms.bRebuildGrids = bRebuildGrids;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CellSize                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldContextObject, float CellSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NavLocalGridManager", "SetLocalNavigationGridDensity");
-
-	Params::NavLocalGridManager_SetLocalNavigationGridDensity Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.CellSize = CellSize;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.AITask_RunEQS.RunEQS
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AAIController*                    Controller                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEnvQuery*                        QueryTemplate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAITask_RunEQS*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAITask_RunEQS* UAITask_RunEQS::RunEQS(class AAIController* Controller, class UEnvQuery* QueryTemplate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AITask_RunEQS", "RunEQS");
-
-	Params::AITask_RunEQS_RunEQS Parms{};
-
-	Parms.Controller = Controller;
-	Parms.QueryTemplate = QueryTemplate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AIModule.AITask_MoveTo.AIMoveTo
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class AAIController*                    Controller                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   GoalLocation                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           GoalActor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   AcceptanceRadius                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EAIOptionFlag                           StopOnOverlap                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EAIOptionFlag                           AcceptPartialPath                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bUsePathfinding                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bLockAILogic                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bUseContinuosGoalTracking                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EAIOptionFlag                           ProjectGoalOnNavigation                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAITask_MoveTo*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UAITask_MoveTo* UAITask_MoveTo::AIMoveTo(class AAIController* Controller, const struct FVector& GoalLocation, class AActor* GoalActor, float AcceptanceRadius, EAIOptionFlag StopOnOverlap, EAIOptionFlag AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuosGoalTracking, EAIOptionFlag ProjectGoalOnNavigation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("AITask_MoveTo", "AIMoveTo");
-
-	Params::AITask_MoveTo_AIMoveTo Parms{};
-
-	Parms.Controller = Controller;
-	Parms.GoalLocation = std::move(GoalLocation);
-	Parms.GoalActor = GoalActor;
-	Parms.AcceptanceRadius = AcceptanceRadius;
-	Parms.StopOnOverlap = StopOnOverlap;
-	Parms.AcceptPartialPath = AcceptPartialPath;
-	Parms.bUsePathfinding = bUsePathfinding;
-	Parms.bLockAILogic = bLockAILogic;
-	Parms.bUseContinuosGoalTracking = bUseContinuosGoalTracking;
-	Parms.ProjectGoalOnNavigation = ProjectGoalOnNavigation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -4879,110 +4700,6 @@ void UCrowdFollowingComponent::SuspendCrowdSteering(bool bSuspend)
 }
 
 
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>*                  ResultingActorsSet                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UEnvQueryContext_BlueprintBase::ProvideActorsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<class AActor*>* ResultingActorsSet) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideActorsSet");
-
-	Params::EnvQueryContext_BlueprintBase_ProvideActorsSet Parms{};
-
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingActorsSet != nullptr)
-		*ResultingActorsSet = std::move(Parms.ResultingActorsSet);
-}
-
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>*                 ResultingLocationSet                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UEnvQueryContext_BlueprintBase::ProvideLocationsSet(class UObject* QuerierObject, class AActor* QuerierActor, TArray<struct FVector>* ResultingLocationSet) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideLocationsSet");
-
-	Params::EnvQueryContext_BlueprintBase_ProvideLocationsSet Parms{};
-
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingLocationSet != nullptr)
-		*ResultingLocationSet = std::move(Parms.ResultingLocationSet);
-}
-
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
-// (Event, Public, HasOutParams, BlueprintEvent, Const)
-// Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor**                          ResultingActor                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UEnvQueryContext_BlueprintBase::ProvideSingleActor(class UObject* QuerierObject, class AActor* QuerierActor, class AActor** ResultingActor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleActor");
-
-	Params::EnvQueryContext_BlueprintBase_ProvideSingleActor Parms{};
-
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingActor != nullptr)
-		*ResultingActor = Parms.ResultingActor;
-}
-
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
-// (Event, Public, HasOutParams, HasDefaults, BlueprintEvent, Const)
-// Parameters:
-// class UObject*                          QuerierObject                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           QuerierActor                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector*                         ResultingLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UEnvQueryContext_BlueprintBase::ProvideSingleLocation(class UObject* QuerierObject, class AActor* QuerierActor, struct FVector* ResultingLocation) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnvQueryContext_BlueprintBase", "ProvideSingleLocation");
-
-	Params::EnvQueryContext_BlueprintBase_ProvideSingleLocation Parms{};
-
-	Parms.QuerierObject = QuerierObject;
-	Parms.QuerierActor = QuerierActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultingLocation != nullptr)
-		*ResultingLocation = std::move(Parms.ResultingLocation);
-}
-
-
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
@@ -5241,6 +4958,42 @@ TArray<struct FVector> UEnvQueryInstanceBlueprintWrapper::GetResultsAsLocations(
 }
 
 
+// Function AIModule.EnvQueryManager.RunEQSQuery
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEnvQuery*                        QueryTemplate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Querier                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEnvQueryRunMode                        RunMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UEnvQueryInstanceBlueprintWrapper>WrapperClass                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEnvQueryInstanceBlueprintWrapper*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UEnvQueryInstanceBlueprintWrapper* UEnvQueryManager::RunEQSQuery(class UObject* WorldContextObject, class UEnvQuery* QueryTemplate, class UObject* Querier, EEnvQueryRunMode RunMode, TSubclassOf<class UEnvQueryInstanceBlueprintWrapper> WrapperClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("EnvQueryManager", "RunEQSQuery");
+
+	Params::EnvQueryManager_RunEQSQuery Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QueryTemplate = QueryTemplate;
+	Parms.Querier = Querier;
+	Parms.RunMode = RunMode;
+	Parms.WrapperClass = WrapperClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AIModule.NavLinkProxy.ReceiveSmartLinkReached
 // (Event, Public, HasOutParams, HasDefaults, BlueprintEvent)
 // Parameters:
@@ -5356,6 +5109,253 @@ bool ANavLinkProxy::IsSmartLinkEnabled() const
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Extent                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNavLocalGridManager::AddLocalNavigationGridForBox(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent, const struct FRotator& Rotation, const int32 Radius2D, const float Height, bool bRebuildGrids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForBox");
+
+	Params::NavLocalGridManager_AddLocalNavigationGridForBox Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Location = std::move(Location);
+	Parms.Extent = std::move(Extent);
+	Parms.Rotation = std::move(Rotation);
+	Parms.Radius2D = Radius2D;
+	Parms.Height = Height;
+	Parms.bRebuildGrids = bRebuildGrids;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CapsuleRadius                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CapsuleHalfHeight                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNavLocalGridManager::AddLocalNavigationGridForCapsule(class UObject* WorldContextObject, const struct FVector& Location, float CapsuleRadius, float CapsuleHalfHeight, const int32 Radius2D, const float Height, bool bRebuildGrids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForCapsule");
+
+	Params::NavLocalGridManager_AddLocalNavigationGridForCapsule Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Location = std::move(Location);
+	Parms.CapsuleRadius = CapsuleRadius;
+	Parms.CapsuleHalfHeight = CapsuleHalfHeight;
+	Parms.Radius2D = Radius2D;
+	Parms.Height = Height;
+	Parms.bRebuildGrids = bRebuildGrids;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNavLocalGridManager::AddLocalNavigationGridForPoint(class UObject* WorldContextObject, const struct FVector& Location, const int32 Radius2D, const float Height, bool bRebuildGrids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForPoint");
+
+	Params::NavLocalGridManager_AddLocalNavigationGridForPoint Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Location = std::move(Location);
+	Parms.Radius2D = Radius2D;
+	Parms.Height = Height;
+	Parms.bRebuildGrids = bRebuildGrids;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FVector>&           Locations                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const int32                             Radius2D                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Height                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNavLocalGridManager::AddLocalNavigationGridForPoints(class UObject* WorldContextObject, const TArray<struct FVector>& Locations, const int32 Radius2D, const float Height, bool bRebuildGrids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "AddLocalNavigationGridForPoints");
+
+	Params::NavLocalGridManager_AddLocalNavigationGridForPoints Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Locations = std::move(Locations);
+	Parms.Radius2D = Radius2D;
+	Parms.Height = Height;
+	Parms.bRebuildGrids = bRebuildGrids;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Start                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   End                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>*                 PathPoints                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNavLocalGridManager::FindLocalNavigationGridPath(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, TArray<struct FVector>* PathPoints)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "FindLocalNavigationGridPath");
+
+	Params::NavLocalGridManager_FindLocalNavigationGridPath Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Start = std::move(Start);
+	Parms.End = std::move(End);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (PathPoints != nullptr)
+		*PathPoints = std::move(Parms.PathPoints);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   GridId                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bRebuildGrids                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNavLocalGridManager::RemoveLocalNavigationGrid(class UObject* WorldContextObject, int32 GridId, bool bRebuildGrids)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "RemoveLocalNavigationGrid");
+
+	Params::NavLocalGridManager_RemoveLocalNavigationGrid Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.GridId = GridId;
+	Parms.bRebuildGrids = bRebuildGrids;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CellSize                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNavLocalGridManager::SetLocalNavigationGridDensity(class UObject* WorldContextObject, float CellSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NavLocalGridManager", "SetLocalNavigationGridDensity");
+
+	Params::NavLocalGridManager_SetLocalNavigationGridDensity Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.CellSize = CellSize;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 

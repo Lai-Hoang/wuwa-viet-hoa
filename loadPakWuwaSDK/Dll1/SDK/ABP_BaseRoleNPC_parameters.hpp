@@ -12,8 +12,8 @@
 
 #include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SDynamicMontageParams_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SMovementSetting_State_structs.hpp"
 
 
@@ -359,301 +359,7 @@ public:
 	uint8                                         Pad_A95[0x3];                                      // 0x0A95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBP_ABPLogicParams_C*                   CallFunc_SpawnObject_ReturnValue;                  // 0x0A98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC");
-static_assert(sizeof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC) == 0x000AA0, "Wrong size on ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, EntryPoint) == 0x000000, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X) == 0x000004, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y) == 0x000008, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue) == 0x000010, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue) == 0x000018, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_1) == 0x000020, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_1) == 0x000024, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_1) == 0x000028, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_1) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue) == 0x000034, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_1) == 0x000038, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DotProduct2D_ReturnValue) == 0x000040, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DotProduct2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue) == 0x000044, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000045, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue) == 0x000046, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_1) == 0x000047, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_2) == 0x000048, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal_ReturnValue) == 0x00004C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_2) == 0x000058, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_2) == 0x00005C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_2) == 0x000060, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_3) == 0x000064, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_3) == 0x000068, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_3) == 0x00006C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_2) == 0x000070, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_3) == 0x000078, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_2) == 0x000080, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_3) == 0x000088, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_4) == 0x000090, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_4) == 0x000094, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_4) == 0x000098, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_4) == 0x00009C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_4) == 0x0000A4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000AC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DotProduct2D_ReturnValue_1) == 0x0000B0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DotProduct2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x0000B4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DotProduct2D_ReturnValue_2) == 0x0000B8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DotProduct2D_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_2) == 0x0000BC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_3) == 0x0000BD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_4) == 0x0000BE, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue) == 0x0000BF, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue) == 0x0000C0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_1) == 0x0000C1, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_2) == 0x0000C2, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_1) == 0x0000C3, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000C4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0000C5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_3) == 0x0000C6, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_5) == 0x0000C7, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_5) == 0x0000C8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_5) == 0x0000CC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_5) == 0x0000D0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_5) == 0x0000D4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_5) == 0x0000DC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_6) == 0x0000E4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_6) == 0x0000E8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_6) == 0x0000EC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_6) == 0x0000F0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_6) == 0x0000F8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DotProduct2D_ReturnValue_3) == 0x000100, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DotProduct2D_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_1) == 0x000104, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x000105, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_4) == 0x000106, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_6) == 0x000107, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_3) == 0x000108, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_2) == 0x000109, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_7) == 0x00010A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_5) == 0x00010B, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue) == 0x00010C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_1) == 0x000110, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_3) == 0x000114, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_2) == 0x000115, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue) == 0x000118, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_2) == 0x00011C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_4) == 0x000120, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1) == 0x000124, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_5) == 0x000128, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_2) == 0x00012C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_6) == 0x000130, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_3) == 0x000134, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000138, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_3) == 0x00013C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha) == 0x000140, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_7) == 0x00014C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_4) == 0x000150, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_8) == 0x000154, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_5) == 0x000158, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_6) == 0x00015C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_7) == 0x000160, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_3) == 0x000164, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_4) == 0x000165, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_8) == 0x000168, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_9) == 0x00016C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000170, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_9) == 0x000174, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_1) == 0x000178, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_4) == 0x000184, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_10) == 0x000188, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_10) == 0x00018C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_5) == 0x000190, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_11) == 0x000194, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_11) == 0x000198, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x00019C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_12) == 0x0001A0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_2) == 0x0001A4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_13) == 0x0001B0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_3) == 0x0001B4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_3) == 0x0001B8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_6) == 0x0001C4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_4) == 0x0001C5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_8) == 0x0001C6, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_9) == 0x0001C7, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_3) == 0x0001C8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_5) == 0x0001C9, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_10) == 0x0001CA, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_6) == 0x0001CB, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_7) == 0x0001CC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_7) == 0x0001CD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_8) == 0x0001CE, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_11) == 0x0001CF, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_8) == 0x0001D0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_7) == 0x0001D4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_7) == 0x0001D8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_7) == 0x0001DC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_7) == 0x0001E0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_7) == 0x0001E8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_X_8) == 0x0001F0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_X_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Y_8) == 0x0001F4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Y_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakVector_Z_8) == 0x0001F8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakVector_Z_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeVector2D_ReturnValue_8) == 0x0001FC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeVector2D_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_CreateDelegate_OutputDelegate) == 0x000208, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Normal2D_ReturnValue_8) == 0x000230, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Normal2D_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DotProduct2D_ReturnValue_4) == 0x000238, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DotProduct2D_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x00023C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_5) == 0x000248, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_12) == 0x000249, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_IsValid_ReturnValue) == 0x00024A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_NotEqual_FloatFloat_ReturnValue) == 0x00024B, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_NotEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x00024C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_12) == 0x000250, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_9) == 0x000251, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurrentStateName_ReturnValue) == 0x000254, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurrentStateName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1) == 0x000260, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000264, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_13) == 0x000265, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_13) == 0x000266, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_9) == 0x000267, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_10) == 0x000268, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_10) == 0x000269, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_11) == 0x00026A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2) == 0x00026C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_FloatFloat_ReturnValue) == 0x000270, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_4) == 0x000271, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000272, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000273, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_5) == 0x000274, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_3) == 0x000278, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_14) == 0x00027C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_4) == 0x000280, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_14) == 0x000284, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_15) == 0x000285, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000286, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000287, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_2) == 0x000288, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_3) == 0x000289, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_4) == 0x00028A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_5) == 0x00028C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000290, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_11) == 0x000291, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_6) == 0x000294, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_12) == 0x000298, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_16) == 0x000299, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_12) == 0x00029A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_17) == 0x00029B, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_15) == 0x00029C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_5) == 0x00029D, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_7) == 0x0002A0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_18) == 0x0002A4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_6) == 0x0002A5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_8) == 0x0002A8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_19) == 0x0002AC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_7) == 0x0002AD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_8) == 0x0002AE, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_9) == 0x0002AF, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_13) == 0x0002B0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_10) == 0x0002B1, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_11) == 0x0002B2, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_12) == 0x0002B3, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_IntInt_ReturnValue_13) == 0x0002B4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_IntInt_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_FloatFloat_ReturnValue_1) == 0x0002B5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_6) == 0x0002B6, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_14) == 0x0002B7, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_9) == 0x0002B8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_FloatFloat_ReturnValue_2) == 0x0002BC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanNOR_ReturnValue_7) == 0x0002BD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanNOR_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakRotator_Roll) == 0x0002C0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakRotator_Pitch) == 0x0002C4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BreakRotator_Yaw) == 0x0002C8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0002CC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_MakeRotator_ReturnValue) == 0x0002D0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_14) == 0x0002DC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_15) == 0x0002E0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_4) == 0x0002E4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_16) == 0x0002E8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_4) == 0x0002EC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_5) == 0x0002F8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_17) == 0x0002FC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_18) == 0x000300, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_5) == 0x000304, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_6) == 0x000310, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_19) == 0x00031C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_20) == 0x000320, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_7) == 0x000324, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_8) == 0x000330, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_21) == 0x00033C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_22) == 0x000340, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_9) == 0x000344, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_10) == 0x000350, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurveValue_ReturnValue_23) == 0x00035C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurveValue_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_MakeStruct_AdditiveBlendAlpha_11) == 0x000360, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_MakeStruct_AdditiveBlendAlpha_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_15) == 0x00036C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_13) == 0x00036D, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_16) == 0x00036E, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_17) == 0x00036F, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SelectFloat_ReturnValue) == 0x000370, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x000374, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_14) == 0x000378, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_16) == 0x000379, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x00037A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x00037B, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00037C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_17) == 0x00037D, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SelectFloat_ReturnValue_1) == 0x000380, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Greater_FloatFloat_ReturnValue_3) == 0x000384, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SelectFloat_ReturnValue_2) == 0x000388, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SelectFloat_ReturnValue_3) == 0x00038C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SelectFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000390, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_10) == 0x000394, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x000398, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetCurrentStateName_ReturnValue_1) == 0x00039C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetCurrentStateName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x0003A8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_18) == 0x0003A9, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_19) == 0x0003AA, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x0003AB, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_20) == 0x0003AC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x0003AD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_6) == 0x0003AE, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_Event_DeltaTimeX) == 0x0003B0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_21) == 0x0003B4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_22) == 0x0003B5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_6) == 0x0003B8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_23) == 0x0003BC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_20) == 0x0003BD, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SelectFloat_ReturnValue_4) == 0x0003C0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SelectFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc________ReturnValue) == 0x0003C4, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc________ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, ___bool_Has_Been_Initd_Variable) == 0x0003C5, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::___bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Greater_FloatFloat_ReturnValue_4) == 0x0003C6, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Greater_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, ___bool_IsClosed_Variable) == 0x0003C7, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::___bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_18) == 0x0003C8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_11) == 0x0003CC, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_LessEqual_FloatFloat_ReturnValue_2) == 0x0003D0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_LessEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, ___bool_IsClosed_Variable_1) == 0x0003D1, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::___bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, ___bool_Has_Been_Initd_Variable_1) == 0x0003D2, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::___bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_TryGetPawnOwner_ReturnValue) == 0x0003D8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_CustomEvent_____) == 0x0003E0, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_CustomEvent_____' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_DynamicCast_AsTs_Base_Character) == 0x0003F8, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_DynamicCast_bSuccess) == 0x000400, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_PlaySlotAnimationAsDynamicMontage_ReturnValue) == 0x000408, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_PlaySlotAnimationAsDynamicMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_IsValid_ReturnValue_1) == 0x000410, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DtGetMovementSettings_data) == 0x000418, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DtGetMovementSettings_data' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_DtGetMovementSettings_ReturnValue) == 0x000A60, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_DtGetMovementSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_IsAutonomousProxy_ReturnValue) == 0x000A61, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_IsAutonomousProxy_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Not_PreBool_ReturnValue_15) == 0x000A62, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Not_PreBool_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_CustomEvent_Character) == 0x000A68, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_CustomEvent_Character' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_CustomEvent_PrevMovementMode) == 0x000A70, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_CustomEvent_PrevMovementMode' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, K2Node_CustomEvent_PreviousCustomMode) == 0x000A71, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::K2Node_CustomEvent_PreviousCustomMode' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_7) == 0x000A72, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_8) == 0x000A73, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetRelevantAnimTime_ReturnValue) == 0x000A74, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetRelevantAnimTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GreaterEqual_FloatFloat_ReturnValue_6) == 0x000A78, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GreaterEqual_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_9) == 0x000A79, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_19) == 0x000A7A, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_20) == 0x000A7B, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_EqualEqual_ByteByte_ReturnValue_10) == 0x000A7C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_EqualEqual_ByteByte_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanAND_ReturnValue_21) == 0x000A7D, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanAND_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetTimeSeconds_ReturnValue) == 0x000A80, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_BooleanOR_ReturnValue_24) == 0x000A84, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_BooleanOR_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Subtract_FloatFloat_ReturnValue_6) == 0x000A88, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Subtract_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_21) == 0x000A8C, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_7) == 0x000A90, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_Less_FloatFloat_ReturnValue_22) == 0x000A94, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_Less_FloatFloat_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC, CallFunc_SpawnObject_ReturnValue) == 0x000A98, "Member 'ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_ExecuteUbergraph_ABP_BaseRoleNPC;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.MovementChanged
 // 0x0010 (0x0010 - 0x0000)
@@ -664,11 +370,7 @@ public:
 	EMovementMode                                 PrevMovementMode;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         PreviousCustomMode;                                // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_MovementChanged) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_MovementChanged");
-static_assert(sizeof(ABP_BaseRoleNPC_C_MovementChanged) == 0x000010, "Wrong size on ABP_BaseRoleNPC_C_MovementChanged");
-static_assert(offsetof(ABP_BaseRoleNPC_C_MovementChanged, Character) == 0x000000, "Member 'ABP_BaseRoleNPC_C_MovementChanged::Character' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_MovementChanged, PrevMovementMode) == 0x000008, "Member 'ABP_BaseRoleNPC_C_MovementChanged::PrevMovementMode' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_MovementChanged, PreviousCustomMode) == 0x000009, "Member 'ABP_BaseRoleNPC_C_MovementChanged::PreviousCustomMode' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_MovementChanged;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.播放动画
 // 0x0018 (0x0018 - 0x0000)
@@ -677,9 +379,7 @@ struct ABP_BaseRoleNPC_C_播放动画 final
 public:
 	struct FSDynamicMontageParams                 播放动画_0;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_播放动画) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_播放动画");
-static_assert(sizeof(ABP_BaseRoleNPC_C_播放动画) == 0x000018, "Wrong size on ABP_BaseRoleNPC_C_播放动画");
-static_assert(offsetof(ABP_BaseRoleNPC_C_播放动画, 播放动画_0) == 0x000000, "Member 'ABP_BaseRoleNPC_C_播放动画::播放动画_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_播放动画;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -688,9 +388,7 @@ struct ABP_BaseRoleNPC_C_BlueprintUpdateAnimation final
 public:
 	float                                         DeltaTimeX_0;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_BaseRoleNPC_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_BaseRoleNPC_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_BaseRoleNPC_C_BlueprintUpdateAnimation, DeltaTimeX_0) == 0x000000, "Member 'ABP_BaseRoleNPC_C_BlueprintUpdateAnimation::DeltaTimeX_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_BlueprintUpdateAnimation;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.是否需要移动
 // 0x0006 (0x0006 - 0x0000)
@@ -704,14 +402,7 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_是否需要移动) == 0x000001, "Wrong alignment on ABP_BaseRoleNPC_C_是否需要移动");
-static_assert(sizeof(ABP_BaseRoleNPC_C_是否需要移动) == 0x000006, "Wrong size on ABP_BaseRoleNPC_C_是否需要移动");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_是否需要移动::ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, CallFunc_Kuro_GetLocalRole_ReturnValue) == 0x000001, "Member 'ABP_BaseRoleNPC_C_是否需要移动::CallFunc_Kuro_GetLocalRole_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000002, "Member 'ABP_BaseRoleNPC_C_是否需要移动::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000003, "Member 'ABP_BaseRoleNPC_C_是否需要移动::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, CallFunc_BooleanOR_ReturnValue) == 0x000004, "Member 'ABP_BaseRoleNPC_C_是否需要移动::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_是否需要移动, CallFunc_BooleanAND_ReturnValue) == 0x000005, "Member 'ABP_BaseRoleNPC_C_是否需要移动::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_是否需要移动;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.原地旋转检查
 // 0x0068 (0x0068 - 0x0000)
@@ -747,34 +438,7 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_原地旋转检查) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_原地旋转检查");
-static_assert(sizeof(ABP_BaseRoleNPC_C_原地旋转检查) == 0x000068, "Wrong size on ABP_BaseRoleNPC_C_原地旋转检查");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, Turn) == 0x000000, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::Turn' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Abs_ReturnValue) == 0x000004, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000008, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000009, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Abs_ReturnValue_1) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x000010, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Greater_FloatFloat_ReturnValue_3) == 0x000011, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Roll) == 0x000014, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Pitch) == 0x000018, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Yaw) == 0x00001C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Roll_1) == 0x000020, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Pitch_1) == 0x000024, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Yaw_1) == 0x000028, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_GetInputRotator_ReturnValue) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_GetInputRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Roll_2) == 0x000038, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Roll_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Pitch_2) == 0x00003C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Pitch_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Yaw_2) == 0x000040, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Yaw_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Roll_3) == 0x000044, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Roll_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Pitch_3) == 0x000048, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Pitch_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_BreakRotator_Yaw_3) == 0x00004C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_BreakRotator_Yaw_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000050, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_ClampAngle_ReturnValue) == 0x000054, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_ClampAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000058, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_ClampAngle_ReturnValue_1) == 0x00005C, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_ClampAngle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000060, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_原地旋转检查, CallFunc_Greater_FloatFloat_ReturnValue_4) == 0x000064, "Member 'ABP_BaseRoleNPC_C_原地旋转检查::CallFunc_Greater_FloatFloat_ReturnValue_4' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_原地旋转检查;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新 IK信息
 // 0x0040 (0x0040 - 0x0000)
@@ -793,19 +457,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新_IK信息) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新_IK信息");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新_IK信息) == 0x000040, "Wrong size on ABP_BaseRoleNPC_C_更新_IK信息");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, Prev) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::Prev' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, ZOffset) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::ZOffset' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, tmp2) == 0x000010, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::tmp2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, tmp) == 0x000014, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::tmp' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, 模型位置) == 0x000020, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::模型位置' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, 模型QuatInverse) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::模型QuatInverse' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, 臀部Lerp速度) == 0x000038, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::臀部Lerp速度' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, K2Node_SwitchEnum_CmpSuccess) == 0x00003C, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, CallFunc_IsInPerformingPlot_ReturnValue) == 0x00003D, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::CallFunc_IsInPerformingPlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, CallFunc_Not_PreBool_ReturnValue) == 0x00003E, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新_IK信息, CallFunc_BooleanOR_ReturnValue) == 0x00003F, "Member 'ABP_BaseRoleNPC_C_更新_IK信息::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新_IK信息;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新头部转向
 // 0x0058 (0x0058 - 0x0000)
@@ -831,25 +483,7 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_FInterpTo_ReturnValue_1;                  // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新头部转向) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新头部转向");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新头部转向) == 0x000058, "Wrong size on ABP_BaseRoleNPC_C_更新头部转向");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, NewParam) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新头部转向::NewParam' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, 看向摄像机方向速度) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_更新头部转向::看向摄像机方向速度' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, 看向摄像机位置速度) == 0x000010, "Member 'ABP_BaseRoleNPC_C_更新头部转向::看向摄像机位置速度' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, 延迟看向摄像机) == 0x000014, "Member 'ABP_BaseRoleNPC_C_更新头部转向::延迟看向摄像机' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, LerpSpeed) == 0x000018, "Member 'ABP_BaseRoleNPC_C_更新头部转向::LerpSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, tmp坡度正弦值) == 0x00001C, "Member 'ABP_BaseRoleNPC_C_更新头部转向::tmp坡度正弦值' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, tmp头部模式) == 0x000028, "Member 'ABP_BaseRoleNPC_C_更新头部转向::tmp头部模式' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, tmp_瞄准Alpha) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_更新头部转向::tmp_瞄准Alpha' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, tmp看向位置) == 0x000030, "Member 'ABP_BaseRoleNPC_C_更新头部转向::tmp看向位置' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, tmp_Alpha) == 0x00003C, "Member 'ABP_BaseRoleNPC_C_更新头部转向::tmp_Alpha' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, 模型QuatInverse) == 0x000040, "Member 'ABP_BaseRoleNPC_C_更新头部转向::模型QuatInverse' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_FInterpTo_ReturnValue) == 0x00004C, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_IsInSequence_ReturnValue) == 0x000050, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_IsInSequence_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_Not_PreBool_ReturnValue) == 0x000051, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_BooleanOR_ReturnValue) == 0x000052, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_BooleanOR_ReturnValue_1) == 0x000053, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新头部转向, CallFunc_FInterpTo_ReturnValue_1) == 0x000054, "Member 'ABP_BaseRoleNPC_C_更新头部转向::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新头部转向;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.设置头部转向状态
 // 0x0002 (0x0002 - 0x0000)
@@ -859,10 +493,7 @@ public:
 	ESightLockMode                                SightMode;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_设置头部转向状态) == 0x000001, "Wrong alignment on ABP_BaseRoleNPC_C_设置头部转向状态");
-static_assert(sizeof(ABP_BaseRoleNPC_C_设置头部转向状态) == 0x000002, "Wrong size on ABP_BaseRoleNPC_C_设置头部转向状态");
-static_assert(offsetof(ABP_BaseRoleNPC_C_设置头部转向状态, SightMode) == 0x000000, "Member 'ABP_BaseRoleNPC_C_设置头部转向状态::SightMode' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_设置头部转向状态, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000001, "Member 'ABP_BaseRoleNPC_C_设置头部转向状态::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_设置头部转向状态;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新角色状态
 // 0x0010 (0x0010 - 0x0000)
@@ -874,11 +505,7 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新角色状态) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_更新角色状态");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新角色状态) == 0x000010, "Wrong size on ABP_BaseRoleNPC_C_更新角色状态");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新角色状态, int64_角色状态) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新角色状态::int64_角色状态' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新角色状态, CallFunc_IsInSequence_ReturnValue) == 0x000008, "Member 'ABP_BaseRoleNPC_C_更新角色状态::CallFunc_IsInSequence_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新角色状态, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_更新角色状态::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新角色状态;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新随机表演
 // 0x0024 (0x0024 - 0x0000)
@@ -896,17 +523,7 @@ public:
 	float                                         CallFunc_GetTimeSeconds_ReturnValue_2;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新随机表演) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新随机表演");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新随机表演) == 0x000024, "Wrong size on ABP_BaseRoleNPC_C_更新随机表演");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_GetTimeSeconds_ReturnValue) == 0x000004, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_Add_FloatFloat_ReturnValue) == 0x000008, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_RandomFloatInRange_ReturnValue) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000010, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_GetTimeSeconds_ReturnValue_1) == 0x000014, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_GetTimeSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000018, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_GetTimeSeconds_ReturnValue_2) == 0x00001C, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_GetTimeSeconds_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新随机表演, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000020, "Member 'ABP_BaseRoleNPC_C_更新随机表演::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新随机表演;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新移动组件参数
 // 0x001C (0x001C - 0x0000)
@@ -917,11 +534,7 @@ public:
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_VSize_ReturnValue;                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新移动组件参数) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新移动组件参数");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新移动组件参数) == 0x00001C, "Wrong size on ABP_BaseRoleNPC_C_更新移动组件参数");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新移动组件参数, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新移动组件参数::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新移动组件参数, CallFunc_K2_GetActorLocation_ReturnValue) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_更新移动组件参数::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新移动组件参数, CallFunc_VSize_ReturnValue) == 0x000018, "Member 'ABP_BaseRoleNPC_C_更新移动组件参数::CallFunc_VSize_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新移动组件参数;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新网络参数
 // 0x0001 (0x0001 - 0x0000)
@@ -930,9 +543,7 @@ struct ABP_BaseRoleNPC_C_更新网络参数 final
 public:
 	bool                                          CallFunc_IsAutonomousProxy_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新网络参数) == 0x000001, "Wrong alignment on ABP_BaseRoleNPC_C_更新网络参数");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新网络参数) == 0x000001, "Wrong size on ABP_BaseRoleNPC_C_更新网络参数");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新网络参数, CallFunc_IsAutonomousProxy_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新网络参数::CallFunc_IsAutonomousProxy_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新网络参数;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新时间参数
 // 0x0004 (0x0004 - 0x0000)
@@ -941,9 +552,7 @@ struct ABP_BaseRoleNPC_C_更新时间参数 final
 public:
 	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新时间参数) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新时间参数");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新时间参数) == 0x000004, "Wrong size on ABP_BaseRoleNPC_C_更新时间参数");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新时间参数, CallFunc_GetTimeSeconds_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新时间参数::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新时间参数;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新上传
 // 0x000C (0x000C - 0x0000)
@@ -954,11 +563,7 @@ public:
 	float                                         CallFunc_BreakVector_Y;                            // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakVector_Z;                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新上传) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新上传");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新上传) == 0x00000C, "Wrong size on ABP_BaseRoleNPC_C_更新上传");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新上传, CallFunc_BreakVector_X) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新上传::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新上传, CallFunc_BreakVector_Y) == 0x000004, "Member 'ABP_BaseRoleNPC_C_更新上传::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新上传, CallFunc_BreakVector_Z) == 0x000008, "Member 'ABP_BaseRoleNPC_C_更新上传::CallFunc_BreakVector_Z' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新上传;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.切换地面移动模式时高度补差
 // 0x007C (0x007C - 0x0000)
@@ -988,29 +593,7 @@ public:
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0064(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_切换地面移动模式时高度补差");
-static_assert(sizeof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差) == 0x00007C, "Wrong size on ABP_BaseRoleNPC_C_切换地面移动模式时高度补差");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, TmpFloat) == 0x000000, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::TmpFloat' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_VSizeXYSquared_ReturnValue) == 0x00000C, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_VSizeXYSquared_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_X) == 0x000010, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Y) == 0x000014, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Z) == 0x000018, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_Less_FloatFloat_ReturnValue) == 0x00001C, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_X_1) == 0x000020, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Y_1) == 0x000024, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Z_1) == 0x000028, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_X_2) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Y_2) == 0x000030, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Z_2) == 0x000034, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_X_3) == 0x000038, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Y_3) == 0x00003C, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_BreakVector_Z_3) == 0x000040, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_Add_FloatFloat_ReturnValue) == 0x000044, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000048, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_MakeVector_ReturnValue) == 0x00004C, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_MakeVector_ReturnValue_1) == 0x000058, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000064, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_切换地面移动模式时高度补差, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000070, "Member 'ABP_BaseRoleNPC_C_切换地面移动模式时高度补差::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_切换地面移动模式时高度补差;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新状态参数信息
 // 0x0001 (0x0001 - 0x0000)
@@ -1019,20 +602,18 @@ struct ABP_BaseRoleNPC_C_更新状态参数信息 final
 public:
 	bool                                          暂存bool值;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新状态参数信息) == 0x000001, "Wrong alignment on ABP_BaseRoleNPC_C_更新状态参数信息");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新状态参数信息) == 0x000001, "Wrong size on ABP_BaseRoleNPC_C_更新状态参数信息");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新状态参数信息, 暂存bool值) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新状态参数信息::暂存bool值' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新状态参数信息;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新移动信息
-// 0x0004 (0x0004 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct ABP_BaseRoleNPC_C_更新移动信息 final
 {
 public:
-	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新移动信息) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新移动信息");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新移动信息) == 0x000004, "Wrong size on ABP_BaseRoleNPC_C_更新移动信息");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新移动信息, CallFunc_SelectFloat_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新移动信息::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新移动信息;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.初始化身高
 // 0x0008 (0x0008 - 0x0000)
@@ -1042,10 +623,7 @@ public:
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_初始化身高) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_初始化身高");
-static_assert(sizeof(ABP_BaseRoleNPC_C_初始化身高) == 0x000008, "Wrong size on ABP_BaseRoleNPC_C_初始化身高");
-static_assert(offsetof(ABP_BaseRoleNPC_C_初始化身高, CallFunc_FTrunc_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_初始化身高::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_初始化身高, CallFunc_Multiply_IntInt_ReturnValue) == 0x000004, "Member 'ABP_BaseRoleNPC_C_初始化身高::CallFunc_Multiply_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_初始化身高;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新载具信息
 // 0x00F0 (0x00F0 - 0x0000)
@@ -1105,57 +683,7 @@ public:
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新载具信息) == 0x000010, "Wrong alignment on ABP_BaseRoleNPC_C_更新载具信息");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新载具信息) == 0x0000F0, "Wrong size on ABP_BaseRoleNPC_C_更新载具信息");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CurSpeed) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CurSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CurVelocity) == 0x000004, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CurVelocity' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, VehicleVelocity) == 0x000010, "Member 'ABP_BaseRoleNPC_C_更新载具信息::VehicleVelocity' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x00001C, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_DegSin_ReturnValue) == 0x000020, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_DegSin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_DegCos_ReturnValue) == 0x000024, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_DegCos_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000028, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Multiply_IntFloat_ReturnValue_1) == 0x00002C, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Multiply_IntFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_FMax_ReturnValue) == 0x000030, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_FMax_ReturnValue_1) == 0x000034, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_FMax_ReturnValue_2) == 0x000038, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_FMax_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_FMax_ReturnValue_3) == 0x00003C, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_FMax_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, K2Node_MakeStruct_Vector4) == 0x000040, "Member 'ABP_BaseRoleNPC_C_更新载具信息::K2Node_MakeStruct_Vector4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000050, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000054, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_VSize_ReturnValue) == 0x000058, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x00005C, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00005D, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Less_FloatFloat_ReturnValue) == 0x00005E, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00005F, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue) == 0x000060, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_1) == 0x000061, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Not_PreBool_ReturnValue) == 0x000062, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Vector4_Size_ReturnValue) == 0x000064, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Vector4_Size_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, K2Node_MakeStruct_Vector4_1) == 0x000070, "Member 'ABP_BaseRoleNPC_C_更新载具信息::K2Node_MakeStruct_Vector4_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Divide_Vector4Vector4_ReturnValue) == 0x000080, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Divide_Vector4Vector4_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, K2Node_MakeStruct_Vector4_2) == 0x000090, "Member 'ABP_BaseRoleNPC_C_更新载具信息::K2Node_MakeStruct_Vector4_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, K2Node_MakeStruct_Vector4_3) == 0x0000A0, "Member 'ABP_BaseRoleNPC_C_更新载具信息::K2Node_MakeStruct_Vector4_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x0000B0, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_FMax_ReturnValue_4) == 0x0000B4, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_FMax_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_EqualEqual_FloatFloat_ReturnValue) == 0x0000B8, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_EqualEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_2) == 0x0000B9, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x0000BA, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x0000BB, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Less_FloatFloat_ReturnValue_2) == 0x0000BC, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Less_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_3) == 0x0000BD, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_4) == 0x0000BE, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x0000BF, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_5) == 0x0000C0, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanOR_ReturnValue) == 0x0000C1, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_GetDrivedVehicleVelocity_ReturnValue) == 0x0000C2, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_GetDrivedVehicleVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_GetActorForwardVector_ReturnValue) == 0x0000C4, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Dot_VectorVector_ReturnValue) == 0x0000D0, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_ConvertAngleToPassengerSpace_ReturnValue) == 0x0000D4, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_ConvertAngleToPassengerSpace_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_SignOfFloat_ReturnValue) == 0x0000D8, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_SignOfFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0000DC, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_GetDrivedVehicleSeatRot_ReturnValue) == 0x0000E0, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_GetDrivedVehicleSeatRot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_Greater_FloatFloat_ReturnValue_3) == 0x0000E1, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新载具信息, CallFunc_BooleanAND_ReturnValue_6) == 0x0000E2, "Member 'ABP_BaseRoleNPC_C_更新载具信息::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新载具信息;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.更新坐下待机计时
 // 0x000C (0x000C - 0x0000)
@@ -1168,12 +696,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_更新坐下待机计时) == 0x000004, "Wrong alignment on ABP_BaseRoleNPC_C_更新坐下待机计时");
-static_assert(sizeof(ABP_BaseRoleNPC_C_更新坐下待机计时) == 0x00000C, "Wrong size on ABP_BaseRoleNPC_C_更新坐下待机计时");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新坐下待机计时, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000000, "Member 'ABP_BaseRoleNPC_C_更新坐下待机计时::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新坐下待机计时, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000004, "Member 'ABP_BaseRoleNPC_C_更新坐下待机计时::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新坐下待机计时, CallFunc_BooleanAND_ReturnValue) == 0x000008, "Member 'ABP_BaseRoleNPC_C_更新坐下待机计时::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_更新坐下待机计时, CallFunc_BooleanAND_ReturnValue_1) == 0x000009, "Member 'ABP_BaseRoleNPC_C_更新坐下待机计时::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_更新坐下待机计时;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.AnimGraph
 // 0x0020 (0x0020 - 0x0000)
@@ -1183,10 +706,7 @@ public:
 	struct FPoseLink                              地区运动状态;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_AnimGraph");
-static_assert(sizeof(ABP_BaseRoleNPC_C_AnimGraph) == 0x000020, "Wrong size on ABP_BaseRoleNPC_C_AnimGraph");
-static_assert(offsetof(ABP_BaseRoleNPC_C_AnimGraph, 地区运动状态) == 0x000000, "Member 'ABP_BaseRoleNPC_C_AnimGraph::地区运动状态' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_AnimGraph, AnimGraph_0) == 0x000010, "Member 'ABP_BaseRoleNPC_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_AnimGraph;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.叠加层
 // 0x0010 (0x0010 - 0x0000)
@@ -1195,9 +715,7 @@ struct ABP_BaseRoleNPC_C_叠加层 final
 public:
 	struct FPoseLink                              叠加层_0;                                          // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_叠加层) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_叠加层");
-static_assert(sizeof(ABP_BaseRoleNPC_C_叠加层) == 0x000010, "Wrong size on ABP_BaseRoleNPC_C_叠加层");
-static_assert(offsetof(ABP_BaseRoleNPC_C_叠加层, 叠加层_0) == 0x000000, "Member 'ABP_BaseRoleNPC_C_叠加层::叠加层_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_叠加层;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.手臂叠加层
 // 0x0010 (0x0010 - 0x0000)
@@ -1206,9 +724,7 @@ struct ABP_BaseRoleNPC_C_手臂叠加层 final
 public:
 	struct FPoseLink                              手臂叠加层_0;                                      // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_手臂叠加层) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_手臂叠加层");
-static_assert(sizeof(ABP_BaseRoleNPC_C_手臂叠加层) == 0x000010, "Wrong size on ABP_BaseRoleNPC_C_手臂叠加层");
-static_assert(offsetof(ABP_BaseRoleNPC_C_手臂叠加层, 手臂叠加层_0) == 0x000000, "Member 'ABP_BaseRoleNPC_C_手臂叠加层::手臂叠加层_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_手臂叠加层;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.混合层
 // 0x0050 (0x0050 - 0x0000)
@@ -1221,13 +737,7 @@ public:
 	struct FPoseLink                              手臂叠加层输入;                                    // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              混合层_0;                                          // 0x0040(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_混合层) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_混合层");
-static_assert(sizeof(ABP_BaseRoleNPC_C_混合层) == 0x000050, "Wrong size on ABP_BaseRoleNPC_C_混合层");
-static_assert(offsetof(ABP_BaseRoleNPC_C_混合层, 基础层输入) == 0x000000, "Member 'ABP_BaseRoleNPC_C_混合层::基础层输入' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_混合层, 叠加层输入) == 0x000010, "Member 'ABP_BaseRoleNPC_C_混合层::叠加层输入' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_混合层, 姿势层输入) == 0x000020, "Member 'ABP_BaseRoleNPC_C_混合层::姿势层输入' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_混合层, 手臂叠加层输入) == 0x000030, "Member 'ABP_BaseRoleNPC_C_混合层::手臂叠加层输入' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_混合层, 混合层_0) == 0x000040, "Member 'ABP_BaseRoleNPC_C_混合层::混合层_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_混合层;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.基础姿势层
 // 0x0010 (0x0010 - 0x0000)
@@ -1236,9 +746,7 @@ struct ABP_BaseRoleNPC_C_基础姿势层 final
 public:
 	struct FPoseLink                              基础姿势层_0;                                      // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_基础姿势层) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_基础姿势层");
-static_assert(sizeof(ABP_BaseRoleNPC_C_基础姿势层) == 0x000010, "Wrong size on ABP_BaseRoleNPC_C_基础姿势层");
-static_assert(offsetof(ABP_BaseRoleNPC_C_基础姿势层, 基础姿势层_0) == 0x000000, "Member 'ABP_BaseRoleNPC_C_基础姿势层::基础姿势层_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_基础姿势层;
 
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.骨骼混合叠加层
 // 0x0040 (0x0040 - 0x0000)
@@ -1250,12 +758,7 @@ public:
 	struct FPoseLink                              BasePose;                                          // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	struct FPoseLink                              骨骼混合叠加层_0;                                  // 0x0030(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_BaseRoleNPC_C_骨骼混合叠加层) == 0x000008, "Wrong alignment on ABP_BaseRoleNPC_C_骨骼混合叠加层");
-static_assert(sizeof(ABP_BaseRoleNPC_C_骨骼混合叠加层) == 0x000040, "Wrong size on ABP_BaseRoleNPC_C_骨骼混合叠加层");
-static_assert(offsetof(ABP_BaseRoleNPC_C_骨骼混合叠加层, BaseLayer) == 0x000000, "Member 'ABP_BaseRoleNPC_C_骨骼混合叠加层::BaseLayer' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_骨骼混合叠加层, OverlayLayer) == 0x000010, "Member 'ABP_BaseRoleNPC_C_骨骼混合叠加层::OverlayLayer' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_骨骼混合叠加层, BasePose) == 0x000020, "Member 'ABP_BaseRoleNPC_C_骨骼混合叠加层::BasePose' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRoleNPC_C_骨骼混合叠加层, 骨骼混合叠加层_0) == 0x000030, "Member 'ABP_BaseRoleNPC_C_骨骼混合叠加层::骨骼混合叠加层_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_BaseRoleNPC_C_骨骼混合叠加层;
 
 }
 

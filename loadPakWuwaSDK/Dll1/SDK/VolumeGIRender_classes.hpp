@@ -35,23 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GIVolumeComponent">();
+		STATIC_CLASS_IMPL("GIVolumeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GIVolumeComponent")
 	}
 	static class UGIVolumeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGIVolumeComponent>();
 	}
 };
-static_assert(alignof(UGIVolumeComponent) == 0x000010, "Wrong alignment on UGIVolumeComponent");
-static_assert(sizeof(UGIVolumeComponent) == 0x000300, "Wrong size on UGIVolumeComponent");
-static_assert(offsetof(UGIVolumeComponent, VolumeSize) == 0x000218, "Member 'UGIVolumeComponent::VolumeSize' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, VolumeDim) == 0x000224, "Member 'UGIVolumeComponent::VolumeDim' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, NumProbes) == 0x000230, "Member 'UGIVolumeComponent::NumProbes' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, Priority) == 0x000234, "Member 'UGIVolumeComponent::Priority' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, SkyIndirectScale) == 0x000238, "Member 'UGIVolumeComponent::SkyIndirectScale' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, SunIndirectScale) == 0x00023C, "Member 'UGIVolumeComponent::SunIndirectScale' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, StaticIrraidianceScale) == 0x000240, "Member 'UGIVolumeComponent::StaticIrraidianceScale' has a wrong offset!");
-static_assert(offsetof(UGIVolumeComponent, TintColor) == 0x000244, "Member 'UGIVolumeComponent::TintColor' has a wrong offset!");
+DUMPER7_ASSERTS_UGIVolumeComponent;
 
 // Class VolumeGIRender.ProbeVolumeActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -63,16 +58,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ProbeVolumeActor">();
+		STATIC_CLASS_IMPL("ProbeVolumeActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ProbeVolumeActor")
 	}
 	static class AProbeVolumeActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AProbeVolumeActor>();
 	}
 };
-static_assert(alignof(AProbeVolumeActor) == 0x000008, "Wrong alignment on AProbeVolumeActor");
-static_assert(sizeof(AProbeVolumeActor) == 0x0002B8, "Wrong size on AProbeVolumeActor");
-static_assert(offsetof(AProbeVolumeActor, GIVolumeComp) == 0x0002B0, "Member 'AProbeVolumeActor::GIVolumeComp' has a wrong offset!");
+DUMPER7_ASSERTS_AProbeVolumeActor;
 
 // Class VolumeGIRender.VolumeGIRenderSystem
 // 0x0008 (0x0040 - 0x0038)
@@ -84,15 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VolumeGIRenderSystem">();
+		STATIC_CLASS_IMPL("VolumeGIRenderSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VolumeGIRenderSystem")
 	}
 	static class UVolumeGIRenderSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UVolumeGIRenderSystem>();
 	}
 };
-static_assert(alignof(UVolumeGIRenderSystem) == 0x000008, "Wrong alignment on UVolumeGIRenderSystem");
-static_assert(sizeof(UVolumeGIRenderSystem) == 0x000040, "Wrong size on UVolumeGIRenderSystem");
+DUMPER7_ASSERTS_UVolumeGIRenderSystem;
 
 }
 

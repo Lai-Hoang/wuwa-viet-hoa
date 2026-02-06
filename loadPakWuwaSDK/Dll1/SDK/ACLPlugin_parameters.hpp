@@ -26,10 +26,7 @@ public:
 	EACLVisualFidelity                            ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AnimationCompressionLibraryDatabase_GetVisualFidelity) == 0x000008, "Wrong alignment on AnimationCompressionLibraryDatabase_GetVisualFidelity");
-static_assert(sizeof(AnimationCompressionLibraryDatabase_GetVisualFidelity) == 0x000010, "Wrong size on AnimationCompressionLibraryDatabase_GetVisualFidelity");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_GetVisualFidelity, DatabaseAsset) == 0x000000, "Member 'AnimationCompressionLibraryDatabase_GetVisualFidelity::DatabaseAsset' has a wrong offset!");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_GetVisualFidelity, ReturnValue) == 0x000008, "Member 'AnimationCompressionLibraryDatabase_GetVisualFidelity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_AnimationCompressionLibraryDatabase_GetVisualFidelity;
 
 // Function ACLPlugin.AnimationCompressionLibraryDatabase.SetVisualFidelity
 // 0x0038 (0x0038 - 0x0000)
@@ -43,13 +40,7 @@ public:
 	EACLVisualFidelity                            VisualFidelity;                                    // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AnimationCompressionLibraryDatabase_SetVisualFidelity) == 0x000008, "Wrong alignment on AnimationCompressionLibraryDatabase_SetVisualFidelity");
-static_assert(sizeof(AnimationCompressionLibraryDatabase_SetVisualFidelity) == 0x000038, "Wrong size on AnimationCompressionLibraryDatabase_SetVisualFidelity");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_SetVisualFidelity, WorldContextObject) == 0x000000, "Member 'AnimationCompressionLibraryDatabase_SetVisualFidelity::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_SetVisualFidelity, LatentInfo) == 0x000008, "Member 'AnimationCompressionLibraryDatabase_SetVisualFidelity::LatentInfo' has a wrong offset!");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_SetVisualFidelity, DatabaseAsset) == 0x000028, "Member 'AnimationCompressionLibraryDatabase_SetVisualFidelity::DatabaseAsset' has a wrong offset!");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_SetVisualFidelity, Result) == 0x000030, "Member 'AnimationCompressionLibraryDatabase_SetVisualFidelity::Result' has a wrong offset!");
-static_assert(offsetof(AnimationCompressionLibraryDatabase_SetVisualFidelity, VisualFidelity) == 0x000031, "Member 'AnimationCompressionLibraryDatabase_SetVisualFidelity::VisualFidelity' has a wrong offset!");
+DUMPER7_ASSERTS_AnimationCompressionLibraryDatabase_SetVisualFidelity;
 
 }
 

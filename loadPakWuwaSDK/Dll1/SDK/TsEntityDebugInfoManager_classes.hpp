@@ -21,29 +21,32 @@ namespace SDK
 class UTsEntityDebugInfoManager_C final : public UObject
 {
 public:
-	float GetEntityTimeScale(int32 entityId);
-	void SetEntityTimeScale(int32 entityId, float timeScale);
-	class AActor* GetDebugEntityActor(int32 entityId);
-	class FString GetDebugBaseInfo(int32 entityId);
-	int32 GetSelectedEntityId(const class FString& label);
-	int32 GetEntityPbDataId(int32 entityId);
-	class FString GetEntityCommonTagDebugString(int32 entityId);
-	class FString GetDebugEntityName(int32 entityId);
-	TArray<class FString> GetDebugEntityNameList();
 	class FString GetInteractionDebugInfos(int32 entityId1);
+	TArray<class FString> GetDebugEntityNameList();
+	class FString GetDebugEntityName(int32 entityId);
+	class FString GetEntityCommonTagDebugString(int32 entityId);
+	int32 GetEntityPbDataId(int32 entityId);
+	int32 GetSelectedEntityId(const class FString& label);
+	class FString GetDebugBaseInfo(int32 entityId);
+	class AActor* GetDebugEntityActor(int32 entityId);
+	void SetEntityTimeScale(int32 entityId, float timeScale);
+	float GetEntityTimeScale(int32 entityId);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsEntityDebugInfoManager_C">();
+		BP_STATIC_CLASS_IMPL("TsEntityDebugInfoManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsEntityDebugInfoManager_C")
 	}
 	static class UTsEntityDebugInfoManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsEntityDebugInfoManager_C>();
 	}
 };
-static_assert(alignof(UTsEntityDebugInfoManager_C) == 0x000008, "Wrong alignment on UTsEntityDebugInfoManager_C");
-static_assert(sizeof(UTsEntityDebugInfoManager_C) == 0x000030, "Wrong size on UTsEntityDebugInfoManager_C");
+DUMPER7_ASSERTS_UTsEntityDebugInfoManager_C;
 
 }
 

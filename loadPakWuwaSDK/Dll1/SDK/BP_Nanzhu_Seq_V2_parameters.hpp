@@ -11,33 +11,23 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SModelConfig_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_Nanzhu_Seq_V2.BP_Nanzhu_Seq_V2_C.UserConstructionScript
-// 0x0478 (0x0478 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BP_Nanzhu_Seq_V2_C_UserConstructionScript final
 {
 public:
-	struct FSModelConfig                          CallFunc_GetDataTableRowFromName_OutRow;           // 0x0000(0x0458)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0458(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0459(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_45A[0x6];                                      // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          K2Node_DynamicCast_As_____;                        // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          K2Node_DynamicCast_As_____;                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Nanzhu_Seq_V2_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_Nanzhu_Seq_V2_C_UserConstructionScript");
-static_assert(sizeof(BP_Nanzhu_Seq_V2_C_UserConstructionScript) == 0x000478, "Wrong size on BP_Nanzhu_Seq_V2_C_UserConstructionScript");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, CallFunc_GetDataTableRowFromName_OutRow) == 0x000000, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000458, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, CallFunc_IsEditor_ReturnValue) == 0x000459, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000460, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, K2Node_DynamicCast_As_____) == 0x000468, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::K2Node_DynamicCast_As_____' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_UserConstructionScript, K2Node_DynamicCast_bSuccess) == 0x000470, "Member 'BP_Nanzhu_Seq_V2_C_UserConstructionScript::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Nanzhu_Seq_V2_C_UserConstructionScript;
 
 // Function BP_Nanzhu_Seq_V2.BP_Nanzhu_Seq_V2_C.SwitchMeshTransform
 // 0x012C (0x012C - 0x0000)
@@ -49,11 +39,7 @@ public:
 	struct FHitResult                             CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult; // 0x0004(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FHitResult                             CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult_1; // 0x0098(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_Nanzhu_Seq_V2_C_SwitchMeshTransform) == 0x000004, "Wrong alignment on BP_Nanzhu_Seq_V2_C_SwitchMeshTransform");
-static_assert(sizeof(BP_Nanzhu_Seq_V2_C_SwitchMeshTransform) == 0x00012C, "Wrong size on BP_Nanzhu_Seq_V2_C_SwitchMeshTransform");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_SwitchMeshTransform, LevelA) == 0x000000, "Member 'BP_Nanzhu_Seq_V2_C_SwitchMeshTransform::LevelA' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_SwitchMeshTransform, CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult) == 0x000004, "Member 'BP_Nanzhu_Seq_V2_C_SwitchMeshTransform::CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_Nanzhu_Seq_V2_C_SwitchMeshTransform, CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult_1) == 0x000098, "Member 'BP_Nanzhu_Seq_V2_C_SwitchMeshTransform::CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Nanzhu_Seq_V2_C_SwitchMeshTransform;
 
 }
 

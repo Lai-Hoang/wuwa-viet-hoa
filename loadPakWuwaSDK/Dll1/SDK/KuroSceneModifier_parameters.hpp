@@ -24,11 +24,7 @@ public:
 	bool                                          bVisibleBeforeModify;                              // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer) == 0x000008, "Wrong alignment on KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer");
-static_assert(sizeof(KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer) == 0x000060, "Wrong size on KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer");
-static_assert(offsetof(KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer, InDataLayers) == 0x000000, "Member 'KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer::InDataLayers' has a wrong offset!");
-static_assert(offsetof(KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer, InMatDataAsset) == 0x000050, "Member 'KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer::InMatDataAsset' has a wrong offset!");
-static_assert(offsetof(KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer, bVisibleBeforeModify) == 0x000058, "Member 'KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer::bVisibleBeforeModify' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSceneModifierSubsystem_ModifyMaterialsByDataLayer;
 
 // Function KuroSceneModifier.KuroSceneModifierSubsystem.ResetMaterialsByDataLayer
 // 0x0050 (0x0050 - 0x0000)
@@ -37,9 +33,7 @@ struct KuroSceneModifierSubsystem_ResetMaterialsByDataLayer final
 public:
 	TSet<class FName>                             InDataLayers;                                      // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSceneModifierSubsystem_ResetMaterialsByDataLayer) == 0x000008, "Wrong alignment on KuroSceneModifierSubsystem_ResetMaterialsByDataLayer");
-static_assert(sizeof(KuroSceneModifierSubsystem_ResetMaterialsByDataLayer) == 0x000050, "Wrong size on KuroSceneModifierSubsystem_ResetMaterialsByDataLayer");
-static_assert(offsetof(KuroSceneModifierSubsystem_ResetMaterialsByDataLayer, InDataLayers) == 0x000000, "Member 'KuroSceneModifierSubsystem_ResetMaterialsByDataLayer::InDataLayers' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSceneModifierSubsystem_ResetMaterialsByDataLayer;
 
 }
 

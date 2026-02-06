@@ -31,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAndroidModelTools">();
+		STATIC_CLASS_IMPL("KuroAndroidModelTools")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAndroidModelTools")
 	}
 	static class UKuroAndroidModelTools* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAndroidModelTools>();
 	}
 };
-static_assert(alignof(UKuroAndroidModelTools) == 0x000008, "Wrong alignment on UKuroAndroidModelTools");
-static_assert(sizeof(UKuroAndroidModelTools) == 0x000030, "Wrong size on UKuroAndroidModelTools");
+DUMPER7_ASSERTS_UKuroAndroidModelTools;
 
 // Class KuroSoHotPatch.KuroOnPatchCallback
 // 0x0010 (0x0040 - 0x0030)
@@ -54,16 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroOnPatchCallback">();
+		STATIC_CLASS_IMPL("KuroOnPatchCallback")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroOnPatchCallback")
 	}
 	static class UKuroOnPatchCallback* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroOnPatchCallback>();
 	}
 };
-static_assert(alignof(UKuroOnPatchCallback) == 0x000008, "Wrong alignment on UKuroOnPatchCallback");
-static_assert(sizeof(UKuroOnPatchCallback) == 0x000040, "Wrong size on UKuroOnPatchCallback");
-static_assert(offsetof(UKuroOnPatchCallback, Callback) == 0x000030, "Member 'UKuroOnPatchCallback::Callback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroOnPatchCallback;
 
 // Class KuroSoHotPatch.KuroSPTools
 // 0x0000 (0x0030 - 0x0030)
@@ -78,15 +83,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSPTools">();
+		STATIC_CLASS_IMPL("KuroSPTools")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSPTools")
 	}
 	static class UKuroSPTools* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSPTools>();
 	}
 };
-static_assert(alignof(UKuroSPTools) == 0x000008, "Wrong alignment on UKuroSPTools");
-static_assert(sizeof(UKuroSPTools) == 0x000030, "Wrong size on UKuroSPTools");
+DUMPER7_ASSERTS_UKuroSPTools;
 
 // Class KuroSoHotPatch.KuroTinkerTools
 // 0x0000 (0x0030 - 0x0030)
@@ -104,15 +112,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTinkerTools">();
+		STATIC_CLASS_IMPL("KuroTinkerTools")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTinkerTools")
 	}
 	static class UKuroTinkerTools* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTinkerTools>();
 	}
 };
-static_assert(alignof(UKuroTinkerTools) == 0x000008, "Wrong alignment on UKuroTinkerTools");
-static_assert(sizeof(UKuroTinkerTools) == 0x000030, "Wrong size on UKuroTinkerTools");
+DUMPER7_ASSERTS_UKuroTinkerTools;
 
 }
 

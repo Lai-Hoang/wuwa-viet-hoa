@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -33,16 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateModifyMeshLocation_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateModifyMeshLocation_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateModifyMeshLocation_C")
 	}
 	static class UTsAnimNotifyStateModifyMeshLocation_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateModifyMeshLocation_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateModifyMeshLocation_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateModifyMeshLocation_C");
-static_assert(sizeof(UTsAnimNotifyStateModifyMeshLocation_C) == 0x000058, "Wrong size on UTsAnimNotifyStateModifyMeshLocation_C");
-static_assert(offsetof(UTsAnimNotifyStateModifyMeshLocation_C, RelativeLocation) == 0x000048, "Member 'UTsAnimNotifyStateModifyMeshLocation_C::RelativeLocation' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateModifyMeshLocation_C;
 
 }
 

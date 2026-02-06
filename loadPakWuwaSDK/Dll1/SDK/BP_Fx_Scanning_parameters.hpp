@@ -38,23 +38,7 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0054(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning) == 0x000008, "Wrong alignment on BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning");
-static_assert(sizeof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning) == 0x000068, "Wrong size on BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, EntryPoint) == 0x000000, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_GetInverseSelfCenteredTimeDilation_ReturnValue) == 0x000004, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_GetInverseSelfCenteredTimeDilation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00000C, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000010, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Add_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x000018, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_BreakVectorDouble_X) == 0x000030, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_BreakVectorDouble_Y) == 0x000038, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_BreakVectorDouble_Z) == 0x000040, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000048, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x00004C, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Conv_DoubleToFloat_ReturnValue_2) == 0x000050, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Conv_DoubleToFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, K2Node_MakeStruct_LinearColor) == 0x000054, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000064, "Member 'BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Fx_Scanning_C_ExecuteUbergraph_BP_Fx_Scanning;
 
 // Function BP_Fx_Scanning.BP_Fx_Scanning_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -63,9 +47,7 @@ struct BP_Fx_Scanning_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Fx_Scanning_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Fx_Scanning_C_ReceiveTick");
-static_assert(sizeof(BP_Fx_Scanning_C_ReceiveTick) == 0x000004, "Wrong size on BP_Fx_Scanning_C_ReceiveTick");
-static_assert(offsetof(BP_Fx_Scanning_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Fx_Scanning_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Fx_Scanning_C_ReceiveTick;
 
 // Function BP_Fx_Scanning.BP_Fx_Scanning_C.SetRevert
 // 0x0001 (0x0001 - 0x0000)
@@ -74,9 +56,7 @@ struct BP_Fx_Scanning_C_SetRevert final
 public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Fx_Scanning_C_SetRevert) == 0x000001, "Wrong alignment on BP_Fx_Scanning_C_SetRevert");
-static_assert(sizeof(BP_Fx_Scanning_C_SetRevert) == 0x000001, "Wrong size on BP_Fx_Scanning_C_SetRevert");
-static_assert(offsetof(BP_Fx_Scanning_C_SetRevert, CallFunc_Not_PreBool_ReturnValue) == 0x000000, "Member 'BP_Fx_Scanning_C_SetRevert::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Fx_Scanning_C_SetRevert;
 
 // Function BP_Fx_Scanning.BP_Fx_Scanning_C.StartScanEffect
 // 0x0020 (0x0020 - 0x0000)
@@ -87,11 +67,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Fx_Scanning_C_StartScanEffect) == 0x000008, "Wrong alignment on BP_Fx_Scanning_C_StartScanEffect");
-static_assert(sizeof(BP_Fx_Scanning_C_StartScanEffect) == 0x000020, "Wrong size on BP_Fx_Scanning_C_StartScanEffect");
-static_assert(offsetof(BP_Fx_Scanning_C_StartScanEffect, K2Node_MakeStruct_WeightedBlendable) == 0x000000, "Member 'BP_Fx_Scanning_C_StartScanEffect::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_StartScanEffect, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_Fx_Scanning_C_StartScanEffect::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Fx_Scanning_C_StartScanEffect, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_Fx_Scanning_C_StartScanEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Fx_Scanning_C_StartScanEffect;
 
 }
 

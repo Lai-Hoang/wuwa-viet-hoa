@@ -26,11 +26,7 @@ public:
 	int32                                         Times_6_DA576DA24A42428AC63321AE5F10CC8D;          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Duration_17_BBB02F2344204D97F0188C9D04B79726;      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSInteractionLimit) == 0x000004, "Wrong alignment on FSInteractionLimit");
-static_assert(sizeof(FSInteractionLimit) == 0x00000C, "Wrong size on FSInteractionLimit");
-static_assert(offsetof(FSInteractionLimit, LimitType_2_F22CA8324FE67729BC0B479C5553A77D) == 0x000000, "Member 'FSInteractionLimit::LimitType_2_F22CA8324FE67729BC0B479C5553A77D' has a wrong offset!");
-static_assert(offsetof(FSInteractionLimit, Times_6_DA576DA24A42428AC63321AE5F10CC8D) == 0x000004, "Member 'FSInteractionLimit::Times_6_DA576DA24A42428AC63321AE5F10CC8D' has a wrong offset!");
-static_assert(offsetof(FSInteractionLimit, Duration_17_BBB02F2344204D97F0188C9D04B79726) == 0x000008, "Member 'FSInteractionLimit::Duration_17_BBB02F2344204D97F0188C9D04B79726' has a wrong offset!");
+DUMPER7_ASSERTS_FSInteractionLimit;
 
 }
 

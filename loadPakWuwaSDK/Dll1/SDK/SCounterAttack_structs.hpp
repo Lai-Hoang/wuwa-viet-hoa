@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "SCounterAttackEffect_structs.hpp"
 #include "SCounterAttackBuff_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -39,21 +39,7 @@ public:
 	struct FGameplayTag                           结束事件Tag_64_73DE9EC74B7E952793F7B38D76B33642;   // 0x03D0(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	bool                                          QTE弹刀忽略角度距离检测_74_B746849148775FB528669BA90AEF4AB6; // 0x03DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSCounterAttack) == 0x000008, "Wrong alignment on FSCounterAttack");
-static_assert(sizeof(FSCounterAttack) == 0x0003E0, "Wrong size on FSCounterAttack");
-static_assert(offsetof(FSCounterAttack, 弹反部位_71_BE8FD36F4A493484450B19BC73EDC7FD) == 0x000000, "Member 'FSCounterAttack::弹反部位_71_BE8FD36F4A493484450B19BC73EDC7FD' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 无弹反动作效果_48_6BA4BD5340721A8BC381B7985973F481) == 0x000010, "Member 'FSCounterAttack::无弹反动作效果_48_6BA4BD5340721A8BC381B7985973F481' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 有弹反动作效果_51_B1D03EC34BA6773FAF72939D97EAE31F) == 0x0001D0, "Member 'FSCounterAttack::有弹反动作效果_51_B1D03EC34BA6773FAF72939D97EAE31F' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 削韧倍率_10_5FFEA61B4A6822B406F1E7AB634133B4) == 0x000390, "Member 'FSCounterAttack::削韧倍率_10_5FFEA61B4A6822B406F1E7AB634133B4' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 最大触发距离_12_B1E9072B4B14DF443199C8A0B257C149) == 0x000394, "Member 'FSCounterAttack::最大触发距离_12_B1E9072B4B14DF443199C8A0B257C149' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 最大触发夹角_14_9C54863B4F28F6D8229137908D84F815) == 0x000398, "Member 'FSCounterAttack::最大触发夹角_14_9C54863B4F28F6D8229137908D84F815' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 被弹反者应用BuffID_52_3FD017324758D15AA7A88E8DDDF8F266) == 0x0003A0, "Member 'FSCounterAttack::被弹反者应用BuffID_52_3FD017324758D15AA7A88E8DDDF8F266' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 攻击者应用BuffID_53_BCC3A4494643E23E0CBC8F8A2EE6977F) == 0x0003A8, "Member 'FSCounterAttack::攻击者应用BuffID_53_BCC3A4494643E23E0CBC8F8A2EE6977F' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 受击动画忽略Buff检测_40_B75D26CA4B24DAB1F5CBF39BB2321401) == 0x0003B0, "Member 'FSCounterAttack::受击动画忽略Buff检测_40_B75D26CA4B24DAB1F5CBF39BB2321401' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 检测Buff列表_57_5CD865994F901D76CB1C488EE5222C44) == 0x0003B8, "Member 'FSCounterAttack::检测Buff列表_57_5CD865994F901D76CB1C488EE5222C44' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, ANS期间被弹反者生效的BuffID_60_BB7B172C4B0C23B10BAFB89E83C222A2) == 0x0003C8, "Member 'FSCounterAttack::ANS期间被弹反者生效的BuffID_60_BB7B172C4B0C23B10BAFB89E83C222A2' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, 结束事件Tag_64_73DE9EC74B7E952793F7B38D76B33642) == 0x0003D0, "Member 'FSCounterAttack::结束事件Tag_64_73DE9EC74B7E952793F7B38D76B33642' has a wrong offset!");
-static_assert(offsetof(FSCounterAttack, QTE弹刀忽略角度距离检测_74_B746849148775FB528669BA90AEF4AB6) == 0x0003DC, "Member 'FSCounterAttack::QTE弹刀忽略角度距离检测_74_B746849148775FB528669BA90AEF4AB6' has a wrong offset!");
+DUMPER7_ASSERTS_FSCounterAttack;
 
 }
 

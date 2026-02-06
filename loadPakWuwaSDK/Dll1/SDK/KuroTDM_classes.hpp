@@ -31,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TDMStaticLibrary">();
+		STATIC_CLASS_IMPL("TDMStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TDMStaticLibrary")
 	}
 	static class UTDMStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTDMStaticLibrary>();
 	}
 };
-static_assert(alignof(UTDMStaticLibrary) == 0x000008, "Wrong alignment on UTDMStaticLibrary");
-static_assert(sizeof(UTDMStaticLibrary) == 0x000030, "Wrong size on UTDMStaticLibrary");
+DUMPER7_ASSERTS_UTDMStaticLibrary;
 
 }
 

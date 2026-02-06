@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "KuroCrowdAi_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroCrowdAi_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -37,15 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiBoidAnimUpdater">();
+		STATIC_CLASS_IMPL("KuroCrowdAiBoidAnimUpdater")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiBoidAnimUpdater")
 	}
 	static class UKuroCrowdAiBoidAnimUpdater* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCrowdAiBoidAnimUpdater>();
 	}
 };
-static_assert(alignof(UKuroCrowdAiBoidAnimUpdater) == 0x000008, "Wrong alignment on UKuroCrowdAiBoidAnimUpdater");
-static_assert(sizeof(UKuroCrowdAiBoidAnimUpdater) == 0x000270, "Wrong size on UKuroCrowdAiBoidAnimUpdater");
+DUMPER7_ASSERTS_UKuroCrowdAiBoidAnimUpdater;
 
 // Class KuroCrowdAi.KuroCrowdAiBoidActorSystem
 // 0x0530 (0x0800 - 0x02D0)
@@ -90,40 +93,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiBoidActorSystem">();
+		STATIC_CLASS_IMPL("KuroCrowdAiBoidActorSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiBoidActorSystem")
 	}
 	static class AKuroCrowdAiBoidActorSystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroCrowdAiBoidActorSystem>();
 	}
 };
-static_assert(alignof(AKuroCrowdAiBoidActorSystem) == 0x000010, "Wrong alignment on AKuroCrowdAiBoidActorSystem");
-static_assert(sizeof(AKuroCrowdAiBoidActorSystem) == 0x000800, "Wrong size on AKuroCrowdAiBoidActorSystem");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, BakedBoneMeshComp) == 0x0002D0, "Member 'AKuroCrowdAiBoidActorSystem::BakedBoneMeshComp' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MaterialControllerComp) == 0x0002D8, "Member 'AKuroCrowdAiBoidActorSystem::MaterialControllerComp' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MaxBoidCount) == 0x0002E0, "Member 'AKuroCrowdAiBoidActorSystem::MaxBoidCount' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, Radius) == 0x0002E4, "Member 'AKuroCrowdAiBoidActorSystem::Radius' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, HalfHeight) == 0x0002E8, "Member 'AKuroCrowdAiBoidActorSystem::HalfHeight' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, RelativeTrans) == 0x0002F0, "Member 'AKuroCrowdAiBoidActorSystem::RelativeTrans' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MaxSpeed) == 0x000320, "Member 'AKuroCrowdAiBoidActorSystem::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MaxAccel) == 0x000324, "Member 'AKuroCrowdAiBoidActorSystem::MaxAccel' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, GroundFriction) == 0x000328, "Member 'AKuroCrowdAiBoidActorSystem::GroundFriction' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MovingRadiusFactor) == 0x00032C, "Member 'AKuroCrowdAiBoidActorSystem::MovingRadiusFactor' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, TurnThresholdSpeed) == 0x000330, "Member 'AKuroCrowdAiBoidActorSystem::TurnThresholdSpeed' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, TurnInterpSpeed) == 0x000334, "Member 'AKuroCrowdAiBoidActorSystem::TurnInterpSpeed' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, FleeRadius) == 0x000338, "Member 'AKuroCrowdAiBoidActorSystem::FleeRadius' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MovingFleeRadiusFactor) == 0x00033C, "Member 'AKuroCrowdAiBoidActorSystem::MovingFleeRadiusFactor' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, ArrivalRadius) == 0x000340, "Member 'AKuroCrowdAiBoidActorSystem::ArrivalRadius' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MinDistToNavEdge) == 0x000344, "Member 'AKuroCrowdAiBoidActorSystem::MinDistToNavEdge' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, ExtraQueryOffset) == 0x000348, "Member 'AKuroCrowdAiBoidActorSystem::ExtraQueryOffset' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, IdlePerformMinCD) == 0x00034C, "Member 'AKuroCrowdAiBoidActorSystem::IdlePerformMinCD' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, IdlePerformMaxCD) == 0x000350, "Member 'AKuroCrowdAiBoidActorSystem::IdlePerformMaxCD' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, IdlePerformMaxPortion) == 0x000354, "Member 'AKuroCrowdAiBoidActorSystem::IdlePerformMaxPortion' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, BoidIdToInstanceIdMap) == 0x000360, "Member 'AKuroCrowdAiBoidActorSystem::BoidIdToInstanceIdMap' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, AllocatedAnimUpdater) == 0x0006A8, "Member 'AKuroCrowdAiBoidActorSystem::AllocatedAnimUpdater' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, AnimStateConfig) == 0x0006F8, "Member 'AKuroCrowdAiBoidActorSystem::AnimStateConfig' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, AnimSequenceConfig) == 0x000748, "Member 'AKuroCrowdAiBoidActorSystem::AnimSequenceConfig' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidActorSystem, MaterialEffectWithTextureConfig) == 0x000758, "Member 'AKuroCrowdAiBoidActorSystem::MaterialEffectWithTextureConfig' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroCrowdAiBoidActorSystem;
 
 // Class KuroCrowdAi.KuroCrowdAiBoidComponent
 // 0x0180 (0x0240 - 0x00C0)
@@ -172,43 +153,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiBoidComponent">();
+		STATIC_CLASS_IMPL("KuroCrowdAiBoidComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiBoidComponent")
 	}
 	static class UKuroCrowdAiBoidComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCrowdAiBoidComponent>();
 	}
 };
-static_assert(alignof(UKuroCrowdAiBoidComponent) == 0x000010, "Wrong alignment on UKuroCrowdAiBoidComponent");
-static_assert(sizeof(UKuroCrowdAiBoidComponent) == 0x000240, "Wrong size on UKuroCrowdAiBoidComponent");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, UpdatedComponent) == 0x0000C8, "Member 'UKuroCrowdAiBoidComponent::UpdatedComponent' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, BoidId) == 0x0000D0, "Member 'UKuroCrowdAiBoidComponent::BoidId' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, GroupId) == 0x0000D4, "Member 'UKuroCrowdAiBoidComponent::GroupId' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, WatchingBoidId) == 0x0000D8, "Member 'UKuroCrowdAiBoidComponent::WatchingBoidId' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, Transform) == 0x0000E0, "Member 'UKuroCrowdAiBoidComponent::Transform' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, Velocity) == 0x000110, "Member 'UKuroCrowdAiBoidComponent::Velocity' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, Steering) == 0x00011C, "Member 'UKuroCrowdAiBoidComponent::Steering' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, Gravity) == 0x000128, "Member 'UKuroCrowdAiBoidComponent::Gravity' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, LastTransform) == 0x000140, "Member 'UKuroCrowdAiBoidComponent::LastTransform' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, LastVelocity) == 0x000170, "Member 'UKuroCrowdAiBoidComponent::LastVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, LastSteering) == 0x00017C, "Member 'UKuroCrowdAiBoidComponent::LastSteering' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, IsCrowdAiControlled) == 0x000188, "Member 'UKuroCrowdAiBoidComponent::IsCrowdAiControlled' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, Radius) == 0x00018C, "Member 'UKuroCrowdAiBoidComponent::Radius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, HalfHeight) == 0x000190, "Member 'UKuroCrowdAiBoidComponent::HalfHeight' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, MaxSpeed) == 0x000194, "Member 'UKuroCrowdAiBoidComponent::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, MaxAccel) == 0x000198, "Member 'UKuroCrowdAiBoidComponent::MaxAccel' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, GroundFriction) == 0x00019C, "Member 'UKuroCrowdAiBoidComponent::GroundFriction' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, LocationOffset) == 0x0001A0, "Member 'UKuroCrowdAiBoidComponent::LocationOffset' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, RotationOffset) == 0x0001AC, "Member 'UKuroCrowdAiBoidComponent::RotationOffset' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, FleeRadius) == 0x0001B8, "Member 'UKuroCrowdAiBoidComponent::FleeRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, ArrivalRadius) == 0x0001BC, "Member 'UKuroCrowdAiBoidComponent::ArrivalRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, MinDistToNavEdge) == 0x0001C0, "Member 'UKuroCrowdAiBoidComponent::MinDistToNavEdge' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, ExtraQueryOffset) == 0x0001C4, "Member 'UKuroCrowdAiBoidComponent::ExtraQueryOffset' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, bStickToGround) == 0x0001C8, "Member 'UKuroCrowdAiBoidComponent::bStickToGround' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, TurnThresholdSpeed) == 0x0001CC, "Member 'UKuroCrowdAiBoidComponent::TurnThresholdSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, TurnInterpSpeed) == 0x0001D0, "Member 'UKuroCrowdAiBoidComponent::TurnInterpSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, ExtrusionRadius) == 0x0001D4, "Member 'UKuroCrowdAiBoidComponent::ExtrusionRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiBoidComponent, ShapeCollisionTagName) == 0x0001D8, "Member 'UKuroCrowdAiBoidComponent::ShapeCollisionTagName' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCrowdAiBoidComponent;
 
 // Class KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxy
 // 0x0018 (0x02C8 - 0x02B0)
@@ -225,16 +181,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiBoidInstanceSequenceProxy">();
+		STATIC_CLASS_IMPL("KuroCrowdAiBoidInstanceSequenceProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiBoidInstanceSequenceProxy")
 	}
 	static class AKuroCrowdAiBoidInstanceSequenceProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroCrowdAiBoidInstanceSequenceProxy>();
 	}
 };
-static_assert(alignof(AKuroCrowdAiBoidInstanceSequenceProxy) == 0x000008, "Wrong alignment on AKuroCrowdAiBoidInstanceSequenceProxy");
-static_assert(sizeof(AKuroCrowdAiBoidInstanceSequenceProxy) == 0x0002C8, "Wrong size on AKuroCrowdAiBoidInstanceSequenceProxy");
-static_assert(offsetof(AKuroCrowdAiBoidInstanceSequenceProxy, RootSceneComponent) == 0x0002B0, "Member 'AKuroCrowdAiBoidInstanceSequenceProxy::RootSceneComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroCrowdAiBoidInstanceSequenceProxy;
 
 // Class KuroCrowdAi.KuroCrowdAiBoidInstanceSequenceProxyRouter
 // 0x00F8 (0x03A8 - 0x02B0)
@@ -257,19 +215,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiBoidInstanceSequenceProxyRouter">();
+		STATIC_CLASS_IMPL("KuroCrowdAiBoidInstanceSequenceProxyRouter")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiBoidInstanceSequenceProxyRouter")
 	}
 	static class AKuroCrowdAiBoidInstanceSequenceProxyRouter* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroCrowdAiBoidInstanceSequenceProxyRouter>();
 	}
 };
-static_assert(alignof(AKuroCrowdAiBoidInstanceSequenceProxyRouter) == 0x000008, "Wrong alignment on AKuroCrowdAiBoidInstanceSequenceProxyRouter");
-static_assert(sizeof(AKuroCrowdAiBoidInstanceSequenceProxyRouter) == 0x0003A8, "Wrong size on AKuroCrowdAiBoidInstanceSequenceProxyRouter");
-static_assert(offsetof(AKuroCrowdAiBoidInstanceSequenceProxyRouter, ProxyActorToBoidId) == 0x0002B0, "Member 'AKuroCrowdAiBoidInstanceSequenceProxyRouter::ProxyActorToBoidId' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidInstanceSequenceProxyRouter, BoidIdToProxyActor) == 0x000300, "Member 'AKuroCrowdAiBoidInstanceSequenceProxyRouter::BoidIdToProxyActor' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidInstanceSequenceProxyRouter, CrowdAiSubsystem) == 0x000350, "Member 'AKuroCrowdAiBoidInstanceSequenceProxyRouter::CrowdAiSubsystem' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiBoidInstanceSequenceProxyRouter, ProxyActorsBusyRouting) == 0x000358, "Member 'AKuroCrowdAiBoidInstanceSequenceProxyRouter::ProxyActorsBusyRouting' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroCrowdAiBoidInstanceSequenceProxyRouter;
 
 // Class KuroCrowdAi.KuroCrowdAiSubsystem
 // 0x0548 (0x0580 - 0x0038)
@@ -330,37 +287,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiSubsystem">();
+		STATIC_CLASS_IMPL("KuroCrowdAiSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiSubsystem")
 	}
 	static class UKuroCrowdAiSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCrowdAiSubsystem>();
 	}
 };
-static_assert(alignof(UKuroCrowdAiSubsystem) == 0x000008, "Wrong alignment on UKuroCrowdAiSubsystem");
-static_assert(sizeof(UKuroCrowdAiSubsystem) == 0x000580, "Wrong size on UKuroCrowdAiSubsystem");
-static_assert(offsetof(UKuroCrowdAiSubsystem, GroupSplitRadius) == 0x000038, "Member 'UKuroCrowdAiSubsystem::GroupSplitRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, GroupNavigationInterval) == 0x00003C, "Member 'UKuroCrowdAiSubsystem::GroupNavigationInterval' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, PauseSeekMinDist) == 0x000040, "Member 'UKuroCrowdAiSubsystem::PauseSeekMinDist' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, PauseSeekMaxTime) == 0x000044, "Member 'UKuroCrowdAiSubsystem::PauseSeekMaxTime' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, PauseSeekMaxSpeed) == 0x000048, "Member 'UKuroCrowdAiSubsystem::PauseSeekMaxSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, bEnableFollowLimitation) == 0x00004C, "Member 'UKuroCrowdAiSubsystem::bEnableFollowLimitation' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, FanWingEdgesAngle) == 0x000050, "Member 'UKuroCrowdAiSubsystem::FanWingEdgesAngle' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, FanWingEdgesLen) == 0x000054, "Member 'UKuroCrowdAiSubsystem::FanWingEdgesLen' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, FanBottomEdgeHalfLen) == 0x000058, "Member 'UKuroCrowdAiSubsystem::FanBottomEdgeHalfLen' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, FanBottomEdgeDistToWatchingBoid) == 0x00005C, "Member 'UKuroCrowdAiSubsystem::FanBottomEdgeDistToWatchingBoid' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, BornDelayMaxTime) == 0x000060, "Member 'UKuroCrowdAiSubsystem::BornDelayMaxTime' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, DestroyDelayMaxTime) == 0x000064, "Member 'UKuroCrowdAiSubsystem::DestroyDelayMaxTime' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, bEnableTeleport) == 0x000068, "Member 'UKuroCrowdAiSubsystem::bEnableTeleport' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportMinPlanarDist) == 0x00006C, "Member 'UKuroCrowdAiSubsystem::TeleportMinPlanarDist' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportMinVerticalDist) == 0x000070, "Member 'UKuroCrowdAiSubsystem::TeleportMinVerticalDist' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, PauseTeleportMaxPlanarSpeed) == 0x000074, "Member 'UKuroCrowdAiSubsystem::PauseTeleportMaxPlanarSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportMinTime) == 0x000078, "Member 'UKuroCrowdAiSubsystem::TeleportMinTime' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportMaxTime) == 0x00007C, "Member 'UKuroCrowdAiSubsystem::TeleportMaxTime' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportTargetMaxRadius) == 0x000080, "Member 'UKuroCrowdAiSubsystem::TeleportTargetMaxRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportTargetMinRadius) == 0x000084, "Member 'UKuroCrowdAiSubsystem::TeleportTargetMinRadius' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, TeleportTryCount) == 0x000088, "Member 'UKuroCrowdAiSubsystem::TeleportTryCount' has a wrong offset!");
-static_assert(offsetof(UKuroCrowdAiSubsystem, bStickToGround) == 0x00008C, "Member 'UKuroCrowdAiSubsystem::bStickToGround' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroCrowdAiSubsystem;
 
 // Class KuroCrowdAi.KuroCrowdAiManagerProxyActor
 // 0x0020 (0x02D0 - 0x02B0)
@@ -378,18 +316,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCrowdAiManagerProxyActor">();
+		STATIC_CLASS_IMPL("KuroCrowdAiManagerProxyActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCrowdAiManagerProxyActor")
 	}
 	static class AKuroCrowdAiManagerProxyActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroCrowdAiManagerProxyActor>();
 	}
 };
-static_assert(alignof(AKuroCrowdAiManagerProxyActor) == 0x000008, "Wrong alignment on AKuroCrowdAiManagerProxyActor");
-static_assert(sizeof(AKuroCrowdAiManagerProxyActor) == 0x0002D0, "Wrong size on AKuroCrowdAiManagerProxyActor");
-static_assert(offsetof(AKuroCrowdAiManagerProxyActor, RootSceneComponent) == 0x0002B0, "Member 'AKuroCrowdAiManagerProxyActor::RootSceneComponent' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiManagerProxyActor, MaxSimulationIterations) == 0x0002B8, "Member 'AKuroCrowdAiManagerProxyActor::MaxSimulationIterations' has a wrong offset!");
-static_assert(offsetof(AKuroCrowdAiManagerProxyActor, MaxSimulationTimeStep) == 0x0002BC, "Member 'AKuroCrowdAiManagerProxyActor::MaxSimulationTimeStep' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroCrowdAiManagerProxyActor;
 
 }
 

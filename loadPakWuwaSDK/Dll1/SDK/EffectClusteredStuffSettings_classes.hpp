@@ -32,19 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectClusteredStuffSettings_C">();
+		BP_STATIC_CLASS_IMPL("EffectClusteredStuffSettings_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectClusteredStuffSettings_C")
 	}
 	static class UEffectClusteredStuffSettings_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectClusteredStuffSettings_C>();
 	}
 };
-static_assert(alignof(UEffectClusteredStuffSettings_C) == 0x000008, "Wrong alignment on UEffectClusteredStuffSettings_C");
-static_assert(sizeof(UEffectClusteredStuffSettings_C) == 0x000080, "Wrong size on UEffectClusteredStuffSettings_C");
-static_assert(offsetof(UEffectClusteredStuffSettings_C, DensityChangeSpeed) == 0x000038, "Member 'UEffectClusteredStuffSettings_C::DensityChangeSpeed' has a wrong offset!");
-static_assert(offsetof(UEffectClusteredStuffSettings_C, AttachToActor) == 0x00003C, "Member 'UEffectClusteredStuffSettings_C::AttachToActor' has a wrong offset!");
-static_assert(offsetof(UEffectClusteredStuffSettings_C, AbsoluteWorldPosition) == 0x000040, "Member 'UEffectClusteredStuffSettings_C::AbsoluteWorldPosition' has a wrong offset!");
-static_assert(offsetof(UEffectClusteredStuffSettings_C, EffectDataRef) == 0x000050, "Member 'UEffectClusteredStuffSettings_C::EffectDataRef' has a wrong offset!");
+DUMPER7_ASSERTS_UEffectClusteredStuffSettings_C;
 
 }
 

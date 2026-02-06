@@ -10,10 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SInputAction_structs.hpp"
 #include "SBornTransform_structs.hpp"
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SInputAction_structs.hpp"
+#include "Engine_classes.hpp"
+#include "SFollowShooterEnablePriorityInfo_structs.hpp"
+#include "SFollowShooterTagConfig_structs.hpp"
 #include "SLockOnFollowShooter_structs.hpp"
 
 
@@ -21,7 +23,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FollowShooterConfig.BP_FollowShooterConfig_C
-// 0x01F0 (0x0228 - 0x0038)
+// 0x0250 (0x0288 - 0x0038)
 class UBP_FollowShooterConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -35,42 +37,32 @@ public:
 	TMap<struct FGameplayTag, struct FGameplayTagContainer> AddTagsWhenCurrentRoleHasAnyTags;        // 0x0080(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         DelayDisappearMillisecond;                         // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSLockOnFollowShooter                  LockOnConfig;                                      // 0x00D8(0x0108)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         AimType;                                           // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SightResId;                                        // 0x01E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FSBornTransform                        BornTransform;                                     // 0x01F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          AutoPossessed;                                     // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          BeRegardedAsPlayerFollowShooter;                   // 0x0221(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          SetEntityEnableAfterMaterialController;            // 0x0222(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FSLockOnFollowShooter                  LockOnConfig;                                      // 0x00D8(0x0128)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         AimType;                                           // 0x0200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_204[0x4];                                      // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SightResId;                                        // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FSBornTransform                        BornTransform;                                     // 0x0218(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FSFollowShooterTagConfig>       AddTagByCheckCurrentRoleTag;                       // 0x0240(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          SetEntityEnableAfterMaterialController;            // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  DisableInputWhenHasTags;                           // 0x0258(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FSFollowShooterEnablePriorityInfo> EnablePriority;                                 // 0x0278(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_FollowShooterConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_FollowShooterConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_FollowShooterConfig_C")
 	}
 	static class UBP_FollowShooterConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_FollowShooterConfig_C>();
 	}
 };
-static_assert(alignof(UBP_FollowShooterConfig_C) == 0x000008, "Wrong alignment on UBP_FollowShooterConfig_C");
-static_assert(sizeof(UBP_FollowShooterConfig_C) == 0x000228, "Wrong size on UBP_FollowShooterConfig_C");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AutoEnable) == 0x000038, "Member 'UBP_FollowShooterConfig_C::AutoEnable' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, NeedUploadData) == 0x000039, "Member 'UBP_FollowShooterConfig_C::NeedUploadData' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, NeedInputActions) == 0x000040, "Member 'UBP_FollowShooterConfig_C::NeedInputActions' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AddTagsWhenEnable) == 0x000050, "Member 'UBP_FollowShooterConfig_C::AddTagsWhenEnable' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AddTagsToPlayerWhenPossess) == 0x000060, "Member 'UBP_FollowShooterConfig_C::AddTagsToPlayerWhenPossess' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, DisableWhenCurrentRoleHasTags) == 0x000070, "Member 'UBP_FollowShooterConfig_C::DisableWhenCurrentRoleHasTags' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AddTagsWhenCurrentRoleHasAnyTags) == 0x000080, "Member 'UBP_FollowShooterConfig_C::AddTagsWhenCurrentRoleHasAnyTags' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, DelayDisappearMillisecond) == 0x0000D0, "Member 'UBP_FollowShooterConfig_C::DelayDisappearMillisecond' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, LockOnConfig) == 0x0000D8, "Member 'UBP_FollowShooterConfig_C::LockOnConfig' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AimType) == 0x0001E0, "Member 'UBP_FollowShooterConfig_C::AimType' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, SightResId) == 0x0001E8, "Member 'UBP_FollowShooterConfig_C::SightResId' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, BornTransform) == 0x0001F8, "Member 'UBP_FollowShooterConfig_C::BornTransform' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, AutoPossessed) == 0x000220, "Member 'UBP_FollowShooterConfig_C::AutoPossessed' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, BeRegardedAsPlayerFollowShooter) == 0x000221, "Member 'UBP_FollowShooterConfig_C::BeRegardedAsPlayerFollowShooter' has a wrong offset!");
-static_assert(offsetof(UBP_FollowShooterConfig_C, SetEntityEnableAfterMaterialController) == 0x000222, "Member 'UBP_FollowShooterConfig_C::SetEntityEnableAfterMaterialController' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_FollowShooterConfig_C;
 
 }
 

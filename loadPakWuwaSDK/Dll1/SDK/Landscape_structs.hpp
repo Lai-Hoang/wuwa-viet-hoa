@@ -47,6 +47,16 @@ enum class ELandscapeClearMode : uint8
 	Clear_MAX                                = 4,
 };
 
+// Enum Landscape.EKuroIndexmapMipOption
+// NumValues: 0x0004
+enum class EKuroIndexmapMipOption : uint8
+{
+	KuroIndexmapMipOption_Default            = 0,
+	KuroIndexmapMipOption_NoMips             = 1,
+	KuroIndexmapMipOption_UseMips            = 2,
+	KuroIndexmapMipOption_MAX                = 3,
+};
+
 // Enum Landscape.ELandscapeGizmoType
 // NumValues: 0x0004
 enum class ELandscapeGizmoType : uint8
@@ -176,17 +186,7 @@ public:
 	class UTexture2D*                             LayerContributionTexture;                          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             DirtyTexture;                                      // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeEditToolRenderData) == 0x000008, "Wrong alignment on FLandscapeEditToolRenderData");
-static_assert(sizeof(FLandscapeEditToolRenderData) == 0x000038, "Wrong size on FLandscapeEditToolRenderData");
-static_assert(offsetof(FLandscapeEditToolRenderData, ToolMaterial) == 0x000000, "Member 'FLandscapeEditToolRenderData::ToolMaterial' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, GizmoMaterial) == 0x000008, "Member 'FLandscapeEditToolRenderData::GizmoMaterial' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, SelectedType) == 0x000010, "Member 'FLandscapeEditToolRenderData::SelectedType' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, DebugChannelR) == 0x000014, "Member 'FLandscapeEditToolRenderData::DebugChannelR' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, DebugChannelG) == 0x000018, "Member 'FLandscapeEditToolRenderData::DebugChannelG' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, DebugChannelB) == 0x00001C, "Member 'FLandscapeEditToolRenderData::DebugChannelB' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, DataTexture) == 0x000020, "Member 'FLandscapeEditToolRenderData::DataTexture' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, LayerContributionTexture) == 0x000028, "Member 'FLandscapeEditToolRenderData::LayerContributionTexture' has a wrong offset!");
-static_assert(offsetof(FLandscapeEditToolRenderData, DirtyTexture) == 0x000030, "Member 'FLandscapeEditToolRenderData::DirtyTexture' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeEditToolRenderData;
 
 // ScriptStruct Landscape.LandscapeLayerBrush
 // 0x0001 (0x0001 - 0x0000)
@@ -195,8 +195,7 @@ struct FLandscapeLayerBrush final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLandscapeLayerBrush) == 0x000001, "Wrong alignment on FLandscapeLayerBrush");
-static_assert(sizeof(FLandscapeLayerBrush) == 0x000001, "Wrong size on FLandscapeLayerBrush");
+DUMPER7_ASSERTS_FLandscapeLayerBrush;
 
 // ScriptStruct Landscape.LandscapeLayer
 // 0x0090 (0x0090 - 0x0000)
@@ -215,17 +214,7 @@ public:
 	TArray<struct FLandscapeLayerBrush>           Brushes;                                           // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TMap<class ULandscapeLayerInfoObject*, bool>  WeightmapLayerAllocationBlend;                     // 0x0040(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeLayer) == 0x000008, "Wrong alignment on FLandscapeLayer");
-static_assert(sizeof(FLandscapeLayer) == 0x000090, "Wrong size on FLandscapeLayer");
-static_assert(offsetof(FLandscapeLayer, Guid) == 0x000000, "Member 'FLandscapeLayer::Guid' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, Name) == 0x000010, "Member 'FLandscapeLayer::Name' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, bVisible) == 0x00001C, "Member 'FLandscapeLayer::bVisible' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, bLocked) == 0x00001D, "Member 'FLandscapeLayer::bLocked' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, HeightmapAlpha) == 0x000020, "Member 'FLandscapeLayer::HeightmapAlpha' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, WeightmapAlpha) == 0x000024, "Member 'FLandscapeLayer::WeightmapAlpha' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, BlendMode) == 0x000028, "Member 'FLandscapeLayer::BlendMode' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, Brushes) == 0x000030, "Member 'FLandscapeLayer::Brushes' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayer, WeightmapLayerAllocationBlend) == 0x000040, "Member 'FLandscapeLayer::WeightmapLayerAllocationBlend' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeLayer;
 
 // ScriptStruct Landscape.HeightmapData
 // 0x0008 (0x0008 - 0x0000)
@@ -234,9 +223,7 @@ struct FHeightmapData final
 public:
 	class UTexture2D*                             Texture;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FHeightmapData) == 0x000008, "Wrong alignment on FHeightmapData");
-static_assert(sizeof(FHeightmapData) == 0x000008, "Wrong size on FHeightmapData");
-static_assert(offsetof(FHeightmapData, Texture) == 0x000000, "Member 'FHeightmapData::Texture' has a wrong offset!");
+DUMPER7_ASSERTS_FHeightmapData;
 
 // ScriptStruct Landscape.WeightmapLayerAllocationInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -248,11 +235,7 @@ public:
 	uint8                                         WeightmapTextureChannel;                           // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FWeightmapLayerAllocationInfo) == 0x000008, "Wrong alignment on FWeightmapLayerAllocationInfo");
-static_assert(sizeof(FWeightmapLayerAllocationInfo) == 0x000010, "Wrong size on FWeightmapLayerAllocationInfo");
-static_assert(offsetof(FWeightmapLayerAllocationInfo, LayerInfo) == 0x000000, "Member 'FWeightmapLayerAllocationInfo::LayerInfo' has a wrong offset!");
-static_assert(offsetof(FWeightmapLayerAllocationInfo, WeightmapTextureIndex) == 0x000008, "Member 'FWeightmapLayerAllocationInfo::WeightmapTextureIndex' has a wrong offset!");
-static_assert(offsetof(FWeightmapLayerAllocationInfo, WeightmapTextureChannel) == 0x000009, "Member 'FWeightmapLayerAllocationInfo::WeightmapTextureChannel' has a wrong offset!");
+DUMPER7_ASSERTS_FWeightmapLayerAllocationInfo;
 
 // ScriptStruct Landscape.WeightmapData
 // 0x0030 (0x0030 - 0x0000)
@@ -263,11 +246,7 @@ public:
 	TArray<struct FWeightmapLayerAllocationInfo>  LayerAllocations;                                  // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<class ULandscapeWeightmapUsage*>       TextureUsages;                                     // 0x0020(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWeightmapData) == 0x000008, "Wrong alignment on FWeightmapData");
-static_assert(sizeof(FWeightmapData) == 0x000030, "Wrong size on FWeightmapData");
-static_assert(offsetof(FWeightmapData, Textures) == 0x000000, "Member 'FWeightmapData::Textures' has a wrong offset!");
-static_assert(offsetof(FWeightmapData, LayerAllocations) == 0x000010, "Member 'FWeightmapData::LayerAllocations' has a wrong offset!");
-static_assert(offsetof(FWeightmapData, TextureUsages) == 0x000020, "Member 'FWeightmapData::TextureUsages' has a wrong offset!");
+DUMPER7_ASSERTS_FWeightmapData;
 
 // ScriptStruct Landscape.LandscapeLayerComponentData
 // 0x0038 (0x0038 - 0x0000)
@@ -277,10 +256,28 @@ public:
 	struct FHeightmapData                         HeightmapData;                                     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWeightmapData                         WeightmapData;                                     // 0x0008(0x0030)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeLayerComponentData) == 0x000008, "Wrong alignment on FLandscapeLayerComponentData");
-static_assert(sizeof(FLandscapeLayerComponentData) == 0x000038, "Wrong size on FLandscapeLayerComponentData");
-static_assert(offsetof(FLandscapeLayerComponentData, HeightmapData) == 0x000000, "Member 'FLandscapeLayerComponentData::HeightmapData' has a wrong offset!");
-static_assert(offsetof(FLandscapeLayerComponentData, WeightmapData) == 0x000008, "Member 'FLandscapeLayerComponentData::WeightmapData' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeLayerComponentData;
+
+// ScriptStruct Landscape.LandscapeSplineConnection
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeSplineConnection final
+{
+public:
+	class ULandscapeSplineSegment*                Segment;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         End : 1;                                           // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FLandscapeSplineConnection;
+
+// ScriptStruct Landscape.LandscapeMaterialTextureStreamingInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeMaterialTextureStreamingInfo final
+{
+public:
+	class FName                                   TextureName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TexelFactor;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLandscapeMaterialTextureStreamingInfo;
 
 // ScriptStruct Landscape.LandscapeComponentMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -291,10 +288,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeComponentMaterialOverride) == 0x000008, "Wrong alignment on FLandscapeComponentMaterialOverride");
-static_assert(sizeof(FLandscapeComponentMaterialOverride) == 0x000010, "Wrong size on FLandscapeComponentMaterialOverride");
-static_assert(offsetof(FLandscapeComponentMaterialOverride, LODIndex) == 0x000000, "Member 'FLandscapeComponentMaterialOverride::LODIndex' has a wrong offset!");
-static_assert(offsetof(FLandscapeComponentMaterialOverride, Material) == 0x000008, "Member 'FLandscapeComponentMaterialOverride::Material' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeComponentMaterialOverride;
 
 // ScriptStruct Landscape.GizmoSelectData
 // 0x0050 (0x0050 - 0x0000)
@@ -303,8 +297,16 @@ struct alignas(0x08) FGizmoSelectData final
 public:
 	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGizmoSelectData) == 0x000008, "Wrong alignment on FGizmoSelectData");
-static_assert(sizeof(FGizmoSelectData) == 0x000050, "Wrong size on FGizmoSelectData");
+DUMPER7_ASSERTS_FGizmoSelectData;
+
+// ScriptStruct Landscape.LandscapeLayerStruct
+// 0x0008 (0x0008 - 0x0000)
+struct FLandscapeLayerStruct final
+{
+public:
+	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLandscapeLayerStruct;
 
 // ScriptStruct Landscape.GrassVariety
 // 0x0058 (0x0058 - 0x0000)
@@ -334,27 +336,7 @@ public:
 	bool                                          bKeepInstanceBufferCPUCopy;                        // 0x0052(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGrassVariety) == 0x000008, "Wrong alignment on FGrassVariety");
-static_assert(sizeof(FGrassVariety) == 0x000058, "Wrong size on FGrassVariety");
-static_assert(offsetof(FGrassVariety, GrassMesh) == 0x000000, "Member 'FGrassVariety::GrassMesh' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, OverrideMaterials) == 0x000008, "Member 'FGrassVariety::OverrideMaterials' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, GrassDensity) == 0x000018, "Member 'FGrassVariety::GrassDensity' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, bUseGrid) == 0x00001C, "Member 'FGrassVariety::bUseGrid' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, PlacementJitter) == 0x000020, "Member 'FGrassVariety::PlacementJitter' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, StartCullDistance) == 0x000024, "Member 'FGrassVariety::StartCullDistance' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, EndCullDistance) == 0x000028, "Member 'FGrassVariety::EndCullDistance' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, MinLOD) == 0x00002C, "Member 'FGrassVariety::MinLOD' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, Scaling) == 0x000030, "Member 'FGrassVariety::Scaling' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, ScaleX) == 0x000034, "Member 'FGrassVariety::ScaleX' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, ScaleY) == 0x00003C, "Member 'FGrassVariety::ScaleY' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, ScaleZ) == 0x000044, "Member 'FGrassVariety::ScaleZ' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, RandomRotation) == 0x00004C, "Member 'FGrassVariety::RandomRotation' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, AlignToSurface) == 0x00004D, "Member 'FGrassVariety::AlignToSurface' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, bUseLandscapeLightmap) == 0x00004E, "Member 'FGrassVariety::bUseLandscapeLightmap' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, LightingChannels) == 0x00004F, "Member 'FGrassVariety::LightingChannels' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, bReceivesDecals) == 0x000050, "Member 'FGrassVariety::bReceivesDecals' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, bCastDynamicShadow) == 0x000051, "Member 'FGrassVariety::bCastDynamicShadow' has a wrong offset!");
-static_assert(offsetof(FGrassVariety, bKeepInstanceBufferCPUCopy) == 0x000052, "Member 'FGrassVariety::bKeepInstanceBufferCPUCopy' has a wrong offset!");
+DUMPER7_ASSERTS_FGrassVariety;
 
 // ScriptStruct Landscape.LandscapeInfoLayerSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -365,23 +347,7 @@ public:
 	class FName                                   LayerName;                                         // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLandscapeInfoLayerSettings) == 0x000008, "Wrong alignment on FLandscapeInfoLayerSettings");
-static_assert(sizeof(FLandscapeInfoLayerSettings) == 0x000018, "Wrong size on FLandscapeInfoLayerSettings");
-static_assert(offsetof(FLandscapeInfoLayerSettings, LayerInfoObj) == 0x000000, "Member 'FLandscapeInfoLayerSettings::LayerInfoObj' has a wrong offset!");
-static_assert(offsetof(FLandscapeInfoLayerSettings, LayerName) == 0x000008, "Member 'FLandscapeInfoLayerSettings::LayerName' has a wrong offset!");
-
-// ScriptStruct Landscape.LandscapeMaterialTextureStreamingInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeMaterialTextureStreamingInfo final
-{
-public:
-	class FName                                   TextureName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TexelFactor;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FLandscapeMaterialTextureStreamingInfo) == 0x000004, "Wrong alignment on FLandscapeMaterialTextureStreamingInfo");
-static_assert(sizeof(FLandscapeMaterialTextureStreamingInfo) == 0x000010, "Wrong size on FLandscapeMaterialTextureStreamingInfo");
-static_assert(offsetof(FLandscapeMaterialTextureStreamingInfo, TextureName) == 0x000000, "Member 'FLandscapeMaterialTextureStreamingInfo::TextureName' has a wrong offset!");
-static_assert(offsetof(FLandscapeMaterialTextureStreamingInfo, TexelFactor) == 0x00000C, "Member 'FLandscapeMaterialTextureStreamingInfo::TexelFactor' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeInfoLayerSettings;
 
 // ScriptStruct Landscape.LandscapeProxyCustomLayerPhysicalMaterial
 // 0x0018 (0x0018 - 0x0000)
@@ -392,10 +358,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0010(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeProxyCustomLayerPhysicalMaterial) == 0x000008, "Wrong alignment on FLandscapeProxyCustomLayerPhysicalMaterial");
-static_assert(sizeof(FLandscapeProxyCustomLayerPhysicalMaterial) == 0x000018, "Wrong size on FLandscapeProxyCustomLayerPhysicalMaterial");
-static_assert(offsetof(FLandscapeProxyCustomLayerPhysicalMaterial, LayerName) == 0x000000, "Member 'FLandscapeProxyCustomLayerPhysicalMaterial::LayerName' has a wrong offset!");
-static_assert(offsetof(FLandscapeProxyCustomLayerPhysicalMaterial, PhysicalMaterial) == 0x000010, "Member 'FLandscapeProxyCustomLayerPhysicalMaterial::PhysicalMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeProxyCustomLayerPhysicalMaterial;
 
 // ScriptStruct Landscape.LandscapeProxyMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
@@ -406,10 +369,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeProxyMaterialOverride) == 0x000008, "Wrong alignment on FLandscapeProxyMaterialOverride");
-static_assert(sizeof(FLandscapeProxyMaterialOverride) == 0x000010, "Wrong size on FLandscapeProxyMaterialOverride");
-static_assert(offsetof(FLandscapeProxyMaterialOverride, LODIndex) == 0x000000, "Member 'FLandscapeProxyMaterialOverride::LODIndex' has a wrong offset!");
-static_assert(offsetof(FLandscapeProxyMaterialOverride, Material) == 0x000008, "Member 'FLandscapeProxyMaterialOverride::Material' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeProxyMaterialOverride;
 
 // ScriptStruct Landscape.LandscapeImportLayerInfo
 // 0x0001 (0x0001 - 0x0000)
@@ -418,19 +378,7 @@ struct FLandscapeImportLayerInfo final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLandscapeImportLayerInfo) == 0x000001, "Wrong alignment on FLandscapeImportLayerInfo");
-static_assert(sizeof(FLandscapeImportLayerInfo) == 0x000001, "Wrong size on FLandscapeImportLayerInfo");
-
-// ScriptStruct Landscape.LandscapeLayerStruct
-// 0x0008 (0x0008 - 0x0000)
-struct FLandscapeLayerStruct final
-{
-public:
-	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FLandscapeLayerStruct) == 0x000008, "Wrong alignment on FLandscapeLayerStruct");
-static_assert(sizeof(FLandscapeLayerStruct) == 0x000008, "Wrong size on FLandscapeLayerStruct");
-static_assert(offsetof(FLandscapeLayerStruct, LayerInfoObj) == 0x000000, "Member 'FLandscapeLayerStruct::LayerInfoObj' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeImportLayerInfo;
 
 // ScriptStruct Landscape.LandscapeEditorLayerSettings
 // 0x0001 (0x0001 - 0x0000)
@@ -439,21 +387,7 @@ struct FLandscapeEditorLayerSettings final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong alignment on FLandscapeEditorLayerSettings");
-static_assert(sizeof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong size on FLandscapeEditorLayerSettings");
-
-// ScriptStruct Landscape.LandscapeSplineConnection
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeSplineConnection final
-{
-public:
-	class ULandscapeSplineSegment*                Segment;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         End : 1;                                           // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FLandscapeSplineConnection) == 0x000008, "Wrong alignment on FLandscapeSplineConnection");
-static_assert(sizeof(FLandscapeSplineConnection) == 0x000010, "Wrong size on FLandscapeSplineConnection");
-static_assert(offsetof(FLandscapeSplineConnection, Segment) == 0x000000, "Member 'FLandscapeSplineConnection::Segment' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeEditorLayerSettings;
 
 // ScriptStruct Landscape.ForeignWorldSplineData
 // 0x0001 (0x0001 - 0x0000)
@@ -462,8 +396,7 @@ struct FForeignWorldSplineData final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FForeignWorldSplineData) == 0x000001, "Wrong alignment on FForeignWorldSplineData");
-static_assert(sizeof(FForeignWorldSplineData) == 0x000001, "Wrong size on FForeignWorldSplineData");
+DUMPER7_ASSERTS_FForeignWorldSplineData;
 
 // ScriptStruct Landscape.ForeignSplineSegmentData
 // 0x0001 (0x0001 - 0x0000)
@@ -472,8 +405,7 @@ struct FForeignSplineSegmentData final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FForeignSplineSegmentData) == 0x000001, "Wrong alignment on FForeignSplineSegmentData");
-static_assert(sizeof(FForeignSplineSegmentData) == 0x000001, "Wrong size on FForeignSplineSegmentData");
+DUMPER7_ASSERTS_FForeignSplineSegmentData;
 
 // ScriptStruct Landscape.ForeignControlPointData
 // 0x0001 (0x0001 - 0x0000)
@@ -482,8 +414,7 @@ struct FForeignControlPointData final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FForeignControlPointData) == 0x000001, "Wrong alignment on FForeignControlPointData");
-static_assert(sizeof(FForeignControlPointData) == 0x000001, "Wrong size on FForeignControlPointData");
+DUMPER7_ASSERTS_FForeignControlPointData;
 
 // ScriptStruct Landscape.LandscapeSplineMeshEntry
 // 0x0038 (0x0038 - 0x0000)
@@ -503,15 +434,7 @@ public:
 	ESplineMeshAxis                               UpAxis;                                            // 0x0036(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_37[0x1];                                       // 0x0037(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLandscapeSplineMeshEntry) == 0x000008, "Wrong alignment on FLandscapeSplineMeshEntry");
-static_assert(sizeof(FLandscapeSplineMeshEntry) == 0x000038, "Wrong size on FLandscapeSplineMeshEntry");
-static_assert(offsetof(FLandscapeSplineMeshEntry, Mesh) == 0x000000, "Member 'FLandscapeSplineMeshEntry::Mesh' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, MaterialOverrides) == 0x000008, "Member 'FLandscapeSplineMeshEntry::MaterialOverrides' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, CenterAdjust) == 0x00001C, "Member 'FLandscapeSplineMeshEntry::CenterAdjust' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, Scale) == 0x000028, "Member 'FLandscapeSplineMeshEntry::Scale' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, Orientation) == 0x000034, "Member 'FLandscapeSplineMeshEntry::Orientation' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, ForwardAxis) == 0x000035, "Member 'FLandscapeSplineMeshEntry::ForwardAxis' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineMeshEntry, UpAxis) == 0x000036, "Member 'FLandscapeSplineMeshEntry::UpAxis' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeSplineMeshEntry;
 
 // ScriptStruct Landscape.LandscapeSplineSegmentConnection
 // 0x0018 (0x0018 - 0x0000)
@@ -522,11 +445,7 @@ public:
 	float                                         TangentLen;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SocketName;                                        // 0x000C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeSplineSegmentConnection) == 0x000008, "Wrong alignment on FLandscapeSplineSegmentConnection");
-static_assert(sizeof(FLandscapeSplineSegmentConnection) == 0x000018, "Wrong size on FLandscapeSplineSegmentConnection");
-static_assert(offsetof(FLandscapeSplineSegmentConnection, ControlPoint) == 0x000000, "Member 'FLandscapeSplineSegmentConnection::ControlPoint' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineSegmentConnection, TangentLen) == 0x000008, "Member 'FLandscapeSplineSegmentConnection::TangentLen' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineSegmentConnection, SocketName) == 0x00000C, "Member 'FLandscapeSplineSegmentConnection::SocketName' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeSplineSegmentConnection;
 
 // ScriptStruct Landscape.LandscapeSplineInterpPoint
 // 0x0070 (0x0070 - 0x0000)
@@ -544,18 +463,7 @@ public:
 	struct FVector                                LayerFalloffRight;                                 // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StartEndFalloff;                                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeSplineInterpPoint) == 0x000004, "Wrong alignment on FLandscapeSplineInterpPoint");
-static_assert(sizeof(FLandscapeSplineInterpPoint) == 0x000070, "Wrong size on FLandscapeSplineInterpPoint");
-static_assert(offsetof(FLandscapeSplineInterpPoint, Center) == 0x000000, "Member 'FLandscapeSplineInterpPoint::Center' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, Left) == 0x00000C, "Member 'FLandscapeSplineInterpPoint::Left' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, Right) == 0x000018, "Member 'FLandscapeSplineInterpPoint::Right' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, FalloffLeft) == 0x000024, "Member 'FLandscapeSplineInterpPoint::FalloffLeft' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, FalloffRight) == 0x000030, "Member 'FLandscapeSplineInterpPoint::FalloffRight' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, LayerLeft) == 0x00003C, "Member 'FLandscapeSplineInterpPoint::LayerLeft' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, LayerRight) == 0x000048, "Member 'FLandscapeSplineInterpPoint::LayerRight' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, LayerFalloffLeft) == 0x000054, "Member 'FLandscapeSplineInterpPoint::LayerFalloffLeft' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, LayerFalloffRight) == 0x000060, "Member 'FLandscapeSplineInterpPoint::LayerFalloffRight' has a wrong offset!");
-static_assert(offsetof(FLandscapeSplineInterpPoint, StartEndFalloff) == 0x00006C, "Member 'FLandscapeSplineInterpPoint::StartEndFalloff' has a wrong offset!");
+DUMPER7_ASSERTS_FLandscapeSplineInterpPoint;
 
 // ScriptStruct Landscape.GrassInput
 // 0x0038 (0x0038 - 0x0000)
@@ -568,11 +476,7 @@ public:
 	struct FExpressionInput                       Input;                                             // 0x0018(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGrassInput) == 0x000008, "Wrong alignment on FGrassInput");
-static_assert(sizeof(FGrassInput) == 0x000038, "Wrong size on FGrassInput");
-static_assert(offsetof(FGrassInput, Name) == 0x000000, "Member 'FGrassInput::Name' has a wrong offset!");
-static_assert(offsetof(FGrassInput, GrassType) == 0x000010, "Member 'FGrassInput::GrassType' has a wrong offset!");
-static_assert(offsetof(FGrassInput, Input) == 0x000018, "Member 'FGrassInput::Input' has a wrong offset!");
+DUMPER7_ASSERTS_FGrassInput;
 
 // ScriptStruct Landscape.LayerBlendInput
 // 0x005C (0x005C - 0x0000)
@@ -590,15 +494,7 @@ public:
 	struct FVector                                ConstLayerInput;                                   // 0x004C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ConstHeightInput;                                  // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLayerBlendInput) == 0x000004, "Wrong alignment on FLayerBlendInput");
-static_assert(sizeof(FLayerBlendInput) == 0x00005C, "Wrong size on FLayerBlendInput");
-static_assert(offsetof(FLayerBlendInput, LayerName) == 0x000000, "Member 'FLayerBlendInput::LayerName' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, BlendType) == 0x00000C, "Member 'FLayerBlendInput::BlendType' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, LayerInput) == 0x000010, "Member 'FLayerBlendInput::LayerInput' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, HeightInput) == 0x00002C, "Member 'FLayerBlendInput::HeightInput' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, PreviewWeight) == 0x000048, "Member 'FLayerBlendInput::PreviewWeight' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, ConstLayerInput) == 0x00004C, "Member 'FLayerBlendInput::ConstLayerInput' has a wrong offset!");
-static_assert(offsetof(FLayerBlendInput, ConstHeightInput) == 0x000058, "Member 'FLayerBlendInput::ConstHeightInput' has a wrong offset!");
+DUMPER7_ASSERTS_FLayerBlendInput;
 
 // ScriptStruct Landscape.PhysicalMaterialInput
 // 0x0028 (0x0028 - 0x0000)
@@ -609,10 +505,7 @@ public:
 	struct FExpressionInput                       Input;                                             // 0x0008(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_18[0x10];                                      // 0x0018(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPhysicalMaterialInput) == 0x000008, "Wrong alignment on FPhysicalMaterialInput");
-static_assert(sizeof(FPhysicalMaterialInput) == 0x000028, "Wrong size on FPhysicalMaterialInput");
-static_assert(offsetof(FPhysicalMaterialInput, PhysicalMaterial) == 0x000000, "Member 'FPhysicalMaterialInput::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(FPhysicalMaterialInput, Input) == 0x000008, "Member 'FPhysicalMaterialInput::Input' has a wrong offset!");
+DUMPER7_ASSERTS_FPhysicalMaterialInput;
 
 }
 

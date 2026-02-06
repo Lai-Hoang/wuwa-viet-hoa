@@ -65,54 +65,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SoarConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_SoarConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SoarConfig_C")
 	}
 	static class UBP_SoarConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SoarConfig_C>();
 	}
 };
-static_assert(alignof(UBP_SoarConfig_C) == 0x000008, "Wrong alignment on UBP_SoarConfig_C");
-static_assert(sizeof(UBP_SoarConfig_C) == 0x0000E0, "Wrong size on UBP_SoarConfig_C");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面角度极限最小值) == 0x000038, "Member 'UBP_SoarConfig_C::阻挡面角度极限最小值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面角度极限最大值) == 0x00003C, "Member 'UBP_SoarConfig_C::阻挡面角度极限最大值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 空气阻力面系数最小值) == 0x000040, "Member 'UBP_SoarConfig_C::空气阻力面系数最小值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 空气阻力面系数最大值) == 0x000044, "Member 'UBP_SoarConfig_C::空气阻力面系数最大值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面最小值对应速度值) == 0x000048, "Member 'UBP_SoarConfig_C::阻挡面最小值对应速度值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 满抬升输入时平衡速度向量) == 0x00004C, "Member 'UBP_SoarConfig_C::满抬升输入时平衡速度向量' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 满抬升输入判定阈值) == 0x000058, "Member 'UBP_SoarConfig_C::满抬升输入判定阈值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 平衡用最小加速度) == 0x00005C, "Member 'UBP_SoarConfig_C::平衡用最小加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 平衡用最大加速度) == 0x000060, "Member 'UBP_SoarConfig_C::平衡用最大加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 平衡使用最大值对应速度差) == 0x000064, "Member 'UBP_SoarConfig_C::平衡使用最大值对应速度差' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 满抬升输入平衡开启速度阈值) == 0x000068, "Member 'UBP_SoarConfig_C::满抬升输入平衡开启速度阈值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 非满抬升输入平衡速度值) == 0x00006C, "Member 'UBP_SoarConfig_C::非满抬升输入平衡速度值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 非满抬升输入平衡开启速度阈值) == 0x000070, "Member 'UBP_SoarConfig_C::非满抬升输入平衡开启速度阈值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面转速第一段线性) == 0x000074, "Member 'UBP_SoarConfig_C::阻挡面转速第一段线性' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面转速第二段比例) == 0x000078, "Member 'UBP_SoarConfig_C::阻挡面转速第二段比例' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 面向转速第一段线性) == 0x00007C, "Member 'UBP_SoarConfig_C::面向转速第一段线性' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 面向转速第二段比例) == 0x000080, "Member 'UBP_SoarConfig_C::面向转速第二段比例' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面最大值对应速度值) == 0x000084, "Member 'UBP_SoarConfig_C::阻挡面最大值对应速度值' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面最小角度) == 0x000088, "Member 'UBP_SoarConfig_C::阻挡面最小角度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 阻挡面最大角度) == 0x00008C, "Member 'UBP_SoarConfig_C::阻挡面最大角度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 无输入时阻挡面转速) == 0x000090, "Member 'UBP_SoarConfig_C::无输入时阻挡面转速' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 空气阻力) == 0x000094, "Member 'UBP_SoarConfig_C::空气阻力' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 最大速度) == 0x000098, "Member 'UBP_SoarConfig_C::最大速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, Boost阻挡面转速第一段线性) == 0x00009C, "Member 'UBP_SoarConfig_C::Boost阻挡面转速第一段线性' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, Boost阻挡面转速第二段比例) == 0x0000A0, "Member 'UBP_SoarConfig_C::Boost阻挡面转速第二段比例' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, Boost加速度) == 0x0000A4, "Member 'UBP_SoarConfig_C::Boost加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 重力加速度) == 0x0000A8, "Member 'UBP_SoarConfig_C::重力加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 撞墙结束时间) == 0x0000AC, "Member 'UBP_SoarConfig_C::撞墙结束时间' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道最小速度) == 0x0000B0, "Member 'UBP_SoarConfig_C::风道最小速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道最大加速度) == 0x0000B4, "Member 'UBP_SoarConfig_C::风道最大加速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道输入对应偏转) == 0x0000B8, "Member 'UBP_SoarConfig_C::风道输入对应偏转' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道中线拉回最小速对应距离) == 0x0000BC, "Member 'UBP_SoarConfig_C::风道中线拉回最小速对应距离' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道中线拉回最大速对应距离) == 0x0000C0, "Member 'UBP_SoarConfig_C::风道中线拉回最大速对应距离' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道中线拉回最小速度) == 0x0000C4, "Member 'UBP_SoarConfig_C::风道中线拉回最小速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道中线拉回最大速度) == 0x0000C8, "Member 'UBP_SoarConfig_C::风道中线拉回最大速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道无输入面向修正速度) == 0x0000CC, "Member 'UBP_SoarConfig_C::风道无输入面向修正速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道有输入面向修正速度) == 0x0000D0, "Member 'UBP_SoarConfig_C::风道有输入面向修正速度' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, 风道转向第二段比例) == 0x0000D4, "Member 'UBP_SoarConfig_C::风道转向第二段比例' has a wrong offset!");
-static_assert(offsetof(UBP_SoarConfig_C, DebugDraw) == 0x0000D8, "Member 'UBP_SoarConfig_C::DebugDraw' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SoarConfig_C;
 
 }
 

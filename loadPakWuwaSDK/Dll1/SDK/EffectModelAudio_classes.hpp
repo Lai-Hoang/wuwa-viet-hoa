@@ -23,15 +23,18 @@ class UEffectModelAudio_C final : public UEffectModelAudio
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectModelAudio_C">();
+		BP_STATIC_CLASS_IMPL("EffectModelAudio_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelAudio_C")
 	}
 	static class UEffectModelAudio_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectModelAudio_C>();
 	}
 };
-static_assert(alignof(UEffectModelAudio_C) == 0x000008, "Wrong alignment on UEffectModelAudio_C");
-static_assert(sizeof(UEffectModelAudio_C) == 0x000088, "Wrong size on UEffectModelAudio_C");
+DUMPER7_ASSERTS_UEffectModelAudio_C;
 
 }
 

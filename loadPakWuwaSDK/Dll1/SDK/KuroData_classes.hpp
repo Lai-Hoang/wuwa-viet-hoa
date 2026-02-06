@@ -59,39 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroHitResult">();
+		STATIC_CLASS_IMPL("KuroHitResult")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroHitResult")
 	}
 	static class UKuroHitResult* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroHitResult>();
 	}
 };
-static_assert(alignof(UKuroHitResult) == 0x000008, "Wrong alignment on UKuroHitResult");
-static_assert(sizeof(UKuroHitResult) == 0x000248, "Wrong size on UKuroHitResult");
-static_assert(offsetof(UKuroHitResult, bBlockingHit) == 0x0000D8, "Member 'UKuroHitResult::bBlockingHit' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, bStartPenetrating) == 0x0000D9, "Member 'UKuroHitResult::bStartPenetrating' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, Actors) == 0x0000E0, "Member 'UKuroHitResult::Actors' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, Components) == 0x0000F0, "Member 'UKuroHitResult::Components' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, PhysMaterials) == 0x000100, "Member 'UKuroHitResult::PhysMaterials' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, BoneNameArray) == 0x000110, "Member 'UKuroHitResult::BoneNameArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ElementIndexArray) == 0x000120, "Member 'UKuroHitResult::ElementIndexArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, FaceIndexArray) == 0x000130, "Member 'UKuroHitResult::FaceIndexArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ItemArray) == 0x000140, "Member 'UKuroHitResult::ItemArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, DistanceArray) == 0x000150, "Member 'UKuroHitResult::DistanceArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, PenetrationDepthArray) == 0x000160, "Member 'UKuroHitResult::PenetrationDepthArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, TimeArray) == 0x000170, "Member 'UKuroHitResult::TimeArray' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactNormalX_Array) == 0x000180, "Member 'UKuroHitResult::ImpactNormalX_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactNormalY_Array) == 0x000190, "Member 'UKuroHitResult::ImpactNormalY_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactNormalZ_Array) == 0x0001A0, "Member 'UKuroHitResult::ImpactNormalZ_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactPointX_Array) == 0x0001B0, "Member 'UKuroHitResult::ImpactPointX_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactPointY_Array) == 0x0001C0, "Member 'UKuroHitResult::ImpactPointY_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, ImpactPointZ_Array) == 0x0001D0, "Member 'UKuroHitResult::ImpactPointZ_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, LocationX_Array) == 0x0001E0, "Member 'UKuroHitResult::LocationX_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, LocationY_Array) == 0x0001F0, "Member 'UKuroHitResult::LocationY_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, LocationZ_Array) == 0x000200, "Member 'UKuroHitResult::LocationZ_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, NormalX_Array) == 0x000210, "Member 'UKuroHitResult::NormalX_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, NormalY_Array) == 0x000220, "Member 'UKuroHitResult::NormalY_Array' has a wrong offset!");
-static_assert(offsetof(UKuroHitResult, NormalZ_Array) == 0x000230, "Member 'UKuroHitResult::NormalZ_Array' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroHitResult;
 
 // Class KuroData.KuroTraceLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -111,15 +90,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTraceLibrary">();
+		STATIC_CLASS_IMPL("KuroTraceLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTraceLibrary")
 	}
 	static class UKuroTraceLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTraceLibrary>();
 	}
 };
-static_assert(alignof(UKuroTraceLibrary) == 0x000008, "Wrong alignment on UKuroTraceLibrary");
-static_assert(sizeof(UKuroTraceLibrary) == 0x000030, "Wrong size on UKuroTraceLibrary");
+DUMPER7_ASSERTS_UKuroTraceLibrary;
 
 // Class KuroData.TraceBaseElement
 // 0x00B8 (0x00E8 - 0x0030)
@@ -170,40 +152,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TraceBaseElement">();
+		STATIC_CLASS_IMPL("TraceBaseElement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceBaseElement")
 	}
 	static class UTraceBaseElement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTraceBaseElement>();
 	}
 };
-static_assert(alignof(UTraceBaseElement) == 0x000008, "Wrong alignment on UTraceBaseElement");
-static_assert(sizeof(UTraceBaseElement) == 0x0000E8, "Wrong size on UTraceBaseElement");
-static_assert(offsetof(UTraceBaseElement, WorldContextObject) == 0x000030, "Member 'UTraceBaseElement::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, ActorsToIgnore) == 0x000060, "Member 'UTraceBaseElement::ActorsToIgnore' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, HitResult) == 0x000070, "Member 'UTraceBaseElement::HitResult' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, StartX) == 0x000078, "Member 'UTraceBaseElement::StartX' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, StartY) == 0x000080, "Member 'UTraceBaseElement::StartY' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, StartZ) == 0x000088, "Member 'UTraceBaseElement::StartZ' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, EndX) == 0x000090, "Member 'UTraceBaseElement::EndX' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, EndY) == 0x000098, "Member 'UTraceBaseElement::EndY' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, EndZ) == 0x0000A0, "Member 'UTraceBaseElement::EndZ' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceColor_R) == 0x0000A8, "Member 'UTraceBaseElement::TraceColor_R' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceColor_G) == 0x0000AC, "Member 'UTraceBaseElement::TraceColor_G' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceColor_B) == 0x0000B0, "Member 'UTraceBaseElement::TraceColor_B' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceColor_A) == 0x0000B4, "Member 'UTraceBaseElement::TraceColor_A' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceHitColor_R) == 0x0000B8, "Member 'UTraceBaseElement::TraceHitColor_R' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceHitColor_G) == 0x0000BC, "Member 'UTraceBaseElement::TraceHitColor_G' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceHitColor_B) == 0x0000C0, "Member 'UTraceBaseElement::TraceHitColor_B' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, TraceHitColor_A) == 0x0000C4, "Member 'UTraceBaseElement::TraceHitColor_A' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, DrawTime) == 0x0000C8, "Member 'UTraceBaseElement::DrawTime' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bTraceComplex) == 0x0000CC, "Member 'UTraceBaseElement::bTraceComplex' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIgnoreSelf) == 0x0000CD, "Member 'UTraceBaseElement::bIgnoreSelf' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIsSingle) == 0x0000CE, "Member 'UTraceBaseElement::bIsSingle' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIsBoth) == 0x0000CF, "Member 'UTraceBaseElement::bIsBoth' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIsTraceCapsuleAsSphere) == 0x0000D0, "Member 'UTraceBaseElement::bIsTraceCapsuleAsSphere' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIsProfile) == 0x0000D1, "Member 'UTraceBaseElement::bIsProfile' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, ProfileName) == 0x0000D4, "Member 'UTraceBaseElement::ProfileName' has a wrong offset!");
+DUMPER7_ASSERTS_UTraceBaseElement;
 
 // Class KuroData.TraceLineElement
 // 0x0000 (0x00E8 - 0x00E8)
@@ -212,15 +172,18 @@ class UTraceLineElement final : public UTraceBaseElement
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TraceLineElement">();
+		STATIC_CLASS_IMPL("TraceLineElement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceLineElement")
 	}
 	static class UTraceLineElement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTraceLineElement>();
 	}
 };
-static_assert(alignof(UTraceLineElement) == 0x000008, "Wrong alignment on UTraceLineElement");
-static_assert(sizeof(UTraceLineElement) == 0x0000E8, "Wrong size on UTraceLineElement");
+DUMPER7_ASSERTS_UTraceLineElement;
 
 // Class KuroData.TraceBoxElement
 // 0x0018 (0x0100 - 0x00E8)
@@ -241,44 +204,49 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TraceBoxElement">();
+		STATIC_CLASS_IMPL("TraceBoxElement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceBoxElement")
 	}
 	static class UTraceBoxElement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTraceBoxElement>();
 	}
 };
-static_assert(alignof(UTraceBoxElement) == 0x000008, "Wrong alignment on UTraceBoxElement");
-static_assert(sizeof(UTraceBoxElement) == 0x000100, "Wrong size on UTraceBoxElement");
-static_assert(offsetof(UTraceBoxElement, HalfSizeX) == 0x0000E8, "Member 'UTraceBoxElement::HalfSizeX' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, HalfSizeY) == 0x0000EC, "Member 'UTraceBoxElement::HalfSizeY' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, HalfSizeZ) == 0x0000F0, "Member 'UTraceBoxElement::HalfSizeZ' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationPitch) == 0x0000F4, "Member 'UTraceBoxElement::OrientationPitch' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationYaw) == 0x0000F8, "Member 'UTraceBoxElement::OrientationYaw' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationRoll) == 0x0000FC, "Member 'UTraceBoxElement::OrientationRoll' has a wrong offset!");
+DUMPER7_ASSERTS_UTraceBoxElement;
 
 // Class KuroData.TraceCapsuleElement
-// 0x0008 (0x00F0 - 0x00E8)
+// 0x0018 (0x0100 - 0x00E8)
 class UTraceCapsuleElement final : public UTraceBaseElement
 {
 public:
 	float                                         Radius;                                            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HalfHeight;                                        // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationPitch;                                  // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationYaw;                                    // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationRoll;                                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetCapsuleOrientation(float Pitch, float Yaw, float Roll);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TraceCapsuleElement">();
+		STATIC_CLASS_IMPL("TraceCapsuleElement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceCapsuleElement")
 	}
 	static class UTraceCapsuleElement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTraceCapsuleElement>();
 	}
 };
-static_assert(alignof(UTraceCapsuleElement) == 0x000008, "Wrong alignment on UTraceCapsuleElement");
-static_assert(sizeof(UTraceCapsuleElement) == 0x0000F0, "Wrong size on UTraceCapsuleElement");
-static_assert(offsetof(UTraceCapsuleElement, Radius) == 0x0000E8, "Member 'UTraceCapsuleElement::Radius' has a wrong offset!");
-static_assert(offsetof(UTraceCapsuleElement, HalfHeight) == 0x0000EC, "Member 'UTraceCapsuleElement::HalfHeight' has a wrong offset!");
+DUMPER7_ASSERTS_UTraceCapsuleElement;
 
 // Class KuroData.TraceSphereElement
 // 0x0008 (0x00F0 - 0x00E8)
@@ -291,16 +259,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TraceSphereElement">();
+		STATIC_CLASS_IMPL("TraceSphereElement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TraceSphereElement")
 	}
 	static class UTraceSphereElement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTraceSphereElement>();
 	}
 };
-static_assert(alignof(UTraceSphereElement) == 0x000008, "Wrong alignment on UTraceSphereElement");
-static_assert(sizeof(UTraceSphereElement) == 0x0000F0, "Wrong size on UTraceSphereElement");
-static_assert(offsetof(UTraceSphereElement, Radius) == 0x0000E8, "Member 'UTraceSphereElement::Radius' has a wrong offset!");
+DUMPER7_ASSERTS_UTraceSphereElement;
 
 }
 

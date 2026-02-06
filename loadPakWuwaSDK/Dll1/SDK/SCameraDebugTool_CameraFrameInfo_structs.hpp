@@ -29,13 +29,7 @@ public:
 	TArray<struct FSCameraDebugTool_SubCameraModification> SubCameraModifications_20_1FFC70644FA0422C59DD1EAA04788376; // 0x0068(0x0010)(Edit, BlueprintVisible)
 	struct FSCameraDebugTool_CameraModeInfo       CamerModeInfo_31_2BC7238C4EEE76E72C7603A10BFD349C; // 0x0078(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCameraDebugTool_CameraFrameInfo) == 0x000008, "Wrong alignment on FSCameraDebugTool_CameraFrameInfo");
-static_assert(sizeof(FSCameraDebugTool_CameraFrameInfo) == 0x000100, "Wrong size on FSCameraDebugTool_CameraFrameInfo");
-static_assert(offsetof(FSCameraDebugTool_CameraFrameInfo, FrameNumber_25_5286701F43C845E3669BC79C9D7EF67D) == 0x000000, "Member 'FSCameraDebugTool_CameraFrameInfo::FrameNumber_25_5286701F43C845E3669BC79C9D7EF67D' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraFrameInfo, DesiredCameraProps_13_A009612649DCFB89CCCA3BAA5BE5B30E) == 0x000008, "Member 'FSCameraDebugTool_CameraFrameInfo::DesiredCameraProps_13_A009612649DCFB89CCCA3BAA5BE5B30E' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraFrameInfo, ControllerModifications_17_04C4D6194013D006FC7B7292C0F04E43) == 0x000058, "Member 'FSCameraDebugTool_CameraFrameInfo::ControllerModifications_17_04C4D6194013D006FC7B7292C0F04E43' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraFrameInfo, SubCameraModifications_20_1FFC70644FA0422C59DD1EAA04788376) == 0x000068, "Member 'FSCameraDebugTool_CameraFrameInfo::SubCameraModifications_20_1FFC70644FA0422C59DD1EAA04788376' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraFrameInfo, CamerModeInfo_31_2BC7238C4EEE76E72C7603A10BFD349C) == 0x000078, "Member 'FSCameraDebugTool_CameraFrameInfo::CamerModeInfo_31_2BC7238C4EEE76E72C7603A10BFD349C' has a wrong offset!");
+DUMPER7_ASSERTS_FSCameraDebugTool_CameraFrameInfo;
 
 }
 

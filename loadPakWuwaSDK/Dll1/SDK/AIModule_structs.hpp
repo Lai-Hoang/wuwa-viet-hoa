@@ -557,6 +557,15 @@ enum class EPawnActionMoveMode : uint8
 	EPawnActionMoveMode_MAX                  = 2,
 };
 
+// ScriptStruct AIModule.AIRequestID
+// 0x0004 (0x0004 - 0x0000)
+struct FAIRequestID final
+{
+public:
+	uint32                                        RequestID;                                         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FAIRequestID;
+
 // ScriptStruct AIModule.AIDataProviderValue
 // 0x0028 (0x0028 - 0x0000)
 struct FAIDataProviderValue
@@ -567,10 +576,7 @@ public:
 	class FName                                   DataField;                                         // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAIDataProviderValue) == 0x000008, "Wrong alignment on FAIDataProviderValue");
-static_assert(sizeof(FAIDataProviderValue) == 0x000028, "Wrong size on FAIDataProviderValue");
-static_assert(offsetof(FAIDataProviderValue, DataBinding) == 0x000010, "Member 'FAIDataProviderValue::DataBinding' has a wrong offset!");
-static_assert(offsetof(FAIDataProviderValue, DataField) == 0x000018, "Member 'FAIDataProviderValue::DataField' has a wrong offset!");
+DUMPER7_ASSERTS_FAIDataProviderValue;
 
 // ScriptStruct AIModule.AIDataProviderTypedValue
 // 0x0010 (0x0038 - 0x0028)
@@ -580,31 +586,17 @@ public:
 	class UClass*                                 PropertyType;                                      // 0x0028(0x0008)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAIDataProviderTypedValue) == 0x000008, "Wrong alignment on FAIDataProviderTypedValue");
-static_assert(sizeof(FAIDataProviderTypedValue) == 0x000038, "Wrong size on FAIDataProviderTypedValue");
-static_assert(offsetof(FAIDataProviderTypedValue, PropertyType) == 0x000028, "Member 'FAIDataProviderTypedValue::PropertyType' has a wrong offset!");
+DUMPER7_ASSERTS_FAIDataProviderTypedValue;
 
-// ScriptStruct AIModule.PawnActionStack
-// 0x0008 (0x0008 - 0x0000)
-struct FPawnActionStack final
+// ScriptStruct AIModule.AIDataProviderFloatValue
+// 0x0008 (0x0040 - 0x0038)
+struct FAIDataProviderFloatValue final : public FAIDataProviderTypedValue
 {
 public:
-	class UPawnAction*                            TopAction;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         DefaultValue;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPawnActionStack) == 0x000008, "Wrong alignment on FPawnActionStack");
-static_assert(sizeof(FPawnActionStack) == 0x000008, "Wrong size on FPawnActionStack");
-static_assert(offsetof(FPawnActionStack, TopAction) == 0x000000, "Member 'FPawnActionStack::TopAction' has a wrong offset!");
-
-// ScriptStruct AIModule.AIRequestID
-// 0x0004 (0x0004 - 0x0000)
-struct FAIRequestID final
-{
-public:
-	uint32                                        RequestID;                                         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FAIRequestID) == 0x000004, "Wrong alignment on FAIRequestID");
-static_assert(sizeof(FAIRequestID) == 0x000004, "Wrong size on FAIRequestID");
-static_assert(offsetof(FAIRequestID, RequestID) == 0x000000, "Member 'FAIRequestID::RequestID' has a wrong offset!");
+DUMPER7_ASSERTS_FAIDataProviderFloatValue;
 
 // ScriptStruct AIModule.AIStimulus
 // 0x0044 (0x0044 - 0x0000)
@@ -622,14 +614,58 @@ public:
 	uint8                                         bSuccessfullySensed : 1;                           // 0x0040(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAIStimulus) == 0x000004, "Wrong alignment on FAIStimulus");
-static_assert(sizeof(FAIStimulus) == 0x000044, "Wrong size on FAIStimulus");
-static_assert(offsetof(FAIStimulus, Age) == 0x000000, "Member 'FAIStimulus::Age' has a wrong offset!");
-static_assert(offsetof(FAIStimulus, ExpirationAge) == 0x000004, "Member 'FAIStimulus::ExpirationAge' has a wrong offset!");
-static_assert(offsetof(FAIStimulus, Strength) == 0x000008, "Member 'FAIStimulus::Strength' has a wrong offset!");
-static_assert(offsetof(FAIStimulus, StimulusLocation) == 0x00000C, "Member 'FAIStimulus::StimulusLocation' has a wrong offset!");
-static_assert(offsetof(FAIStimulus, ReceiverLocation) == 0x000018, "Member 'FAIStimulus::ReceiverLocation' has a wrong offset!");
-static_assert(offsetof(FAIStimulus, Tag) == 0x000024, "Member 'FAIStimulus::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_FAIStimulus;
+
+// ScriptStruct AIModule.AITouchEvent
+// 0x0020 (0x0020 - 0x0000)
+struct FAITouchEvent final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TouchReceiver;                                     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAITouchEvent;
+
+// ScriptStruct AIModule.ActorPerceptionUpdateInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FActorPerceptionUpdateInfo final
+{
+public:
+	int32                                         TargetId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  Target;                                            // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FAIStimulus                            Stimulus;                                          // 0x000C(0x0044)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FActorPerceptionUpdateInfo;
+
+// ScriptStruct AIModule.AIDataProviderBoolValue
+// 0x0008 (0x0040 - 0x0038)
+struct FAIDataProviderBoolValue final : public FAIDataProviderTypedValue
+{
+public:
+	bool                                          DefaultValue;                                      // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIDataProviderBoolValue;
+
+// ScriptStruct AIModule.AIDataProviderIntValue
+// 0x0008 (0x0040 - 0x0038)
+struct FAIDataProviderIntValue final : public FAIDataProviderTypedValue
+{
+public:
+	int32                                         DefaultValue;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIDataProviderIntValue;
+
+// ScriptStruct AIModule.AIDataProviderStructValue
+// 0x0010 (0x0038 - 0x0028)
+struct FAIDataProviderStructValue final : public FAIDataProviderValue
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAIDataProviderStructValue;
 
 // ScriptStruct AIModule.ActorPerceptionBlueprintInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -641,82 +677,7 @@ public:
 	uint8                                         bIsHostile : 1;                                    // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FActorPerceptionBlueprintInfo) == 0x000008, "Wrong alignment on FActorPerceptionBlueprintInfo");
-static_assert(sizeof(FActorPerceptionBlueprintInfo) == 0x000020, "Wrong size on FActorPerceptionBlueprintInfo");
-static_assert(offsetof(FActorPerceptionBlueprintInfo, Target) == 0x000000, "Member 'FActorPerceptionBlueprintInfo::Target' has a wrong offset!");
-static_assert(offsetof(FActorPerceptionBlueprintInfo, LastSensedStimuli) == 0x000008, "Member 'FActorPerceptionBlueprintInfo::LastSensedStimuli' has a wrong offset!");
-
-// ScriptStruct AIModule.GenericTeamId
-// 0x0001 (0x0001 - 0x0000)
-struct FGenericTeamId final
-{
-public:
-	uint8                                         TeamID;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-};
-static_assert(alignof(FGenericTeamId) == 0x000001, "Wrong alignment on FGenericTeamId");
-static_assert(sizeof(FGenericTeamId) == 0x000001, "Wrong size on FGenericTeamId");
-static_assert(offsetof(FGenericTeamId, TeamID) == 0x000000, "Member 'FGenericTeamId::TeamID' has a wrong offset!");
-
-// ScriptStruct AIModule.ActorPerceptionUpdateInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FActorPerceptionUpdateInfo final
-{
-public:
-	int32                                         TargetId;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  Target;                                            // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAIStimulus                            Stimulus;                                          // 0x000C(0x0044)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FActorPerceptionUpdateInfo) == 0x000004, "Wrong alignment on FActorPerceptionUpdateInfo");
-static_assert(sizeof(FActorPerceptionUpdateInfo) == 0x000050, "Wrong size on FActorPerceptionUpdateInfo");
-static_assert(offsetof(FActorPerceptionUpdateInfo, TargetId) == 0x000000, "Member 'FActorPerceptionUpdateInfo::TargetId' has a wrong offset!");
-static_assert(offsetof(FActorPerceptionUpdateInfo, Target) == 0x000004, "Member 'FActorPerceptionUpdateInfo::Target' has a wrong offset!");
-static_assert(offsetof(FActorPerceptionUpdateInfo, Stimulus) == 0x00000C, "Member 'FActorPerceptionUpdateInfo::Stimulus' has a wrong offset!");
-
-// ScriptStruct AIModule.AIDataProviderBoolValue
-// 0x0008 (0x0040 - 0x0038)
-struct FAIDataProviderBoolValue final : public FAIDataProviderTypedValue
-{
-public:
-	bool                                          DefaultValue;                                      // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIDataProviderBoolValue) == 0x000008, "Wrong alignment on FAIDataProviderBoolValue");
-static_assert(sizeof(FAIDataProviderBoolValue) == 0x000040, "Wrong size on FAIDataProviderBoolValue");
-static_assert(offsetof(FAIDataProviderBoolValue, DefaultValue) == 0x000038, "Member 'FAIDataProviderBoolValue::DefaultValue' has a wrong offset!");
-
-// ScriptStruct AIModule.AIDataProviderFloatValue
-// 0x0008 (0x0040 - 0x0038)
-struct FAIDataProviderFloatValue final : public FAIDataProviderTypedValue
-{
-public:
-	float                                         DefaultValue;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIDataProviderFloatValue) == 0x000008, "Wrong alignment on FAIDataProviderFloatValue");
-static_assert(sizeof(FAIDataProviderFloatValue) == 0x000040, "Wrong size on FAIDataProviderFloatValue");
-static_assert(offsetof(FAIDataProviderFloatValue, DefaultValue) == 0x000038, "Member 'FAIDataProviderFloatValue::DefaultValue' has a wrong offset!");
-
-// ScriptStruct AIModule.AIDataProviderIntValue
-// 0x0008 (0x0040 - 0x0038)
-struct FAIDataProviderIntValue final : public FAIDataProviderTypedValue
-{
-public:
-	int32                                         DefaultValue;                                      // 0x0038(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIDataProviderIntValue) == 0x000008, "Wrong alignment on FAIDataProviderIntValue");
-static_assert(sizeof(FAIDataProviderIntValue) == 0x000040, "Wrong size on FAIDataProviderIntValue");
-static_assert(offsetof(FAIDataProviderIntValue, DefaultValue) == 0x000038, "Member 'FAIDataProviderIntValue::DefaultValue' has a wrong offset!");
-
-// ScriptStruct AIModule.AIDataProviderStructValue
-// 0x0010 (0x0038 - 0x0028)
-struct FAIDataProviderStructValue final : public FAIDataProviderValue
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAIDataProviderStructValue) == 0x000008, "Wrong alignment on FAIDataProviderStructValue");
-static_assert(sizeof(FAIDataProviderStructValue) == 0x000038, "Wrong size on FAIDataProviderStructValue");
+DUMPER7_ASSERTS_FActorPerceptionBlueprintInfo;
 
 // ScriptStruct AIModule.AISenseAffiliationFilter
 // 0x0004 (0x0004 - 0x0000)
@@ -728,8 +689,7 @@ public:
 	uint8                                         bDetectFriendlies : 1;                             // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAISenseAffiliationFilter) == 0x000004, "Wrong alignment on FAISenseAffiliationFilter");
-static_assert(sizeof(FAISenseAffiliationFilter) == 0x000004, "Wrong size on FAISenseAffiliationFilter");
+DUMPER7_ASSERTS_FAISenseAffiliationFilter;
 
 // ScriptStruct AIModule.AIDamageEvent
 // 0x0030 (0x0030 - 0x0000)
@@ -743,13 +703,7 @@ public:
 	class AActor*                                 DamagedActor;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Instigator;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAIDamageEvent) == 0x000008, "Wrong alignment on FAIDamageEvent");
-static_assert(sizeof(FAIDamageEvent) == 0x000030, "Wrong size on FAIDamageEvent");
-static_assert(offsetof(FAIDamageEvent, Amount) == 0x000000, "Member 'FAIDamageEvent::Amount' has a wrong offset!");
-static_assert(offsetof(FAIDamageEvent, Location) == 0x000004, "Member 'FAIDamageEvent::Location' has a wrong offset!");
-static_assert(offsetof(FAIDamageEvent, HitLocation) == 0x000010, "Member 'FAIDamageEvent::HitLocation' has a wrong offset!");
-static_assert(offsetof(FAIDamageEvent, DamagedActor) == 0x000020, "Member 'FAIDamageEvent::DamagedActor' has a wrong offset!");
-static_assert(offsetof(FAIDamageEvent, Instigator) == 0x000028, "Member 'FAIDamageEvent::Instigator' has a wrong offset!");
+DUMPER7_ASSERTS_FAIDamageEvent;
 
 // ScriptStruct AIModule.AINoiseEvent
 // 0x0030 (0x0030 - 0x0000)
@@ -764,13 +718,7 @@ public:
 	class FName                                   Tag;                                               // 0x0020(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAINoiseEvent) == 0x000008, "Wrong alignment on FAINoiseEvent");
-static_assert(sizeof(FAINoiseEvent) == 0x000030, "Wrong size on FAINoiseEvent");
-static_assert(offsetof(FAINoiseEvent, NoiseLocation) == 0x000004, "Member 'FAINoiseEvent::NoiseLocation' has a wrong offset!");
-static_assert(offsetof(FAINoiseEvent, Loudness) == 0x000010, "Member 'FAINoiseEvent::Loudness' has a wrong offset!");
-static_assert(offsetof(FAINoiseEvent, MaxRange) == 0x000014, "Member 'FAINoiseEvent::MaxRange' has a wrong offset!");
-static_assert(offsetof(FAINoiseEvent, Instigator) == 0x000018, "Member 'FAINoiseEvent::Instigator' has a wrong offset!");
-static_assert(offsetof(FAINoiseEvent, Tag) == 0x000020, "Member 'FAINoiseEvent::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_FAINoiseEvent;
 
 // ScriptStruct AIModule.AIPredictionEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -781,10 +729,7 @@ public:
 	class AActor*                                 PredictedActor;                                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x8];                                       // 0x0010(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAIPredictionEvent) == 0x000008, "Wrong alignment on FAIPredictionEvent");
-static_assert(sizeof(FAIPredictionEvent) == 0x000018, "Wrong size on FAIPredictionEvent");
-static_assert(offsetof(FAIPredictionEvent, Requestor) == 0x000000, "Member 'FAIPredictionEvent::Requestor' has a wrong offset!");
-static_assert(offsetof(FAIPredictionEvent, PredictedActor) == 0x000008, "Member 'FAIPredictionEvent::PredictedActor' has a wrong offset!");
+DUMPER7_ASSERTS_FAIPredictionEvent;
 
 // ScriptStruct AIModule.AISightEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -795,10 +740,7 @@ public:
 	class AActor*                                 SeenActor;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Observer;                                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAISightEvent) == 0x000008, "Wrong alignment on FAISightEvent");
-static_assert(sizeof(FAISightEvent) == 0x000018, "Wrong size on FAISightEvent");
-static_assert(offsetof(FAISightEvent, SeenActor) == 0x000008, "Member 'FAISightEvent::SeenActor' has a wrong offset!");
-static_assert(offsetof(FAISightEvent, Observer) == 0x000010, "Member 'FAISightEvent::Observer' has a wrong offset!");
+DUMPER7_ASSERTS_FAISightEvent;
 
 // ScriptStruct AIModule.AITeamStimulusEvent
 // 0x0038 (0x0038 - 0x0000)
@@ -809,24 +751,7 @@ public:
 	class AActor*                                 Broadcaster;                                       // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class AActor*                                 Enemy;                                             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAITeamStimulusEvent) == 0x000008, "Wrong alignment on FAITeamStimulusEvent");
-static_assert(sizeof(FAITeamStimulusEvent) == 0x000038, "Wrong size on FAITeamStimulusEvent");
-static_assert(offsetof(FAITeamStimulusEvent, Broadcaster) == 0x000028, "Member 'FAITeamStimulusEvent::Broadcaster' has a wrong offset!");
-static_assert(offsetof(FAITeamStimulusEvent, Enemy) == 0x000030, "Member 'FAITeamStimulusEvent::Enemy' has a wrong offset!");
-
-// ScriptStruct AIModule.AITouchEvent
-// 0x0020 (0x0020 - 0x0000)
-struct FAITouchEvent final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TouchReceiver;                                     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAITouchEvent) == 0x000008, "Wrong alignment on FAITouchEvent");
-static_assert(sizeof(FAITouchEvent) == 0x000020, "Wrong size on FAITouchEvent");
-static_assert(offsetof(FAITouchEvent, TouchReceiver) == 0x000010, "Member 'FAITouchEvent::TouchReceiver' has a wrong offset!");
-static_assert(offsetof(FAITouchEvent, OtherActor) == 0x000018, "Member 'FAITouchEvent::OtherActor' has a wrong offset!");
+DUMPER7_ASSERTS_FAITeamStimulusEvent;
 
 // ScriptStruct AIModule.IntervalCountdown
 // 0x0008 (0x0008 - 0x0000)
@@ -836,9 +761,7 @@ public:
 	float                                         Interval;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FIntervalCountdown) == 0x000004, "Wrong alignment on FIntervalCountdown");
-static_assert(sizeof(FIntervalCountdown) == 0x000008, "Wrong size on FIntervalCountdown");
-static_assert(offsetof(FIntervalCountdown, Interval) == 0x000000, "Member 'FIntervalCountdown::Interval' has a wrong offset!");
+DUMPER7_ASSERTS_FIntervalCountdown;
 
 // ScriptStruct AIModule.AIMoveRequest
 // 0x0040 (0x0040 - 0x0000)
@@ -848,9 +771,7 @@ public:
 	class AActor*                                 GoalActor;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_8[0x38];                                       // 0x0008(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAIMoveRequest) == 0x000008, "Wrong alignment on FAIMoveRequest");
-static_assert(sizeof(FAIMoveRequest) == 0x000040, "Wrong size on FAIMoveRequest");
-static_assert(offsetof(FAIMoveRequest, GoalActor) == 0x000000, "Member 'FAIMoveRequest::GoalActor' has a wrong offset!");
+DUMPER7_ASSERTS_FAIMoveRequest;
 
 // ScriptStruct AIModule.BehaviorTreeTemplateInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -861,10 +782,17 @@ public:
 	class UBTCompositeNode*                       Template;                                          // 0x0008(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_10[0x58];                                      // 0x0010(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBehaviorTreeTemplateInfo) == 0x000008, "Wrong alignment on FBehaviorTreeTemplateInfo");
-static_assert(sizeof(FBehaviorTreeTemplateInfo) == 0x000068, "Wrong size on FBehaviorTreeTemplateInfo");
-static_assert(offsetof(FBehaviorTreeTemplateInfo, Asset) == 0x000000, "Member 'FBehaviorTreeTemplateInfo::Asset' has a wrong offset!");
-static_assert(offsetof(FBehaviorTreeTemplateInfo, Template) == 0x000008, "Member 'FBehaviorTreeTemplateInfo::Template' has a wrong offset!");
+DUMPER7_ASSERTS_FBehaviorTreeTemplateInfo;
+
+// ScriptStruct AIModule.PawnActionEvent
+// 0x0018 (0x0018 - 0x0000)
+struct FPawnActionEvent final
+{
+public:
+	class UPawnAction*                            Action;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPawnActionEvent;
 
 // ScriptStruct AIModule.BlackboardKeySelector
 // 0x0030 (0x0030 - 0x0000)
@@ -880,12 +808,7 @@ public:
 	uint8                                         bNoneIsAllowedValue : 1;                           // 0x002C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBlackboardKeySelector) == 0x000008, "Wrong alignment on FBlackboardKeySelector");
-static_assert(sizeof(FBlackboardKeySelector) == 0x000030, "Wrong size on FBlackboardKeySelector");
-static_assert(offsetof(FBlackboardKeySelector, AllowedTypes) == 0x000000, "Member 'FBlackboardKeySelector::AllowedTypes' has a wrong offset!");
-static_assert(offsetof(FBlackboardKeySelector, SelectedKeyName) == 0x000010, "Member 'FBlackboardKeySelector::SelectedKeyName' has a wrong offset!");
-static_assert(offsetof(FBlackboardKeySelector, SelectedKeyType) == 0x000020, "Member 'FBlackboardKeySelector::SelectedKeyType' has a wrong offset!");
-static_assert(offsetof(FBlackboardKeySelector, SelectedKeyID) == 0x000028, "Member 'FBlackboardKeySelector::SelectedKeyID' has a wrong offset!");
+DUMPER7_ASSERTS_FBlackboardKeySelector;
 
 // ScriptStruct AIModule.BlackboardEntry
 // 0x0020 (0x0020 - 0x0000)
@@ -898,10 +821,7 @@ public:
 	uint8                                         bInstanceSynced : 1;                               // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBlackboardEntry) == 0x000008, "Wrong alignment on FBlackboardEntry");
-static_assert(sizeof(FBlackboardEntry) == 0x000020, "Wrong size on FBlackboardEntry");
-static_assert(offsetof(FBlackboardEntry, EntryName) == 0x000000, "Member 'FBlackboardEntry::EntryName' has a wrong offset!");
-static_assert(offsetof(FBlackboardEntry, KeyType) == 0x000010, "Member 'FBlackboardEntry::KeyType' has a wrong offset!");
+DUMPER7_ASSERTS_FBlackboardEntry;
 
 // ScriptStruct AIModule.BTDecoratorLogic
 // 0x0004 (0x0004 - 0x0000)
@@ -912,10 +832,7 @@ public:
 	uint8                                         Pad_1[0x1];                                        // 0x0001(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	uint16                                        Number;                                            // 0x0002(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBTDecoratorLogic) == 0x000002, "Wrong alignment on FBTDecoratorLogic");
-static_assert(sizeof(FBTDecoratorLogic) == 0x000004, "Wrong size on FBTDecoratorLogic");
-static_assert(offsetof(FBTDecoratorLogic, Operation) == 0x000000, "Member 'FBTDecoratorLogic::Operation' has a wrong offset!");
-static_assert(offsetof(FBTDecoratorLogic, Number) == 0x000002, "Member 'FBTDecoratorLogic::Number' has a wrong offset!");
+DUMPER7_ASSERTS_FBTDecoratorLogic;
 
 // ScriptStruct AIModule.BTCompositeChild
 // 0x0030 (0x0030 - 0x0000)
@@ -927,12 +844,7 @@ public:
 	TArray<class UBTDecorator*>                   Decorators;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FBTDecoratorLogic>              DecoratorOps;                                      // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBTCompositeChild) == 0x000008, "Wrong alignment on FBTCompositeChild");
-static_assert(sizeof(FBTCompositeChild) == 0x000030, "Wrong size on FBTCompositeChild");
-static_assert(offsetof(FBTCompositeChild, ChildComposite) == 0x000000, "Member 'FBTCompositeChild::ChildComposite' has a wrong offset!");
-static_assert(offsetof(FBTCompositeChild, ChildTask) == 0x000008, "Member 'FBTCompositeChild::ChildTask' has a wrong offset!");
-static_assert(offsetof(FBTCompositeChild, Decorators) == 0x000010, "Member 'FBTCompositeChild::Decorators' has a wrong offset!");
-static_assert(offsetof(FBTCompositeChild, DecoratorOps) == 0x000020, "Member 'FBTCompositeChild::DecoratorOps' has a wrong offset!");
+DUMPER7_ASSERTS_FBTCompositeChild;
 
 // ScriptStruct AIModule.CrowdAvoidanceSamplingPattern
 // 0x0020 (0x0020 - 0x0000)
@@ -942,10 +854,7 @@ public:
 	TArray<float>                                 Angles;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 Radii;                                             // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCrowdAvoidanceSamplingPattern) == 0x000008, "Wrong alignment on FCrowdAvoidanceSamplingPattern");
-static_assert(sizeof(FCrowdAvoidanceSamplingPattern) == 0x000020, "Wrong size on FCrowdAvoidanceSamplingPattern");
-static_assert(offsetof(FCrowdAvoidanceSamplingPattern, Angles) == 0x000000, "Member 'FCrowdAvoidanceSamplingPattern::Angles' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceSamplingPattern, Radii) == 0x000010, "Member 'FCrowdAvoidanceSamplingPattern::Radii' has a wrong offset!");
+DUMPER7_ASSERTS_FCrowdAvoidanceSamplingPattern;
 
 // ScriptStruct AIModule.CrowdAvoidanceConfig
 // 0x001C (0x001C - 0x0000)
@@ -963,18 +872,7 @@ public:
 	uint8                                         AdaptiveRings;                                     // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         AdaptiveDepth;                                     // 0x001B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCrowdAvoidanceConfig) == 0x000004, "Wrong alignment on FCrowdAvoidanceConfig");
-static_assert(sizeof(FCrowdAvoidanceConfig) == 0x00001C, "Wrong size on FCrowdAvoidanceConfig");
-static_assert(offsetof(FCrowdAvoidanceConfig, VelocityBias) == 0x000000, "Member 'FCrowdAvoidanceConfig::VelocityBias' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, DesiredVelocityWeight) == 0x000004, "Member 'FCrowdAvoidanceConfig::DesiredVelocityWeight' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, CurrentVelocityWeight) == 0x000008, "Member 'FCrowdAvoidanceConfig::CurrentVelocityWeight' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, SideBiasWeight) == 0x00000C, "Member 'FCrowdAvoidanceConfig::SideBiasWeight' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, ImpactTimeWeight) == 0x000010, "Member 'FCrowdAvoidanceConfig::ImpactTimeWeight' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, ImpactTimeRange) == 0x000014, "Member 'FCrowdAvoidanceConfig::ImpactTimeRange' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, CustomPatternIdx) == 0x000018, "Member 'FCrowdAvoidanceConfig::CustomPatternIdx' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, AdaptiveDivisions) == 0x000019, "Member 'FCrowdAvoidanceConfig::AdaptiveDivisions' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, AdaptiveRings) == 0x00001A, "Member 'FCrowdAvoidanceConfig::AdaptiveRings' has a wrong offset!");
-static_assert(offsetof(FCrowdAvoidanceConfig, AdaptiveDepth) == 0x00001B, "Member 'FCrowdAvoidanceConfig::AdaptiveDepth' has a wrong offset!");
+DUMPER7_ASSERTS_FCrowdAvoidanceConfig;
 
 // ScriptStruct AIModule.EnvQueryInstanceCache
 // 0x0188 (0x0188 - 0x0000)
@@ -984,9 +882,7 @@ public:
 	class UEnvQuery*                              Template;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x180];                                      // 0x0008(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvQueryInstanceCache) == 0x000008, "Wrong alignment on FEnvQueryInstanceCache");
-static_assert(sizeof(FEnvQueryInstanceCache) == 0x000188, "Wrong size on FEnvQueryInstanceCache");
-static_assert(offsetof(FEnvQueryInstanceCache, Template) == 0x000000, "Member 'FEnvQueryInstanceCache::Template' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvQueryInstanceCache;
 
 // ScriptStruct AIModule.EnvQueryRequest
 // 0x0068 (0x0068 - 0x0000)
@@ -998,11 +894,7 @@ public:
 	class UWorld*                                 World;                                             // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_18[0x50];                                      // 0x0018(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvQueryRequest) == 0x000008, "Wrong alignment on FEnvQueryRequest");
-static_assert(sizeof(FEnvQueryRequest) == 0x000068, "Wrong size on FEnvQueryRequest");
-static_assert(offsetof(FEnvQueryRequest, QueryTemplate) == 0x000000, "Member 'FEnvQueryRequest::QueryTemplate' has a wrong offset!");
-static_assert(offsetof(FEnvQueryRequest, Owner) == 0x000008, "Member 'FEnvQueryRequest::Owner' has a wrong offset!");
-static_assert(offsetof(FEnvQueryRequest, World) == 0x000010, "Member 'FEnvQueryRequest::World' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvQueryRequest;
 
 // ScriptStruct AIModule.AIDynamicParam
 // 0x0048 (0x0048 - 0x0000)
@@ -1016,12 +908,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBlackboardKeySelector                 BBKey;                                             // 0x0018(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAIDynamicParam) == 0x000008, "Wrong alignment on FAIDynamicParam");
-static_assert(sizeof(FAIDynamicParam) == 0x000048, "Wrong size on FAIDynamicParam");
-static_assert(offsetof(FAIDynamicParam, ParamName) == 0x000000, "Member 'FAIDynamicParam::ParamName' has a wrong offset!");
-static_assert(offsetof(FAIDynamicParam, ParamType) == 0x00000C, "Member 'FAIDynamicParam::ParamType' has a wrong offset!");
-static_assert(offsetof(FAIDynamicParam, Value) == 0x000010, "Member 'FAIDynamicParam::Value' has a wrong offset!");
-static_assert(offsetof(FAIDynamicParam, BBKey) == 0x000018, "Member 'FAIDynamicParam::BBKey' has a wrong offset!");
+DUMPER7_ASSERTS_FAIDynamicParam;
 
 // ScriptStruct AIModule.EQSParametrizedQueryExecutionRequest
 // 0x0050 (0x0050 - 0x0000)
@@ -1036,12 +923,7 @@ public:
 	uint8                                         bUseBBKeyForQueryTemplate : 1;                     // 0x004C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEQSParametrizedQueryExecutionRequest) == 0x000008, "Wrong alignment on FEQSParametrizedQueryExecutionRequest");
-static_assert(sizeof(FEQSParametrizedQueryExecutionRequest) == 0x000050, "Wrong size on FEQSParametrizedQueryExecutionRequest");
-static_assert(offsetof(FEQSParametrizedQueryExecutionRequest, QueryTemplate) == 0x000000, "Member 'FEQSParametrizedQueryExecutionRequest::QueryTemplate' has a wrong offset!");
-static_assert(offsetof(FEQSParametrizedQueryExecutionRequest, QueryConfig) == 0x000008, "Member 'FEQSParametrizedQueryExecutionRequest::QueryConfig' has a wrong offset!");
-static_assert(offsetof(FEQSParametrizedQueryExecutionRequest, EQSQueryBlackboardKey) == 0x000018, "Member 'FEQSParametrizedQueryExecutionRequest::EQSQueryBlackboardKey' has a wrong offset!");
-static_assert(offsetof(FEQSParametrizedQueryExecutionRequest, RunMode) == 0x000048, "Member 'FEQSParametrizedQueryExecutionRequest::RunMode' has a wrong offset!");
+DUMPER7_ASSERTS_FEQSParametrizedQueryExecutionRequest;
 
 // ScriptStruct AIModule.EnvQueryResult
 // 0x0040 (0x0040 - 0x0000)
@@ -1055,11 +937,7 @@ public:
 	int32                                         QueryID;                                           // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0xC];                                       // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvQueryResult) == 0x000008, "Wrong alignment on FEnvQueryResult");
-static_assert(sizeof(FEnvQueryResult) == 0x000040, "Wrong size on FEnvQueryResult");
-static_assert(offsetof(FEnvQueryResult, ItemType) == 0x000010, "Member 'FEnvQueryResult::ItemType' has a wrong offset!");
-static_assert(offsetof(FEnvQueryResult, OptionIndex) == 0x00002C, "Member 'FEnvQueryResult::OptionIndex' has a wrong offset!");
-static_assert(offsetof(FEnvQueryResult, QueryID) == 0x000030, "Member 'FEnvQueryResult::QueryID' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvQueryResult;
 
 // ScriptStruct AIModule.EnvOverlapData
 // 0x0020 (0x0020 - 0x0000)
@@ -1078,14 +956,7 @@ public:
 	uint8                                         bSkipOverlapQuerier : 1;                           // 0x001C(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvOverlapData) == 0x000004, "Wrong alignment on FEnvOverlapData");
-static_assert(sizeof(FEnvOverlapData) == 0x000020, "Wrong size on FEnvOverlapData");
-static_assert(offsetof(FEnvOverlapData, ExtentX) == 0x000000, "Member 'FEnvOverlapData::ExtentX' has a wrong offset!");
-static_assert(offsetof(FEnvOverlapData, ExtentY) == 0x000004, "Member 'FEnvOverlapData::ExtentY' has a wrong offset!");
-static_assert(offsetof(FEnvOverlapData, ExtentZ) == 0x000008, "Member 'FEnvOverlapData::ExtentZ' has a wrong offset!");
-static_assert(offsetof(FEnvOverlapData, ShapeOffset) == 0x00000C, "Member 'FEnvOverlapData::ShapeOffset' has a wrong offset!");
-static_assert(offsetof(FEnvOverlapData, OverlapChannel) == 0x000018, "Member 'FEnvOverlapData::OverlapChannel' has a wrong offset!");
-static_assert(offsetof(FEnvOverlapData, OverlapShape) == 0x000019, "Member 'FEnvOverlapData::OverlapShape' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvOverlapData;
 
 // ScriptStruct AIModule.EnvTraceData
 // 0x0030 (0x0030 - 0x0000)
@@ -1113,20 +984,7 @@ public:
 	uint8                                         bCanProjectDown : 1;                               // 0x002C(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvTraceData) == 0x000008, "Wrong alignment on FEnvTraceData");
-static_assert(sizeof(FEnvTraceData) == 0x000030, "Wrong size on FEnvTraceData");
-static_assert(offsetof(FEnvTraceData, VersionNum) == 0x000000, "Member 'FEnvTraceData::VersionNum' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, NavigationFilter) == 0x000008, "Member 'FEnvTraceData::NavigationFilter' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, ProjectDown) == 0x000010, "Member 'FEnvTraceData::ProjectDown' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, ProjectUp) == 0x000014, "Member 'FEnvTraceData::ProjectUp' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, ExtentX) == 0x000018, "Member 'FEnvTraceData::ExtentX' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, ExtentY) == 0x00001C, "Member 'FEnvTraceData::ExtentY' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, ExtentZ) == 0x000020, "Member 'FEnvTraceData::ExtentZ' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, PostProjectionVerticalOffset) == 0x000024, "Member 'FEnvTraceData::PostProjectionVerticalOffset' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, TraceChannel) == 0x000028, "Member 'FEnvTraceData::TraceChannel' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, SerializedChannel) == 0x000029, "Member 'FEnvTraceData::SerializedChannel' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, TraceShape) == 0x00002A, "Member 'FEnvTraceData::TraceShape' has a wrong offset!");
-static_assert(offsetof(FEnvTraceData, TraceMode) == 0x00002B, "Member 'FEnvTraceData::TraceMode' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvTraceData;
 
 // ScriptStruct AIModule.EnvDirection
 // 0x0020 (0x0020 - 0x0000)
@@ -1139,12 +997,7 @@ public:
 	EEnvDirection                                 DirMode;                                           // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FEnvDirection) == 0x000008, "Wrong alignment on FEnvDirection");
-static_assert(sizeof(FEnvDirection) == 0x000020, "Wrong size on FEnvDirection");
-static_assert(offsetof(FEnvDirection, LineFrom) == 0x000000, "Member 'FEnvDirection::LineFrom' has a wrong offset!");
-static_assert(offsetof(FEnvDirection, LineTo) == 0x000008, "Member 'FEnvDirection::LineTo' has a wrong offset!");
-static_assert(offsetof(FEnvDirection, Rotation) == 0x000010, "Member 'FEnvDirection::Rotation' has a wrong offset!");
-static_assert(offsetof(FEnvDirection, DirMode) == 0x000018, "Member 'FEnvDirection::DirMode' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvDirection;
 
 // ScriptStruct AIModule.EnvNamedValue
 // 0x0014 (0x0014 - 0x0000)
@@ -1156,23 +1009,25 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Value;                                             // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEnvNamedValue) == 0x000004, "Wrong alignment on FEnvNamedValue");
-static_assert(sizeof(FEnvNamedValue) == 0x000014, "Wrong size on FEnvNamedValue");
-static_assert(offsetof(FEnvNamedValue, ParamName) == 0x000000, "Member 'FEnvNamedValue::ParamName' has a wrong offset!");
-static_assert(offsetof(FEnvNamedValue, ParamType) == 0x00000C, "Member 'FEnvNamedValue::ParamType' has a wrong offset!");
-static_assert(offsetof(FEnvNamedValue, Value) == 0x000010, "Member 'FEnvNamedValue::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FEnvNamedValue;
 
-// ScriptStruct AIModule.PawnActionEvent
-// 0x0018 (0x0018 - 0x0000)
-struct FPawnActionEvent final
+// ScriptStruct AIModule.GenericTeamId
+// 0x0001 (0x0001 - 0x0000)
+struct FGenericTeamId final
 {
 public:
-	class UPawnAction*                            Action;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         TeamID;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FPawnActionEvent) == 0x000008, "Wrong alignment on FPawnActionEvent");
-static_assert(sizeof(FPawnActionEvent) == 0x000018, "Wrong size on FPawnActionEvent");
-static_assert(offsetof(FPawnActionEvent, Action) == 0x000000, "Member 'FPawnActionEvent::Action' has a wrong offset!");
+DUMPER7_ASSERTS_FGenericTeamId;
+
+// ScriptStruct AIModule.PawnActionStack
+// 0x0008 (0x0008 - 0x0000)
+struct FPawnActionStack final
+{
+public:
+	class UPawnAction*                            TopAction;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FPawnActionStack;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GooglePAD_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GooglePAD_structs.hpp"
 
 
 namespace SDK
@@ -41,15 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GooglePADFunctionLibrary">();
+		STATIC_CLASS_IMPL("GooglePADFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GooglePADFunctionLibrary")
 	}
 	static class UGooglePADFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGooglePADFunctionLibrary>();
 	}
 };
-static_assert(alignof(UGooglePADFunctionLibrary) == 0x000008, "Wrong alignment on UGooglePADFunctionLibrary");
-static_assert(sizeof(UGooglePADFunctionLibrary) == 0x000030, "Wrong size on UGooglePADFunctionLibrary");
+DUMPER7_ASSERTS_UGooglePADFunctionLibrary;
 
 }
 

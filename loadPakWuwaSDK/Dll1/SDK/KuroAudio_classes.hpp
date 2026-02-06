@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "MovieScene_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroAudio_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "MovieScene_classes.hpp"
 
 
 namespace SDK
@@ -32,18 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioStateVolume">();
+		STATIC_CLASS_IMPL("KuroAudioStateVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioStateVolume")
 	}
 	static class AKuroAudioStateVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroAudioStateVolume>();
 	}
 };
-static_assert(alignof(AKuroAudioStateVolume) == 0x000008, "Wrong alignment on AKuroAudioStateVolume");
-static_assert(sizeof(AKuroAudioStateVolume) == 0x000310, "Wrong size on AKuroAudioStateVolume");
-static_assert(offsetof(AKuroAudioStateVolume, Group) == 0x0002E8, "Member 'AKuroAudioStateVolume::Group' has a wrong offset!");
-static_assert(offsetof(AKuroAudioStateVolume, State) == 0x0002F8, "Member 'AKuroAudioStateVolume::State' has a wrong offset!");
-static_assert(offsetof(AKuroAudioStateVolume, Priority) == 0x000308, "Member 'AKuroAudioStateVolume::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroAudioStateVolume;
 
 // Class KuroAudio.KuroAmbientSoundActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -55,16 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAmbientSoundActor">();
+		STATIC_CLASS_IMPL("KuroAmbientSoundActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAmbientSoundActor")
 	}
 	static class AKuroAmbientSoundActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroAmbientSoundActor>();
 	}
 };
-static_assert(alignof(AKuroAmbientSoundActor) == 0x000008, "Wrong alignment on AKuroAmbientSoundActor");
-static_assert(sizeof(AKuroAmbientSoundActor) == 0x0002B8, "Wrong size on AKuroAmbientSoundActor");
-static_assert(offsetof(AKuroAmbientSoundActor, AmbientSoundComponent) == 0x0002B0, "Member 'AKuroAmbientSoundActor::AmbientSoundComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroAmbientSoundActor;
 
 // Class KuroAudio.KuroAudioStatics
 // 0x0000 (0x0030 - 0x0030)
@@ -91,15 +93,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioStatics">();
+		STATIC_CLASS_IMPL("KuroAudioStatics")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioStatics")
 	}
 	static class UKuroAudioStatics* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAudioStatics>();
 	}
 };
-static_assert(alignof(UKuroAudioStatics) == 0x000008, "Wrong alignment on UKuroAudioStatics");
-static_assert(sizeof(UKuroAudioStatics) == 0x000030, "Wrong size on UKuroAudioStatics");
+DUMPER7_ASSERTS_UKuroAudioStatics;
 
 // Class KuroAudio.KuroAmbientSoundComponent
 // 0x0050 (0x0270 - 0x0220)
@@ -122,19 +127,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAmbientSoundComponent">();
+		STATIC_CLASS_IMPL("KuroAmbientSoundComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAmbientSoundComponent")
 	}
 	static class UKuroAmbientSoundComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAmbientSoundComponent>();
 	}
 };
-static_assert(alignof(UKuroAmbientSoundComponent) == 0x000010, "Wrong alignment on UKuroAmbientSoundComponent");
-static_assert(sizeof(UKuroAmbientSoundComponent) == 0x000270, "Wrong size on UKuroAmbientSoundComponent");
-static_assert(offsetof(UKuroAmbientSoundComponent, AudioEvent) == 0x000218, "Member 'UKuroAmbientSoundComponent::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UKuroAmbientSoundComponent, bAutoPlay) == 0x000220, "Member 'UKuroAmbientSoundComponent::bAutoPlay' has a wrong offset!");
-static_assert(offsetof(UKuroAmbientSoundComponent, AttenuationScalingFactor) == 0x000224, "Member 'UKuroAmbientSoundComponent::AttenuationScalingFactor' has a wrong offset!");
-static_assert(offsetof(UKuroAmbientSoundComponent, SoundPositions) == 0x000228, "Member 'UKuroAmbientSoundComponent::SoundPositions' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAmbientSoundComponent;
 
 // Class KuroAudio.KuroAmbientSoundPositionsProxyComponent
 // 0x0000 (0x06B0 - 0x06B0)
@@ -146,16 +150,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAmbientSoundPositionsProxyComponent">();
+		STATIC_CLASS_IMPL("KuroAmbientSoundPositionsProxyComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAmbientSoundPositionsProxyComponent")
 	}
 	static class UKuroAmbientSoundPositionsProxyComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAmbientSoundPositionsProxyComponent>();
 	}
 };
-static_assert(alignof(UKuroAmbientSoundPositionsProxyComponent) == 0x000010, "Wrong alignment on UKuroAmbientSoundPositionsProxyComponent");
-static_assert(sizeof(UKuroAmbientSoundPositionsProxyComponent) == 0x0006B0, "Wrong size on UKuroAmbientSoundPositionsProxyComponent");
-static_assert(offsetof(UKuroAmbientSoundPositionsProxyComponent, TargetComponent) == 0x0006A8, "Member 'UKuroAmbientSoundPositionsProxyComponent::TargetComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAmbientSoundPositionsProxyComponent;
 
 // Class KuroAudio.KuroAudioDelegates
 // 0x0000 (0x0030 - 0x0030)
@@ -170,24 +176,27 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioDelegates">();
+		STATIC_CLASS_IMPL("KuroAudioDelegates")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioDelegates")
 	}
 	static class UKuroAudioDelegates* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAudioDelegates>();
 	}
 };
-static_assert(alignof(UKuroAudioDelegates) == 0x000008, "Wrong alignment on UKuroAudioDelegates");
-static_assert(sizeof(UKuroAudioDelegates) == 0x000030, "Wrong size on UKuroAudioDelegates");
+DUMPER7_ASSERTS_UKuroAudioDelegates;
 
 // Class KuroAudio.KuroAudioEnvironmentSubsystem
-// 0x07A8 (0x07E0 - 0x0038)
+// 0x0748 (0x0780 - 0x0038)
 class alignas(0x10) UKuroAudioEnvironmentSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_38[0x278];                                     // 0x0038(0x0278)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void()>              EnvironmentUpdatedDelegate;                        // 0x02B0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C0[0x520];                                    // 0x02C0(0x0520)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C0[0x4C0];                                    // 0x02C0(0x04C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void D_DynamicReverbTrace(const struct FVectorDouble& Location, const bool bForceUpdate);
@@ -202,16 +211,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioEnvironmentSubsystem">();
+		STATIC_CLASS_IMPL("KuroAudioEnvironmentSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioEnvironmentSubsystem")
 	}
 	static class UKuroAudioEnvironmentSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAudioEnvironmentSubsystem>();
 	}
 };
-static_assert(alignof(UKuroAudioEnvironmentSubsystem) == 0x000010, "Wrong alignment on UKuroAudioEnvironmentSubsystem");
-static_assert(sizeof(UKuroAudioEnvironmentSubsystem) == 0x0007E0, "Wrong size on UKuroAudioEnvironmentSubsystem");
-static_assert(offsetof(UKuroAudioEnvironmentSubsystem, EnvironmentUpdatedDelegate) == 0x0002B0, "Member 'UKuroAudioEnvironmentSubsystem::EnvironmentUpdatedDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAudioEnvironmentSubsystem;
 
 // Class KuroAudio.KuroAudioVolume
 // 0x0018 (0x0300 - 0x02E8)
@@ -228,19 +239,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAudioVolume">();
+		STATIC_CLASS_IMPL("KuroAudioVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAudioVolume")
 	}
 	static class AKuroAudioVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroAudioVolume>();
 	}
 };
-static_assert(alignof(AKuroAudioVolume) == 0x000008, "Wrong alignment on AKuroAudioVolume");
-static_assert(sizeof(AKuroAudioVolume) == 0x000300, "Wrong size on AKuroAudioVolume");
-static_assert(offsetof(AKuroAudioVolume, Channel) == 0x0002E8, "Member 'AKuroAudioVolume::Channel' has a wrong offset!");
-static_assert(offsetof(AKuroAudioVolume, Priority) == 0x0002E9, "Member 'AKuroAudioVolume::Priority' has a wrong offset!");
-static_assert(offsetof(AKuroAudioVolume, StateEvent) == 0x0002F0, "Member 'AKuroAudioVolume::StateEvent' has a wrong offset!");
-static_assert(offsetof(AKuroAudioVolume, bEnableDynamicReverb) == 0x0002F8, "Member 'AKuroAudioVolume::bEnableDynamicReverb' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroAudioVolume;
 
 // Class KuroAudio.KuroBgPlayerStatic
 // 0x0000 (0x0030 - 0x0030)
@@ -253,15 +263,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBgPlayerStatic">();
+		STATIC_CLASS_IMPL("KuroBgPlayerStatic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBgPlayerStatic")
 	}
 	static class UKuroBgPlayerStatic* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBgPlayerStatic>();
 	}
 };
-static_assert(alignof(UKuroBgPlayerStatic) == 0x000008, "Wrong alignment on UKuroBgPlayerStatic");
-static_assert(sizeof(UKuroBgPlayerStatic) == 0x000030, "Wrong size on UKuroBgPlayerStatic");
+DUMPER7_ASSERTS_UKuroBgPlayerStatic;
 
 // Class KuroAudio.MovieSceneKuroAudioEventSection
 // 0x0048 (0x0140 - 0x00F8)
@@ -281,44 +294,42 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneKuroAudioEventSection">();
+		STATIC_CLASS_IMPL("MovieSceneKuroAudioEventSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneKuroAudioEventSection")
 	}
 	static class UMovieSceneKuroAudioEventSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneKuroAudioEventSection>();
 	}
 };
-static_assert(alignof(UMovieSceneKuroAudioEventSection) == 0x000008, "Wrong alignment on UMovieSceneKuroAudioEventSection");
-static_assert(sizeof(UMovieSceneKuroAudioEventSection) == 0x000140, "Wrong size on UMovieSceneKuroAudioEventSection");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, bStopAtSectionEnd) == 0x0000F8, "Member 'UMovieSceneKuroAudioEventSection::bStopAtSectionEnd' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeDuration) == 0x0000FC, "Member 'UMovieSceneKuroAudioEventSection::FadeDuration' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeCurve) == 0x000100, "Member 'UMovieSceneKuroAudioEventSection::FadeCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, bSyncAudio) == 0x000101, "Member 'UMovieSceneKuroAudioEventSection::bSyncAudio' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, bAutoMatchLength) == 0x000102, "Member 'UMovieSceneKuroAudioEventSection::bAutoMatchLength' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, AudioEvent) == 0x000108, "Member 'UMovieSceneKuroAudioEventSection::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, SoftAudioEvent) == 0x000110, "Member 'UMovieSceneKuroAudioEventSection::SoftAudioEvent' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneKuroAudioEventSection;
 
 // Class KuroAudio.MovieSceneKuroAudioEventTrack
-// 0x0018 (0x0098 - 0x0080)
+// 0x0018 (0x00B0 - 0x0098)
 class UMovieSceneKuroAudioEventTrack final : public UMovieSceneTrack
 {
 public:
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0088(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneKuroAudioEventTrack">();
+		STATIC_CLASS_IMPL("MovieSceneKuroAudioEventTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneKuroAudioEventTrack")
 	}
 	static class UMovieSceneKuroAudioEventTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneKuroAudioEventTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneKuroAudioEventTrack) == 0x000008, "Wrong alignment on UMovieSceneKuroAudioEventTrack");
-static_assert(sizeof(UMovieSceneKuroAudioEventTrack) == 0x000098, "Wrong size on UMovieSceneKuroAudioEventTrack");
-static_assert(offsetof(UMovieSceneKuroAudioEventTrack, Sections) == 0x000088, "Member 'UMovieSceneKuroAudioEventTrack::Sections' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneKuroAudioEventTrack;
 
 }
 

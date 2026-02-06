@@ -43,23 +43,7 @@ public:
 	TArray<struct FSBulletEffectOnHitConf>        命中特效配置_142_0183F6F34279268BC0DB5BA431D0354C; // 0x0208(0x0010)(Edit, BlueprintVisible)
 	TSoftObjectPtr<class UPD_CharacterControllerData_C> 受击闪白_149_0AEEAA7B423D48764A7A65AAD5452335; // 0x0218(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataPerformance) == 0x000008, "Wrong alignment on FSReBulletDataPerformance");
-static_assert(sizeof(FSReBulletDataPerformance) == 0x000248, "Wrong size on FSReBulletDataPerformance");
-static_assert(offsetof(FSReBulletDataPerformance, 接手父子弹的特效_80_9F7DC8A841D73FDC00EB84A17B1275EB) == 0x000000, "Member 'FSReBulletDataPerformance::接手父子弹的特效_80_9F7DC8A841D73FDC00EB84A17B1275EB' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 子弹特效DA_143_A4DDFA8A450DA7D112EF79BE7E6B44A4) == 0x000008, "Member 'FSReBulletDataPerformance::子弹特效DA_143_A4DDFA8A450DA7D112EF79BE7E6B44A4' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 子弹特效DA参数_104_CE1F47CD41F7F3190071198240B93A1E) == 0x000038, "Member 'FSReBulletDataPerformance::子弹特效DA参数_104_CE1F47CD41F7F3190071198240B93A1E' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 特殊特效DA_135_0D42AB4E49CF93DC4D234D86F34B3E9C) == 0x000088, "Member 'FSReBulletDataPerformance::特殊特效DA_135_0D42AB4E49CF93DC4D234D86F34B3E9C' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 子弹销毁调用子弹停止特效_6_6D80C3BE42200534298A6C964FC0DDAF) == 0x0000D8, "Member 'FSReBulletDataPerformance::子弹销毁调用子弹停止特效_6_6D80C3BE42200534298A6C964FC0DDAF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中特效DA_134_F879336F4BCA1C86C8E4009ECA210399) == 0x0000E0, "Member 'FSReBulletDataPerformance::命中特效DA_134_F879336F4BCA1C86C8E4009ECA210399' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中音效_146_CAFEF49A49D4D694CF8D7C911CB72A87) == 0x000130, "Member 'FSReBulletDataPerformance::命中音效_146_CAFEF49A49D4D694CF8D7C911CB72A87' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 生成时攻击者震屏_118_9935D0704581906CD143F4878CF41C47) == 0x000140, "Member 'FSReBulletDataPerformance::生成时攻击者震屏_118_9935D0704581906CD143F4878CF41C47' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中时攻击者震屏_76_DA091D584EDEB8543C02C1B7FD0DFBE4) == 0x000170, "Member 'FSReBulletDataPerformance::命中时攻击者震屏_76_DA091D584EDEB8543C02C1B7FD0DFBE4' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中时受击者震屏_77_9E34F7C7455CF6C4C40B0DA0A3203F85) == 0x0001A0, "Member 'FSReBulletDataPerformance::命中时受击者震屏_77_9E34F7C7455CF6C4C40B0DA0A3203F85' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中弱点时攻击者震屏_133_F3A8C1A34D99B6D841C2E4A229358EA3) == 0x0001D0, "Member 'FSReBulletDataPerformance::命中弱点时攻击者震屏_133_F3A8C1A34D99B6D841C2E4A229358EA3' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 最大震动次数_27_10EF5EBC4E5B7C5410227AB80FD9EEEF) == 0x000200, "Member 'FSReBulletDataPerformance::最大震动次数_27_10EF5EBC4E5B7C5410227AB80FD9EEEF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 震屏关联到召唤兽主人_111_D320AF2B4F133EF041676E9A7B8B6AD9) == 0x000204, "Member 'FSReBulletDataPerformance::震屏关联到召唤兽主人_111_D320AF2B4F133EF041676E9A7B8B6AD9' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 命中特效配置_142_0183F6F34279268BC0DB5BA431D0354C) == 0x000208, "Member 'FSReBulletDataPerformance::命中特效配置_142_0183F6F34279268BC0DB5BA431D0354C' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataPerformance, 受击闪白_149_0AEEAA7B423D48764A7A65AAD5452335) == 0x000218, "Member 'FSReBulletDataPerformance::受击闪白_149_0AEEAA7B423D48764A7A65AAD5452335' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataPerformance;
 
 }
 

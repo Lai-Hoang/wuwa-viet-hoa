@@ -23,9 +23,7 @@ struct RawInputFunctionLibrary_GetRegisteredDevices final
 public:
 	TArray<struct FRegisteredDeviceInfo>          ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(RawInputFunctionLibrary_GetRegisteredDevices) == 0x000008, "Wrong alignment on RawInputFunctionLibrary_GetRegisteredDevices");
-static_assert(sizeof(RawInputFunctionLibrary_GetRegisteredDevices) == 0x000010, "Wrong size on RawInputFunctionLibrary_GetRegisteredDevices");
-static_assert(offsetof(RawInputFunctionLibrary_GetRegisteredDevices, ReturnValue) == 0x000000, "Member 'RawInputFunctionLibrary_GetRegisteredDevices::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_RawInputFunctionLibrary_GetRegisteredDevices;
 
 }
 

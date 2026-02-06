@@ -23,9 +23,7 @@ struct FSWeaponLevelMaterialData final
 public:
 	TMap<class FString, struct FSWeaponMaterialParams> SlotNewParamValues_25_189180954DD1CE47C26A6A9B4A481A44; // 0x0000(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSWeaponLevelMaterialData) == 0x000008, "Wrong alignment on FSWeaponLevelMaterialData");
-static_assert(sizeof(FSWeaponLevelMaterialData) == 0x000050, "Wrong size on FSWeaponLevelMaterialData");
-static_assert(offsetof(FSWeaponLevelMaterialData, SlotNewParamValues_25_189180954DD1CE47C26A6A9B4A481A44) == 0x000000, "Member 'FSWeaponLevelMaterialData::SlotNewParamValues_25_189180954DD1CE47C26A6A9B4A481A44' has a wrong offset!");
+DUMPER7_ASSERTS_FSWeaponLevelMaterialData;
 
 }
 

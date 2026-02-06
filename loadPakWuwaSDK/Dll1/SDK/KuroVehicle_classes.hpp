@@ -15,8 +15,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "KuroAnim_classes.hpp"
-#include "KuroVehicle_structs.hpp"
 #include "KuroGAS_classes.hpp"
+#include "KuroVehicle_structs.hpp"
 
 
 namespace SDK
@@ -50,25 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroAnimInstanceVehicle">();
+		STATIC_CLASS_IMPL("KuroAnimInstanceVehicle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAnimInstanceVehicle")
 	}
 	static class UKuroAnimInstanceVehicle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroAnimInstanceVehicle>();
 	}
 };
-static_assert(alignof(UKuroAnimInstanceVehicle) == 0x000010, "Wrong alignment on UKuroAnimInstanceVehicle");
-static_assert(sizeof(UKuroAnimInstanceVehicle) == 0x000890, "Wrong size on UKuroAnimInstanceVehicle");
-static_assert(offsetof(UKuroAnimInstanceVehicle, LogicParams) == 0x000820, "Member 'UKuroAnimInstanceVehicle::LogicParams' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, BaseVehicle) == 0x000828, "Member 'UKuroAnimInstanceVehicle::BaseVehicle' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, DeltaTime) == 0x000830, "Member 'UKuroAnimInstanceVehicle::DeltaTime' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, EntityId) == 0x000834, "Member 'UKuroAnimInstanceVehicle::EntityId' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, bIsAutonomousProxy) == 0x000838, "Member 'UKuroAnimInstanceVehicle::bIsAutonomousProxy' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, Velocity) == 0x00083C, "Member 'UKuroAnimInstanceVehicle::Velocity' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, bIsMovedLocation) == 0x000854, "Member 'UKuroAnimInstanceVehicle::bIsMovedLocation' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, Acceleration) == 0x000864, "Member 'UKuroAnimInstanceVehicle::Acceleration' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, ActorForward) == 0x000870, "Member 'UKuroAnimInstanceVehicle::ActorForward' has a wrong offset!");
-static_assert(offsetof(UKuroAnimInstanceVehicle, bHasDriver) == 0x00087C, "Member 'UKuroAnimInstanceVehicle::bHasDriver' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroAnimInstanceVehicle;
 
 // Class KuroVehicle.KuroBaseVehicle
 // 0x0030 (0x06B0 - 0x0680)
@@ -87,18 +80,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBaseVehicle">();
+		STATIC_CLASS_IMPL("KuroBaseVehicle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBaseVehicle")
 	}
 	static class AKuroBaseVehicle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroBaseVehicle>();
 	}
 };
-static_assert(alignof(AKuroBaseVehicle) == 0x000010, "Wrong alignment on AKuroBaseVehicle");
-static_assert(sizeof(AKuroBaseVehicle) == 0x0006B0, "Wrong size on AKuroBaseVehicle");
-static_assert(offsetof(AKuroBaseVehicle, VehicleMovementComponent) == 0x000680, "Member 'AKuroBaseVehicle::VehicleMovementComponent' has a wrong offset!");
-static_assert(offsetof(AKuroBaseVehicle, VehicleMovementModeChangedDelegate) == 0x000688, "Member 'AKuroBaseVehicle::VehicleMovementModeChangedDelegate' has a wrong offset!");
-static_assert(offsetof(AKuroBaseVehicle, OnVehicleMovementUpdated) == 0x000698, "Member 'AKuroBaseVehicle::OnVehicleMovementUpdated' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroBaseVehicle;
 
 // Class KuroVehicle.KuroConfigHelper
 // 0x00F8 (0x0128 - 0x0030)
@@ -118,15 +111,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroConfigHelper">();
+		STATIC_CLASS_IMPL("KuroConfigHelper")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroConfigHelper")
 	}
 	static class UKuroConfigHelper* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroConfigHelper>();
 	}
 };
-static_assert(alignof(UKuroConfigHelper) == 0x000008, "Wrong alignment on UKuroConfigHelper");
-static_assert(sizeof(UKuroConfigHelper) == 0x000128, "Wrong size on UKuroConfigHelper");
+DUMPER7_ASSERTS_UKuroConfigHelper;
 
 // Class KuroVehicle.MotorcycleConfigs
 // 0x0438 (0x0470 - 0x0038)
@@ -154,30 +150,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MotorcycleConfigs">();
+		STATIC_CLASS_IMPL("MotorcycleConfigs")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotorcycleConfigs")
 	}
 	static class UMotorcycleConfigs* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMotorcycleConfigs>();
 	}
 };
-static_assert(alignof(UMotorcycleConfigs) == 0x000010, "Wrong alignment on UMotorcycleConfigs");
-static_assert(sizeof(UMotorcycleConfigs) == 0x000470, "Wrong size on UMotorcycleConfigs");
-static_assert(offsetof(UMotorcycleConfigs, GravityScale) == 0x000038, "Member 'UMotorcycleConfigs::GravityScale' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorAirFriction) == 0x00003C, "Member 'UMotorcycleConfigs::MotorAirFriction' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBodyAngularLengths) == 0x000040, "Member 'UMotorcycleConfigs::MotorBodyAngularLengths' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBodyAngularRateInHitSpeed) == 0x000050, "Member 'UMotorcycleConfigs::MotorBodyAngularRateInHitSpeed' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, HangRotateWeakenWhenTwoWheelOnGroup) == 0x000068, "Member 'UMotorcycleConfigs::HangRotateWeakenWhenTwoWheelOnGroup' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorFrontWheelHang) == 0x000070, "Member 'UMotorcycleConfigs::MotorFrontWheelHang' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBackWheelHang) == 0x0000B8, "Member 'UMotorcycleConfigs::MotorBackWheelHang' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBodyPhys) == 0x000100, "Member 'UMotorcycleConfigs::MotorBodyPhys' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorFrontWheelPhys) == 0x000120, "Member 'UMotorcycleConfigs::MotorFrontWheelPhys' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBackWheelPhys) == 0x000140, "Member 'UMotorcycleConfigs::MotorBackWheelPhys' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorAccelConfig) == 0x000160, "Member 'UMotorcycleConfigs::MotorAccelConfig' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBoostConfig) == 0x0002E0, "Member 'UMotorcycleConfigs::MotorBoostConfig' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBalanceConfig) == 0x000300, "Member 'UMotorcycleConfigs::MotorBalanceConfig' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorBrakingTurnConfig) == 0x000430, "Member 'UMotorcycleConfigs::MotorBrakingTurnConfig' has a wrong offset!");
-static_assert(offsetof(UMotorcycleConfigs, MotorTurnConfig) == 0x000440, "Member 'UMotorcycleConfigs::MotorTurnConfig' has a wrong offset!");
+DUMPER7_ASSERTS_UMotorcycleConfigs;
 
 // Class KuroVehicle.KuroVehicleMovementComponent
 // 0x09B0 (0x0B00 - 0x0150)
@@ -344,6 +328,8 @@ public:
 	void TryMotorcyclingOneStep(int32 Index_0);
 	void UpdateMotorRailMoveTransform(float DeltaSeconds, const struct FTransformDouble& TargetTransform, bool bApplyRootMotion, bool bSweep);
 
+	bool GetBackMotorHitResult(struct FHitResult* OutHit) const;
+	bool GetFrontMotorHitResult(struct FHitResult* OutHit) const;
 	float GetMaxAcceleration() const;
 	struct FVector Kuro_GetGravity() const;
 	struct FVector Kuro_GetGravityDirect() const;
@@ -351,117 +337,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroVehicleMovementComponent">();
+		STATIC_CLASS_IMPL("KuroVehicleMovementComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroVehicleMovementComponent")
 	}
 	static class UKuroVehicleMovementComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroVehicleMovementComponent>();
 	}
 };
-static_assert(alignof(UKuroVehicleMovementComponent) == 0x000010, "Wrong alignment on UKuroVehicleMovementComponent");
-static_assert(sizeof(UKuroVehicleMovementComponent) == 0x000B00, "Wrong size on UKuroVehicleMovementComponent");
-static_assert(offsetof(UKuroVehicleMovementComponent, VehicleOwner) == 0x000150, "Member 'UKuroVehicleMovementComponent::VehicleOwner' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, VehicleShapes) == 0x000158, "Member 'UKuroVehicleMovementComponent::VehicleShapes' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, VehicleShapeBounds) == 0x000168, "Member 'UKuroVehicleMovementComponent::VehicleShapeBounds' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, VehicleShapeBoundsOffset) == 0x000184, "Member 'UKuroVehicleMovementComponent::VehicleShapeBoundsOffset' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MovementMode) == 0x000190, "Member 'UKuroVehicleMovementComponent::MovementMode' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, CustomMovementMode) == 0x000191, "Member 'UKuroVehicleMovementComponent::CustomMovementMode' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, GravityScale) == 0x000194, "Member 'UKuroVehicleMovementComponent::GravityScale' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxAcceleration) == 0x000198, "Member 'UKuroVehicleMovementComponent::MaxAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MinAcceleration) == 0x00019C, "Member 'UKuroVehicleMovementComponent::MinAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxBrakeAcceleration) == 0x0001A0, "Member 'UKuroVehicleMovementComponent::MaxBrakeAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxBackwardAcceleration) == 0x0001A4, "Member 'UKuroVehicleMovementComponent::MaxBackwardAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxSpeed) == 0x0001A8, "Member 'UKuroVehicleMovementComponent::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotationVelocity) == 0x0001AC, "Member 'UKuroVehicleMovementComponent::RotationVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotationAcceleration) == 0x0001B8, "Member 'UKuroVehicleMovementComponent::RotationAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxFloatingSpeed) == 0x0001C4, "Member 'UKuroVehicleMovementComponent::MaxFloatingSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, FloatingFrictionFactor) == 0x0001C8, "Member 'UKuroVehicleMovementComponent::FloatingFrictionFactor' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, ForbidGravityDirectMove) == 0x0001CC, "Member 'UKuroVehicleMovementComponent::ForbidGravityDirectMove' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, BuoyancyBalanceRatio) == 0x0001D0, "Member 'UKuroVehicleMovementComponent::BuoyancyBalanceRatio' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, StrandedWaterDepthThreshold) == 0x0001D4, "Member 'UKuroVehicleMovementComponent::StrandedWaterDepthThreshold' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, SafetyDepthTolerrance) == 0x0001D8, "Member 'UKuroVehicleMovementComponent::SafetyDepthTolerrance' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bSafetyDepthCheck) == 0x0001DC, "Member 'UKuroVehicleMovementComponent::bSafetyDepthCheck' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxWaterDiveDist) == 0x0001E0, "Member 'UKuroVehicleMovementComponent::MaxWaterDiveDist' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxBackwardSpeed) == 0x0001E4, "Member 'UKuroVehicleMovementComponent::MaxBackwardSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MinFriction) == 0x0001E8, "Member 'UKuroVehicleMovementComponent::MinFriction' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxFriction) == 0x0001EC, "Member 'UKuroVehicleMovementComponent::MaxFriction' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, ExtraFrictionWhenExceedMaxSpeed) == 0x0001F0, "Member 'UKuroVehicleMovementComponent::ExtraFrictionWhenExceedMaxSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxRotationSpeed) == 0x0001F4, "Member 'UKuroVehicleMovementComponent::MaxRotationSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxRotationYawAcceleration) == 0x0001F8, "Member 'UKuroVehicleMovementComponent::MaxRotationYawAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MinRotationYawAcceleration) == 0x0001FC, "Member 'UKuroVehicleMovementComponent::MinRotationYawAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotAngleCoef) == 0x000200, "Member 'UKuroVehicleMovementComponent::RotAngleCoef' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotSpeedCoef) == 0x000204, "Member 'UKuroVehicleMovementComponent::RotSpeedCoef' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotConstCoef) == 0x000208, "Member 'UKuroVehicleMovementComponent::RotConstCoef' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotFrictionFactor) == 0x00020C, "Member 'UKuroVehicleMovementComponent::RotFrictionFactor' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, StaticRotFriction) == 0x000210, "Member 'UKuroVehicleMovementComponent::StaticRotFriction' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotaryInertia) == 0x000214, "Member 'UKuroVehicleMovementComponent::RotaryInertia' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, SpeedImpactFactor) == 0x000218, "Member 'UKuroVehicleMovementComponent::SpeedImpactFactor' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, SpeedImpactHorizontalFactor) == 0x00021C, "Member 'UKuroVehicleMovementComponent::SpeedImpactHorizontalFactor' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotationImpactFactor) == 0x000220, "Member 'UKuroVehicleMovementComponent::RotationImpactFactor' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxExtrutionDistance) == 0x000224, "Member 'UKuroVehicleMovementComponent::MaxExtrutionDistance' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, ExtrusionSpeed) == 0x000228, "Member 'UKuroVehicleMovementComponent::ExtrusionSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bEnableRotationExtrusion) == 0x00022C, "Member 'UKuroVehicleMovementComponent::bEnableRotationExtrusion' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotationExtrusionSpeed) == 0x000230, "Member 'UKuroVehicleMovementComponent::RotationExtrusionSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxSafeWaterGravityAngle) == 0x000234, "Member 'UKuroVehicleMovementComponent::MaxSafeWaterGravityAngle' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotPitchFrictionRatio) == 0x000238, "Member 'UKuroVehicleMovementComponent::RotPitchFrictionRatio' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxRotationPitchAcceleration) == 0x00023C, "Member 'UKuroVehicleMovementComponent::MaxRotationPitchAcceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, WaterDepth) == 0x000240, "Member 'UKuroVehicleMovementComponent::WaterDepth' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, WaterNormal) == 0x000244, "Member 'UKuroVehicleMovementComponent::WaterNormal' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RotationRate) == 0x000254, "Member 'UKuroVehicleMovementComponent::RotationRate' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, UseNewRotCalculation) == 0x000260, "Member 'UKuroVehicleMovementComponent::UseNewRotCalculation' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, Acceleration) == 0x000264, "Member 'UKuroVehicleMovementComponent::Acceleration' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, LastUpdateRotation) == 0x000270, "Member 'UKuroVehicleMovementComponent::LastUpdateRotation' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, LastUpdateLocation) == 0x000280, "Member 'UKuroVehicleMovementComponent::LastUpdateLocation' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, LastUpdateVelocity) == 0x00028C, "Member 'UKuroVehicleMovementComponent::LastUpdateVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, LastUpdateRotationVelocity) == 0x000298, "Member 'UKuroVehicleMovementComponent::LastUpdateRotationVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, PendingImpulseToApply) == 0x0002A4, "Member 'UKuroVehicleMovementComponent::PendingImpulseToApply' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, PendingForceToApply) == 0x0002B0, "Member 'UKuroVehicleMovementComponent::PendingForceToApply' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, PendingRotImpluseToApply) == 0x0002BC, "Member 'UKuroVehicleMovementComponent::PendingRotImpluseToApply' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, AnalogInputModifier) == 0x0002C8, "Member 'UKuroVehicleMovementComponent::AnalogInputModifier' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxSimulationTimeStep) == 0x000404, "Member 'UKuroVehicleMovementComponent::MaxSimulationTimeStep' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxSimulationIterations) == 0x000408, "Member 'UKuroVehicleMovementComponent::MaxSimulationIterations' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxSimulationRotationIterations) == 0x00040C, "Member 'UKuroVehicleMovementComponent::MaxSimulationRotationIterations' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxDepenetrationWithGeometry) == 0x000410, "Member 'UKuroVehicleMovementComponent::MaxDepenetrationWithGeometry' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxDepenetrationWithGeometryAsProxy) == 0x000414, "Member 'UKuroVehicleMovementComponent::MaxDepenetrationWithGeometryAsProxy' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxDepenetrationWithPawn) == 0x000418, "Member 'UKuroVehicleMovementComponent::MaxDepenetrationWithPawn' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxDepenetrationWithPawnAsProxy) == 0x00041C, "Member 'UKuroVehicleMovementComponent::MaxDepenetrationWithPawnAsProxy' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, CurrentRootMotion) == 0x000430, "Member 'UKuroVehicleMovementComponent::CurrentRootMotion' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RootMotionParams) == 0x000470, "Member 'UKuroVehicleMovementComponent::RootMotionParams' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, AnimRootMotionVelocity) == 0x0004B0, "Member 'UKuroVehicleMovementComponent::AnimRootMotionVelocity' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, DeferredUpdatedMoveComponent) == 0x0004E8, "Member 'UKuroVehicleMovementComponent::DeferredUpdatedMoveComponent' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bForbiddenTickPose) == 0x0004F0, "Member 'UKuroVehicleMovementComponent::bForbiddenTickPose' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorConfigDataTable) == 0x0004F8, "Member 'UKuroVehicleMovementComponent::MotorConfigDataTable' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorConfigHelper) == 0x000500, "Member 'UKuroVehicleMovementComponent::MotorConfigHelper' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bDebugDraw) == 0x000508, "Member 'UKuroVehicleMovementComponent::bDebugDraw' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bDebugDrawWheel) == 0x000509, "Member 'UKuroVehicleMovementComponent::bDebugDrawWheel' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bDebugDrawHang) == 0x00050A, "Member 'UKuroVehicleMovementComponent::bDebugDrawHang' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bDebugRecord) == 0x00050B, "Member 'UKuroVehicleMovementComponent::bDebugRecord' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bNoWheel) == 0x00050C, "Member 'UKuroVehicleMovementComponent::bNoWheel' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, bNewBoost) == 0x00050D, "Member 'UKuroVehicleMovementComponent::bNewBoost' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorShapeConfig) == 0x000510, "Member 'UKuroVehicleMovementComponent::MotorShapeConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxBaseMovementAccel) == 0x0005E0, "Member 'UKuroVehicleMovementComponent::MaxBaseMovementAccel' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MaxBaseMovementRotateAccel) == 0x0005E4, "Member 'UKuroVehicleMovementComponent::MaxBaseMovementRotateAccel' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorAirFriction) == 0x0005E8, "Member 'UKuroVehicleMovementComponent::MotorAirFriction' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, UseComplexCollisionSpeedThreshold) == 0x0005EC, "Member 'UKuroVehicleMovementComponent::UseComplexCollisionSpeedThreshold' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorStuckRotateFriction) == 0x0005FC, "Member 'UKuroVehicleMovementComponent::MotorStuckRotateFriction' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBodyAngularLengths) == 0x000600, "Member 'UKuroVehicleMovementComponent::MotorBodyAngularLengths' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBodyAngularRateInHitSpeed) == 0x000610, "Member 'UKuroVehicleMovementComponent::MotorBodyAngularRateInHitSpeed' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, HangRotateWeakenWhenTwoWheelOnGroup) == 0x000628, "Member 'UKuroVehicleMovementComponent::HangRotateWeakenWhenTwoWheelOnGroup' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorFrontWheelHang) == 0x000630, "Member 'UKuroVehicleMovementComponent::MotorFrontWheelHang' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBackWheelHang) == 0x000678, "Member 'UKuroVehicleMovementComponent::MotorBackWheelHang' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBodyPhys) == 0x0006C0, "Member 'UKuroVehicleMovementComponent::MotorBodyPhys' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorFrontWheelPhys) == 0x0006E0, "Member 'UKuroVehicleMovementComponent::MotorFrontWheelPhys' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBackWheelPhys) == 0x000700, "Member 'UKuroVehicleMovementComponent::MotorBackWheelPhys' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorAccelConfig) == 0x000720, "Member 'UKuroVehicleMovementComponent::MotorAccelConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBoostConfig) == 0x0008A0, "Member 'UKuroVehicleMovementComponent::MotorBoostConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBalanceConfig) == 0x0008C0, "Member 'UKuroVehicleMovementComponent::MotorBalanceConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorBrakingTurnConfig) == 0x0009F0, "Member 'UKuroVehicleMovementComponent::MotorBrakingTurnConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorTurnConfig) == 0x000A00, "Member 'UKuroVehicleMovementComponent::MotorTurnConfig' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, RootMotionMask) == 0x000A30, "Member 'UKuroVehicleMovementComponent::RootMotionMask' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, MotorSubState) == 0x000A32, "Member 'UKuroVehicleMovementComponent::MotorSubState' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, WheelDisplayInfosObj) == 0x000A38, "Member 'UKuroVehicleMovementComponent::WheelDisplayInfosObj' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, LastMotorHitPart) == 0x000A64, "Member 'UKuroVehicleMovementComponent::LastMotorHitPart' has a wrong offset!");
-static_assert(offsetof(UKuroVehicleMovementComponent, AccumulatedRootMotionInMotorRailMove) == 0x000A70, "Member 'UKuroVehicleMovementComponent::AccumulatedRootMotionInMotorRailMove' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroVehicleMovementComponent;
 
 }
 

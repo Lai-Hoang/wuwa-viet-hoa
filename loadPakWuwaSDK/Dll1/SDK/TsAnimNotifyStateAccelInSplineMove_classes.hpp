@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateAccelInSplineMove_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateAccelInSplineMove_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateAccelInSplineMove_C")
 	}
 	static class UTsAnimNotifyStateAccelInSplineMove_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateAccelInSplineMove_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateAccelInSplineMove_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateAccelInSplineMove_C");
-static_assert(sizeof(UTsAnimNotifyStateAccelInSplineMove_C) == 0x000048, "Wrong size on UTsAnimNotifyStateAccelInSplineMove_C");
+DUMPER7_ASSERTS_UTsAnimNotifyStateAccelInSplineMove_C;
 
 }
 

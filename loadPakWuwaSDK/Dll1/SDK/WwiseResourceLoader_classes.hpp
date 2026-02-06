@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "WwiseResourceLoader_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "WwiseResourceLoader_structs.hpp"
 
 
 namespace SDK
@@ -41,15 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseEventInfoLibrary">();
+		STATIC_CLASS_IMPL("WwiseEventInfoLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseEventInfoLibrary")
 	}
 	static class UWwiseEventInfoLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseEventInfoLibrary>();
 	}
 };
-static_assert(alignof(UWwiseEventInfoLibrary) == 0x000008, "Wrong alignment on UWwiseEventInfoLibrary");
-static_assert(sizeof(UWwiseEventInfoLibrary) == 0x000030, "Wrong size on UWwiseEventInfoLibrary");
+DUMPER7_ASSERTS_UWwiseEventInfoLibrary;
 
 // Class WwiseResourceLoader.WwiseGroupValueInfoLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -70,15 +73,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseGroupValueInfoLibrary">();
+		STATIC_CLASS_IMPL("WwiseGroupValueInfoLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseGroupValueInfoLibrary")
 	}
 	static class UWwiseGroupValueInfoLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseGroupValueInfoLibrary>();
 	}
 };
-static_assert(alignof(UWwiseGroupValueInfoLibrary) == 0x000008, "Wrong alignment on UWwiseGroupValueInfoLibrary");
-static_assert(sizeof(UWwiseGroupValueInfoLibrary) == 0x000030, "Wrong size on UWwiseGroupValueInfoLibrary");
+DUMPER7_ASSERTS_UWwiseGroupValueInfoLibrary;
 
 // Class WwiseResourceLoader.WwiseObjectInfoLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -99,15 +105,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseObjectInfoLibrary">();
+		STATIC_CLASS_IMPL("WwiseObjectInfoLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseObjectInfoLibrary")
 	}
 	static class UWwiseObjectInfoLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseObjectInfoLibrary>();
 	}
 };
-static_assert(alignof(UWwiseObjectInfoLibrary) == 0x000008, "Wrong alignment on UWwiseObjectInfoLibrary");
-static_assert(sizeof(UWwiseObjectInfoLibrary) == 0x000030, "Wrong size on UWwiseObjectInfoLibrary");
+DUMPER7_ASSERTS_UWwiseObjectInfoLibrary;
 
 // Class WwiseResourceLoader.WwiseResourceLoaderSettings
 // 0x0008 (0x0038 - 0x0030)
@@ -120,16 +129,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"WwiseResourceLoaderSettings">();
+		STATIC_CLASS_IMPL("WwiseResourceLoaderSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WwiseResourceLoaderSettings")
 	}
 	static class UWwiseResourceLoaderSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWwiseResourceLoaderSettings>();
 	}
 };
-static_assert(alignof(UWwiseResourceLoaderSettings) == 0x000008, "Wrong alignment on UWwiseResourceLoaderSettings");
-static_assert(sizeof(UWwiseResourceLoaderSettings) == 0x000038, "Wrong size on UWwiseResourceLoaderSettings");
-static_assert(offsetof(UWwiseResourceLoaderSettings, MaxAllowedMediaCount) == 0x000030, "Member 'UWwiseResourceLoaderSettings::MaxAllowedMediaCount' has a wrong offset!");
+DUMPER7_ASSERTS_UWwiseResourceLoaderSettings;
 
 }
 

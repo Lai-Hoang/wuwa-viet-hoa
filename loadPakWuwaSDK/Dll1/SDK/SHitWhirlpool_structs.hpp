@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "EVelocityCurveType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -28,13 +28,7 @@ public:
 	float                                         滞空高度限制_9_D9BA1A4A4F1C80FCC810AEB680D11EE6;   // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EVelocityCurveType                            到滞空点曲线_14_D323D25D47BB71B70E1380AD0493BA46;  // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSHitWhirlpool) == 0x000004, "Wrong alignment on FSHitWhirlpool");
-static_assert(sizeof(FSHitWhirlpool) == 0x00001C, "Wrong size on FSHitWhirlpool");
-static_assert(offsetof(FSHitWhirlpool, 滞空相对位置_2_E509B0D94B74577DF943C6852E674B86) == 0x000000, "Member 'FSHitWhirlpool::滞空相对位置_2_E509B0D94B74577DF943C6852E674B86' has a wrong offset!");
-static_assert(offsetof(FSHitWhirlpool, 滞空时间_5_FB0109EF42D8FE69C4DB468351F305A1) == 0x00000C, "Member 'FSHitWhirlpool::滞空时间_5_FB0109EF42D8FE69C4DB468351F305A1' has a wrong offset!");
-static_assert(offsetof(FSHitWhirlpool, 到滞空点时间_7_61A68E1145012B8E476993901D6BC1CD) == 0x000010, "Member 'FSHitWhirlpool::到滞空点时间_7_61A68E1145012B8E476993901D6BC1CD' has a wrong offset!");
-static_assert(offsetof(FSHitWhirlpool, 滞空高度限制_9_D9BA1A4A4F1C80FCC810AEB680D11EE6) == 0x000014, "Member 'FSHitWhirlpool::滞空高度限制_9_D9BA1A4A4F1C80FCC810AEB680D11EE6' has a wrong offset!");
-static_assert(offsetof(FSHitWhirlpool, 到滞空点曲线_14_D323D25D47BB71B70E1380AD0493BA46) == 0x000018, "Member 'FSHitWhirlpool::到滞空点曲线_14_D323D25D47BB71B70E1380AD0493BA46' has a wrong offset!");
+DUMPER7_ASSERTS_FSHitWhirlpool;
 
 }
 

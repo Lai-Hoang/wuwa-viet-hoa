@@ -31,16 +31,7 @@ public:
 	TMap<class FString, struct FVector>           ComponentVectorParams_53_C0A8581049F160B04B67A682CF9BEFCB; // 0x0108(0x0050)(Edit, BlueprintVisible)
 	TArray<class FString>                         MontageSubPathNames_76_783C9DE54B7B0BFF4DB9A68F0DCE4BD5; // 0x0158(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSCharacterMorphInfo) == 0x000008, "Wrong alignment on FSCharacterMorphInfo");
-static_assert(sizeof(FSCharacterMorphInfo) == 0x000168, "Wrong size on FSCharacterMorphInfo");
-static_assert(offsetof(FSCharacterMorphInfo, ModelId_62_5202D2AA4F4DA33494891EBD8E83733D) == 0x000000, "Member 'FSCharacterMorphInfo::ModelId_62_5202D2AA4F4DA33494891EBD8E83733D' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, PartHitEffect_8_8A594A224174CCFC8F483385BEA1229B) == 0x000008, "Member 'FSCharacterMorphInfo::PartHitEffect_8_8A594A224174CCFC8F483385BEA1229B' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, DtBaseMovementSetting_35_D507C4BE448666AAF58420AF279349A1) == 0x000038, "Member 'FSCharacterMorphInfo::DtBaseMovementSetting_35_D507C4BE448666AAF58420AF279349A1' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, DtCameraConfig_39_6F8A730F417C432A5058868162134252) == 0x000068, "Member 'FSCharacterMorphInfo::DtCameraConfig_39_6F8A730F417C432A5058868162134252' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, InputComponentClass_20_0FD69A094FD3A1700738B19B0C95A282) == 0x000098, "Member 'FSCharacterMorphInfo::InputComponentClass_20_0FD69A094FD3A1700738B19B0C95A282' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, ComponentFloatParams_32_6A753755476D47407590F9BF7B4E14C5) == 0x0000B8, "Member 'FSCharacterMorphInfo::ComponentFloatParams_32_6A753755476D47407590F9BF7B4E14C5' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, ComponentVectorParams_53_C0A8581049F160B04B67A682CF9BEFCB) == 0x000108, "Member 'FSCharacterMorphInfo::ComponentVectorParams_53_C0A8581049F160B04B67A682CF9BEFCB' has a wrong offset!");
-static_assert(offsetof(FSCharacterMorphInfo, MontageSubPathNames_76_783C9DE54B7B0BFF4DB9A68F0DCE4BD5) == 0x000158, "Member 'FSCharacterMorphInfo::MontageSubPathNames_76_783C9DE54B7B0BFF4DB9A68F0DCE4BD5' has a wrong offset!");
+DUMPER7_ASSERTS_FSCharacterMorphInfo;
 
 }
 

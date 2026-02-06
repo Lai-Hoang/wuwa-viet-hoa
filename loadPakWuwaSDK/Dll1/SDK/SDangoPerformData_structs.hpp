@@ -30,13 +30,7 @@ public:
 	int32                                         持续时间_18_96B96E9049896E613A368C89A1B71E0A;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSDangoPerformEffectData>       特效列表_33_62779FA1436B03CF90C8B08631F171C0;      // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSDangoPerformData) == 0x000008, "Wrong alignment on FSDangoPerformData");
-static_assert(sizeof(FSDangoPerformData) == 0x000018, "Wrong size on FSDangoPerformData");
-static_assert(offsetof(FSDangoPerformData, 动画类型_24_7B80A5044CF32ED388D0C591C496CBCB) == 0x000000, "Member 'FSDangoPerformData::动画类型_24_7B80A5044CF32ED388D0C591C496CBCB' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformData, 动画目标类型_29_B9A69F7642C88976D2011AB615DFC4DC) == 0x000001, "Member 'FSDangoPerformData::动画目标类型_29_B9A69F7642C88976D2011AB615DFC4DC' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformData, 堆叠上方团子动画类型_37_6A27358545CF21CB314837A58BF92AEF) == 0x000002, "Member 'FSDangoPerformData::堆叠上方团子动画类型_37_6A27358545CF21CB314837A58BF92AEF' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformData, 持续时间_18_96B96E9049896E613A368C89A1B71E0A) == 0x000004, "Member 'FSDangoPerformData::持续时间_18_96B96E9049896E613A368C89A1B71E0A' has a wrong offset!");
-static_assert(offsetof(FSDangoPerformData, 特效列表_33_62779FA1436B03CF90C8B08631F171C0) == 0x000008, "Member 'FSDangoPerformData::特效列表_33_62779FA1436B03CF90C8B08631F171C0' has a wrong offset!");
+DUMPER7_ASSERTS_FSDangoPerformData;
 
 }
 

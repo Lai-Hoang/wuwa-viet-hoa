@@ -30,14 +30,7 @@ public:
 	struct FGameplayTag                           ContinueWithTag_16_1F5D6EA442683D4388BE9BB0556BCBFC; // 0x001C(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 	EBatchBulletMoveStartMode                     StartMoving_32_993E6A4B46D8B905DD17208668997759;   // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSSkillBehaviorBatchBullet) == 0x000008, "Wrong alignment on FSSkillBehaviorBatchBullet");
-static_assert(sizeof(FSSkillBehaviorBatchBullet) == 0x000030, "Wrong size on FSSkillBehaviorBatchBullet");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, Id_6_8FE506A0458B0E0701BFE7AEDFD6181E) == 0x000000, "Member 'FSSkillBehaviorBatchBullet::Id_6_8FE506A0458B0E0701BFE7AEDFD6181E' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, Number_8_78812FCC4A2FCEA503BC5A8C56937263) == 0x000010, "Member 'FSSkillBehaviorBatchBullet::Number_8_78812FCC4A2FCEA503BC5A8C56937263' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, Interval_34_E67917754543239196555A8D640EA3A7) == 0x000014, "Member 'FSSkillBehaviorBatchBullet::Interval_34_E67917754543239196555A8D640EA3A7' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, StopOnSkillEnd_13_88AF95154AC08739142C7E91EEF56EC3) == 0x000018, "Member 'FSSkillBehaviorBatchBullet::StopOnSkillEnd_13_88AF95154AC08739142C7E91EEF56EC3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, ContinueWithTag_16_1F5D6EA442683D4388BE9BB0556BCBFC) == 0x00001C, "Member 'FSSkillBehaviorBatchBullet::ContinueWithTag_16_1F5D6EA442683D4388BE9BB0556BCBFC' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorBatchBullet, StartMoving_32_993E6A4B46D8B905DD17208668997759) == 0x000028, "Member 'FSSkillBehaviorBatchBullet::StartMoving_32_993E6A4B46D8B905DD17208668997759' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehaviorBatchBullet;
 
 }
 

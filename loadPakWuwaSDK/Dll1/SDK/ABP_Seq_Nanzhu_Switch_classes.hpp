@@ -23,15 +23,18 @@ class UABP_Seq_Nanzhu_Switch_C final : public UABP_Switch_Seq_V2_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Seq_Nanzhu_Switch_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Seq_Nanzhu_Switch_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Seq_Nanzhu_Switch_C")
 	}
 	static class UABP_Seq_Nanzhu_Switch_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Seq_Nanzhu_Switch_C>();
 	}
 };
-static_assert(alignof(UABP_Seq_Nanzhu_Switch_C) == 0x000010, "Wrong alignment on UABP_Seq_Nanzhu_Switch_C");
-static_assert(sizeof(UABP_Seq_Nanzhu_Switch_C) == 0x000A50, "Wrong size on UABP_Seq_Nanzhu_Switch_C");
+DUMPER7_ASSERTS_UABP_Seq_Nanzhu_Switch_C;
 
 }
 

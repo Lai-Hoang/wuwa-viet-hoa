@@ -25,25 +25,26 @@ public:
 	bool                                          HideMeshAfterPlay;                                 // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
+	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyAddMeshMaterialControllerData_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyAddMeshMaterialControllerData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyAddMeshMaterialControllerData_C")
 	}
 	static class UAnimNotifyAddMeshMaterialControllerData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyAddMeshMaterialControllerData_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyAddMeshMaterialControllerData_C) == 0x000008, "Wrong alignment on UAnimNotifyAddMeshMaterialControllerData_C");
-static_assert(sizeof(UAnimNotifyAddMeshMaterialControllerData_C) == 0x000058, "Wrong size on UAnimNotifyAddMeshMaterialControllerData_C");
-static_assert(offsetof(UAnimNotifyAddMeshMaterialControllerData_C, MaterialAssetData) == 0x000048, "Member 'UAnimNotifyAddMeshMaterialControllerData_C::MaterialAssetData' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyAddMeshMaterialControllerData_C, HideMeshAfterPlay) == 0x000050, "Member 'UAnimNotifyAddMeshMaterialControllerData_C::HideMeshAfterPlay' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotifyAddMeshMaterialControllerData_C;
 
 }
 

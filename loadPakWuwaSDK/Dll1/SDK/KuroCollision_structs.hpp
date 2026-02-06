@@ -14,6 +14,15 @@
 namespace SDK
 {
 
+// Enum KuroCollision.ECollisionClusterSerializeVersion
+// NumValues: 0x0003
+enum class ECollisionClusterSerializeVersion : uint8
+{
+	Origin                                   = 0,
+	Tags                                     = 1,
+	ECollisionClusterSerializeVersion_MAX    = 2,
+};
+
 // ScriptStruct KuroCollision.KuroBodySetupInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FKuroBodySetupInfo final
@@ -22,9 +31,7 @@ public:
 	class UBodySetup*                             BodySetup;                                         // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroBodySetupInfo) == 0x000008, "Wrong alignment on FKuroBodySetupInfo");
-static_assert(sizeof(FKuroBodySetupInfo) == 0x000010, "Wrong size on FKuroBodySetupInfo");
-static_assert(offsetof(FKuroBodySetupInfo, BodySetup) == 0x000000, "Member 'FKuroBodySetupInfo::BodySetup' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroBodySetupInfo;
 
 }
 

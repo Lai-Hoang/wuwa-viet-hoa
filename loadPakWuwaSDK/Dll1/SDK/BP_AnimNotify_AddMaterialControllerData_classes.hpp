@@ -23,15 +23,18 @@ class UBP_AnimNotify_AddMaterialControllerData_C final : public UAnimNotifyAddMa
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AnimNotify_AddMaterialControllerData_C">();
+		BP_STATIC_CLASS_IMPL("BP_AnimNotify_AddMaterialControllerData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AnimNotify_AddMaterialControllerData_C")
 	}
 	static class UBP_AnimNotify_AddMaterialControllerData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AnimNotify_AddMaterialControllerData_C>();
 	}
 };
-static_assert(alignof(UBP_AnimNotify_AddMaterialControllerData_C) == 0x000008, "Wrong alignment on UBP_AnimNotify_AddMaterialControllerData_C");
-static_assert(sizeof(UBP_AnimNotify_AddMaterialControllerData_C) == 0x000058, "Wrong size on UBP_AnimNotify_AddMaterialControllerData_C");
+DUMPER7_ASSERTS_UBP_AnimNotify_AddMaterialControllerData_C;
 
 }
 

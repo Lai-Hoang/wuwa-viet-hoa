@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSWaterEffectItem>              EffectConfig_11_200FB8B949A0725155F4338213E110FB;  // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSWaterEffectGroup) == 0x000008, "Wrong alignment on FSWaterEffectGroup");
-static_assert(sizeof(FSWaterEffectGroup) == 0x000018, "Wrong size on FSWaterEffectGroup");
-static_assert(offsetof(FSWaterEffectGroup, WaterDepth_7_F583B78840B6993AE0DE088887941E47) == 0x000000, "Member 'FSWaterEffectGroup::WaterDepth_7_F583B78840B6993AE0DE088887941E47' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectGroup, EffectConfig_11_200FB8B949A0725155F4338213E110FB) == 0x000008, "Member 'FSWaterEffectGroup::EffectConfig_11_200FB8B949A0725155F4338213E110FB' has a wrong offset!");
+DUMPER7_ASSERTS_FSWaterEffectGroup;
 
 }
 

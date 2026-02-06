@@ -95,8 +95,7 @@ struct alignas(0x08) FKuroGeometryGeneralPolygonList final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroGeometryGeneralPolygonList) == 0x000008, "Wrong alignment on FKuroGeometryGeneralPolygonList");
-static_assert(sizeof(FKuroGeometryGeneralPolygonList) == 0x000010, "Wrong size on FKuroGeometryGeneralPolygonList");
+DUMPER7_ASSERTS_FKuroGeometryGeneralPolygonList;
 
 // ScriptStruct KuroMath.KuroGeometrySimplePolygon
 // 0x0010 (0x0010 - 0x0000)
@@ -105,8 +104,7 @@ struct alignas(0x08) FKuroGeometrySimplePolygon final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroGeometrySimplePolygon) == 0x000008, "Wrong alignment on FKuroGeometrySimplePolygon");
-static_assert(sizeof(FKuroGeometrySimplePolygon) == 0x000010, "Wrong size on FKuroGeometrySimplePolygon");
+DUMPER7_ASSERTS_FKuroGeometrySimplePolygon;
 
 // ScriptStruct KuroMath.KuroSplineSamplingOptions
 // 0x000C (0x000C - 0x0000)
@@ -119,12 +117,7 @@ public:
 	ESplineCoordinateSpace                        CoordinateSpace;                                   // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroSplineSamplingOptions) == 0x000004, "Wrong alignment on FKuroSplineSamplingOptions");
-static_assert(sizeof(FKuroSplineSamplingOptions) == 0x00000C, "Wrong size on FKuroSplineSamplingOptions");
-static_assert(offsetof(FKuroSplineSamplingOptions, NumSamples) == 0x000000, "Member 'FKuroSplineSamplingOptions::NumSamples' has a wrong offset!");
-static_assert(offsetof(FKuroSplineSamplingOptions, ErrorTolerance) == 0x000004, "Member 'FKuroSplineSamplingOptions::ErrorTolerance' has a wrong offset!");
-static_assert(offsetof(FKuroSplineSamplingOptions, SampleSpacing) == 0x000008, "Member 'FKuroSplineSamplingOptions::SampleSpacing' has a wrong offset!");
-static_assert(offsetof(FKuroSplineSamplingOptions, CoordinateSpace) == 0x000009, "Member 'FKuroSplineSamplingOptions::CoordinateSpace' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroSplineSamplingOptions;
 
 // ScriptStruct KuroMath.Vector2DArrayStruct
 // 0x0010 (0x0010 - 0x0000)
@@ -133,9 +126,7 @@ struct FVector2DArrayStruct final
 public:
 	TArray<struct FVector2D>                      Vector2Ds;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FVector2DArrayStruct) == 0x000008, "Wrong alignment on FVector2DArrayStruct");
-static_assert(sizeof(FVector2DArrayStruct) == 0x000010, "Wrong size on FVector2DArrayStruct");
-static_assert(offsetof(FVector2DArrayStruct, Vector2Ds) == 0x000000, "Member 'FVector2DArrayStruct::Vector2Ds' has a wrong offset!");
+DUMPER7_ASSERTS_FVector2DArrayStruct;
 
 }
 

@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NetAnalyticsAggregatorConfig">();
+		STATIC_CLASS_IMPL("NetAnalyticsAggregatorConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NetAnalyticsAggregatorConfig")
 	}
 	static class UNetAnalyticsAggregatorConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNetAnalyticsAggregatorConfig>();
 	}
 };
-static_assert(alignof(UNetAnalyticsAggregatorConfig) == 0x000008, "Wrong alignment on UNetAnalyticsAggregatorConfig");
-static_assert(sizeof(UNetAnalyticsAggregatorConfig) == 0x000040, "Wrong size on UNetAnalyticsAggregatorConfig");
-static_assert(offsetof(UNetAnalyticsAggregatorConfig, NetAnalyticsData) == 0x000030, "Member 'UNetAnalyticsAggregatorConfig::NetAnalyticsData' has a wrong offset!");
+DUMPER7_ASSERTS_UNetAnalyticsAggregatorConfig;
 
 }
 

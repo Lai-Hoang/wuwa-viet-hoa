@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Class KuroGamepadFeedbackSequenceRuntime.KuroMovieSceneGamepadForceFeedbackSection
-// 0x0048 (0x0140 - 0x00F8)
+// 0x0050 (0x0148 - 0x00F8)
 class UKuroMovieSceneGamepadForceFeedbackSection final : public UMovieSceneSection
 {
 public:
@@ -29,50 +29,51 @@ public:
 	uint8                                         Pad_12D[0x3];                                      // 0x012D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FadeOutTime;                                       // 0x0130(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EEasingType                                   FadeOutEasingType;                                 // 0x0134(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135[0xB];                                      // 0x0135(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Scale;                                             // 0x0138(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13C[0xC];                                      // 0x013C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMovieSceneGamepadForceFeedbackSection">();
+		STATIC_CLASS_IMPL("KuroMovieSceneGamepadForceFeedbackSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMovieSceneGamepadForceFeedbackSection")
 	}
 	static class UKuroMovieSceneGamepadForceFeedbackSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMovieSceneGamepadForceFeedbackSection>();
 	}
 };
-static_assert(alignof(UKuroMovieSceneGamepadForceFeedbackSection) == 0x000008, "Wrong alignment on UKuroMovieSceneGamepadForceFeedbackSection");
-static_assert(sizeof(UKuroMovieSceneGamepadForceFeedbackSection) == 0x000140, "Wrong size on UKuroMovieSceneGamepadForceFeedbackSection");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackSection, GamepadForceFeedbackEffect) == 0x000120, "Member 'UKuroMovieSceneGamepadForceFeedbackSection::GamepadForceFeedbackEffect' has a wrong offset!");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackSection, FadeInTime) == 0x000128, "Member 'UKuroMovieSceneGamepadForceFeedbackSection::FadeInTime' has a wrong offset!");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackSection, FadeInEasingType) == 0x00012C, "Member 'UKuroMovieSceneGamepadForceFeedbackSection::FadeInEasingType' has a wrong offset!");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackSection, FadeOutTime) == 0x000130, "Member 'UKuroMovieSceneGamepadForceFeedbackSection::FadeOutTime' has a wrong offset!");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackSection, FadeOutEasingType) == 0x000134, "Member 'UKuroMovieSceneGamepadForceFeedbackSection::FadeOutEasingType' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroMovieSceneGamepadForceFeedbackSection;
 
 // Class KuroGamepadFeedbackSequenceRuntime.KuroMovieSceneGamepadForceFeedbackTrack
-// 0x0020 (0x00A0 - 0x0080)
+// 0x0020 (0x00B8 - 0x0098)
 class UKuroMovieSceneGamepadForceFeedbackTrack final : public UMovieSceneTrack
 {
 public:
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0088(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsAMasterTrack;                                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsAMasterTrack;                                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMovieSceneGamepadForceFeedbackTrack">();
+		STATIC_CLASS_IMPL("KuroMovieSceneGamepadForceFeedbackTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMovieSceneGamepadForceFeedbackTrack")
 	}
 	static class UKuroMovieSceneGamepadForceFeedbackTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMovieSceneGamepadForceFeedbackTrack>();
 	}
 };
-static_assert(alignof(UKuroMovieSceneGamepadForceFeedbackTrack) == 0x000008, "Wrong alignment on UKuroMovieSceneGamepadForceFeedbackTrack");
-static_assert(sizeof(UKuroMovieSceneGamepadForceFeedbackTrack) == 0x0000A0, "Wrong size on UKuroMovieSceneGamepadForceFeedbackTrack");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackTrack, Sections) == 0x000088, "Member 'UKuroMovieSceneGamepadForceFeedbackTrack::Sections' has a wrong offset!");
-static_assert(offsetof(UKuroMovieSceneGamepadForceFeedbackTrack, bIsAMasterTrack) == 0x000098, "Member 'UKuroMovieSceneGamepadForceFeedbackTrack::bIsAMasterTrack' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroMovieSceneGamepadForceFeedbackTrack;
 
 }
 

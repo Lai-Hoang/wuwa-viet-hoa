@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -38,20 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateWeaponHang_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateWeaponHang_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateWeaponHang_C")
 	}
 	static class UTsAnimNotifyStateWeaponHang_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateWeaponHang_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateWeaponHang_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateWeaponHang_C");
-static_assert(sizeof(UTsAnimNotifyStateWeaponHang_C) == 0x000078, "Wrong size on UTsAnimNotifyStateWeaponHang_C");
-static_assert(offsetof(UTsAnimNotifyStateWeaponHang_C, Id) == 0x000048, "Member 'UTsAnimNotifyStateWeaponHang_C::Id' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateWeaponHang_C, 新的挂载点名) == 0x000050, "Member 'UTsAnimNotifyStateWeaponHang_C::新的挂载点名' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateWeaponHang_C, 挂载相对位置) == 0x000060, "Member 'UTsAnimNotifyStateWeaponHang_C::挂载相对位置' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateWeaponHang_C, 结束后状态) == 0x000070, "Member 'UTsAnimNotifyStateWeaponHang_C::结束后状态' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateWeaponHang_C, 缓冲时间) == 0x000074, "Member 'UTsAnimNotifyStateWeaponHang_C::缓冲时间' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateWeaponHang_C;
 
 }
 

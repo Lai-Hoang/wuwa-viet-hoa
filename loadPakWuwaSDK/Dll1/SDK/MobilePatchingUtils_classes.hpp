@@ -32,15 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MobileInstalledContent">();
+		STATIC_CLASS_IMPL("MobileInstalledContent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MobileInstalledContent")
 	}
 	static class UMobileInstalledContent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMobileInstalledContent>();
 	}
 };
-static_assert(alignof(UMobileInstalledContent) == 0x000008, "Wrong alignment on UMobileInstalledContent");
-static_assert(sizeof(UMobileInstalledContent) == 0x000050, "Wrong size on UMobileInstalledContent");
+DUMPER7_ASSERTS_UMobileInstalledContent;
 
 // Class MobilePatchingUtils.MobilePendingContent
 // 0x0040 (0x0090 - 0x0050)
@@ -61,15 +64,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MobilePendingContent">();
+		STATIC_CLASS_IMPL("MobilePendingContent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MobilePendingContent")
 	}
 	static class UMobilePendingContent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMobilePendingContent>();
 	}
 };
-static_assert(alignof(UMobilePendingContent) == 0x000008, "Wrong alignment on UMobilePendingContent");
-static_assert(sizeof(UMobilePendingContent) == 0x000090, "Wrong size on UMobilePendingContent");
+DUMPER7_ASSERTS_UMobilePendingContent;
 
 // Class MobilePatchingUtils.MobilePatchingLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -85,15 +91,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MobilePatchingLibrary">();
+		STATIC_CLASS_IMPL("MobilePatchingLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MobilePatchingLibrary")
 	}
 	static class UMobilePatchingLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMobilePatchingLibrary>();
 	}
 };
-static_assert(alignof(UMobilePatchingLibrary) == 0x000008, "Wrong alignment on UMobilePatchingLibrary");
-static_assert(sizeof(UMobilePatchingLibrary) == 0x000030, "Wrong size on UMobilePatchingLibrary");
+DUMPER7_ASSERTS_UMobilePatchingLibrary;
 
 }
 

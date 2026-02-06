@@ -23,15 +23,18 @@ class UWP_Gloomy_C final : public UWeatherPreset_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WP_Gloomy_C">();
+		BP_STATIC_CLASS_IMPL("WP_Gloomy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WP_Gloomy_C")
 	}
 	static class UWP_Gloomy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWP_Gloomy_C>();
 	}
 };
-static_assert(alignof(UWP_Gloomy_C) == 0x000008, "Wrong alignment on UWP_Gloomy_C");
-static_assert(sizeof(UWP_Gloomy_C) == 0x0000A0, "Wrong size on UWP_Gloomy_C");
+DUMPER7_ASSERTS_UWP_Gloomy_C;
 
 }
 

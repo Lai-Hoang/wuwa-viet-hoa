@@ -30,20 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_BindStateSkillCounter_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_BindStateSkillCounter_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_BindStateSkillCounter_C")
 	}
 	static class UBP_SM_BindStateSkillCounter_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_BindStateSkillCounter_C>();
 	}
 };
-static_assert(alignof(UBP_SM_BindStateSkillCounter_C) == 0x000008, "Wrong alignment on UBP_SM_BindStateSkillCounter_C");
-static_assert(sizeof(UBP_SM_BindStateSkillCounter_C) == 0x000060, "Wrong size on UBP_SM_BindStateSkillCounter_C");
-static_assert(offsetof(UBP_SM_BindStateSkillCounter_C, SkillIds) == 0x000030, "Member 'UBP_SM_BindStateSkillCounter_C::SkillIds' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateSkillCounter_C, 黑板Key) == 0x000040, "Member 'UBP_SM_BindStateSkillCounter_C::黑板Key' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateSkillCounter_C, 增加值Min) == 0x000050, "Member 'UBP_SM_BindStateSkillCounter_C::增加值Min' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateSkillCounter_C, 增加值Max) == 0x000054, "Member 'UBP_SM_BindStateSkillCounter_C::增加值Max' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateSkillCounter_C, 重置) == 0x000058, "Member 'UBP_SM_BindStateSkillCounter_C::重置' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_BindStateSkillCounter_C;
 
 }
 

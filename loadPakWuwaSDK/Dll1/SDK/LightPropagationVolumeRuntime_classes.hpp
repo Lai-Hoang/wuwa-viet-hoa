@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LightPropagationVolumeBlendable">();
+		STATIC_CLASS_IMPL("LightPropagationVolumeBlendable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LightPropagationVolumeBlendable")
 	}
 	static class ULightPropagationVolumeBlendable* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULightPropagationVolumeBlendable>();
 	}
 };
-static_assert(alignof(ULightPropagationVolumeBlendable) == 0x000008, "Wrong alignment on ULightPropagationVolumeBlendable");
-static_assert(sizeof(ULightPropagationVolumeBlendable) == 0x000080, "Wrong size on ULightPropagationVolumeBlendable");
-static_assert(offsetof(ULightPropagationVolumeBlendable, Settings) == 0x000038, "Member 'ULightPropagationVolumeBlendable::Settings' has a wrong offset!");
-static_assert(offsetof(ULightPropagationVolumeBlendable, BlendWeight) == 0x000078, "Member 'ULightPropagationVolumeBlendable::BlendWeight' has a wrong offset!");
+DUMPER7_ASSERTS_ULightPropagationVolumeBlendable;
 
 }
 

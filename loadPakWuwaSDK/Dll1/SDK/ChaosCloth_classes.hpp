@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ChaosCloth_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
 
@@ -70,48 +70,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothConfig">();
+		STATIC_CLASS_IMPL("ChaosClothConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothConfig")
 	}
 	static class UChaosClothConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothConfig>();
 	}
 };
-static_assert(alignof(UChaosClothConfig) == 0x000008, "Wrong alignment on UChaosClothConfig");
-static_assert(sizeof(UChaosClothConfig) == 0x0000B8, "Wrong size on UChaosClothConfig");
-static_assert(offsetof(UChaosClothConfig, MassMode) == 0x000030, "Member 'UChaosClothConfig::MassMode' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, UniformMass) == 0x000034, "Member 'UChaosClothConfig::UniformMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, TotalMass) == 0x000038, "Member 'UChaosClothConfig::TotalMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Density) == 0x00003C, "Member 'UChaosClothConfig::Density' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, MinPerParticleMass) == 0x000040, "Member 'UChaosClothConfig::MinPerParticleMass' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, EdgeStiffness) == 0x000044, "Member 'UChaosClothConfig::EdgeStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, BendingStiffness) == 0x000048, "Member 'UChaosClothConfig::BendingStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseBendingElements) == 0x00004C, "Member 'UChaosClothConfig::bUseBendingElements' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AreaStiffness) == 0x000050, "Member 'UChaosClothConfig::AreaStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, VolumeStiffness) == 0x000054, "Member 'UChaosClothConfig::VolumeStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, StrainLimitingStiffness) == 0x000058, "Member 'UChaosClothConfig::StrainLimitingStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LimitScale) == 0x00005C, "Member 'UChaosClothConfig::LimitScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, TetherMode) == 0x000060, "Member 'UChaosClothConfig::TetherMode' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseGeodesicDistance) == 0x000061, "Member 'UChaosClothConfig::bUseGeodesicDistance' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, ShapeTargetStiffness) == 0x000064, "Member 'UChaosClothConfig::ShapeTargetStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, CollisionThickness) == 0x000068, "Member 'UChaosClothConfig::CollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, FrictionCoefficient) == 0x00006C, "Member 'UChaosClothConfig::FrictionCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseSelfCollisions) == 0x000070, "Member 'UChaosClothConfig::bUseSelfCollisions' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, SelfCollisionThickness) == 0x000074, "Member 'UChaosClothConfig::SelfCollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseLegacyBackstop) == 0x000078, "Member 'UChaosClothConfig::bUseLegacyBackstop' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, DampingCoefficient) == 0x00007C, "Member 'UChaosClothConfig::DampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUsePointBasedWindModel) == 0x000080, "Member 'UChaosClothConfig::bUsePointBasedWindModel' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, DragCoefficient) == 0x000084, "Member 'UChaosClothConfig::DragCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LiftCoefficient) == 0x000088, "Member 'UChaosClothConfig::LiftCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseGravityOverride) == 0x00008C, "Member 'UChaosClothConfig::bUseGravityOverride' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, GravityScale) == 0x000090, "Member 'UChaosClothConfig::GravityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Gravity) == 0x000094, "Member 'UChaosClothConfig::Gravity' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveSpringStiffness) == 0x0000A0, "Member 'UChaosClothConfig::AnimDriveSpringStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LinearVelocityScale) == 0x0000A4, "Member 'UChaosClothConfig::LinearVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AngularVelocityScale) == 0x0000B0, "Member 'UChaosClothConfig::AngularVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseTetrahedralConstraints) == 0x0000B4, "Member 'UChaosClothConfig::bUseTetrahedralConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseThinShellVolumeConstraints) == 0x0000B5, "Member 'UChaosClothConfig::bUseThinShellVolumeConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseContinuousCollisionDetection) == 0x0000B6, "Member 'UChaosClothConfig::bUseContinuousCollisionDetection' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosClothConfig;
 
 // Class ChaosCloth.ChaosClothSharedSimConfig
 // 0x0030 (0x0060 - 0x0030)
@@ -136,26 +106,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothSharedSimConfig">();
+		STATIC_CLASS_IMPL("ChaosClothSharedSimConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothSharedSimConfig")
 	}
 	static class UChaosClothSharedSimConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothSharedSimConfig>();
 	}
 };
-static_assert(alignof(UChaosClothSharedSimConfig) == 0x000008, "Wrong alignment on UChaosClothSharedSimConfig");
-static_assert(sizeof(UChaosClothSharedSimConfig) == 0x000060, "Wrong size on UChaosClothSharedSimConfig");
-static_assert(offsetof(UChaosClothSharedSimConfig, IterationCount) == 0x000030, "Member 'UChaosClothSharedSimConfig::IterationCount' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, SubdivisionCount) == 0x000034, "Member 'UChaosClothSharedSimConfig::SubdivisionCount' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, SelfCollisionThickness) == 0x000038, "Member 'UChaosClothSharedSimConfig::SelfCollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, CollisionThickness) == 0x00003C, "Member 'UChaosClothSharedSimConfig::CollisionThickness' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseDampingOverride) == 0x000040, "Member 'UChaosClothSharedSimConfig::bUseDampingOverride' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, Damping) == 0x000044, "Member 'UChaosClothSharedSimConfig::Damping' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseGravityOverride) == 0x000048, "Member 'UChaosClothSharedSimConfig::bUseGravityOverride' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, GravityScale) == 0x00004C, "Member 'UChaosClothSharedSimConfig::GravityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, Gravity) == 0x000050, "Member 'UChaosClothSharedSimConfig::Gravity' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseLocalSpaceSimulation) == 0x00005C, "Member 'UChaosClothSharedSimConfig::bUseLocalSpaceSimulation' has a wrong offset!");
-static_assert(offsetof(UChaosClothSharedSimConfig, bUseXPBDConstraints) == 0x00005D, "Member 'UChaosClothSharedSimConfig::bUseXPBDConstraints' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosClothSharedSimConfig;
 
 // Class ChaosCloth.ChaosClothingSimulationFactory
 // 0x0000 (0x0030 - 0x0030)
@@ -164,15 +126,18 @@ class UChaosClothingSimulationFactory final : public UClothingSimulationFactory
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothingSimulationFactory">();
+		STATIC_CLASS_IMPL("ChaosClothingSimulationFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothingSimulationFactory")
 	}
 	static class UChaosClothingSimulationFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothingSimulationFactory>();
 	}
 };
-static_assert(alignof(UChaosClothingSimulationFactory) == 0x000008, "Wrong alignment on UChaosClothingSimulationFactory");
-static_assert(sizeof(UChaosClothingSimulationFactory) == 0x000030, "Wrong size on UChaosClothingSimulationFactory");
+DUMPER7_ASSERTS_UChaosClothingSimulationFactory;
 
 // Class ChaosCloth.ChaosClothingSimulationInteractor
 // 0x0028 (0x0060 - 0x0038)
@@ -184,15 +149,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosClothingSimulationInteractor">();
+		STATIC_CLASS_IMPL("ChaosClothingSimulationInteractor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosClothingSimulationInteractor")
 	}
 	static class UChaosClothingSimulationInteractor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosClothingSimulationInteractor>();
 	}
 };
-static_assert(alignof(UChaosClothingSimulationInteractor) == 0x000008, "Wrong alignment on UChaosClothingSimulationInteractor");
-static_assert(sizeof(UChaosClothingSimulationInteractor) == 0x000060, "Wrong size on UChaosClothingSimulationInteractor");
+DUMPER7_ASSERTS_UChaosClothingSimulationInteractor;
 
 }
 

@@ -56,36 +56,7 @@ public:
 	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue) == 0x000008, "Wrong alignment on BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue");
-static_assert(sizeof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue) == 0x0000A8, "Wrong size on BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, AnimIns) == 0x000000, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::AnimIns' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, __WorldContext) == 0x000008, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::__WorldContext' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, Value) == 0x000010, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::Value' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, Phy) == 0x000014, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::Phy' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, 物理模拟权重) == 0x000018, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::物理模拟权重' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, ___bool_Variable) == 0x00001C, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetCurveValue_ReturnValue) == 0x000020, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetOuterObject_ReturnValue) == 0x000028, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetOuterObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetOuterObject_ReturnValue_1) == 0x000030, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetOuterObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, K2Node_DynamicCast_As_____actor) == 0x000038, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::K2Node_DynamicCast_As_____actor' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000048, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetActiveCurveNames_OutNames) == 0x000050, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetActiveCurveNames_OutNames' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, K2Node_DynamicCast_AsABPC_Seq_Interface) == 0x000060, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::K2Node_DynamicCast_AsABPC_Seq_Interface' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, K2Node_DynamicCast_bSuccess_1) == 0x000070, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_IsValid_ReturnValue) == 0x000071, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetABPC_Body_V2_ABPC_Body_V2) == 0x000078, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetABPC_Body_V2_ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_IsValid_ReturnValue_1) == 0x000080, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, ___bool_Variable_1) == 0x000081, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::___bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_MakeLiteralName_ReturnValue) == 0x000084, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_Array_Find_ReturnValue) == 0x000090, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_Array_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_FClamp_ReturnValue) == 0x000094, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000098, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_Less_FloatFloat_ReturnValue) == 0x000099, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_GetCurveValue_ReturnValue_1) == 0x00009C, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, K2Node_Select_Default) == 0x0000A0, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0000A4, "Member 'BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_ABPC_Seq_FunctionLibrary_C_ABPC_Seq_GetPhyValue;
 
 }
 

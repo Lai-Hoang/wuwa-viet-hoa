@@ -56,42 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SunSpiritConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_SunSpiritConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SunSpiritConfig_C")
 	}
 	static class UBP_SunSpiritConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SunSpiritConfig_C>();
 	}
 };
-static_assert(alignof(UBP_SunSpiritConfig_C) == 0x000008, "Wrong alignment on UBP_SunSpiritConfig_C");
-static_assert(sizeof(UBP_SunSpiritConfig_C) == 0x0000E8, "Wrong size on UBP_SunSpiritConfig_C");
-static_assert(offsetof(UBP_SunSpiritConfig_C, CrowdAiConfig) == 0x000038, "Member 'UBP_SunSpiritConfig_C::CrowdAiConfig' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, CrowdAiSystemIndex) == 0x000040, "Member 'UBP_SunSpiritConfig_C::CrowdAiSystemIndex' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, AroundPlayerPosQueryRadius) == 0x000044, "Member 'UBP_SunSpiritConfig_C::AroundPlayerPosQueryRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, AroundPlayerPosQueryBoidRadius) == 0x000048, "Member 'UBP_SunSpiritConfig_C::AroundPlayerPosQueryBoidRadius' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, AroundPlayerPosQueryMaxTryCount) == 0x00004C, "Member 'UBP_SunSpiritConfig_C::AroundPlayerPosQueryMaxTryCount' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectMaxDist) == 0x000050, "Member 'UBP_SunSpiritConfig_C::FlyingEffectMaxDist' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectMinDist) == 0x000054, "Member 'UBP_SunSpiritConfig_C::FlyingEffectMinDist' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectUpdateFailMaxTimeSec) == 0x000058, "Member 'UBP_SunSpiritConfig_C::FlyingEffectUpdateFailMaxTimeSec' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectUpdateFailMaxCount) == 0x00005C, "Member 'UBP_SunSpiritConfig_C::FlyingEffectUpdateFailMaxCount' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectMaxFlyingDuration) == 0x000060, "Member 'UBP_SunSpiritConfig_C::FlyingEffectMaxFlyingDuration' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyingEffectDa) == 0x000068, "Member 'UBP_SunSpiritConfig_C::FlyingEffectDa' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromPlayerToGearInOrderFromMinToMax) == 0x000098, "Member 'UBP_SunSpiritConfig_C::FlyFromPlayerToGearInOrderFromMinToMax' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromPlayerToGearDelayInterval) == 0x00009C, "Member 'UBP_SunSpiritConfig_C::FlyFromPlayerToGearDelayInterval' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromPlayerToGearWaitTimeBeforeFly) == 0x0000A0, "Member 'UBP_SunSpiritConfig_C::FlyFromPlayerToGearWaitTimeBeforeFly' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromPlayerToGearSpeedForCalc) == 0x0000A4, "Member 'UBP_SunSpiritConfig_C::FlyFromPlayerToGearSpeedForCalc' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromPlayerToGearDefaultDuration) == 0x0000A8, "Member 'UBP_SunSpiritConfig_C::FlyFromPlayerToGearDefaultDuration' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerInOrderFromMinToMax) == 0x0000AC, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerInOrderFromMinToMax' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerDelayInterval) == 0x0000B0, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerDelayInterval' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerWaitTimeBeforeFly) == 0x0000B4, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerWaitTimeBeforeFly' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerSpeedForCalc) == 0x0000B8, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerSpeedForCalc' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerDefaultDuration) == 0x0000BC, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerDefaultDuration' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, FlyFromGearToPlayerMaxOffsetForReQueryTargetLoc) == 0x0000C0, "Member 'UBP_SunSpiritConfig_C::FlyFromGearToPlayerMaxOffsetForReQueryTargetLoc' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, LauncherHintUiAnchorOffset) == 0x0000C4, "Member 'UBP_SunSpiritConfig_C::LauncherHintUiAnchorOffset' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, LauncherHintUiPosLerpSpeed) == 0x0000CC, "Member 'UBP_SunSpiritConfig_C::LauncherHintUiPosLerpSpeed' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, CharacterHintUiAnchorOffset) == 0x0000D4, "Member 'UBP_SunSpiritConfig_C::CharacterHintUiAnchorOffset' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, CharacterHintUiPosLerpSpeed) == 0x0000DC, "Member 'UBP_SunSpiritConfig_C::CharacterHintUiPosLerpSpeed' has a wrong offset!");
-static_assert(offsetof(UBP_SunSpiritConfig_C, CharacterHintUiShowDurationWhenUpdate) == 0x0000E4, "Member 'UBP_SunSpiritConfig_C::CharacterHintUiShowDurationWhenUpdate' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SunSpiritConfig_C;
 
 }
 

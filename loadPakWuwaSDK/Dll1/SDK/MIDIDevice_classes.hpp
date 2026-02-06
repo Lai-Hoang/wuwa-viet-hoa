@@ -32,18 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MIDIDeviceController">();
+		STATIC_CLASS_IMPL("MIDIDeviceController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MIDIDeviceController")
 	}
 	static class UMIDIDeviceController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMIDIDeviceController>();
 	}
 };
-static_assert(alignof(UMIDIDeviceController) == 0x000008, "Wrong alignment on UMIDIDeviceController");
-static_assert(sizeof(UMIDIDeviceController) == 0x000068, "Wrong size on UMIDIDeviceController");
-static_assert(offsetof(UMIDIDeviceController, OnMIDIEvent) == 0x000030, "Member 'UMIDIDeviceController::OnMIDIEvent' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceController, DeviceID) == 0x000040, "Member 'UMIDIDeviceController::DeviceID' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceController, DeviceName) == 0x000048, "Member 'UMIDIDeviceController::DeviceName' has a wrong offset!");
+DUMPER7_ASSERTS_UMIDIDeviceController;
 
 // Class MIDIDevice.MIDIDeviceInputController
 // 0x0098 (0x00C8 - 0x0030)
@@ -65,24 +65,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MIDIDeviceInputController">();
+		STATIC_CLASS_IMPL("MIDIDeviceInputController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MIDIDeviceInputController")
 	}
 	static class UMIDIDeviceInputController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMIDIDeviceInputController>();
 	}
 };
-static_assert(alignof(UMIDIDeviceInputController) == 0x000008, "Wrong alignment on UMIDIDeviceInputController");
-static_assert(sizeof(UMIDIDeviceInputController) == 0x0000C8, "Wrong size on UMIDIDeviceInputController");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDINoteOn) == 0x000030, "Member 'UMIDIDeviceInputController::OnMIDINoteOn' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDINoteOff) == 0x000040, "Member 'UMIDIDeviceInputController::OnMIDINoteOff' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDIPitchBend) == 0x000050, "Member 'UMIDIDeviceInputController::OnMIDIPitchBend' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDIAftertouch) == 0x000060, "Member 'UMIDIDeviceInputController::OnMIDIAftertouch' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDIControlChange) == 0x000070, "Member 'UMIDIDeviceInputController::OnMIDIControlChange' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDIProgramChange) == 0x000080, "Member 'UMIDIDeviceInputController::OnMIDIProgramChange' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, OnMIDIChannelAftertouch) == 0x000090, "Member 'UMIDIDeviceInputController::OnMIDIChannelAftertouch' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, DeviceID) == 0x0000A0, "Member 'UMIDIDeviceInputController::DeviceID' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceInputController, DeviceName) == 0x0000A8, "Member 'UMIDIDeviceInputController::DeviceName' has a wrong offset!");
+DUMPER7_ASSERTS_UMIDIDeviceInputController;
 
 // Class MIDIDevice.MIDIDeviceManager
 // 0x0000 (0x0030 - 0x0030)
@@ -102,15 +96,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MIDIDeviceManager">();
+		STATIC_CLASS_IMPL("MIDIDeviceManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MIDIDeviceManager")
 	}
 	static class UMIDIDeviceManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMIDIDeviceManager>();
 	}
 };
-static_assert(alignof(UMIDIDeviceManager) == 0x000008, "Wrong alignment on UMIDIDeviceManager");
-static_assert(sizeof(UMIDIDeviceManager) == 0x000030, "Wrong size on UMIDIDeviceManager");
+DUMPER7_ASSERTS_UMIDIDeviceManager;
 
 // Class MIDIDevice.MIDIDeviceOutputController
 // 0x0020 (0x0050 - 0x0030)
@@ -135,17 +132,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MIDIDeviceOutputController">();
+		STATIC_CLASS_IMPL("MIDIDeviceOutputController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MIDIDeviceOutputController")
 	}
 	static class UMIDIDeviceOutputController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMIDIDeviceOutputController>();
 	}
 };
-static_assert(alignof(UMIDIDeviceOutputController) == 0x000008, "Wrong alignment on UMIDIDeviceOutputController");
-static_assert(sizeof(UMIDIDeviceOutputController) == 0x000050, "Wrong size on UMIDIDeviceOutputController");
-static_assert(offsetof(UMIDIDeviceOutputController, DeviceID) == 0x000030, "Member 'UMIDIDeviceOutputController::DeviceID' has a wrong offset!");
-static_assert(offsetof(UMIDIDeviceOutputController, DeviceName) == 0x000038, "Member 'UMIDIDeviceOutputController::DeviceName' has a wrong offset!");
+DUMPER7_ASSERTS_UMIDIDeviceOutputController;
 
 }
 

@@ -23,15 +23,18 @@ class ABP_BasePathLine_Edgewall_3_0_C final : public ABP_BasePathLine_Edgewall_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_BasePathLine_Edgewall_3-0_C">();
+		BP_STATIC_CLASS_IMPL("BP_BasePathLine_Edgewall_3-0_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_BasePathLine_Edgewall_3-0_C")
 	}
 	static class ABP_BasePathLine_Edgewall_3_0_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_BasePathLine_Edgewall_3_0_C>();
 	}
 };
-static_assert(alignof(ABP_BasePathLine_Edgewall_3_0_C) == 0x000008, "Wrong alignment on ABP_BasePathLine_Edgewall_3_0_C");
-static_assert(sizeof(ABP_BasePathLine_Edgewall_3_0_C) == 0x0002E0, "Wrong size on ABP_BasePathLine_Edgewall_3_0_C");
+DUMPER7_ASSERTS_ABP_BasePathLine_Edgewall_3_0_C;
 
 }
 

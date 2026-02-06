@@ -16,6 +16,46 @@
 namespace SDK::Params
 {
 
+// Function KuroCollision.KuroBodySetupLibrary.AddClearWpBodySetupBlackList
+// 0x000C (0x000C - 0x0000)
+struct KuroBodySetupLibrary_AddClearWpBodySetupBlackList final
+{
+public:
+	class FName                                   StaticMeshName;                                    // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroBodySetupLibrary_AddClearWpBodySetupBlackList;
+
+// Function KuroCollision.KuroBodySetupLibrary.InitClearWpBodySetupBlackList
+// 0x0050 (0x0050 - 0x0000)
+struct KuroBodySetupLibrary_InitClearWpBodySetupBlackList final
+{
+public:
+	TSet<class FName>                             InClearWpBodySetupBlackList;                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroBodySetupLibrary_InitClearWpBodySetupBlackList;
+
+// Function KuroCollision.KuroBodySetupLibrary.RemoveClearWpBodySetupBlackList
+// 0x000C (0x000C - 0x0000)
+struct KuroBodySetupLibrary_RemoveClearWpBodySetupBlackList final
+{
+public:
+	class FName                                   StaticMeshName;                                    // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroBodySetupLibrary_RemoveClearWpBodySetupBlackList;
+
+// Function KuroCollision.KuroCollisionLibrary.ActorHasTag
+// 0x0020 (0x0020 - 0x0000)
+struct KuroCollisionLibrary_ActorHasTag final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InstanceIndex;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroCollisionLibrary_ActorHasTag;
+
 // Function KuroCollision.KuroCollisionLibrary.CanCharacterStandOn
 // 0x0010 (0x0010 - 0x0000)
 struct KuroCollisionLibrary_CanCharacterStandOn final
@@ -26,11 +66,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCollisionLibrary_CanCharacterStandOn) == 0x000008, "Wrong alignment on KuroCollisionLibrary_CanCharacterStandOn");
-static_assert(sizeof(KuroCollisionLibrary_CanCharacterStandOn) == 0x000010, "Wrong size on KuroCollisionLibrary_CanCharacterStandOn");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStandOn, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_CanCharacterStandOn::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStandOn, InstanceIndex) == 0x000008, "Member 'KuroCollisionLibrary_CanCharacterStandOn::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStandOn, ReturnValue) == 0x00000C, "Member 'KuroCollisionLibrary_CanCharacterStandOn::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_CanCharacterStandOn;
 
 // Function KuroCollision.KuroCollisionLibrary.CanCharacterStepUp
 // 0x0018 (0x0018 - 0x0000)
@@ -43,12 +79,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCollisionLibrary_CanCharacterStepUp) == 0x000008, "Wrong alignment on KuroCollisionLibrary_CanCharacterStepUp");
-static_assert(sizeof(KuroCollisionLibrary_CanCharacterStepUp) == 0x000018, "Wrong size on KuroCollisionLibrary_CanCharacterStepUp");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStepUp, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_CanCharacterStepUp::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStepUp, Pawn) == 0x000008, "Member 'KuroCollisionLibrary_CanCharacterStepUp::Pawn' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStepUp, InstanceIndex) == 0x000010, "Member 'KuroCollisionLibrary_CanCharacterStepUp::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_CanCharacterStepUp, ReturnValue) == 0x000014, "Member 'KuroCollisionLibrary_CanCharacterStepUp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_CanCharacterStepUp;
 
 // Function KuroCollision.KuroCollisionLibrary.GetBodyInstance
 // 0x0188 (0x0188 - 0x0000)
@@ -60,11 +91,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBodyInstance                          ReturnValue;                                       // 0x0010(0x0178)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCollisionLibrary_GetBodyInstance) == 0x000008, "Wrong alignment on KuroCollisionLibrary_GetBodyInstance");
-static_assert(sizeof(KuroCollisionLibrary_GetBodyInstance) == 0x000188, "Wrong size on KuroCollisionLibrary_GetBodyInstance");
-static_assert(offsetof(KuroCollisionLibrary_GetBodyInstance, HitResult) == 0x000000, "Member 'KuroCollisionLibrary_GetBodyInstance::HitResult' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetBodyInstance, HitIndex) == 0x000008, "Member 'KuroCollisionLibrary_GetBodyInstance::HitIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetBodyInstance, ReturnValue) == 0x000010, "Member 'KuroCollisionLibrary_GetBodyInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetBodyInstance;
 
 // Function KuroCollision.KuroCollisionLibrary.GetCollisionProfileName
 // 0x0018 (0x0018 - 0x0000)
@@ -75,11 +102,7 @@ public:
 	int32                                         InstanceIndex;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCollisionLibrary_GetCollisionProfileName) == 0x000008, "Wrong alignment on KuroCollisionLibrary_GetCollisionProfileName");
-static_assert(sizeof(KuroCollisionLibrary_GetCollisionProfileName) == 0x000018, "Wrong size on KuroCollisionLibrary_GetCollisionProfileName");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionProfileName, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_GetCollisionProfileName::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionProfileName, InstanceIndex) == 0x000008, "Member 'KuroCollisionLibrary_GetCollisionProfileName::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionProfileName, ReturnValue) == 0x00000C, "Member 'KuroCollisionLibrary_GetCollisionProfileName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetCollisionProfileName;
 
 // Function KuroCollision.KuroCollisionLibrary.GetCollisionResponseToChannel
 // 0x0018 (0x0018 - 0x0000)
@@ -93,12 +116,7 @@ public:
 	ECollisionResponse                            ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCollisionLibrary_GetCollisionResponseToChannel) == 0x000008, "Wrong alignment on KuroCollisionLibrary_GetCollisionResponseToChannel");
-static_assert(sizeof(KuroCollisionLibrary_GetCollisionResponseToChannel) == 0x000018, "Wrong size on KuroCollisionLibrary_GetCollisionResponseToChannel");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionResponseToChannel, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_GetCollisionResponseToChannel::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionResponseToChannel, Channel) == 0x000008, "Member 'KuroCollisionLibrary_GetCollisionResponseToChannel::Channel' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionResponseToChannel, InstanceIndex) == 0x00000C, "Member 'KuroCollisionLibrary_GetCollisionResponseToChannel::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetCollisionResponseToChannel, ReturnValue) == 0x000010, "Member 'KuroCollisionLibrary_GetCollisionResponseToChannel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetCollisionResponseToChannel;
 
 // Function KuroCollision.KuroCollisionLibrary.GetOverlappingComponents
 // 0x0028 (0x0028 - 0x0000)
@@ -109,11 +127,7 @@ public:
 	TArray<class UPrimitiveComponent*>            OutOverlappingComponents;                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<int32>                                 OutOverlappingBodyIndices;                         // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCollisionLibrary_GetOverlappingComponents) == 0x000008, "Wrong alignment on KuroCollisionLibrary_GetOverlappingComponents");
-static_assert(sizeof(KuroCollisionLibrary_GetOverlappingComponents) == 0x000028, "Wrong size on KuroCollisionLibrary_GetOverlappingComponents");
-static_assert(offsetof(KuroCollisionLibrary_GetOverlappingComponents, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_GetOverlappingComponents::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetOverlappingComponents, OutOverlappingComponents) == 0x000008, "Member 'KuroCollisionLibrary_GetOverlappingComponents::OutOverlappingComponents' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetOverlappingComponents, OutOverlappingBodyIndices) == 0x000018, "Member 'KuroCollisionLibrary_GetOverlappingComponents::OutOverlappingBodyIndices' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetOverlappingComponents;
 
 // Function KuroCollision.KuroCollisionLibrary.GetWalkableSlopeOverride
 // 0x0020 (0x0020 - 0x0000)
@@ -125,22 +139,20 @@ public:
 	struct FWalkableSlopeOverride                 ReturnValue;                                       // 0x000C(0x0010)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCollisionLibrary_GetWalkableSlopeOverride) == 0x000008, "Wrong alignment on KuroCollisionLibrary_GetWalkableSlopeOverride");
-static_assert(sizeof(KuroCollisionLibrary_GetWalkableSlopeOverride) == 0x000020, "Wrong size on KuroCollisionLibrary_GetWalkableSlopeOverride");
-static_assert(offsetof(KuroCollisionLibrary_GetWalkableSlopeOverride, PrimitiveComponent) == 0x000000, "Member 'KuroCollisionLibrary_GetWalkableSlopeOverride::PrimitiveComponent' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetWalkableSlopeOverride, InstanceIndex) == 0x000008, "Member 'KuroCollisionLibrary_GetWalkableSlopeOverride::InstanceIndex' has a wrong offset!");
-static_assert(offsetof(KuroCollisionLibrary_GetWalkableSlopeOverride, ReturnValue) == 0x00000C, "Member 'KuroCollisionLibrary_GetWalkableSlopeOverride::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetWalkableSlopeOverride;
 
-// Function KuroCollision.KuroCollisionLibrary.InitClearWpBodySetupBlackList
-// 0x0050 (0x0050 - 0x0000)
-struct KuroCollisionLibrary_InitClearWpBodySetupBlackList final
+// Function KuroCollision.KuroCollisionLibrary.SetCollisionResponseToChannel
+// 0x0010 (0x0010 - 0x0000)
+struct KuroCollisionLibrary_SetCollisionResponseToChannel final
 {
 public:
-	TSet<class FName>                             InClearWpBodySetupBlackList;                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    PrimitiveComponent;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionChannel                             Channel;                                           // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionResponse                            NewResponse;                                       // 0x0009(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InstanceIndex;                                     // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCollisionLibrary_InitClearWpBodySetupBlackList) == 0x000008, "Wrong alignment on KuroCollisionLibrary_InitClearWpBodySetupBlackList");
-static_assert(sizeof(KuroCollisionLibrary_InitClearWpBodySetupBlackList) == 0x000050, "Wrong size on KuroCollisionLibrary_InitClearWpBodySetupBlackList");
-static_assert(offsetof(KuroCollisionLibrary_InitClearWpBodySetupBlackList, InClearWpBodySetupBlackList) == 0x000000, "Member 'KuroCollisionLibrary_InitClearWpBodySetupBlackList::InClearWpBodySetupBlackList' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollisionLibrary_SetCollisionResponseToChannel;
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SFloatCurve_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SCameraModifier_Lens_structs.hpp"
+#include "SFloatCurve_structs.hpp"
 
 
 namespace SDK
@@ -48,25 +48,7 @@ public:
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSFloatCurve                           ArmOffsetFloatCurve_46_F34AA4E647849079B00C6AABF808AEF0; // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCameraModifier_SettingsAdditional) == 0x000008, "Wrong alignment on FSCameraModifier_SettingsAdditional");
-static_assert(sizeof(FSCameraModifier_SettingsAdditional) == 0x0000A8, "Wrong size on FSCameraModifier_SettingsAdditional");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, Name_50_288D35B5488E8F91669D05A43D16FAE1) == 0x000000, "Member 'FSCameraModifier_SettingsAdditional::Name_50_288D35B5488E8F91669D05A43D16FAE1' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseArmLengthFloatCurve_1_30F643EB4F195B35F693349FD9712BD1) == 0x000010, "Member 'FSCameraModifier_SettingsAdditional::IsUseArmLengthFloatCurve_1_30F643EB4F195B35F693349FD9712BD1' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, ArmLengthFloatCurve_4_912E7E254D65CD0C83E800B39BF5F2F3) == 0x000018, "Member 'FSCameraModifier_SettingsAdditional::ArmLengthFloatCurve_4_912E7E254D65CD0C83E800B39BF5F2F3' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseArmRotationFloatCurve_7_8F0DB6DA49B6687CE3358EA060F681A1) == 0x000020, "Member 'FSCameraModifier_SettingsAdditional::IsUseArmRotationFloatCurve_7_8F0DB6DA49B6687CE3358EA060F681A1' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, ArmRotationFloatCurve_10_2FA9DAD84AB5C83CE10C209E9FF19595) == 0x000028, "Member 'FSCameraModifier_SettingsAdditional::ArmRotationFloatCurve_10_2FA9DAD84AB5C83CE10C209E9FF19595' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseFovFloatCurve_13_91C6F368497795DDDBB318A625E20ADF) == 0x000030, "Member 'FSCameraModifier_SettingsAdditional::IsUseFovFloatCurve_13_91C6F368497795DDDBB318A625E20ADF' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, FovFloatCurve_16_2420DD304E470B25D8CCB18CAD9B33B0) == 0x000038, "Member 'FSCameraModifier_SettingsAdditional::FovFloatCurve_16_2420DD304E470B25D8CCB18CAD9B33B0' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsModifiedCameraLens_19_6CC6F899450F6808CCF61E9C76DED1B1) == 0x000040, "Member 'FSCameraModifier_SettingsAdditional::IsModifiedCameraLens_19_6CC6F899450F6808CCF61E9C76DED1B1' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseLensFloatCurve_49_BEF7FE3F4A080AE18E45F0A9F26712A2) == 0x000041, "Member 'FSCameraModifier_SettingsAdditional::IsUseLensFloatCurve_49_BEF7FE3F4A080AE18E45F0A9F26712A2' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, LensFloatCurve_22_8386FD5647A166F5D51A7A94C4DE63D6) == 0x000048, "Member 'FSCameraModifier_SettingsAdditional::LensFloatCurve_22_8386FD5647A166F5D51A7A94C4DE63D6' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, CameraLens_25_4C6A5CA048800F87B76EAA9112825B35) == 0x000050, "Member 'FSCameraModifier_SettingsAdditional::CameraLens_25_4C6A5CA048800F87B76EAA9112825B35' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseCameraOffsetFloatCurve_31_045D190F4CB19C90E84748BF53166B60) == 0x000078, "Member 'FSCameraModifier_SettingsAdditional::IsUseCameraOffsetFloatCurve_31_045D190F4CB19C90E84748BF53166B60' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, CameraOffsetFloatCurve_34_0F2C641E4C33AE88EECCB49DD4AA8D30) == 0x000080, "Member 'FSCameraModifier_SettingsAdditional::CameraOffsetFloatCurve_34_0F2C641E4C33AE88EECCB49DD4AA8D30' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsModifiedArmOffset_37_C3A0173446D24981B3E9DCA09B436305) == 0x000088, "Member 'FSCameraModifier_SettingsAdditional::IsModifiedArmOffset_37_C3A0173446D24981B3E9DCA09B436305' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, ArmOffset_40_5B2811D74E4042AD3EEDA3845E76469C) == 0x00008C, "Member 'FSCameraModifier_SettingsAdditional::ArmOffset_40_5B2811D74E4042AD3EEDA3845E76469C' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, IsUseArmOffsetFloatCurve_43_AF55D9EB46B39EB466492696E2193C60) == 0x000098, "Member 'FSCameraModifier_SettingsAdditional::IsUseArmOffsetFloatCurve_43_AF55D9EB46B39EB466492696E2193C60' has a wrong offset!");
-static_assert(offsetof(FSCameraModifier_SettingsAdditional, ArmOffsetFloatCurve_46_F34AA4E647849079B00C6AABF808AEF0) == 0x0000A0, "Member 'FSCameraModifier_SettingsAdditional::ArmOffsetFloatCurve_46_F34AA4E647849079B00C6AABF808AEF0' has a wrong offset!");
+DUMPER7_ASSERTS_FSCameraModifier_SettingsAdditional;
 
 }
 

@@ -26,27 +26,28 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetHandle(int32* Handle);
-	class FString GetEffectPath();
-	void SetHandle(int32 Handle);
-	void RemoveHandle();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ExecuteUbergraph_TsEffectActor(int32 EntryPoint);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void RemoveHandle();
+	void SetHandle(int32 Handle);
+	class FString GetEffectPath();
+	void GetHandle(int32* Handle);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsEffectActor_C">();
+		BP_STATIC_CLASS_IMPL("TsEffectActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsEffectActor_C")
 	}
 	static class ATsEffectActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsEffectActor_C>();
 	}
 };
-static_assert(alignof(ATsEffectActor_C) == 0x000008, "Wrong alignment on ATsEffectActor_C");
-static_assert(sizeof(ATsEffectActor_C) == 0x0002C0, "Wrong size on ATsEffectActor_C");
-static_assert(offsetof(ATsEffectActor_C, UberGraphFrame) == 0x0002B0, "Member 'ATsEffectActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsEffectActor_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsEffectActor_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ATsEffectActor_C;
 
 }
 

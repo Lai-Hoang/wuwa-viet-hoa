@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -63,28 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsHotFixActionHandle_C">();
+		BP_STATIC_CLASS_IMPL("TsHotFixActionHandle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsHotFixActionHandle_C")
 	}
 	static class UTsHotFixActionHandle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsHotFixActionHandle_C>();
 	}
 };
-static_assert(alignof(UTsHotFixActionHandle_C) == 0x000008, "Wrong alignment on UTsHotFixActionHandle_C");
-static_assert(sizeof(UTsHotFixActionHandle_C) == 0x0000E0, "Wrong size on UTsHotFixActionHandle_C");
-static_assert(offsetof(UTsHotFixActionHandle_C, FuncName) == 0x000030, "Member 'UTsHotFixActionHandle_C::FuncName' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, 目标) == 0x000040, "Member 'UTsHotFixActionHandle_C::目标' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, ActionName) == 0x000048, "Member 'UTsHotFixActionHandle_C::ActionName' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, bPress) == 0x000058, "Member 'UTsHotFixActionHandle_C::bPress' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, OnPressActionCallback) == 0x000060, "Member 'UTsHotFixActionHandle_C::OnPressActionCallback' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, TouchIndex) == 0x000070, "Member 'UTsHotFixActionHandle_C::TouchIndex' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, TouchPosition) == 0x000074, "Member 'UTsHotFixActionHandle_C::TouchPosition' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, OnTouchActionCallback) == 0x000080, "Member 'UTsHotFixActionHandle_C::OnTouchActionCallback' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, OnTouchMovedActionCallback) == 0x000090, "Member 'UTsHotFixActionHandle_C::OnTouchMovedActionCallback' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, OnAxisCallback) == 0x0000A0, "Member 'UTsHotFixActionHandle_C::OnAxisCallback' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, AxisName) == 0x0000B0, "Member 'UTsHotFixActionHandle_C::AxisName' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, Func_Name) == 0x0000C0, "Member 'UTsHotFixActionHandle_C::Func_Name' has a wrong offset!");
-static_assert(offsetof(UTsHotFixActionHandle_C, OnAnyKeyPressCallback) == 0x0000D0, "Member 'UTsHotFixActionHandle_C::OnAnyKeyPressCallback' has a wrong offset!");
+DUMPER7_ASSERTS_UTsHotFixActionHandle_C;
 
 }
 

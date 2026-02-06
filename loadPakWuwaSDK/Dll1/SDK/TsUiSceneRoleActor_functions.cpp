@@ -17,19 +17,21 @@
 namespace SDK
 {
 
-// Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.IsShowUiWepaonEffect
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.ExecuteUbergraph_TsUiSceneRoleActor
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool ATsUiSceneRoleActor_C::IsShowUiWepaonEffect()
+void ATsUiSceneRoleActor_C::ExecuteUbergraph_TsUiSceneRoleActor(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiSceneRoleActor_C", "IsShowUiWepaonEffect");
+		Func = Class->GetFunction("TsUiSceneRoleActor_C", "ExecuteUbergraph_TsUiSceneRoleActor");
 
-	Params::TsUiSceneRoleActor_C_IsShowUiWepaonEffect Parms{};
+	Params::TsUiSceneRoleActor_C_ExecuteUbergraph_TsUiSceneRoleActor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -37,8 +39,6 @@ bool ATsUiSceneRoleActor_C::IsShowUiWepaonEffect()
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -67,21 +67,19 @@ void ATsUiSceneRoleActor_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.ExecuteUbergraph_TsUiSceneRoleActor
-// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.IsShowUiWepaonEffect
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void ATsUiSceneRoleActor_C::ExecuteUbergraph_TsUiSceneRoleActor(int32 EntryPoint)
+bool ATsUiSceneRoleActor_C::IsShowUiWepaonEffect()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiSceneRoleActor_C", "ExecuteUbergraph_TsUiSceneRoleActor");
+		Func = Class->GetFunction("TsUiSceneRoleActor_C", "IsShowUiWepaonEffect");
 
-	Params::TsUiSceneRoleActor_C_ExecuteUbergraph_TsUiSceneRoleActor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::TsUiSceneRoleActor_C_IsShowUiWepaonEffect Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -89,6 +87,8 @@ void ATsUiSceneRoleActor_C::ExecuteUbergraph_TsUiSceneRoleActor(int32 EntryPoint
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -57,15 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BulletBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("BulletBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletBlueprintFunctionLibrary_C")
 	}
 	static class UBulletBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UBulletBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UBulletBlueprintFunctionLibrary_C");
-static_assert(sizeof(UBulletBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UBulletBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UBulletBlueprintFunctionLibrary_C;
 
 }
 

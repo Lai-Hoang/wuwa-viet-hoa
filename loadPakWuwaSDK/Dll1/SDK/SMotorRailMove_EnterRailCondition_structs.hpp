@@ -25,13 +25,7 @@ public:
 	float                                         MinRailLenLeftAfterEnterRail_10_6B1922C5424FB419E4CBE293F394F537; // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MaxAngleBetweenTargetUpAndDirPlaneProjectionOfTargetToCurrent_20_5A51E45B46E581CC4465FFA114B9D151; // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMove_EnterRailCondition) == 0x000004, "Wrong alignment on FSMotorRailMove_EnterRailCondition");
-static_assert(sizeof(FSMotorRailMove_EnterRailCondition) == 0x000014, "Wrong size on FSMotorRailMove_EnterRailCondition");
-static_assert(offsetof(FSMotorRailMove_EnterRailCondition, MaxAngleBetweenForwardAndRailTangent_3_5A5CFA0D461F23EBD0A692AA7DBA13E9) == 0x000000, "Member 'FSMotorRailMove_EnterRailCondition::MaxAngleBetweenForwardAndRailTangent_3_5A5CFA0D461F23EBD0A692AA7DBA13E9' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_EnterRailCondition, MaxAngleBetweenUpAndRailUp_5_C445E575408E58FE668E5EAD2F05A28F) == 0x000004, "Member 'FSMotorRailMove_EnterRailCondition::MaxAngleBetweenUpAndRailUp_5_C445E575408E58FE668E5EAD2F05A28F' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_EnterRailCondition, MaxAngleBetweenVelocityAndRailTangent_7_46DDAE3945FBD4780A37C9B8CE5C6B35) == 0x000008, "Member 'FSMotorRailMove_EnterRailCondition::MaxAngleBetweenVelocityAndRailTangent_7_46DDAE3945FBD4780A37C9B8CE5C6B35' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_EnterRailCondition, MinRailLenLeftAfterEnterRail_10_6B1922C5424FB419E4CBE293F394F537) == 0x00000C, "Member 'FSMotorRailMove_EnterRailCondition::MinRailLenLeftAfterEnterRail_10_6B1922C5424FB419E4CBE293F394F537' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_EnterRailCondition, MaxAngleBetweenTargetUpAndDirPlaneProjectionOfTargetToCurrent_20_5A51E45B46E581CC4465FFA114B9D151) == 0x000010, "Member 'FSMotorRailMove_EnterRailCondition::MaxAngleBetweenTargetUpAndDirPlaneProjectionOfTargetToCurrent_20_5A51E45B46E581CC4465FFA114B9D151' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMove_EnterRailCondition;
 
 }
 

@@ -25,11 +25,7 @@ public:
 	TArray<struct FBvbCardItemData>               CardsOnHand_10_AEEBE57B43029D3A6A97B4AB243E9120;   // 0x0010(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FBvbCardItemData>               CardsInLibrary_11_4E7EF7ED43F1E15B0ACB659F7A416A00; // 0x0020(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FBvbPlayerItemData) == 0x000008, "Wrong alignment on FBvbPlayerItemData");
-static_assert(sizeof(FBvbPlayerItemData) == 0x000030, "Wrong size on FBvbPlayerItemData");
-static_assert(offsetof(FBvbPlayerItemData, CardsOnField_3_5979C57348A8A75816732F8A583CD9D1) == 0x000000, "Member 'FBvbPlayerItemData::CardsOnField_3_5979C57348A8A75816732F8A583CD9D1' has a wrong offset!");
-static_assert(offsetof(FBvbPlayerItemData, CardsOnHand_10_AEEBE57B43029D3A6A97B4AB243E9120) == 0x000010, "Member 'FBvbPlayerItemData::CardsOnHand_10_AEEBE57B43029D3A6A97B4AB243E9120' has a wrong offset!");
-static_assert(offsetof(FBvbPlayerItemData, CardsInLibrary_11_4E7EF7ED43F1E15B0ACB659F7A416A00) == 0x000020, "Member 'FBvbPlayerItemData::CardsInLibrary_11_4E7EF7ED43F1E15B0ACB659F7A416A00' has a wrong offset!");
+DUMPER7_ASSERTS_FBvbPlayerItemData;
 
 }
 

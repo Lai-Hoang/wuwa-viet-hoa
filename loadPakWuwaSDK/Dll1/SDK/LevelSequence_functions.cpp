@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function LevelSequence.LevelSequenceDirector.OnCreated
+// (Event, Public, BlueprintEvent)
+
+void ULevelSequenceDirector::OnCreated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LevelSequenceDirector", "OnCreated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function LevelSequence.LevelSequenceActor.AddBinding
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -600,31 +614,6 @@ class ULevelSequence* ALevelSequenceActor::LoadSequence() const
 }
 
 
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FSoftClassPath&            InBurnInClass                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LevelSequenceBurnInOptions", "SetBurnIn");
-
-	Params::LevelSequenceBurnInOptions_SetBurnIn Parms{};
-
-	Parms.InBurnInClass = std::move(InBurnInClass);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function LevelSequence.LevelSequence.CopyMetaData
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -892,6 +881,31 @@ class UMovieScene* ULevelSequence::GetMovieScene() const
 }
 
 
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FSoftClassPath&            InBurnInClass                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULevelSequenceBurnInOptions::SetBurnIn(const struct FSoftClassPath& InBurnInClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LevelSequenceBurnInOptions", "SetBurnIn");
+
+	Params::LevelSequenceBurnInOptions_SetBurnIn Parms{};
+
+	Parms.InBurnInClass = std::move(InBurnInClass);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -934,20 +948,6 @@ TSubclassOf<class ULevelSequenceBurnInInitSettings> ULevelSequenceBurnIn::GetSet
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function LevelSequence.LevelSequenceDirector.OnCreated
-// (Event, Public, BlueprintEvent)
-
-void ULevelSequenceDirector::OnCreated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LevelSequenceDirector", "OnCreated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

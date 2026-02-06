@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroWorldPartitionActor">();
+		STATIC_CLASS_IMPL("KuroWorldPartitionActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroWorldPartitionActor")
 	}
 	static class AKuroWorldPartitionActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroWorldPartitionActor>();
 	}
 };
-static_assert(alignof(AKuroWorldPartitionActor) == 0x000008, "Wrong alignment on AKuroWorldPartitionActor");
-static_assert(sizeof(AKuroWorldPartitionActor) == 0x0002B8, "Wrong size on AKuroWorldPartitionActor");
-static_assert(offsetof(AKuroWorldPartitionActor, LocationComponent) == 0x0002B0, "Member 'AKuroWorldPartitionActor::LocationComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroWorldPartitionActor;
 
 // Class KuroWorldPartition.KuroWorldPartitionLocationComponent
 // 0x0020 (0x0240 - 0x0220)
@@ -51,18 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroWorldPartitionLocationComponent">();
+		STATIC_CLASS_IMPL("KuroWorldPartitionLocationComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroWorldPartitionLocationComponent")
 	}
 	static class UKuroWorldPartitionLocationComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroWorldPartitionLocationComponent>();
 	}
 };
-static_assert(alignof(UKuroWorldPartitionLocationComponent) == 0x000010, "Wrong alignment on UKuroWorldPartitionLocationComponent");
-static_assert(sizeof(UKuroWorldPartitionLocationComponent) == 0x000240, "Wrong size on UKuroWorldPartitionLocationComponent");
-static_assert(offsetof(UKuroWorldPartitionLocationComponent, X) == 0x000218, "Member 'UKuroWorldPartitionLocationComponent::X' has a wrong offset!");
-static_assert(offsetof(UKuroWorldPartitionLocationComponent, Y) == 0x00021C, "Member 'UKuroWorldPartitionLocationComponent::Y' has a wrong offset!");
-static_assert(offsetof(UKuroWorldPartitionLocationComponent, DataChunkActorBounds) == 0x000220, "Member 'UKuroWorldPartitionLocationComponent::DataChunkActorBounds' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroWorldPartitionLocationComponent;
 
 }
 

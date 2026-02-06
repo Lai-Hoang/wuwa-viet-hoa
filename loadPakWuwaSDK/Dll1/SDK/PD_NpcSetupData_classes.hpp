@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SNpcHookPart_structs.hpp"
 #include "ENpcSetupType_structs.hpp"
+#include "SNpcHookPart_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PD_NpcSetupData.PD_NpcSetupData_C
-// 0x01A0 (0x01D8 - 0x0038)
+// 0x01B0 (0x01E8 - 0x0038)
 class UPD_NpcSetupData_C final : public UPrimaryDataAsset
 {
 public:
@@ -71,6 +71,7 @@ public:
 	TArray<class UMaterialInstance*>              Face_Mat_Extra;                                    // 0x01A8(0x0010)(Edit, BlueprintVisible)
 	TArray<class UMaterialInstance*>              Skel_BodyUp_Mat_Extra;                             // 0x01B8(0x0010)(Edit, BlueprintVisible)
 	TArray<class UMaterialInstance*>              Skel_BodyDown_Mat_Extra;                           // 0x01C8(0x0010)(Edit, BlueprintVisible)
+	TArray<class UMaterialInterface*>             ReferencedOulineMaterials;                         // 0x01D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, AdvancedDisplay)
 
 public:
 	void IsEmpty(bool* Result);
@@ -86,51 +87,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_NpcSetupData_C">();
+		BP_STATIC_CLASS_IMPL("PD_NpcSetupData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_NpcSetupData_C")
 	}
 	static class UPD_NpcSetupData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_NpcSetupData_C>();
 	}
 };
-static_assert(alignof(UPD_NpcSetupData_C) == 0x000008, "Wrong alignment on UPD_NpcSetupData_C");
-static_assert(sizeof(UPD_NpcSetupData_C) == 0x0001D8, "Wrong size on UPD_NpcSetupData_C");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Hair) == 0x000038, "Member 'UPD_NpcSetupData_C::Skel_Hair' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Hair_Color) == 0x000040, "Member 'UPD_NpcSetupData_C::Skel_Hair_Color' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Face) == 0x000048, "Member 'UPD_NpcSetupData_C::Skel_Face' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyUp) == 0x000050, "Member 'UPD_NpcSetupData_C::Skel_BodyUp' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyUp_Color) == 0x000058, "Member 'UPD_NpcSetupData_C::Skel_BodyUp_Color' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyDown) == 0x000060, "Member 'UPD_NpcSetupData_C::Skel_BodyDown' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyDown_Color) == 0x000068, "Member 'UPD_NpcSetupData_C::Skel_BodyDown_Color' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Body) == 0x000070, "Member 'UPD_NpcSetupData_C::Skel_Body' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, bDyeColor) == 0x000078, "Member 'UPD_NpcSetupData_C::bDyeColor' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, SkinDyeColor) == 0x00007C, "Member 'UPD_NpcSetupData_C::SkinDyeColor' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, NpcSetupType) == 0x00008C, "Member 'UPD_NpcSetupData_C::NpcSetupType' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Main) == 0x000090, "Member 'UPD_NpcSetupData_C::Skel_Main' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Arm) == 0x000098, "Member 'UPD_NpcSetupData_C::Hook_Arm' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Arm_Socket) == 0x0000A8, "Member 'UPD_NpcSetupData_C::Hook_Arm_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Waist) == 0x0000B8, "Member 'UPD_NpcSetupData_C::Hook_Waist' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Waist_Socket) == 0x0000C8, "Member 'UPD_NpcSetupData_C::Hook_Waist_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Back) == 0x0000D8, "Member 'UPD_NpcSetupData_C::Hook_Back' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Back_Socket) == 0x0000E8, "Member 'UPD_NpcSetupData_C::Hook_Back_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Weapon) == 0x0000F8, "Member 'UPD_NpcSetupData_C::Hook_Weapon' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Weapon_Socket) == 0x000108, "Member 'UPD_NpcSetupData_C::Hook_Weapon_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Leg) == 0x000118, "Member 'UPD_NpcSetupData_C::Hook_Leg' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Leg_Socket) == 0x000128, "Member 'UPD_NpcSetupData_C::Hook_Leg_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Body_Dyecolor01) == 0x000134, "Member 'UPD_NpcSetupData_C::Body_Dyecolor01' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Body_Dyecolor02) == 0x000138, "Member 'UPD_NpcSetupData_C::Body_Dyecolor02' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Head) == 0x000140, "Member 'UPD_NpcSetupData_C::Hook_Head' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hook_Head_Socket) == 0x000150, "Member 'UPD_NpcSetupData_C::Hook_Head_Socket' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hair_Mat) == 0x000160, "Member 'UPD_NpcSetupData_C::Hair_Mat' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Face_Mat) == 0x000168, "Member 'UPD_NpcSetupData_C::Face_Mat' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyUp_Mat) == 0x000170, "Member 'UPD_NpcSetupData_C::Skel_BodyUp_Mat' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyDown_Mat) == 0x000178, "Member 'UPD_NpcSetupData_C::Skel_BodyDown_Mat' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Body_Mat) == 0x000180, "Member 'UPD_NpcSetupData_C::Skel_Body_Mat' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_Body_Mat_Extra) == 0x000188, "Member 'UPD_NpcSetupData_C::Skel_Body_Mat_Extra' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Hair_Mat_Extra) == 0x000198, "Member 'UPD_NpcSetupData_C::Hair_Mat_Extra' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Face_Mat_Extra) == 0x0001A8, "Member 'UPD_NpcSetupData_C::Face_Mat_Extra' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyUp_Mat_Extra) == 0x0001B8, "Member 'UPD_NpcSetupData_C::Skel_BodyUp_Mat_Extra' has a wrong offset!");
-static_assert(offsetof(UPD_NpcSetupData_C, Skel_BodyDown_Mat_Extra) == 0x0001C8, "Member 'UPD_NpcSetupData_C::Skel_BodyDown_Mat_Extra' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_NpcSetupData_C;
 
 }
 

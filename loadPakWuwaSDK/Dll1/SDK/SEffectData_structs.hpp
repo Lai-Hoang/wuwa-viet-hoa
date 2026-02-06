@@ -23,9 +23,7 @@ struct FSEffectData final
 public:
 	TArray<struct FSEffectType>                   效果_3_C0039EAB4764CDBDDB2D38A35556BACB;           // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSEffectData) == 0x000008, "Wrong alignment on FSEffectData");
-static_assert(sizeof(FSEffectData) == 0x000010, "Wrong size on FSEffectData");
-static_assert(offsetof(FSEffectData, 效果_3_C0039EAB4764CDBDDB2D38A35556BACB) == 0x000000, "Member 'FSEffectData::效果_3_C0039EAB4764CDBDDB2D38A35556BACB' has a wrong offset!");
+DUMPER7_ASSERTS_FSEffectData;
 
 }
 

@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DebugViewOverdrawSettings">();
+		STATIC_CLASS_IMPL("DebugViewOverdrawSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DebugViewOverdrawSettings")
 	}
 	static class UDebugViewOverdrawSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDebugViewOverdrawSettings>();
 	}
 };
-static_assert(alignof(UDebugViewOverdrawSettings) == 0x000008, "Wrong alignment on UDebugViewOverdrawSettings");
-static_assert(sizeof(UDebugViewOverdrawSettings) == 0x000040, "Wrong size on UDebugViewOverdrawSettings");
-static_assert(offsetof(UDebugViewOverdrawSettings, OverdrawColor) == 0x000030, "Member 'UDebugViewOverdrawSettings::OverdrawColor' has a wrong offset!");
+DUMPER7_ASSERTS_UDebugViewOverdrawSettings;
 
 // Class Renderer.DebugViewTexelDensitySettings
 // 0x0038 (0x0068 - 0x0030)
@@ -52,18 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DebugViewTexelDensitySettings">();
+		STATIC_CLASS_IMPL("DebugViewTexelDensitySettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DebugViewTexelDensitySettings")
 	}
 	static class UDebugViewTexelDensitySettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDebugViewTexelDensitySettings>();
 	}
 };
-static_assert(alignof(UDebugViewTexelDensitySettings) == 0x000008, "Wrong alignment on UDebugViewTexelDensitySettings");
-static_assert(sizeof(UDebugViewTexelDensitySettings) == 0x000068, "Wrong size on UDebugViewTexelDensitySettings");
-static_assert(offsetof(UDebugViewTexelDensitySettings, AutoTextureNameRegex) == 0x000030, "Member 'UDebugViewTexelDensitySettings::AutoTextureNameRegex' has a wrong offset!");
-static_assert(offsetof(UDebugViewTexelDensitySettings, BaseDensity) == 0x000040, "Member 'UDebugViewTexelDensitySettings::BaseDensity' has a wrong offset!");
-static_assert(offsetof(UDebugViewTexelDensitySettings, DensityColors) == 0x000048, "Member 'UDebugViewTexelDensitySettings::DensityColors' has a wrong offset!");
+DUMPER7_ASSERTS_UDebugViewTexelDensitySettings;
 
 }
 

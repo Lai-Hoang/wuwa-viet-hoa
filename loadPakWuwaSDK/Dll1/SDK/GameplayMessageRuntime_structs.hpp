@@ -32,8 +32,7 @@ struct alignas(0x10) FGameplayMessageListenerData final
 public:
 	uint8                                         Pad_0[0x60];                                       // 0x0000(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayMessageListenerData) == 0x000010, "Wrong alignment on FGameplayMessageListenerData");
-static_assert(sizeof(FGameplayMessageListenerData) == 0x000060, "Wrong size on FGameplayMessageListenerData");
+DUMPER7_ASSERTS_FGameplayMessageListenerData;
 
 // ScriptStruct GameplayMessageRuntime.GameplayMessageListenerHandle
 // 0x0020 (0x0020 - 0x0000)
@@ -45,11 +44,7 @@ public:
 	int32                                         ID;                                                // 0x0014(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayMessageListenerHandle) == 0x000008, "Wrong alignment on FGameplayMessageListenerHandle");
-static_assert(sizeof(FGameplayMessageListenerHandle) == 0x000020, "Wrong size on FGameplayMessageListenerHandle");
-static_assert(offsetof(FGameplayMessageListenerHandle, Subsystem) == 0x000000, "Member 'FGameplayMessageListenerHandle::Subsystem' has a wrong offset!");
-static_assert(offsetof(FGameplayMessageListenerHandle, Channel) == 0x000008, "Member 'FGameplayMessageListenerHandle::Channel' has a wrong offset!");
-static_assert(offsetof(FGameplayMessageListenerHandle, ID) == 0x000014, "Member 'FGameplayMessageListenerHandle::ID' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayMessageListenerHandle;
 
 }
 

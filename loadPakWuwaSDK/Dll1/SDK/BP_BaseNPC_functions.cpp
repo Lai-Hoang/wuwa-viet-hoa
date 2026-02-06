@@ -17,198 +17,21 @@
 namespace SDK
 {
 
-// Function BP_BaseNPC.BP_BaseNPC_C.检查是否玩家攻击
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_BaseNPC.BP_BaseNPC_C.ExecuteUbergraph_BP_BaseNPC
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool*                                   IsAttack                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_BaseNPC_C::检查是否玩家攻击(bool* IsAttack)
+void ABP_BaseNPC_C::ExecuteUbergraph_BP_BaseNPC(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "检查是否玩家攻击");
+		Func = Class->GetFunction("BP_BaseNPC_C", "ExecuteUbergraph_BP_BaseNPC");
 
-	Params::BP_BaseNPC_C_检查是否玩家攻击 Parms{};
+	Params::BP_BaseNPC_C_ExecuteUbergraph_BP_BaseNPC Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsAttack != nullptr)
-		*IsAttack = Parms.IsAttack;
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.通知AIC攻击结果
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BaseNPC_C::通知AIC攻击结果(bool IsAttack)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "通知AIC攻击结果");
-
-	Params::BP_BaseNPC_C_通知AIC攻击结果 Parms{};
-
-	Parms.IsAttack = IsAttack;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.执行攻击处理
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BaseNPC_C::执行攻击处理(bool* Success)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "执行攻击处理");
-
-	Params::BP_BaseNPC_C_执行攻击处理 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Success != nullptr)
-		*Success = Parms.Success;
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.执行冲撞处理
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BaseNPC_C::执行冲撞处理(bool* Success)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "执行冲撞处理");
-
-	Params::BP_BaseNPC_C_执行冲撞处理 Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Success != nullptr)
-		*Success = Parms.Success;
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.通知AIC冲撞结果
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsImpact                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BaseNPC_C::通知AIC冲撞结果(bool IsImpact)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "通知AIC冲撞结果");
-
-	Params::BP_BaseNPC_C_通知AIC冲撞结果 Parms{};
-
-	Parms.IsImpact = IsImpact;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.设置硬直
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BaseNPC_C::设置硬直(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "设置硬直");
-
-	Params::BP_BaseNPC_C_设置硬直 Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.initAI
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_BaseNPC_C::initAI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "initAI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BaseNPC_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "ReceiveTick");
-
-	Params::BP_BaseNPC_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_BaseNPC_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BaseNPC.BP_BaseNPC_C.BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BaseNPC_C::BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-
-	Params::BP_BaseNPC_C_BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -244,23 +67,200 @@ void ABP_BaseNPC_C::BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_0
 }
 
 
-// Function BP_BaseNPC.BP_BaseNPC_C.ExecuteUbergraph_BP_BaseNPC
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_BaseNPC.BP_BaseNPC_C.BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_BaseNPC_C::ExecuteUbergraph_BP_BaseNPC(int32 EntryPoint)
+void ABP_BaseNPC_C::BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseNPC_C", "ExecuteUbergraph_BP_BaseNPC");
+		Func = Class->GetFunction("BP_BaseNPC_C", "BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
-	Params::BP_BaseNPC_C_ExecuteUbergraph_BP_BaseNPC Parms{};
+	Params::BP_BaseNPC_C_BndEvt__BP_BaseNPC_HitCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_BaseNPC_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BaseNPC_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "ReceiveTick");
+
+	Params::BP_BaseNPC_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.initAI
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_BaseNPC_C::initAI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "initAI");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.设置硬直
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::设置硬直(bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "设置硬直");
+
+	Params::BP_BaseNPC_C_设置硬直 Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.通知AIC冲撞结果
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsImpact                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::通知AIC冲撞结果(bool IsImpact)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "通知AIC冲撞结果");
+
+	Params::BP_BaseNPC_C_通知AIC冲撞结果 Parms{};
+
+	Parms.IsImpact = IsImpact;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.执行冲撞处理
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::执行冲撞处理(bool* Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "执行冲撞处理");
+
+	Params::BP_BaseNPC_C_执行冲撞处理 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Success != nullptr)
+		*Success = Parms.Success;
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.执行攻击处理
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::执行攻击处理(bool* Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "执行攻击处理");
+
+	Params::BP_BaseNPC_C_执行攻击处理 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Success != nullptr)
+		*Success = Parms.Success;
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.通知AIC攻击结果
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsAttack                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::通知AIC攻击结果(bool IsAttack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "通知AIC攻击结果");
+
+	Params::BP_BaseNPC_C_通知AIC攻击结果 Parms{};
+
+	Parms.IsAttack = IsAttack;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseNPC.BP_BaseNPC_C.检查是否玩家攻击
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   IsAttack                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BaseNPC_C::检查是否玩家攻击(bool* IsAttack)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseNPC_C", "检查是否玩家攻击");
+
+	Params::BP_BaseNPC_C_检查是否玩家攻击 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsAttack != nullptr)
+		*IsAttack = Parms.IsAttack;
 }
 
 }

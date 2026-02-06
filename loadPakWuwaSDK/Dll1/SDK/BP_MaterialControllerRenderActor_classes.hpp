@@ -28,18 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_MaterialControllerRenderActor_C">();
+		BP_STATIC_CLASS_IMPL("BP_MaterialControllerRenderActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_MaterialControllerRenderActor_C")
 	}
 	static class ABP_MaterialControllerRenderActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_MaterialControllerRenderActor_C>();
 	}
 };
-static_assert(alignof(ABP_MaterialControllerRenderActor_C) == 0x000008, "Wrong alignment on ABP_MaterialControllerRenderActor_C");
-static_assert(sizeof(ABP_MaterialControllerRenderActor_C) == 0x0002C8, "Wrong size on ABP_MaterialControllerRenderActor_C");
-static_assert(offsetof(ABP_MaterialControllerRenderActor_C, CharRenderingComponent) == 0x0002B0, "Member 'ABP_MaterialControllerRenderActor_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ABP_MaterialControllerRenderActor_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_MaterialControllerRenderActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MaterialControllerRenderActor_C, RefActor) == 0x0002C0, "Member 'ABP_MaterialControllerRenderActor_C::RefActor' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_MaterialControllerRenderActor_C;
 
 }
 

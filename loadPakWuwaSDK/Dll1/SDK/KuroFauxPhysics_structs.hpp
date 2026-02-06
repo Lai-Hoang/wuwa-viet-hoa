@@ -45,8 +45,7 @@ struct alignas(0x08) FKuroInstigator final
 public:
 	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroInstigator) == 0x000008, "Wrong alignment on FKuroInstigator");
-static_assert(sizeof(FKuroInstigator) == 0x000038, "Wrong size on FKuroInstigator");
+DUMPER7_ASSERTS_FKuroInstigator;
 
 // ScriptStruct KuroFauxPhysics.KuroDashedLine
 // 0x0038 (0x0038 - 0x0000)
@@ -62,15 +61,7 @@ public:
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DepthBias;                                         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroDashedLine) == 0x000004, "Wrong alignment on FKuroDashedLine");
-static_assert(sizeof(FKuroDashedLine) == 0x000038, "Wrong size on FKuroDashedLine");
-static_assert(offsetof(FKuroDashedLine, Start) == 0x000000, "Member 'FKuroDashedLine::Start' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, End) == 0x00000C, "Member 'FKuroDashedLine::End' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, Color) == 0x000018, "Member 'FKuroDashedLine::Color' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, DashSize) == 0x000028, "Member 'FKuroDashedLine::DashSize' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, RemainingLifeTime) == 0x00002C, "Member 'FKuroDashedLine::RemainingLifeTime' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, DepthPriority) == 0x000030, "Member 'FKuroDashedLine::DepthPriority' has a wrong offset!");
-static_assert(offsetof(FKuroDashedLine, DepthBias) == 0x000034, "Member 'FKuroDashedLine::DepthBias' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroDashedLine;
 
 // ScriptStruct KuroFauxPhysics.KuroLine
 // 0x0034 (0x0034 - 0x0000)
@@ -85,14 +76,7 @@ public:
 	uint8                                         DepthPriority;                                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroLine) == 0x000004, "Wrong alignment on FKuroLine");
-static_assert(sizeof(FKuroLine) == 0x000034, "Wrong size on FKuroLine");
-static_assert(offsetof(FKuroLine, Start) == 0x000000, "Member 'FKuroLine::Start' has a wrong offset!");
-static_assert(offsetof(FKuroLine, End) == 0x00000C, "Member 'FKuroLine::End' has a wrong offset!");
-static_assert(offsetof(FKuroLine, Color) == 0x000018, "Member 'FKuroLine::Color' has a wrong offset!");
-static_assert(offsetof(FKuroLine, Thickness) == 0x000028, "Member 'FKuroLine::Thickness' has a wrong offset!");
-static_assert(offsetof(FKuroLine, RemainingLifeTime) == 0x00002C, "Member 'FKuroLine::RemainingLifeTime' has a wrong offset!");
-static_assert(offsetof(FKuroLine, DepthPriority) == 0x000030, "Member 'FKuroLine::DepthPriority' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroLine;
 
 }
 

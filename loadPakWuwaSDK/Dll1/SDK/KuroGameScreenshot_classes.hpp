@@ -39,18 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameScreenshotTask">();
+		STATIC_CLASS_IMPL("GameScreenshotTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameScreenshotTask")
 	}
 	static class UGameScreenshotTask* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameScreenshotTask>();
 	}
 };
-static_assert(alignof(UGameScreenshotTask) == 0x000008, "Wrong alignment on UGameScreenshotTask");
-static_assert(sizeof(UGameScreenshotTask) == 0x000090, "Wrong size on UGameScreenshotTask");
-static_assert(offsetof(UGameScreenshotTask, OnTakeScreenshotCapturedDelegate) == 0x000030, "Member 'UGameScreenshotTask::OnTakeScreenshotCapturedDelegate' has a wrong offset!");
-static_assert(offsetof(UGameScreenshotTask, OnTakeScreenshotCompressedDelegate) == 0x000040, "Member 'UGameScreenshotTask::OnTakeScreenshotCompressedDelegate' has a wrong offset!");
-static_assert(offsetof(UGameScreenshotTask, OnIOSPhotoLibraryAuthorizationCompletedDelegate) == 0x000050, "Member 'UGameScreenshotTask::OnIOSPhotoLibraryAuthorizationCompletedDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UGameScreenshotTask;
 
 // Class KuroGameScreenshot.KuroGameScreenshotBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -68,15 +68,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroGameScreenshotBPLibrary">();
+		STATIC_CLASS_IMPL("KuroGameScreenshotBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameScreenshotBPLibrary")
 	}
 	static class UKuroGameScreenshotBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroGameScreenshotBPLibrary>();
 	}
 };
-static_assert(alignof(UKuroGameScreenshotBPLibrary) == 0x000008, "Wrong alignment on UKuroGameScreenshotBPLibrary");
-static_assert(sizeof(UKuroGameScreenshotBPLibrary) == 0x000030, "Wrong size on UKuroGameScreenshotBPLibrary");
+DUMPER7_ASSERTS_UKuroGameScreenshotBPLibrary;
 
 }
 

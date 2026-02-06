@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "KuroPerformance_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -67,15 +67,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPerformanceBPLibrary">();
+		STATIC_CLASS_IMPL("KuroPerformanceBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPerformanceBPLibrary")
 	}
 	static class UKuroPerformanceBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPerformanceBPLibrary>();
 	}
 };
-static_assert(alignof(UKuroPerformanceBPLibrary) == 0x000008, "Wrong alignment on UKuroPerformanceBPLibrary");
-static_assert(sizeof(UKuroPerformanceBPLibrary) == 0x000030, "Wrong size on UKuroPerformanceBPLibrary");
+DUMPER7_ASSERTS_UKuroPerformanceBPLibrary;
 
 }
 

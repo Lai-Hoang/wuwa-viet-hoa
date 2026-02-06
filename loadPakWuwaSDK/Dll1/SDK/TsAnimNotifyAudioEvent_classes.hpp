@@ -36,19 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyAudioEvent_C")
 	}
 	static class UTsAnimNotifyAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyAudioEvent_C) == 0x000008, "Wrong alignment on UTsAnimNotifyAudioEvent_C");
-static_assert(sizeof(UTsAnimNotifyAudioEvent_C) == 0x0000A0, "Wrong size on UTsAnimNotifyAudioEvent_C");
-static_assert(offsetof(UTsAnimNotifyAudioEvent_C, AudioEvent) == 0x000048, "Member 'UTsAnimNotifyAudioEvent_C::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyAudioEvent_C, SocketName) == 0x000078, "Member 'UTsAnimNotifyAudioEvent_C::SocketName' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyAudioEvent_C, Follow) == 0x000084, "Member 'UTsAnimNotifyAudioEvent_C::Follow' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyAudioEvent_C, TagProbabilityInfo) == 0x000088, "Member 'UTsAnimNotifyAudioEvent_C::TagProbabilityInfo' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyAudioEvent_C;
 
 }
 

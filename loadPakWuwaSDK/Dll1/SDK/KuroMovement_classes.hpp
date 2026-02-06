@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "KuroGameplay_structs.hpp"
-#include "KuroMovement_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroMovement_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroGameplay_structs.hpp"
 
 
 namespace SDK
@@ -55,15 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroClimbObject">();
+		STATIC_CLASS_IMPL("KuroClimbObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroClimbObject")
 	}
 	static class UKuroClimbObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroClimbObject>();
 	}
 };
-static_assert(alignof(UKuroClimbObject) == 0x000008, "Wrong alignment on UKuroClimbObject");
-static_assert(sizeof(UKuroClimbObject) == 0x000220, "Wrong size on UKuroClimbObject");
+DUMPER7_ASSERTS_UKuroClimbObject;
 
 // Class KuroMovement.KuroDebugMovementComponent
 // 0x01A0 (0x06D0 - 0x0530)
@@ -92,17 +95,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroDebugMovementComponent">();
+		STATIC_CLASS_IMPL("KuroDebugMovementComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroDebugMovementComponent")
 	}
 	static class UKuroDebugMovementComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroDebugMovementComponent>();
 	}
 };
-static_assert(alignof(UKuroDebugMovementComponent) == 0x000010, "Wrong alignment on UKuroDebugMovementComponent");
-static_assert(sizeof(UKuroDebugMovementComponent) == 0x0006D0, "Wrong size on UKuroDebugMovementComponent");
-static_assert(offsetof(UKuroDebugMovementComponent, DrawDebugCount) == 0x000528, "Member 'UKuroDebugMovementComponent::DrawDebugCount' has a wrong offset!");
-static_assert(offsetof(UKuroDebugMovementComponent, bDrawDebug) == 0x00052D, "Member 'UKuroDebugMovementComponent::bDrawDebug' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroDebugMovementComponent;
 
 // Class KuroMovement.KuroMoveTrigger
 // 0x0008 (0x02B8 - 0x02B0)
@@ -119,16 +123,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMoveTrigger">();
+		STATIC_CLASS_IMPL("KuroMoveTrigger")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMoveTrigger")
 	}
 	static class AKuroMoveTrigger* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroMoveTrigger>();
 	}
 };
-static_assert(alignof(AKuroMoveTrigger) == 0x000008, "Wrong alignment on AKuroMoveTrigger");
-static_assert(sizeof(AKuroMoveTrigger) == 0x0002B8, "Wrong size on AKuroMoveTrigger");
-static_assert(offsetof(AKuroMoveTrigger, AreaType) == 0x0002B0, "Member 'AKuroMoveTrigger::AreaType' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroMoveTrigger;
 
 // Class KuroMovement.KuroMoveBoxTrigger
 // 0x0008 (0x02C0 - 0x02B8)
@@ -140,16 +146,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMoveBoxTrigger">();
+		STATIC_CLASS_IMPL("KuroMoveBoxTrigger")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMoveBoxTrigger")
 	}
 	static class AKuroMoveBoxTrigger* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroMoveBoxTrigger>();
 	}
 };
-static_assert(alignof(AKuroMoveBoxTrigger) == 0x000008, "Wrong alignment on AKuroMoveBoxTrigger");
-static_assert(sizeof(AKuroMoveBoxTrigger) == 0x0002C0, "Wrong size on AKuroMoveBoxTrigger");
-static_assert(offsetof(AKuroMoveBoxTrigger, BoxCollision) == 0x0002B8, "Member 'AKuroMoveBoxTrigger::BoxCollision' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroMoveBoxTrigger;
 
 // Class KuroMovement.KuroMoveBrushTrigger
 // 0x0010 (0x02C8 - 0x02B8)
@@ -162,17 +170,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMoveBrushTrigger">();
+		STATIC_CLASS_IMPL("KuroMoveBrushTrigger")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMoveBrushTrigger")
 	}
 	static class AKuroMoveBrushTrigger* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroMoveBrushTrigger>();
 	}
 };
-static_assert(alignof(AKuroMoveBrushTrigger) == 0x000008, "Wrong alignment on AKuroMoveBrushTrigger");
-static_assert(sizeof(AKuroMoveBrushTrigger) == 0x0002C8, "Wrong size on AKuroMoveBrushTrigger");
-static_assert(offsetof(AKuroMoveBrushTrigger, Volume) == 0x0002B8, "Member 'AKuroMoveBrushTrigger::Volume' has a wrong offset!");
-static_assert(offsetof(AKuroMoveBrushTrigger, Root) == 0x0002C0, "Member 'AKuroMoveBrushTrigger::Root' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroMoveBrushTrigger;
 
 // Class KuroMovement.KuroMovementBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -189,15 +198,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMovementBPLibrary">();
+		STATIC_CLASS_IMPL("KuroMovementBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMovementBPLibrary")
 	}
 	static class UKuroMovementBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroMovementBPLibrary>();
 	}
 };
-static_assert(alignof(UKuroMovementBPLibrary) == 0x000008, "Wrong alignment on UKuroMovementBPLibrary");
-static_assert(sizeof(UKuroMovementBPLibrary) == 0x000030, "Wrong size on UKuroMovementBPLibrary");
+DUMPER7_ASSERTS_UKuroMovementBPLibrary;
 
 // Class KuroMovement.KuroMoveTriggerController
 // 0x0020 (0x02D0 - 0x02B0)
@@ -216,17 +228,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroMoveTriggerController">();
+		STATIC_CLASS_IMPL("KuroMoveTriggerController")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMoveTriggerController")
 	}
 	static class AKuroMoveTriggerController* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroMoveTriggerController>();
 	}
 };
-static_assert(alignof(AKuroMoveTriggerController) == 0x000008, "Wrong alignment on AKuroMoveTriggerController");
-static_assert(sizeof(AKuroMoveTriggerController) == 0x0002D0, "Wrong size on AKuroMoveTriggerController");
-static_assert(offsetof(AKuroMoveTriggerController, Callback) == 0x0002B0, "Member 'AKuroMoveTriggerController::Callback' has a wrong offset!");
-static_assert(offsetof(AKuroMoveTriggerController, Records) == 0x0002C0, "Member 'AKuroMoveTriggerController::Records' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroMoveTriggerController;
 
 }
 

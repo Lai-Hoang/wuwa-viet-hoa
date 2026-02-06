@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SHitMapping_structs.hpp"
-#include "ERelation_structs.hpp"
-#include "Engine_structs.hpp"
 #include "ECamp_structs.hpp"
+#include "SHitMapping_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ERelation_structs.hpp"
 #include "SCamp_structs.hpp"
 
 
@@ -28,10 +28,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_ExecuteUbergraph_BP_FightManager) == 0x000004, "Wrong alignment on BP_FightManager_C_ExecuteUbergraph_BP_FightManager");
-static_assert(sizeof(BP_FightManager_C_ExecuteUbergraph_BP_FightManager) == 0x000008, "Wrong size on BP_FightManager_C_ExecuteUbergraph_BP_FightManager");
-static_assert(offsetof(BP_FightManager_C_ExecuteUbergraph_BP_FightManager, EntryPoint) == 0x000000, "Member 'BP_FightManager_C_ExecuteUbergraph_BP_FightManager::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_ExecuteUbergraph_BP_FightManager, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_FightManager_C_ExecuteUbergraph_BP_FightManager::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_ExecuteUbergraph_BP_FightManager;
 
 // Function BP_FightManager.BP_FightManager_C.Tick
 // 0x0004 (0x0004 - 0x0000)
@@ -40,9 +37,7 @@ struct BP_FightManager_C_Tick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_Tick) == 0x000004, "Wrong alignment on BP_FightManager_C_Tick");
-static_assert(sizeof(BP_FightManager_C_Tick) == 0x000004, "Wrong size on BP_FightManager_C_Tick");
-static_assert(offsetof(BP_FightManager_C_Tick, DeltaSeconds) == 0x000000, "Member 'BP_FightManager_C_Tick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_Tick;
 
 // Function BP_FightManager.BP_FightManager_C.战斗初始化
 // 0x0010 (0x0010 - 0x0000)
@@ -53,11 +48,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_FightManager_C_战斗初始化) == 0x000008, "Wrong alignment on BP_FightManager_C_战斗初始化");
-static_assert(sizeof(BP_FightManager_C_战斗初始化) == 0x000010, "Wrong size on BP_FightManager_C_战斗初始化");
-static_assert(offsetof(BP_FightManager_C_战斗初始化, CallFunc_SpawnObject_ReturnValue) == 0x000000, "Member 'BP_FightManager_C_战斗初始化::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_战斗初始化, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_FightManager_C_战斗初始化::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_战斗初始化, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_FightManager_C_战斗初始化::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_战斗初始化;
 
 // Function BP_FightManager.BP_FightManager_C.初始化
 // 0x0008 (0x0008 - 0x0000)
@@ -66,9 +57,7 @@ struct BP_FightManager_C_初始化 final
 public:
 	class UBP_MainGameInstance_C*                 游戏实例_0;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_初始化) == 0x000008, "Wrong alignment on BP_FightManager_C_初始化");
-static_assert(sizeof(BP_FightManager_C_初始化) == 0x000008, "Wrong size on BP_FightManager_C_初始化");
-static_assert(offsetof(BP_FightManager_C_初始化, 游戏实例_0) == 0x000000, "Member 'BP_FightManager_C_初始化::游戏实例_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_初始化;
 
 // Function BP_FightManager.BP_FightManager_C.阵营判断
 // 0x0050 (0x0050 - 0x0000)
@@ -89,20 +78,7 @@ public:
 	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_FightManager_C_阵营判断) == 0x000008, "Wrong alignment on BP_FightManager_C_阵营判断");
-static_assert(sizeof(BP_FightManager_C_阵营判断) == 0x000050, "Wrong size on BP_FightManager_C_阵营判断");
-static_assert(offsetof(BP_FightManager_C_阵营判断, 自身阵营) == 0x000000, "Member 'BP_FightManager_C_阵营判断::自身阵营' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, 目标阵营) == 0x000001, "Member 'BP_FightManager_C_阵营判断::目标阵营' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, 关系) == 0x000002, "Member 'BP_FightManager_C_阵营判断::关系' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, 关系整数) == 0x000004, "Member 'BP_FightManager_C_阵营判断::关系整数' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, 找到的阵营数据) == 0x000008, "Member 'BP_FightManager_C_阵营判断::找到的阵营数据' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000018, "Member 'BP_FightManager_C_阵营判断::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000028, "Member 'BP_FightManager_C_阵营判断::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_Conv_StringToName_ReturnValue) == 0x00002C, "Member 'BP_FightManager_C_阵营判断::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_GetDataTableRowFromName_OutRow) == 0x000038, "Member 'BP_FightManager_C_阵营判断::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000048, "Member 'BP_FightManager_C_阵营判断::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000049, "Member 'BP_FightManager_C_阵营判断::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_阵营判断, K2Node_SwitchInteger_CmpSuccess) == 0x00004A, "Member 'BP_FightManager_C_阵营判断::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_阵营判断;
 
 // Function BP_FightManager.BP_FightManager_C.烈度返回NPC
 // 0x0048 (0x0048 - 0x0000)
@@ -119,15 +95,7 @@ public:
 	class UObject*                                角色实体局部;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UObject*>                        角色数组局部;                                      // 0x0038(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 };
-static_assert(alignof(BP_FightManager_C_烈度返回NPC) == 0x000008, "Wrong alignment on BP_FightManager_C_烈度返回NPC");
-static_assert(sizeof(BP_FightManager_C_烈度返回NPC) == 0x000048, "Wrong size on BP_FightManager_C_烈度返回NPC");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 烈度加npc) == 0x000000, "Member 'BP_FightManager_C_烈度返回NPC::烈度加npc' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 循环烈度) == 0x000010, "Member 'BP_FightManager_C_烈度返回NPC::循环烈度' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 同时攻击达到上限) == 0x000014, "Member 'BP_FightManager_C_烈度返回NPC::同时攻击达到上限' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 怪物攻击权重局部) == 0x000018, "Member 'BP_FightManager_C_烈度返回NPC::怪物攻击权重局部' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 怪物aic局部数组) == 0x000020, "Member 'BP_FightManager_C_烈度返回NPC::怪物aic局部数组' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 角色实体局部) == 0x000030, "Member 'BP_FightManager_C_烈度返回NPC::角色实体局部' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度返回NPC, 角色数组局部) == 0x000038, "Member 'BP_FightManager_C_烈度返回NPC::角色数组局部' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_烈度返回NPC;
 
 // Function BP_FightManager.BP_FightManager_C.烈度获取所有Actor
 // 0x0018 (0x0018 - 0x0000)
@@ -139,11 +107,7 @@ public:
 	class UObject*                                怪物临时变量;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                角色临时变量;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_烈度获取所有Actor) == 0x000008, "Wrong alignment on BP_FightManager_C_烈度获取所有Actor");
-static_assert(sizeof(BP_FightManager_C_烈度获取所有Actor) == 0x000018, "Wrong size on BP_FightManager_C_烈度获取所有Actor");
-static_assert(offsetof(BP_FightManager_C_烈度获取所有Actor, 当前怪物索引) == 0x000000, "Member 'BP_FightManager_C_烈度获取所有Actor::当前怪物索引' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度获取所有Actor, 怪物临时变量) == 0x000008, "Member 'BP_FightManager_C_烈度获取所有Actor::怪物临时变量' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_烈度获取所有Actor, 角色临时变量) == 0x000010, "Member 'BP_FightManager_C_烈度获取所有Actor::角色临时变量' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_烈度获取所有Actor;
 
 // Function BP_FightManager.BP_FightManager_C.注册BPai
 // 0x0008 (0x0008 - 0x0000)
@@ -152,9 +116,7 @@ struct BP_FightManager_C_注册BPai final
 public:
 	class UObject*                                BPAI对象;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_注册BPai) == 0x000008, "Wrong alignment on BP_FightManager_C_注册BPai");
-static_assert(sizeof(BP_FightManager_C_注册BPai) == 0x000008, "Wrong size on BP_FightManager_C_注册BPai");
-static_assert(offsetof(BP_FightManager_C_注册BPai, BPAI对象) == 0x000000, "Member 'BP_FightManager_C_注册BPai::BPAI对象' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_注册BPai;
 
 // Function BP_FightManager.BP_FightManager_C.添加Debug的对象
 // 0x0060 (0x0060 - 0x0000)
@@ -170,15 +132,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_添加Debug的对象) == 0x000008, "Wrong alignment on BP_FightManager_C_添加Debug的对象");
-static_assert(sizeof(BP_FightManager_C_添加Debug的对象) == 0x000060, "Wrong size on BP_FightManager_C_添加Debug的对象");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, baseChar) == 0x000000, "Member 'BP_FightManager_C_添加Debug的对象::baseChar' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_GetEntityId_self_CastInput) == 0x000008, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_GetEntityId_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_GetEntityId_ReturnValue) == 0x000018, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_GetEntityId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_GetObjectName_ReturnValue) == 0x000020, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_添加Debug的对象, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000050, "Member 'BP_FightManager_C_添加Debug的对象::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_添加Debug的对象;
 
 // Function BP_FightManager.BP_FightManager_C.删除Debug的对象
 // 0x0068 (0x0068 - 0x0000)
@@ -195,16 +149,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Remove_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_FightManager_C_删除Debug的对象) == 0x000008, "Wrong alignment on BP_FightManager_C_删除Debug的对象");
-static_assert(sizeof(BP_FightManager_C_删除Debug的对象) == 0x000068, "Wrong size on BP_FightManager_C_删除Debug的对象");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, baseChar) == 0x000000, "Member 'BP_FightManager_C_删除Debug的对象::baseChar' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_GetEntityId_self_CastInput) == 0x000008, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_GetEntityId_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_GetEntityId_ReturnValue) == 0x000018, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_GetEntityId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_GetObjectName_ReturnValue) == 0x000020, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_Conv_IntToString_ReturnValue) == 0x000030, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_Concat_StrStr_ReturnValue) == 0x000040, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000050, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_删除Debug的对象, CallFunc_Map_Remove_ReturnValue) == 0x000060, "Member 'BP_FightManager_C_删除Debug的对象::CallFunc_Map_Remove_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_删除Debug的对象;
 
 // Function BP_FightManager.BP_FightManager_C.站位控制
 // 0x0020 (0x0020 - 0x0000)
@@ -215,11 +160,7 @@ public:
 	class UObject*                                临时选中结果;                                      // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                站位临时数组对象;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FightManager_C_站位控制) == 0x000008, "Wrong alignment on BP_FightManager_C_站位控制");
-static_assert(sizeof(BP_FightManager_C_站位控制) == 0x000020, "Wrong size on BP_FightManager_C_站位控制");
-static_assert(offsetof(BP_FightManager_C_站位控制, 怪物数组) == 0x000000, "Member 'BP_FightManager_C_站位控制::怪物数组' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_站位控制, 临时选中结果) == 0x000010, "Member 'BP_FightManager_C_站位控制::临时选中结果' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_站位控制, 站位临时数组对象) == 0x000018, "Member 'BP_FightManager_C_站位控制::站位临时数组对象' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_站位控制;
 
 // Function BP_FightManager.BP_FightManager_C.查询受击类型覆盖
 // 0x0128 (0x0128 - 0x0000)
@@ -242,20 +183,7 @@ public:
 	struct FSHitMapping                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x00F8(0x0028)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_FightManager_C_查询受击类型覆盖) == 0x000008, "Wrong alignment on BP_FightManager_C_查询受击类型覆盖");
-static_assert(sizeof(BP_FightManager_C_查询受击类型覆盖) == 0x000128, "Wrong size on BP_FightManager_C_查询受击类型覆盖");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, ID) == 0x000000, "Member 'BP_FightManager_C_查询受击类型覆盖::ID' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, 受击覆盖) == 0x000008, "Member 'BP_FightManager_C_查询受击类型覆盖::受击覆盖' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, 是否找到) == 0x000030, "Member 'BP_FightManager_C_查询受击类型覆盖::是否找到' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, 找到的数据) == 0x000038, "Member 'BP_FightManager_C_查询受击类型覆盖::找到的数据' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_Conv_IntToString_ReturnValue) == 0x000060, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_Conv_StringToName_ReturnValue) == 0x000070, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, K2Node_MakeStruct_FormatArgumentData) == 0x000080, "Member 'BP_FightManager_C_查询受击类型覆盖::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, K2Node_MakeArray_Array) == 0x0000C0, "Member 'BP_FightManager_C_查询受击类型覆盖::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_Format_ReturnValue) == 0x0000D0, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_Conv_TextToString_ReturnValue) == 0x0000E8, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000F8, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_FightManager_C_查询受击类型覆盖, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000120, "Member 'BP_FightManager_C_查询受击类型覆盖::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_FightManager_C_查询受击类型覆盖;
 
 }
 

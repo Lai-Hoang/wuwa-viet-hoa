@@ -23,15 +23,18 @@ class UNiagaraMergeable : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraMergeable">();
+		STATIC_CLASS_IMPL("NiagaraMergeable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraMergeable")
 	}
 	static class UNiagaraMergeable* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNiagaraMergeable>();
 	}
 };
-static_assert(alignof(UNiagaraMergeable) == 0x000008, "Wrong alignment on UNiagaraMergeable");
-static_assert(sizeof(UNiagaraMergeable) == 0x000030, "Wrong size on UNiagaraMergeable");
+DUMPER7_ASSERTS_UNiagaraMergeable;
 
 // Class NiagaraCore.NiagaraDataInterfaceBase
 // 0x0000 (0x0030 - 0x0030)
@@ -40,15 +43,18 @@ class UNiagaraDataInterfaceBase : public UNiagaraMergeable
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NiagaraDataInterfaceBase">();
+		STATIC_CLASS_IMPL("NiagaraDataInterfaceBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NiagaraDataInterfaceBase")
 	}
 	static class UNiagaraDataInterfaceBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNiagaraDataInterfaceBase>();
 	}
 };
-static_assert(alignof(UNiagaraDataInterfaceBase) == 0x000008, "Wrong alignment on UNiagaraDataInterfaceBase");
-static_assert(sizeof(UNiagaraDataInterfaceBase) == 0x000030, "Wrong size on UNiagaraDataInterfaceBase");
+DUMPER7_ASSERTS_UNiagaraDataInterfaceBase;
 
 }
 

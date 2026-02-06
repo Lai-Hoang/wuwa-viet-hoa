@@ -42,19 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsLguiEventSystemActor_C">();
+		BP_STATIC_CLASS_IMPL("TsLguiEventSystemActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsLguiEventSystemActor_C")
 	}
 	static class ATsLguiEventSystemActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsLguiEventSystemActor_C>();
 	}
 };
-static_assert(alignof(ATsLguiEventSystemActor_C) == 0x000008, "Wrong alignment on ATsLguiEventSystemActor_C");
-static_assert(sizeof(ATsLguiEventSystemActor_C) == 0x0002D8, "Wrong size on ATsLguiEventSystemActor_C");
-static_assert(offsetof(ATsLguiEventSystemActor_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsLguiEventSystemActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ATsLguiEventSystemActor_C, TouchInputModule) == 0x0002C0, "Member 'ATsLguiEventSystemActor_C::TouchInputModule' has a wrong offset!");
-static_assert(offsetof(ATsLguiEventSystemActor_C, StandaloneInputModule) == 0x0002C8, "Member 'ATsLguiEventSystemActor_C::StandaloneInputModule' has a wrong offset!");
-static_assert(offsetof(ATsLguiEventSystemActor_C, NavigationEnable) == 0x0002D0, "Member 'ATsLguiEventSystemActor_C::NavigationEnable' has a wrong offset!");
+DUMPER7_ASSERTS_ATsLguiEventSystemActor_C;
 
 }
 

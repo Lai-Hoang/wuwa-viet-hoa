@@ -31,11 +31,7 @@ public:
 	uint16                                        SubdivisionLevel;                                  // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        Format;                                            // 0x0006(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOpacityMicromapDesc) == 0x000004, "Wrong alignment on FOpacityMicromapDesc");
-static_assert(sizeof(FOpacityMicromapDesc) == 0x000008, "Wrong size on FOpacityMicromapDesc");
-static_assert(offsetof(FOpacityMicromapDesc, Offset) == 0x000000, "Member 'FOpacityMicromapDesc::Offset' has a wrong offset!");
-static_assert(offsetof(FOpacityMicromapDesc, SubdivisionLevel) == 0x000004, "Member 'FOpacityMicromapDesc::SubdivisionLevel' has a wrong offset!");
-static_assert(offsetof(FOpacityMicromapDesc, Format) == 0x000006, "Member 'FOpacityMicromapDesc::Format' has a wrong offset!");
+DUMPER7_ASSERTS_FOpacityMicromapDesc;
 
 // ScriptStruct OpacityMicroMap.OpacityMicroMapUsageCount
 // 0x000C (0x000C - 0x0000)
@@ -46,11 +42,7 @@ public:
 	uint32                                        SubdivisionLevel;                                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        Format;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOpacityMicroMapUsageCount) == 0x000004, "Wrong alignment on FOpacityMicroMapUsageCount");
-static_assert(sizeof(FOpacityMicroMapUsageCount) == 0x00000C, "Wrong size on FOpacityMicroMapUsageCount");
-static_assert(offsetof(FOpacityMicroMapUsageCount, Count) == 0x000000, "Member 'FOpacityMicroMapUsageCount::Count' has a wrong offset!");
-static_assert(offsetof(FOpacityMicroMapUsageCount, SubdivisionLevel) == 0x000004, "Member 'FOpacityMicroMapUsageCount::SubdivisionLevel' has a wrong offset!");
-static_assert(offsetof(FOpacityMicroMapUsageCount, Format) == 0x000008, "Member 'FOpacityMicroMapUsageCount::Format' has a wrong offset!");
+DUMPER7_ASSERTS_FOpacityMicroMapUsageCount;
 
 // ScriptStruct OpacityMicroMap.OpacityMaskTextureDesc
 // 0x0010 (0x0010 - 0x0000)
@@ -60,10 +52,7 @@ public:
 	class FName                                   TextureParameterName;                              // 0x0000(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AlphaChannel;                                      // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOpacityMaskTextureDesc) == 0x000004, "Wrong alignment on FOpacityMaskTextureDesc");
-static_assert(sizeof(FOpacityMaskTextureDesc) == 0x000010, "Wrong size on FOpacityMaskTextureDesc");
-static_assert(offsetof(FOpacityMaskTextureDesc, TextureParameterName) == 0x000000, "Member 'FOpacityMaskTextureDesc::TextureParameterName' has a wrong offset!");
-static_assert(offsetof(FOpacityMaskTextureDesc, AlphaChannel) == 0x00000C, "Member 'FOpacityMaskTextureDesc::AlphaChannel' has a wrong offset!");
+DUMPER7_ASSERTS_FOpacityMaskTextureDesc;
 
 }
 

@@ -113,23 +113,18 @@ enum class EKuroPlatformFlags : uint8
 	EKuroPlatformFlags_MAX                   = 5,
 };
 
-// ScriptStruct KuroGameBudget.GameBudgetAllocatorTickDetailConfig
+// ScriptStruct KuroGameBudget.GameBudgetBoundsScreenRadiusConfig
 // 0x0008 (0x0008 - 0x0000)
-struct FGameBudgetAllocatorTickDetailConfig final
+struct FGameBudgetBoundsScreenRadiusConfig final
 {
 public:
-	uint32                                        MaxTickInterval;                                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionStartSize;                            // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        TickReductionIntervalSize;                         // 0x0006(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TickReductionStartScreenRatio;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TickReductionIntervalScreenRatio;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameBudgetAllocatorTickDetailConfig) == 0x000004, "Wrong alignment on FGameBudgetAllocatorTickDetailConfig");
-static_assert(sizeof(FGameBudgetAllocatorTickDetailConfig) == 0x000008, "Wrong size on FGameBudgetAllocatorTickDetailConfig");
-static_assert(offsetof(FGameBudgetAllocatorTickDetailConfig, MaxTickInterval) == 0x000000, "Member 'FGameBudgetAllocatorTickDetailConfig::MaxTickInterval' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorTickDetailConfig, TickReductionStartSize) == 0x000004, "Member 'FGameBudgetAllocatorTickDetailConfig::TickReductionStartSize' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorTickDetailConfig, TickReductionIntervalSize) == 0x000006, "Member 'FGameBudgetAllocatorTickDetailConfig::TickReductionIntervalSize' has a wrong offset!");
+DUMPER7_ASSERTS_FGameBudgetBoundsScreenRadiusConfig;
 
 // ScriptStruct KuroGameBudget.KuroGameBudgetBlueprint
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct alignas(0x08) FKuroGameBudgetBlueprint final
 {
 public:
@@ -139,22 +134,16 @@ public:
 	bool                                          bRegisterGameBudgetTick;                           // 0x000A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRegisterOnEnableChangeEvent;                      // 0x000B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRegisterOnVisibilityChangeEvent;                  // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSyncComponentTick;                                // 0x000D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBoundsCalculateDistance;                       // 0x000E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F[0x29];                                       // 0x000F(0x0029)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bRegisterOnEnvInteractChangeEvent;                 // 0x000D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSyncComponentTick;                                // 0x000E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBoundsCalculateDistance;                       // 0x000F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseScreenRadiusCalculateTickInterval;             // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x37];                                      // 0x0011(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroGameBudgetBlueprint) == 0x000008, "Wrong alignment on FKuroGameBudgetBlueprint");
-static_assert(sizeof(FKuroGameBudgetBlueprint) == 0x000038, "Wrong size on FKuroGameBudgetBlueprint");
-static_assert(offsetof(FKuroGameBudgetBlueprint, GroupType) == 0x000008, "Member 'FKuroGameBudgetBlueprint::GroupType' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, SupportedPlatforms) == 0x000009, "Member 'FKuroGameBudgetBlueprint::SupportedPlatforms' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, bRegisterGameBudgetTick) == 0x00000A, "Member 'FKuroGameBudgetBlueprint::bRegisterGameBudgetTick' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, bRegisterOnEnableChangeEvent) == 0x00000B, "Member 'FKuroGameBudgetBlueprint::bRegisterOnEnableChangeEvent' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, bRegisterOnVisibilityChangeEvent) == 0x00000C, "Member 'FKuroGameBudgetBlueprint::bRegisterOnVisibilityChangeEvent' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, bSyncComponentTick) == 0x00000D, "Member 'FKuroGameBudgetBlueprint::bSyncComponentTick' has a wrong offset!");
-static_assert(offsetof(FKuroGameBudgetBlueprint, bUseBoundsCalculateDistance) == 0x00000E, "Member 'FKuroGameBudgetBlueprint::bUseBoundsCalculateDistance' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroGameBudgetBlueprint;
 
 // ScriptStruct KuroGameBudget.GameBudgetAllocatorGroupConfig
-// 0x0078 (0x0078 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct FGameBudgetAllocatorGroupConfig final
 {
 public:
@@ -165,15 +154,21 @@ public:
 	EDisableActorTickStrategy                     DisableActorTickStrategy;                          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        DisableActorTickDistance;                          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x5C];                                      // 0x001C(0x005C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C[0xB4];                                      // 0x001C(0x00B4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameBudgetAllocatorGroupConfig) == 0x000004, "Wrong alignment on FGameBudgetAllocatorGroupConfig");
-static_assert(sizeof(FGameBudgetAllocatorGroupConfig) == 0x000078, "Wrong size on FGameBudgetAllocatorGroupConfig");
-static_assert(offsetof(FGameBudgetAllocatorGroupConfig, GroupName) == 0x000000, "Member 'FGameBudgetAllocatorGroupConfig::GroupName' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorGroupConfig, SignificanceGroup) == 0x00000C, "Member 'FGameBudgetAllocatorGroupConfig::SignificanceGroup' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorGroupConfig, TickPriority) == 0x000010, "Member 'FGameBudgetAllocatorGroupConfig::TickPriority' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorGroupConfig, DisableActorTickStrategy) == 0x000014, "Member 'FGameBudgetAllocatorGroupConfig::DisableActorTickStrategy' has a wrong offset!");
-static_assert(offsetof(FGameBudgetAllocatorGroupConfig, DisableActorTickDistance) == 0x000018, "Member 'FGameBudgetAllocatorGroupConfig::DisableActorTickDistance' has a wrong offset!");
+DUMPER7_ASSERTS_FGameBudgetAllocatorGroupConfig;
+
+// ScriptStruct KuroGameBudget.GameBudgetAllocatorTickDetailConfig
+// 0x0010 (0x0010 - 0x0000)
+struct FGameBudgetAllocatorTickDetailConfig final
+{
+public:
+	uint32                                        MaxTickInterval;                                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionStartSize;                            // 0x0004(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        TickReductionIntervalSize;                         // 0x0006(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameBudgetBoundsScreenRadiusConfig    ScreenRadiusConfig;                                // 0x0008(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameBudgetAllocatorTickDetailConfig;
 
 // ScriptStruct KuroGameBudget.GameBudgetAllocatorAfterTickFunction
 // 0x0008 (0x0030 - 0x0028)
@@ -182,8 +177,7 @@ struct FGameBudgetAllocatorAfterTickFunction final : public FTickFunction
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameBudgetAllocatorAfterTickFunction) == 0x000008, "Wrong alignment on FGameBudgetAllocatorAfterTickFunction");
-static_assert(sizeof(FGameBudgetAllocatorAfterTickFunction) == 0x000030, "Wrong size on FGameBudgetAllocatorAfterTickFunction");
+DUMPER7_ASSERTS_FGameBudgetAllocatorAfterTickFunction;
 
 // ScriptStruct KuroGameBudget.GameBudgetAllocatorTickFunction
 // 0x0008 (0x0030 - 0x0028)
@@ -192,8 +186,7 @@ struct FGameBudgetAllocatorTickFunction final : public FTickFunction
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameBudgetAllocatorTickFunction) == 0x000008, "Wrong alignment on FGameBudgetAllocatorTickFunction");
-static_assert(sizeof(FGameBudgetAllocatorTickFunction) == 0x000030, "Wrong size on FGameBudgetAllocatorTickFunction");
+DUMPER7_ASSERTS_FGameBudgetAllocatorTickFunction;
 
 // ScriptStruct KuroGameBudget.GameBudgetBlueprintGroupConfig
 // 0x0018 (0x0018 - 0x0000)
@@ -206,12 +199,7 @@ public:
 	float                                         DisableCollisionRange;                             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DisablePhysicsSimulationRange;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameBudgetBlueprintGroupConfig) == 0x000004, "Wrong alignment on FGameBudgetBlueprintGroupConfig");
-static_assert(sizeof(FGameBudgetBlueprintGroupConfig) == 0x000018, "Wrong size on FGameBudgetBlueprintGroupConfig");
-static_assert(offsetof(FGameBudgetBlueprintGroupConfig, Group) == 0x000000, "Member 'FGameBudgetBlueprintGroupConfig::Group' has a wrong offset!");
-static_assert(offsetof(FGameBudgetBlueprintGroupConfig, GameBudgetGroupName) == 0x000004, "Member 'FGameBudgetBlueprintGroupConfig::GameBudgetGroupName' has a wrong offset!");
-static_assert(offsetof(FGameBudgetBlueprintGroupConfig, DisableCollisionRange) == 0x000010, "Member 'FGameBudgetBlueprintGroupConfig::DisableCollisionRange' has a wrong offset!");
-static_assert(offsetof(FGameBudgetBlueprintGroupConfig, DisablePhysicsSimulationRange) == 0x000014, "Member 'FGameBudgetBlueprintGroupConfig::DisablePhysicsSimulationRange' has a wrong offset!");
+DUMPER7_ASSERTS_FGameBudgetBlueprintGroupConfig;
 
 }
 

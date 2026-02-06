@@ -50,50 +50,29 @@ public:
 	struct FRotator                               Add_Bip001RFoot;                                   // 0x01B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ProcessEye(const struct FVector& EyeLookAt, float AngleScale);
-	void SetAnimDataFloatByOwner(TArray<struct FNamedCurveValue>& InCurves);
 	void SetAnimDataVectorByOwner(TMap<class FName, struct FVector>& VectorMap);
+	void SetAnimDataFloatByOwner(TArray<struct FNamedCurveValue>& InCurves);
+	void ProcessEye(const struct FVector& EyeLookAt, float AngleScale);
 
-	class FName GetBindingName() const;
-	void GetCurves(TArray<struct FNamedCurveValue>* OutValues) const;
 	float GetCurveValue(class FName CurveName) const;
+	void GetCurves(TArray<struct FNamedCurveValue>* OutValues) const;
+	class FName GetBindingName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABPC_Seq_Body_V2_C">();
+		BP_STATIC_CLASS_IMPL("ABPC_Seq_Body_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABPC_Seq_Body_V2_C")
 	}
 	static class UABPC_Seq_Body_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABPC_Seq_Body_V2_C>();
 	}
 };
-static_assert(alignof(UABPC_Seq_Body_V2_C) == 0x000008, "Wrong alignment on UABPC_Seq_Body_V2_C");
-static_assert(sizeof(UABPC_Seq_Body_V2_C) == 0x0001C8, "Wrong size on UABPC_Seq_Body_V2_C");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, 启用物理模拟) == 0x0000C0, "Member 'UABPC_Seq_Body_V2_C::启用物理模拟' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, 物理模拟权重) == 0x0000C4, "Member 'UABPC_Seq_Body_V2_C::物理模拟权重' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, NamedCurves) == 0x0000C8, "Member 'UABPC_Seq_Body_V2_C::NamedCurves' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_LookAt) == 0x0000D8, "Member 'UABPC_Seq_Body_V2_C::Add_LookAt' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001Head) == 0x0000E4, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001Head' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001Neck) == 0x0000F0, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001Neck' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001Spine2) == 0x0000FC, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001Spine2' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LClavicle) == 0x000108, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LClavicle' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LUpperArm) == 0x000114, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LUpperArm' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LForearm) == 0x000120, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LForearm' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RClavicle) == 0x00012C, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RClavicle' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RUpperArm) == 0x000138, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RUpperArm' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RForearm) == 0x000144, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RForearm' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001Spine1) == 0x000150, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001Spine1' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LHand) == 0x00015C, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LHand' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RHand) == 0x000168, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RHand' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, SeqLHandWeight) == 0x000174, "Member 'UABPC_Seq_Body_V2_C::SeqLHandWeight' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, SeqRHandWeight) == 0x000178, "Member 'UABPC_Seq_Body_V2_C::SeqRHandWeight' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LThigh) == 0x00017C, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LThigh' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LCalf) == 0x000188, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LCalf' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LFoot) == 0x000194, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LFoot' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RThigh) == 0x0001A0, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RThigh' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RCalf) == 0x0001AC, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RCalf' has a wrong offset!");
-static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RFoot) == 0x0001B8, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RFoot' has a wrong offset!");
+DUMPER7_ASSERTS_UABPC_Seq_Body_V2_C;
 
 }
 

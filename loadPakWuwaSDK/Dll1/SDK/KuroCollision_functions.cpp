@@ -17,6 +17,151 @@
 namespace SDK
 {
 
+// Function KuroCollision.KuroBodySetupLibrary.AddClearWpBodySetupBlackList
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      StaticMeshName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroBodySetupLibrary::AddClearWpBodySetupBlackList(const class FName& StaticMeshName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBodySetupLibrary", "AddClearWpBodySetupBlackList");
+
+	Params::KuroBodySetupLibrary_AddClearWpBodySetupBlackList Parms{};
+
+	Parms.StaticMeshName = StaticMeshName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroCollision.KuroBodySetupLibrary.EmptyClearWpBodySetupBlackList
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroBodySetupLibrary::EmptyClearWpBodySetupBlackList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBodySetupLibrary", "EmptyClearWpBodySetupBlackList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroCollision.KuroBodySetupLibrary.InitClearWpBodySetupBlackList
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TSet<class FName>&                InClearWpBodySetupBlackList                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroBodySetupLibrary::InitClearWpBodySetupBlackList(const TSet<class FName>& InClearWpBodySetupBlackList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBodySetupLibrary", "InitClearWpBodySetupBlackList");
+
+	Params::KuroBodySetupLibrary_InitClearWpBodySetupBlackList Parms{};
+
+	Parms.InClearWpBodySetupBlackList = std::move(InClearWpBodySetupBlackList);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroCollision.KuroBodySetupLibrary.LoadClearWpBodySetupBlackList
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroBodySetupLibrary::LoadClearWpBodySetupBlackList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBodySetupLibrary", "LoadClearWpBodySetupBlackList");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroCollision.KuroBodySetupLibrary.RemoveClearWpBodySetupBlackList
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      StaticMeshName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroBodySetupLibrary::RemoveClearWpBodySetupBlackList(const class FName& StaticMeshName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBodySetupLibrary", "RemoveClearWpBodySetupBlackList");
+
+	Params::KuroBodySetupLibrary_RemoveClearWpBodySetupBlackList Parms{};
+
+	Parms.StaticMeshName = StaticMeshName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroCollision.KuroCollisionLibrary.ActorHasTag
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class AActor*                           InActor                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      Tag                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroCollisionLibrary::ActorHasTag(class AActor* InActor, const class FName& Tag, int32 InstanceIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCollisionLibrary", "ActorHasTag");
+
+	Params::KuroCollisionLibrary_ActorHasTag Parms{};
+
+	Parms.InActor = InActor;
+	Parms.Tag = Tag;
+	Parms.InstanceIndex = InstanceIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroCollision.KuroCollisionLibrary.CanCharacterStandOn
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -234,21 +379,27 @@ const struct FWalkableSlopeOverride UKuroCollisionLibrary::GetWalkableSlopeOverr
 }
 
 
-// Function KuroCollision.KuroCollisionLibrary.InitClearWpBodySetupBlackList
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function KuroCollision.KuroCollisionLibrary.SetCollisionResponseToChannel
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const TSet<class FName>&                InClearWpBodySetupBlackList                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              PrimitiveComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ECollisionChannel                 Channel                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ECollisionResponse                NewResponse                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InstanceIndex                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroCollisionLibrary::InitClearWpBodySetupBlackList(const TSet<class FName>& InClearWpBodySetupBlackList)
+void UKuroCollisionLibrary::SetCollisionResponseToChannel(class UPrimitiveComponent* PrimitiveComponent, const ECollisionChannel Channel, const ECollisionResponse NewResponse, const int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroCollisionLibrary", "InitClearWpBodySetupBlackList");
+		Func = StaticClass()->GetFunction("KuroCollisionLibrary", "SetCollisionResponseToChannel");
 
-	Params::KuroCollisionLibrary_InitClearWpBodySetupBlackList Parms{};
+	Params::KuroCollisionLibrary_SetCollisionResponseToChannel Parms{};
 
-	Parms.InClearWpBodySetupBlackList = std::move(InClearWpBodySetupBlackList);
+	Parms.PrimitiveComponent = PrimitiveComponent;
+	Parms.Channel = Channel;
+	Parms.NewResponse = NewResponse;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

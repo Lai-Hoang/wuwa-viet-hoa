@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Cloud_None.BP_Cloud_None_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05A8 - 0x05A0)
 class ABP_Cloud_None_C final : public ABP_CloudPrefab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Cloud_None_C;                    // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Cloud_None_C;                    // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_Cloud_None(int32 EntryPoint);
@@ -35,16 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Cloud_None_C">();
+		BP_STATIC_CLASS_IMPL("BP_Cloud_None_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Cloud_None_C")
 	}
 	static class ABP_Cloud_None_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Cloud_None_C>();
 	}
 };
-static_assert(alignof(ABP_Cloud_None_C) == 0x000008, "Wrong alignment on ABP_Cloud_None_C");
-static_assert(sizeof(ABP_Cloud_None_C) == 0x000598, "Wrong size on ABP_Cloud_None_C");
-static_assert(offsetof(ABP_Cloud_None_C, UberGraphFrame_BP_Cloud_None_C) == 0x000590, "Member 'ABP_Cloud_None_C::UberGraphFrame_BP_Cloud_None_C' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Cloud_None_C;
 
 }
 

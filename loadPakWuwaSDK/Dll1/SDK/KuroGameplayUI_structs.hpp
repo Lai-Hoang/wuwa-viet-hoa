@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // ScriptStruct KuroGameplayUI.DamageConfig
-// 0x0038 (0x0038 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct FDamageConfig final
 {
 public:
@@ -32,26 +32,14 @@ public:
 	float                                         AnimTime;                                          // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CritAnimTime;                                      // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CritEffectTime;                                    // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CureDamageId;                                      // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ImmunityDamageId;                                  // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AtkDamageId;                                       // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CureDamageId;                                      // 0x002C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ImmunityDamageId;                                  // 0x0030(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AtkDamageId;                                       // 0x0034(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, float>                            MergeDurationByDamageId;                           // 0x0038(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          EnableCompactNumberFormat;                         // 0x0088(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDamageConfig) == 0x000004, "Wrong alignment on FDamageConfig");
-static_assert(sizeof(FDamageConfig) == 0x000038, "Wrong size on FDamageConfig");
-static_assert(offsetof(FDamageConfig, MaxDamagePerFrame) == 0x000000, "Member 'FDamageConfig::MaxDamagePerFrame' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, MinDamageOffsetScale) == 0x000004, "Member 'FDamageConfig::MinDamageOffsetScale' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, MaxDamageOffsetScale) == 0x000008, "Member 'FDamageConfig::MaxDamageOffsetScale' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, MinDamageOffsetDistSquared) == 0x00000C, "Member 'FDamageConfig::MinDamageOffsetDistSquared' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, MaxDamageOffsetDistSquared) == 0x000010, "Member 'FDamageConfig::MaxDamageOffsetDistSquared' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, PcFontSizeScale) == 0x000014, "Member 'FDamageConfig::PcFontSizeScale' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, MobileFontSizeScale) == 0x000018, "Member 'FDamageConfig::MobileFontSizeScale' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, CritOffsetScale) == 0x00001C, "Member 'FDamageConfig::CritOffsetScale' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, AnimTime) == 0x000020, "Member 'FDamageConfig::AnimTime' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, CritAnimTime) == 0x000024, "Member 'FDamageConfig::CritAnimTime' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, CritEffectTime) == 0x000028, "Member 'FDamageConfig::CritEffectTime' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, CureDamageId) == 0x00002C, "Member 'FDamageConfig::CureDamageId' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, ImmunityDamageId) == 0x000030, "Member 'FDamageConfig::ImmunityDamageId' has a wrong offset!");
-static_assert(offsetof(FDamageConfig, AtkDamageId) == 0x000034, "Member 'FDamageConfig::AtkDamageId' has a wrong offset!");
+DUMPER7_ASSERTS_FDamageConfig;
 
 // ScriptStruct KuroGameplayUI.DamageInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -67,15 +55,18 @@ public:
 	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DamageText;                                        // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDamageInfo) == 0x000008, "Wrong alignment on FDamageInfo");
-static_assert(sizeof(FDamageInfo) == 0x000038, "Wrong size on FDamageInfo");
-static_assert(offsetof(FDamageInfo, Damage) == 0x000000, "Member 'FDamageInfo::Damage' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, DamageConfigId) == 0x000004, "Member 'FDamageInfo::DamageConfigId' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, DamagePosition) == 0x000008, "Member 'FDamageInfo::DamagePosition' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, bOwnPlayer) == 0x000020, "Member 'FDamageInfo::bOwnPlayer' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, bCrit) == 0x000021, "Member 'FDamageInfo::bCrit' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, bCure) == 0x000022, "Member 'FDamageInfo::bCure' has a wrong offset!");
-static_assert(offsetof(FDamageInfo, DamageText) == 0x000028, "Member 'FDamageInfo::DamageText' has a wrong offset!");
+DUMPER7_ASSERTS_FDamageInfo;
+
+// ScriptStruct KuroGameplayUI.DamageMergeInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FDamageMergeInfo final
+{
+public:
+	struct FDamageInfo                            DamageInfo;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         ShowDamageTime;                                    // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FDamageMergeInfo;
 
 // ScriptStruct KuroGameplayUI.DamageViewData
 // 0x0034 (0x0034 - 0x0000)
@@ -96,21 +87,7 @@ public:
 	int32                                         MonsterCritDamageAnimType;                         // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TextDamageAnimType;                                // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDamageViewData) == 0x000004, "Wrong alignment on FDamageViewData");
-static_assert(sizeof(FDamageViewData) == 0x000034, "Wrong size on FDamageViewData");
-static_assert(offsetof(FDamageViewData, ConfigId) == 0x000000, "Member 'FDamageViewData::ConfigId' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MinRandomOffsetX) == 0x000004, "Member 'FDamageViewData::MinRandomOffsetX' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MinRandomOffsetY) == 0x000008, "Member 'FDamageViewData::MinRandomOffsetY' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MaxRandomOffsetX) == 0x00000C, "Member 'FDamageViewData::MaxRandomOffsetX' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MaxRandomOffsetY) == 0x000010, "Member 'FDamageViewData::MaxRandomOffsetY' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, TextColor) == 0x000014, "Member 'FDamageViewData::TextColor' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, CritTextColor) == 0x000018, "Member 'FDamageViewData::CritTextColor' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, CritNiagaraType) == 0x00001C, "Member 'FDamageViewData::CritNiagaraType' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, OwnDamageAnimType) == 0x000020, "Member 'FDamageViewData::OwnDamageAnimType' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, OwnCritDamageAnimType) == 0x000024, "Member 'FDamageViewData::OwnCritDamageAnimType' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MonsterDamageAnimType) == 0x000028, "Member 'FDamageViewData::MonsterDamageAnimType' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, MonsterCritDamageAnimType) == 0x00002C, "Member 'FDamageViewData::MonsterCritDamageAnimType' has a wrong offset!");
-static_assert(offsetof(FDamageViewData, TextDamageAnimType) == 0x000030, "Member 'FDamageViewData::TextDamageAnimType' has a wrong offset!");
+DUMPER7_ASSERTS_FDamageViewData;
 
 // ScriptStruct KuroGameplayUI.KSC_HeadStateData
 // 0x0038 (0x0038 - 0x0000)
@@ -126,15 +103,7 @@ public:
 	bool                                          bVisible;                                          // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_HeadStateData) == 0x000008, "Wrong alignment on FKSC_HeadStateData");
-static_assert(sizeof(FKSC_HeadStateData) == 0x000038, "Wrong size on FKSC_HeadStateData");
-static_assert(offsetof(FKSC_HeadStateData, Location) == 0x000000, "Member 'FKSC_HeadStateData::Location' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, EntityId) == 0x000018, "Member 'FKSC_HeadStateData::EntityId' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, CurHp) == 0x00001C, "Member 'FKSC_HeadStateData::CurHp' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, MaxHp) == 0x000020, "Member 'FKSC_HeadStateData::MaxHp' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, Shield) == 0x000024, "Member 'FKSC_HeadStateData::Shield' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, DistSquared) == 0x000028, "Member 'FKSC_HeadStateData::DistSquared' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadStateData, bVisible) == 0x000030, "Member 'FKSC_HeadStateData::bVisible' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_HeadStateData;
 
 }
 

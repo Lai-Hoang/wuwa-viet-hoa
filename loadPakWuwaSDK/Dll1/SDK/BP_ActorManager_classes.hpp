@@ -23,15 +23,18 @@ class UBP_ActorManager_C final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ActorManager_C">();
+		BP_STATIC_CLASS_IMPL("BP_ActorManager_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ActorManager_C")
 	}
 	static class UBP_ActorManager_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ActorManager_C>();
 	}
 };
-static_assert(alignof(UBP_ActorManager_C) == 0x000008, "Wrong alignment on UBP_ActorManager_C");
-static_assert(sizeof(UBP_ActorManager_C) == 0x000030, "Wrong size on UBP_ActorManager_C");
+DUMPER7_ASSERTS_UBP_ActorManager_C;
 
 }
 

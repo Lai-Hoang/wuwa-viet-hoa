@@ -35,17 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateShowUiCalabashEffect_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateShowUiCalabashEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateShowUiCalabashEffect_C")
 	}
 	static class UTsAnimNotifyStateShowUiCalabashEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateShowUiCalabashEffect_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateShowUiCalabashEffect_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateShowUiCalabashEffect_C");
-static_assert(sizeof(UTsAnimNotifyStateShowUiCalabashEffect_C) == 0x000098, "Wrong size on UTsAnimNotifyStateShowUiCalabashEffect_C");
-static_assert(offsetof(UTsAnimNotifyStateShowUiCalabashEffect_C, EffectSlotName) == 0x000088, "Member 'UTsAnimNotifyStateShowUiCalabashEffect_C::EffectSlotName' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiCalabashEffect_C, PlayOnEnd) == 0x000094, "Member 'UTsAnimNotifyStateShowUiCalabashEffect_C::PlayOnEnd' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateShowUiCalabashEffect_C;
 
 }
 

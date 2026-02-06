@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // Enum KuroSimpleCombat.EKSC_AttrType
-// NumValues: 0x004A
+// NumValues: 0x0051
 enum class EKSC_AttrType : uint8
 {
 	EAttributeType_None                      = 0,
@@ -34,8 +34,13 @@ enum class EKSC_AttrType : uint8
 	AtkChange                                = 11,
 	MaxLifeShieldChange                      = 12,
 	BaseLife                                 = 13,
+	CritChange                               = 14,
 	DamageChange                             = 15,
 	DamageReduce                             = 16,
+	DamageLifeSteal                          = 17,
+	HealBase                                 = 18,
+	DamageReduceCollision                    = 19,
+	DamageAbsorptionCount                    = 20,
 	DamageChangePhys                         = 21,
 	DamageChangeElement1                     = 22,
 	DamageChangeElement2                     = 23,
@@ -94,8 +99,24 @@ enum class EKSC_AttrType : uint8
 	SpecialChange7                           = 217,
 	SpecialChange8                           = 218,
 	SpecialChange9                           = 219,
+	AttackSpeed                              = 220,
+	AttackSpeedChange                        = 221,
 	AttributeType_Max                        = 255,
 	EKSC_MAX                                 = 256,
+};
+
+// Enum KuroSimpleCombat.EKSC_WorldAttrType
+// NumValues: 0x0008
+enum class EKSC_WorldAttrType : uint8
+{
+	EAttributeType_None                      = 0,
+	WorldKillZ                               = 1,
+	Gold                                     = 2,
+	Wave                                     = 3,
+	WorldSpeed                               = 4,
+	WorldSpeedChange                         = 5,
+	BattleStage                              = 6,
+	EKSC_MAX                                 = 7,
 };
 
 // Enum KuroSimpleCombat.EKSC_Faction
@@ -156,7 +177,7 @@ enum class EKSC_Buff_Aura_TargetType : uint8
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ListenEvent_Response
-// NumValues: 0x0007
+// NumValues: 0x0009
 enum class EKSC_Buff_ListenEvent_Response : uint8
 {
 	AddTag                                   = 0,
@@ -165,11 +186,13 @@ enum class EKSC_Buff_ListenEvent_Response : uint8
 	AddBuff                                  = 3,
 	AdditionalAttack                         = 4,
 	RemoveBuff                               = 5,
-	EKSC_Buff_ListenEvent_MAX                = 6,
+	AddMultiBuff                             = 6,
+	SpawnEntity                              = 7,
+	EKSC_Buff_ListenEvent_MAX                = 8,
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ListenEvent_ListenType
-// NumValues: 0x000B
+// NumValues: 0x000E
 enum class EKSC_Buff_ListenEvent_ListenType : uint8
 {
 	OnDead                                   = 0,
@@ -182,7 +205,10 @@ enum class EKSC_Buff_ListenEvent_ListenType : uint8
 	OnCritAfter                              = 7,
 	OnTagCountAdd                            = 8,
 	OnTagCountRemove                         = 9,
-	EKSC_Buff_ListenEvent_MAX                = 10,
+	OnBulletCreate                           = 10,
+	OnKill                                   = 11,
+	OnAttrChange                             = 12,
+	EKSC_Buff_ListenEvent_MAX                = 13,
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ModifyAttr_BeforeAfterHit_Target
@@ -224,14 +250,48 @@ enum class EKSC_Buff_StopAction_ActionType : uint8
 	EKSC_Buff_StopAction_MAX                 = 3,
 };
 
-// Enum KuroSimpleCombat.EKSC_HeadUiType
+// Enum KuroSimpleCombat.EKSC_PeriodBuffTagEffect
+// NumValues: 0x0003
+enum class EKSC_PeriodBuffTagEffect : uint8
+{
+	AttackSpeed                              = 0,
+	CD                                       = 1,
+	EKSC_MAX                                 = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ComparisonSymbols
+// NumValues: 0x0006
+enum class EKSC_ComparisonSymbols : uint8
+{
+	Less                                     = 0,
+	LessEqual                                = 1,
+	Greater                                  = 2,
+	GreaterEqual                             = 3,
+	Equal                                    = 4,
+	EKSC_MAX                                 = 5,
+};
+
+// Enum KuroSimpleCombat.EKSC_BattleStage
 // NumValues: 0x0004
+enum class EKSC_BattleStage : uint8
+{
+	Default                                  = 0,
+	Ready                                    = 1,
+	TimesUp                                  = 2,
+	EKSC_MAX                                 = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_HeadUiType
+// NumValues: 0x0007
 enum class EKSC_HeadUiType : uint8
 {
 	Default                                  = 0,
 	Player                                   = 1,
 	Boss                                     = 2,
-	EKSC_MAX                                 = 3,
+	BuffGate                                 = 3,
+	TopBoss                                  = 4,
+	Digital                                  = 5,
+	EKSC_MAX                                 = 6,
 };
 
 // Enum KuroSimpleCombat.EKSC_LockTarget
@@ -354,24 +414,16 @@ enum class EKSC_Skill_State : uint8
 };
 
 // Enum KuroSimpleCombat.EKSC_CalculateType
-// NumValues: 0x0004
+// NumValues: 0x0007
 enum class EKSC_CalculateType : uint8
 {
 	Hurt                                     = 0,
 	Heal                                     = 1,
 	PercentageHurt                           = 2,
-	EKSC_MAX                                 = 3,
-};
-
-// Enum KuroSimpleCombat.EKSC_WorldAttrType
-// NumValues: 0x0005
-enum class EKSC_WorldAttrType : uint8
-{
-	EAttributeType_None                      = 0,
-	WorldKillZ                               = 1,
-	Gold                                     = 2,
-	Wave                                     = 3,
-	EKSC_MAX                                 = 4,
+	MotorFightHurt                           = 3,
+	MotorCollisionHurt                       = 4,
+	MotorFightHeal                           = 5,
+	EKSC_MAX                                 = 6,
 };
 
 // Enum KuroSimpleCombat.EKSC_Element
@@ -431,6 +483,15 @@ enum class EKSC_SearchType : uint8
 	EKSC_MAX                                 = 129,
 };
 
+// Enum KuroSimpleCombat.EKSC_SkillCastMode
+// NumValues: 0x0003
+enum class EKSC_SkillCastMode : uint8
+{
+	Default                                  = 0,
+	Single                                   = 1,
+	EKSC_MAX                                 = 2,
+};
+
 // Enum KuroSimpleCombat.EKSC_GPUNPCAnimState
 // NumValues: 0x000E
 enum class EKSC_GPUNPCAnimState : uint8
@@ -482,28 +543,44 @@ enum class EKSC_HeadHpContextType : uint8
 	EKSC_MAX                                 = 3,
 };
 
-// ScriptStruct KuroSimpleCombat.KSC_KuroFX
-// 0x0050 (0x0050 - 0x0000)
-struct FKSC_KuroFX final
+// ScriptStruct KuroSimpleCombat.KSC_BulletTargetContext
+// 0x0040 (0x0040 - 0x0000)
+struct FKSC_BulletTargetContext final
 {
 public:
-	class UEffectModelBase*                       FX;                                                // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             FX_Offset;                                         // 0x0010(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   Socket;                                            // 0x0040(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FX_AttackLocation;                                 // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FX_AttackRotation;                                 // 0x004D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FX_AttackScale;                                    // 0x004E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         TargetEntityId;                                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_SkillComp*                         SkillComp;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             TargetTrans;                                       // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_KuroFX) == 0x000010, "Wrong alignment on FKSC_KuroFX");
-static_assert(sizeof(FKSC_KuroFX) == 0x000050, "Wrong size on FKSC_KuroFX");
-static_assert(offsetof(FKSC_KuroFX, FX) == 0x000000, "Member 'FKSC_KuroFX::FX' has a wrong offset!");
-static_assert(offsetof(FKSC_KuroFX, FX_Offset) == 0x000010, "Member 'FKSC_KuroFX::FX_Offset' has a wrong offset!");
-static_assert(offsetof(FKSC_KuroFX, Socket) == 0x000040, "Member 'FKSC_KuroFX::Socket' has a wrong offset!");
-static_assert(offsetof(FKSC_KuroFX, FX_AttackLocation) == 0x00004C, "Member 'FKSC_KuroFX::FX_AttackLocation' has a wrong offset!");
-static_assert(offsetof(FKSC_KuroFX, FX_AttackRotation) == 0x00004D, "Member 'FKSC_KuroFX::FX_AttackRotation' has a wrong offset!");
-static_assert(offsetof(FKSC_KuroFX, FX_AttackScale) == 0x00004E, "Member 'FKSC_KuroFX::FX_AttackScale' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_BulletTargetContext;
+
+// ScriptStruct KuroSimpleCombat.KSCTableRowBase
+// 0x0038 (0x0040 - 0x0008)
+struct FKSCTableRowBase : public FTableRowBase
+{
+public:
+	int32                                         Id;                                                // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UDataAsset>              RuntimeDA;                                         // 0x0010(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSCTableRowBase;
+
+// ScriptStruct KuroSimpleCombat.KSCSkillTableRow
+// 0x0028 (0x0068 - 0x0040)
+struct FKSCSkillTableRow final : public FKSCTableRowBase
+{
+public:
+	EKSC_OperateType                              OperateType;                                       // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PressTime;                                         // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PsFeedbackId;                                      // 0x0048(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChargeCueId;                                       // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChargeFullCueId;                                   // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SkillId;                                           // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKSCSkillTableRow;
 
 // ScriptStruct KuroSimpleCombat.KSC_RemoveContext
 // 0x0050 (0x0050 - 0x0000)
@@ -521,15 +598,21 @@ public:
 	class FName                                   EntityTypeKillBy;                                  // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_RemoveContext) == 0x000008, "Wrong alignment on FKSC_RemoveContext");
-static_assert(sizeof(FKSC_RemoveContext) == 0x000050, "Wrong size on FKSC_RemoveContext");
-static_assert(offsetof(FKSC_RemoveContext, EntityId) == 0x000000, "Member 'FKSC_RemoveContext::EntityId' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, EntityTypeName) == 0x000004, "Member 'FKSC_RemoveContext::EntityTypeName' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, ReasonName) == 0x000010, "Member 'FKSC_RemoveContext::ReasonName' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, Location) == 0x000020, "Member 'FKSC_RemoveContext::Location' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, IsPreview) == 0x000038, "Member 'FKSC_RemoveContext::IsPreview' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, EntityIdKillBy) == 0x00003C, "Member 'FKSC_RemoveContext::EntityIdKillBy' has a wrong offset!");
-static_assert(offsetof(FKSC_RemoveContext, EntityTypeKillBy) == 0x000040, "Member 'FKSC_RemoveContext::EntityTypeKillBy' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_RemoveContext;
+
+// ScriptStruct KuroSimpleCombat.KSC_DamageTypeFilter
+// 0x0030 (0x0030 - 0x0000)
+struct FKSC_DamageTypeFilter final
+{
+public:
+	EKSC_CalculateType                            CalculateType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_CalculateType>                    CalculateTypes;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          IsNot;                                             // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_Element>                          ElementTypes;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_DamageTypeFilter;
 
 // ScriptStruct KuroSimpleCombat.KSC_LandFireContext
 // 0x0060 (0x0060 - 0x0000)
@@ -543,13 +626,42 @@ public:
 	int32                                         FireNum;                                           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<EKSC_AttrType, int32>                    Params;                                            // 0x0010(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_LandFireContext) == 0x000008, "Wrong alignment on FKSC_LandFireContext");
-static_assert(sizeof(FKSC_LandFireContext) == 0x000060, "Wrong size on FKSC_LandFireContext");
-static_assert(offsetof(FKSC_LandFireContext, ClearCell) == 0x000000, "Member 'FKSC_LandFireContext::ClearCell' has a wrong offset!");
-static_assert(offsetof(FKSC_LandFireContext, SpawnerEntityId) == 0x000004, "Member 'FKSC_LandFireContext::SpawnerEntityId' has a wrong offset!");
-static_assert(offsetof(FKSC_LandFireContext, EffectRange) == 0x000008, "Member 'FKSC_LandFireContext::EffectRange' has a wrong offset!");
-static_assert(offsetof(FKSC_LandFireContext, FireNum) == 0x00000C, "Member 'FKSC_LandFireContext::FireNum' has a wrong offset!");
-static_assert(offsetof(FKSC_LandFireContext, Params) == 0x000010, "Member 'FKSC_LandFireContext::Params' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_LandFireContext;
+
+// ScriptStruct KuroSimpleCombat.KSC_ListenAttrEventBuff
+// 0x0008 (0x0008 - 0x0000)
+struct FKSC_ListenAttrEventBuff final
+{
+public:
+	EKSC_AttrType                                 AttrId;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_ComparisonSymbols                        Comparison;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AttrValue;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_ListenAttrEventBuff;
+
+// ScriptStruct KuroSimpleCombat.KSC_ModifyAttrFromOthers
+// 0x0008 (0x0008 - 0x0000)
+struct FKSC_ModifyAttrFromOthers final
+{
+public:
+	EKSC_AttrType                                 ToAttrId;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_AttrType                                 FromAttrId;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Amplify;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_ModifyAttrFromOthers;
+
+// ScriptStruct KuroSimpleCombat.KSC_SpawnEntity
+// 0x0050 (0x0050 - 0x0000)
+struct FKSC_SpawnEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformDouble                       EntityTrans;                                       // 0x0010(0x0040)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_SpawnEntity;
 
 // ScriptStruct KuroSimpleCombat.KSC_AttrBoundLocker
 // 0x0008 (0x0008 - 0x0000)
@@ -558,54 +670,23 @@ struct alignas(0x04) FKSC_AttrBoundLocker final
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_AttrBoundLocker) == 0x000004, "Wrong alignment on FKSC_AttrBoundLocker");
-static_assert(sizeof(FKSC_AttrBoundLocker) == 0x000008, "Wrong size on FKSC_AttrBoundLocker");
+DUMPER7_ASSERTS_FKSC_AttrBoundLocker;
 
-// ScriptStruct KuroSimpleCombat.KSC_Delay_KuroMatFX
-// 0x0010 (0x0010 - 0x0000)
-struct FKSC_Delay_KuroMatFX final
+// ScriptStruct KuroSimpleCombat.KSC_KuroFX
+// 0x0050 (0x0050 - 0x0000)
+struct FKSC_KuroFX final
 {
 public:
-	float                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       FX;                                                // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             FX_Offset;                                         // 0x0010(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket;                                            // 0x0040(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FX_AttackLocation;                                 // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FX_AttackRotation;                                 // 0x004D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FX_AttackScale;                                    // 0x004E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_Delay_KuroMatFX) == 0x000008, "Wrong alignment on FKSC_Delay_KuroMatFX");
-static_assert(sizeof(FKSC_Delay_KuroMatFX) == 0x000010, "Wrong size on FKSC_Delay_KuroMatFX");
-static_assert(offsetof(FKSC_Delay_KuroMatFX, Time) == 0x000000, "Member 'FKSC_Delay_KuroMatFX::Time' has a wrong offset!");
-static_assert(offsetof(FKSC_Delay_KuroMatFX, KuroMatFX) == 0x000008, "Member 'FKSC_Delay_KuroMatFX::KuroMatFX' has a wrong offset!");
-
-// ScriptStruct KuroSimpleCombat.KSC_BulletTargetContext
-// 0x0040 (0x0040 - 0x0000)
-struct FKSC_BulletTargetContext final
-{
-public:
-	int32                                         TargetEntityId;                                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_SkillComp*                         SkillComp;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             TargetTrans;                                       // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKSC_BulletTargetContext) == 0x000010, "Wrong alignment on FKSC_BulletTargetContext");
-static_assert(sizeof(FKSC_BulletTargetContext) == 0x000040, "Wrong size on FKSC_BulletTargetContext");
-static_assert(offsetof(FKSC_BulletTargetContext, TargetEntityId) == 0x000000, "Member 'FKSC_BulletTargetContext::TargetEntityId' has a wrong offset!");
-static_assert(offsetof(FKSC_BulletTargetContext, SkillComp) == 0x000008, "Member 'FKSC_BulletTargetContext::SkillComp' has a wrong offset!");
-static_assert(offsetof(FKSC_BulletTargetContext, TargetTrans) == 0x000010, "Member 'FKSC_BulletTargetContext::TargetTrans' has a wrong offset!");
-
-// ScriptStruct KuroSimpleCombat.KSC_DamageTypeFilter
-// 0x0018 (0x0018 - 0x0000)
-struct FKSC_DamageTypeFilter final
-{
-public:
-	EKSC_CalculateType                            CalculateType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsNot;                                             // 0x0001(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EKSC_Element>                          ElementTypes;                                      // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKSC_DamageTypeFilter) == 0x000008, "Wrong alignment on FKSC_DamageTypeFilter");
-static_assert(sizeof(FKSC_DamageTypeFilter) == 0x000018, "Wrong size on FKSC_DamageTypeFilter");
-static_assert(offsetof(FKSC_DamageTypeFilter, CalculateType) == 0x000000, "Member 'FKSC_DamageTypeFilter::CalculateType' has a wrong offset!");
-static_assert(offsetof(FKSC_DamageTypeFilter, IsNot) == 0x000001, "Member 'FKSC_DamageTypeFilter::IsNot' has a wrong offset!");
-static_assert(offsetof(FKSC_DamageTypeFilter, ElementTypes) == 0x000008, "Member 'FKSC_DamageTypeFilter::ElementTypes' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_KuroFX;
 
 // ScriptStruct KuroSimpleCombat.KSC_TagFilter
 // 0x0028 (0x0028 - 0x0000)
@@ -617,11 +698,7 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  CompareTags;                                       // 0x0008(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_TagFilter) == 0x000008, "Wrong alignment on FKSC_TagFilter");
-static_assert(sizeof(FKSC_TagFilter) == 0x000028, "Wrong size on FKSC_TagFilter");
-static_assert(offsetof(FKSC_TagFilter, IsNot) == 0x000000, "Member 'FKSC_TagFilter::IsNot' has a wrong offset!");
-static_assert(offsetof(FKSC_TagFilter, CompareHasAll) == 0x000001, "Member 'FKSC_TagFilter::CompareHasAll' has a wrong offset!");
-static_assert(offsetof(FKSC_TagFilter, CompareTags) == 0x000008, "Member 'FKSC_TagFilter::CompareTags' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_TagFilter;
 
 // ScriptStruct KuroSimpleCombat.KSC_Range
 // 0x0050 (0x0050 - 0x0000)
@@ -634,12 +711,7 @@ public:
 	struct FVector                                HalfExtent;                                        // 0x0040(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_Range) == 0x000010, "Wrong alignment on FKSC_Range");
-static_assert(sizeof(FKSC_Range) == 0x000050, "Wrong size on FKSC_Range");
-static_assert(offsetof(FKSC_Range, RangeShapeType) == 0x000000, "Member 'FKSC_Range::RangeShapeType' has a wrong offset!");
-static_assert(offsetof(FKSC_Range, OffsetTrans) == 0x000010, "Member 'FKSC_Range::OffsetTrans' has a wrong offset!");
-static_assert(offsetof(FKSC_Range, HalfExtent) == 0x000040, "Member 'FKSC_Range::HalfExtent' has a wrong offset!");
-static_assert(offsetof(FKSC_Range, Radius) == 0x00004C, "Member 'FKSC_Range::Radius' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_Range;
 
 // ScriptStruct KuroSimpleCombat.KSC_FXParam
 // 0x0020 (0x0020 - 0x0000)
@@ -654,17 +726,10 @@ public:
 	struct FVector                                VectorValue;                                       // 0x0010(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FloatValue;                                        // 0x001C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_FXParam) == 0x000004, "Wrong alignment on FKSC_FXParam");
-static_assert(sizeof(FKSC_FXParam) == 0x000020, "Wrong size on FKSC_FXParam");
-static_assert(offsetof(FKSC_FXParam, ParamName) == 0x000000, "Member 'FKSC_FXParam::ParamName' has a wrong offset!");
-static_assert(offsetof(FKSC_FXParam, FXValueType) == 0x00000C, "Member 'FKSC_FXParam::FXValueType' has a wrong offset!");
-static_assert(offsetof(FKSC_FXParam, FXBindingType) == 0x00000D, "Member 'FKSC_FXParam::FXBindingType' has a wrong offset!");
-static_assert(offsetof(FKSC_FXParam, BindingWorldPos) == 0x00000E, "Member 'FKSC_FXParam::BindingWorldPos' has a wrong offset!");
-static_assert(offsetof(FKSC_FXParam, VectorValue) == 0x000010, "Member 'FKSC_FXParam::VectorValue' has a wrong offset!");
-static_assert(offsetof(FKSC_FXParam, FloatValue) == 0x00001C, "Member 'FKSC_FXParam::FloatValue' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_FXParam;
 
 // ScriptStruct KuroSimpleCombat.KSC_DiffTransferAddAttr
-// 0x0010 (0x0010 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FKSC_DiffTransferAddAttr final
 {
 public:
@@ -674,13 +739,9 @@ public:
 	EKSC_AttrType                                 ThresholdAttr;                                     // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ThresholdAttrAmplify;                              // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BaseValue;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_DiffTransferAddAttr) == 0x000004, "Wrong alignment on FKSC_DiffTransferAddAttr");
-static_assert(sizeof(FKSC_DiffTransferAddAttr) == 0x000010, "Wrong size on FKSC_DiffTransferAddAttr");
-static_assert(offsetof(FKSC_DiffTransferAddAttr, FromAttr) == 0x000000, "Member 'FKSC_DiffTransferAddAttr::FromAttr' has a wrong offset!");
-static_assert(offsetof(FKSC_DiffTransferAddAttr, FromAttrAmplify) == 0x000004, "Member 'FKSC_DiffTransferAddAttr::FromAttrAmplify' has a wrong offset!");
-static_assert(offsetof(FKSC_DiffTransferAddAttr, ThresholdAttr) == 0x000008, "Member 'FKSC_DiffTransferAddAttr::ThresholdAttr' has a wrong offset!");
-static_assert(offsetof(FKSC_DiffTransferAddAttr, ThresholdAttrAmplify) == 0x00000C, "Member 'FKSC_DiffTransferAddAttr::ThresholdAttrAmplify' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_DiffTransferAddAttr;
 
 // ScriptStruct KuroSimpleCombat.KSC_TransferAddAttr
 // 0x000C (0x000C - 0x0000)
@@ -692,11 +753,7 @@ public:
 	int32                                         Threshold;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Amplify;                                           // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_TransferAddAttr) == 0x000004, "Wrong alignment on FKSC_TransferAddAttr");
-static_assert(sizeof(FKSC_TransferAddAttr) == 0x00000C, "Wrong size on FKSC_TransferAddAttr");
-static_assert(offsetof(FKSC_TransferAddAttr, FromAttr) == 0x000000, "Member 'FKSC_TransferAddAttr::FromAttr' has a wrong offset!");
-static_assert(offsetof(FKSC_TransferAddAttr, Threshold) == 0x000004, "Member 'FKSC_TransferAddAttr::Threshold' has a wrong offset!");
-static_assert(offsetof(FKSC_TransferAddAttr, Amplify) == 0x000008, "Member 'FKSC_TransferAddAttr::Amplify' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_TransferAddAttr;
 
 // ScriptStruct KuroSimpleCombat.KSCDamage
 // 0x000C (0x000C - 0x0000)
@@ -710,65 +767,28 @@ public:
 	EKSC_AttrType                                 RelatedProperty;                                   // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSCDamage) == 0x000004, "Wrong alignment on FKSCDamage");
-static_assert(sizeof(FKSCDamage) == 0x00000C, "Wrong size on FKSCDamage");
-static_assert(offsetof(FKSCDamage, CalculateType) == 0x000000, "Member 'FKSCDamage::CalculateType' has a wrong offset!");
-static_assert(offsetof(FKSCDamage, Element) == 0x000001, "Member 'FKSCDamage::Element' has a wrong offset!");
-static_assert(offsetof(FKSCDamage, Amplify) == 0x000004, "Member 'FKSCDamage::Amplify' has a wrong offset!");
-static_assert(offsetof(FKSCDamage, RelatedProperty) == 0x000008, "Member 'FKSCDamage::RelatedProperty' has a wrong offset!");
+DUMPER7_ASSERTS_FKSCDamage;
 
-// ScriptStruct KuroSimpleCombat.KSCTableRowBase
-// 0x0038 (0x0040 - 0x0008)
-struct FKSCTableRowBase : public FTableRowBase
+// ScriptStruct KuroSimpleCombat.KSCSceneSegmentTableRow
+// 0x0000 (0x0040 - 0x0040)
+struct FKSCSceneSegmentTableRow final : public FKSCTableRowBase
 {
-public:
-	int32                                         Id;                                                // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UDataAsset>              RuntimeDA;                                         // 0x0010(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSCTableRowBase) == 0x000008, "Wrong alignment on FKSCTableRowBase");
-static_assert(sizeof(FKSCTableRowBase) == 0x000040, "Wrong size on FKSCTableRowBase");
-static_assert(offsetof(FKSCTableRowBase, Id) == 0x000008, "Member 'FKSCTableRowBase::Id' has a wrong offset!");
-static_assert(offsetof(FKSCTableRowBase, RuntimeDA) == 0x000010, "Member 'FKSCTableRowBase::RuntimeDA' has a wrong offset!");
-
-// ScriptStruct KuroSimpleCombat.KSCSkillTableRow
-// 0x0028 (0x0068 - 0x0040)
-struct FKSCSkillTableRow final : public FKSCTableRowBase
-{
-public:
-	EKSC_OperateType                              OperateType;                                       // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PressTime;                                         // 0x0044(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PsFeedbackId;                                      // 0x0048(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChargeCueId;                                       // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ChargeFullCueId;                                   // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SkillId;                                           // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FKSCSkillTableRow) == 0x000008, "Wrong alignment on FKSCSkillTableRow");
-static_assert(sizeof(FKSCSkillTableRow) == 0x000068, "Wrong size on FKSCSkillTableRow");
-static_assert(offsetof(FKSCSkillTableRow, OperateType) == 0x000040, "Member 'FKSCSkillTableRow::OperateType' has a wrong offset!");
-static_assert(offsetof(FKSCSkillTableRow, PressTime) == 0x000044, "Member 'FKSCSkillTableRow::PressTime' has a wrong offset!");
-static_assert(offsetof(FKSCSkillTableRow, PsFeedbackId) == 0x000048, "Member 'FKSCSkillTableRow::PsFeedbackId' has a wrong offset!");
-static_assert(offsetof(FKSCSkillTableRow, ChargeCueId) == 0x000058, "Member 'FKSCSkillTableRow::ChargeCueId' has a wrong offset!");
-static_assert(offsetof(FKSCSkillTableRow, ChargeFullCueId) == 0x00005C, "Member 'FKSCSkillTableRow::ChargeFullCueId' has a wrong offset!");
-static_assert(offsetof(FKSCSkillTableRow, SkillId) == 0x000060, "Member 'FKSCSkillTableRow::SkillId' has a wrong offset!");
+DUMPER7_ASSERTS_FKSCSceneSegmentTableRow;
 
 // ScriptStruct KuroSimpleCombat.KSCBuffTableRow
 // 0x0000 (0x0040 - 0x0040)
 struct FKSCBuffTableRow final : public FKSCTableRowBase
 {
 };
-static_assert(alignof(FKSCBuffTableRow) == 0x000008, "Wrong alignment on FKSCBuffTableRow");
-static_assert(sizeof(FKSCBuffTableRow) == 0x000040, "Wrong size on FKSCBuffTableRow");
+DUMPER7_ASSERTS_FKSCBuffTableRow;
 
 // ScriptStruct KuroSimpleCombat.KSCEntityTableRow
 // 0x0000 (0x0040 - 0x0040)
 struct FKSCEntityTableRow final : public FKSCTableRowBase
 {
 };
-static_assert(alignof(FKSCEntityTableRow) == 0x000008, "Wrong alignment on FKSCEntityTableRow");
-static_assert(sizeof(FKSCEntityTableRow) == 0x000040, "Wrong size on FKSCEntityTableRow");
+DUMPER7_ASSERTS_FKSCEntityTableRow;
 
 // ScriptStruct KuroSimpleCombat.KSC_Enemy_Delay_KuroMatFX
 // 0x0010 (0x0010 - 0x0000)
@@ -779,10 +799,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_Enemy_Delay_KuroMatFX) == 0x000008, "Wrong alignment on FKSC_Enemy_Delay_KuroMatFX");
-static_assert(sizeof(FKSC_Enemy_Delay_KuroMatFX) == 0x000010, "Wrong size on FKSC_Enemy_Delay_KuroMatFX");
-static_assert(offsetof(FKSC_Enemy_Delay_KuroMatFX, Delay) == 0x000000, "Member 'FKSC_Enemy_Delay_KuroMatFX::Delay' has a wrong offset!");
-static_assert(offsetof(FKSC_Enemy_Delay_KuroMatFX, KuroMatFX) == 0x000008, "Member 'FKSC_Enemy_Delay_KuroMatFX::KuroMatFX' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_Enemy_Delay_KuroMatFX;
 
 // ScriptStruct KuroSimpleCombat.KSC_Enemy_Delay_KuroFX
 // 0x0060 (0x0060 - 0x0000)
@@ -793,10 +810,7 @@ public:
 	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKSC_KuroFX                            KuroFX;                                            // 0x0010(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_Enemy_Delay_KuroFX) == 0x000010, "Wrong alignment on FKSC_Enemy_Delay_KuroFX");
-static_assert(sizeof(FKSC_Enemy_Delay_KuroFX) == 0x000060, "Wrong size on FKSC_Enemy_Delay_KuroFX");
-static_assert(offsetof(FKSC_Enemy_Delay_KuroFX, Delay) == 0x000000, "Member 'FKSC_Enemy_Delay_KuroFX::Delay' has a wrong offset!");
-static_assert(offsetof(FKSC_Enemy_Delay_KuroFX, KuroFX) == 0x000010, "Member 'FKSC_Enemy_Delay_KuroFX::KuroFX' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_Enemy_Delay_KuroFX;
 
 // ScriptStruct KuroSimpleCombat.KSC_Delay_KuroFX
 // 0x0040 (0x0040 - 0x0000)
@@ -808,11 +822,18 @@ public:
 	class UEffectModelBase*                       FX;                                                // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             FX_Offset;                                         // 0x0010(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_Delay_KuroFX) == 0x000010, "Wrong alignment on FKSC_Delay_KuroFX");
-static_assert(sizeof(FKSC_Delay_KuroFX) == 0x000040, "Wrong size on FKSC_Delay_KuroFX");
-static_assert(offsetof(FKSC_Delay_KuroFX, Time) == 0x000000, "Member 'FKSC_Delay_KuroFX::Time' has a wrong offset!");
-static_assert(offsetof(FKSC_Delay_KuroFX, FX) == 0x000008, "Member 'FKSC_Delay_KuroFX::FX' has a wrong offset!");
-static_assert(offsetof(FKSC_Delay_KuroFX, FX_Offset) == 0x000010, "Member 'FKSC_Delay_KuroFX::FX_Offset' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_Delay_KuroFX;
+
+// ScriptStruct KuroSimpleCombat.KSC_Delay_KuroMatFX
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_Delay_KuroMatFX final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_Delay_KuroMatFX;
 
 // ScriptStruct KuroSimpleCombat.KSC_TimeLineData
 // 0x0028 (0x0028 - 0x0000)
@@ -824,11 +845,7 @@ public:
 	TArray<struct FKSC_Delay_KuroFX>              TimeLineFX;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TArray<struct FKSC_Delay_KuroMatFX>           TimeLineMatFX;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_TimeLineData) == 0x000008, "Wrong alignment on FKSC_TimeLineData");
-static_assert(sizeof(FKSC_TimeLineData) == 0x000028, "Wrong size on FKSC_TimeLineData");
-static_assert(offsetof(FKSC_TimeLineData, MaxTime) == 0x000000, "Member 'FKSC_TimeLineData::MaxTime' has a wrong offset!");
-static_assert(offsetof(FKSC_TimeLineData, TimeLineFX) == 0x000008, "Member 'FKSC_TimeLineData::TimeLineFX' has a wrong offset!");
-static_assert(offsetof(FKSC_TimeLineData, TimeLineMatFX) == 0x000018, "Member 'FKSC_TimeLineData::TimeLineMatFX' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_TimeLineData;
 
 // ScriptStruct KuroSimpleCombat.KSC_EffectReuseData
 // 0x0030 (0x0030 - 0x0000)
@@ -837,11 +854,10 @@ struct alignas(0x08) FKSC_EffectReuseData final
 public:
 	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_EffectReuseData) == 0x000008, "Wrong alignment on FKSC_EffectReuseData");
-static_assert(sizeof(FKSC_EffectReuseData) == 0x000030, "Wrong size on FKSC_EffectReuseData");
+DUMPER7_ASSERTS_FKSC_EffectReuseData;
 
 // ScriptStruct KuroSimpleCombat.KSC_HeadHpContext
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FKSC_HeadHpContext final
 {
 public:
@@ -852,15 +868,10 @@ public:
 	int32                                         CurHp;                                             // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxHp;                                             // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Shield;                                            // 0x002C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_HeadUiType                               HeadUiType;                                        // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_HeadHpContext) == 0x000008, "Wrong alignment on FKSC_HeadHpContext");
-static_assert(sizeof(FKSC_HeadHpContext) == 0x000030, "Wrong size on FKSC_HeadHpContext");
-static_assert(offsetof(FKSC_HeadHpContext, ActionType) == 0x000000, "Member 'FKSC_HeadHpContext::ActionType' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadHpContext, Location) == 0x000008, "Member 'FKSC_HeadHpContext::Location' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadHpContext, EntityId) == 0x000020, "Member 'FKSC_HeadHpContext::EntityId' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadHpContext, CurHp) == 0x000024, "Member 'FKSC_HeadHpContext::CurHp' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadHpContext, MaxHp) == 0x000028, "Member 'FKSC_HeadHpContext::MaxHp' has a wrong offset!");
-static_assert(offsetof(FKSC_HeadHpContext, Shield) == 0x00002C, "Member 'FKSC_HeadHpContext::Shield' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_HeadHpContext;
 
 // ScriptStruct KuroSimpleCombat.KSC_MiniMapContext
 // 0x0028 (0x0028 - 0x0000)
@@ -873,14 +884,10 @@ public:
 	float                                         Distance;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_MiniMapContext) == 0x000008, "Wrong alignment on FKSC_MiniMapContext");
-static_assert(sizeof(FKSC_MiniMapContext) == 0x000028, "Wrong size on FKSC_MiniMapContext");
-static_assert(offsetof(FKSC_MiniMapContext, EnemyType) == 0x000000, "Member 'FKSC_MiniMapContext::EnemyType' has a wrong offset!");
-static_assert(offsetof(FKSC_MiniMapContext, Location) == 0x000008, "Member 'FKSC_MiniMapContext::Location' has a wrong offset!");
-static_assert(offsetof(FKSC_MiniMapContext, Distance) == 0x000020, "Member 'FKSC_MiniMapContext::Distance' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_MiniMapContext;
 
 // ScriptStruct KuroSimpleCombat.KSC_HitContext
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FKSC_HitContext final
 {
 public:
@@ -890,15 +897,11 @@ public:
 	int32                                         Damage;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsCrit;                                            // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsCure;                                            // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         EntityId;                                          // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKSC_HitContext) == 0x000008, "Wrong alignment on FKSC_HitContext");
-static_assert(sizeof(FKSC_HitContext) == 0x000028, "Wrong size on FKSC_HitContext");
-static_assert(offsetof(FKSC_HitContext, ElementType) == 0x000000, "Member 'FKSC_HitContext::ElementType' has a wrong offset!");
-static_assert(offsetof(FKSC_HitContext, Location) == 0x000008, "Member 'FKSC_HitContext::Location' has a wrong offset!");
-static_assert(offsetof(FKSC_HitContext, Damage) == 0x000020, "Member 'FKSC_HitContext::Damage' has a wrong offset!");
-static_assert(offsetof(FKSC_HitContext, IsCrit) == 0x000024, "Member 'FKSC_HitContext::IsCrit' has a wrong offset!");
-static_assert(offsetof(FKSC_HitContext, IsCure) == 0x000025, "Member 'FKSC_HitContext::IsCure' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_HitContext;
 
 // ScriptStruct KuroSimpleCombat.KSC_Segment
 // 0x0018 (0x0018 - 0x0000)
@@ -908,10 +911,7 @@ public:
 	struct FVector                                PointA;                                            // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                PointB;                                            // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKSC_Segment) == 0x000004, "Wrong alignment on FKSC_Segment");
-static_assert(sizeof(FKSC_Segment) == 0x000018, "Wrong size on FKSC_Segment");
-static_assert(offsetof(FKSC_Segment, PointA) == 0x000000, "Member 'FKSC_Segment::PointA' has a wrong offset!");
-static_assert(offsetof(FKSC_Segment, PointB) == 0x00000C, "Member 'FKSC_Segment::PointB' has a wrong offset!");
+DUMPER7_ASSERTS_FKSC_Segment;
 
 }
 

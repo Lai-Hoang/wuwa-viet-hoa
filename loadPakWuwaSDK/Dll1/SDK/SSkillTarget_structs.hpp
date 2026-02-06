@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSkillTarget.SSkillTarget
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FSSkillTarget final
 {
 public:
@@ -29,16 +29,9 @@ public:
 	bool                                          GlobalTarget_35_C8F0C6EE4E19DE7DD23820B99040632C;  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BlackboardKey_39_4B3BDD654E196A674D080AB04ADE7C0A; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	float                                         SkillTargetRemainTime_42_8895E5CB41289FAAAAF2DF9791A19C1F; // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSSkillTarget) == 0x000008, "Wrong alignment on FSSkillTarget");
-static_assert(sizeof(FSSkillTarget) == 0x000020, "Wrong size on FSSkillTarget");
-static_assert(offsetof(FSSkillTarget, LockOnConfigId_13_9240CDCD4A7C75F715B64899EE8F2DC1) == 0x000000, "Member 'FSSkillTarget::LockOnConfigId_13_9240CDCD4A7C75F715B64899EE8F2DC1' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, SkillTargetPriority_32_6503AE024BF0D5CB5D542B84F997BBB4) == 0x000004, "Member 'FSSkillTarget::SkillTargetPriority_32_6503AE024BF0D5CB5D542B84F997BBB4' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, ShowTarget_28_4A5D9B40438221B0FC28ACA3361C6C06) == 0x000005, "Member 'FSSkillTarget::ShowTarget_28_4A5D9B40438221B0FC28ACA3361C6C06' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, HateOrLockOnChanged_21_D264B269445DCEAE86F9BEAE40EE18CA) == 0x000006, "Member 'FSSkillTarget::HateOrLockOnChanged_21_D264B269445DCEAE86F9BEAE40EE18CA' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, TargetDied_23_07DBB3684ACF90FA21FB5EB88B580C67) == 0x000007, "Member 'FSSkillTarget::TargetDied_23_07DBB3684ACF90FA21FB5EB88B580C67' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, GlobalTarget_35_C8F0C6EE4E19DE7DD23820B99040632C) == 0x000008, "Member 'FSSkillTarget::GlobalTarget_35_C8F0C6EE4E19DE7DD23820B99040632C' has a wrong offset!");
-static_assert(offsetof(FSSkillTarget, BlackboardKey_39_4B3BDD654E196A674D080AB04ADE7C0A) == 0x000010, "Member 'FSSkillTarget::BlackboardKey_39_4B3BDD654E196A674D080AB04ADE7C0A' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillTarget;
 
 }
 

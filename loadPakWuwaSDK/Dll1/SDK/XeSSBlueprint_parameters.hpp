@@ -26,10 +26,7 @@ public:
 	EXeSSQualityMode                              ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(XeSSBlueprintLibrary_GetDefaultXeSSQualityMode) == 0x000004, "Wrong alignment on XeSSBlueprintLibrary_GetDefaultXeSSQualityMode");
-static_assert(sizeof(XeSSBlueprintLibrary_GetDefaultXeSSQualityMode) == 0x00000C, "Wrong size on XeSSBlueprintLibrary_GetDefaultXeSSQualityMode");
-static_assert(offsetof(XeSSBlueprintLibrary_GetDefaultXeSSQualityMode, ScreenResolution) == 0x000000, "Member 'XeSSBlueprintLibrary_GetDefaultXeSSQualityMode::ScreenResolution' has a wrong offset!");
-static_assert(offsetof(XeSSBlueprintLibrary_GetDefaultXeSSQualityMode, ReturnValue) == 0x000008, "Member 'XeSSBlueprintLibrary_GetDefaultXeSSQualityMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_GetDefaultXeSSQualityMode;
 
 // Function XeSSBlueprint.XeSSBlueprintLibrary.GetSupportedXeSSQualityModes
 // 0x0010 (0x0010 - 0x0000)
@@ -38,9 +35,7 @@ struct XeSSBlueprintLibrary_GetSupportedXeSSQualityModes final
 public:
 	TArray<EXeSSQualityMode>                      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeSSBlueprintLibrary_GetSupportedXeSSQualityModes) == 0x000008, "Wrong alignment on XeSSBlueprintLibrary_GetSupportedXeSSQualityModes");
-static_assert(sizeof(XeSSBlueprintLibrary_GetSupportedXeSSQualityModes) == 0x000010, "Wrong size on XeSSBlueprintLibrary_GetSupportedXeSSQualityModes");
-static_assert(offsetof(XeSSBlueprintLibrary_GetSupportedXeSSQualityModes, ReturnValue) == 0x000000, "Member 'XeSSBlueprintLibrary_GetSupportedXeSSQualityModes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_GetSupportedXeSSQualityModes;
 
 // Function XeSSBlueprint.XeSSBlueprintLibrary.GetXeSSQualityMode
 // 0x0001 (0x0001 - 0x0000)
@@ -49,9 +44,7 @@ struct XeSSBlueprintLibrary_GetXeSSQualityMode final
 public:
 	EXeSSQualityMode                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeSSBlueprintLibrary_GetXeSSQualityMode) == 0x000001, "Wrong alignment on XeSSBlueprintLibrary_GetXeSSQualityMode");
-static_assert(sizeof(XeSSBlueprintLibrary_GetXeSSQualityMode) == 0x000001, "Wrong size on XeSSBlueprintLibrary_GetXeSSQualityMode");
-static_assert(offsetof(XeSSBlueprintLibrary_GetXeSSQualityMode, ReturnValue) == 0x000000, "Member 'XeSSBlueprintLibrary_GetXeSSQualityMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_GetXeSSQualityMode;
 
 // Function XeSSBlueprint.XeSSBlueprintLibrary.GetXeSSQualityModeInformation
 // 0x000C (0x000C - 0x0000)
@@ -64,11 +57,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(XeSSBlueprintLibrary_GetXeSSQualityModeInformation) == 0x000004, "Wrong alignment on XeSSBlueprintLibrary_GetXeSSQualityModeInformation");
-static_assert(sizeof(XeSSBlueprintLibrary_GetXeSSQualityModeInformation) == 0x00000C, "Wrong size on XeSSBlueprintLibrary_GetXeSSQualityModeInformation");
-static_assert(offsetof(XeSSBlueprintLibrary_GetXeSSQualityModeInformation, QualityMode) == 0x000000, "Member 'XeSSBlueprintLibrary_GetXeSSQualityModeInformation::QualityMode' has a wrong offset!");
-static_assert(offsetof(XeSSBlueprintLibrary_GetXeSSQualityModeInformation, ScreenPercentage) == 0x000004, "Member 'XeSSBlueprintLibrary_GetXeSSQualityModeInformation::ScreenPercentage' has a wrong offset!");
-static_assert(offsetof(XeSSBlueprintLibrary_GetXeSSQualityModeInformation, ReturnValue) == 0x000008, "Member 'XeSSBlueprintLibrary_GetXeSSQualityModeInformation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_GetXeSSQualityModeInformation;
 
 // Function XeSSBlueprint.XeSSBlueprintLibrary.IsXeSSSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -77,9 +66,7 @@ struct XeSSBlueprintLibrary_IsXeSSSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeSSBlueprintLibrary_IsXeSSSupported) == 0x000001, "Wrong alignment on XeSSBlueprintLibrary_IsXeSSSupported");
-static_assert(sizeof(XeSSBlueprintLibrary_IsXeSSSupported) == 0x000001, "Wrong size on XeSSBlueprintLibrary_IsXeSSSupported");
-static_assert(offsetof(XeSSBlueprintLibrary_IsXeSSSupported, ReturnValue) == 0x000000, "Member 'XeSSBlueprintLibrary_IsXeSSSupported::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_IsXeSSSupported;
 
 // Function XeSSBlueprint.XeSSBlueprintLibrary.SetXeSSQualityMode
 // 0x0001 (0x0001 - 0x0000)
@@ -88,9 +75,7 @@ struct XeSSBlueprintLibrary_SetXeSSQualityMode final
 public:
 	EXeSSQualityMode                              QualityMode;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(XeSSBlueprintLibrary_SetXeSSQualityMode) == 0x000001, "Wrong alignment on XeSSBlueprintLibrary_SetXeSSQualityMode");
-static_assert(sizeof(XeSSBlueprintLibrary_SetXeSSQualityMode) == 0x000001, "Wrong size on XeSSBlueprintLibrary_SetXeSSQualityMode");
-static_assert(offsetof(XeSSBlueprintLibrary_SetXeSSQualityMode, QualityMode) == 0x000000, "Member 'XeSSBlueprintLibrary_SetXeSSQualityMode::QualityMode' has a wrong offset!");
+DUMPER7_ASSERTS_XeSSBlueprintLibrary_SetXeSSQualityMode;
 
 }
 

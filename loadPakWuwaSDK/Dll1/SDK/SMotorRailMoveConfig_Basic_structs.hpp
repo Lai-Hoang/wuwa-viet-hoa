@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "SMotorRailMove_EventHandler_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -37,22 +37,7 @@ public:
 	TMap<int64, bool>                             ModifyDriverBuffsOnEnterRail_62_E0BE7E3A4F33EF28054DAFA8D36C6FB5; // 0x0290(0x0050)(Edit, BlueprintVisible)
 	TMap<int64, bool>                             ModifyDriverBuffsOnLeaveRail_63_C4A371F243C007974581298E993E9E6A; // 0x02E0(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSMotorRailMoveConfig_Basic) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig_Basic");
-static_assert(sizeof(FSMotorRailMoveConfig_Basic) == 0x000330, "Wrong size on FSMotorRailMoveConfig_Basic");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, MaxDeltaTimeForMoveUpdate_6_EA8E9CCB4E6350609F49FF82FBB17EBB) == 0x000000, "Member 'FSMotorRailMoveConfig_Basic::MaxDeltaTimeForMoveUpdate_6_EA8E9CCB4E6350609F49FF82FBB17EBB' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, DefaultMoveSpeed_7_7CDB03ED42390262FFF4ABAFC202F27E) == 0x000004, "Member 'FSMotorRailMoveConfig_Basic::DefaultMoveSpeed_7_7CDB03ED42390262FFF4ABAFC202F27E' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, AllowUseSkillIds_15_ED9F76B54F7E9838198DC1947FBDED98) == 0x000008, "Member 'FSMotorRailMoveConfig_Basic::AllowUseSkillIds_15_ED9F76B54F7E9838198DC1947FBDED98' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, AutoEnterRailCdAfterLeaveRailMove_28_4FD7871742EEF957151882A2C6B4DA14) == 0x000058, "Member 'FSMotorRailMoveConfig_Basic::AutoEnterRailCdAfterLeaveRailMove_28_4FD7871742EEF957151882A2C6B4DA14' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, AutoEnterRailCdAfterLeaveRail_14_7C78841D4DDB780DAE969DB7977C78CC) == 0x00005C, "Member 'FSMotorRailMoveConfig_Basic::AutoEnterRailCdAfterLeaveRail_14_7C78841D4DDB780DAE969DB7977C78CC' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ClientEventHandlers_42_2B08411B43433EC69B74D6ACCB813FA8) == 0x000060, "Member 'FSMotorRailMoveConfig_Basic::ClientEventHandlers_42_2B08411B43433EC69B74D6ACCB813FA8' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyVehicleTagsOnEnterRail_33_5B7190344B8B7F4F9D19FDA99C2C5552) == 0x0000B0, "Member 'FSMotorRailMoveConfig_Basic::ModifyVehicleTagsOnEnterRail_33_5B7190344B8B7F4F9D19FDA99C2C5552' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyVehicleTagsOnLeaveRail_32_781B20764C58A3ADF16753BEA760E5D5) == 0x000100, "Member 'FSMotorRailMoveConfig_Basic::ModifyVehicleTagsOnLeaveRail_32_781B20764C58A3ADF16753BEA760E5D5' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyVehicleBuffsOnEnterRail_47_98D4F4E944103386CB1A4BBEA54E7D7B) == 0x000150, "Member 'FSMotorRailMoveConfig_Basic::ModifyVehicleBuffsOnEnterRail_47_98D4F4E944103386CB1A4BBEA54E7D7B' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyVehicleBuffsOnLeaveRail_49_67E9B5DB49CAEB4F0B90EA9D6CCD29E9) == 0x0001A0, "Member 'FSMotorRailMoveConfig_Basic::ModifyVehicleBuffsOnLeaveRail_49_67E9B5DB49CAEB4F0B90EA9D6CCD29E9' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyDriverPlayerTagsOnEnterRail_64_1E117AE5425BDF527C012FAF54129AB9) == 0x0001F0, "Member 'FSMotorRailMoveConfig_Basic::ModifyDriverPlayerTagsOnEnterRail_64_1E117AE5425BDF527C012FAF54129AB9' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyDriverPlayerTagsOnLeaveRail_65_794CFE044F6C354C3CD31C8EAD70A882) == 0x000240, "Member 'FSMotorRailMoveConfig_Basic::ModifyDriverPlayerTagsOnLeaveRail_65_794CFE044F6C354C3CD31C8EAD70A882' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyDriverBuffsOnEnterRail_62_E0BE7E3A4F33EF28054DAFA8D36C6FB5) == 0x000290, "Member 'FSMotorRailMoveConfig_Basic::ModifyDriverBuffsOnEnterRail_62_E0BE7E3A4F33EF28054DAFA8D36C6FB5' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_Basic, ModifyDriverBuffsOnLeaveRail_63_C4A371F243C007974581298E993E9E6A) == 0x0002E0, "Member 'FSMotorRailMoveConfig_Basic::ModifyDriverBuffsOnLeaveRail_63_C4A371F243C007974581298E993E9E6A' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig_Basic;
 
 }
 

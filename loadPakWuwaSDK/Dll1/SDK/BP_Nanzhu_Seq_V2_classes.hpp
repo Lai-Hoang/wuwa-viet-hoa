@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Nanzhu_Seq_V2.BP_Nanzhu_Seq_V2_C
-// 0x0000 (0x03D8 - 0x03D8)
+// 0x0000 (0x0408 - 0x0408)
 class ABP_Nanzhu_Seq_V2_C final : public ABP_BaseRole_Seq_V2_C
 {
 public:
@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Nanzhu_Seq_V2_C">();
+		BP_STATIC_CLASS_IMPL("BP_Nanzhu_Seq_V2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Nanzhu_Seq_V2_C")
 	}
 	static class ABP_Nanzhu_Seq_V2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Nanzhu_Seq_V2_C>();
 	}
 };
-static_assert(alignof(ABP_Nanzhu_Seq_V2_C) == 0x000008, "Wrong alignment on ABP_Nanzhu_Seq_V2_C");
-static_assert(sizeof(ABP_Nanzhu_Seq_V2_C) == 0x0003D8, "Wrong size on ABP_Nanzhu_Seq_V2_C");
+DUMPER7_ASSERTS_ABP_Nanzhu_Seq_V2_C;
 
 }
 

@@ -84,21 +84,7 @@ public:
 	EAudioFadeCurve                               FadeCurve;                                         // 0x0074(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_75[0xB];                                       // 0x0075(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroCrowdAiAnimNotifyEventConfig) == 0x000010, "Wrong alignment on FKuroCrowdAiAnimNotifyEventConfig");
-static_assert(sizeof(FKuroCrowdAiAnimNotifyEventConfig) == 0x000080, "Wrong size on FKuroCrowdAiAnimNotifyEventConfig");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, Type) == 0x000000, "Member 'FKuroCrowdAiAnimNotifyEventConfig::Type' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, AnimNotifyType) == 0x000001, "Member 'FKuroCrowdAiAnimNotifyEventConfig::AnimNotifyType' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, AnimNotifyStateType) == 0x000002, "Member 'FKuroCrowdAiAnimNotifyEventConfig::AnimNotifyStateType' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, TriggerTime) == 0x000004, "Member 'FKuroCrowdAiAnimNotifyEventConfig::TriggerTime' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, Duration) == 0x000008, "Member 'FKuroCrowdAiAnimNotifyEventConfig::Duration' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, EffectAsset) == 0x000010, "Member 'FKuroCrowdAiAnimNotifyEventConfig::EffectAsset' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, EffectTransform) == 0x000020, "Member 'FKuroCrowdAiAnimNotifyEventConfig::EffectTransform' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, MaterialDataAsset) == 0x000050, "Member 'FKuroCrowdAiAnimNotifyEventConfig::MaterialDataAsset' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, TargetRadius) == 0x000058, "Member 'FKuroCrowdAiAnimNotifyEventConfig::TargetRadius' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, LerpCurve) == 0x000060, "Member 'FKuroCrowdAiAnimNotifyEventConfig::LerpCurve' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, AudioEvent) == 0x000068, "Member 'FKuroCrowdAiAnimNotifyEventConfig::AudioEvent' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, FadeDuration) == 0x000070, "Member 'FKuroCrowdAiAnimNotifyEventConfig::FadeDuration' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimNotifyEventConfig, FadeCurve) == 0x000074, "Member 'FKuroCrowdAiAnimNotifyEventConfig::FadeCurve' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroCrowdAiAnimNotifyEventConfig;
 
 // ScriptStruct KuroCrowdAi.KuroCrowdAiAnimSequenceConfig
 // 0x0018 (0x0018 - 0x0000)
@@ -109,11 +95,7 @@ public:
 	float                                         BlendInTime;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FKuroCrowdAiAnimNotifyEventConfig> NotifyEventsConfig;                             // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroCrowdAiAnimSequenceConfig) == 0x000008, "Wrong alignment on FKuroCrowdAiAnimSequenceConfig");
-static_assert(sizeof(FKuroCrowdAiAnimSequenceConfig) == 0x000018, "Wrong size on FKuroCrowdAiAnimSequenceConfig");
-static_assert(offsetof(FKuroCrowdAiAnimSequenceConfig, AnimIndex) == 0x000000, "Member 'FKuroCrowdAiAnimSequenceConfig::AnimIndex' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimSequenceConfig, BlendInTime) == 0x000004, "Member 'FKuroCrowdAiAnimSequenceConfig::BlendInTime' has a wrong offset!");
-static_assert(offsetof(FKuroCrowdAiAnimSequenceConfig, NotifyEventsConfig) == 0x000008, "Member 'FKuroCrowdAiAnimSequenceConfig::NotifyEventsConfig' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroCrowdAiAnimSequenceConfig;
 
 // ScriptStruct KuroCrowdAi.ChunkedPointCode
 // 0x0018 (0x0018 - 0x0000)
@@ -123,10 +105,7 @@ public:
 	struct FIntVector                             ChunkCoord;                                        // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntVector                             LocalCoord;                                        // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FChunkedPointCode) == 0x000004, "Wrong alignment on FChunkedPointCode");
-static_assert(sizeof(FChunkedPointCode) == 0x000018, "Wrong size on FChunkedPointCode");
-static_assert(offsetof(FChunkedPointCode, ChunkCoord) == 0x000000, "Member 'FChunkedPointCode::ChunkCoord' has a wrong offset!");
-static_assert(offsetof(FChunkedPointCode, LocalCoord) == 0x00000C, "Member 'FChunkedPointCode::LocalCoord' has a wrong offset!");
+DUMPER7_ASSERTS_FChunkedPointCode;
 
 // ScriptStruct KuroCrowdAi.GridItem
 // 0x0020 (0x0020 - 0x0000)
@@ -136,10 +115,7 @@ public:
 	int32                                         Key;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBox                                   BoundBox;                                          // 0x0004(0x001C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGridItem) == 0x000004, "Wrong alignment on FGridItem");
-static_assert(sizeof(FGridItem) == 0x000020, "Wrong size on FGridItem");
-static_assert(offsetof(FGridItem, Key) == 0x000000, "Member 'FGridItem::Key' has a wrong offset!");
-static_assert(offsetof(FGridItem, BoundBox) == 0x000004, "Member 'FGridItem::BoundBox' has a wrong offset!");
+DUMPER7_ASSERTS_FGridItem;
 
 }
 

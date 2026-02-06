@@ -27,16 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"T4MLandscapeActor">();
+		STATIC_CLASS_IMPL("T4MLandscapeActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"T4MLandscapeActor")
 	}
 	static class AT4MLandscapeActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AT4MLandscapeActor>();
 	}
 };
-static_assert(alignof(AT4MLandscapeActor) == 0x000008, "Wrong alignment on AT4MLandscapeActor");
-static_assert(sizeof(AT4MLandscapeActor) == 0x0002B8, "Wrong size on AT4MLandscapeActor");
-static_assert(offsetof(AT4MLandscapeActor, T4MLandscapeComponent) == 0x0002B0, "Member 'AT4MLandscapeActor::T4MLandscapeComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AT4MLandscapeActor;
 
 // Class T4MRuntime.T4MLandscapeComponent
 // 0x00B0 (0x06A0 - 0x05F0)
@@ -75,36 +77,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"T4MLandscapeComponent">();
+		STATIC_CLASS_IMPL("T4MLandscapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"T4MLandscapeComponent")
 	}
 	static class UT4MLandscapeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UT4MLandscapeComponent>();
 	}
 };
-static_assert(alignof(UT4MLandscapeComponent) == 0x000010, "Wrong alignment on UT4MLandscapeComponent");
-static_assert(sizeof(UT4MLandscapeComponent) == 0x0006A0, "Wrong size on UT4MLandscapeComponent");
-static_assert(offsetof(UT4MLandscapeComponent, MapBuildDataId) == 0x0005E8, "Member 'UT4MLandscapeComponent::MapBuildDataId' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, SectionBaseX) == 0x0005F8, "Member 'UT4MLandscapeComponent::SectionBaseX' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, SectionBaseY) == 0x0005FC, "Member 'UT4MLandscapeComponent::SectionBaseY' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, ComponentSizeQuads) == 0x000600, "Member 'UT4MLandscapeComponent::ComponentSizeQuads' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, SubsectionSizeQuads) == 0x000604, "Member 'UT4MLandscapeComponent::SubsectionSizeQuads' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, NumSubsections) == 0x000608, "Member 'UT4MLandscapeComponent::NumSubsections' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, WeightmapScaleBias) == 0x000610, "Member 'UT4MLandscapeComponent::WeightmapScaleBias' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, WeightmapSubsectionOffset) == 0x000620, "Member 'UT4MLandscapeComponent::WeightmapSubsectionOffset' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, HeightmapSubsectionOffsetU) == 0x000624, "Member 'UT4MLandscapeComponent::HeightmapSubsectionOffsetU' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, HeightmapSubsectionOffsetV) == 0x000628, "Member 'UT4MLandscapeComponent::HeightmapSubsectionOffsetV' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, HeightmapScaleBias) == 0x000630, "Member 'UT4MLandscapeComponent::HeightmapScaleBias' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, BlendableLayerMask) == 0x000640, "Member 'UT4MLandscapeComponent::BlendableLayerMask' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, StaticLightingLOD) == 0x000644, "Member 'UT4MLandscapeComponent::StaticLightingLOD' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, StaticLightingResolution) == 0x000648, "Member 'UT4MLandscapeComponent::StaticLightingResolution' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, NormalmapTexture) == 0x000650, "Member 'UT4MLandscapeComponent::NormalmapTexture' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, WeightmapTextures) == 0x000658, "Member 'UT4MLandscapeComponent::WeightmapTextures' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, IndexmapTexture) == 0x000668, "Member 'UT4MLandscapeComponent::IndexmapTexture' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, BlendmapTexture) == 0x000670, "Member 'UT4MLandscapeComponent::BlendmapTexture' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, KuroColormapTexture) == 0x000678, "Member 'UT4MLandscapeComponent::KuroColormapTexture' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, LandscapeLayerParams) == 0x000680, "Member 'UT4MLandscapeComponent::LandscapeLayerParams' has a wrong offset!");
-static_assert(offsetof(UT4MLandscapeComponent, MaterialInstances) == 0x000690, "Member 'UT4MLandscapeComponent::MaterialInstances' has a wrong offset!");
+DUMPER7_ASSERTS_UT4MLandscapeComponent;
 
 }
 

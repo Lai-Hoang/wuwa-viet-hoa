@@ -24,12 +24,7 @@ public:
 	float                                         TotalDuration;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin) == 0x000008, "Wrong alignment on TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin");
-static_assert(sizeof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin) == 0x000018, "Wrong size on TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin");
-static_assert(offsetof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin, MeshComp) == 0x000000, "Member 'TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin::MeshComp' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin, Animation) == 0x000008, "Member 'TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin::Animation' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin, TotalDuration) == 0x000010, "Member 'TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin::TotalDuration' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin, ReturnValue) == 0x000014, "Member 'TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAnimNotifyStateAddCharRendering_C_K2_NotifyBegin;
 
 }
 

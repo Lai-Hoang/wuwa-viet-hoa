@@ -38,16 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SE_ControllerBase_C">();
+		BP_STATIC_CLASS_IMPL("SE_ControllerBase_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SE_ControllerBase_C")
 	}
 	static class USE_ControllerBase_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USE_ControllerBase_C>();
 	}
 };
-static_assert(alignof(USE_ControllerBase_C) == 0x000008, "Wrong alignment on USE_ControllerBase_C");
-static_assert(sizeof(USE_ControllerBase_C) == 0x0000C8, "Wrong size on USE_ControllerBase_C");
-static_assert(offsetof(USE_ControllerBase_C, UberGraphFrame) == 0x0000C0, "Member 'USE_ControllerBase_C::UberGraphFrame' has a wrong offset!");
+DUMPER7_ASSERTS_USE_ControllerBase_C;
 
 }
 

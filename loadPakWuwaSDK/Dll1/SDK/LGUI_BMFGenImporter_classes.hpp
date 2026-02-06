@@ -45,30 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LGUIBitmapFontGeneratorData">();
+		STATIC_CLASS_IMPL("LGUIBitmapFontGeneratorData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LGUIBitmapFontGeneratorData")
 	}
 	static class ULGUIBitmapFontGeneratorData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULGUIBitmapFontGeneratorData>();
 	}
 };
-static_assert(alignof(ULGUIBitmapFontGeneratorData) == 0x000008, "Wrong alignment on ULGUIBitmapFontGeneratorData");
-static_assert(sizeof(ULGUIBitmapFontGeneratorData) == 0x000130, "Wrong size on ULGUIBitmapFontGeneratorData");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, fntFileSourcePath) == 0x000080, "Member 'ULGUIBitmapFontGeneratorData::fntFileSourcePath' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, convertTextureType) == 0x000090, "Member 'ULGUIBitmapFontGeneratorData::convertTextureType' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, name) == 0x000098, "Member 'ULGUIBitmapFontGeneratorData::name' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, size) == 0x0000A8, "Member 'ULGUIBitmapFontGeneratorData::size' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, lineHeight) == 0x0000AA, "Member 'ULGUIBitmapFontGeneratorData::lineHeight' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, base) == 0x0000AC, "Member 'ULGUIBitmapFontGeneratorData::base' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, scaleW) == 0x0000AE, "Member 'ULGUIBitmapFontGeneratorData::scaleW' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, scaleH) == 0x0000B0, "Member 'ULGUIBitmapFontGeneratorData::scaleH' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, charCount) == 0x0000B2, "Member 'ULGUIBitmapFontGeneratorData::charCount' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, texture) == 0x0000B8, "Member 'ULGUIBitmapFontGeneratorData::texture' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, charDataMap) == 0x0000C0, "Member 'ULGUIBitmapFontGeneratorData::charDataMap' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, fixedVerticalOffset) == 0x000110, "Member 'ULGUIBitmapFontGeneratorData::fixedVerticalOffset' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, italicAngle) == 0x000114, "Member 'ULGUIBitmapFontGeneratorData::italicAngle' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, boldRatio) == 0x000118, "Member 'ULGUIBitmapFontGeneratorData::boldRatio' has a wrong offset!");
-static_assert(offsetof(ULGUIBitmapFontGeneratorData, renderTextArray) == 0x000120, "Member 'ULGUIBitmapFontGeneratorData::renderTextArray' has a wrong offset!");
+DUMPER7_ASSERTS_ULGUIBitmapFontGeneratorData;
 
 }
 

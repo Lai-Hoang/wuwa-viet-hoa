@@ -22,10 +22,7 @@ public:
 	int64                                         BuffID_5_B5DDE1114C99EC0149B557B21284534A;         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         层数_4_C7EB1FBF4747DE458EA1928EEB30372D;           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSCounterAttackBuff) == 0x000008, "Wrong alignment on FSCounterAttackBuff");
-static_assert(sizeof(FSCounterAttackBuff) == 0x000010, "Wrong size on FSCounterAttackBuff");
-static_assert(offsetof(FSCounterAttackBuff, BuffID_5_B5DDE1114C99EC0149B557B21284534A) == 0x000000, "Member 'FSCounterAttackBuff::BuffID_5_B5DDE1114C99EC0149B557B21284534A' has a wrong offset!");
-static_assert(offsetof(FSCounterAttackBuff, 层数_4_C7EB1FBF4747DE458EA1928EEB30372D) == 0x000008, "Member 'FSCounterAttackBuff::层数_4_C7EB1FBF4747DE458EA1928EEB30372D' has a wrong offset!");
+DUMPER7_ASSERTS_FSCounterAttackBuff;
 
 }
 

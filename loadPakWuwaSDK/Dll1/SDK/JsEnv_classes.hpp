@@ -29,15 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JSAnimGeneratedClass">();
+		STATIC_CLASS_IMPL("JSAnimGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSAnimGeneratedClass")
 	}
 	static class UJSAnimGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJSAnimGeneratedClass>();
 	}
 };
-static_assert(alignof(UJSAnimGeneratedClass) == 0x000008, "Wrong alignment on UJSAnimGeneratedClass");
-static_assert(sizeof(UJSAnimGeneratedClass) == 0x0005F0, "Wrong size on UJSAnimGeneratedClass");
+DUMPER7_ASSERTS_UJSAnimGeneratedClass;
 
 // Class JsEnv.DynamicDelegateProxy
 // 0x0078 (0x00A8 - 0x0030)
@@ -151,15 +154,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DynamicDelegateProxy">();
+		STATIC_CLASS_IMPL("DynamicDelegateProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DynamicDelegateProxy")
 	}
 	static class UDynamicDelegateProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDynamicDelegateProxy>();
 	}
 };
-static_assert(alignof(UDynamicDelegateProxy) == 0x000008, "Wrong alignment on UDynamicDelegateProxy");
-static_assert(sizeof(UDynamicDelegateProxy) == 0x0000A8, "Wrong size on UDynamicDelegateProxy");
+DUMPER7_ASSERTS_UDynamicDelegateProxy;
 
 // Class JsEnv.JsEnvSetting
 // 0x00A8 (0x00D8 - 0x0030)
@@ -206,48 +212,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JsEnvSetting">();
+		STATIC_CLASS_IMPL("JsEnvSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JsEnvSetting")
 	}
 	static class UJsEnvSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJsEnvSetting>();
 	}
 };
-static_assert(alignof(UJsEnvSetting) == 0x000008, "Wrong alignment on UJsEnvSetting");
-static_assert(sizeof(UJsEnvSetting) == 0x0000D8, "Wrong size on UJsEnvSetting");
-static_assert(offsetof(UJsEnvSetting, JsRootPath) == 0x000030, "Member 'UJsEnvSetting::JsRootPath' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, RawJsRootPath) == 0x000040, "Member 'UJsEnvSetting::RawJsRootPath' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, JsByteCodeRoot) == 0x000050, "Member 'UJsEnvSetting::JsByteCodeRoot' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, JsMockCodeRoot) == 0x000060, "Member 'UJsEnvSetting::JsMockCodeRoot' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, V8Flags) == 0x000070, "Member 'UJsEnvSetting::V8Flags' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, MemoryWaringBehavior) == 0x000080, "Member 'UJsEnvSetting::MemoryWaringBehavior' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, MaxYoungGenerationSizeInMB) == 0x000084, "Member 'UJsEnvSetting::MaxYoungGenerationSizeInMB' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EditorMaxOldGenerationSizeInMB) == 0x000088, "Member 'UJsEnvSetting::EditorMaxOldGenerationSizeInMB' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, MinorGCIdleBudgetInMicroSec) == 0x00008C, "Member 'UJsEnvSetting::MinorGCIdleBudgetInMicroSec' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, V8IdleMinTimeInMicroSec) == 0x000090, "Member 'UJsEnvSetting::V8IdleMinTimeInMicroSec' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, V8EditorTickIdleMinTimeInMicroSec) == 0x000094, "Member 'UJsEnvSetting::V8EditorTickIdleMinTimeInMicroSec' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, MinorGCIdleIntervalInMilliSec) == 0x000098, "Member 'UJsEnvSetting::MinorGCIdleIntervalInMilliSec' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, MaxPumpMessageLoopCountPerFrame) == 0x00009C, "Member 'UJsEnvSetting::MaxPumpMessageLoopCountPerFrame' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, V8MaxThreadPoolSize) == 0x0000A0, "Member 'UJsEnvSetting::V8MaxThreadPoolSize' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, V8ThreadPoolSizePercent) == 0x0000A4, "Member 'UJsEnvSetting::V8ThreadPoolSizePercent' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, StackTraceOption) == 0x0000A8, "Member 'UJsEnvSetting::StackTraceOption' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, ReportDeoptFrameInfoThreshold) == 0x0000AC, "Member 'UJsEnvSetting::ReportDeoptFrameInfoThreshold' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableMinorGCInTick) == 0x0000B0, "Member 'UJsEnvSetting::EnableMinorGCInTick' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnablePreloadJS) == 0x0000B1, "Member 'UJsEnvSetting::EnablePreloadJS' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableCheckBlueprintBind) == 0x0000B2, "Member 'UJsEnvSetting::EnableCheckBlueprintBind' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, IgnoreCheckBlueprintBindDirs) == 0x0000B8, "Member 'UJsEnvSetting::IgnoreCheckBlueprintBindDirs' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableV8Print) == 0x0000C8, "Member 'UJsEnvSetting::EnableV8Print' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableGCHeapLayoutTrace) == 0x0000C9, "Member 'UJsEnvSetting::EnableGCHeapLayoutTrace' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableGCHeapStatsTrace) == 0x0000CA, "Member 'UJsEnvSetting::EnableGCHeapStatsTrace' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, UseRelativeScriptOrigin) == 0x0000CB, "Member 'UJsEnvSetting::UseRelativeScriptOrigin' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, JsAbsPathSupportPak) == 0x0000CC, "Member 'UJsEnvSetting::JsAbsPathSupportPak' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableV8DeoptimizeTrace) == 0x0000CD, "Member 'UJsEnvSetting::EnableV8DeoptimizeTrace' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableV8RuntimeTrace) == 0x0000CE, "Member 'UJsEnvSetting::EnableV8RuntimeTrace' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableV8TracingController) == 0x0000CF, "Member 'UJsEnvSetting::EnableV8TracingController' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableV8PriorityMode) == 0x0000D0, "Member 'UJsEnvSetting::EnableV8PriorityMode' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableRedirectV8Stdout) == 0x0000D1, "Member 'UJsEnvSetting::EnableRedirectV8Stdout' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableRedirectV8Stderr) == 0x0000D2, "Member 'UJsEnvSetting::EnableRedirectV8Stderr' has a wrong offset!");
-static_assert(offsetof(UJsEnvSetting, EnableFastV8ToFString) == 0x0000D3, "Member 'UJsEnvSetting::EnableFastV8ToFString' has a wrong offset!");
+DUMPER7_ASSERTS_UJsEnvSetting;
 
 // Class JsEnv.ExtensionMethods
 // 0x0000 (0x0030 - 0x0030)
@@ -256,15 +232,18 @@ class UExtensionMethods final : public UBlueprintFunctionLibrary
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ExtensionMethods">();
+		STATIC_CLASS_IMPL("ExtensionMethods")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ExtensionMethods")
 	}
 	static class UExtensionMethods* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UExtensionMethods>();
 	}
 };
-static_assert(alignof(UExtensionMethods) == 0x000008, "Wrong alignment on UExtensionMethods");
-static_assert(sizeof(UExtensionMethods) == 0x000030, "Wrong size on UExtensionMethods");
+DUMPER7_ASSERTS_UExtensionMethods;
 
 // Class JsEnv.JSGeneratedClass
 // 0x0020 (0x0358 - 0x0338)
@@ -276,15 +255,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JSGeneratedClass">();
+		STATIC_CLASS_IMPL("JSGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSGeneratedClass")
 	}
 	static class UJSGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJSGeneratedClass>();
 	}
 };
-static_assert(alignof(UJSGeneratedClass) == 0x000008, "Wrong alignment on UJSGeneratedClass");
-static_assert(sizeof(UJSGeneratedClass) == 0x000358, "Wrong size on UJSGeneratedClass");
+DUMPER7_ASSERTS_UJSGeneratedClass;
 
 // Class JsEnv.JSGeneratedFunction
 // 0x0020 (0x0108 - 0x00E8)
@@ -296,15 +278,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JSGeneratedFunction">();
+		STATIC_CLASS_IMPL("JSGeneratedFunction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSGeneratedFunction")
 	}
 	static class UJSGeneratedFunction* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJSGeneratedFunction>();
 	}
 };
-static_assert(alignof(UJSGeneratedFunction) == 0x000008, "Wrong alignment on UJSGeneratedFunction");
-static_assert(sizeof(UJSGeneratedFunction) == 0x000108, "Wrong size on UJSGeneratedFunction");
+DUMPER7_ASSERTS_UJSGeneratedFunction;
 
 // Class JsEnv.JSWidgetGeneratedClass
 // 0x0020 (0x0398 - 0x0378)
@@ -316,15 +301,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JSWidgetGeneratedClass">();
+		STATIC_CLASS_IMPL("JSWidgetGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSWidgetGeneratedClass")
 	}
 	static class UJSWidgetGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJSWidgetGeneratedClass>();
 	}
 };
-static_assert(alignof(UJSWidgetGeneratedClass) == 0x000008, "Wrong alignment on UJSWidgetGeneratedClass");
-static_assert(sizeof(UJSWidgetGeneratedClass) == 0x000398, "Wrong size on UJSWidgetGeneratedClass");
+DUMPER7_ASSERTS_UJSWidgetGeneratedClass;
 
 // Class JsEnv.KuroPreloadJSCallback
 // 0x0028 (0x0058 - 0x0030)
@@ -336,16 +324,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPreloadJSCallback">();
+		STATIC_CLASS_IMPL("KuroPreloadJSCallback")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPreloadJSCallback")
 	}
 	static class UKuroPreloadJSCallback* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPreloadJSCallback>();
 	}
 };
-static_assert(alignof(UKuroPreloadJSCallback) == 0x000008, "Wrong alignment on UKuroPreloadJSCallback");
-static_assert(sizeof(UKuroPreloadJSCallback) == 0x000058, "Wrong size on UKuroPreloadJSCallback");
-static_assert(offsetof(UKuroPreloadJSCallback, CompletedDelegate) == 0x000030, "Member 'UKuroPreloadJSCallback::CompletedDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroPreloadJSCallback;
 
 // Class JsEnv.TypeScriptBlueprint
 // 0x0000 (0x00A8 - 0x00A8)
@@ -354,15 +344,18 @@ class UTypeScriptBlueprint final : public UBlueprint
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypeScriptBlueprint">();
+		STATIC_CLASS_IMPL("TypeScriptBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypeScriptBlueprint")
 	}
 	static class UTypeScriptBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTypeScriptBlueprint>();
 	}
 };
-static_assert(alignof(UTypeScriptBlueprint) == 0x000008, "Wrong alignment on UTypeScriptBlueprint");
-static_assert(sizeof(UTypeScriptBlueprint) == 0x0000A8, "Wrong size on UTypeScriptBlueprint");
+DUMPER7_ASSERTS_UTypeScriptBlueprint;
 
 // Class JsEnv.TypeScriptGeneratedClass
 // 0x0070 (0x03A8 - 0x0338)
@@ -376,16 +369,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypeScriptGeneratedClass">();
+		STATIC_CLASS_IMPL("TypeScriptGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypeScriptGeneratedClass")
 	}
 	static class UTypeScriptGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTypeScriptGeneratedClass>();
 	}
 };
-static_assert(alignof(UTypeScriptGeneratedClass) == 0x000008, "Wrong alignment on UTypeScriptGeneratedClass");
-static_assert(sizeof(UTypeScriptGeneratedClass) == 0x0003A8, "Wrong size on UTypeScriptGeneratedClass");
-static_assert(offsetof(UTypeScriptGeneratedClass, HasConstructor) == 0x0003A1, "Member 'UTypeScriptGeneratedClass::HasConstructor' has a wrong offset!");
+DUMPER7_ASSERTS_UTypeScriptGeneratedClass;
 
 // Class JsEnv.TypeScriptObject
 // 0x0000 (0x0000 - 0x0000)
@@ -394,7 +389,11 @@ class ITypeScriptObject final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TypeScriptObject">();
+		STATIC_CLASS_IMPL("TypeScriptObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TypeScriptObject")
 	}
 	static class ITypeScriptObject* GetDefaultObj()
 	{
@@ -410,8 +409,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITypeScriptObject) == 0x000001, "Wrong alignment on ITypeScriptObject");
-static_assert(sizeof(ITypeScriptObject) == 0x000001, "Wrong size on ITypeScriptObject");
+DUMPER7_ASSERTS_ITypeScriptObject;
 
 }
 

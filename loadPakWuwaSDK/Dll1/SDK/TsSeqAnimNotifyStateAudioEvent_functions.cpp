@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function TsSeqAnimNotifyStateAudioEvent.TsSeqAnimNotifyStateAudioEvent_C.K2_NotifyEnd
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UTsSeqAnimNotifyStateAudioEvent_C::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsSeqAnimNotifyStateAudioEvent_C", "K2_NotifyEnd");
-
-	Params::TsSeqAnimNotifyStateAudioEvent_C_K2_NotifyEnd Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TsSeqAnimNotifyStateAudioEvent.TsSeqAnimNotifyStateAudioEvent_C.K2_NotifyBegin
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -62,6 +37,31 @@ bool UTsSeqAnimNotifyStateAudioEvent_C::K2_NotifyBegin(class USkeletalMeshCompon
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 	Parms.TotalDuration = TotalDuration;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsSeqAnimNotifyStateAudioEvent.TsSeqAnimNotifyStateAudioEvent_C.K2_NotifyEnd
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTsSeqAnimNotifyStateAudioEvent_C::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsSeqAnimNotifyStateAudioEvent_C", "K2_NotifyEnd");
+
+	Params::TsSeqAnimNotifyStateAudioEvent_C_K2_NotifyEnd Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
 

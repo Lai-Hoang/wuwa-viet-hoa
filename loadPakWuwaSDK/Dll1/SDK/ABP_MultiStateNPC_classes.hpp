@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ECharState_structs.hpp"
 #include "KuroAnim_structs.hpp"
 #include "KuroAnim_classes.hpp"
 #include "Engine_structs.hpp"
-#include "ECharState_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -182,219 +182,75 @@ public:
 	bool                                          是否无过渡切换状态;                                // 0x428C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void InterfaceJumpPressed(float* Speed);
-	void 基础层(struct FPoseLink* 基础层_0);
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
-	void 更新角色状态();
-	void 更新眨眼();
-	void HasInputRotate(bool* Output_Get);
-	void 是否AI驱动(bool* Result);
-	void 更新角色转身();
-	void 更新角色移动();
-	void 更新角色碰撞();
-	void 更新视线();
-	void 更新角色信息();
-	void InterfaceManipulateInteractDirection(float 角度);
-	void InterfaceFixHookDirect(const struct FVector& Offset);
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TextureFace_47C3F22343F4E2941D0AC3929521DD7B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_FE7049014D58E276D1DAA4A7B255E004();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_BE174F4E4305A31C44EB53B8A0ACB38F();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_2753322D49988F73D13551BE96449CEC();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_1BD443804CCB9B22EFA4DBA71566B6B7();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_8698E7E3445AAA35915DC7B9FE769331();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_397CD326496626151E6C38AFBFB8C7BC();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_6BAB1C7244A9FA3CCE76DC83A08CCED5();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_CBB2E4A1476665CF32489F8488633075();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_58B5095B4B2B5446A89319BB171C7794();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_210DFE6A4C2E240DE1D99AACF91F01EF();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_4AF0EC2E474050F4A6FEEFB5B0EB514D();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_7A5788C0485C309C2ECB9693EC3EB1E7();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_DA048FEC4A7322378EEF208E853CE59B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_CF817C524F33139FE79DFF871D173577();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_F4F96042466926A52814119508C8224A();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_BD5D1A29496F8570ECA77DA2ED3219BB();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_7CD0B5224A979BBF8DD500B389E56FF4();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_4963A49343D067378F50F4897F39D90B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_2BE5DC3A4BF210E9CCD4D9BB0BBF70FE();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_6574E985420FDB1130BEA6991C5D661B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_D58127CB43F64574DF9FC4B027EE42F2();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_27EFD72A476E73371BEEACAE3F318B51();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_8ECA98314DE03091D8AEF7859D07C8D1();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_1165591C4973FAFC213772A1917D020F();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_DD54A29F4039E201894B5D98D07489CE();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_79CA551742D69E3E0FD67EB0149DAC1D();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_FD997E7D42E1AD7C0BCA5E86676A938C();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_30942B7F421866411D6649824CA5F52B();
-	void InterfaceSimulateJump(float Speed);
-	void BlueprintInitializeAnimation();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void ClimbDash();
-	void OnComponentStart();
-	void AnimNotify_OnCollisionAnimEnd();
-	void AnimNotify_OnCollisionAnimBegin();
-	void AnimNotify_OnHitAnimBegin();
-	void AnimNotify_OnHitAnimEnd();
 	void ExecuteUbergraph_ABP_MultiStateNPC(int32 EntryPoint);
+	void AnimNotify_OnHitAnimEnd();
+	void AnimNotify_OnHitAnimBegin();
+	void AnimNotify_OnCollisionAnimBegin();
+	void AnimNotify_OnCollisionAnimEnd();
+	void OnComponentStart();
+	void ClimbDash();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void BlueprintInitializeAnimation();
+	void InterfaceSimulateJump(float Speed);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_30942B7F421866411D6649824CA5F52B();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_FD997E7D42E1AD7C0BCA5E86676A938C();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_79CA551742D69E3E0FD67EB0149DAC1D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_DD54A29F4039E201894B5D98D07489CE();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_1165591C4973FAFC213772A1917D020F();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_8ECA98314DE03091D8AEF7859D07C8D1();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_27EFD72A476E73371BEEACAE3F318B51();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_D58127CB43F64574DF9FC4B027EE42F2();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_6574E985420FDB1130BEA6991C5D661B();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_2BE5DC3A4BF210E9CCD4D9BB0BBF70FE();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_4963A49343D067378F50F4897F39D90B();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_7CD0B5224A979BBF8DD500B389E56FF4();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_BD5D1A29496F8570ECA77DA2ED3219BB();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_F4F96042466926A52814119508C8224A();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_CF817C524F33139FE79DFF871D173577();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_DA048FEC4A7322378EEF208E853CE59B();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_7A5788C0485C309C2ECB9693EC3EB1E7();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_4AF0EC2E474050F4A6FEEFB5B0EB514D();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_210DFE6A4C2E240DE1D99AACF91F01EF();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_58B5095B4B2B5446A89319BB171C7794();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_CBB2E4A1476665CF32489F8488633075();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_6BAB1C7244A9FA3CCE76DC83A08CCED5();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_397CD326496626151E6C38AFBFB8C7BC();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_8698E7E3445AAA35915DC7B9FE769331();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_1BD443804CCB9B22EFA4DBA71566B6B7();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_2753322D49988F73D13551BE96449CEC();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_BE174F4E4305A31C44EB53B8A0ACB38F();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TransitionResult_FE7049014D58E276D1DAA4A7B255E004();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MultiStateNPC_AnimGraphNode_TextureFace_47C3F22343F4E2941D0AC3929521DD7B();
+	void InterfaceFixHookDirect(const struct FVector& Offset);
+	void InterfaceManipulateInteractDirection(float 角度);
+	void 更新角色信息();
+	void 更新视线();
+	void 更新角色碰撞();
+	void 更新角色移动();
+	void 更新角色转身();
+	void 是否AI驱动(bool* Result);
+	void HasInputRotate(bool* Output_Get);
+	void 更新眨眼();
+	void 更新角色状态();
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void 基础层(struct FPoseLink* 基础层_0);
+	void InterfaceJumpPressed(float* Speed);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_MultiStateNPC_C">();
+		BP_STATIC_CLASS_IMPL("ABP_MultiStateNPC_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_MultiStateNPC_C")
 	}
 	static class UABP_MultiStateNPC_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_MultiStateNPC_C>();
 	}
 };
-static_assert(alignof(UABP_MultiStateNPC_C) == 0x000010, "Wrong alignment on UABP_MultiStateNPC_C");
-static_assert(sizeof(UABP_MultiStateNPC_C) == 0x004290, "Wrong size on UABP_MultiStateNPC_C");
-static_assert(offsetof(UABP_MultiStateNPC_C, UberGraphFrame) == 0x000820, "Member 'UABP_MultiStateNPC_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Root_1) == 0x000828, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot_5) == 0x000860, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Inertialization) == 0x0008C0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_31) == 0x000930, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_31' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_30) == 0x000958, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_30' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_29) == 0x000980, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_29' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_28) == 0x0009A8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_28' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_27) == 0x0009D0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_27' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_26) == 0x0009F8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_26' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_25) == 0x000A20, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_25' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_24) == 0x000A48, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_24' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_14) == 0x000A70, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_14' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_35) == 0x000B48, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_35' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_13) == 0x000B80, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_13' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_34) == 0x000C58, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_34' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_33) == 0x000C90, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_33' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_10) == 0x000CC8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_10' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_32) == 0x000E60, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_32' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_23) == 0x000E98, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_23' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_22) == 0x000EC0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_22' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_12) == 0x000EE8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_12' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_31) == 0x000FC0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_31' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_11) == 0x000FF8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_11' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_30) == 0x0010D0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_30' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_29) == 0x001108, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_29' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_9) == 0x001140, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_9' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_28) == 0x0012D8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_28' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_21) == 0x001310, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_21' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_20) == 0x001338, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_20' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_10) == 0x001360, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_10' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_27) == 0x001438, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_27' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_9) == 0x001470, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_9' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_26) == 0x001548, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_26' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_25) == 0x001580, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_25' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_8) == 0x0015B8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_8' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_24) == 0x001750, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_24' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_19) == 0x001788, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_19' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_18) == 0x0017B0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_18' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_BlendSpacePlayer_3) == 0x0017D8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_BlendSpacePlayer_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_23) == 0x0018E0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_23' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_BlendSpacePlayer_2) == 0x001918, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_BlendSpacePlayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_22) == 0x001A20, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_22' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_21) == 0x001A58, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_21' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_7) == 0x001A90, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_7' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_20) == 0x001C28, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_20' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_17) == 0x001C60, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_17' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_16) == 0x001C88, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_16' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_15) == 0x001CB0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_15' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_14) == 0x001CD8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_14' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_13) == 0x001D00, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_13' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_12) == 0x001D28, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_12' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_11) == 0x001D50, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_11' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_10) == 0x001D78, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_10' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_8) == 0x001DA0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_8' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_19) == 0x001E78, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_19' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_7) == 0x001EB0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_7' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_18) == 0x001F88, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_18' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_17) == 0x001FC0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_17' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_6) == 0x001FF8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_6' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_16) == 0x002190, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_16' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_9) == 0x0021C8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_9' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_8) == 0x0021F0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_8' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_6) == 0x002218, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_6' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_15) == 0x0022F0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_15' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_5) == 0x002328, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_5' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_14) == 0x002400, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_14' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_13) == 0x002438, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_13' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_5) == 0x002470, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_5' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_12) == 0x002608, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_12' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_7) == 0x002640, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_7' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_6) == 0x002668, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_6' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_5) == 0x002690, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_4) == 0x0026B8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_3) == 0x0026E0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_2) == 0x002708, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_4) == 0x002730, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_11) == 0x002808, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_11' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_3) == 0x002840, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_10) == 0x002918, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_10' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_2) == 0x002950, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_9) == 0x002A28, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_9' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer_1) == 0x002A60, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_8) == 0x002B38, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_8' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_7) == 0x002B70, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_7' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_4) == 0x002BA8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_4' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_6) == 0x002D40, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_6' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_3) == 0x002D78, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_5) == 0x002F10, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_5' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult_1) == 0x002F48, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TransitionResult) == 0x002F70, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_BlendSpacePlayer_1) == 0x002F98, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_BlendSpacePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_4) == 0x0030A0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_4' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_BlendSpacePlayer) == 0x0030D8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_3) == 0x0031E0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_2) == 0x003218, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_2) == 0x003250, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult_1) == 0x0033E8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine_1) == 0x003420, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateResult) == 0x0035B8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_StateMachine) == 0x0035F0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot_4) == 0x003788, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_ApplyAdditive_1) == 0x0037E8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot_3) == 0x0038C0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_ApplyAdditive) == 0x003920, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Root) == 0x0039F8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_LinkedAnimLayer) == 0x003A30, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot_2) == 0x003AF0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SightLock) == 0x003B50, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SightLock' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_LocalToComponentSpace) == 0x003D38, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_ComponentToLocalSpace) == 0x003D58, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_RBF) == 0x003D80, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_RBF' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_CombineCurves_1) == 0x003ED0, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_CombineCurves_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_CombineCurves) == 0x003F30, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_CombineCurves' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_SequencePlayer) == 0x003F90, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot_1) == 0x004068, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_Slot) == 0x0040C8, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, AnimGraphNode_TextureFace) == 0x004128, "Member 'UABP_MultiStateNPC_C::AnimGraphNode_TextureFace' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 角色蓝图) == 0x0041F0, "Member 'UABP_MultiStateNPC_C::角色蓝图' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 移动输入向量) == 0x0041F8, "Member 'UABP_MultiStateNPC_C::移动输入向量' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 速度) == 0x004204, "Member 'UABP_MultiStateNPC_C::速度' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 是否有移动输入) == 0x004208, "Member 'UABP_MultiStateNPC_C::是否有移动输入' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, ifPlayIdleAction) == 0x004209, "Member 'UABP_MultiStateNPC_C::ifPlayIdleAction' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, IdleMontageArray) == 0x004210, "Member 'UABP_MultiStateNPC_C::IdleMontageArray' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 角色Mesh) == 0x004220, "Member 'UABP_MultiStateNPC_C::角色Mesh' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 是否原地转身) == 0x004228, "Member 'UABP_MultiStateNPC_C::是否原地转身' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 旋转角度差值) == 0x00422C, "Member 'UABP_MultiStateNPC_C::旋转角度差值' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 上一次旋转角度) == 0x004230, "Member 'UABP_MultiStateNPC_C::上一次旋转角度' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, SightDirect) == 0x004234, "Member 'UABP_MultiStateNPC_C::SightDirect' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, IsBeingImpacted) == 0x004240, "Member 'UABP_MultiStateNPC_C::IsBeingImpacted' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, IsBeingAttacked) == 0x004241, "Member 'UABP_MultiStateNPC_C::IsBeingAttacked' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, SightLockMode) == 0x004242, "Member 'UABP_MultiStateNPC_C::SightLockMode' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 走跑混合) == 0x004244, "Member 'UABP_MultiStateNPC_C::走跑混合' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, IsTurnLeft) == 0x004248, "Member 'UABP_MultiStateNPC_C::IsTurnLeft' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 角色旋转) == 0x00424C, "Member 'UABP_MultiStateNPC_C::角色旋转' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, NpcEntityId) == 0x004258, "Member 'UABP_MultiStateNPC_C::NpcEntityId' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, CollisionStrength) == 0x00425C, "Member 'UABP_MultiStateNPC_C::CollisionStrength' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, CollisionDirection) == 0x004260, "Member 'UABP_MultiStateNPC_C::CollisionDirection' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, RandomEpresionEndTime) == 0x004264, "Member 'UABP_MultiStateNPC_C::RandomEpresionEndTime' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 眨眼动画时长) == 0x004268, "Member 'UABP_MultiStateNPC_C::眨眼动画时长' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 此轮眨眼动画总时长) == 0x00426C, "Member 'UABP_MultiStateNPC_C::此轮眨眼动画总时长' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, ExpresionAlpha) == 0x004270, "Member 'UABP_MultiStateNPC_C::ExpresionAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 眨眼中) == 0x004274, "Member 'UABP_MultiStateNPC_C::眨眼中' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, Cache原地转身) == 0x004275, "Member 'UABP_MultiStateNPC_C::Cache原地转身' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 口型曲线) == 0x004278, "Member 'UABP_MultiStateNPC_C::口型曲线' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 当前状态) == 0x004288, "Member 'UABP_MultiStateNPC_C::当前状态' has a wrong offset!");
-static_assert(offsetof(UABP_MultiStateNPC_C, 是否无过渡切换状态) == 0x00428C, "Member 'UABP_MultiStateNPC_C::是否无过渡切换状态' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_MultiStateNPC_C;
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 
 
@@ -78,16 +78,7 @@ public:
 	EPhyCollisionShape                            Shape;                                             // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKawaiiPhysicsSettings) == 0x000004, "Wrong alignment on FKawaiiPhysicsSettings");
-static_assert(sizeof(FKawaiiPhysicsSettings) == 0x000020, "Wrong size on FKawaiiPhysicsSettings");
-static_assert(offsetof(FKawaiiPhysicsSettings, Damping) == 0x000000, "Member 'FKawaiiPhysicsSettings::Damping' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, WorldDampingLocation) == 0x000004, "Member 'FKawaiiPhysicsSettings::WorldDampingLocation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, WorldDampingRotation) == 0x000008, "Member 'FKawaiiPhysicsSettings::WorldDampingRotation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, Stiffness) == 0x00000C, "Member 'FKawaiiPhysicsSettings::Stiffness' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, Radius) == 0x000010, "Member 'FKawaiiPhysicsSettings::Radius' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, LimitAngle) == 0x000014, "Member 'FKawaiiPhysicsSettings::LimitAngle' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, HalfWidth) == 0x000018, "Member 'FKawaiiPhysicsSettings::HalfWidth' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsSettings, Shape) == 0x00001C, "Member 'FKawaiiPhysicsSettings::Shape' has a wrong offset!");
+DUMPER7_ASSERTS_FKawaiiPhysicsSettings;
 
 // ScriptStruct KawaiiPhysics.CollisionLimitBase
 // 0x0050 (0x0050 - 0x0000)
@@ -101,13 +92,7 @@ public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Rotation;                                          // 0x0040(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCollisionLimitBase) == 0x000010, "Wrong alignment on FCollisionLimitBase");
-static_assert(sizeof(FCollisionLimitBase) == 0x000050, "Wrong size on FCollisionLimitBase");
-static_assert(offsetof(FCollisionLimitBase, DrivingBone) == 0x000000, "Member 'FCollisionLimitBase::DrivingBone' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitBase, OffsetLocation) == 0x000014, "Member 'FCollisionLimitBase::OffsetLocation' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitBase, OffsetRotation) == 0x000020, "Member 'FCollisionLimitBase::OffsetRotation' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitBase, Location) == 0x00002C, "Member 'FCollisionLimitBase::Location' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitBase, Rotation) == 0x000040, "Member 'FCollisionLimitBase::Rotation' has a wrong offset!");
+DUMPER7_ASSERTS_FCollisionLimitBase;
 
 // ScriptStruct KawaiiPhysics.SphericalLimit
 // 0x0010 (0x0060 - 0x0050)
@@ -118,10 +103,7 @@ public:
 	ESphericalLimitType                           LimitType;                                         // 0x0054(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSphericalLimit) == 0x000010, "Wrong alignment on FSphericalLimit");
-static_assert(sizeof(FSphericalLimit) == 0x000060, "Wrong size on FSphericalLimit");
-static_assert(offsetof(FSphericalLimit, Radius) == 0x000050, "Member 'FSphericalLimit::Radius' has a wrong offset!");
-static_assert(offsetof(FSphericalLimit, LimitType) == 0x000054, "Member 'FSphericalLimit::LimitType' has a wrong offset!");
+DUMPER7_ASSERTS_FSphericalLimit;
 
 // ScriptStruct KawaiiPhysics.CapsuleLimit
 // 0x0010 (0x0060 - 0x0050)
@@ -132,10 +114,7 @@ public:
 	float                                         Length;                                            // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCapsuleLimit) == 0x000010, "Wrong alignment on FCapsuleLimit");
-static_assert(sizeof(FCapsuleLimit) == 0x000060, "Wrong size on FCapsuleLimit");
-static_assert(offsetof(FCapsuleLimit, Radius) == 0x000050, "Member 'FCapsuleLimit::Radius' has a wrong offset!");
-static_assert(offsetof(FCapsuleLimit, Length) == 0x000054, "Member 'FCapsuleLimit::Length' has a wrong offset!");
+DUMPER7_ASSERTS_FCapsuleLimit;
 
 // ScriptStruct KawaiiPhysics.PlanarLimit
 // 0x0010 (0x0060 - 0x0050)
@@ -144,9 +123,7 @@ struct FPlanarLimit final : public FCollisionLimitBase
 public:
 	struct FPlane                                 Plane;                                             // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlanarLimit) == 0x000010, "Wrong alignment on FPlanarLimit");
-static_assert(sizeof(FPlanarLimit) == 0x000060, "Wrong size on FPlanarLimit");
-static_assert(offsetof(FPlanarLimit, Plane) == 0x000050, "Member 'FPlanarLimit::Plane' has a wrong offset!");
+DUMPER7_ASSERTS_FPlanarLimit;
 
 // ScriptStruct KawaiiPhysics.KawaiiPhysicsModifyBone
 // 0x00C0 (0x00C0 - 0x0000)
@@ -172,23 +149,7 @@ public:
 	float                                         WindCurveRate;                                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKawaiiPhysicsModifyBone) == 0x000010, "Wrong alignment on FKawaiiPhysicsModifyBone");
-static_assert(sizeof(FKawaiiPhysicsModifyBone) == 0x0000C0, "Wrong size on FKawaiiPhysicsModifyBone");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, BoneRef) == 0x000000, "Member 'FKawaiiPhysicsModifyBone::BoneRef' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, ParentIndex) == 0x000014, "Member 'FKawaiiPhysicsModifyBone::ParentIndex' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, ChildIndexs) == 0x000018, "Member 'FKawaiiPhysicsModifyBone::ChildIndexs' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PhysicsSettings) == 0x000028, "Member 'FKawaiiPhysicsModifyBone::PhysicsSettings' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, Location) == 0x000048, "Member 'FKawaiiPhysicsModifyBone::Location' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PrevLocation) == 0x000054, "Member 'FKawaiiPhysicsModifyBone::PrevLocation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PrevRotation) == 0x000060, "Member 'FKawaiiPhysicsModifyBone::PrevRotation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PoseLocation) == 0x000070, "Member 'FKawaiiPhysicsModifyBone::PoseLocation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PoseRotation) == 0x000080, "Member 'FKawaiiPhysicsModifyBone::PoseRotation' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PoseScale) == 0x000090, "Member 'FKawaiiPhysicsModifyBone::PoseScale' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, LengthFromRoot) == 0x00009C, "Member 'FKawaiiPhysicsModifyBone::LengthFromRoot' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, bDummy) == 0x0000A0, "Member 'FKawaiiPhysicsModifyBone::bDummy' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, IgnoreMechanics) == 0x0000A4, "Member 'FKawaiiPhysicsModifyBone::IgnoreMechanics' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, PrevBasePosition) == 0x0000A8, "Member 'FKawaiiPhysicsModifyBone::PrevBasePosition' has a wrong offset!");
-static_assert(offsetof(FKawaiiPhysicsModifyBone, WindCurveRate) == 0x0000B4, "Member 'FKawaiiPhysicsModifyBone::WindCurveRate' has a wrong offset!");
+DUMPER7_ASSERTS_FKawaiiPhysicsModifyBone;
 
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysicsBase
 // 0x0198 (0x0280 - 0x00E8)
@@ -242,43 +203,7 @@ public:
 	uint8                                         Pad_251[0x27];                                     // 0x0251(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 #pragma pack(pop)
-static_assert(alignof(FAnimNode_KawaiiPhysicsBase) == 0x000010, "Wrong alignment on FAnimNode_KawaiiPhysicsBase");
-static_assert(sizeof(FAnimNode_KawaiiPhysicsBase) == 0x000280, "Wrong size on FAnimNode_KawaiiPhysicsBase");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, ExcludeBones) == 0x0000E8, "Member 'FAnimNode_KawaiiPhysicsBase::ExcludeBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, TargetFramerate) == 0x0000F8, "Member 'FAnimNode_KawaiiPhysicsBase::TargetFramerate' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, OverrideTargetFramerate) == 0x0000FC, "Member 'FAnimNode_KawaiiPhysicsBase::OverrideTargetFramerate' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, IgnoreMechanicsLevel) == 0x000100, "Member 'FAnimNode_KawaiiPhysicsBase::IgnoreMechanicsLevel' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, bNewIgnoreMechanics) == 0x000104, "Member 'FAnimNode_KawaiiPhysicsBase::bNewIgnoreMechanics' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, PhysicsSettings) == 0x000108, "Member 'FAnimNode_KawaiiPhysicsBase::PhysicsSettings' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, DampingCurve) == 0x000128, "Member 'FAnimNode_KawaiiPhysicsBase::DampingCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, WorldDampingLocationCurve) == 0x000130, "Member 'FAnimNode_KawaiiPhysicsBase::WorldDampingLocationCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, WorldDampingRotationCurve) == 0x000138, "Member 'FAnimNode_KawaiiPhysicsBase::WorldDampingRotationCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, StiffnessCurve) == 0x000140, "Member 'FAnimNode_KawaiiPhysicsBase::StiffnessCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, RadiusCurve) == 0x000148, "Member 'FAnimNode_KawaiiPhysicsBase::RadiusCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, HalfWidthCurve) == 0x000150, "Member 'FAnimNode_KawaiiPhysicsBase::HalfWidthCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, LimitAngleCurve) == 0x000158, "Member 'FAnimNode_KawaiiPhysicsBase::LimitAngleCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, bUpdatePhysicsSettingsInGame) == 0x000160, "Member 'FAnimNode_KawaiiPhysicsBase::bUpdatePhysicsSettingsInGame' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, DummyBoneLength) == 0x000164, "Member 'FAnimNode_KawaiiPhysicsBase::DummyBoneLength' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, BoneForwardAxis) == 0x000168, "Member 'FAnimNode_KawaiiPhysicsBase::BoneForwardAxis' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, PlanarConstraint) == 0x000169, "Member 'FAnimNode_KawaiiPhysicsBase::PlanarConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, SphericalLimits) == 0x000170, "Member 'FAnimNode_KawaiiPhysicsBase::SphericalLimits' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, CapsuleLimits) == 0x000180, "Member 'FAnimNode_KawaiiPhysicsBase::CapsuleLimits' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, PlanarLimits) == 0x000190, "Member 'FAnimNode_KawaiiPhysicsBase::PlanarLimits' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, LimitsDataAsset) == 0x0001A0, "Member 'FAnimNode_KawaiiPhysicsBase::LimitsDataAsset' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, SphericalLimitsData) == 0x0001A8, "Member 'FAnimNode_KawaiiPhysicsBase::SphericalLimitsData' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, CapsuleLimitsData) == 0x0001B8, "Member 'FAnimNode_KawaiiPhysicsBase::CapsuleLimitsData' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, PlanarLimitsData) == 0x0001C8, "Member 'FAnimNode_KawaiiPhysicsBase::PlanarLimitsData' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, TeleportDistanceThreshold) == 0x0001D8, "Member 'FAnimNode_KawaiiPhysicsBase::TeleportDistanceThreshold' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, TeleportRotationThreshold) == 0x0001DC, "Member 'FAnimNode_KawaiiPhysicsBase::TeleportRotationThreshold' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, Gravity) == 0x0001E0, "Member 'FAnimNode_KawaiiPhysicsBase::Gravity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, bEnableWind) == 0x0001EC, "Member 'FAnimNode_KawaiiPhysicsBase::bEnableWind' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, WindScale) == 0x0001F0, "Member 'FAnimNode_KawaiiPhysicsBase::WindScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, ModifyBones) == 0x0001F8, "Member 'FAnimNode_KawaiiPhysicsBase::ModifyBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, bEnableSimulate) == 0x000208, "Member 'FAnimNode_KawaiiPhysicsBase::bEnableSimulate' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, AlphaScale) == 0x00020C, "Member 'FAnimNode_KawaiiPhysicsBase::AlphaScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, TotalBoneLength) == 0x000210, "Member 'FAnimNode_KawaiiPhysicsBase::TotalBoneLength' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, PreSkelCompTransform) == 0x000220, "Member 'FAnimNode_KawaiiPhysicsBase::PreSkelCompTransform' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsBase, bInitPhysicsSettings) == 0x000250, "Member 'FAnimNode_KawaiiPhysicsBase::bInitPhysicsSettings' has a wrong offset!");
+DUMPER7_ASSERTS_FAnimNode_KawaiiPhysicsBase;
 
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysics
 // 0x0010 (0x0290 - 0x0280)
@@ -288,9 +213,7 @@ public:
 	struct FBoneReference                         RootBone;                                          // 0x0278(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAnimNode_KawaiiPhysics) == 0x000010, "Wrong alignment on FAnimNode_KawaiiPhysics");
-static_assert(sizeof(FAnimNode_KawaiiPhysics) == 0x000290, "Wrong size on FAnimNode_KawaiiPhysics");
-static_assert(offsetof(FAnimNode_KawaiiPhysics, RootBone) == 0x000278, "Member 'FAnimNode_KawaiiPhysics::RootBone' has a wrong offset!");
+DUMPER7_ASSERTS_FAnimNode_KawaiiPhysics;
 
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysicsGroup
 // 0x0020 (0x02A0 - 0x0280)
@@ -303,12 +226,7 @@ public:
 	float                                         DistanceToWindRate;                                // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAnimNode_KawaiiPhysicsGroup) == 0x000010, "Wrong alignment on FAnimNode_KawaiiPhysicsGroup");
-static_assert(sizeof(FAnimNode_KawaiiPhysicsGroup) == 0x0002A0, "Wrong size on FAnimNode_KawaiiPhysicsGroup");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsGroup, RootBones) == 0x000278, "Member 'FAnimNode_KawaiiPhysicsGroup::RootBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsGroup, WindCurve) == 0x000288, "Member 'FAnimNode_KawaiiPhysicsGroup::WindCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsGroup, StandardWindSpeed) == 0x000290, "Member 'FAnimNode_KawaiiPhysicsGroup::StandardWindSpeed' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KawaiiPhysicsGroup, DistanceToWindRate) == 0x000294, "Member 'FAnimNode_KawaiiPhysicsGroup::DistanceToWindRate' has a wrong offset!");
+DUMPER7_ASSERTS_FAnimNode_KawaiiPhysicsGroup;
 
 // ScriptStruct KawaiiPhysics.CollisionLimitDataBase
 // 0x0050 (0x0050 - 0x0000)
@@ -322,14 +240,7 @@ public:
 	struct FQuat                                  Rotation;                                          // 0x0030(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGuid                                  Guid;                                              // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCollisionLimitDataBase) == 0x000010, "Wrong alignment on FCollisionLimitDataBase");
-static_assert(sizeof(FCollisionLimitDataBase) == 0x000050, "Wrong size on FCollisionLimitDataBase");
-static_assert(offsetof(FCollisionLimitDataBase, DrivingBoneName) == 0x000000, "Member 'FCollisionLimitDataBase::DrivingBoneName' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitDataBase, OffsetLocation) == 0x00000C, "Member 'FCollisionLimitDataBase::OffsetLocation' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitDataBase, OffsetRotation) == 0x000018, "Member 'FCollisionLimitDataBase::OffsetRotation' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitDataBase, Location) == 0x000024, "Member 'FCollisionLimitDataBase::Location' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitDataBase, Rotation) == 0x000030, "Member 'FCollisionLimitDataBase::Rotation' has a wrong offset!");
-static_assert(offsetof(FCollisionLimitDataBase, Guid) == 0x000040, "Member 'FCollisionLimitDataBase::Guid' has a wrong offset!");
+DUMPER7_ASSERTS_FCollisionLimitDataBase;
 
 // ScriptStruct KawaiiPhysics.PlanarLimitData
 // 0x0010 (0x0060 - 0x0050)
@@ -338,9 +249,7 @@ struct FPlanarLimitData final : public FCollisionLimitDataBase
 public:
 	struct FPlane                                 Plane;                                             // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPlanarLimitData) == 0x000010, "Wrong alignment on FPlanarLimitData");
-static_assert(sizeof(FPlanarLimitData) == 0x000060, "Wrong size on FPlanarLimitData");
-static_assert(offsetof(FPlanarLimitData, Plane) == 0x000050, "Member 'FPlanarLimitData::Plane' has a wrong offset!");
+DUMPER7_ASSERTS_FPlanarLimitData;
 
 // ScriptStruct KawaiiPhysics.CapsuleLimitData
 // 0x0010 (0x0060 - 0x0050)
@@ -351,10 +260,7 @@ public:
 	float                                         Length;                                            // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCapsuleLimitData) == 0x000010, "Wrong alignment on FCapsuleLimitData");
-static_assert(sizeof(FCapsuleLimitData) == 0x000060, "Wrong size on FCapsuleLimitData");
-static_assert(offsetof(FCapsuleLimitData, Radius) == 0x000050, "Member 'FCapsuleLimitData::Radius' has a wrong offset!");
-static_assert(offsetof(FCapsuleLimitData, Length) == 0x000054, "Member 'FCapsuleLimitData::Length' has a wrong offset!");
+DUMPER7_ASSERTS_FCapsuleLimitData;
 
 // ScriptStruct KawaiiPhysics.SphericalLimitData
 // 0x0010 (0x0060 - 0x0050)
@@ -365,10 +271,7 @@ public:
 	ESphericalLimitType                           LimitType;                                         // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_55[0xB];                                       // 0x0055(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSphericalLimitData) == 0x000010, "Wrong alignment on FSphericalLimitData");
-static_assert(sizeof(FSphericalLimitData) == 0x000060, "Wrong size on FSphericalLimitData");
-static_assert(offsetof(FSphericalLimitData, Radius) == 0x000050, "Member 'FSphericalLimitData::Radius' has a wrong offset!");
-static_assert(offsetof(FSphericalLimitData, LimitType) == 0x000054, "Member 'FSphericalLimitData::LimitType' has a wrong offset!");
+DUMPER7_ASSERTS_FSphericalLimitData;
 
 // ScriptStruct KawaiiPhysics.KawaiiDebugDrawLine
 // 0x0028 (0x0028 - 0x0000)
@@ -379,11 +282,7 @@ public:
 	struct FVector                                End;                                               // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Color;                                             // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKawaiiDebugDrawLine) == 0x000004, "Wrong alignment on FKawaiiDebugDrawLine");
-static_assert(sizeof(FKawaiiDebugDrawLine) == 0x000028, "Wrong size on FKawaiiDebugDrawLine");
-static_assert(offsetof(FKawaiiDebugDrawLine, Start) == 0x000000, "Member 'FKawaiiDebugDrawLine::Start' has a wrong offset!");
-static_assert(offsetof(FKawaiiDebugDrawLine, End) == 0x00000C, "Member 'FKawaiiDebugDrawLine::End' has a wrong offset!");
-static_assert(offsetof(FKawaiiDebugDrawLine, Color) == 0x000018, "Member 'FKawaiiDebugDrawLine::Color' has a wrong offset!");
+DUMPER7_ASSERTS_FKawaiiDebugDrawLine;
 
 // ScriptStruct KawaiiPhysics.KawaiiDebugDrawSphere
 // 0x0024 (0x0024 - 0x0000)
@@ -396,12 +295,7 @@ public:
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Color;                                             // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKawaiiDebugDrawSphere) == 0x000004, "Wrong alignment on FKawaiiDebugDrawSphere");
-static_assert(sizeof(FKawaiiDebugDrawSphere) == 0x000024, "Wrong size on FKawaiiDebugDrawSphere");
-static_assert(offsetof(FKawaiiDebugDrawSphere, Center) == 0x000000, "Member 'FKawaiiDebugDrawSphere::Center' has a wrong offset!");
-static_assert(offsetof(FKawaiiDebugDrawSphere, Radius) == 0x00000C, "Member 'FKawaiiDebugDrawSphere::Radius' has a wrong offset!");
-static_assert(offsetof(FKawaiiDebugDrawSphere, bCollided) == 0x000010, "Member 'FKawaiiDebugDrawSphere::bCollided' has a wrong offset!");
-static_assert(offsetof(FKawaiiDebugDrawSphere, Color) == 0x000014, "Member 'FKawaiiDebugDrawSphere::Color' has a wrong offset!");
+DUMPER7_ASSERTS_FKawaiiDebugDrawSphere;
 
 }
 

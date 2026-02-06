@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ERelation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "BPEEnableFollowShooter_structs.hpp"
 #include "EInputAction_structs.hpp"
 #include "EInputState_structs.hpp"
-#include "EPawnChannel_structs.hpp"
 #include "EDetachType_structs.hpp"
+#include "EPawnChannel_structs.hpp"
+#include "ERelation_structs.hpp"
 #include "EWeatherState_structs.hpp"
 #include "EWuYinQuState_structs.hpp"
 
@@ -178,7 +179,6 @@ public:
 	static int32 CurrentFrontRoleEntityId(class UObject* __WorldContext);
 	static int32 GetPlayerFollower(class UObject* __WorldContext);
 	static bool IsPlayerFollowerEnable(class UObject* __WorldContext);
-	static void SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext);
 	static int32 GetPlayerFollowerMotor(class UObject* __WorldContext);
 	static void SetPlayerFollowerMotorEnable(bool enable, class UObject* __WorldContext);
 	static bool IsPlayerFollowerMotorEnable(class UObject* __WorldContext);
@@ -187,19 +187,23 @@ public:
 	static void SetPlayerFollowerCustomEntityId(const class FString& customKey, int32 entityId, class UObject* __WorldContext);
 	static void RemovePlayerFollowerCustomEntityId(const class FString& customKey, class UObject* __WorldContext);
 	static void ShowTipsByTextId(const class FString& textId, class UObject* __WorldContext);
+	static void SetPlayerFollowerEnable(bool enable, EBPEEnableFollowShooter enableType, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WorldFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("WorldFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WorldFunctionLibrary_C")
 	}
 	static class UWorldFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWorldFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UWorldFunctionLibrary_C) == 0x000008, "Wrong alignment on UWorldFunctionLibrary_C");
-static_assert(sizeof(UWorldFunctionLibrary_C) == 0x000030, "Wrong size on UWorldFunctionLibrary_C");
+DUMPER7_ASSERTS_UWorldFunctionLibrary_C;
 
 }
 

@@ -21,27 +21,32 @@ namespace SDK
 class UTsHideActorBlueprintFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void ShowNpcMesh(class UObject* __WorldContext);
-	static void ShowNpcEffect(class UObject* __WorldContext);
-	static void HideNpcEffect(class UObject* __WorldContext);
-	static void HideNpcMesh(class UObject* __WorldContext);
-	static void ShowEffect(class UObject* __WorldContext);
-	static void ShowMesh(class UObject* __WorldContext);
-	static void HideEffect(class UObject* __WorldContext);
 	static void HideMesh(class UObject* __WorldContext);
+	static void HideEffect(class UObject* __WorldContext);
+	static void ShowMesh(class UObject* __WorldContext);
+	static void ShowEffect(class UObject* __WorldContext);
+	static void HideNpcMesh(class UObject* __WorldContext);
+	static void HideNpcEffect(class UObject* __WorldContext);
+	static void ShowNpcEffect(class UObject* __WorldContext);
+	static void ShowNpcMesh(class UObject* __WorldContext);
+	static void SetHideParameter(float distance, class FName boneName, class UObject* __WorldContext);
+	static void ResetHideParameter(class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsHideActorBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsHideActorBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsHideActorBlueprintFunctionLibrary_C")
 	}
 	static class UTsHideActorBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsHideActorBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsHideActorBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsHideActorBlueprintFunctionLibrary_C");
-static_assert(sizeof(UTsHideActorBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UTsHideActorBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsHideActorBlueprintFunctionLibrary_C;
 
 }
 

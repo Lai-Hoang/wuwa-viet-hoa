@@ -32,57 +32,49 @@ struct FElementID
 public:
 	int32                                         IDValue;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FElementID) == 0x000004, "Wrong alignment on FElementID");
-static_assert(sizeof(FElementID) == 0x000004, "Wrong size on FElementID");
-static_assert(offsetof(FElementID, IDValue) == 0x000000, "Member 'FElementID::IDValue' has a wrong offset!");
+DUMPER7_ASSERTS_FElementID;
 
 // ScriptStruct MeshDescription.PolygonID
 // 0x0000 (0x0004 - 0x0004)
 struct FPolygonID final : public FElementID
 {
 };
-static_assert(alignof(FPolygonID) == 0x000004, "Wrong alignment on FPolygonID");
-static_assert(sizeof(FPolygonID) == 0x000004, "Wrong size on FPolygonID");
+DUMPER7_ASSERTS_FPolygonID;
 
 // ScriptStruct MeshDescription.PolygonGroupID
 // 0x0000 (0x0004 - 0x0004)
 struct FPolygonGroupID final : public FElementID
 {
 };
-static_assert(alignof(FPolygonGroupID) == 0x000004, "Wrong alignment on FPolygonGroupID");
-static_assert(sizeof(FPolygonGroupID) == 0x000004, "Wrong size on FPolygonGroupID");
+DUMPER7_ASSERTS_FPolygonGroupID;
 
 // ScriptStruct MeshDescription.TriangleID
 // 0x0000 (0x0004 - 0x0004)
 struct FTriangleID final : public FElementID
 {
 };
-static_assert(alignof(FTriangleID) == 0x000004, "Wrong alignment on FTriangleID");
-static_assert(sizeof(FTriangleID) == 0x000004, "Wrong size on FTriangleID");
+DUMPER7_ASSERTS_FTriangleID;
 
 // ScriptStruct MeshDescription.EdgeID
 // 0x0000 (0x0004 - 0x0004)
 struct FEdgeID final : public FElementID
 {
 };
-static_assert(alignof(FEdgeID) == 0x000004, "Wrong alignment on FEdgeID");
-static_assert(sizeof(FEdgeID) == 0x000004, "Wrong size on FEdgeID");
+DUMPER7_ASSERTS_FEdgeID;
 
 // ScriptStruct MeshDescription.VertexInstanceID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexInstanceID final : public FElementID
 {
 };
-static_assert(alignof(FVertexInstanceID) == 0x000004, "Wrong alignment on FVertexInstanceID");
-static_assert(sizeof(FVertexInstanceID) == 0x000004, "Wrong size on FVertexInstanceID");
+DUMPER7_ASSERTS_FVertexInstanceID;
 
 // ScriptStruct MeshDescription.VertexID
 // 0x0000 (0x0004 - 0x0004)
 struct FVertexID final : public FElementID
 {
 };
-static_assert(alignof(FVertexID) == 0x000004, "Wrong alignment on FVertexID");
-static_assert(sizeof(FVertexID) == 0x000004, "Wrong size on FVertexID");
+DUMPER7_ASSERTS_FVertexID;
 
 }
 

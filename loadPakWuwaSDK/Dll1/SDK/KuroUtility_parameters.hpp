@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "KuroUtility_structs.hpp"
+#include "Engine_structs.hpp"
 #include "JsEnv_structs.hpp"
+#include "KuroUtility_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,10 +28,7 @@ public:
 	class FString                                 InPath;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                UserData;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AsyncLoadState_AsyncLoadClass) == 0x000008, "Wrong alignment on AsyncLoadState_AsyncLoadClass");
-static_assert(sizeof(AsyncLoadState_AsyncLoadClass) == 0x000018, "Wrong size on AsyncLoadState_AsyncLoadClass");
-static_assert(offsetof(AsyncLoadState_AsyncLoadClass, InPath) == 0x000000, "Member 'AsyncLoadState_AsyncLoadClass::InPath' has a wrong offset!");
-static_assert(offsetof(AsyncLoadState_AsyncLoadClass, UserData) == 0x000010, "Member 'AsyncLoadState_AsyncLoadClass::UserData' has a wrong offset!");
+DUMPER7_ASSERTS_AsyncLoadState_AsyncLoadClass;
 
 // Function KuroUtility.AsyncLoadState.AsyncLoadObject
 // 0x0018 (0x0018 - 0x0000)
@@ -41,10 +38,7 @@ public:
 	class FString                                 InPath;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                UserData;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AsyncLoadState_AsyncLoadObject) == 0x000008, "Wrong alignment on AsyncLoadState_AsyncLoadObject");
-static_assert(sizeof(AsyncLoadState_AsyncLoadObject) == 0x000018, "Wrong size on AsyncLoadState_AsyncLoadObject");
-static_assert(offsetof(AsyncLoadState_AsyncLoadObject, InPath) == 0x000000, "Member 'AsyncLoadState_AsyncLoadObject::InPath' has a wrong offset!");
-static_assert(offsetof(AsyncLoadState_AsyncLoadObject, UserData) == 0x000010, "Member 'AsyncLoadState_AsyncLoadObject::UserData' has a wrong offset!");
+DUMPER7_ASSERTS_AsyncLoadState_AsyncLoadObject;
 
 // Function KuroUtility.HoldPreloadObject.AddCommonAsset
 // 0x0008 (0x0008 - 0x0000)
@@ -53,9 +47,7 @@ struct HoldPreloadObject_AddCommonAsset final
 public:
 	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoldPreloadObject_AddCommonAsset) == 0x000008, "Wrong alignment on HoldPreloadObject_AddCommonAsset");
-static_assert(sizeof(HoldPreloadObject_AddCommonAsset) == 0x000008, "Wrong size on HoldPreloadObject_AddCommonAsset");
-static_assert(offsetof(HoldPreloadObject_AddCommonAsset, InObject) == 0x000000, "Member 'HoldPreloadObject_AddCommonAsset::InObject' has a wrong offset!");
+DUMPER7_ASSERTS_HoldPreloadObject_AddCommonAsset;
 
 // Function KuroUtility.HoldPreloadObject.AddEntityAsset
 // 0x0018 (0x0018 - 0x0000)
@@ -68,11 +60,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoldPreloadObject_AddEntityAsset) == 0x000008, "Wrong alignment on HoldPreloadObject_AddEntityAsset");
-static_assert(sizeof(HoldPreloadObject_AddEntityAsset) == 0x000018, "Wrong size on HoldPreloadObject_AddEntityAsset");
-static_assert(offsetof(HoldPreloadObject_AddEntityAsset, EntityId) == 0x000000, "Member 'HoldPreloadObject_AddEntityAsset::EntityId' has a wrong offset!");
-static_assert(offsetof(HoldPreloadObject_AddEntityAsset, InObject) == 0x000008, "Member 'HoldPreloadObject_AddEntityAsset::InObject' has a wrong offset!");
-static_assert(offsetof(HoldPreloadObject_AddEntityAsset, ReturnValue) == 0x000010, "Member 'HoldPreloadObject_AddEntityAsset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoldPreloadObject_AddEntityAsset;
 
 // Function KuroUtility.HoldPreloadObject.GetCommonAssetArray
 // 0x0010 (0x0010 - 0x0000)
@@ -81,9 +69,7 @@ struct HoldPreloadObject_GetCommonAssetArray final
 public:
 	TArray<class UObject*>                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoldPreloadObject_GetCommonAssetArray) == 0x000008, "Wrong alignment on HoldPreloadObject_GetCommonAssetArray");
-static_assert(sizeof(HoldPreloadObject_GetCommonAssetArray) == 0x000010, "Wrong size on HoldPreloadObject_GetCommonAssetArray");
-static_assert(offsetof(HoldPreloadObject_GetCommonAssetArray, ReturnValue) == 0x000000, "Member 'HoldPreloadObject_GetCommonAssetArray::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoldPreloadObject_GetCommonAssetArray;
 
 // Function KuroUtility.HoldPreloadObject.GetEntityAssetArray
 // 0x0020 (0x0020 - 0x0000)
@@ -96,11 +82,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoldPreloadObject_GetEntityAssetArray) == 0x000008, "Wrong alignment on HoldPreloadObject_GetEntityAssetArray");
-static_assert(sizeof(HoldPreloadObject_GetEntityAssetArray) == 0x000020, "Wrong size on HoldPreloadObject_GetEntityAssetArray");
-static_assert(offsetof(HoldPreloadObject_GetEntityAssetArray, EntityId) == 0x000000, "Member 'HoldPreloadObject_GetEntityAssetArray::EntityId' has a wrong offset!");
-static_assert(offsetof(HoldPreloadObject_GetEntityAssetArray, OutAssets) == 0x000008, "Member 'HoldPreloadObject_GetEntityAssetArray::OutAssets' has a wrong offset!");
-static_assert(offsetof(HoldPreloadObject_GetEntityAssetArray, ReturnValue) == 0x000018, "Member 'HoldPreloadObject_GetEntityAssetArray::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoldPreloadObject_GetEntityAssetArray;
 
 // Function KuroUtility.HoldPreloadObject.RemoveEntityAssets
 // 0x0008 (0x0008 - 0x0000)
@@ -111,10 +93,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(HoldPreloadObject_RemoveEntityAssets) == 0x000004, "Wrong alignment on HoldPreloadObject_RemoveEntityAssets");
-static_assert(sizeof(HoldPreloadObject_RemoveEntityAssets) == 0x000008, "Wrong size on HoldPreloadObject_RemoveEntityAssets");
-static_assert(offsetof(HoldPreloadObject_RemoveEntityAssets, EntityId) == 0x000000, "Member 'HoldPreloadObject_RemoveEntityAssets::EntityId' has a wrong offset!");
-static_assert(offsetof(HoldPreloadObject_RemoveEntityAssets, ReturnValue) == 0x000004, "Member 'HoldPreloadObject_RemoveEntityAssets::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_HoldPreloadObject_RemoveEntityAssets;
 
 // Function KuroUtility.KuroActorComponent.EditorTickComponent
 // 0x0004 (0x0004 - 0x0000)
@@ -123,9 +102,7 @@ struct KuroActorComponent_EditorTickComponent final
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorComponent_EditorTickComponent) == 0x000004, "Wrong alignment on KuroActorComponent_EditorTickComponent");
-static_assert(sizeof(KuroActorComponent_EditorTickComponent) == 0x000004, "Wrong size on KuroActorComponent_EditorTickComponent");
-static_assert(offsetof(KuroActorComponent_EditorTickComponent, DeltaTime) == 0x000000, "Member 'KuroActorComponent_EditorTickComponent::DeltaTime' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorComponent_EditorTickComponent;
 
 // Function KuroUtility.KuroActorManager.ClearAcquiredComponents
 // 0x0010 (0x0010 - 0x0000)
@@ -136,10 +113,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroActorManager_ClearAcquiredComponents) == 0x000008, "Wrong alignment on KuroActorManager_ClearAcquiredComponents");
-static_assert(sizeof(KuroActorManager_ClearAcquiredComponents) == 0x000010, "Wrong size on KuroActorManager_ClearAcquiredComponents");
-static_assert(offsetof(KuroActorManager_ClearAcquiredComponents, Actor) == 0x000000, "Member 'KuroActorManager_ClearAcquiredComponents::Actor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_ClearAcquiredComponents, ReturnValue) == 0x000008, "Member 'KuroActorManager_ClearAcquiredComponents::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ClearAcquiredComponents;
 
 // Function KuroUtility.KuroActorManager.D_SpawnActor
 // 0x0080 (0x0080 - 0x0000)
@@ -158,16 +132,7 @@ public:
 	class AActor*                                 ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroActorManager_D_SpawnActor) == 0x000010, "Wrong alignment on KuroActorManager_D_SpawnActor");
-static_assert(sizeof(KuroActorManager_D_SpawnActor) == 0x000080, "Wrong size on KuroActorManager_D_SpawnActor");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, WorldContextObject) == 0x000000, "Member 'KuroActorManager_D_SpawnActor::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, ActorClass) == 0x000008, "Member 'KuroActorManager_D_SpawnActor::ActorClass' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, SpawnTransform) == 0x000010, "Member 'KuroActorManager_D_SpawnActor::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, CollisionHandlingOverride) == 0x000050, "Member 'KuroActorManager_D_SpawnActor::CollisionHandlingOverride' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, Owner) == 0x000058, "Member 'KuroActorManager_D_SpawnActor::Owner' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, Instigator) == 0x000060, "Member 'KuroActorManager_D_SpawnActor::Instigator' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, bAsPoolActor) == 0x000068, "Member 'KuroActorManager_D_SpawnActor::bAsPoolActor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_D_SpawnActor, ReturnValue) == 0x000070, "Member 'KuroActorManager_D_SpawnActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_D_SpawnActor;
 
 // Function KuroUtility.KuroActorManager.DestroyActor
 // 0x0008 (0x0008 - 0x0000)
@@ -176,9 +141,7 @@ struct KuroActorManager_DestroyActor final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_DestroyActor) == 0x000008, "Wrong alignment on KuroActorManager_DestroyActor");
-static_assert(sizeof(KuroActorManager_DestroyActor) == 0x000008, "Wrong size on KuroActorManager_DestroyActor");
-static_assert(offsetof(KuroActorManager_DestroyActor, Actor) == 0x000000, "Member 'KuroActorManager_DestroyActor::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_DestroyActor;
 
 // Function KuroUtility.KuroActorManager.GetAllAcquiredComponents
 // 0x0018 (0x0018 - 0x0000)
@@ -188,10 +151,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_GetAllAcquiredComponents) == 0x000008, "Wrong alignment on KuroActorManager_GetAllAcquiredComponents");
-static_assert(sizeof(KuroActorManager_GetAllAcquiredComponents) == 0x000018, "Wrong size on KuroActorManager_GetAllAcquiredComponents");
-static_assert(offsetof(KuroActorManager_GetAllAcquiredComponents, Actor) == 0x000000, "Member 'KuroActorManager_GetAllAcquiredComponents::Actor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_GetAllAcquiredComponents, ReturnValue) == 0x000008, "Member 'KuroActorManager_GetAllAcquiredComponents::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_GetAllAcquiredComponents;
 
 // Function KuroUtility.KuroActorManager.GetDummySequence
 // 0x0008 (0x0008 - 0x0000)
@@ -200,9 +160,7 @@ struct KuroActorManager_GetDummySequence final
 public:
 	class ULevelSequence*                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_GetDummySequence) == 0x000008, "Wrong alignment on KuroActorManager_GetDummySequence");
-static_assert(sizeof(KuroActorManager_GetDummySequence) == 0x000008, "Wrong size on KuroActorManager_GetDummySequence");
-static_assert(offsetof(KuroActorManager_GetDummySequence, ReturnValue) == 0x000000, "Member 'KuroActorManager_GetDummySequence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_GetDummySequence;
 
 // Function KuroUtility.KuroActorManager.GetResourceSizeBytes
 // 0x0010 (0x0010 - 0x0000)
@@ -214,11 +172,7 @@ public:
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_GetResourceSizeBytes) == 0x000008, "Wrong alignment on KuroActorManager_GetResourceSizeBytes");
-static_assert(sizeof(KuroActorManager_GetResourceSizeBytes) == 0x000010, "Wrong size on KuroActorManager_GetResourceSizeBytes");
-static_assert(offsetof(KuroActorManager_GetResourceSizeBytes, Actor) == 0x000000, "Member 'KuroActorManager_GetResourceSizeBytes::Actor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_GetResourceSizeBytes, isExclusive) == 0x000008, "Member 'KuroActorManager_GetResourceSizeBytes::isExclusive' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_GetResourceSizeBytes, ReturnValue) == 0x00000C, "Member 'KuroActorManager_GetResourceSizeBytes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_GetResourceSizeBytes;
 
 // Function KuroUtility.KuroActorManager.IsActorPoolEnable
 // 0x0001 (0x0001 - 0x0000)
@@ -227,9 +181,7 @@ struct KuroActorManager_IsActorPoolEnable final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_IsActorPoolEnable) == 0x000001, "Wrong alignment on KuroActorManager_IsActorPoolEnable");
-static_assert(sizeof(KuroActorManager_IsActorPoolEnable) == 0x000001, "Wrong size on KuroActorManager_IsActorPoolEnable");
-static_assert(offsetof(KuroActorManager_IsActorPoolEnable, ReturnValue) == 0x000000, "Member 'KuroActorManager_IsActorPoolEnable::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_IsActorPoolEnable;
 
 // Function KuroUtility.KuroActorManager.IsPooledActor
 // 0x0010 (0x0010 - 0x0000)
@@ -240,10 +192,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroActorManager_IsPooledActor) == 0x000008, "Wrong alignment on KuroActorManager_IsPooledActor");
-static_assert(sizeof(KuroActorManager_IsPooledActor) == 0x000010, "Wrong size on KuroActorManager_IsPooledActor");
-static_assert(offsetof(KuroActorManager_IsPooledActor, Actor) == 0x000000, "Member 'KuroActorManager_IsPooledActor::Actor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_IsPooledActor, ReturnValue) == 0x000008, "Member 'KuroActorManager_IsPooledActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_IsPooledActor;
 
 // Function KuroUtility.KuroActorManager.RegisterActorSkipProperties
 // 0x0018 (0x0018 - 0x0000)
@@ -253,10 +202,7 @@ public:
 	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FPropertyPair>                  Properties;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_RegisterActorSkipProperties) == 0x000008, "Wrong alignment on KuroActorManager_RegisterActorSkipProperties");
-static_assert(sizeof(KuroActorManager_RegisterActorSkipProperties) == 0x000018, "Wrong size on KuroActorManager_RegisterActorSkipProperties");
-static_assert(offsetof(KuroActorManager_RegisterActorSkipProperties, Class_0) == 0x000000, "Member 'KuroActorManager_RegisterActorSkipProperties::Class_0' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_RegisterActorSkipProperties, Properties) == 0x000008, "Member 'KuroActorManager_RegisterActorSkipProperties::Properties' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_RegisterActorSkipProperties;
 
 // Function KuroUtility.KuroActorManager.ResetActorToDefault
 // 0x0010 (0x0010 - 0x0000)
@@ -267,10 +213,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroActorManager_ResetActorToDefault) == 0x000008, "Wrong alignment on KuroActorManager_ResetActorToDefault");
-static_assert(sizeof(KuroActorManager_ResetActorToDefault) == 0x000010, "Wrong size on KuroActorManager_ResetActorToDefault");
-static_assert(offsetof(KuroActorManager_ResetActorToDefault, Actor) == 0x000000, "Member 'KuroActorManager_ResetActorToDefault::Actor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_ResetActorToDefault, ReturnValue) == 0x000008, "Member 'KuroActorManager_ResetActorToDefault::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ResetActorToDefault;
 
 // Function KuroUtility.KuroActorManager.ResetClassPropertyCache
 // 0x0008 (0x0008 - 0x0000)
@@ -279,9 +222,7 @@ struct KuroActorManager_ResetClassPropertyCache final
 public:
 	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_ResetClassPropertyCache) == 0x000008, "Wrong alignment on KuroActorManager_ResetClassPropertyCache");
-static_assert(sizeof(KuroActorManager_ResetClassPropertyCache) == 0x000008, "Wrong size on KuroActorManager_ResetClassPropertyCache");
-static_assert(offsetof(KuroActorManager_ResetClassPropertyCache, Class_0) == 0x000000, "Member 'KuroActorManager_ResetClassPropertyCache::Class_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ResetClassPropertyCache;
 
 // Function KuroUtility.KuroActorManager.ResetDelegates
 // 0x0008 (0x0008 - 0x0000)
@@ -290,9 +231,7 @@ struct KuroActorManager_ResetDelegates final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_ResetDelegates) == 0x000008, "Wrong alignment on KuroActorManager_ResetDelegates");
-static_assert(sizeof(KuroActorManager_ResetDelegates) == 0x000008, "Wrong size on KuroActorManager_ResetDelegates");
-static_assert(offsetof(KuroActorManager_ResetDelegates, Actor) == 0x000000, "Member 'KuroActorManager_ResetDelegates::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ResetDelegates;
 
 // Function KuroUtility.KuroActorManager.ResetUberGraph
 // 0x0008 (0x0008 - 0x0000)
@@ -301,9 +240,7 @@ struct KuroActorManager_ResetUberGraph final
 public:
 	class UObject*                                Obj;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_ResetUberGraph) == 0x000008, "Wrong alignment on KuroActorManager_ResetUberGraph");
-static_assert(sizeof(KuroActorManager_ResetUberGraph) == 0x000008, "Wrong size on KuroActorManager_ResetUberGraph");
-static_assert(offsetof(KuroActorManager_ResetUberGraph, Obj) == 0x000000, "Member 'KuroActorManager_ResetUberGraph::Obj' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ResetUberGraph;
 
 // Function KuroUtility.KuroActorManager.ResetUObjectByCDO
 // 0x0008 (0x0008 - 0x0000)
@@ -312,9 +249,7 @@ struct KuroActorManager_ResetUObjectByCDO final
 public:
 	class UObject*                                Obj;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_ResetUObjectByCDO) == 0x000008, "Wrong alignment on KuroActorManager_ResetUObjectByCDO");
-static_assert(sizeof(KuroActorManager_ResetUObjectByCDO) == 0x000008, "Wrong size on KuroActorManager_ResetUObjectByCDO");
-static_assert(offsetof(KuroActorManager_ResetUObjectByCDO, Obj) == 0x000000, "Member 'KuroActorManager_ResetUObjectByCDO::Obj' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_ResetUObjectByCDO;
 
 // Function KuroUtility.KuroActorManager.SpawnActor
 // 0x0070 (0x0070 - 0x0000)
@@ -333,16 +268,7 @@ public:
 	class AActor*                                 ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroActorManager_SpawnActor) == 0x000010, "Wrong alignment on KuroActorManager_SpawnActor");
-static_assert(sizeof(KuroActorManager_SpawnActor) == 0x000070, "Wrong size on KuroActorManager_SpawnActor");
-static_assert(offsetof(KuroActorManager_SpawnActor, WorldContextObject) == 0x000000, "Member 'KuroActorManager_SpawnActor::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, ActorClass) == 0x000008, "Member 'KuroActorManager_SpawnActor::ActorClass' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, SpawnTransform) == 0x000010, "Member 'KuroActorManager_SpawnActor::SpawnTransform' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, CollisionHandlingOverride) == 0x000040, "Member 'KuroActorManager_SpawnActor::CollisionHandlingOverride' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, Owner) == 0x000048, "Member 'KuroActorManager_SpawnActor::Owner' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, Instigator) == 0x000050, "Member 'KuroActorManager_SpawnActor::Instigator' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, bAsPoolActor) == 0x000058, "Member 'KuroActorManager_SpawnActor::bAsPoolActor' has a wrong offset!");
-static_assert(offsetof(KuroActorManager_SpawnActor, ReturnValue) == 0x000060, "Member 'KuroActorManager_SpawnActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_SpawnActor;
 
 // Function KuroUtility.KuroActorManager.UnregisterComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -351,9 +277,7 @@ struct KuroActorManager_UnregisterComponent final
 public:
 	class UActorComponent*                        Componet;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroActorManager_UnregisterComponent) == 0x000008, "Wrong alignment on KuroActorManager_UnregisterComponent");
-static_assert(sizeof(KuroActorManager_UnregisterComponent) == 0x000008, "Wrong size on KuroActorManager_UnregisterComponent");
-static_assert(offsetof(KuroActorManager_UnregisterComponent, Componet) == 0x000000, "Member 'KuroActorManager_UnregisterComponent::Componet' has a wrong offset!");
+DUMPER7_ASSERTS_KuroActorManager_UnregisterComponent;
 
 // Function KuroUtility.KuroApplicationLibrary.AddApplicationLifetimeDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -364,10 +288,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroApplicationLibrary_AddApplicationLifetimeDelegate) == 0x000004, "Wrong alignment on KuroApplicationLibrary_AddApplicationLifetimeDelegate");
-static_assert(sizeof(KuroApplicationLibrary_AddApplicationLifetimeDelegate) == 0x000030, "Wrong size on KuroApplicationLibrary_AddApplicationLifetimeDelegate");
-static_assert(offsetof(KuroApplicationLibrary_AddApplicationLifetimeDelegate, InDelegate) == 0x000000, "Member 'KuroApplicationLibrary_AddApplicationLifetimeDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroApplicationLibrary_AddApplicationLifetimeDelegate, ReturnValue) == 0x000028, "Member 'KuroApplicationLibrary_AddApplicationLifetimeDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroApplicationLibrary_AddApplicationLifetimeDelegate;
 
 // Function KuroUtility.KuroApplicationLibrary.AddEditorPreEndPIEDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -378,10 +299,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate) == 0x000004, "Wrong alignment on KuroApplicationLibrary_AddEditorPreEndPIEDelegate");
-static_assert(sizeof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate) == 0x000030, "Wrong size on KuroApplicationLibrary_AddEditorPreEndPIEDelegate");
-static_assert(offsetof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate, InDelegate) == 0x000000, "Member 'KuroApplicationLibrary_AddEditorPreEndPIEDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate, ReturnValue) == 0x000028, "Member 'KuroApplicationLibrary_AddEditorPreEndPIEDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroApplicationLibrary_AddEditorPreEndPIEDelegate;
 
 // Function KuroUtility.KuroApplicationLibrary.AddWindowActivationDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -392,10 +310,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroApplicationLibrary_AddWindowActivationDelegate) == 0x000004, "Wrong alignment on KuroApplicationLibrary_AddWindowActivationDelegate");
-static_assert(sizeof(KuroApplicationLibrary_AddWindowActivationDelegate) == 0x000030, "Wrong size on KuroApplicationLibrary_AddWindowActivationDelegate");
-static_assert(offsetof(KuroApplicationLibrary_AddWindowActivationDelegate, InDelegate) == 0x000000, "Member 'KuroApplicationLibrary_AddWindowActivationDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroApplicationLibrary_AddWindowActivationDelegate, ReturnValue) == 0x000028, "Member 'KuroApplicationLibrary_AddWindowActivationDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroApplicationLibrary_AddWindowActivationDelegate;
 
 // Function KuroUtility.KuroApplicationLibrary.Test
 // 0x0008 (0x0008 - 0x0000)
@@ -406,10 +321,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroApplicationLibrary_Test) == 0x000004, "Wrong alignment on KuroApplicationLibrary_Test");
-static_assert(sizeof(KuroApplicationLibrary_Test) == 0x000008, "Wrong size on KuroApplicationLibrary_Test");
-static_assert(offsetof(KuroApplicationLibrary_Test, Type) == 0x000000, "Member 'KuroApplicationLibrary_Test::Type' has a wrong offset!");
-static_assert(offsetof(KuroApplicationLibrary_Test, ReturnValue) == 0x000004, "Member 'KuroApplicationLibrary_Test::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroApplicationLibrary_Test;
 
 // Function KuroUtility.KuroApplicationLibrary.UnBind
 // 0x0001 (0x0001 - 0x0000)
@@ -418,9 +330,7 @@ struct KuroApplicationLibrary_UnBind final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroApplicationLibrary_UnBind) == 0x000001, "Wrong alignment on KuroApplicationLibrary_UnBind");
-static_assert(sizeof(KuroApplicationLibrary_UnBind) == 0x000001, "Wrong size on KuroApplicationLibrary_UnBind");
-static_assert(offsetof(KuroApplicationLibrary_UnBind, ReturnValue) == 0x000000, "Member 'KuroApplicationLibrary_UnBind::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroApplicationLibrary_UnBind;
 
 // Function KuroUtility.KuroCollectActorComponent.GetActorWithTag
 // 0x0018 (0x0018 - 0x0000)
@@ -432,11 +342,7 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCollectActorComponent_GetActorWithTag) == 0x000008, "Wrong alignment on KuroCollectActorComponent_GetActorWithTag");
-static_assert(sizeof(KuroCollectActorComponent_GetActorWithTag) == 0x000018, "Wrong size on KuroCollectActorComponent_GetActorWithTag");
-static_assert(offsetof(KuroCollectActorComponent_GetActorWithTag, Tag) == 0x000000, "Member 'KuroCollectActorComponent_GetActorWithTag::Tag' has a wrong offset!");
-static_assert(offsetof(KuroCollectActorComponent_GetActorWithTag, Type) == 0x00000C, "Member 'KuroCollectActorComponent_GetActorWithTag::Type' has a wrong offset!");
-static_assert(offsetof(KuroCollectActorComponent_GetActorWithTag, ReturnValue) == 0x000010, "Member 'KuroCollectActorComponent_GetActorWithTag::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCollectActorComponent_GetActorWithTag;
 
 // Function KuroUtility.KuroCompressLibrary.CompressFileOrFolder
 // 0x00A0 (0x00A0 - 0x0000)
@@ -450,14 +356,7 @@ public:
 	TDelegate<void()>                             OnFail;                                            // 0x0070(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int64                                         MaxSingleFileReadSize;                             // 0x0098(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCompressLibrary_CompressFileOrFolder) == 0x000008, "Wrong alignment on KuroCompressLibrary_CompressFileOrFolder");
-static_assert(sizeof(KuroCompressLibrary_CompressFileOrFolder) == 0x0000A0, "Wrong size on KuroCompressLibrary_CompressFileOrFolder");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, Path) == 0x000000, "Member 'KuroCompressLibrary_CompressFileOrFolder::Path' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, DestPath) == 0x000010, "Member 'KuroCompressLibrary_CompressFileOrFolder::DestPath' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, OnProgress) == 0x000020, "Member 'KuroCompressLibrary_CompressFileOrFolder::OnProgress' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, OnCompressComplete) == 0x000048, "Member 'KuroCompressLibrary_CompressFileOrFolder::OnCompressComplete' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, OnFail) == 0x000070, "Member 'KuroCompressLibrary_CompressFileOrFolder::OnFail' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFileOrFolder, MaxSingleFileReadSize) == 0x000098, "Member 'KuroCompressLibrary_CompressFileOrFolder::MaxSingleFileReadSize' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCompressLibrary_CompressFileOrFolder;
 
 // Function KuroUtility.KuroCompressLibrary.CompressFilesOrFoldersAsync
 // 0x00A8 (0x00A8 - 0x0000)
@@ -473,15 +372,7 @@ public:
 	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         MaxSingleFileReadSize;                             // 0x00A0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCompressLibrary_CompressFilesOrFoldersAsync) == 0x000008, "Wrong alignment on KuroCompressLibrary_CompressFilesOrFoldersAsync");
-static_assert(sizeof(KuroCompressLibrary_CompressFilesOrFoldersAsync) == 0x0000A8, "Wrong size on KuroCompressLibrary_CompressFilesOrFoldersAsync");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, Paths) == 0x000000, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::Paths' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, DestPath) == 0x000010, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::DestPath' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, OnProgress) == 0x000020, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::OnProgress' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, OnCompressComplete) == 0x000048, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::OnCompressComplete' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, OnFail) == 0x000070, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::OnFail' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, bAutoIncludeFilesUnderFolder) == 0x000098, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::bAutoIncludeFilesUnderFolder' has a wrong offset!");
-static_assert(offsetof(KuroCompressLibrary_CompressFilesOrFoldersAsync, MaxSingleFileReadSize) == 0x0000A0, "Member 'KuroCompressLibrary_CompressFilesOrFoldersAsync::MaxSingleFileReadSize' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCompressLibrary_CompressFilesOrFoldersAsync;
 
 // Function KuroUtility.KuroDemoInteractSubSystem.GetDemoInteractiveActor
 // 0x0018 (0x0018 - 0x0000)
@@ -492,10 +383,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroDemoInteractSubSystem_GetDemoInteractiveActor) == 0x000008, "Wrong alignment on KuroDemoInteractSubSystem_GetDemoInteractiveActor");
-static_assert(sizeof(KuroDemoInteractSubSystem_GetDemoInteractiveActor) == 0x000018, "Wrong size on KuroDemoInteractSubSystem_GetDemoInteractiveActor");
-static_assert(offsetof(KuroDemoInteractSubSystem_GetDemoInteractiveActor, ActorKey) == 0x000000, "Member 'KuroDemoInteractSubSystem_GetDemoInteractiveActor::ActorKey' has a wrong offset!");
-static_assert(offsetof(KuroDemoInteractSubSystem_GetDemoInteractiveActor, ReturnValue) == 0x000010, "Member 'KuroDemoInteractSubSystem_GetDemoInteractiveActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroDemoInteractSubSystem_GetDemoInteractiveActor;
 
 // Function KuroUtility.KuroMathLibrary.BitwiseLeftShift
 // 0x0018 (0x0018 - 0x0000)
@@ -507,11 +395,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMathLibrary_BitwiseLeftShift) == 0x000008, "Wrong alignment on KuroMathLibrary_BitwiseLeftShift");
-static_assert(sizeof(KuroMathLibrary_BitwiseLeftShift) == 0x000018, "Wrong size on KuroMathLibrary_BitwiseLeftShift");
-static_assert(offsetof(KuroMathLibrary_BitwiseLeftShift, Source) == 0x000000, "Member 'KuroMathLibrary_BitwiseLeftShift::Source' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_BitwiseLeftShift, Bit) == 0x000008, "Member 'KuroMathLibrary_BitwiseLeftShift::Bit' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_BitwiseLeftShift, ReturnValue) == 0x000010, "Member 'KuroMathLibrary_BitwiseLeftShift::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMathLibrary_BitwiseLeftShift;
 
 // Function KuroUtility.KuroMathLibrary.BitwiseRightShift
 // 0x0018 (0x0018 - 0x0000)
@@ -523,11 +407,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMathLibrary_BitwiseRightShift) == 0x000008, "Wrong alignment on KuroMathLibrary_BitwiseRightShift");
-static_assert(sizeof(KuroMathLibrary_BitwiseRightShift) == 0x000018, "Wrong size on KuroMathLibrary_BitwiseRightShift");
-static_assert(offsetof(KuroMathLibrary_BitwiseRightShift, Source) == 0x000000, "Member 'KuroMathLibrary_BitwiseRightShift::Source' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_BitwiseRightShift, Bit) == 0x000008, "Member 'KuroMathLibrary_BitwiseRightShift::Bit' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_BitwiseRightShift, ReturnValue) == 0x000010, "Member 'KuroMathLibrary_BitwiseRightShift::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMathLibrary_BitwiseRightShift;
 
 // Function KuroUtility.KuroMathLibrary.Max
 // 0x0018 (0x0018 - 0x0000)
@@ -538,11 +418,7 @@ public:
 	struct FVector2D                              B;                                                 // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMathLibrary_Max) == 0x000004, "Wrong alignment on KuroMathLibrary_Max");
-static_assert(sizeof(KuroMathLibrary_Max) == 0x000018, "Wrong size on KuroMathLibrary_Max");
-static_assert(offsetof(KuroMathLibrary_Max, A) == 0x000000, "Member 'KuroMathLibrary_Max::A' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_Max, B) == 0x000008, "Member 'KuroMathLibrary_Max::B' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_Max, ReturnValue) == 0x000010, "Member 'KuroMathLibrary_Max::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMathLibrary_Max;
 
 // Function KuroUtility.KuroMathLibrary.Min
 // 0x0018 (0x0018 - 0x0000)
@@ -553,11 +429,7 @@ public:
 	struct FVector2D                              B;                                                 // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMathLibrary_Min) == 0x000004, "Wrong alignment on KuroMathLibrary_Min");
-static_assert(sizeof(KuroMathLibrary_Min) == 0x000018, "Wrong size on KuroMathLibrary_Min");
-static_assert(offsetof(KuroMathLibrary_Min, A) == 0x000000, "Member 'KuroMathLibrary_Min::A' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_Min, B) == 0x000008, "Member 'KuroMathLibrary_Min::B' has a wrong offset!");
-static_assert(offsetof(KuroMathLibrary_Min, ReturnValue) == 0x000010, "Member 'KuroMathLibrary_Min::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMathLibrary_Min;
 
 // Function KuroUtility.KuroMemoryLibrary.PrintUObjectMemoryInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -566,9 +438,7 @@ struct KuroMemoryLibrary_PrintUObjectMemoryInfo final
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMemoryLibrary_PrintUObjectMemoryInfo) == 0x000008, "Wrong alignment on KuroMemoryLibrary_PrintUObjectMemoryInfo");
-static_assert(sizeof(KuroMemoryLibrary_PrintUObjectMemoryInfo) == 0x000008, "Wrong size on KuroMemoryLibrary_PrintUObjectMemoryInfo");
-static_assert(offsetof(KuroMemoryLibrary_PrintUObjectMemoryInfo, Object) == 0x000000, "Member 'KuroMemoryLibrary_PrintUObjectMemoryInfo::Object' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMemoryLibrary_PrintUObjectMemoryInfo;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.AddMeshesBundleStreamedAllMipsDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -579,10 +449,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate) == 0x000004, "Wrong alignment on KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate) == 0x000030, "Wrong size on KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate, InDelegate) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate, ReturnValue) == 0x000028, "Member 'KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_AddMeshesBundleStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.AddSkeletalStreamedAllMipsDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -593,10 +460,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate) == 0x000004, "Wrong alignment on KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate) == 0x000030, "Wrong size on KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate, InDelegate) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate, ReturnValue) == 0x000028, "Member 'KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_AddSkeletalStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.AddStaticMeshStreamedAllMipsDelegate
 // 0x0030 (0x0030 - 0x0000)
@@ -607,10 +471,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate) == 0x000004, "Wrong alignment on KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate) == 0x000030, "Wrong size on KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate, InDelegate) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate, ReturnValue) == 0x000028, "Member 'KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_AddStaticMeshStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.ForceMeshesBundleStreamingInAllMips
 // 0x0050 (0x0050 - 0x0000)
@@ -623,12 +484,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips) == 0x000050, "Wrong size on KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips, MeshBundleSkeletalMeshes) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips::MeshBundleSkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips, MeshBundleStaticMeshes) == 0x000010, "Member 'KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips::MeshBundleStaticMeshes' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips, InDelegate) == 0x000020, "Member 'KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips::InDelegate' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips, ReturnValue) == 0x000048, "Member 'KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_ForceMeshesBundleStreamingInAllMips;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.HandleMeshesComponentsBundleStreaming
 // 0x0028 (0x0028 - 0x0000)
@@ -640,11 +496,7 @@ public:
 	bool                                          bStartForceStreamIn;                               // 0x0020(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming) == 0x000028, "Wrong size on KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming, MeshBundleSkeletalMeshes) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming::MeshBundleSkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming, MeshBundleStaticMeshes) == 0x000010, "Member 'KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming::MeshBundleStaticMeshes' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming, bStartForceStreamIn) == 0x000020, "Member 'KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming::bStartForceStreamIn' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_HandleMeshesComponentsBundleStreaming;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.HandleSkeletalMeshComponentStreaming
 // 0x0010 (0x0010 - 0x0000)
@@ -655,10 +507,7 @@ public:
 	bool                                          bStartForceStreamIn;                               // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming) == 0x000010, "Wrong size on KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming, skeletalMesh) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming::skeletalMesh' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming, bStartForceStreamIn) == 0x000008, "Member 'KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming::bStartForceStreamIn' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_HandleSkeletalMeshComponentStreaming;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.HandleStaticMeshComponentStreaming
 // 0x0010 (0x0010 - 0x0000)
@@ -669,10 +518,7 @@ public:
 	bool                                          bStartForceStreamIn;                               // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming) == 0x000010, "Wrong size on KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming, staticMesh) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming::staticMesh' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming, bStartForceStreamIn) == 0x000008, "Member 'KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming::bStartForceStreamIn' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_HandleStaticMeshComponentStreaming;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.IsSkeletalMeshComponentStreamingComplete
 // 0x0010 (0x0010 - 0x0000)
@@ -683,10 +529,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete) == 0x000010, "Wrong size on KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete, skeletalMesh) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete::skeletalMesh' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete, ReturnValue) == 0x000008, "Member 'KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_IsSkeletalMeshComponentStreamingComplete;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.IsStaticMeshComponentStreamingComplete
 // 0x0010 (0x0010 - 0x0000)
@@ -697,10 +540,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete) == 0x000008, "Wrong alignment on KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete) == 0x000010, "Wrong size on KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete, staticMesh) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete::staticMesh' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete, ReturnValue) == 0x000008, "Member 'KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_IsStaticMeshComponentStreamingComplete;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.StopMeshesBundleStreamingInAllMips
 // 0x0008 (0x0008 - 0x0000)
@@ -711,10 +551,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips) == 0x000004, "Wrong alignment on KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips) == 0x000008, "Wrong size on KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips, UniqueInstanceID) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips::UniqueInstanceID' has a wrong offset!");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips, ReturnValue) == 0x000004, "Member 'KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_StopMeshesBundleStreamingInAllMips;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.UnbindMeshesBundleStreamedAllMipsDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -723,9 +560,7 @@ struct KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate 
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate) == 0x000001, "Wrong alignment on KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate) == 0x000001, "Wrong size on KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate, ReturnValue) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_UnbindMeshesBundleStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.UnbindSkeletalStreamedAllMipsDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -734,9 +569,7 @@ struct KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate fina
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate) == 0x000001, "Wrong alignment on KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate) == 0x000001, "Wrong size on KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate, ReturnValue) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_UnbindSkeletalStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroMeshTextureFunctionLibrary.UnbindStaticMeshStreamedAllMipsDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -745,9 +578,7 @@ struct KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate fi
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate) == 0x000001, "Wrong alignment on KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate");
-static_assert(sizeof(KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate) == 0x000001, "Wrong size on KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate");
-static_assert(offsetof(KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate, ReturnValue) == 0x000000, "Member 'KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroMeshTextureFunctionLibrary_UnbindStaticMeshStreamedAllMipsDelegate;
 
 // Function KuroUtility.KuroPhysicsLibrary.GetHitPoint
 // 0x0050 (0x0050 - 0x0000)
@@ -764,16 +595,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x004D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPhysicsLibrary_GetHitPoint) == 0x000008, "Wrong alignment on KuroPhysicsLibrary_GetHitPoint");
-static_assert(sizeof(KuroPhysicsLibrary_GetHitPoint) == 0x000050, "Wrong size on KuroPhysicsLibrary_GetHitPoint");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, StartLocation) == 0x000000, "Member 'KuroPhysicsLibrary_GetHitPoint::StartLocation' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, EndLocation) == 0x000018, "Member 'KuroPhysicsLibrary_GetHitPoint::EndLocation' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, Actor) == 0x000030, "Member 'KuroPhysicsLibrary_GetHitPoint::Actor' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, TraceComp) == 0x000038, "Member 'KuroPhysicsLibrary_GetHitPoint::TraceComp' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, HitResult) == 0x000040, "Member 'KuroPhysicsLibrary_GetHitPoint::HitResult' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, DrawDuration) == 0x000048, "Member 'KuroPhysicsLibrary_GetHitPoint::DrawDuration' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, ForceTrace) == 0x00004C, "Member 'KuroPhysicsLibrary_GetHitPoint::ForceTrace' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetHitPoint, ReturnValue) == 0x00004D, "Member 'KuroPhysicsLibrary_GetHitPoint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPhysicsLibrary_GetHitPoint;
 
 // Function KuroUtility.KuroPhysicsLibrary.GetSphereHitPoint
 // 0x0058 (0x0058 - 0x0000)
@@ -792,17 +614,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0055(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPhysicsLibrary_GetSphereHitPoint) == 0x000008, "Wrong alignment on KuroPhysicsLibrary_GetSphereHitPoint");
-static_assert(sizeof(KuroPhysicsLibrary_GetSphereHitPoint) == 0x000058, "Wrong size on KuroPhysicsLibrary_GetSphereHitPoint");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, StartLocation) == 0x000000, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::StartLocation' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, EndLocation) == 0x000018, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::EndLocation' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, Actor) == 0x000030, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::Actor' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, TraceComp) == 0x000038, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::TraceComp' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, Radius) == 0x000040, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::Radius' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, HitResult) == 0x000048, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::HitResult' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, DrawDuration) == 0x000050, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::DrawDuration' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, ForceTrace) == 0x000054, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::ForceTrace' has a wrong offset!");
-static_assert(offsetof(KuroPhysicsLibrary_GetSphereHitPoint, ReturnValue) == 0x000055, "Member 'KuroPhysicsLibrary_GetSphereHitPoint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPhysicsLibrary_GetSphereHitPoint;
 
 // Function KuroUtility.KuroPolypartition.BuildTriangleByVertex2D
 // 0x0020 (0x0020 - 0x0000)
@@ -812,10 +624,7 @@ public:
 	TArray<struct FVector2D>                      points;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPolypartition_BuildTriangleByVertex2D) == 0x000008, "Wrong alignment on KuroPolypartition_BuildTriangleByVertex2D");
-static_assert(sizeof(KuroPolypartition_BuildTriangleByVertex2D) == 0x000020, "Wrong size on KuroPolypartition_BuildTriangleByVertex2D");
-static_assert(offsetof(KuroPolypartition_BuildTriangleByVertex2D, points) == 0x000000, "Member 'KuroPolypartition_BuildTriangleByVertex2D::points' has a wrong offset!");
-static_assert(offsetof(KuroPolypartition_BuildTriangleByVertex2D, ReturnValue) == 0x000010, "Member 'KuroPolypartition_BuildTriangleByVertex2D::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPolypartition_BuildTriangleByVertex2D;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.AddAndroidScreenChangeDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -824,9 +633,7 @@ struct KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate final
 public:
 	TDelegate<void()>                             Handler;                                           // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate) == 0x000004, "Wrong alignment on KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate");
-static_assert(sizeof(KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate) == 0x000028, "Wrong size on KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate");
-static_assert(offsetof(KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate, Handler) == 0x000000, "Member 'KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate::Handler' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_AddAndroidScreenChangeDelegate;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.GetCustomChannel
 // 0x0010 (0x0010 - 0x0000)
@@ -835,9 +642,7 @@ struct KuroStaticAndroidLibrary_GetCustomChannel final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_GetCustomChannel) == 0x000008, "Wrong alignment on KuroStaticAndroidLibrary_GetCustomChannel");
-static_assert(sizeof(KuroStaticAndroidLibrary_GetCustomChannel) == 0x000010, "Wrong size on KuroStaticAndroidLibrary_GetCustomChannel");
-static_assert(offsetof(KuroStaticAndroidLibrary_GetCustomChannel, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetCustomChannel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_GetCustomChannel;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.GetDeviceIsEmulator
 // 0x0001 (0x0001 - 0x0000)
@@ -846,9 +651,7 @@ struct KuroStaticAndroidLibrary_GetDeviceIsEmulator final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_GetDeviceIsEmulator) == 0x000001, "Wrong alignment on KuroStaticAndroidLibrary_GetDeviceIsEmulator");
-static_assert(sizeof(KuroStaticAndroidLibrary_GetDeviceIsEmulator) == 0x000001, "Wrong size on KuroStaticAndroidLibrary_GetDeviceIsEmulator");
-static_assert(offsetof(KuroStaticAndroidLibrary_GetDeviceIsEmulator, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetDeviceIsEmulator::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_GetDeviceIsEmulator;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.GetDeviceIsRooted
 // 0x0001 (0x0001 - 0x0000)
@@ -857,9 +660,7 @@ struct KuroStaticAndroidLibrary_GetDeviceIsRooted final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_GetDeviceIsRooted) == 0x000001, "Wrong alignment on KuroStaticAndroidLibrary_GetDeviceIsRooted");
-static_assert(sizeof(KuroStaticAndroidLibrary_GetDeviceIsRooted) == 0x000001, "Wrong size on KuroStaticAndroidLibrary_GetDeviceIsRooted");
-static_assert(offsetof(KuroStaticAndroidLibrary_GetDeviceIsRooted, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetDeviceIsRooted::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_GetDeviceIsRooted;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.GetHarmonyOSVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -868,9 +669,7 @@ struct KuroStaticAndroidLibrary_GetHarmonyOSVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_GetHarmonyOSVersion) == 0x000008, "Wrong alignment on KuroStaticAndroidLibrary_GetHarmonyOSVersion");
-static_assert(sizeof(KuroStaticAndroidLibrary_GetHarmonyOSVersion) == 0x000010, "Wrong size on KuroStaticAndroidLibrary_GetHarmonyOSVersion");
-static_assert(offsetof(KuroStaticAndroidLibrary_GetHarmonyOSVersion, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetHarmonyOSVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_GetHarmonyOSVersion;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.IsHarmonyOS
 // 0x0001 (0x0001 - 0x0000)
@@ -879,9 +678,7 @@ struct KuroStaticAndroidLibrary_IsHarmonyOS final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_IsHarmonyOS) == 0x000001, "Wrong alignment on KuroStaticAndroidLibrary_IsHarmonyOS");
-static_assert(sizeof(KuroStaticAndroidLibrary_IsHarmonyOS) == 0x000001, "Wrong size on KuroStaticAndroidLibrary_IsHarmonyOS");
-static_assert(offsetof(KuroStaticAndroidLibrary_IsHarmonyOS, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_IsHarmonyOS::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_IsHarmonyOS;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.OpenAppWithUrl
 // 0x0020 (0x0020 - 0x0000)
@@ -891,10 +688,7 @@ public:
 	class FString                                 schema;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 failSchema;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticAndroidLibrary_OpenAppWithUrl) == 0x000008, "Wrong alignment on KuroStaticAndroidLibrary_OpenAppWithUrl");
-static_assert(sizeof(KuroStaticAndroidLibrary_OpenAppWithUrl) == 0x000020, "Wrong size on KuroStaticAndroidLibrary_OpenAppWithUrl");
-static_assert(offsetof(KuroStaticAndroidLibrary_OpenAppWithUrl, schema) == 0x000000, "Member 'KuroStaticAndroidLibrary_OpenAppWithUrl::schema' has a wrong offset!");
-static_assert(offsetof(KuroStaticAndroidLibrary_OpenAppWithUrl, failSchema) == 0x000010, "Member 'KuroStaticAndroidLibrary_OpenAppWithUrl::failSchema' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticAndroidLibrary_OpenAppWithUrl;
 
 // Function KuroUtility.KuroStaticiOSLibrary.GetDeviceJailbroken
 // 0x0001 (0x0001 - 0x0000)
@@ -903,9 +697,7 @@ struct KuroStaticiOSLibrary_GetDeviceJailbroken final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticiOSLibrary_GetDeviceJailbroken) == 0x000001, "Wrong alignment on KuroStaticiOSLibrary_GetDeviceJailbroken");
-static_assert(sizeof(KuroStaticiOSLibrary_GetDeviceJailbroken) == 0x000001, "Wrong size on KuroStaticiOSLibrary_GetDeviceJailbroken");
-static_assert(offsetof(KuroStaticiOSLibrary_GetDeviceJailbroken, ReturnValue) == 0x000000, "Member 'KuroStaticiOSLibrary_GetDeviceJailbroken::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticiOSLibrary_GetDeviceJailbroken;
 
 // Function KuroUtility.KuroStaticiOSLibrary.OpenAppWithUrl
 // 0x0020 (0x0020 - 0x0000)
@@ -915,10 +707,7 @@ public:
 	class FString                                 url;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 failUrl;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticiOSLibrary_OpenAppWithUrl) == 0x000008, "Wrong alignment on KuroStaticiOSLibrary_OpenAppWithUrl");
-static_assert(sizeof(KuroStaticiOSLibrary_OpenAppWithUrl) == 0x000020, "Wrong size on KuroStaticiOSLibrary_OpenAppWithUrl");
-static_assert(offsetof(KuroStaticiOSLibrary_OpenAppWithUrl, url) == 0x000000, "Member 'KuroStaticiOSLibrary_OpenAppWithUrl::url' has a wrong offset!");
-static_assert(offsetof(KuroStaticiOSLibrary_OpenAppWithUrl, failUrl) == 0x000010, "Member 'KuroStaticiOSLibrary_OpenAppWithUrl::failUrl' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticiOSLibrary_OpenAppWithUrl;
 
 // Function KuroUtility.KuroStaticLibrary.AddToRoot
 // 0x0008 (0x0008 - 0x0000)
@@ -927,9 +716,7 @@ struct KuroStaticLibrary_AddToRoot final
 public:
 	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_AddToRoot) == 0x000008, "Wrong alignment on KuroStaticLibrary_AddToRoot");
-static_assert(sizeof(KuroStaticLibrary_AddToRoot) == 0x000008, "Wrong size on KuroStaticLibrary_AddToRoot");
-static_assert(offsetof(KuroStaticLibrary_AddToRoot, InObject) == 0x000000, "Member 'KuroStaticLibrary_AddToRoot::InObject' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_AddToRoot;
 
 // Function KuroUtility.KuroStaticLibrary.ApplyChangeToBlueprint
 // 0x0008 (0x0008 - 0x0000)
@@ -938,9 +725,7 @@ struct KuroStaticLibrary_ApplyChangeToBlueprint final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ApplyChangeToBlueprint) == 0x000008, "Wrong alignment on KuroStaticLibrary_ApplyChangeToBlueprint");
-static_assert(sizeof(KuroStaticLibrary_ApplyChangeToBlueprint) == 0x000008, "Wrong size on KuroStaticLibrary_ApplyChangeToBlueprint");
-static_assert(offsetof(KuroStaticLibrary_ApplyChangeToBlueprint, Actor) == 0x000000, "Member 'KuroStaticLibrary_ApplyChangeToBlueprint::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ApplyChangeToBlueprint;
 
 // Function KuroUtility.KuroStaticLibrary.ArrayToBuffer
 // 0x0020 (0x0020 - 0x0000)
@@ -950,10 +735,7 @@ public:
 	TArray<uint8>                                 InArray;                                           // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FArrayBuffer                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ArrayToBuffer) == 0x000008, "Wrong alignment on KuroStaticLibrary_ArrayToBuffer");
-static_assert(sizeof(KuroStaticLibrary_ArrayToBuffer) == 0x000020, "Wrong size on KuroStaticLibrary_ArrayToBuffer");
-static_assert(offsetof(KuroStaticLibrary_ArrayToBuffer, InArray) == 0x000000, "Member 'KuroStaticLibrary_ArrayToBuffer::InArray' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ArrayToBuffer, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_ArrayToBuffer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ArrayToBuffer;
 
 // Function KuroUtility.KuroStaticLibrary.Base64Decode
 // 0x0020 (0x0020 - 0x0000)
@@ -963,10 +745,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64Decode) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64Decode");
-static_assert(sizeof(KuroStaticLibrary_Base64Decode) == 0x000020, "Wrong size on KuroStaticLibrary_Base64Decode");
-static_assert(offsetof(KuroStaticLibrary_Base64Decode, inString) == 0x000000, "Member 'KuroStaticLibrary_Base64Decode::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64Decode, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Base64Decode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64Decode;
 
 // Function KuroUtility.KuroStaticLibrary.Base64Encode
 // 0x0020 (0x0020 - 0x0000)
@@ -976,10 +755,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64Encode) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64Encode");
-static_assert(sizeof(KuroStaticLibrary_Base64Encode) == 0x000020, "Wrong size on KuroStaticLibrary_Base64Encode");
-static_assert(offsetof(KuroStaticLibrary_Base64Encode, inString) == 0x000000, "Member 'KuroStaticLibrary_Base64Encode::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64Encode, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Base64Encode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64Encode;
 
 // Function KuroUtility.KuroStaticLibrary.Base64EncodeBinary
 // 0x0020 (0x0020 - 0x0000)
@@ -989,10 +765,7 @@ public:
 	struct FArrayBuffer                           InBuffer;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64EncodeBinary) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64EncodeBinary");
-static_assert(sizeof(KuroStaticLibrary_Base64EncodeBinary) == 0x000020, "Wrong size on KuroStaticLibrary_Base64EncodeBinary");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeBinary, InBuffer) == 0x000000, "Member 'KuroStaticLibrary_Base64EncodeBinary::InBuffer' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeBinary, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Base64EncodeBinary::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64EncodeBinary;
 
 // Function KuroUtility.KuroStaticLibrary.Base64EncodeWithConvertToUTF8
 // 0x0020 (0x0020 - 0x0000)
@@ -1002,10 +775,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64EncodeWithConvertToUTF8) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64EncodeWithConvertToUTF8");
-static_assert(sizeof(KuroStaticLibrary_Base64EncodeWithConvertToUTF8) == 0x000020, "Wrong size on KuroStaticLibrary_Base64EncodeWithConvertToUTF8");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithConvertToUTF8, inString) == 0x000000, "Member 'KuroStaticLibrary_Base64EncodeWithConvertToUTF8::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithConvertToUTF8, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Base64EncodeWithConvertToUTF8::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64EncodeWithConvertToUTF8;
 
 // Function KuroUtility.KuroStaticLibrary.Base64EncodeWithSpecifyChar
 // 0x0030 (0x0030 - 0x0000)
@@ -1016,11 +786,7 @@ public:
 	class FString                                 SpecifyChar;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64EncodeWithSpecifyChar) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64EncodeWithSpecifyChar");
-static_assert(sizeof(KuroStaticLibrary_Base64EncodeWithSpecifyChar) == 0x000030, "Wrong size on KuroStaticLibrary_Base64EncodeWithSpecifyChar");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyChar, ByteArray) == 0x000000, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyChar::ByteArray' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyChar, SpecifyChar) == 0x000010, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyChar::SpecifyChar' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyChar, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyChar::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64EncodeWithSpecifyChar;
 
 // Function KuroUtility.KuroStaticLibrary.Base64EncodeWithSpecifyCharWithConvertToUTF8
 // 0x0030 (0x0030 - 0x0000)
@@ -1031,11 +797,7 @@ public:
 	class FString                                 SpecifyChar;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8) == 0x000008, "Wrong alignment on KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8");
-static_assert(sizeof(KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8) == 0x000030, "Wrong size on KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8, inString) == 0x000000, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8, SpecifyChar) == 0x000010, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8::SpecifyChar' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Base64EncodeWithSpecifyCharWithConvertToUTF8;
 
 // Function KuroUtility.KuroStaticLibrary.BindCustomGetTimeBetweenGarbageCollectionPassesDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -1044,9 +806,7 @@ struct KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate
 public:
 	TDelegate<void(float MBFree, float ExtraDevelopmentMemorySize, int32 NumObjects)> Delegate;      // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate) == 0x000004, "Wrong alignment on KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate");
-static_assert(sizeof(KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate) == 0x000028, "Wrong size on KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate");
-static_assert(offsetof(KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate, Delegate) == 0x000000, "Member 'KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_BindCustomGetTimeBetweenGarbageCollectionPassesDelegate;
 
 // Function KuroUtility.KuroStaticLibrary.BindDeviceLangChangeDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -1055,9 +815,7 @@ struct KuroStaticLibrary_BindDeviceLangChangeDelegate final
 public:
 	TDelegate<void()>                             Delegate;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_BindDeviceLangChangeDelegate) == 0x000004, "Wrong alignment on KuroStaticLibrary_BindDeviceLangChangeDelegate");
-static_assert(sizeof(KuroStaticLibrary_BindDeviceLangChangeDelegate) == 0x000028, "Wrong size on KuroStaticLibrary_BindDeviceLangChangeDelegate");
-static_assert(offsetof(KuroStaticLibrary_BindDeviceLangChangeDelegate, Delegate) == 0x000000, "Member 'KuroStaticLibrary_BindDeviceLangChangeDelegate::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_BindDeviceLangChangeDelegate;
 
 // Function KuroUtility.KuroStaticLibrary.ClearPlayerInputCache
 // 0x0008 (0x0008 - 0x0000)
@@ -1066,9 +824,7 @@ struct KuroStaticLibrary_ClearPlayerInputCache final
 public:
 	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ClearPlayerInputCache) == 0x000008, "Wrong alignment on KuroStaticLibrary_ClearPlayerInputCache");
-static_assert(sizeof(KuroStaticLibrary_ClearPlayerInputCache) == 0x000008, "Wrong size on KuroStaticLibrary_ClearPlayerInputCache");
-static_assert(offsetof(KuroStaticLibrary_ClearPlayerInputCache, PC) == 0x000000, "Member 'KuroStaticLibrary_ClearPlayerInputCache::PC' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ClearPlayerInputCache;
 
 // Function KuroUtility.KuroStaticLibrary.ConvertToObjectType
 // 0x0002 (0x0002 - 0x0000)
@@ -1078,10 +834,7 @@ public:
 	ECollisionChannel                             InCollisionChannel;                                // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EObjectTypeQuery                              ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ConvertToObjectType) == 0x000001, "Wrong alignment on KuroStaticLibrary_ConvertToObjectType");
-static_assert(sizeof(KuroStaticLibrary_ConvertToObjectType) == 0x000002, "Wrong size on KuroStaticLibrary_ConvertToObjectType");
-static_assert(offsetof(KuroStaticLibrary_ConvertToObjectType, InCollisionChannel) == 0x000000, "Member 'KuroStaticLibrary_ConvertToObjectType::InCollisionChannel' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ConvertToObjectType, ReturnValue) == 0x000001, "Member 'KuroStaticLibrary_ConvertToObjectType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ConvertToObjectType;
 
 // Function KuroUtility.KuroStaticLibrary.ConvertToTraceType
 // 0x0002 (0x0002 - 0x0000)
@@ -1091,10 +844,7 @@ public:
 	ECollisionChannel                             InCollisionChannel;                                // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETraceTypeQuery                               ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ConvertToTraceType) == 0x000001, "Wrong alignment on KuroStaticLibrary_ConvertToTraceType");
-static_assert(sizeof(KuroStaticLibrary_ConvertToTraceType) == 0x000002, "Wrong size on KuroStaticLibrary_ConvertToTraceType");
-static_assert(offsetof(KuroStaticLibrary_ConvertToTraceType, InCollisionChannel) == 0x000000, "Member 'KuroStaticLibrary_ConvertToTraceType::InCollisionChannel' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ConvertToTraceType, ReturnValue) == 0x000001, "Member 'KuroStaticLibrary_ConvertToTraceType::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ConvertToTraceType;
 
 // Function KuroUtility.KuroStaticLibrary.CopyFile
 // 0x0028 (0x0028 - 0x0000)
@@ -1106,11 +856,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_CopyFile) == 0x000008, "Wrong alignment on KuroStaticLibrary_CopyFile");
-static_assert(sizeof(KuroStaticLibrary_CopyFile) == 0x000028, "Wrong size on KuroStaticLibrary_CopyFile");
-static_assert(offsetof(KuroStaticLibrary_CopyFile, SourcePath) == 0x000000, "Member 'KuroStaticLibrary_CopyFile::SourcePath' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_CopyFile, DstPath) == 0x000010, "Member 'KuroStaticLibrary_CopyFile::DstPath' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_CopyFile, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_CopyFile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_CopyFile;
 
 // Function KuroUtility.KuroStaticLibrary.D_GetFirstLocationFromSeqTrack
 // 0x0020 (0x0020 - 0x0000)
@@ -1120,10 +866,7 @@ public:
 	class UMovieScene3DTransformTrack*            TransformTrack;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVectorDouble                          ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_D_GetFirstLocationFromSeqTrack) == 0x000008, "Wrong alignment on KuroStaticLibrary_D_GetFirstLocationFromSeqTrack");
-static_assert(sizeof(KuroStaticLibrary_D_GetFirstLocationFromSeqTrack) == 0x000020, "Wrong size on KuroStaticLibrary_D_GetFirstLocationFromSeqTrack");
-static_assert(offsetof(KuroStaticLibrary_D_GetFirstLocationFromSeqTrack, TransformTrack) == 0x000000, "Member 'KuroStaticLibrary_D_GetFirstLocationFromSeqTrack::TransformTrack' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_D_GetFirstLocationFromSeqTrack, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_D_GetFirstLocationFromSeqTrack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_D_GetFirstLocationFromSeqTrack;
 
 // Function KuroUtility.KuroStaticLibrary.DeleteFile
 // 0x0018 (0x0018 - 0x0000)
@@ -1137,13 +880,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0013(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_DeleteFile) == 0x000008, "Wrong alignment on KuroStaticLibrary_DeleteFile");
-static_assert(sizeof(KuroStaticLibrary_DeleteFile) == 0x000018, "Wrong size on KuroStaticLibrary_DeleteFile");
-static_assert(offsetof(KuroStaticLibrary_DeleteFile, Path) == 0x000000, "Member 'KuroStaticLibrary_DeleteFile::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFile, bRequireExists) == 0x000010, "Member 'KuroStaticLibrary_DeleteFile::bRequireExists' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFile, bEvenReadOnly) == 0x000011, "Member 'KuroStaticLibrary_DeleteFile::bEvenReadOnly' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFile, bQuiet) == 0x000012, "Member 'KuroStaticLibrary_DeleteFile::bQuiet' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFile, ReturnValue) == 0x000013, "Member 'KuroStaticLibrary_DeleteFile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DeleteFile;
 
 // Function KuroUtility.KuroStaticLibrary.DeleteFolder
 // 0x0018 (0x0018 - 0x0000)
@@ -1156,12 +893,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0012(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_DeleteFolder) == 0x000008, "Wrong alignment on KuroStaticLibrary_DeleteFolder");
-static_assert(sizeof(KuroStaticLibrary_DeleteFolder) == 0x000018, "Wrong size on KuroStaticLibrary_DeleteFolder");
-static_assert(offsetof(KuroStaticLibrary_DeleteFolder, Path) == 0x000000, "Member 'KuroStaticLibrary_DeleteFolder::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFolder, bRequireExists) == 0x000010, "Member 'KuroStaticLibrary_DeleteFolder::bRequireExists' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFolder, bTree) == 0x000011, "Member 'KuroStaticLibrary_DeleteFolder::bTree' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DeleteFolder, ReturnValue) == 0x000012, "Member 'KuroStaticLibrary_DeleteFolder::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DeleteFolder;
 
 // Function KuroUtility.KuroStaticLibrary.DestroyObject
 // 0x0008 (0x0008 - 0x0000)
@@ -1170,9 +902,7 @@ struct KuroStaticLibrary_DestroyObject final
 public:
 	class UObject*                                Object;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_DestroyObject) == 0x000008, "Wrong alignment on KuroStaticLibrary_DestroyObject");
-static_assert(sizeof(KuroStaticLibrary_DestroyObject) == 0x000008, "Wrong size on KuroStaticLibrary_DestroyObject");
-static_assert(offsetof(KuroStaticLibrary_DestroyObject, Object) == 0x000000, "Member 'KuroStaticLibrary_DestroyObject::Object' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DestroyObject;
 
 // Function KuroUtility.KuroStaticLibrary.DirectoryExists
 // 0x0018 (0x0018 - 0x0000)
@@ -1183,10 +913,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_DirectoryExists) == 0x000008, "Wrong alignment on KuroStaticLibrary_DirectoryExists");
-static_assert(sizeof(KuroStaticLibrary_DirectoryExists) == 0x000018, "Wrong size on KuroStaticLibrary_DirectoryExists");
-static_assert(offsetof(KuroStaticLibrary_DirectoryExists, Path) == 0x000000, "Member 'KuroStaticLibrary_DirectoryExists::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DirectoryExists, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_DirectoryExists::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DirectoryExists;
 
 // Function KuroUtility.KuroStaticLibrary.DoGameViewPortMouseEnter
 // 0x0010 (0x0010 - 0x0000)
@@ -1197,11 +924,7 @@ public:
 	int32                                         x;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         y;                                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_DoGameViewPortMouseEnter) == 0x000008, "Wrong alignment on KuroStaticLibrary_DoGameViewPortMouseEnter");
-static_assert(sizeof(KuroStaticLibrary_DoGameViewPortMouseEnter) == 0x000010, "Wrong size on KuroStaticLibrary_DoGameViewPortMouseEnter");
-static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, InViewport) == 0x000000, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::InViewport' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, x) == 0x000008, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::x' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, y) == 0x00000C, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::y' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DoGameViewPortMouseEnter;
 
 // Function KuroUtility.KuroStaticLibrary.DumpStackTrace
 // 0x0010 (0x0010 - 0x0000)
@@ -1210,9 +933,7 @@ struct KuroStaticLibrary_DumpStackTrace final
 public:
 	class FString                                 Str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_DumpStackTrace) == 0x000008, "Wrong alignment on KuroStaticLibrary_DumpStackTrace");
-static_assert(sizeof(KuroStaticLibrary_DumpStackTrace) == 0x000010, "Wrong size on KuroStaticLibrary_DumpStackTrace");
-static_assert(offsetof(KuroStaticLibrary_DumpStackTrace, Str) == 0x000000, "Member 'KuroStaticLibrary_DumpStackTrace::Str' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_DumpStackTrace;
 
 // Function KuroUtility.KuroStaticLibrary.EncompassesPoint
 // 0x0020 (0x0020 - 0x0000)
@@ -1225,12 +946,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_EncompassesPoint) == 0x000008, "Wrong alignment on KuroStaticLibrary_EncompassesPoint");
-static_assert(sizeof(KuroStaticLibrary_EncompassesPoint) == 0x000020, "Wrong size on KuroStaticLibrary_EncompassesPoint");
-static_assert(offsetof(KuroStaticLibrary_EncompassesPoint, Volume) == 0x000000, "Member 'KuroStaticLibrary_EncompassesPoint::Volume' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_EncompassesPoint, Point) == 0x000008, "Member 'KuroStaticLibrary_EncompassesPoint::Point' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_EncompassesPoint, SphereRadius) == 0x000014, "Member 'KuroStaticLibrary_EncompassesPoint::SphereRadius' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_EncompassesPoint, ReturnValue) == 0x000018, "Member 'KuroStaticLibrary_EncompassesPoint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_EncompassesPoint;
 
 // Function KuroUtility.KuroStaticLibrary.ExecProcess
 // 0x0050 (0x0050 - 0x0000)
@@ -1246,14 +962,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_ExecProcess) == 0x000008, "Wrong alignment on KuroStaticLibrary_ExecProcess");
-static_assert(sizeof(KuroStaticLibrary_ExecProcess) == 0x000050, "Wrong size on KuroStaticLibrary_ExecProcess");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, URL) == 0x000000, "Member 'KuroStaticLibrary_ExecProcess::URL' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, Params_0) == 0x000010, "Member 'KuroStaticLibrary_ExecProcess::Params_0' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, ReturnCode) == 0x000020, "Member 'KuroStaticLibrary_ExecProcess::ReturnCode' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, OutStd) == 0x000028, "Member 'KuroStaticLibrary_ExecProcess::OutStd' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, OutErr) == 0x000038, "Member 'KuroStaticLibrary_ExecProcess::OutErr' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecProcess, ReturnValue) == 0x000048, "Member 'KuroStaticLibrary_ExecProcess::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ExecProcess;
 
 // Function KuroUtility.KuroStaticLibrary.ExecuteFunctionByName
 // 0x0030 (0x0030 - 0x0000)
@@ -1266,12 +975,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_ExecuteFunctionByName) == 0x000008, "Wrong alignment on KuroStaticLibrary_ExecuteFunctionByName");
-static_assert(sizeof(KuroStaticLibrary_ExecuteFunctionByName) == 0x000030, "Wrong size on KuroStaticLibrary_ExecuteFunctionByName");
-static_assert(offsetof(KuroStaticLibrary_ExecuteFunctionByName, Object) == 0x000000, "Member 'KuroStaticLibrary_ExecuteFunctionByName::Object' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecuteFunctionByName, FunctionName) == 0x000008, "Member 'KuroStaticLibrary_ExecuteFunctionByName::FunctionName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecuteFunctionByName, Result) == 0x000018, "Member 'KuroStaticLibrary_ExecuteFunctionByName::Result' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ExecuteFunctionByName, ReturnValue) == 0x000028, "Member 'KuroStaticLibrary_ExecuteFunctionByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ExecuteFunctionByName;
 
 // Function KuroUtility.KuroStaticLibrary.ExitGame
 // 0x0001 (0x0001 - 0x0000)
@@ -1280,9 +984,7 @@ struct KuroStaticLibrary_ExitGame final
 public:
 	bool                                          force;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ExitGame) == 0x000001, "Wrong alignment on KuroStaticLibrary_ExitGame");
-static_assert(sizeof(KuroStaticLibrary_ExitGame) == 0x000001, "Wrong size on KuroStaticLibrary_ExitGame");
-static_assert(offsetof(KuroStaticLibrary_ExitGame, force) == 0x000000, "Member 'KuroStaticLibrary_ExitGame::force' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ExitGame;
 
 // Function KuroUtility.KuroStaticLibrary.FileExists
 // 0x0018 (0x0018 - 0x0000)
@@ -1293,10 +995,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_FileExists) == 0x000008, "Wrong alignment on KuroStaticLibrary_FileExists");
-static_assert(sizeof(KuroStaticLibrary_FileExists) == 0x000018, "Wrong size on KuroStaticLibrary_FileExists");
-static_assert(offsetof(KuroStaticLibrary_FileExists, Path) == 0x000000, "Member 'KuroStaticLibrary_FileExists::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_FileExists, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_FileExists::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_FileExists;
 
 // Function KuroUtility.KuroStaticLibrary.FindFilesSorted
 // 0x0030 (0x0030 - 0x0000)
@@ -1307,11 +1006,7 @@ public:
 	class FString                                 Extension;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_FindFilesSorted) == 0x000008, "Wrong alignment on KuroStaticLibrary_FindFilesSorted");
-static_assert(sizeof(KuroStaticLibrary_FindFilesSorted) == 0x000030, "Wrong size on KuroStaticLibrary_FindFilesSorted");
-static_assert(offsetof(KuroStaticLibrary_FindFilesSorted, Path) == 0x000000, "Member 'KuroStaticLibrary_FindFilesSorted::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_FindFilesSorted, Extension) == 0x000010, "Member 'KuroStaticLibrary_FindFilesSorted::Extension' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_FindFilesSorted, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_FindFilesSorted::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_FindFilesSorted;
 
 // Function KuroUtility.KuroStaticLibrary.ForceGarbageCollection
 // 0x0001 (0x0001 - 0x0000)
@@ -1320,9 +1015,7 @@ struct KuroStaticLibrary_ForceGarbageCollection final
 public:
 	bool                                          bFullPurge;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ForceGarbageCollection) == 0x000001, "Wrong alignment on KuroStaticLibrary_ForceGarbageCollection");
-static_assert(sizeof(KuroStaticLibrary_ForceGarbageCollection) == 0x000001, "Wrong size on KuroStaticLibrary_ForceGarbageCollection");
-static_assert(offsetof(KuroStaticLibrary_ForceGarbageCollection, bFullPurge) == 0x000000, "Member 'KuroStaticLibrary_ForceGarbageCollection::bFullPurge' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ForceGarbageCollection;
 
 // Function KuroUtility.KuroStaticLibrary.FromUnixTimestamp
 // 0x0010 (0x0010 - 0x0000)
@@ -1333,10 +1026,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDateTime                              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_FromUnixTimestamp) == 0x000008, "Wrong alignment on KuroStaticLibrary_FromUnixTimestamp");
-static_assert(sizeof(KuroStaticLibrary_FromUnixTimestamp) == 0x000010, "Wrong size on KuroStaticLibrary_FromUnixTimestamp");
-static_assert(offsetof(KuroStaticLibrary_FromUnixTimestamp, Timestamp) == 0x000000, "Member 'KuroStaticLibrary_FromUnixTimestamp::Timestamp' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_FromUnixTimestamp, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_FromUnixTimestamp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_FromUnixTimestamp;
 
 // Function KuroUtility.KuroStaticLibrary.GetActorOfClassOnLevelInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -1347,11 +1037,7 @@ public:
 	const class ALevelInstance*                   LevelInstance;                                     // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetActorOfClassOnLevelInstance) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetActorOfClassOnLevelInstance");
-static_assert(sizeof(KuroStaticLibrary_GetActorOfClassOnLevelInstance) == 0x000018, "Wrong size on KuroStaticLibrary_GetActorOfClassOnLevelInstance");
-static_assert(offsetof(KuroStaticLibrary_GetActorOfClassOnLevelInstance, ActorClass) == 0x000000, "Member 'KuroStaticLibrary_GetActorOfClassOnLevelInstance::ActorClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetActorOfClassOnLevelInstance, LevelInstance) == 0x000008, "Member 'KuroStaticLibrary_GetActorOfClassOnLevelInstance::LevelInstance' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetActorOfClassOnLevelInstance, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetActorOfClassOnLevelInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetActorOfClassOnLevelInstance;
 
 // Function KuroUtility.KuroStaticLibrary.GetActorsOnLevelInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -1361,10 +1047,7 @@ public:
 	const class ALevelInstance*                   LevelInstance;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class AActor*>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetActorsOnLevelInstance) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetActorsOnLevelInstance");
-static_assert(sizeof(KuroStaticLibrary_GetActorsOnLevelInstance) == 0x000018, "Wrong size on KuroStaticLibrary_GetActorsOnLevelInstance");
-static_assert(offsetof(KuroStaticLibrary_GetActorsOnLevelInstance, LevelInstance) == 0x000000, "Member 'KuroStaticLibrary_GetActorsOnLevelInstance::LevelInstance' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetActorsOnLevelInstance, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetActorsOnLevelInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetActorsOnLevelInstance;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimAssets
 // 0x0058 (0x0058 - 0x0000)
@@ -1374,10 +1057,7 @@ public:
 	const class UAnimBlueprint*                   InAnimBlueprint;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSet<class UAnimationAsset*>                  OutAnimationAssets;                                // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimAssets) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimAssets");
-static_assert(sizeof(KuroStaticLibrary_GetAnimAssets) == 0x000058, "Wrong size on KuroStaticLibrary_GetAnimAssets");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssets, InAnimBlueprint) == 0x000000, "Member 'KuroStaticLibrary_GetAnimAssets::InAnimBlueprint' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssets, OutAnimationAssets) == 0x000008, "Member 'KuroStaticLibrary_GetAnimAssets::OutAnimationAssets' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimAssets;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimAssetsByAnimBlueprintClass
 // 0x0058 (0x0058 - 0x0000)
@@ -1387,10 +1067,7 @@ public:
 	TSubclassOf<class UAnimInstance>              InAnimClass;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSet<class UAnimationAsset*>                  OutAnimationAssets;                                // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass");
-static_assert(sizeof(KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass) == 0x000058, "Wrong size on KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass, InAnimClass) == 0x000000, "Member 'KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass::InAnimClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass, OutAnimationAssets) == 0x000008, "Member 'KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass::OutAnimationAssets' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimAssetsByAnimBlueprintClass;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimAssetsByAnimInstance
 // 0x0058 (0x0058 - 0x0000)
@@ -1400,10 +1077,7 @@ public:
 	const class UAnimInstance*                    InAnimInstance;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSet<class UAnimationAsset*>                  OutAnimationAssets;                                // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimAssetsByAnimInstance) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimAssetsByAnimInstance");
-static_assert(sizeof(KuroStaticLibrary_GetAnimAssetsByAnimInstance) == 0x000058, "Wrong size on KuroStaticLibrary_GetAnimAssetsByAnimInstance");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssetsByAnimInstance, InAnimInstance) == 0x000000, "Member 'KuroStaticLibrary_GetAnimAssetsByAnimInstance::InAnimInstance' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimAssetsByAnimInstance, OutAnimationAssets) == 0x000008, "Member 'KuroStaticLibrary_GetAnimAssetsByAnimInstance::OutAnimationAssets' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimAssetsByAnimInstance;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimMontageNotifies
 // 0x0018 (0x0018 - 0x0000)
@@ -1413,10 +1087,7 @@ public:
 	const class UAnimMontage*                     AnimMontage;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FAnimNotifyEvent>               OutNotifies;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimMontageNotifies) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimMontageNotifies");
-static_assert(sizeof(KuroStaticLibrary_GetAnimMontageNotifies) == 0x000018, "Wrong size on KuroStaticLibrary_GetAnimMontageNotifies");
-static_assert(offsetof(KuroStaticLibrary_GetAnimMontageNotifies, AnimMontage) == 0x000000, "Member 'KuroStaticLibrary_GetAnimMontageNotifies::AnimMontage' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimMontageNotifies, OutNotifies) == 0x000008, "Member 'KuroStaticLibrary_GetAnimMontageNotifies::OutNotifies' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimMontageNotifies;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimSequenceNotifies
 // 0x0018 (0x0018 - 0x0000)
@@ -1426,10 +1097,7 @@ public:
 	const class UAnimSequenceBase*                AnimSequence;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FAnimNotifyEvent>               OutNotifies;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimSequenceNotifies) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimSequenceNotifies");
-static_assert(sizeof(KuroStaticLibrary_GetAnimSequenceNotifies) == 0x000018, "Wrong size on KuroStaticLibrary_GetAnimSequenceNotifies");
-static_assert(offsetof(KuroStaticLibrary_GetAnimSequenceNotifies, AnimSequence) == 0x000000, "Member 'KuroStaticLibrary_GetAnimSequenceNotifies::AnimSequence' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimSequenceNotifies, OutNotifies) == 0x000008, "Member 'KuroStaticLibrary_GetAnimSequenceNotifies::OutNotifies' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimSequenceNotifies;
 
 // Function KuroUtility.KuroStaticLibrary.GetAnimSequencesByAnimMontage
 // 0x0018 (0x0018 - 0x0000)
@@ -1439,10 +1107,7 @@ public:
 	const class UAnimMontage*                     AnimMontage;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UAnimSequenceBase*>              OutAnimSequences;                                  // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetAnimSequencesByAnimMontage) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetAnimSequencesByAnimMontage");
-static_assert(sizeof(KuroStaticLibrary_GetAnimSequencesByAnimMontage) == 0x000018, "Wrong size on KuroStaticLibrary_GetAnimSequencesByAnimMontage");
-static_assert(offsetof(KuroStaticLibrary_GetAnimSequencesByAnimMontage, AnimMontage) == 0x000000, "Member 'KuroStaticLibrary_GetAnimSequencesByAnimMontage::AnimMontage' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetAnimSequencesByAnimMontage, OutAnimSequences) == 0x000008, "Member 'KuroStaticLibrary_GetAnimSequencesByAnimMontage::OutAnimSequences' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetAnimSequencesByAnimMontage;
 
 // Function KuroUtility.KuroStaticLibrary.GetBaseBoardInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -1451,9 +1116,7 @@ struct KuroStaticLibrary_GetBaseBoardInfo final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetBaseBoardInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetBaseBoardInfo");
-static_assert(sizeof(KuroStaticLibrary_GetBaseBoardInfo) == 0x000010, "Wrong size on KuroStaticLibrary_GetBaseBoardInfo");
-static_assert(offsetof(KuroStaticLibrary_GetBaseBoardInfo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetBaseBoardInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetBaseBoardInfo;
 
 // Function KuroUtility.KuroStaticLibrary.GetBatteryLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -1462,9 +1125,7 @@ struct KuroStaticLibrary_GetBatteryLevel final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetBatteryLevel) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetBatteryLevel");
-static_assert(sizeof(KuroStaticLibrary_GetBatteryLevel) == 0x000004, "Wrong size on KuroStaticLibrary_GetBatteryLevel");
-static_assert(offsetof(KuroStaticLibrary_GetBatteryLevel, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetBatteryLevel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetBatteryLevel;
 
 // Function KuroUtility.KuroStaticLibrary.GetBlueprintCallstack
 // 0x0010 (0x0010 - 0x0000)
@@ -1473,9 +1134,7 @@ struct KuroStaticLibrary_GetBlueprintCallstack final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetBlueprintCallstack) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetBlueprintCallstack");
-static_assert(sizeof(KuroStaticLibrary_GetBlueprintCallstack) == 0x000010, "Wrong size on KuroStaticLibrary_GetBlueprintCallstack");
-static_assert(offsetof(KuroStaticLibrary_GetBlueprintCallstack, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetBlueprintCallstack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetBlueprintCallstack;
 
 // Function KuroUtility.KuroStaticLibrary.GetCameraShakeInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -1487,11 +1146,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetCameraShakeInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetCameraShakeInfo");
-static_assert(sizeof(KuroStaticLibrary_GetCameraShakeInfo) == 0x000020, "Wrong size on KuroStaticLibrary_GetCameraShakeInfo");
-static_assert(offsetof(KuroStaticLibrary_GetCameraShakeInfo, CameraShakeClass) == 0x000000, "Member 'KuroStaticLibrary_GetCameraShakeInfo::CameraShakeClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCameraShakeInfo, OutInfo) == 0x000008, "Member 'KuroStaticLibrary_GetCameraShakeInfo::OutInfo' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCameraShakeInfo, ReturnValue) == 0x000018, "Member 'KuroStaticLibrary_GetCameraShakeInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetCameraShakeInfo;
 
 // Function KuroUtility.KuroStaticLibrary.GetCharacterAnimClass
 // 0x0010 (0x0010 - 0x0000)
@@ -1501,10 +1156,7 @@ public:
 	TSubclassOf<class AActor>                     InActorClass;                                      // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UAnimInstance>              OutAnimClass;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetCharacterAnimClass) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetCharacterAnimClass");
-static_assert(sizeof(KuroStaticLibrary_GetCharacterAnimClass) == 0x000010, "Wrong size on KuroStaticLibrary_GetCharacterAnimClass");
-static_assert(offsetof(KuroStaticLibrary_GetCharacterAnimClass, InActorClass) == 0x000000, "Member 'KuroStaticLibrary_GetCharacterAnimClass::InActorClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCharacterAnimClass, OutAnimClass) == 0x000008, "Member 'KuroStaticLibrary_GetCharacterAnimClass::OutAnimClass' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetCharacterAnimClass;
 
 // Function KuroUtility.KuroStaticLibrary.GetCreatureGenDirectoryByMap
 // 0x0028 (0x0028 - 0x0000)
@@ -1517,12 +1169,7 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Directory;                                         // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetCreatureGenDirectoryByMap) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetCreatureGenDirectoryByMap");
-static_assert(sizeof(KuroStaticLibrary_GetCreatureGenDirectoryByMap) == 0x000028, "Wrong size on KuroStaticLibrary_GetCreatureGenDirectoryByMap");
-static_assert(offsetof(KuroStaticLibrary_GetCreatureGenDirectoryByMap, Path) == 0x000000, "Member 'KuroStaticLibrary_GetCreatureGenDirectoryByMap::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCreatureGenDirectoryByMap, MapID) == 0x000010, "Member 'KuroStaticLibrary_GetCreatureGenDirectoryByMap::MapID' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCreatureGenDirectoryByMap, Exist) == 0x000014, "Member 'KuroStaticLibrary_GetCreatureGenDirectoryByMap::Exist' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetCreatureGenDirectoryByMap, Directory) == 0x000018, "Member 'KuroStaticLibrary_GetCreatureGenDirectoryByMap::Directory' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetCreatureGenDirectoryByMap;
 
 // Function KuroUtility.KuroStaticLibrary.GetCultureRegion
 // 0x0010 (0x0010 - 0x0000)
@@ -1531,9 +1178,7 @@ struct KuroStaticLibrary_GetCultureRegion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetCultureRegion) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetCultureRegion");
-static_assert(sizeof(KuroStaticLibrary_GetCultureRegion) == 0x000010, "Wrong size on KuroStaticLibrary_GetCultureRegion");
-static_assert(offsetof(KuroStaticLibrary_GetCultureRegion, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetCultureRegion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetCultureRegion;
 
 // Function KuroUtility.KuroStaticLibrary.GetCurCPUFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -1542,9 +1187,7 @@ struct KuroStaticLibrary_GetCurCPUFrequency final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetCurCPUFrequency) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetCurCPUFrequency");
-static_assert(sizeof(KuroStaticLibrary_GetCurCPUFrequency) == 0x000004, "Wrong size on KuroStaticLibrary_GetCurCPUFrequency");
-static_assert(offsetof(KuroStaticLibrary_GetCurCPUFrequency, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetCurCPUFrequency::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetCurCPUFrequency;
 
 // Function KuroUtility.KuroStaticLibrary.GetDefaultObject
 // 0x0010 (0x0010 - 0x0000)
@@ -1554,10 +1197,7 @@ public:
 	class UClass*                                 Class_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetDefaultObject) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetDefaultObject");
-static_assert(sizeof(KuroStaticLibrary_GetDefaultObject) == 0x000010, "Wrong size on KuroStaticLibrary_GetDefaultObject");
-static_assert(offsetof(KuroStaticLibrary_GetDefaultObject, Class_0) == 0x000000, "Member 'KuroStaticLibrary_GetDefaultObject::Class_0' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetDefaultObject, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetDefaultObject::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetDefaultObject;
 
 // Function KuroUtility.KuroStaticLibrary.GetDeviceCPU
 // 0x0010 (0x0010 - 0x0000)
@@ -1566,9 +1206,7 @@ struct KuroStaticLibrary_GetDeviceCPU final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetDeviceCPU) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetDeviceCPU");
-static_assert(sizeof(KuroStaticLibrary_GetDeviceCPU) == 0x000010, "Wrong size on KuroStaticLibrary_GetDeviceCPU");
-static_assert(offsetof(KuroStaticLibrary_GetDeviceCPU, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetDeviceCPU::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetDeviceCPU;
 
 // Function KuroUtility.KuroStaticLibrary.GetDirectories
 // 0x0020 (0x0020 - 0x0000)
@@ -1578,10 +1216,7 @@ public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetDirectories) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetDirectories");
-static_assert(sizeof(KuroStaticLibrary_GetDirectories) == 0x000020, "Wrong size on KuroStaticLibrary_GetDirectories");
-static_assert(offsetof(KuroStaticLibrary_GetDirectories, Path) == 0x000000, "Member 'KuroStaticLibrary_GetDirectories::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetDirectories, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetDirectories::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetDirectories;
 
 // Function KuroUtility.KuroStaticLibrary.GetDiskSerialNo
 // 0x0010 (0x0010 - 0x0000)
@@ -1590,9 +1225,7 @@ struct KuroStaticLibrary_GetDiskSerialNo final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetDiskSerialNo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetDiskSerialNo");
-static_assert(sizeof(KuroStaticLibrary_GetDiskSerialNo) == 0x000010, "Wrong size on KuroStaticLibrary_GetDiskSerialNo");
-static_assert(offsetof(KuroStaticLibrary_GetDiskSerialNo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetDiskSerialNo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetDiskSerialNo;
 
 // Function KuroUtility.KuroStaticLibrary.GetEnableMobileLowStreaming
 // 0x0010 (0x0010 - 0x0000)
@@ -1603,10 +1236,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetEnableMobileLowStreaming) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetEnableMobileLowStreaming");
-static_assert(sizeof(KuroStaticLibrary_GetEnableMobileLowStreaming) == 0x000010, "Wrong size on KuroStaticLibrary_GetEnableMobileLowStreaming");
-static_assert(offsetof(KuroStaticLibrary_GetEnableMobileLowStreaming, Sequence) == 0x000000, "Member 'KuroStaticLibrary_GetEnableMobileLowStreaming::Sequence' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetEnableMobileLowStreaming, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetEnableMobileLowStreaming::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetEnableMobileLowStreaming;
 
 // Function KuroUtility.KuroStaticLibrary.GetFileAccessTime
 // 0x0020 (0x0020 - 0x0000)
@@ -1616,10 +1246,7 @@ public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetFileAccessTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileAccessTime");
-static_assert(sizeof(KuroStaticLibrary_GetFileAccessTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileAccessTime");
-static_assert(offsetof(KuroStaticLibrary_GetFileAccessTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileAccessTime::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFileAccessTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileAccessTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFileAccessTime;
 
 // Function KuroUtility.KuroStaticLibrary.GetFileCreationTime
 // 0x0020 (0x0020 - 0x0000)
@@ -1629,10 +1256,7 @@ public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetFileCreationTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileCreationTime");
-static_assert(sizeof(KuroStaticLibrary_GetFileCreationTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileCreationTime");
-static_assert(offsetof(KuroStaticLibrary_GetFileCreationTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileCreationTime::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFileCreationTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileCreationTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFileCreationTime;
 
 // Function KuroUtility.KuroStaticLibrary.GetFileModificationTime
 // 0x0020 (0x0020 - 0x0000)
@@ -1642,10 +1266,7 @@ public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetFileModificationTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileModificationTime");
-static_assert(sizeof(KuroStaticLibrary_GetFileModificationTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileModificationTime");
-static_assert(offsetof(KuroStaticLibrary_GetFileModificationTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileModificationTime::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFileModificationTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileModificationTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFileModificationTime;
 
 // Function KuroUtility.KuroStaticLibrary.GetFiles
 // 0x0030 (0x0030 - 0x0000)
@@ -1656,11 +1277,7 @@ public:
 	class FString                                 Extension;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetFiles) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFiles");
-static_assert(sizeof(KuroStaticLibrary_GetFiles) == 0x000030, "Wrong size on KuroStaticLibrary_GetFiles");
-static_assert(offsetof(KuroStaticLibrary_GetFiles, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFiles::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFiles, Extension) == 0x000010, "Member 'KuroStaticLibrary_GetFiles::Extension' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFiles, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_GetFiles::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFiles;
 
 // Function KuroUtility.KuroStaticLibrary.GetFilesRecursive
 // 0x0038 (0x0038 - 0x0000)
@@ -1674,13 +1291,7 @@ public:
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetFilesRecursive) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFilesRecursive");
-static_assert(sizeof(KuroStaticLibrary_GetFilesRecursive) == 0x000038, "Wrong size on KuroStaticLibrary_GetFilesRecursive");
-static_assert(offsetof(KuroStaticLibrary_GetFilesRecursive, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFilesRecursive::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFilesRecursive, Filter) == 0x000010, "Member 'KuroStaticLibrary_GetFilesRecursive::Filter' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFilesRecursive, Files) == 0x000020, "Member 'KuroStaticLibrary_GetFilesRecursive::Files' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFilesRecursive, Directories) == 0x000021, "Member 'KuroStaticLibrary_GetFilesRecursive::Directories' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFilesRecursive, ReturnValue) == 0x000028, "Member 'KuroStaticLibrary_GetFilesRecursive::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFilesRecursive;
 
 // Function KuroUtility.KuroStaticLibrary.GetFirstLocationFromSeqTrack
 // 0x0018 (0x0018 - 0x0000)
@@ -1691,10 +1302,7 @@ public:
 	struct FVector                                ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetFirstLocationFromSeqTrack) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFirstLocationFromSeqTrack");
-static_assert(sizeof(KuroStaticLibrary_GetFirstLocationFromSeqTrack) == 0x000018, "Wrong size on KuroStaticLibrary_GetFirstLocationFromSeqTrack");
-static_assert(offsetof(KuroStaticLibrary_GetFirstLocationFromSeqTrack, TransformTrack) == 0x000000, "Member 'KuroStaticLibrary_GetFirstLocationFromSeqTrack::TransformTrack' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetFirstLocationFromSeqTrack, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetFirstLocationFromSeqTrack::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetFirstLocationFromSeqTrack;
 
 // Function KuroUtility.KuroStaticLibrary.GetGameViewPort
 // 0x0008 (0x0008 - 0x0000)
@@ -1703,9 +1311,7 @@ struct KuroStaticLibrary_GetGameViewPort final
 public:
 	class UGameViewportClient*                    ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetGameViewPort) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetGameViewPort");
-static_assert(sizeof(KuroStaticLibrary_GetGameViewPort) == 0x000008, "Wrong size on KuroStaticLibrary_GetGameViewPort");
-static_assert(offsetof(KuroStaticLibrary_GetGameViewPort, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetGameViewPort::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetGameViewPort;
 
 // Function KuroUtility.KuroStaticLibrary.GetGPUInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -1714,9 +1320,7 @@ struct KuroStaticLibrary_GetGPUInfo final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetGPUInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetGPUInfo");
-static_assert(sizeof(KuroStaticLibrary_GetGPUInfo) == 0x000010, "Wrong size on KuroStaticLibrary_GetGPUInfo");
-static_assert(offsetof(KuroStaticLibrary_GetGPUInfo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetGPUInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetGPUInfo;
 
 // Function KuroUtility.KuroStaticLibrary.GetLevelPath
 // 0x0018 (0x0018 - 0x0000)
@@ -1726,10 +1330,7 @@ public:
 	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetLevelPath) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetLevelPath");
-static_assert(sizeof(KuroStaticLibrary_GetLevelPath) == 0x000018, "Wrong size on KuroStaticLibrary_GetLevelPath");
-static_assert(offsetof(KuroStaticLibrary_GetLevelPath, WorldContextObject) == 0x000000, "Member 'KuroStaticLibrary_GetLevelPath::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetLevelPath, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetLevelPath::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetLevelPath;
 
 // Function KuroUtility.KuroStaticLibrary.GetLevelPrefabShowActor
 // 0x0010 (0x0010 - 0x0000)
@@ -1739,10 +1340,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetLevelPrefabShowActor) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetLevelPrefabShowActor");
-static_assert(sizeof(KuroStaticLibrary_GetLevelPrefabShowActor) == 0x000010, "Wrong size on KuroStaticLibrary_GetLevelPrefabShowActor");
-static_assert(offsetof(KuroStaticLibrary_GetLevelPrefabShowActor, Actor) == 0x000000, "Member 'KuroStaticLibrary_GetLevelPrefabShowActor::Actor' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetLevelPrefabShowActor, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetLevelPrefabShowActor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetLevelPrefabShowActor;
 
 // Function KuroUtility.KuroStaticLibrary.GetLocalAdapterAddressesUint32
 // 0x0018 (0x0018 - 0x0000)
@@ -1753,10 +1351,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetLocalAdapterAddressesUint32) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetLocalAdapterAddressesUint32");
-static_assert(sizeof(KuroStaticLibrary_GetLocalAdapterAddressesUint32) == 0x000018, "Wrong size on KuroStaticLibrary_GetLocalAdapterAddressesUint32");
-static_assert(offsetof(KuroStaticLibrary_GetLocalAdapterAddressesUint32, OutAddresses) == 0x000000, "Member 'KuroStaticLibrary_GetLocalAdapterAddressesUint32::OutAddresses' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetLocalAdapterAddressesUint32, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetLocalAdapterAddressesUint32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetLocalAdapterAddressesUint32;
 
 // Function KuroUtility.KuroStaticLibrary.GetLocalHostAddresses
 // 0x0018 (0x0018 - 0x0000)
@@ -1767,10 +1362,7 @@ public:
 	bool                                          bAppendPort;                                       // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetLocalHostAddresses) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetLocalHostAddresses");
-static_assert(sizeof(KuroStaticLibrary_GetLocalHostAddresses) == 0x000018, "Wrong size on KuroStaticLibrary_GetLocalHostAddresses");
-static_assert(offsetof(KuroStaticLibrary_GetLocalHostAddresses, OutAddresses) == 0x000000, "Member 'KuroStaticLibrary_GetLocalHostAddresses::OutAddresses' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetLocalHostAddresses, bAppendPort) == 0x000010, "Member 'KuroStaticLibrary_GetLocalHostAddresses::bAppendPort' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetLocalHostAddresses;
 
 // Function KuroUtility.KuroStaticLibrary.GetMacAddress
 // 0x0010 (0x0010 - 0x0000)
@@ -1779,9 +1371,7 @@ struct KuroStaticLibrary_GetMacAddress final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetMacAddress) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetMacAddress");
-static_assert(sizeof(KuroStaticLibrary_GetMacAddress) == 0x000010, "Wrong size on KuroStaticLibrary_GetMacAddress");
-static_assert(offsetof(KuroStaticLibrary_GetMacAddress, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetMacAddress::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetMacAddress;
 
 // Function KuroUtility.KuroStaticLibrary.GetNavPointData
 // 0x0050 (0x0050 - 0x0000)
@@ -1799,17 +1389,7 @@ public:
 	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        ReturnValue;                                       // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetNavPointData) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetNavPointData");
-static_assert(sizeof(KuroStaticLibrary_GetNavPointData) == 0x000050, "Wrong size on KuroStaticLibrary_GetNavPointData");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, WorldContextObject) == 0x000000, "Member 'KuroStaticLibrary_GetNavPointData::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, XNumber) == 0x000008, "Member 'KuroStaticLibrary_GetNavPointData::XNumber' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, YNumber) == 0x00000C, "Member 'KuroStaticLibrary_GetNavPointData::YNumber' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, Dis) == 0x000010, "Member 'KuroStaticLibrary_GetNavPointData::Dis' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, NavData) == 0x000018, "Member 'KuroStaticLibrary_GetNavPointData::NavData' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, Point) == 0x000020, "Member 'KuroStaticLibrary_GetNavPointData::Point' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, QueryExtent) == 0x00002C, "Member 'KuroStaticLibrary_GetNavPointData::QueryExtent' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, FilterClass) == 0x000038, "Member 'KuroStaticLibrary_GetNavPointData::FilterClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetNavPointData, ReturnValue) == 0x000040, "Member 'KuroStaticLibrary_GetNavPointData::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetNavPointData;
 
 // Function KuroUtility.KuroStaticLibrary.GetOSVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -1818,9 +1398,7 @@ struct KuroStaticLibrary_GetOSVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetOSVersion) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetOSVersion");
-static_assert(sizeof(KuroStaticLibrary_GetOSVersion) == 0x000010, "Wrong size on KuroStaticLibrary_GetOSVersion");
-static_assert(offsetof(KuroStaticLibrary_GetOSVersion, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetOSVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetOSVersion;
 
 // Function KuroUtility.KuroStaticLibrary.GetPIEStartTimeInSeconds
 // 0x0004 (0x0004 - 0x0000)
@@ -1829,9 +1407,7 @@ struct KuroStaticLibrary_GetPIEStartTimeInSeconds final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetPIEStartTimeInSeconds) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetPIEStartTimeInSeconds");
-static_assert(sizeof(KuroStaticLibrary_GetPIEStartTimeInSeconds) == 0x000004, "Wrong size on KuroStaticLibrary_GetPIEStartTimeInSeconds");
-static_assert(offsetof(KuroStaticLibrary_GetPIEStartTimeInSeconds, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetPIEStartTimeInSeconds::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetPIEStartTimeInSeconds;
 
 // Function KuroUtility.KuroStaticLibrary.GetPlatformTimeInSeconds
 // 0x0004 (0x0004 - 0x0000)
@@ -1840,9 +1416,7 @@ struct KuroStaticLibrary_GetPlatformTimeInSeconds final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetPlatformTimeInSeconds) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetPlatformTimeInSeconds");
-static_assert(sizeof(KuroStaticLibrary_GetPlatformTimeInSeconds) == 0x000004, "Wrong size on KuroStaticLibrary_GetPlatformTimeInSeconds");
-static_assert(offsetof(KuroStaticLibrary_GetPlatformTimeInSeconds, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetPlatformTimeInSeconds::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetPlatformTimeInSeconds;
 
 // Function KuroUtility.KuroStaticLibrary.GetProcessorId
 // 0x0010 (0x0010 - 0x0000)
@@ -1851,9 +1425,7 @@ struct KuroStaticLibrary_GetProcessorId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetProcessorId) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetProcessorId");
-static_assert(sizeof(KuroStaticLibrary_GetProcessorId) == 0x000010, "Wrong size on KuroStaticLibrary_GetProcessorId");
-static_assert(offsetof(KuroStaticLibrary_GetProcessorId, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetProcessorId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetProcessorId;
 
 // Function KuroUtility.KuroStaticLibrary.GetSequenceTracksForObjectBindingID
 // 0x0028 (0x0028 - 0x0000)
@@ -1865,11 +1437,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMovieSceneTrack*>               ReturnValue;                                       // 0x0018(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetSequenceTracksForObjectBindingID) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetSequenceTracksForObjectBindingID");
-static_assert(sizeof(KuroStaticLibrary_GetSequenceTracksForObjectBindingID) == 0x000028, "Wrong size on KuroStaticLibrary_GetSequenceTracksForObjectBindingID");
-static_assert(offsetof(KuroStaticLibrary_GetSequenceTracksForObjectBindingID, Actor) == 0x000000, "Member 'KuroStaticLibrary_GetSequenceTracksForObjectBindingID::Actor' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSequenceTracksForObjectBindingID, TagName) == 0x000008, "Member 'KuroStaticLibrary_GetSequenceTracksForObjectBindingID::TagName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSequenceTracksForObjectBindingID, ReturnValue) == 0x000018, "Member 'KuroStaticLibrary_GetSequenceTracksForObjectBindingID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetSequenceTracksForObjectBindingID;
 
 // Function KuroUtility.KuroStaticLibrary.GetSlateApplicationCursorPos
 // 0x0008 (0x0008 - 0x0000)
@@ -1878,9 +1446,7 @@ struct KuroStaticLibrary_GetSlateApplicationCursorPos final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetSlateApplicationCursorPos) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetSlateApplicationCursorPos");
-static_assert(sizeof(KuroStaticLibrary_GetSlateApplicationCursorPos) == 0x000008, "Wrong size on KuroStaticLibrary_GetSlateApplicationCursorPos");
-static_assert(offsetof(KuroStaticLibrary_GetSlateApplicationCursorPos, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetSlateApplicationCursorPos::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetSlateApplicationCursorPos;
 
 // Function KuroUtility.KuroStaticLibrary.GetSlotNamesByAnimMontage
 // 0x0018 (0x0018 - 0x0000)
@@ -1890,10 +1456,7 @@ public:
 	const class UAnimMontage*                     AnimMontage;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FName>                           OutSlotNames;                                      // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetSlotNamesByAnimMontage) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetSlotNamesByAnimMontage");
-static_assert(sizeof(KuroStaticLibrary_GetSlotNamesByAnimMontage) == 0x000018, "Wrong size on KuroStaticLibrary_GetSlotNamesByAnimMontage");
-static_assert(offsetof(KuroStaticLibrary_GetSlotNamesByAnimMontage, AnimMontage) == 0x000000, "Member 'KuroStaticLibrary_GetSlotNamesByAnimMontage::AnimMontage' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSlotNamesByAnimMontage, OutSlotNames) == 0x000008, "Member 'KuroStaticLibrary_GetSlotNamesByAnimMontage::OutSlotNames' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetSlotNamesByAnimMontage;
 
 // Function KuroUtility.KuroStaticLibrary.GetSplineRotationAtSplinePoint
 // 0x0020 (0x0020 - 0x0000)
@@ -1907,12 +1470,7 @@ public:
 	struct FRotator                               ReturnValue;                                       // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetSplineRotationAtSplinePoint) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetSplineRotationAtSplinePoint");
-static_assert(sizeof(KuroStaticLibrary_GetSplineRotationAtSplinePoint) == 0x000020, "Wrong size on KuroStaticLibrary_GetSplineRotationAtSplinePoint");
-static_assert(offsetof(KuroStaticLibrary_GetSplineRotationAtSplinePoint, Spline) == 0x000000, "Member 'KuroStaticLibrary_GetSplineRotationAtSplinePoint::Spline' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSplineRotationAtSplinePoint, PointIndex) == 0x000008, "Member 'KuroStaticLibrary_GetSplineRotationAtSplinePoint::PointIndex' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSplineRotationAtSplinePoint, CoordinateSpace) == 0x00000C, "Member 'KuroStaticLibrary_GetSplineRotationAtSplinePoint::CoordinateSpace' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetSplineRotationAtSplinePoint, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetSplineRotationAtSplinePoint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetSplineRotationAtSplinePoint;
 
 // Function KuroUtility.KuroStaticLibrary.GetStatUnitInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -1921,9 +1479,7 @@ struct KuroStaticLibrary_GetStatUnitInfo final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetStatUnitInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetStatUnitInfo");
-static_assert(sizeof(KuroStaticLibrary_GetStatUnitInfo) == 0x000010, "Wrong size on KuroStaticLibrary_GetStatUnitInfo");
-static_assert(offsetof(KuroStaticLibrary_GetStatUnitInfo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetStatUnitInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetStatUnitInfo;
 
 // Function KuroUtility.KuroStaticLibrary.GetSysUUID
 // 0x0010 (0x0010 - 0x0000)
@@ -1932,9 +1488,7 @@ struct KuroStaticLibrary_GetSysUUID final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetSysUUID) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetSysUUID");
-static_assert(sizeof(KuroStaticLibrary_GetSysUUID) == 0x000010, "Wrong size on KuroStaticLibrary_GetSysUUID");
-static_assert(offsetof(KuroStaticLibrary_GetSysUUID, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetSysUUID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetSysUUID;
 
 // Function KuroUtility.KuroStaticLibrary.GetTotalPhysicalMemory
 // 0x0008 (0x0008 - 0x0000)
@@ -1943,9 +1497,7 @@ struct KuroStaticLibrary_GetTotalPhysicalMemory final
 public:
 	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetTotalPhysicalMemory) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetTotalPhysicalMemory");
-static_assert(sizeof(KuroStaticLibrary_GetTotalPhysicalMemory) == 0x000008, "Wrong size on KuroStaticLibrary_GetTotalPhysicalMemory");
-static_assert(offsetof(KuroStaticLibrary_GetTotalPhysicalMemory, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetTotalPhysicalMemory::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetTotalPhysicalMemory;
 
 // Function KuroUtility.KuroStaticLibrary.GetTrackByClass
 // 0x0020 (0x0020 - 0x0000)
@@ -1956,11 +1508,7 @@ public:
 	TSubclassOf<class UMovieSceneTrack>           Class_0;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UMovieSceneTrack*                       ReturnValue;                                       // 0x0018(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetTrackByClass) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetTrackByClass");
-static_assert(sizeof(KuroStaticLibrary_GetTrackByClass) == 0x000020, "Wrong size on KuroStaticLibrary_GetTrackByClass");
-static_assert(offsetof(KuroStaticLibrary_GetTrackByClass, Tracks) == 0x000000, "Member 'KuroStaticLibrary_GetTrackByClass::Tracks' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetTrackByClass, Class_0) == 0x000010, "Member 'KuroStaticLibrary_GetTrackByClass::Class_0' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetTrackByClass, ReturnValue) == 0x000018, "Member 'KuroStaticLibrary_GetTrackByClass::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetTrackByClass;
 
 // Function KuroUtility.KuroStaticLibrary.GetVendorInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -1969,9 +1517,7 @@ struct KuroStaticLibrary_GetVendorInfo final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetVendorInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetVendorInfo");
-static_assert(sizeof(KuroStaticLibrary_GetVendorInfo) == 0x000010, "Wrong size on KuroStaticLibrary_GetVendorInfo");
-static_assert(offsetof(KuroStaticLibrary_GetVendorInfo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetVendorInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetVendorInfo;
 
 // Function KuroUtility.KuroStaticLibrary.GetVideoMemoryGB
 // 0x0004 (0x0004 - 0x0000)
@@ -1980,9 +1526,7 @@ struct KuroStaticLibrary_GetVideoMemoryGB final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetVideoMemoryGB) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetVideoMemoryGB");
-static_assert(sizeof(KuroStaticLibrary_GetVideoMemoryGB) == 0x000004, "Wrong size on KuroStaticLibrary_GetVideoMemoryGB");
-static_assert(offsetof(KuroStaticLibrary_GetVideoMemoryGB, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetVideoMemoryGB::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetVideoMemoryGB;
 
 // Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition
 // 0x0008 (0x0008 - 0x0000)
@@ -1991,9 +1535,7 @@ struct KuroStaticLibrary_GetViewPortMousePosition final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetViewPortMousePosition) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetViewPortMousePosition");
-static_assert(sizeof(KuroStaticLibrary_GetViewPortMousePosition) == 0x000008, "Wrong size on KuroStaticLibrary_GetViewPortMousePosition");
-static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetViewPortMousePosition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetViewPortMousePosition;
 
 // Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition2
 // 0x000C (0x000C - 0x0000)
@@ -2004,10 +1546,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_GetViewPortMousePosition2) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetViewPortMousePosition2");
-static_assert(sizeof(KuroStaticLibrary_GetViewPortMousePosition2) == 0x00000C, "Wrong size on KuroStaticLibrary_GetViewPortMousePosition2");
-static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition2, MousePos) == 0x000000, "Member 'KuroStaticLibrary_GetViewPortMousePosition2::MousePos' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition2, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetViewPortMousePosition2::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetViewPortMousePosition2;
 
 // Function KuroUtility.KuroStaticLibrary.GetWholeStatUnitInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -2018,10 +1557,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_GetWholeStatUnitInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetWholeStatUnitInfo");
-static_assert(sizeof(KuroStaticLibrary_GetWholeStatUnitInfo) == 0x000018, "Wrong size on KuroStaticLibrary_GetWholeStatUnitInfo");
-static_assert(offsetof(KuroStaticLibrary_GetWholeStatUnitInfo, Timespan) == 0x000000, "Member 'KuroStaticLibrary_GetWholeStatUnitInfo::Timespan' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_GetWholeStatUnitInfo, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetWholeStatUnitInfo::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_GetWholeStatUnitInfo;
 
 // Function KuroUtility.KuroStaticLibrary.HashStringWithSHA1
 // 0x0020 (0x0020 - 0x0000)
@@ -2031,10 +1567,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_HashStringWithSHA1) == 0x000008, "Wrong alignment on KuroStaticLibrary_HashStringWithSHA1");
-static_assert(sizeof(KuroStaticLibrary_HashStringWithSHA1) == 0x000020, "Wrong size on KuroStaticLibrary_HashStringWithSHA1");
-static_assert(offsetof(KuroStaticLibrary_HashStringWithSHA1, inString) == 0x000000, "Member 'KuroStaticLibrary_HashStringWithSHA1::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_HashStringWithSHA1, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_HashStringWithSHA1::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_HashStringWithSHA1;
 
 // Function KuroUtility.KuroStaticLibrary.IcmpPing
 // 0x0040 (0x0040 - 0x0000)
@@ -2046,11 +1579,7 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const class FString& Address, float Time, int32 responseState)> InDelegate;       // 0x0018(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_IcmpPing) == 0x000008, "Wrong alignment on KuroStaticLibrary_IcmpPing");
-static_assert(sizeof(KuroStaticLibrary_IcmpPing) == 0x000040, "Wrong size on KuroStaticLibrary_IcmpPing");
-static_assert(offsetof(KuroStaticLibrary_IcmpPing, IpAddress) == 0x000000, "Member 'KuroStaticLibrary_IcmpPing::IpAddress' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IcmpPing, Timeout) == 0x000010, "Member 'KuroStaticLibrary_IcmpPing::Timeout' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IcmpPing, InDelegate) == 0x000018, "Member 'KuroStaticLibrary_IcmpPing::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IcmpPing;
 
 // Function KuroUtility.KuroStaticLibrary.IsEditor
 // 0x0010 (0x0010 - 0x0000)
@@ -2061,10 +1590,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsEditor) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsEditor");
-static_assert(sizeof(KuroStaticLibrary_IsEditor) == 0x000010, "Wrong size on KuroStaticLibrary_IsEditor");
-static_assert(offsetof(KuroStaticLibrary_IsEditor, WorldContextObject) == 0x000000, "Member 'KuroStaticLibrary_IsEditor::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsEditor, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_IsEditor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsEditor;
 
 // Function KuroUtility.KuroStaticLibrary.IsForegroundWindow
 // 0x0001 (0x0001 - 0x0000)
@@ -2073,9 +1599,7 @@ struct KuroStaticLibrary_IsForegroundWindow final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_IsForegroundWindow) == 0x000001, "Wrong alignment on KuroStaticLibrary_IsForegroundWindow");
-static_assert(sizeof(KuroStaticLibrary_IsForegroundWindow) == 0x000001, "Wrong size on KuroStaticLibrary_IsForegroundWindow");
-static_assert(offsetof(KuroStaticLibrary_IsForegroundWindow, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_IsForegroundWindow::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsForegroundWindow;
 
 // Function KuroUtility.KuroStaticLibrary.IsImplementInterface
 // 0x0018 (0x0018 - 0x0000)
@@ -2087,11 +1611,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsImplementInterface) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsImplementInterface");
-static_assert(sizeof(KuroStaticLibrary_IsImplementInterface) == 0x000018, "Wrong size on KuroStaticLibrary_IsImplementInterface");
-static_assert(offsetof(KuroStaticLibrary_IsImplementInterface, InClass) == 0x000000, "Member 'KuroStaticLibrary_IsImplementInterface::InClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsImplementInterface, InInterfaceClass) == 0x000008, "Member 'KuroStaticLibrary_IsImplementInterface::InInterfaceClass' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsImplementInterface, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_IsImplementInterface::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsImplementInterface;
 
 // Function KuroUtility.KuroStaticLibrary.IsLowMemoryDevice
 // 0x0001 (0x0001 - 0x0000)
@@ -2100,9 +1620,7 @@ struct KuroStaticLibrary_IsLowMemoryDevice final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_IsLowMemoryDevice) == 0x000001, "Wrong alignment on KuroStaticLibrary_IsLowMemoryDevice");
-static_assert(sizeof(KuroStaticLibrary_IsLowMemoryDevice) == 0x000001, "Wrong size on KuroStaticLibrary_IsLowMemoryDevice");
-static_assert(offsetof(KuroStaticLibrary_IsLowMemoryDevice, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_IsLowMemoryDevice::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsLowMemoryDevice;
 
 // Function KuroUtility.KuroStaticLibrary.IsModuleLoaded
 // 0x0018 (0x0018 - 0x0000)
@@ -2113,10 +1631,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsModuleLoaded) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsModuleLoaded");
-static_assert(sizeof(KuroStaticLibrary_IsModuleLoaded) == 0x000018, "Wrong size on KuroStaticLibrary_IsModuleLoaded");
-static_assert(offsetof(KuroStaticLibrary_IsModuleLoaded, ModelName) == 0x000000, "Member 'KuroStaticLibrary_IsModuleLoaded::ModelName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsModuleLoaded, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_IsModuleLoaded::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsModuleLoaded;
 
 // Function KuroUtility.KuroStaticLibrary.IsMontageContainGivenAnimNotify
 // 0x0060 (0x0060 - 0x0000)
@@ -2128,11 +1643,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsMontageContainGivenAnimNotify) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsMontageContainGivenAnimNotify");
-static_assert(sizeof(KuroStaticLibrary_IsMontageContainGivenAnimNotify) == 0x000060, "Wrong size on KuroStaticLibrary_IsMontageContainGivenAnimNotify");
-static_assert(offsetof(KuroStaticLibrary_IsMontageContainGivenAnimNotify, AnimMontage) == 0x000000, "Member 'KuroStaticLibrary_IsMontageContainGivenAnimNotify::AnimMontage' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsMontageContainGivenAnimNotify, CheckClassNames) == 0x000008, "Member 'KuroStaticLibrary_IsMontageContainGivenAnimNotify::CheckClassNames' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsMontageContainGivenAnimNotify, ReturnValue) == 0x000058, "Member 'KuroStaticLibrary_IsMontageContainGivenAnimNotify::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsMontageContainGivenAnimNotify;
 
 // Function KuroUtility.KuroStaticLibrary.IsObjectClassByName
 // 0x0018 (0x0018 - 0x0000)
@@ -2144,11 +1655,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsObjectClassByName) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsObjectClassByName");
-static_assert(sizeof(KuroStaticLibrary_IsObjectClassByName) == 0x000018, "Wrong size on KuroStaticLibrary_IsObjectClassByName");
-static_assert(offsetof(KuroStaticLibrary_IsObjectClassByName, Object) == 0x000000, "Member 'KuroStaticLibrary_IsObjectClassByName::Object' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsObjectClassByName, ClassName) == 0x000008, "Member 'KuroStaticLibrary_IsObjectClassByName::ClassName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsObjectClassByName, ReturnValue) == 0x000014, "Member 'KuroStaticLibrary_IsObjectClassByName::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsObjectClassByName;
 
 // Function KuroUtility.KuroStaticLibrary.IsViewportFocus
 // 0x0001 (0x0001 - 0x0000)
@@ -2157,9 +1664,7 @@ struct KuroStaticLibrary_IsViewportFocus final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_IsViewportFocus) == 0x000001, "Wrong alignment on KuroStaticLibrary_IsViewportFocus");
-static_assert(sizeof(KuroStaticLibrary_IsViewportFocus) == 0x000001, "Wrong size on KuroStaticLibrary_IsViewportFocus");
-static_assert(offsetof(KuroStaticLibrary_IsViewportFocus, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_IsViewportFocus::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsViewportFocus;
 
 // Function KuroUtility.KuroStaticLibrary.IsWithEditor
 // 0x0001 (0x0001 - 0x0000)
@@ -2168,9 +1673,7 @@ struct KuroStaticLibrary_IsWithEditor final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_IsWithEditor) == 0x000001, "Wrong alignment on KuroStaticLibrary_IsWithEditor");
-static_assert(sizeof(KuroStaticLibrary_IsWithEditor) == 0x000001, "Wrong size on KuroStaticLibrary_IsWithEditor");
-static_assert(offsetof(KuroStaticLibrary_IsWithEditor, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_IsWithEditor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsWithEditor;
 
 // Function KuroUtility.KuroStaticLibrary.IsWorldTearingDown
 // 0x0010 (0x0010 - 0x0000)
@@ -2181,10 +1684,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_IsWorldTearingDown) == 0x000008, "Wrong alignment on KuroStaticLibrary_IsWorldTearingDown");
-static_assert(sizeof(KuroStaticLibrary_IsWorldTearingDown) == 0x000010, "Wrong size on KuroStaticLibrary_IsWorldTearingDown");
-static_assert(offsetof(KuroStaticLibrary_IsWorldTearingDown, World) == 0x000000, "Member 'KuroStaticLibrary_IsWorldTearingDown::World' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_IsWorldTearingDown, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_IsWorldTearingDown::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_IsWorldTearingDown;
 
 // Function KuroUtility.KuroStaticLibrary.KuroEnableCustomAffinity
 // 0x0001 (0x0001 - 0x0000)
@@ -2193,9 +1693,7 @@ struct KuroStaticLibrary_KuroEnableCustomAffinity final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_KuroEnableCustomAffinity) == 0x000001, "Wrong alignment on KuroStaticLibrary_KuroEnableCustomAffinity");
-static_assert(sizeof(KuroStaticLibrary_KuroEnableCustomAffinity) == 0x000001, "Wrong size on KuroStaticLibrary_KuroEnableCustomAffinity");
-static_assert(offsetof(KuroStaticLibrary_KuroEnableCustomAffinity, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_KuroEnableCustomAffinity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_KuroEnableCustomAffinity;
 
 // Function KuroUtility.KuroStaticLibrary.KuroFormatText
 // 0x0030 (0x0030 - 0x0000)
@@ -2206,11 +1704,7 @@ public:
 	TArray<class FString>                         Parameters;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_KuroFormatText) == 0x000008, "Wrong alignment on KuroStaticLibrary_KuroFormatText");
-static_assert(sizeof(KuroStaticLibrary_KuroFormatText) == 0x000030, "Wrong size on KuroStaticLibrary_KuroFormatText");
-static_assert(offsetof(KuroStaticLibrary_KuroFormatText, Format) == 0x000000, "Member 'KuroStaticLibrary_KuroFormatText::Format' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_KuroFormatText, Parameters) == 0x000010, "Member 'KuroStaticLibrary_KuroFormatText::Parameters' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_KuroFormatText, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_KuroFormatText::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_KuroFormatText;
 
 // Function KuroUtility.KuroStaticLibrary.LoadFilesRecursive
 // 0x0038 (0x0038 - 0x0000)
@@ -2224,13 +1718,7 @@ public:
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_LoadFilesRecursive) == 0x000008, "Wrong alignment on KuroStaticLibrary_LoadFilesRecursive");
-static_assert(sizeof(KuroStaticLibrary_LoadFilesRecursive) == 0x000038, "Wrong size on KuroStaticLibrary_LoadFilesRecursive");
-static_assert(offsetof(KuroStaticLibrary_LoadFilesRecursive, Path) == 0x000000, "Member 'KuroStaticLibrary_LoadFilesRecursive::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFilesRecursive, Filter) == 0x000010, "Member 'KuroStaticLibrary_LoadFilesRecursive::Filter' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFilesRecursive, Files) == 0x000020, "Member 'KuroStaticLibrary_LoadFilesRecursive::Files' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFilesRecursive, Directories) == 0x000021, "Member 'KuroStaticLibrary_LoadFilesRecursive::Directories' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFilesRecursive, ReturnValue) == 0x000028, "Member 'KuroStaticLibrary_LoadFilesRecursive::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_LoadFilesRecursive;
 
 // Function KuroUtility.KuroStaticLibrary.LoadFileToArray
 // 0x0028 (0x0028 - 0x0000)
@@ -2242,11 +1730,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_LoadFileToArray) == 0x000008, "Wrong alignment on KuroStaticLibrary_LoadFileToArray");
-static_assert(sizeof(KuroStaticLibrary_LoadFileToArray) == 0x000028, "Wrong size on KuroStaticLibrary_LoadFileToArray");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToArray, Path) == 0x000000, "Member 'KuroStaticLibrary_LoadFileToArray::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToArray, OutArray) == 0x000010, "Member 'KuroStaticLibrary_LoadFileToArray::OutArray' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToArray, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_LoadFileToArray::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_LoadFileToArray;
 
 // Function KuroUtility.KuroStaticLibrary.LoadFileToString
 // 0x0028 (0x0028 - 0x0000)
@@ -2258,11 +1742,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_LoadFileToString) == 0x000008, "Wrong alignment on KuroStaticLibrary_LoadFileToString");
-static_assert(sizeof(KuroStaticLibrary_LoadFileToString) == 0x000028, "Wrong size on KuroStaticLibrary_LoadFileToString");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToString, Result) == 0x000000, "Member 'KuroStaticLibrary_LoadFileToString::Result' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToString, Filename) == 0x000010, "Member 'KuroStaticLibrary_LoadFileToString::Filename' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToString, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_LoadFileToString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_LoadFileToString;
 
 // Function KuroUtility.KuroStaticLibrary.LoadFileToStringArray
 // 0x0020 (0x0020 - 0x0000)
@@ -2272,10 +1752,7 @@ public:
 	class FString                                 FileRevisionPath;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_LoadFileToStringArray) == 0x000008, "Wrong alignment on KuroStaticLibrary_LoadFileToStringArray");
-static_assert(sizeof(KuroStaticLibrary_LoadFileToStringArray) == 0x000020, "Wrong size on KuroStaticLibrary_LoadFileToStringArray");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToStringArray, FileRevisionPath) == 0x000000, "Member 'KuroStaticLibrary_LoadFileToStringArray::FileRevisionPath' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_LoadFileToStringArray, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_LoadFileToStringArray::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_LoadFileToStringArray;
 
 // Function KuroUtility.KuroStaticLibrary.MakeDirectory
 // 0x0018 (0x0018 - 0x0000)
@@ -2287,11 +1764,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_MakeDirectory) == 0x000008, "Wrong alignment on KuroStaticLibrary_MakeDirectory");
-static_assert(sizeof(KuroStaticLibrary_MakeDirectory) == 0x000018, "Wrong size on KuroStaticLibrary_MakeDirectory");
-static_assert(offsetof(KuroStaticLibrary_MakeDirectory, Path) == 0x000000, "Member 'KuroStaticLibrary_MakeDirectory::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_MakeDirectory, bTree) == 0x000010, "Member 'KuroStaticLibrary_MakeDirectory::bTree' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_MakeDirectory, ReturnValue) == 0x000011, "Member 'KuroStaticLibrary_MakeDirectory::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_MakeDirectory;
 
 // Function KuroUtility.KuroStaticLibrary.Md5HashAnsiString
 // 0x0020 (0x0020 - 0x0000)
@@ -2301,10 +1774,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Md5HashAnsiString) == 0x000008, "Wrong alignment on KuroStaticLibrary_Md5HashAnsiString");
-static_assert(sizeof(KuroStaticLibrary_Md5HashAnsiString) == 0x000020, "Wrong size on KuroStaticLibrary_Md5HashAnsiString");
-static_assert(offsetof(KuroStaticLibrary_Md5HashAnsiString, inString) == 0x000000, "Member 'KuroStaticLibrary_Md5HashAnsiString::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Md5HashAnsiString, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Md5HashAnsiString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Md5HashAnsiString;
 
 // Function KuroUtility.KuroStaticLibrary.Md5HashUTF8String
 // 0x0020 (0x0020 - 0x0000)
@@ -2314,10 +1784,7 @@ public:
 	class FString                                 inString;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_Md5HashUTF8String) == 0x000008, "Wrong alignment on KuroStaticLibrary_Md5HashUTF8String");
-static_assert(sizeof(KuroStaticLibrary_Md5HashUTF8String) == 0x000020, "Wrong size on KuroStaticLibrary_Md5HashUTF8String");
-static_assert(offsetof(KuroStaticLibrary_Md5HashUTF8String, inString) == 0x000000, "Member 'KuroStaticLibrary_Md5HashUTF8String::inString' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_Md5HashUTF8String, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_Md5HashUTF8String::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_Md5HashUTF8String;
 
 // Function KuroUtility.KuroStaticLibrary.PerceptionConfigureSense
 // 0x0010 (0x0010 - 0x0000)
@@ -2327,10 +1794,7 @@ public:
 	class UAIPerceptionComponent*                 AIPerception;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAISenseConfig*                         AISenseConfig;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_PerceptionConfigureSense) == 0x000008, "Wrong alignment on KuroStaticLibrary_PerceptionConfigureSense");
-static_assert(sizeof(KuroStaticLibrary_PerceptionConfigureSense) == 0x000010, "Wrong size on KuroStaticLibrary_PerceptionConfigureSense");
-static_assert(offsetof(KuroStaticLibrary_PerceptionConfigureSense, AIPerception) == 0x000000, "Member 'KuroStaticLibrary_PerceptionConfigureSense::AIPerception' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_PerceptionConfigureSense, AISenseConfig) == 0x000008, "Member 'KuroStaticLibrary_PerceptionConfigureSense::AISenseConfig' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_PerceptionConfigureSense;
 
 // Function KuroUtility.KuroStaticLibrary.RegisterCustomCommandProcessor
 // 0x0038 (0x0038 - 0x0000)
@@ -2340,10 +1804,7 @@ public:
 	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const class FString& Command)> Processor;                                         // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_RegisterCustomCommandProcessor) == 0x000008, "Wrong alignment on KuroStaticLibrary_RegisterCustomCommandProcessor");
-static_assert(sizeof(KuroStaticLibrary_RegisterCustomCommandProcessor) == 0x000038, "Wrong size on KuroStaticLibrary_RegisterCustomCommandProcessor");
-static_assert(offsetof(KuroStaticLibrary_RegisterCustomCommandProcessor, Category) == 0x000000, "Member 'KuroStaticLibrary_RegisterCustomCommandProcessor::Category' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_RegisterCustomCommandProcessor, Processor) == 0x000010, "Member 'KuroStaticLibrary_RegisterCustomCommandProcessor::Processor' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_RegisterCustomCommandProcessor;
 
 // Function KuroUtility.KuroStaticLibrary.RemoveFromRoot
 // 0x0008 (0x0008 - 0x0000)
@@ -2352,9 +1813,7 @@ struct KuroStaticLibrary_RemoveFromRoot final
 public:
 	class UObject*                                InObject;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_RemoveFromRoot) == 0x000008, "Wrong alignment on KuroStaticLibrary_RemoveFromRoot");
-static_assert(sizeof(KuroStaticLibrary_RemoveFromRoot) == 0x000008, "Wrong size on KuroStaticLibrary_RemoveFromRoot");
-static_assert(offsetof(KuroStaticLibrary_RemoveFromRoot, InObject) == 0x000000, "Member 'KuroStaticLibrary_RemoveFromRoot::InObject' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_RemoveFromRoot;
 
 // Function KuroUtility.KuroStaticLibrary.SaveBufferToFile
 // 0x0028 (0x0028 - 0x0000)
@@ -2366,11 +1825,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SaveBufferToFile) == 0x000008, "Wrong alignment on KuroStaticLibrary_SaveBufferToFile");
-static_assert(sizeof(KuroStaticLibrary_SaveBufferToFile) == 0x000028, "Wrong size on KuroStaticLibrary_SaveBufferToFile");
-static_assert(offsetof(KuroStaticLibrary_SaveBufferToFile, Path) == 0x000000, "Member 'KuroStaticLibrary_SaveBufferToFile::Path' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SaveBufferToFile, InBuffer) == 0x000010, "Member 'KuroStaticLibrary_SaveBufferToFile::InBuffer' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SaveBufferToFile, ReturnValue) == 0x000020, "Member 'KuroStaticLibrary_SaveBufferToFile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SaveBufferToFile;
 
 // Function KuroUtility.KuroStaticLibrary.SaveStringToFile
 // 0x0028 (0x0028 - 0x0000)
@@ -2383,12 +1838,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SaveStringToFile) == 0x000008, "Wrong alignment on KuroStaticLibrary_SaveStringToFile");
-static_assert(sizeof(KuroStaticLibrary_SaveStringToFile) == 0x000028, "Wrong size on KuroStaticLibrary_SaveStringToFile");
-static_assert(offsetof(KuroStaticLibrary_SaveStringToFile, SaveText) == 0x000000, "Member 'KuroStaticLibrary_SaveStringToFile::SaveText' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SaveStringToFile, FileName) == 0x000010, "Member 'KuroStaticLibrary_SaveStringToFile::FileName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SaveStringToFile, bWithBom) == 0x000020, "Member 'KuroStaticLibrary_SaveStringToFile::bWithBom' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SaveStringToFile, ReturnValue) == 0x000021, "Member 'KuroStaticLibrary_SaveStringToFile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SaveStringToFile;
 
 // Function KuroUtility.KuroStaticLibrary.SetActorModify
 // 0x0008 (0x0008 - 0x0000)
@@ -2397,9 +1847,7 @@ struct KuroStaticLibrary_SetActorModify final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetActorModify) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetActorModify");
-static_assert(sizeof(KuroStaticLibrary_SetActorModify) == 0x000008, "Wrong size on KuroStaticLibrary_SetActorModify");
-static_assert(offsetof(KuroStaticLibrary_SetActorModify, Actor) == 0x000000, "Member 'KuroStaticLibrary_SetActorModify::Actor' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetActorModify;
 
 // Function KuroUtility.KuroStaticLibrary.SetActorPermanent
 // 0x0010 (0x0010 - 0x0000)
@@ -2411,11 +1859,7 @@ public:
 	bool                                          bWithAllChildren;                                  // 0x0009(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetActorPermanent) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetActorPermanent");
-static_assert(sizeof(KuroStaticLibrary_SetActorPermanent) == 0x000010, "Wrong size on KuroStaticLibrary_SetActorPermanent");
-static_assert(offsetof(KuroStaticLibrary_SetActorPermanent, Actor) == 0x000000, "Member 'KuroStaticLibrary_SetActorPermanent::Actor' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetActorPermanent, bIsPermanent) == 0x000008, "Member 'KuroStaticLibrary_SetActorPermanent::bIsPermanent' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetActorPermanent, bWithAllChildren) == 0x000009, "Member 'KuroStaticLibrary_SetActorPermanent::bWithAllChildren' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetActorPermanent;
 
 // Function KuroUtility.KuroStaticLibrary.SetBaseAndSaveBaseLocation
 // 0x0010 (0x0010 - 0x0000)
@@ -2425,10 +1869,39 @@ public:
 	class UCharacterMovementComponent*            CharacterMovementComp;                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimitiveComponent*                    NewBase;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetBaseAndSaveBaseLocation) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetBaseAndSaveBaseLocation");
-static_assert(sizeof(KuroStaticLibrary_SetBaseAndSaveBaseLocation) == 0x000010, "Wrong size on KuroStaticLibrary_SetBaseAndSaveBaseLocation");
-static_assert(offsetof(KuroStaticLibrary_SetBaseAndSaveBaseLocation, CharacterMovementComp) == 0x000000, "Member 'KuroStaticLibrary_SetBaseAndSaveBaseLocation::CharacterMovementComp' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetBaseAndSaveBaseLocation, NewBase) == 0x000008, "Member 'KuroStaticLibrary_SetBaseAndSaveBaseLocation::NewBase' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetBaseAndSaveBaseLocation;
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float
+// 0x0018 (0x0018 - 0x0000)
+struct KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Float final
+{
+public:
+	class FString                                 InCVar;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Float;
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Int
+// 0x0018 (0x0018 - 0x0000)
+struct KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Int final
+{
+public:
+	class FString                                 InCVar;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InValue;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Int;
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_String
+// 0x0020 (0x0020 - 0x0000)
+struct KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_String final
+{
+public:
+	class FString                                 InCVar;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InValue;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_String;
 
 // Function KuroUtility.KuroStaticLibrary.SetCursorVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -2437,9 +1910,7 @@ struct KuroStaticLibrary_SetCursorVisibility final
 public:
 	bool                                          visible;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetCursorVisibility) == 0x000001, "Wrong alignment on KuroStaticLibrary_SetCursorVisibility");
-static_assert(sizeof(KuroStaticLibrary_SetCursorVisibility) == 0x000001, "Wrong size on KuroStaticLibrary_SetCursorVisibility");
-static_assert(offsetof(KuroStaticLibrary_SetCursorVisibility, visible) == 0x000000, "Member 'KuroStaticLibrary_SetCursorVisibility::visible' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetCursorVisibility;
 
 // Function KuroUtility.KuroStaticLibrary.SetEditorWidgetSkipTick
 // 0x0001 (0x0001 - 0x0000)
@@ -2448,9 +1919,7 @@ struct KuroStaticLibrary_SetEditorWidgetSkipTick final
 public:
 	bool                                          bSkipTick;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetEditorWidgetSkipTick) == 0x000001, "Wrong alignment on KuroStaticLibrary_SetEditorWidgetSkipTick");
-static_assert(sizeof(KuroStaticLibrary_SetEditorWidgetSkipTick) == 0x000001, "Wrong size on KuroStaticLibrary_SetEditorWidgetSkipTick");
-static_assert(offsetof(KuroStaticLibrary_SetEditorWidgetSkipTick, bSkipTick) == 0x000000, "Member 'KuroStaticLibrary_SetEditorWidgetSkipTick::bSkipTick' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetEditorWidgetSkipTick;
 
 // Function KuroUtility.KuroStaticLibrary.SetGameThreadAffinity
 // 0x0001 (0x0001 - 0x0000)
@@ -2459,9 +1928,7 @@ struct KuroStaticLibrary_SetGameThreadAffinity final
 public:
 	bool                                          bIsInFighting;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetGameThreadAffinity) == 0x000001, "Wrong alignment on KuroStaticLibrary_SetGameThreadAffinity");
-static_assert(sizeof(KuroStaticLibrary_SetGameThreadAffinity) == 0x000001, "Wrong size on KuroStaticLibrary_SetGameThreadAffinity");
-static_assert(offsetof(KuroStaticLibrary_SetGameThreadAffinity, bIsInFighting) == 0x000000, "Member 'KuroStaticLibrary_SetGameThreadAffinity::bIsInFighting' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetGameThreadAffinity;
 
 // Function KuroUtility.KuroStaticLibrary.SetHangAssertFlag
 // 0x0001 (0x0001 - 0x0000)
@@ -2470,9 +1937,7 @@ struct KuroStaticLibrary_SetHangAssertFlag final
 public:
 	bool                                          bAssertFlag;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetHangAssertFlag) == 0x000001, "Wrong alignment on KuroStaticLibrary_SetHangAssertFlag");
-static_assert(sizeof(KuroStaticLibrary_SetHangAssertFlag) == 0x000001, "Wrong size on KuroStaticLibrary_SetHangAssertFlag");
-static_assert(offsetof(KuroStaticLibrary_SetHangAssertFlag, bAssertFlag) == 0x000000, "Member 'KuroStaticLibrary_SetHangAssertFlag::bAssertFlag' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetHangAssertFlag;
 
 // Function KuroUtility.KuroStaticLibrary.SetHangDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -2481,9 +1946,7 @@ struct KuroStaticLibrary_SetHangDuration final
 public:
 	float                                         HangDuration;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetHangDuration) == 0x000004, "Wrong alignment on KuroStaticLibrary_SetHangDuration");
-static_assert(sizeof(KuroStaticLibrary_SetHangDuration) == 0x000004, "Wrong size on KuroStaticLibrary_SetHangDuration");
-static_assert(offsetof(KuroStaticLibrary_SetHangDuration, HangDuration) == 0x000000, "Member 'KuroStaticLibrary_SetHangDuration::HangDuration' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetHangDuration;
 
 // Function KuroUtility.KuroStaticLibrary.SetHttpThreadActiveMinimumSleepTimeInSeconds
 // 0x0004 (0x0004 - 0x0000)
@@ -2492,9 +1955,7 @@ struct KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds final
 public:
 	float                                         InHttpThreadActiveMinimumSleepTimeInSeconds;       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds) == 0x000004, "Wrong alignment on KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds");
-static_assert(sizeof(KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds) == 0x000004, "Wrong size on KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds");
-static_assert(offsetof(KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds, InHttpThreadActiveMinimumSleepTimeInSeconds) == 0x000000, "Member 'KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds::InHttpThreadActiveMinimumSleepTimeInSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetHttpThreadActiveMinimumSleepTimeInSeconds;
 
 // Function KuroUtility.KuroStaticLibrary.SetHttpThreadIdleMinimumSleepTimeInSeconds
 // 0x0004 (0x0004 - 0x0000)
@@ -2503,9 +1964,7 @@ struct KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds final
 public:
 	float                                         InHttpThreadIdleMinimumSleepTimeInSeconds;         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds) == 0x000004, "Wrong alignment on KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds");
-static_assert(sizeof(KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds) == 0x000004, "Wrong size on KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds");
-static_assert(offsetof(KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds, InHttpThreadIdleMinimumSleepTimeInSeconds) == 0x000000, "Member 'KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds::InHttpThreadIdleMinimumSleepTimeInSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetHttpThreadIdleMinimumSleepTimeInSeconds;
 
 // Function KuroUtility.KuroStaticLibrary.SetInputKeyDeadZone
 // 0x0038 (0x0038 - 0x0000)
@@ -2519,12 +1978,7 @@ public:
 	float                                         deadZone;                                          // 0x0030(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetInputKeyDeadZone) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetInputKeyDeadZone");
-static_assert(sizeof(KuroStaticLibrary_SetInputKeyDeadZone) == 0x000038, "Wrong size on KuroStaticLibrary_SetInputKeyDeadZone");
-static_assert(offsetof(KuroStaticLibrary_SetInputKeyDeadZone, world) == 0x000000, "Member 'KuroStaticLibrary_SetInputKeyDeadZone::world' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetInputKeyDeadZone, playerIndex) == 0x000008, "Member 'KuroStaticLibrary_SetInputKeyDeadZone::playerIndex' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetInputKeyDeadZone, key) == 0x000010, "Member 'KuroStaticLibrary_SetInputKeyDeadZone::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetInputKeyDeadZone, deadZone) == 0x000030, "Member 'KuroStaticLibrary_SetInputKeyDeadZone::deadZone' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetInputKeyDeadZone;
 
 // Function KuroUtility.KuroStaticLibrary.SetMontageANIndex
 // 0x0008 (0x0008 - 0x0000)
@@ -2533,9 +1987,7 @@ struct KuroStaticLibrary_SetMontageANIndex final
 public:
 	const class UAnimMontage*                     AnimMontage;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetMontageANIndex) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetMontageANIndex");
-static_assert(sizeof(KuroStaticLibrary_SetMontageANIndex) == 0x000008, "Wrong size on KuroStaticLibrary_SetMontageANIndex");
-static_assert(offsetof(KuroStaticLibrary_SetMontageANIndex, AnimMontage) == 0x000000, "Member 'KuroStaticLibrary_SetMontageANIndex::AnimMontage' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetMontageANIndex;
 
 // Function KuroUtility.KuroStaticLibrary.SetSplinePointsWithType
 // 0x0020 (0x0020 - 0x0000)
@@ -2549,13 +2001,7 @@ public:
 	bool                                          bUpdateSpline;                                     // 0x001A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetSplinePointsWithType) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetSplinePointsWithType");
-static_assert(sizeof(KuroStaticLibrary_SetSplinePointsWithType) == 0x000020, "Wrong size on KuroStaticLibrary_SetSplinePointsWithType");
-static_assert(offsetof(KuroStaticLibrary_SetSplinePointsWithType, Spline) == 0x000000, "Member 'KuroStaticLibrary_SetSplinePointsWithType::Spline' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetSplinePointsWithType, Points) == 0x000008, "Member 'KuroStaticLibrary_SetSplinePointsWithType::Points' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetSplinePointsWithType, CoordinateSpace) == 0x000018, "Member 'KuroStaticLibrary_SetSplinePointsWithType::CoordinateSpace' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetSplinePointsWithType, Type) == 0x000019, "Member 'KuroStaticLibrary_SetSplinePointsWithType::Type' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetSplinePointsWithType, bUpdateSpline) == 0x00001A, "Member 'KuroStaticLibrary_SetSplinePointsWithType::bUpdateSpline' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetSplinePointsWithType;
 
 // Function KuroUtility.KuroStaticLibrary.SetStaticMeshVelocity
 // 0x0020 (0x0020 - 0x0000)
@@ -2566,10 +2012,7 @@ public:
 	struct FVector                                NewVelocity;                                       // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetStaticMeshVelocity) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetStaticMeshVelocity");
-static_assert(sizeof(KuroStaticLibrary_SetStaticMeshVelocity) == 0x000020, "Wrong size on KuroStaticLibrary_SetStaticMeshVelocity");
-static_assert(offsetof(KuroStaticLibrary_SetStaticMeshVelocity, Actors) == 0x000000, "Member 'KuroStaticLibrary_SetStaticMeshVelocity::Actors' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetStaticMeshVelocity, NewVelocity) == 0x000010, "Member 'KuroStaticLibrary_SetStaticMeshVelocity::NewVelocity' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetStaticMeshVelocity;
 
 // Function KuroUtility.KuroStaticLibrary.SetThreadAffinity
 // 0x0018 (0x0018 - 0x0000)
@@ -2580,11 +2023,7 @@ public:
 	int32                                         AffinityHigh;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AffinityLow;                                       // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetThreadAffinity) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetThreadAffinity");
-static_assert(sizeof(KuroStaticLibrary_SetThreadAffinity) == 0x000018, "Wrong size on KuroStaticLibrary_SetThreadAffinity");
-static_assert(offsetof(KuroStaticLibrary_SetThreadAffinity, ThreadName) == 0x000000, "Member 'KuroStaticLibrary_SetThreadAffinity::ThreadName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadAffinity, AffinityHigh) == 0x000010, "Member 'KuroStaticLibrary_SetThreadAffinity::AffinityHigh' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadAffinity, AffinityLow) == 0x000014, "Member 'KuroStaticLibrary_SetThreadAffinity::AffinityLow' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetThreadAffinity;
 
 // Function KuroUtility.KuroStaticLibrary.SetThreadPolicy
 // 0x0018 (0x0018 - 0x0000)
@@ -2595,10 +2034,7 @@ public:
 	int32                                         Policy;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetThreadPolicy) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetThreadPolicy");
-static_assert(sizeof(KuroStaticLibrary_SetThreadPolicy) == 0x000018, "Wrong size on KuroStaticLibrary_SetThreadPolicy");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPolicy, ThreadName) == 0x000000, "Member 'KuroStaticLibrary_SetThreadPolicy::ThreadName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPolicy, Policy) == 0x000010, "Member 'KuroStaticLibrary_SetThreadPolicy::Policy' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetThreadPolicy;
 
 // Function KuroUtility.KuroStaticLibrary.SetThreadPriority
 // 0x0018 (0x0018 - 0x0000)
@@ -2609,10 +2045,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_SetThreadPriority) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetThreadPriority");
-static_assert(sizeof(KuroStaticLibrary_SetThreadPriority) == 0x000018, "Wrong size on KuroStaticLibrary_SetThreadPriority");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriority, ThreadName) == 0x000000, "Member 'KuroStaticLibrary_SetThreadPriority::ThreadName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriority, Priority) == 0x000010, "Member 'KuroStaticLibrary_SetThreadPriority::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetThreadPriority;
 
 // Function KuroUtility.KuroStaticLibrary.SetThreadPriorityAndPolicy
 // 0x0018 (0x0018 - 0x0000)
@@ -2623,11 +2056,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Policy;                                            // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetThreadPriorityAndPolicy) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetThreadPriorityAndPolicy");
-static_assert(sizeof(KuroStaticLibrary_SetThreadPriorityAndPolicy) == 0x000018, "Wrong size on KuroStaticLibrary_SetThreadPriorityAndPolicy");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicy, ThreadName) == 0x000000, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicy::ThreadName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicy, Priority) == 0x000010, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicy::Priority' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicy, Policy) == 0x000014, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicy::Policy' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetThreadPriorityAndPolicy;
 
 // Function KuroUtility.KuroStaticLibrary.SetThreadPriorityAndPolicyAndAffinity
 // 0x0020 (0x0020 - 0x0000)
@@ -2640,13 +2069,7 @@ public:
 	int32                                         AffinityHigh;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AffinityLow;                                       // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity) == 0x000008, "Wrong alignment on KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity");
-static_assert(sizeof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity) == 0x000020, "Wrong size on KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity, ThreadName) == 0x000000, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity::ThreadName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity, Priority) == 0x000010, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity::Priority' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity, Policy) == 0x000014, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity::Policy' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity, AffinityHigh) == 0x000018, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity::AffinityHigh' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity, AffinityLow) == 0x00001C, "Member 'KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity::AffinityLow' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SetThreadPriorityAndPolicyAndAffinity;
 
 // Function KuroUtility.KuroStaticLibrary.ShowSoftwareCursor
 // 0x0001 (0x0001 - 0x0000)
@@ -2655,9 +2078,7 @@ struct KuroStaticLibrary_ShowSoftwareCursor final
 public:
 	bool                                          visible;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_ShowSoftwareCursor) == 0x000001, "Wrong alignment on KuroStaticLibrary_ShowSoftwareCursor");
-static_assert(sizeof(KuroStaticLibrary_ShowSoftwareCursor) == 0x000001, "Wrong size on KuroStaticLibrary_ShowSoftwareCursor");
-static_assert(offsetof(KuroStaticLibrary_ShowSoftwareCursor, visible) == 0x000000, "Member 'KuroStaticLibrary_ShowSoftwareCursor::visible' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ShowSoftwareCursor;
 
 // Function KuroUtility.KuroStaticLibrary.SpawnActorFromAnother
 // 0x0018 (0x0018 - 0x0000)
@@ -2668,11 +2089,7 @@ public:
 	class AActor*                                 Parent;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SpawnActorFromAnother) == 0x000008, "Wrong alignment on KuroStaticLibrary_SpawnActorFromAnother");
-static_assert(sizeof(KuroStaticLibrary_SpawnActorFromAnother) == 0x000018, "Wrong size on KuroStaticLibrary_SpawnActorFromAnother");
-static_assert(offsetof(KuroStaticLibrary_SpawnActorFromAnother, Actor) == 0x000000, "Member 'KuroStaticLibrary_SpawnActorFromAnother::Actor' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SpawnActorFromAnother, Parent) == 0x000008, "Member 'KuroStaticLibrary_SpawnActorFromAnother::Parent' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_SpawnActorFromAnother, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_SpawnActorFromAnother::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SpawnActorFromAnother;
 
 // Function KuroUtility.KuroStaticLibrary.StopAllMontagesBySlotName
 // 0x0018 (0x0018 - 0x0000)
@@ -2683,11 +2100,7 @@ public:
 	class FName                                   InSlotName;                                        // 0x0008(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InBlendOutTime;                                    // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_StopAllMontagesBySlotName) == 0x000008, "Wrong alignment on KuroStaticLibrary_StopAllMontagesBySlotName");
-static_assert(sizeof(KuroStaticLibrary_StopAllMontagesBySlotName) == 0x000018, "Wrong size on KuroStaticLibrary_StopAllMontagesBySlotName");
-static_assert(offsetof(KuroStaticLibrary_StopAllMontagesBySlotName, UAnimInstance) == 0x000000, "Member 'KuroStaticLibrary_StopAllMontagesBySlotName::UAnimInstance' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_StopAllMontagesBySlotName, InSlotName) == 0x000008, "Member 'KuroStaticLibrary_StopAllMontagesBySlotName::InSlotName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_StopAllMontagesBySlotName, InBlendOutTime) == 0x000014, "Member 'KuroStaticLibrary_StopAllMontagesBySlotName::InBlendOutTime' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_StopAllMontagesBySlotName;
 
 // Function KuroUtility.KuroStaticLibrary.SynchronizeProperties
 // 0x0008 (0x0008 - 0x0000)
@@ -2696,9 +2109,7 @@ struct KuroStaticLibrary_SynchronizeProperties final
 public:
 	class UWidget*                                InWidget;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_SynchronizeProperties) == 0x000008, "Wrong alignment on KuroStaticLibrary_SynchronizeProperties");
-static_assert(sizeof(KuroStaticLibrary_SynchronizeProperties) == 0x000008, "Wrong size on KuroStaticLibrary_SynchronizeProperties");
-static_assert(offsetof(KuroStaticLibrary_SynchronizeProperties, InWidget) == 0x000000, "Member 'KuroStaticLibrary_SynchronizeProperties::InWidget' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_SynchronizeProperties;
 
 // Function KuroUtility.KuroStaticLibrary.ToggleSequenceNodeActiveByTag
 // 0x0018 (0x0018 - 0x0000)
@@ -2711,12 +2122,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag) == 0x000008, "Wrong alignment on KuroStaticLibrary_ToggleSequenceNodeActiveByTag");
-static_assert(sizeof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag) == 0x000018, "Wrong size on KuroStaticLibrary_ToggleSequenceNodeActiveByTag");
-static_assert(offsetof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag, Actor) == 0x000000, "Member 'KuroStaticLibrary_ToggleSequenceNodeActiveByTag::Actor' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag, TagName) == 0x000008, "Member 'KuroStaticLibrary_ToggleSequenceNodeActiveByTag::TagName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag, bActive) == 0x000014, "Member 'KuroStaticLibrary_ToggleSequenceNodeActiveByTag::bActive' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ToggleSequenceNodeActiveByTag, ReturnValue) == 0x000015, "Member 'KuroStaticLibrary_ToggleSequenceNodeActiveByTag::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ToggleSequenceNodeActiveByTag;
 
 // Function KuroUtility.KuroStaticLibrary.ToUnixTimestamp
 // 0x0010 (0x0010 - 0x0000)
@@ -2727,10 +2133,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_ToUnixTimestamp) == 0x000008, "Wrong alignment on KuroStaticLibrary_ToUnixTimestamp");
-static_assert(sizeof(KuroStaticLibrary_ToUnixTimestamp) == 0x000010, "Wrong size on KuroStaticLibrary_ToUnixTimestamp");
-static_assert(offsetof(KuroStaticLibrary_ToUnixTimestamp, InDataTime) == 0x000000, "Member 'KuroStaticLibrary_ToUnixTimestamp::InDataTime' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_ToUnixTimestamp, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_ToUnixTimestamp::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_ToUnixTimestamp;
 
 // Function KuroUtility.KuroStaticLibrary.UnRegisterCustomCommandProcessor
 // 0x0010 (0x0010 - 0x0000)
@@ -2739,9 +2142,7 @@ struct KuroStaticLibrary_UnRegisterCustomCommandProcessor final
 public:
 	class FString                                 Category;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticLibrary_UnRegisterCustomCommandProcessor) == 0x000008, "Wrong alignment on KuroStaticLibrary_UnRegisterCustomCommandProcessor");
-static_assert(sizeof(KuroStaticLibrary_UnRegisterCustomCommandProcessor) == 0x000010, "Wrong size on KuroStaticLibrary_UnRegisterCustomCommandProcessor");
-static_assert(offsetof(KuroStaticLibrary_UnRegisterCustomCommandProcessor, Category) == 0x000000, "Member 'KuroStaticLibrary_UnRegisterCustomCommandProcessor::Category' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_UnRegisterCustomCommandProcessor;
 
 // Function KuroUtility.KuroStaticLibrary.WriteStringToFile
 // 0x0028 (0x0028 - 0x0000)
@@ -2755,13 +2156,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticLibrary_WriteStringToFile) == 0x000008, "Wrong alignment on KuroStaticLibrary_WriteStringToFile");
-static_assert(sizeof(KuroStaticLibrary_WriteStringToFile) == 0x000028, "Wrong size on KuroStaticLibrary_WriteStringToFile");
-static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, SaveText) == 0x000000, "Member 'KuroStaticLibrary_WriteStringToFile::SaveText' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, FileName) == 0x000010, "Member 'KuroStaticLibrary_WriteStringToFile::FileName' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, bPublic) == 0x000020, "Member 'KuroStaticLibrary_WriteStringToFile::bPublic' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, bWithBom) == 0x000021, "Member 'KuroStaticLibrary_WriteStringToFile::bWithBom' has a wrong offset!");
-static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, ReturnValue) == 0x000022, "Member 'KuroStaticLibrary_WriteStringToFile::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticLibrary_WriteStringToFile;
 
 // Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsDeviceAMD
 // 0x0001 (0x0001 - 0x0000)
@@ -2770,9 +2165,7 @@ struct KuroFFXFSR3BlueprintLibrary_IsDeviceAMD final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsDeviceAMD");
-static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsDeviceAMD");
-static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsDeviceAMD::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFFXFSR3BlueprintLibrary_IsDeviceAMD;
 
 // Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn
 // 0x0001 (0x0001 - 0x0000)
@@ -2781,9 +2174,7 @@ struct KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn");
-static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn");
-static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn;
 
 // Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsSupported
 // 0x0001 (0x0001 - 0x0000)
@@ -2792,9 +2183,7 @@ struct KuroFFXFSR3BlueprintLibrary_IsSupported final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsSupported) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsSupported");
-static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsSupported) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsSupported");
-static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsSupported, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsSupported::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFFXFSR3BlueprintLibrary_IsSupported;
 
 // Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFI
 // 0x0001 (0x0001 - 0x0000)
@@ -2803,9 +2192,7 @@ struct KuroFFXFSR3BlueprintLibrary_SupportFI final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFFXFSR3BlueprintLibrary_SupportFI) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_SupportFI");
-static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_SupportFI) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_SupportFI");
-static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_SupportFI, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_SupportFI::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFFXFSR3BlueprintLibrary_SupportFI;
 
 // Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFSR3
 // 0x0001 (0x0001 - 0x0000)
@@ -2814,9 +2201,7 @@ struct KuroFFXFSR3BlueprintLibrary_SupportFSR3 final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroFFXFSR3BlueprintLibrary_SupportFSR3) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_SupportFSR3");
-static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_SupportFSR3) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_SupportFSR3");
-static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_SupportFSR3, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_SupportFSR3::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroFFXFSR3BlueprintLibrary_SupportFSR3;
 
 // Function KuroUtility.KuroStaticPS5Library.AbortTrophyHandleAsync
 // 0x0030 (0x0030 - 0x0000)
@@ -2827,10 +2212,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_AbortTrophyHandleAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_AbortTrophyHandleAsync");
-static_assert(sizeof(KuroStaticPS5Library_AbortTrophyHandleAsync) == 0x000030, "Wrong size on KuroStaticPS5Library_AbortTrophyHandleAsync");
-static_assert(offsetof(KuroStaticPS5Library_AbortTrophyHandleAsync, handle) == 0x000000, "Member 'KuroStaticPS5Library_AbortTrophyHandleAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_AbortTrophyHandleAsync, callback) == 0x000008, "Member 'KuroStaticPS5Library_AbortTrophyHandleAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_AbortTrophyHandleAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.AbortUdsHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -2840,10 +2222,7 @@ public:
 	int32                                         handle;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_AbortUdsHandle) == 0x000004, "Wrong alignment on KuroStaticPS5Library_AbortUdsHandle");
-static_assert(sizeof(KuroStaticPS5Library_AbortUdsHandle) == 0x000008, "Wrong size on KuroStaticPS5Library_AbortUdsHandle");
-static_assert(offsetof(KuroStaticPS5Library_AbortUdsHandle, handle) == 0x000000, "Member 'KuroStaticPS5Library_AbortUdsHandle::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_AbortUdsHandle, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_AbortUdsHandle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_AbortUdsHandle;
 
 // Function KuroUtility.KuroStaticPS5Library.AddCacheMapElement
 // 0x0020 (0x0020 - 0x0000)
@@ -2853,10 +2232,7 @@ public:
 	class FString                                 key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_AddCacheMapElement) == 0x000008, "Wrong alignment on KuroStaticPS5Library_AddCacheMapElement");
-static_assert(sizeof(KuroStaticPS5Library_AddCacheMapElement) == 0x000020, "Wrong size on KuroStaticPS5Library_AddCacheMapElement");
-static_assert(offsetof(KuroStaticPS5Library_AddCacheMapElement, key) == 0x000000, "Member 'KuroStaticPS5Library_AddCacheMapElement::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_AddCacheMapElement, value) == 0x000010, "Member 'KuroStaticPS5Library_AddCacheMapElement::value' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_AddCacheMapElement;
 
 // Function KuroUtility.KuroStaticPS5Library.AddJoinSessionDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -2865,9 +2241,7 @@ struct KuroStaticPS5Library_AddJoinSessionDelegate final
 public:
 	TDelegate<void(const class FString& userId, const class FString& playerSessionId)> InDelegate;   // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_AddJoinSessionDelegate) == 0x000004, "Wrong alignment on KuroStaticPS5Library_AddJoinSessionDelegate");
-static_assert(sizeof(KuroStaticPS5Library_AddJoinSessionDelegate) == 0x000028, "Wrong size on KuroStaticPS5Library_AddJoinSessionDelegate");
-static_assert(offsetof(KuroStaticPS5Library_AddJoinSessionDelegate, InDelegate) == 0x000000, "Member 'KuroStaticPS5Library_AddJoinSessionDelegate::InDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_AddJoinSessionDelegate;
 
 // Function KuroUtility.KuroStaticPS5Library.CheckJoinSession
 // 0x0010 (0x0010 - 0x0000)
@@ -2876,9 +2250,7 @@ struct KuroStaticPS5Library_CheckJoinSession final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CheckJoinSession) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CheckJoinSession");
-static_assert(sizeof(KuroStaticPS5Library_CheckJoinSession) == 0x000010, "Wrong size on KuroStaticPS5Library_CheckJoinSession");
-static_assert(offsetof(KuroStaticPS5Library_CheckJoinSession, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_CheckJoinSession::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CheckJoinSession;
 
 // Function KuroUtility.KuroStaticPS5Library.CheckUserPremium
 // 0x0018 (0x0018 - 0x0000)
@@ -2889,10 +2261,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_CheckUserPremium) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CheckUserPremium");
-static_assert(sizeof(KuroStaticPS5Library_CheckUserPremium) == 0x000018, "Wrong size on KuroStaticPS5Library_CheckUserPremium");
-static_assert(offsetof(KuroStaticPS5Library_CheckUserPremium, userId) == 0x000000, "Member 'KuroStaticPS5Library_CheckUserPremium::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CheckUserPremium, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_CheckUserPremium::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CheckUserPremium;
 
 // Function KuroUtility.KuroStaticPS5Library.CloseWebBrowser
 // 0x0004 (0x0004 - 0x0000)
@@ -2901,9 +2270,7 @@ struct KuroStaticPS5Library_CloseWebBrowser final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CloseWebBrowser) == 0x000004, "Wrong alignment on KuroStaticPS5Library_CloseWebBrowser");
-static_assert(sizeof(KuroStaticPS5Library_CloseWebBrowser) == 0x000004, "Wrong size on KuroStaticPS5Library_CloseWebBrowser");
-static_assert(offsetof(KuroStaticPS5Library_CloseWebBrowser, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_CloseWebBrowser::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CloseWebBrowser;
 
 // Function KuroUtility.KuroStaticPS5Library.CreatePlayerSession
 // 0x0028 (0x0028 - 0x0000)
@@ -2915,11 +2282,7 @@ public:
 	class FString                                 playerId;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CreatePlayerSession) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CreatePlayerSession");
-static_assert(sizeof(KuroStaticPS5Library_CreatePlayerSession) == 0x000028, "Wrong size on KuroStaticPS5Library_CreatePlayerSession");
-static_assert(offsetof(KuroStaticPS5Library_CreatePlayerSession, joinableUserType) == 0x000000, "Member 'KuroStaticPS5Library_CreatePlayerSession::joinableUserType' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreatePlayerSession, playerId) == 0x000008, "Member 'KuroStaticPS5Library_CreatePlayerSession::playerId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreatePlayerSession, ReturnValue) == 0x000018, "Member 'KuroStaticPS5Library_CreatePlayerSession::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreatePlayerSession;
 
 // Function KuroUtility.KuroStaticPS5Library.CreateTrophyContextAsync
 // 0x0050 (0x0050 - 0x0000)
@@ -2932,12 +2295,7 @@ public:
 	class FString                                 optionsLong;                                       // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int32 ret, int32 result)>      callback;                                          // 0x0028(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CreateTrophyContextAsync) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CreateTrophyContextAsync");
-static_assert(sizeof(KuroStaticPS5Library_CreateTrophyContextAsync) == 0x000050, "Wrong size on KuroStaticPS5Library_CreateTrophyContextAsync");
-static_assert(offsetof(KuroStaticPS5Library_CreateTrophyContextAsync, userId) == 0x000000, "Member 'KuroStaticPS5Library_CreateTrophyContextAsync::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateTrophyContextAsync, serviceLabel) == 0x000010, "Member 'KuroStaticPS5Library_CreateTrophyContextAsync::serviceLabel' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateTrophyContextAsync, optionsLong) == 0x000018, "Member 'KuroStaticPS5Library_CreateTrophyContextAsync::optionsLong' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateTrophyContextAsync, callback) == 0x000028, "Member 'KuroStaticPS5Library_CreateTrophyContextAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreateTrophyContextAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.CreateTrophyHandleAsync
 // 0x0028 (0x0028 - 0x0000)
@@ -2946,9 +2304,7 @@ struct KuroStaticPS5Library_CreateTrophyHandleAsync final
 public:
 	TDelegate<void(int32 ret, int32 result)>      callback;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CreateTrophyHandleAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_CreateTrophyHandleAsync");
-static_assert(sizeof(KuroStaticPS5Library_CreateTrophyHandleAsync) == 0x000028, "Wrong size on KuroStaticPS5Library_CreateTrophyHandleAsync");
-static_assert(offsetof(KuroStaticPS5Library_CreateTrophyHandleAsync, callback) == 0x000000, "Member 'KuroStaticPS5Library_CreateTrophyHandleAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreateTrophyHandleAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.CreateUdsContext
 // 0x0018 (0x0018 - 0x0000)
@@ -2959,11 +2315,7 @@ public:
 	int32                                         context;                                           // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CreateUdsContext) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CreateUdsContext");
-static_assert(sizeof(KuroStaticPS5Library_CreateUdsContext) == 0x000018, "Wrong size on KuroStaticPS5Library_CreateUdsContext");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsContext, userId) == 0x000000, "Member 'KuroStaticPS5Library_CreateUdsContext::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsContext, context) == 0x000010, "Member 'KuroStaticPS5Library_CreateUdsContext::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsContext, ReturnValue) == 0x000014, "Member 'KuroStaticPS5Library_CreateUdsContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreateUdsContext;
 
 // Function KuroUtility.KuroStaticPS5Library.CreateUdsEvent
 // 0x0028 (0x0028 - 0x0000)
@@ -2976,12 +2328,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_CreateUdsEvent) == 0x000008, "Wrong alignment on KuroStaticPS5Library_CreateUdsEvent");
-static_assert(sizeof(KuroStaticPS5Library_CreateUdsEvent) == 0x000028, "Wrong size on KuroStaticPS5Library_CreateUdsEvent");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsEvent, eventName) == 0x000000, "Member 'KuroStaticPS5Library_CreateUdsEvent::eventName' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsEvent, outEventPtr) == 0x000010, "Member 'KuroStaticPS5Library_CreateUdsEvent::outEventPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsEvent, outProPtr) == 0x000018, "Member 'KuroStaticPS5Library_CreateUdsEvent::outProPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsEvent, ReturnValue) == 0x000020, "Member 'KuroStaticPS5Library_CreateUdsEvent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreateUdsEvent;
 
 // Function KuroUtility.KuroStaticPS5Library.CreateUdsHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -2991,10 +2338,7 @@ public:
 	int32                                         handle;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_CreateUdsHandle) == 0x000004, "Wrong alignment on KuroStaticPS5Library_CreateUdsHandle");
-static_assert(sizeof(KuroStaticPS5Library_CreateUdsHandle) == 0x000008, "Wrong size on KuroStaticPS5Library_CreateUdsHandle");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsHandle, handle) == 0x000000, "Member 'KuroStaticPS5Library_CreateUdsHandle::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_CreateUdsHandle, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_CreateUdsHandle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_CreateUdsHandle;
 
 // Function KuroUtility.KuroStaticPS5Library.DestroyTrophyContextAsync
 // 0x0030 (0x0030 - 0x0000)
@@ -3005,10 +2349,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_DestroyTrophyContextAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_DestroyTrophyContextAsync");
-static_assert(sizeof(KuroStaticPS5Library_DestroyTrophyContextAsync) == 0x000030, "Wrong size on KuroStaticPS5Library_DestroyTrophyContextAsync");
-static_assert(offsetof(KuroStaticPS5Library_DestroyTrophyContextAsync, context) == 0x000000, "Member 'KuroStaticPS5Library_DestroyTrophyContextAsync::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_DestroyTrophyContextAsync, callback) == 0x000008, "Member 'KuroStaticPS5Library_DestroyTrophyContextAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_DestroyTrophyContextAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.DestroyTrophyHandleAsync
 // 0x0030 (0x0030 - 0x0000)
@@ -3019,10 +2360,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_DestroyTrophyHandleAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_DestroyTrophyHandleAsync");
-static_assert(sizeof(KuroStaticPS5Library_DestroyTrophyHandleAsync) == 0x000030, "Wrong size on KuroStaticPS5Library_DestroyTrophyHandleAsync");
-static_assert(offsetof(KuroStaticPS5Library_DestroyTrophyHandleAsync, handle) == 0x000000, "Member 'KuroStaticPS5Library_DestroyTrophyHandleAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_DestroyTrophyHandleAsync, callback) == 0x000008, "Member 'KuroStaticPS5Library_DestroyTrophyHandleAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_DestroyTrophyHandleAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.DestroyUdsContext
 // 0x0008 (0x0008 - 0x0000)
@@ -3032,10 +2370,7 @@ public:
 	int32                                         context;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_DestroyUdsContext) == 0x000004, "Wrong alignment on KuroStaticPS5Library_DestroyUdsContext");
-static_assert(sizeof(KuroStaticPS5Library_DestroyUdsContext) == 0x000008, "Wrong size on KuroStaticPS5Library_DestroyUdsContext");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsContext, context) == 0x000000, "Member 'KuroStaticPS5Library_DestroyUdsContext::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsContext, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_DestroyUdsContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_DestroyUdsContext;
 
 // Function KuroUtility.KuroStaticPS5Library.DestroyUdsEvent
 // 0x0010 (0x0010 - 0x0000)
@@ -3046,10 +2381,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_DestroyUdsEvent) == 0x000008, "Wrong alignment on KuroStaticPS5Library_DestroyUdsEvent");
-static_assert(sizeof(KuroStaticPS5Library_DestroyUdsEvent) == 0x000010, "Wrong size on KuroStaticPS5Library_DestroyUdsEvent");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsEvent, eventPtr) == 0x000000, "Member 'KuroStaticPS5Library_DestroyUdsEvent::eventPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsEvent, ReturnValue) == 0x000008, "Member 'KuroStaticPS5Library_DestroyUdsEvent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_DestroyUdsEvent;
 
 // Function KuroUtility.KuroStaticPS5Library.DestroyUdsHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -3059,10 +2391,7 @@ public:
 	int32                                         handle;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_DestroyUdsHandle) == 0x000004, "Wrong alignment on KuroStaticPS5Library_DestroyUdsHandle");
-static_assert(sizeof(KuroStaticPS5Library_DestroyUdsHandle) == 0x000008, "Wrong size on KuroStaticPS5Library_DestroyUdsHandle");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsHandle, handle) == 0x000000, "Member 'KuroStaticPS5Library_DestroyUdsHandle::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_DestroyUdsHandle, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_DestroyUdsHandle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_DestroyUdsHandle;
 
 // Function KuroUtility.KuroStaticPS5Library.GetAccountIdByUserId
 // 0x0020 (0x0020 - 0x0000)
@@ -3072,10 +2401,7 @@ public:
 	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetAccountIdByUserId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetAccountIdByUserId");
-static_assert(sizeof(KuroStaticPS5Library_GetAccountIdByUserId) == 0x000020, "Wrong size on KuroStaticPS5Library_GetAccountIdByUserId");
-static_assert(offsetof(KuroStaticPS5Library_GetAccountIdByUserId, userId) == 0x000000, "Member 'KuroStaticPS5Library_GetAccountIdByUserId::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetAccountIdByUserId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetAccountIdByUserId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetAccountIdByUserId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetAuthCode
 // 0x0038 (0x0038 - 0x0000)
@@ -3088,13 +2414,7 @@ public:
 	int32                                         IssuerId;                                          // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetAuthCode) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetAuthCode");
-static_assert(sizeof(KuroStaticPS5Library_GetAuthCode) == 0x000038, "Wrong size on KuroStaticPS5Library_GetAuthCode");
-static_assert(offsetof(KuroStaticPS5Library_GetAuthCode, ClientId) == 0x000000, "Member 'KuroStaticPS5Library_GetAuthCode::ClientId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetAuthCode, Scope) == 0x000010, "Member 'KuroStaticPS5Library_GetAuthCode::Scope' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetAuthCode, AuthCode) == 0x000020, "Member 'KuroStaticPS5Library_GetAuthCode::AuthCode' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetAuthCode, IssuerId) == 0x000030, "Member 'KuroStaticPS5Library_GetAuthCode::IssuerId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetAuthCode, ReturnValue) == 0x000034, "Member 'KuroStaticPS5Library_GetAuthCode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetAuthCode;
 
 // Function KuroUtility.KuroStaticPS5Library.GetBasicPresence
 // 0x0020 (0x0020 - 0x0000)
@@ -3104,10 +2424,7 @@ public:
 	class FString                                 accountId;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FBasicPresenceData>             ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetBasicPresence) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetBasicPresence");
-static_assert(sizeof(KuroStaticPS5Library_GetBasicPresence) == 0x000020, "Wrong size on KuroStaticPS5Library_GetBasicPresence");
-static_assert(offsetof(KuroStaticPS5Library_GetBasicPresence, accountId) == 0x000000, "Member 'KuroStaticPS5Library_GetBasicPresence::accountId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetBasicPresence, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetBasicPresence::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetBasicPresence;
 
 // Function KuroUtility.KuroStaticPS5Library.GetBlockUserList
 // 0x0020 (0x0020 - 0x0000)
@@ -3118,11 +2435,7 @@ public:
 	int32                                         limit;                                             // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlockUserData                         ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetBlockUserList) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetBlockUserList");
-static_assert(sizeof(KuroStaticPS5Library_GetBlockUserList) == 0x000020, "Wrong size on KuroStaticPS5Library_GetBlockUserList");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserList, offset) == 0x000000, "Member 'KuroStaticPS5Library_GetBlockUserList::offset' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserList, limit) == 0x000004, "Member 'KuroStaticPS5Library_GetBlockUserList::limit' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserList, ReturnValue) == 0x000008, "Member 'KuroStaticPS5Library_GetBlockUserList::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetBlockUserList;
 
 // Function KuroUtility.KuroStaticPS5Library.GetBlockUserListAsync
 // 0x0030 (0x0030 - 0x0000)
@@ -3133,11 +2446,7 @@ public:
 	int32                                         limit;                                             // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const struct FBlockUserData& data)> Delegate;                                     // 0x0008(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetBlockUserListAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_GetBlockUserListAsync");
-static_assert(sizeof(KuroStaticPS5Library_GetBlockUserListAsync) == 0x000030, "Wrong size on KuroStaticPS5Library_GetBlockUserListAsync");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserListAsync, offset) == 0x000000, "Member 'KuroStaticPS5Library_GetBlockUserListAsync::offset' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserListAsync, limit) == 0x000004, "Member 'KuroStaticPS5Library_GetBlockUserListAsync::limit' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetBlockUserListAsync, Delegate) == 0x000008, "Member 'KuroStaticPS5Library_GetBlockUserListAsync::Delegate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetBlockUserListAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.GetCacheMapElement
 // 0x0020 (0x0020 - 0x0000)
@@ -3147,10 +2456,7 @@ public:
 	class FString                                 key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetCacheMapElement) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetCacheMapElement");
-static_assert(sizeof(KuroStaticPS5Library_GetCacheMapElement) == 0x000020, "Wrong size on KuroStaticPS5Library_GetCacheMapElement");
-static_assert(offsetof(KuroStaticPS5Library_GetCacheMapElement, key) == 0x000000, "Member 'KuroStaticPS5Library_GetCacheMapElement::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetCacheMapElement, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetCacheMapElement::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetCacheMapElement;
 
 // Function KuroUtility.KuroStaticPS5Library.GetCommunicationRestrictionStatusAsync
 // 0x0038 (0x0038 - 0x0000)
@@ -3160,10 +2466,7 @@ public:
 	class FString                                 accountId;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int32 ret, int32 status)>      callback;                                          // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync");
-static_assert(sizeof(KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync) == 0x000038, "Wrong size on KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync");
-static_assert(offsetof(KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync, accountId) == 0x000000, "Member 'KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync::accountId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync, callback) == 0x000010, "Member 'KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetCommunicationRestrictionStatusAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.GetCountryCodeByUserId
 // 0x0020 (0x0020 - 0x0000)
@@ -3173,10 +2476,7 @@ public:
 	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetCountryCodeByUserId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetCountryCodeByUserId");
-static_assert(sizeof(KuroStaticPS5Library_GetCountryCodeByUserId) == 0x000020, "Wrong size on KuroStaticPS5Library_GetCountryCodeByUserId");
-static_assert(offsetof(KuroStaticPS5Library_GetCountryCodeByUserId, userId) == 0x000000, "Member 'KuroStaticPS5Library_GetCountryCodeByUserId::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetCountryCodeByUserId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetCountryCodeByUserId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetCountryCodeByUserId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetIdToken
 // 0x0048 (0x0048 - 0x0000)
@@ -3190,13 +2490,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_GetIdToken) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetIdToken");
-static_assert(sizeof(KuroStaticPS5Library_GetIdToken) == 0x000048, "Wrong size on KuroStaticPS5Library_GetIdToken");
-static_assert(offsetof(KuroStaticPS5Library_GetIdToken, ClientId) == 0x000000, "Member 'KuroStaticPS5Library_GetIdToken::ClientId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetIdToken, ClientSecret) == 0x000010, "Member 'KuroStaticPS5Library_GetIdToken::ClientSecret' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetIdToken, Scope) == 0x000020, "Member 'KuroStaticPS5Library_GetIdToken::Scope' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetIdToken, IdToken) == 0x000030, "Member 'KuroStaticPS5Library_GetIdToken::IdToken' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetIdToken, ReturnValue) == 0x000040, "Member 'KuroStaticPS5Library_GetIdToken::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetIdToken;
 
 // Function KuroUtility.KuroStaticPS5Library.GetMessageDialogStateAsync
 // 0x0028 (0x0028 - 0x0000)
@@ -3205,9 +2499,7 @@ struct KuroStaticPS5Library_GetMessageDialogStateAsync final
 public:
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetMessageDialogStateAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_GetMessageDialogStateAsync");
-static_assert(sizeof(KuroStaticPS5Library_GetMessageDialogStateAsync) == 0x000028, "Wrong size on KuroStaticPS5Library_GetMessageDialogStateAsync");
-static_assert(offsetof(KuroStaticPS5Library_GetMessageDialogStateAsync, callback) == 0x000000, "Member 'KuroStaticPS5Library_GetMessageDialogStateAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetMessageDialogStateAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.GetOnlineIdByUserId
 // 0x0020 (0x0020 - 0x0000)
@@ -3217,10 +2509,7 @@ public:
 	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetOnlineIdByUserId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetOnlineIdByUserId");
-static_assert(sizeof(KuroStaticPS5Library_GetOnlineIdByUserId) == 0x000020, "Wrong size on KuroStaticPS5Library_GetOnlineIdByUserId");
-static_assert(offsetof(KuroStaticPS5Library_GetOnlineIdByUserId, userId) == 0x000000, "Member 'KuroStaticPS5Library_GetOnlineIdByUserId::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetOnlineIdByUserId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetOnlineIdByUserId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetOnlineIdByUserId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetPlayerIdByPlayerSessionId
 // 0x0020 (0x0020 - 0x0000)
@@ -3230,10 +2519,7 @@ public:
 	class FString                                 playerSessionId;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetPlayerIdByPlayerSessionId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetPlayerIdByPlayerSessionId");
-static_assert(sizeof(KuroStaticPS5Library_GetPlayerIdByPlayerSessionId) == 0x000020, "Wrong size on KuroStaticPS5Library_GetPlayerIdByPlayerSessionId");
-static_assert(offsetof(KuroStaticPS5Library_GetPlayerIdByPlayerSessionId, playerSessionId) == 0x000000, "Member 'KuroStaticPS5Library_GetPlayerIdByPlayerSessionId::playerSessionId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetPlayerIdByPlayerSessionId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetPlayerIdByPlayerSessionId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetPlayerIdByPlayerSessionId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetStoreProducts
 // 0x0010 (0x0010 - 0x0000)
@@ -3242,9 +2528,7 @@ struct KuroStaticPS5Library_GetStoreProducts final
 public:
 	TArray<struct FProductData>                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetStoreProducts) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetStoreProducts");
-static_assert(sizeof(KuroStaticPS5Library_GetStoreProducts) == 0x000010, "Wrong size on KuroStaticPS5Library_GetStoreProducts");
-static_assert(offsetof(KuroStaticPS5Library_GetStoreProducts, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_GetStoreProducts::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetStoreProducts;
 
 // Function KuroUtility.KuroStaticPS5Library.GetTrophyList
 // 0x0040 (0x0040 - 0x0000)
@@ -3256,12 +2540,7 @@ public:
 	int32                                         length;                                            // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTrophyInfoData                        ReturnValue;                                       // 0x0018(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetTrophyList) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetTrophyList");
-static_assert(sizeof(KuroStaticPS5Library_GetTrophyList) == 0x000040, "Wrong size on KuroStaticPS5Library_GetTrophyList");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyList, userId) == 0x000000, "Member 'KuroStaticPS5Library_GetTrophyList::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyList, inputOffset) == 0x000010, "Member 'KuroStaticPS5Library_GetTrophyList::inputOffset' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyList, length) == 0x000014, "Member 'KuroStaticPS5Library_GetTrophyList::length' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyList, ReturnValue) == 0x000018, "Member 'KuroStaticPS5Library_GetTrophyList::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetTrophyList;
 
 // Function KuroUtility.KuroStaticPS5Library.GetTrophyListWithContextIdAndHandleId
 // 0x0038 (0x0038 - 0x0000)
@@ -3274,13 +2553,7 @@ public:
 	int32                                         length;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTrophyInfoData                        ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId");
-static_assert(sizeof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId) == 0x000038, "Wrong size on KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId, context) == 0x000000, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId, handle) == 0x000004, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId, inputOffset) == 0x000008, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId::inputOffset' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId, length) == 0x00000C, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId::length' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetTrophyListWithContextIdAndHandleIdAsync
 // 0x0038 (0x0038 - 0x0000)
@@ -3293,13 +2566,7 @@ public:
 	int32                                         handle;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(const struct FTrophyInfoData& data)> callback;                                    // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync");
-static_assert(sizeof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync) == 0x000038, "Wrong size on KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync, inputOffset) == 0x000000, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync::inputOffset' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync, length) == 0x000004, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync::length' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync, context) == 0x000008, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync, handle) == 0x00000C, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync, callback) == 0x000010, "Member 'KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetTrophyListWithContextIdAndHandleIdAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.GetUserId
 // 0x0010 (0x0010 - 0x0000)
@@ -3308,9 +2575,7 @@ struct KuroStaticPS5Library_GetUserId final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetUserId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetUserId");
-static_assert(sizeof(KuroStaticPS5Library_GetUserId) == 0x000010, "Wrong size on KuroStaticPS5Library_GetUserId");
-static_assert(offsetof(KuroStaticPS5Library_GetUserId, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_GetUserId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetUserId;
 
 // Function KuroUtility.KuroStaticPS5Library.GetUserIdByAccountId
 // 0x0020 (0x0020 - 0x0000)
@@ -3320,10 +2585,7 @@ public:
 	class FString                                 accountId;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_GetUserIdByAccountId) == 0x000008, "Wrong alignment on KuroStaticPS5Library_GetUserIdByAccountId");
-static_assert(sizeof(KuroStaticPS5Library_GetUserIdByAccountId) == 0x000020, "Wrong size on KuroStaticPS5Library_GetUserIdByAccountId");
-static_assert(offsetof(KuroStaticPS5Library_GetUserIdByAccountId, accountId) == 0x000000, "Member 'KuroStaticPS5Library_GetUserIdByAccountId::accountId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_GetUserIdByAccountId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_GetUserIdByAccountId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetUserIdByAccountId;
 
 // Function KuroUtility.KuroStaticPS5Library.HidePsStoreIcon
 // 0x0004 (0x0004 - 0x0000)
@@ -3332,9 +2594,7 @@ struct KuroStaticPS5Library_HidePsStoreIcon final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_HidePsStoreIcon) == 0x000004, "Wrong alignment on KuroStaticPS5Library_HidePsStoreIcon");
-static_assert(sizeof(KuroStaticPS5Library_HidePsStoreIcon) == 0x000004, "Wrong size on KuroStaticPS5Library_HidePsStoreIcon");
-static_assert(offsetof(KuroStaticPS5Library_HidePsStoreIcon, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_HidePsStoreIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_HidePsStoreIcon;
 
 // Function KuroUtility.KuroStaticPS5Library.InitNpUniversalDataSystem
 // 0x0008 (0x0008 - 0x0000)
@@ -3344,10 +2604,7 @@ public:
 	int32                                         poolSize;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_InitNpUniversalDataSystem) == 0x000004, "Wrong alignment on KuroStaticPS5Library_InitNpUniversalDataSystem");
-static_assert(sizeof(KuroStaticPS5Library_InitNpUniversalDataSystem) == 0x000008, "Wrong size on KuroStaticPS5Library_InitNpUniversalDataSystem");
-static_assert(offsetof(KuroStaticPS5Library_InitNpUniversalDataSystem, poolSize) == 0x000000, "Member 'KuroStaticPS5Library_InitNpUniversalDataSystem::poolSize' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_InitNpUniversalDataSystem, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_InitNpUniversalDataSystem::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_InitNpUniversalDataSystem;
 
 // Function KuroUtility.KuroStaticPS5Library.InitWebApi
 // 0x0018 (0x0018 - 0x0000)
@@ -3358,10 +2615,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_InitWebApi) == 0x000008, "Wrong alignment on KuroStaticPS5Library_InitWebApi");
-static_assert(sizeof(KuroStaticPS5Library_InitWebApi) == 0x000018, "Wrong size on KuroStaticPS5Library_InitWebApi");
-static_assert(offsetof(KuroStaticPS5Library_InitWebApi, userId) == 0x000000, "Member 'KuroStaticPS5Library_InitWebApi::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_InitWebApi, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_InitWebApi::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_InitWebApi;
 
 // Function KuroUtility.KuroStaticPS5Library.JoinPlayerSession
 // 0x0010 (0x0010 - 0x0000)
@@ -3370,9 +2624,7 @@ struct KuroStaticPS5Library_JoinPlayerSession final
 public:
 	class FString                                 playerSessionId;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_JoinPlayerSession) == 0x000008, "Wrong alignment on KuroStaticPS5Library_JoinPlayerSession");
-static_assert(sizeof(KuroStaticPS5Library_JoinPlayerSession) == 0x000010, "Wrong size on KuroStaticPS5Library_JoinPlayerSession");
-static_assert(offsetof(KuroStaticPS5Library_JoinPlayerSession, playerSessionId) == 0x000000, "Member 'KuroStaticPS5Library_JoinPlayerSession::playerSessionId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_JoinPlayerSession;
 
 // Function KuroUtility.KuroStaticPS5Library.NotifyPremium
 // 0x0010 (0x0010 - 0x0000)
@@ -3381,9 +2633,7 @@ struct KuroStaticPS5Library_NotifyPremium final
 public:
 	class FString                                 userId;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_NotifyPremium) == 0x000008, "Wrong alignment on KuroStaticPS5Library_NotifyPremium");
-static_assert(sizeof(KuroStaticPS5Library_NotifyPremium) == 0x000010, "Wrong size on KuroStaticPS5Library_NotifyPremium");
-static_assert(offsetof(KuroStaticPS5Library_NotifyPremium, userId) == 0x000000, "Member 'KuroStaticPS5Library_NotifyPremium::userId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_NotifyPremium;
 
 // Function KuroUtility.KuroStaticPS5Library.NotifyPremiumFeature
 // 0x0018 (0x0018 - 0x0000)
@@ -3394,10 +2644,7 @@ public:
 	bool                                          isPlayStationOnly;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_NotifyPremiumFeature) == 0x000008, "Wrong alignment on KuroStaticPS5Library_NotifyPremiumFeature");
-static_assert(sizeof(KuroStaticPS5Library_NotifyPremiumFeature) == 0x000018, "Wrong size on KuroStaticPS5Library_NotifyPremiumFeature");
-static_assert(offsetof(KuroStaticPS5Library_NotifyPremiumFeature, userId) == 0x000000, "Member 'KuroStaticPS5Library_NotifyPremiumFeature::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_NotifyPremiumFeature, isPlayStationOnly) == 0x000010, "Member 'KuroStaticPS5Library_NotifyPremiumFeature::isPlayStationOnly' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_NotifyPremiumFeature;
 
 // Function KuroUtility.KuroStaticPS5Library.OpenCheckoutDialog
 // 0x0018 (0x0018 - 0x0000)
@@ -3408,10 +2655,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_OpenCheckoutDialog) == 0x000008, "Wrong alignment on KuroStaticPS5Library_OpenCheckoutDialog");
-static_assert(sizeof(KuroStaticPS5Library_OpenCheckoutDialog) == 0x000018, "Wrong size on KuroStaticPS5Library_OpenCheckoutDialog");
-static_assert(offsetof(KuroStaticPS5Library_OpenCheckoutDialog, ProductLabel) == 0x000000, "Member 'KuroStaticPS5Library_OpenCheckoutDialog::ProductLabel' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_OpenCheckoutDialog, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_OpenCheckoutDialog::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_OpenCheckoutDialog;
 
 // Function KuroUtility.KuroStaticPS5Library.OpenMessageDialog
 // 0x0040 (0x0040 - 0x0000)
@@ -3423,12 +2667,7 @@ public:
 	int32                                         msgType;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0018(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_OpenMessageDialog) == 0x000008, "Wrong alignment on KuroStaticPS5Library_OpenMessageDialog");
-static_assert(sizeof(KuroStaticPS5Library_OpenMessageDialog) == 0x000040, "Wrong size on KuroStaticPS5Library_OpenMessageDialog");
-static_assert(offsetof(KuroStaticPS5Library_OpenMessageDialog, userId) == 0x000000, "Member 'KuroStaticPS5Library_OpenMessageDialog::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_OpenMessageDialog, openMode) == 0x000010, "Member 'KuroStaticPS5Library_OpenMessageDialog::openMode' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_OpenMessageDialog, msgType) == 0x000014, "Member 'KuroStaticPS5Library_OpenMessageDialog::msgType' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_OpenMessageDialog, callback) == 0x000018, "Member 'KuroStaticPS5Library_OpenMessageDialog::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_OpenMessageDialog;
 
 // Function KuroUtility.KuroStaticPS5Library.OpenWebBrowser
 // 0x0010 (0x0010 - 0x0000)
@@ -3437,9 +2676,7 @@ struct KuroStaticPS5Library_OpenWebBrowser final
 public:
 	class FString                                 Url;                                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_OpenWebBrowser) == 0x000008, "Wrong alignment on KuroStaticPS5Library_OpenWebBrowser");
-static_assert(sizeof(KuroStaticPS5Library_OpenWebBrowser) == 0x000010, "Wrong size on KuroStaticPS5Library_OpenWebBrowser");
-static_assert(offsetof(KuroStaticPS5Library_OpenWebBrowser, Url) == 0x000000, "Member 'KuroStaticPS5Library_OpenWebBrowser::Url' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_OpenWebBrowser;
 
 // Function KuroUtility.KuroStaticPS5Library.OpenWebView
 // 0x0018 (0x0018 - 0x0000)
@@ -3450,10 +2687,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_OpenWebView) == 0x000008, "Wrong alignment on KuroStaticPS5Library_OpenWebView");
-static_assert(sizeof(KuroStaticPS5Library_OpenWebView) == 0x000018, "Wrong size on KuroStaticPS5Library_OpenWebView");
-static_assert(offsetof(KuroStaticPS5Library_OpenWebView, Url) == 0x000000, "Member 'KuroStaticPS5Library_OpenWebView::Url' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_OpenWebView, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_OpenWebView::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_OpenWebView;
 
 // Function KuroUtility.KuroStaticPS5Library.PollCheckoutDialogResult
 // 0x0004 (0x0004 - 0x0000)
@@ -3462,9 +2696,7 @@ struct KuroStaticPS5Library_PollCheckoutDialogResult final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_PollCheckoutDialogResult) == 0x000004, "Wrong alignment on KuroStaticPS5Library_PollCheckoutDialogResult");
-static_assert(sizeof(KuroStaticPS5Library_PollCheckoutDialogResult) == 0x000004, "Wrong size on KuroStaticPS5Library_PollCheckoutDialogResult");
-static_assert(offsetof(KuroStaticPS5Library_PollCheckoutDialogResult, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_PollCheckoutDialogResult::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_PollCheckoutDialogResult;
 
 // Function KuroUtility.KuroStaticPS5Library.PollWebBrowser
 // 0x0001 (0x0001 - 0x0000)
@@ -3473,9 +2705,7 @@ struct KuroStaticPS5Library_PollWebBrowser final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_PollWebBrowser) == 0x000001, "Wrong alignment on KuroStaticPS5Library_PollWebBrowser");
-static_assert(sizeof(KuroStaticPS5Library_PollWebBrowser) == 0x000001, "Wrong size on KuroStaticPS5Library_PollWebBrowser");
-static_assert(offsetof(KuroStaticPS5Library_PollWebBrowser, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_PollWebBrowser::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_PollWebBrowser;
 
 // Function KuroUtility.KuroStaticPS5Library.PostUdsEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -3488,12 +2718,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_PostUdsEvent) == 0x000008, "Wrong alignment on KuroStaticPS5Library_PostUdsEvent");
-static_assert(sizeof(KuroStaticPS5Library_PostUdsEvent) == 0x000018, "Wrong size on KuroStaticPS5Library_PostUdsEvent");
-static_assert(offsetof(KuroStaticPS5Library_PostUdsEvent, context) == 0x000000, "Member 'KuroStaticPS5Library_PostUdsEvent::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_PostUdsEvent, handle) == 0x000004, "Member 'KuroStaticPS5Library_PostUdsEvent::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_PostUdsEvent, eventPtr) == 0x000008, "Member 'KuroStaticPS5Library_PostUdsEvent::eventPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_PostUdsEvent, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_PostUdsEvent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_PostUdsEvent;
 
 // Function KuroUtility.KuroStaticPS5Library.RegisterTrophyContextAsync
 // 0x0040 (0x0040 - 0x0000)
@@ -3505,12 +2730,7 @@ public:
 	class FString                                 optionsLong;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0018(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_RegisterTrophyContextAsync) == 0x000008, "Wrong alignment on KuroStaticPS5Library_RegisterTrophyContextAsync");
-static_assert(sizeof(KuroStaticPS5Library_RegisterTrophyContextAsync) == 0x000040, "Wrong size on KuroStaticPS5Library_RegisterTrophyContextAsync");
-static_assert(offsetof(KuroStaticPS5Library_RegisterTrophyContextAsync, context) == 0x000000, "Member 'KuroStaticPS5Library_RegisterTrophyContextAsync::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_RegisterTrophyContextAsync, handle) == 0x000004, "Member 'KuroStaticPS5Library_RegisterTrophyContextAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_RegisterTrophyContextAsync, optionsLong) == 0x000008, "Member 'KuroStaticPS5Library_RegisterTrophyContextAsync::optionsLong' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_RegisterTrophyContextAsync, callback) == 0x000018, "Member 'KuroStaticPS5Library_RegisterTrophyContextAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_RegisterTrophyContextAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.RegisterUdsContext
 // 0x000C (0x000C - 0x0000)
@@ -3521,11 +2741,7 @@ public:
 	int32                                         handle;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_RegisterUdsContext) == 0x000004, "Wrong alignment on KuroStaticPS5Library_RegisterUdsContext");
-static_assert(sizeof(KuroStaticPS5Library_RegisterUdsContext) == 0x00000C, "Wrong size on KuroStaticPS5Library_RegisterUdsContext");
-static_assert(offsetof(KuroStaticPS5Library_RegisterUdsContext, context) == 0x000000, "Member 'KuroStaticPS5Library_RegisterUdsContext::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_RegisterUdsContext, handle) == 0x000004, "Member 'KuroStaticPS5Library_RegisterUdsContext::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_RegisterUdsContext, ReturnValue) == 0x000008, "Member 'KuroStaticPS5Library_RegisterUdsContext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_RegisterUdsContext;
 
 // Function KuroUtility.KuroStaticPS5Library.RemoveCacheElement
 // 0x0010 (0x0010 - 0x0000)
@@ -3534,9 +2750,7 @@ struct KuroStaticPS5Library_RemoveCacheElement final
 public:
 	class FString                                 key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_RemoveCacheElement) == 0x000008, "Wrong alignment on KuroStaticPS5Library_RemoveCacheElement");
-static_assert(sizeof(KuroStaticPS5Library_RemoveCacheElement) == 0x000010, "Wrong size on KuroStaticPS5Library_RemoveCacheElement");
-static_assert(offsetof(KuroStaticPS5Library_RemoveCacheElement, key) == 0x000000, "Member 'KuroStaticPS5Library_RemoveCacheElement::key' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_RemoveCacheElement;
 
 // Function KuroUtility.KuroStaticPS5Library.SceNpGetNpReachabilityState
 // 0x0018 (0x0018 - 0x0000)
@@ -3547,11 +2761,7 @@ public:
 	int32                                         outState;                                          // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_SceNpGetNpReachabilityState) == 0x000008, "Wrong alignment on KuroStaticPS5Library_SceNpGetNpReachabilityState");
-static_assert(sizeof(KuroStaticPS5Library_SceNpGetNpReachabilityState) == 0x000018, "Wrong size on KuroStaticPS5Library_SceNpGetNpReachabilityState");
-static_assert(offsetof(KuroStaticPS5Library_SceNpGetNpReachabilityState, userId) == 0x000000, "Member 'KuroStaticPS5Library_SceNpGetNpReachabilityState::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_SceNpGetNpReachabilityState, outState) == 0x000010, "Member 'KuroStaticPS5Library_SceNpGetNpReachabilityState::outState' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_SceNpGetNpReachabilityState, ReturnValue) == 0x000014, "Member 'KuroStaticPS5Library_SceNpGetNpReachabilityState::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_SceNpGetNpReachabilityState;
 
 // Function KuroUtility.KuroStaticPS5Library.SetPlayerSessionJoinableUserType
 // 0x0004 (0x0004 - 0x0000)
@@ -3560,9 +2770,7 @@ struct KuroStaticPS5Library_SetPlayerSessionJoinableUserType final
 public:
 	int32                                         joinableUserType;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_SetPlayerSessionJoinableUserType) == 0x000004, "Wrong alignment on KuroStaticPS5Library_SetPlayerSessionJoinableUserType");
-static_assert(sizeof(KuroStaticPS5Library_SetPlayerSessionJoinableUserType) == 0x000004, "Wrong size on KuroStaticPS5Library_SetPlayerSessionJoinableUserType");
-static_assert(offsetof(KuroStaticPS5Library_SetPlayerSessionJoinableUserType, joinableUserType) == 0x000000, "Member 'KuroStaticPS5Library_SetPlayerSessionJoinableUserType::joinableUserType' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_SetPlayerSessionJoinableUserType;
 
 // Function KuroUtility.KuroStaticPS5Library.ShowPsStoreIcon
 // 0x0008 (0x0008 - 0x0000)
@@ -3572,10 +2780,7 @@ public:
 	int32                                         position;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_ShowPsStoreIcon) == 0x000004, "Wrong alignment on KuroStaticPS5Library_ShowPsStoreIcon");
-static_assert(sizeof(KuroStaticPS5Library_ShowPsStoreIcon) == 0x000008, "Wrong size on KuroStaticPS5Library_ShowPsStoreIcon");
-static_assert(offsetof(KuroStaticPS5Library_ShowPsStoreIcon, position) == 0x000000, "Member 'KuroStaticPS5Library_ShowPsStoreIcon::position' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_ShowPsStoreIcon, ReturnValue) == 0x000004, "Member 'KuroStaticPS5Library_ShowPsStoreIcon::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_ShowPsStoreIcon;
 
 // Function KuroUtility.KuroStaticPS5Library.TerminateWebBrowser
 // 0x0004 (0x0004 - 0x0000)
@@ -3584,9 +2789,7 @@ struct KuroStaticPS5Library_TerminateWebBrowser final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_TerminateWebBrowser) == 0x000004, "Wrong alignment on KuroStaticPS5Library_TerminateWebBrowser");
-static_assert(sizeof(KuroStaticPS5Library_TerminateWebBrowser) == 0x000004, "Wrong size on KuroStaticPS5Library_TerminateWebBrowser");
-static_assert(offsetof(KuroStaticPS5Library_TerminateWebBrowser, ReturnValue) == 0x000000, "Member 'KuroStaticPS5Library_TerminateWebBrowser::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_TerminateWebBrowser;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyArraySetString
 // 0x0030 (0x0030 - 0x0000)
@@ -3599,12 +2802,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyArraySetString) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyArraySetString");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyArraySetString) == 0x000030, "Wrong size on KuroStaticPS5Library_UdsEventPropertyArraySetString");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyArraySetString, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyArraySetString::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyArraySetString, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyArraySetString::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyArraySetString, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyArraySetString::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyArraySetString, ReturnValue) == 0x000028, "Member 'KuroStaticPS5Library_UdsEventPropertyArraySetString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyArraySetString;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetBool
 // 0x0020 (0x0020 - 0x0000)
@@ -3617,12 +2815,7 @@ public:
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetBool");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool) == 0x000020, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetBool");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetBool::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetBool::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetBool::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetBool, ReturnValue) == 0x00001C, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetBool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetBool;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetFloat32
 // 0x0020 (0x0020 - 0x0000)
@@ -3634,12 +2827,7 @@ public:
 	float                                         value;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32) == 0x000020, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32, ReturnValue) == 0x00001C, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetFloat32;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetFloat64
 // 0x0028 (0x0028 - 0x0000)
@@ -3652,12 +2840,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64) == 0x000028, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64, ReturnValue) == 0x000020, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetFloat64;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetInt32
 // 0x0020 (0x0020 - 0x0000)
@@ -3669,12 +2852,7 @@ public:
 	int32                                         value;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetInt32");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32) == 0x000020, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetInt32");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt32::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt32::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt32::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt32, ReturnValue) == 0x00001C, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetInt32;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetInt64
 // 0x0028 (0x0028 - 0x0000)
@@ -3687,12 +2865,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetInt64");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64) == 0x000028, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetInt64");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt64::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt64::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt64::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetInt64, ReturnValue) == 0x000020, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetInt64::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetInt64;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetString
 // 0x0030 (0x0030 - 0x0000)
@@ -3705,12 +2878,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetString) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetString");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetString) == 0x000030, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetString");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetString, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetString::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetString, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetString::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetString, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetString::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetString, ReturnValue) == 0x000028, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetString;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetUInt32
 // 0x0020 (0x0020 - 0x0000)
@@ -3722,12 +2890,7 @@ public:
 	int32                                         value;                                             // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32) == 0x000020, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32, ReturnValue) == 0x00001C, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetUInt32;
 
 // Function KuroUtility.KuroStaticPS5Library.UdsEventPropertyObjectSetUInt64
 // 0x0028 (0x0028 - 0x0000)
@@ -3740,12 +2903,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64");
-static_assert(sizeof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64) == 0x000028, "Wrong size on KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64, proPtr) == 0x000000, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64::proPtr' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64, key) == 0x000008, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64::key' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64, value) == 0x000018, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64::value' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64, ReturnValue) == 0x000020, "Member 'KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UdsEventPropertyObjectSetUInt64;
 
 // Function KuroUtility.KuroStaticPS5Library.UnlockTrophy
 // 0x0018 (0x0018 - 0x0000)
@@ -3756,11 +2914,7 @@ public:
 	int32                                         trophyId;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UnlockTrophy) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UnlockTrophy");
-static_assert(sizeof(KuroStaticPS5Library_UnlockTrophy) == 0x000018, "Wrong size on KuroStaticPS5Library_UnlockTrophy");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophy, userId) == 0x000000, "Member 'KuroStaticPS5Library_UnlockTrophy::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophy, trophyId) == 0x000010, "Member 'KuroStaticPS5Library_UnlockTrophy::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophy, ReturnValue) == 0x000014, "Member 'KuroStaticPS5Library_UnlockTrophy::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UnlockTrophy;
 
 // Function KuroUtility.KuroStaticPS5Library.UnlockTrophyWithContextIdAndHandleId
 // 0x0010 (0x0010 - 0x0000)
@@ -3772,12 +2926,7 @@ public:
 	int32                                         trophyId;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId) == 0x000004, "Wrong alignment on KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId");
-static_assert(sizeof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId) == 0x000010, "Wrong size on KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId, contextId) == 0x000000, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId::contextId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId, handle) == 0x000004, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId, trophyId) == 0x000008, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId, ReturnValue) == 0x00000C, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleId;
 
 // Function KuroUtility.KuroStaticPS5Library.UnlockTrophyWithContextIdAndHandleIdAsync
 // 0x0038 (0x0038 - 0x0000)
@@ -3790,12 +2939,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync");
-static_assert(sizeof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync) == 0x000038, "Wrong size on KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync, contextId) == 0x000000, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync::contextId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync, handle) == 0x000004, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync, trophyId) == 0x000008, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync, callback) == 0x000010, "Member 'KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UnlockTrophyWithContextIdAndHandleIdAsync;
 
 // Function KuroUtility.KuroStaticPS5Library.UpdateTrophyProgress
 // 0x0020 (0x0020 - 0x0000)
@@ -3808,12 +2952,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroStaticPS5Library_UpdateTrophyProgress) == 0x000008, "Wrong alignment on KuroStaticPS5Library_UpdateTrophyProgress");
-static_assert(sizeof(KuroStaticPS5Library_UpdateTrophyProgress) == 0x000020, "Wrong size on KuroStaticPS5Library_UpdateTrophyProgress");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgress, userId) == 0x000000, "Member 'KuroStaticPS5Library_UpdateTrophyProgress::userId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgress, trophyId) == 0x000010, "Member 'KuroStaticPS5Library_UpdateTrophyProgress::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgress, progress) == 0x000014, "Member 'KuroStaticPS5Library_UpdateTrophyProgress::progress' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgress, ReturnValue) == 0x000018, "Member 'KuroStaticPS5Library_UpdateTrophyProgress::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UpdateTrophyProgress;
 
 // Function KuroUtility.KuroStaticPS5Library.UpdateTrophyProgressWithContextIdAndHandleId
 // 0x0014 (0x0014 - 0x0000)
@@ -3826,13 +2965,7 @@ public:
 	int32                                         progress;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId) == 0x000004, "Wrong alignment on KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId");
-static_assert(sizeof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId) == 0x000014, "Wrong size on KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId, context) == 0x000000, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId, handle) == 0x000004, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId, trophyId) == 0x000008, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId, progress) == 0x00000C, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId::progress' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId, ReturnValue) == 0x000010, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleId;
 
 // Function KuroUtility.KuroStaticPS5Library.UpdateTrophyProgressWithContextIdAndHandleIdAsync
 // 0x0038 (0x0038 - 0x0000)
@@ -3845,13 +2978,7 @@ public:
 	int32                                         progress;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(int32 ret)>                    callback;                                          // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync) == 0x000004, "Wrong alignment on KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync");
-static_assert(sizeof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync) == 0x000038, "Wrong size on KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync, context) == 0x000000, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync::context' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync, handle) == 0x000004, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync::handle' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync, trophyId) == 0x000008, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync::trophyId' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync, progress) == 0x00000C, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync::progress' has a wrong offset!");
-static_assert(offsetof(KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync, callback) == 0x000010, "Member 'KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync::callback' has a wrong offset!");
+DUMPER7_ASSERTS_KuroStaticPS5Library_UpdateTrophyProgressWithContextIdAndHandleIdAsync;
 
 // Function KuroUtility.KuroSubLevelVisibleSubsystem.GetSubSystem
 // 0x0010 (0x0010 - 0x0000)
@@ -3861,10 +2988,7 @@ public:
 	const class UGameInstance*                    GameInstance;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKuroSubLevelVisibleSubsystem*          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSubLevelVisibleSubsystem_GetSubSystem) == 0x000008, "Wrong alignment on KuroSubLevelVisibleSubsystem_GetSubSystem");
-static_assert(sizeof(KuroSubLevelVisibleSubsystem_GetSubSystem) == 0x000010, "Wrong size on KuroSubLevelVisibleSubsystem_GetSubSystem");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_GetSubSystem, GameInstance) == 0x000000, "Member 'KuroSubLevelVisibleSubsystem_GetSubSystem::GameInstance' has a wrong offset!");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_GetSubSystem, ReturnValue) == 0x000008, "Member 'KuroSubLevelVisibleSubsystem_GetSubSystem::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSubLevelVisibleSubsystem_GetSubSystem;
 
 // Function KuroUtility.KuroSubLevelVisibleSubsystem.AddLevel
 // 0x0010 (0x0010 - 0x0000)
@@ -3875,10 +2999,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevel*                                 Level;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSubLevelVisibleSubsystem_AddLevel) == 0x000008, "Wrong alignment on KuroSubLevelVisibleSubsystem_AddLevel");
-static_assert(sizeof(KuroSubLevelVisibleSubsystem_AddLevel) == 0x000010, "Wrong size on KuroSubLevelVisibleSubsystem_AddLevel");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_AddLevel, LinkId) == 0x000000, "Member 'KuroSubLevelVisibleSubsystem_AddLevel::LinkId' has a wrong offset!");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_AddLevel, Level) == 0x000008, "Member 'KuroSubLevelVisibleSubsystem_AddLevel::Level' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSubLevelVisibleSubsystem_AddLevel;
 
 // Function KuroUtility.KuroSubLevelVisibleSubsystem.RemoveLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -3887,9 +3008,7 @@ struct KuroSubLevelVisibleSubsystem_RemoveLevel final
 public:
 	int32                                         LinkId;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSubLevelVisibleSubsystem_RemoveLevel) == 0x000004, "Wrong alignment on KuroSubLevelVisibleSubsystem_RemoveLevel");
-static_assert(sizeof(KuroSubLevelVisibleSubsystem_RemoveLevel) == 0x000004, "Wrong size on KuroSubLevelVisibleSubsystem_RemoveLevel");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_RemoveLevel, LinkId) == 0x000000, "Member 'KuroSubLevelVisibleSubsystem_RemoveLevel::LinkId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSubLevelVisibleSubsystem_RemoveLevel;
 
 // Function KuroUtility.KuroSubLevelVisibleSubsystem.SetLevelActorsVisible
 // 0x0038 (0x0038 - 0x0000)
@@ -3903,12 +3022,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible) == 0x000004, "Wrong alignment on KuroSubLevelVisibleSubsystem_SetLevelActorsVisible");
-static_assert(sizeof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible) == 0x000038, "Wrong size on KuroSubLevelVisibleSubsystem_SetLevelActorsVisible");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible, LinkId) == 0x000000, "Member 'KuroSubLevelVisibleSubsystem_SetLevelActorsVisible::LinkId' has a wrong offset!");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible, Visible) == 0x000004, "Member 'KuroSubLevelVisibleSubsystem_SetLevelActorsVisible::Visible' has a wrong offset!");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible, FinishCallback) == 0x000008, "Member 'KuroSubLevelVisibleSubsystem_SetLevelActorsVisible::FinishCallback' has a wrong offset!");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_SetLevelActorsVisible, ReturnValue) == 0x000030, "Member 'KuroSubLevelVisibleSubsystem_SetLevelActorsVisible::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSubLevelVisibleSubsystem_SetLevelActorsVisible;
 
 // Function KuroUtility.KuroSubLevelVisibleSubsystem.SetOneFrameExecuteCount
 // 0x0004 (0x0004 - 0x0000)
@@ -3917,9 +3031,7 @@ struct KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount final
 public:
 	int32                                         Count;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount) == 0x000004, "Wrong alignment on KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount");
-static_assert(sizeof(KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount) == 0x000004, "Wrong size on KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount");
-static_assert(offsetof(KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount, Count) == 0x000000, "Member 'KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount::Count' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSubLevelVisibleSubsystem_SetOneFrameExecuteCount;
 
 // Function KuroUtility.KuroTencentCOSLibrary.EnableAuthorization
 // 0x0001 (0x0001 - 0x0000)
@@ -3928,9 +3040,7 @@ struct KuroTencentCOSLibrary_EnableAuthorization final
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_EnableAuthorization) == 0x000001, "Wrong alignment on KuroTencentCOSLibrary_EnableAuthorization");
-static_assert(sizeof(KuroTencentCOSLibrary_EnableAuthorization) == 0x000001, "Wrong size on KuroTencentCOSLibrary_EnableAuthorization");
-static_assert(offsetof(KuroTencentCOSLibrary_EnableAuthorization, Enable) == 0x000000, "Member 'KuroTencentCOSLibrary_EnableAuthorization::Enable' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_EnableAuthorization;
 
 // Function KuroUtility.KuroTencentCOSLibrary.GetAllFileNumNeedToSend
 // 0x0004 (0x0004 - 0x0000)
@@ -3939,9 +3049,7 @@ struct KuroTencentCOSLibrary_GetAllFileNumNeedToSend final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_GetAllFileNumNeedToSend) == 0x000004, "Wrong alignment on KuroTencentCOSLibrary_GetAllFileNumNeedToSend");
-static_assert(sizeof(KuroTencentCOSLibrary_GetAllFileNumNeedToSend) == 0x000004, "Wrong size on KuroTencentCOSLibrary_GetAllFileNumNeedToSend");
-static_assert(offsetof(KuroTencentCOSLibrary_GetAllFileNumNeedToSend, ReturnValue) == 0x000000, "Member 'KuroTencentCOSLibrary_GetAllFileNumNeedToSend::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_GetAllFileNumNeedToSend;
 
 // Function KuroUtility.KuroTencentCOSLibrary.GetSendedFileNum
 // 0x0004 (0x0004 - 0x0000)
@@ -3950,9 +3058,7 @@ struct KuroTencentCOSLibrary_GetSendedFileNum final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_GetSendedFileNum) == 0x000004, "Wrong alignment on KuroTencentCOSLibrary_GetSendedFileNum");
-static_assert(sizeof(KuroTencentCOSLibrary_GetSendedFileNum) == 0x000004, "Wrong size on KuroTencentCOSLibrary_GetSendedFileNum");
-static_assert(offsetof(KuroTencentCOSLibrary_GetSendedFileNum, ReturnValue) == 0x000000, "Member 'KuroTencentCOSLibrary_GetSendedFileNum::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_GetSendedFileNum;
 
 // Function KuroUtility.KuroTencentCOSLibrary.IsSending
 // 0x0001 (0x0001 - 0x0000)
@@ -3961,9 +3067,7 @@ struct KuroTencentCOSLibrary_IsSending final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_IsSending) == 0x000001, "Wrong alignment on KuroTencentCOSLibrary_IsSending");
-static_assert(sizeof(KuroTencentCOSLibrary_IsSending) == 0x000001, "Wrong size on KuroTencentCOSLibrary_IsSending");
-static_assert(offsetof(KuroTencentCOSLibrary_IsSending, ReturnValue) == 0x000000, "Member 'KuroTencentCOSLibrary_IsSending::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_IsSending;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SendFileToTencentCOS
 // 0x0060 (0x0060 - 0x0000)
@@ -3977,14 +3081,7 @@ public:
 	class FString                                 BucketName;                                        // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Region;                                            // 0x0050(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SendFileToTencentCOS) == 0x000008, "Wrong alignment on KuroTencentCOSLibrary_SendFileToTencentCOS");
-static_assert(sizeof(KuroTencentCOSLibrary_SendFileToTencentCOS) == 0x000060, "Wrong size on KuroTencentCOSLibrary_SendFileToTencentCOS");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, Path) == 0x000000, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::Path' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, RemoteURI) == 0x000010, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::RemoteURI' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, SecretID) == 0x000020, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::SecretID' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, SecretKey) == 0x000030, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::SecretKey' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, BucketName) == 0x000040, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::BucketName' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SendFileToTencentCOS, Region) == 0x000050, "Member 'KuroTencentCOSLibrary_SendFileToTencentCOS::Region' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SendFileToTencentCOS;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SendLogToTencentCOS
 // 0x0028 (0x0028 - 0x0000)
@@ -3993,9 +3090,7 @@ struct KuroTencentCOSLibrary_SendLogToTencentCOS final
 public:
 	TDelegate<void(int32 State, float Rate)>      OnProgress;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SendLogToTencentCOS) == 0x000004, "Wrong alignment on KuroTencentCOSLibrary_SendLogToTencentCOS");
-static_assert(sizeof(KuroTencentCOSLibrary_SendLogToTencentCOS) == 0x000028, "Wrong size on KuroTencentCOSLibrary_SendLogToTencentCOS");
-static_assert(offsetof(KuroTencentCOSLibrary_SendLogToTencentCOS, OnProgress) == 0x000000, "Member 'KuroTencentCOSLibrary_SendLogToTencentCOS::OnProgress' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SendLogToTencentCOS;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetAdmissibleValue
 // 0x0004 (0x0004 - 0x0000)
@@ -4004,9 +3099,7 @@ struct KuroTencentCOSLibrary_SetAdmissibleValue final
 public:
 	int32                                         SingleLogSizeInMb;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetAdmissibleValue) == 0x000004, "Wrong alignment on KuroTencentCOSLibrary_SetAdmissibleValue");
-static_assert(sizeof(KuroTencentCOSLibrary_SetAdmissibleValue) == 0x000004, "Wrong size on KuroTencentCOSLibrary_SetAdmissibleValue");
-static_assert(offsetof(KuroTencentCOSLibrary_SetAdmissibleValue, SingleLogSizeInMb) == 0x000000, "Member 'KuroTencentCOSLibrary_SetAdmissibleValue::SingleLogSizeInMb' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetAdmissibleValue;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetFilesToSend
 // 0x0010 (0x0010 - 0x0000)
@@ -4015,9 +3108,7 @@ struct KuroTencentCOSLibrary_SetFilesToSend final
 public:
 	TArray<class FString>                         FilePaths;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetFilesToSend) == 0x000008, "Wrong alignment on KuroTencentCOSLibrary_SetFilesToSend");
-static_assert(sizeof(KuroTencentCOSLibrary_SetFilesToSend) == 0x000010, "Wrong size on KuroTencentCOSLibrary_SetFilesToSend");
-static_assert(offsetof(KuroTencentCOSLibrary_SetFilesToSend, FilePaths) == 0x000000, "Member 'KuroTencentCOSLibrary_SetFilesToSend::FilePaths' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetFilesToSend;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetHandleFunc
 // 0x0050 (0x0050 - 0x0000)
@@ -4027,10 +3118,7 @@ public:
 	TDelegate<void(const TArray<class FString>& FileNames)> PrepareFunc;                             // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TDelegate<void(const TArray<class FString>& SendedFiles)> PostSend;                              // 0x0028(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetHandleFunc) == 0x000004, "Wrong alignment on KuroTencentCOSLibrary_SetHandleFunc");
-static_assert(sizeof(KuroTencentCOSLibrary_SetHandleFunc) == 0x000050, "Wrong size on KuroTencentCOSLibrary_SetHandleFunc");
-static_assert(offsetof(KuroTencentCOSLibrary_SetHandleFunc, PrepareFunc) == 0x000000, "Member 'KuroTencentCOSLibrary_SetHandleFunc::PrepareFunc' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SetHandleFunc, PostSend) == 0x000028, "Member 'KuroTencentCOSLibrary_SetHandleFunc::PostSend' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetHandleFunc;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetIsAutoSend
 // 0x0001 (0x0001 - 0x0000)
@@ -4039,9 +3127,7 @@ struct KuroTencentCOSLibrary_SetIsAutoSend final
 public:
 	bool                                          bIsAutoSend;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetIsAutoSend) == 0x000001, "Wrong alignment on KuroTencentCOSLibrary_SetIsAutoSend");
-static_assert(sizeof(KuroTencentCOSLibrary_SetIsAutoSend) == 0x000001, "Wrong size on KuroTencentCOSLibrary_SetIsAutoSend");
-static_assert(offsetof(KuroTencentCOSLibrary_SetIsAutoSend, bIsAutoSend) == 0x000000, "Member 'KuroTencentCOSLibrary_SetIsAutoSend::bIsAutoSend' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetIsAutoSend;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetSendLogConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -4053,12 +3139,7 @@ public:
 	class FString                                 BucketName;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Region;                                            // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetSendLogConfig) == 0x000008, "Wrong alignment on KuroTencentCOSLibrary_SetSendLogConfig");
-static_assert(sizeof(KuroTencentCOSLibrary_SetSendLogConfig) == 0x000040, "Wrong size on KuroTencentCOSLibrary_SetSendLogConfig");
-static_assert(offsetof(KuroTencentCOSLibrary_SetSendLogConfig, SecretID) == 0x000000, "Member 'KuroTencentCOSLibrary_SetSendLogConfig::SecretID' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SetSendLogConfig, SecretKey) == 0x000010, "Member 'KuroTencentCOSLibrary_SetSendLogConfig::SecretKey' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SetSendLogConfig, BucketName) == 0x000020, "Member 'KuroTencentCOSLibrary_SetSendLogConfig::BucketName' has a wrong offset!");
-static_assert(offsetof(KuroTencentCOSLibrary_SetSendLogConfig, Region) == 0x000030, "Member 'KuroTencentCOSLibrary_SetSendLogConfig::Region' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetSendLogConfig;
 
 // Function KuroUtility.KuroTencentCOSLibrary.SetSendLogZipName
 // 0x0010 (0x0010 - 0x0000)
@@ -4067,9 +3148,7 @@ struct KuroTencentCOSLibrary_SetSendLogZipName final
 public:
 	class FString                                 ZipFileName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTencentCOSLibrary_SetSendLogZipName) == 0x000008, "Wrong alignment on KuroTencentCOSLibrary_SetSendLogZipName");
-static_assert(sizeof(KuroTencentCOSLibrary_SetSendLogZipName) == 0x000010, "Wrong size on KuroTencentCOSLibrary_SetSendLogZipName");
-static_assert(offsetof(KuroTencentCOSLibrary_SetSendLogZipName, ZipFileName) == 0x000000, "Member 'KuroTencentCOSLibrary_SetSendLogZipName::ZipFileName' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTencentCOSLibrary_SetSendLogZipName;
 
 // Function KuroUtility.KuroTickableManager.CreateTickableFunc
 // 0x0030 (0x0030 - 0x0000)
@@ -4079,10 +3158,7 @@ public:
 	class UObject*                                InOwner;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(float DeltaSeconds)>           TickableHandler;                                   // 0x0008(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickableManager_CreateTickableFunc) == 0x000008, "Wrong alignment on KuroTickableManager_CreateTickableFunc");
-static_assert(sizeof(KuroTickableManager_CreateTickableFunc) == 0x000030, "Wrong size on KuroTickableManager_CreateTickableFunc");
-static_assert(offsetof(KuroTickableManager_CreateTickableFunc, InOwner) == 0x000000, "Member 'KuroTickableManager_CreateTickableFunc::InOwner' has a wrong offset!");
-static_assert(offsetof(KuroTickableManager_CreateTickableFunc, TickableHandler) == 0x000008, "Member 'KuroTickableManager_CreateTickableFunc::TickableHandler' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickableManager_CreateTickableFunc;
 
 // Function KuroUtility.KuroTickableManager.RemoveTickableFunc
 // 0x0008 (0x0008 - 0x0000)
@@ -4091,9 +3167,7 @@ struct KuroTickableManager_RemoveTickableFunc final
 public:
 	class UObject*                                InOwner;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickableManager_RemoveTickableFunc) == 0x000008, "Wrong alignment on KuroTickableManager_RemoveTickableFunc");
-static_assert(sizeof(KuroTickableManager_RemoveTickableFunc) == 0x000008, "Wrong size on KuroTickableManager_RemoveTickableFunc");
-static_assert(offsetof(KuroTickableManager_RemoveTickableFunc, InOwner) == 0x000000, "Member 'KuroTickableManager_RemoveTickableFunc::InOwner' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickableManager_RemoveTickableFunc;
 
 // Function KuroUtility.KuroTriggerVolumeManager.GetKuroTriggerVolume
 // 0x0018 (0x0018 - 0x0000)
@@ -4104,10 +3178,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTriggerVolumeManager_GetKuroTriggerVolume) == 0x000008, "Wrong alignment on KuroTriggerVolumeManager_GetKuroTriggerVolume");
-static_assert(sizeof(KuroTriggerVolumeManager_GetKuroTriggerVolume) == 0x000018, "Wrong size on KuroTriggerVolumeManager_GetKuroTriggerVolume");
-static_assert(offsetof(KuroTriggerVolumeManager_GetKuroTriggerVolume, ActorKey) == 0x000000, "Member 'KuroTriggerVolumeManager_GetKuroTriggerVolume::ActorKey' has a wrong offset!");
-static_assert(offsetof(KuroTriggerVolumeManager_GetKuroTriggerVolume, ReturnValue) == 0x000010, "Member 'KuroTriggerVolumeManager_GetKuroTriggerVolume::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTriggerVolumeManager_GetKuroTriggerVolume;
 
 // Function KuroUtility.LoadMapNotify.BindBeginLoadMap
 // 0x0028 (0x0028 - 0x0000)
@@ -4116,9 +3187,7 @@ struct LoadMapNotify_BindBeginLoadMap final
 public:
 	TDelegate<void(const class FString& MapName)> BeginLoadMapHandler;                               // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindBeginLoadMap) == 0x000004, "Wrong alignment on LoadMapNotify_BindBeginLoadMap");
-static_assert(sizeof(LoadMapNotify_BindBeginLoadMap) == 0x000028, "Wrong size on LoadMapNotify_BindBeginLoadMap");
-static_assert(offsetof(LoadMapNotify_BindBeginLoadMap, BeginLoadMapHandler) == 0x000000, "Member 'LoadMapNotify_BindBeginLoadMap::BeginLoadMapHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindBeginLoadMap;
 
 // Function KuroUtility.LoadMapNotify.BindBeginTravelLoadMap
 // 0x0028 (0x0028 - 0x0000)
@@ -4127,9 +3196,7 @@ struct LoadMapNotify_BindBeginTravelLoadMap final
 public:
 	TDelegate<void(const class FString& MapName)> BeginTravelLoadMapHandler;                         // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindBeginTravelLoadMap) == 0x000004, "Wrong alignment on LoadMapNotify_BindBeginTravelLoadMap");
-static_assert(sizeof(LoadMapNotify_BindBeginTravelLoadMap) == 0x000028, "Wrong size on LoadMapNotify_BindBeginTravelLoadMap");
-static_assert(offsetof(LoadMapNotify_BindBeginTravelLoadMap, BeginTravelLoadMapHandler) == 0x000000, "Member 'LoadMapNotify_BindBeginTravelLoadMap::BeginTravelLoadMapHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindBeginTravelLoadMap;
 
 // Function KuroUtility.LoadMapNotify.BindEndLoadMap
 // 0x0028 (0x0028 - 0x0000)
@@ -4138,9 +3205,7 @@ struct LoadMapNotify_BindEndLoadMap final
 public:
 	TDelegate<void(const class FString& MapName)> EndLoadMapHandler;                                 // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindEndLoadMap) == 0x000004, "Wrong alignment on LoadMapNotify_BindEndLoadMap");
-static_assert(sizeof(LoadMapNotify_BindEndLoadMap) == 0x000028, "Wrong size on LoadMapNotify_BindEndLoadMap");
-static_assert(offsetof(LoadMapNotify_BindEndLoadMap, EndLoadMapHandler) == 0x000000, "Member 'LoadMapNotify_BindEndLoadMap::EndLoadMapHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindEndLoadMap;
 
 // Function KuroUtility.LoadMapNotify.BindEndLoadTransitionMap
 // 0x0028 (0x0028 - 0x0000)
@@ -4149,9 +3214,7 @@ struct LoadMapNotify_BindEndLoadTransitionMap final
 public:
 	TDelegate<void()>                             EndLoadTransitionMapHandler;                       // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindEndLoadTransitionMap) == 0x000004, "Wrong alignment on LoadMapNotify_BindEndLoadTransitionMap");
-static_assert(sizeof(LoadMapNotify_BindEndLoadTransitionMap) == 0x000028, "Wrong size on LoadMapNotify_BindEndLoadTransitionMap");
-static_assert(offsetof(LoadMapNotify_BindEndLoadTransitionMap, EndLoadTransitionMapHandler) == 0x000000, "Member 'LoadMapNotify_BindEndLoadTransitionMap::EndLoadTransitionMapHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindEndLoadTransitionMap;
 
 // Function KuroUtility.LoadMapNotify.BindLoadStreamLevel
 // 0x0028 (0x0028 - 0x0000)
@@ -4160,9 +3223,7 @@ struct LoadMapNotify_BindLoadStreamLevel final
 public:
 	TDelegate<void(const int32 LinkId, const class FName& LevelName, const class ULevelStreaming* StreamingLevel)> LoadStreamLevelHandler; // 0x0000(0x0028)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindLoadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_BindLoadStreamLevel");
-static_assert(sizeof(LoadMapNotify_BindLoadStreamLevel) == 0x000028, "Wrong size on LoadMapNotify_BindLoadStreamLevel");
-static_assert(offsetof(LoadMapNotify_BindLoadStreamLevel, LoadStreamLevelHandler) == 0x000000, "Member 'LoadMapNotify_BindLoadStreamLevel::LoadStreamLevelHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindLoadStreamLevel;
 
 // Function KuroUtility.LoadMapNotify.BindUnLoadStreamLevel
 // 0x0028 (0x0028 - 0x0000)
@@ -4171,9 +3232,7 @@ struct LoadMapNotify_BindUnLoadStreamLevel final
 public:
 	TDelegate<void(const int32 LinkId, const class FName& LevelName)> UnLoadStreamLevelHandler;      // 0x0000(0x0028)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_BindUnLoadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_BindUnLoadStreamLevel");
-static_assert(sizeof(LoadMapNotify_BindUnLoadStreamLevel) == 0x000028, "Wrong size on LoadMapNotify_BindUnLoadStreamLevel");
-static_assert(offsetof(LoadMapNotify_BindUnLoadStreamLevel, UnLoadStreamLevelHandler) == 0x000000, "Member 'LoadMapNotify_BindUnLoadStreamLevel::UnLoadStreamLevelHandler' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_BindUnLoadStreamLevel;
 
 // Function KuroUtility.LoadMapNotify.LoadStreamLevel
 // 0x0014 (0x0014 - 0x0000)
@@ -4186,12 +3245,7 @@ public:
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_LoadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_LoadStreamLevel");
-static_assert(sizeof(LoadMapNotify_LoadStreamLevel) == 0x000014, "Wrong size on LoadMapNotify_LoadStreamLevel");
-static_assert(offsetof(LoadMapNotify_LoadStreamLevel, Path) == 0x000000, "Member 'LoadMapNotify_LoadStreamLevel::Path' has a wrong offset!");
-static_assert(offsetof(LoadMapNotify_LoadStreamLevel, bMakeVisibleAfterLoad) == 0x00000C, "Member 'LoadMapNotify_LoadStreamLevel::bMakeVisibleAfterLoad' has a wrong offset!");
-static_assert(offsetof(LoadMapNotify_LoadStreamLevel, bShouldBlockOnLoad) == 0x00000D, "Member 'LoadMapNotify_LoadStreamLevel::bShouldBlockOnLoad' has a wrong offset!");
-static_assert(offsetof(LoadMapNotify_LoadStreamLevel, ReturnValue) == 0x000010, "Member 'LoadMapNotify_LoadStreamLevel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_LoadStreamLevel;
 
 // Function KuroUtility.LoadMapNotify.OnLoadStreamLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -4200,9 +3254,7 @@ struct LoadMapNotify_OnLoadStreamLevel final
 public:
 	int32                                         LinkID;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_OnLoadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_OnLoadStreamLevel");
-static_assert(sizeof(LoadMapNotify_OnLoadStreamLevel) == 0x000004, "Wrong size on LoadMapNotify_OnLoadStreamLevel");
-static_assert(offsetof(LoadMapNotify_OnLoadStreamLevel, LinkID) == 0x000000, "Member 'LoadMapNotify_OnLoadStreamLevel::LinkID' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_OnLoadStreamLevel;
 
 // Function KuroUtility.LoadMapNotify.OnUnLoadStreamLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -4211,9 +3263,7 @@ struct LoadMapNotify_OnUnLoadStreamLevel final
 public:
 	int32                                         LinkID;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_OnUnLoadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_OnUnLoadStreamLevel");
-static_assert(sizeof(LoadMapNotify_OnUnLoadStreamLevel) == 0x000004, "Wrong size on LoadMapNotify_OnUnLoadStreamLevel");
-static_assert(offsetof(LoadMapNotify_OnUnLoadStreamLevel, LinkID) == 0x000000, "Member 'LoadMapNotify_OnUnLoadStreamLevel::LinkID' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_OnUnLoadStreamLevel;
 
 // Function KuroUtility.LoadMapNotify.UnloadStreamLevel
 // 0x0014 (0x0014 - 0x0000)
@@ -4225,11 +3275,7 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LoadMapNotify_UnloadStreamLevel) == 0x000004, "Wrong alignment on LoadMapNotify_UnloadStreamLevel");
-static_assert(sizeof(LoadMapNotify_UnloadStreamLevel) == 0x000014, "Wrong size on LoadMapNotify_UnloadStreamLevel");
-static_assert(offsetof(LoadMapNotify_UnloadStreamLevel, Path) == 0x000000, "Member 'LoadMapNotify_UnloadStreamLevel::Path' has a wrong offset!");
-static_assert(offsetof(LoadMapNotify_UnloadStreamLevel, bShouldBlockOnLoad) == 0x00000C, "Member 'LoadMapNotify_UnloadStreamLevel::bShouldBlockOnLoad' has a wrong offset!");
-static_assert(offsetof(LoadMapNotify_UnloadStreamLevel, ReturnValue) == 0x000010, "Member 'LoadMapNotify_UnloadStreamLevel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LoadMapNotify_UnloadStreamLevel;
 
 // Function KuroUtility.KuroTickManager.AddPrerequisiteActor
 // 0x0018 (0x0018 - 0x0000)
@@ -4242,11 +3288,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_AddPrerequisiteActor) == 0x000008, "Wrong alignment on KuroTickManager_AddPrerequisiteActor");
-static_assert(sizeof(KuroTickManager_AddPrerequisiteActor) == 0x000018, "Wrong size on KuroTickManager_AddPrerequisiteActor");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActor, TickingGroup) == 0x000000, "Member 'KuroTickManager_AddPrerequisiteActor::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActor, Actor) == 0x000008, "Member 'KuroTickManager_AddPrerequisiteActor::Actor' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActor, Priority) == 0x000010, "Member 'KuroTickManager_AddPrerequisiteActor::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_AddPrerequisiteActor;
 
 // Function KuroUtility.KuroTickManager.AddPrerequisiteActorComponent
 // 0x0018 (0x0018 - 0x0000)
@@ -4259,11 +3301,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_AddPrerequisiteActorComponent) == 0x000008, "Wrong alignment on KuroTickManager_AddPrerequisiteActorComponent");
-static_assert(sizeof(KuroTickManager_AddPrerequisiteActorComponent) == 0x000018, "Wrong size on KuroTickManager_AddPrerequisiteActorComponent");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActorComponent, TickingGroup) == 0x000000, "Member 'KuroTickManager_AddPrerequisiteActorComponent::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActorComponent, ActorComp) == 0x000008, "Member 'KuroTickManager_AddPrerequisiteActorComponent::ActorComp' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddPrerequisiteActorComponent, Priority) == 0x000010, "Member 'KuroTickManager_AddPrerequisiteActorComponent::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_AddPrerequisiteActorComponent;
 
 // Function KuroUtility.KuroTickManager.AddTick
 // 0x0038 (0x0038 - 0x0000)
@@ -4277,12 +3315,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0034(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_AddTick) == 0x000004, "Wrong alignment on KuroTickManager_AddTick");
-static_assert(sizeof(KuroTickManager_AddTick) == 0x000038, "Wrong size on KuroTickManager_AddTick");
-static_assert(offsetof(KuroTickManager_AddTick, TickingGroup) == 0x000000, "Member 'KuroTickManager_AddTick::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddTick, TickHandler) == 0x000008, "Member 'KuroTickManager_AddTick::TickHandler' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddTick, Priority) == 0x000030, "Member 'KuroTickManager_AddTick::Priority' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_AddTick, ReturnValue) == 0x000034, "Member 'KuroTickManager_AddTick::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_AddTick;
 
 // Function KuroUtility.KuroTickManager.CleanCharacterMovementProxyTickFunction
 // 0x0008 (0x0008 - 0x0000)
@@ -4291,9 +3324,7 @@ struct KuroTickManager_CleanCharacterMovementProxyTickFunction final
 public:
 	class UCharacterMovementComponent*            MoveComp;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_CleanCharacterMovementProxyTickFunction) == 0x000008, "Wrong alignment on KuroTickManager_CleanCharacterMovementProxyTickFunction");
-static_assert(sizeof(KuroTickManager_CleanCharacterMovementProxyTickFunction) == 0x000008, "Wrong size on KuroTickManager_CleanCharacterMovementProxyTickFunction");
-static_assert(offsetof(KuroTickManager_CleanCharacterMovementProxyTickFunction, MoveComp) == 0x000000, "Member 'KuroTickManager_CleanCharacterMovementProxyTickFunction::MoveComp' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_CleanCharacterMovementProxyTickFunction;
 
 // Function KuroUtility.KuroTickManager.CleanSkeletalMeshProxyTickFunction
 // 0x0008 (0x0008 - 0x0000)
@@ -4302,9 +3333,7 @@ struct KuroTickManager_CleanSkeletalMeshProxyTickFunction final
 public:
 	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_CleanSkeletalMeshProxyTickFunction) == 0x000008, "Wrong alignment on KuroTickManager_CleanSkeletalMeshProxyTickFunction");
-static_assert(sizeof(KuroTickManager_CleanSkeletalMeshProxyTickFunction) == 0x000008, "Wrong size on KuroTickManager_CleanSkeletalMeshProxyTickFunction");
-static_assert(offsetof(KuroTickManager_CleanSkeletalMeshProxyTickFunction, SkeletalComp) == 0x000000, "Member 'KuroTickManager_CleanSkeletalMeshProxyTickFunction::SkeletalComp' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_CleanSkeletalMeshProxyTickFunction;
 
 // Function KuroUtility.KuroTickManager.RemovePrerequisiteActor
 // 0x0018 (0x0018 - 0x0000)
@@ -4317,11 +3346,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_RemovePrerequisiteActor) == 0x000008, "Wrong alignment on KuroTickManager_RemovePrerequisiteActor");
-static_assert(sizeof(KuroTickManager_RemovePrerequisiteActor) == 0x000018, "Wrong size on KuroTickManager_RemovePrerequisiteActor");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActor, TickingGroup) == 0x000000, "Member 'KuroTickManager_RemovePrerequisiteActor::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActor, Actor) == 0x000008, "Member 'KuroTickManager_RemovePrerequisiteActor::Actor' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActor, Priority) == 0x000010, "Member 'KuroTickManager_RemovePrerequisiteActor::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_RemovePrerequisiteActor;
 
 // Function KuroUtility.KuroTickManager.RemovePrerequisiteActorComponent
 // 0x0018 (0x0018 - 0x0000)
@@ -4334,11 +3359,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_RemovePrerequisiteActorComponent) == 0x000008, "Wrong alignment on KuroTickManager_RemovePrerequisiteActorComponent");
-static_assert(sizeof(KuroTickManager_RemovePrerequisiteActorComponent) == 0x000018, "Wrong size on KuroTickManager_RemovePrerequisiteActorComponent");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActorComponent, TickingGroup) == 0x000000, "Member 'KuroTickManager_RemovePrerequisiteActorComponent::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActorComponent, ActorComp) == 0x000008, "Member 'KuroTickManager_RemovePrerequisiteActorComponent::ActorComp' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_RemovePrerequisiteActorComponent, Priority) == 0x000010, "Member 'KuroTickManager_RemovePrerequisiteActorComponent::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_RemovePrerequisiteActorComponent;
 
 // Function KuroUtility.KuroTickManager.RemoveTick
 // 0x0002 (0x0002 - 0x0000)
@@ -4348,10 +3369,7 @@ public:
 	ETickingGroup                                 TickingGroup;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_RemoveTick) == 0x000001, "Wrong alignment on KuroTickManager_RemoveTick");
-static_assert(sizeof(KuroTickManager_RemoveTick) == 0x000002, "Wrong size on KuroTickManager_RemoveTick");
-static_assert(offsetof(KuroTickManager_RemoveTick, TickingGroup) == 0x000000, "Member 'KuroTickManager_RemoveTick::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_RemoveTick, ReturnValue) == 0x000001, "Member 'KuroTickManager_RemoveTick::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_RemoveTick;
 
 // Function KuroUtility.KuroTickManager.SetCharacterMovementProxyTickFunction
 // 0x0018 (0x0018 - 0x0000)
@@ -4364,11 +3382,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_SetCharacterMovementProxyTickFunction) == 0x000008, "Wrong alignment on KuroTickManager_SetCharacterMovementProxyTickFunction");
-static_assert(sizeof(KuroTickManager_SetCharacterMovementProxyTickFunction) == 0x000018, "Wrong size on KuroTickManager_SetCharacterMovementProxyTickFunction");
-static_assert(offsetof(KuroTickManager_SetCharacterMovementProxyTickFunction, TickingGroup) == 0x000000, "Member 'KuroTickManager_SetCharacterMovementProxyTickFunction::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetCharacterMovementProxyTickFunction, MoveComp) == 0x000008, "Member 'KuroTickManager_SetCharacterMovementProxyTickFunction::MoveComp' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetCharacterMovementProxyTickFunction, Priority) == 0x000010, "Member 'KuroTickManager_SetCharacterMovementProxyTickFunction::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_SetCharacterMovementProxyTickFunction;
 
 // Function KuroUtility.KuroTickManager.SetGamePrerequisiteTickFunction
 // 0x0008 (0x0008 - 0x0000)
@@ -4379,10 +3393,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_SetGamePrerequisiteTickFunction) == 0x000004, "Wrong alignment on KuroTickManager_SetGamePrerequisiteTickFunction");
-static_assert(sizeof(KuroTickManager_SetGamePrerequisiteTickFunction) == 0x000008, "Wrong size on KuroTickManager_SetGamePrerequisiteTickFunction");
-static_assert(offsetof(KuroTickManager_SetGamePrerequisiteTickFunction, TickingGroup) == 0x000000, "Member 'KuroTickManager_SetGamePrerequisiteTickFunction::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetGamePrerequisiteTickFunction, Priority) == 0x000004, "Member 'KuroTickManager_SetGamePrerequisiteTickFunction::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_SetGamePrerequisiteTickFunction;
 
 // Function KuroUtility.KuroTickManager.SetSkeletalMeshComponentPrerequisite
 // 0x0010 (0x0010 - 0x0000)
@@ -4394,11 +3405,7 @@ public:
 	int32                                         Priority;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_SetSkeletalMeshComponentPrerequisite) == 0x000008, "Wrong alignment on KuroTickManager_SetSkeletalMeshComponentPrerequisite");
-static_assert(sizeof(KuroTickManager_SetSkeletalMeshComponentPrerequisite) == 0x000010, "Wrong size on KuroTickManager_SetSkeletalMeshComponentPrerequisite");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshComponentPrerequisite, TickingGroup) == 0x000000, "Member 'KuroTickManager_SetSkeletalMeshComponentPrerequisite::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshComponentPrerequisite, Priority) == 0x000004, "Member 'KuroTickManager_SetSkeletalMeshComponentPrerequisite::Priority' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshComponentPrerequisite, SkeletalComp) == 0x000008, "Member 'KuroTickManager_SetSkeletalMeshComponentPrerequisite::SkeletalComp' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_SetSkeletalMeshComponentPrerequisite;
 
 // Function KuroUtility.KuroTickManager.SetSkeletalMeshProxyTickFunction
 // 0x0018 (0x0018 - 0x0000)
@@ -4411,11 +3418,7 @@ public:
 	int32                                         Priority;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTickManager_SetSkeletalMeshProxyTickFunction) == 0x000008, "Wrong alignment on KuroTickManager_SetSkeletalMeshProxyTickFunction");
-static_assert(sizeof(KuroTickManager_SetSkeletalMeshProxyTickFunction) == 0x000018, "Wrong size on KuroTickManager_SetSkeletalMeshProxyTickFunction");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshProxyTickFunction, TickingGroup) == 0x000000, "Member 'KuroTickManager_SetSkeletalMeshProxyTickFunction::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshProxyTickFunction, SkeletalComp) == 0x000008, "Member 'KuroTickManager_SetSkeletalMeshProxyTickFunction::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetSkeletalMeshProxyTickFunction, Priority) == 0x000010, "Member 'KuroTickManager_SetSkeletalMeshProxyTickFunction::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_SetSkeletalMeshProxyTickFunction;
 
 // Function KuroUtility.KuroTickManager.SetTickFunctionCompletionCallbackInMainThread
 // 0x0008 (0x0008 - 0x0000)
@@ -4426,10 +3429,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTickManager_SetTickFunctionCompletionCallbackInMainThread) == 0x000004, "Wrong alignment on KuroTickManager_SetTickFunctionCompletionCallbackInMainThread");
-static_assert(sizeof(KuroTickManager_SetTickFunctionCompletionCallbackInMainThread) == 0x000008, "Wrong size on KuroTickManager_SetTickFunctionCompletionCallbackInMainThread");
-static_assert(offsetof(KuroTickManager_SetTickFunctionCompletionCallbackInMainThread, TickingGroup) == 0x000000, "Member 'KuroTickManager_SetTickFunctionCompletionCallbackInMainThread::TickingGroup' has a wrong offset!");
-static_assert(offsetof(KuroTickManager_SetTickFunctionCompletionCallbackInMainThread, Priority) == 0x000004, "Member 'KuroTickManager_SetTickFunctionCompletionCallbackInMainThread::Priority' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTickManager_SetTickFunctionCompletionCallbackInMainThread;
 
 }
 

@@ -26,7 +26,11 @@ class ISMInstanceInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMInstanceInterface">();
+		STATIC_CLASS_IMPL("SMInstanceInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMInstanceInterface")
 	}
 	static class ISMInstanceInterface* GetDefaultObj()
 	{
@@ -42,8 +46,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ISMInstanceInterface) == 0x000001, "Wrong alignment on ISMInstanceInterface");
-static_assert(sizeof(ISMInstanceInterface) == 0x000001, "Wrong size on ISMInstanceInterface");
+DUMPER7_ASSERTS_ISMInstanceInterface;
 
 // Class SMSystem.SMStateMachineInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -52,7 +55,11 @@ class ISMStateMachineInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateMachineInterface">();
+		STATIC_CLASS_IMPL("SMStateMachineInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateMachineInterface")
 	}
 	static class ISMStateMachineInterface* GetDefaultObj()
 	{
@@ -68,8 +75,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ISMStateMachineInterface) == 0x000001, "Wrong alignment on ISMStateMachineInterface");
-static_assert(sizeof(ISMStateMachineInterface) == 0x000001, "Wrong size on ISMStateMachineInterface");
+DUMPER7_ASSERTS_ISMStateMachineInterface;
 
 // Class SMSystem.SMStateMachineNetworkedInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -83,7 +89,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateMachineNetworkedInterface">();
+		STATIC_CLASS_IMPL("SMStateMachineNetworkedInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateMachineNetworkedInterface")
 	}
 	static class ISMStateMachineNetworkedInterface* GetDefaultObj()
 	{
@@ -99,8 +109,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ISMStateMachineNetworkedInterface) == 0x000001, "Wrong alignment on ISMStateMachineNetworkedInterface");
-static_assert(sizeof(ISMStateMachineNetworkedInterface) == 0x000001, "Wrong size on ISMStateMachineNetworkedInterface");
+DUMPER7_ASSERTS_ISMStateMachineNetworkedInterface;
 
 // Class SMSystem.SMBlueprint
 // 0x0008 (0x00B0 - 0x00A8)
@@ -113,16 +122,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMBlueprint">();
+		STATIC_CLASS_IMPL("SMBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMBlueprint")
 	}
 	static class USMBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMBlueprint>();
 	}
 };
-static_assert(alignof(USMBlueprint) == 0x000008, "Wrong alignment on USMBlueprint");
-static_assert(sizeof(USMBlueprint) == 0x0000B0, "Wrong size on USMBlueprint");
-static_assert(offsetof(USMBlueprint, AssetVersion) == 0x0000A8, "Member 'USMBlueprint::AssetVersion' has a wrong offset!");
+DUMPER7_ASSERTS_USMBlueprint;
 
 // Class SMSystem.SMNodeBlueprint
 // 0x0000 (0x00A8 - 0x00A8)
@@ -131,15 +142,18 @@ class USMNodeBlueprint final : public UBlueprint
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMNodeBlueprint">();
+		STATIC_CLASS_IMPL("SMNodeBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMNodeBlueprint")
 	}
 	static class USMNodeBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMNodeBlueprint>();
 	}
 };
-static_assert(alignof(USMNodeBlueprint) == 0x000008, "Wrong alignment on USMNodeBlueprint");
-static_assert(sizeof(USMNodeBlueprint) == 0x0000A8, "Wrong size on USMNodeBlueprint");
+DUMPER7_ASSERTS_USMNodeBlueprint;
 
 // Class SMSystem.SMBlueprintGeneratedClass
 // 0x0020 (0x0358 - 0x0338)
@@ -152,17 +166,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMBlueprintGeneratedClass">();
+		STATIC_CLASS_IMPL("SMBlueprintGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMBlueprintGeneratedClass")
 	}
 	static class USMBlueprintGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMBlueprintGeneratedClass>();
 	}
 };
-static_assert(alignof(USMBlueprintGeneratedClass) == 0x000008, "Wrong alignment on USMBlueprintGeneratedClass");
-static_assert(sizeof(USMBlueprintGeneratedClass) == 0x000358, "Wrong size on USMBlueprintGeneratedClass");
-static_assert(offsetof(USMBlueprintGeneratedClass, RootGuid) == 0x000338, "Member 'USMBlueprintGeneratedClass::RootGuid' has a wrong offset!");
-static_assert(offsetof(USMBlueprintGeneratedClass, AllRootInstances) == 0x000348, "Member 'USMBlueprintGeneratedClass::AllRootInstances' has a wrong offset!");
+DUMPER7_ASSERTS_USMBlueprintGeneratedClass;
 
 // Class SMSystem.SMNodeBlueprintGeneratedClass
 // 0x0000 (0x0338 - 0x0338)
@@ -171,15 +186,18 @@ class USMNodeBlueprintGeneratedClass final : public UBlueprintGeneratedClass
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMNodeBlueprintGeneratedClass">();
+		STATIC_CLASS_IMPL("SMNodeBlueprintGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMNodeBlueprintGeneratedClass")
 	}
 	static class USMNodeBlueprintGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMNodeBlueprintGeneratedClass>();
 	}
 };
-static_assert(alignof(USMNodeBlueprintGeneratedClass) == 0x000008, "Wrong alignment on USMNodeBlueprintGeneratedClass");
-static_assert(sizeof(USMNodeBlueprintGeneratedClass) == 0x000338, "Wrong size on USMNodeBlueprintGeneratedClass");
+DUMPER7_ASSERTS_USMNodeBlueprintGeneratedClass;
 
 // Class SMSystem.SMNodeInstance
 // 0x0020 (0x0050 - 0x0030)
@@ -204,16 +222,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMNodeInstance">();
+		STATIC_CLASS_IMPL("SMNodeInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMNodeInstance")
 	}
 	static class USMNodeInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMNodeInstance>();
 	}
 };
-static_assert(alignof(USMNodeInstance) == 0x000008, "Wrong alignment on USMNodeInstance");
-static_assert(sizeof(USMNodeInstance) == 0x000050, "Wrong size on USMNodeInstance");
-static_assert(offsetof(USMNodeInstance, TemplateGuid) == 0x000040, "Member 'USMNodeInstance::TemplateGuid' has a wrong offset!");
+DUMPER7_ASSERTS_USMNodeInstance;
 
 // Class SMSystem.SMStateInstance_Base
 // 0x00A0 (0x00F0 - 0x0050)
@@ -275,31 +295,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateInstance_Base">();
+		STATIC_CLASS_IMPL("SMStateInstance_Base")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateInstance_Base")
 	}
 	static class USMStateInstance_Base* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMStateInstance_Base>();
 	}
 };
-static_assert(alignof(USMStateInstance_Base) == 0x000008, "Wrong alignment on USMStateInstance_Base");
-static_assert(sizeof(USMStateInstance_Base) == 0x0000F0, "Wrong size on USMStateInstance_Base");
-static_assert(offsetof(USMStateInstance_Base, OnStateBeginEvent) == 0x000058, "Member 'USMStateInstance_Base::OnStateBeginEvent' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, OnPostStateBeginEvent) == 0x000068, "Member 'USMStateInstance_Base::OnPostStateBeginEvent' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, OnStateUpdateEvent) == 0x000078, "Member 'USMStateInstance_Base::OnStateUpdateEvent' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, OnStateEndEvent) == 0x000088, "Member 'USMStateInstance_Base::OnStateEndEvent' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, TakeControlType) == 0x000098, "Member 'USMStateInstance_Base::TakeControlType' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, TransitionRule) == 0x000099, "Member 'USMStateInstance_Base::TransitionRule' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, Task) == 0x0000A0, "Member 'USMStateInstance_Base::Task' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, BindStates) == 0x0000A8, "Member 'USMStateInstance_Base::BindStates' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, OnEnterActions) == 0x0000B8, "Member 'USMStateInstance_Base::OnEnterActions' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, OnExitActions) == 0x0000C8, "Member 'USMStateInstance_Base::OnExitActions' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, NodeName) == 0x0000D8, "Member 'USMStateInstance_Base::NodeName' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, IsRefNode) == 0x0000E8, "Member 'USMStateInstance_Base::IsRefNode' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, IsOvrNode) == 0x0000E9, "Member 'USMStateInstance_Base::IsOvrNode' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, IsAnimNode) == 0x0000EA, "Member 'USMStateInstance_Base::IsAnimNode' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, IsConduitNode) == 0x0000EB, "Member 'USMStateInstance_Base::IsConduitNode' has a wrong offset!");
-static_assert(offsetof(USMStateInstance_Base, IsAnyStateNode) == 0x0000EC, "Member 'USMStateInstance_Base::IsAnyStateNode' has a wrong offset!");
+DUMPER7_ASSERTS_USMStateInstance_Base;
 
 // Class SMSystem.SMConduitInstance
 // 0x0008 (0x00F8 - 0x00F0)
@@ -318,15 +325,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMConduitInstance">();
+		STATIC_CLASS_IMPL("SMConduitInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMConduitInstance")
 	}
 	static class USMConduitInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMConduitInstance>();
 	}
 };
-static_assert(alignof(USMConduitInstance) == 0x000008, "Wrong alignment on USMConduitInstance");
-static_assert(sizeof(USMConduitInstance) == 0x0000F8, "Wrong size on USMConduitInstance");
+DUMPER7_ASSERTS_USMConduitInstance;
 
 // Class SMSystem.SMInstance
 // 0x0580 (0x05B0 - 0x0030)
@@ -474,37 +484,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMInstance">();
+		STATIC_CLASS_IMPL("SMInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMInstance")
 	}
 	static class USMInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMInstance>();
 	}
 };
-static_assert(alignof(USMInstance) == 0x000008, "Wrong alignment on USMInstance");
-static_assert(sizeof(USMInstance) == 0x0005B0, "Wrong size on USMInstance");
-static_assert(offsetof(USMInstance, ReplicatedReferences) == 0x000068, "Member 'USMInstance::ReplicatedReferences' has a wrong offset!");
-static_assert(offsetof(USMInstance, RootStateMachineGuid) == 0x000078, "Member 'USMInstance::RootStateMachineGuid' has a wrong offset!");
-static_assert(offsetof(USMInstance, AllRootNodeInstances) == 0x000088, "Member 'USMInstance::AllRootNodeInstances' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnPreStateMachineInitializedEvent) == 0x000098, "Member 'USMInstance::OnPreStateMachineInitializedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineInitializedEvent) == 0x0000A8, "Member 'USMInstance::OnStateMachineInitializedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineStartedEvent) == 0x0000B8, "Member 'USMInstance::OnStateMachineStartedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineUpdatedEvent) == 0x0000C8, "Member 'USMInstance::OnStateMachineUpdatedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineStoppedEvent) == 0x0000D8, "Member 'USMInstance::OnStateMachineStoppedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineTransitionTakenEvent) == 0x0000E8, "Member 'USMInstance::OnStateMachineTransitionTakenEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineStateChangedEvent) == 0x0000F8, "Member 'USMInstance::OnStateMachineStateChangedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, OnStateMachineStateStartedEvent) == 0x000108, "Member 'USMInstance::OnStateMachineStateStartedEvent' has a wrong offset!");
-static_assert(offsetof(USMInstance, ComponentOwner) == 0x000118, "Member 'USMInstance::ComponentOwner' has a wrong offset!");
-static_assert(offsetof(USMInstance, NetworkInterface) == 0x000120, "Member 'USMInstance::NetworkInterface' has a wrong offset!");
-static_assert(offsetof(USMInstance, RootStateMachine) == 0x000270, "Member 'USMInstance::RootStateMachine' has a wrong offset!");
-static_assert(offsetof(USMInstance, R_StateMachineContext) == 0x000508, "Member 'USMInstance::R_StateMachineContext' has a wrong offset!");
-static_assert(offsetof(USMInstance, ReferenceOwner) == 0x000510, "Member 'USMInstance::ReferenceOwner' has a wrong offset!");
-static_assert(offsetof(USMInstance, StateMachineClass) == 0x000518, "Member 'USMInstance::StateMachineClass' has a wrong offset!");
-static_assert(offsetof(USMInstance, TickInterval) == 0x000524, "Member 'USMInstance::TickInterval' has a wrong offset!");
-static_assert(offsetof(USMInstance, StateHistory) == 0x000538, "Member 'USMInstance::StateHistory' has a wrong offset!");
-static_assert(offsetof(USMInstance, StateHistoryMaxCount) == 0x000548, "Member 'USMInstance::StateHistoryMaxCount' has a wrong offset!");
-static_assert(offsetof(USMInstance, PathGuidRedirectMap) == 0x000550, "Member 'USMInstance::PathGuidRedirectMap' has a wrong offset!");
-static_assert(offsetof(USMInstance, ReferenceTemplates) == 0x0005A0, "Member 'USMInstance::ReferenceTemplates' has a wrong offset!");
+DUMPER7_ASSERTS_USMInstance;
 
 // Class SMSystem.SMRuntimeSettings
 // 0x0008 (0x0038 - 0x0030)
@@ -517,16 +508,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMRuntimeSettings">();
+		STATIC_CLASS_IMPL("SMRuntimeSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMRuntimeSettings")
 	}
 	static class USMRuntimeSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMRuntimeSettings>();
 	}
 };
-static_assert(alignof(USMRuntimeSettings) == 0x000008, "Wrong alignment on USMRuntimeSettings");
-static_assert(sizeof(USMRuntimeSettings) == 0x000038, "Wrong size on USMRuntimeSettings");
-static_assert(offsetof(USMRuntimeSettings, bPreloadDefaultNodes) == 0x000030, "Member 'USMRuntimeSettings::bPreloadDefaultNodes' has a wrong offset!");
+DUMPER7_ASSERTS_USMRuntimeSettings;
 
 // Class SMSystem.ASMBindState
 // 0x0000 (0x0030 - 0x0030)
@@ -535,15 +528,18 @@ class UASMBindState : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMBindState">();
+		STATIC_CLASS_IMPL("ASMBindState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMBindState")
 	}
 	static class UASMBindState* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMBindState>();
 	}
 };
-static_assert(alignof(UASMBindState) == 0x000008, "Wrong alignment on UASMBindState");
-static_assert(sizeof(UASMBindState) == 0x000030, "Wrong size on UASMBindState");
+DUMPER7_ASSERTS_UASMBindState;
 
 // Class SMSystem.ASMAction
 // 0x0000 (0x0030 - 0x0030)
@@ -552,15 +548,18 @@ class UASMAction : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMAction">();
+		STATIC_CLASS_IMPL("ASMAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMAction")
 	}
 	static class UASMAction* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMAction>();
 	}
 };
-static_assert(alignof(UASMAction) == 0x000008, "Wrong alignment on UASMAction");
-static_assert(sizeof(UASMAction) == 0x000030, "Wrong size on UASMAction");
+DUMPER7_ASSERTS_UASMAction;
 
 // Class SMSystem.ASMTask
 // 0x0000 (0x0030 - 0x0030)
@@ -569,15 +568,18 @@ class UASMTask : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMTask">();
+		STATIC_CLASS_IMPL("ASMTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMTask")
 	}
 	static class UASMTask* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMTask>();
 	}
 };
-static_assert(alignof(UASMTask) == 0x000008, "Wrong alignment on UASMTask");
-static_assert(sizeof(UASMTask) == 0x000030, "Wrong size on UASMTask");
+DUMPER7_ASSERTS_UASMTask;
 
 // Class SMSystem.SMStateInstance
 // 0x0000 (0x00F0 - 0x00F0)
@@ -586,15 +588,18 @@ class USMStateInstance final : public USMStateInstance_Base
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateInstance">();
+		STATIC_CLASS_IMPL("SMStateInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateInstance")
 	}
 	static class USMStateInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMStateInstance>();
 	}
 };
-static_assert(alignof(USMStateInstance) == 0x000008, "Wrong alignment on USMStateInstance");
-static_assert(sizeof(USMStateInstance) == 0x0000F0, "Wrong size on USMStateInstance");
+DUMPER7_ASSERTS_USMStateInstance;
 
 // Class SMSystem.SMStateMachineComponent
 // 0x0148 (0x0208 - 0x00C0)
@@ -699,38 +704,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateMachineComponent">();
+		STATIC_CLASS_IMPL("SMStateMachineComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateMachineComponent")
 	}
 	static class USMStateMachineComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMStateMachineComponent>();
 	}
 };
-static_assert(alignof(USMStateMachineComponent) == 0x000008, "Wrong alignment on USMStateMachineComponent");
-static_assert(sizeof(USMStateMachineComponent) == 0x000208, "Wrong size on USMStateMachineComponent");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineInitializedEvent) == 0x0000D0, "Member 'USMStateMachineComponent::OnStateMachineInitializedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineStartedEvent) == 0x0000E0, "Member 'USMStateMachineComponent::OnStateMachineStartedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineUpdatedEvent) == 0x0000F0, "Member 'USMStateMachineComponent::OnStateMachineUpdatedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineStoppedEvent) == 0x000100, "Member 'USMStateMachineComponent::OnStateMachineStoppedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineTransitionTakenEvent) == 0x000110, "Member 'USMStateMachineComponent::OnStateMachineTransitionTakenEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineStateChangedEvent) == 0x000120, "Member 'USMStateMachineComponent::OnStateMachineStateChangedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, OnStateMachineStateStartedEvent) == 0x000130, "Member 'USMStateMachineComponent::OnStateMachineStateStartedEvent' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, CurrentActorChannels) == 0x000140, "Member 'USMStateMachineComponent::CurrentActorChannels' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, StateMachineClass) == 0x0001B8, "Member 'USMStateMachineComponent::StateMachineClass' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, StateChangeAuthority) == 0x0001C1, "Member 'USMStateMachineComponent::StateChangeAuthority' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, NetworkTransitionConfiguration) == 0x0001C2, "Member 'USMStateMachineComponent::NetworkTransitionConfiguration' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, NetworkTickConfiguration) == 0x0001C3, "Member 'USMStateMachineComponent::NetworkTickConfiguration' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, NetworkStateExecution) == 0x0001C4, "Member 'USMStateMachineComponent::NetworkStateExecution' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, NetworkStateConfiguration) == 0x0001C5, "Member 'USMStateMachineComponent::NetworkStateConfiguration' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, NetworkTransitionEnteredConfiguration) == 0x0001C7, "Member 'USMStateMachineComponent::NetworkTransitionEnteredConfiguration' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, ServerNetUpdateFrequency) == 0x0001CC, "Member 'USMStateMachineComponent::ServerNetUpdateFrequency' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, ClientNetUpdateFrequency) == 0x0001D0, "Member 'USMStateMachineComponent::ClientNetUpdateFrequency' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, TransitionResetTimeSeconds) == 0x0001D8, "Member 'USMStateMachineComponent::TransitionResetTimeSeconds' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, MaxTimeToWaitForTransitionUpdate) == 0x0001DC, "Member 'USMStateMachineComponent::MaxTimeToWaitForTransitionUpdate' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, ComponentToCopy) == 0x0001E0, "Member 'USMStateMachineComponent::ComponentToCopy' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, R_Instance) == 0x0001F0, "Member 'USMStateMachineComponent::R_Instance' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, InstanceTemplate) == 0x0001F8, "Member 'USMStateMachineComponent::InstanceTemplate' has a wrong offset!");
-static_assert(offsetof(USMStateMachineComponent, TickInterval) == 0x000204, "Member 'USMStateMachineComponent::TickInterval' has a wrong offset!");
+DUMPER7_ASSERTS_USMStateMachineComponent;
 
 // Class SMSystem.SMStateMachineInstance
 // 0x0028 (0x0118 - 0x00F0)
@@ -758,17 +743,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMStateMachineInstance">();
+		STATIC_CLASS_IMPL("SMStateMachineInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMStateMachineInstance")
 	}
 	static class USMStateMachineInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMStateMachineInstance>();
 	}
 };
-static_assert(alignof(USMStateMachineInstance) == 0x000008, "Wrong alignment on USMStateMachineInstance");
-static_assert(sizeof(USMStateMachineInstance) == 0x000118, "Wrong size on USMStateMachineInstance");
-static_assert(offsetof(USMStateMachineInstance, Children) == 0x0000F0, "Member 'USMStateMachineInstance::Children' has a wrong offset!");
-static_assert(offsetof(USMStateMachineInstance, TransitionList) == 0x000100, "Member 'USMStateMachineInstance::TransitionList' has a wrong offset!");
+DUMPER7_ASSERTS_USMStateMachineInstance;
 
 // Class SMSystem.ASMConditionBase
 // 0x0008 (0x0038 - 0x0030)
@@ -781,16 +767,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMConditionBase">();
+		STATIC_CLASS_IMPL("ASMConditionBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMConditionBase")
 	}
 	static class UASMConditionBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMConditionBase>();
 	}
 };
-static_assert(alignof(UASMConditionBase) == 0x000008, "Wrong alignment on UASMConditionBase");
-static_assert(sizeof(UASMConditionBase) == 0x000038, "Wrong size on UASMConditionBase");
-static_assert(offsetof(UASMConditionBase, Reverse) == 0x000030, "Member 'UASMConditionBase::Reverse' has a wrong offset!");
+DUMPER7_ASSERTS_UASMConditionBase;
 
 // Class SMSystem.ASMConditionAnd
 // 0x0010 (0x0048 - 0x0038)
@@ -802,16 +790,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMConditionAnd">();
+		STATIC_CLASS_IMPL("ASMConditionAnd")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMConditionAnd")
 	}
 	static class UASMConditionAnd* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMConditionAnd>();
 	}
 };
-static_assert(alignof(UASMConditionAnd) == 0x000008, "Wrong alignment on UASMConditionAnd");
-static_assert(sizeof(UASMConditionAnd) == 0x000048, "Wrong size on UASMConditionAnd");
-static_assert(offsetof(UASMConditionAnd, Conditions) == 0x000038, "Member 'UASMConditionAnd::Conditions' has a wrong offset!");
+DUMPER7_ASSERTS_UASMConditionAnd;
 
 // Class SMSystem.ASMConditionOr
 // 0x0010 (0x0048 - 0x0038)
@@ -823,16 +813,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ASMConditionOr">();
+		STATIC_CLASS_IMPL("ASMConditionOr")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ASMConditionOr")
 	}
 	static class UASMConditionOr* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UASMConditionOr>();
 	}
 };
-static_assert(alignof(UASMConditionOr) == 0x000008, "Wrong alignment on UASMConditionOr");
-static_assert(sizeof(UASMConditionOr) == 0x000048, "Wrong size on UASMConditionOr");
-static_assert(offsetof(UASMConditionOr, Conditions) == 0x000038, "Member 'UASMConditionOr::Conditions' has a wrong offset!");
+DUMPER7_ASSERTS_UASMConditionOr;
 
 // Class SMSystem.SMTransitionInstance
 // 0x0038 (0x0088 - 0x0050)
@@ -871,21 +863,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMTransitionInstance">();
+		STATIC_CLASS_IMPL("SMTransitionInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMTransitionInstance")
 	}
 	static class USMTransitionInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMTransitionInstance>();
 	}
 };
-static_assert(alignof(USMTransitionInstance) == 0x000008, "Wrong alignment on USMTransitionInstance");
-static_assert(sizeof(USMTransitionInstance) == 0x000088, "Wrong size on USMTransitionInstance");
-static_assert(offsetof(USMTransitionInstance, PriorityOrder) == 0x000050, "Member 'USMTransitionInstance::PriorityOrder' has a wrong offset!");
-static_assert(offsetof(USMTransitionInstance, OnTransitionEnteredEvent) == 0x000058, "Member 'USMTransitionInstance::OnTransitionEnteredEvent' has a wrong offset!");
-static_assert(offsetof(USMTransitionInstance, TransitionPredictionType) == 0x000068, "Member 'USMTransitionInstance::TransitionPredictionType' has a wrong offset!");
-static_assert(offsetof(USMTransitionInstance, Condition) == 0x000070, "Member 'USMTransitionInstance::Condition' has a wrong offset!");
-static_assert(offsetof(USMTransitionInstance, From) == 0x000078, "Member 'USMTransitionInstance::From' has a wrong offset!");
-static_assert(offsetof(USMTransitionInstance, To) == 0x000080, "Member 'USMTransitionInstance::To' has a wrong offset!");
+DUMPER7_ASSERTS_USMTransitionInstance;
 
 // Class SMSystem.SMBlueprintUtils
 // 0x0000 (0x0030 - 0x0030)
@@ -899,15 +888,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SMBlueprintUtils">();
+		STATIC_CLASS_IMPL("SMBlueprintUtils")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SMBlueprintUtils")
 	}
 	static class USMBlueprintUtils* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USMBlueprintUtils>();
 	}
 };
-static_assert(alignof(USMBlueprintUtils) == 0x000008, "Wrong alignment on USMBlueprintUtils");
-static_assert(sizeof(USMBlueprintUtils) == 0x000030, "Wrong size on USMBlueprintUtils");
+DUMPER7_ASSERTS_USMBlueprintUtils;
 
 }
 

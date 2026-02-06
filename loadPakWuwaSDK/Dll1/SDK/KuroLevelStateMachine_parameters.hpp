@@ -23,10 +23,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroLevelStateMachineComponent_HasState) == 0x000004, "Wrong alignment on KuroLevelStateMachineComponent_HasState");
-static_assert(sizeof(KuroLevelStateMachineComponent_HasState) == 0x000010, "Wrong size on KuroLevelStateMachineComponent_HasState");
-static_assert(offsetof(KuroLevelStateMachineComponent_HasState, StateName) == 0x000000, "Member 'KuroLevelStateMachineComponent_HasState::StateName' has a wrong offset!");
-static_assert(offsetof(KuroLevelStateMachineComponent_HasState, ReturnValue) == 0x00000C, "Member 'KuroLevelStateMachineComponent_HasState::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroLevelStateMachineComponent_HasState;
 
 // Function KuroLevelStateMachine.KuroLevelStateMachineComponent.SetState
 // 0x0010 (0x0010 - 0x0000)
@@ -36,10 +33,7 @@ public:
 	class FName                                   StateName;                                         // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PlayRate;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroLevelStateMachineComponent_SetState) == 0x000004, "Wrong alignment on KuroLevelStateMachineComponent_SetState");
-static_assert(sizeof(KuroLevelStateMachineComponent_SetState) == 0x000010, "Wrong size on KuroLevelStateMachineComponent_SetState");
-static_assert(offsetof(KuroLevelStateMachineComponent_SetState, StateName) == 0x000000, "Member 'KuroLevelStateMachineComponent_SetState::StateName' has a wrong offset!");
-static_assert(offsetof(KuroLevelStateMachineComponent_SetState, PlayRate) == 0x00000C, "Member 'KuroLevelStateMachineComponent_SetState::PlayRate' has a wrong offset!");
+DUMPER7_ASSERTS_KuroLevelStateMachineComponent_SetState;
 
 }
 

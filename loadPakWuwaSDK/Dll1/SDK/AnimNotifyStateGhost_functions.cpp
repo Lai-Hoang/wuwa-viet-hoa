@@ -17,19 +17,26 @@
 namespace SDK
 {
 
-// Function AnimNotifyStateGhost.AnimNotifyStateGhost_C.K2_ValidateAssets
+// Function AnimNotifyStateGhost.AnimNotifyStateGhost_C.K2_NotifyBegin
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UAnimNotifyStateGhost_C::K2_ValidateAssets()
+bool UAnimNotifyStateGhost_C::K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyStateGhost_C", "K2_ValidateAssets");
+		Func = Class->GetFunction("AnimNotifyStateGhost_C", "K2_NotifyBegin");
 
-	Params::AnimNotifyStateGhost_C_K2_ValidateAssets Parms{};
+	Params::AnimNotifyStateGhost_C_K2_NotifyBegin Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.TotalDuration = TotalDuration;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -62,26 +69,19 @@ bool UAnimNotifyStateGhost_C::K2_NotifyEnd(class USkeletalMeshComponent* MeshCom
 }
 
 
-// Function AnimNotifyStateGhost.AnimNotifyStateGhost_C.K2_NotifyBegin
+// Function AnimNotifyStateGhost.AnimNotifyStateGhost_C.K2_ValidateAssets
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UAnimNotifyStateGhost_C::K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
+bool UAnimNotifyStateGhost_C::K2_ValidateAssets()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotifyStateGhost_C", "K2_NotifyBegin");
+		Func = Class->GetFunction("AnimNotifyStateGhost_C", "K2_ValidateAssets");
 
-	Params::AnimNotifyStateGhost_C_K2_NotifyBegin Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.TotalDuration = TotalDuration;
+	Params::AnimNotifyStateGhost_C_K2_ValidateAssets Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

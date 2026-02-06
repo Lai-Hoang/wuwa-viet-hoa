@@ -24,12 +24,7 @@ public:
 	float                                         Min_9_4F5390874C80597263DCC8BEC26C297C;            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         Max_11_2092690A48C59E92851A87ADFC791C78;           // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSGlobalRtpcEntry) == 0x000008, "Wrong alignment on FSGlobalRtpcEntry");
-static_assert(sizeof(FSGlobalRtpcEntry) == 0x000020, "Wrong size on FSGlobalRtpcEntry");
-static_assert(offsetof(FSGlobalRtpcEntry, RtpcFile_3_55D4A7C347028CC3921034B5F2340748) == 0x000000, "Member 'FSGlobalRtpcEntry::RtpcFile_3_55D4A7C347028CC3921034B5F2340748' has a wrong offset!");
-static_assert(offsetof(FSGlobalRtpcEntry, Identifier_7_7BFE7B914FD3C6D5C23BD9991C1E45C3) == 0x000008, "Member 'FSGlobalRtpcEntry::Identifier_7_7BFE7B914FD3C6D5C23BD9991C1E45C3' has a wrong offset!");
-static_assert(offsetof(FSGlobalRtpcEntry, Min_9_4F5390874C80597263DCC8BEC26C297C) == 0x000018, "Member 'FSGlobalRtpcEntry::Min_9_4F5390874C80597263DCC8BEC26C297C' has a wrong offset!");
-static_assert(offsetof(FSGlobalRtpcEntry, Max_11_2092690A48C59E92851A87ADFC791C78) == 0x00001C, "Member 'FSGlobalRtpcEntry::Max_11_2092690A48C59E92851A87ADFC791C78' has a wrong offset!");
+DUMPER7_ASSERTS_FSGlobalRtpcEntry;
 
 }
 

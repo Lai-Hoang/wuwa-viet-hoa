@@ -23,9 +23,7 @@ struct GeometryCacheActor_GetGeometryCacheComponent final
 public:
 	class UGeometryCacheComponent*                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheActor_GetGeometryCacheComponent) == 0x000008, "Wrong alignment on GeometryCacheActor_GetGeometryCacheComponent");
-static_assert(sizeof(GeometryCacheActor_GetGeometryCacheComponent) == 0x000008, "Wrong size on GeometryCacheActor_GetGeometryCacheComponent");
-static_assert(offsetof(GeometryCacheActor_GetGeometryCacheComponent, ReturnValue) == 0x000000, "Member 'GeometryCacheActor_GetGeometryCacheComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheActor_GetGeometryCacheComponent;
 
 // Function GeometryCache.GeometryCacheComponent.SetGeometryCache
 // 0x0010 (0x0010 - 0x0000)
@@ -36,10 +34,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GeometryCacheComponent_SetGeometryCache) == 0x000008, "Wrong alignment on GeometryCacheComponent_SetGeometryCache");
-static_assert(sizeof(GeometryCacheComponent_SetGeometryCache) == 0x000010, "Wrong size on GeometryCacheComponent_SetGeometryCache");
-static_assert(offsetof(GeometryCacheComponent_SetGeometryCache, NewGeomCache) == 0x000000, "Member 'GeometryCacheComponent_SetGeometryCache::NewGeomCache' has a wrong offset!");
-static_assert(offsetof(GeometryCacheComponent_SetGeometryCache, ReturnValue) == 0x000008, "Member 'GeometryCacheComponent_SetGeometryCache::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_SetGeometryCache;
 
 // Function GeometryCache.GeometryCacheComponent.SetLooping
 // 0x0001 (0x0001 - 0x0000)
@@ -48,9 +43,7 @@ struct GeometryCacheComponent_SetLooping final
 public:
 	bool                                          bNewLooping;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_SetLooping) == 0x000001, "Wrong alignment on GeometryCacheComponent_SetLooping");
-static_assert(sizeof(GeometryCacheComponent_SetLooping) == 0x000001, "Wrong size on GeometryCacheComponent_SetLooping");
-static_assert(offsetof(GeometryCacheComponent_SetLooping, bNewLooping) == 0x000000, "Member 'GeometryCacheComponent_SetLooping::bNewLooping' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_SetLooping;
 
 // Function GeometryCache.GeometryCacheComponent.SetPlaybackSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -59,9 +52,7 @@ struct GeometryCacheComponent_SetPlaybackSpeed final
 public:
 	float                                         NewPlaybackSpeed;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_SetPlaybackSpeed) == 0x000004, "Wrong alignment on GeometryCacheComponent_SetPlaybackSpeed");
-static_assert(sizeof(GeometryCacheComponent_SetPlaybackSpeed) == 0x000004, "Wrong size on GeometryCacheComponent_SetPlaybackSpeed");
-static_assert(offsetof(GeometryCacheComponent_SetPlaybackSpeed, NewPlaybackSpeed) == 0x000000, "Member 'GeometryCacheComponent_SetPlaybackSpeed::NewPlaybackSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_SetPlaybackSpeed;
 
 // Function GeometryCache.GeometryCacheComponent.SetStartTimeOffset
 // 0x0004 (0x0004 - 0x0000)
@@ -70,9 +61,7 @@ struct GeometryCacheComponent_SetStartTimeOffset final
 public:
 	float                                         NewStartTimeOffset;                                // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_SetStartTimeOffset) == 0x000004, "Wrong alignment on GeometryCacheComponent_SetStartTimeOffset");
-static_assert(sizeof(GeometryCacheComponent_SetStartTimeOffset) == 0x000004, "Wrong size on GeometryCacheComponent_SetStartTimeOffset");
-static_assert(offsetof(GeometryCacheComponent_SetStartTimeOffset, NewStartTimeOffset) == 0x000000, "Member 'GeometryCacheComponent_SetStartTimeOffset::NewStartTimeOffset' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_SetStartTimeOffset;
 
 // Function GeometryCache.GeometryCacheComponent.TickAtThisTime
 // 0x0008 (0x0008 - 0x0000)
@@ -85,12 +74,7 @@ public:
 	bool                                          bInIsLooping;                                      // 0x0006(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GeometryCacheComponent_TickAtThisTime) == 0x000004, "Wrong alignment on GeometryCacheComponent_TickAtThisTime");
-static_assert(sizeof(GeometryCacheComponent_TickAtThisTime) == 0x000008, "Wrong size on GeometryCacheComponent_TickAtThisTime");
-static_assert(offsetof(GeometryCacheComponent_TickAtThisTime, Time) == 0x000000, "Member 'GeometryCacheComponent_TickAtThisTime::Time' has a wrong offset!");
-static_assert(offsetof(GeometryCacheComponent_TickAtThisTime, bInIsRunning) == 0x000004, "Member 'GeometryCacheComponent_TickAtThisTime::bInIsRunning' has a wrong offset!");
-static_assert(offsetof(GeometryCacheComponent_TickAtThisTime, bInBackwards) == 0x000005, "Member 'GeometryCacheComponent_TickAtThisTime::bInBackwards' has a wrong offset!");
-static_assert(offsetof(GeometryCacheComponent_TickAtThisTime, bInIsLooping) == 0x000006, "Member 'GeometryCacheComponent_TickAtThisTime::bInIsLooping' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_TickAtThisTime;
 
 // Function GeometryCache.GeometryCacheComponent.GetAnimationTime
 // 0x0004 (0x0004 - 0x0000)
@@ -99,9 +83,7 @@ struct GeometryCacheComponent_GetAnimationTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetAnimationTime) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetAnimationTime");
-static_assert(sizeof(GeometryCacheComponent_GetAnimationTime) == 0x000004, "Wrong size on GeometryCacheComponent_GetAnimationTime");
-static_assert(offsetof(GeometryCacheComponent_GetAnimationTime, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetAnimationTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetAnimationTime;
 
 // Function GeometryCache.GeometryCacheComponent.GetDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -110,9 +92,7 @@ struct GeometryCacheComponent_GetDuration final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetDuration) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetDuration");
-static_assert(sizeof(GeometryCacheComponent_GetDuration) == 0x000004, "Wrong size on GeometryCacheComponent_GetDuration");
-static_assert(offsetof(GeometryCacheComponent_GetDuration, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetDuration::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetDuration;
 
 // Function GeometryCache.GeometryCacheComponent.GetNumberOfFrames
 // 0x0004 (0x0004 - 0x0000)
@@ -121,9 +101,7 @@ struct GeometryCacheComponent_GetNumberOfFrames final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetNumberOfFrames) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetNumberOfFrames");
-static_assert(sizeof(GeometryCacheComponent_GetNumberOfFrames) == 0x000004, "Wrong size on GeometryCacheComponent_GetNumberOfFrames");
-static_assert(offsetof(GeometryCacheComponent_GetNumberOfFrames, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetNumberOfFrames::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetNumberOfFrames;
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackDirection
 // 0x0004 (0x0004 - 0x0000)
@@ -132,9 +110,7 @@ struct GeometryCacheComponent_GetPlaybackDirection final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetPlaybackDirection) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetPlaybackDirection");
-static_assert(sizeof(GeometryCacheComponent_GetPlaybackDirection) == 0x000004, "Wrong size on GeometryCacheComponent_GetPlaybackDirection");
-static_assert(offsetof(GeometryCacheComponent_GetPlaybackDirection, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetPlaybackDirection::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetPlaybackDirection;
 
 // Function GeometryCache.GeometryCacheComponent.GetPlaybackSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -143,9 +119,7 @@ struct GeometryCacheComponent_GetPlaybackSpeed final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetPlaybackSpeed) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetPlaybackSpeed");
-static_assert(sizeof(GeometryCacheComponent_GetPlaybackSpeed) == 0x000004, "Wrong size on GeometryCacheComponent_GetPlaybackSpeed");
-static_assert(offsetof(GeometryCacheComponent_GetPlaybackSpeed, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetPlaybackSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetPlaybackSpeed;
 
 // Function GeometryCache.GeometryCacheComponent.GetStartTimeOffset
 // 0x0004 (0x0004 - 0x0000)
@@ -154,9 +128,7 @@ struct GeometryCacheComponent_GetStartTimeOffset final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_GetStartTimeOffset) == 0x000004, "Wrong alignment on GeometryCacheComponent_GetStartTimeOffset");
-static_assert(sizeof(GeometryCacheComponent_GetStartTimeOffset) == 0x000004, "Wrong size on GeometryCacheComponent_GetStartTimeOffset");
-static_assert(offsetof(GeometryCacheComponent_GetStartTimeOffset, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_GetStartTimeOffset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_GetStartTimeOffset;
 
 // Function GeometryCache.GeometryCacheComponent.IsLooping
 // 0x0001 (0x0001 - 0x0000)
@@ -165,9 +137,7 @@ struct GeometryCacheComponent_IsLooping final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_IsLooping) == 0x000001, "Wrong alignment on GeometryCacheComponent_IsLooping");
-static_assert(sizeof(GeometryCacheComponent_IsLooping) == 0x000001, "Wrong size on GeometryCacheComponent_IsLooping");
-static_assert(offsetof(GeometryCacheComponent_IsLooping, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_IsLooping::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_IsLooping;
 
 // Function GeometryCache.GeometryCacheComponent.IsPlaying
 // 0x0001 (0x0001 - 0x0000)
@@ -176,9 +146,7 @@ struct GeometryCacheComponent_IsPlaying final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_IsPlaying) == 0x000001, "Wrong alignment on GeometryCacheComponent_IsPlaying");
-static_assert(sizeof(GeometryCacheComponent_IsPlaying) == 0x000001, "Wrong size on GeometryCacheComponent_IsPlaying");
-static_assert(offsetof(GeometryCacheComponent_IsPlaying, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_IsPlaying::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_IsPlaying;
 
 // Function GeometryCache.GeometryCacheComponent.IsPlayingReversed
 // 0x0001 (0x0001 - 0x0000)
@@ -187,9 +155,7 @@ struct GeometryCacheComponent_IsPlayingReversed final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheComponent_IsPlayingReversed) == 0x000001, "Wrong alignment on GeometryCacheComponent_IsPlayingReversed");
-static_assert(sizeof(GeometryCacheComponent_IsPlayingReversed) == 0x000001, "Wrong size on GeometryCacheComponent_IsPlayingReversed");
-static_assert(offsetof(GeometryCacheComponent_IsPlayingReversed, ReturnValue) == 0x000000, "Member 'GeometryCacheComponent_IsPlayingReversed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheComponent_IsPlayingReversed;
 
 // Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
 // 0x00B0 (0x00B0 - 0x0000)
@@ -200,10 +166,7 @@ public:
 	float                                         SampleTime;                                        // 0x00A8(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GeometryCacheTrack_FlipbookAnimation_AddMeshSample) == 0x000008, "Wrong alignment on GeometryCacheTrack_FlipbookAnimation_AddMeshSample");
-static_assert(sizeof(GeometryCacheTrack_FlipbookAnimation_AddMeshSample) == 0x0000B0, "Wrong size on GeometryCacheTrack_FlipbookAnimation_AddMeshSample");
-static_assert(offsetof(GeometryCacheTrack_FlipbookAnimation_AddMeshSample, MeshData) == 0x000000, "Member 'GeometryCacheTrack_FlipbookAnimation_AddMeshSample::MeshData' has a wrong offset!");
-static_assert(offsetof(GeometryCacheTrack_FlipbookAnimation_AddMeshSample, SampleTime) == 0x0000A8, "Member 'GeometryCacheTrack_FlipbookAnimation_AddMeshSample::SampleTime' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheTrack_FlipbookAnimation_AddMeshSample;
 
 // Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
 // 0x00A8 (0x00A8 - 0x0000)
@@ -212,9 +175,7 @@ struct GeometryCacheTrack_TransformAnimation_SetMesh final
 public:
 	struct FGeometryCacheMeshData                 NewMeshData;                                       // 0x0000(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheTrack_TransformAnimation_SetMesh) == 0x000008, "Wrong alignment on GeometryCacheTrack_TransformAnimation_SetMesh");
-static_assert(sizeof(GeometryCacheTrack_TransformAnimation_SetMesh) == 0x0000A8, "Wrong size on GeometryCacheTrack_TransformAnimation_SetMesh");
-static_assert(offsetof(GeometryCacheTrack_TransformAnimation_SetMesh, NewMeshData) == 0x000000, "Member 'GeometryCacheTrack_TransformAnimation_SetMesh::NewMeshData' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheTrack_TransformAnimation_SetMesh;
 
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
 // 0x00A8 (0x00A8 - 0x0000)
@@ -223,9 +184,7 @@ struct GeometryCacheTrack_TransformGroupAnimation_SetMesh final
 public:
 	struct FGeometryCacheMeshData                 NewMeshData;                                       // 0x0000(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryCacheTrack_TransformGroupAnimation_SetMesh) == 0x000008, "Wrong alignment on GeometryCacheTrack_TransformGroupAnimation_SetMesh");
-static_assert(sizeof(GeometryCacheTrack_TransformGroupAnimation_SetMesh) == 0x0000A8, "Wrong size on GeometryCacheTrack_TransformGroupAnimation_SetMesh");
-static_assert(offsetof(GeometryCacheTrack_TransformGroupAnimation_SetMesh, NewMeshData) == 0x000000, "Member 'GeometryCacheTrack_TransformGroupAnimation_SetMesh::NewMeshData' has a wrong offset!");
+DUMPER7_ASSERTS_GeometryCacheTrack_TransformGroupAnimation_SetMesh;
 
 }
 

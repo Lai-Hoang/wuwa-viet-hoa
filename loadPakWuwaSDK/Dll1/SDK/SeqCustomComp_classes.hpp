@@ -37,18 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SeqCustomComp_C">();
+		BP_STATIC_CLASS_IMPL("SeqCustomComp_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SeqCustomComp_C")
 	}
 	static class USeqCustomComp_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USeqCustomComp_C>();
 	}
 };
-static_assert(alignof(USeqCustomComp_C) == 0x000008, "Wrong alignment on USeqCustomComp_C");
-static_assert(sizeof(USeqCustomComp_C) == 0x0000D8, "Wrong size on USeqCustomComp_C");
-static_assert(offsetof(USeqCustomComp_C, CurveData) == 0x0000C0, "Member 'USeqCustomComp_C::CurveData' has a wrong offset!");
-static_assert(offsetof(USeqCustomComp_C, SeqLHandWeight) == 0x0000D0, "Member 'USeqCustomComp_C::SeqLHandWeight' has a wrong offset!");
-static_assert(offsetof(USeqCustomComp_C, SeqRHandWeight) == 0x0000D4, "Member 'USeqCustomComp_C::SeqRHandWeight' has a wrong offset!");
+DUMPER7_ASSERTS_USeqCustomComp_C;
 
 }
 

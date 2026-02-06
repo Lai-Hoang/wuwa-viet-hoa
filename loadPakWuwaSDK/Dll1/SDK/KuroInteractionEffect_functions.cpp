@@ -277,6 +277,34 @@ int32 UKuroInteractionEffectSystem::SearchInteractionFoliage(const class FString
 }
 
 
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionFoliageArray
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TArray<class FString>&            FoliageTypeNames                                       (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UKuroInteractionEffectSystem::SearchInteractionFoliageArray(const TArray<class FString>& FoliageTypeNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionEffectSystem", "SearchInteractionFoliageArray");
+
+	Params::KuroInteractionEffectSystem_SearchInteractionFoliageArray Parms{};
+
+	Parms.FoliageTypeNames = std::move(FoliageTypeNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionPlacementTriggerActor
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:

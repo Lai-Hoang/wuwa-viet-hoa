@@ -30,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateTurnAdd_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateTurnAdd_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateTurnAdd_C")
 	}
 	static class UTsAnimNotifyStateTurnAdd_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateTurnAdd_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateTurnAdd_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateTurnAdd_C");
-static_assert(sizeof(UTsAnimNotifyStateTurnAdd_C) == 0x000048, "Wrong size on UTsAnimNotifyStateTurnAdd_C");
+DUMPER7_ASSERTS_UTsAnimNotifyStateTurnAdd_C;
 
 }
 

@@ -22,10 +22,7 @@ public:
 	TSoftObjectPtr<class UBulletSceneInteraction_C> 水面交互_5_B00722FA4F9CC0CF4B95DCB3CCF38D5C;     // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UBP_SceneBattleInteract_C> 场景物件交互_12_734144634E65753A60121BAB4A68F0FF; // 0x0030(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataInteraction) == 0x000008, "Wrong alignment on FSReBulletDataInteraction");
-static_assert(sizeof(FSReBulletDataInteraction) == 0x000060, "Wrong size on FSReBulletDataInteraction");
-static_assert(offsetof(FSReBulletDataInteraction, 水面交互_5_B00722FA4F9CC0CF4B95DCB3CCF38D5C) == 0x000000, "Member 'FSReBulletDataInteraction::水面交互_5_B00722FA4F9CC0CF4B95DCB3CCF38D5C' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataInteraction, 场景物件交互_12_734144634E65753A60121BAB4A68F0FF) == 0x000030, "Member 'FSReBulletDataInteraction::场景物件交互_12_734144634E65753A60121BAB4A68F0FF' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataInteraction;
 
 }
 

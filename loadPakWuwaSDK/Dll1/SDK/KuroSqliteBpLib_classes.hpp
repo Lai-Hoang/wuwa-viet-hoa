@@ -42,15 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroPrepareStatementLib">();
+		STATIC_CLASS_IMPL("KuroPrepareStatementLib")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroPrepareStatementLib")
 	}
 	static class UKuroPrepareStatementLib* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroPrepareStatementLib>();
 	}
 };
-static_assert(alignof(UKuroPrepareStatementLib) == 0x000008, "Wrong alignment on UKuroPrepareStatementLib");
-static_assert(sizeof(UKuroPrepareStatementLib) == 0x000030, "Wrong size on UKuroPrepareStatementLib");
+DUMPER7_ASSERTS_UKuroPrepareStatementLib;
 
 // Class KuroSqliteBpLib.KuroQueryStatLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -68,15 +71,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroQueryStatLibrary">();
+		STATIC_CLASS_IMPL("KuroQueryStatLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroQueryStatLibrary")
 	}
 	static class UKuroQueryStatLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroQueryStatLibrary>();
 	}
 };
-static_assert(alignof(UKuroQueryStatLibrary) == 0x000008, "Wrong alignment on UKuroQueryStatLibrary");
-static_assert(sizeof(UKuroQueryStatLibrary) == 0x000030, "Wrong size on UKuroQueryStatLibrary");
+DUMPER7_ASSERTS_UKuroQueryStatLibrary;
 
 // Class KuroSqliteBpLib.KuroSqliteLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -96,15 +102,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSqliteLibrary">();
+		STATIC_CLASS_IMPL("KuroSqliteLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSqliteLibrary")
 	}
 	static class UKuroSqliteLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSqliteLibrary>();
 	}
 };
-static_assert(alignof(UKuroSqliteLibrary) == 0x000008, "Wrong alignment on UKuroSqliteLibrary");
-static_assert(sizeof(UKuroSqliteLibrary) == 0x000030, "Wrong size on UKuroSqliteLibrary");
+DUMPER7_ASSERTS_UKuroSqliteLibrary;
 
 // Class KuroSqliteBpLib.KuroSqliteResultSet
 // 0x0048 (0x0078 - 0x0030)
@@ -129,16 +138,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSqliteResultSet">();
+		STATIC_CLASS_IMPL("KuroSqliteResultSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSqliteResultSet")
 	}
 	static class UKuroSqliteResultSet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSqliteResultSet>();
 	}
 };
-static_assert(alignof(UKuroSqliteResultSet) == 0x000008, "Wrong alignment on UKuroSqliteResultSet");
-static_assert(sizeof(UKuroSqliteResultSet) == 0x000078, "Wrong size on UKuroSqliteResultSet");
-static_assert(offsetof(UKuroSqliteResultSet, QueriedCallback) == 0x000030, "Member 'UKuroSqliteResultSet::QueriedCallback' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSqliteResultSet;
 
 }
 

@@ -189,8 +189,7 @@ public:
 	uint8                                         bUpdateMassWhenScaleChanges : 1;                   // 0x0010(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBodyInstanceCore) == 0x000008, "Wrong alignment on FBodyInstanceCore");
-static_assert(sizeof(FBodyInstanceCore) == 0x000018, "Wrong size on FBodyInstanceCore");
+DUMPER7_ASSERTS_FBodyInstanceCore;
 
 }
 

@@ -10,122 +10,121 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RippleSwim.BP_RippleSwim_C
-// 0x02C0 (0x0668 - 0x03A8)
+// 0x02C0 (0x0678 - 0x03B8)
 class ABP_RippleSwim_C final : public AKuroBPCustomCookActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               AddNewMaterial;                                    // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               tempToPrevMaterial;                                // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DrawMaterial;                                      // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSim;                                              // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Plane;                                             // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PrevState;                                         // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         State;                                             // 0x03E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  Tag_Container;                                     // 0x03E8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBP_RippleWater_Data_C*                 Current_Ripple_State;                              // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Step;                                              // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         captureSize;                                       // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               rippleMaterial;                                    // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 prevRT;                                            // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 currentRT;                                         // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 tempRTRef;                                         // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PlayerLocation;                                    // 0x0438(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Offset;                                            // 0x0444(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44C[0x4];                                      // 0x044C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TestActor;                                         // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PlayerSize;                                        // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               AddNewMaterial;                                    // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               tempToPrevMaterial;                                // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DrawMaterial;                                      // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSim;                                              // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Plane;                                             // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PrevState;                                         // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         State;                                             // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  Tag_Container;                                     // 0x03F8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UBP_RippleWater_Data_C*                 Current_Ripple_State;                              // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Step;                                              // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         captureSize;                                       // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               rippleMaterial;                                    // 0x0428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 prevRT;                                            // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 currentRT;                                         // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 tempRTRef;                                         // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PlayerLocation;                                    // 0x0448(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Offset;                                            // 0x0454(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           Global_MPC;                                        // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayerInWaterLast;                                // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_469[0x3];                                      // 0x0469(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RippleDistanceNormal;                              // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RippleDistanceFluo;                                // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              PositionOffset;                                    // 0x0474(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastRippleLocationNormal;                          // 0x047C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RippleOffset;                                      // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastRippleLocationFluo;                            // 0x048C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SwimRippleOffset;                                  // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              PlayerPosNormal;                                   // 0x049C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              PlayerPosFluo;                                     // 0x04A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastRipplePastTime;                                // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_RippleWater_Data_C*                 Swim_Ripple;                                       // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_RippleWater_Data_C*                 Gongduola_Ripple;                                  // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_RippleWater_Data_C*                 Fly_Ripple;                                        // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_RippleWater_Data_C*                 Drop_Ripple;                                       // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InFixedRippleArea;                                 // 0x04D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4D1[0x7];                                      // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 PersistRT;                                         // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 FinalRT;                                           // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCustomRippleState;                                // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SceneBattleInteract_C*              BulletConfig;                                      // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              BulletUV;                                          // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              LastBulletUV;                                      // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSetUV;                                            // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bShowDebugData;                                    // 0x0509(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          开启翱翔水交互;                                    // 0x050A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_50B[0x5];                                      // 0x050B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        翱翔射线长度;                                      // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrRippleOffset;                                  // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrRippleIntensity;                               // 0x051C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RippleIntensity;                                   // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyMaxDistance;                                    // 0x0524(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyMinDistance;                                    // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RippleAttenuation;                                 // 0x052C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          AvailblePoint;                                     // 0x0530(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          LastAvailblePoint;                                 // 0x0548(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BulletMinConnectDistance;                          // 0x0560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BulletMaxConnectDistance;                          // 0x0564(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Distance;                                          // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BulletLastHitTime0;                                // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_574[0x4];                                      // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVectorDouble>                  BulletPointList0;                                  // 0x0578(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         BulletLastHitTime1;                                // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58C[0x4];                                      // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVectorDouble>                  BulletPointList1;                                  // 0x0590(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         BulletLastHitTime2;                                // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVectorDouble>                  BulletPointList2;                                  // 0x05A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         CatMullStep;                                       // 0x05B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Alpha;                                             // 0x05BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Tension;                                           // 0x05C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C4[0x4];                                      // 0x05C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVectorDouble>                  AvailblePointList;                                 // 0x05C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UTextureRenderTarget2D*                 PointRT;                                           // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               AddPointsMaterial;                                 // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               AddCapsuleMaterial;                                // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EDrawDebugTrace                               Fly_Ray_Debug_Type;                                // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5F1[0x3];                                      // 0x05F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              CurrentRippleCenter;                               // 0x05F4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseOldRipple;                                      // 0x05FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5FD[0x3];                                      // 0x05FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NewCaptureSize;                                    // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_604[0x4];                                      // 0x0604(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               NewRipplePrevMaterial;                             // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Weapon_0_Debug_Color;                              // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Weapon_1_Debug_Color;                              // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Weapon_2_Debug_Color;                              // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              RippleCenterOffset;                                // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_RippleWater_Data_C*                 Fuludelisi_Ripple;                                 // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableSwimRipple;                                 // 0x0650(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_651[0x3];                                      // 0x0651(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WaterDepth;                                        // 0x0654(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FallJumpDepthThreshold;                            // 0x0658(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_65C[0x4];                                      // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_RippleWater_Data_C*                 Moto_Ripple;                                       // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TestActor;                                         // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PlayerSize;                                        // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           Global_MPC;                                        // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayerInWaterLast;                                // 0x0478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_479[0x3];                                      // 0x0479(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RippleDistanceNormal;                              // 0x047C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RippleDistanceFluo;                                // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              PositionOffset;                                    // 0x0484(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastRippleLocationNormal;                          // 0x048C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RippleOffset;                                      // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastRippleLocationFluo;                            // 0x049C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SwimRippleOffset;                                  // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              PlayerPosNormal;                                   // 0x04AC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              PlayerPosFluo;                                     // 0x04B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastRipplePastTime;                                // 0x04BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RippleWater_Data_C*                 Swim_Ripple;                                       // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RippleWater_Data_C*                 Gongduola_Ripple;                                  // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RippleWater_Data_C*                 Fly_Ripple;                                        // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RippleWater_Data_C*                 Drop_Ripple;                                       // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InFixedRippleArea;                                 // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 PersistRT;                                         // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 FinalRT;                                           // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCustomRippleState;                                // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SceneBattleInteract_C*              BulletConfig;                                      // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              BulletUV;                                          // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              LastBulletUV;                                      // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSetUV;                                            // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bShowDebugData;                                    // 0x0519(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51A[0x6];                                      // 0x051A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        翱翔射线长度;                                      // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrRippleOffset;                                  // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrRippleIntensity;                               // 0x052C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RippleIntensity;                                   // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyMaxDistance;                                    // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyMinDistance;                                    // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RippleAttenuation;                                 // 0x053C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          AvailblePoint;                                     // 0x0540(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          LastAvailblePoint;                                 // 0x0558(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BulletMinConnectDistance;                          // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BulletMaxConnectDistance;                          // 0x0574(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Distance;                                          // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BulletLastHitTime0;                                // 0x0580(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_584[0x4];                                      // 0x0584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVectorDouble>                  BulletPointList0;                                  // 0x0588(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         BulletLastHitTime1;                                // 0x0598(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVectorDouble>                  BulletPointList1;                                  // 0x05A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         BulletLastHitTime2;                                // 0x05B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B4[0x4];                                      // 0x05B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVectorDouble>                  BulletPointList2;                                  // 0x05B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         CatMullStep;                                       // 0x05C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Alpha;                                             // 0x05CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Tension;                                           // 0x05D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVectorDouble>                  AvailblePointList;                                 // 0x05D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UTextureRenderTarget2D*                 PointRT;                                           // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               AddPointsMaterial;                                 // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               AddCapsuleMaterial;                                // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EDrawDebugTrace                               Fly_Ray_Debug_Type;                                // 0x0600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_601[0x3];                                      // 0x0601(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              CurrentRippleCenter;                               // 0x0604(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseOldRipple;                                      // 0x060C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_60D[0x3];                                      // 0x060D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NewCaptureSize;                                    // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_614[0x4];                                      // 0x0614(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               NewRipplePrevMaterial;                             // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Weapon_0_Debug_Color;                              // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Weapon_1_Debug_Color;                              // 0x0630(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Weapon_2_Debug_Color;                              // 0x0640(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              RippleCenterOffset;                                // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RippleWater_Data_C*                 Fuludelisi_Ripple;                                 // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableSwimRipple;                                 // 0x0660(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_661[0x3];                                      // 0x0661(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WaterDepth;                                        // 0x0664(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FallJumpDepthThreshold;                            // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_66C[0x4];                                      // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_RippleWater_Data_C*                 Moto_Ripple;                                       // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_RippleSwim(int32 EntryPoint);
@@ -170,101 +169,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RippleSwim_C">();
+		BP_STATIC_CLASS_IMPL("BP_RippleSwim_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RippleSwim_C")
 	}
 	static class ABP_RippleSwim_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_RippleSwim_C>();
 	}
 };
-static_assert(alignof(ABP_RippleSwim_C) == 0x000008, "Wrong alignment on ABP_RippleSwim_C");
-static_assert(sizeof(ABP_RippleSwim_C) == 0x000668, "Wrong size on ABP_RippleSwim_C");
-static_assert(offsetof(ABP_RippleSwim_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_RippleSwim_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, DefaultSceneRoot) == 0x0003B0, "Member 'ABP_RippleSwim_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, AddNewMaterial) == 0x0003B8, "Member 'ABP_RippleSwim_C::AddNewMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, tempToPrevMaterial) == 0x0003C0, "Member 'ABP_RippleSwim_C::tempToPrevMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, DrawMaterial) == 0x0003C8, "Member 'ABP_RippleSwim_C::DrawMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bSim) == 0x0003D0, "Member 'ABP_RippleSwim_C::bSim' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Plane) == 0x0003D8, "Member 'ABP_RippleSwim_C::Plane' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PrevState) == 0x0003E0, "Member 'ABP_RippleSwim_C::PrevState' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, State) == 0x0003E4, "Member 'ABP_RippleSwim_C::State' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Tag_Container) == 0x0003E8, "Member 'ABP_RippleSwim_C::Tag_Container' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Current_Ripple_State) == 0x000408, "Member 'ABP_RippleSwim_C::Current_Ripple_State' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Step) == 0x000410, "Member 'ABP_RippleSwim_C::Step' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, captureSize) == 0x000414, "Member 'ABP_RippleSwim_C::captureSize' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, rippleMaterial) == 0x000418, "Member 'ABP_RippleSwim_C::rippleMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, prevRT) == 0x000420, "Member 'ABP_RippleSwim_C::prevRT' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, currentRT) == 0x000428, "Member 'ABP_RippleSwim_C::currentRT' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, tempRTRef) == 0x000430, "Member 'ABP_RippleSwim_C::tempRTRef' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PlayerLocation) == 0x000438, "Member 'ABP_RippleSwim_C::PlayerLocation' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Offset) == 0x000444, "Member 'ABP_RippleSwim_C::Offset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, TestActor) == 0x000450, "Member 'ABP_RippleSwim_C::TestActor' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PlayerSize) == 0x000458, "Member 'ABP_RippleSwim_C::PlayerSize' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Global_MPC) == 0x000460, "Member 'ABP_RippleSwim_C::Global_MPC' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bPlayerInWaterLast) == 0x000468, "Member 'ABP_RippleSwim_C::bPlayerInWaterLast' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleDistanceNormal) == 0x00046C, "Member 'ABP_RippleSwim_C::RippleDistanceNormal' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleDistanceFluo) == 0x000470, "Member 'ABP_RippleSwim_C::RippleDistanceFluo' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PositionOffset) == 0x000474, "Member 'ABP_RippleSwim_C::PositionOffset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, LastRippleLocationNormal) == 0x00047C, "Member 'ABP_RippleSwim_C::LastRippleLocationNormal' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleOffset) == 0x000488, "Member 'ABP_RippleSwim_C::RippleOffset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, LastRippleLocationFluo) == 0x00048C, "Member 'ABP_RippleSwim_C::LastRippleLocationFluo' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, SwimRippleOffset) == 0x000498, "Member 'ABP_RippleSwim_C::SwimRippleOffset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PlayerPosNormal) == 0x00049C, "Member 'ABP_RippleSwim_C::PlayerPosNormal' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PlayerPosFluo) == 0x0004A4, "Member 'ABP_RippleSwim_C::PlayerPosFluo' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, LastRipplePastTime) == 0x0004AC, "Member 'ABP_RippleSwim_C::LastRipplePastTime' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Swim_Ripple) == 0x0004B0, "Member 'ABP_RippleSwim_C::Swim_Ripple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Gongduola_Ripple) == 0x0004B8, "Member 'ABP_RippleSwim_C::Gongduola_Ripple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Fly_Ripple) == 0x0004C0, "Member 'ABP_RippleSwim_C::Fly_Ripple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Drop_Ripple) == 0x0004C8, "Member 'ABP_RippleSwim_C::Drop_Ripple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, InFixedRippleArea) == 0x0004D0, "Member 'ABP_RippleSwim_C::InFixedRippleArea' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PersistRT) == 0x0004D8, "Member 'ABP_RippleSwim_C::PersistRT' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, FinalRT) == 0x0004E0, "Member 'ABP_RippleSwim_C::FinalRT' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bCustomRippleState) == 0x0004E8, "Member 'ABP_RippleSwim_C::bCustomRippleState' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletConfig) == 0x0004F0, "Member 'ABP_RippleSwim_C::BulletConfig' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletUV) == 0x0004F8, "Member 'ABP_RippleSwim_C::BulletUV' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, LastBulletUV) == 0x000500, "Member 'ABP_RippleSwim_C::LastBulletUV' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bSetUV) == 0x000508, "Member 'ABP_RippleSwim_C::bSetUV' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bShowDebugData) == 0x000509, "Member 'ABP_RippleSwim_C::bShowDebugData' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, 开启翱翔水交互) == 0x00050A, "Member 'ABP_RippleSwim_C::开启翱翔水交互' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, 翱翔射线长度) == 0x000510, "Member 'ABP_RippleSwim_C::翱翔射线长度' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, CurrRippleOffset) == 0x000518, "Member 'ABP_RippleSwim_C::CurrRippleOffset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, CurrRippleIntensity) == 0x00051C, "Member 'ABP_RippleSwim_C::CurrRippleIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleIntensity) == 0x000520, "Member 'ABP_RippleSwim_C::RippleIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, FlyMaxDistance) == 0x000524, "Member 'ABP_RippleSwim_C::FlyMaxDistance' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, FlyMinDistance) == 0x000528, "Member 'ABP_RippleSwim_C::FlyMinDistance' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleAttenuation) == 0x00052C, "Member 'ABP_RippleSwim_C::RippleAttenuation' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, AvailblePoint) == 0x000530, "Member 'ABP_RippleSwim_C::AvailblePoint' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, LastAvailblePoint) == 0x000548, "Member 'ABP_RippleSwim_C::LastAvailblePoint' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletMinConnectDistance) == 0x000560, "Member 'ABP_RippleSwim_C::BulletMinConnectDistance' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletMaxConnectDistance) == 0x000564, "Member 'ABP_RippleSwim_C::BulletMaxConnectDistance' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Distance) == 0x000568, "Member 'ABP_RippleSwim_C::Distance' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletLastHitTime0) == 0x000570, "Member 'ABP_RippleSwim_C::BulletLastHitTime0' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletPointList0) == 0x000578, "Member 'ABP_RippleSwim_C::BulletPointList0' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletLastHitTime1) == 0x000588, "Member 'ABP_RippleSwim_C::BulletLastHitTime1' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletPointList1) == 0x000590, "Member 'ABP_RippleSwim_C::BulletPointList1' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletLastHitTime2) == 0x0005A0, "Member 'ABP_RippleSwim_C::BulletLastHitTime2' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, BulletPointList2) == 0x0005A8, "Member 'ABP_RippleSwim_C::BulletPointList2' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, CatMullStep) == 0x0005B8, "Member 'ABP_RippleSwim_C::CatMullStep' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Alpha) == 0x0005BC, "Member 'ABP_RippleSwim_C::Alpha' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Tension) == 0x0005C0, "Member 'ABP_RippleSwim_C::Tension' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, AvailblePointList) == 0x0005C8, "Member 'ABP_RippleSwim_C::AvailblePointList' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, PointRT) == 0x0005D8, "Member 'ABP_RippleSwim_C::PointRT' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, AddPointsMaterial) == 0x0005E0, "Member 'ABP_RippleSwim_C::AddPointsMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, AddCapsuleMaterial) == 0x0005E8, "Member 'ABP_RippleSwim_C::AddCapsuleMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Fly_Ray_Debug_Type) == 0x0005F0, "Member 'ABP_RippleSwim_C::Fly_Ray_Debug_Type' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, CurrentRippleCenter) == 0x0005F4, "Member 'ABP_RippleSwim_C::CurrentRippleCenter' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, UseOldRipple) == 0x0005FC, "Member 'ABP_RippleSwim_C::UseOldRipple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, NewCaptureSize) == 0x000600, "Member 'ABP_RippleSwim_C::NewCaptureSize' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, NewRipplePrevMaterial) == 0x000608, "Member 'ABP_RippleSwim_C::NewRipplePrevMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Weapon_0_Debug_Color) == 0x000610, "Member 'ABP_RippleSwim_C::Weapon_0_Debug_Color' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Weapon_1_Debug_Color) == 0x000620, "Member 'ABP_RippleSwim_C::Weapon_1_Debug_Color' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Weapon_2_Debug_Color) == 0x000630, "Member 'ABP_RippleSwim_C::Weapon_2_Debug_Color' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, RippleCenterOffset) == 0x000640, "Member 'ABP_RippleSwim_C::RippleCenterOffset' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Fuludelisi_Ripple) == 0x000648, "Member 'ABP_RippleSwim_C::Fuludelisi_Ripple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, bEnableSwimRipple) == 0x000650, "Member 'ABP_RippleSwim_C::bEnableSwimRipple' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, WaterDepth) == 0x000654, "Member 'ABP_RippleSwim_C::WaterDepth' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, FallJumpDepthThreshold) == 0x000658, "Member 'ABP_RippleSwim_C::FallJumpDepthThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_RippleSwim_C, Moto_Ripple) == 0x000660, "Member 'ABP_RippleSwim_C::Moto_Ripple' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_RippleSwim_C;
 
 }
 

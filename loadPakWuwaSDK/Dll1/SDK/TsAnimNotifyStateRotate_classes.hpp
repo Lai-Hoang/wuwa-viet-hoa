@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EAnsRotateBlackboardType_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "EAnsRotateDetectionType_structs.hpp"
-#include "EAnsRotateBlackboardType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -61,34 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateRotate_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateRotate_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateRotate_C")
 	}
 	static class UTsAnimNotifyStateRotate_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateRotate_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateRotate_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateRotate_C");
-static_assert(sizeof(UTsAnimNotifyStateRotate_C) == 0x0000B8, "Wrong size on UTsAnimNotifyStateRotate_C");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 旋转速度) == 0x000048, "Member 'UTsAnimNotifyStateRotate_C::旋转速度' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 是否自动朝向目标) == 0x00004C, "Member 'UTsAnimNotifyStateRotate_C::是否自动朝向目标' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 是否平滑旋转) == 0x00004D, "Member 'UTsAnimNotifyStateRotate_C::是否平滑旋转' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, Curve) == 0x000050, "Member 'UTsAnimNotifyStateRotate_C::Curve' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 是否应用旋转偏移) == 0x000058, "Member 'UTsAnimNotifyStateRotate_C::是否应用旋转偏移' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 旋转偏移) == 0x00005C, "Member 'UTsAnimNotifyStateRotate_C::旋转偏移' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 设置为朝向黑板目标) == 0x000060, "Member 'UTsAnimNotifyStateRotate_C::设置为朝向黑板目标' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 黑板类型) == 0x000061, "Member 'UTsAnimNotifyStateRotate_C::黑板类型' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 朝向黑板目标名) == 0x000068, "Member 'UTsAnimNotifyStateRotate_C::朝向黑板目标名' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 停止旋转阈值) == 0x000078, "Member 'UTsAnimNotifyStateRotate_C::停止旋转阈值' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 继续旋转阈值) == 0x00007C, "Member 'UTsAnimNotifyStateRotate_C::继续旋转阈值' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 在横板模式中禁用) == 0x000080, "Member 'UTsAnimNotifyStateRotate_C::在横板模式中禁用' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 只在横板模式中生效) == 0x000081, "Member 'UTsAnimNotifyStateRotate_C::只在横板模式中生效' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 屏蔽标签列表) == 0x000088, "Member 'UTsAnimNotifyStateRotate_C::屏蔽标签列表' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 定向旋转功能) == 0x0000A8, "Member 'UTsAnimNotifyStateRotate_C::定向旋转功能' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 定向旋转阈值最小值) == 0x0000AC, "Member 'UTsAnimNotifyStateRotate_C::定向旋转阈值最小值' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 定向旋转阈值最大值) == 0x0000B0, "Member 'UTsAnimNotifyStateRotate_C::定向旋转阈值最大值' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 定向旋转方式) == 0x0000B4, "Member 'UTsAnimNotifyStateRotate_C::定向旋转方式' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateRotate_C, 调试定向旋转范围) == 0x0000B5, "Member 'UTsAnimNotifyStateRotate_C::调试定向旋转范围' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateRotate_C;
 
 }
 

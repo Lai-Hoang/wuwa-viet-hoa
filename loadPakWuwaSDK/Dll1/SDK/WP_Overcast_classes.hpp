@@ -23,15 +23,18 @@ class UWP_Overcast_C final : public UWeatherPreset_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WP_Overcast_C">();
+		BP_STATIC_CLASS_IMPL("WP_Overcast_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WP_Overcast_C")
 	}
 	static class UWP_Overcast_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWP_Overcast_C>();
 	}
 };
-static_assert(alignof(UWP_Overcast_C) == 0x000008, "Wrong alignment on UWP_Overcast_C");
-static_assert(sizeof(UWP_Overcast_C) == 0x0000A0, "Wrong size on UWP_Overcast_C");
+DUMPER7_ASSERTS_UWP_Overcast_C;
 
 }
 

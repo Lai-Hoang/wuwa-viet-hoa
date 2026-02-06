@@ -23,15 +23,18 @@ class UWP_Snowy_C final : public UWeatherPreset_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"WP_Snowy_C">();
+		BP_STATIC_CLASS_IMPL("WP_Snowy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"WP_Snowy_C")
 	}
 	static class UWP_Snowy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UWP_Snowy_C>();
 	}
 };
-static_assert(alignof(UWP_Snowy_C) == 0x000008, "Wrong alignment on UWP_Snowy_C");
-static_assert(sizeof(UWP_Snowy_C) == 0x0000A0, "Wrong size on UWP_Snowy_C");
+DUMPER7_ASSERTS_UWP_Snowy_C;
 
 }
 

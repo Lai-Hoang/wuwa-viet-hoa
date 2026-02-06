@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -32,16 +32,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene) == 0x000030, "Wrong size on BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, EntryPoint) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, K2Node_Event_DeltaTime_1) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::K2Node_Event_DeltaTime_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, K2Node_Event_DeltaTime) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, K2Node_Event_CurrentTime) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::K2Node_Event_CurrentTime' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, K2Node_Event_InName) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::K2Node_Event_InName' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, K2Node_Event_InUILevel) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::K2Node_Event_InUILevel' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene, CallFunc_IsEditor_ReturnValue) == 0x000029, "Member 'BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_ExecuteUbergraph_BP_GlobalGI_LaunchScene;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.OnKuroStartUiScene
 // 0x0018 (0x0018 - 0x0000)
@@ -51,10 +42,7 @@ public:
 	class FString                                 InName;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class ULevel*                                 InUILevel;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene) == 0x000018, "Wrong size on BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene, InName) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene::InName' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene, InUILevel) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene::InUILevel' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_OnKuroStartUiScene;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.OnKuroSetRuntimeTime
 // 0x0004 (0x0004 - 0x0000)
@@ -63,9 +51,7 @@ struct BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime final
 public:
 	float                                         CurrentTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime) == 0x000004, "Wrong size on BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime, CurrentTime) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime::CurrentTime' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_OnKuroSetRuntimeTime;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.OnKuroTick
 // 0x0004 (0x0004 - 0x0000)
@@ -74,9 +60,7 @@ struct BP_GlobalGI_LaunchScene_C_OnKuroTick final
 public:
 	float                                         DeltaTime_0;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_OnKuroTick) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_OnKuroTick");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_OnKuroTick) == 0x000004, "Wrong size on BP_GlobalGI_LaunchScene_C_OnKuroTick");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_OnKuroTick, DeltaTime_0) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_OnKuroTick::DeltaTime_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_OnKuroTick;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.OnKuroTickEditor
 // 0x0004 (0x0004 - 0x0000)
@@ -85,9 +69,7 @@ struct BP_GlobalGI_LaunchScene_C_OnKuroTickEditor final
 public:
 	float                                         DeltaTime_0;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_OnKuroTickEditor) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_OnKuroTickEditor");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_OnKuroTickEditor) == 0x000004, "Wrong size on BP_GlobalGI_LaunchScene_C_OnKuroTickEditor");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_OnKuroTickEditor, DeltaTime_0) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_OnKuroTickEditor::DeltaTime_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_OnKuroTickEditor;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateGIData
 // 0x0020 (0x0020 - 0x0000)
@@ -98,10 +80,7 @@ public:
 	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector4                               SunPositon;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateGIData) == 0x000010, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateGIData");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateGIData) == 0x000020, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateGIData");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateGIData, SkipLerpData) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateGIData::SkipLerpData' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateGIData, SunPositon) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_UpdateGIData::SunPositon' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateGIData;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Update Fog
 // 0x0068 (0x0068 - 0x0000)
@@ -124,21 +103,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS;    // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Update_Fog) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Update_Fog");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Update_Fog) == 0x000068, "Wrong size on BP_GlobalGI_LaunchScene_C_Update_Fog");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, NewLocalVar_1) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::NewLocalVar_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, K2Node_MakeStruct_WeightedBlendable) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x00002C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, K2Node_DynamicCast_AsBP_Kuro_Volume_Cloud_Global) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::K2Node_DynamicCast_AsBP_Kuro_Volume_Cloud_Global' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000050, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000058, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_1) == 0x000060, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_2) == 0x000061, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_3) == 0x000062, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS) == 0x000063, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Update_Fog;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Is Day
 // 0x000C (0x000C - 0x0000)
@@ -150,11 +115,7 @@ public:
 	float                                         CallFunc_GetTrulyTime_CurTime;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Is_Day) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Is_Day");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Is_Day) == 0x00000C, "Wrong size on BP_GlobalGI_LaunchScene_C_Is_Day");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Is_Day, Result) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Is_Day::Result' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Is_Day, CallFunc_GetTrulyTime_CurTime) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_Is_Day::CallFunc_GetTrulyTime_CurTime' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Is_Day, CallFunc_InRange_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_Is_Day::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Is_Day;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Get Light Direction
 // 0x003C (0x003C - 0x0000)
@@ -167,13 +128,7 @@ public:
 	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorInt_ReturnValue;           // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Get_Light_Direction");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction) == 0x00003C, "Wrong size on BP_GlobalGI_LaunchScene_C_Get_Light_Direction");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction, SunLight) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Direction::SunLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction, NightLight) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Direction::NightLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction, CallFunc_GetForwardVector_ReturnValue) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Direction::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction, CallFunc_Normal_ReturnValue) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Direction::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Direction, CallFunc_Multiply_VectorInt_ReturnValue) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Direction::CallFunc_Multiply_VectorInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Get_Light_Direction;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Get Light Rotator
 // 0x003C (0x003C - 0x0000)
@@ -186,13 +141,7 @@ public:
 	struct FVector                                CallFunc_Get_Light_Direction_NightLight;           // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Get_Light_Rotator");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator) == 0x00003C, "Wrong size on BP_GlobalGI_LaunchScene_C_Get_Light_Rotator");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator, SunLight) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Rotator::SunLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator, NightLight) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Rotator::NightLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator, CallFunc_Get_Light_Direction_SunLight) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Rotator::CallFunc_Get_Light_Direction_SunLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator, CallFunc_Get_Light_Direction_NightLight) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Rotator::CallFunc_Get_Light_Direction_NightLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Light_Rotator, CallFunc_MakeRotFromX_ReturnValue) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_Get_Light_Rotator::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Get_Light_Rotator;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Get Scene Light Direction
 // 0x0018 (0x0018 - 0x0000)
@@ -202,10 +151,7 @@ public:
 	struct FVector                                LightDir;                                          // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction) == 0x000018, "Wrong size on BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction, LightDir) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction::LightDir' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction, CallFunc_GetForwardVector_ReturnValue) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Direction;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Get Scene Light Rotator
 // 0x0018 (0x0018 - 0x0000)
@@ -215,10 +161,7 @@ public:
 	struct FRotator                               SunLight;                                          // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               NightLight;                                        // 0x000C(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator) == 0x000018, "Wrong size on BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator, SunLight) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator::SunLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator, NightLight) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator::NightLight' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Get_Scene_Light_Rotator;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.CalculateLightDirection
 // 0x0058 (0x0058 - 0x0000)
@@ -236,18 +179,7 @@ public:
 	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_CalculateLightDirection");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection) == 0x000058, "Wrong size on BP_GlobalGI_LaunchScene_C_CalculateLightDirection");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, Vertical) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::Vertical' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, Horizontal) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::Horizontal' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, Time) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::Time' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, NewParam) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::NewParam' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_GetLightDirectionFromVH_Result) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_GetLightDirectionFromVH_Result' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_MapRangeClamped_ReturnValue) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_GetUpVector_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_GetForwardVector_ReturnValue) == 0x000034, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_RotateAngleAxis_ReturnValue) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalculateLightDirection, CallFunc_MakeRotFromX_ReturnValue) == 0x00004C, "Member 'BP_GlobalGI_LaunchScene_C_CalculateLightDirection::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_CalculateLightDirection;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.CalulateLightDirectionWithLimit
 // 0x0090 (0x0090 - 0x0000)
@@ -280,30 +212,7 @@ public:
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit) == 0x000090, "Wrong size on BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, V) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::V' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, H) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::H' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, Time) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::Time' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, NewParam) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::NewParam' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, TempAngle) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::TempAngle' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_InRange_FloatFloat_ReturnValue) == 0x00001C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_InRange_FloatFloat_ReturnValue_1) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_InRange_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_MapRangeClamped_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_MapRangeClamped_ReturnValue_1) == 0x00002C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_MapRangeClamped_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_InRange_FloatFloat_ReturnValue_2) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_InRange_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_GetLightDirectionFromVH_Result) == 0x000034, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_GetLightDirectionFromVH_Result' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_GetUpVector_ReturnValue) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_MapRangeClamped_ReturnValue_2) == 0x00004C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_MapRangeClamped_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_GetForwardVector_ReturnValue) == 0x000050, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_RotateAngleAxis_ReturnValue) == 0x00005C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_MakeRotFromX_ReturnValue) == 0x000068, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_BreakRotator_Roll) == 0x000074, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_BreakRotator_Pitch) == 0x000078, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_BreakRotator_Yaw) == 0x00007C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_MakeRotator_ReturnValue) == 0x000080, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit, CallFunc_Less_FloatFloat_ReturnValue) == 0x00008C, "Member 'BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_CalulateLightDirectionWithLimit;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.InitFeature
 // 0x0001 (0x0001 - 0x0000)
@@ -312,9 +221,7 @@ struct BP_GlobalGI_LaunchScene_C_InitFeature final
 public:
 	bool                                          NewLocalVar_0;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_InitFeature) == 0x000001, "Wrong alignment on BP_GlobalGI_LaunchScene_C_InitFeature");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_InitFeature) == 0x000001, "Wrong size on BP_GlobalGI_LaunchScene_C_InitFeature");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_InitFeature, NewLocalVar_0) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_InitFeature::NewLocalVar_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_InitFeature;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.GetViewLocation
 // 0x0058 (0x0058 - 0x0000)
@@ -332,16 +239,7 @@ public:
 	struct FVectorDouble                          CallFunc_GetCameraLocation_Location;               // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_GetViewLocation) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_GetViewLocation");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_GetViewLocation) == 0x000058, "Wrong size on BP_GlobalGI_LaunchScene_C_GetViewLocation");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, WorldPosition) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::WorldPosition' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, Suc) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::Suc' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x00001C, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_GetCameraLocation_Success) == 0x000029, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_GetCameraLocation_Success' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_GetCameraLocation_Location) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_GetCameraLocation_Location' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetViewLocation, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_GetViewLocation::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_GetViewLocation;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateTime
 // 0x002C (0x002C - 0x0000)
@@ -360,19 +258,7 @@ public:
 	float                                         CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateTime) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateTime");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateTime) == 0x00002C, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateTime");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Fraction_ReturnValue) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Fraction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, ___int_Variable) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Add_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x00001C, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Percent_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateTime, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_UpdateTime::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateTime;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateMainLight
 // 0x0010 (0x0010 - 0x0000)
@@ -381,9 +267,7 @@ struct BP_GlobalGI_LaunchScene_C_UpdateMainLight final
 public:
 	struct FLinearColor                           LightColor;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateMainLight) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateMainLight");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateMainLight) == 0x000010, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateMainLight");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateMainLight, LightColor) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateMainLight::LightColor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateMainLight;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Update Main Light Direction
 // 0x0250 (0x0250 - 0x0000)
@@ -426,38 +310,7 @@ public:
 	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult_2;  // 0x01B8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction) == 0x000250, "Wrong size on BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GetForwardVector_ReturnValue) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GetForwardVector_ReturnValue_1) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Dot_VectorVector_ReturnValue) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_DegAcos_ReturnValue) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_DegAcos_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_K2_GetTextureParameterValue_ReturnValue) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_K2_GetTextureParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_IsUsingParallaxCorrect_ReturnValue) == 0x000038, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_IsUsingParallaxCorrect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Divide_FloatFloat_ReturnValue) == 0x00003C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000044, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GetParallaxCorrectCachedForwardVector_ReturnValue) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GetParallaxCorrectCachedForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000054, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000058, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Add_FloatFloat_ReturnValue) == 0x00005C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_CalLightDirectionWithLimit_LightRotation) == 0x000060, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_CalLightDirectionWithLimit_LightRotation' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_IsUsingParallaxCorrect_ReturnValue_1) == 0x00006C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_IsUsingParallaxCorrect_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_IsUsingNotSeparateCache_ReturnValue) == 0x00006D, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_IsUsingNotSeparateCache_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00006E, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_IsValid_ReturnValue_1) == 0x00006F, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x000070, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x000074, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000078, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GetForwardVector_ReturnValue_2) == 0x00010C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GetForwardVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_Dot_VectorVector_ReturnValue_1) == 0x000118, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_Dot_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_K2_SetRelativeRotation_SweepHitResult_1) == 0x00011C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_K2_SetRelativeRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_DegAcos_ReturnValue_1) == 0x0001B0, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_DegAcos_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_GreaterEqual_FloatFloat_ReturnValue_2) == 0x0001B4, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_GreaterEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction, CallFunc_K2_SetRelativeRotation_SweepHitResult_2) == 0x0001B8, "Member 'BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction::CallFunc_K2_SetRelativeRotation_SweepHitResult_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Update_Main_Light_Direction;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.GetLightDirectionFromVH
 // 0x0020 (0x0020 - 0x0000)
@@ -469,12 +322,7 @@ public:
 	struct FRotator                               Result;                                            // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0014(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH) == 0x000020, "Wrong size on BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH, Vertical) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH::Vertical' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH, Horizontal) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH::Horizontal' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH, Result) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH::Result' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH, CallFunc_MakeRotator_ReturnValue) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_GetLightDirectionFromVH;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.SetUIComponentsVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -483,9 +331,7 @@ struct BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility final
 public:
 	bool                                          IsVisible;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility) == 0x000001, "Wrong alignment on BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility) == 0x000001, "Wrong size on BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility, IsVisible) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility::IsVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_SetUIComponentsVisibility;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Set All Components States
 // 0x0002 (0x0002 - 0x0000)
@@ -495,10 +341,7 @@ public:
 	bool                                          IsEnable;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Set_All_Components_States) == 0x000001, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Set_All_Components_States");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Set_All_Components_States) == 0x000002, "Wrong size on BP_GlobalGI_LaunchScene_C_Set_All_Components_States");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Set_All_Components_States, IsEnable) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Set_All_Components_States::IsEnable' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Set_All_Components_States, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000001, "Member 'BP_GlobalGI_LaunchScene_C_Set_All_Components_States::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Set_All_Components_States;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Get Total TOD Time Elapsed
 // 0x0010 (0x0010 - 0x0000)
@@ -510,12 +353,7 @@ public:
 	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed) == 0x000010, "Wrong size on BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed, Time) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed::Time' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed, CallFunc_GetTrulyTime_CurTime) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed::CallFunc_GetTrulyTime_CurTime' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed, CallFunc_Multiply_IntFloat_ReturnValue) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed, CallFunc_Add_FloatFloat_ReturnValue) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Get_Total_TOD_Time_Elapsed;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateDayNightDataLayer
 // 0x001C (0x001C - 0x0000)
@@ -528,13 +366,7 @@ public:
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer) == 0x00001C, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer, CallFunc_MakeLiteralName_ReturnValue) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer, CallFunc_MakeLiteralName_ReturnValue_1) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000019, "Member 'BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer, CallFunc_BooleanAND_ReturnValue) == 0x00001A, "Member 'BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateDayNightDataLayer;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.GetTrulyTime
 // 0x0008 (0x0008 - 0x0000)
@@ -544,10 +376,7 @@ public:
 	float                                         CurTime;                                           // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetGITime_ReturnValue;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_GetTrulyTime) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_GetTrulyTime");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_GetTrulyTime) == 0x000008, "Wrong size on BP_GlobalGI_LaunchScene_C_GetTrulyTime");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTrulyTime, CurTime) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_GetTrulyTime::CurTime' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTrulyTime, CallFunc_GetGITime_ReturnValue) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_GetTrulyTime::CallFunc_GetGITime_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_GetTrulyTime;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateMisc
 // 0x0020 (0x0020 - 0x0000)
@@ -557,10 +386,7 @@ public:
 	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateMisc) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateMisc");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateMisc) == 0x000020, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateMisc");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateMisc, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateMisc::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateMisc, K2Node_MakeStruct_LinearColor) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_UpdateMisc::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateMisc;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.GetSkyboxDMI
 // 0x0020 (0x0020 - 0x0000)
@@ -574,13 +400,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_GetSkyboxDMI");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI) == 0x000020, "Wrong size on BP_GlobalGI_LaunchScene_C_GetSkyboxDMI");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI, DMIRet) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_GetSkyboxDMI::DMIRet' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_GetSkyboxDMI::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_GetSkyboxDMI::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_GetSkyboxDMI::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetSkyboxDMI, CallFunc_IsValid_ReturnValue_2) == 0x000019, "Member 'BP_GlobalGI_LaunchScene_C_GetSkyboxDMI::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_GetSkyboxDMI;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.EulerToForward
 // 0x0040 (0x0040 - 0x0000)
@@ -594,14 +414,7 @@ public:
 	struct FQuat                                  CallFunc_Quat_MakeFromEuler_ReturnValue;           // 0x0020(0x0010)(IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_Quat_VectorForward_ReturnValue;           // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_EulerToForward) == 0x000010, "Wrong alignment on BP_GlobalGI_LaunchScene_C_EulerToForward");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_EulerToForward) == 0x000040, "Wrong size on BP_GlobalGI_LaunchScene_C_EulerToForward");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, Pitch) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::Pitch' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, Yaw) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::Yaw' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, ReturnValue) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, CallFunc_MakeVector_ReturnValue) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, CallFunc_Quat_MakeFromEuler_ReturnValue) == 0x000020, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::CallFunc_Quat_MakeFromEuler_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_EulerToForward, CallFunc_Quat_VectorForward_ReturnValue) == 0x000030, "Member 'BP_GlobalGI_LaunchScene_C_EulerToForward::CallFunc_Quat_VectorForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_EulerToForward;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Clamp Luminance
 // 0x006C (0x006C - 0x0000)
@@ -621,20 +434,7 @@ public:
 	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x004C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_HSP2RGB_ReturnValue;                      // 0x005C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Clamp_Luminance");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance) == 0x00006C, "Wrong size on BP_GlobalGI_LaunchScene_C_Clamp_Luminance");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, InColor) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::InColor' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, Min) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::Min' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, Max) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::Max' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, ReturnValue) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_RGB2HSP_ReturnValue) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_RGB2HSP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_BreakColor_R) == 0x000038, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_BreakColor_G) == 0x00003C, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_BreakColor_B) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_BreakColor_A) == 0x000044, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_FClamp_ReturnValue) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_MakeColor_ReturnValue) == 0x00004C, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Clamp_Luminance, CallFunc_HSP2RGB_ReturnValue) == 0x00005C, "Member 'BP_GlobalGI_LaunchScene_C_Clamp_Luminance::CallFunc_HSP2RGB_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Clamp_Luminance;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.GetTODCharacterLighting
 // 0x00B0 (0x00B0 - 0x0000)
@@ -656,22 +456,7 @@ public:
 	struct FLinearColor                           CallFunc_LinearColor_Desaturated_ReturnValue;      // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Add_LinearColorLinearColor_ReturnValue;   // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting) == 0x0000B0, "Wrong size on BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, mainLight) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::mainLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, mainLightIntensity) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::mainLightIntensity' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, skyLight) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::skyLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, skyLightIntensity) == 0x000024, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::skyLightIntensity' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, FrontSideLight) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::FrontSideLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, BackSideLight) == 0x000038, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::BackSideLight' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x00004C, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000050, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Multiply_LinearColorFloat_ReturnValue_1) == 0x000060, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Multiply_LinearColorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Clamp_Luminance_ReturnValue) == 0x000070, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Clamp_Luminance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Clamp_Luminance_ReturnValue_1) == 0x000080, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Clamp_Luminance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_LinearColor_Desaturated_ReturnValue) == 0x000090, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_LinearColor_Desaturated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting, CallFunc_Add_LinearColorLinearColor_ReturnValue) == 0x0000A0, "Member 'BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting::CallFunc_Add_LinearColorLinearColor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_GetTODCharacterLighting;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateCloudCard
 // 0x00A4 (0x00A4 - 0x0000)
@@ -681,10 +466,7 @@ public:
 	struct FKuroCloudCardSetting                  CloudCardSetting;                                  // 0x0000(0x0094)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x0094(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateCloudCard) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateCloudCard");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateCloudCard) == 0x0000A4, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateCloudCard");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateCloudCard, CloudCardSetting) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateCloudCard::CloudCardSetting' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateCloudCard, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000094, "Member 'BP_GlobalGI_LaunchScene_C_UpdateCloudCard::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateCloudCard;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.UpdateEditor
 // 0x0058 (0x0058 - 0x0000)
@@ -706,22 +488,7 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_UpdateEditor) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_UpdateEditor");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_UpdateEditor) == 0x000058, "Wrong size on BP_GlobalGI_LaunchScene_C_UpdateEditor");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, ___int_Loop_Counter_Variable) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, ___int_Array_Index_Variable) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, ___int_Array_Index_Variable_1) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, ___int_Loop_Counter_Variable_1) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Add_IntInt_ReturnValue_1) == 0x000014, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_GetAllActorsOfClass_OutActors) == 0x000018, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_GetAllActorsOfClass_OutActors_1) == 0x000028, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_GetAllActorsOfClass_OutActors_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Array_Get_Item_1) == 0x000040, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Array_Length_ReturnValue_1) == 0x00004C, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_UpdateEditor, CallFunc_Less_IntInt_ReturnValue_1) == 0x000051, "Member 'BP_GlobalGI_LaunchScene_C_UpdateEditor::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_UpdateEditor;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.On Global GITick
 // 0x0003 (0x0003 - 0x0000)
@@ -732,11 +499,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_On_Global_GITick) == 0x000001, "Wrong alignment on BP_GlobalGI_LaunchScene_C_On_Global_GITick");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_On_Global_GITick) == 0x000003, "Wrong size on BP_GlobalGI_LaunchScene_C_On_Global_GITick");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_On_Global_GITick, CallFunc_BooleanOR_ReturnValue) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_On_Global_GITick::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_On_Global_GITick, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_GlobalGI_LaunchScene_C_On_Global_GITick::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_On_Global_GITick, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'BP_GlobalGI_LaunchScene_C_On_Global_GITick::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_On_Global_GITick;
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Update Big World
 // 0x001C (0x001C - 0x0000)
@@ -750,13 +513,7 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x0010(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_GlobalGI_LaunchScene_C_Update_Big_World) == 0x000004, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Update_Big_World");
-static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Update_Big_World) == 0x00001C, "Wrong size on BP_GlobalGI_LaunchScene_C_Update_Big_World");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Big_World, CallFunc_BreakVector_X) == 0x000000, "Member 'BP_GlobalGI_LaunchScene_C_Update_Big_World::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Big_World, CallFunc_BreakVector_Y) == 0x000004, "Member 'BP_GlobalGI_LaunchScene_C_Update_Big_World::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Big_World, CallFunc_BreakVector_Z) == 0x000008, "Member 'BP_GlobalGI_LaunchScene_C_Update_Big_World::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Big_World, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00000C, "Member 'BP_GlobalGI_LaunchScene_C_Update_Big_World::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Big_World, CallFunc_SelectVector_ReturnValue) == 0x000010, "Member 'BP_GlobalGI_LaunchScene_C_Update_Big_World::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_GlobalGI_LaunchScene_C_Update_Big_World;
 
 }
 

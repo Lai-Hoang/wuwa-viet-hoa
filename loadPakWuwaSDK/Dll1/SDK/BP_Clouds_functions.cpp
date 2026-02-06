@@ -1676,5 +1676,61 @@ void ABP_Clouds_C::One9_拉海洛初见()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_Clouds.BP_Clouds_C.20 日灵棺解密前
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two0_日灵棺解密前()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "20 日灵棺解密前");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.21 日灵棺解密后
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two1_日灵棺解密后()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "21 日灵棺解密后");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.22 高达Boss一阶
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two2_高达Boss一阶()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "22 高达Boss一阶");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.23 高达Boss三阶
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two3_高达Boss三阶()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "23 高达Boss三阶");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
 }
 

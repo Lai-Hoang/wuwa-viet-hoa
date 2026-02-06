@@ -22,10 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner) == 0x000004, "Wrong alignment on BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner");
-static_assert(sizeof(BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner) == 0x000008, "Wrong size on BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner");
-static_assert(offsetof(BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner, EntryPoint) == 0x000000, "Member 'BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CurveTrailSpawner_C_ExecuteUbergraph_BP_CurveTrailSpawner;
 
 // Function BP_CurveTrailSpawner.BP_CurveTrailSpawner_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +31,7 @@ struct BP_CurveTrailSpawner_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CurveTrailSpawner_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CurveTrailSpawner_C_ReceiveTick");
-static_assert(sizeof(BP_CurveTrailSpawner_C_ReceiveTick) == 0x000004, "Wrong size on BP_CurveTrailSpawner_C_ReceiveTick");
-static_assert(offsetof(BP_CurveTrailSpawner_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CurveTrailSpawner_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CurveTrailSpawner_C_ReceiveTick;
 
 }
 

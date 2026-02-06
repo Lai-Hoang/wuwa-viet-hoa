@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -46,9 +46,7 @@ public:
 	int32                                         Hash;                                              // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagHashData) == 0x000008, "Wrong alignment on FGameplayTagHashData");
-static_assert(sizeof(FGameplayTagHashData) == 0x000010, "Wrong size on FGameplayTagHashData");
-static_assert(offsetof(FGameplayTagHashData, Hash) == 0x000008, "Member 'FGameplayTagHashData::Hash' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTagHashData;
 
 // ScriptStruct KuroGAS.KuroGameplayParameter
 // 0x0010 (0x0010 - 0x0000)
@@ -58,10 +56,7 @@ public:
 	struct FGameplayTag                           ParameterTag;                                      // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ParameterValue;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroGameplayParameter) == 0x000004, "Wrong alignment on FKuroGameplayParameter");
-static_assert(sizeof(FKuroGameplayParameter) == 0x000010, "Wrong size on FKuroGameplayParameter");
-static_assert(offsetof(FKuroGameplayParameter, ParameterTag) == 0x000000, "Member 'FKuroGameplayParameter::ParameterTag' has a wrong offset!");
-static_assert(offsetof(FKuroGameplayParameter, ParameterValue) == 0x00000C, "Member 'FKuroGameplayParameter::ParameterValue' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroGameplayParameter;
 
 // ScriptStruct KuroGAS.KuroGameplayParameterContainer
 // 0x0010 (0x0010 - 0x0000)
@@ -70,9 +65,7 @@ struct FKuroGameplayParameterContainer final
 public:
 	TArray<struct FKuroGameplayParameter>         Parameters;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroGameplayParameterContainer) == 0x000008, "Wrong alignment on FKuroGameplayParameterContainer");
-static_assert(sizeof(FKuroGameplayParameterContainer) == 0x000010, "Wrong size on FKuroGameplayParameterContainer");
-static_assert(offsetof(FKuroGameplayParameterContainer, Parameters) == 0x000000, "Member 'FKuroGameplayParameterContainer::Parameters' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroGameplayParameterContainer;
 
 }
 

@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroEffectProxyActor">();
+		STATIC_CLASS_IMPL("KuroEffectProxyActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroEffectProxyActor")
 	}
 	static class AKuroEffectProxyActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroEffectProxyActor>();
 	}
 };
-static_assert(alignof(AKuroEffectProxyActor) == 0x000008, "Wrong alignment on AKuroEffectProxyActor");
-static_assert(sizeof(AKuroEffectProxyActor) == 0x0002B8, "Wrong size on AKuroEffectProxyActor");
+DUMPER7_ASSERTS_AKuroEffectProxyActor;
 
 }
 

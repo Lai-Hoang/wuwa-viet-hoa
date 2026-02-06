@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -35,23 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SplineClimbConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_SplineClimbConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SplineClimbConfig_C")
 	}
 	static class UBP_SplineClimbConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SplineClimbConfig_C>();
 	}
 };
-static_assert(alignof(UBP_SplineClimbConfig_C) == 0x000008, "Wrong alignment on UBP_SplineClimbConfig_C");
-static_assert(sizeof(UBP_SplineClimbConfig_C) == 0x000080, "Wrong size on UBP_SplineClimbConfig_C");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 期间Tag) == 0x000038, "Member 'UBP_SplineClimbConfig_C::期间Tag' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 打断技能) == 0x000058, "Member 'UBP_SplineClimbConfig_C::打断技能' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, DebugDraw) == 0x000068, "Member 'UBP_SplineClimbConfig_C::DebugDraw' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 采样长度) == 0x00006C, "Member 'UBP_SplineClimbConfig_C::采样长度' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 采样间隔) == 0x000070, "Member 'UBP_SplineClimbConfig_C::采样间隔' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 检测距离) == 0x000074, "Member 'UBP_SplineClimbConfig_C::检测距离' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 检测起始偏移) == 0x000078, "Member 'UBP_SplineClimbConfig_C::检测起始偏移' has a wrong offset!");
-static_assert(offsetof(UBP_SplineClimbConfig_C, 离墙额外距离) == 0x00007C, "Member 'UBP_SplineClimbConfig_C::离墙额外距离' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SplineClimbConfig_C;
 
 }
 

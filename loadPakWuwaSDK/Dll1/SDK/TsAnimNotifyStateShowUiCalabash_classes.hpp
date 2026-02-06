@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateShowUiCalabash_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateShowUiCalabash_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateShowUiCalabash_C")
 	}
 	static class UTsAnimNotifyStateShowUiCalabash_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateShowUiCalabash_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateShowUiCalabash_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateShowUiCalabash_C");
-static_assert(sizeof(UTsAnimNotifyStateShowUiCalabash_C) == 0x000058, "Wrong size on UTsAnimNotifyStateShowUiCalabash_C");
-static_assert(offsetof(UTsAnimNotifyStateShowUiCalabash_C, Socket) == 0x000048, "Member 'UTsAnimNotifyStateShowUiCalabash_C::Socket' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateShowUiCalabash_C, IsRotate) == 0x000054, "Member 'UTsAnimNotifyStateShowUiCalabash_C::IsRotate' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateShowUiCalabash_C;
 
 }
 

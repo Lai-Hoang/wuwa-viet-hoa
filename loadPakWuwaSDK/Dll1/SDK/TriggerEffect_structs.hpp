@@ -59,10 +59,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<uint8>                                 Amplitude;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMultiplePositionVibrationMode) == 0x000008, "Wrong alignment on FMultiplePositionVibrationMode");
-static_assert(sizeof(FMultiplePositionVibrationMode) == 0x000018, "Wrong size on FMultiplePositionVibrationMode");
-static_assert(offsetof(FMultiplePositionVibrationMode, Frequency) == 0x000000, "Member 'FMultiplePositionVibrationMode::Frequency' has a wrong offset!");
-static_assert(offsetof(FMultiplePositionVibrationMode, Amplitude) == 0x000008, "Member 'FMultiplePositionVibrationMode::Amplitude' has a wrong offset!");
+DUMPER7_ASSERTS_FMultiplePositionVibrationMode;
 
 // ScriptStruct TriggerEffect.MultiplePositionFeedbackMode
 // 0x0010 (0x0010 - 0x0000)
@@ -71,9 +68,7 @@ struct FMultiplePositionFeedbackMode final
 public:
 	TArray<uint8>                                 Strength;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMultiplePositionFeedbackMode) == 0x000008, "Wrong alignment on FMultiplePositionFeedbackMode");
-static_assert(sizeof(FMultiplePositionFeedbackMode) == 0x000010, "Wrong size on FMultiplePositionFeedbackMode");
-static_assert(offsetof(FMultiplePositionFeedbackMode, Strength) == 0x000000, "Member 'FMultiplePositionFeedbackMode::Strength' has a wrong offset!");
+DUMPER7_ASSERTS_FMultiplePositionFeedbackMode;
 
 // ScriptStruct TriggerEffect.SlopeFeedbackMode
 // 0x0004 (0x0004 - 0x0000)
@@ -85,12 +80,7 @@ public:
 	uint8                                         StartStrength;                                     // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EndStrength;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSlopeFeedbackMode) == 0x000001, "Wrong alignment on FSlopeFeedbackMode");
-static_assert(sizeof(FSlopeFeedbackMode) == 0x000004, "Wrong size on FSlopeFeedbackMode");
-static_assert(offsetof(FSlopeFeedbackMode, StartPosition) == 0x000000, "Member 'FSlopeFeedbackMode::StartPosition' has a wrong offset!");
-static_assert(offsetof(FSlopeFeedbackMode, EndPosition) == 0x000001, "Member 'FSlopeFeedbackMode::EndPosition' has a wrong offset!");
-static_assert(offsetof(FSlopeFeedbackMode, StartStrength) == 0x000002, "Member 'FSlopeFeedbackMode::StartStrength' has a wrong offset!");
-static_assert(offsetof(FSlopeFeedbackMode, EndStrength) == 0x000003, "Member 'FSlopeFeedbackMode::EndStrength' has a wrong offset!");
+DUMPER7_ASSERTS_FSlopeFeedbackMode;
 
 // ScriptStruct TriggerEffect.WeaponMode
 // 0x0003 (0x0003 - 0x0000)
@@ -101,11 +91,7 @@ public:
 	uint8                                         EndPosition;                                       // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Strength;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWeaponMode) == 0x000001, "Wrong alignment on FWeaponMode");
-static_assert(sizeof(FWeaponMode) == 0x000003, "Wrong size on FWeaponMode");
-static_assert(offsetof(FWeaponMode, StartPosition) == 0x000000, "Member 'FWeaponMode::StartPosition' has a wrong offset!");
-static_assert(offsetof(FWeaponMode, EndPosition) == 0x000001, "Member 'FWeaponMode::EndPosition' has a wrong offset!");
-static_assert(offsetof(FWeaponMode, Strength) == 0x000002, "Member 'FWeaponMode::Strength' has a wrong offset!");
+DUMPER7_ASSERTS_FWeaponMode;
 
 // ScriptStruct TriggerEffect.VibrationMode
 // 0x0003 (0x0003 - 0x0000)
@@ -116,11 +102,7 @@ public:
 	uint8                                         Frequency;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Amplitude;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FVibrationMode) == 0x000001, "Wrong alignment on FVibrationMode");
-static_assert(sizeof(FVibrationMode) == 0x000003, "Wrong size on FVibrationMode");
-static_assert(offsetof(FVibrationMode, Position) == 0x000000, "Member 'FVibrationMode::Position' has a wrong offset!");
-static_assert(offsetof(FVibrationMode, Frequency) == 0x000001, "Member 'FVibrationMode::Frequency' has a wrong offset!");
-static_assert(offsetof(FVibrationMode, Amplitude) == 0x000002, "Member 'FVibrationMode::Amplitude' has a wrong offset!");
+DUMPER7_ASSERTS_FVibrationMode;
 
 // ScriptStruct TriggerEffect.FeedbackMode
 // 0x0002 (0x0002 - 0x0000)
@@ -130,10 +112,7 @@ public:
 	uint8                                         Position;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Strength;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FFeedbackMode) == 0x000001, "Wrong alignment on FFeedbackMode");
-static_assert(sizeof(FFeedbackMode) == 0x000002, "Wrong size on FFeedbackMode");
-static_assert(offsetof(FFeedbackMode, Position) == 0x000000, "Member 'FFeedbackMode::Position' has a wrong offset!");
-static_assert(offsetof(FFeedbackMode, Strength) == 0x000001, "Member 'FFeedbackMode::Strength' has a wrong offset!");
+DUMPER7_ASSERTS_FFeedbackMode;
 
 }
 

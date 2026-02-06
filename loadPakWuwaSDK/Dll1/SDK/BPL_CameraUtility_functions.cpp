@@ -17,32 +17,6 @@
 namespace SDK
 {
 
-// Function BPL_CameraUtility.BPL_CameraUtility_C.DtGetCameraConfigList
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FSCameraConfig>&          CameraSettings                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPL_CameraUtility_C::DtGetCameraConfigList(TArray<struct FSCameraConfig>& CameraSettings, class UDataTable* DataTable, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPL_CameraUtility_C", "DtGetCameraConfigList");
-
-	Params::BPL_CameraUtility_C_DtGetCameraConfigList Parms{};
-
-	Parms.CameraSettings = std::move(CameraSettings);
-	Parms.DataTable = DataTable;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	CameraSettings = std::move(Parms.CameraSettings);
-}
-
-
 // Function BPL_CameraUtility.BPL_CameraUtility_C.DtGetCameraConfigs
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -58,6 +32,32 @@ void UBPL_CameraUtility_C::DtGetCameraConfigs(TArray<struct FSCamera_Setting>& C
 		Func = StaticClass()->GetFunction("BPL_CameraUtility_C", "DtGetCameraConfigs");
 
 	Params::BPL_CameraUtility_C_DtGetCameraConfigs Parms{};
+
+	Parms.CameraSettings = std::move(CameraSettings);
+	Parms.DataTable = DataTable;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	CameraSettings = std::move(Parms.CameraSettings);
+}
+
+
+// Function BPL_CameraUtility.BPL_CameraUtility_C.DtGetCameraConfigList
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FSCameraConfig>&          CameraSettings                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPL_CameraUtility_C::DtGetCameraConfigList(TArray<struct FSCameraConfig>& CameraSettings, class UDataTable* DataTable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPL_CameraUtility_C", "DtGetCameraConfigList");
+
+	Params::BPL_CameraUtility_C_DtGetCameraConfigList Parms{};
 
 	Parms.CameraSettings = std::move(CameraSettings);
 	Parms.DataTable = DataTable;

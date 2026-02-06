@@ -23,9 +23,7 @@ struct ClothingSimulationInteractor_EnableGravityOverride final
 public:
 	struct FVector                                InVector;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_EnableGravityOverride) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_EnableGravityOverride");
-static_assert(sizeof(ClothingSimulationInteractor_EnableGravityOverride) == 0x00000C, "Wrong size on ClothingSimulationInteractor_EnableGravityOverride");
-static_assert(offsetof(ClothingSimulationInteractor_EnableGravityOverride, InVector) == 0x000000, "Member 'ClothingSimulationInteractor_EnableGravityOverride::InVector' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_EnableGravityOverride;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.SetAnimDriveSpringStiffness
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +32,7 @@ struct ClothingSimulationInteractor_SetAnimDriveSpringStiffness final
 public:
 	float                                         InStiffness;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_SetAnimDriveSpringStiffness) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_SetAnimDriveSpringStiffness");
-static_assert(sizeof(ClothingSimulationInteractor_SetAnimDriveSpringStiffness) == 0x000004, "Wrong size on ClothingSimulationInteractor_SetAnimDriveSpringStiffness");
-static_assert(offsetof(ClothingSimulationInteractor_SetAnimDriveSpringStiffness, InStiffness) == 0x000000, "Member 'ClothingSimulationInteractor_SetAnimDriveSpringStiffness::InStiffness' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_SetAnimDriveSpringStiffness;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumCloths
 // 0x0004 (0x0004 - 0x0000)
@@ -45,9 +41,7 @@ struct ClothingSimulationInteractor_GetNumCloths final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetNumCloths) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetNumCloths");
-static_assert(sizeof(ClothingSimulationInteractor_GetNumCloths) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetNumCloths");
-static_assert(offsetof(ClothingSimulationInteractor_GetNumCloths, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetNumCloths::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetNumCloths;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumDynamicParticles
 // 0x0004 (0x0004 - 0x0000)
@@ -56,9 +50,7 @@ struct ClothingSimulationInteractor_GetNumDynamicParticles final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetNumDynamicParticles) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetNumDynamicParticles");
-static_assert(sizeof(ClothingSimulationInteractor_GetNumDynamicParticles) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetNumDynamicParticles");
-static_assert(offsetof(ClothingSimulationInteractor_GetNumDynamicParticles, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetNumDynamicParticles::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetNumDynamicParticles;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumIterations
 // 0x0004 (0x0004 - 0x0000)
@@ -67,9 +59,7 @@ struct ClothingSimulationInteractor_GetNumIterations final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetNumIterations) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetNumIterations");
-static_assert(sizeof(ClothingSimulationInteractor_GetNumIterations) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetNumIterations");
-static_assert(offsetof(ClothingSimulationInteractor_GetNumIterations, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetNumIterations::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetNumIterations;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumKinematicParticles
 // 0x0004 (0x0004 - 0x0000)
@@ -78,9 +68,7 @@ struct ClothingSimulationInteractor_GetNumKinematicParticles final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetNumKinematicParticles) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetNumKinematicParticles");
-static_assert(sizeof(ClothingSimulationInteractor_GetNumKinematicParticles) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetNumKinematicParticles");
-static_assert(offsetof(ClothingSimulationInteractor_GetNumKinematicParticles, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetNumKinematicParticles::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetNumKinematicParticles;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetNumSubsteps
 // 0x0004 (0x0004 - 0x0000)
@@ -89,9 +77,7 @@ struct ClothingSimulationInteractor_GetNumSubsteps final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetNumSubsteps) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetNumSubsteps");
-static_assert(sizeof(ClothingSimulationInteractor_GetNumSubsteps) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetNumSubsteps");
-static_assert(offsetof(ClothingSimulationInteractor_GetNumSubsteps, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetNumSubsteps::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetNumSubsteps;
 
 // Function ClothingSystemRuntimeInterface.ClothingSimulationInteractor.GetSimulationTime
 // 0x0004 (0x0004 - 0x0000)
@@ -100,9 +86,7 @@ struct ClothingSimulationInteractor_GetSimulationTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ClothingSimulationInteractor_GetSimulationTime) == 0x000004, "Wrong alignment on ClothingSimulationInteractor_GetSimulationTime");
-static_assert(sizeof(ClothingSimulationInteractor_GetSimulationTime) == 0x000004, "Wrong size on ClothingSimulationInteractor_GetSimulationTime");
-static_assert(offsetof(ClothingSimulationInteractor_GetSimulationTime, ReturnValue) == 0x000000, "Member 'ClothingSimulationInteractor_GetSimulationTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_ClothingSimulationInteractor_GetSimulationTime;
 
 }
 

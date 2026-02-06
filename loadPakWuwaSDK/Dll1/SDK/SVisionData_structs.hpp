@@ -43,23 +43,7 @@ public:
 	TArray<struct FGameplayTag>                   同步Tags_93_4ABD4A5C426AA7FB5CEFF0895B3B776C;      // 0x0080(0x0010)(Edit, BlueprintVisible)
 	bool                                          buff是否转移_115_6A7365934B51B20CCD4DD78379278C7A; // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSVisionData) == 0x000008, "Wrong alignment on FSVisionData");
-static_assert(sizeof(FSVisionData) == 0x000098, "Wrong size on FSVisionData");
-static_assert(offsetof(FSVisionData, Id_2_065E27A14AA24E0A7C8F5CA445947325) == 0x000000, "Member 'FSVisionData::Id_2_065E27A14AA24E0A7C8F5CA445947325' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 说明_13_F8AD46694EF68CB46331C68E35DD0ED9) == 0x000008, "Member 'FSVisionData::说明_13_F8AD46694EF68CB46331C68E35DD0ED9' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 实体配置表Id_10_E80D86D5464C71760985F1B786B736EE) == 0x000018, "Member 'FSVisionData::实体配置表Id_10_E80D86D5464C71760985F1B786B736EE' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 类型_8_84EBEE6844743DB98B95909B87A6ED02) == 0x00001C, "Member 'FSVisionData::类型_8_84EBEE6844743DB98B95909B87A6ED02' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 技能ID_46_9D18806E4FEB66562F323AA15AD05179) == 0x000020, "Member 'FSVisionData::技能ID_46_9D18806E4FEB66562F323AA15AD05179' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 空中能否释放_47_B975475146540BD15A4534B1573C46B4) == 0x000024, "Member 'FSVisionData::空中能否释放_47_B975475146540BD15A4534B1573C46B4' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 出生隐藏_99_F1599FDF4E016D699537B3816FC5091B) == 0x000025, "Member 'FSVisionData::出生隐藏_99_F1599FDF4E016D699537B3816FC5091B' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 葫芦轨迹子弹列表_130_B2D6B5F545C8DA8F8346F3AC079BC49C) == 0x000028, "Member 'FSVisionData::葫芦轨迹子弹列表_130_B2D6B5F545C8DA8F8346F3AC079BC49C' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 战时是否播放出生动画_74_924A0A1E4C487E999C6F5388BCBF1B6C) == 0x000038, "Member 'FSVisionData::战时是否播放出生动画_74_924A0A1E4C487E999C6F5388BCBF1B6C' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 生命中Tag_65_813425D34B9E9CD3C01D6BBCE1C03559) == 0x000040, "Member 'FSVisionData::生命中Tag_65_813425D34B9E9CD3C01D6BBCE1C03559' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 出生Buff_61_91DFAA3E41813A64A2BA97A05F04C1FC) == 0x000050, "Member 'FSVisionData::出生Buff_61_91DFAA3E41813A64A2BA97A05F04C1FC' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 出生时给召唤者Buff_69_BBFB5994429F722CE115B18CF79BFCFD) == 0x000060, "Member 'FSVisionData::出生时给召唤者Buff_69_BBFB5994429F722CE115B18CF79BFCFD' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 出生施放主动技能_95_60A55F35422FD02D44B76D8FC9603985) == 0x000070, "Member 'FSVisionData::出生施放主动技能_95_60A55F35422FD02D44B76D8FC9603985' has a wrong offset!");
-static_assert(offsetof(FSVisionData, 同步Tags_93_4ABD4A5C426AA7FB5CEFF0895B3B776C) == 0x000080, "Member 'FSVisionData::同步Tags_93_4ABD4A5C426AA7FB5CEFF0895B3B776C' has a wrong offset!");
-static_assert(offsetof(FSVisionData, buff是否转移_115_6A7365934B51B20CCD4DD78379278C7A) == 0x000090, "Member 'FSVisionData::buff是否转移_115_6A7365934B51B20CCD4DD78379278C7A' has a wrong offset!");
+DUMPER7_ASSERTS_FSVisionData;
 
 }
 

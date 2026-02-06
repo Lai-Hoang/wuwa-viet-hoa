@@ -34,15 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroCurveLibrary">();
+		STATIC_CLASS_IMPL("KuroCurveLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCurveLibrary")
 	}
 	static class UKuroCurveLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroCurveLibrary>();
 	}
 };
-static_assert(alignof(UKuroCurveLibrary) == 0x000008, "Wrong alignment on UKuroCurveLibrary");
-static_assert(sizeof(UKuroCurveLibrary) == 0x000030, "Wrong size on UKuroCurveLibrary");
+DUMPER7_ASSERTS_UKuroCurveLibrary;
 
 }
 

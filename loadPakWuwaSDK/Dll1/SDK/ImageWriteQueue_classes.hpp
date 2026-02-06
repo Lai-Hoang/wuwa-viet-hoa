@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ImageWriteBlueprintLibrary">();
+		STATIC_CLASS_IMPL("ImageWriteBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ImageWriteBlueprintLibrary")
 	}
 	static class UImageWriteBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UImageWriteBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UImageWriteBlueprintLibrary) == 0x000008, "Wrong alignment on UImageWriteBlueprintLibrary");
-static_assert(sizeof(UImageWriteBlueprintLibrary) == 0x000030, "Wrong size on UImageWriteBlueprintLibrary");
+DUMPER7_ASSERTS_UImageWriteBlueprintLibrary;
 
 }
 

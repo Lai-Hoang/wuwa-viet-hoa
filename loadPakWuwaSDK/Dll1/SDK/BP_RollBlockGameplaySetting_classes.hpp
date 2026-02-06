@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_RollBlockGameplaySetting.BP_RollBlockGameplaySetting_C
-// 0x00B8 (0x00F0 - 0x0038)
+// 0x0180 (0x01B8 - 0x0038)
 class UBP_RollBlockGameplaySetting_C final : public UPrimaryDataAsset
 {
 public:
@@ -33,29 +33,28 @@ public:
 	class FString                                 RollBlockMainTipKey;                               // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 RollBlockSecondTipKey;                             // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 RollBlockPhantomTipKey;                            // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UEffectModelGroup>       LightBeamEffect;                                   // 0x00F0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UEffectModelGroup>       LightBeamHitEffect;                                // 0x0120(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UEffectModelGroup>       LightBeamHitWallEffect;                            // 0x0150(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UEffectModelGroup>       LightBeamStartEffect;                              // 0x0180(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	float                                         VisionBlockRollTime;                               // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BlockDestroyDelayResetTime;                        // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_RollBlockGameplaySetting_C">();
+		BP_STATIC_CLASS_IMPL("BP_RollBlockGameplaySetting_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_RollBlockGameplaySetting_C")
 	}
 	static class UBP_RollBlockGameplaySetting_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_RollBlockGameplaySetting_C>();
 	}
 };
-static_assert(alignof(UBP_RollBlockGameplaySetting_C) == 0x000008, "Wrong alignment on UBP_RollBlockGameplaySetting_C");
-static_assert(sizeof(UBP_RollBlockGameplaySetting_C) == 0x0000F0, "Wrong size on UBP_RollBlockGameplaySetting_C");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, BlockRollTime) == 0x000038, "Member 'UBP_RollBlockGameplaySetting_C::BlockRollTime' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, BreakableObstacleLinkEffect) == 0x000040, "Member 'UBP_RollBlockGameplaySetting_C::BreakableObstacleLinkEffect' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, BreakableObstacleDestroyLinkEffect) == 0x000070, "Member 'UBP_RollBlockGameplaySetting_C::BreakableObstacleDestroyLinkEffect' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, ShowBlockInterval) == 0x0000A0, "Member 'UBP_RollBlockGameplaySetting_C::ShowBlockInterval' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, ShowMistakeTipsCount) == 0x0000A4, "Member 'UBP_RollBlockGameplaySetting_C::ShowMistakeTipsCount' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, RollBlockErrorTipKey) == 0x0000A8, "Member 'UBP_RollBlockGameplaySetting_C::RollBlockErrorTipKey' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, DestroyTime) == 0x0000B8, "Member 'UBP_RollBlockGameplaySetting_C::DestroyTime' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, RollBlockMainTipKey) == 0x0000C0, "Member 'UBP_RollBlockGameplaySetting_C::RollBlockMainTipKey' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, RollBlockSecondTipKey) == 0x0000D0, "Member 'UBP_RollBlockGameplaySetting_C::RollBlockSecondTipKey' has a wrong offset!");
-static_assert(offsetof(UBP_RollBlockGameplaySetting_C, RollBlockPhantomTipKey) == 0x0000E0, "Member 'UBP_RollBlockGameplaySetting_C::RollBlockPhantomTipKey' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_RollBlockGameplaySetting_C;
 
 }
 

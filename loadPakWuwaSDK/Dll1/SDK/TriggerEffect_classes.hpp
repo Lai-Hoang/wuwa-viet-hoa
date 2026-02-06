@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_classes.hpp"
 #include "TriggerEffect_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -37,24 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroTriggerEffect">();
+		STATIC_CLASS_IMPL("KuroTriggerEffect")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroTriggerEffect")
 	}
 	static class UKuroTriggerEffect* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroTriggerEffect>();
 	}
 };
-static_assert(alignof(UKuroTriggerEffect) == 0x000008, "Wrong alignment on UKuroTriggerEffect");
-static_assert(sizeof(UKuroTriggerEffect) == 0x000068, "Wrong size on UKuroTriggerEffect");
-static_assert(offsetof(UKuroTriggerEffect, bUseEffectForThreshold) == 0x000030, "Member 'UKuroTriggerEffect::bUseEffectForThreshold' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, AnalogThreshold) == 0x000031, "Member 'UKuroTriggerEffect::AnalogThreshold' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, Mode) == 0x000032, "Member 'UKuroTriggerEffect::Mode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, FeedbackMode) == 0x000033, "Member 'UKuroTriggerEffect::FeedbackMode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, VibrationMode) == 0x000035, "Member 'UKuroTriggerEffect::VibrationMode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, WeaponMode) == 0x000038, "Member 'UKuroTriggerEffect::WeaponMode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, SlopeFeedbackMode) == 0x00003B, "Member 'UKuroTriggerEffect::SlopeFeedbackMode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, MultiplePositionFeedbackMode) == 0x000040, "Member 'UKuroTriggerEffect::MultiplePositionFeedbackMode' has a wrong offset!");
-static_assert(offsetof(UKuroTriggerEffect, MultiplePositionVibrationMode) == 0x000050, "Member 'UKuroTriggerEffect::MultiplePositionVibrationMode' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroTriggerEffect;
 
 // Class TriggerEffect.TriggerEffectBPLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -77,15 +71,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TriggerEffectBPLibrary">();
+		STATIC_CLASS_IMPL("TriggerEffectBPLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TriggerEffectBPLibrary")
 	}
 	static class UTriggerEffectBPLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTriggerEffectBPLibrary>();
 	}
 };
-static_assert(alignof(UTriggerEffectBPLibrary) == 0x000008, "Wrong alignment on UTriggerEffectBPLibrary");
-static_assert(sizeof(UTriggerEffectBPLibrary) == 0x000030, "Wrong size on UTriggerEffectBPLibrary");
+DUMPER7_ASSERTS_UTriggerEffectBPLibrary;
 
 }
 

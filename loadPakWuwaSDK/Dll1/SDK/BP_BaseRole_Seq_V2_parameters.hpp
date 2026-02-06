@@ -24,9 +24,7 @@ struct BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2 final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2) == 0x000004, "Wrong alignment on BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2) == 0x000004, "Wrong size on BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2, EntryPoint) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_ExecuteUbergraph_BP_BaseRole_Seq_V2;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.UserConstructionScript
 // 0x0008 (0x0008 - 0x0000)
@@ -36,10 +34,7 @@ public:
 	int32                                         CallFunc_GetDeviceHardwareLevel_ReturnValue;       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_UserConstructionScript) == 0x000004, "Wrong alignment on BP_BaseRole_Seq_V2_C_UserConstructionScript");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_UserConstructionScript) == 0x000008, "Wrong size on BP_BaseRole_Seq_V2_C_UserConstructionScript");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_UserConstructionScript, CallFunc_GetDeviceHardwareLevel_ReturnValue) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_UserConstructionScript::CallFunc_GetDeviceHardwareLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_UserConstructionScript, CallFunc_Greater_IntInt_ReturnValue) == 0x000004, "Member 'BP_BaseRole_Seq_V2_C_UserConstructionScript::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_UserConstructionScript;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.JumpFrame
 // 0x0020 (0x0020 - 0x0000)
@@ -50,11 +45,7 @@ public:
 	TScriptInterface<class IABPI_Seq_LevelB_C>    K2Node_DynamicCast_AsABPI_Seq_Level_B;             // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_JumpFrame) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_JumpFrame");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_JumpFrame) == 0x000020, "Wrong size on BP_BaseRole_Seq_V2_C_JumpFrame");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_JumpFrame, CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_JumpFrame::CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_JumpFrame, K2Node_DynamicCast_AsABPI_Seq_Level_B) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_JumpFrame::K2Node_DynamicCast_AsABPI_Seq_Level_B' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_JumpFrame, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_JumpFrame::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_JumpFrame;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.BeginSwitchPose
 // 0x0038 (0x0038 - 0x0000)
@@ -71,16 +62,7 @@ public:
 	class ABP_BaseRole_Seq_V2_C*                  K2Node_DynamicCast_AsBP_Base_Role_Seq_V2;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_BeginSwitchPose) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_BeginSwitchPose");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_BeginSwitchPose) == 0x000038, "Wrong size on BP_BaseRole_Seq_V2_C_BeginSwitchPose");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, From) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::From' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, To) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, SwitchTime) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::SwitchTime' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, ErrorLog) == 0x000014, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::ErrorLog' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, ToMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, FromMeshCom) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, K2Node_DynamicCast_AsBP_Base_Role_Seq_V2) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::K2Node_DynamicCast_AsBP_Base_Role_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_BeginSwitchPose;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.EndSwitchPose
 // 0x0030 (0x0030 - 0x0000)
@@ -95,14 +77,7 @@ public:
 	class ABP_BaseRole_Seq_V2_C*                  K2Node_DynamicCast_AsBP_Base_Role_Seq_V2;          // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_EndSwitchPose) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_EndSwitchPose");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_EndSwitchPose) == 0x000030, "Wrong size on BP_BaseRole_Seq_V2_C_EndSwitchPose");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, To) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, Log) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::Log' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, ToMeshCom) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, FromMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, K2Node_DynamicCast_AsBP_Base_Role_Seq_V2) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::K2Node_DynamicCast_AsBP_Base_Role_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_EndSwitchPose;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.SwitchMeshTransform
 // 0x0001 (0x0001 - 0x0000)
@@ -111,9 +86,7 @@ struct BP_BaseRole_Seq_V2_C_SwitchMeshTransform final
 public:
 	bool                                          LevelA;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_SwitchMeshTransform) == 0x000001, "Wrong alignment on BP_BaseRole_Seq_V2_C_SwitchMeshTransform");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_SwitchMeshTransform) == 0x000001, "Wrong size on BP_BaseRole_Seq_V2_C_SwitchMeshTransform");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SwitchMeshTransform, LevelA) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_SwitchMeshTransform::LevelA' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_SwitchMeshTransform;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.ChangeHuluState
 // 0x0030 (0x0030 - 0x0000)
@@ -134,18 +107,7 @@ public:
 	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_ChangeHuluState) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_ChangeHuluState");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_ChangeHuluState) == 0x000030, "Wrong size on BP_BaseRole_Seq_V2_C_ChangeHuluState");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, State) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::State' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, HuluComp) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::HuluComp' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, K2Node_SwitchInteger_CmpSuccess) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_QuickInitAndAddData_MeshComponent_HandleId) == 0x000014, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_QuickInitAndAddData_MeshComponent_HandleId' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_QuickInitAndAddData_MeshComponent_HandleId_1) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_QuickInitAndAddData_MeshComponent_HandleId_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_QuickInitAndAddData_MeshComponent_HandleId_2) == 0x00001C, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_QuickInitAndAddData_MeshComponent_HandleId_2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_QuickInitAndAddData_MeshComponent_HandleId_3) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_QuickInitAndAddData_MeshComponent_HandleId_3' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_IsValid_ReturnValue) == 0x000025, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_ChangeHuluState, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_ChangeHuluState::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_ChangeHuluState;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.CleanHuluState
 // 0x0020 (0x0020 - 0x0000)
@@ -159,13 +121,7 @@ public:
 	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_CleanHuluState) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_CleanHuluState");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_CleanHuluState) == 0x000020, "Wrong size on BP_BaseRole_Seq_V2_C_CleanHuluState");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_CleanHuluState, HuluComp) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_CleanHuluState::HuluComp' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_CleanHuluState, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_CleanHuluState::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_CleanHuluState, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_BaseRole_Seq_V2_C_CleanHuluState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_CleanHuluState, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_CleanHuluState::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_CleanHuluState, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_CleanHuluState::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_CleanHuluState;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.添加角色材质控制器组
 // 0x0010 (0x0010 - 0x0000)
@@ -176,10 +132,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharRenderingComponent_C*              CallFunc_QuickInitAndAddDataGroup_MeshComponent_CharRenderComponent; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_添加角色材质控制器组) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_添加角色材质控制器组");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_添加角色材质控制器组) == 0x000010, "Wrong size on BP_BaseRole_Seq_V2_C_添加角色材质控制器组");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加角色材质控制器组, CallFunc_QuickInitAndAddDataGroup_MeshComponent_HandleId) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_添加角色材质控制器组::CallFunc_QuickInitAndAddDataGroup_MeshComponent_HandleId' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加角色材质控制器组, CallFunc_QuickInitAndAddDataGroup_MeshComponent_CharRenderComponent) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_添加角色材质控制器组::CallFunc_QuickInitAndAddDataGroup_MeshComponent_CharRenderComponent' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_添加角色材质控制器组;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.添加角色材质控制器
 // 0x0004 (0x0004 - 0x0000)
@@ -188,9 +141,7 @@ struct BP_BaseRole_Seq_V2_C_添加角色材质控制器 final
 public:
 	float                                         CallFunc_QuickInitAndAddData_MeshComponent_HandleId; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_添加角色材质控制器) == 0x000004, "Wrong alignment on BP_BaseRole_Seq_V2_C_添加角色材质控制器");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_添加角色材质控制器) == 0x000004, "Wrong size on BP_BaseRole_Seq_V2_C_添加角色材质控制器");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加角色材质控制器, CallFunc_QuickInitAndAddData_MeshComponent_HandleId) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_添加角色材质控制器::CallFunc_QuickInitAndAddData_MeshComponent_HandleId' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_添加角色材质控制器;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.添加扫描效果
 // 0x0050 (0x0050 - 0x0000)
@@ -201,11 +152,7 @@ public:
 	class AActor*                                 CallFunc_D_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_Fx_Scanning_C*                      CallFunc_D_FinishSpawningActor_ReturnValue;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_添加扫描效果) == 0x000010, "Wrong alignment on BP_BaseRole_Seq_V2_C_添加扫描效果");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_添加扫描效果) == 0x000050, "Wrong size on BP_BaseRole_Seq_V2_C_添加扫描效果");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加扫描效果, CallFunc_D_GetTransform_ReturnValue) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_添加扫描效果::CallFunc_D_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加扫描效果, CallFunc_D_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000040, "Member 'BP_BaseRole_Seq_V2_C_添加扫描效果::CallFunc_D_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_添加扫描效果, CallFunc_D_FinishSpawningActor_ReturnValue) == 0x000048, "Member 'BP_BaseRole_Seq_V2_C_添加扫描效果::CallFunc_D_FinishSpawningActor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_添加扫描效果;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.Begin Switch Pose to Seq
 // 0x00B0 (0x00B0 - 0x0000)
@@ -231,25 +178,7 @@ public:
 	class UABP_BaseRole_Seq_V2_C*                 K2Node_DynamicCast_AsABP_Base_Role_Seq_V2;         // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq) == 0x0000B0, "Wrong size on BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, From) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::From' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, To) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, SwitchTime) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::SwitchTime' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, ErrorLog) == 0x000014, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::ErrorLog' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, ToMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, FromMeshCom) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_Concat_StrStr_ReturnValue) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_GetDisplayName_ReturnValue) == 0x000038, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_GetDisplayName_ReturnValue_1) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_GetDisplayName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000060, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000070, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000078, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000088, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue) == 0x000098, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, K2Node_DynamicCast_AsABP_Base_Role_Seq_V2) == 0x0000A0, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::K2Node_DynamicCast_AsABP_Base_Role_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.BeginSwitchPose_ToBP
 // 0x00C0 (0x00C0 - 0x0000)
@@ -278,27 +207,7 @@ public:
 	class UABP_BaseRoleNPC_C*                     K2Node_DynamicCast_AsABP_Base_Role_NPC;            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP) == 0x0000C0, "Wrong size on BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, From) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::From' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, To) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, SwitchTime) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::SwitchTime' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, ErrorLog) == 0x000014, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::ErrorLog' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, ToMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, FromMeshCom) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_Concat_StrStr_ReturnValue) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_GetDisplayName_ReturnValue) == 0x000038, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_GetDisplayName_ReturnValue_1) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_GetDisplayName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000060, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000070, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000078, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000088, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue) == 0x000098, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, K2Node_DynamicCast_AsABP_Base_Role) == 0x0000A0, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::K2Node_DynamicCast_AsABP_Base_Role' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, K2Node_DynamicCast_AsABP_Base_Role_NPC) == 0x0000B0, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::K2Node_DynamicCast_AsABP_Base_Role_NPC' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP, K2Node_DynamicCast_bSuccess_1) == 0x0000B8, "Member 'BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToBP;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.EndSwitchPose_ToSeq
 // 0x0040 (0x0040 - 0x0000)
@@ -315,16 +224,7 @@ public:
 	class UABP_BaseRole_Seq_V2_C*                 K2Node_DynamicCast_AsABP_Base_Role_Seq_V2;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq) == 0x000040, "Wrong size on BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, To) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, Log) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::Log' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, ToMeshCom) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, FromMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, CallFunc_GetComponentByClass_ReturnValue) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, K2Node_DynamicCast_AsABP_Base_Role_Seq_V2) == 0x000030, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::K2Node_DynamicCast_AsABP_Base_Role_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_EndSwitchPose_ToSeq;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.EndSwitchPose_ToBP
 // 0x0050 (0x0050 - 0x0000)
@@ -344,18 +244,7 @@ public:
 	class UABP_BaseRoleNPC_C*                     K2Node_DynamicCast_AsABP_Base_Role_NPC;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP) == 0x000050, "Wrong size on BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, To) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::To' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, Log) == 0x000008, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::Log' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, ToMeshCom) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::ToMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, FromMeshCom) == 0x000018, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::FromMeshCom' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, CallFunc_GetComponentByClass_ReturnValue) == 0x000020, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue) == 0x000028, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::CallFunc_GetLinkedAnimGraphInstanceByTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, K2Node_DynamicCast_AsABP_Base_Role) == 0x000030, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::K2Node_DynamicCast_AsABP_Base_Role' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, K2Node_DynamicCast_AsABP_Base_Role_NPC) == 0x000040, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::K2Node_DynamicCast_AsABP_Base_Role_NPC' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_EndSwitchPose_ToBP;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetABPC_Body_V2
 // 0x0008 (0x0008 - 0x0000)
@@ -364,9 +253,7 @@ struct BP_BaseRole_Seq_V2_C_GetABPC_Body_V2 final
 public:
 	class UABPC_Seq_Body_V2_C*                    ABPC_Body_V2_0;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetABPC_Body_V2) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetABPC_Body_V2");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetABPC_Body_V2) == 0x000008, "Wrong size on BP_BaseRole_Seq_V2_C_GetABPC_Body_V2");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetABPC_Body_V2, ABPC_Body_V2_0) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetABPC_Body_V2::ABPC_Body_V2_0' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetABPC_Body_V2;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.SetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -376,10 +263,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_SetAnimDataVector) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_SetAnimDataVector");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_SetAnimDataVector) == 0x000058, "Wrong size on BP_BaseRole_Seq_V2_C_SetAnimDataVector");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_SetAnimDataVector;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.SetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -389,10 +273,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_SetAnimDataFloat) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_SetAnimDataFloat");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_SetAnimDataFloat) == 0x000018, "Wrong size on BP_BaseRole_Seq_V2_C_SetAnimDataFloat");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_SetAnimDataFloat;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -402,10 +283,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetAnimDataVector) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetAnimDataVector");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetAnimDataVector) == 0x000058, "Wrong size on BP_BaseRole_Seq_V2_C_GetAnimDataVector");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetAnimDataVector;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -415,10 +293,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetAnimDataFloat) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetAnimDataFloat");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetAnimDataFloat) == 0x000018, "Wrong size on BP_BaseRole_Seq_V2_C_GetAnimDataFloat");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetAnimDataFloat;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetSupportGroupNames
 // 0x0020 (0x0020 - 0x0000)
@@ -428,10 +303,7 @@ public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0010(0x0010)(ReferenceParm)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetSupportGroupNames) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetSupportGroupNames");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetSupportGroupNames) == 0x000020, "Wrong size on BP_BaseRole_Seq_V2_C_GetSupportGroupNames");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetSupportGroupNames, ReturnValue) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetSupportGroupNames::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetSupportGroupNames, K2Node_MakeArray_Array) == 0x000010, "Member 'BP_BaseRole_Seq_V2_C_GetSupportGroupNames::K2Node_MakeArray_Array' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetSupportGroupNames;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.SetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -441,10 +313,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_SetAnimDataTransform) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_SetAnimDataTransform");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_SetAnimDataTransform) == 0x000058, "Wrong size on BP_BaseRole_Seq_V2_C_SetAnimDataTransform");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_SetAnimDataTransform;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.IsCustomSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -453,9 +322,7 @@ struct BP_BaseRole_Seq_V2_C_IsCustomSupport final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_IsCustomSupport) == 0x000001, "Wrong alignment on BP_BaseRole_Seq_V2_C_IsCustomSupport");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_IsCustomSupport) == 0x000001, "Wrong size on BP_BaseRole_Seq_V2_C_IsCustomSupport");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_IsCustomSupport, ReturnValue) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_IsCustomSupport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_IsCustomSupport;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -465,10 +332,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetAnimDataTransform) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetAnimDataTransform");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetAnimDataTransform) == 0x000058, "Wrong size on BP_BaseRole_Seq_V2_C_GetAnimDataTransform");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_BaseRole_Seq_V2_C_GetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetAnimDataTransform;
 
 // Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetSeqAudio
 // 0x0008 (0x0008 - 0x0000)
@@ -477,9 +341,7 @@ struct BP_BaseRole_Seq_V2_C_GetSeqAudio final
 public:
 	class USeqAudio_Seq_V2_C*                     SeqAudio;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseRole_Seq_V2_C_GetSeqAudio) == 0x000008, "Wrong alignment on BP_BaseRole_Seq_V2_C_GetSeqAudio");
-static_assert(sizeof(BP_BaseRole_Seq_V2_C_GetSeqAudio) == 0x000008, "Wrong size on BP_BaseRole_Seq_V2_C_GetSeqAudio");
-static_assert(offsetof(BP_BaseRole_Seq_V2_C_GetSeqAudio, SeqAudio) == 0x000000, "Member 'BP_BaseRole_Seq_V2_C_GetSeqAudio::SeqAudio' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseRole_Seq_V2_C_GetSeqAudio;
 
 }
 

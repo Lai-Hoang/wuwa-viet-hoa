@@ -65,18 +65,7 @@ public:
 	class FString                                 desc;                                              // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 reward;                                            // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTrophyDetailData) == 0x000008, "Wrong alignment on FTrophyDetailData");
-static_assert(sizeof(FTrophyDetailData) == 0x000058, "Wrong size on FTrophyDetailData");
-static_assert(offsetof(FTrophyDetailData, trophyId) == 0x000000, "Member 'FTrophyDetailData::trophyId' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, trophyGrade) == 0x000004, "Member 'FTrophyDetailData::trophyGrade' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, groupId) == 0x000008, "Member 'FTrophyDetailData::groupId' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, hidden) == 0x00000C, "Member 'FTrophyDetailData::hidden' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, hasReward) == 0x00000D, "Member 'FTrophyDetailData::hasReward' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, progressType) == 0x000010, "Member 'FTrophyDetailData::progressType' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, progress) == 0x000018, "Member 'FTrophyDetailData::progress' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, name) == 0x000028, "Member 'FTrophyDetailData::name' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, desc) == 0x000038, "Member 'FTrophyDetailData::desc' has a wrong offset!");
-static_assert(offsetof(FTrophyDetailData, reward) == 0x000048, "Member 'FTrophyDetailData::reward' has a wrong offset!");
+DUMPER7_ASSERTS_FTrophyDetailData;
 
 // ScriptStruct KuroUtility.TrophyData
 // 0x0030 (0x0030 - 0x0000)
@@ -91,13 +80,7 @@ public:
 	class FString                                 progress;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 timestamp;                                         // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTrophyData) == 0x000008, "Wrong alignment on FTrophyData");
-static_assert(sizeof(FTrophyData) == 0x000030, "Wrong size on FTrophyData");
-static_assert(offsetof(FTrophyData, trophyId) == 0x000000, "Member 'FTrophyData::trophyId' has a wrong offset!");
-static_assert(offsetof(FTrophyData, unlocked) == 0x000004, "Member 'FTrophyData::unlocked' has a wrong offset!");
-static_assert(offsetof(FTrophyData, progressType) == 0x000008, "Member 'FTrophyData::progressType' has a wrong offset!");
-static_assert(offsetof(FTrophyData, progress) == 0x000010, "Member 'FTrophyData::progress' has a wrong offset!");
-static_assert(offsetof(FTrophyData, timestamp) == 0x000020, "Member 'FTrophyData::timestamp' has a wrong offset!");
+DUMPER7_ASSERTS_FTrophyData;
 
 // ScriptStruct KuroUtility.TrophyInfoData
 // 0x0028 (0x0028 - 0x0000)
@@ -109,30 +92,7 @@ public:
 	TArray<struct FTrophyDetailData>              trophyDetail;                                      // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FTrophyData>                    trophyData;                                        // 0x0018(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTrophyInfoData) == 0x000008, "Wrong alignment on FTrophyInfoData");
-static_assert(sizeof(FTrophyInfoData) == 0x000028, "Wrong size on FTrophyInfoData");
-static_assert(offsetof(FTrophyInfoData, offset) == 0x000000, "Member 'FTrophyInfoData::offset' has a wrong offset!");
-static_assert(offsetof(FTrophyInfoData, count) == 0x000004, "Member 'FTrophyInfoData::count' has a wrong offset!");
-static_assert(offsetof(FTrophyInfoData, trophyDetail) == 0x000008, "Member 'FTrophyInfoData::trophyDetail' has a wrong offset!");
-static_assert(offsetof(FTrophyInfoData, trophyData) == 0x000018, "Member 'FTrophyInfoData::trophyData' has a wrong offset!");
-
-// ScriptStruct KuroUtility.OverlapActorInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FOverlapActorInfo final
-{
-public:
-	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Dirty;                                             // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOverlapActorInfo) == 0x000008, "Wrong alignment on FOverlapActorInfo");
-static_assert(sizeof(FOverlapActorInfo) == 0x000038, "Wrong size on FOverlapActorInfo");
-static_assert(offsetof(FOverlapActorInfo, ActorLabel) == 0x000000, "Member 'FOverlapActorInfo::ActorLabel' has a wrong offset!");
-static_assert(offsetof(FOverlapActorInfo, ActorType) == 0x000010, "Member 'FOverlapActorInfo::ActorType' has a wrong offset!");
-static_assert(offsetof(FOverlapActorInfo, ActorPath) == 0x000020, "Member 'FOverlapActorInfo::ActorPath' has a wrong offset!");
-static_assert(offsetof(FOverlapActorInfo, Dirty) == 0x000030, "Member 'FOverlapActorInfo::Dirty' has a wrong offset!");
+DUMPER7_ASSERTS_FTrophyInfoData;
 
 // ScriptStruct KuroUtility.ProductData
 // 0x0090 (0x0090 - 0x0000)
@@ -149,30 +109,22 @@ public:
 	class FText                                   label;                                             // 0x0070(0x0018)(NativeAccessSpecifierPublic)
 	struct FDateTime                              endData;                                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FProductData) == 0x000008, "Wrong alignment on FProductData");
-static_assert(sizeof(FProductData) == 0x000090, "Wrong size on FProductData");
-static_assert(offsetof(FProductData, id) == 0x000000, "Member 'FProductData::id' has a wrong offset!");
-static_assert(offsetof(FProductData, type) == 0x000010, "Member 'FProductData::type' has a wrong offset!");
-static_assert(offsetof(FProductData, price) == 0x000020, "Member 'FProductData::price' has a wrong offset!");
-static_assert(offsetof(FProductData, displayPrice) == 0x000028, "Member 'FProductData::displayPrice' has a wrong offset!");
-static_assert(offsetof(FProductData, description) == 0x000040, "Member 'FProductData::description' has a wrong offset!");
-static_assert(offsetof(FProductData, displayName) == 0x000058, "Member 'FProductData::displayName' has a wrong offset!");
-static_assert(offsetof(FProductData, label) == 0x000070, "Member 'FProductData::label' has a wrong offset!");
-static_assert(offsetof(FProductData, endData) == 0x000088, "Member 'FProductData::endData' has a wrong offset!");
+DUMPER7_ASSERTS_FProductData;
 
-// ScriptStruct KuroUtility.PropertyPair
-// 0x0010 (0x0010 - 0x0000)
-struct FPropertyPair final
+// ScriptStruct KuroUtility.OverlapActorInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FOverlapActorInfo final
 {
 public:
-	class FName                                   Name;                                              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBelongsToActor;                                   // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastEditTimestamp;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastEditPerson;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPropertyPair) == 0x000004, "Wrong alignment on FPropertyPair");
-static_assert(sizeof(FPropertyPair) == 0x000010, "Wrong size on FPropertyPair");
-static_assert(offsetof(FPropertyPair, Name) == 0x000000, "Member 'FPropertyPair::Name' has a wrong offset!");
-static_assert(offsetof(FPropertyPair, bBelongsToActor) == 0x00000C, "Member 'FPropertyPair::bBelongsToActor' has a wrong offset!");
+DUMPER7_ASSERTS_FOverlapActorInfo;
 
 // ScriptStruct KuroUtility.BlockUserData
 // 0x0018 (0x0018 - 0x0000)
@@ -183,11 +135,7 @@ public:
 	int32                                         previousOffset;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         blockUsers;                                        // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FBlockUserData) == 0x000008, "Wrong alignment on FBlockUserData");
-static_assert(sizeof(FBlockUserData) == 0x000018, "Wrong size on FBlockUserData");
-static_assert(offsetof(FBlockUserData, nextOffset) == 0x000000, "Member 'FBlockUserData::nextOffset' has a wrong offset!");
-static_assert(offsetof(FBlockUserData, previousOffset) == 0x000004, "Member 'FBlockUserData::previousOffset' has a wrong offset!");
-static_assert(offsetof(FBlockUserData, blockUsers) == 0x000008, "Member 'FBlockUserData::blockUsers' has a wrong offset!");
+DUMPER7_ASSERTS_FBlockUserData;
 
 // ScriptStruct KuroUtility.PreloadObjectCollection
 // 0x0010 (0x0010 - 0x0000)
@@ -196,9 +144,18 @@ struct FPreloadObjectCollection final
 public:
 	TArray<class UObject*>                        Assets;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPreloadObjectCollection) == 0x000008, "Wrong alignment on FPreloadObjectCollection");
-static_assert(sizeof(FPreloadObjectCollection) == 0x000010, "Wrong size on FPreloadObjectCollection");
-static_assert(offsetof(FPreloadObjectCollection, Assets) == 0x000000, "Member 'FPreloadObjectCollection::Assets' has a wrong offset!");
+DUMPER7_ASSERTS_FPreloadObjectCollection;
+
+// ScriptStruct KuroUtility.PropertyPair
+// 0x0010 (0x0010 - 0x0000)
+struct FPropertyPair final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBelongsToActor;                                   // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPropertyPair;
 
 // ScriptStruct KuroUtility.BasicPresenceData
 // 0x0018 (0x0018 - 0x0000)
@@ -210,11 +167,7 @@ public:
 	bool                                          Context;                                           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FBasicPresenceData) == 0x000008, "Wrong alignment on FBasicPresenceData");
-static_assert(sizeof(FBasicPresenceData) == 0x000018, "Wrong size on FBasicPresenceData");
-static_assert(offsetof(FBasicPresenceData, accountId) == 0x000000, "Member 'FBasicPresenceData::accountId' has a wrong offset!");
-static_assert(offsetof(FBasicPresenceData, OnlineState) == 0x000010, "Member 'FBasicPresenceData::OnlineState' has a wrong offset!");
-static_assert(offsetof(FBasicPresenceData, Context) == 0x000014, "Member 'FBasicPresenceData::Context' has a wrong offset!");
+DUMPER7_ASSERTS_FBasicPresenceData;
 
 }
 

@@ -15,8 +15,8 @@
 #include "Engine_classes.hpp"
 #include "ECameraGravityMode_structs.hpp"
 #include "EAimAssistMode_structs.hpp"
-#include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "ECustomCameraMode_structs.hpp"
+#include "ECameraAnsEffectiveClientType_structs.hpp"
 
 
 namespace SDK
@@ -98,15 +98,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CameraBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("CameraBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CameraBlueprintFunctionLibrary_C")
 	}
 	static class UCameraBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCameraBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UCameraBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UCameraBlueprintFunctionLibrary_C");
-static_assert(sizeof(UCameraBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UCameraBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UCameraBlueprintFunctionLibrary_C;
 
 }
 

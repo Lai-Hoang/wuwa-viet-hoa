@@ -23,15 +23,18 @@ class UHandlerComponentFactory : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HandlerComponentFactory">();
+		STATIC_CLASS_IMPL("HandlerComponentFactory")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HandlerComponentFactory")
 	}
 	static class UHandlerComponentFactory* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHandlerComponentFactory>();
 	}
 };
-static_assert(alignof(UHandlerComponentFactory) == 0x000008, "Wrong alignment on UHandlerComponentFactory");
-static_assert(sizeof(UHandlerComponentFactory) == 0x000030, "Wrong size on UHandlerComponentFactory");
+DUMPER7_ASSERTS_UHandlerComponentFactory;
 
 // Class PacketHandler.PacketHandlerProfileConfig
 // 0x0010 (0x0040 - 0x0030)
@@ -43,16 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PacketHandlerProfileConfig">();
+		STATIC_CLASS_IMPL("PacketHandlerProfileConfig")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PacketHandlerProfileConfig")
 	}
 	static class UPacketHandlerProfileConfig* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPacketHandlerProfileConfig>();
 	}
 };
-static_assert(alignof(UPacketHandlerProfileConfig) == 0x000008, "Wrong alignment on UPacketHandlerProfileConfig");
-static_assert(sizeof(UPacketHandlerProfileConfig) == 0x000040, "Wrong size on UPacketHandlerProfileConfig");
-static_assert(offsetof(UPacketHandlerProfileConfig, Components) == 0x000030, "Member 'UPacketHandlerProfileConfig::Components' has a wrong offset!");
+DUMPER7_ASSERTS_UPacketHandlerProfileConfig;
 
 }
 

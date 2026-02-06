@@ -122,17 +122,7 @@ public:
 	float                                         Time;                                              // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Type;                                              // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FChaosDestructionEvent) == 0x000004, "Wrong alignment on FChaosDestructionEvent");
-static_assert(sizeof(FChaosDestructionEvent) == 0x000044, "Wrong size on FChaosDestructionEvent");
-static_assert(offsetof(FChaosDestructionEvent, Position) == 0x000000, "Member 'FChaosDestructionEvent::Position' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, Normal) == 0x00000C, "Member 'FChaosDestructionEvent::Normal' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, Velocity) == 0x000018, "Member 'FChaosDestructionEvent::Velocity' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, AngularVelocity) == 0x000024, "Member 'FChaosDestructionEvent::AngularVelocity' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, ExtentMin) == 0x000030, "Member 'FChaosDestructionEvent::ExtentMin' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, ExtentMax) == 0x000034, "Member 'FChaosDestructionEvent::ExtentMax' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, ParticleID) == 0x000038, "Member 'FChaosDestructionEvent::ParticleID' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, Time) == 0x00003C, "Member 'FChaosDestructionEvent::Time' has a wrong offset!");
-static_assert(offsetof(FChaosDestructionEvent, Type) == 0x000040, "Member 'FChaosDestructionEvent::Type' has a wrong offset!");
+DUMPER7_ASSERTS_FChaosDestructionEvent;
 
 }
 

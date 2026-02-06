@@ -34,22 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PD_HolographicEffect_C">();
+		BP_STATIC_CLASS_IMPL("PD_HolographicEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PD_HolographicEffect_C")
 	}
 	static class UPD_HolographicEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPD_HolographicEffect_C>();
 	}
 };
-static_assert(alignof(UPD_HolographicEffect_C) == 0x000008, "Wrong alignment on UPD_HolographicEffect_C");
-static_assert(sizeof(UPD_HolographicEffect_C) == 0x000110, "Wrong size on UPD_HolographicEffect_C");
-static_assert(offsetof(UPD_HolographicEffect_C, Start) == 0x000038, "Member 'UPD_HolographicEffect_C::Start' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, Loop) == 0x00003C, "Member 'UPD_HolographicEffect_C::Loop' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, End) == 0x000040, "Member 'UPD_HolographicEffect_C::End' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, OutlineData) == 0x000048, "Member 'UPD_HolographicEffect_C::OutlineData' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, OtherData) == 0x0000A8, "Member 'UPD_HolographicEffect_C::OtherData' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, CanSkipLoopUpdate) == 0x000108, "Member 'UPD_HolographicEffect_C::CanSkipLoopUpdate' has a wrong offset!");
-static_assert(offsetof(UPD_HolographicEffect_C, ExtraUpdateOnStart) == 0x000109, "Member 'UPD_HolographicEffect_C::ExtraUpdateOnStart' has a wrong offset!");
+DUMPER7_ASSERTS_UPD_HolographicEffect_C;
 
 }
 

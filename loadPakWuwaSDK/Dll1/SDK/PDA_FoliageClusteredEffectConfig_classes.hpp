@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_classes.hpp"
 #include "SFoliageClusteredEffectEntry_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_FoliageClusteredEffectConfig_C">();
+		BP_STATIC_CLASS_IMPL("PDA_FoliageClusteredEffectConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_FoliageClusteredEffectConfig_C")
 	}
 	static class UPDA_FoliageClusteredEffectConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_FoliageClusteredEffectConfig_C>();
 	}
 };
-static_assert(alignof(UPDA_FoliageClusteredEffectConfig_C) == 0x000008, "Wrong alignment on UPDA_FoliageClusteredEffectConfig_C");
-static_assert(sizeof(UPDA_FoliageClusteredEffectConfig_C) == 0x000058, "Wrong size on UPDA_FoliageClusteredEffectConfig_C");
-static_assert(offsetof(UPDA_FoliageClusteredEffectConfig_C, SettingsData) == 0x000038, "Member 'UPDA_FoliageClusteredEffectConfig_C::SettingsData' has a wrong offset!");
-static_assert(offsetof(UPDA_FoliageClusteredEffectConfig_C, BoxExtend) == 0x000048, "Member 'UPDA_FoliageClusteredEffectConfig_C::BoxExtend' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_FoliageClusteredEffectConfig_C;
 
 }
 

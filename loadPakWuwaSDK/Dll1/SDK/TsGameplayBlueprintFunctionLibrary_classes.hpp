@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "EVisionType_structs.hpp"
-#include "Engine_classes.hpp"
 #include "EHookInteractTypeBp_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EMorphType_structs.hpp"
 #include "ECharacterLoadType_structs.hpp"
+#include "EAimViewState_structs.hpp"
 #include "EFishingSkillType_structs.hpp"
+#include "EVisionType_structs.hpp"
 #include "EHitAnim_structs.hpp"
 #include "ESkillTargetDirection_structs.hpp"
-#include "EAimViewState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
-#include "ECharState_structs.hpp"
 #include "ECharParentMoveState_structs.hpp"
+#include "ECharState_structs.hpp"
 
 
 namespace SDK
@@ -320,30 +320,38 @@ public:
 	static void SendCombatEventForDebug(int32 entityId, const class FString& tagName, bool needSave, bool isMainState, class UObject* __WorldContext);
 	static void SendLevelEventForDebug(int32 entityId, const class FString& tagName, class UObject* __WorldContext);
 	static void StopCableWayMove(int32 id, class UObject* __WorldContext);
+	static void QuantumDiffusionInteract(int32 entityId, class UObject* __WorldContext);
 	static class USkeletalMeshComponent* GetCurrentTargetPilotSkeletalMeshComponent(int32 entityId, class UObject* __WorldContext);
+	static int32 FixHookTargetEntityId(int32 entityId, class UObject* __WorldContext);
 	static bool GetPilotThrowNeedMotorRide(class UObject* __WorldContext);
 	static bool GetPilotThrowIsDisableInterrupt(class UObject* __WorldContext);
-	static void OpenPilotThrowGameplayCamera(int32 targetEntityId, class UObject* __WorldContext);
-	static int32 FixHookTargetEntityId(int32 entityId, class UObject* __WorldContext);
 	static void LevelFlowDeadlySkeletonMeshCastToCharacter(class UObject* __WorldContext);
 	static void LevelFlowAddBuff(int32 entityId, int32 buffId, class UObject* __WorldContext);
 	static void LevelFlowRemoveBuff(int32 entityId, int32 buffId, class UObject* __WorldContext);
 	static void LevelFlowCameraShake(const class FString& cameraShakeBp, class UObject* __WorldContext);
 	static void LevelFlowPlayLevelSequence(const class FString& path, const class FString& mark, class UObject* __WorldContext);
+	static void OpenPilotThrowGameplayCamera(int32 targetEntityId, class UObject* __WorldContext);
+	static void GuessJokerNpcTurnToIdlePerform(class UObject* __WorldContext);
 	static struct FVectorDouble GetPilotCurrentInRangePoint(class UObject* __WorldContext);
+	static int32 GetHookOverrideSpeed(int32 entityId, class UObject* __WorldContext);
+	static float GetVehicleCatapultUnitRisingTime(int32 entityId, class UObject* __WorldContext);
+	static void SetGameplayCueEffectForceRecycle(int32 entityId, int64 cueId, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsGameplayBlueprintFunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("TsGameplayBlueprintFunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsGameplayBlueprintFunctionLibrary_C")
 	}
 	static class UTsGameplayBlueprintFunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsGameplayBlueprintFunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UTsGameplayBlueprintFunctionLibrary_C) == 0x000008, "Wrong alignment on UTsGameplayBlueprintFunctionLibrary_C");
-static_assert(sizeof(UTsGameplayBlueprintFunctionLibrary_C) == 0x000030, "Wrong size on UTsGameplayBlueprintFunctionLibrary_C");
+DUMPER7_ASSERTS_UTsGameplayBlueprintFunctionLibrary_C;
 
 }
 

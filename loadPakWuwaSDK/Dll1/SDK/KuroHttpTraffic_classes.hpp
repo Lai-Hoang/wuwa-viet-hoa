@@ -27,15 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroHttpTrafficStatic">();
+		STATIC_CLASS_IMPL("KuroHttpTrafficStatic")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroHttpTrafficStatic")
 	}
 	static class UKuroHttpTrafficStatic* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroHttpTrafficStatic>();
 	}
 };
-static_assert(alignof(UKuroHttpTrafficStatic) == 0x000008, "Wrong alignment on UKuroHttpTrafficStatic");
-static_assert(sizeof(UKuroHttpTrafficStatic) == 0x000030, "Wrong size on UKuroHttpTrafficStatic");
+DUMPER7_ASSERTS_UKuroHttpTrafficStatic;
 
 }
 

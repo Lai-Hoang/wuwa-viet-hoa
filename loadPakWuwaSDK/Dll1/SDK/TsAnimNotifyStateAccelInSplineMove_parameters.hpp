@@ -24,12 +24,7 @@ public:
 	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick) == 0x000008, "Wrong alignment on TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick");
-static_assert(sizeof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick) == 0x000018, "Wrong size on TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick");
-static_assert(offsetof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick, MeshComp) == 0x000000, "Member 'TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick::MeshComp' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick, Animation) == 0x000008, "Member 'TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick::Animation' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick, FrameDeltaTime) == 0x000010, "Member 'TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick::FrameDeltaTime' has a wrong offset!");
-static_assert(offsetof(TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick, ReturnValue) == 0x000014, "Member 'TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsAnimNotifyStateAccelInSplineMove_C_K2_NotifyTick;
 
 }
 

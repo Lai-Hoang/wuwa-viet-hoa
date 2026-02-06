@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSAiRaceStrategyOneParamFunction> CalcTargetSpeedByRunningTimeConfig_40_C886A6E745869034C2EB0CA3FCD143AA; // 0x0008(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSAiRaceStrategyCorrectionByTime) == 0x000008, "Wrong alignment on FSAiRaceStrategyCorrectionByTime");
-static_assert(sizeof(FSAiRaceStrategyCorrectionByTime) == 0x000018, "Wrong size on FSAiRaceStrategyCorrectionByTime");
-static_assert(offsetof(FSAiRaceStrategyCorrectionByTime, Enable_8_990BD65148AE83829208A5ABE39ECF8C) == 0x000000, "Member 'FSAiRaceStrategyCorrectionByTime::Enable_8_990BD65148AE83829208A5ABE39ECF8C' has a wrong offset!");
-static_assert(offsetof(FSAiRaceStrategyCorrectionByTime, CalcTargetSpeedByRunningTimeConfig_40_C886A6E745869034C2EB0CA3FCD143AA) == 0x000008, "Member 'FSAiRaceStrategyCorrectionByTime::CalcTargetSpeedByRunningTimeConfig_40_C886A6E745869034C2EB0CA3FCD143AA' has a wrong offset!");
+DUMPER7_ASSERTS_FSAiRaceStrategyCorrectionByTime;
 
 }
 

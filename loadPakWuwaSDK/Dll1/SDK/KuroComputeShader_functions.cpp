@@ -757,15 +757,15 @@ void AKuroCSRpbd::StopSimulation()
 }
 
 
-// Function KuroComputeShader.KuroCSSkeltalPlant.afterBeginPlay
+// Function KuroComputeShader.KuroCSSimpleCollision.InitShaderManager
 // (Final, Native, Public, BlueprintCallable)
 
-void AKuroCSSkeltalPlant::afterBeginPlay()
+void AKuroCSSimpleCollision::InitShaderManager()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroCSSkeltalPlant", "afterBeginPlay");
+		Func = Class->GetFunction("KuroCSSimpleCollision", "InitShaderManager");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -776,15 +776,15 @@ void AKuroCSSkeltalPlant::afterBeginPlay()
 }
 
 
-// Function KuroComputeShader.KuroCSSkeltalPlant.BeginRenderShader
+// Function KuroComputeShader.KuroCSSimpleCollision.ReleaseShaderManager
 // (Final, Native, Public, BlueprintCallable)
 
-void AKuroCSSkeltalPlant::BeginRenderShader()
+void AKuroCSSimpleCollision::ReleaseShaderManager()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroCSSkeltalPlant", "BeginRenderShader");
+		Func = Class->GetFunction("KuroCSSimpleCollision", "ReleaseShaderManager");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -795,15 +795,15 @@ void AKuroCSSkeltalPlant::BeginRenderShader()
 }
 
 
-// Function KuroComputeShader.KuroCSSkeltalPlant.BuildParticleData
+// Function KuroComputeShader.KuroCSSimpleCollision.StartSimulation
 // (Final, Native, Public, BlueprintCallable)
 
-void AKuroCSSkeltalPlant::BuildParticleData()
+void AKuroCSSimpleCollision::StartSimulation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroCSSkeltalPlant", "BuildParticleData");
+		Func = Class->GetFunction("KuroCSSimpleCollision", "StartSimulation");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -814,15 +814,91 @@ void AKuroCSSkeltalPlant::BuildParticleData()
 }
 
 
-// Function KuroComputeShader.KuroCSSkeltalPlant.EndRenderShader
+// Function KuroComputeShader.KuroCSSimpleCollision.StopSimulation
 // (Final, Native, Public, BlueprintCallable)
 
-void AKuroCSSkeltalPlant::EndRenderShader()
+void AKuroCSSimpleCollision::StopSimulation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroCSSkeltalPlant", "EndRenderShader");
+		Func = Class->GetFunction("KuroCSSimpleCollision", "StopSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSSkeltalPlant.InitShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSSkeltalPlant::InitShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSSkeltalPlant", "InitShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSSkeltalPlant.ReleaseShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSSkeltalPlant::ReleaseShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSSkeltalPlant", "ReleaseShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSSkeltalPlant.StartSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSSkeltalPlant::StartSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSSkeltalPlant", "StartSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSSkeltalPlant.StopSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSSkeltalPlant::StopSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSSkeltalPlant", "StopSimulation");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

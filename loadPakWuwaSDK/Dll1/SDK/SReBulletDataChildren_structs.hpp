@@ -28,14 +28,7 @@ public:
 	EBulletChildrenType                           召唤触发_15_62AE08EE4B095C2155C26DA81380E2AD;      // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          失败是否停止_17_CF1A58E845796CA346205A9C4F8334C2;  // 0x0015(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSReBulletDataChildren) == 0x000008, "Wrong alignment on FSReBulletDataChildren");
-static_assert(sizeof(FSReBulletDataChildren) == 0x000018, "Wrong size on FSReBulletDataChildren");
-static_assert(offsetof(FSReBulletDataChildren, 召唤子弹ID_4_2B4C2C064049651D03D9BFA5A7B8ACE1) == 0x000000, "Member 'FSReBulletDataChildren::召唤子弹ID_4_2B4C2C064049651D03D9BFA5A7B8ACE1' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataChildren, 召唤子弹延迟_7_E28516FA498DCF1B4C6860865A2467C6) == 0x000008, "Member 'FSReBulletDataChildren::召唤子弹延迟_7_E28516FA498DCF1B4C6860865A2467C6' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataChildren, 召唤子弹数量_9_B498C6914F30E0787D758BA413B8633F) == 0x00000C, "Member 'FSReBulletDataChildren::召唤子弹数量_9_B498C6914F30E0787D758BA413B8633F' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataChildren, 召唤子弹间隔_12_30777CBB45B8422A5CE591B45D3FCF78) == 0x000010, "Member 'FSReBulletDataChildren::召唤子弹间隔_12_30777CBB45B8422A5CE591B45D3FCF78' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataChildren, 召唤触发_15_62AE08EE4B095C2155C26DA81380E2AD) == 0x000014, "Member 'FSReBulletDataChildren::召唤触发_15_62AE08EE4B095C2155C26DA81380E2AD' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataChildren, 失败是否停止_17_CF1A58E845796CA346205A9C4F8334C2) == 0x000015, "Member 'FSReBulletDataChildren::失败是否停止_17_CF1A58E845796CA346205A9C4F8334C2' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataChildren;
 
 }
 

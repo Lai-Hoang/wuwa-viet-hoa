@@ -24,10 +24,7 @@ public:
 	TSoftClassPtr<class UClass>                   GE的类型_15_25F04E6D4645FDD76DE145AF0E587420;      // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FKuroGameplayParameterContainer        GE的参数_11_53A76D7244F66DF29F58A39A7441C940;      // 0x0030(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSBulletGE) == 0x000008, "Wrong alignment on FSBulletGE");
-static_assert(sizeof(FSBulletGE) == 0x000040, "Wrong size on FSBulletGE");
-static_assert(offsetof(FSBulletGE, GE的类型_15_25F04E6D4645FDD76DE145AF0E587420) == 0x000000, "Member 'FSBulletGE::GE的类型_15_25F04E6D4645FDD76DE145AF0E587420' has a wrong offset!");
-static_assert(offsetof(FSBulletGE, GE的参数_11_53A76D7244F66DF29F58A39A7441C940) == 0x000030, "Member 'FSBulletGE::GE的参数_11_53A76D7244F66DF29F58A39A7441C940' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletGE;
 
 }
 

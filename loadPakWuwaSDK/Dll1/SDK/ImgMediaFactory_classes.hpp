@@ -39,25 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ImgMediaSettings">();
+		STATIC_CLASS_IMPL("ImgMediaSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ImgMediaSettings")
 	}
 	static class UImgMediaSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UImgMediaSettings>();
 	}
 };
-static_assert(alignof(UImgMediaSettings) == 0x000008, "Wrong alignment on UImgMediaSettings");
-static_assert(sizeof(UImgMediaSettings) == 0x000070, "Wrong size on UImgMediaSettings");
-static_assert(offsetof(UImgMediaSettings, DefaultFrameRate) == 0x000030, "Member 'UImgMediaSettings::DefaultFrameRate' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, CacheBehindPercentage) == 0x000038, "Member 'UImgMediaSettings::CacheBehindPercentage' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, CacheSizeGB) == 0x00003C, "Member 'UImgMediaSettings::CacheSizeGB' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, CacheThreads) == 0x000040, "Member 'UImgMediaSettings::CacheThreads' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, CacheThreadStackSizeKB) == 0x000044, "Member 'UImgMediaSettings::CacheThreadStackSizeKB' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, GlobalCacheSizeGB) == 0x000048, "Member 'UImgMediaSettings::GlobalCacheSizeGB' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, UseGlobalCache) == 0x00004C, "Member 'UImgMediaSettings::UseGlobalCache' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, ExrDecoderThreads) == 0x000050, "Member 'UImgMediaSettings::ExrDecoderThreads' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, DefaultProxy) == 0x000058, "Member 'UImgMediaSettings::DefaultProxy' has a wrong offset!");
-static_assert(offsetof(UImgMediaSettings, UseDefaultProxy) == 0x000068, "Member 'UImgMediaSettings::UseDefaultProxy' has a wrong offset!");
+DUMPER7_ASSERTS_UImgMediaSettings;
 
 }
 

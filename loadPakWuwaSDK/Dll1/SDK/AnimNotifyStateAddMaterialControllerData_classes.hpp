@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -17,33 +18,37 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass AnimNotifyStateAddMaterialControllerData.AnimNotifyStateAddMaterialControllerData_C
-// 0x0010 (0x0058 - 0x0048)
+// 0x0068 (0x00B0 - 0x0048)
 class UAnimNotifyStateAddMaterialControllerData_C final : public UKuroAnimNotifyState
 {
 public:
 	class UPD_CharacterControllerData_C*          MaterialAssetData;                                 // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Handle;                                            // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NeedAnyTag;                                        // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FGameplayTag, bool>               PlayNeedTags;                                      // 0x0058(0x0050)(Edit, BlueprintVisible)
+	bool                                          TagCheckWithOwner;                                 // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
+	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 
 	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyStateAddMaterialControllerData_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyStateAddMaterialControllerData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyStateAddMaterialControllerData_C")
 	}
 	static class UAnimNotifyStateAddMaterialControllerData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyStateAddMaterialControllerData_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyStateAddMaterialControllerData_C) == 0x000008, "Wrong alignment on UAnimNotifyStateAddMaterialControllerData_C");
-static_assert(sizeof(UAnimNotifyStateAddMaterialControllerData_C) == 0x000058, "Wrong size on UAnimNotifyStateAddMaterialControllerData_C");
-static_assert(offsetof(UAnimNotifyStateAddMaterialControllerData_C, MaterialAssetData) == 0x000048, "Member 'UAnimNotifyStateAddMaterialControllerData_C::MaterialAssetData' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyStateAddMaterialControllerData_C, Handle) == 0x000050, "Member 'UAnimNotifyStateAddMaterialControllerData_C::Handle' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotifyStateAddMaterialControllerData_C;
 
 }
 

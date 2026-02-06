@@ -32,15 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PuertsBlueprintLibrary">();
+		STATIC_CLASS_IMPL("PuertsBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PuertsBlueprintLibrary")
 	}
 	static class UPuertsBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPuertsBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UPuertsBlueprintLibrary) == 0x000008, "Wrong alignment on UPuertsBlueprintLibrary");
-static_assert(sizeof(UPuertsBlueprintLibrary) == 0x000030, "Wrong size on UPuertsBlueprintLibrary");
+DUMPER7_ASSERTS_UPuertsBlueprintLibrary;
 
 // Class Puerts.PuertsSetting
 // 0x0068 (0x0098 - 0x0030)
@@ -67,27 +70,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PuertsSetting">();
+		STATIC_CLASS_IMPL("PuertsSetting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PuertsSetting")
 	}
 	static class UPuertsSetting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPuertsSetting>();
 	}
 };
-static_assert(alignof(UPuertsSetting) == 0x000008, "Wrong alignment on UPuertsSetting");
-static_assert(sizeof(UPuertsSetting) == 0x000098, "Wrong size on UPuertsSetting");
-static_assert(offsetof(UPuertsSetting, RootPath) == 0x000030, "Member 'UPuertsSetting::RootPath' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, AutoModeEnable) == 0x000040, "Member 'UPuertsSetting::AutoModeEnable' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, DebugEnable) == 0x000041, "Member 'UPuertsSetting::DebugEnable' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, DebugPort) == 0x000044, "Member 'UPuertsSetting::DebugPort' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, WaitDebugger) == 0x000048, "Member 'UPuertsSetting::WaitDebugger' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, WaitDebuggerTimeout) == 0x000050, "Member 'UPuertsSetting::WaitDebuggerTimeout' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, NumberOfJsEnv) == 0x000058, "Member 'UPuertsSetting::NumberOfJsEnv' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, WatchDisable) == 0x00005C, "Member 'UPuertsSetting::WatchDisable' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, IgnoreClassListOnDTS) == 0x000060, "Member 'UPuertsSetting::IgnoreClassListOnDTS' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, IgnoreStructListOnDTS) == 0x000070, "Member 'UPuertsSetting::IgnoreStructListOnDTS' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, PreloadPath) == 0x000080, "Member 'UPuertsSetting::PreloadPath' has a wrong offset!");
-static_assert(offsetof(UPuertsSetting, EnableStackTrace) == 0x000090, "Member 'UPuertsSetting::EnableStackTrace' has a wrong offset!");
+DUMPER7_ASSERTS_UPuertsSetting;
 
 }
 

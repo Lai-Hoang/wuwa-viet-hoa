@@ -40,15 +40,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"XeLLBlueprintLibrary">();
+		STATIC_CLASS_IMPL("XeLLBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"XeLLBlueprintLibrary")
 	}
 	static class UXeLLBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UXeLLBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UXeLLBlueprintLibrary) == 0x000008, "Wrong alignment on UXeLLBlueprintLibrary");
-static_assert(sizeof(UXeLLBlueprintLibrary) == 0x000030, "Wrong size on UXeLLBlueprintLibrary");
+DUMPER7_ASSERTS_UXeLLBlueprintLibrary;
 
 }
 

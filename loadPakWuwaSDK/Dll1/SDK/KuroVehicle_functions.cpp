@@ -1019,6 +1019,64 @@ void UKuroVehicleMovementComponent::UpdateMotorRailMoveTransform(float DeltaSeco
 }
 
 
+// Function KuroVehicle.KuroVehicleMovementComponent.GetBackMotorHitResult
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FHitResult*                      OutHit                                                 (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroVehicleMovementComponent::GetBackMotorHitResult(struct FHitResult* OutHit) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetBackMotorHitResult");
+
+	Params::KuroVehicleMovementComponent_GetBackMotorHitResult Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutHit != nullptr)
+		*OutHit = std::move(Parms.OutHit);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetFrontMotorHitResult
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FHitResult*                      OutHit                                                 (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroVehicleMovementComponent::GetFrontMotorHitResult(struct FHitResult* OutHit) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetFrontMotorHitResult");
+
+	Params::KuroVehicleMovementComponent_GetFrontMotorHitResult Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutHit != nullptr)
+		*OutHit = std::move(Parms.OutHit);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroVehicle.KuroVehicleMovementComponent.GetMaxAcceleration
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

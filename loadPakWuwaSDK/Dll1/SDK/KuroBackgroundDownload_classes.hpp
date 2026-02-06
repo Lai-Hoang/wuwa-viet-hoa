@@ -36,18 +36,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroBgPrefixDownload">();
+		STATIC_CLASS_IMPL("KuroBgPrefixDownload")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroBgPrefixDownload")
 	}
 	static class UKuroBgPrefixDownload* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroBgPrefixDownload>();
 	}
 };
-static_assert(alignof(UKuroBgPrefixDownload) == 0x000008, "Wrong alignment on UKuroBgPrefixDownload");
-static_assert(sizeof(UKuroBgPrefixDownload) == 0x000068, "Wrong size on UKuroBgPrefixDownload");
-static_assert(offsetof(UKuroBgPrefixDownload, AllCompleteDelegate) == 0x000030, "Member 'UKuroBgPrefixDownload::AllCompleteDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroBgPrefixDownload, ProgressDelegate) == 0x000040, "Member 'UKuroBgPrefixDownload::ProgressDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroBgPrefixDownload, ProgressDelegateNew) == 0x000050, "Member 'UKuroBgPrefixDownload::ProgressDelegateNew' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroBgPrefixDownload;
 
 }
 

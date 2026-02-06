@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Sharphereal_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Sharphereal_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -35,15 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CSharpBlueprintFunctionLibrary">();
+		STATIC_CLASS_IMPL("CSharpBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CSharpBlueprintFunctionLibrary")
 	}
 	static class UCSharpBlueprintFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCSharpBlueprintFunctionLibrary>();
 	}
 };
-static_assert(alignof(UCSharpBlueprintFunctionLibrary) == 0x000008, "Wrong alignment on UCSharpBlueprintFunctionLibrary");
-static_assert(sizeof(UCSharpBlueprintFunctionLibrary) == 0x000030, "Wrong size on UCSharpBlueprintFunctionLibrary");
+DUMPER7_ASSERTS_UCSharpBlueprintFunctionLibrary;
 
 // Class Sharphereal.CSharpGeneratedClass
 // 0x0000 (0x0338 - 0x0338)
@@ -52,15 +55,18 @@ class UCSharpGeneratedClass final : public UBlueprintGeneratedClass
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"CSharpGeneratedClass">();
+		STATIC_CLASS_IMPL("CSharpGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CSharpGeneratedClass")
 	}
 	static class UCSharpGeneratedClass* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UCSharpGeneratedClass>();
 	}
 };
-static_assert(alignof(UCSharpGeneratedClass) == 0x000008, "Wrong alignment on UCSharpGeneratedClass");
-static_assert(sizeof(UCSharpGeneratedClass) == 0x000338, "Wrong size on UCSharpGeneratedClass");
+DUMPER7_ASSERTS_UCSharpGeneratedClass;
 
 // Class Sharphereal.DelegateProxy
 // 0x0078 (0x00A8 - 0x0030)
@@ -202,15 +208,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"DelegateProxy">();
+		STATIC_CLASS_IMPL("DelegateProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DelegateProxy")
 	}
 	static class UDelegateProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDelegateProxy>();
 	}
 };
-static_assert(alignof(UDelegateProxy) == 0x000008, "Wrong alignment on UDelegateProxy");
-static_assert(sizeof(UDelegateProxy) == 0x0000A8, "Wrong size on UDelegateProxy");
+DUMPER7_ASSERTS_UDelegateProxy;
 
 // Class Sharphereal.JsBridgetBlueprintFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -222,18 +231,21 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"JsBridgetBlueprintFunctionLibrary">();
+		STATIC_CLASS_IMPL("JsBridgetBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JsBridgetBlueprintFunctionLibrary")
 	}
 	static class UJsBridgetBlueprintFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UJsBridgetBlueprintFunctionLibrary>();
 	}
 };
-static_assert(alignof(UJsBridgetBlueprintFunctionLibrary) == 0x000008, "Wrong alignment on UJsBridgetBlueprintFunctionLibrary");
-static_assert(sizeof(UJsBridgetBlueprintFunctionLibrary) == 0x000030, "Wrong size on UJsBridgetBlueprintFunctionLibrary");
+DUMPER7_ASSERTS_UJsBridgetBlueprintFunctionLibrary;
 
 // Class Sharphereal.KooSharpRuntimeSettings
-// 0x0130 (0x0178 - 0x0048)
+// 0x0180 (0x01C8 - 0x0048)
 class UKooSharpRuntimeSettings final : public UDeveloperSettings
 {
 public:
@@ -250,50 +262,37 @@ public:
 	TArray<EKooSharpBuildConfiguration>           EnableMonoStatForMemory;                           // 0x00E8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<EKooSharpBuildConfiguration>           EnableMonoStatForJIT;                              // 0x00F8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<EKooSharpBuildConfiguration>           EnableMonoStatForGC;                               // 0x0108(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	bool                                          bEnableCSharpEnvironment;                          // 0x0118(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseMMapLoadDLL;                                   // 0x0119(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLogJitAddress;                                    // 0x011A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ScriptAssembliesPath;                              // 0x0120(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ScriptAssembliesEditorPath;                        // 0x0130(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ScriptAssembliesNonShippingPath;                   // 0x0140(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMonoAotMode                                  MonoAOTMode;                                       // 0x0150(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         EditorPreloadAssemblies;                           // 0x0158(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<class FString>                         RuntimeLoadAssemblies;                             // 0x0168(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<EKooSharpBuildConfiguration>           EnableLogJitAddress;                               // 0x0118(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ExtraMonoOptions;                                  // 0x0128(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          bEnableCSharpEnvironment;                          // 0x0138(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseMMapLoadDLL;                                   // 0x0139(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13A[0x6];                                      // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ScriptProjectName;                                 // 0x0140(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ScriptAssembliesPath;                              // 0x0150(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ScriptAssembliesEditorPath;                        // 0x0160(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ScriptAssembliesNonShippingPath;                   // 0x0170(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMonoAotMode                                  MonoAOTMode;                                       // 0x0180(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         EditorPreloadAssemblies;                           // 0x0188(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         RuntimeLoadAssemblies;                             // 0x0198(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         BlueprintProxyWhiteList;                           // 0x01A8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         ExtraEnvironment;                                  // 0x01B8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KooSharpRuntimeSettings">();
+		STATIC_CLASS_IMPL("KooSharpRuntimeSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KooSharpRuntimeSettings")
 	}
 	static class UKooSharpRuntimeSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKooSharpRuntimeSettings>();
 	}
 };
-static_assert(alignof(UKooSharpRuntimeSettings) == 0x000008, "Wrong alignment on UKooSharpRuntimeSettings");
-static_assert(sizeof(UKooSharpRuntimeSettings) == 0x000178, "Wrong size on UKooSharpRuntimeSettings");
-static_assert(offsetof(UKooSharpRuntimeSettings, EnableDebugger) == 0x000048, "Member 'UKooSharpRuntimeSettings::EnableDebugger' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, WaitForDebugger) == 0x000058, "Member 'UKooSharpRuntimeSettings::WaitForDebugger' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, DebuggerPort) == 0x000068, "Member 'UKooSharpRuntimeSettings::DebuggerPort' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoTraceLevel) == 0x00006A, "Member 'UKooSharpRuntimeSettings::MonoTraceLevel' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoTraceMask) == 0x000070, "Member 'UKooSharpRuntimeSettings::MonoTraceMask' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoDebuggerLogLevel) == 0x0000C0, "Member 'UKooSharpRuntimeSettings::MonoDebuggerLogLevel' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoDebuggerLogFile) == 0x0000C8, "Member 'UKooSharpRuntimeSettings::MonoDebuggerLogFile' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoGCDebugArgs) == 0x0000D8, "Member 'UKooSharpRuntimeSettings::MonoGCDebugArgs' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, EnableMonoStatForMemory) == 0x0000E8, "Member 'UKooSharpRuntimeSettings::EnableMonoStatForMemory' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, EnableMonoStatForJIT) == 0x0000F8, "Member 'UKooSharpRuntimeSettings::EnableMonoStatForJIT' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, EnableMonoStatForGC) == 0x000108, "Member 'UKooSharpRuntimeSettings::EnableMonoStatForGC' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, bEnableCSharpEnvironment) == 0x000118, "Member 'UKooSharpRuntimeSettings::bEnableCSharpEnvironment' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, bUseMMapLoadDLL) == 0x000119, "Member 'UKooSharpRuntimeSettings::bUseMMapLoadDLL' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, bLogJitAddress) == 0x00011A, "Member 'UKooSharpRuntimeSettings::bLogJitAddress' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, ScriptAssembliesPath) == 0x000120, "Member 'UKooSharpRuntimeSettings::ScriptAssembliesPath' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, ScriptAssembliesEditorPath) == 0x000130, "Member 'UKooSharpRuntimeSettings::ScriptAssembliesEditorPath' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, ScriptAssembliesNonShippingPath) == 0x000140, "Member 'UKooSharpRuntimeSettings::ScriptAssembliesNonShippingPath' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, MonoAOTMode) == 0x000150, "Member 'UKooSharpRuntimeSettings::MonoAOTMode' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, EditorPreloadAssemblies) == 0x000158, "Member 'UKooSharpRuntimeSettings::EditorPreloadAssemblies' has a wrong offset!");
-static_assert(offsetof(UKooSharpRuntimeSettings, RuntimeLoadAssemblies) == 0x000168, "Member 'UKooSharpRuntimeSettings::RuntimeLoadAssemblies' has a wrong offset!");
+DUMPER7_ASSERTS_UKooSharpRuntimeSettings;
 
 }
 

@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVectorDouble                          HitPoint;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletHitActorInterface_OnBulletHit) == 0x000008, "Wrong alignment on BulletHitActorInterface_OnBulletHit");
-static_assert(sizeof(BulletHitActorInterface_OnBulletHit) == 0x000020, "Wrong size on BulletHitActorInterface_OnBulletHit");
-static_assert(offsetof(BulletHitActorInterface_OnBulletHit, BulletEntityId) == 0x000000, "Member 'BulletHitActorInterface_OnBulletHit::BulletEntityId' has a wrong offset!");
-static_assert(offsetof(BulletHitActorInterface_OnBulletHit, HitPoint) == 0x000008, "Member 'BulletHitActorInterface_OnBulletHit::HitPoint' has a wrong offset!");
+DUMPER7_ASSERTS_BulletHitActorInterface_OnBulletHit;
 
 // Function KuroGameplayInterface.GamePartitionInterface.GetGamePartitionObjectID
 // 0x0004 (0x0004 - 0x0000)
@@ -37,9 +34,36 @@ struct GamePartitionInterface_GetGamePartitionObjectID final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartitionInterface_GetGamePartitionObjectID) == 0x000004, "Wrong alignment on GamePartitionInterface_GetGamePartitionObjectID");
-static_assert(sizeof(GamePartitionInterface_GetGamePartitionObjectID) == 0x000004, "Wrong size on GamePartitionInterface_GetGamePartitionObjectID");
-static_assert(offsetof(GamePartitionInterface_GetGamePartitionObjectID, ReturnValue) == 0x000000, "Member 'GamePartitionInterface_GetGamePartitionObjectID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartitionInterface_GetGamePartitionObjectID;
+
+// Function KuroGameplayInterface.KuroWaterDetectedInterface.BroadcastWaterDetectedTick
+// 0x0020 (0x0020 - 0x0000)
+struct KuroWaterDetectedInterface_BroadcastWaterDetectedTick final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WaterSurface;                                      // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          Location;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroWaterDetectedInterface_BroadcastWaterDetectedTick;
+
+// Function KuroGameplayInterface.KuroWaterDetectedReceiverInterface.GetTargetInvoker
+// 0x0008 (0x0008 - 0x0000)
+struct KuroWaterDetectedReceiverInterface_GetTargetInvoker final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroWaterDetectedReceiverInterface_GetTargetInvoker;
+
+// Function KuroGameplayInterface.KuroWaterDetectedReceiverInterface.GetWaterDetectedInterface
+// 0x0010 (0x0010 - 0x0000)
+struct KuroWaterDetectedReceiverInterface_GetWaterDetectedInterface final
+{
+public:
+	TScriptInterface<class IKuroWaterDetectedInterface> ReturnValue;                                 // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroWaterDetectedReceiverInterface_GetWaterDetectedInterface;
 
 }
 

@@ -30,17 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAxisHandle_C">();
+		BP_STATIC_CLASS_IMPL("TsAxisHandle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAxisHandle_C")
 	}
 	static class UTsAxisHandle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAxisHandle_C>();
 	}
 };
-static_assert(alignof(UTsAxisHandle_C) == 0x000008, "Wrong alignment on UTsAxisHandle_C");
-static_assert(sizeof(UTsAxisHandle_C) == 0x000048, "Wrong size on UTsAxisHandle_C");
-static_assert(offsetof(UTsAxisHandle_C, PlayerController) == 0x000030, "Member 'UTsAxisHandle_C::PlayerController' has a wrong offset!");
-static_assert(offsetof(UTsAxisHandle_C, AxisName) == 0x000038, "Member 'UTsAxisHandle_C::AxisName' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAxisHandle_C;
 
 }
 

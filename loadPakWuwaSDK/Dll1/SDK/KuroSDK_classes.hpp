@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "KuroSDK_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -119,44 +119,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSDKManager">();
+		STATIC_CLASS_IMPL("KuroSDKManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSDKManager")
 	}
 	static class UKuroSDKManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSDKManager>();
 	}
 };
-static_assert(alignof(UKuroSDKManager) == 0x000008, "Wrong alignment on UKuroSDKManager");
-static_assert(sizeof(UKuroSDKManager) == 0x000268, "Wrong size on UKuroSDKManager");
-static_assert(offsetof(UKuroSDKManager, InitDelegate) == 0x000038, "Member 'UKuroSDKManager::InitDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, LoginSuccessDelegate) == 0x000048, "Member 'UKuroSDKManager::LoginSuccessDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, LoginDelegate) == 0x000058, "Member 'UKuroSDKManager::LoginDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, KickDelegate) == 0x000068, "Member 'UKuroSDKManager::KickDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, LogoutDelegate) == 0x000078, "Member 'UKuroSDKManager::LogoutDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ExitDelegate) == 0x000088, "Member 'UKuroSDKManager::ExitDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, HasExitDelegate) == 0x000098, "Member 'UKuroSDKManager::HasExitDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, PaymentDelegate) == 0x0000A8, "Member 'UKuroSDKManager::PaymentDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, PostRedPointDelegate) == 0x0000B8, "Member 'UKuroSDKManager::PostRedPointDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, PostProductDelegate) == 0x0000C8, "Member 'UKuroSDKManager::PostProductDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ProtocolCallBack) == 0x0000D8, "Member 'UKuroSDKManager::ProtocolCallBack' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, GameStateChangeCallBack) == 0x0000E8, "Member 'UKuroSDKManager::GameStateChangeCallBack' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, RequestPhotoPermissionDelegate) == 0x0000F8, "Member 'UKuroSDKManager::RequestPhotoPermissionDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, AnnounceInitDelegate) == 0x000110, "Member 'UKuroSDKManager::AnnounceInitDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, AnnounceOpenDelegate) == 0x000120, "Member 'UKuroSDKManager::AnnounceOpenDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, AnnounceRedPointDelegate) == 0x000130, "Member 'UKuroSDKManager::AnnounceRedPointDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, CustomerServiceResultDelegate) == 0x000140, "Member 'UKuroSDKManager::CustomerServiceResultDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, GetParamsDelegate) == 0x000150, "Member 'UKuroSDKManager::GetParamsDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, OnLoginDelegate) == 0x000160, "Member 'UKuroSDKManager::OnLoginDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, DeepLinkDelegate) == 0x000170, "Member 'UKuroSDKManager::DeepLinkDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, GetAdsValueDelegate) == 0x000180, "Member 'UKuroSDKManager::GetAdsValueDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, GetSharePlatformDelegate) == 0x000190, "Member 'UKuroSDKManager::GetSharePlatformDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ShareResultDelegate) == 0x0001A0, "Member 'UKuroSDKManager::ShareResultDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, LogDelegate) == 0x0001B0, "Member 'UKuroSDKManager::LogDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, WebViewCloseDelegate) == 0x0001C0, "Member 'UKuroSDKManager::WebViewCloseDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ExternalLoginCallBack) == 0x0001D0, "Member 'UKuroSDKManager::ExternalLoginCallBack' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ExternalQueryAchievementsDelegate) == 0x0001E0, "Member 'UKuroSDKManager::ExternalQueryAchievementsDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, ExternalWriteAchievementsDelegate) == 0x0001F0, "Member 'UKuroSDKManager::ExternalWriteAchievementsDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, OnActivatedByApplinksDelegate) == 0x000200, "Member 'UKuroSDKManager::OnActivatedByApplinksDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroSDKManager;
 
 // Class KuroSDK.KuroSDKStaticLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -196,15 +170,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroSDKStaticLibrary">();
+		STATIC_CLASS_IMPL("KuroSDKStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSDKStaticLibrary")
 	}
 	static class UKuroSDKStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroSDKStaticLibrary>();
 	}
 };
-static_assert(alignof(UKuroSDKStaticLibrary) == 0x000008, "Wrong alignment on UKuroSDKStaticLibrary");
-static_assert(sizeof(UKuroSDKStaticLibrary) == 0x000030, "Wrong size on UKuroSDKStaticLibrary");
+DUMPER7_ASSERTS_UKuroSDKStaticLibrary;
 
 }
 

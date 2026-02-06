@@ -21,9 +21,7 @@ struct SdkParamExtendStaticLibrary_GetSdkParamInstance final
 public:
 	class USdkParam*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SdkParamExtendStaticLibrary_GetSdkParamInstance) == 0x000008, "Wrong alignment on SdkParamExtendStaticLibrary_GetSdkParamInstance");
-static_assert(sizeof(SdkParamExtendStaticLibrary_GetSdkParamInstance) == 0x000008, "Wrong size on SdkParamExtendStaticLibrary_GetSdkParamInstance");
-static_assert(offsetof(SdkParamExtendStaticLibrary_GetSdkParamInstance, ReturnValue) == 0x000000, "Member 'SdkParamExtendStaticLibrary_GetSdkParamInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_SdkParamExtendStaticLibrary_GetSdkParamInstance;
 
 }
 

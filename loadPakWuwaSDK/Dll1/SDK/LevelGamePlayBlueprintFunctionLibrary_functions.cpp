@@ -261,5 +261,85 @@ struct FKuroGeometryGeneralPolygonList ULevelGamePlayBlueprintFunctionLibrary_C:
 	return Parms.ReturnValue;
 }
 
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.UseNewScanSystem
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ULevelGamePlayBlueprintFunctionLibrary_C::UseNewScanSystem(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelGamePlayBlueprintFunctionLibrary_C", "UseNewScanSystem");
+
+	Params::LevelGamePlayBlueprintFunctionLibrary_C_UseNewScanSystem Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.StartScan
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULevelGamePlayBlueprintFunctionLibrary_C::StartScan(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelGamePlayBlueprintFunctionLibrary_C", "StartScan");
+
+	Params::LevelGamePlayBlueprintFunctionLibrary_C_StartScan Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function LevelGamePlayBlueprintFunctionLibrary.LevelGamePlayBlueprintFunctionLibrary_C.GenFurniturePrefabIcon
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    path                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULevelGamePlayBlueprintFunctionLibrary_C::GenFurniturePrefabIcon(const class FString& path, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LevelGamePlayBlueprintFunctionLibrary_C", "GenFurniturePrefabIcon");
+
+	Params::LevelGamePlayBlueprintFunctionLibrary_C_GenFurniturePrefabIcon Parms{};
+
+	Parms.path = std::move(path);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

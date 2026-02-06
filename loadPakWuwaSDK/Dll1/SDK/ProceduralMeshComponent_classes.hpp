@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ProceduralMeshComponent_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
+#include "ProceduralMeshComponent_structs.hpp"
 
 
 namespace SDK
@@ -54,7 +54,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ProceduralMeshComponent">();
+		STATIC_CLASS_IMPL("ProceduralMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ProceduralMeshComponent")
 	}
 	static class UProceduralMeshComponent* GetDefaultObj()
 	{
@@ -62,15 +66,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(UProceduralMeshComponent) == 0x000010, "Wrong alignment on UProceduralMeshComponent");
-static_assert(sizeof(UProceduralMeshComponent) == 0x0005D0, "Wrong size on UProceduralMeshComponent");
-static_assert(offsetof(UProceduralMeshComponent, bUseComplexAsSimpleCollision) == 0x000568, "Member 'UProceduralMeshComponent::bUseComplexAsSimpleCollision' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, bUseAsyncCooking) == 0x000569, "Member 'UProceduralMeshComponent::bUseAsyncCooking' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, ProcMeshBodySetup) == 0x000570, "Member 'UProceduralMeshComponent::ProcMeshBodySetup' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, ProcMeshSections) == 0x000578, "Member 'UProceduralMeshComponent::ProcMeshSections' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, CollisionConvexElems) == 0x000588, "Member 'UProceduralMeshComponent::CollisionConvexElems' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, LocalBounds) == 0x000598, "Member 'UProceduralMeshComponent::LocalBounds' has a wrong offset!");
-static_assert(offsetof(UProceduralMeshComponent, AsyncBodySetupQueue) == 0x0005B8, "Member 'UProceduralMeshComponent::AsyncBodySetupQueue' has a wrong offset!");
+DUMPER7_ASSERTS_UProceduralMeshComponent;
 
 // Class ProceduralMeshComponent.KismetProceduralMeshLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -91,15 +87,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KismetProceduralMeshLibrary">();
+		STATIC_CLASS_IMPL("KismetProceduralMeshLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KismetProceduralMeshLibrary")
 	}
 	static class UKismetProceduralMeshLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKismetProceduralMeshLibrary>();
 	}
 };
-static_assert(alignof(UKismetProceduralMeshLibrary) == 0x000008, "Wrong alignment on UKismetProceduralMeshLibrary");
-static_assert(sizeof(UKismetProceduralMeshLibrary) == 0x000030, "Wrong size on UKismetProceduralMeshLibrary");
+DUMPER7_ASSERTS_UKismetProceduralMeshLibrary;
 
 }
 

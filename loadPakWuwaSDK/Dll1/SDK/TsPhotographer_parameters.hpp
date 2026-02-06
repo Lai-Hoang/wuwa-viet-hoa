@@ -16,94 +16,6 @@
 namespace SDK::Params
 {
 
-// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
-// 0x000C (0x000C - 0x0000)
-struct TsPhotographer_C_SetPlayerSourceLocation final
-{
-public:
-	struct FVector                                location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_SetPlayerSourceLocation) == 0x000004, "Wrong alignment on TsPhotographer_C_SetPlayerSourceLocation");
-static_assert(sizeof(TsPhotographer_C_SetPlayerSourceLocation) == 0x00000C, "Wrong size on TsPhotographer_C_SetPlayerSourceLocation");
-static_assert(offsetof(TsPhotographer_C_SetPlayerSourceLocation, location) == 0x000000, "Member 'TsPhotographer_C_SetPlayerSourceLocation::location' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.AddSourcePitchInput
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_AddSourcePitchInput final
-{
-public:
-	float                                         pitch;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_AddSourcePitchInput) == 0x000004, "Wrong alignment on TsPhotographer_C_AddSourcePitchInput");
-static_assert(sizeof(TsPhotographer_C_AddSourcePitchInput) == 0x000004, "Wrong size on TsPhotographer_C_AddSourcePitchInput");
-static_assert(offsetof(TsPhotographer_C_AddSourcePitchInput, pitch) == 0x000000, "Member 'TsPhotographer_C_AddSourcePitchInput::pitch' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.GetFov
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_GetFov final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_GetFov) == 0x000004, "Wrong alignment on TsPhotographer_C_GetFov");
-static_assert(sizeof(TsPhotographer_C_GetFov) == 0x000004, "Wrong size on TsPhotographer_C_GetFov");
-static_assert(offsetof(TsPhotographer_C_GetFov, ReturnValue) == 0x000000, "Member 'TsPhotographer_C_GetFov::ReturnValue' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.SetFov
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_SetFov final
-{
-public:
-	float                                         length;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_SetFov) == 0x000004, "Wrong alignment on TsPhotographer_C_SetFov");
-static_assert(sizeof(TsPhotographer_C_SetFov) == 0x000004, "Wrong size on TsPhotographer_C_SetFov");
-static_assert(offsetof(TsPhotographer_C_SetFov, length) == 0x000000, "Member 'TsPhotographer_C_SetFov::length' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
-// 0x0030 (0x0030 - 0x0000)
-struct TsPhotographer_C_GetCameraInitializeTransform final
-{
-public:
-	struct FTransform                             ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
-};
-static_assert(alignof(TsPhotographer_C_GetCameraInitializeTransform) == 0x000010, "Wrong alignment on TsPhotographer_C_GetCameraInitializeTransform");
-static_assert(sizeof(TsPhotographer_C_GetCameraInitializeTransform) == 0x000030, "Wrong size on TsPhotographer_C_GetCameraInitializeTransform");
-static_assert(offsetof(TsPhotographer_C_GetCameraInitializeTransform, ReturnValue) == 0x000000, "Member 'TsPhotographer_C_GetCameraInitializeTransform::ReturnValue' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
-// 0x0030 (0x0030 - 0x0000)
-struct TsPhotographer_C_SetCameraInitializeTransform final
-{
-public:
-	struct FTransform                             transform;                                         // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(TsPhotographer_C_SetCameraInitializeTransform) == 0x000010, "Wrong alignment on TsPhotographer_C_SetCameraInitializeTransform");
-static_assert(sizeof(TsPhotographer_C_SetCameraInitializeTransform) == 0x000030, "Wrong size on TsPhotographer_C_SetCameraInitializeTransform");
-static_assert(offsetof(TsPhotographer_C_SetCameraInitializeTransform, transform) == 0x000000, "Member 'TsPhotographer_C_SetCameraInitializeTransform::transform' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_AddSourceYawInput final
-{
-public:
-	float                                         yaw;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_AddSourceYawInput) == 0x000004, "Wrong alignment on TsPhotographer_C_AddSourceYawInput");
-static_assert(sizeof(TsPhotographer_C_AddSourceYawInput) == 0x000004, "Wrong size on TsPhotographer_C_AddSourceYawInput");
-static_assert(offsetof(TsPhotographer_C_AddSourceYawInput, yaw) == 0x000000, "Member 'TsPhotographer_C_AddSourceYawInput::yaw' has a wrong offset!");
-
-// Function TsPhotographer.TsPhotographer_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsPhotographer_C_ReceiveTick) == 0x000004, "Wrong alignment on TsPhotographer_C_ReceiveTick");
-static_assert(sizeof(TsPhotographer_C_ReceiveTick) == 0x000004, "Wrong size on TsPhotographer_C_ReceiveTick");
-static_assert(offsetof(TsPhotographer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'TsPhotographer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function TsPhotographer.TsPhotographer_C.ExecuteUbergraph_TsPhotographer
 // 0x0008 (0x0008 - 0x0000)
 struct TsPhotographer_C_ExecuteUbergraph_TsPhotographer final
@@ -112,10 +24,79 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsPhotographer_C_ExecuteUbergraph_TsPhotographer) == 0x000004, "Wrong alignment on TsPhotographer_C_ExecuteUbergraph_TsPhotographer");
-static_assert(sizeof(TsPhotographer_C_ExecuteUbergraph_TsPhotographer) == 0x000008, "Wrong size on TsPhotographer_C_ExecuteUbergraph_TsPhotographer");
-static_assert(offsetof(TsPhotographer_C_ExecuteUbergraph_TsPhotographer, EntryPoint) == 0x000000, "Member 'TsPhotographer_C_ExecuteUbergraph_TsPhotographer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TsPhotographer_C_ExecuteUbergraph_TsPhotographer, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'TsPhotographer_C_ExecuteUbergraph_TsPhotographer::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_TsPhotographer_C_ExecuteUbergraph_TsPhotographer;
+
+// Function TsPhotographer.TsPhotographer_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_ReceiveTick;
+
+// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_AddSourceYawInput final
+{
+public:
+	float                                         yaw;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_AddSourceYawInput;
+
+// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
+// 0x0030 (0x0030 - 0x0000)
+struct TsPhotographer_C_SetCameraInitializeTransform final
+{
+public:
+	struct FTransform                             transform;                                         // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_SetCameraInitializeTransform;
+
+// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
+// 0x0030 (0x0030 - 0x0000)
+struct TsPhotographer_C_GetCameraInitializeTransform final
+{
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_GetCameraInitializeTransform;
+
+// Function TsPhotographer.TsPhotographer_C.SetFov
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_SetFov final
+{
+public:
+	float                                         length;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_SetFov;
+
+// Function TsPhotographer.TsPhotographer_C.GetFov
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_GetFov final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_GetFov;
+
+// Function TsPhotographer.TsPhotographer_C.AddSourcePitchInput
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_AddSourcePitchInput final
+{
+public:
+	float                                         pitch;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_AddSourcePitchInput;
+
+// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
+// 0x000C (0x000C - 0x0000)
+struct TsPhotographer_C_SetPlayerSourceLocation final
+{
+public:
+	struct FVector                                location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_SetPlayerSourceLocation;
 
 }
 

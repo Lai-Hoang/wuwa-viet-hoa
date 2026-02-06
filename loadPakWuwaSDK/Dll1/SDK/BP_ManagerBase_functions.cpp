@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_ManagerBase.BP_ManagerBase_C.OnLeaveWorld
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_ManagerBase_C::OnLeaveWorld()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ManagerBase_C", "OnLeaveWorld");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_ManagerBase.BP_ManagerBase_C.初始化
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -48,6 +34,20 @@ void UBP_ManagerBase_C::初始化(class UBP_MainGameInstance_C* 游戏实例_0)
 	Parms.游戏实例_0 = 游戏实例_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ManagerBase.BP_ManagerBase_C.OnLeaveWorld
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_ManagerBase_C::OnLeaveWorld()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ManagerBase_C", "OnLeaveWorld");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

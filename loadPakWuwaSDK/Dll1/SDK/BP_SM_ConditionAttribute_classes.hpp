@@ -30,18 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_ConditionAttribute_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_ConditionAttribute_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_ConditionAttribute_C")
 	}
 	static class UBP_SM_ConditionAttribute_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_ConditionAttribute_C>();
 	}
 };
-static_assert(alignof(UBP_SM_ConditionAttribute_C) == 0x000008, "Wrong alignment on UBP_SM_ConditionAttribute_C");
-static_assert(sizeof(UBP_SM_ConditionAttribute_C) == 0x000048, "Wrong size on UBP_SM_ConditionAttribute_C");
-static_assert(offsetof(UBP_SM_ConditionAttribute_C, 属性类型) == 0x000038, "Member 'UBP_SM_ConditionAttribute_C::属性类型' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionAttribute_C, Min) == 0x00003C, "Member 'UBP_SM_ConditionAttribute_C::Min' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionAttribute_C, Max) == 0x000040, "Member 'UBP_SM_ConditionAttribute_C::Max' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_ConditionAttribute_C;
 
 }
 

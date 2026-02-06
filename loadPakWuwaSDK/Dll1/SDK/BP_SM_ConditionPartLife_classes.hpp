@@ -30,19 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_ConditionPartLife_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_ConditionPartLife_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_ConditionPartLife_C")
 	}
 	static class UBP_SM_ConditionPartLife_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_ConditionPartLife_C>();
 	}
 };
-static_assert(alignof(UBP_SM_ConditionPartLife_C) == 0x000008, "Wrong alignment on UBP_SM_ConditionPartLife_C");
-static_assert(sizeof(UBP_SM_ConditionPartLife_C) == 0x000058, "Wrong size on UBP_SM_ConditionPartLife_C");
-static_assert(offsetof(UBP_SM_ConditionPartLife_C, 部位名) == 0x000038, "Member 'UBP_SM_ConditionPartLife_C::部位名' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionPartLife_C, 是否万分比) == 0x000048, "Member 'UBP_SM_ConditionPartLife_C::是否万分比' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionPartLife_C, Min) == 0x00004C, "Member 'UBP_SM_ConditionPartLife_C::Min' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionPartLife_C, Max) == 0x000050, "Member 'UBP_SM_ConditionPartLife_C::Max' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_ConditionPartLife_C;
 
 }
 

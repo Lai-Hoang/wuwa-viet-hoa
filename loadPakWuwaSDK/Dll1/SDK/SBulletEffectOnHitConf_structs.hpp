@@ -28,12 +28,7 @@ public:
 	struct FVector2D                              高度约束_9_0BEA46E84FDB002A2CCC37B8A4748263;       // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                大小缩放_12_2B3D2AB84D22F5BE84973A87FA0CEBF6;      // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSBulletEffectOnHitConf) == 0x000004, "Wrong alignment on FSBulletEffectOnHitConf");
-static_assert(sizeof(FSBulletEffectOnHitConf) == 0x000018, "Wrong size on FSBulletEffectOnHitConf");
-static_assert(offsetof(FSBulletEffectOnHitConf, 类型_2_36EA9DFC456FCDA74BA0AEA4661A0EA8) == 0x000000, "Member 'FSBulletEffectOnHitConf::类型_2_36EA9DFC456FCDA74BA0AEA4661A0EA8' has a wrong offset!");
-static_assert(offsetof(FSBulletEffectOnHitConf, 启用约束_5_E3F1C78144E26F8EFA1D638288E2072D) == 0x000001, "Member 'FSBulletEffectOnHitConf::启用约束_5_E3F1C78144E26F8EFA1D638288E2072D' has a wrong offset!");
-static_assert(offsetof(FSBulletEffectOnHitConf, 高度约束_9_0BEA46E84FDB002A2CCC37B8A4748263) == 0x000004, "Member 'FSBulletEffectOnHitConf::高度约束_9_0BEA46E84FDB002A2CCC37B8A4748263' has a wrong offset!");
-static_assert(offsetof(FSBulletEffectOnHitConf, 大小缩放_12_2B3D2AB84D22F5BE84973A87FA0CEBF6) == 0x00000C, "Member 'FSBulletEffectOnHitConf::大小缩放_12_2B3D2AB84D22F5BE84973A87FA0CEBF6' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletEffectOnHitConf;
 
 }
 

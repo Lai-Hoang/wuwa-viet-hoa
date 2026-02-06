@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhysicInteractProxy.BP_PhysicInteractProxy_C
-// 0x0008 (0x03B0 - 0x03A8)
+// 0x0008 (0x03C0 - 0x03B8)
 class ABP_PhysicInteractProxy_C final : public AKuroGameBudgetBlueprintActor
 {
 public:
-	class UCapsuleComponent*                      Capsule;                                           // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Capsule;                                           // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetRadiusAndHeight(float radius, float height);
@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_PhysicInteractProxy_C">();
+		BP_STATIC_CLASS_IMPL("BP_PhysicInteractProxy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_PhysicInteractProxy_C")
 	}
 	static class ABP_PhysicInteractProxy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_PhysicInteractProxy_C>();
 	}
 };
-static_assert(alignof(ABP_PhysicInteractProxy_C) == 0x000008, "Wrong alignment on ABP_PhysicInteractProxy_C");
-static_assert(sizeof(ABP_PhysicInteractProxy_C) == 0x0003B0, "Wrong size on ABP_PhysicInteractProxy_C");
-static_assert(offsetof(ABP_PhysicInteractProxy_C, Capsule) == 0x0003A8, "Member 'ABP_PhysicInteractProxy_C::Capsule' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_PhysicInteractProxy_C;
 
 }
 

@@ -27,10 +27,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         GlobalFeedbackCoef;                                // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BasePlayerController_SetKuroForceFeedbackConfig) == 0x000004, "Wrong alignment on BasePlayerController_SetKuroForceFeedbackConfig");
-static_assert(sizeof(BasePlayerController_SetKuroForceFeedbackConfig) == 0x000008, "Wrong size on BasePlayerController_SetKuroForceFeedbackConfig");
-static_assert(offsetof(BasePlayerController_SetKuroForceFeedbackConfig, FeedbackConfig) == 0x000000, "Member 'BasePlayerController_SetKuroForceFeedbackConfig::FeedbackConfig' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_SetKuroForceFeedbackConfig, GlobalFeedbackCoef) == 0x000004, "Member 'BasePlayerController_SetKuroForceFeedbackConfig::GlobalFeedbackCoef' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_SetKuroForceFeedbackConfig;
 
 // Function KuroInput.BasePlayerController.SetUseSonyGamepadState
 // 0x0001 (0x0001 - 0x0000)
@@ -39,9 +36,7 @@ struct BasePlayerController_SetUseSonyGamepadState final
 public:
 	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BasePlayerController_SetUseSonyGamepadState) == 0x000001, "Wrong alignment on BasePlayerController_SetUseSonyGamepadState");
-static_assert(sizeof(BasePlayerController_SetUseSonyGamepadState) == 0x000001, "Wrong size on BasePlayerController_SetUseSonyGamepadState");
-static_assert(offsetof(BasePlayerController_SetUseSonyGamepadState, value) == 0x000000, "Member 'BasePlayerController_SetUseSonyGamepadState::value' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_SetUseSonyGamepadState;
 
 // Function KuroInput.BasePlayerController.AddActionBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -55,12 +50,7 @@ public:
 	class FName                                   FuncName;                                          // 0x0018(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_AddActionBinding) == 0x000008, "Wrong alignment on BasePlayerController_AddActionBinding");
-static_assert(sizeof(BasePlayerController_AddActionBinding) == 0x000028, "Wrong size on BasePlayerController_AddActionBinding");
-static_assert(offsetof(BasePlayerController_AddActionBinding, ActionName) == 0x000000, "Member 'BasePlayerController_AddActionBinding::ActionName' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddActionBinding, KeyEvent) == 0x00000C, "Member 'BasePlayerController_AddActionBinding::KeyEvent' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddActionBinding, Object) == 0x000010, "Member 'BasePlayerController_AddActionBinding::Object' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddActionBinding, FuncName) == 0x000018, "Member 'BasePlayerController_AddActionBinding::FuncName' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_AddActionBinding;
 
 // Function KuroInput.BasePlayerController.AddAxisBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -73,11 +63,7 @@ public:
 	class FName                                   FuncName;                                          // 0x0018(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_AddAxisBinding) == 0x000008, "Wrong alignment on BasePlayerController_AddAxisBinding");
-static_assert(sizeof(BasePlayerController_AddAxisBinding) == 0x000028, "Wrong size on BasePlayerController_AddAxisBinding");
-static_assert(offsetof(BasePlayerController_AddAxisBinding, AxisName) == 0x000000, "Member 'BasePlayerController_AddAxisBinding::AxisName' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddAxisBinding, Object) == 0x000010, "Member 'BasePlayerController_AddAxisBinding::Object' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddAxisBinding, FuncName) == 0x000018, "Member 'BasePlayerController_AddAxisBinding::FuncName' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_AddAxisBinding;
 
 // Function KuroInput.BasePlayerController.AddKeyBinding
 // 0x0048 (0x0048 - 0x0000)
@@ -91,12 +77,7 @@ public:
 	class FName                                   FuncName;                                          // 0x0038(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_AddKeyBinding) == 0x000008, "Wrong alignment on BasePlayerController_AddKeyBinding");
-static_assert(sizeof(BasePlayerController_AddKeyBinding) == 0x000048, "Wrong size on BasePlayerController_AddKeyBinding");
-static_assert(offsetof(BasePlayerController_AddKeyBinding, Chord) == 0x000000, "Member 'BasePlayerController_AddKeyBinding::Chord' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddKeyBinding, KeyEvent) == 0x000028, "Member 'BasePlayerController_AddKeyBinding::KeyEvent' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddKeyBinding, Object) == 0x000030, "Member 'BasePlayerController_AddKeyBinding::Object' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddKeyBinding, FuncName) == 0x000038, "Member 'BasePlayerController_AddKeyBinding::FuncName' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_AddKeyBinding;
 
 // Function KuroInput.BasePlayerController.AddTouchBinding
 // 0x0020 (0x0020 - 0x0000)
@@ -109,11 +90,7 @@ public:
 	class FName                                   FuncName;                                          // 0x0010(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_AddTouchBinding) == 0x000008, "Wrong alignment on BasePlayerController_AddTouchBinding");
-static_assert(sizeof(BasePlayerController_AddTouchBinding) == 0x000020, "Wrong size on BasePlayerController_AddTouchBinding");
-static_assert(offsetof(BasePlayerController_AddTouchBinding, KeyEvent) == 0x000000, "Member 'BasePlayerController_AddTouchBinding::KeyEvent' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddTouchBinding, Object) == 0x000008, "Member 'BasePlayerController_AddTouchBinding::Object' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_AddTouchBinding, FuncName) == 0x000010, "Member 'BasePlayerController_AddTouchBinding::FuncName' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_AddTouchBinding;
 
 // Function KuroInput.BasePlayerController.PlayKuroForceFeedback
 // 0x0018 (0x0018 - 0x0000)
@@ -127,13 +104,7 @@ public:
 	bool                                          bPlayWhilePaused;                                  // 0x0016(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_PlayKuroForceFeedback) == 0x000008, "Wrong alignment on BasePlayerController_PlayKuroForceFeedback");
-static_assert(sizeof(BasePlayerController_PlayKuroForceFeedback) == 0x000018, "Wrong size on BasePlayerController_PlayKuroForceFeedback");
-static_assert(offsetof(BasePlayerController_PlayKuroForceFeedback, ForceFeedbackEffect) == 0x000000, "Member 'BasePlayerController_PlayKuroForceFeedback::ForceFeedbackEffect' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_PlayKuroForceFeedback, Tag) == 0x000008, "Member 'BasePlayerController_PlayKuroForceFeedback::Tag' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_PlayKuroForceFeedback, bLooping) == 0x000014, "Member 'BasePlayerController_PlayKuroForceFeedback::bLooping' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_PlayKuroForceFeedback, bIgnoreTimeDilation) == 0x000015, "Member 'BasePlayerController_PlayKuroForceFeedback::bIgnoreTimeDilation' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_PlayKuroForceFeedback, bPlayWhilePaused) == 0x000016, "Member 'BasePlayerController_PlayKuroForceFeedback::bPlayWhilePaused' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_PlayKuroForceFeedback;
 
 // Function KuroInput.BasePlayerController.ReceivePostProcessInput
 // 0x0008 (0x0008 - 0x0000)
@@ -144,10 +115,7 @@ public:
 	bool                                          bGamePaused;                                       // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_ReceivePostProcessInput) == 0x000004, "Wrong alignment on BasePlayerController_ReceivePostProcessInput");
-static_assert(sizeof(BasePlayerController_ReceivePostProcessInput) == 0x000008, "Wrong size on BasePlayerController_ReceivePostProcessInput");
-static_assert(offsetof(BasePlayerController_ReceivePostProcessInput, DeltaTime) == 0x000000, "Member 'BasePlayerController_ReceivePostProcessInput::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_ReceivePostProcessInput, bGamePaused) == 0x000004, "Member 'BasePlayerController_ReceivePostProcessInput::bGamePaused' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_ReceivePostProcessInput;
 
 // Function KuroInput.BasePlayerController.ReceivePreProcessInput
 // 0x0008 (0x0008 - 0x0000)
@@ -158,10 +126,7 @@ public:
 	bool                                          bGamePaused;                                       // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_ReceivePreProcessInput) == 0x000004, "Wrong alignment on BasePlayerController_ReceivePreProcessInput");
-static_assert(sizeof(BasePlayerController_ReceivePreProcessInput) == 0x000008, "Wrong size on BasePlayerController_ReceivePreProcessInput");
-static_assert(offsetof(BasePlayerController_ReceivePreProcessInput, DeltaTime) == 0x000000, "Member 'BasePlayerController_ReceivePreProcessInput::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_ReceivePreProcessInput, bGamePaused) == 0x000004, "Member 'BasePlayerController_ReceivePreProcessInput::bGamePaused' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_ReceivePreProcessInput;
 
 // Function KuroInput.BasePlayerController.StopKuroForceFeedback
 // 0x0018 (0x0018 - 0x0000)
@@ -172,10 +137,7 @@ public:
 	class FName                                   Tag;                                               // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BasePlayerController_StopKuroForceFeedback) == 0x000008, "Wrong alignment on BasePlayerController_StopKuroForceFeedback");
-static_assert(sizeof(BasePlayerController_StopKuroForceFeedback) == 0x000018, "Wrong size on BasePlayerController_StopKuroForceFeedback");
-static_assert(offsetof(BasePlayerController_StopKuroForceFeedback, ForceFeedbackEffect) == 0x000000, "Member 'BasePlayerController_StopKuroForceFeedback::ForceFeedbackEffect' has a wrong offset!");
-static_assert(offsetof(BasePlayerController_StopKuroForceFeedback, Tag) == 0x000008, "Member 'BasePlayerController_StopKuroForceFeedback::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_BasePlayerController_StopKuroForceFeedback;
 
 // Function KuroInput.KuroInputFunctionLibrary.ApplyInputMode
 // 0x0008 (0x0008 - 0x0000)
@@ -184,9 +146,7 @@ struct KuroInputFunctionLibrary_ApplyInputMode final
 public:
 	class APlayerController*                      InPlayerController;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_ApplyInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_ApplyInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_ApplyInputMode) == 0x000008, "Wrong size on KuroInputFunctionLibrary_ApplyInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_ApplyInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_ApplyInputMode::InPlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_ApplyInputMode;
 
 // Function KuroInput.KuroInputFunctionLibrary.HasInputModeReply
 // 0x0028 (0x0028 - 0x0000)
@@ -197,10 +157,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroInputFunctionLibrary_HasInputModeReply) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_HasInputModeReply");
-static_assert(sizeof(KuroInputFunctionLibrary_HasInputModeReply) == 0x000028, "Wrong size on KuroInputFunctionLibrary_HasInputModeReply");
-static_assert(offsetof(KuroInputFunctionLibrary_HasInputModeReply, InputModeReply) == 0x000000, "Member 'KuroInputFunctionLibrary_HasInputModeReply::InputModeReply' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_HasInputModeReply, ReturnValue) == 0x000020, "Member 'KuroInputFunctionLibrary_HasInputModeReply::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_HasInputModeReply;
 
 // Function KuroInput.KuroInputFunctionLibrary.ReplyInputMode
 // 0x0028 (0x0028 - 0x0000)
@@ -210,10 +167,7 @@ public:
 	class APlayerController*                      InPlayerController;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FInputModeReply                        InputModeReply;                                    // 0x0008(0x0020)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_ReplyInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_ReplyInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_ReplyInputMode) == 0x000028, "Wrong size on KuroInputFunctionLibrary_ReplyInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_ReplyInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_ReplyInputMode::InPlayerController' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_ReplyInputMode, InputModeReply) == 0x000008, "Member 'KuroInputFunctionLibrary_ReplyInputMode::InputModeReply' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_ReplyInputMode;
 
 // Function KuroInput.KuroInputFunctionLibrary.ResetInputMode
 // 0x0008 (0x0008 - 0x0000)
@@ -222,9 +176,7 @@ struct KuroInputFunctionLibrary_ResetInputMode final
 public:
 	class APlayerController*                      InPlayerController;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_ResetInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_ResetInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_ResetInputMode) == 0x000008, "Wrong size on KuroInputFunctionLibrary_ResetInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_ResetInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_ResetInputMode::InPlayerController' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_ResetInputMode;
 
 // Function KuroInput.KuroInputFunctionLibrary.SetGameAndUIInputMode
 // 0x0040 (0x0040 - 0x0000)
@@ -238,13 +190,7 @@ public:
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputModeReply                        ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_SetGameAndUIInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_SetGameAndUIInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_SetGameAndUIInputMode) == 0x000040, "Wrong size on KuroInputFunctionLibrary_SetGameAndUIInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameAndUIInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_SetGameAndUIInputMode::InPlayerController' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameAndUIInputMode, Reason) == 0x000008, "Member 'KuroInputFunctionLibrary_SetGameAndUIInputMode::Reason' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameAndUIInputMode, bLockMouseToViewport) == 0x000018, "Member 'KuroInputFunctionLibrary_SetGameAndUIInputMode::bLockMouseToViewport' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameAndUIInputMode, bHideCursorDuringCapture) == 0x000019, "Member 'KuroInputFunctionLibrary_SetGameAndUIInputMode::bHideCursorDuringCapture' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameAndUIInputMode, ReturnValue) == 0x000020, "Member 'KuroInputFunctionLibrary_SetGameAndUIInputMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_SetGameAndUIInputMode;
 
 // Function KuroInput.KuroInputFunctionLibrary.SetGameOnlyInputMode
 // 0x0038 (0x0038 - 0x0000)
@@ -255,11 +201,7 @@ public:
 	class FString                                 Reason;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FInputModeReply                        ReturnValue;                                       // 0x0018(0x0020)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_SetGameOnlyInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_SetGameOnlyInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_SetGameOnlyInputMode) == 0x000038, "Wrong size on KuroInputFunctionLibrary_SetGameOnlyInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameOnlyInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_SetGameOnlyInputMode::InPlayerController' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameOnlyInputMode, Reason) == 0x000008, "Member 'KuroInputFunctionLibrary_SetGameOnlyInputMode::Reason' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetGameOnlyInputMode, ReturnValue) == 0x000018, "Member 'KuroInputFunctionLibrary_SetGameOnlyInputMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_SetGameOnlyInputMode;
 
 // Function KuroInput.KuroInputFunctionLibrary.SetUIOnlyInputMode
 // 0x0040 (0x0040 - 0x0000)
@@ -272,12 +214,7 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputModeReply                        ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroInputFunctionLibrary_SetUIOnlyInputMode) == 0x000008, "Wrong alignment on KuroInputFunctionLibrary_SetUIOnlyInputMode");
-static_assert(sizeof(KuroInputFunctionLibrary_SetUIOnlyInputMode) == 0x000040, "Wrong size on KuroInputFunctionLibrary_SetUIOnlyInputMode");
-static_assert(offsetof(KuroInputFunctionLibrary_SetUIOnlyInputMode, InPlayerController) == 0x000000, "Member 'KuroInputFunctionLibrary_SetUIOnlyInputMode::InPlayerController' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetUIOnlyInputMode, Reason) == 0x000008, "Member 'KuroInputFunctionLibrary_SetUIOnlyInputMode::Reason' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetUIOnlyInputMode, bLockMouseToViewport) == 0x000018, "Member 'KuroInputFunctionLibrary_SetUIOnlyInputMode::bLockMouseToViewport' has a wrong offset!");
-static_assert(offsetof(KuroInputFunctionLibrary_SetUIOnlyInputMode, ReturnValue) == 0x000020, "Member 'KuroInputFunctionLibrary_SetUIOnlyInputMode::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_SetUIOnlyInputMode;
 
 }
 

@@ -34,19 +34,7 @@ public:
 	TSoftObjectPtr<class UEffectModelAudio_C>     Audio_40_E45E0E954689F2D19E643087BB447DF1;         // 0x0098(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          ReplaceBulletHitEffect_42_6B34C17A48089EBCB961A7A725DE02EF; // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSPartHitEffect) == 0x000008, "Wrong alignment on FSPartHitEffect");
-static_assert(sizeof(FSPartHitEffect) == 0x0000D0, "Wrong size on FSPartHitEffect");
-static_assert(offsetof(FSPartHitEffect, BoneName_2_560E38B7482B1183EAA6A68DE1067D65) == 0x000000, "Member 'FSPartHitEffect::BoneName_2_560E38B7482B1183EAA6A68DE1067D65' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, IsBlockPawn_18_0CB2E9434D64A135D4718A8F0F5930C5) == 0x000010, "Member 'FSPartHitEffect::IsBlockPawn_18_0CB2E9434D64A135D4718A8F0F5930C5' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, IsBulletDetect_23_F154CEAA451D9AFFDE01C6BFD7BD74DE) == 0x000011, "Member 'FSPartHitEffect::IsBulletDetect_23_F154CEAA451D9AFFDE01C6BFD7BD74DE' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, IsBlockCamera_22_D6D277294065842B127BB7B99775DE21) == 0x000012, "Member 'FSPartHitEffect::IsBlockCamera_22_D6D277294065842B127BB7B99775DE21' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, Size_30_DC47F386426EEC9B42EA338920A8BD2D) == 0x000014, "Member 'FSPartHitEffect::Size_30_DC47F386426EEC9B42EA338920A8BD2D' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, Location_31_408187B541400244A10EC1B648D29196) == 0x000020, "Member 'FSPartHitEffect::Location_31_408187B541400244A10EC1B648D29196' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, Rotation_33_F3539A04434E79BCE554E7A695C21644) == 0x00002C, "Member 'FSPartHitEffect::Rotation_33_F3539A04434E79BCE554E7A695C21644' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, Effect_43_AE655DD04CD628496758049C2507566F) == 0x000038, "Member 'FSPartHitEffect::Effect_43_AE655DD04CD628496758049C2507566F' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, MaterialEffect_50_D3ED0F1C4876A118C156739ACC1B3ABB) == 0x000068, "Member 'FSPartHitEffect::MaterialEffect_50_D3ED0F1C4876A118C156739ACC1B3ABB' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, Audio_40_E45E0E954689F2D19E643087BB447DF1) == 0x000098, "Member 'FSPartHitEffect::Audio_40_E45E0E954689F2D19E643087BB447DF1' has a wrong offset!");
-static_assert(offsetof(FSPartHitEffect, ReplaceBulletHitEffect_42_6B34C17A48089EBCB961A7A725DE02EF) == 0x0000C8, "Member 'FSPartHitEffect::ReplaceBulletHitEffect_42_6B34C17A48089EBCB961A7A725DE02EF' has a wrong offset!");
+DUMPER7_ASSERTS_FSPartHitEffect;
 
 }
 

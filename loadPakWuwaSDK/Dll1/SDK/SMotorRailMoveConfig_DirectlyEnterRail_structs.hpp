@@ -28,12 +28,7 @@ public:
 	struct FSMotorRailMove_EnterRailCondition     EnterCondition_6_47889C0846D24B6432AC5CAE1F26D5CF; // 0x00AC(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMotorRailMove_LinearMove             LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A;     // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMoveConfig_DirectlyEnterRail) == 0x000008, "Wrong alignment on FSMotorRailMoveConfig_DirectlyEnterRail");
-static_assert(sizeof(FSMotorRailMoveConfig_DirectlyEnterRail) == 0x0000C8, "Wrong size on FSMotorRailMoveConfig_DirectlyEnterRail");
-static_assert(offsetof(FSMotorRailMoveConfig_DirectlyEnterRail, CommonConfig_13_31A77C1E4E27AFF27F1C119989F88AE8) == 0x000000, "Member 'FSMotorRailMoveConfig_DirectlyEnterRail::CommonConfig_13_31A77C1E4E27AFF27F1C119989F88AE8' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_DirectlyEnterRail, MaxAbsorbDist_3_F4F796AA4289EDB87EA7FDB3885C9E5E) == 0x0000A8, "Member 'FSMotorRailMoveConfig_DirectlyEnterRail::MaxAbsorbDist_3_F4F796AA4289EDB87EA7FDB3885C9E5E' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_DirectlyEnterRail, EnterCondition_6_47889C0846D24B6432AC5CAE1F26D5CF) == 0x0000AC, "Member 'FSMotorRailMoveConfig_DirectlyEnterRail::EnterCondition_6_47889C0846D24B6432AC5CAE1F26D5CF' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMoveConfig_DirectlyEnterRail, LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A) == 0x0000C0, "Member 'FSMotorRailMoveConfig_DirectlyEnterRail::LinearMove_9_DE22E0ED4C53588CC2F10EA5CC172E1A' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMoveConfig_DirectlyEnterRail;
 
 }
 

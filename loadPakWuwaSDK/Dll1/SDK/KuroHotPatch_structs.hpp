@@ -43,15 +43,7 @@ public:
 	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Result;                                            // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroCheckInfoEntry) == 0x000008, "Wrong alignment on FKuroCheckInfoEntry");
-static_assert(sizeof(FKuroCheckInfoEntry) == 0x000050, "Wrong size on FKuroCheckInfoEntry");
-static_assert(offsetof(FKuroCheckInfoEntry, FileName) == 0x000000, "Member 'FKuroCheckInfoEntry::FileName' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, FilePath) == 0x000010, "Member 'FKuroCheckInfoEntry::FilePath' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, Hash) == 0x000020, "Member 'FKuroCheckInfoEntry::Hash' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, Size) == 0x000030, "Member 'FKuroCheckInfoEntry::Size' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, Url) == 0x000038, "Member 'FKuroCheckInfoEntry::Url' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, NeedRestart) == 0x000048, "Member 'FKuroCheckInfoEntry::NeedRestart' has a wrong offset!");
-static_assert(offsetof(FKuroCheckInfoEntry, Result) == 0x00004C, "Member 'FKuroCheckInfoEntry::Result' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroCheckInfoEntry;
 
 }
 

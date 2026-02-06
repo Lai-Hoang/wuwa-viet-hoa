@@ -38,15 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StreamlineLibraryDeepDVC">();
+		STATIC_CLASS_IMPL("StreamlineLibraryDeepDVC")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StreamlineLibraryDeepDVC")
 	}
 	static class UStreamlineLibraryDeepDVC* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStreamlineLibraryDeepDVC>();
 	}
 };
-static_assert(alignof(UStreamlineLibraryDeepDVC) == 0x000008, "Wrong alignment on UStreamlineLibraryDeepDVC");
-static_assert(sizeof(UStreamlineLibraryDeepDVC) == 0x000030, "Wrong size on UStreamlineLibraryDeepDVC");
+DUMPER7_ASSERTS_UStreamlineLibraryDeepDVC;
 
 }
 

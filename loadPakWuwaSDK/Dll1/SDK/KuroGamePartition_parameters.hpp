@@ -24,9 +24,7 @@ struct GamePartition_AllocateNewID final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_AllocateNewID) == 0x000004, "Wrong alignment on GamePartition_AllocateNewID");
-static_assert(sizeof(GamePartition_AllocateNewID) == 0x000004, "Wrong size on GamePartition_AllocateNewID");
-static_assert(offsetof(GamePartition_AllocateNewID, ReturnValue) == 0x000000, "Member 'GamePartition_AllocateNewID::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_AllocateNewID;
 
 // Function KuroGamePartition.GamePartition.Insert
 // 0x0010 (0x0010 - 0x0000)
@@ -37,11 +35,7 @@ public:
 	int32                                         Type;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_Insert) == 0x000008, "Wrong alignment on GamePartition_Insert");
-static_assert(sizeof(GamePartition_Insert) == 0x000010, "Wrong size on GamePartition_Insert");
-static_assert(offsetof(GamePartition_Insert, Actor) == 0x000000, "Member 'GamePartition_Insert::Actor' has a wrong offset!");
-static_assert(offsetof(GamePartition_Insert, Type) == 0x000008, "Member 'GamePartition_Insert::Type' has a wrong offset!");
-static_assert(offsetof(GamePartition_Insert, ReturnValue) == 0x00000C, "Member 'GamePartition_Insert::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_Insert;
 
 // Function KuroGamePartition.GamePartition.K2_Insert
 // 0x0020 (0x0020 - 0x0000)
@@ -56,13 +50,7 @@ public:
 	bool                                          bUseActorBounds;                                   // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GamePartition_K2_Insert) == 0x000008, "Wrong alignment on GamePartition_K2_Insert");
-static_assert(sizeof(GamePartition_K2_Insert) == 0x000020, "Wrong size on GamePartition_K2_Insert");
-static_assert(offsetof(GamePartition_K2_Insert, ID) == 0x000000, "Member 'GamePartition_K2_Insert::ID' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_Insert, Actor) == 0x000008, "Member 'GamePartition_K2_Insert::Actor' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_Insert, Type) == 0x000010, "Member 'GamePartition_K2_Insert::Type' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_Insert, SubType) == 0x000014, "Member 'GamePartition_K2_Insert::SubType' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_Insert, bUseActorBounds) == 0x000018, "Member 'GamePartition_K2_Insert::bUseActorBounds' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_K2_Insert;
 
 // Function KuroGamePartition.GamePartition.K2_RangeQueryWithBounds
 // 0x0038 (0x0038 - 0x0000)
@@ -76,13 +64,7 @@ public:
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGamePartitionObject>           ReturnValue;                                       // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_K2_RangeQueryWithBounds) == 0x000008, "Wrong alignment on GamePartition_K2_RangeQueryWithBounds");
-static_assert(sizeof(GamePartition_K2_RangeQueryWithBounds) == 0x000038, "Wrong size on GamePartition_K2_RangeQueryWithBounds");
-static_assert(offsetof(GamePartition_K2_RangeQueryWithBounds, QueryBounds) == 0x000000, "Member 'GamePartition_K2_RangeQueryWithBounds::QueryBounds' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_RangeQueryWithBounds, QueryType) == 0x00001C, "Member 'GamePartition_K2_RangeQueryWithBounds::QueryType' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_RangeQueryWithBounds, QuerySubType) == 0x000020, "Member 'GamePartition_K2_RangeQueryWithBounds::QuerySubType' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_RangeQueryWithBounds, bConsiderObjectPosition) == 0x000024, "Member 'GamePartition_K2_RangeQueryWithBounds::bConsiderObjectPosition' has a wrong offset!");
-static_assert(offsetof(GamePartition_K2_RangeQueryWithBounds, ReturnValue) == 0x000028, "Member 'GamePartition_K2_RangeQueryWithBounds::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_K2_RangeQueryWithBounds;
 
 // Function KuroGamePartition.GamePartition.K2_Remove
 // 0x0004 (0x0004 - 0x0000)
@@ -91,9 +73,7 @@ struct GamePartition_K2_Remove final
 public:
 	int32                                         ID;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_K2_Remove) == 0x000004, "Wrong alignment on GamePartition_K2_Remove");
-static_assert(sizeof(GamePartition_K2_Remove) == 0x000004, "Wrong size on GamePartition_K2_Remove");
-static_assert(offsetof(GamePartition_K2_Remove, ID) == 0x000000, "Member 'GamePartition_K2_Remove::ID' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_K2_Remove;
 
 // Function KuroGamePartition.GamePartition.RangeQuery
 // 0x0040 (0x0040 - 0x0000)
@@ -108,14 +88,7 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGamePartitionObject>           ReturnValue;                                       // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_RangeQuery) == 0x000008, "Wrong alignment on GamePartition_RangeQuery");
-static_assert(sizeof(GamePartition_RangeQuery) == 0x000040, "Wrong size on GamePartition_RangeQuery");
-static_assert(offsetof(GamePartition_RangeQuery, QueryOrigin) == 0x000000, "Member 'GamePartition_RangeQuery::QueryOrigin' has a wrong offset!");
-static_assert(offsetof(GamePartition_RangeQuery, QuerySphereRadius) == 0x000018, "Member 'GamePartition_RangeQuery::QuerySphereRadius' has a wrong offset!");
-static_assert(offsetof(GamePartition_RangeQuery, QueryType) == 0x000020, "Member 'GamePartition_RangeQuery::QueryType' has a wrong offset!");
-static_assert(offsetof(GamePartition_RangeQuery, QuerySubType) == 0x000024, "Member 'GamePartition_RangeQuery::QuerySubType' has a wrong offset!");
-static_assert(offsetof(GamePartition_RangeQuery, bConsiderObjectPosition) == 0x000028, "Member 'GamePartition_RangeQuery::bConsiderObjectPosition' has a wrong offset!");
-static_assert(offsetof(GamePartition_RangeQuery, ReturnValue) == 0x000030, "Member 'GamePartition_RangeQuery::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_RangeQuery;
 
 // Function KuroGamePartition.GamePartition.Remove
 // 0x0008 (0x0008 - 0x0000)
@@ -124,23 +97,7 @@ struct GamePartition_Remove final
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartition_Remove) == 0x000008, "Wrong alignment on GamePartition_Remove");
-static_assert(sizeof(GamePartition_Remove) == 0x000008, "Wrong size on GamePartition_Remove");
-static_assert(offsetof(GamePartition_Remove, Actor) == 0x000000, "Member 'GamePartition_Remove::Actor' has a wrong offset!");
-
-// Function KuroGamePartition.GamePartitionManager.GetGamePartition
-// 0x0010 (0x0010 - 0x0000)
-struct GamePartitionManager_GetGamePartition final
-{
-public:
-	EGamePartitionCellSizeType                    CellSizeType;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGamePartition*                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GamePartitionManager_GetGamePartition) == 0x000008, "Wrong alignment on GamePartitionManager_GetGamePartition");
-static_assert(sizeof(GamePartitionManager_GetGamePartition) == 0x000010, "Wrong size on GamePartitionManager_GetGamePartition");
-static_assert(offsetof(GamePartitionManager_GetGamePartition, CellSizeType) == 0x000000, "Member 'GamePartitionManager_GetGamePartition::CellSizeType' has a wrong offset!");
-static_assert(offsetof(GamePartitionManager_GetGamePartition, ReturnValue) == 0x000008, "Member 'GamePartitionManager_GetGamePartition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartition_Remove;
 
 // Function KuroGamePartition.GamePartitionSubsystem.GetGamePartition
 // 0x0010 (0x0010 - 0x0000)
@@ -151,10 +108,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGamePartition*                         ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GamePartitionSubsystem_GetGamePartition) == 0x000008, "Wrong alignment on GamePartitionSubsystem_GetGamePartition");
-static_assert(sizeof(GamePartitionSubsystem_GetGamePartition) == 0x000010, "Wrong size on GamePartitionSubsystem_GetGamePartition");
-static_assert(offsetof(GamePartitionSubsystem_GetGamePartition, CellSizeType) == 0x000000, "Member 'GamePartitionSubsystem_GetGamePartition::CellSizeType' has a wrong offset!");
-static_assert(offsetof(GamePartitionSubsystem_GetGamePartition, ReturnValue) == 0x000008, "Member 'GamePartitionSubsystem_GetGamePartition::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_GamePartitionSubsystem_GetGamePartition;
 
 }
 

@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TeleControlConfig.BP_TeleControlConfig_C
-// 0x0268 (0x02A0 - 0x0038)
+// 0x02C8 (0x0300 - 0x0038)
 class UBP_TeleControlConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -89,75 +89,24 @@ public:
 	struct FSoftObjectPath                        归位消失特效;                                      // 0x0228(0x0020)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	TMap<int32, float>                            投掷状态CueId;                                     // 0x0248(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UPhysicalMaterial*                      物体物理材质;                                      // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UKuroForceFeedbackEffect> 吸取飞行手柄震动;                                 // 0x02A0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UKuroForceFeedbackEffect> 投掷手柄震动;                                     // 0x02D0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_TeleControlConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_TeleControlConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_TeleControlConfig_C")
 	}
 	static class UBP_TeleControlConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_TeleControlConfig_C>();
 	}
 };
-static_assert(alignof(UBP_TeleControlConfig_C) == 0x000008, "Wrong alignment on UBP_TeleControlConfig_C");
-static_assert(sizeof(UBP_TeleControlConfig_C) == 0x0002A0, "Wrong size on UBP_TeleControlConfig_C");
-static_assert(offsetof(UBP_TeleControlConfig_C, 读条时间) == 0x000038, "Member 'UBP_TeleControlConfig_C::读条时间' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 未锁定目标时不可投掷) == 0x00003C, "Member 'UBP_TeleControlConfig_C::未锁定目标时不可投掷' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 摆动频率) == 0x000040, "Member 'UBP_TeleControlConfig_C::摆动频率' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 吸取延迟) == 0x000044, "Member 'UBP_TeleControlConfig_C::吸取延迟' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 线性阻尼) == 0x000048, "Member 'UBP_TeleControlConfig_C::线性阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 角刚度) == 0x00004C, "Member 'UBP_TeleControlConfig_C::角刚度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 线性刚度) == 0x000050, "Member 'UBP_TeleControlConfig_C::线性刚度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 角度阻尼) == 0x000054, "Member 'UBP_TeleControlConfig_C::角度阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 吸取时间) == 0x000058, "Member 'UBP_TeleControlConfig_C::吸取时间' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 对齐时间) == 0x00005C, "Member 'UBP_TeleControlConfig_C::对齐时间' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 牵引高度) == 0x000060, "Member 'UBP_TeleControlConfig_C::牵引高度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 角速度) == 0x000064, "Member 'UBP_TeleControlConfig_C::角速度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 摆动范围) == 0x000068, "Member 'UBP_TeleControlConfig_C::摆动范围' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 旋转) == 0x00006C, "Member 'UBP_TeleControlConfig_C::旋转' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 一级偏移) == 0x000078, "Member 'UBP_TeleControlConfig_C::一级偏移' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 二级偏移) == 0x000084, "Member 'UBP_TeleControlConfig_C::二级偏移' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 控物保持镜头) == 0x000090, "Member 'UBP_TeleControlConfig_C::控物保持镜头' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 读条镜头) == 0x00009C, "Member 'UBP_TeleControlConfig_C::读条镜头' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 读条震屏) == 0x0000A8, "Member 'UBP_TeleControlConfig_C::读条震屏' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 被控制CD) == 0x0000B0, "Member 'UBP_TeleControlConfig_C::被控制CD' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 控物保持震屏) == 0x0000B8, "Member 'UBP_TeleControlConfig_C::控物保持震屏' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 吸取飞行镜头) == 0x0000C0, "Member 'UBP_TeleControlConfig_C::吸取飞行镜头' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 吸取飞行震屏) == 0x0000D0, "Member 'UBP_TeleControlConfig_C::吸取飞行震屏' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 打开速度Log) == 0x0000D8, "Member 'UBP_TeleControlConfig_C::打开速度Log' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 可再被控速度最小值) == 0x0000DC, "Member 'UBP_TeleControlConfig_C::可再被控速度最小值' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 被感知范围) == 0x0000E0, "Member 'UBP_TeleControlConfig_C::被感知范围' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 被感知角度权重) == 0x0000E8, "Member 'UBP_TeleControlConfig_C::被感知角度权重' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 投掷震屏) == 0x000138, "Member 'UBP_TeleControlConfig_C::投掷震屏' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 随速度调整朝向) == 0x000140, "Member 'UBP_TeleControlConfig_C::随速度调整朝向' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 控物保持使用物理) == 0x000141, "Member 'UBP_TeleControlConfig_C::控物保持使用物理' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 无锁状态附加仰角) == 0x000144, "Member 'UBP_TeleControlConfig_C::无锁状态附加仰角' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 控物保持标签) == 0x000148, "Member 'UBP_TeleControlConfig_C::控物保持标签' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 被感知坐标偏移) == 0x000158, "Member 'UBP_TeleControlConfig_C::被感知坐标偏移' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 物体质量) == 0x000164, "Member 'UBP_TeleControlConfig_C::物体质量' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 物体线性阻尼) == 0x000168, "Member 'UBP_TeleControlConfig_C::物体线性阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 物体角速度阻尼) == 0x00016C, "Member 'UBP_TeleControlConfig_C::物体角速度阻尼' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 控物准星资源ID) == 0x000170, "Member 'UBP_TeleControlConfig_C::控物准星资源ID' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 角色是否随相机旋转) == 0x000180, "Member 'UBP_TeleControlConfig_C::角色是否随相机旋转' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 待机状态碰撞预设) == 0x000184, "Member 'UBP_TeleControlConfig_C::待机状态碰撞预设' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 吸取状态碰撞预设) == 0x000190, "Member 'UBP_TeleControlConfig_C::吸取状态碰撞预设' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 保持状态碰撞预设) == 0x00019C, "Member 'UBP_TeleControlConfig_C::保持状态碰撞预设' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 投掷状态碰撞预设) == 0x0001A8, "Member 'UBP_TeleControlConfig_C::投掷状态碰撞预设' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 投掷运动轨迹曲线) == 0x0001B8, "Member 'UBP_TeleControlConfig_C::投掷运动轨迹曲线' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准射线Debug) == 0x0001C0, "Member 'UBP_TeleControlConfig_C::抛物瞄准射线Debug' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式开关) == 0x0001C1, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式开关' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式仰角) == 0x0001C4, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式仰角' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式初速度) == 0x0001C8, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式初速度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准射线检测半径) == 0x0001CC, "Member 'UBP_TeleControlConfig_C::抛物瞄准射线检测半径' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式镜头) == 0x0001D0, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式镜头' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式样条特效) == 0x0001E0, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式样条特效' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式终点特效) == 0x000200, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式终点特效' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 抛物瞄准模式重力加速度) == 0x000220, "Member 'UBP_TeleControlConfig_C::抛物瞄准模式重力加速度' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 投掷锁定范围) == 0x000224, "Member 'UBP_TeleControlConfig_C::投掷锁定范围' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 归位消失特效) == 0x000228, "Member 'UBP_TeleControlConfig_C::归位消失特效' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 投掷状态CueId) == 0x000248, "Member 'UBP_TeleControlConfig_C::投掷状态CueId' has a wrong offset!");
-static_assert(offsetof(UBP_TeleControlConfig_C, 物体物理材质) == 0x000298, "Member 'UBP_TeleControlConfig_C::物体物理材质' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_TeleControlConfig_C;
 
 }
 

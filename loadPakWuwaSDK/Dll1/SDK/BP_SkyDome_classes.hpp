@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "PresetChangeInfo_structs.hpp"
-#include "WeatherData_structs.hpp"
+#include "TimeOfDayData_structs.hpp"
+#include "PresetSelection_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "TimeOfDayCurves_structs.hpp"
-#include "PresetSelection_structs.hpp"
-#include "TimeOfDayData_structs.hpp"
+#include "PresetChangeInfo_structs.hpp"
+#include "WeatherData_structs.hpp"
 
 
 namespace SDK
@@ -170,135 +170,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SkyDome_C">();
+		BP_STATIC_CLASS_IMPL("BP_SkyDome_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SkyDome_C")
 	}
 	static class ABP_SkyDome_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SkyDome_C>();
 	}
 };
-static_assert(alignof(ABP_SkyDome_C) == 0x000008, "Wrong alignment on ABP_SkyDome_C");
-static_assert(sizeof(ABP_SkyDome_C) == 0x000920, "Wrong size on ABP_SkyDome_C");
-static_assert(offsetof(ABP_SkyDome_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_SkyDome_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Dummy) == 0x0002B8, "Member 'ABP_SkyDome_C::Dummy' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyMesh) == 0x0002C0, "Member 'ABP_SkyDome_C::SkyMesh' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_SkyDome_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDay) == 0x0002D0, "Member 'ABP_SkyDome_C::TimeOfDay' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeChangeSpeed) == 0x0002D4, "Member 'ABP_SkyDome_C::TimeChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeCycleDuration) == 0x0002D8, "Member 'ABP_SkyDome_C::TimeCycleDuration' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UseTimeOfDayCurves) == 0x0002DC, "Member 'ABP_SkyDome_C::UseTimeOfDayCurves' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayCurves) == 0x0002E0, "Member 'ABP_SkyDome_C::TimeOfDayCurves' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherPresetList) == 0x000330, "Member 'ABP_SkyDome_C::WeatherPresetList' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SelectedWeatherPreset) == 0x000340, "Member 'ABP_SkyDome_C::SelectedWeatherPreset' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherChangeMode) == 0x000344, "Member 'ABP_SkyDome_C::WeatherChangeMode' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherChangeDuration) == 0x000348, "Member 'ABP_SkyDome_C::WeatherChangeDuration' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherChangeTransition) == 0x00034C, "Member 'ABP_SkyDome_C::WeatherChangeTransition' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherChangeAfterTime) == 0x000350, "Member 'ABP_SkyDome_C::WeatherChangeAfterTime' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDaySettings) == 0x000354, "Member 'ABP_SkyDome_C::TimeOfDaySettings' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayPresetList) == 0x0003F8, "Member 'ABP_SkyDome_C::TimeOfDayPresetList' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayPresetChange) == 0x000408, "Member 'ABP_SkyDome_C::TimeOfDayPresetChange' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonDirection) == 0x000420, "Member 'ABP_SkyDome_C::MoonDirection' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunHeight) == 0x00042C, "Member 'ABP_SkyDome_C::SunHeight' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherSettings) == 0x000430, "Member 'ABP_SkyDome_C::WeatherSettings' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyMaterialInst) == 0x0004A0, "Member 'ABP_SkyDome_C::SkyMaterialInst' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherPresetTarget) == 0x0004A8, "Member 'ABP_SkyDome_C::WeatherPresetTarget' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherPresetInterp) == 0x0004B0, "Member 'ABP_SkyDome_C::WeatherPresetInterp' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyMaterial) == 0x0004B8, "Member 'ABP_SkyDome_C::SkyMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyMaterialNight) == 0x0004C0, "Member 'ABP_SkyDome_C::SkyMaterialNight' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunLightSource) == 0x0004C8, "Member 'ABP_SkyDome_C::SunLightSource' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonLightSource) == 0x0004D0, "Member 'ABP_SkyDome_C::MoonLightSource' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, HeightFog) == 0x0004D8, "Member 'ABP_SkyDome_C::HeightFog' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLight) == 0x0004E0, "Member 'ABP_SkyDome_C::SkyLight' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightRecaptureDelay) == 0x0004E8, "Member 'ABP_SkyDome_C::SkyLightRecaptureDelay' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightStaticCubemaps) == 0x0004F0, "Member 'ABP_SkyDome_C::SkyLightStaticCubemaps' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightCubemapsTimeDriven) == 0x000500, "Member 'ABP_SkyDome_C::SkyLightCubemapsTimeDriven' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Saturation) == 0x000504, "Member 'ABP_SkyDome_C::Saturation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsBloom) == 0x000508, "Member 'ABP_SkyDome_C::CloudsBloom' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsFluffy) == 0x00050C, "Member 'ABP_SkyDome_C::CloudsFluffy' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVHorizonRadius) == 0x000510, "Member 'ABP_SkyDome_C::UVHorizonRadius' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVHorizonMapping) == 0x000514, "Member 'ABP_SkyDome_C::UVHorizonMapping' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVScale) == 0x000518, "Member 'ABP_SkyDome_C::UVScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, FogDirectionalInScattering) == 0x00051C, "Member 'ABP_SkyDome_C::FogDirectionalInScattering' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, FogDensity) == 0x000520, "Member 'ABP_SkyDome_C::FogDensity' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, HorizonTilt) == 0x000524, "Member 'ABP_SkyDome_C::HorizonTilt' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVBaseLayerPosition) == 0x000528, "Member 'ABP_SkyDome_C::UVBaseLayerPosition' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVBaseLayerSize) == 0x000538, "Member 'ABP_SkyDome_C::UVBaseLayerSize' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVSecondLayerSize) == 0x000548, "Member 'ABP_SkyDome_C::UVSecondLayerSize' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UVSecondLayerPosition) == 0x000558, "Member 'ABP_SkyDome_C::UVSecondLayerPosition' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsLayer1) == 0x000568, "Member 'ABP_SkyDome_C::CloudsLayer1' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsLayer2) == 0x000570, "Member 'ABP_SkyDome_C::CloudsLayer2' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WindForce) == 0x000578, "Member 'ABP_SkyDome_C::WindForce' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunRadius) == 0x000580, "Member 'ABP_SkyDome_C::SunRadius' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunShine) == 0x000584, "Member 'ABP_SkyDome_C::SunShine' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunSaturation) == 0x000588, "Member 'ABP_SkyDome_C::SunSaturation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunMaxAltitude) == 0x00058C, "Member 'ABP_SkyDome_C::SunMaxAltitude' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunAzimuth) == 0x000590, "Member 'ABP_SkyDome_C::SunAzimuth' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunVisibleDuration) == 0x000594, "Member 'ABP_SkyDome_C::SunVisibleDuration' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunDirectionTimeOfDay) == 0x000598, "Member 'ABP_SkyDome_C::SunDirectionTimeOfDay' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunDirection) == 0x00059C, "Member 'ABP_SkyDome_C::SunDirection' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, StarsBrightness) == 0x0005A8, "Member 'ABP_SkyDome_C::StarsBrightness' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonTexture) == 0x0005B0, "Member 'ABP_SkyDome_C::MoonTexture' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonBightness) == 0x0005B8, "Member 'ABP_SkyDome_C::MoonBightness' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonRadius) == 0x0005BC, "Member 'ABP_SkyDome_C::MoonRadius' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonClouds) == 0x0005C0, "Member 'ABP_SkyDome_C::MoonClouds' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonShine) == 0x0005C4, "Member 'ABP_SkyDome_C::MoonShine' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonRoll) == 0x0005C8, "Member 'ABP_SkyDome_C::MoonRoll' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonVisibleDuration) == 0x0005CC, "Member 'ABP_SkyDome_C::MoonVisibleDuration' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonSyncedToSun) == 0x0005D0, "Member 'ABP_SkyDome_C::MoonSyncedToSun' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonRotation) == 0x0005D4, "Member 'ABP_SkyDome_C::MoonRotation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherFrom) == 0x0005E0, "Member 'ABP_SkyDome_C::WeatherFrom' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WeatherTo) == 0x00064C, "Member 'ABP_SkyDome_C::WeatherTo' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonChangeSpeed) == 0x0006B8, "Member 'ABP_SkyDome_C::MoonChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldRotation) == 0x0006C4, "Member 'ABP_SkyDome_C::WorldRotation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldRotationSpeed) == 0x0006C8, "Member 'ABP_SkyDome_C::WorldRotationSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldLayerTexture) == 0x0006D0, "Member 'ABP_SkyDome_C::WorldLayerTexture' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldLayerFog) == 0x0006D8, "Member 'ABP_SkyDome_C::WorldLayerFog' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldLayerDepth) == 0x0006DC, "Member 'ABP_SkyDome_C::WorldLayerDepth' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, WorldLayerColor) == 0x0006E0, "Member 'ABP_SkyDome_C::WorldLayerColor' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightRecaptureTime) == 0x0006F0, "Member 'ABP_SkyDome_C::SkyLightRecaptureTime' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayFrom) == 0x0006F4, "Member 'ABP_SkyDome_C::TimeOfDayFrom' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayTo) == 0x0006F8, "Member 'ABP_SkyDome_C::TimeOfDayTo' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayTransitionDuration) == 0x0006FC, "Member 'ABP_SkyDome_C::TimeOfDayTransitionDuration' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayTransition) == 0x000700, "Member 'ABP_SkyDome_C::TimeOfDayTransition' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayInterp) == 0x000704, "Member 'ABP_SkyDome_C::TimeOfDayInterp' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, GroundShadowMaterial) == 0x000708, "Member 'ABP_SkyDome_C::GroundShadowMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, GroundShadowMaterialInst) == 0x000710, "Member 'ABP_SkyDome_C::GroundShadowMaterialInst' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, GroundShadowScale) == 0x000718, "Member 'ABP_SkyDome_C::GroundShadowScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, GroundShadowSoft) == 0x00071C, "Member 'ABP_SkyDome_C::GroundShadowSoft' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Version) == 0x000720, "Member 'ABP_SkyDome_C::Version' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayDataFrom) == 0x000724, "Member 'ABP_SkyDome_C::TimeOfDayDataFrom' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayDataTo) == 0x0007C8, "Member 'ABP_SkyDome_C::TimeOfDayDataTo' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayPresetInterp) == 0x00086C, "Member 'ABP_SkyDome_C::TimeOfDayPresetInterp' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, TimeOfDayPresetTarget) == 0x000870, "Member 'ABP_SkyDome_C::TimeOfDayPresetTarget' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightIntensity) == 0x000878, "Member 'ABP_SkyDome_C::SkyLightIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLightLightning) == 0x00087C, "Member 'ABP_SkyDome_C::SkyLightLightning' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UseWorldSpaceRotation) == 0x000880, "Member 'ABP_SkyDome_C::UseWorldSpaceRotation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, DaysPassedBy) == 0x000884, "Member 'ABP_SkyDome_C::DaysPassedBy' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, OnWeatherPresetChanged) == 0x000888, "Member 'ABP_SkyDome_C::OnWeatherPresetChanged' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, OnTimeOfDayPresetChanged) == 0x000898, "Member 'ABP_SkyDome_C::OnTimeOfDayPresetChanged' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, OnHourPassedBy) == 0x0008A8, "Member 'ABP_SkyDome_C::OnHourPassedBy' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, OnDayPassedBy) == 0x0008B8, "Member 'ABP_SkyDome_C::OnDayPassedBy' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonLightLightning) == 0x0008C8, "Member 'ABP_SkyDome_C::MoonLightLightning' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, ColorScale) == 0x0008CC, "Member 'ABP_SkyDome_C::ColorScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, EngineVersion) == 0x0008D0, "Member 'ABP_SkyDome_C::EngineVersion' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Curr_Time_Of_Day) == 0x0008D4, "Member 'ABP_SkyDome_C::Curr_Time_Of_Day' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, BlueSaturation) == 0x0008D8, "Member 'ABP_SkyDome_C::BlueSaturation' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyShineScale) == 0x0008DC, "Member 'ABP_SkyDome_C::SkyShineScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Total_TODTime) == 0x0008E0, "Member 'ABP_SkyDome_C::Total_TODTime' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsMoveWithTOD) == 0x0008E4, "Member 'ABP_SkyDome_C::CloudsMoveWithTOD' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsTODTimeScale) == 0x0008E8, "Member 'ABP_SkyDome_C::CloudsTODTimeScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Layer1Phase) == 0x0008EC, "Member 'ABP_SkyDome_C::Layer1Phase' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, Layer2Phase) == 0x0008F0, "Member 'ABP_SkyDome_C::Layer2Phase' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, MoonFade) == 0x0008F4, "Member 'ABP_SkyDome_C::MoonFade' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, CloudsBlendScale) == 0x0008F8, "Member 'ABP_SkyDome_C::CloudsBlendScale' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SunHardness) == 0x0008FC, "Member 'ABP_SkyDome_C::SunHardness' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, SkyLowerFalloff) == 0x000900, "Member 'ABP_SkyDome_C::SkyLowerFalloff' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, EclipseLevel) == 0x000904, "Member 'ABP_SkyDome_C::EclipseLevel' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, EclipseOffset) == 0x000908, "Member 'ABP_SkyDome_C::EclipseOffset' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, EclipseAngle) == 0x00090C, "Member 'ABP_SkyDome_C::EclipseAngle' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, EclipseHardness) == 0x000910, "Member 'ABP_SkyDome_C::EclipseHardness' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, bUseNightMtl) == 0x000914, "Member 'ABP_SkyDome_C::bUseNightMtl' has a wrong offset!");
-static_assert(offsetof(ABP_SkyDome_C, UseFlowmapSkybox) == 0x000918, "Member 'ABP_SkyDome_C::UseFlowmapSkybox' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SkyDome_C;
 
 }
 

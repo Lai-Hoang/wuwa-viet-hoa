@@ -33,16 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateSetRootMotionScale_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateSetRootMotionScale_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateSetRootMotionScale_C")
 	}
 	static class UTsAnimNotifyStateSetRootMotionScale_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateSetRootMotionScale_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateSetRootMotionScale_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateSetRootMotionScale_C");
-static_assert(sizeof(UTsAnimNotifyStateSetRootMotionScale_C) == 0x000058, "Wrong size on UTsAnimNotifyStateSetRootMotionScale_C");
-static_assert(offsetof(UTsAnimNotifyStateSetRootMotionScale_C, Tag) == 0x000048, "Member 'UTsAnimNotifyStateSetRootMotionScale_C::Tag' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateSetRootMotionScale_C;
 
 }
 

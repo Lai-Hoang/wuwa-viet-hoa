@@ -39,44 +39,33 @@ public:
 	bool                                          EnableLightsOnBeginPlay;                           // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void LightsColorChange(float ElapsedTime, const struct FLinearColor& ColorOriginal_0, const struct FLinearColor& ColorTarget_0);
-	void ToggleLightsColorChange();
-	void GetLightsIntensity();
-	void Timer(float* ElapsedTime);
-	void TurnOnLights(float ElapsedTime);
-	void TurnOffLights(float ElapsedTime);
-	void ToggleLightsIntensity();
-	void ToggleLights(bool inEnable);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds_0);
 	void ExecuteUbergraph_BP_LightsGroup(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds_0);
+	void ReceiveBeginPlay();
+	void ToggleLights(bool inEnable);
+	void ToggleLightsIntensity();
+	void TurnOffLights(float ElapsedTime);
+	void TurnOnLights(float ElapsedTime);
+	void Timer(float* ElapsedTime);
+	void GetLightsIntensity();
+	void ToggleLightsColorChange();
+	void LightsColorChange(float ElapsedTime, const struct FLinearColor& ColorOriginal_0, const struct FLinearColor& ColorTarget_0);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_LightsGroup_C">();
+		BP_STATIC_CLASS_IMPL("BP_LightsGroup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_LightsGroup_C")
 	}
 	static class ABP_LightsGroup_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_LightsGroup_C>();
 	}
 };
-static_assert(alignof(ABP_LightsGroup_C) == 0x000008, "Wrong alignment on ABP_LightsGroup_C");
-static_assert(sizeof(ABP_LightsGroup_C) == 0x000318, "Wrong size on ABP_LightsGroup_C");
-static_assert(offsetof(ABP_LightsGroup_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_LightsGroup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_LightsGroup_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, IsTick) == 0x0002C0, "Member 'ABP_LightsGroup_C::IsTick' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, TurnOffOrOn) == 0x0002C1, "Member 'ABP_LightsGroup_C::TurnOffOrOn' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, UseSimpleToggle) == 0x0002C2, "Member 'ABP_LightsGroup_C::UseSimpleToggle' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, UseColorChange) == 0x0002C3, "Member 'ABP_LightsGroup_C::UseColorChange' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, Time) == 0x0002C4, "Member 'ABP_LightsGroup_C::Time' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, Duration) == 0x0002C8, "Member 'ABP_LightsGroup_C::Duration' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, DeltaSeconds) == 0x0002CC, "Member 'ABP_LightsGroup_C::DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, LightsIntensity) == 0x0002D0, "Member 'ABP_LightsGroup_C::LightsIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, ColorOriginal) == 0x0002E0, "Member 'ABP_LightsGroup_C::ColorOriginal' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, ColorTarget) == 0x0002F0, "Member 'ABP_LightsGroup_C::ColorTarget' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, Test) == 0x000300, "Member 'ABP_LightsGroup_C::Test' has a wrong offset!");
-static_assert(offsetof(ABP_LightsGroup_C, EnableLightsOnBeginPlay) == 0x000310, "Member 'ABP_LightsGroup_C::EnableLightsOnBeginPlay' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LightsGroup_C;
 
 }
 

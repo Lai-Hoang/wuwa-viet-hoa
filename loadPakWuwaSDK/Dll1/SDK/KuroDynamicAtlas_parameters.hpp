@@ -28,12 +28,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DynamicAtlasBlueprintLibrary_AddTextureAsync) == 0x000008, "Wrong alignment on DynamicAtlasBlueprintLibrary_AddTextureAsync");
-static_assert(sizeof(DynamicAtlasBlueprintLibrary_AddTextureAsync) == 0x000050, "Wrong size on DynamicAtlasBlueprintLibrary_AddTextureAsync");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_AddTextureAsync, InAtlasTag) == 0x000000, "Member 'DynamicAtlasBlueprintLibrary_AddTextureAsync::InAtlasTag' has a wrong offset!");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_AddTextureAsync, InSoftObjectPath) == 0x000010, "Member 'DynamicAtlasBlueprintLibrary_AddTextureAsync::InSoftObjectPath' has a wrong offset!");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_AddTextureAsync, CompleteCallback) == 0x000020, "Member 'DynamicAtlasBlueprintLibrary_AddTextureAsync::CompleteCallback' has a wrong offset!");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_AddTextureAsync, ReturnValue) == 0x000048, "Member 'DynamicAtlasBlueprintLibrary_AddTextureAsync::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicAtlasBlueprintLibrary_AddTextureAsync;
 
 // Function KuroDynamicAtlas.DynamicAtlasBlueprintLibrary.CleanAllAtlas
 // 0x0010 (0x0010 - 0x0000)
@@ -42,9 +37,7 @@ struct DynamicAtlasBlueprintLibrary_CleanAllAtlas final
 public:
 	class FString                                 InAtlasTag;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicAtlasBlueprintLibrary_CleanAllAtlas) == 0x000008, "Wrong alignment on DynamicAtlasBlueprintLibrary_CleanAllAtlas");
-static_assert(sizeof(DynamicAtlasBlueprintLibrary_CleanAllAtlas) == 0x000010, "Wrong size on DynamicAtlasBlueprintLibrary_CleanAllAtlas");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_CleanAllAtlas, InAtlasTag) == 0x000000, "Member 'DynamicAtlasBlueprintLibrary_CleanAllAtlas::InAtlasTag' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicAtlasBlueprintLibrary_CleanAllAtlas;
 
 // Function KuroDynamicAtlas.DynamicAtlasBlueprintLibrary.HasOverrideSetting
 // 0x0018 (0x0018 - 0x0000)
@@ -55,10 +48,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DynamicAtlasBlueprintLibrary_HasOverrideSetting) == 0x000008, "Wrong alignment on DynamicAtlasBlueprintLibrary_HasOverrideSetting");
-static_assert(sizeof(DynamicAtlasBlueprintLibrary_HasOverrideSetting) == 0x000018, "Wrong size on DynamicAtlasBlueprintLibrary_HasOverrideSetting");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_HasOverrideSetting, InAtlasTag) == 0x000000, "Member 'DynamicAtlasBlueprintLibrary_HasOverrideSetting::InAtlasTag' has a wrong offset!");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_HasOverrideSetting, ReturnValue) == 0x000010, "Member 'DynamicAtlasBlueprintLibrary_HasOverrideSetting::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicAtlasBlueprintLibrary_HasOverrideSetting;
 
 // Function KuroDynamicAtlas.DynamicAtlasBlueprintLibrary.RebuildAllAtlas
 // 0x0010 (0x0010 - 0x0000)
@@ -67,9 +57,7 @@ struct DynamicAtlasBlueprintLibrary_RebuildAllAtlas final
 public:
 	class FString                                 InAtlasTag;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicAtlasBlueprintLibrary_RebuildAllAtlas) == 0x000008, "Wrong alignment on DynamicAtlasBlueprintLibrary_RebuildAllAtlas");
-static_assert(sizeof(DynamicAtlasBlueprintLibrary_RebuildAllAtlas) == 0x000010, "Wrong size on DynamicAtlasBlueprintLibrary_RebuildAllAtlas");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_RebuildAllAtlas, InAtlasTag) == 0x000000, "Member 'DynamicAtlasBlueprintLibrary_RebuildAllAtlas::InAtlasTag' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicAtlasBlueprintLibrary_RebuildAllAtlas;
 
 // Function KuroDynamicAtlas.DynamicAtlasBlueprintLibrary.SetOverrideSetting
 // 0x0048 (0x0048 - 0x0000)
@@ -79,10 +67,7 @@ public:
 	class FString                                 InAtlasTag;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDynamicTextureAtlasSetting            InSetting;                                         // 0x0010(0x0038)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DynamicAtlasBlueprintLibrary_SetOverrideSetting) == 0x000008, "Wrong alignment on DynamicAtlasBlueprintLibrary_SetOverrideSetting");
-static_assert(sizeof(DynamicAtlasBlueprintLibrary_SetOverrideSetting) == 0x000048, "Wrong size on DynamicAtlasBlueprintLibrary_SetOverrideSetting");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_SetOverrideSetting, InAtlasTag) == 0x000000, "Member 'DynamicAtlasBlueprintLibrary_SetOverrideSetting::InAtlasTag' has a wrong offset!");
-static_assert(offsetof(DynamicAtlasBlueprintLibrary_SetOverrideSetting, InSetting) == 0x000010, "Member 'DynamicAtlasBlueprintLibrary_SetOverrideSetting::InSetting' has a wrong offset!");
+DUMPER7_ASSERTS_DynamicAtlasBlueprintLibrary_SetOverrideSetting;
 
 }
 

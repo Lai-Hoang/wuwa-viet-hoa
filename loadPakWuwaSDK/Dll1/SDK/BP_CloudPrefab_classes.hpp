@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroCurve_structs.hpp"
 #include "Engine_structs.hpp"
+#include "KuroCurve_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -19,76 +19,76 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CloudPrefab.BP_CloudPrefab_C
-// 0x01C0 (0x0590 - 0x03D0)
+// 0x01C0 (0x05A0 - 0x03E0)
 class ABP_CloudPrefab_C : public AKuroCloudPrefabActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cloud_Top;                                         // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mountain;                                          // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cloud_BigShape;                                    // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cloud_Cover;                                       // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Parent;                                            // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               CloudColorMap;                                     // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UTexture*                               CloudMaskMap;                                      // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         ChangeSpeed;                                       // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         CloudRotateSpeed;                                  // 0x041C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Time;                                              // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          change;                                            // 0x0424(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Stop;                                              // 0x0425(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Farward;                                           // 0x0426(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_427[0x1];                                      // 0x0427(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstanceDynamic*>       DMI;                                               // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         Delta_Seconds;                                     // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TimerInit;                                         // 0x043C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          ColoredCloud_;                                     // 0x043D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_43E[0x2];                                      // 0x043E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CloudSaturation;                                   // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentOpacity___别改我__;                         // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMI_Top;                                           // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMI_Cover;                                         // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMI_Anomalies;                                     // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMI_BigShape;                                      // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DMI_Mountain;                                      // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CloudInitialZAngle;                                // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UpdatePerFourFrame01;                              // 0x0474(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          UpdatePerFourFrame02;                              // 0x0475(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          SetCoverMaterial;                                  // 0x0476(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_477[0x1];                                      // 0x0477(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     Cloud_Cover_Material;                              // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TransSortNumber;                                   // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UStaticMeshComponent*>           MeshArray;                                         // 0x0488(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TArray<class UMaterialInstanceDynamic*>       DMIArray;                                          // 0x0498(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         Random;                                            // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 Trans;                                             // 0x04B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         SDFTime;                                           // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFollowChar;                                       // 0x04C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bFollowCamera;                                     // 0x04C5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4C6[0x2];                                      // 0x04C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SmoothWidth_0;                                     // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bOverrideCloudOffset;                              // 0x04CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4CD[0x3];                                      // 0x04CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CloudSpeed;                                        // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         CloudOffset;                                       // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsReversed;                                        // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsReversedTemp;                                    // 0x04D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4DA[0x2];                                      // 0x04DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReversedZHeightBias;                               // 0x04DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CoverNoiseParameters;                              // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4E1[0x3];                                      // 0x04E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NoiseSpeed;                                        // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseTilling;                                      // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NoiseStrength;                                     // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ChangeProgress;                                    // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableSequence;                                    // 0x04F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4F5[0x3];                                      // 0x04F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurveTime;                                         // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurveStart;                                        // 0x04FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4FD[0x3];                                      // 0x04FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroCurveFloat                        ProgressCurve;                                     // 0x0500(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Cloud_Top;                                         // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mountain;                                          // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cloud_BigShape;                                    // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cloud_Cover;                                       // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Parent;                                            // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0410(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               CloudColorMap;                                     // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UTexture*                               CloudMaskMap;                                      // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         ChangeSpeed;                                       // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         CloudRotateSpeed;                                  // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         Time;                                              // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          change;                                            // 0x0434(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Stop;                                              // 0x0435(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Farward;                                           // 0x0436(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_437[0x1];                                      // 0x0437(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInstanceDynamic*>       DMI;                                               // 0x0438(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         Delta_Seconds;                                     // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TimerInit;                                         // 0x044C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          ColoredCloud_;                                     // 0x044D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_44E[0x2];                                      // 0x044E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CloudSaturation;                                   // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentOpacity___别改我__;                         // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_Top;                                           // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_Cover;                                         // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_Anomalies;                                     // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_BigShape;                                      // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DMI_Mountain;                                      // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CloudInitialZAngle;                                // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UpdatePerFourFrame01;                              // 0x0484(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          UpdatePerFourFrame02;                              // 0x0485(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          SetCoverMaterial;                                  // 0x0486(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_487[0x1];                                      // 0x0487(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     Cloud_Cover_Material;                              // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TransSortNumber;                                   // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UStaticMeshComponent*>           MeshArray;                                         // 0x0498(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class UMaterialInstanceDynamic*>       DMIArray;                                          // 0x04A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         Random;                                            // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4BC[0x4];                                      // 0x04BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Trans;                                             // 0x04C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         SDFTime;                                           // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFollowChar;                                       // 0x04D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bFollowCamera;                                     // 0x04D5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4D6[0x2];                                      // 0x04D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SmoothWidth_0;                                     // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideCloudOffset;                              // 0x04DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4DD[0x3];                                      // 0x04DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CloudSpeed;                                        // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         CloudOffset;                                       // 0x04E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsReversed;                                        // 0x04E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsReversedTemp;                                    // 0x04E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4EA[0x2];                                      // 0x04EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReversedZHeightBias;                               // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CoverNoiseParameters;                              // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4F1[0x3];                                      // 0x04F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NoiseSpeed;                                        // 0x04F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseTilling;                                      // 0x04F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseStrength;                                     // 0x04FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ChangeProgress;                                    // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableSequence;                                    // 0x0504(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_505[0x3];                                      // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurveTime;                                         // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurveStart;                                        // 0x050C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroCurveFloat                        ProgressCurve;                                     // 0x0510(0x0090)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_CloudPrefab(int32 EntryPoint);
@@ -114,70 +114,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CloudPrefab_C">();
+		BP_STATIC_CLASS_IMPL("BP_CloudPrefab_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CloudPrefab_C")
 	}
 	static class ABP_CloudPrefab_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_CloudPrefab_C>();
 	}
 };
-static_assert(alignof(ABP_CloudPrefab_C) == 0x000008, "Wrong alignment on ABP_CloudPrefab_C");
-static_assert(sizeof(ABP_CloudPrefab_C) == 0x000590, "Wrong size on ABP_CloudPrefab_C");
-static_assert(offsetof(ABP_CloudPrefab_C, UberGraphFrame) == 0x0003D0, "Member 'ABP_CloudPrefab_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Cloud_Top) == 0x0003D8, "Member 'ABP_CloudPrefab_C::Cloud_Top' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Mountain) == 0x0003E0, "Member 'ABP_CloudPrefab_C::Mountain' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Cloud_BigShape) == 0x0003E8, "Member 'ABP_CloudPrefab_C::Cloud_BigShape' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Cloud_Cover) == 0x0003F0, "Member 'ABP_CloudPrefab_C::Cloud_Cover' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Parent) == 0x0003F8, "Member 'ABP_CloudPrefab_C::Parent' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DefaultSceneRoot) == 0x000400, "Member 'ABP_CloudPrefab_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudColorMap) == 0x000408, "Member 'ABP_CloudPrefab_C::CloudColorMap' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudMaskMap) == 0x000410, "Member 'ABP_CloudPrefab_C::CloudMaskMap' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, ChangeSpeed) == 0x000418, "Member 'ABP_CloudPrefab_C::ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudRotateSpeed) == 0x00041C, "Member 'ABP_CloudPrefab_C::CloudRotateSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Time) == 0x000420, "Member 'ABP_CloudPrefab_C::Time' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, change) == 0x000424, "Member 'ABP_CloudPrefab_C::change' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Stop) == 0x000425, "Member 'ABP_CloudPrefab_C::Stop' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Farward) == 0x000426, "Member 'ABP_CloudPrefab_C::Farward' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI) == 0x000428, "Member 'ABP_CloudPrefab_C::DMI' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Delta_Seconds) == 0x000438, "Member 'ABP_CloudPrefab_C::Delta_Seconds' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, TimerInit) == 0x00043C, "Member 'ABP_CloudPrefab_C::TimerInit' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, ColoredCloud_) == 0x00043D, "Member 'ABP_CloudPrefab_C::ColoredCloud_' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudSaturation) == 0x000440, "Member 'ABP_CloudPrefab_C::CloudSaturation' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CurrentOpacity___别改我__) == 0x000444, "Member 'ABP_CloudPrefab_C::CurrentOpacity___别改我__' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI_Top) == 0x000448, "Member 'ABP_CloudPrefab_C::DMI_Top' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI_Cover) == 0x000450, "Member 'ABP_CloudPrefab_C::DMI_Cover' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI_Anomalies) == 0x000458, "Member 'ABP_CloudPrefab_C::DMI_Anomalies' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI_BigShape) == 0x000460, "Member 'ABP_CloudPrefab_C::DMI_BigShape' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMI_Mountain) == 0x000468, "Member 'ABP_CloudPrefab_C::DMI_Mountain' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudInitialZAngle) == 0x000470, "Member 'ABP_CloudPrefab_C::CloudInitialZAngle' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, UpdatePerFourFrame01) == 0x000474, "Member 'ABP_CloudPrefab_C::UpdatePerFourFrame01' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, UpdatePerFourFrame02) == 0x000475, "Member 'ABP_CloudPrefab_C::UpdatePerFourFrame02' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, SetCoverMaterial) == 0x000476, "Member 'ABP_CloudPrefab_C::SetCoverMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Cloud_Cover_Material) == 0x000478, "Member 'ABP_CloudPrefab_C::Cloud_Cover_Material' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, TransSortNumber) == 0x000480, "Member 'ABP_CloudPrefab_C::TransSortNumber' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, MeshArray) == 0x000488, "Member 'ABP_CloudPrefab_C::MeshArray' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, DMIArray) == 0x000498, "Member 'ABP_CloudPrefab_C::DMIArray' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Random) == 0x0004A8, "Member 'ABP_CloudPrefab_C::Random' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, Trans) == 0x0004B0, "Member 'ABP_CloudPrefab_C::Trans' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, SDFTime) == 0x0004C0, "Member 'ABP_CloudPrefab_C::SDFTime' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, bFollowChar) == 0x0004C4, "Member 'ABP_CloudPrefab_C::bFollowChar' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, bFollowCamera) == 0x0004C5, "Member 'ABP_CloudPrefab_C::bFollowCamera' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, SmoothWidth_0) == 0x0004C8, "Member 'ABP_CloudPrefab_C::SmoothWidth_0' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, bOverrideCloudOffset) == 0x0004CC, "Member 'ABP_CloudPrefab_C::bOverrideCloudOffset' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudSpeed) == 0x0004D0, "Member 'ABP_CloudPrefab_C::CloudSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CloudOffset) == 0x0004D4, "Member 'ABP_CloudPrefab_C::CloudOffset' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, IsReversed) == 0x0004D8, "Member 'ABP_CloudPrefab_C::IsReversed' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, IsReversedTemp) == 0x0004D9, "Member 'ABP_CloudPrefab_C::IsReversedTemp' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, ReversedZHeightBias) == 0x0004DC, "Member 'ABP_CloudPrefab_C::ReversedZHeightBias' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CoverNoiseParameters) == 0x0004E0, "Member 'ABP_CloudPrefab_C::CoverNoiseParameters' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, NoiseSpeed) == 0x0004E4, "Member 'ABP_CloudPrefab_C::NoiseSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, NoiseTilling) == 0x0004E8, "Member 'ABP_CloudPrefab_C::NoiseTilling' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, NoiseStrength) == 0x0004EC, "Member 'ABP_CloudPrefab_C::NoiseStrength' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, ChangeProgress) == 0x0004F0, "Member 'ABP_CloudPrefab_C::ChangeProgress' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, EnableSequence) == 0x0004F4, "Member 'ABP_CloudPrefab_C::EnableSequence' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CurveTime) == 0x0004F8, "Member 'ABP_CloudPrefab_C::CurveTime' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, CurveStart) == 0x0004FC, "Member 'ABP_CloudPrefab_C::CurveStart' has a wrong offset!");
-static_assert(offsetof(ABP_CloudPrefab_C, ProgressCurve) == 0x000500, "Member 'ABP_CloudPrefab_C::ProgressCurve' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_CloudPrefab_C;
 
 }
 

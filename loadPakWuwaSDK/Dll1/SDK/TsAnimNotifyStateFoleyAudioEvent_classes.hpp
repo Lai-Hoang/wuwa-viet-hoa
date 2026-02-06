@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroAudio_structs.hpp"
 #include "E_FoleyVariant_structs.hpp"
+#include "KuroAudio_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -34,18 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyStateFoleyAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyStateFoleyAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyStateFoleyAudioEvent_C")
 	}
 	static class UTsAnimNotifyStateFoleyAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyStateFoleyAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyStateFoleyAudioEvent_C) == 0x000008, "Wrong alignment on UTsAnimNotifyStateFoleyAudioEvent_C");
-static_assert(sizeof(UTsAnimNotifyStateFoleyAudioEvent_C) == 0x000050, "Wrong size on UTsAnimNotifyStateFoleyAudioEvent_C");
-static_assert(offsetof(UTsAnimNotifyStateFoleyAudioEvent_C, FadeDuration) == 0x000048, "Member 'UTsAnimNotifyStateFoleyAudioEvent_C::FadeDuration' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateFoleyAudioEvent_C, FadeCurve) == 0x00004C, "Member 'UTsAnimNotifyStateFoleyAudioEvent_C::FadeCurve' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyStateFoleyAudioEvent_C, Variant) == 0x00004D, "Member 'UTsAnimNotifyStateFoleyAudioEvent_C::Variant' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyStateFoleyAudioEvent_C;
 
 }
 

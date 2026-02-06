@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function TsBaseItem.TsBaseItem_C.GetTagDebugStrings
-// 0x0010 (0x0010 - 0x0000)
-struct TsBaseItem_C_GetTagDebugStrings final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(TsBaseItem_C_GetTagDebugStrings) == 0x000008, "Wrong alignment on TsBaseItem_C_GetTagDebugStrings");
-static_assert(sizeof(TsBaseItem_C_GetTagDebugStrings) == 0x000010, "Wrong size on TsBaseItem_C_GetTagDebugStrings");
-static_assert(offsetof(TsBaseItem_C_GetTagDebugStrings, ReturnValue) == 0x000000, "Member 'TsBaseItem_C_GetTagDebugStrings::ReturnValue' has a wrong offset!");
-
 // Function TsBaseItem.TsBaseItem_C.ExecuteUbergraph_TsBaseItem
 // 0x0004 (0x0004 - 0x0000)
 struct TsBaseItem_C_ExecuteUbergraph_TsBaseItem final
@@ -32,9 +21,16 @@ struct TsBaseItem_C_ExecuteUbergraph_TsBaseItem final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsBaseItem_C_ExecuteUbergraph_TsBaseItem) == 0x000004, "Wrong alignment on TsBaseItem_C_ExecuteUbergraph_TsBaseItem");
-static_assert(sizeof(TsBaseItem_C_ExecuteUbergraph_TsBaseItem) == 0x000004, "Wrong size on TsBaseItem_C_ExecuteUbergraph_TsBaseItem");
-static_assert(offsetof(TsBaseItem_C_ExecuteUbergraph_TsBaseItem, EntryPoint) == 0x000000, "Member 'TsBaseItem_C_ExecuteUbergraph_TsBaseItem::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_TsBaseItem_C_ExecuteUbergraph_TsBaseItem;
+
+// Function TsBaseItem.TsBaseItem_C.GetTagDebugStrings
+// 0x0010 (0x0010 - 0x0000)
+struct TsBaseItem_C_GetTagDebugStrings final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsBaseItem_C_GetTagDebugStrings;
 
 }
 

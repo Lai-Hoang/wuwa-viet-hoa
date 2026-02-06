@@ -29,14 +29,7 @@ public:
 	bool                                          bNewIOSApi;                                        // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBgPrefixDownload_Start) == 0x000008, "Wrong alignment on KuroBgPrefixDownload_Start");
-static_assert(sizeof(KuroBgPrefixDownload_Start) == 0x000040, "Wrong size on KuroBgPrefixDownload_Start");
-static_assert(offsetof(KuroBgPrefixDownload_Start, Suffix) == 0x000000, "Member 'KuroBgPrefixDownload_Start::Suffix' has a wrong offset!");
-static_assert(offsetof(KuroBgPrefixDownload_Start, Prefixes) == 0x000010, "Member 'KuroBgPrefixDownload_Start::Prefixes' has a wrong offset!");
-static_assert(offsetof(KuroBgPrefixDownload_Start, Targets) == 0x000020, "Member 'KuroBgPrefixDownload_Start::Targets' has a wrong offset!");
-static_assert(offsetof(KuroBgPrefixDownload_Start, InRetryCount) == 0x000030, "Member 'KuroBgPrefixDownload_Start::InRetryCount' has a wrong offset!");
-static_assert(offsetof(KuroBgPrefixDownload_Start, InTimeout) == 0x000034, "Member 'KuroBgPrefixDownload_Start::InTimeout' has a wrong offset!");
-static_assert(offsetof(KuroBgPrefixDownload_Start, bNewIOSApi) == 0x000038, "Member 'KuroBgPrefixDownload_Start::bNewIOSApi' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBgPrefixDownload_Start;
 
 // Function KuroBackgroundDownload.KuroBgPrefixDownload.GetBpsSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -45,9 +38,7 @@ struct KuroBgPrefixDownload_GetBpsSpeed final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBgPrefixDownload_GetBpsSpeed) == 0x000004, "Wrong alignment on KuroBgPrefixDownload_GetBpsSpeed");
-static_assert(sizeof(KuroBgPrefixDownload_GetBpsSpeed) == 0x000004, "Wrong size on KuroBgPrefixDownload_GetBpsSpeed");
-static_assert(offsetof(KuroBgPrefixDownload_GetBpsSpeed, ReturnValue) == 0x000000, "Member 'KuroBgPrefixDownload_GetBpsSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBgPrefixDownload_GetBpsSpeed;
 
 }
 

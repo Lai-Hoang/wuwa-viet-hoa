@@ -26,7 +26,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABPC_Seq_Interface_C">();
+		BP_STATIC_CLASS_IMPL("ABPC_Seq_Interface_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABPC_Seq_Interface_C")
 	}
 	static class IABPC_Seq_Interface_C* GetDefaultObj()
 	{
@@ -42,8 +46,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IABPC_Seq_Interface_C) == 0x000001, "Wrong alignment on IABPC_Seq_Interface_C");
-static_assert(sizeof(IABPC_Seq_Interface_C) == 0x000001, "Wrong size on IABPC_Seq_Interface_C");
+DUMPER7_ASSERTS_IABPC_Seq_Interface_C;
 
 }
 

@@ -21,9 +21,7 @@ struct VolcanoPipeWrapper_SendMcBinary final
 public:
 	TArray<uint8>                                 bin;                                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VolcanoPipeWrapper_SendMcBinary) == 0x000008, "Wrong alignment on VolcanoPipeWrapper_SendMcBinary");
-static_assert(sizeof(VolcanoPipeWrapper_SendMcBinary) == 0x000010, "Wrong size on VolcanoPipeWrapper_SendMcBinary");
-static_assert(offsetof(VolcanoPipeWrapper_SendMcBinary, bin) == 0x000000, "Member 'VolcanoPipeWrapper_SendMcBinary::bin' has a wrong offset!");
+DUMPER7_ASSERTS_VolcanoPipeWrapper_SendMcBinary;
 
 // Function VolcanoMsgChannel.VolcanoPipeWrapper.SendMcBinaryWithKey
 // 0x0020 (0x0020 - 0x0000)
@@ -33,10 +31,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 bin;                                               // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VolcanoPipeWrapper_SendMcBinaryWithKey) == 0x000008, "Wrong alignment on VolcanoPipeWrapper_SendMcBinaryWithKey");
-static_assert(sizeof(VolcanoPipeWrapper_SendMcBinaryWithKey) == 0x000020, "Wrong size on VolcanoPipeWrapper_SendMcBinaryWithKey");
-static_assert(offsetof(VolcanoPipeWrapper_SendMcBinaryWithKey, Key) == 0x000000, "Member 'VolcanoPipeWrapper_SendMcBinaryWithKey::Key' has a wrong offset!");
-static_assert(offsetof(VolcanoPipeWrapper_SendMcBinaryWithKey, bin) == 0x000010, "Member 'VolcanoPipeWrapper_SendMcBinaryWithKey::bin' has a wrong offset!");
+DUMPER7_ASSERTS_VolcanoPipeWrapper_SendMcBinaryWithKey;
 
 // Function VolcanoMsgChannel.VolcanoPipeWrapper.SendMcString
 // 0x0010 (0x0010 - 0x0000)
@@ -45,9 +40,7 @@ struct VolcanoPipeWrapper_SendMcString final
 public:
 	class FString                                 msg;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VolcanoPipeWrapper_SendMcString) == 0x000008, "Wrong alignment on VolcanoPipeWrapper_SendMcString");
-static_assert(sizeof(VolcanoPipeWrapper_SendMcString) == 0x000010, "Wrong size on VolcanoPipeWrapper_SendMcString");
-static_assert(offsetof(VolcanoPipeWrapper_SendMcString, msg) == 0x000000, "Member 'VolcanoPipeWrapper_SendMcString::msg' has a wrong offset!");
+DUMPER7_ASSERTS_VolcanoPipeWrapper_SendMcString;
 
 }
 

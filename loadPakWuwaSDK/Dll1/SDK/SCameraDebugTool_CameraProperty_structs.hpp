@@ -23,11 +23,7 @@ public:
 	float                                         Value_12_C232FD304DC5E2FEC082A3B083512BFA;         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsEffect_15_623BD92E4ED2B6BD2D9BFFAB2F4ABDAD;      // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSCameraDebugTool_CameraProperty) == 0x000008, "Wrong alignment on FSCameraDebugTool_CameraProperty");
-static_assert(sizeof(FSCameraDebugTool_CameraProperty) == 0x000018, "Wrong size on FSCameraDebugTool_CameraProperty");
-static_assert(offsetof(FSCameraDebugTool_CameraProperty, PropertyName_9_2259EB8F4C6FDB2FADA93AB64B10982F) == 0x000000, "Member 'FSCameraDebugTool_CameraProperty::PropertyName_9_2259EB8F4C6FDB2FADA93AB64B10982F' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraProperty, Value_12_C232FD304DC5E2FEC082A3B083512BFA) == 0x000010, "Member 'FSCameraDebugTool_CameraProperty::Value_12_C232FD304DC5E2FEC082A3B083512BFA' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraProperty, IsEffect_15_623BD92E4ED2B6BD2D9BFFAB2F4ABDAD) == 0x000014, "Member 'FSCameraDebugTool_CameraProperty::IsEffect_15_623BD92E4ED2B6BD2D9BFFAB2F4ABDAD' has a wrong offset!");
+DUMPER7_ASSERTS_FSCameraDebugTool_CameraProperty;
 
 }
 

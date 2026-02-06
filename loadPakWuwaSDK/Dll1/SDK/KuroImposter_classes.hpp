@@ -24,15 +24,18 @@ class UKuroImposterCommandlet final : public UCommandlet
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroImposterCommandlet">();
+		STATIC_CLASS_IMPL("KuroImposterCommandlet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroImposterCommandlet")
 	}
 	static class UKuroImposterCommandlet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroImposterCommandlet>();
 	}
 };
-static_assert(alignof(UKuroImposterCommandlet) == 0x000008, "Wrong alignment on UKuroImposterCommandlet");
-static_assert(sizeof(UKuroImposterCommandlet) == 0x000088, "Wrong size on UKuroImposterCommandlet");
+DUMPER7_ASSERTS_UKuroImposterCommandlet;
 
 // Class KuroImposter.KuroImposterComponent
 // 0x0040 (0x0260 - 0x0220)
@@ -52,20 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroImposterComponent">();
+		STATIC_CLASS_IMPL("KuroImposterComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroImposterComponent")
 	}
 	static class UKuroImposterComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroImposterComponent>();
 	}
 };
-static_assert(alignof(UKuroImposterComponent) == 0x000010, "Wrong alignment on UKuroImposterComponent");
-static_assert(sizeof(UKuroImposterComponent) == 0x000260, "Wrong size on UKuroImposterComponent");
-static_assert(offsetof(UKuroImposterComponent, bPreview) == 0x000224, "Member 'UKuroImposterComponent::bPreview' has a wrong offset!");
-static_assert(offsetof(UKuroImposterComponent, ImposterScreenSizeScaleLod0) == 0x000228, "Member 'UKuroImposterComponent::ImposterScreenSizeScaleLod0' has a wrong offset!");
-static_assert(offsetof(UKuroImposterComponent, ImposterScreenSizeScaleLod1) == 0x00022C, "Member 'UKuroImposterComponent::ImposterScreenSizeScaleLod1' has a wrong offset!");
-static_assert(offsetof(UKuroImposterComponent, ImposterUseComtomBelowThr) == 0x000230, "Member 'UKuroImposterComponent::ImposterUseComtomBelowThr' has a wrong offset!");
-static_assert(offsetof(UKuroImposterComponent, ImposterBelowThr) == 0x000234, "Member 'UKuroImposterComponent::ImposterBelowThr' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroImposterComponent;
 
 // Class KuroImposter.KuroImposterUpdater
 // 0x0008 (0x02B8 - 0x02B0)
@@ -83,17 +84,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroImposterUpdater">();
+		STATIC_CLASS_IMPL("KuroImposterUpdater")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroImposterUpdater")
 	}
 	static class AKuroImposterUpdater* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroImposterUpdater>();
 	}
 };
-static_assert(alignof(AKuroImposterUpdater) == 0x000008, "Wrong alignment on AKuroImposterUpdater");
-static_assert(sizeof(AKuroImposterUpdater) == 0x0002B8, "Wrong size on AKuroImposterUpdater");
-static_assert(offsetof(AKuroImposterUpdater, bEnabled) == 0x0002B0, "Member 'AKuroImposterUpdater::bEnabled' has a wrong offset!");
-static_assert(offsetof(AKuroImposterUpdater, bSearchMainLight) == 0x0002B1, "Member 'AKuroImposterUpdater::bSearchMainLight' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroImposterUpdater;
 
 // Class KuroImposter.KuroImposterUtility
 // 0x0000 (0x0030 - 0x0030)
@@ -106,15 +108,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroImposterUtility">();
+		STATIC_CLASS_IMPL("KuroImposterUtility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroImposterUtility")
 	}
 	static class UKuroImposterUtility* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroImposterUtility>();
 	}
 };
-static_assert(alignof(UKuroImposterUtility) == 0x000008, "Wrong alignment on UKuroImposterUtility");
-static_assert(sizeof(UKuroImposterUtility) == 0x000030, "Wrong size on UKuroImposterUtility");
+DUMPER7_ASSERTS_UKuroImposterUtility;
 
 }
 

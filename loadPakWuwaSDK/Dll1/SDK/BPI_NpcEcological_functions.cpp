@@ -16,99 +16,15 @@
 namespace SDK
 {
 
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerAttackEnd
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandleWeatherChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_NpcEcological_C::HandlePlayerAttackEnd()
+void IBPI_NpcEcological_C::HandleWeatherChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerAttackEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerAttack
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandlePlayerAttack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerAttack");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerImpactEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandlePlayerImpactEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerImpactEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerImpact
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandlePlayerImpact()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerImpact");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerExit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandlePlayerExit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerExit");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerEnter
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandlePlayerEnter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerEnter");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandleQuestChanged
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_NpcEcological_C::HandleQuestChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandleQuestChanged");
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandleWeatherChanged");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
@@ -128,15 +44,99 @@ void IBPI_NpcEcological_C::HandleDayStateChanged()
 }
 
 
-// Function BPI_NpcEcological.BPI_NpcEcological_C.HandleWeatherChanged
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandleQuestChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_NpcEcological_C::HandleWeatherChanged()
+void IBPI_NpcEcological_C::HandleQuestChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandleWeatherChanged");
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandleQuestChanged");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerEnter
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerEnter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerEnter");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerExit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerExit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerExit");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerImpact
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerImpact()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerImpact");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerImpactEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerImpactEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerImpactEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerAttack
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerAttack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerAttack");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_NpcEcological.BPI_NpcEcological_C.HandlePlayerAttackEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_NpcEcological_C::HandlePlayerAttackEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_NpcEcological_C", "HandlePlayerAttackEnd");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

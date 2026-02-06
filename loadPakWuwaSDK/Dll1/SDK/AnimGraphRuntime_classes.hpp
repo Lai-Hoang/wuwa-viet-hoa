@@ -30,16 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimNotify_PlayMontageNotify">();
+		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotify")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotify")
 	}
 	static class UAnimNotify_PlayMontageNotify* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
 	}
 };
-static_assert(alignof(UAnimNotify_PlayMontageNotify) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotify");
-static_assert(sizeof(UAnimNotify_PlayMontageNotify) == 0x000050, "Wrong size on UAnimNotify_PlayMontageNotify");
-static_assert(offsetof(UAnimNotify_PlayMontageNotify, NotifyName) == 0x000040, "Member 'UAnimNotify_PlayMontageNotify::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
 
 // Class AnimGraphRuntime.AnimSequencerInstance
 // 0x0010 (0x0740 - 0x0730)
@@ -51,37 +53,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimSequencerInstance">();
+		STATIC_CLASS_IMPL("AnimSequencerInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimSequencerInstance")
 	}
 	static class UAnimSequencerInstance* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimSequencerInstance>();
 	}
 };
-static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
-static_assert(sizeof(UAnimSequencerInstance) == 0x000740, "Wrong size on UAnimSequencerInstance");
-
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
-// 0x0010 (0x0050 - 0x0040)
-class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimNotify_PlayMontageNotifyWindow">();
-	}
-	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
-	}
-};
-static_assert(alignof(UAnimNotify_PlayMontageNotifyWindow) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotifyWindow");
-static_assert(sizeof(UAnimNotify_PlayMontageNotifyWindow) == 0x000050, "Wrong size on UAnimNotify_PlayMontageNotifyWindow");
-static_assert(offsetof(UAnimNotify_PlayMontageNotifyWindow, NotifyName) == 0x000040, "Member 'UAnimNotify_PlayMontageNotifyWindow::NotifyName' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimSequencerInstance;
 
 // Class AnimGraphRuntime.KismetAnimationLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -102,15 +85,42 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KismetAnimationLibrary">();
+		STATIC_CLASS_IMPL("KismetAnimationLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KismetAnimationLibrary")
 	}
 	static class UKismetAnimationLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKismetAnimationLibrary>();
 	}
 };
-static_assert(alignof(UKismetAnimationLibrary) == 0x000008, "Wrong alignment on UKismetAnimationLibrary");
-static_assert(sizeof(UKismetAnimationLibrary) == 0x000030, "Wrong size on UKismetAnimationLibrary");
+DUMPER7_ASSERTS_UKismetAnimationLibrary;
+
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
+// 0x0010 (0x0050 - 0x0040)
+class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotifyWindow")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotifyWindow")
+	}
+	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
+	}
+};
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
 // 0x0080 (0x00B0 - 0x0030)
@@ -135,20 +145,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PlayMontageCallbackProxy">();
+		STATIC_CLASS_IMPL("PlayMontageCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayMontageCallbackProxy")
 	}
 	static class UPlayMontageCallbackProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
 	}
 };
-static_assert(alignof(UPlayMontageCallbackProxy) == 0x000008, "Wrong alignment on UPlayMontageCallbackProxy");
-static_assert(sizeof(UPlayMontageCallbackProxy) == 0x0000B0, "Wrong size on UPlayMontageCallbackProxy");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnCompleted) == 0x000030, "Member 'UPlayMontageCallbackProxy::OnCompleted' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnBlendOut) == 0x000040, "Member 'UPlayMontageCallbackProxy::OnBlendOut' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnInterrupted) == 0x000050, "Member 'UPlayMontageCallbackProxy::OnInterrupted' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyBegin) == 0x000060, "Member 'UPlayMontageCallbackProxy::OnNotifyBegin' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyEnd) == 0x000070, "Member 'UPlayMontageCallbackProxy::OnNotifyEnd' has a wrong offset!");
+DUMPER7_ASSERTS_UPlayMontageCallbackProxy;
 
 // Class AnimGraphRuntime.SequencerAnimationSupport
 // 0x0000 (0x0000 - 0x0000)
@@ -157,7 +165,11 @@ class ISequencerAnimationSupport final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SequencerAnimationSupport">();
+		STATIC_CLASS_IMPL("SequencerAnimationSupport")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SequencerAnimationSupport")
 	}
 	static class ISequencerAnimationSupport* GetDefaultObj()
 	{
@@ -173,8 +185,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ISequencerAnimationSupport) == 0x000001, "Wrong alignment on ISequencerAnimationSupport");
-static_assert(sizeof(ISequencerAnimationSupport) == 0x000001, "Wrong size on ISequencerAnimationSupport");
+DUMPER7_ASSERTS_ISequencerAnimationSupport;
 
 }
 

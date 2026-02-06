@@ -22,10 +22,7 @@ public:
 	class FString                                 Name_5_E199F58E4E228405A3801FBF27A03346;           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          NeedLoop_3_B3503EB54C43FBF5456CD6B7657BC625;       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSpineThingsInfo) == 0x000008, "Wrong alignment on FSpineThingsInfo");
-static_assert(sizeof(FSpineThingsInfo) == 0x000018, "Wrong size on FSpineThingsInfo");
-static_assert(offsetof(FSpineThingsInfo, Name_5_E199F58E4E228405A3801FBF27A03346) == 0x000000, "Member 'FSpineThingsInfo::Name_5_E199F58E4E228405A3801FBF27A03346' has a wrong offset!");
-static_assert(offsetof(FSpineThingsInfo, NeedLoop_3_B3503EB54C43FBF5456CD6B7657BC625) == 0x000010, "Member 'FSpineThingsInfo::NeedLoop_3_B3503EB54C43FBF5456CD6B7657BC625' has a wrong offset!");
+DUMPER7_ASSERTS_FSpineThingsInfo;
 
 }
 

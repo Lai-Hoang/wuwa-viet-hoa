@@ -21,9 +21,7 @@ struct FSSkillBehaviorUpdateCustomValue final
 public:
 	TArray<class FString>                         ValueName_3_91A57F794FACC091A9731EA83B559633;      // 0x0000(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSSkillBehaviorUpdateCustomValue) == 0x000008, "Wrong alignment on FSSkillBehaviorUpdateCustomValue");
-static_assert(sizeof(FSSkillBehaviorUpdateCustomValue) == 0x000010, "Wrong size on FSSkillBehaviorUpdateCustomValue");
-static_assert(offsetof(FSSkillBehaviorUpdateCustomValue, ValueName_3_91A57F794FACC091A9731EA83B559633) == 0x000000, "Member 'FSSkillBehaviorUpdateCustomValue::ValueName_3_91A57F794FACC091A9731EA83B559633' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehaviorUpdateCustomValue;
 
 }
 

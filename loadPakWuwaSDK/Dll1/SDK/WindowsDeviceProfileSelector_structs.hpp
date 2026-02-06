@@ -55,11 +55,7 @@ public:
 	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MatchString;                                       // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWindowsDeviceProfileMatchItem) == 0x000008, "Wrong alignment on FWindowsDeviceProfileMatchItem");
-static_assert(sizeof(FWindowsDeviceProfileMatchItem) == 0x000018, "Wrong size on FWindowsDeviceProfileMatchItem");
-static_assert(offsetof(FWindowsDeviceProfileMatchItem, SourceType) == 0x000000, "Member 'FWindowsDeviceProfileMatchItem::SourceType' has a wrong offset!");
-static_assert(offsetof(FWindowsDeviceProfileMatchItem, CompareType) == 0x000001, "Member 'FWindowsDeviceProfileMatchItem::CompareType' has a wrong offset!");
-static_assert(offsetof(FWindowsDeviceProfileMatchItem, MatchString) == 0x000008, "Member 'FWindowsDeviceProfileMatchItem::MatchString' has a wrong offset!");
+DUMPER7_ASSERTS_FWindowsDeviceProfileMatchItem;
 
 // ScriptStruct WindowsDeviceProfileSelector.WindowsDeviceProfileMatch
 // 0x0020 (0x0020 - 0x0000)
@@ -69,10 +65,7 @@ public:
 	class FString                                 Profile;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FWindowsDeviceProfileMatchItem> Match;                                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWindowsDeviceProfileMatch) == 0x000008, "Wrong alignment on FWindowsDeviceProfileMatch");
-static_assert(sizeof(FWindowsDeviceProfileMatch) == 0x000020, "Wrong size on FWindowsDeviceProfileMatch");
-static_assert(offsetof(FWindowsDeviceProfileMatch, Profile) == 0x000000, "Member 'FWindowsDeviceProfileMatch::Profile' has a wrong offset!");
-static_assert(offsetof(FWindowsDeviceProfileMatch, Match) == 0x000010, "Member 'FWindowsDeviceProfileMatch::Match' has a wrong offset!");
+DUMPER7_ASSERTS_FWindowsDeviceProfileMatch;
 
 }
 

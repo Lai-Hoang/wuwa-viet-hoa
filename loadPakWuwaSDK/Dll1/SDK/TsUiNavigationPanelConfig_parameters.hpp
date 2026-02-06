@@ -21,9 +21,7 @@ struct TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig fi
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig) == 0x000004, "Wrong alignment on TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig");
-static_assert(sizeof(TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig) == 0x000004, "Wrong size on TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig");
-static_assert(offsetof(TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig, EntryPoint) == 0x000000, "Member 'TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_TsUiNavigationPanelConfig_C_ExecuteUbergraph_TsUiNavigationPanelConfig;
 
 }
 

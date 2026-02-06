@@ -37,15 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GamePartition">();
+		STATIC_CLASS_IMPL("GamePartition")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GamePartition")
 	}
 	static class UGamePartition* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGamePartition>();
 	}
 };
-static_assert(alignof(UGamePartition) == 0x000008, "Wrong alignment on UGamePartition");
-static_assert(sizeof(UGamePartition) == 0x0002C8, "Wrong size on UGamePartition");
+DUMPER7_ASSERTS_UGamePartition;
 
 // Class KuroGamePartition.GamePartitionMedium
 // 0x0000 (0x02C8 - 0x02C8)
@@ -54,35 +57,18 @@ class UGamePartitionMedium final : public UGamePartition
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GamePartitionMedium">();
+		STATIC_CLASS_IMPL("GamePartitionMedium")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GamePartitionMedium")
 	}
 	static class UGamePartitionMedium* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGamePartitionMedium>();
 	}
 };
-static_assert(alignof(UGamePartitionMedium) == 0x000008, "Wrong alignment on UGamePartitionMedium");
-static_assert(sizeof(UGamePartitionMedium) == 0x0002C8, "Wrong size on UGamePartitionMedium");
-
-// Class KuroGamePartition.GamePartitionManager
-// 0x0000 (0x0030 - 0x0030)
-class UGamePartitionManager final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UGamePartition* GetGamePartition(EGamePartitionCellSizeType CellSizeType);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GamePartitionManager">();
-	}
-	static class UGamePartitionManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGamePartitionManager>();
-	}
-};
-static_assert(alignof(UGamePartitionManager) == 0x000008, "Wrong alignment on UGamePartitionManager");
-static_assert(sizeof(UGamePartitionManager) == 0x000030, "Wrong size on UGamePartitionManager");
+DUMPER7_ASSERTS_UGamePartitionMedium;
 
 // Class KuroGamePartition.GamePartitionSubsystem
 // 0x0010 (0x0048 - 0x0038)
@@ -97,16 +83,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GamePartitionSubsystem">();
+		STATIC_CLASS_IMPL("GamePartitionSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GamePartitionSubsystem")
 	}
 	static class UGamePartitionSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGamePartitionSubsystem>();
 	}
 };
-static_assert(alignof(UGamePartitionSubsystem) == 0x000008, "Wrong alignment on UGamePartitionSubsystem");
-static_assert(sizeof(UGamePartitionSubsystem) == 0x000048, "Wrong size on UGamePartitionSubsystem");
-static_assert(offsetof(UGamePartitionSubsystem, GamePartition) == 0x000038, "Member 'UGamePartitionSubsystem::GamePartition' has a wrong offset!");
+DUMPER7_ASSERTS_UGamePartitionSubsystem;
 
 }
 

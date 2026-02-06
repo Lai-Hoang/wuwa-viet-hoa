@@ -27,13 +27,7 @@ public:
 	float                                         半高_17_0D2473BB4F4208A2C647B48AF1FF77B1;          // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSoftObjectPath                        交互配置_46_566E7D084E146CC131B2C4A95FEFCCE6;      // 0x0020(0x0020)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 };
-static_assert(alignof(FSKuroInteractionLimbsConfig) == 0x000008, "Wrong alignment on FSKuroInteractionLimbsConfig");
-static_assert(sizeof(FSKuroInteractionLimbsConfig) == 0x000040, "Wrong size on FSKuroInteractionLimbsConfig");
-static_assert(offsetof(FSKuroInteractionLimbsConfig, 插槽名字_2_317A3C8F4FFE42EDB0464A976636B5F3) == 0x000000, "Member 'FSKuroInteractionLimbsConfig::插槽名字_2_317A3C8F4FFE42EDB0464A976636B5F3' has a wrong offset!");
-static_assert(offsetof(FSKuroInteractionLimbsConfig, 相对位置_6_8240CCB94D0AB05628FDF589E18667D6) == 0x00000C, "Member 'FSKuroInteractionLimbsConfig::相对位置_6_8240CCB94D0AB05628FDF589E18667D6' has a wrong offset!");
-static_assert(offsetof(FSKuroInteractionLimbsConfig, 半径_16_2F3754A64F23BAD88E622A8399F42FC4) == 0x000018, "Member 'FSKuroInteractionLimbsConfig::半径_16_2F3754A64F23BAD88E622A8399F42FC4' has a wrong offset!");
-static_assert(offsetof(FSKuroInteractionLimbsConfig, 半高_17_0D2473BB4F4208A2C647B48AF1FF77B1) == 0x00001C, "Member 'FSKuroInteractionLimbsConfig::半高_17_0D2473BB4F4208A2C647B48AF1FF77B1' has a wrong offset!");
-static_assert(offsetof(FSKuroInteractionLimbsConfig, 交互配置_46_566E7D084E146CC131B2C4A95FEFCCE6) == 0x000020, "Member 'FSKuroInteractionLimbsConfig::交互配置_46_566E7D084E146CC131B2C4A95FEFCCE6' has a wrong offset!");
+DUMPER7_ASSERTS_FSKuroInteractionLimbsConfig;
 
 }
 

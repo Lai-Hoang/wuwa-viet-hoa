@@ -34,19 +34,7 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Contains_ReturnValue_5;                   // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu) == 0x000004, "Wrong alignment on ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu");
-static_assert(sizeof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu) == 0x000014, "Wrong size on ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, EntryPoint) == 0x000000, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue) == 0x000004, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue_1) == 0x000005, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue) == 0x000008, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_GetRelevantAnimTimeRemainingFraction_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Less_FloatFloat_ReturnValue) == 0x00000C, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue_2) == 0x00000D, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue_3) == 0x00000E, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Not_PreBool_ReturnValue) == 0x00000F, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue_4) == 0x000010, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_BooleanAND_ReturnValue) == 0x000011, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu, CallFunc_Contains_ReturnValue_5) == 0x000012, "Member 'ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu::CallFunc_Contains_ReturnValue_5' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelPrefabDaiyu_C_ExecuteUbergraph_ABP_LevelPrefabDaiyu;
 
 // Function ABP_LevelPrefabDaiyu.ABP_LevelPrefabDaiyu_C.SetState
 // 0x0010 (0x0010 - 0x0000)
@@ -55,9 +43,7 @@ struct ABP_LevelPrefabDaiyu_C_SetState final
 public:
 	class FString                                 NewParam;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_LevelPrefabDaiyu_C_SetState) == 0x000008, "Wrong alignment on ABP_LevelPrefabDaiyu_C_SetState");
-static_assert(sizeof(ABP_LevelPrefabDaiyu_C_SetState) == 0x000010, "Wrong size on ABP_LevelPrefabDaiyu_C_SetState");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_SetState, NewParam) == 0x000000, "Member 'ABP_LevelPrefabDaiyu_C_SetState::NewParam' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelPrefabDaiyu_C_SetState;
 
 // Function ABP_LevelPrefabDaiyu.ABP_LevelPrefabDaiyu_C.SetPlayRate
 // 0x0004 (0x0004 - 0x0000)
@@ -66,9 +52,7 @@ struct ABP_LevelPrefabDaiyu_C_SetPlayRate final
 public:
 	float                                         playRate;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ABP_LevelPrefabDaiyu_C_SetPlayRate) == 0x000004, "Wrong alignment on ABP_LevelPrefabDaiyu_C_SetPlayRate");
-static_assert(sizeof(ABP_LevelPrefabDaiyu_C_SetPlayRate) == 0x000004, "Wrong size on ABP_LevelPrefabDaiyu_C_SetPlayRate");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_SetPlayRate, playRate) == 0x000000, "Member 'ABP_LevelPrefabDaiyu_C_SetPlayRate::playRate' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelPrefabDaiyu_C_SetPlayRate;
 
 // Function ABP_LevelPrefabDaiyu.ABP_LevelPrefabDaiyu_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -77,9 +61,7 @@ struct ABP_LevelPrefabDaiyu_C_AnimGraph final
 public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
-static_assert(alignof(ABP_LevelPrefabDaiyu_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_LevelPrefabDaiyu_C_AnimGraph");
-static_assert(sizeof(ABP_LevelPrefabDaiyu_C_AnimGraph) == 0x000010, "Wrong size on ABP_LevelPrefabDaiyu_C_AnimGraph");
-static_assert(offsetof(ABP_LevelPrefabDaiyu_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_LevelPrefabDaiyu_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_LevelPrefabDaiyu_C_AnimGraph;
 
 }
 

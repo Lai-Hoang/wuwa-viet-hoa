@@ -10,17 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
+#include "SFloatThresholdAndCameraShake_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "SGameplayTagArray_structs.hpp"
 #include "SInt64Array_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_VehicleConfig.BP_VehicleConfig_C
-// 0x0258 (0x0290 - 0x0038)
+// 0x02A0 (0x02D8 - 0x0038)
 class UBP_VehicleConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -40,34 +41,28 @@ public:
 	TMap<struct FGameplayTag, struct FSInt64Array> 驾驶员同步Buff;                                   // 0x01E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UCurveFloat*                            前后输入映射曲线;                                  // 0x0238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGameplayTag, struct FSGameplayTagArray> 载具同步驾驶员Tag;                          // 0x0240(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FSFloatThresholdAndCameraShake> 撞击震屏;                                          // 0x0290(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FSFloatThresholdAndCameraShake> 撞击震屏Z;                                         // 0x02A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         震屏CD;                                            // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSFloatThresholdAndCameraShake> 撞击震屏_第一人称;                                 // 0x02B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FSFloatThresholdAndCameraShake> 撞击震屏Z_第一人称;                                // 0x02C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_VehicleConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_VehicleConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_VehicleConfig_C")
 	}
 	static class UBP_VehicleConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_VehicleConfig_C>();
 	}
 };
-static_assert(alignof(UBP_VehicleConfig_C) == 0x000008, "Wrong alignment on UBP_VehicleConfig_C");
-static_assert(sizeof(UBP_VehicleConfig_C) == 0x000290, "Wrong size on UBP_VehicleConfig_C");
-static_assert(offsetof(UBP_VehicleConfig_C, 载具出生Tag) == 0x000038, "Member 'UBP_VehicleConfig_C::载具出生Tag' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 载具乘坐期间Tag) == 0x000058, "Member 'UBP_VehicleConfig_C::载具乘坐期间Tag' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 角色乘坐期间Tag) == 0x000078, "Member 'UBP_VehicleConfig_C::角色乘坐期间Tag' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 弹射时间) == 0x000098, "Member 'UBP_VehicleConfig_C::弹射时间' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 弹射高度) == 0x00009C, "Member 'UBP_VehicleConfig_C::弹射高度' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 打开滑翔伞延迟时间) == 0x0000A0, "Member 'UBP_VehicleConfig_C::打开滑翔伞延迟时间' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 弹射时间路径曲线) == 0x0000A8, "Member 'UBP_VehicleConfig_C::弹射时间路径曲线' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, PreEnterEffect) == 0x0000D8, "Member 'UBP_VehicleConfig_C::PreEnterEffect' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, PostEnterEffect) == 0x000108, "Member 'UBP_VehicleConfig_C::PostEnterEffect' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, PreEnterMatEffect) == 0x000138, "Member 'UBP_VehicleConfig_C::PreEnterMatEffect' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, PostEnterMatEffect) == 0x000168, "Member 'UBP_VehicleConfig_C::PostEnterMatEffect' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 驾驶员同步Tag) == 0x000198, "Member 'UBP_VehicleConfig_C::驾驶员同步Tag' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 驾驶员同步Buff) == 0x0001E8, "Member 'UBP_VehicleConfig_C::驾驶员同步Buff' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 前后输入映射曲线) == 0x000238, "Member 'UBP_VehicleConfig_C::前后输入映射曲线' has a wrong offset!");
-static_assert(offsetof(UBP_VehicleConfig_C, 载具同步驾驶员Tag) == 0x000240, "Member 'UBP_VehicleConfig_C::载具同步驾驶员Tag' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_VehicleConfig_C;
 
 }
 

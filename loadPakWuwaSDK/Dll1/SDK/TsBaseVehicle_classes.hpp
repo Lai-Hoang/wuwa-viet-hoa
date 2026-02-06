@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroVehicle_classes.hpp"
+#include "ECharacterDitherType_structs.hpp"
 
 
 namespace SDK
@@ -34,29 +34,26 @@ public:
 	int32                                         EntityId;                                          // 0x06EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	int32 GetEntityId();
-	void SetDitherEffect(float dither, ECharacterDitherType ditherType);
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_TsBaseVehicle(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void SetDitherEffect(float dither, ECharacterDitherType ditherType);
+	int32 GetEntityId();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsBaseVehicle_C">();
+		BP_STATIC_CLASS_IMPL("TsBaseVehicle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsBaseVehicle_C")
 	}
 	static class ATsBaseVehicle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsBaseVehicle_C>();
 	}
 };
-static_assert(alignof(ATsBaseVehicle_C) == 0x000010, "Wrong alignment on ATsBaseVehicle_C");
-static_assert(sizeof(ATsBaseVehicle_C) == 0x0006F0, "Wrong size on ATsBaseVehicle_C");
-static_assert(offsetof(ATsBaseVehicle_C, UberGraphFrame) == 0x0006B0, "Member 'ATsBaseVehicle_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsBaseVehicle_C, CharRenderingComponent) == 0x0006B8, "Member 'ATsBaseVehicle_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ATsBaseVehicle_C, InputComponentClass) == 0x0006C0, "Member 'ATsBaseVehicle_C::InputComponentClass' has a wrong offset!");
-static_assert(offsetof(ATsBaseVehicle_C, PlatformActor) == 0x0006E0, "Member 'ATsBaseVehicle_C::PlatformActor' has a wrong offset!");
-static_assert(offsetof(ATsBaseVehicle_C, RenderType) == 0x0006E8, "Member 'ATsBaseVehicle_C::RenderType' has a wrong offset!");
-static_assert(offsetof(ATsBaseVehicle_C, EntityId) == 0x0006EC, "Member 'ATsBaseVehicle_C::EntityId' has a wrong offset!");
+DUMPER7_ASSERTS_ATsBaseVehicle_C;
 
 }
 

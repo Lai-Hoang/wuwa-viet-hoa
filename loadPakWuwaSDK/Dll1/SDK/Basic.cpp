@@ -13,6 +13,7 @@
 
 #include "CoreUObject_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 namespace SDK
 {
@@ -21,9 +22,9 @@ uintptr_t InSDKUtils::GetImageBase()
 	return reinterpret_cast<uintptr_t>(GetModuleHandle(0));
 }
 
-class UClass* BasicFilesImpleUtils::FindClassByName(const std::string& Name)
+class UClass* BasicFilesImpleUtils::FindClassByName(const std::string& Name, bool bByFullName)
 {
-	return UObject::FindClassFast(Name);
+	return bByFullName ? UObject::FindClass(Name) : UObject::FindClassFast(Name);
 }
 
 class UClass* BasicFilesImpleUtils::FindClassByFullName(const std::string& Name)
@@ -67,6 +68,20 @@ UFunction* BasicFilesImpleUtils::FindFunctionByFName(const FName* Name)
 	return nullptr;
 }
 
+FName BasicFilesImpleUtils::StringToName(const wchar_t* Name)
+{
+	return UKismetStringLibrary::Conv_StringToName(FString(Name));
+}
+
+const FName& GetStaticName(const wchar_t* Name, FName& StaticName)
+{
+	if (StaticName.IsNone())
+	{
+		StaticName = BasicFilesImpleUtils::StringToName(Name);
+	}
+
+	return StaticName;
+}
 
 // Predefined Function
 

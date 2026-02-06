@@ -28,12 +28,7 @@ public:
 	double                                        Frame;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletEntity_OnObstacleTrace) == 0x000008, "Wrong alignment on BulletEntity_OnObstacleTrace");
-static_assert(sizeof(BulletEntity_OnObstacleTrace) == 0x000020, "Wrong size on BulletEntity_OnObstacleTrace");
-static_assert(offsetof(BulletEntity_OnObstacleTrace, Result) == 0x000000, "Member 'BulletEntity_OnObstacleTrace::Result' has a wrong offset!");
-static_assert(offsetof(BulletEntity_OnObstacleTrace, Element) == 0x000008, "Member 'BulletEntity_OnObstacleTrace::Element' has a wrong offset!");
-static_assert(offsetof(BulletEntity_OnObstacleTrace, Frame) == 0x000010, "Member 'BulletEntity_OnObstacleTrace::Frame' has a wrong offset!");
-static_assert(offsetof(BulletEntity_OnObstacleTrace, Index_0) == 0x000018, "Member 'BulletEntity_OnObstacleTrace::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_BulletEntity_OnObstacleTrace;
 
 // Function KuroBullet.BulletWorld.AddCommonBulletDataTable
 // 0x0008 (0x0008 - 0x0000)
@@ -42,9 +37,7 @@ struct BulletWorld_AddCommonBulletDataTable final
 public:
 	class UDataTable*                             DataTable;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletWorld_AddCommonBulletDataTable) == 0x000008, "Wrong alignment on BulletWorld_AddCommonBulletDataTable");
-static_assert(sizeof(BulletWorld_AddCommonBulletDataTable) == 0x000008, "Wrong size on BulletWorld_AddCommonBulletDataTable");
-static_assert(offsetof(BulletWorld_AddCommonBulletDataTable, DataTable) == 0x000000, "Member 'BulletWorld_AddCommonBulletDataTable::DataTable' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_AddCommonBulletDataTable;
 
 // Function KuroBullet.BulletWorld.CreateBullet
 // 0x0070 (0x0070 - 0x0000)
@@ -58,12 +51,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BulletWorld_CreateBullet) == 0x000010, "Wrong alignment on BulletWorld_CreateBullet");
-static_assert(sizeof(BulletWorld_CreateBullet) == 0x000070, "Wrong size on BulletWorld_CreateBullet");
-static_assert(offsetof(BulletWorld_CreateBullet, BulletOwner) == 0x000000, "Member 'BulletWorld_CreateBullet::BulletOwner' has a wrong offset!");
-static_assert(offsetof(BulletWorld_CreateBullet, BulletConfigId) == 0x000010, "Member 'BulletWorld_CreateBullet::BulletConfigId' has a wrong offset!");
-static_assert(offsetof(BulletWorld_CreateBullet, InitialTransform) == 0x000020, "Member 'BulletWorld_CreateBullet::InitialTransform' has a wrong offset!");
-static_assert(offsetof(BulletWorld_CreateBullet, ReturnValue) == 0x000060, "Member 'BulletWorld_CreateBullet::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_CreateBullet;
 
 // Function KuroBullet.BulletWorld.DestroyAllBulletsByOwner
 // 0x0008 (0x0008 - 0x0000)
@@ -72,9 +60,7 @@ struct BulletWorld_DestroyAllBulletsByOwner final
 public:
 	const class AActor*                           Owner;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletWorld_DestroyAllBulletsByOwner) == 0x000008, "Wrong alignment on BulletWorld_DestroyAllBulletsByOwner");
-static_assert(sizeof(BulletWorld_DestroyAllBulletsByOwner) == 0x000008, "Wrong size on BulletWorld_DestroyAllBulletsByOwner");
-static_assert(offsetof(BulletWorld_DestroyAllBulletsByOwner, Owner) == 0x000000, "Member 'BulletWorld_DestroyAllBulletsByOwner::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_DestroyAllBulletsByOwner;
 
 // Function KuroBullet.BulletWorld.DestroyBullet
 // 0x0010 (0x0010 - 0x0000)
@@ -85,10 +71,7 @@ public:
 	bool                                          ClearOwner;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BulletWorld_DestroyBullet) == 0x000008, "Wrong alignment on BulletWorld_DestroyBullet");
-static_assert(sizeof(BulletWorld_DestroyBullet) == 0x000010, "Wrong size on BulletWorld_DestroyBullet");
-static_assert(offsetof(BulletWorld_DestroyBullet, BulletEntity) == 0x000000, "Member 'BulletWorld_DestroyBullet::BulletEntity' has a wrong offset!");
-static_assert(offsetof(BulletWorld_DestroyBullet, ClearOwner) == 0x000008, "Member 'BulletWorld_DestroyBullet::ClearOwner' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_DestroyBullet;
 
 // Function KuroBullet.BulletWorld.DestroyBulletById
 // 0x0008 (0x0008 - 0x0000)
@@ -99,10 +82,7 @@ public:
 	bool                                          ClearOwner;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BulletWorld_DestroyBulletById) == 0x000004, "Wrong alignment on BulletWorld_DestroyBulletById");
-static_assert(sizeof(BulletWorld_DestroyBulletById) == 0x000008, "Wrong size on BulletWorld_DestroyBulletById");
-static_assert(offsetof(BulletWorld_DestroyBulletById, BulletEntityId) == 0x000000, "Member 'BulletWorld_DestroyBulletById::BulletEntityId' has a wrong offset!");
-static_assert(offsetof(BulletWorld_DestroyBulletById, ClearOwner) == 0x000004, "Member 'BulletWorld_DestroyBulletById::ClearOwner' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_DestroyBulletById;
 
 // Function KuroBullet.BulletWorld.EnableFlatGround
 // 0x0008 (0x0008 - 0x0000)
@@ -111,9 +91,7 @@ struct BulletWorld_EnableFlatGround final
 public:
 	double                                        Height;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletWorld_EnableFlatGround) == 0x000008, "Wrong alignment on BulletWorld_EnableFlatGround");
-static_assert(sizeof(BulletWorld_EnableFlatGround) == 0x000008, "Wrong size on BulletWorld_EnableFlatGround");
-static_assert(offsetof(BulletWorld_EnableFlatGround, Height) == 0x000000, "Member 'BulletWorld_EnableFlatGround::Height' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_EnableFlatGround;
 
 // Function KuroBullet.BulletWorld.EnableFlatGroundByAbovePoint
 // 0x0018 (0x0018 - 0x0000)
@@ -122,9 +100,7 @@ struct BulletWorld_EnableFlatGroundByAbovePoint final
 public:
 	struct FVectorDouble                          AbovePoint;                                        // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletWorld_EnableFlatGroundByAbovePoint) == 0x000008, "Wrong alignment on BulletWorld_EnableFlatGroundByAbovePoint");
-static_assert(sizeof(BulletWorld_EnableFlatGroundByAbovePoint) == 0x000018, "Wrong size on BulletWorld_EnableFlatGroundByAbovePoint");
-static_assert(offsetof(BulletWorld_EnableFlatGroundByAbovePoint, AbovePoint) == 0x000000, "Member 'BulletWorld_EnableFlatGroundByAbovePoint::AbovePoint' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_EnableFlatGroundByAbovePoint;
 
 // Function KuroBullet.BulletWorld.FindBulletConfig
 // 0x0228 (0x0228 - 0x0000)
@@ -137,12 +113,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0220(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BulletWorld_FindBulletConfig) == 0x000008, "Wrong alignment on BulletWorld_FindBulletConfig");
-static_assert(sizeof(BulletWorld_FindBulletConfig) == 0x000228, "Wrong size on BulletWorld_FindBulletConfig");
-static_assert(offsetof(BulletWorld_FindBulletConfig, BulletConfigId) == 0x000000, "Member 'BulletWorld_FindBulletConfig::BulletConfigId' has a wrong offset!");
-static_assert(offsetof(BulletWorld_FindBulletConfig, OwnerBulletDataTable) == 0x000008, "Member 'BulletWorld_FindBulletConfig::OwnerBulletDataTable' has a wrong offset!");
-static_assert(offsetof(BulletWorld_FindBulletConfig, OutRow) == 0x000010, "Member 'BulletWorld_FindBulletConfig::OutRow' has a wrong offset!");
-static_assert(offsetof(BulletWorld_FindBulletConfig, ReturnValue) == 0x000220, "Member 'BulletWorld_FindBulletConfig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_FindBulletConfig;
 
 // Function KuroBullet.BulletWorld.InitBulletConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -155,12 +126,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(BulletWorld_InitBulletConfig) == 0x000008, "Wrong alignment on BulletWorld_InitBulletConfig");
-static_assert(sizeof(BulletWorld_InitBulletConfig) == 0x000020, "Wrong size on BulletWorld_InitBulletConfig");
-static_assert(offsetof(BulletWorld_InitBulletConfig, BulletEntity) == 0x000000, "Member 'BulletWorld_InitBulletConfig::BulletEntity' has a wrong offset!");
-static_assert(offsetof(BulletWorld_InitBulletConfig, BulletConfigId) == 0x000008, "Member 'BulletWorld_InitBulletConfig::BulletConfigId' has a wrong offset!");
-static_assert(offsetof(BulletWorld_InitBulletConfig, OwnerBulletDataTable) == 0x000010, "Member 'BulletWorld_InitBulletConfig::OwnerBulletDataTable' has a wrong offset!");
-static_assert(offsetof(BulletWorld_InitBulletConfig, ReturnValue) == 0x000018, "Member 'BulletWorld_InitBulletConfig::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_InitBulletConfig;
 
 // Function KuroBullet.BulletWorld.SetShowBulletCollision
 // 0x0001 (0x0001 - 0x0000)
@@ -169,9 +135,7 @@ struct BulletWorld_SetShowBulletCollision final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(BulletWorld_SetShowBulletCollision) == 0x000001, "Wrong alignment on BulletWorld_SetShowBulletCollision");
-static_assert(sizeof(BulletWorld_SetShowBulletCollision) == 0x000001, "Wrong size on BulletWorld_SetShowBulletCollision");
-static_assert(offsetof(BulletWorld_SetShowBulletCollision, Value) == 0x000000, "Member 'BulletWorld_SetShowBulletCollision::Value' has a wrong offset!");
+DUMPER7_ASSERTS_BulletWorld_SetShowBulletCollision;
 
 // Function KuroBullet.KuroBulletFunctionLibrary.CreateBullet
 // 0x0070 (0x0070 - 0x0000)
@@ -186,14 +150,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBulletFunctionLibrary_CreateBullet) == 0x000010, "Wrong alignment on KuroBulletFunctionLibrary_CreateBullet");
-static_assert(sizeof(KuroBulletFunctionLibrary_CreateBullet) == 0x000070, "Wrong size on KuroBulletFunctionLibrary_CreateBullet");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, KSC_Entity) == 0x000000, "Member 'KuroBulletFunctionLibrary_CreateBullet::KSC_Entity' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, BulletConfigId) == 0x000008, "Member 'KuroBulletFunctionLibrary_CreateBullet::BulletConfigId' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, InitialTransform) == 0x000010, "Member 'KuroBulletFunctionLibrary_CreateBullet::InitialTransform' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, OwnerBulletDataTable) == 0x000050, "Member 'KuroBulletFunctionLibrary_CreateBullet::OwnerBulletDataTable' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, SkillTarget) == 0x000058, "Member 'KuroBulletFunctionLibrary_CreateBullet::SkillTarget' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_CreateBullet, ReturnValue) == 0x000060, "Member 'KuroBulletFunctionLibrary_CreateBullet::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_CreateBullet;
 
 // Function KuroBullet.KuroBulletFunctionLibrary.DestroyBulletById
 // 0x0008 (0x0008 - 0x0000)
@@ -204,10 +161,7 @@ public:
 	bool                                          ClearOwner;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroBulletFunctionLibrary_DestroyBulletById) == 0x000004, "Wrong alignment on KuroBulletFunctionLibrary_DestroyBulletById");
-static_assert(sizeof(KuroBulletFunctionLibrary_DestroyBulletById) == 0x000008, "Wrong size on KuroBulletFunctionLibrary_DestroyBulletById");
-static_assert(offsetof(KuroBulletFunctionLibrary_DestroyBulletById, BulletEntityId) == 0x000000, "Member 'KuroBulletFunctionLibrary_DestroyBulletById::BulletEntityId' has a wrong offset!");
-static_assert(offsetof(KuroBulletFunctionLibrary_DestroyBulletById, ClearOwner) == 0x000004, "Member 'KuroBulletFunctionLibrary_DestroyBulletById::ClearOwner' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_DestroyBulletById;
 
 // Function KuroBullet.KuroBulletFunctionLibrary.SetShowBulletCollision
 // 0x0001 (0x0001 - 0x0000)
@@ -216,9 +170,7 @@ struct KuroBulletFunctionLibrary_SetShowBulletCollision final
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBulletFunctionLibrary_SetShowBulletCollision) == 0x000001, "Wrong alignment on KuroBulletFunctionLibrary_SetShowBulletCollision");
-static_assert(sizeof(KuroBulletFunctionLibrary_SetShowBulletCollision) == 0x000001, "Wrong size on KuroBulletFunctionLibrary_SetShowBulletCollision");
-static_assert(offsetof(KuroBulletFunctionLibrary_SetShowBulletCollision, Value) == 0x000000, "Member 'KuroBulletFunctionLibrary_SetShowBulletCollision::Value' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_SetShowBulletCollision;
 
 // Function KuroBullet.KuroBulletSubsystem.CreateWorld
 // 0x0008 (0x0008 - 0x0000)
@@ -227,9 +179,7 @@ struct KuroBulletSubsystem_CreateWorld final
 public:
 	class UBulletWorld*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBulletSubsystem_CreateWorld) == 0x000008, "Wrong alignment on KuroBulletSubsystem_CreateWorld");
-static_assert(sizeof(KuroBulletSubsystem_CreateWorld) == 0x000008, "Wrong size on KuroBulletSubsystem_CreateWorld");
-static_assert(offsetof(KuroBulletSubsystem_CreateWorld, ReturnValue) == 0x000000, "Member 'KuroBulletSubsystem_CreateWorld::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBulletSubsystem_CreateWorld;
 
 // Function KuroBullet.KuroBulletSubsystem.GetBulletWorld
 // 0x0008 (0x0008 - 0x0000)
@@ -238,9 +188,7 @@ struct KuroBulletSubsystem_GetBulletWorld final
 public:
 	class UBulletWorld*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroBulletSubsystem_GetBulletWorld) == 0x000008, "Wrong alignment on KuroBulletSubsystem_GetBulletWorld");
-static_assert(sizeof(KuroBulletSubsystem_GetBulletWorld) == 0x000008, "Wrong size on KuroBulletSubsystem_GetBulletWorld");
-static_assert(offsetof(KuroBulletSubsystem_GetBulletWorld, ReturnValue) == 0x000000, "Member 'KuroBulletSubsystem_GetBulletWorld::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroBulletSubsystem_GetBulletWorld;
 
 }
 

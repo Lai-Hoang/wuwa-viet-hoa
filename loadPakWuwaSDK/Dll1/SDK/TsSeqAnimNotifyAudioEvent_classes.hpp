@@ -33,18 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSeqAnimNotifyAudioEvent_C">();
+		BP_STATIC_CLASS_IMPL("TsSeqAnimNotifyAudioEvent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSeqAnimNotifyAudioEvent_C")
 	}
 	static class UTsSeqAnimNotifyAudioEvent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsSeqAnimNotifyAudioEvent_C>();
 	}
 };
-static_assert(alignof(UTsSeqAnimNotifyAudioEvent_C) == 0x000008, "Wrong alignment on UTsSeqAnimNotifyAudioEvent_C");
-static_assert(sizeof(UTsSeqAnimNotifyAudioEvent_C) == 0x000088, "Wrong size on UTsSeqAnimNotifyAudioEvent_C");
-static_assert(offsetof(UTsSeqAnimNotifyAudioEvent_C, AudioEvent) == 0x000048, "Member 'UTsSeqAnimNotifyAudioEvent_C::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyAudioEvent_C, SocketName) == 0x000078, "Member 'UTsSeqAnimNotifyAudioEvent_C::SocketName' has a wrong offset!");
-static_assert(offsetof(UTsSeqAnimNotifyAudioEvent_C, Follow) == 0x000084, "Member 'UTsSeqAnimNotifyAudioEvent_C::Follow' has a wrong offset!");
+DUMPER7_ASSERTS_UTsSeqAnimNotifyAudioEvent_C;
 
 }
 

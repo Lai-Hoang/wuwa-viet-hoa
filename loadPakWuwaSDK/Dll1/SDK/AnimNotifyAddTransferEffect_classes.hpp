@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyAddTransferEffect_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyAddTransferEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyAddTransferEffect_C")
 	}
 	static class UAnimNotifyAddTransferEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyAddTransferEffect_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyAddTransferEffect_C) == 0x000008, "Wrong alignment on UAnimNotifyAddTransferEffect_C");
-static_assert(sizeof(UAnimNotifyAddTransferEffect_C) == 0x000058, "Wrong size on UAnimNotifyAddTransferEffect_C");
+DUMPER7_ASSERTS_UAnimNotifyAddTransferEffect_C;
 
 }
 

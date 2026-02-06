@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "ChaosSolverEngine_structs.hpp"
 #include "GeometryCollectionEngine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "Chaos_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ChaosSolverEngine_structs.hpp"
 
 
 namespace SDK
@@ -61,23 +61,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ChaosDestructionListener">();
+		STATIC_CLASS_IMPL("ChaosDestructionListener")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ChaosDestructionListener")
 	}
 	static class UChaosDestructionListener* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UChaosDestructionListener>();
 	}
 };
-static_assert(alignof(UChaosDestructionListener) == 0x000010, "Wrong alignment on UChaosDestructionListener");
-static_assert(sizeof(UChaosDestructionListener) == 0x000440, "Wrong size on UChaosDestructionListener");
-static_assert(offsetof(UChaosDestructionListener, CollisionEventRequestSettings) == 0x00021C, "Member 'UChaosDestructionListener::CollisionEventRequestSettings' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, BreakingEventRequestSettings) == 0x000234, "Member 'UChaosDestructionListener::BreakingEventRequestSettings' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, TrailingEventRequestSettings) == 0x00024C, "Member 'UChaosDestructionListener::TrailingEventRequestSettings' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, ChaosSolverActors) == 0x000268, "Member 'UChaosDestructionListener::ChaosSolverActors' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, GeometryCollectionActors) == 0x0002B8, "Member 'UChaosDestructionListener::GeometryCollectionActors' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, OnCollisionEvents) == 0x000308, "Member 'UChaosDestructionListener::OnCollisionEvents' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, OnBreakingEvents) == 0x000318, "Member 'UChaosDestructionListener::OnBreakingEvents' has a wrong offset!");
-static_assert(offsetof(UChaosDestructionListener, OnTrailingEvents) == 0x000328, "Member 'UChaosDestructionListener::OnTrailingEvents' has a wrong offset!");
+DUMPER7_ASSERTS_UChaosDestructionListener;
 
 // Class GeometryCollectionEngine.GeometryCollectionActor
 // 0x0010 (0x02C0 - 0x02B0)
@@ -95,17 +90,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionActor">();
+		STATIC_CLASS_IMPL("GeometryCollectionActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionActor")
 	}
 	static class AGeometryCollectionActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGeometryCollectionActor>();
 	}
 };
-static_assert(alignof(AGeometryCollectionActor) == 0x000008, "Wrong alignment on AGeometryCollectionActor");
-static_assert(sizeof(AGeometryCollectionActor) == 0x0002C0, "Wrong size on AGeometryCollectionActor");
-static_assert(offsetof(AGeometryCollectionActor, GeometryCollectionComponent) == 0x0002B0, "Member 'AGeometryCollectionActor::GeometryCollectionComponent' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionActor, GeometryCollectionDebugDrawComponent) == 0x0002B8, "Member 'AGeometryCollectionActor::GeometryCollectionDebugDrawComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AGeometryCollectionActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionCache
 // 0x0028 (0x0058 - 0x0030)
@@ -119,18 +115,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionCache">();
+		STATIC_CLASS_IMPL("GeometryCollectionCache")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionCache")
 	}
 	static class UGeometryCollectionCache* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCollectionCache>();
 	}
 };
-static_assert(alignof(UGeometryCollectionCache) == 0x000008, "Wrong alignment on UGeometryCollectionCache");
-static_assert(sizeof(UGeometryCollectionCache) == 0x000058, "Wrong size on UGeometryCollectionCache");
-static_assert(offsetof(UGeometryCollectionCache, RecordedData) == 0x000030, "Member 'UGeometryCollectionCache::RecordedData' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionCache, SupportedCollection) == 0x000040, "Member 'UGeometryCollectionCache::SupportedCollection' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionCache, CompatibleCollectionState) == 0x000048, "Member 'UGeometryCollectionCache::CompatibleCollectionState' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCollectionCache;
 
 // Class GeometryCollectionEngine.GeometryCollectionComponent
 // 0x04B0 (0x0A10 - 0x0560)
@@ -195,48 +191,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionComponent">();
+		STATIC_CLASS_IMPL("GeometryCollectionComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionComponent")
 	}
 	static class UGeometryCollectionComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCollectionComponent>();
 	}
 };
-static_assert(alignof(UGeometryCollectionComponent) == 0x000010, "Wrong alignment on UGeometryCollectionComponent");
-static_assert(sizeof(UGeometryCollectionComponent) == 0x000A10, "Wrong size on UGeometryCollectionComponent");
-static_assert(offsetof(UGeometryCollectionComponent, ChaosSolverActor) == 0x000568, "Member 'UGeometryCollectionComponent::ChaosSolverActor' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, RestCollection) == 0x000650, "Member 'UGeometryCollectionComponent::RestCollection' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, InitializationFields) == 0x000658, "Member 'UGeometryCollectionComponent::InitializationFields' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, Simulating) == 0x000668, "Member 'UGeometryCollectionComponent::Simulating' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, ObjectType) == 0x000670, "Member 'UGeometryCollectionComponent::ObjectType' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, EnableClustering) == 0x000671, "Member 'UGeometryCollectionComponent::EnableClustering' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, ClusterGroupIndex) == 0x000674, "Member 'UGeometryCollectionComponent::ClusterGroupIndex' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, MaxClusterLevel) == 0x000678, "Member 'UGeometryCollectionComponent::MaxClusterLevel' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, DamageThreshold) == 0x000680, "Member 'UGeometryCollectionComponent::DamageThreshold' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, ClusterConnectionType) == 0x000690, "Member 'UGeometryCollectionComponent::ClusterConnectionType' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, CollisionGroup) == 0x000694, "Member 'UGeometryCollectionComponent::CollisionGroup' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, CollisionSampleFraction) == 0x000698, "Member 'UGeometryCollectionComponent::CollisionSampleFraction' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, LinearEtherDrag) == 0x00069C, "Member 'UGeometryCollectionComponent::LinearEtherDrag' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, AngularEtherDrag) == 0x0006A0, "Member 'UGeometryCollectionComponent::AngularEtherDrag' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, PhysicalMaterial) == 0x0006A8, "Member 'UGeometryCollectionComponent::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, InitialVelocityType) == 0x0006B0, "Member 'UGeometryCollectionComponent::InitialVelocityType' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, InitialLinearVelocity) == 0x0006B4, "Member 'UGeometryCollectionComponent::InitialLinearVelocity' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, InitialAngularVelocity) == 0x0006C0, "Member 'UGeometryCollectionComponent::InitialAngularVelocity' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, PhysicalMaterialOverride) == 0x0006D0, "Member 'UGeometryCollectionComponent::PhysicalMaterialOverride' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, CacheParameters) == 0x0006D8, "Member 'UGeometryCollectionComponent::CacheParameters' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, NotifyGeometryCollectionPhysicsStateChange) == 0x000728, "Member 'UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsStateChange' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, NotifyGeometryCollectionPhysicsLoadingStateChange) == 0x000738, "Member 'UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsLoadingStateChange' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, OnChaosBreakEvent) == 0x000760, "Member 'UGeometryCollectionComponent::OnChaosBreakEvent' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, DesiredCacheTime) == 0x000770, "Member 'UGeometryCollectionComponent::DesiredCacheTime' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, CachePlayback) == 0x000774, "Member 'UGeometryCollectionComponent::CachePlayback' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, OnChaosPhysicsCollision) == 0x000778, "Member 'UGeometryCollectionComponent::OnChaosPhysicsCollision' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, bNotifyBreaks) == 0x000788, "Member 'UGeometryCollectionComponent::bNotifyBreaks' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, bNotifyCollisions) == 0x000789, "Member 'UGeometryCollectionComponent::bNotifyCollisions' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, bEnableReplication) == 0x00078A, "Member 'UGeometryCollectionComponent::bEnableReplication' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, bEnableAbandonAfterLevel) == 0x00078B, "Member 'UGeometryCollectionComponent::bEnableAbandonAfterLevel' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, ReplicationAbandonClusterLevel) == 0x00078C, "Member 'UGeometryCollectionComponent::ReplicationAbandonClusterLevel' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, RepData) == 0x000790, "Member 'UGeometryCollectionComponent::RepData' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionComponent, DummyBodySetup) == 0x0009E0, "Member 'UGeometryCollectionComponent::DummyBodySetup' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCollectionComponent;
 
 // Class GeometryCollectionEngine.GeometryCollectionDebugDrawActor
 // 0x00E8 (0x0398 - 0x02B0)
@@ -312,76 +278,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionDebugDrawActor">();
+		STATIC_CLASS_IMPL("GeometryCollectionDebugDrawActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionDebugDrawActor")
 	}
 	static class AGeometryCollectionDebugDrawActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGeometryCollectionDebugDrawActor>();
 	}
 };
-static_assert(alignof(AGeometryCollectionDebugDrawActor) == 0x000008, "Wrong alignment on AGeometryCollectionDebugDrawActor");
-static_assert(sizeof(AGeometryCollectionDebugDrawActor) == 0x000398, "Wrong size on AGeometryCollectionDebugDrawActor");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, WarningMessage) == 0x0002B0, "Member 'AGeometryCollectionDebugDrawActor::WarningMessage' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, SelectedRigidBody) == 0x0002B8, "Member 'AGeometryCollectionDebugDrawActor::SelectedRigidBody' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bDebugDrawWholeCollection) == 0x0002D0, "Member 'AGeometryCollectionDebugDrawActor::bDebugDrawWholeCollection' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bDebugDrawHierarchy) == 0x0002D1, "Member 'AGeometryCollectionDebugDrawActor::bDebugDrawHierarchy' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bDebugDrawClustering) == 0x0002D2, "Member 'AGeometryCollectionDebugDrawActor::bDebugDrawClustering' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, HideGeometry) == 0x0002D3, "Member 'AGeometryCollectionDebugDrawActor::HideGeometry' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyId) == 0x0002D4, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyId' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyCollision) == 0x0002D5, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyCollision' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bCollisionAtOrigin) == 0x0002D6, "Member 'AGeometryCollectionDebugDrawActor::bCollisionAtOrigin' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyTransform) == 0x0002D7, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyTransform' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyInertia) == 0x0002D8, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyInertia' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyVelocity) == 0x0002D9, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyVelocity' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyForce) == 0x0002DA, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyForce' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowRigidBodyInfos) == 0x0002DB, "Member 'AGeometryCollectionDebugDrawActor::bShowRigidBodyInfos' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowTransformIndex) == 0x0002DC, "Member 'AGeometryCollectionDebugDrawActor::bShowTransformIndex' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowTransform) == 0x0002DD, "Member 'AGeometryCollectionDebugDrawActor::bShowTransform' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowParent) == 0x0002DE, "Member 'AGeometryCollectionDebugDrawActor::bShowParent' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowLevel) == 0x0002DF, "Member 'AGeometryCollectionDebugDrawActor::bShowLevel' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowConnectivityEdges) == 0x0002E0, "Member 'AGeometryCollectionDebugDrawActor::bShowConnectivityEdges' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowGeometryIndex) == 0x0002E1, "Member 'AGeometryCollectionDebugDrawActor::bShowGeometryIndex' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowGeometryTransform) == 0x0002E2, "Member 'AGeometryCollectionDebugDrawActor::bShowGeometryTransform' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowBoundingBox) == 0x0002E3, "Member 'AGeometryCollectionDebugDrawActor::bShowBoundingBox' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowFaces) == 0x0002E4, "Member 'AGeometryCollectionDebugDrawActor::bShowFaces' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowFaceIndices) == 0x0002E5, "Member 'AGeometryCollectionDebugDrawActor::bShowFaceIndices' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowFaceNormals) == 0x0002E6, "Member 'AGeometryCollectionDebugDrawActor::bShowFaceNormals' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowSingleFace) == 0x0002E7, "Member 'AGeometryCollectionDebugDrawActor::bShowSingleFace' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, SingleFaceIndex) == 0x0002E8, "Member 'AGeometryCollectionDebugDrawActor::SingleFaceIndex' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowVertices) == 0x0002EC, "Member 'AGeometryCollectionDebugDrawActor::bShowVertices' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowVertexIndices) == 0x0002ED, "Member 'AGeometryCollectionDebugDrawActor::bShowVertexIndices' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bShowVertexNormals) == 0x0002EE, "Member 'AGeometryCollectionDebugDrawActor::bShowVertexNormals' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bUseActiveVisualization) == 0x0002EF, "Member 'AGeometryCollectionDebugDrawActor::bUseActiveVisualization' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, PointThickness) == 0x0002F0, "Member 'AGeometryCollectionDebugDrawActor::PointThickness' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, LineThickness) == 0x0002F4, "Member 'AGeometryCollectionDebugDrawActor::LineThickness' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, bTextShadow) == 0x0002F8, "Member 'AGeometryCollectionDebugDrawActor::bTextShadow' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, TextScale) == 0x0002FC, "Member 'AGeometryCollectionDebugDrawActor::TextScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, NormalScale) == 0x000300, "Member 'AGeometryCollectionDebugDrawActor::NormalScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, AxisScale) == 0x000304, "Member 'AGeometryCollectionDebugDrawActor::AxisScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, ArrowScale) == 0x000308, "Member 'AGeometryCollectionDebugDrawActor::ArrowScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyIdColor) == 0x00030C, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyIdColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyTransformScale) == 0x000310, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyTransformScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyCollisionColor) == 0x000314, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyCollisionColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyInertiaColor) == 0x000318, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyInertiaColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyVelocityColor) == 0x00031C, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyVelocityColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyForceColor) == 0x000320, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyForceColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, RigidBodyInfoColor) == 0x000324, "Member 'AGeometryCollectionDebugDrawActor::RigidBodyInfoColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, TransformIndexColor) == 0x000328, "Member 'AGeometryCollectionDebugDrawActor::TransformIndexColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, TransformScale) == 0x00032C, "Member 'AGeometryCollectionDebugDrawActor::TransformScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, LevelColor) == 0x000330, "Member 'AGeometryCollectionDebugDrawActor::LevelColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, ParentColor) == 0x000334, "Member 'AGeometryCollectionDebugDrawActor::ParentColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, ConnectivityEdgeThickness) == 0x000338, "Member 'AGeometryCollectionDebugDrawActor::ConnectivityEdgeThickness' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, GeometryIndexColor) == 0x00033C, "Member 'AGeometryCollectionDebugDrawActor::GeometryIndexColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, GeometryTransformScale) == 0x000340, "Member 'AGeometryCollectionDebugDrawActor::GeometryTransformScale' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, BoundingBoxColor) == 0x000344, "Member 'AGeometryCollectionDebugDrawActor::BoundingBoxColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, FaceColor) == 0x000348, "Member 'AGeometryCollectionDebugDrawActor::FaceColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, FaceIndexColor) == 0x00034C, "Member 'AGeometryCollectionDebugDrawActor::FaceIndexColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, FaceNormalColor) == 0x000350, "Member 'AGeometryCollectionDebugDrawActor::FaceNormalColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, SingleFaceColor) == 0x000354, "Member 'AGeometryCollectionDebugDrawActor::SingleFaceColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, VertexColor) == 0x000358, "Member 'AGeometryCollectionDebugDrawActor::VertexColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, VertexIndexColor) == 0x00035C, "Member 'AGeometryCollectionDebugDrawActor::VertexIndexColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, VertexNormalColor) == 0x000360, "Member 'AGeometryCollectionDebugDrawActor::VertexNormalColor' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionDebugDrawActor, SpriteComponent) == 0x000368, "Member 'AGeometryCollectionDebugDrawActor::SpriteComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AGeometryCollectionDebugDrawActor;
 
 // Class GeometryCollectionEngine.GeometryCollectionDebugDrawComponent
 // 0x0018 (0x00D8 - 0x00C0)
@@ -395,17 +303,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionDebugDrawComponent">();
+		STATIC_CLASS_IMPL("GeometryCollectionDebugDrawComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionDebugDrawComponent")
 	}
 	static class UGeometryCollectionDebugDrawComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCollectionDebugDrawComponent>();
 	}
 };
-static_assert(alignof(UGeometryCollectionDebugDrawComponent) == 0x000008, "Wrong alignment on UGeometryCollectionDebugDrawComponent");
-static_assert(sizeof(UGeometryCollectionDebugDrawComponent) == 0x0000D8, "Wrong size on UGeometryCollectionDebugDrawComponent");
-static_assert(offsetof(UGeometryCollectionDebugDrawComponent, GeometryCollectionDebugDrawActor) == 0x0000C0, "Member 'UGeometryCollectionDebugDrawComponent::GeometryCollectionDebugDrawActor' has a wrong offset!");
-static_assert(offsetof(UGeometryCollectionDebugDrawComponent, GeometryCollectionRenderLevelSetActor) == 0x0000C8, "Member 'UGeometryCollectionDebugDrawComponent::GeometryCollectionRenderLevelSetActor' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCollectionDebugDrawComponent;
 
 // Class GeometryCollectionEngine.GeometryCollection
 // 0x00B8 (0x00E8 - 0x0030)
@@ -442,35 +351,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollection">();
+		STATIC_CLASS_IMPL("GeometryCollection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollection")
 	}
 	static class UGeometryCollection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGeometryCollection>();
 	}
 };
-static_assert(alignof(UGeometryCollection) == 0x000008, "Wrong alignment on UGeometryCollection");
-static_assert(sizeof(UGeometryCollection) == 0x0000E8, "Wrong size on UGeometryCollection");
-static_assert(offsetof(UGeometryCollection, GeometrySource) == 0x000038, "Member 'UGeometryCollection::GeometrySource' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, Materials) == 0x000048, "Member 'UGeometryCollection::Materials' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, CollisionType) == 0x000058, "Member 'UGeometryCollection::CollisionType' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, ImplicitType) == 0x000059, "Member 'UGeometryCollection::ImplicitType' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MinLevelSetResolution) == 0x00005C, "Member 'UGeometryCollection::MinLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MaxLevelSetResolution) == 0x000060, "Member 'UGeometryCollection::MaxLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MinClusterLevelSetResolution) == 0x000064, "Member 'UGeometryCollection::MinClusterLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MaxClusterLevelSetResolution) == 0x000068, "Member 'UGeometryCollection::MaxClusterLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, CollisionObjectReductionPercentage) == 0x00006C, "Member 'UGeometryCollection::CollisionObjectReductionPercentage' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, bMassAsDensity) == 0x000070, "Member 'UGeometryCollection::bMassAsDensity' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, Mass) == 0x000074, "Member 'UGeometryCollection::Mass' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MinimumMassClamp) == 0x000078, "Member 'UGeometryCollection::MinimumMassClamp' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, CollisionParticlesFraction) == 0x00007C, "Member 'UGeometryCollection::CollisionParticlesFraction' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, MaximumCollisionParticles) == 0x000080, "Member 'UGeometryCollection::MaximumCollisionParticles' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, SizeSpecificData) == 0x000088, "Member 'UGeometryCollection::SizeSpecificData' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, EnableRemovePiecesOnFracture) == 0x000098, "Member 'UGeometryCollection::EnableRemovePiecesOnFracture' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, RemoveOnFractureMaterials) == 0x0000A0, "Member 'UGeometryCollection::RemoveOnFractureMaterials' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, PersistentGuid) == 0x0000B0, "Member 'UGeometryCollection::PersistentGuid' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, StateGuid) == 0x0000C0, "Member 'UGeometryCollection::StateGuid' has a wrong offset!");
-static_assert(offsetof(UGeometryCollection, BoneSelectedMaterialIndex) == 0x0000D0, "Member 'UGeometryCollection::BoneSelectedMaterialIndex' has a wrong offset!");
+DUMPER7_ASSERTS_UGeometryCollection;
 
 // Class GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
 // 0x00A0 (0x0350 - 0x02B0)
@@ -488,21 +380,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryCollectionRenderLevelSetActor">();
+		STATIC_CLASS_IMPL("GeometryCollectionRenderLevelSetActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GeometryCollectionRenderLevelSetActor")
 	}
 	static class AGeometryCollectionRenderLevelSetActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGeometryCollectionRenderLevelSetActor>();
 	}
 };
-static_assert(alignof(AGeometryCollectionRenderLevelSetActor) == 0x000010, "Wrong alignment on AGeometryCollectionRenderLevelSetActor");
-static_assert(sizeof(AGeometryCollectionRenderLevelSetActor) == 0x000350, "Wrong size on AGeometryCollectionRenderLevelSetActor");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, TargetVolumeTexture) == 0x0002B0, "Member 'AGeometryCollectionRenderLevelSetActor::TargetVolumeTexture' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, RayMarchMaterial) == 0x0002B8, "Member 'AGeometryCollectionRenderLevelSetActor::RayMarchMaterial' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, SurfaceTolerance) == 0x0002C0, "Member 'AGeometryCollectionRenderLevelSetActor::SurfaceTolerance' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, Isovalue) == 0x0002C4, "Member 'AGeometryCollectionRenderLevelSetActor::Isovalue' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, Enabled) == 0x0002C8, "Member 'AGeometryCollectionRenderLevelSetActor::Enabled' has a wrong offset!");
-static_assert(offsetof(AGeometryCollectionRenderLevelSetActor, RenderVolumeBoundingBox) == 0x0002C9, "Member 'AGeometryCollectionRenderLevelSetActor::RenderVolumeBoundingBox' has a wrong offset!");
+DUMPER7_ASSERTS_AGeometryCollectionRenderLevelSetActor;
 
 // Class GeometryCollectionEngine.SkeletalMeshSimulationComponent
 // 0x0088 (0x0148 - 0x00C0)
@@ -541,35 +430,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SkeletalMeshSimulationComponent">();
+		STATIC_CLASS_IMPL("SkeletalMeshSimulationComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SkeletalMeshSimulationComponent")
 	}
 	static class USkeletalMeshSimulationComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USkeletalMeshSimulationComponent>();
 	}
 };
-static_assert(alignof(USkeletalMeshSimulationComponent) == 0x000008, "Wrong alignment on USkeletalMeshSimulationComponent");
-static_assert(sizeof(USkeletalMeshSimulationComponent) == 0x000148, "Wrong size on USkeletalMeshSimulationComponent");
-static_assert(offsetof(USkeletalMeshSimulationComponent, PhysicalMaterial) == 0x0000C8, "Member 'USkeletalMeshSimulationComponent::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, ChaosSolverActor) == 0x0000D0, "Member 'USkeletalMeshSimulationComponent::ChaosSolverActor' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, OverridePhysicsAsset) == 0x0000D8, "Member 'USkeletalMeshSimulationComponent::OverridePhysicsAsset' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, bSimulating) == 0x0000E0, "Member 'USkeletalMeshSimulationComponent::bSimulating' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, bNotifyCollisions) == 0x0000E1, "Member 'USkeletalMeshSimulationComponent::bNotifyCollisions' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, ObjectType) == 0x0000E2, "Member 'USkeletalMeshSimulationComponent::ObjectType' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, Density) == 0x0000E4, "Member 'USkeletalMeshSimulationComponent::Density' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, MinMass) == 0x0000E8, "Member 'USkeletalMeshSimulationComponent::MinMass' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, MaxMass) == 0x0000EC, "Member 'USkeletalMeshSimulationComponent::MaxMass' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, CollisionType) == 0x0000F0, "Member 'USkeletalMeshSimulationComponent::CollisionType' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, ImplicitShapeParticlesPerUnitArea) == 0x0000F4, "Member 'USkeletalMeshSimulationComponent::ImplicitShapeParticlesPerUnitArea' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, ImplicitShapeMinNumParticles) == 0x0000F8, "Member 'USkeletalMeshSimulationComponent::ImplicitShapeMinNumParticles' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, ImplicitShapeMaxNumParticles) == 0x0000FC, "Member 'USkeletalMeshSimulationComponent::ImplicitShapeMaxNumParticles' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, MinLevelSetResolution) == 0x000100, "Member 'USkeletalMeshSimulationComponent::MinLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, MaxLevelSetResolution) == 0x000104, "Member 'USkeletalMeshSimulationComponent::MaxLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, CollisionGroup) == 0x000108, "Member 'USkeletalMeshSimulationComponent::CollisionGroup' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, InitialVelocityType) == 0x00010C, "Member 'USkeletalMeshSimulationComponent::InitialVelocityType' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, InitialLinearVelocity) == 0x000110, "Member 'USkeletalMeshSimulationComponent::InitialLinearVelocity' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, InitialAngularVelocity) == 0x00011C, "Member 'USkeletalMeshSimulationComponent::InitialAngularVelocity' has a wrong offset!");
-static_assert(offsetof(USkeletalMeshSimulationComponent, OnChaosPhysicsCollision) == 0x000128, "Member 'USkeletalMeshSimulationComponent::OnChaosPhysicsCollision' has a wrong offset!");
+DUMPER7_ASSERTS_USkeletalMeshSimulationComponent;
 
 // Class GeometryCollectionEngine.StaticMeshSimulationComponent
 // 0x0088 (0x0148 - 0x00C0)
@@ -607,31 +479,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StaticMeshSimulationComponent">();
+		STATIC_CLASS_IMPL("StaticMeshSimulationComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StaticMeshSimulationComponent")
 	}
 	static class UStaticMeshSimulationComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStaticMeshSimulationComponent>();
 	}
 };
-static_assert(alignof(UStaticMeshSimulationComponent) == 0x000008, "Wrong alignment on UStaticMeshSimulationComponent");
-static_assert(sizeof(UStaticMeshSimulationComponent) == 0x000148, "Wrong size on UStaticMeshSimulationComponent");
-static_assert(offsetof(UStaticMeshSimulationComponent, Simulating) == 0x0000C8, "Member 'UStaticMeshSimulationComponent::Simulating' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, bNotifyCollisions) == 0x0000C9, "Member 'UStaticMeshSimulationComponent::bNotifyCollisions' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, ObjectType) == 0x0000CA, "Member 'UStaticMeshSimulationComponent::ObjectType' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, Mass) == 0x0000CC, "Member 'UStaticMeshSimulationComponent::Mass' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, CollisionType) == 0x0000D0, "Member 'UStaticMeshSimulationComponent::CollisionType' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, ImplicitType) == 0x0000D1, "Member 'UStaticMeshSimulationComponent::ImplicitType' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, MinLevelSetResolution) == 0x0000D4, "Member 'UStaticMeshSimulationComponent::MinLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, MaxLevelSetResolution) == 0x0000D8, "Member 'UStaticMeshSimulationComponent::MaxLevelSetResolution' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, InitialVelocityType) == 0x0000DC, "Member 'UStaticMeshSimulationComponent::InitialVelocityType' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, InitialLinearVelocity) == 0x0000E0, "Member 'UStaticMeshSimulationComponent::InitialLinearVelocity' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, InitialAngularVelocity) == 0x0000EC, "Member 'UStaticMeshSimulationComponent::InitialAngularVelocity' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, DamageThreshold) == 0x0000F8, "Member 'UStaticMeshSimulationComponent::DamageThreshold' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, PhysicalMaterial) == 0x000100, "Member 'UStaticMeshSimulationComponent::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, ChaosSolverActor) == 0x000108, "Member 'UStaticMeshSimulationComponent::ChaosSolverActor' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, OnChaosPhysicsCollision) == 0x000110, "Member 'UStaticMeshSimulationComponent::OnChaosPhysicsCollision' has a wrong offset!");
-static_assert(offsetof(UStaticMeshSimulationComponent, SimulatedComponents) == 0x000130, "Member 'UStaticMeshSimulationComponent::SimulatedComponents' has a wrong offset!");
+DUMPER7_ASSERTS_UStaticMeshSimulationComponent;
 
 }
 

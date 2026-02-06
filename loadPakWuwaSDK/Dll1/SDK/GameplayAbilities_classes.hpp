@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GameplayTasks_classes.hpp"
 
 
@@ -33,7 +33,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueInterface">();
+		STATIC_CLASS_IMPL("GameplayCueInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueInterface")
 	}
 	static class IGameplayCueInterface* GetDefaultObj()
 	{
@@ -49,8 +53,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IGameplayCueInterface) == 0x000001, "Wrong alignment on IGameplayCueInterface");
-static_assert(sizeof(IGameplayCueInterface) == 0x000001, "Wrong size on IGameplayCueInterface");
+DUMPER7_ASSERTS_IGameplayCueInterface;
 
 // Class GameplayAbilities.AbilitySystemGlobals
 // 0x02C8 (0x02F8 - 0x0030)
@@ -107,47 +110,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemGlobals">();
+		STATIC_CLASS_IMPL("AbilitySystemGlobals")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemGlobals")
 	}
 	static class UAbilitySystemGlobals* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilitySystemGlobals>();
 	}
 };
-static_assert(alignof(UAbilitySystemGlobals) == 0x000008, "Wrong alignment on UAbilitySystemGlobals");
-static_assert(sizeof(UAbilitySystemGlobals) == 0x0002F8, "Wrong size on UAbilitySystemGlobals");
-static_assert(offsetof(UAbilitySystemGlobals, AbilitySystemGlobalsClassName) == 0x000030, "Member 'UAbilitySystemGlobals::AbilitySystemGlobalsClassName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailIsDeadTag) == 0x000078, "Member 'UAbilitySystemGlobals::ActivateFailIsDeadTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailIsDeadName) == 0x000084, "Member 'UAbilitySystemGlobals::ActivateFailIsDeadName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailCooldownTag) == 0x000090, "Member 'UAbilitySystemGlobals::ActivateFailCooldownTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailCooldownName) == 0x00009C, "Member 'UAbilitySystemGlobals::ActivateFailCooldownName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailCostTag) == 0x0000A8, "Member 'UAbilitySystemGlobals::ActivateFailCostTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailCostName) == 0x0000B4, "Member 'UAbilitySystemGlobals::ActivateFailCostName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailTagsBlockedTag) == 0x0000C0, "Member 'UAbilitySystemGlobals::ActivateFailTagsBlockedTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailTagsBlockedName) == 0x0000CC, "Member 'UAbilitySystemGlobals::ActivateFailTagsBlockedName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailTagsMissingTag) == 0x0000D8, "Member 'UAbilitySystemGlobals::ActivateFailTagsMissingTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailTagsMissingName) == 0x0000E4, "Member 'UAbilitySystemGlobals::ActivateFailTagsMissingName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailNetworkingTag) == 0x0000F0, "Member 'UAbilitySystemGlobals::ActivateFailNetworkingTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, ActivateFailNetworkingName) == 0x0000FC, "Member 'UAbilitySystemGlobals::ActivateFailNetworkingName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, MinimalReplicationTagCountBits) == 0x000108, "Member 'UAbilitySystemGlobals::MinimalReplicationTagCountBits' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, TargetDataStructCache) == 0x000110, "Member 'UAbilitySystemGlobals::TargetDataStructCache' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, bAllowGameplayModEvaluationChannels) == 0x000120, "Member 'UAbilitySystemGlobals::bAllowGameplayModEvaluationChannels' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, DefaultGameplayModEvaluationChannel) == 0x000121, "Member 'UAbilitySystemGlobals::DefaultGameplayModEvaluationChannel' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GameplayModEvaluationChannelAliases) == 0x000124, "Member 'UAbilitySystemGlobals::GameplayModEvaluationChannelAliases' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalCurveTableName) == 0x0001A0, "Member 'UAbilitySystemGlobals::GlobalCurveTableName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalCurveTable) == 0x0001C0, "Member 'UAbilitySystemGlobals::GlobalCurveTable' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalAttributeMetaDataTableName) == 0x0001C8, "Member 'UAbilitySystemGlobals::GlobalAttributeMetaDataTableName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalAttributeMetaDataTable) == 0x0001E8, "Member 'UAbilitySystemGlobals::GlobalAttributeMetaDataTable' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalAttributeSetDefaultsTableName) == 0x0001F0, "Member 'UAbilitySystemGlobals::GlobalAttributeSetDefaultsTableName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalAttributeSetDefaultsTableNames) == 0x000210, "Member 'UAbilitySystemGlobals::GlobalAttributeSetDefaultsTableNames' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalAttributeDefaultsTables) == 0x000220, "Member 'UAbilitySystemGlobals::GlobalAttributeDefaultsTables' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalGameplayCueManagerClass) == 0x000230, "Member 'UAbilitySystemGlobals::GlobalGameplayCueManagerClass' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalGameplayCueManagerName) == 0x000250, "Member 'UAbilitySystemGlobals::GlobalGameplayCueManagerName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GameplayCueNotifyPaths) == 0x000270, "Member 'UAbilitySystemGlobals::GameplayCueNotifyPaths' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GameplayTagResponseTableName) == 0x000280, "Member 'UAbilitySystemGlobals::GameplayTagResponseTableName' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GameplayTagResponseTable) == 0x0002A0, "Member 'UAbilitySystemGlobals::GameplayTagResponseTable' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, PredictTargetGameplayEffects) == 0x0002A8, "Member 'UAbilitySystemGlobals::PredictTargetGameplayEffects' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemGlobals, GlobalGameplayCueManager) == 0x0002B0, "Member 'UAbilitySystemGlobals::GlobalGameplayCueManager' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilitySystemGlobals;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor
 // 0x0130 (0x03E0 - 0x02B0)
@@ -179,7 +153,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor")
 	}
 	static class AGameplayAbilityTargetActor* GetDefaultObj()
 	{
@@ -187,19 +165,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(AGameplayAbilityTargetActor) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor");
-static_assert(sizeof(AGameplayAbilityTargetActor) == 0x0003E0, "Wrong size on AGameplayAbilityTargetActor");
-static_assert(offsetof(AGameplayAbilityTargetActor, ShouldProduceTargetDataOnServer) == 0x0002B0, "Member 'AGameplayAbilityTargetActor::ShouldProduceTargetDataOnServer' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, StartLocation) == 0x0002C0, "Member 'AGameplayAbilityTargetActor::StartLocation' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, MasterPC) == 0x000370, "Member 'AGameplayAbilityTargetActor::MasterPC' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, OwningAbility) == 0x000378, "Member 'AGameplayAbilityTargetActor::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, bDestroyOnConfirmation) == 0x000380, "Member 'AGameplayAbilityTargetActor::bDestroyOnConfirmation' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, SourceActor) == 0x000388, "Member 'AGameplayAbilityTargetActor::SourceActor' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, ReticleParams) == 0x000390, "Member 'AGameplayAbilityTargetActor::ReticleParams' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, ReticleClass) == 0x0003A0, "Member 'AGameplayAbilityTargetActor::ReticleClass' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, Filter) == 0x0003A8, "Member 'AGameplayAbilityTargetActor::Filter' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, bDebug) == 0x0003B8, "Member 'AGameplayAbilityTargetActor::bDebug' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor, GenericDelegateBoundASC) == 0x0003D0, "Member 'AGameplayAbilityTargetActor::GenericDelegateBoundASC' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor;
 
 // Class GameplayAbilities.AbilitySystemBlueprintLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -289,15 +255,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemBlueprintLibrary">();
+		STATIC_CLASS_IMPL("AbilitySystemBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemBlueprintLibrary")
 	}
 	static class UAbilitySystemBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilitySystemBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UAbilitySystemBlueprintLibrary) == 0x000008, "Wrong alignment on UAbilitySystemBlueprintLibrary");
-static_assert(sizeof(UAbilitySystemBlueprintLibrary) == 0x000030, "Wrong size on UAbilitySystemBlueprintLibrary");
+DUMPER7_ASSERTS_UAbilitySystemBlueprintLibrary;
 
 // Class GameplayAbilities.AttributeSet
 // 0x0008 (0x0038 - 0x0030)
@@ -309,15 +278,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AttributeSet">();
+		STATIC_CLASS_IMPL("AttributeSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AttributeSet")
 	}
 	static class UAttributeSet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAttributeSet>();
 	}
 };
-static_assert(alignof(UAttributeSet) == 0x000008, "Wrong alignment on UAttributeSet");
-static_assert(sizeof(UAttributeSet) == 0x000038, "Wrong size on UAttributeSet");
+DUMPER7_ASSERTS_UAttributeSet;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_Radius
 // 0x0000 (0x03E0 - 0x03E0)
@@ -330,16 +302,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor_Radius">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_Radius")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_Radius")
 	}
 	static class AGameplayAbilityTargetActor_Radius* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayAbilityTargetActor_Radius>();
 	}
 };
-static_assert(alignof(AGameplayAbilityTargetActor_Radius) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor_Radius");
-static_assert(sizeof(AGameplayAbilityTargetActor_Radius) == 0x0003E0, "Wrong size on AGameplayAbilityTargetActor_Radius");
-static_assert(offsetof(AGameplayAbilityTargetActor_Radius, Radius) == 0x0003D8, "Member 'AGameplayAbilityTargetActor_Radius::Radius' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_Radius;
 
 // Class GameplayAbilities.AbilitySystemComponent
 // 0x1258 (0x1388 - 0x0130)
@@ -469,42 +443,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemComponent">();
+		STATIC_CLASS_IMPL("AbilitySystemComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemComponent")
 	}
 	static class UAbilitySystemComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilitySystemComponent>();
 	}
 };
-static_assert(alignof(UAbilitySystemComponent) == 0x000008, "Wrong alignment on UAbilitySystemComponent");
-static_assert(sizeof(UAbilitySystemComponent) == 0x001388, "Wrong size on UAbilitySystemComponent");
-static_assert(offsetof(UAbilitySystemComponent, DefaultStartingData) == 0x000140, "Member 'UAbilitySystemComponent::DefaultStartingData' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, SpawnedAttributes) == 0x000150, "Member 'UAbilitySystemComponent::SpawnedAttributes' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AffectedAnimInstanceTag) == 0x000160, "Member 'UAbilitySystemComponent::AffectedAnimInstanceTag' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, OutgoingDuration) == 0x000318, "Member 'UAbilitySystemComponent::OutgoingDuration' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, IncomingDuration) == 0x00031C, "Member 'UAbilitySystemComponent::IncomingDuration' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ClientDebugStrings) == 0x000340, "Member 'UAbilitySystemComponent::ClientDebugStrings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ServerDebugStrings) == 0x000350, "Member 'UAbilitySystemComponent::ServerDebugStrings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, UserAbilityActivationInhibited) == 0x0003B8, "Member 'UAbilitySystemComponent::UserAbilityActivationInhibited' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ReplicationProxyEnabled) == 0x0003B9, "Member 'UAbilitySystemComponent::ReplicationProxyEnabled' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bSuppressGrantAbility) == 0x0003BA, "Member 'UAbilitySystemComponent::bSuppressGrantAbility' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bSuppressGameplayCues) == 0x0003BB, "Member 'UAbilitySystemComponent::bSuppressGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, SpawnedTargetActors) == 0x0003C0, "Member 'UAbilitySystemComponent::SpawnedTargetActors' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, OwnerActor) == 0x0003F8, "Member 'UAbilitySystemComponent::OwnerActor' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AvatarActor) == 0x000400, "Member 'UAbilitySystemComponent::AvatarActor' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActivatableAbilities) == 0x000418, "Member 'UAbilitySystemComponent::ActivatableAbilities' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, AllReplicatedInstancedAbilities) == 0x000568, "Member 'UAbilitySystemComponent::AllReplicatedInstancedAbilities' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, RepAnimMontageInfo) == 0x000778, "Member 'UAbilitySystemComponent::RepAnimMontageInfo' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bCachedIsNetSimulated) == 0x0007A8, "Member 'UAbilitySystemComponent::bCachedIsNetSimulated' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, bPendingMontageRep) == 0x0007A9, "Member 'UAbilitySystemComponent::bPendingMontageRep' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, LocalAnimMontageInfo) == 0x0007B0, "Member 'UAbilitySystemComponent::LocalAnimMontageInfo' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayEffects) == 0x000878, "Member 'UAbilitySystemComponent::ActiveGameplayEffects' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ActiveGameplayCues) == 0x000D28, "Member 'UAbilitySystemComponent::ActiveGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationGameplayCues) == 0x000E50, "Member 'UAbilitySystemComponent::MinimalReplicationGameplayCues' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, BlockedAbilityBindings) == 0x0010A8, "Member 'UAbilitySystemComponent::BlockedAbilityBindings' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, MinimalReplicationTags) == 0x0011E8, "Member 'UAbilitySystemComponent::MinimalReplicationTags' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, ReplicatedPredictionKeyMap) == 0x001260, "Member 'UAbilitySystemComponent::ReplicatedPredictionKeyMap' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemComponent, TagUpdated) == 0x001378, "Member 'UAbilitySystemComponent::TagUpdated' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilitySystemComponent;
 
 // Class GameplayAbilities.GameplayAbilityWorldReticle
 // 0x0020 (0x02D0 - 0x02B0)
@@ -530,22 +480,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityWorldReticle">();
+		STATIC_CLASS_IMPL("GameplayAbilityWorldReticle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityWorldReticle")
 	}
 	static class AGameplayAbilityWorldReticle* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayAbilityWorldReticle>();
 	}
 };
-static_assert(alignof(AGameplayAbilityWorldReticle) == 0x000008, "Wrong alignment on AGameplayAbilityWorldReticle");
-static_assert(sizeof(AGameplayAbilityWorldReticle) == 0x0002D0, "Wrong size on AGameplayAbilityWorldReticle");
-static_assert(offsetof(AGameplayAbilityWorldReticle, Parameters) == 0x0002B0, "Member 'AGameplayAbilityWorldReticle::Parameters' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, bFaceOwnerFlat) == 0x0002BC, "Member 'AGameplayAbilityWorldReticle::bFaceOwnerFlat' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, bSnapToTargetedActor) == 0x0002BD, "Member 'AGameplayAbilityWorldReticle::bSnapToTargetedActor' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, bIsTargetValid) == 0x0002BE, "Member 'AGameplayAbilityWorldReticle::bIsTargetValid' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, bIsTargetAnActor) == 0x0002BF, "Member 'AGameplayAbilityWorldReticle::bIsTargetAnActor' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, MasterPC) == 0x0002C0, "Member 'AGameplayAbilityWorldReticle::MasterPC' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle, TargetingActor) == 0x0002C8, "Member 'AGameplayAbilityWorldReticle::TargetingActor' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityWorldReticle;
 
 // Class GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization
 // 0x0018 (0x02E8 - 0x02D0)
@@ -558,17 +504,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityWorldReticle_ActorVisualization">();
+		STATIC_CLASS_IMPL("GameplayAbilityWorldReticle_ActorVisualization")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityWorldReticle_ActorVisualization")
 	}
 	static class AGameplayAbilityWorldReticle_ActorVisualization* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayAbilityWorldReticle_ActorVisualization>();
 	}
 };
-static_assert(alignof(AGameplayAbilityWorldReticle_ActorVisualization) == 0x000008, "Wrong alignment on AGameplayAbilityWorldReticle_ActorVisualization");
-static_assert(sizeof(AGameplayAbilityWorldReticle_ActorVisualization) == 0x0002E8, "Wrong size on AGameplayAbilityWorldReticle_ActorVisualization");
-static_assert(offsetof(AGameplayAbilityWorldReticle_ActorVisualization, CollisionComponent) == 0x0002D0, "Member 'AGameplayAbilityWorldReticle_ActorVisualization::CollisionComponent' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityWorldReticle_ActorVisualization, VisualizationComponents) == 0x0002D8, "Member 'AGameplayAbilityWorldReticle_ActorVisualization::VisualizationComponents' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityWorldReticle_ActorVisualization;
 
 // Class GameplayAbilities.AbilitySystemDebugHUD
 // 0x0000 (0x03A0 - 0x03A0)
@@ -577,15 +524,18 @@ class AAbilitySystemDebugHUD final : public AHUD
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemDebugHUD">();
+		STATIC_CLASS_IMPL("AbilitySystemDebugHUD")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemDebugHUD")
 	}
 	static class AAbilitySystemDebugHUD* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AAbilitySystemDebugHUD>();
 	}
 };
-static_assert(alignof(AAbilitySystemDebugHUD) == 0x000008, "Wrong alignment on AAbilitySystemDebugHUD");
-static_assert(sizeof(AAbilitySystemDebugHUD) == 0x0003A0, "Wrong size on AAbilitySystemDebugHUD");
+DUMPER7_ASSERTS_AAbilitySystemDebugHUD;
 
 // Class GameplayAbilities.GameplayCueNotify_Actor
 // 0x0068 (0x0318 - 0x02B0)
@@ -622,28 +572,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueNotify_Actor">();
+		STATIC_CLASS_IMPL("GameplayCueNotify_Actor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueNotify_Actor")
 	}
 	static class AGameplayCueNotify_Actor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayCueNotify_Actor>();
 	}
 };
-static_assert(alignof(AGameplayCueNotify_Actor) == 0x000008, "Wrong alignment on AGameplayCueNotify_Actor");
-static_assert(sizeof(AGameplayCueNotify_Actor) == 0x000318, "Wrong size on AGameplayCueNotify_Actor");
-static_assert(offsetof(AGameplayCueNotify_Actor, bAutoDestroyOnRemove) == 0x0002B0, "Member 'AGameplayCueNotify_Actor::bAutoDestroyOnRemove' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, AutoDestroyDelay) == 0x0002B4, "Member 'AGameplayCueNotify_Actor::AutoDestroyDelay' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, WarnIfTimelineIsStillRunning) == 0x0002B8, "Member 'AGameplayCueNotify_Actor::WarnIfTimelineIsStillRunning' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, WarnIfLatentActionIsStillRunning) == 0x0002B9, "Member 'AGameplayCueNotify_Actor::WarnIfLatentActionIsStillRunning' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, GameplayCueTag) == 0x0002BC, "Member 'AGameplayCueNotify_Actor::GameplayCueTag' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, GameplayCueName) == 0x0002C8, "Member 'AGameplayCueNotify_Actor::GameplayCueName' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, bAutoAttachToOwner) == 0x0002D4, "Member 'AGameplayCueNotify_Actor::bAutoAttachToOwner' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, IsOverride) == 0x0002D5, "Member 'AGameplayCueNotify_Actor::IsOverride' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, bUniqueInstancePerInstigator) == 0x0002D6, "Member 'AGameplayCueNotify_Actor::bUniqueInstancePerInstigator' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, bUniqueInstancePerSourceObject) == 0x0002D7, "Member 'AGameplayCueNotify_Actor::bUniqueInstancePerSourceObject' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, bAllowMultipleOnActiveEvents) == 0x0002D8, "Member 'AGameplayCueNotify_Actor::bAllowMultipleOnActiveEvents' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, bAllowMultipleWhileActiveEvents) == 0x0002D9, "Member 'AGameplayCueNotify_Actor::bAllowMultipleWhileActiveEvents' has a wrong offset!");
-static_assert(offsetof(AGameplayCueNotify_Actor, NumPreallocatedInstances) == 0x0002DC, "Member 'AGameplayCueNotify_Actor::NumPreallocatedInstances' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayCueNotify_Actor;
 
 // Class GameplayAbilities.AbilitySystemInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -652,7 +592,11 @@ class IAbilitySystemInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemInterface">();
+		STATIC_CLASS_IMPL("AbilitySystemInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemInterface")
 	}
 	static class IAbilitySystemInterface* GetDefaultObj()
 	{
@@ -668,8 +612,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IAbilitySystemInterface) == 0x000001, "Wrong alignment on IAbilitySystemInterface");
-static_assert(sizeof(IAbilitySystemInterface) == 0x000001, "Wrong size on IAbilitySystemInterface");
+DUMPER7_ASSERTS_IAbilitySystemInterface;
 
 // Class GameplayAbilities.AbilitySystemReplicationProxyInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -678,7 +621,11 @@ class IAbilitySystemReplicationProxyInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemReplicationProxyInterface">();
+		STATIC_CLASS_IMPL("AbilitySystemReplicationProxyInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemReplicationProxyInterface")
 	}
 	static class IAbilitySystemReplicationProxyInterface* GetDefaultObj()
 	{
@@ -694,8 +641,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IAbilitySystemReplicationProxyInterface) == 0x000001, "Wrong alignment on IAbilitySystemReplicationProxyInterface");
-static_assert(sizeof(IAbilitySystemReplicationProxyInterface) == 0x000001, "Wrong size on IAbilitySystemReplicationProxyInterface");
+DUMPER7_ASSERTS_IAbilitySystemReplicationProxyInterface;
 
 // Class GameplayAbilities.AbilitySystemTestAttributeSet
 // 0x0040 (0x0078 - 0x0038)
@@ -722,31 +668,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemTestAttributeSet">();
+		STATIC_CLASS_IMPL("AbilitySystemTestAttributeSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemTestAttributeSet")
 	}
 	static class UAbilitySystemTestAttributeSet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilitySystemTestAttributeSet>();
 	}
 };
-static_assert(alignof(UAbilitySystemTestAttributeSet) == 0x000008, "Wrong alignment on UAbilitySystemTestAttributeSet");
-static_assert(sizeof(UAbilitySystemTestAttributeSet) == 0x000078, "Wrong size on UAbilitySystemTestAttributeSet");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, MaxHealth) == 0x000038, "Member 'UAbilitySystemTestAttributeSet::MaxHealth' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, Health) == 0x00003C, "Member 'UAbilitySystemTestAttributeSet::Health' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, Mana) == 0x000040, "Member 'UAbilitySystemTestAttributeSet::Mana' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, MaxMana) == 0x000044, "Member 'UAbilitySystemTestAttributeSet::MaxMana' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, Damage) == 0x000048, "Member 'UAbilitySystemTestAttributeSet::Damage' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, SpellDamage) == 0x00004C, "Member 'UAbilitySystemTestAttributeSet::SpellDamage' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, PhysicalDamage) == 0x000050, "Member 'UAbilitySystemTestAttributeSet::PhysicalDamage' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, CritChance) == 0x000054, "Member 'UAbilitySystemTestAttributeSet::CritChance' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, CritMultiplier) == 0x000058, "Member 'UAbilitySystemTestAttributeSet::CritMultiplier' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, ArmorDamageReduction) == 0x00005C, "Member 'UAbilitySystemTestAttributeSet::ArmorDamageReduction' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, DodgeChance) == 0x000060, "Member 'UAbilitySystemTestAttributeSet::DodgeChance' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, LifeSteal) == 0x000064, "Member 'UAbilitySystemTestAttributeSet::LifeSteal' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, Strength) == 0x000068, "Member 'UAbilitySystemTestAttributeSet::Strength' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, StackingAttribute1) == 0x00006C, "Member 'UAbilitySystemTestAttributeSet::StackingAttribute1' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, StackingAttribute2) == 0x000070, "Member 'UAbilitySystemTestAttributeSet::StackingAttribute2' has a wrong offset!");
-static_assert(offsetof(UAbilitySystemTestAttributeSet, NoStackAttribute) == 0x000074, "Member 'UAbilitySystemTestAttributeSet::NoStackAttribute' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilitySystemTestAttributeSet;
 
 // Class GameplayAbilities.AbilitySystemTestPawn
 // 0x0020 (0x0358 - 0x0338)
@@ -759,16 +692,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilitySystemTestPawn">();
+		STATIC_CLASS_IMPL("AbilitySystemTestPawn")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilitySystemTestPawn")
 	}
 	static class AAbilitySystemTestPawn* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AAbilitySystemTestPawn>();
 	}
 };
-static_assert(alignof(AAbilitySystemTestPawn) == 0x000008, "Wrong alignment on AAbilitySystemTestPawn");
-static_assert(sizeof(AAbilitySystemTestPawn) == 0x000358, "Wrong size on AAbilitySystemTestPawn");
-static_assert(offsetof(AAbilitySystemTestPawn, AbilitySystemComponent) == 0x000350, "Member 'AAbilitySystemTestPawn::AbilitySystemComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AAbilitySystemTestPawn;
 
 // Class GameplayAbilities.AbilityTask
 // 0x0018 (0x0088 - 0x0070)
@@ -782,17 +717,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask">();
+		STATIC_CLASS_IMPL("AbilityTask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask")
 	}
 	static class UAbilityTask* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask>();
 	}
 };
-static_assert(alignof(UAbilityTask) == 0x000008, "Wrong alignment on UAbilityTask");
-static_assert(sizeof(UAbilityTask) == 0x000088, "Wrong size on UAbilityTask");
-static_assert(offsetof(UAbilityTask, Ability) == 0x000070, "Member 'UAbilityTask::Ability' has a wrong offset!");
-static_assert(offsetof(UAbilityTask, AbilitySystemComponent) == 0x000078, "Member 'UAbilityTask::AbilitySystemComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotion_Base
 // 0x0038 (0x00C0 - 0x0088)
@@ -810,20 +746,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotion_Base">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotion_Base")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotion_Base")
 	}
 	static class UAbilityTask_ApplyRootMotion_Base* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotion_Base>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotion_Base) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotion_Base");
-static_assert(sizeof(UAbilityTask_ApplyRootMotion_Base) == 0x0000C0, "Wrong size on UAbilityTask_ApplyRootMotion_Base");
-static_assert(offsetof(UAbilityTask_ApplyRootMotion_Base, ForceName) == 0x000088, "Member 'UAbilityTask_ApplyRootMotion_Base::ForceName' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotion_Base, FinishVelocityMode) == 0x000094, "Member 'UAbilityTask_ApplyRootMotion_Base::FinishVelocityMode' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotion_Base, FinishSetVelocity) == 0x000098, "Member 'UAbilityTask_ApplyRootMotion_Base::FinishSetVelocity' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotion_Base, FinishClampVelocity) == 0x0000A4, "Member 'UAbilityTask_ApplyRootMotion_Base::FinishClampVelocity' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotion_Base, MovementComponent) == 0x0000A8, "Member 'UAbilityTask_ApplyRootMotion_Base::MovementComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotion_Base;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionConstantForce
 // 0x0038 (0x00F8 - 0x00C0)
@@ -846,22 +780,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotionConstantForce">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotionConstantForce")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotionConstantForce")
 	}
 	static class UAbilityTask_ApplyRootMotionConstantForce* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotionConstantForce>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotionConstantForce) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotionConstantForce");
-static_assert(sizeof(UAbilityTask_ApplyRootMotionConstantForce) == 0x0000F8, "Wrong size on UAbilityTask_ApplyRootMotionConstantForce");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, OnFinish) == 0x0000C0, "Member 'UAbilityTask_ApplyRootMotionConstantForce::OnFinish' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, WorldDirection) == 0x0000D0, "Member 'UAbilityTask_ApplyRootMotionConstantForce::WorldDirection' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, Strength) == 0x0000DC, "Member 'UAbilityTask_ApplyRootMotionConstantForce::Strength' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, Duration) == 0x0000E0, "Member 'UAbilityTask_ApplyRootMotionConstantForce::Duration' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, bIsAdditive) == 0x0000E4, "Member 'UAbilityTask_ApplyRootMotionConstantForce::bIsAdditive' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, StrengthOverTime) == 0x0000E8, "Member 'UAbilityTask_ApplyRootMotionConstantForce::StrengthOverTime' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionConstantForce, bEnableGravity) == 0x0000F0, "Member 'UAbilityTask_ApplyRootMotionConstantForce::bEnableGravity' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotionConstantForce;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce
 // 0x0058 (0x0118 - 0x00C0)
@@ -890,25 +820,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotionJumpForce">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotionJumpForce")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotionJumpForce")
 	}
 	static class UAbilityTask_ApplyRootMotionJumpForce* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotionJumpForce>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotionJumpForce) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotionJumpForce");
-static_assert(sizeof(UAbilityTask_ApplyRootMotionJumpForce) == 0x000118, "Wrong size on UAbilityTask_ApplyRootMotionJumpForce");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, OnFinish) == 0x0000C0, "Member 'UAbilityTask_ApplyRootMotionJumpForce::OnFinish' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, OnLanded) == 0x0000D0, "Member 'UAbilityTask_ApplyRootMotionJumpForce::OnLanded' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, Rotation) == 0x0000E0, "Member 'UAbilityTask_ApplyRootMotionJumpForce::Rotation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, Distance) == 0x0000EC, "Member 'UAbilityTask_ApplyRootMotionJumpForce::Distance' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, Height) == 0x0000F0, "Member 'UAbilityTask_ApplyRootMotionJumpForce::Height' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, Duration) == 0x0000F4, "Member 'UAbilityTask_ApplyRootMotionJumpForce::Duration' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, MinimumLandedTriggerTime) == 0x0000F8, "Member 'UAbilityTask_ApplyRootMotionJumpForce::MinimumLandedTriggerTime' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, bFinishOnLanded) == 0x0000FC, "Member 'UAbilityTask_ApplyRootMotionJumpForce::bFinishOnLanded' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, PathOffsetCurve) == 0x000100, "Member 'UAbilityTask_ApplyRootMotionJumpForce::PathOffsetCurve' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionJumpForce, TimeMappingCurve) == 0x000108, "Member 'UAbilityTask_ApplyRootMotionJumpForce::TimeMappingCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotionJumpForce;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce
 // 0x0078 (0x0138 - 0x00C0)
@@ -944,30 +867,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotionMoveToActorForce">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotionMoveToActorForce")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotionMoveToActorForce")
 	}
 	static class UAbilityTask_ApplyRootMotionMoveToActorForce* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotionMoveToActorForce>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotionMoveToActorForce) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotionMoveToActorForce");
-static_assert(sizeof(UAbilityTask_ApplyRootMotionMoveToActorForce) == 0x000138, "Wrong size on UAbilityTask_ApplyRootMotionMoveToActorForce");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, OnFinished) == 0x0000C0, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::OnFinished' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, StartLocation) == 0x0000D8, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::StartLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLocation) == 0x0000E4, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetActor) == 0x0000F0, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetActor' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLocationOffset) == 0x0000F8, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLocationOffset' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, OffsetAlignment) == 0x000104, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::OffsetAlignment' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, Duration) == 0x000108, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::Duration' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, bDisableDestinationReachedInterrupt) == 0x00010C, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::bDisableDestinationReachedInterrupt' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, bSetNewMovementMode) == 0x00010D, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::bSetNewMovementMode' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, NewMovementMode) == 0x00010E, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::NewMovementMode' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, bRestrictSpeedToExpected) == 0x00010F, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::bRestrictSpeedToExpected' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, PathOffsetCurve) == 0x000110, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::PathOffsetCurve' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TimeMappingCurve) == 0x000118, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TimeMappingCurve' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLerpSpeedHorizontalCurve) == 0x000120, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLerpSpeedHorizontalCurve' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToActorForce, TargetLerpSpeedVerticalCurve) == 0x000128, "Member 'UAbilityTask_ApplyRootMotionMoveToActorForce::TargetLerpSpeedVerticalCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotionMoveToActorForce;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce
 // 0x0050 (0x0110 - 0x00C0)
@@ -992,24 +903,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotionMoveToForce">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotionMoveToForce")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotionMoveToForce")
 	}
 	static class UAbilityTask_ApplyRootMotionMoveToForce* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotionMoveToForce>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotionMoveToForce) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotionMoveToForce");
-static_assert(sizeof(UAbilityTask_ApplyRootMotionMoveToForce) == 0x000110, "Wrong size on UAbilityTask_ApplyRootMotionMoveToForce");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, OnTimedOut) == 0x0000C0, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::OnTimedOut' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, OnTimedOutAndDestinationReached) == 0x0000D0, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::OnTimedOutAndDestinationReached' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, StartLocation) == 0x0000E0, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::StartLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, TargetLocation) == 0x0000EC, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::TargetLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, Duration) == 0x0000F8, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::Duration' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, bSetNewMovementMode) == 0x0000FC, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::bSetNewMovementMode' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, NewMovementMode) == 0x0000FD, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::NewMovementMode' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, bRestrictSpeedToExpected) == 0x0000FE, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::bRestrictSpeedToExpected' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionMoveToForce, PathOffsetCurve) == 0x000100, "Member 'UAbilityTask_ApplyRootMotionMoveToForce::PathOffsetCurve' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotionMoveToForce;
 
 // Class GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce
 // 0x0058 (0x0118 - 0x00C0)
@@ -1039,28 +944,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_ApplyRootMotionRadialForce">();
+		STATIC_CLASS_IMPL("AbilityTask_ApplyRootMotionRadialForce")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_ApplyRootMotionRadialForce")
 	}
 	static class UAbilityTask_ApplyRootMotionRadialForce* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_ApplyRootMotionRadialForce>();
 	}
 };
-static_assert(alignof(UAbilityTask_ApplyRootMotionRadialForce) == 0x000008, "Wrong alignment on UAbilityTask_ApplyRootMotionRadialForce");
-static_assert(sizeof(UAbilityTask_ApplyRootMotionRadialForce) == 0x000118, "Wrong size on UAbilityTask_ApplyRootMotionRadialForce");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, OnFinish) == 0x0000C0, "Member 'UAbilityTask_ApplyRootMotionRadialForce::OnFinish' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, Location) == 0x0000D0, "Member 'UAbilityTask_ApplyRootMotionRadialForce::Location' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, LocationActor) == 0x0000E0, "Member 'UAbilityTask_ApplyRootMotionRadialForce::LocationActor' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, Strength) == 0x0000E8, "Member 'UAbilityTask_ApplyRootMotionRadialForce::Strength' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, Duration) == 0x0000EC, "Member 'UAbilityTask_ApplyRootMotionRadialForce::Duration' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, Radius) == 0x0000F0, "Member 'UAbilityTask_ApplyRootMotionRadialForce::Radius' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, bIsPush) == 0x0000F4, "Member 'UAbilityTask_ApplyRootMotionRadialForce::bIsPush' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, bIsAdditive) == 0x0000F5, "Member 'UAbilityTask_ApplyRootMotionRadialForce::bIsAdditive' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, bNoZForce) == 0x0000F6, "Member 'UAbilityTask_ApplyRootMotionRadialForce::bNoZForce' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, StrengthDistanceFalloff) == 0x0000F8, "Member 'UAbilityTask_ApplyRootMotionRadialForce::StrengthDistanceFalloff' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, StrengthOverTime) == 0x000100, "Member 'UAbilityTask_ApplyRootMotionRadialForce::StrengthOverTime' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, bUseFixedWorldDirection) == 0x000108, "Member 'UAbilityTask_ApplyRootMotionRadialForce::bUseFixedWorldDirection' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_ApplyRootMotionRadialForce, FixedWorldDirection) == 0x00010C, "Member 'UAbilityTask_ApplyRootMotionRadialForce::FixedWorldDirection' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_ApplyRootMotionRadialForce;
 
 // Class GameplayAbilities.AbilityTask_MoveToLocation
 // 0x0048 (0x00D0 - 0x0088)
@@ -1082,21 +977,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_MoveToLocation">();
+		STATIC_CLASS_IMPL("AbilityTask_MoveToLocation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_MoveToLocation")
 	}
 	static class UAbilityTask_MoveToLocation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_MoveToLocation>();
 	}
 };
-static_assert(alignof(UAbilityTask_MoveToLocation) == 0x000008, "Wrong alignment on UAbilityTask_MoveToLocation");
-static_assert(sizeof(UAbilityTask_MoveToLocation) == 0x0000D0, "Wrong size on UAbilityTask_MoveToLocation");
-static_assert(offsetof(UAbilityTask_MoveToLocation, OnTargetLocationReached) == 0x000088, "Member 'UAbilityTask_MoveToLocation::OnTargetLocationReached' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_MoveToLocation, StartLocation) == 0x00009C, "Member 'UAbilityTask_MoveToLocation::StartLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_MoveToLocation, TargetLocation) == 0x0000A8, "Member 'UAbilityTask_MoveToLocation::TargetLocation' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_MoveToLocation, DurationOfMovement) == 0x0000B4, "Member 'UAbilityTask_MoveToLocation::DurationOfMovement' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_MoveToLocation, LerpCurve) == 0x0000C0, "Member 'UAbilityTask_MoveToLocation::LerpCurve' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_MoveToLocation, LerpCurveVector) == 0x0000C8, "Member 'UAbilityTask_MoveToLocation::LerpCurveVector' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_MoveToLocation;
 
 // Class GameplayAbilities.AbilityTask_NetworkSyncPoint
 // 0x0018 (0x00A0 - 0x0088)
@@ -1114,16 +1006,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_NetworkSyncPoint">();
+		STATIC_CLASS_IMPL("AbilityTask_NetworkSyncPoint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_NetworkSyncPoint")
 	}
 	static class UAbilityTask_NetworkSyncPoint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_NetworkSyncPoint>();
 	}
 };
-static_assert(alignof(UAbilityTask_NetworkSyncPoint) == 0x000008, "Wrong alignment on UAbilityTask_NetworkSyncPoint");
-static_assert(sizeof(UAbilityTask_NetworkSyncPoint) == 0x0000A0, "Wrong size on UAbilityTask_NetworkSyncPoint");
-static_assert(offsetof(UAbilityTask_NetworkSyncPoint, OnSync) == 0x000088, "Member 'UAbilityTask_NetworkSyncPoint::OnSync' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_NetworkSyncPoint;
 
 // Class GameplayAbilities.AbilityTask_PlayMontageAndWait
 // 0x00A0 (0x0128 - 0x0088)
@@ -1155,26 +1049,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_PlayMontageAndWait">();
+		STATIC_CLASS_IMPL("AbilityTask_PlayMontageAndWait")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_PlayMontageAndWait")
 	}
 	static class UAbilityTask_PlayMontageAndWait* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_PlayMontageAndWait>();
 	}
 };
-static_assert(alignof(UAbilityTask_PlayMontageAndWait) == 0x000008, "Wrong alignment on UAbilityTask_PlayMontageAndWait");
-static_assert(sizeof(UAbilityTask_PlayMontageAndWait) == 0x000128, "Wrong size on UAbilityTask_PlayMontageAndWait");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, OnCompleted) == 0x000088, "Member 'UAbilityTask_PlayMontageAndWait::OnCompleted' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, OnBlendOut) == 0x000098, "Member 'UAbilityTask_PlayMontageAndWait::OnBlendOut' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, OnInterrupted) == 0x0000A8, "Member 'UAbilityTask_PlayMontageAndWait::OnInterrupted' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, OnCancelled) == 0x0000B8, "Member 'UAbilityTask_PlayMontageAndWait::OnCancelled' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, OnTick) == 0x0000C8, "Member 'UAbilityTask_PlayMontageAndWait::OnTick' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, MontageToPlay) == 0x000100, "Member 'UAbilityTask_PlayMontageAndWait::MontageToPlay' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, Rate) == 0x000108, "Member 'UAbilityTask_PlayMontageAndWait::Rate' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, StartSection) == 0x00010C, "Member 'UAbilityTask_PlayMontageAndWait::StartSection' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, AnimRootMotionTranslationScale) == 0x000118, "Member 'UAbilityTask_PlayMontageAndWait::AnimRootMotionTranslationScale' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, StartTimeSeconds) == 0x00011C, "Member 'UAbilityTask_PlayMontageAndWait::StartTimeSeconds' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_PlayMontageAndWait, bStopWhenAbilityEnds) == 0x000120, "Member 'UAbilityTask_PlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_PlayMontageAndWait;
 
 // Class GameplayAbilities.AbilityTask_Repeat
 // 0x0038 (0x00C0 - 0x0088)
@@ -1191,17 +1077,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_Repeat">();
+		STATIC_CLASS_IMPL("AbilityTask_Repeat")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_Repeat")
 	}
 	static class UAbilityTask_Repeat* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_Repeat>();
 	}
 };
-static_assert(alignof(UAbilityTask_Repeat) == 0x000008, "Wrong alignment on UAbilityTask_Repeat");
-static_assert(sizeof(UAbilityTask_Repeat) == 0x0000C0, "Wrong size on UAbilityTask_Repeat");
-static_assert(offsetof(UAbilityTask_Repeat, OnPerformAction) == 0x000088, "Member 'UAbilityTask_Repeat::OnPerformAction' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_Repeat, OnFinished) == 0x000098, "Member 'UAbilityTask_Repeat::OnFinished' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_Repeat;
 
 // Class GameplayAbilities.AbilityTask_SpawnActor
 // 0x0048 (0x00D0 - 0x0088)
@@ -1221,17 +1108,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_SpawnActor">();
+		STATIC_CLASS_IMPL("AbilityTask_SpawnActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_SpawnActor")
 	}
 	static class UAbilityTask_SpawnActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_SpawnActor>();
 	}
 };
-static_assert(alignof(UAbilityTask_SpawnActor) == 0x000008, "Wrong alignment on UAbilityTask_SpawnActor");
-static_assert(sizeof(UAbilityTask_SpawnActor) == 0x0000D0, "Wrong size on UAbilityTask_SpawnActor");
-static_assert(offsetof(UAbilityTask_SpawnActor, Success) == 0x000088, "Member 'UAbilityTask_SpawnActor::Success' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_SpawnActor, DidNotSpawn) == 0x000098, "Member 'UAbilityTask_SpawnActor::DidNotSpawn' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_SpawnActor;
 
 // Class GameplayAbilities.AbilityTask_StartAbilityState
 // 0x0038 (0x00C0 - 0x0088)
@@ -1248,17 +1136,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_StartAbilityState">();
+		STATIC_CLASS_IMPL("AbilityTask_StartAbilityState")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_StartAbilityState")
 	}
 	static class UAbilityTask_StartAbilityState* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_StartAbilityState>();
 	}
 };
-static_assert(alignof(UAbilityTask_StartAbilityState) == 0x000008, "Wrong alignment on UAbilityTask_StartAbilityState");
-static_assert(sizeof(UAbilityTask_StartAbilityState) == 0x0000C0, "Wrong size on UAbilityTask_StartAbilityState");
-static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateEnded) == 0x000088, "Member 'UAbilityTask_StartAbilityState::OnStateEnded' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_StartAbilityState, OnStateInterrupted) == 0x000098, "Member 'UAbilityTask_StartAbilityState::OnStateInterrupted' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_StartAbilityState;
 
 // Class GameplayAbilities.AbilityTask_VisualizeTargeting
 // 0x0028 (0x00B0 - 0x0088)
@@ -1278,16 +1167,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_VisualizeTargeting">();
+		STATIC_CLASS_IMPL("AbilityTask_VisualizeTargeting")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_VisualizeTargeting")
 	}
 	static class UAbilityTask_VisualizeTargeting* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_VisualizeTargeting>();
 	}
 };
-static_assert(alignof(UAbilityTask_VisualizeTargeting) == 0x000008, "Wrong alignment on UAbilityTask_VisualizeTargeting");
-static_assert(sizeof(UAbilityTask_VisualizeTargeting) == 0x0000B0, "Wrong size on UAbilityTask_VisualizeTargeting");
-static_assert(offsetof(UAbilityTask_VisualizeTargeting, TimeElapsed) == 0x000088, "Member 'UAbilityTask_VisualizeTargeting::TimeElapsed' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_VisualizeTargeting;
 
 // Class GameplayAbilities.AbilityTask_WaitAbilityActivate
 // 0x00C8 (0x0150 - 0x0088)
@@ -1307,16 +1198,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitAbilityActivate">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitAbilityActivate")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitAbilityActivate")
 	}
 	static class UAbilityTask_WaitAbilityActivate* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitAbilityActivate>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitAbilityActivate) == 0x000008, "Wrong alignment on UAbilityTask_WaitAbilityActivate");
-static_assert(sizeof(UAbilityTask_WaitAbilityActivate) == 0x000150, "Wrong size on UAbilityTask_WaitAbilityActivate");
-static_assert(offsetof(UAbilityTask_WaitAbilityActivate, OnActivate) == 0x000088, "Member 'UAbilityTask_WaitAbilityActivate::OnActivate' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitAbilityActivate;
 
 // Class GameplayAbilities.AbilityTask_WaitAbilityCommit
 // 0x0080 (0x0108 - 0x0088)
@@ -1335,16 +1228,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitAbilityCommit">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitAbilityCommit")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitAbilityCommit")
 	}
 	static class UAbilityTask_WaitAbilityCommit* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitAbilityCommit>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitAbilityCommit) == 0x000008, "Wrong alignment on UAbilityTask_WaitAbilityCommit");
-static_assert(sizeof(UAbilityTask_WaitAbilityCommit) == 0x000108, "Wrong size on UAbilityTask_WaitAbilityCommit");
-static_assert(offsetof(UAbilityTask_WaitAbilityCommit, OnCommit) == 0x000088, "Member 'UAbilityTask_WaitAbilityCommit::OnCommit' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitAbilityCommit;
 
 // Class GameplayAbilities.AbilityTask_WaitAttributeChange
 // 0x0080 (0x0108 - 0x0088)
@@ -1362,17 +1257,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChange">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitAttributeChange")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitAttributeChange")
 	}
 	static class UAbilityTask_WaitAttributeChange* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChange>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitAttributeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChange");
-static_assert(sizeof(UAbilityTask_WaitAttributeChange) == 0x000108, "Wrong size on UAbilityTask_WaitAttributeChange");
-static_assert(offsetof(UAbilityTask_WaitAttributeChange, OnChange) == 0x000088, "Member 'UAbilityTask_WaitAttributeChange::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChange, ExternalOwner) == 0x000100, "Member 'UAbilityTask_WaitAttributeChange::ExternalOwner' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitAttributeChange;
 
 // Class GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold
 // 0x00C0 (0x0148 - 0x0088)
@@ -1389,17 +1285,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChangeRatioThreshold">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitAttributeChangeRatioThreshold")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitAttributeChangeRatioThreshold")
 	}
 	static class UAbilityTask_WaitAttributeChangeRatioThreshold* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeRatioThreshold>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeRatioThreshold");
-static_assert(sizeof(UAbilityTask_WaitAttributeChangeRatioThreshold) == 0x000148, "Wrong size on UAbilityTask_WaitAttributeChangeRatioThreshold");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, OnChange) == 0x000088, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeRatioThreshold, ExternalOwner) == 0x000140, "Member 'UAbilityTask_WaitAttributeChangeRatioThreshold::ExternalOwner' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitAttributeChangeRatioThreshold;
 
 // Class GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold
 // 0x0070 (0x00F8 - 0x0088)
@@ -1416,17 +1313,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitAttributeChangeThreshold">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitAttributeChangeThreshold")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitAttributeChangeThreshold")
 	}
 	static class UAbilityTask_WaitAttributeChangeThreshold* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitAttributeChangeThreshold>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitAttributeChangeThreshold) == 0x000008, "Wrong alignment on UAbilityTask_WaitAttributeChangeThreshold");
-static_assert(sizeof(UAbilityTask_WaitAttributeChangeThreshold) == 0x0000F8, "Wrong size on UAbilityTask_WaitAttributeChangeThreshold");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, OnChange) == 0x000088, "Member 'UAbilityTask_WaitAttributeChangeThreshold::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitAttributeChangeThreshold, ExternalOwner) == 0x0000F0, "Member 'UAbilityTask_WaitAttributeChangeThreshold::ExternalOwner' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitAttributeChangeThreshold;
 
 // Class GameplayAbilities.AbilityTask_WaitCancel
 // 0x0018 (0x00A0 - 0x0088)
@@ -1445,16 +1343,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitCancel">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitCancel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitCancel")
 	}
 	static class UAbilityTask_WaitCancel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitCancel>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitCancel");
-static_assert(sizeof(UAbilityTask_WaitCancel) == 0x0000A0, "Wrong size on UAbilityTask_WaitCancel");
-static_assert(offsetof(UAbilityTask_WaitCancel, OnCancel) == 0x000088, "Member 'UAbilityTask_WaitCancel::OnCancel' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitCancel;
 
 // Class GameplayAbilities.AbilityTask_WaitConfirm
 // 0x0020 (0x00A8 - 0x0088)
@@ -1472,16 +1372,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitConfirm">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitConfirm")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitConfirm")
 	}
 	static class UAbilityTask_WaitConfirm* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitConfirm>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitConfirm) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirm");
-static_assert(sizeof(UAbilityTask_WaitConfirm) == 0x0000A8, "Wrong size on UAbilityTask_WaitConfirm");
-static_assert(offsetof(UAbilityTask_WaitConfirm, OnConfirm) == 0x000088, "Member 'UAbilityTask_WaitConfirm::OnConfirm' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitConfirm;
 
 // Class GameplayAbilities.AbilityTask_WaitConfirmCancel
 // 0x0028 (0x00B0 - 0x0088)
@@ -1503,17 +1405,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitConfirmCancel">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitConfirmCancel")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitConfirmCancel")
 	}
 	static class UAbilityTask_WaitConfirmCancel* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitConfirmCancel>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitConfirmCancel) == 0x000008, "Wrong alignment on UAbilityTask_WaitConfirmCancel");
-static_assert(sizeof(UAbilityTask_WaitConfirmCancel) == 0x0000B0, "Wrong size on UAbilityTask_WaitConfirmCancel");
-static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnConfirm) == 0x000088, "Member 'UAbilityTask_WaitConfirmCancel::OnConfirm' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitConfirmCancel, OnCancel) == 0x000098, "Member 'UAbilityTask_WaitConfirmCancel::OnCancel' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitConfirmCancel;
 
 // Class GameplayAbilities.AbilityTask_WaitDelay
 // 0x0018 (0x00A0 - 0x0088)
@@ -1529,16 +1432,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitDelay">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitDelay")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitDelay")
 	}
 	static class UAbilityTask_WaitDelay* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitDelay>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitDelay) == 0x000008, "Wrong alignment on UAbilityTask_WaitDelay");
-static_assert(sizeof(UAbilityTask_WaitDelay) == 0x0000A0, "Wrong size on UAbilityTask_WaitDelay");
-static_assert(offsetof(UAbilityTask_WaitDelay, OnFinish) == 0x000088, "Member 'UAbilityTask_WaitDelay::OnFinish' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitDelay;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied
 // 0x0148 (0x01D0 - 0x0088)
@@ -1555,16 +1460,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectApplied">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectApplied")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectApplied")
 	}
 	static class UAbilityTask_WaitGameplayEffectApplied* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectApplied>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectApplied) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectApplied");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectApplied) == 0x0001D0, "Wrong size on UAbilityTask_WaitGameplayEffectApplied");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectApplied, ExternalOwner) == 0x0001C0, "Member 'UAbilityTask_WaitGameplayEffectApplied::ExternalOwner' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectApplied;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self
 // 0x0020 (0x01F0 - 0x01D0)
@@ -1581,16 +1488,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectApplied_Self">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectApplied_Self")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectApplied_Self")
 	}
 	static class UAbilityTask_WaitGameplayEffectApplied_Self* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectApplied_Self>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectApplied_Self) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectApplied_Self");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectApplied_Self) == 0x0001F0, "Wrong size on UAbilityTask_WaitGameplayEffectApplied_Self");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectApplied_Self, OnApplied) == 0x0001D0, "Member 'UAbilityTask_WaitGameplayEffectApplied_Self::OnApplied' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectApplied_Self;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target
 // 0x0020 (0x01F0 - 0x01D0)
@@ -1607,16 +1516,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectApplied_Target">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectApplied_Target")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectApplied_Target")
 	}
 	static class UAbilityTask_WaitGameplayEffectApplied_Target* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectApplied_Target>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectApplied_Target) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectApplied_Target");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectApplied_Target) == 0x0001F0, "Wrong size on UAbilityTask_WaitGameplayEffectApplied_Target");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectApplied_Target, OnApplied) == 0x0001D0, "Member 'UAbilityTask_WaitGameplayEffectApplied_Target::OnApplied' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectApplied_Target;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectBlockedImmunity
 // 0x00B8 (0x0140 - 0x0088)
@@ -1634,17 +1545,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectBlockedImmunity">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectBlockedImmunity")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectBlockedImmunity")
 	}
 	static class UAbilityTask_WaitGameplayEffectBlockedImmunity* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectBlockedImmunity>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectBlockedImmunity) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectBlockedImmunity");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectBlockedImmunity) == 0x000140, "Wrong size on UAbilityTask_WaitGameplayEffectBlockedImmunity");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectBlockedImmunity, Blocked) == 0x000088, "Member 'UAbilityTask_WaitGameplayEffectBlockedImmunity::Blocked' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectBlockedImmunity, ExternalOwner) == 0x000130, "Member 'UAbilityTask_WaitGameplayEffectBlockedImmunity::ExternalOwner' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectBlockedImmunity;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved
 // 0x0040 (0x00C8 - 0x0088)
@@ -1663,17 +1575,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectRemoved">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectRemoved")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectRemoved")
 	}
 	static class UAbilityTask_WaitGameplayEffectRemoved* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectRemoved>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectRemoved) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectRemoved");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectRemoved) == 0x0000C8, "Wrong size on UAbilityTask_WaitGameplayEffectRemoved");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectRemoved, OnRemoved) == 0x000088, "Member 'UAbilityTask_WaitGameplayEffectRemoved::OnRemoved' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectRemoved, InvalidHandle) == 0x000098, "Member 'UAbilityTask_WaitGameplayEffectRemoved::InvalidHandle' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectRemoved;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange
 // 0x0038 (0x00C0 - 0x0088)
@@ -1692,17 +1605,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEffectStackChange">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEffectStackChange")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEffectStackChange")
 	}
 	static class UAbilityTask_WaitGameplayEffectStackChange* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEffectStackChange>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEffectStackChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEffectStackChange");
-static_assert(sizeof(UAbilityTask_WaitGameplayEffectStackChange) == 0x0000C0, "Wrong size on UAbilityTask_WaitGameplayEffectStackChange");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectStackChange, OnChange) == 0x000088, "Member 'UAbilityTask_WaitGameplayEffectStackChange::OnChange' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitGameplayEffectStackChange, InvalidHandle) == 0x000098, "Member 'UAbilityTask_WaitGameplayEffectStackChange::InvalidHandle' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEffectStackChange;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayEvent
 // 0x0038 (0x00C0 - 0x0088)
@@ -1720,17 +1634,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayEvent">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayEvent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayEvent")
 	}
 	static class UAbilityTask_WaitGameplayEvent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayEvent>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayEvent) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayEvent");
-static_assert(sizeof(UAbilityTask_WaitGameplayEvent) == 0x0000C0, "Wrong size on UAbilityTask_WaitGameplayEvent");
-static_assert(offsetof(UAbilityTask_WaitGameplayEvent, EventReceived) == 0x000088, "Member 'UAbilityTask_WaitGameplayEvent::EventReceived' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitGameplayEvent, OptionalExternalTarget) == 0x0000A8, "Member 'UAbilityTask_WaitGameplayEvent::OptionalExternalTarget' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayEvent;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayTag
 // 0x0028 (0x00B0 - 0x0088)
@@ -1747,16 +1662,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayTag">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayTag")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayTag")
 	}
 	static class UAbilityTask_WaitGameplayTag* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayTag>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayTag) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayTag");
-static_assert(sizeof(UAbilityTask_WaitGameplayTag) == 0x0000B0, "Wrong size on UAbilityTask_WaitGameplayTag");
-static_assert(offsetof(UAbilityTask_WaitGameplayTag, OptionalExternalTarget) == 0x000098, "Member 'UAbilityTask_WaitGameplayTag::OptionalExternalTarget' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTag;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayTagAdded
 // 0x0010 (0x00C0 - 0x00B0)
@@ -1771,16 +1688,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayTagAdded">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayTagAdded")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayTagAdded")
 	}
 	static class UAbilityTask_WaitGameplayTagAdded* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayTagAdded>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayTagAdded) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayTagAdded");
-static_assert(sizeof(UAbilityTask_WaitGameplayTagAdded) == 0x0000C0, "Wrong size on UAbilityTask_WaitGameplayTagAdded");
-static_assert(offsetof(UAbilityTask_WaitGameplayTagAdded, Added) == 0x0000B0, "Member 'UAbilityTask_WaitGameplayTagAdded::Added' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTagAdded;
 
 // Class GameplayAbilities.AbilityTask_WaitGameplayTagRemoved
 // 0x0010 (0x00C0 - 0x00B0)
@@ -1795,16 +1714,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitGameplayTagRemoved">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitGameplayTagRemoved")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitGameplayTagRemoved")
 	}
 	static class UAbilityTask_WaitGameplayTagRemoved* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitGameplayTagRemoved>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitGameplayTagRemoved) == 0x000008, "Wrong alignment on UAbilityTask_WaitGameplayTagRemoved");
-static_assert(sizeof(UAbilityTask_WaitGameplayTagRemoved) == 0x0000C0, "Wrong size on UAbilityTask_WaitGameplayTagRemoved");
-static_assert(offsetof(UAbilityTask_WaitGameplayTagRemoved, Removed) == 0x0000B0, "Member 'UAbilityTask_WaitGameplayTagRemoved::Removed' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitGameplayTagRemoved;
 
 // Class GameplayAbilities.AbilityTask_WaitInputPress
 // 0x0020 (0x00A8 - 0x0088)
@@ -1822,16 +1743,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitInputPress">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitInputPress")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitInputPress")
 	}
 	static class UAbilityTask_WaitInputPress* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitInputPress>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitInputPress) == 0x000008, "Wrong alignment on UAbilityTask_WaitInputPress");
-static_assert(sizeof(UAbilityTask_WaitInputPress) == 0x0000A8, "Wrong size on UAbilityTask_WaitInputPress");
-static_assert(offsetof(UAbilityTask_WaitInputPress, OnPress) == 0x000088, "Member 'UAbilityTask_WaitInputPress::OnPress' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitInputPress;
 
 // Class GameplayAbilities.AbilityTask_WaitInputRelease
 // 0x0020 (0x00A8 - 0x0088)
@@ -1849,16 +1772,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitInputRelease">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitInputRelease")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitInputRelease")
 	}
 	static class UAbilityTask_WaitInputRelease* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitInputRelease>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitInputRelease) == 0x000008, "Wrong alignment on UAbilityTask_WaitInputRelease");
-static_assert(sizeof(UAbilityTask_WaitInputRelease) == 0x0000A8, "Wrong size on UAbilityTask_WaitInputRelease");
-static_assert(offsetof(UAbilityTask_WaitInputRelease, OnRelease) == 0x000088, "Member 'UAbilityTask_WaitInputRelease::OnRelease' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitInputRelease;
 
 // Class GameplayAbilities.AbilityTask_WaitMovementModeChange
 // 0x0020 (0x00A8 - 0x0088)
@@ -1876,16 +1801,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitMovementModeChange">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitMovementModeChange")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitMovementModeChange")
 	}
 	static class UAbilityTask_WaitMovementModeChange* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitMovementModeChange>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitMovementModeChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitMovementModeChange");
-static_assert(sizeof(UAbilityTask_WaitMovementModeChange) == 0x0000A8, "Wrong size on UAbilityTask_WaitMovementModeChange");
-static_assert(offsetof(UAbilityTask_WaitMovementModeChange, OnChange) == 0x000088, "Member 'UAbilityTask_WaitMovementModeChange::OnChange' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitMovementModeChange;
 
 // Class GameplayAbilities.AbilityTask_WaitOverlap
 // 0x0010 (0x0098 - 0x0088)
@@ -1902,16 +1829,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitOverlap">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitOverlap")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitOverlap")
 	}
 	static class UAbilityTask_WaitOverlap* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitOverlap>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitOverlap) == 0x000008, "Wrong alignment on UAbilityTask_WaitOverlap");
-static_assert(sizeof(UAbilityTask_WaitOverlap) == 0x000098, "Wrong size on UAbilityTask_WaitOverlap");
-static_assert(offsetof(UAbilityTask_WaitOverlap, OnOverlap) == 0x000088, "Member 'UAbilityTask_WaitOverlap::OnOverlap' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitOverlap;
 
 // Class GameplayAbilities.AbilityTask_WaitTargetData
 // 0x0040 (0x00C8 - 0x0088)
@@ -1938,19 +1867,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitTargetData">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitTargetData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitTargetData")
 	}
 	static class UAbilityTask_WaitTargetData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitTargetData>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitTargetData) == 0x000008, "Wrong alignment on UAbilityTask_WaitTargetData");
-static_assert(sizeof(UAbilityTask_WaitTargetData) == 0x0000C8, "Wrong size on UAbilityTask_WaitTargetData");
-static_assert(offsetof(UAbilityTask_WaitTargetData, ValidData) == 0x000088, "Member 'UAbilityTask_WaitTargetData::ValidData' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, Cancelled) == 0x000098, "Member 'UAbilityTask_WaitTargetData::Cancelled' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, TargetClass) == 0x0000A8, "Member 'UAbilityTask_WaitTargetData::TargetClass' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitTargetData, TargetActor) == 0x0000B0, "Member 'UAbilityTask_WaitTargetData::TargetActor' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitTargetData;
 
 // Class GameplayAbilities.AbilityTask_WaitVelocityChange
 // 0x0028 (0x00B0 - 0x0088)
@@ -1967,17 +1895,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AbilityTask_WaitVelocityChange">();
+		STATIC_CLASS_IMPL("AbilityTask_WaitVelocityChange")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AbilityTask_WaitVelocityChange")
 	}
 	static class UAbilityTask_WaitVelocityChange* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAbilityTask_WaitVelocityChange>();
 	}
 };
-static_assert(alignof(UAbilityTask_WaitVelocityChange) == 0x000008, "Wrong alignment on UAbilityTask_WaitVelocityChange");
-static_assert(sizeof(UAbilityTask_WaitVelocityChange) == 0x0000B0, "Wrong size on UAbilityTask_WaitVelocityChange");
-static_assert(offsetof(UAbilityTask_WaitVelocityChange, OnVelocityChage) == 0x000088, "Member 'UAbilityTask_WaitVelocityChange::OnVelocityChage' has a wrong offset!");
-static_assert(offsetof(UAbilityTask_WaitVelocityChange, CachedMovementComponent) == 0x000098, "Member 'UAbilityTask_WaitVelocityChange::CachedMovementComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UAbilityTask_WaitVelocityChange;
 
 // Class GameplayAbilities.GameplayAbility
 // 0x0390 (0x03C0 - 0x0030)
@@ -2082,44 +2011,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbility">();
+		STATIC_CLASS_IMPL("GameplayAbility")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbility")
 	}
 	static class UGameplayAbility* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayAbility>();
 	}
 };
-static_assert(alignof(UGameplayAbility) == 0x000008, "Wrong alignment on UGameplayAbility");
-static_assert(sizeof(UGameplayAbility) == 0x0003C0, "Wrong size on UGameplayAbility");
-static_assert(offsetof(UGameplayAbility, AbilityTags) == 0x0000B0, "Member 'UGameplayAbility::AbilityTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bReplicateInputDirectly) == 0x0000D0, "Member 'UGameplayAbility::bReplicateInputDirectly' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, RemoteInstanceEnded) == 0x0000D1, "Member 'UGameplayAbility::RemoteInstanceEnded' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, ReplicationPolicy) == 0x0000D6, "Member 'UGameplayAbility::ReplicationPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, InstancingPolicy) == 0x0000D7, "Member 'UGameplayAbility::InstancingPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bServerRespectsRemoteAbilityCancellation) == 0x0000D8, "Member 'UGameplayAbility::bServerRespectsRemoteAbilityCancellation' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bRetriggerInstancedAbility) == 0x0000D9, "Member 'UGameplayAbility::bRetriggerInstancedAbility' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CurrentActivationInfo) == 0x0000E0, "Member 'UGameplayAbility::CurrentActivationInfo' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CurrentEventData) == 0x0000F8, "Member 'UGameplayAbility::CurrentEventData' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, NetExecutionPolicy) == 0x0001B0, "Member 'UGameplayAbility::NetExecutionPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, NetSecurityPolicy) == 0x0001B1, "Member 'UGameplayAbility::NetSecurityPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CostGameplayEffectClass) == 0x0001B8, "Member 'UGameplayAbility::CostGameplayEffectClass' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, AbilityTriggers) == 0x0001C0, "Member 'UGameplayAbility::AbilityTriggers' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CooldownGameplayEffectClass) == 0x0001D0, "Member 'UGameplayAbility::CooldownGameplayEffectClass' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CancelAbilitiesWithTag) == 0x0001D8, "Member 'UGameplayAbility::CancelAbilitiesWithTag' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, BlockAbilitiesWithTag) == 0x0001F8, "Member 'UGameplayAbility::BlockAbilitiesWithTag' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, ActivationOwnedTags) == 0x000218, "Member 'UGameplayAbility::ActivationOwnedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, ActivationRequiredTags) == 0x000238, "Member 'UGameplayAbility::ActivationRequiredTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, ActivationBlockedTags) == 0x000258, "Member 'UGameplayAbility::ActivationBlockedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, SourceRequiredTags) == 0x000278, "Member 'UGameplayAbility::SourceRequiredTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, SourceBlockedTags) == 0x000298, "Member 'UGameplayAbility::SourceBlockedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, TargetRequiredTags) == 0x0002B8, "Member 'UGameplayAbility::TargetRequiredTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, TargetBlockedTags) == 0x0002D8, "Member 'UGameplayAbility::TargetBlockedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, ActiveTasks) == 0x000318, "Member 'UGameplayAbility::ActiveTasks' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, CurrentMontage) == 0x000338, "Member 'UGameplayAbility::CurrentMontage' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bIsActive) == 0x0003A0, "Member 'UGameplayAbility::bIsActive' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bIsCancelable) == 0x0003A1, "Member 'UGameplayAbility::bIsCancelable' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bIsBlockingOtherAbilities) == 0x0003A2, "Member 'UGameplayAbility::bIsBlockingOtherAbilities' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility, bMarkPendingKillOnAbilityEnd) == 0x0003B8, "Member 'UGameplayAbility::bMarkPendingKillOnAbilityEnd' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayAbility;
 
 // Class GameplayAbilities.GameplayAbility_CharacterJump
 // 0x0000 (0x03C0 - 0x03C0)
@@ -2128,15 +2031,18 @@ class UGameplayAbility_CharacterJump final : public UGameplayAbility
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbility_CharacterJump">();
+		STATIC_CLASS_IMPL("GameplayAbility_CharacterJump")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbility_CharacterJump")
 	}
 	static class UGameplayAbility_CharacterJump* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayAbility_CharacterJump>();
 	}
 };
-static_assert(alignof(UGameplayAbility_CharacterJump) == 0x000008, "Wrong alignment on UGameplayAbility_CharacterJump");
-static_assert(sizeof(UGameplayAbility_CharacterJump) == 0x0003C0, "Wrong size on UGameplayAbility_CharacterJump");
+DUMPER7_ASSERTS_UGameplayAbility_CharacterJump;
 
 // Class GameplayAbilities.GameplayAbility_Montage
 // 0x0038 (0x03F8 - 0x03C0)
@@ -2152,20 +2058,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbility_Montage">();
+		STATIC_CLASS_IMPL("GameplayAbility_Montage")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbility_Montage")
 	}
 	static class UGameplayAbility_Montage* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayAbility_Montage>();
 	}
 };
-static_assert(alignof(UGameplayAbility_Montage) == 0x000008, "Wrong alignment on UGameplayAbility_Montage");
-static_assert(sizeof(UGameplayAbility_Montage) == 0x0003F8, "Wrong size on UGameplayAbility_Montage");
-static_assert(offsetof(UGameplayAbility_Montage, MontageToPlay) == 0x0003C0, "Member 'UGameplayAbility_Montage::MontageToPlay' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility_Montage, PlayRate) == 0x0003C8, "Member 'UGameplayAbility_Montage::PlayRate' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility_Montage, SectionName) == 0x0003CC, "Member 'UGameplayAbility_Montage::SectionName' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility_Montage, GameplayEffectClassesWhileAnimating) == 0x0003D8, "Member 'UGameplayAbility_Montage::GameplayEffectClassesWhileAnimating' has a wrong offset!");
-static_assert(offsetof(UGameplayAbility_Montage, GameplayEffectsWhileAnimating) == 0x0003E8, "Member 'UGameplayAbility_Montage::GameplayEffectsWhileAnimating' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayAbility_Montage;
 
 // Class GameplayAbilities.GameplayAbilityBlueprint
 // 0x0000 (0x00A8 - 0x00A8)
@@ -2174,15 +2078,18 @@ class UGameplayAbilityBlueprint final : public UBlueprint
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityBlueprint">();
+		STATIC_CLASS_IMPL("GameplayAbilityBlueprint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityBlueprint")
 	}
 	static class UGameplayAbilityBlueprint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayAbilityBlueprint>();
 	}
 };
-static_assert(alignof(UGameplayAbilityBlueprint) == 0x000008, "Wrong alignment on UGameplayAbilityBlueprint");
-static_assert(sizeof(UGameplayAbilityBlueprint) == 0x0000A8, "Wrong size on UGameplayAbilityBlueprint");
+DUMPER7_ASSERTS_UGameplayAbilityBlueprint;
 
 // Class GameplayAbilities.GameplayAbilitySet
 // 0x0010 (0x0048 - 0x0038)
@@ -2194,16 +2101,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilitySet">();
+		STATIC_CLASS_IMPL("GameplayAbilitySet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilitySet")
 	}
 	static class UGameplayAbilitySet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayAbilitySet>();
 	}
 };
-static_assert(alignof(UGameplayAbilitySet) == 0x000008, "Wrong alignment on UGameplayAbilitySet");
-static_assert(sizeof(UGameplayAbilitySet) == 0x000048, "Wrong size on UGameplayAbilitySet");
-static_assert(offsetof(UGameplayAbilitySet, Abilities) == 0x000038, "Member 'UGameplayAbilitySet::Abilities' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayAbilitySet;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_Trace
 // 0x0020 (0x0400 - 0x03E0)
@@ -2219,7 +2128,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor_Trace">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_Trace")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_Trace")
 	}
 	static class AGameplayAbilityTargetActor_Trace* GetDefaultObj()
 	{
@@ -2227,11 +2140,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(AGameplayAbilityTargetActor_Trace) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor_Trace");
-static_assert(sizeof(AGameplayAbilityTargetActor_Trace) == 0x000400, "Wrong size on AGameplayAbilityTargetActor_Trace");
-static_assert(offsetof(AGameplayAbilityTargetActor_Trace, MaxRange) == 0x0003D8, "Member 'AGameplayAbilityTargetActor_Trace::MaxRange' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor_Trace, TraceProfile) == 0x0003DC, "Member 'AGameplayAbilityTargetActor_Trace::TraceProfile' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor_Trace, bTraceAffectsAimPitch) == 0x0003E8, "Member 'AGameplayAbilityTargetActor_Trace::bTraceAffectsAimPitch' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_Trace;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_GroundTrace
 // 0x0020 (0x0420 - 0x0400)
@@ -2246,7 +2155,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor_GroundTrace">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_GroundTrace")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_GroundTrace")
 	}
 	static class AGameplayAbilityTargetActor_GroundTrace* GetDefaultObj()
 	{
@@ -2254,10 +2167,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(AGameplayAbilityTargetActor_GroundTrace) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor_GroundTrace");
-static_assert(sizeof(AGameplayAbilityTargetActor_GroundTrace) == 0x000420, "Wrong size on AGameplayAbilityTargetActor_GroundTrace");
-static_assert(offsetof(AGameplayAbilityTargetActor_GroundTrace, CollisionRadius) == 0x0003F8, "Member 'AGameplayAbilityTargetActor_GroundTrace::CollisionRadius' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor_GroundTrace, CollisionHeight) == 0x0003FC, "Member 'AGameplayAbilityTargetActor_GroundTrace::CollisionHeight' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_GroundTrace;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_ActorPlacement
 // 0x0010 (0x0430 - 0x0420)
@@ -2271,17 +2181,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor_ActorPlacement">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_ActorPlacement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_ActorPlacement")
 	}
 	static class AGameplayAbilityTargetActor_ActorPlacement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayAbilityTargetActor_ActorPlacement>();
 	}
 };
-static_assert(alignof(AGameplayAbilityTargetActor_ActorPlacement) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor_ActorPlacement");
-static_assert(sizeof(AGameplayAbilityTargetActor_ActorPlacement) == 0x000430, "Wrong size on AGameplayAbilityTargetActor_ActorPlacement");
-static_assert(offsetof(AGameplayAbilityTargetActor_ActorPlacement, PlacedActorClass) == 0x000418, "Member 'AGameplayAbilityTargetActor_ActorPlacement::PlacedActorClass' has a wrong offset!");
-static_assert(offsetof(AGameplayAbilityTargetActor_ActorPlacement, PlacedActorMaterial) == 0x000420, "Member 'AGameplayAbilityTargetActor_ActorPlacement::PlacedActorMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_ActorPlacement;
 
 // Class GameplayAbilities.GameplayAbilityTargetActor_SingleLineTrace
 // 0x0000 (0x0400 - 0x0400)
@@ -2290,15 +2201,18 @@ class AGameplayAbilityTargetActor_SingleLineTrace final : public AGameplayAbilit
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayAbilityTargetActor_SingleLineTrace">();
+		STATIC_CLASS_IMPL("GameplayAbilityTargetActor_SingleLineTrace")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayAbilityTargetActor_SingleLineTrace")
 	}
 	static class AGameplayAbilityTargetActor_SingleLineTrace* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AGameplayAbilityTargetActor_SingleLineTrace>();
 	}
 };
-static_assert(alignof(AGameplayAbilityTargetActor_SingleLineTrace) == 0x000010, "Wrong alignment on AGameplayAbilityTargetActor_SingleLineTrace");
-static_assert(sizeof(AGameplayAbilityTargetActor_SingleLineTrace) == 0x000400, "Wrong size on AGameplayAbilityTargetActor_SingleLineTrace");
+DUMPER7_ASSERTS_AGameplayAbilityTargetActor_SingleLineTrace;
 
 // Class GameplayAbilities.GameplayCueManager
 // 0x02E0 (0x0318 - 0x0038)
@@ -2320,22 +2234,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueManager">();
+		STATIC_CLASS_IMPL("GameplayCueManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueManager")
 	}
 	static class UGameplayCueManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueManager>();
 	}
 };
-static_assert(alignof(UGameplayCueManager) == 0x000008, "Wrong alignment on UGameplayCueManager");
-static_assert(sizeof(UGameplayCueManager) == 0x000318, "Wrong size on UGameplayCueManager");
-static_assert(offsetof(UGameplayCueManager, RuntimeGameplayCueObjectLibrary) == 0x000050, "Member 'UGameplayCueManager::RuntimeGameplayCueObjectLibrary' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, EditorGameplayCueObjectLibrary) == 0x0000A0, "Member 'UGameplayCueManager::EditorGameplayCueObjectLibrary' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, LoadedGameplayCueNotifyClasses) == 0x0002B8, "Member 'UGameplayCueManager::LoadedGameplayCueNotifyClasses' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, GameplayCueClassesForPreallocation) == 0x0002C8, "Member 'UGameplayCueManager::GameplayCueClassesForPreallocation' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, PendingExecuteCues) == 0x0002D8, "Member 'UGameplayCueManager::PendingExecuteCues' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, GameplayCueSendContextCount) == 0x0002E8, "Member 'UGameplayCueManager::GameplayCueSendContextCount' has a wrong offset!");
-static_assert(offsetof(UGameplayCueManager, PreallocationInfoList_Internal) == 0x0002F0, "Member 'UGameplayCueManager::PreallocationInfoList_Internal' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayCueManager;
 
 // Class GameplayAbilities.GameplayCueNotify_Static
 // 0x0020 (0x0050 - 0x0030)
@@ -2357,18 +2267,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueNotify_Static">();
+		STATIC_CLASS_IMPL("GameplayCueNotify_Static")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueNotify_Static")
 	}
 	static class UGameplayCueNotify_Static* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueNotify_Static>();
 	}
 };
-static_assert(alignof(UGameplayCueNotify_Static) == 0x000008, "Wrong alignment on UGameplayCueNotify_Static");
-static_assert(sizeof(UGameplayCueNotify_Static) == 0x000050, "Wrong size on UGameplayCueNotify_Static");
-static_assert(offsetof(UGameplayCueNotify_Static, GameplayCueTag) == 0x000030, "Member 'UGameplayCueNotify_Static::GameplayCueTag' has a wrong offset!");
-static_assert(offsetof(UGameplayCueNotify_Static, GameplayCueName) == 0x00003C, "Member 'UGameplayCueNotify_Static::GameplayCueName' has a wrong offset!");
-static_assert(offsetof(UGameplayCueNotify_Static, IsOverride) == 0x000048, "Member 'UGameplayCueNotify_Static::IsOverride' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayCueNotify_Static;
 
 // Class GameplayAbilities.GameplayCueNotify_HitImpact
 // 0x0010 (0x0060 - 0x0050)
@@ -2381,17 +2291,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueNotify_HitImpact">();
+		STATIC_CLASS_IMPL("GameplayCueNotify_HitImpact")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueNotify_HitImpact")
 	}
 	static class UGameplayCueNotify_HitImpact* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueNotify_HitImpact>();
 	}
 };
-static_assert(alignof(UGameplayCueNotify_HitImpact) == 0x000008, "Wrong alignment on UGameplayCueNotify_HitImpact");
-static_assert(sizeof(UGameplayCueNotify_HitImpact) == 0x000060, "Wrong size on UGameplayCueNotify_HitImpact");
-static_assert(offsetof(UGameplayCueNotify_HitImpact, Sound) == 0x000050, "Member 'UGameplayCueNotify_HitImpact::Sound' has a wrong offset!");
-static_assert(offsetof(UGameplayCueNotify_HitImpact, ParticleSystem) == 0x000058, "Member 'UGameplayCueNotify_HitImpact::ParticleSystem' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayCueNotify_HitImpact;
 
 // Class GameplayAbilities.GameplayCueSet
 // 0x0060 (0x0098 - 0x0038)
@@ -2404,16 +2315,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueSet">();
+		STATIC_CLASS_IMPL("GameplayCueSet")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueSet")
 	}
 	static class UGameplayCueSet* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueSet>();
 	}
 };
-static_assert(alignof(UGameplayCueSet) == 0x000008, "Wrong alignment on UGameplayCueSet");
-static_assert(sizeof(UGameplayCueSet) == 0x000098, "Wrong size on UGameplayCueSet");
-static_assert(offsetof(UGameplayCueSet, GameplayCueData) == 0x000038, "Member 'UGameplayCueSet::GameplayCueData' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayCueSet;
 
 // Class GameplayAbilities.GameplayCueTranslator
 // 0x0000 (0x0030 - 0x0030)
@@ -2422,15 +2335,18 @@ class UGameplayCueTranslator : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueTranslator">();
+		STATIC_CLASS_IMPL("GameplayCueTranslator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueTranslator")
 	}
 	static class UGameplayCueTranslator* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueTranslator>();
 	}
 };
-static_assert(alignof(UGameplayCueTranslator) == 0x000008, "Wrong alignment on UGameplayCueTranslator");
-static_assert(sizeof(UGameplayCueTranslator) == 0x000030, "Wrong size on UGameplayCueTranslator");
+DUMPER7_ASSERTS_UGameplayCueTranslator;
 
 // Class GameplayAbilities.GameplayCueTranslator_Test
 // 0x0000 (0x0030 - 0x0030)
@@ -2439,15 +2355,18 @@ class UGameplayCueTranslator_Test final : public UGameplayCueTranslator
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayCueTranslator_Test">();
+		STATIC_CLASS_IMPL("GameplayCueTranslator_Test")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayCueTranslator_Test")
 	}
 	static class UGameplayCueTranslator_Test* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayCueTranslator_Test>();
 	}
 };
-static_assert(alignof(UGameplayCueTranslator_Test) == 0x000008, "Wrong alignment on UGameplayCueTranslator_Test");
-static_assert(sizeof(UGameplayCueTranslator_Test) == 0x000030, "Wrong size on UGameplayCueTranslator_Test");
+DUMPER7_ASSERTS_UGameplayCueTranslator_Test;
 
 // Class GameplayAbilities.GameplayEffect
 // 0x08E8 (0x0918 - 0x0030)
@@ -2511,58 +2430,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffect">();
+		STATIC_CLASS_IMPL("GameplayEffect")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffect")
 	}
 	static class UGameplayEffect* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffect>();
 	}
 };
-static_assert(alignof(UGameplayEffect) == 0x000008, "Wrong alignment on UGameplayEffect");
-static_assert(sizeof(UGameplayEffect) == 0x000918, "Wrong size on UGameplayEffect");
-static_assert(offsetof(UGameplayEffect, GameplayEffectId) == 0x000038, "Member 'UGameplayEffect::GameplayEffectId' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, OverflowEffectIds) == 0x000040, "Member 'UGameplayEffect::OverflowEffectIds' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, PrematureExpirationEffectClassIds) == 0x000050, "Member 'UGameplayEffect::PrematureExpirationEffectClassIds' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, RoutineExpirationEffectClassIds) == 0x000060, "Member 'UGameplayEffect::RoutineExpirationEffectClassIds' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, DurationPolicy) == 0x000070, "Member 'UGameplayEffect::DurationPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, DurationMagnitude) == 0x000078, "Member 'UGameplayEffect::DurationMagnitude' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, Period) == 0x000280, "Member 'UGameplayEffect::Period' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, bExecutePeriodicEffectOnApplication) == 0x0002A8, "Member 'UGameplayEffect::bExecutePeriodicEffectOnApplication' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, PeriodicInhibitionPolicy) == 0x0002A9, "Member 'UGameplayEffect::PeriodicInhibitionPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, Modifiers) == 0x0002B0, "Member 'UGameplayEffect::Modifiers' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, Executions) == 0x0002C0, "Member 'UGameplayEffect::Executions' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, ChanceToApplyToTarget) == 0x0002D0, "Member 'UGameplayEffect::ChanceToApplyToTarget' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, ApplicationRequirements) == 0x0002F8, "Member 'UGameplayEffect::ApplicationRequirements' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, TargetEffectClasses) == 0x000308, "Member 'UGameplayEffect::TargetEffectClasses' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, ConditionalGameplayEffects) == 0x000318, "Member 'UGameplayEffect::ConditionalGameplayEffects' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, OverflowEffects) == 0x000328, "Member 'UGameplayEffect::OverflowEffects' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, bDenyOverflowApplication) == 0x000338, "Member 'UGameplayEffect::bDenyOverflowApplication' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, bClearStackOnOverflow) == 0x000339, "Member 'UGameplayEffect::bClearStackOnOverflow' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, PrematureExpirationEffectClasses) == 0x000340, "Member 'UGameplayEffect::PrematureExpirationEffectClasses' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, RoutineExpirationEffectClasses) == 0x000350, "Member 'UGameplayEffect::RoutineExpirationEffectClasses' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, bRequireModifierSuccessToTriggerCues) == 0x000360, "Member 'UGameplayEffect::bRequireModifierSuccessToTriggerCues' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, bSuppressStackingCues) == 0x000361, "Member 'UGameplayEffect::bSuppressStackingCues' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, GameplayCues) == 0x000368, "Member 'UGameplayEffect::GameplayCues' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, GameplayCueIds) == 0x000378, "Member 'UGameplayEffect::GameplayCueIds' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, UIData) == 0x000388, "Member 'UGameplayEffect::UIData' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, InheritableGameplayEffectTags) == 0x000390, "Member 'UGameplayEffect::InheritableGameplayEffectTags' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, InheritableOwnedTagsContainer) == 0x0003F0, "Member 'UGameplayEffect::InheritableOwnedTagsContainer' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, OngoingTagRequirements) == 0x000450, "Member 'UGameplayEffect::OngoingTagRequirements' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, ApplicationSourceTagRequirements) == 0x000498, "Member 'UGameplayEffect::ApplicationSourceTagRequirements' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, ApplicationTagRequirements) == 0x0004E0, "Member 'UGameplayEffect::ApplicationTagRequirements' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, RemovalTagRequirements) == 0x000528, "Member 'UGameplayEffect::RemovalTagRequirements' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, RemoveGameplayEffectsWithTags) == 0x000570, "Member 'UGameplayEffect::RemoveGameplayEffectsWithTags' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, GrantedApplicationImmunityTags) == 0x0005D0, "Member 'UGameplayEffect::GrantedApplicationImmunityTags' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, GrantedApplicationImmunityQuery) == 0x000618, "Member 'UGameplayEffect::GrantedApplicationImmunityQuery' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, RemoveGameplayEffectQuery) == 0x000788, "Member 'UGameplayEffect::RemoveGameplayEffectQuery' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackingType) == 0x0008F1, "Member 'UGameplayEffect::StackingType' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackLimitCount) == 0x0008F4, "Member 'UGameplayEffect::StackLimitCount' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackAppendCount) == 0x0008F8, "Member 'UGameplayEffect::StackAppendCount' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackDurationRefreshPolicy) == 0x0008FC, "Member 'UGameplayEffect::StackDurationRefreshPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackPeriodResetPolicy) == 0x0008FD, "Member 'UGameplayEffect::StackPeriodResetPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackExpirationPolicy) == 0x0008FE, "Member 'UGameplayEffect::StackExpirationPolicy' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, StackExpirationRemoveNumber) == 0x000900, "Member 'UGameplayEffect::StackExpirationRemoveNumber' has a wrong offset!");
-static_assert(offsetof(UGameplayEffect, GrantedAbilities) == 0x000908, "Member 'UGameplayEffect::GrantedAbilities' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayEffect;
 
 // Class GameplayAbilities.GameplayEffectCalculation
 // 0x0010 (0x0040 - 0x0030)
@@ -2574,16 +2453,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffectCalculation">();
+		STATIC_CLASS_IMPL("GameplayEffectCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectCalculation")
 	}
 	static class UGameplayEffectCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffectCalculation>();
 	}
 };
-static_assert(alignof(UGameplayEffectCalculation) == 0x000008, "Wrong alignment on UGameplayEffectCalculation");
-static_assert(sizeof(UGameplayEffectCalculation) == 0x000040, "Wrong size on UGameplayEffectCalculation");
-static_assert(offsetof(UGameplayEffectCalculation, RelevantAttributesToCapture) == 0x000030, "Member 'UGameplayEffectCalculation::RelevantAttributesToCapture' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayEffectCalculation;
 
 // Class GameplayAbilities.GameplayEffectCustomApplicationRequirement
 // 0x0000 (0x0030 - 0x0030)
@@ -2595,15 +2476,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffectCustomApplicationRequirement">();
+		STATIC_CLASS_IMPL("GameplayEffectCustomApplicationRequirement")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectCustomApplicationRequirement")
 	}
 	static class UGameplayEffectCustomApplicationRequirement* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffectCustomApplicationRequirement>();
 	}
 };
-static_assert(alignof(UGameplayEffectCustomApplicationRequirement) == 0x000008, "Wrong alignment on UGameplayEffectCustomApplicationRequirement");
-static_assert(sizeof(UGameplayEffectCustomApplicationRequirement) == 0x000030, "Wrong size on UGameplayEffectCustomApplicationRequirement");
+DUMPER7_ASSERTS_UGameplayEffectCustomApplicationRequirement;
 
 // Class GameplayAbilities.GameplayEffectExecutionCalculation
 // 0x0008 (0x0048 - 0x0040)
@@ -2616,16 +2500,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffectExecutionCalculation">();
+		STATIC_CLASS_IMPL("GameplayEffectExecutionCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectExecutionCalculation")
 	}
 	static class UGameplayEffectExecutionCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffectExecutionCalculation>();
 	}
 };
-static_assert(alignof(UGameplayEffectExecutionCalculation) == 0x000008, "Wrong alignment on UGameplayEffectExecutionCalculation");
-static_assert(sizeof(UGameplayEffectExecutionCalculation) == 0x000048, "Wrong size on UGameplayEffectExecutionCalculation");
-static_assert(offsetof(UGameplayEffectExecutionCalculation, bRequiresPassedInTags) == 0x000040, "Member 'UGameplayEffectExecutionCalculation::bRequiresPassedInTags' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayEffectExecutionCalculation;
 
 // Class GameplayAbilities.GameplayEffectUIData
 // 0x0000 (0x0030 - 0x0030)
@@ -2634,15 +2520,18 @@ class UGameplayEffectUIData : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffectUIData">();
+		STATIC_CLASS_IMPL("GameplayEffectUIData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectUIData")
 	}
 	static class UGameplayEffectUIData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffectUIData>();
 	}
 };
-static_assert(alignof(UGameplayEffectUIData) == 0x000008, "Wrong alignment on UGameplayEffectUIData");
-static_assert(sizeof(UGameplayEffectUIData) == 0x000030, "Wrong size on UGameplayEffectUIData");
+DUMPER7_ASSERTS_UGameplayEffectUIData;
 
 // Class GameplayAbilities.GameplayEffectUIData_TextOnly
 // 0x0018 (0x0048 - 0x0030)
@@ -2654,16 +2543,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayEffectUIData_TextOnly">();
+		STATIC_CLASS_IMPL("GameplayEffectUIData_TextOnly")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayEffectUIData_TextOnly")
 	}
 	static class UGameplayEffectUIData_TextOnly* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayEffectUIData_TextOnly>();
 	}
 };
-static_assert(alignof(UGameplayEffectUIData_TextOnly) == 0x000008, "Wrong alignment on UGameplayEffectUIData_TextOnly");
-static_assert(sizeof(UGameplayEffectUIData_TextOnly) == 0x000048, "Wrong size on UGameplayEffectUIData_TextOnly");
-static_assert(offsetof(UGameplayEffectUIData_TextOnly, Description) == 0x000030, "Member 'UGameplayEffectUIData_TextOnly::Description' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayEffectUIData_TextOnly;
 
 // Class GameplayAbilities.GameplayModMagnitudeCalculation
 // 0x0008 (0x0048 - 0x0040)
@@ -2676,16 +2567,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayModMagnitudeCalculation">();
+		STATIC_CLASS_IMPL("GameplayModMagnitudeCalculation")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayModMagnitudeCalculation")
 	}
 	static class UGameplayModMagnitudeCalculation* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayModMagnitudeCalculation>();
 	}
 };
-static_assert(alignof(UGameplayModMagnitudeCalculation) == 0x000008, "Wrong alignment on UGameplayModMagnitudeCalculation");
-static_assert(sizeof(UGameplayModMagnitudeCalculation) == 0x000048, "Wrong size on UGameplayModMagnitudeCalculation");
-static_assert(offsetof(UGameplayModMagnitudeCalculation, bAllowNonNetAuthorityDependencyRegistration) == 0x000040, "Member 'UGameplayModMagnitudeCalculation::bAllowNonNetAuthorityDependencyRegistration' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayModMagnitudeCalculation;
 
 // Class GameplayAbilities.GameplayTagReponseTable
 // 0x01D0 (0x0208 - 0x0038)
@@ -2701,16 +2594,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayTagReponseTable">();
+		STATIC_CLASS_IMPL("GameplayTagReponseTable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTagReponseTable")
 	}
 	static class UGameplayTagReponseTable* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayTagReponseTable>();
 	}
 };
-static_assert(alignof(UGameplayTagReponseTable) == 0x000008, "Wrong alignment on UGameplayTagReponseTable");
-static_assert(sizeof(UGameplayTagReponseTable) == 0x000208, "Wrong size on UGameplayTagReponseTable");
-static_assert(offsetof(UGameplayTagReponseTable, Entries) == 0x000038, "Member 'UGameplayTagReponseTable::Entries' has a wrong offset!");
+DUMPER7_ASSERTS_UGameplayTagReponseTable;
 
 // Class GameplayAbilities.TickableAttributeSetInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -2719,7 +2614,11 @@ class ITickableAttributeSetInterface final
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"TickableAttributeSetInterface">();
+		STATIC_CLASS_IMPL("TickableAttributeSetInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TickableAttributeSetInterface")
 	}
 	static class ITickableAttributeSetInterface* GetDefaultObj()
 	{
@@ -2735,8 +2634,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(ITickableAttributeSetInterface) == 0x000001, "Wrong alignment on ITickableAttributeSetInterface");
-static_assert(sizeof(ITickableAttributeSetInterface) == 0x000001, "Wrong size on ITickableAttributeSetInterface");
+DUMPER7_ASSERTS_ITickableAttributeSetInterface;
 
 }
 

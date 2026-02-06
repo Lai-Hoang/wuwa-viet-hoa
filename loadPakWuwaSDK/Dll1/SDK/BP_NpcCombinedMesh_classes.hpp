@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SNpcSetupPartInfo_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EBodyPartName_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -63,29 +63,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_NpcCombinedMesh_C">();
+		BP_STATIC_CLASS_IMPL("BP_NpcCombinedMesh_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_NpcCombinedMesh_C")
 	}
 	static class ABP_NpcCombinedMesh_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_NpcCombinedMesh_C>();
 	}
 };
-static_assert(alignof(ABP_NpcCombinedMesh_C) == 0x000008, "Wrong alignment on ABP_NpcCombinedMesh_C");
-static_assert(sizeof(ABP_NpcCombinedMesh_C) == 0x0003D8, "Wrong size on ABP_NpcCombinedMesh_C");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, Skel_Main) == 0x0002B0, "Member 'ABP_NpcCombinedMesh_C::Skel_Main' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_NpcCombinedMesh_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, NpcData) == 0x0002C0, "Member 'ABP_NpcCombinedMesh_C::NpcData' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, OriginalSkeletalVisible) == 0x0002C8, "Member 'ABP_NpcCombinedMesh_C::OriginalSkeletalVisible' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, AllSubSkeletalComponents) == 0x0002D0, "Member 'ABP_NpcCombinedMesh_C::AllSubSkeletalComponents' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, Target) == 0x000320, "Member 'ABP_NpcCombinedMesh_C::Target' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, AllBodyPartName) == 0x000328, "Member 'ABP_NpcCombinedMesh_C::AllBodyPartName' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, ColorNPC01) == 0x000378, "Member 'ABP_NpcCombinedMesh_C::ColorNPC01' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, ColorNPC02) == 0x000388, "Member 'ABP_NpcCombinedMesh_C::ColorNPC02' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, Forced_LOD) == 0x000398, "Member 'ABP_NpcCombinedMesh_C::Forced_LOD' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, SkinColor) == 0x00039C, "Member 'ABP_NpcCombinedMesh_C::SkinColor' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, SkelMeshArray) == 0x0003B0, "Member 'ABP_NpcCombinedMesh_C::SkelMeshArray' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, MINPCs) == 0x0003C0, "Member 'ABP_NpcCombinedMesh_C::MINPCs' has a wrong offset!");
-static_assert(offsetof(ABP_NpcCombinedMesh_C, AdaptMaterialController) == 0x0003D0, "Member 'ABP_NpcCombinedMesh_C::AdaptMaterialController' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_NpcCombinedMesh_C;
 
 }
 

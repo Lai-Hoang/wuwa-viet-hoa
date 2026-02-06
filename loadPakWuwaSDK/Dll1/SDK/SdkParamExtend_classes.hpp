@@ -30,15 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SdkParam">();
+		STATIC_CLASS_IMPL("SdkParam")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SdkParam")
 	}
 	static class USdkParam* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USdkParam>();
 	}
 };
-static_assert(alignof(USdkParam) == 0x000008, "Wrong alignment on USdkParam");
-static_assert(sizeof(USdkParam) == 0x000068, "Wrong size on USdkParam");
+DUMPER7_ASSERTS_USdkParam;
 
 // Class SdkParamExtend.SdkParamExtendStaticLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -51,15 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"SdkParamExtendStaticLibrary">();
+		STATIC_CLASS_IMPL("SdkParamExtendStaticLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SdkParamExtendStaticLibrary")
 	}
 	static class USdkParamExtendStaticLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USdkParamExtendStaticLibrary>();
 	}
 };
-static_assert(alignof(USdkParamExtendStaticLibrary) == 0x000008, "Wrong alignment on USdkParamExtendStaticLibrary");
-static_assert(sizeof(USdkParamExtendStaticLibrary) == 0x000030, "Wrong size on USdkParamExtendStaticLibrary");
+DUMPER7_ASSERTS_USdkParamExtendStaticLibrary;
 
 }
 

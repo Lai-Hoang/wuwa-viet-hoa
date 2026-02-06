@@ -23,10 +23,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AUIContainerActor*                      K2Node_CustomEvent_UiItem_Tmp;                     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SequenceDirector_C_ExecuteUbergraph_SequenceDirector) == 0x000008, "Wrong alignment on SequenceDirector_C_ExecuteUbergraph_SequenceDirector");
-static_assert(sizeof(SequenceDirector_C_ExecuteUbergraph_SequenceDirector) == 0x000010, "Wrong size on SequenceDirector_C_ExecuteUbergraph_SequenceDirector");
-static_assert(offsetof(SequenceDirector_C_ExecuteUbergraph_SequenceDirector, EntryPoint) == 0x000000, "Member 'SequenceDirector_C_ExecuteUbergraph_SequenceDirector::EntryPoint' has a wrong offset!");
-static_assert(offsetof(SequenceDirector_C_ExecuteUbergraph_SequenceDirector, K2Node_CustomEvent_UiItem_Tmp) == 0x000008, "Member 'SequenceDirector_C_ExecuteUbergraph_SequenceDirector::K2Node_CustomEvent_UiItem_Tmp' has a wrong offset!");
+DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector;
 
 // Function Ani_UiItem_InteractionSpot_NorOut_2_PC.SequenceDirector_C.UiItem_Tmp_Event_0
 // 0x0008 (0x0008 - 0x0000)
@@ -35,9 +32,7 @@ struct SequenceDirector_C_UiItem_Tmp_Event_0 final
 public:
 	class AUIContainerActor*                      UiItem_Tmp;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SequenceDirector_C_UiItem_Tmp_Event_0) == 0x000008, "Wrong alignment on SequenceDirector_C_UiItem_Tmp_Event_0");
-static_assert(sizeof(SequenceDirector_C_UiItem_Tmp_Event_0) == 0x000008, "Wrong size on SequenceDirector_C_UiItem_Tmp_Event_0");
-static_assert(offsetof(SequenceDirector_C_UiItem_Tmp_Event_0, UiItem_Tmp) == 0x000000, "Member 'SequenceDirector_C_UiItem_Tmp_Event_0::UiItem_Tmp' has a wrong offset!");
+DUMPER7_ASSERTS_SequenceDirector_C_UiItem_Tmp_Event_0;
 
 // Function Ani_UiItem_InteractionSpot_NorOut_2_PC.SequenceDirector_C.SequenceEvent__ENTRYPOINTSequenceDirector_0
 // 0x0008 (0x0008 - 0x0000)
@@ -46,9 +41,7 @@ struct SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0 final
 public:
 	class AUIContainerActor*                      UiItem_Tmp;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0) == 0x000008, "Wrong alignment on SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0");
-static_assert(sizeof(SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0) == 0x000008, "Wrong size on SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0");
-static_assert(offsetof(SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0, UiItem_Tmp) == 0x000000, "Member 'SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0::UiItem_Tmp' has a wrong offset!");
+DUMPER7_ASSERTS_SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0;
 
 }
 

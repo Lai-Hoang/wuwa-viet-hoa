@@ -38,27 +38,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BulletCommonDataAsset_C">();
+		BP_STATIC_CLASS_IMPL("BulletCommonDataAsset_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BulletCommonDataAsset_C")
 	}
 	static class UBulletCommonDataAsset_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBulletCommonDataAsset_C>();
 	}
 };
-static_assert(alignof(UBulletCommonDataAsset_C) == 0x000008, "Wrong alignment on UBulletCommonDataAsset_C");
-static_assert(sizeof(UBulletCommonDataAsset_C) == 0x0000D8, "Wrong size on UBulletCommonDataAsset_C");
-static_assert(offsetof(UBulletCommonDataAsset_C, TakeAim) == 0x000038, "Member 'UBulletCommonDataAsset_C::TakeAim' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, Obstacles) == 0x000048, "Member 'UBulletCommonDataAsset_C::Obstacles' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, HitPoint) == 0x000058, "Member 'UBulletCommonDataAsset_C::HitPoint' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Type1) == 0x000068, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Type1' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Type2) == 0x000078, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Type2' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Type3) == 0x000088, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Type3' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Type1_Special) == 0x000098, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Type1_Special' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Type2_Special) == 0x0000A8, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Type2_Special' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, FastMoveTraceBullet_Only_Bullet) == 0x0000B8, "Member 'UBulletCommonDataAsset_C::FastMoveTraceBullet_Only_Bullet' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, OnHitMaterialDelay) == 0x0000C8, "Member 'UBulletCommonDataAsset_C::OnHitMaterialDelay' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, OnHitMaterialDuration) == 0x0000CC, "Member 'UBulletCommonDataAsset_C::OnHitMaterialDuration' has a wrong offset!");
-static_assert(offsetof(UBulletCommonDataAsset_C, OnHitMaterialCd) == 0x0000D0, "Member 'UBulletCommonDataAsset_C::OnHitMaterialCd' has a wrong offset!");
+DUMPER7_ASSERTS_UBulletCommonDataAsset_C;
 
 }
 

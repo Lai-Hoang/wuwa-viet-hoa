@@ -42,15 +42,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPL_Fight_C">();
+		BP_STATIC_CLASS_IMPL("BPL_Fight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPL_Fight_C")
 	}
 	static class UBPL_Fight_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPL_Fight_C>();
 	}
 };
-static_assert(alignof(UBPL_Fight_C) == 0x000008, "Wrong alignment on UBPL_Fight_C");
-static_assert(sizeof(UBPL_Fight_C) == 0x000030, "Wrong size on UBPL_Fight_C");
+DUMPER7_ASSERTS_UBPL_Fight_C;
 
 }
 

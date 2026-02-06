@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "SHolographicMaterialsCache_structs.hpp"
 #include "EHolographicState_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "SHolographicMaterialsCache_structs.hpp"
 
 
 namespace SDK
@@ -59,27 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_NPCMaterialController_C">();
+		BP_STATIC_CLASS_IMPL("BP_NPCMaterialController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_NPCMaterialController_C")
 	}
 	static class UBP_NPCMaterialController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_NPCMaterialController_C>();
 	}
 };
-static_assert(alignof(UBP_NPCMaterialController_C) == 0x000008, "Wrong alignment on UBP_NPCMaterialController_C");
-static_assert(sizeof(UBP_NPCMaterialController_C) == 0x000160, "Wrong size on UBP_NPCMaterialController_C");
-static_assert(offsetof(UBP_NPCMaterialController_C, UberGraphFrame) == 0x0000C0, "Member 'UBP_NPCMaterialController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, OL_Materials) == 0x0000C8, "Member 'UBP_NPCMaterialController_C::OL_Materials' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, Other_Materials) == 0x0000D8, "Member 'UBP_NPCMaterialController_C::Other_Materials' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, DATA) == 0x0000E8, "Member 'UBP_NPCMaterialController_C::DATA' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, TimeCounter) == 0x0000F0, "Member 'UBP_NPCMaterialController_C::TimeCounter' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, State) == 0x0000F4, "Member 'UBP_NPCMaterialController_C::State' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, bCached) == 0x0000F5, "Member 'UBP_NPCMaterialController_C::bCached' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, ComponentMaterialsCache) == 0x0000F8, "Member 'UBP_NPCMaterialController_C::ComponentMaterialsCache' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, EnableBattle) == 0x000148, "Member 'UBP_NPCMaterialController_C::EnableBattle' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, EnableMask) == 0x000149, "Member 'UBP_NPCMaterialController_C::EnableMask' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, MaterialController) == 0x000150, "Member 'UBP_NPCMaterialController_C::MaterialController' has a wrong offset!");
-static_assert(offsetof(UBP_NPCMaterialController_C, IsOnMobile) == 0x000158, "Member 'UBP_NPCMaterialController_C::IsOnMobile' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_NPCMaterialController_C;
 
 }
 

@@ -33,18 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyCameraShake_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyCameraShake_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyCameraShake_C")
 	}
 	static class UTsAnimNotifyCameraShake_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyCameraShake_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyCameraShake_C) == 0x000008, "Wrong alignment on UTsAnimNotifyCameraShake_C");
-static_assert(sizeof(UTsAnimNotifyCameraShake_C) == 0x000058, "Wrong size on UTsAnimNotifyCameraShake_C");
-static_assert(offsetof(UTsAnimNotifyCameraShake_C, 震动配置) == 0x000048, "Member 'UTsAnimNotifyCameraShake_C::震动配置' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraShake_C, Radius) == 0x000050, "Member 'UTsAnimNotifyCameraShake_C::Radius' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraShake_C, bForSelf) == 0x000054, "Member 'UTsAnimNotifyCameraShake_C::bForSelf' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyCameraShake_C;
 
 }
 

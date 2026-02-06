@@ -23,9 +23,7 @@ struct KuroHitResult_GetHitCount final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroHitResult_GetHitCount) == 0x000004, "Wrong alignment on KuroHitResult_GetHitCount");
-static_assert(sizeof(KuroHitResult_GetHitCount) == 0x000004, "Wrong size on KuroHitResult_GetHitCount");
-static_assert(offsetof(KuroHitResult_GetHitCount, ReturnValue) == 0x000000, "Member 'KuroHitResult_GetHitCount::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroHitResult_GetHitCount;
 
 // Function KuroData.KuroTraceLibrary.AsyncBoxTrace
 // 0x0050 (0x0050 - 0x0000)
@@ -38,13 +36,7 @@ public:
 	double                                        Frame;                                             // 0x0040(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTraceLibrary_AsyncBoxTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_AsyncBoxTrace");
-static_assert(sizeof(KuroTraceLibrary_AsyncBoxTrace) == 0x000050, "Wrong size on KuroTraceLibrary_AsyncBoxTrace");
-static_assert(offsetof(KuroTraceLibrary_AsyncBoxTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_AsyncBoxTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncBoxTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_AsyncBoxTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncBoxTrace, Delegate) == 0x000018, "Member 'KuroTraceLibrary_AsyncBoxTrace::Delegate' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncBoxTrace, Frame) == 0x000040, "Member 'KuroTraceLibrary_AsyncBoxTrace::Frame' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncBoxTrace, Index_0) == 0x000048, "Member 'KuroTraceLibrary_AsyncBoxTrace::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_AsyncBoxTrace;
 
 // Function KuroData.KuroTraceLibrary.AsyncCapsuleTrace
 // 0x0050 (0x0050 - 0x0000)
@@ -57,13 +49,7 @@ public:
 	double                                        Frame;                                             // 0x0040(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTraceLibrary_AsyncCapsuleTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_AsyncCapsuleTrace");
-static_assert(sizeof(KuroTraceLibrary_AsyncCapsuleTrace) == 0x000050, "Wrong size on KuroTraceLibrary_AsyncCapsuleTrace");
-static_assert(offsetof(KuroTraceLibrary_AsyncCapsuleTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_AsyncCapsuleTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncCapsuleTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_AsyncCapsuleTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncCapsuleTrace, Delegate) == 0x000018, "Member 'KuroTraceLibrary_AsyncCapsuleTrace::Delegate' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncCapsuleTrace, Frame) == 0x000040, "Member 'KuroTraceLibrary_AsyncCapsuleTrace::Frame' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncCapsuleTrace, Index_0) == 0x000048, "Member 'KuroTraceLibrary_AsyncCapsuleTrace::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_AsyncCapsuleTrace;
 
 // Function KuroData.KuroTraceLibrary.AsyncLineTrace
 // 0x0050 (0x0050 - 0x0000)
@@ -76,13 +62,7 @@ public:
 	double                                        Frame;                                             // 0x0040(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTraceLibrary_AsyncLineTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_AsyncLineTrace");
-static_assert(sizeof(KuroTraceLibrary_AsyncLineTrace) == 0x000050, "Wrong size on KuroTraceLibrary_AsyncLineTrace");
-static_assert(offsetof(KuroTraceLibrary_AsyncLineTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_AsyncLineTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncLineTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_AsyncLineTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncLineTrace, Delegate) == 0x000018, "Member 'KuroTraceLibrary_AsyncLineTrace::Delegate' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncLineTrace, Frame) == 0x000040, "Member 'KuroTraceLibrary_AsyncLineTrace::Frame' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncLineTrace, Index_0) == 0x000048, "Member 'KuroTraceLibrary_AsyncLineTrace::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_AsyncLineTrace;
 
 // Function KuroData.KuroTraceLibrary.AsyncSphereTrace
 // 0x0050 (0x0050 - 0x0000)
@@ -95,13 +75,7 @@ public:
 	double                                        Frame;                                             // 0x0040(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Index_0;                                           // 0x0048(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTraceLibrary_AsyncSphereTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_AsyncSphereTrace");
-static_assert(sizeof(KuroTraceLibrary_AsyncSphereTrace) == 0x000050, "Wrong size on KuroTraceLibrary_AsyncSphereTrace");
-static_assert(offsetof(KuroTraceLibrary_AsyncSphereTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_AsyncSphereTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncSphereTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_AsyncSphereTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncSphereTrace, Delegate) == 0x000018, "Member 'KuroTraceLibrary_AsyncSphereTrace::Delegate' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncSphereTrace, Frame) == 0x000040, "Member 'KuroTraceLibrary_AsyncSphereTrace::Frame' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_AsyncSphereTrace, Index_0) == 0x000048, "Member 'KuroTraceLibrary_AsyncSphereTrace::Index_0' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_AsyncSphereTrace;
 
 // Function KuroData.KuroTraceLibrary.BoxTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -113,11 +87,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTraceLibrary_BoxTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_BoxTrace");
-static_assert(sizeof(KuroTraceLibrary_BoxTrace) == 0x000020, "Wrong size on KuroTraceLibrary_BoxTrace");
-static_assert(offsetof(KuroTraceLibrary_BoxTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_BoxTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_BoxTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_BoxTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_BoxTrace, ReturnValue) == 0x000018, "Member 'KuroTraceLibrary_BoxTrace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_BoxTrace;
 
 // Function KuroData.KuroTraceLibrary.CapsuleTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -129,11 +99,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTraceLibrary_CapsuleTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_CapsuleTrace");
-static_assert(sizeof(KuroTraceLibrary_CapsuleTrace) == 0x000020, "Wrong size on KuroTraceLibrary_CapsuleTrace");
-static_assert(offsetof(KuroTraceLibrary_CapsuleTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_CapsuleTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_CapsuleTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_CapsuleTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_CapsuleTrace, ReturnValue) == 0x000018, "Member 'KuroTraceLibrary_CapsuleTrace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_CapsuleTrace;
 
 // Function KuroData.KuroTraceLibrary.LineTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -145,11 +111,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTraceLibrary_LineTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_LineTrace");
-static_assert(sizeof(KuroTraceLibrary_LineTrace) == 0x000020, "Wrong size on KuroTraceLibrary_LineTrace");
-static_assert(offsetof(KuroTraceLibrary_LineTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_LineTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_LineTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_LineTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_LineTrace, ReturnValue) == 0x000018, "Member 'KuroTraceLibrary_LineTrace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_LineTrace;
 
 // Function KuroData.KuroTraceLibrary.ShapeTrace
 // 0x0038 (0x0038 - 0x0000)
@@ -164,13 +126,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTraceLibrary_ShapeTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_ShapeTrace");
-static_assert(sizeof(KuroTraceLibrary_ShapeTrace) == 0x000038, "Wrong size on KuroTraceLibrary_ShapeTrace");
-static_assert(offsetof(KuroTraceLibrary_ShapeTrace, InShapeComp) == 0x000000, "Member 'KuroTraceLibrary_ShapeTrace::InShapeComp' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_ShapeTrace, Element) == 0x000008, "Member 'KuroTraceLibrary_ShapeTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_ShapeTrace, TraceTagName) == 0x000010, "Member 'KuroTraceLibrary_ShapeTrace::TraceTagName' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_ShapeTrace, ProfileKey) == 0x000020, "Member 'KuroTraceLibrary_ShapeTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_ShapeTrace, ReturnValue) == 0x000030, "Member 'KuroTraceLibrary_ShapeTrace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_ShapeTrace;
 
 // Function KuroData.KuroTraceLibrary.SphereTrace
 // 0x0020 (0x0020 - 0x0000)
@@ -182,11 +138,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroTraceLibrary_SphereTrace) == 0x000008, "Wrong alignment on KuroTraceLibrary_SphereTrace");
-static_assert(sizeof(KuroTraceLibrary_SphereTrace) == 0x000020, "Wrong size on KuroTraceLibrary_SphereTrace");
-static_assert(offsetof(KuroTraceLibrary_SphereTrace, Element) == 0x000000, "Member 'KuroTraceLibrary_SphereTrace::Element' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_SphereTrace, ProfileKey) == 0x000008, "Member 'KuroTraceLibrary_SphereTrace::ProfileKey' has a wrong offset!");
-static_assert(offsetof(KuroTraceLibrary_SphereTrace, ReturnValue) == 0x000018, "Member 'KuroTraceLibrary_SphereTrace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTraceLibrary_SphereTrace;
 
 // Function KuroData.TraceBaseElement.AddObjectTypeQuery
 // 0x0001 (0x0001 - 0x0000)
@@ -195,9 +147,7 @@ struct TraceBaseElement_AddObjectTypeQuery final
 public:
 	EObjectTypeQuery                              ObjectType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_AddObjectTypeQuery) == 0x000001, "Wrong alignment on TraceBaseElement_AddObjectTypeQuery");
-static_assert(sizeof(TraceBaseElement_AddObjectTypeQuery) == 0x000001, "Wrong size on TraceBaseElement_AddObjectTypeQuery");
-static_assert(offsetof(TraceBaseElement_AddObjectTypeQuery, ObjectType) == 0x000000, "Member 'TraceBaseElement_AddObjectTypeQuery::ObjectType' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_AddObjectTypeQuery;
 
 // Function KuroData.TraceBaseElement.ClearCacheData
 // 0x0001 (0x0001 - 0x0000)
@@ -206,9 +156,7 @@ struct TraceBaseElement_ClearCacheData final
 public:
 	bool                                          bClearWorld;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_ClearCacheData) == 0x000001, "Wrong alignment on TraceBaseElement_ClearCacheData");
-static_assert(sizeof(TraceBaseElement_ClearCacheData) == 0x000001, "Wrong size on TraceBaseElement_ClearCacheData");
-static_assert(offsetof(TraceBaseElement_ClearCacheData, bClearWorld) == 0x000000, "Member 'TraceBaseElement_ClearCacheData::bClearWorld' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_ClearCacheData;
 
 // Function KuroData.TraceBaseElement.SetDrawDebugTrace
 // 0x0001 (0x0001 - 0x0000)
@@ -217,9 +165,7 @@ struct TraceBaseElement_SetDrawDebugTrace final
 public:
 	EDrawDebugTrace                               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetDrawDebugTrace) == 0x000001, "Wrong alignment on TraceBaseElement_SetDrawDebugTrace");
-static_assert(sizeof(TraceBaseElement_SetDrawDebugTrace) == 0x000001, "Wrong size on TraceBaseElement_SetDrawDebugTrace");
-static_assert(offsetof(TraceBaseElement_SetDrawDebugTrace, Type) == 0x000000, "Member 'TraceBaseElement_SetDrawDebugTrace::Type' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetDrawDebugTrace;
 
 // Function KuroData.TraceBaseElement.SetEndLocation
 // 0x0018 (0x0018 - 0x0000)
@@ -230,11 +176,7 @@ public:
 	double                                        Y;                                                 // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Z;                                                 // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetEndLocation) == 0x000008, "Wrong alignment on TraceBaseElement_SetEndLocation");
-static_assert(sizeof(TraceBaseElement_SetEndLocation) == 0x000018, "Wrong size on TraceBaseElement_SetEndLocation");
-static_assert(offsetof(TraceBaseElement_SetEndLocation, X) == 0x000000, "Member 'TraceBaseElement_SetEndLocation::X' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetEndLocation, Y) == 0x000008, "Member 'TraceBaseElement_SetEndLocation::Y' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetEndLocation, Z) == 0x000010, "Member 'TraceBaseElement_SetEndLocation::Z' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetEndLocation;
 
 // Function KuroData.TraceBaseElement.SetObjectTypesQuery
 // 0x0010 (0x0010 - 0x0000)
@@ -243,9 +185,7 @@ struct TraceBaseElement_SetObjectTypesQuery final
 public:
 	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetObjectTypesQuery) == 0x000008, "Wrong alignment on TraceBaseElement_SetObjectTypesQuery");
-static_assert(sizeof(TraceBaseElement_SetObjectTypesQuery) == 0x000010, "Wrong size on TraceBaseElement_SetObjectTypesQuery");
-static_assert(offsetof(TraceBaseElement_SetObjectTypesQuery, ObjectTypes) == 0x000000, "Member 'TraceBaseElement_SetObjectTypesQuery::ObjectTypes' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetObjectTypesQuery;
 
 // Function KuroData.TraceBaseElement.SetStartLocation
 // 0x0018 (0x0018 - 0x0000)
@@ -256,11 +196,7 @@ public:
 	double                                        Y;                                                 // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Z;                                                 // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetStartLocation) == 0x000008, "Wrong alignment on TraceBaseElement_SetStartLocation");
-static_assert(sizeof(TraceBaseElement_SetStartLocation) == 0x000018, "Wrong size on TraceBaseElement_SetStartLocation");
-static_assert(offsetof(TraceBaseElement_SetStartLocation, X) == 0x000000, "Member 'TraceBaseElement_SetStartLocation::X' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetStartLocation, Y) == 0x000008, "Member 'TraceBaseElement_SetStartLocation::Y' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetStartLocation, Z) == 0x000010, "Member 'TraceBaseElement_SetStartLocation::Z' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetStartLocation;
 
 // Function KuroData.TraceBaseElement.SetTraceColor
 // 0x0010 (0x0010 - 0x0000)
@@ -272,12 +208,7 @@ public:
 	float                                         B;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         A;                                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetTraceColor) == 0x000004, "Wrong alignment on TraceBaseElement_SetTraceColor");
-static_assert(sizeof(TraceBaseElement_SetTraceColor) == 0x000010, "Wrong size on TraceBaseElement_SetTraceColor");
-static_assert(offsetof(TraceBaseElement_SetTraceColor, R) == 0x000000, "Member 'TraceBaseElement_SetTraceColor::R' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceColor, G) == 0x000004, "Member 'TraceBaseElement_SetTraceColor::G' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceColor, B) == 0x000008, "Member 'TraceBaseElement_SetTraceColor::B' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceColor, A) == 0x00000C, "Member 'TraceBaseElement_SetTraceColor::A' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetTraceColor;
 
 // Function KuroData.TraceBaseElement.SetTraceHitColor
 // 0x0010 (0x0010 - 0x0000)
@@ -289,12 +220,7 @@ public:
 	float                                         B;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         A;                                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetTraceHitColor) == 0x000004, "Wrong alignment on TraceBaseElement_SetTraceHitColor");
-static_assert(sizeof(TraceBaseElement_SetTraceHitColor) == 0x000010, "Wrong size on TraceBaseElement_SetTraceHitColor");
-static_assert(offsetof(TraceBaseElement_SetTraceHitColor, R) == 0x000000, "Member 'TraceBaseElement_SetTraceHitColor::R' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceHitColor, G) == 0x000004, "Member 'TraceBaseElement_SetTraceHitColor::G' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceHitColor, B) == 0x000008, "Member 'TraceBaseElement_SetTraceHitColor::B' has a wrong offset!");
-static_assert(offsetof(TraceBaseElement_SetTraceHitColor, A) == 0x00000C, "Member 'TraceBaseElement_SetTraceHitColor::A' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetTraceHitColor;
 
 // Function KuroData.TraceBaseElement.SetTraceTypeQuery
 // 0x0001 (0x0001 - 0x0000)
@@ -303,9 +229,7 @@ struct TraceBaseElement_SetTraceTypeQuery final
 public:
 	ETraceTypeQuery                               Type;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBaseElement_SetTraceTypeQuery) == 0x000001, "Wrong alignment on TraceBaseElement_SetTraceTypeQuery");
-static_assert(sizeof(TraceBaseElement_SetTraceTypeQuery) == 0x000001, "Wrong size on TraceBaseElement_SetTraceTypeQuery");
-static_assert(offsetof(TraceBaseElement_SetTraceTypeQuery, Type) == 0x000000, "Member 'TraceBaseElement_SetTraceTypeQuery::Type' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBaseElement_SetTraceTypeQuery;
 
 // Function KuroData.TraceBoxElement.SetBoxHalfSize
 // 0x000C (0x000C - 0x0000)
@@ -316,11 +240,7 @@ public:
 	float                                         Y;                                                 // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Z;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBoxElement_SetBoxHalfSize) == 0x000004, "Wrong alignment on TraceBoxElement_SetBoxHalfSize");
-static_assert(sizeof(TraceBoxElement_SetBoxHalfSize) == 0x00000C, "Wrong size on TraceBoxElement_SetBoxHalfSize");
-static_assert(offsetof(TraceBoxElement_SetBoxHalfSize, X) == 0x000000, "Member 'TraceBoxElement_SetBoxHalfSize::X' has a wrong offset!");
-static_assert(offsetof(TraceBoxElement_SetBoxHalfSize, Y) == 0x000004, "Member 'TraceBoxElement_SetBoxHalfSize::Y' has a wrong offset!");
-static_assert(offsetof(TraceBoxElement_SetBoxHalfSize, Z) == 0x000008, "Member 'TraceBoxElement_SetBoxHalfSize::Z' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBoxElement_SetBoxHalfSize;
 
 // Function KuroData.TraceBoxElement.SetBoxOrientation
 // 0x000C (0x000C - 0x0000)
@@ -331,11 +251,18 @@ public:
 	float                                         Yaw;                                               // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Roll;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(TraceBoxElement_SetBoxOrientation) == 0x000004, "Wrong alignment on TraceBoxElement_SetBoxOrientation");
-static_assert(sizeof(TraceBoxElement_SetBoxOrientation) == 0x00000C, "Wrong size on TraceBoxElement_SetBoxOrientation");
-static_assert(offsetof(TraceBoxElement_SetBoxOrientation, Pitch) == 0x000000, "Member 'TraceBoxElement_SetBoxOrientation::Pitch' has a wrong offset!");
-static_assert(offsetof(TraceBoxElement_SetBoxOrientation, Yaw) == 0x000004, "Member 'TraceBoxElement_SetBoxOrientation::Yaw' has a wrong offset!");
-static_assert(offsetof(TraceBoxElement_SetBoxOrientation, Roll) == 0x000008, "Member 'TraceBoxElement_SetBoxOrientation::Roll' has a wrong offset!");
+DUMPER7_ASSERTS_TraceBoxElement_SetBoxOrientation;
+
+// Function KuroData.TraceCapsuleElement.SetCapsuleOrientation
+// 0x000C (0x000C - 0x0000)
+struct TraceCapsuleElement_SetCapsuleOrientation final
+{
+public:
+	float                                         Pitch;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Yaw;                                               // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Roll;                                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_TraceCapsuleElement_SetCapsuleOrientation;
 
 }
 

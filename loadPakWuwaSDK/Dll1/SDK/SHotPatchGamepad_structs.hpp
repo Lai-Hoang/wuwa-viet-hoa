@@ -22,10 +22,7 @@ public:
 	class FString                                 ActionName_2_BE7C98D64A37A666DEFF21A8977575EA;     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class AUITextureActor*                        TextureActor_8_EAA6E7E0406FFD280978ED9165D23E96;   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSHotPatchGamepad) == 0x000008, "Wrong alignment on FSHotPatchGamepad");
-static_assert(sizeof(FSHotPatchGamepad) == 0x000018, "Wrong size on FSHotPatchGamepad");
-static_assert(offsetof(FSHotPatchGamepad, ActionName_2_BE7C98D64A37A666DEFF21A8977575EA) == 0x000000, "Member 'FSHotPatchGamepad::ActionName_2_BE7C98D64A37A666DEFF21A8977575EA' has a wrong offset!");
-static_assert(offsetof(FSHotPatchGamepad, TextureActor_8_EAA6E7E0406FFD280978ED9165D23E96) == 0x000010, "Member 'FSHotPatchGamepad::TextureActor_8_EAA6E7E0406FFD280978ED9165D23E96' has a wrong offset!");
+DUMPER7_ASSERTS_FSHotPatchGamepad;
 
 }
 

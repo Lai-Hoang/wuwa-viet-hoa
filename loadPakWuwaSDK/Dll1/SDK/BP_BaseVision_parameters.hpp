@@ -24,10 +24,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision) == 0x000004, "Wrong alignment on BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision");
-static_assert(sizeof(BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision) == 0x000008, "Wrong size on BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision");
-static_assert(offsetof(BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision, EntryPoint) == 0x000000, "Member 'BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseVision_C_ExecuteUbergraph_BP_BaseVision;
 
 // Function BP_BaseVision.BP_BaseVision_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -36,9 +33,7 @@ struct BP_BaseVision_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_BaseVision_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_BaseVision_C_ReceiveTick");
-static_assert(sizeof(BP_BaseVision_C_ReceiveTick) == 0x000004, "Wrong size on BP_BaseVision_C_ReceiveTick");
-static_assert(offsetof(BP_BaseVision_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_BaseVision_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseVision_C_ReceiveTick;
 
 // Function BP_BaseVision.BP_BaseVision_C.获取幻象数据
 // 0x0160 (0x0160 - 0x0000)
@@ -54,15 +49,7 @@ public:
 	struct FSVisionData                           CallFunc_GetDataTableRowFromName_OutRow;           // 0x00C0(0x0098)(ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseVision_C_获取幻象数据) == 0x000008, "Wrong alignment on BP_BaseVision_C_获取幻象数据");
-static_assert(sizeof(BP_BaseVision_C_获取幻象数据) == 0x000160, "Wrong size on BP_BaseVision_C_获取幻象数据");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, 幻象数据) == 0x000000, "Member 'BP_BaseVision_C_获取幻象数据::幻象数据' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_GetEntityId_ReturnValue) == 0x000098, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_GetEntityId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_GetVisionId_ReturnValue) == 0x00009C, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_GetVisionId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_Conv_IntToString_ReturnValue) == 0x0000A0, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_Conv_StringToName_ReturnValue) == 0x0000B0, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_GetDataTableRowFromName_OutRow) == 0x0000C0, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取幻象数据, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000158, "Member 'BP_BaseVision_C_获取幻象数据::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseVision_C_获取幻象数据;
 
 // Function BP_BaseVision.BP_BaseVision_C.获取召唤角色
 // 0x0028 (0x0028 - 0x0000)
@@ -76,14 +63,7 @@ public:
 	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_BaseVision_C_获取召唤角色) == 0x000008, "Wrong alignment on BP_BaseVision_C_获取召唤角色");
-static_assert(sizeof(BP_BaseVision_C_获取召唤角色) == 0x000028, "Wrong size on BP_BaseVision_C_获取召唤角色");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, 召唤角色) == 0x000000, "Member 'BP_BaseVision_C_获取召唤角色::召唤角色' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, CallFunc_GetEntityId_ReturnValue) == 0x000008, "Member 'BP_BaseVision_C_获取召唤角色::CallFunc_GetEntityId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, CallFunc_GetSummonerEntityId_ReturnValue) == 0x00000C, "Member 'BP_BaseVision_C_获取召唤角色::CallFunc_GetSummonerEntityId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, CallFunc_GetDynamicEntity_ReturnValue) == 0x000010, "Member 'BP_BaseVision_C_获取召唤角色::CallFunc_GetDynamicEntity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, K2Node_DynamicCast_AsTs_Base_Character) == 0x000018, "Member 'BP_BaseVision_C_获取召唤角色::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_BaseVision_C_获取召唤角色, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_BaseVision_C_获取召唤角色::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_BaseVision_C_获取召唤角色;
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SBaseCurve_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EDangoPerformType_structs.hpp"
-#include "Engine_classes.hpp"
 #include "SDangoPerformData_structs.hpp"
+#include "SBaseCurve_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -54,39 +54,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_DangoGlobalConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_DangoGlobalConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_DangoGlobalConfig_C")
 	}
 	static class UBP_DangoGlobalConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_DangoGlobalConfig_C>();
 	}
 };
-static_assert(alignof(UBP_DangoGlobalConfig_C) == 0x000008, "Wrong alignment on UBP_DangoGlobalConfig_C");
-static_assert(sizeof(UBP_DangoGlobalConfig_C) == 0x000118, "Wrong size on UBP_DangoGlobalConfig_C");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前摇时间) == 0x000038, "Member 'UBP_DangoGlobalConfig_C::跳跃前摇时间' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃移动时间) == 0x00003C, "Member 'UBP_DangoGlobalConfig_C::跳跃移动时间' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃后摇时间) == 0x000040, "Member 'UBP_DangoGlobalConfig_C::跳跃后摇时间' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃旋转速度) == 0x000044, "Member 'UBP_DangoGlobalConfig_C::跳跃旋转速度' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃高度偏移基准) == 0x000048, "Member 'UBP_DangoGlobalConfig_C::跳跃高度偏移基准' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃上升偏移曲线高度范围) == 0x00004C, "Member 'UBP_DangoGlobalConfig_C::跳跃上升偏移曲线高度范围' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃下降偏移曲线高度范围) == 0x000050, "Member 'UBP_DangoGlobalConfig_C::跳跃下降偏移曲线高度范围' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃上升偏移曲线) == 0x000058, "Member 'UBP_DangoGlobalConfig_C::跳跃上升偏移曲线' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃下降偏移曲线) == 0x000060, "Member 'UBP_DangoGlobalConfig_C::跳跃下降偏移曲线' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃中镜头臂长) == 0x000068, "Member 'UBP_DangoGlobalConfig_C::跳跃中镜头臂长' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃中镜头追踪时间) == 0x00006C, "Member 'UBP_DangoGlobalConfig_C::跳跃中镜头追踪时间' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃中镜头FOV) == 0x000070, "Member 'UBP_DangoGlobalConfig_C::跳跃中镜头FOV' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃中镜头曲线) == 0x000074, "Member 'UBP_DangoGlobalConfig_C::跳跃中镜头曲线' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头死区距离基准) == 0x00007C, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头死区距离基准' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头臂长) == 0x000080, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头臂长' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头近距离基准范围) == 0x000084, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头近距离基准范围' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头近距离追踪时间范围) == 0x000094, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头近距离追踪时间范围' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头远距离基准) == 0x0000A4, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头远距离基准' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头远距离追踪时间) == 0x0000A8, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头远距离追踪时间' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头FOV) == 0x0000AC, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头FOV' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 跳跃前镜头曲线) == 0x0000B0, "Member 'UBP_DangoGlobalConfig_C::跳跃前镜头曲线' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 动作表现) == 0x0000B8, "Member 'UBP_DangoGlobalConfig_C::动作表现' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 堆叠绑定骨骼名称) == 0x000108, "Member 'UBP_DangoGlobalConfig_C::堆叠绑定骨骼名称' has a wrong offset!");
-static_assert(offsetof(UBP_DangoGlobalConfig_C, 堆叠间隔) == 0x000114, "Member 'UBP_DangoGlobalConfig_C::堆叠间隔' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_DangoGlobalConfig_C;
 
 }
 

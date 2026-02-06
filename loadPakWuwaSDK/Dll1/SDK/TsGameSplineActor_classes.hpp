@@ -30,16 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsGameSplineActor_C">();
+		BP_STATIC_CLASS_IMPL("TsGameSplineActor_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsGameSplineActor_C")
 	}
 	static class ATsGameSplineActor_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsGameSplineActor_C>();
 	}
 };
-static_assert(alignof(ATsGameSplineActor_C) == 0x000008, "Wrong alignment on ATsGameSplineActor_C");
-static_assert(sizeof(ATsGameSplineActor_C) == 0x0002B8, "Wrong size on ATsGameSplineActor_C");
-static_assert(offsetof(ATsGameSplineActor_C, DefaultSceneRoot) == 0x0002B0, "Member 'ATsGameSplineActor_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ATsGameSplineActor_C;
 
 }
 

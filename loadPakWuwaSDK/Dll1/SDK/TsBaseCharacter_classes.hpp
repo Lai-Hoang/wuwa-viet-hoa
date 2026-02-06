@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ECharacterRenderingType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ECharacterRenderingType_structs.hpp"
+#include "ECharacterDitherType_structs.hpp"
 #include "ECamp_structs.hpp"
 #include "KuroGAS_classes.hpp"
 
@@ -58,22 +58,26 @@ public:
 	class UDataTable*                             DtGameplayAbpConfig;                               // 0x0750(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	int32 GetEntityId();
-	void BindGameplayEnableState(bool& gameplayEnable);
-	void SetDitherEffect(float dither, ECharacterDitherType ditherType);
-	void Initialize();
-	void FightCommand(bool isInAir);
-	void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
-	void ReceivePossessed(class AController* NewController);
-	void ReceiveUnpossessed(class AController* OldController);
-	void K2_UpdateCustomMovement(float DeltaTime);
-	void ReceiveDestroyed();
 	void ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void K2_UpdateCustomMovement(float DeltaTime);
+	void ReceiveUnpossessed(class AController* OldController);
+	void ReceivePossessed(class AController* NewController);
+	void K2_OnMovementModeChanged(EMovementMode PrevMovementMode, EMovementMode NewMovementMode, uint8 PrevCustomMode, uint8 NewCustomMode);
+	void FightCommand(bool isInAir);
+	void Initialize();
+	void SetDitherEffect(float dither, ECharacterDitherType ditherType);
+	void BindGameplayEnableState(bool& gameplayEnable);
+	int32 GetEntityId();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsBaseCharacter_C">();
+		BP_STATIC_CLASS_IMPL("TsBaseCharacter_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsBaseCharacter_C")
 	}
 	static class ATsBaseCharacter_C* GetDefaultObj()
 	{
@@ -81,34 +85,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(ATsBaseCharacter_C) == 0x000010, "Wrong alignment on ATsBaseCharacter_C");
-static_assert(sizeof(ATsBaseCharacter_C) == 0x000760, "Wrong size on ATsBaseCharacter_C");
-static_assert(offsetof(ATsBaseCharacter_C, UberGraphFrame) == 0x000680, "Member 'ATsBaseCharacter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, NavigationInvoker) == 0x000688, "Member 'ATsBaseCharacter_C::NavigationInvoker' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, TsCharacterDebugComponent) == 0x000690, "Member 'ATsBaseCharacter_C::TsCharacterDebugComponent' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, CharRenderingComponent) == 0x000698, "Member 'ATsBaseCharacter_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, FightManager) == 0x0006A0, "Member 'ATsBaseCharacter_C::FightManager' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtHitEffect) == 0x0006A8, "Member 'ATsBaseCharacter_C::DtHitEffect' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtBaseMovementSetting) == 0x0006B0, "Member 'ATsBaseCharacter_C::DtBaseMovementSetting' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, BattleSockets) == 0x0006B8, "Member 'ATsBaseCharacter_C::BattleSockets' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, NormalSockets) == 0x0006C8, "Member 'ATsBaseCharacter_C::NormalSockets' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, WeaponInEffect) == 0x0006D8, "Member 'ATsBaseCharacter_C::WeaponInEffect' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, RenderType) == 0x0006E0, "Member 'ATsBaseCharacter_C::RenderType' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtNewBulletDataMain) == 0x0006E8, "Member 'ATsBaseCharacter_C::DtNewBulletDataMain' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtCharacterPart) == 0x0006F0, "Member 'ATsBaseCharacter_C::DtCharacterPart' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, InputComponentClass) == 0x0006F8, "Member 'ATsBaseCharacter_C::InputComponentClass' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, FkData) == 0x000718, "Member 'ATsBaseCharacter_C::FkData' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, WeaponHideEffect) == 0x000720, "Member 'ATsBaseCharacter_C::WeaponHideEffect' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, CharacterData) == 0x000728, "Member 'ATsBaseCharacter_C::CharacterData' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, PhysicsClothSimulateEnable) == 0x000730, "Member 'ATsBaseCharacter_C::PhysicsClothSimulateEnable' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, PhysicsClothSimulateDisableOneFrame) == 0x000731, "Member 'ATsBaseCharacter_C::PhysicsClothSimulateDisableOneFrame' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, CachePoseEnableOneFrame) == 0x000732, "Member 'ATsBaseCharacter_C::CachePoseEnableOneFrame' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, CacheTime) == 0x000734, "Member 'ATsBaseCharacter_C::CacheTime' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtCameraConfig) == 0x000738, "Member 'ATsBaseCharacter_C::DtCameraConfig' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, BasePlatform) == 0x000740, "Member 'ATsBaseCharacter_C::BasePlatform' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, Camp) == 0x000748, "Member 'ATsBaseCharacter_C::Camp' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, EntityId) == 0x00074C, "Member 'ATsBaseCharacter_C::EntityId' has a wrong offset!");
-static_assert(offsetof(ATsBaseCharacter_C, DtGameplayAbpConfig) == 0x000750, "Member 'ATsBaseCharacter_C::DtGameplayAbpConfig' has a wrong offset!");
+DUMPER7_ASSERTS_ATsBaseCharacter_C;
 
 }
 

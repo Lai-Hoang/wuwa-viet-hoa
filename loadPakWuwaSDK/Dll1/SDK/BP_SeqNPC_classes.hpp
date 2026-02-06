@@ -55,25 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SeqNPC_C">();
+		BP_STATIC_CLASS_IMPL("BP_SeqNPC_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SeqNPC_C")
 	}
 	static class ABP_SeqNPC_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_SeqNPC_C>();
 	}
 };
-static_assert(alignof(ABP_SeqNPC_C) == 0x000008, "Wrong alignment on ABP_SeqNPC_C");
-static_assert(sizeof(ABP_SeqNPC_C) == 0x000460, "Wrong size on ABP_SeqNPC_C");
-static_assert(offsetof(ABP_SeqNPC_C, UberGraphFrame) == 0x0003D8, "Member 'ABP_SeqNPC_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, SeqAudio_Seq_V2) == 0x0003E0, "Member 'ABP_SeqNPC_C::SeqAudio_Seq_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, ABPC_Body_V2) == 0x0003E8, "Member 'ABP_SeqNPC_C::ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, NPC_DA) == 0x0003F0, "Member 'ABP_SeqNPC_C::NPC_DA' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, MaxLod) == 0x0003F8, "Member 'ABP_SeqNPC_C::MaxLod' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, LodBias) == 0x0003FC, "Member 'ABP_SeqNPC_C::LodBias' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, IgnoreSockets) == 0x000400, "Member 'ABP_SeqNPC_C::IgnoreSockets' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, TalkID) == 0x000404, "Member 'ABP_SeqNPC_C::TalkID' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, TalkID_SP) == 0x000408, "Member 'ABP_SeqNPC_C::TalkID_SP' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, Float_Curve_Data) == 0x000410, "Member 'ABP_SeqNPC_C::Float_Curve_Data' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_SeqNPC_C;
 
 }
 

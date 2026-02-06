@@ -35,10 +35,7 @@ public:
 	uint8                                         MtlID;                                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EnvType;                                           // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroVoxelInfo) == 0x000001, "Wrong alignment on FKuroVoxelInfo");
-static_assert(sizeof(FKuroVoxelInfo) == 0x000002, "Wrong size on FKuroVoxelInfo");
-static_assert(offsetof(FKuroVoxelInfo, MtlID) == 0x000000, "Member 'FKuroVoxelInfo::MtlID' has a wrong offset!");
-static_assert(offsetof(FKuroVoxelInfo, EnvType) == 0x000001, "Member 'FKuroVoxelInfo::EnvType' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroVoxelInfo;
 
 }
 

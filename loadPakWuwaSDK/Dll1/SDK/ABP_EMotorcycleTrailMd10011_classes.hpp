@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "KawaiiPhysics_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KawaiiPhysics_structs.hpp"
 
 
 namespace SDK
@@ -37,21 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_EMotorcycleTrailMd10011_C">();
+		BP_STATIC_CLASS_IMPL("ABP_EMotorcycleTrailMd10011_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_EMotorcycleTrailMd10011_C")
 	}
 	static class UABP_EMotorcycleTrailMd10011_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_EMotorcycleTrailMd10011_C>();
 	}
 };
-static_assert(alignof(UABP_EMotorcycleTrailMd10011_C) == 0x000010, "Wrong alignment on UABP_EMotorcycleTrailMd10011_C");
-static_assert(sizeof(UABP_EMotorcycleTrailMd10011_C) == 0x000B90, "Wrong size on UABP_EMotorcycleTrailMd10011_C");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, UberGraphFrame) == 0x000730, "Member 'UABP_EMotorcycleTrailMd10011_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_EMotorcycleTrailMd10011_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, AnimGraphNode_LocalToComponentSpace) == 0x000770, "Member 'UABP_EMotorcycleTrailMd10011_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, AnimGraphNode_ComponentToLocalSpace) == 0x000790, "Member 'UABP_EMotorcycleTrailMd10011_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, AnimGraphNode_KawaiiPhysicsGroup) == 0x0007B0, "Member 'UABP_EMotorcycleTrailMd10011_C::AnimGraphNode_KawaiiPhysicsGroup' has a wrong offset!");
-static_assert(offsetof(UABP_EMotorcycleTrailMd10011_C, AnimGraphNode_LinkedInputPose) == 0x000A50, "Member 'UABP_EMotorcycleTrailMd10011_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_EMotorcycleTrailMd10011_C;
 
 }
 

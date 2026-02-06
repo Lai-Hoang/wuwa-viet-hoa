@@ -26,23 +26,24 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_TsSkeletalObserver(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsSkeletalObserver_C">();
+		BP_STATIC_CLASS_IMPL("TsSkeletalObserver_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsSkeletalObserver_C")
 	}
 	static class ATsSkeletalObserver_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsSkeletalObserver_C>();
 	}
 };
-static_assert(alignof(ATsSkeletalObserver_C) == 0x000008, "Wrong alignment on ATsSkeletalObserver_C");
-static_assert(sizeof(ATsSkeletalObserver_C) == 0x0002C0, "Wrong size on ATsSkeletalObserver_C");
-static_assert(offsetof(ATsSkeletalObserver_C, UberGraphFrame) == 0x0002B0, "Member 'ATsSkeletalObserver_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsSkeletalObserver_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsSkeletalObserver_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ATsSkeletalObserver_C;
 
 }
 

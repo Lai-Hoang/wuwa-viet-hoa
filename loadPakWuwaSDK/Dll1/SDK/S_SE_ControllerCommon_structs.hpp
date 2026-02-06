@@ -26,11 +26,7 @@ public:
 	TArray<struct FSMaterialControllerColorParameter> CustomColors_23_D46E551F4EE49A33813738920A17A1A1; // 0x0010(0x0010)(Edit, BlueprintVisible)
 	bool                                          bActive_27_2CF94B2C45421EB008661E9B70C1D57E;       // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FS_SE_ControllerCommon) == 0x000008, "Wrong alignment on FS_SE_ControllerCommon");
-static_assert(sizeof(FS_SE_ControllerCommon) == 0x000028, "Wrong size on FS_SE_ControllerCommon");
-static_assert(offsetof(FS_SE_ControllerCommon, CustomFloats_20_BEFE4A72466DBBF31C7BE88043697CC2) == 0x000000, "Member 'FS_SE_ControllerCommon::CustomFloats_20_BEFE4A72466DBBF31C7BE88043697CC2' has a wrong offset!");
-static_assert(offsetof(FS_SE_ControllerCommon, CustomColors_23_D46E551F4EE49A33813738920A17A1A1) == 0x000010, "Member 'FS_SE_ControllerCommon::CustomColors_23_D46E551F4EE49A33813738920A17A1A1' has a wrong offset!");
-static_assert(offsetof(FS_SE_ControllerCommon, bActive_27_2CF94B2C45421EB008661E9B70C1D57E) == 0x000020, "Member 'FS_SE_ControllerCommon::bActive_27_2CF94B2C45421EB008661E9B70C1D57E' has a wrong offset!");
+DUMPER7_ASSERTS_FS_SE_ControllerCommon;
 
 }
 

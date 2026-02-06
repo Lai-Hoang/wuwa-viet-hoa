@@ -17,50 +17,6 @@
 namespace SDK
 {
 
-// Function TsBaseItem.TsBaseItem_C.GetTagDebugStrings
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString ATsBaseItem_C::GetTagDebugStrings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseItem_C", "GetTagDebugStrings");
-
-	Params::TsBaseItem_C_GetTagDebugStrings Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TsBaseItem.TsBaseItem_C.ReceiveBeginPlay
-// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void ATsBaseItem_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseItem_C", "ReceiveBeginPlay");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function TsBaseItem.TsBaseItem_C.ExecuteUbergraph_TsBaseItem
 // (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -83,6 +39,50 @@ void ATsBaseItem_C::ExecuteUbergraph_TsBaseItem(int32 EntryPoint)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseItem.TsBaseItem_C.ReceiveBeginPlay
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+
+void ATsBaseItem_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseItem_C", "ReceiveBeginPlay");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseItem.TsBaseItem_C.GetTagDebugStrings
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString ATsBaseItem_C::GetTagDebugStrings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseItem_C", "GetTagDebugStrings");
+
+	Params::TsBaseItem_C_GetTagDebugStrings Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

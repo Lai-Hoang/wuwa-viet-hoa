@@ -31,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavMeshCookDataSubsystem">();
+		STATIC_CLASS_IMPL("NavMeshCookDataSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavMeshCookDataSubsystem")
 	}
 	static class UNavMeshCookDataSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNavMeshCookDataSubsystem>();
 	}
 };
-static_assert(alignof(UNavMeshCookDataSubsystem) == 0x000008, "Wrong alignment on UNavMeshCookDataSubsystem");
-static_assert(sizeof(UNavMeshCookDataSubsystem) == 0x000088, "Wrong size on UNavMeshCookDataSubsystem");
+DUMPER7_ASSERTS_UNavMeshCookDataSubsystem;
 
 // Class KuroNavMeshCookData.NavEdgesExportVolume
 // 0x0000 (0x02E8 - 0x02E8)
@@ -48,15 +51,18 @@ class ANavEdgesExportVolume final : public AVolume
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavEdgesExportVolume">();
+		STATIC_CLASS_IMPL("NavEdgesExportVolume")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavEdgesExportVolume")
 	}
 	static class ANavEdgesExportVolume* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ANavEdgesExportVolume>();
 	}
 };
-static_assert(alignof(ANavEdgesExportVolume) == 0x000008, "Wrong alignment on ANavEdgesExportVolume");
-static_assert(sizeof(ANavEdgesExportVolume) == 0x0002E8, "Wrong size on ANavEdgesExportVolume");
+DUMPER7_ASSERTS_ANavEdgesExportVolume;
 
 // Class KuroNavMeshCookData.NavMeshEdgesActor
 // 0x0000 (0x02B0 - 0x02B0)
@@ -65,15 +71,18 @@ class ANavMeshEdgesActor final : public AActor
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavMeshEdgesActor">();
+		STATIC_CLASS_IMPL("NavMeshEdgesActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavMeshEdgesActor")
 	}
 	static class ANavMeshEdgesActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ANavMeshEdgesActor>();
 	}
 };
-static_assert(alignof(ANavMeshEdgesActor) == 0x000008, "Wrong alignment on ANavMeshEdgesActor");
-static_assert(sizeof(ANavMeshEdgesActor) == 0x0002B0, "Wrong size on ANavMeshEdgesActor");
+DUMPER7_ASSERTS_ANavMeshEdgesActor;
 
 // Class KuroNavMeshCookData.NavMeshEdgesComponent
 // 0x0060 (0x0120 - 0x00C0)
@@ -87,17 +96,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavMeshEdgesComponent">();
+		STATIC_CLASS_IMPL("NavMeshEdgesComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"NavMeshEdgesComponent")
 	}
 	static class UNavMeshEdgesComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UNavMeshEdgesComponent>();
 	}
 };
-static_assert(alignof(UNavMeshEdgesComponent) == 0x000008, "Wrong alignment on UNavMeshEdgesComponent");
-static_assert(sizeof(UNavMeshEdgesComponent) == 0x000120, "Wrong size on UNavMeshEdgesComponent");
-static_assert(offsetof(UNavMeshEdgesComponent, TileSizeUU) == 0x0000C0, "Member 'UNavMeshEdgesComponent::TileSizeUU' has a wrong offset!");
-static_assert(offsetof(UNavMeshEdgesComponent, NavMeshOrig) == 0x0000C4, "Member 'UNavMeshEdgesComponent::NavMeshOrig' has a wrong offset!");
+DUMPER7_ASSERTS_UNavMeshEdgesComponent;
 
 }
 

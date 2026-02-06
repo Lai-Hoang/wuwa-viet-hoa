@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiHotKeyLinkListener_C">();
+		BP_STATIC_CLASS_IMPL("TsUiHotKeyLinkListener_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiHotKeyLinkListener_C")
 	}
 	static class UTsUiHotKeyLinkListener_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiHotKeyLinkListener_C>();
 	}
 };
-static_assert(alignof(UTsUiHotKeyLinkListener_C) == 0x000008, "Wrong alignment on UTsUiHotKeyLinkListener_C");
-static_assert(sizeof(UTsUiHotKeyLinkListener_C) == 0x000110, "Wrong size on UTsUiHotKeyLinkListener_C");
-static_assert(offsetof(UTsUiHotKeyLinkListener_C, ActorList) == 0x000100, "Member 'UTsUiHotKeyLinkListener_C::ActorList' has a wrong offset!");
+DUMPER7_ASSERTS_UTsUiHotKeyLinkListener_C;
 
 }
 

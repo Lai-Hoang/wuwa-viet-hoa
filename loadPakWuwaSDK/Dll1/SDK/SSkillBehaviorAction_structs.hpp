@@ -11,23 +11,23 @@
 #include "Basic.hpp"
 
 #include "ESkillBehaviorActionType_structs.hpp"
-#include "ESkillBehaviorLocationType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ESkillBehaviorRestrictType_structs.hpp"
-#include "SBaseCurve_structs.hpp"
-#include "ESkillBehaviorLocationForwardType_structs.hpp"
-#include "ESkillBehaviorRotationType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "SSkillBehaviorCue_structs.hpp"
-#include "SSkillBehaviorBullet_structs.hpp"
-#include "SCameraModifier_Condition_structs.hpp"
-#include "ECameraAnsEffectiveClientType_structs.hpp"
-#include "ESkillBehaviorBestSpotType_structs.hpp"
-#include "SCameraModifier_Settings_structs.hpp"
-#include "SSequenceCamera_Settings_structs.hpp"
-#include "ESkillBehaviorBuffTargetType_structs.hpp"
-#include "Engine_structs.hpp"
+#include "ESkillBehaviorLocationType_structs.hpp"
 #include "SSkillBehaviorUpdateCustomValue_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ESkillBehaviorLocationForwardType_structs.hpp"
+#include "ESkillBehaviorRestrictType_structs.hpp"
+#include "ESkillBehaviorRotationType_structs.hpp"
+#include "SSkillBehaviorBullet_structs.hpp"
+#include "SSequenceCamera_Settings_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "SBaseCurve_structs.hpp"
+#include "ECameraAnsEffectiveClientType_structs.hpp"
+#include "SCameraModifier_Condition_structs.hpp"
+#include "SCameraModifier_Settings_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ESkillBehaviorBestSpotType_structs.hpp"
+#include "ESkillBehaviorBuffTargetType_structs.hpp"
 
 
 namespace SDK
@@ -105,62 +105,7 @@ public:
 	TSoftObjectPtr<class UPrimaryDataAsset>       CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6;   // 0x0290(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FName                                   BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D;     // 0x02C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSSkillBehaviorAction) == 0x000008, "Wrong alignment on FSSkillBehaviorAction");
-static_assert(sizeof(FSSkillBehaviorAction) == 0x0002D0, "Wrong size on FSSkillBehaviorAction");
-static_assert(offsetof(FSSkillBehaviorAction, ActionType_19_928EDB4F42F86E100915608112580A79) == 0x000000, "Member 'FSSkillBehaviorAction::ActionType_19_928EDB4F42F86E100915608112580A79' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, LocationType_189_529AE283410C2E1005CB1F87D7127A4D) == 0x000001, "Member 'FSSkillBehaviorAction::LocationType_189_529AE283410C2E1005CB1F87D7127A4D' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BlackboardKey_209_F7A2DF3E49A071728CEDCDAC40CC9A37) == 0x000008, "Member 'FSSkillBehaviorAction::BlackboardKey_209_F7A2DF3E49A071728CEDCDAC40CC9A37' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, LocationForwardType_191_B83ADEED485C283B0510A68E10C7852F) == 0x000018, "Member 'FSSkillBehaviorAction::LocationForwardType_191_B83ADEED485C283B0510A68E10C7852F' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, LocationOffset_108_BA50F7AA4075F430C69C30A161E79A59) == 0x00001C, "Member 'FSSkillBehaviorAction::LocationOffset_108_BA50F7AA4075F430C69C30A161E79A59' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Restrict_95_C2990E2B43935300EFE0DF8F424BEFF3) == 0x000028, "Member 'FSSkillBehaviorAction::Restrict_95_C2990E2B43935300EFE0DF8F424BEFF3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, RestrictType_98_D0DCBBB94CD417F01441E6B6C6FF581C) == 0x000029, "Member 'FSSkillBehaviorAction::RestrictType_98_D0DCBBB94CD417F01441E6B6C6FF581C' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, RestrictDistance_101_FFF667624EBD7B985E81BA99F7817192) == 0x00002C, "Member 'FSSkillBehaviorAction::RestrictDistance_101_FFF667624EBD7B985E81BA99F7817192' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BestSpot_104_D24BFD95459541F3CFCC6BBA59927536) == 0x000030, "Member 'FSSkillBehaviorAction::BestSpot_104_D24BFD95459541F3CFCC6BBA59927536' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, RotationType_196_62E567E44622E8EE1AA49397199ACA60) == 0x000031, "Member 'FSSkillBehaviorAction::RotationType_196_62E567E44622E8EE1AA49397199ACA60' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, DirectionOffset_111_523AE48A41BFB39B830684B870FF2CAE) == 0x000034, "Member 'FSSkillBehaviorAction::DirectionOffset_111_523AE48A41BFB39B830684B870FF2CAE' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Cues_76_2D918BA24A0CA641D7BBF7BD13E08398) == 0x000038, "Member 'FSSkillBehaviorAction::Cues_76_2D918BA24A0CA641D7BBF7BD13E08398' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Bullets_77_D4BBB46C47AE6F88D881F9ADA9156FFA) == 0x000048, "Member 'FSSkillBehaviorAction::Bullets_77_D4BBB46C47AE6F88D881F9ADA9156FFA' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Tag_120_68C740484932F7D3DDAC2FAAFE60FCFC) == 0x000058, "Member 'FSSkillBehaviorAction::Tag_120_68C740484932F7D3DDAC2FAAFE60FCFC' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Duration_123_E3B2684B40F4575A565A0A90837D76E2) == 0x000064, "Member 'FSSkillBehaviorAction::Duration_123_E3B2684B40F4575A565A0A90837D76E2' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BlendInTime_125_8B2D7D7D4C3A11F601631E811D4639E3) == 0x000068, "Member 'FSSkillBehaviorAction::BlendInTime_125_8B2D7D7D4C3A11F601631E811D4639E3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BlendOutTime_127_3F28F38D488982760674879A821AA054) == 0x00006C, "Member 'FSSkillBehaviorAction::BlendOutTime_127_3F28F38D488982760674879A821AA054' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BreakBlendOutTime_221_2497E8FB47E32B8788CC63BEC8061D3F) == 0x000070, "Member 'FSSkillBehaviorAction::BreakBlendOutTime_221_2497E8FB47E32B8788CC63BEC8061D3F' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BlendInCurve_254_53F40FA34EBBD72696A3DAA2E5C9A50D) == 0x000074, "Member 'FSSkillBehaviorAction::BlendInCurve_254_53F40FA34EBBD72696A3DAA2E5C9A50D' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BlendOutCurve_251_CA445C0A4C82A45C6656EB86F1C14945) == 0x00007C, "Member 'FSSkillBehaviorAction::BlendOutCurve_251_CA445C0A4C82A45C6656EB86F1C14945' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraEffectiveClientType_229_51C02ABD4110AE58BB4FC3AC2647F39E) == 0x000084, "Member 'FSSkillBehaviorAction::CameraEffectiveClientType_229_51C02ABD4110AE58BB4FC3AC2647F39E' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraModifierConditions_228_BA7966AF4EFF27AF382884AAA620E601) == 0x000088, "Member 'FSSkillBehaviorAction::CameraModifierConditions_228_BA7966AF4EFF27AF382884AAA620E601' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraModifierSettings_131_24F3A807485EF77178D294A1DE455488) == 0x000098, "Member 'FSSkillBehaviorAction::CameraModifierSettings_131_24F3A807485EF77178D294A1DE455488' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraSequenceSettings_184_B0C9DEF24C35C77F696B6D90D53C8554) == 0x0001B0, "Member 'FSSkillBehaviorAction::CameraSequenceSettings_184_B0C9DEF24C35C77F696B6D90D53C8554' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, ResetLockOnCamera_138_047F77FB4E4D9FAB90A871861BFC5696) == 0x0001E8, "Member 'FSSkillBehaviorAction::ResetLockOnCamera_138_047F77FB4E4D9FAB90A871861BFC5696' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, AdditiveRotation_141_55E8256C46827D1642FDCD9D14854589) == 0x0001EC, "Member 'FSSkillBehaviorAction::AdditiveRotation_141_55E8256C46827D1642FDCD9D14854589' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraAttachSocket_185_10D4FB3A459032757A89FD9BA96C1A83) == 0x0001F8, "Member 'FSSkillBehaviorAction::CameraAttachSocket_185_10D4FB3A459032757A89FD9BA96C1A83' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CameraDetectSocket_186_64C9856C4917F5C7D921E09772835BD3) == 0x000204, "Member 'FSSkillBehaviorAction::CameraDetectSocket_186_64C9856C4917F5C7D921E09772835BD3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, ExtraDetectSphereRadius_149_160C5A3F4AD2C8B136350BADC5D3C9FB) == 0x000210, "Member 'FSSkillBehaviorAction::ExtraDetectSphereRadius_149_160C5A3F4AD2C8B136350BADC5D3C9FB' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, ExtraSphereLocation_152_6C303A16434283376C250A88F7B988AB) == 0x000214, "Member 'FSSkillBehaviorAction::ExtraSphereLocation_152_6C303A16434283376C250A88F7B988AB' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, IsShowExtraSphere_155_50E2906841D692145464899F7C5EA736) == 0x000220, "Member 'FSSkillBehaviorAction::IsShowExtraSphere_155_50E2906841D692145464899F7C5EA736' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BeginMovementMode_187_D1BF07234A6B80DB9D19BDA7C643891A) == 0x000221, "Member 'FSSkillBehaviorAction::BeginMovementMode_187_D1BF07234A6B80DB9D19BDA7C643891A' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, EndMovementMode_160_0FA7DBA048F42DB50D468EB52506E1DB) == 0x000222, "Member 'FSSkillBehaviorAction::EndMovementMode_160_0FA7DBA048F42DB50D468EB52506E1DB' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CollisionResponse_163_0015C44A414FFD53174E3CB6A9D62D0F) == 0x000223, "Member 'FSSkillBehaviorAction::CollisionResponse_163_0015C44A414FFD53174E3CB6A9D62D0F' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CollisionChannel_166_2949B1CD400718236C2A858C6641A6F8) == 0x000224, "Member 'FSSkillBehaviorAction::CollisionChannel_166_2949B1CD400718236C2A858C6641A6F8' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CollisionRestore_169_E0018CC746C17607B0334EBC40C5EE00) == 0x000225, "Member 'FSSkillBehaviorAction::CollisionRestore_169_E0018CC746C17607B0334EBC40C5EE00' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, FollowIndex_174_4B2308594A0BC5860E4681B75D818114) == 0x000228, "Member 'FSSkillBehaviorAction::FollowIndex_174_4B2308594A0BC5860E4681B75D818114' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, SummonSkillId_181_1FA5575B40D0B30D536CF8BE1D3F4ED3) == 0x00022C, "Member 'FSSkillBehaviorAction::SummonSkillId_181_1FA5575B40D0B30D536CF8BE1D3F4ED3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, StopSummonSkill_182_448527CA436CE3C791BBB0923C802CD7) == 0x000230, "Member 'FSSkillBehaviorAction::StopSummonSkill_182_448527CA436CE3C791BBB0923C802CD7' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Strategy_206_364E8199461F866DA1E738B909AF9BA3) == 0x000231, "Member 'FSSkillBehaviorAction::Strategy_206_364E8199461F866DA1E738B909AF9BA3' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, AngleOffsets_276_BDAF73C744E7A53ACE23E4B06A084017) == 0x000238, "Member 'FSSkillBehaviorAction::AngleOffsets_276_BDAF73C744E7A53ACE23E4B06A084017' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, OnGround_231_915FC3974BAA519E7D883299AD2058F7) == 0x000248, "Member 'FSSkillBehaviorAction::OnGround_231_915FC3974BAA519E7D883299AD2058F7' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, GroundOffset_234_B494A3804408F95D5A37548D7B8D049D) == 0x00024C, "Member 'FSSkillBehaviorAction::GroundOffset_234_B494A3804408F95D5A37548D7B8D049D' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, DebugTrace_198_772A39284872AB2CF44366AE8AD28728) == 0x000250, "Member 'FSSkillBehaviorAction::DebugTrace_198_772A39284872AB2CF44366AE8AD28728' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Navigation_201_3CAB915C492DDD5D14DC38A6527C52D1) == 0x000254, "Member 'FSSkillBehaviorAction::Navigation_201_3CAB915C492DDD5D14DC38A6527C52D1' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BuffId_215_FC5579E6440CA752BF0A20A3D0291FCF) == 0x000258, "Member 'FSSkillBehaviorAction::BuffId_215_FC5579E6440CA752BF0A20A3D0291FCF' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BuffTarget_218_52829D6E4FDD50520D92D6BB2D3A0613) == 0x000260, "Member 'FSSkillBehaviorAction::BuffTarget_218_52829D6E4FDD50520D92D6BB2D3A0613' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, Add_211_548FB33648C85E653FEA8A939D97D296) == 0x000261, "Member 'FSSkillBehaviorAction::Add_211_548FB33648C85E653FEA8A939D97D296' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, MontageIndex_237_161CBCEE4238997B831C0DAFD37AAF44) == 0x000264, "Member 'FSSkillBehaviorAction::MontageIndex_237_161CBCEE4238997B831C0DAFD37AAF44' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, StartSection_245_FC2AC39C4289C2607E7FA4B1CC13730F) == 0x000268, "Member 'FSSkillBehaviorAction::StartSection_245_FC2AC39C4289C2607E7FA4B1CC13730F' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, StartTime_246_B7BFD6B741AA0F21C4262384C5DDFBBE) == 0x000278, "Member 'FSSkillBehaviorAction::StartTime_246_B7BFD6B741AA0F21C4262384C5DDFBBE' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, UpdateCustomValue_257_8F128846455436A6E50D79874DF0F5EE) == 0x000280, "Member 'FSSkillBehaviorAction::UpdateCustomValue_257_8F128846455436A6E50D79874DF0F5EE' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6) == 0x000290, "Member 'FSSkillBehaviorAction::CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6' has a wrong offset!");
-static_assert(offsetof(FSSkillBehaviorAction, BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D) == 0x0002C0, "Member 'FSSkillBehaviorAction::BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D' has a wrong offset!");
+DUMPER7_ASSERTS_FSSkillBehaviorAction;
 
 }
 

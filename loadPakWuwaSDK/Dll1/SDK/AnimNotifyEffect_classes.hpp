@@ -12,9 +12,9 @@
 
 #include "ESkillEffectType_structs.hpp"
 #include "EAnimNotifyEffectLocationType_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -57,31 +57,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"AnimNotifyEffect_C">();
+		BP_STATIC_CLASS_IMPL("AnimNotifyEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotifyEffect_C")
 	}
 	static class UAnimNotifyEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAnimNotifyEffect_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyEffect_C) == 0x000008, "Wrong alignment on UAnimNotifyEffect_C");
-static_assert(sizeof(UAnimNotifyEffect_C) == 0x000130, "Wrong size on UAnimNotifyEffect_C");
-static_assert(offsetof(UAnimNotifyEffect_C, UseSocketTransform) == 0x000080, "Member 'UAnimNotifyEffect_C::UseSocketTransform' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, UseClipboardTransform) == 0x000081, "Member 'UAnimNotifyEffect_C::UseClipboardTransform' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, DetachWhenSkillEnd) == 0x000082, "Member 'UAnimNotifyEffect_C::DetachWhenSkillEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, WhenSkillEnd) == 0x000083, "Member 'UAnimNotifyEffect_C::WhenSkillEnd' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, LocationType) == 0x000084, "Member 'UAnimNotifyEffect_C::LocationType' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, RightOrLeftFoot) == 0x000085, "Member 'UAnimNotifyEffect_C::RightOrLeftFoot' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, EffectDataAssetRef) == 0x000088, "Member 'UAnimNotifyEffect_C::EffectDataAssetRef' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, WhenSkillEndEnableTime) == 0x0000B8, "Member 'UAnimNotifyEffect_C::WhenSkillEndEnableTime' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, DebugTrace) == 0x0000BC, "Member 'UAnimNotifyEffect_C::DebugTrace' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, TraceFrom) == 0x0000C0, "Member 'UAnimNotifyEffect_C::TraceFrom' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, TraceTo) == 0x0000CC, "Member 'UAnimNotifyEffect_C::TraceTo' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, PlayNeedTags) == 0x0000D8, "Member 'UAnimNotifyEffect_C::PlayNeedTags' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, NeedAnyTag) == 0x000128, "Member 'UAnimNotifyEffect_C::NeedAnyTag' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, IgnoreWhenInvisible) == 0x000129, "Member 'UAnimNotifyEffect_C::IgnoreWhenInvisible' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, IsSyncEffectTimeScale) == 0x00012A, "Member 'UAnimNotifyEffect_C::IsSyncEffectTimeScale' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyEffect_C, DisableOnVehicle) == 0x00012B, "Member 'UAnimNotifyEffect_C::DisableOnVehicle' has a wrong offset!");
+DUMPER7_ASSERTS_UAnimNotifyEffect_C;
 
 }
 

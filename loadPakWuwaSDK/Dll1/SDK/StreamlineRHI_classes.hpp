@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StreamlineOverrideSettings">();
+		STATIC_CLASS_IMPL("StreamlineOverrideSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StreamlineOverrideSettings")
 	}
 	static class UStreamlineOverrideSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStreamlineOverrideSettings>();
 	}
 };
-static_assert(alignof(UStreamlineOverrideSettings) == 0x000008, "Wrong alignment on UStreamlineOverrideSettings");
-static_assert(sizeof(UStreamlineOverrideSettings) == 0x000038, "Wrong size on UStreamlineOverrideSettings");
-static_assert(offsetof(UStreamlineOverrideSettings, EnableDLSSFGInPlayInEditorViewportsOverride) == 0x000030, "Member 'UStreamlineOverrideSettings::EnableDLSSFGInPlayInEditorViewportsOverride' has a wrong offset!");
-static_assert(offsetof(UStreamlineOverrideSettings, LoadDebugOverlayOverride) == 0x000031, "Member 'UStreamlineOverrideSettings::LoadDebugOverlayOverride' has a wrong offset!");
+DUMPER7_ASSERTS_UStreamlineOverrideSettings;
 
 // Class StreamlineRHI.StreamlineSettings
 // 0x0010 (0x0040 - 0x0030)
@@ -58,21 +59,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StreamlineSettings">();
+		STATIC_CLASS_IMPL("StreamlineSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StreamlineSettings")
 	}
 	static class UStreamlineSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStreamlineSettings>();
 	}
 };
-static_assert(alignof(UStreamlineSettings) == 0x000008, "Wrong alignment on UStreamlineSettings");
-static_assert(sizeof(UStreamlineSettings) == 0x000040, "Wrong size on UStreamlineSettings");
-static_assert(offsetof(UStreamlineSettings, bEnableStreamlineD3D12) == 0x000030, "Member 'UStreamlineSettings::bEnableStreamlineD3D12' has a wrong offset!");
-static_assert(offsetof(UStreamlineSettings, bEnableStreamlineD3D11) == 0x000031, "Member 'UStreamlineSettings::bEnableStreamlineD3D11' has a wrong offset!");
-static_assert(offsetof(UStreamlineSettings, bEnableDLSSFGInPlayInEditorViewports) == 0x000032, "Member 'UStreamlineSettings::bEnableDLSSFGInPlayInEditorViewports' has a wrong offset!");
-static_assert(offsetof(UStreamlineSettings, bLoadDebugOverlay) == 0x000033, "Member 'UStreamlineSettings::bLoadDebugOverlay' has a wrong offset!");
-static_assert(offsetof(UStreamlineSettings, bAllowOTAUpdate) == 0x000034, "Member 'UStreamlineSettings::bAllowOTAUpdate' has a wrong offset!");
-static_assert(offsetof(UStreamlineSettings, NVIDIANGXApplicationId) == 0x000038, "Member 'UStreamlineSettings::NVIDIANGXApplicationId' has a wrong offset!");
+DUMPER7_ASSERTS_UStreamlineSettings;
 
 }
 

@@ -29,15 +29,7 @@ public:
 	TArray<struct FKuroCurveFloat>                FloatStart;                                        // 0x0050(0x0010)(Edit, BlueprintVisible)
 	class UKuroCharacterMaterialControllerCache*  CallFunc_SpawnObject_ReturnValue;                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PD_CharacterControllerData_C_InitCache) == 0x000008, "Wrong alignment on PD_CharacterControllerData_C_InitCache");
-static_assert(sizeof(PD_CharacterControllerData_C_InitCache) == 0x000068, "Wrong size on PD_CharacterControllerData_C_InitCache");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, ColorEnd) == 0x000000, "Member 'PD_CharacterControllerData_C_InitCache::ColorEnd' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, ColorLoop) == 0x000010, "Member 'PD_CharacterControllerData_C_InitCache::ColorLoop' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, ColorStart) == 0x000020, "Member 'PD_CharacterControllerData_C_InitCache::ColorStart' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, FloatEnd) == 0x000030, "Member 'PD_CharacterControllerData_C_InitCache::FloatEnd' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, FloatLoop) == 0x000040, "Member 'PD_CharacterControllerData_C_InitCache::FloatLoop' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, FloatStart) == 0x000050, "Member 'PD_CharacterControllerData_C_InitCache::FloatStart' has a wrong offset!");
-static_assert(offsetof(PD_CharacterControllerData_C_InitCache, CallFunc_SpawnObject_ReturnValue) == 0x000060, "Member 'PD_CharacterControllerData_C_InitCache::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_PD_CharacterControllerData_C_InitCache;
 
 }
 

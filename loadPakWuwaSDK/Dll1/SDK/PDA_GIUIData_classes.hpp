@@ -30,19 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_GIUIData_C">();
+		BP_STATIC_CLASS_IMPL("PDA_GIUIData_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_GIUIData_C")
 	}
 	static class UPDA_GIUIData_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_GIUIData_C>();
 	}
 };
-static_assert(alignof(UPDA_GIUIData_C) == 0x000008, "Wrong alignment on UPDA_GIUIData_C");
-static_assert(sizeof(UPDA_GIUIData_C) == 0x000050, "Wrong size on UPDA_GIUIData_C");
-static_assert(offsetof(UPDA_GIUIData_C, HideSkyBox) == 0x000038, "Member 'UPDA_GIUIData_C::HideSkyBox' has a wrong offset!");
-static_assert(offsetof(UPDA_GIUIData_C, UIGIData) == 0x000040, "Member 'UPDA_GIUIData_C::UIGIData' has a wrong offset!");
-static_assert(offsetof(UPDA_GIUIData_C, SunVerticalAngle) == 0x000048, "Member 'UPDA_GIUIData_C::SunVerticalAngle' has a wrong offset!");
-static_assert(offsetof(UPDA_GIUIData_C, SunHorinzonAngle) == 0x00004C, "Member 'UPDA_GIUIData_C::SunHorinzonAngle' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_GIUIData_C;
 
 }
 

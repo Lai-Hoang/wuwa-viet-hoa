@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"CommonEffectMoveSpline2_C">();
+		BP_STATIC_CLASS_IMPL("CommonEffectMoveSpline2_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"CommonEffectMoveSpline2_C")
 	}
 	static class ACommonEffectMoveSpline2_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ACommonEffectMoveSpline2_C>();
 	}
 };
-static_assert(alignof(ACommonEffectMoveSpline2_C) == 0x000008, "Wrong alignment on ACommonEffectMoveSpline2_C");
-static_assert(sizeof(ACommonEffectMoveSpline2_C) == 0x0002B8, "Wrong size on ACommonEffectMoveSpline2_C");
-static_assert(offsetof(ACommonEffectMoveSpline2_C, KuroMoveSpline) == 0x0002B0, "Member 'ACommonEffectMoveSpline2_C::KuroMoveSpline' has a wrong offset!");
+DUMPER7_ASSERTS_ACommonEffectMoveSpline2_C;
 
 }
 

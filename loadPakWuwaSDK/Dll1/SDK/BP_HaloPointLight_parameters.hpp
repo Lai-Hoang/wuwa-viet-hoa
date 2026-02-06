@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_BillboardMode_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK::Params
@@ -31,12 +31,7 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight) == 0x000008, "Wrong alignment on BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight");
-static_assert(sizeof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight) == 0x000040, "Wrong size on BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight");
-static_assert(offsetof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight, EntryPoint) == 0x000000, "Member 'BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight, K2Node_CreateDelegate_OutputDelegate) == 0x000008, "Member 'BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight, K2Node_Event_DeltaSeconds) == 0x000030, "Member 'BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight, CallFunc_GetGameUserSettings_ReturnValue) == 0x000038, "Member 'BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_ExecuteUbergraph_BP_HaloPointLight;
 
 // Function BP_HaloPointLight.BP_HaloPointLight_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -45,9 +40,7 @@ struct BP_HaloPointLight_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HaloPointLight_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_HaloPointLight_C_ReceiveTick");
-static_assert(sizeof(BP_HaloPointLight_C_ReceiveTick) == 0x000004, "Wrong size on BP_HaloPointLight_C_ReceiveTick");
-static_assert(offsetof(BP_HaloPointLight_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_HaloPointLight_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_ReceiveTick;
 
 // Function BP_HaloPointLight.BP_HaloPointLight_C.UserConstructionScript
 // 0x0070 (0x0070 - 0x0000)
@@ -67,18 +60,7 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_3; // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_HaloPointLight_C_UserConstructionScript) == 0x000010, "Wrong alignment on BP_HaloPointLight_C_UserConstructionScript");
-static_assert(sizeof(BP_HaloPointLight_C_UserConstructionScript) == 0x000070, "Wrong size on BP_HaloPointLight_C_UserConstructionScript");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, ___struct_Variable) == 0x000000, "Member 'BP_HaloPointLight_C_UserConstructionScript::___struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000038, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000040, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000048, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000050, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_GetWorldFeatureLevel_ReturnValue) == 0x000058, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_GetWorldFeatureLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00005C, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_CreateDynamicMaterialInstance_ReturnValue_3) == 0x000060, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_CreateDynamicMaterialInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UserConstructionScript, CallFunc_SetStaticMesh_ReturnValue) == 0x000068, "Member 'BP_HaloPointLight_C_UserConstructionScript::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_UserConstructionScript;
 
 // Function BP_HaloPointLight.BP_HaloPointLight_C.UpdateHaloParameter
 // 0x00A8 (0x00A8 - 0x0000)
@@ -113,32 +95,7 @@ public:
 	struct FLinearColor                           K2Node_MakeStruct_LinearColor_3;                   // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HaloPointLight_C_UpdateHaloParameter) == 0x000004, "Wrong alignment on BP_HaloPointLight_C_UpdateHaloParameter");
-static_assert(sizeof(BP_HaloPointLight_C_UpdateHaloParameter) == 0x0000A8, "Wrong size on BP_HaloPointLight_C_UpdateHaloParameter");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, UpdateComponent) == 0x000000, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::UpdateComponent' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, ___float_Variable) == 0x000004, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, ___float_Variable_1) == 0x00000C, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::___float_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_GetHaloDrawParameters_MinDrawDistance) == 0x000010, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_GetHaloDrawParameters_MinDrawDistance' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_GetHaloDrawParameters_MaxDrawDistance) == 0x000014, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_GetHaloDrawParameters_MaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_GetHaloDrawParameters_MinDrawRange) == 0x000018, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_GetHaloDrawParameters_MinDrawRange' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_GetHaloDrawParameters_MaxDrawRange) == 0x00001C, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_GetHaloDrawParameters_MaxDrawRange' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor) == 0x000020, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, ___float_Variable_2) == 0x000030, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::___float_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000034, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, ___byte_Variable) == 0x000038, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::___byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x00003C, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_1) == 0x000040, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, K2Node_Select_Default) == 0x000050, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000054, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000058, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x00005C, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x000060, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_2) == 0x000064, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_6) == 0x000074, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_GetLightColor_ReturnValue) == 0x000078, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_GetLightColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_3) == 0x000088, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_UpdateHaloParameter, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000098, "Member 'BP_HaloPointLight_C_UpdateHaloParameter::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_UpdateHaloParameter;
 
 // Function BP_HaloPointLight.BP_HaloPointLight_C.GetHaloDrawParameters
 // 0x009C (0x009C - 0x0000)
@@ -190,50 +147,7 @@ public:
 	ELightDistanceCullType                        CallFunc_GetLightDistanceCullType_ReturnValue;     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_HaloPointLight_C_GetHaloDrawParameters) == 0x000004, "Wrong alignment on BP_HaloPointLight_C_GetHaloDrawParameters");
-static_assert(sizeof(BP_HaloPointLight_C_GetHaloDrawParameters) == 0x00009C, "Wrong size on BP_HaloPointLight_C_GetHaloDrawParameters");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, MinDrawDistance_0) == 0x000000, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::MinDrawDistance_0' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, MaxDrawDistance_0) == 0x000004, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::MaxDrawDistance_0' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, MinDrawRange_0) == 0x000008, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::MinDrawRange_0' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, MaxDrawRange_0) == 0x00000C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::MaxDrawRange_0' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, K2Node_SwitchEnum_CmpSuccess) == 0x000010, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X) == 0x000014, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y) == 0x000018, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z) == 0x00001C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W) == 0x000020, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, K2Node_SwitchEnum_CmpSuccess_1) == 0x000024, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, K2Node_SwitchEnum_CmpSuccess_2) == 0x000025, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, K2Node_SwitchEnum_CmpSuccess_3) == 0x000026, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_1) == 0x000028, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_1) == 0x00002C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_1) == 0x000030, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_1) == 0x000034, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_1' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_2) == 0x000038, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_2) == 0x00003C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_2) == 0x000040, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_2) == 0x000044, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_2' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_3) == 0x000048, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_3) == 0x00004C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_3) == 0x000050, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_3) == 0x000054, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_3' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_4) == 0x000058, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_4' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_4) == 0x00005C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_4' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_4) == 0x000060, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_4' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_4) == 0x000064, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_4' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_5) == 0x000068, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_5' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_5) == 0x00006C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_5' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_5) == 0x000070, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_5' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_5) == 0x000074, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_5' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_6) == 0x000078, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_6' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_6) == 0x00007C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_6' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_6) == 0x000080, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_6' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_6) == 0x000084, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_6' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_X_7) == 0x000088, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_X_7' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Y_7) == 0x00008C, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Y_7' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_Z_7) == 0x000090, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_Z_7' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_BreakVector4_W_7) == 0x000094, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_BreakVector4_W_7' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, CallFunc_GetLightDistanceCullType_ReturnValue) == 0x000098, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::CallFunc_GetLightDistanceCullType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_GetHaloDrawParameters, K2Node_SwitchEnum_CmpSuccess_4) == 0x000099, "Member 'BP_HaloPointLight_C_GetHaloDrawParameters::K2Node_SwitchEnum_CmpSuccess_4' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_GetHaloDrawParameters;
 
 // Function BP_HaloPointLight.BP_HaloPointLight_C.SetQuality
 // 0x0018 (0x0018 - 0x0000)
@@ -248,15 +162,7 @@ public:
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_HaloPointLight_C_SetQuality) == 0x000008, "Wrong alignment on BP_HaloPointLight_C_SetQuality");
-static_assert(sizeof(BP_HaloPointLight_C_SetQuality) == 0x000018, "Wrong size on BP_HaloPointLight_C_SetQuality");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_GetGameUserSettings_ReturnValue) == 0x000000, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000008, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_GetGameQualitySettingLevel_ReturnValue) == 0x00000C, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_GetGameQualitySettingLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_Subtract_IntInt_ReturnValue) == 0x000010, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000014, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000015, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HaloPointLight_C_SetQuality, CallFunc_BooleanAND_ReturnValue) == 0x000016, "Member 'BP_HaloPointLight_C_SetQuality::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_HaloPointLight_C_SetQuality;
 
 }
 

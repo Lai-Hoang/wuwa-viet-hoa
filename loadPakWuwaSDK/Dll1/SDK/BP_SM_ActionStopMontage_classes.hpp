@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_ActionStopMontage_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_ActionStopMontage_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_ActionStopMontage_C")
 	}
 	static class UBP_SM_ActionStopMontage_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_ActionStopMontage_C>();
 	}
 };
-static_assert(alignof(UBP_SM_ActionStopMontage_C) == 0x000008, "Wrong alignment on UBP_SM_ActionStopMontage_C");
-static_assert(sizeof(UBP_SM_ActionStopMontage_C) == 0x000038, "Wrong size on UBP_SM_ActionStopMontage_C");
-static_assert(offsetof(UBP_SM_ActionStopMontage_C, 淡出时间) == 0x000030, "Member 'UBP_SM_ActionStopMontage_C::淡出时间' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_ActionStopMontage_C;
 
 }
 

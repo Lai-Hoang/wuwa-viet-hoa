@@ -27,17 +27,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EffectAudio_C">();
+		BP_STATIC_CLASS_IMPL("BP_EffectAudio_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EffectAudio_C")
 	}
 	static class ABP_EffectAudio_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EffectAudio_C>();
 	}
 };
-static_assert(alignof(ABP_EffectAudio_C) == 0x000008, "Wrong alignment on ABP_EffectAudio_C");
-static_assert(sizeof(ABP_EffectAudio_C) == 0x0002C0, "Wrong size on ABP_EffectAudio_C");
-static_assert(offsetof(ABP_EffectAudio_C, AkComponent) == 0x0002B0, "Member 'ABP_EffectAudio_C::AkComponent' has a wrong offset!");
-static_assert(offsetof(ABP_EffectAudio_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_EffectAudio_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EffectAudio_C;
 
 }
 

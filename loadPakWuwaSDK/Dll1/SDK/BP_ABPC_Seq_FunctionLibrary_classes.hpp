@@ -26,15 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ABPC_Seq_FunctionLibrary_C">();
+		BP_STATIC_CLASS_IMPL("BP_ABPC_Seq_FunctionLibrary_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ABPC_Seq_FunctionLibrary_C")
 	}
 	static class UBP_ABPC_Seq_FunctionLibrary_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_ABPC_Seq_FunctionLibrary_C>();
 	}
 };
-static_assert(alignof(UBP_ABPC_Seq_FunctionLibrary_C) == 0x000008, "Wrong alignment on UBP_ABPC_Seq_FunctionLibrary_C");
-static_assert(sizeof(UBP_ABPC_Seq_FunctionLibrary_C) == 0x000030, "Wrong size on UBP_ABPC_Seq_FunctionLibrary_C");
+DUMPER7_ASSERTS_UBP_ABPC_Seq_FunctionLibrary_C;
 
 }
 

@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_Miaozhunxian_Bullet_C">();
+		BP_STATIC_CLASS_IMPL("BP_Miaozhunxian_Bullet_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_Miaozhunxian_Bullet_C")
 	}
 	static class ABP_Miaozhunxian_Bullet_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_Miaozhunxian_Bullet_C>();
 	}
 };
-static_assert(alignof(ABP_Miaozhunxian_Bullet_C) == 0x000008, "Wrong alignment on ABP_Miaozhunxian_Bullet_C");
-static_assert(sizeof(ABP_Miaozhunxian_Bullet_C) == 0x0002B8, "Wrong size on ABP_Miaozhunxian_Bullet_C");
-static_assert(offsetof(ABP_Miaozhunxian_Bullet_C, DefaultSceneRoot) == 0x0002B0, "Member 'ABP_Miaozhunxian_Bullet_C::DefaultSceneRoot' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_Miaozhunxian_Bullet_C;
 
 }
 

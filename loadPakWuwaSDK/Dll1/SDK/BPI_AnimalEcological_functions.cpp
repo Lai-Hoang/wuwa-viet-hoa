@@ -17,51 +17,185 @@
 namespace SDK
 {
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.SystemUiEnd
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.TakeOffStart
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_AnimalEcological_C::SystemUiEnd()
+void IBPI_AnimalEcological_C::TakeOffStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "SystemUiEnd");
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "TakeOffStart");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.SystemUiStart
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.TakeOffEnd
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_AnimalEcological_C::SystemUiStart()
+void IBPI_AnimalEcological_C::TakeOffEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "SystemUiStart");
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "TakeOffEnd");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.FeedStart
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.AlertStart
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGameplayTag&              GameplayTag                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AnimalEcological_C::FeedStart(const struct FGameplayTag& GameplayTag)
+void IBPI_AnimalEcological_C::AlertStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "FeedStart");
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "AlertStart");
 
-	Params::BPI_AnimalEcological_C_FeedStart Parms{};
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
 
-	Parms.GameplayTag = std::move(GameplayTag);
 
-	AsUObject()->ProcessEvent(Func, &Parms);
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.AlertEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::AlertEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "AlertEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.UnderAttackStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::UnderAttackStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "UnderAttackStart");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.UnderAttackEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::UnderAttackEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "UnderAttackEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.IdleStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::IdleStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "IdleStart");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.IdleEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::IdleEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "IdleEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.InteractStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::InteractStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "InteractStart");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.InteractEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::InteractEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "InteractEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.StateMachineInitializationComplete
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::StateMachineInitializationComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "StateMachineInitializationComplete");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.NoneStateStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::NoneStateStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "NoneStateStart");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.NoneStateEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::NoneStateEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "NoneStateEnd");
+
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
@@ -86,183 +220,49 @@ void IBPI_AnimalEcological_C::GetCurrentActionTime(float* ActionTime)
 }
 
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.NoneStateEnd
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.FeedStart
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTag&              GameplayTag                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AnimalEcological_C::NoneStateEnd()
+void IBPI_AnimalEcological_C::FeedStart(const struct FGameplayTag& GameplayTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "NoneStateEnd");
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "FeedStart");
+
+	Params::BPI_AnimalEcological_C_FeedStart Parms{};
+
+	Parms.GameplayTag = std::move(GameplayTag);
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.SystemUiStart
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_AnimalEcological_C::SystemUiStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "SystemUiStart");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.NoneStateStart
+// Function BPI_AnimalEcological.BPI_AnimalEcological_C.SystemUiEnd
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void IBPI_AnimalEcological_C::NoneStateStart()
+void IBPI_AnimalEcological_C::SystemUiEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "NoneStateStart");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.StateMachineInitializationComplete
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::StateMachineInitializationComplete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "StateMachineInitializationComplete");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.InteractEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::InteractEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "InteractEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.InteractStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::InteractStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "InteractStart");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.IdleEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::IdleEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "IdleEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.IdleStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::IdleStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "IdleStart");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.UnderAttackEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::UnderAttackEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "UnderAttackEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.UnderAttackStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::UnderAttackStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "UnderAttackStart");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.AlertEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::AlertEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "AlertEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.AlertStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::AlertStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "AlertStart");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.TakeOffEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::TakeOffEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "TakeOffEnd");
-
-	AsUObject()->ProcessEvent(Func, nullptr);
-}
-
-
-// Function BPI_AnimalEcological.BPI_AnimalEcological_C.TakeOffStart
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_AnimalEcological_C::TakeOffStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "TakeOffStart");
+		Func = AsUObject()->Class->GetFunction("BPI_AnimalEcological_C", "SystemUiEnd");
 
 	AsUObject()->ProcessEvent(Func, nullptr);
 }

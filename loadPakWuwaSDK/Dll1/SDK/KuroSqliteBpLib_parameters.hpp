@@ -25,10 +25,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_ClearBindings) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_ClearBindings");
-static_assert(sizeof(KuroPrepareStatementLib_ClearBindings) == 0x000008, "Wrong size on KuroPrepareStatementLib_ClearBindings");
-static_assert(offsetof(KuroPrepareStatementLib_ClearBindings, InId) == 0x000000, "Member 'KuroPrepareStatementLib_ClearBindings::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_ClearBindings, ReturnValue) == 0x000004, "Member 'KuroPrepareStatementLib_ClearBindings::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_ClearBindings;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.CloseConnection
 // 0x0004 (0x0004 - 0x0000)
@@ -37,9 +34,7 @@ struct KuroPrepareStatementLib_CloseConnection final
 public:
 	int32                                         InId;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPrepareStatementLib_CloseConnection) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_CloseConnection");
-static_assert(sizeof(KuroPrepareStatementLib_CloseConnection) == 0x000004, "Wrong size on KuroPrepareStatementLib_CloseConnection");
-static_assert(offsetof(KuroPrepareStatementLib_CloseConnection, InId) == 0x000000, "Member 'KuroPrepareStatementLib_CloseConnection::InId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_CloseConnection;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.CreateStatement
 // 0x0028 (0x0028 - 0x0000)
@@ -52,11 +47,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_CreateStatement) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_CreateStatement");
-static_assert(sizeof(KuroPrepareStatementLib_CreateStatement) == 0x000028, "Wrong size on KuroPrepareStatementLib_CreateStatement");
-static_assert(offsetof(KuroPrepareStatementLib_CreateStatement, InDbPath) == 0x000000, "Member 'KuroPrepareStatementLib_CreateStatement::InDbPath' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_CreateStatement, InCommand) == 0x000010, "Member 'KuroPrepareStatementLib_CreateStatement::InCommand' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_CreateStatement, ReturnValue) == 0x000020, "Member 'KuroPrepareStatementLib_CreateStatement::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_CreateStatement;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.DestroyStatement
 // 0x0004 (0x0004 - 0x0000)
@@ -65,9 +56,7 @@ struct KuroPrepareStatementLib_DestroyStatement final
 public:
 	int32                                         InId;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPrepareStatementLib_DestroyStatement) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_DestroyStatement");
-static_assert(sizeof(KuroPrepareStatementLib_DestroyStatement) == 0x000004, "Wrong size on KuroPrepareStatementLib_DestroyStatement");
-static_assert(offsetof(KuroPrepareStatementLib_DestroyStatement, InId) == 0x000000, "Member 'KuroPrepareStatementLib_DestroyStatement::InId' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_DestroyStatement;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.GetColumnValueBytes
 // 0x0020 (0x0020 - 0x0000)
@@ -80,12 +69,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_GetColumnValueBytes) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_GetColumnValueBytes");
-static_assert(sizeof(KuroPrepareStatementLib_GetColumnValueBytes) == 0x000020, "Wrong size on KuroPrepareStatementLib_GetColumnValueBytes");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueBytes, InId) == 0x000000, "Member 'KuroPrepareStatementLib_GetColumnValueBytes::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueBytes, InColumnIndex) == 0x000004, "Member 'KuroPrepareStatementLib_GetColumnValueBytes::InColumnIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueBytes, OutValue) == 0x000008, "Member 'KuroPrepareStatementLib_GetColumnValueBytes::OutValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueBytes, ReturnValue) == 0x000018, "Member 'KuroPrepareStatementLib_GetColumnValueBytes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_GetColumnValueBytes;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.GetColumnValueInt32
 // 0x0010 (0x0010 - 0x0000)
@@ -98,12 +82,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_GetColumnValueInt32) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_GetColumnValueInt32");
-static_assert(sizeof(KuroPrepareStatementLib_GetColumnValueInt32) == 0x000010, "Wrong size on KuroPrepareStatementLib_GetColumnValueInt32");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueInt32, InId) == 0x000000, "Member 'KuroPrepareStatementLib_GetColumnValueInt32::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueInt32, InColumnIndex) == 0x000004, "Member 'KuroPrepareStatementLib_GetColumnValueInt32::InColumnIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueInt32, OutValue) == 0x000008, "Member 'KuroPrepareStatementLib_GetColumnValueInt32::OutValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetColumnValueInt32, ReturnValue) == 0x00000C, "Member 'KuroPrepareStatementLib_GetColumnValueInt32::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_GetColumnValueInt32;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.GetOrCreateStatement
 // 0x0028 (0x0028 - 0x0000)
@@ -116,11 +95,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_GetOrCreateStatement) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_GetOrCreateStatement");
-static_assert(sizeof(KuroPrepareStatementLib_GetOrCreateStatement) == 0x000028, "Wrong size on KuroPrepareStatementLib_GetOrCreateStatement");
-static_assert(offsetof(KuroPrepareStatementLib_GetOrCreateStatement, InDbPath) == 0x000000, "Member 'KuroPrepareStatementLib_GetOrCreateStatement::InDbPath' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetOrCreateStatement, InCommand) == 0x000010, "Member 'KuroPrepareStatementLib_GetOrCreateStatement::InCommand' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_GetOrCreateStatement, ReturnValue) == 0x000020, "Member 'KuroPrepareStatementLib_GetOrCreateStatement::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_GetOrCreateStatement;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.Reset
 // 0x0008 (0x0008 - 0x0000)
@@ -131,10 +106,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_Reset) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_Reset");
-static_assert(sizeof(KuroPrepareStatementLib_Reset) == 0x000008, "Wrong size on KuroPrepareStatementLib_Reset");
-static_assert(offsetof(KuroPrepareStatementLib_Reset, InId) == 0x000000, "Member 'KuroPrepareStatementLib_Reset::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_Reset, ReturnValue) == 0x000004, "Member 'KuroPrepareStatementLib_Reset::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_Reset;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueBigInt
 // 0x0018 (0x0018 - 0x0000)
@@ -147,12 +119,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueBigInt) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueBigInt");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueBigInt) == 0x000018, "Wrong size on KuroPrepareStatementLib_SetBindingValueBigInt");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBigInt, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueBigInt::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBigInt, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueBigInt::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBigInt, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueBigInt::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBigInt, ReturnValue) == 0x000010, "Member 'KuroPrepareStatementLib_SetBindingValueBigInt::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueBigInt;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueBool
 // 0x000C (0x000C - 0x0000)
@@ -165,12 +132,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueBool) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueBool");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueBool) == 0x00000C, "Wrong size on KuroPrepareStatementLib_SetBindingValueBool");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBool, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueBool::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBool, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueBool::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBool, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueBool::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueBool, ReturnValue) == 0x000009, "Member 'KuroPrepareStatementLib_SetBindingValueBool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueBool;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueFloat
 // 0x0010 (0x0010 - 0x0000)
@@ -183,12 +145,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueFloat) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueFloat");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueFloat) == 0x000010, "Wrong size on KuroPrepareStatementLib_SetBindingValueFloat");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueFloat::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueFloat::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueFloat::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat, ReturnValue) == 0x00000C, "Member 'KuroPrepareStatementLib_SetBindingValueFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueFloat;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueFloat64
 // 0x0018 (0x0018 - 0x0000)
@@ -201,12 +158,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueFloat64) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueFloat64");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueFloat64) == 0x000018, "Wrong size on KuroPrepareStatementLib_SetBindingValueFloat64");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat64, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueFloat64::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat64, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueFloat64::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat64, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueFloat64::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueFloat64, ReturnValue) == 0x000010, "Member 'KuroPrepareStatementLib_SetBindingValueFloat64::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueFloat64;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueInt
 // 0x0010 (0x0010 - 0x0000)
@@ -219,12 +171,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueInt) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueInt");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueInt) == 0x000010, "Wrong size on KuroPrepareStatementLib_SetBindingValueInt");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueInt, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueInt::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueInt, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueInt::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueInt, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueInt::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueInt, ReturnValue) == 0x00000C, "Member 'KuroPrepareStatementLib_SetBindingValueInt::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueInt;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueString
 // 0x0020 (0x0020 - 0x0000)
@@ -237,12 +184,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPrepareStatementLib_SetBindingValueString) == 0x000008, "Wrong alignment on KuroPrepareStatementLib_SetBindingValueString");
-static_assert(sizeof(KuroPrepareStatementLib_SetBindingValueString) == 0x000020, "Wrong size on KuroPrepareStatementLib_SetBindingValueString");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueString, InId) == 0x000000, "Member 'KuroPrepareStatementLib_SetBindingValueString::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueString, InBindingIndex) == 0x000004, "Member 'KuroPrepareStatementLib_SetBindingValueString::InBindingIndex' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueString, InValue) == 0x000008, "Member 'KuroPrepareStatementLib_SetBindingValueString::InValue' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_SetBindingValueString, ReturnValue) == 0x000018, "Member 'KuroPrepareStatementLib_SetBindingValueString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_SetBindingValueString;
 
 // Function KuroSqliteBpLib.KuroPrepareStatementLib.Step
 // 0x0008 (0x0008 - 0x0000)
@@ -252,10 +194,7 @@ public:
 	int32                                         InId;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroPrepareStatementLib_Step) == 0x000004, "Wrong alignment on KuroPrepareStatementLib_Step");
-static_assert(sizeof(KuroPrepareStatementLib_Step) == 0x000008, "Wrong size on KuroPrepareStatementLib_Step");
-static_assert(offsetof(KuroPrepareStatementLib_Step, InId) == 0x000000, "Member 'KuroPrepareStatementLib_Step::InId' has a wrong offset!");
-static_assert(offsetof(KuroPrepareStatementLib_Step, ReturnValue) == 0x000004, "Member 'KuroPrepareStatementLib_Step::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroPrepareStatementLib_Step;
 
 // Function KuroSqliteBpLib.KuroQueryStatLibrary.AppendString
 // 0x0010 (0x0010 - 0x0000)
@@ -264,9 +203,7 @@ struct KuroQueryStatLibrary_AppendString final
 public:
 	class FString                                 Content;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroQueryStatLibrary_AppendString) == 0x000008, "Wrong alignment on KuroQueryStatLibrary_AppendString");
-static_assert(sizeof(KuroQueryStatLibrary_AppendString) == 0x000010, "Wrong size on KuroQueryStatLibrary_AppendString");
-static_assert(offsetof(KuroQueryStatLibrary_AppendString, Content) == 0x000000, "Member 'KuroQueryStatLibrary_AppendString::Content' has a wrong offset!");
+DUMPER7_ASSERTS_KuroQueryStatLibrary_AppendString;
 
 // Function KuroSqliteBpLib.KuroQueryStatLibrary.SetCloseSaveQueryArgsFileAction
 // 0x0018 (0x0018 - 0x0000)
@@ -275,9 +212,7 @@ struct KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction final
 public:
 	struct FJsObject                              Action;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction) == 0x000008, "Wrong alignment on KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction");
-static_assert(sizeof(KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction) == 0x000018, "Wrong size on KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction");
-static_assert(offsetof(KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction, Action) == 0x000000, "Member 'KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction::Action' has a wrong offset!");
+DUMPER7_ASSERTS_KuroQueryStatLibrary_SetCloseSaveQueryArgsFileAction;
 
 // Function KuroSqliteBpLib.KuroQueryStatLibrary.SetTestDataSavePath
 // 0x0010 (0x0010 - 0x0000)
@@ -286,9 +221,7 @@ struct KuroQueryStatLibrary_SetTestDataSavePath final
 public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroQueryStatLibrary_SetTestDataSavePath) == 0x000008, "Wrong alignment on KuroQueryStatLibrary_SetTestDataSavePath");
-static_assert(sizeof(KuroQueryStatLibrary_SetTestDataSavePath) == 0x000010, "Wrong size on KuroQueryStatLibrary_SetTestDataSavePath");
-static_assert(offsetof(KuroQueryStatLibrary_SetTestDataSavePath, Path) == 0x000000, "Member 'KuroQueryStatLibrary_SetTestDataSavePath::Path' has a wrong offset!");
+DUMPER7_ASSERTS_KuroQueryStatLibrary_SetTestDataSavePath;
 
 // Function KuroSqliteBpLib.KuroQueryStatLibrary.SetTestSqliteAction
 // 0x0018 (0x0018 - 0x0000)
@@ -297,9 +230,7 @@ struct KuroQueryStatLibrary_SetTestSqliteAction final
 public:
 	struct FJsObject                              Action;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroQueryStatLibrary_SetTestSqliteAction) == 0x000008, "Wrong alignment on KuroQueryStatLibrary_SetTestSqliteAction");
-static_assert(sizeof(KuroQueryStatLibrary_SetTestSqliteAction) == 0x000018, "Wrong size on KuroQueryStatLibrary_SetTestSqliteAction");
-static_assert(offsetof(KuroQueryStatLibrary_SetTestSqliteAction, Action) == 0x000000, "Member 'KuroQueryStatLibrary_SetTestSqliteAction::Action' has a wrong offset!");
+DUMPER7_ASSERTS_KuroQueryStatLibrary_SetTestSqliteAction;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.Execute
 // 0x0028 (0x0028 - 0x0000)
@@ -311,11 +242,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteLibrary_Execute) == 0x000008, "Wrong alignment on KuroSqliteLibrary_Execute");
-static_assert(sizeof(KuroSqliteLibrary_Execute) == 0x000028, "Wrong size on KuroSqliteLibrary_Execute");
-static_assert(offsetof(KuroSqliteLibrary_Execute, DbPath) == 0x000000, "Member 'KuroSqliteLibrary_Execute::DbPath' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_Execute, Sql) == 0x000010, "Member 'KuroSqliteLibrary_Execute::Sql' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_Execute, ReturnValue) == 0x000020, "Member 'KuroSqliteLibrary_Execute::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_Execute;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.ExecuteAsync
 // 0x0020 (0x0020 - 0x0000)
@@ -325,10 +252,7 @@ public:
 	class FString                                 DbPath;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Sql;                                               // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteLibrary_ExecuteAsync) == 0x000008, "Wrong alignment on KuroSqliteLibrary_ExecuteAsync");
-static_assert(sizeof(KuroSqliteLibrary_ExecuteAsync) == 0x000020, "Wrong size on KuroSqliteLibrary_ExecuteAsync");
-static_assert(offsetof(KuroSqliteLibrary_ExecuteAsync, DbPath) == 0x000000, "Member 'KuroSqliteLibrary_ExecuteAsync::DbPath' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_ExecuteAsync, Sql) == 0x000010, "Member 'KuroSqliteLibrary_ExecuteAsync::Sql' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_ExecuteAsync;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.OpenCreateDB
 // 0x0018 (0x0018 - 0x0000)
@@ -340,11 +264,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteLibrary_OpenCreateDB) == 0x000008, "Wrong alignment on KuroSqliteLibrary_OpenCreateDB");
-static_assert(sizeof(KuroSqliteLibrary_OpenCreateDB) == 0x000018, "Wrong size on KuroSqliteLibrary_OpenCreateDB");
-static_assert(offsetof(KuroSqliteLibrary_OpenCreateDB, DbPath) == 0x000000, "Member 'KuroSqliteLibrary_OpenCreateDB::DbPath' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_OpenCreateDB, bUseThread) == 0x000010, "Member 'KuroSqliteLibrary_OpenCreateDB::bUseThread' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_OpenCreateDB, ReturnValue) == 0x000011, "Member 'KuroSqliteLibrary_OpenCreateDB::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_OpenCreateDB;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.Query
 // 0x0030 (0x0030 - 0x0000)
@@ -357,12 +277,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteLibrary_Query) == 0x000008, "Wrong alignment on KuroSqliteLibrary_Query");
-static_assert(sizeof(KuroSqliteLibrary_Query) == 0x000030, "Wrong size on KuroSqliteLibrary_Query");
-static_assert(offsetof(KuroSqliteLibrary_Query, DbPath) == 0x000000, "Member 'KuroSqliteLibrary_Query::DbPath' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_Query, Sql) == 0x000010, "Member 'KuroSqliteLibrary_Query::Sql' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_Query, ResultSet) == 0x000020, "Member 'KuroSqliteLibrary_Query::ResultSet' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_Query, ReturnValue) == 0x000028, "Member 'KuroSqliteLibrary_Query::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_Query;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.QueryValue
 // 0x0038 (0x0038 - 0x0000)
@@ -375,12 +290,7 @@ public:
 	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteLibrary_QueryValue) == 0x000008, "Wrong alignment on KuroSqliteLibrary_QueryValue");
-static_assert(sizeof(KuroSqliteLibrary_QueryValue) == 0x000038, "Wrong size on KuroSqliteLibrary_QueryValue");
-static_assert(offsetof(KuroSqliteLibrary_QueryValue, DbPath) == 0x000000, "Member 'KuroSqliteLibrary_QueryValue::DbPath' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_QueryValue, Sql) == 0x000010, "Member 'KuroSqliteLibrary_QueryValue::Sql' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_QueryValue, OutValue) == 0x000020, "Member 'KuroSqliteLibrary_QueryValue::OutValue' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_QueryValue, ReturnValue) == 0x000030, "Member 'KuroSqliteLibrary_QueryValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_QueryValue;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.SetDBKey
 // 0x0010 (0x0010 - 0x0000)
@@ -389,9 +299,7 @@ struct KuroSqliteLibrary_SetDBKey final
 public:
 	class FString                                 DBKey;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteLibrary_SetDBKey) == 0x000008, "Wrong alignment on KuroSqliteLibrary_SetDBKey");
-static_assert(sizeof(KuroSqliteLibrary_SetDBKey) == 0x000010, "Wrong size on KuroSqliteLibrary_SetDBKey");
-static_assert(offsetof(KuroSqliteLibrary_SetDBKey, DBKey) == 0x000000, "Member 'KuroSqliteLibrary_SetDBKey::DBKey' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_SetDBKey;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.SqliteStatusGetCurrent
 // 0x0008 (0x0008 - 0x0000)
@@ -401,10 +309,7 @@ public:
 	int32                                         StatusOp;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteLibrary_SqliteStatusGetCurrent) == 0x000004, "Wrong alignment on KuroSqliteLibrary_SqliteStatusGetCurrent");
-static_assert(sizeof(KuroSqliteLibrary_SqliteStatusGetCurrent) == 0x000008, "Wrong size on KuroSqliteLibrary_SqliteStatusGetCurrent");
-static_assert(offsetof(KuroSqliteLibrary_SqliteStatusGetCurrent, StatusOp) == 0x000000, "Member 'KuroSqliteLibrary_SqliteStatusGetCurrent::StatusOp' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_SqliteStatusGetCurrent, ReturnValue) == 0x000004, "Member 'KuroSqliteLibrary_SqliteStatusGetCurrent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_SqliteStatusGetCurrent;
 
 // Function KuroSqliteBpLib.KuroSqliteLibrary.SqliteStatusGetHighWater
 // 0x000C (0x000C - 0x0000)
@@ -416,11 +321,7 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteLibrary_SqliteStatusGetHighWater) == 0x000004, "Wrong alignment on KuroSqliteLibrary_SqliteStatusGetHighWater");
-static_assert(sizeof(KuroSqliteLibrary_SqliteStatusGetHighWater) == 0x00000C, "Wrong size on KuroSqliteLibrary_SqliteStatusGetHighWater");
-static_assert(offsetof(KuroSqliteLibrary_SqliteStatusGetHighWater, StatusOp) == 0x000000, "Member 'KuroSqliteLibrary_SqliteStatusGetHighWater::StatusOp' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_SqliteStatusGetHighWater, ResetHighWater) == 0x000004, "Member 'KuroSqliteLibrary_SqliteStatusGetHighWater::ResetHighWater' has a wrong offset!");
-static_assert(offsetof(KuroSqliteLibrary_SqliteStatusGetHighWater, ReturnValue) == 0x000008, "Member 'KuroSqliteLibrary_SqliteStatusGetHighWater::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteLibrary_SqliteStatusGetHighWater;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetBigInt
 // 0x0020 (0x0020 - 0x0000)
@@ -432,11 +333,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetBigInt) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetBigInt");
-static_assert(sizeof(KuroSqliteResultSet_GetBigInt) == 0x000020, "Wrong size on KuroSqliteResultSet_GetBigInt");
-static_assert(offsetof(KuroSqliteResultSet_GetBigInt, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetBigInt::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBigInt, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetBigInt::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBigInt, ReturnValue) == 0x000018, "Member 'KuroSqliteResultSet_GetBigInt::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetBigInt;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetBool
 // 0x0018 (0x0018 - 0x0000)
@@ -448,11 +345,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetBool) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetBool");
-static_assert(sizeof(KuroSqliteResultSet_GetBool) == 0x000018, "Wrong size on KuroSqliteResultSet_GetBool");
-static_assert(offsetof(KuroSqliteResultSet_GetBool, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetBool::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBool, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetBool::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBool, ReturnValue) == 0x000011, "Member 'KuroSqliteResultSet_GetBool::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetBool;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetBytes
 // 0x0028 (0x0028 - 0x0000)
@@ -464,11 +357,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetBytes) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetBytes");
-static_assert(sizeof(KuroSqliteResultSet_GetBytes) == 0x000028, "Wrong size on KuroSqliteResultSet_GetBytes");
-static_assert(offsetof(KuroSqliteResultSet_GetBytes, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetBytes::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBytes, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetBytes::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetBytes, ReturnValue) == 0x000020, "Member 'KuroSqliteResultSet_GetBytes::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetBytes;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -480,11 +369,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetFloat) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetFloat");
-static_assert(sizeof(KuroSqliteResultSet_GetFloat) == 0x000018, "Wrong size on KuroSqliteResultSet_GetFloat");
-static_assert(offsetof(KuroSqliteResultSet_GetFloat, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetFloat::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetFloat, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetFloat::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetFloat, ReturnValue) == 0x000014, "Member 'KuroSqliteResultSet_GetFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetFloat;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetInt
 // 0x0018 (0x0018 - 0x0000)
@@ -496,11 +381,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetInt) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetInt");
-static_assert(sizeof(KuroSqliteResultSet_GetInt) == 0x000018, "Wrong size on KuroSqliteResultSet_GetInt");
-static_assert(offsetof(KuroSqliteResultSet_GetInt, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetInt::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetInt, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetInt::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetInt, ReturnValue) == 0x000014, "Member 'KuroSqliteResultSet_GetInt::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetInt;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.GetString
 // 0x0028 (0x0028 - 0x0000)
@@ -512,11 +393,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroSqliteResultSet_GetString) == 0x000008, "Wrong alignment on KuroSqliteResultSet_GetString");
-static_assert(sizeof(KuroSqliteResultSet_GetString) == 0x000028, "Wrong size on KuroSqliteResultSet_GetString");
-static_assert(offsetof(KuroSqliteResultSet_GetString, Column) == 0x000000, "Member 'KuroSqliteResultSet_GetString::Column' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetString, Value) == 0x000010, "Member 'KuroSqliteResultSet_GetString::Value' has a wrong offset!");
-static_assert(offsetof(KuroSqliteResultSet_GetString, ReturnValue) == 0x000020, "Member 'KuroSqliteResultSet_GetString::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_GetString;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.HasValue
 // 0x0001 (0x0001 - 0x0000)
@@ -525,9 +402,7 @@ struct KuroSqliteResultSet_HasValue final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteResultSet_HasValue) == 0x000001, "Wrong alignment on KuroSqliteResultSet_HasValue");
-static_assert(sizeof(KuroSqliteResultSet_HasValue) == 0x000001, "Wrong size on KuroSqliteResultSet_HasValue");
-static_assert(offsetof(KuroSqliteResultSet_HasValue, ReturnValue) == 0x000000, "Member 'KuroSqliteResultSet_HasValue::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_HasValue;
 
 // Function KuroSqliteBpLib.KuroSqliteResultSet.MoveToNext
 // 0x0001 (0x0001 - 0x0000)
@@ -536,9 +411,7 @@ struct KuroSqliteResultSet_MoveToNext final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSqliteResultSet_MoveToNext) == 0x000001, "Wrong alignment on KuroSqliteResultSet_MoveToNext");
-static_assert(sizeof(KuroSqliteResultSet_MoveToNext) == 0x000001, "Wrong size on KuroSqliteResultSet_MoveToNext");
-static_assert(offsetof(KuroSqliteResultSet_MoveToNext, ReturnValue) == 0x000000, "Member 'KuroSqliteResultSet_MoveToNext::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSqliteResultSet_MoveToNext;
 
 }
 

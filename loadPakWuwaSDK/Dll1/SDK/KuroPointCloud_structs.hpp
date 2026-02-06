@@ -35,11 +35,7 @@ public:
 	int32                                         Channel;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<float>                                 Data;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroPointCloudCacheCustomFloat) == 0x000008, "Wrong alignment on FKuroPointCloudCacheCustomFloat");
-static_assert(sizeof(FKuroPointCloudCacheCustomFloat) == 0x000020, "Wrong size on FKuroPointCloudCacheCustomFloat");
-static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Name) == 0x000000, "Member 'FKuroPointCloudCacheCustomFloat::Name' has a wrong offset!");
-static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Channel) == 0x00000C, "Member 'FKuroPointCloudCacheCustomFloat::Channel' has a wrong offset!");
-static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Data) == 0x000010, "Member 'FKuroPointCloudCacheCustomFloat::Data' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointCloudCacheCustomFloat;
 
 // ScriptStruct KuroPointCloud.KuroPointCloudInstanceQueryResult
 // 0x0020 (0x0020 - 0x0000)
@@ -48,8 +44,7 @@ struct alignas(0x08) FKuroPointCloudInstanceQueryResult final
 public:
 	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroPointCloudInstanceQueryResult) == 0x000008, "Wrong alignment on FKuroPointCloudInstanceQueryResult");
-static_assert(sizeof(FKuroPointCloudInstanceQueryResult) == 0x000020, "Wrong size on FKuroPointCloudInstanceQueryResult");
+DUMPER7_ASSERTS_FKuroPointCloudInstanceQueryResult;
 
 // ScriptStruct KuroPointCloud.PointData
 // 0x0010 (0x0010 - 0x0000)
@@ -59,10 +54,7 @@ public:
 	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Position;                                          // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPointData) == 0x000004, "Wrong alignment on FPointData");
-static_assert(sizeof(FPointData) == 0x000010, "Wrong size on FPointData");
-static_assert(offsetof(FPointData, Index) == 0x000000, "Member 'FPointData::Index' has a wrong offset!");
-static_assert(offsetof(FPointData, Position) == 0x000004, "Member 'FPointData::Position' has a wrong offset!");
+DUMPER7_ASSERTS_FPointData;
 
 // ScriptStruct KuroPointCloud.KuroPointSpatialTree
 // 0x0038 (0x0038 - 0x0000)
@@ -74,10 +66,7 @@ public:
 	struct FBox                                   MaxBound;                                          // 0x0018(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroPointSpatialTree) == 0x000008, "Wrong alignment on FKuroPointSpatialTree");
-static_assert(sizeof(FKuroPointSpatialTree) == 0x000038, "Wrong size on FKuroPointSpatialTree");
-static_assert(offsetof(FKuroPointSpatialTree, PointCloudData) == 0x000008, "Member 'FKuroPointSpatialTree::PointCloudData' has a wrong offset!");
-static_assert(offsetof(FKuroPointSpatialTree, MaxBound) == 0x000018, "Member 'FKuroPointSpatialTree::MaxBound' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointSpatialTree;
 
 // ScriptStruct KuroPointCloud.KuroPointKdTreeNode
 // 0x002C (0x002C - 0x0000)
@@ -90,13 +79,7 @@ public:
 	int32                                         PointArrayEnd;                                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBox                                   BoundingBox;                                       // 0x0010(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroPointKdTreeNode) == 0x000004, "Wrong alignment on FKuroPointKdTreeNode");
-static_assert(sizeof(FKuroPointKdTreeNode) == 0x00002C, "Wrong size on FKuroPointKdTreeNode");
-static_assert(offsetof(FKuroPointKdTreeNode, LeftNodeIndex) == 0x000000, "Member 'FKuroPointKdTreeNode::LeftNodeIndex' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTreeNode, RightNodeIndex) == 0x000004, "Member 'FKuroPointKdTreeNode::RightNodeIndex' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTreeNode, PointArrayBegin) == 0x000008, "Member 'FKuroPointKdTreeNode::PointArrayBegin' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTreeNode, PointArrayEnd) == 0x00000C, "Member 'FKuroPointKdTreeNode::PointArrayEnd' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTreeNode, BoundingBox) == 0x000010, "Member 'FKuroPointKdTreeNode::BoundingBox' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointKdTreeNode;
 
 // ScriptStruct KuroPointCloud.KuroPointKdTree
 // 0x0020 (0x0058 - 0x0038)
@@ -109,12 +92,7 @@ public:
 	int32                                         RootNodeId;                                        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroPointKdTree) == 0x000008, "Wrong alignment on FKuroPointKdTree");
-static_assert(sizeof(FKuroPointKdTree) == 0x000058, "Wrong size on FKuroPointKdTree");
-static_assert(offsetof(FKuroPointKdTree, PointNumToStopDivide) == 0x000038, "Member 'FKuroPointKdTree::PointNumToStopDivide' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTree, BoxLengthToStopDivide) == 0x00003C, "Member 'FKuroPointKdTree::BoxLengthToStopDivide' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTree, TreeNodes) == 0x000040, "Member 'FKuroPointKdTree::TreeNodes' has a wrong offset!");
-static_assert(offsetof(FKuroPointKdTree, RootNodeId) == 0x000050, "Member 'FKuroPointKdTree::RootNodeId' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointKdTree;
 
 // ScriptStruct KuroPointCloud.KuroPointCloudCollectionInstance
 // 0x0030 (0x0030 - 0x0000)
@@ -125,10 +103,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        Instance;                                          // 0x0010(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroPointCloudCollectionInstance) == 0x000008, "Wrong alignment on FKuroPointCloudCollectionInstance");
-static_assert(sizeof(FKuroPointCloudCollectionInstance) == 0x000030, "Wrong size on FKuroPointCloudCollectionInstance");
-static_assert(offsetof(FKuroPointCloudCollectionInstance, CollectionName) == 0x000000, "Member 'FKuroPointCloudCollectionInstance::CollectionName' has a wrong offset!");
-static_assert(offsetof(FKuroPointCloudCollectionInstance, Instance) == 0x000010, "Member 'FKuroPointCloudCollectionInstance::Instance' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointCloudCollectionInstance;
 
 // ScriptStruct KuroPointCloud.KuroPointCloudStreamingCell
 // 0x0018 (0x0018 - 0x0000)
@@ -139,11 +114,7 @@ public:
 	int32                                         CellY;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FKuroPointCloudCollectionInstance> InstanceData;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroPointCloudStreamingCell) == 0x000008, "Wrong alignment on FKuroPointCloudStreamingCell");
-static_assert(sizeof(FKuroPointCloudStreamingCell) == 0x000018, "Wrong size on FKuroPointCloudStreamingCell");
-static_assert(offsetof(FKuroPointCloudStreamingCell, CellX) == 0x000000, "Member 'FKuroPointCloudStreamingCell::CellX' has a wrong offset!");
-static_assert(offsetof(FKuroPointCloudStreamingCell, CellY) == 0x000004, "Member 'FKuroPointCloudStreamingCell::CellY' has a wrong offset!");
-static_assert(offsetof(FKuroPointCloudStreamingCell, InstanceData) == 0x000008, "Member 'FKuroPointCloudStreamingCell::InstanceData' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointCloudStreamingCell;
 
 // ScriptStruct KuroPointCloud.KPCWDynamicPointSocketInfo
 // 0x0040 (0x0040 - 0x0000)
@@ -154,10 +125,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             SocketSpaceTransform;                              // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKPCWDynamicPointSocketInfo) == 0x000010, "Wrong alignment on FKPCWDynamicPointSocketInfo");
-static_assert(sizeof(FKPCWDynamicPointSocketInfo) == 0x000040, "Wrong size on FKPCWDynamicPointSocketInfo");
-static_assert(offsetof(FKPCWDynamicPointSocketInfo, SocketName) == 0x000000, "Member 'FKPCWDynamicPointSocketInfo::SocketName' has a wrong offset!");
-static_assert(offsetof(FKPCWDynamicPointSocketInfo, SocketSpaceTransform) == 0x000010, "Member 'FKPCWDynamicPointSocketInfo::SocketSpaceTransform' has a wrong offset!");
+DUMPER7_ASSERTS_FKPCWDynamicPointSocketInfo;
 
 // ScriptStruct KuroPointCloud.KuroPointCloudWorldCollection
 // 0x0010 (0x0010 - 0x0000)
@@ -166,9 +134,7 @@ struct FKuroPointCloudWorldCollection final
 public:
 	TArray<class UKuroPointCloudWorldComponent*>  PointCloudWorldComponents;                         // 0x0000(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroPointCloudWorldCollection) == 0x000008, "Wrong alignment on FKuroPointCloudWorldCollection");
-static_assert(sizeof(FKuroPointCloudWorldCollection) == 0x000010, "Wrong size on FKuroPointCloudWorldCollection");
-static_assert(offsetof(FKuroPointCloudWorldCollection, PointCloudWorldComponents) == 0x000000, "Member 'FKuroPointCloudWorldCollection::PointCloudWorldComponents' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroPointCloudWorldCollection;
 
 }
 

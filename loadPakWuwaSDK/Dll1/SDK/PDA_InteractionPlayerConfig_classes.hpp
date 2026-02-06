@@ -39,24 +39,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"PDA_InteractionPlayerConfig_C">();
+		BP_STATIC_CLASS_IMPL("PDA_InteractionPlayerConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PDA_InteractionPlayerConfig_C")
 	}
 	static class UPDA_InteractionPlayerConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPDA_InteractionPlayerConfig_C>();
 	}
 };
-static_assert(alignof(UPDA_InteractionPlayerConfig_C) == 0x000008, "Wrong alignment on UPDA_InteractionPlayerConfig_C");
-static_assert(sizeof(UPDA_InteractionPlayerConfig_C) == 0x000070, "Wrong size on UPDA_InteractionPlayerConfig_C");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 启用植被交互) == 0x000038, "Member 'UPDA_InteractionPlayerConfig_C::启用植被交互' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 植被交互半径) == 0x00003C, "Member 'UPDA_InteractionPlayerConfig_C::植被交互半径' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 启用水面交互) == 0x000040, "Member 'UPDA_InteractionPlayerConfig_C::启用水面交互' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 水特效) == 0x000048, "Member 'UPDA_InteractionPlayerConfig_C::水特效' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 射线向下延长) == 0x000050, "Member 'UPDA_InteractionPlayerConfig_C::射线向下延长' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 自动草集群) == 0x000054, "Member 'UPDA_InteractionPlayerConfig_C::自动草集群' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 草集群特效) == 0x000058, "Member 'UPDA_InteractionPlayerConfig_C::草集群特效' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 启用简易水面交互) == 0x000060, "Member 'UPDA_InteractionPlayerConfig_C::启用简易水面交互' has a wrong offset!");
-static_assert(offsetof(UPDA_InteractionPlayerConfig_C, 植被交互相对位置) == 0x000064, "Member 'UPDA_InteractionPlayerConfig_C::植被交互相对位置' has a wrong offset!");
+DUMPER7_ASSERTS_UPDA_InteractionPlayerConfig_C;
 
 }
 

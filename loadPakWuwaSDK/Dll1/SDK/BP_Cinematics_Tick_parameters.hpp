@@ -180,130 +180,7 @@ public:
 	class ABP_Nvzhu_Seq_V2_C*                     K2Node_DynamicCast_AsBP_Nvzhu_Seq_V2_1;            // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_21;                    // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick");
-static_assert(sizeof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick) == 0x000230, "Wrong size on BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, EntryPoint) == 0x000000, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_2) == 0x000006, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character) == 0x000008, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_3) == 0x000020, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000028, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_4) == 0x000030, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_5) == 0x000031, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_6) == 0x000032, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_7) == 0x000033, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000038, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000040, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_8) == 0x000048, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_9) == 0x000049, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_10) == 0x00004A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_11) == 0x00004B, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_4) == 0x000050, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_12) == 0x000058, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_13) == 0x000059, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_14) == 0x00005A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_15) == 0x00005B, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_1) == 0x000060, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_16) == 0x000069, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_17) == 0x00006A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_2) == 0x000070, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_2) == 0x000078, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_18) == 0x000079, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_19) == 0x00007A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_3) == 0x000080, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_3) == 0x000088, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_20) == 0x000089, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_21) == 0x00008A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_4) == 0x000090, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_4' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_4) == 0x000098, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_22) == 0x000099, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_23) == 0x00009A, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_5) == 0x0000A0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_5' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_5) == 0x0000A8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_24) == 0x0000A9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_25) == 0x0000AA, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_25' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_6) == 0x0000B0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_6' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_6) == 0x0000B8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_26) == 0x0000B9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_26' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_27) == 0x0000BA, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_27' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_7) == 0x0000C0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_7' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_7) == 0x0000C8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_28) == 0x0000C9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_28' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_29) == 0x0000CA, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_29' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_8) == 0x0000D0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_8' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_8) == 0x0000D8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_30) == 0x0000D9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_30' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_31) == 0x0000DA, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_31' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_9) == 0x0000E0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_9' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_9) == 0x0000E8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_32) == 0x0000E9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_32' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_33) == 0x0000EA, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_33' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_10) == 0x0000F0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_10' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_10) == 0x0000F8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_34) == 0x0000F9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_34' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_5) == 0x000100, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_35) == 0x000108, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_35' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_Event_DeltaSeconds_1) == 0x00010C, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_36) == 0x000110, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_36' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_37) == 0x000111, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_37' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_11) == 0x000118, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_11' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_11) == 0x000120, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_38) == 0x000121, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_38' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_12) == 0x000128, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_12' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_12) == 0x000130, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_39) == 0x000131, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_39' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_40) == 0x000132, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_40' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_41) == 0x000133, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_41' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_13) == 0x000138, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_13' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_13) == 0x000140, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_42) == 0x000141, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_42' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_6) == 0x000148, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_43) == 0x000150, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_43' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_SwitchInteger_CmpSuccess) == 0x000151, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_44) == 0x000152, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_44' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_45) == 0x000153, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_45' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_14) == 0x000158, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_14' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_14) == 0x000160, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_46) == 0x000161, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_46' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_7) == 0x000168, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_47) == 0x000170, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_47' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_48) == 0x000171, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_48' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_8) == 0x000178, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_49) == 0x000180, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_49' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_50) == 0x000181, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_50' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_9) == 0x000188, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_51) == 0x000190, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_51' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_52) == 0x000191, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_52' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_10) == 0x000198, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_53) == 0x0001A0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_53' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_54) == 0x0001A1, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_54' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_GetComponentByClass_ReturnValue_11) == 0x0001A8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_GetComponentByClass_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_55) == 0x0001B0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_55' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_56) == 0x0001B1, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_56' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_57) == 0x0001B2, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_57' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_15) == 0x0001B8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_15' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_15) == 0x0001C0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_15' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_58) == 0x0001C1, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_58' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_16) == 0x0001C8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_16' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_16) == 0x0001D0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_16' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_59) == 0x0001D1, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_59' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_Event_DeltaSeconds) == 0x0001D4, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_60) == 0x0001D8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_60' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, CallFunc_IsValid_ReturnValue_61) == 0x0001D9, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::CallFunc_IsValid_ReturnValue_61' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsTs_Base_Character_17) == 0x0001E0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsTs_Base_Character_17' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_17) == 0x0001E8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_17' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsBP_Nanzhu_Seq_V2) == 0x0001F0, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsBP_Nanzhu_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_18) == 0x0001F8, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_18' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsBP_Nvzhu_Seq_V2) == 0x000200, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsBP_Nvzhu_Seq_V2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_19) == 0x000208, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_19' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsBP_Nanzhu_Seq_V2_1) == 0x000210, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsBP_Nanzhu_Seq_V2_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_20) == 0x000218, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_20' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_AsBP_Nvzhu_Seq_V2_1) == 0x000220, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_AsBP_Nvzhu_Seq_V2_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick, K2Node_DynamicCast_bSuccess_21) == 0x000228, "Member 'BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick::K2Node_DynamicCast_bSuccess_21' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_ExecuteUbergraph_BP_Cinematics_Tick;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -312,9 +189,7 @@ struct BP_Cinematics_Tick_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Cinematics_Tick_C_ReceiveTick");
-static_assert(sizeof(BP_Cinematics_Tick_C_ReceiveTick) == 0x000004, "Wrong size on BP_Cinematics_Tick_C_ReceiveTick");
-static_assert(offsetof(BP_Cinematics_Tick_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Cinematics_Tick_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_ReceiveTick;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -323,9 +198,7 @@ struct BP_Cinematics_Tick_C_EditorTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_EditorTick) == 0x000004, "Wrong alignment on BP_Cinematics_Tick_C_EditorTick");
-static_assert(sizeof(BP_Cinematics_Tick_C_EditorTick) == 0x000004, "Wrong size on BP_Cinematics_Tick_C_EditorTick");
-static_assert(offsetof(BP_Cinematics_Tick_C_EditorTick, DeltaSeconds) == 0x000000, "Member 'BP_Cinematics_Tick_C_EditorTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_EditorTick;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.SetLightDirection
 // 0x0050 (0x0050 - 0x0000)
@@ -346,20 +219,7 @@ public:
 	struct FVector                                CallFunc_EulerToForward_ReturnValue;               // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_SetLightDirection) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_SetLightDirection");
-static_assert(sizeof(BP_Cinematics_Tick_C_SetLightDirection) == 0x000050, "Wrong size on BP_Cinematics_Tick_C_SetLightDirection");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, Mesh) == 0x000000, "Member 'BP_Cinematics_Tick_C_SetLightDirection::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, LightYaw) == 0x000008, "Member 'BP_Cinematics_Tick_C_SetLightDirection::LightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, LightPitch) == 0x00000C, "Member 'BP_Cinematics_Tick_C_SetLightDirection::LightPitch' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, FaceLightYaw) == 0x000010, "Member 'BP_Cinematics_Tick_C_SetLightDirection::FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x000018, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_BreakRotator_Roll) == 0x000024, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_BreakRotator_Pitch) == 0x000028, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_BreakRotator_Yaw) == 0x00002C, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_Add_FloatFloat_ReturnValue) == 0x000030, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_EulerToForward_ReturnValue) == 0x000034, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_EulerToForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetLightDirection, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000040, "Member 'BP_Cinematics_Tick_C_SetLightDirection::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_SetLightDirection;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.RevertLightDirection
 // 0x0008 (0x0008 - 0x0000)
@@ -368,9 +228,7 @@ struct BP_Cinematics_Tick_C_RevertLightDirection final
 public:
 	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_RevertLightDirection) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_RevertLightDirection");
-static_assert(sizeof(BP_Cinematics_Tick_C_RevertLightDirection) == 0x000008, "Wrong size on BP_Cinematics_Tick_C_RevertLightDirection");
-static_assert(offsetof(BP_Cinematics_Tick_C_RevertLightDirection, Mesh) == 0x000000, "Member 'BP_Cinematics_Tick_C_RevertLightDirection::Mesh' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_RevertLightDirection;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.ProcessCombinNPC
 // 0x0068 (0x0068 - 0x0000)
@@ -398,24 +256,7 @@ public:
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_ProcessCombinNPC) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_ProcessCombinNPC");
-static_assert(sizeof(BP_Cinematics_Tick_C_ProcessCombinNPC) == 0x000068, "Wrong size on BP_Cinematics_Tick_C_ProcessCombinNPC");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, Mesh) == 0x000000, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::Mesh' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, LightYaw) == 0x000008, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::LightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, FaceLightYaw) == 0x00000C, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, ___int_Loop_Counter_Variable) == 0x000010, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Map_Values_Values) == 0x000018, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, ___int_Array_Index_Variable) == 0x000034, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, ___int_Array_Index_Variable_1) == 0x000038, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Array_Get_Item_1) == 0x000050, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Array_Length_ReturnValue_1) == 0x000058, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, ___int_Loop_Counter_Variable_1) == 0x00005C, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Less_IntInt_ReturnValue_1) == 0x000060, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_ProcessCombinNPC, CallFunc_Add_IntInt_ReturnValue_1) == 0x000064, "Member 'BP_Cinematics_Tick_C_ProcessCombinNPC::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_ProcessCombinNPC;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.SetActorLight
 // 0x00F8 (0x00F8 - 0x0000)
@@ -471,50 +312,10 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_SetActorLight) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_SetActorLight");
-static_assert(sizeof(BP_Cinematics_Tick_C_SetActorLight) == 0x0000F8, "Wrong size on BP_Cinematics_Tick_C_SetActorLight");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, InActor) == 0x000000, "Member 'BP_Cinematics_Tick_C_SetActorLight::InActor' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, LightYaw) == 0x000008, "Member 'BP_Cinematics_Tick_C_SetActorLight::LightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, LightPitch) == 0x00000C, "Member 'BP_Cinematics_Tick_C_SetActorLight::LightPitch' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, FaceLightYaw) == 0x000010, "Member 'BP_Cinematics_Tick_C_SetActorLight::FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, IsRevert) == 0x000014, "Member 'BP_Cinematics_Tick_C_SetActorLight::IsRevert' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Loop_Counter_Variable) == 0x000018, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Add_IntInt_ReturnValue) == 0x00001C, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_GetAttachedActors_OutActors) == 0x000028, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Length_ReturnValue_1) == 0x00003C, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Greater_IntInt_ReturnValue) == 0x000041, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000048, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_K2_GetComponentsByClass_ReturnValue_1) == 0x000058, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_K2_GetComponentsByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Length_ReturnValue_2) == 0x000068, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Length_ReturnValue_3) == 0x00006C, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Loop_Counter_Variable_1) == 0x000070, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Less_IntInt_ReturnValue_1) == 0x000074, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Add_IntInt_ReturnValue_1) == 0x000078, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Array_Index_Variable) == 0x00007C, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Get_Item) == 0x000080, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Loop_Counter_Variable_2) == 0x000088, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Less_IntInt_ReturnValue_2) == 0x00008C, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Add_IntInt_ReturnValue_2) == 0x000090, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Array_Index_Variable_1) == 0x000094, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Loop_Counter_Variable_3) == 0x000098, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Add_IntInt_ReturnValue_3) == 0x0000A8, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Array_Index_Variable_2) == 0x0000AC, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, ___int_Array_Index_Variable_3) == 0x0000B0, "Member 'BP_Cinematics_Tick_C_SetActorLight::___int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Get_Item_2) == 0x0000B8, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_IsValid_ReturnValue_1) == 0x0000C0, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, K2Node_DynamicCast_AsBP_Base_Hulu_Seq) == 0x0000C8, "Member 'BP_Cinematics_Tick_C_SetActorLight::K2Node_DynamicCast_AsBP_Base_Hulu_Seq' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, K2Node_DynamicCast_bSuccess) == 0x0000D0, "Member 'BP_Cinematics_Tick_C_SetActorLight::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_K2_GetComponentsByClass_ReturnValue_2) == 0x0000D8, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_K2_GetComponentsByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Get_Item_3) == 0x0000E8, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Array_Length_ReturnValue_4) == 0x0000F0, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_SetActorLight, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000F4, "Member 'BP_Cinematics_Tick_C_SetActorLight::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_SetActorLight;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.UpdateMeshAndEffectState
-// 0x0020 (0x0020 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct BP_Cinematics_Tick_C_UpdateMeshAndEffectState final
 {
 public:
@@ -524,24 +325,18 @@ public:
 	bool                                          isDestroyed;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsHideNpcMesh_0;                                   // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsHideNpcEffect_0;                                 // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsAutonomousProxy_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HideDistance_0;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BasisBoneName_0;                                   // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsAutonomousProxy_ReturnValue;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_UpdateMeshAndEffectState");
-static_assert(sizeof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState) == 0x000020, "Wrong size on BP_Cinematics_Tick_C_UpdateMeshAndEffectState");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, InActor) == 0x000000, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::InActor' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideMesh_0) == 0x000008, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideMesh_0' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideEffect_0) == 0x000009, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideEffect_0' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, isDestroyed) == 0x00000A, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::isDestroyed' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideNpcMesh_0) == 0x00000B, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideNpcMesh_0' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideNpcEffect_0) == 0x00000C, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideNpcEffect_0' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, CallFunc_Not_PreBool_ReturnValue) == 0x00000D, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, K2Node_DynamicCast_AsTs_Base_Character) == 0x000010, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, CallFunc_IsAutonomousProxy_ReturnValue) == 0x000019, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::CallFunc_IsAutonomousProxy_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_UpdateMeshAndEffectState;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.EulerToForward
 // 0x0040 (0x0040 - 0x0000)
@@ -555,14 +350,7 @@ public:
 	struct FQuat                                  CallFunc_Quat_MakeFromEuler_ReturnValue;           // 0x0020(0x0010)(IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_Quat_VectorForward_ReturnValue;           // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_EulerToForward) == 0x000010, "Wrong alignment on BP_Cinematics_Tick_C_EulerToForward");
-static_assert(sizeof(BP_Cinematics_Tick_C_EulerToForward) == 0x000040, "Wrong size on BP_Cinematics_Tick_C_EulerToForward");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, Pitch) == 0x000000, "Member 'BP_Cinematics_Tick_C_EulerToForward::Pitch' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, Yaw) == 0x000004, "Member 'BP_Cinematics_Tick_C_EulerToForward::Yaw' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, ReturnValue) == 0x000008, "Member 'BP_Cinematics_Tick_C_EulerToForward::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, CallFunc_MakeVector_ReturnValue) == 0x000014, "Member 'BP_Cinematics_Tick_C_EulerToForward::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, CallFunc_Quat_MakeFromEuler_ReturnValue) == 0x000020, "Member 'BP_Cinematics_Tick_C_EulerToForward::CallFunc_Quat_MakeFromEuler_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_EulerToForward, CallFunc_Quat_VectorForward_ReturnValue) == 0x000030, "Member 'BP_Cinematics_Tick_C_EulerToForward::CallFunc_Quat_VectorForward_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_EulerToForward;
 
 // Function BP_Cinematics_Tick.BP_Cinematics_Tick_C.UpdateCameraCollision
 // 0x0020 (0x0020 - 0x0000)
@@ -577,14 +365,7 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAutonomousProxy_ReturnValue;            // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Cinematics_Tick_C_UpdateCameraCollision) == 0x000008, "Wrong alignment on BP_Cinematics_Tick_C_UpdateCameraCollision");
-static_assert(sizeof(BP_Cinematics_Tick_C_UpdateCameraCollision) == 0x000020, "Wrong size on BP_Cinematics_Tick_C_UpdateCameraCollision");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, InActor) == 0x000000, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::InActor' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, IsDisableCameraCollision_0) == 0x000008, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::IsDisableCameraCollision_0' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, K2Node_DynamicCast_AsTs_Base_Character) == 0x000010, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, CallFunc_Not_PreBool_ReturnValue) == 0x000019, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateCameraCollision, CallFunc_IsAutonomousProxy_ReturnValue) == 0x00001A, "Member 'BP_Cinematics_Tick_C_UpdateCameraCollision::CallFunc_IsAutonomousProxy_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Cinematics_Tick_C_UpdateCameraCollision;
 
 }
 

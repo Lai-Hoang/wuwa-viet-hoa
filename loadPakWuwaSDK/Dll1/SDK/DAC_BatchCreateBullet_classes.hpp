@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "SSkillBehaviorBatchBullet_structs.hpp"
-#include "Engine_classes.hpp"
 #include "EBatchBulletPosition_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -29,17 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"DAC_BatchCreateBullet_C">();
+		BP_STATIC_CLASS_IMPL("DAC_BatchCreateBullet_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"DAC_BatchCreateBullet_C")
 	}
 	static class UDAC_BatchCreateBullet_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UDAC_BatchCreateBullet_C>();
 	}
 };
-static_assert(alignof(UDAC_BatchCreateBullet_C) == 0x000008, "Wrong alignment on UDAC_BatchCreateBullet_C");
-static_assert(sizeof(UDAC_BatchCreateBullet_C) == 0x000070, "Wrong size on UDAC_BatchCreateBullet_C");
-static_assert(offsetof(UDAC_BatchCreateBullet_C, Base) == 0x000038, "Member 'UDAC_BatchCreateBullet_C::Base' has a wrong offset!");
-static_assert(offsetof(UDAC_BatchCreateBullet_C, BeginPos) == 0x000068, "Member 'UDAC_BatchCreateBullet_C::BeginPos' has a wrong offset!");
+DUMPER7_ASSERTS_UDAC_BatchCreateBullet_C;
 
 }
 

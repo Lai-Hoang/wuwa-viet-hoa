@@ -219,7 +219,7 @@ void UDamageUiManager::InitAllRes(class USceneComponent* Parent, class AUIBaseAc
 // Function KuroGameplayUI.DamageUiManager.InitDamageConfig
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FDamageConfig&             InDamageConfig                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FDamageConfig&             InDamageConfig                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UDamageUiManager::InitDamageConfig(const struct FDamageConfig& InDamageConfig)
 {

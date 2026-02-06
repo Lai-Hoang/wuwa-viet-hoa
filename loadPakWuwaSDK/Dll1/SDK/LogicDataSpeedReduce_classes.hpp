@@ -30,18 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"LogicDataSpeedReduce_C">();
+		BP_STATIC_CLASS_IMPL("LogicDataSpeedReduce_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LogicDataSpeedReduce_C")
 	}
 	static class ULogicDataSpeedReduce_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULogicDataSpeedReduce_C>();
 	}
 };
-static_assert(alignof(ULogicDataSpeedReduce_C) == 0x000008, "Wrong alignment on ULogicDataSpeedReduce_C");
-static_assert(sizeof(ULogicDataSpeedReduce_C) == 0x000048, "Wrong size on ULogicDataSpeedReduce_C");
-static_assert(offsetof(ULogicDataSpeedReduce_C, SpeedDampingRatio) == 0x00003C, "Member 'ULogicDataSpeedReduce_C::SpeedDampingRatio' has a wrong offset!");
-static_assert(offsetof(ULogicDataSpeedReduce_C, IsNotThroughObstacles) == 0x000040, "Member 'ULogicDataSpeedReduce_C::IsNotThroughObstacles' has a wrong offset!");
-static_assert(offsetof(ULogicDataSpeedReduce_C, MinSpeed) == 0x000044, "Member 'ULogicDataSpeedReduce_C::MinSpeed' has a wrong offset!");
+DUMPER7_ASSERTS_ULogicDataSpeedReduce_C;
 
 }
 

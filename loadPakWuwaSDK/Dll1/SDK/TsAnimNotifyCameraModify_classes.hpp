@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "SCameraModifier_Settings_structs.hpp"
 #include "SCameraModifier_Condition_structs.hpp"
+#include "SCameraModifier_Settings_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
@@ -45,24 +45,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyCameraModify_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyCameraModify_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyCameraModify_C")
 	}
 	static class UTsAnimNotifyCameraModify_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyCameraModify_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyCameraModify_C) == 0x000008, "Wrong alignment on UTsAnimNotifyCameraModify_C");
-static_assert(sizeof(UTsAnimNotifyCameraModify_C) == 0x0001A8, "Wrong size on UTsAnimNotifyCameraModify_C");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, Tag) == 0x000048, "Member 'UTsAnimNotifyCameraModify_C::Tag' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 持续时间) == 0x000054, "Member 'UTsAnimNotifyCameraModify_C::持续时间' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 淡入时间) == 0x000058, "Member 'UTsAnimNotifyCameraModify_C::淡入时间' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 淡出时间) == 0x00005C, "Member 'UTsAnimNotifyCameraModify_C::淡出时间' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 打断淡出时间) == 0x000060, "Member 'UTsAnimNotifyCameraModify_C::打断淡出时间' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 相机修改配置) == 0x000068, "Member 'UTsAnimNotifyCameraModify_C::相机修改配置' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 生效客户端类型) == 0x000180, "Member 'UTsAnimNotifyCameraModify_C::生效客户端类型' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, CameraAttachSocket) == 0x000188, "Member 'UTsAnimNotifyCameraModify_C::CameraAttachSocket' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyCameraModify_C, 条件) == 0x000198, "Member 'UTsAnimNotifyCameraModify_C::条件' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyCameraModify_C;
 
 }
 

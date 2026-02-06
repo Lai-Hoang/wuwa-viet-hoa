@@ -21,9 +21,7 @@ struct BPI_Tick_C_Tick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_Tick_C_Tick) == 0x000004, "Wrong alignment on BPI_Tick_C_Tick");
-static_assert(sizeof(BPI_Tick_C_Tick) == 0x000004, "Wrong size on BPI_Tick_C_Tick");
-static_assert(offsetof(BPI_Tick_C_Tick, DeltaSeconds) == 0x000000, "Member 'BPI_Tick_C_Tick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BPI_Tick_C_Tick;
 
 }
 

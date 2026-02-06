@@ -25,10 +25,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_SetAnimDataVector) == 0x000008, "Wrong alignment on BP_SeqCustom_C_SetAnimDataVector");
-static_assert(sizeof(BP_SeqCustom_C_SetAnimDataVector) == 0x000058, "Wrong size on BP_SeqCustom_C_SetAnimDataVector");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_SeqCustom_C_SetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_SeqCustom_C_SetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_SetAnimDataVector;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.SetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -38,10 +35,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_SetAnimDataFloat) == 0x000008, "Wrong alignment on BP_SeqCustom_C_SetAnimDataFloat");
-static_assert(sizeof(BP_SeqCustom_C_SetAnimDataFloat) == 0x000018, "Wrong size on BP_SeqCustom_C_SetAnimDataFloat");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_SeqCustom_C_SetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_SeqCustom_C_SetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_SetAnimDataFloat;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.GetSupportGroupNames
 // 0x0010 (0x0010 - 0x0000)
@@ -50,9 +44,7 @@ struct BP_SeqCustom_C_GetSupportGroupNames final
 public:
 	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BP_SeqCustom_C_GetSupportGroupNames) == 0x000008, "Wrong alignment on BP_SeqCustom_C_GetSupportGroupNames");
-static_assert(sizeof(BP_SeqCustom_C_GetSupportGroupNames) == 0x000010, "Wrong size on BP_SeqCustom_C_GetSupportGroupNames");
-static_assert(offsetof(BP_SeqCustom_C_GetSupportGroupNames, ReturnValue) == 0x000000, "Member 'BP_SeqCustom_C_GetSupportGroupNames::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_GetSupportGroupNames;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.GetAnimDataVector
 // 0x0058 (0x0058 - 0x0000)
@@ -62,10 +54,7 @@ public:
 	TMap<class FName, struct FVector>             VectorCurveData;                                   // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_GetAnimDataVector) == 0x000008, "Wrong alignment on BP_SeqCustom_C_GetAnimDataVector");
-static_assert(sizeof(BP_SeqCustom_C_GetAnimDataVector) == 0x000058, "Wrong size on BP_SeqCustom_C_GetAnimDataVector");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataVector, VectorCurveData) == 0x000000, "Member 'BP_SeqCustom_C_GetAnimDataVector::VectorCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataVector, ReturnValue) == 0x000050, "Member 'BP_SeqCustom_C_GetAnimDataVector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_GetAnimDataVector;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.GetAnimDataFloat
 // 0x0018 (0x0018 - 0x0000)
@@ -75,10 +64,7 @@ public:
 	TArray<struct FNamedCurveValue>               FloatCurveData;                                    // 0x0000(0x0010)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_GetAnimDataFloat) == 0x000008, "Wrong alignment on BP_SeqCustom_C_GetAnimDataFloat");
-static_assert(sizeof(BP_SeqCustom_C_GetAnimDataFloat) == 0x000018, "Wrong size on BP_SeqCustom_C_GetAnimDataFloat");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_SeqCustom_C_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_SeqCustom_C_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_GetAnimDataFloat;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.SetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -88,10 +74,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_SetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqCustom_C_SetAnimDataTransform");
-static_assert(sizeof(BP_SeqCustom_C_SetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqCustom_C_SetAnimDataTransform");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqCustom_C_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqCustom_C_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_SetAnimDataTransform;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.GetAnimDataTransform
 // 0x0058 (0x0058 - 0x0000)
@@ -101,10 +84,7 @@ public:
 	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(Parm, OutParm)
 	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_GetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqCustom_C_GetAnimDataTransform");
-static_assert(sizeof(BP_SeqCustom_C_GetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqCustom_C_GetAnimDataTransform");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqCustom_C_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
-static_assert(offsetof(BP_SeqCustom_C_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqCustom_C_GetAnimDataTransform::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_GetAnimDataTransform;
 
 // Function BP_SeqCustom.BP_SeqCustom_C.IsCustomSupport
 // 0x0001 (0x0001 - 0x0000)
@@ -113,9 +93,7 @@ struct BP_SeqCustom_C_IsCustomSupport final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_SeqCustom_C_IsCustomSupport) == 0x000001, "Wrong alignment on BP_SeqCustom_C_IsCustomSupport");
-static_assert(sizeof(BP_SeqCustom_C_IsCustomSupport) == 0x000001, "Wrong size on BP_SeqCustom_C_IsCustomSupport");
-static_assert(offsetof(BP_SeqCustom_C_IsCustomSupport, ReturnValue) == 0x000000, "Member 'BP_SeqCustom_C_IsCustomSupport::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_SeqCustom_C_IsCustomSupport;
 
 }
 

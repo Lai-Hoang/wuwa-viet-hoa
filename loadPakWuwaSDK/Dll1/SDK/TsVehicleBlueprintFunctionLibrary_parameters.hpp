@@ -29,13 +29,7 @@ public:
 	float                                         strength;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData, isImpacted) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData::isImpacted' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData, direction) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData::direction' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData, strength) == 0x00000C, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData::strength' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData, __WorldContext) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_UpdateVehiclePerformData;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.UpdateAnimInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -46,10 +40,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo) == 0x000010, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_UpdateAnimInfo;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetAndResetEnterSprint
 // 0x0018 (0x0018 - 0x0000)
@@ -61,11 +52,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint, ReturnValue) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetAndResetEnterSprint;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.UpdateDrivedVehiclePerformData
 // 0x0018 (0x0018 - 0x0000)
@@ -79,13 +66,7 @@ public:
 	float                                         strength;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData, isImpacted) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData::isImpacted' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData, direction) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData::direction' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData, strength) == 0x00000C, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData::strength' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData, __WorldContext) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_UpdateDrivedVehiclePerformData;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetDrivedVehicleSeatRot
 // 0x0020 (0x0020 - 0x0000)
@@ -97,12 +78,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot) == 0x000020, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot, outRot) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot::outRot' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot, __WorldContext) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot, ReturnValue) == 0x000018, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleSeatRot;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.ConvertAngleToPassengerSpace
 // 0x0018 (0x0018 - 0x0000)
@@ -114,12 +90,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace, yawInVehicleCoordinate) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace::yawInVehicleCoordinate' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace, ReturnValue) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_ConvertAngleToPassengerSpace;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetDrivedVehicleVelocity
 // 0x0020 (0x0020 - 0x0000)
@@ -131,12 +102,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity) == 0x000020, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity, outVelocity) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity::outVelocity' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity, __WorldContext) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity, ReturnValue) == 0x000018, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleVelocity;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetDrivedVehicleRotiationSpeed
 // 0x0018 (0x0018 - 0x0000)
@@ -148,11 +114,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed, ReturnValue) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetDrivedVehicleRotiationSpeed;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetVehicleVelocity
 // 0x0020 (0x0020 - 0x0000)
@@ -164,12 +126,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity) == 0x000020, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity, outVelocity) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity::outVelocity' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity, __WorldContext) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity, ReturnValue) == 0x000018, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetVehicleVelocity;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetVehicleRotiationSpeed
 // 0x0018 (0x0018 - 0x0000)
@@ -181,11 +138,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed, ReturnValue) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetVehicleRotiationSpeed;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.SmoothVehicleRotation
 // 0x0030 (0x0030 - 0x0000)
@@ -199,13 +152,7 @@ public:
 	class FString                                 context;                                           // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation) == 0x000030, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation, entityId1) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation::entityId1' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation, target) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation::target' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation, speed) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation::speed' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation, context) == 0x000018, "Member 'TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation::context' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation, __WorldContext) == 0x000028, "Member 'TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_SmoothVehicleRotation;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.AddBuffToVehicleFromGA
 // 0x0038 (0x0038 - 0x0000)
@@ -221,14 +168,7 @@ public:
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA) == 0x000038, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, target) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::target' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, buffId) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::buffId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, skillId) == 0x000018, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::skillId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, addCount) == 0x000028, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::addCount' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA, __WorldContext) == 0x000030, "Member 'TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_AddBuffToVehicleFromGA;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetVehicleImpactInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -242,13 +182,7 @@ public:
 	struct FHitResult                             impactHitResult;                                   // 0x0014(0x0094)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class UObject*                                __WorldContext;                                    // 0x00A8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo) == 0x0000B0, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo, isImpacted) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo::isImpacted' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo, impactVelocity) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo::impactVelocity' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo, impactHitResult) == 0x000014, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo::impactHitResult' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo, __WorldContext) == 0x0000A8, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetVehicleImpactInfo;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetDrivingVehicleImpactInfo
 // 0x00B0 (0x00B0 - 0x0000)
@@ -262,13 +196,7 @@ public:
 	struct FHitResult                             impactHitResult;                                   // 0x0014(0x0094)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class UObject*                                __WorldContext;                                    // 0x00A8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo) == 0x0000B0, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo, isImpacted) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo::isImpacted' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo, impactVelocity) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo::impactVelocity' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo, impactHitResult) == 0x000014, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo::impactHitResult' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo, __WorldContext) == 0x0000A8, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetDrivingVehicleImpactInfo;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.ClearMotorTimer
 // 0x0008 (0x0008 - 0x0000)
@@ -277,9 +205,7 @@ struct TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer final
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer) == 0x000008, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer, __WorldContext) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_ClearMotorTimer;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.TryGetPlayerMotorEntityId
 // 0x0010 (0x0010 - 0x0000)
@@ -289,10 +215,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId) == 0x000010, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId, __WorldContext) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId, ReturnValue) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_TryGetPlayerMotorEntityId;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.ClearMotorAppearanceTag
 // 0x0010 (0x0010 - 0x0000)
@@ -302,10 +225,7 @@ public:
 	class ATsBaseVehicle_C*                       motor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag) == 0x000010, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag, motor) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag::motor' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_ClearMotorAppearanceTag;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.MotorAppearance
 // 0x0048 (0x0048 - 0x0000)
@@ -325,18 +245,7 @@ public:
 	int64                                         disappearBuffId;                                   // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_MotorAppearance");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance) == 0x000048, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_MotorAppearance");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, motor) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::motor' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, skillId) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::skillId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, forceBrake) == 0x000020, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::forceBrake' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, hangTimeAfterAppear) == 0x000024, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::hangTimeAfterAppear' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, endHangBuffId) == 0x000028, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::endHangBuffId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, disappearDistance) == 0x000030, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::disappearDistance' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, disappearTime) == 0x000034, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::disappearTime' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, disappearBuffId) == 0x000038, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::disappearBuffId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_MotorAppearance, __WorldContext) == 0x000040, "Member 'TsVehicleBlueprintFunctionLibrary_C_MotorAppearance::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_MotorAppearance;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.GetPassengerOnVehicle
 // 0x0018 (0x0018 - 0x0000)
@@ -348,12 +257,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ATsBaseCharacter_C*                     ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle) == 0x000018, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle, seat) == 0x000004, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle::seat' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle, ReturnValue) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_GetPassengerOnVehicle;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.SummonAndRideMotorcycle
 // 0x0060 (0x0060 - 0x0000)
@@ -367,13 +271,7 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ATsBaseVehicle_C*                       ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle) == 0x000010, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle) == 0x000060, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle, entityId) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle::entityId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle, seatTrans) == 0x000010, "Member 'TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle::seatTrans' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle, motorSkillId) == 0x000040, "Member 'TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle::motorSkillId' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle, __WorldContext) == 0x000048, "Member 'TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle, ReturnValue) == 0x000050, "Member 'TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_SummonAndRideMotorcycle;
 
 // Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.SetMotorAndroidInitParams
 // 0x0010 (0x0010 - 0x0000)
@@ -383,10 +281,19 @@ public:
 	class UKuroVehicleMovementComponent*          vehicleMove;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams) == 0x000008, "Wrong alignment on TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams");
-static_assert(sizeof(TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams) == 0x000010, "Wrong size on TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams, vehicleMove) == 0x000000, "Member 'TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams::vehicleMove' has a wrong offset!");
-static_assert(offsetof(TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams, __WorldContext) == 0x000008, "Member 'TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams::__WorldContext' has a wrong offset!");
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_SetMotorAndroidInitParams;
+
+// Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.NeedSimulateMotorIk
+// 0x0018 (0x0018 - 0x0000)
+struct TsVehicleBlueprintFunctionLibrary_C_NeedSimulateMotorIk final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_TsVehicleBlueprintFunctionLibrary_C_NeedSimulateMotorIk;
 
 }
 

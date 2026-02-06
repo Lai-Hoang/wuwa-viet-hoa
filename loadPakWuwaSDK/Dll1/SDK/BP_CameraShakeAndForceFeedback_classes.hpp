@@ -26,16 +26,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_CameraShakeAndForceFeedback_C">();
+		BP_STATIC_CLASS_IMPL("BP_CameraShakeAndForceFeedback_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_CameraShakeAndForceFeedback_C")
 	}
 	static class UBP_CameraShakeAndForceFeedback_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_CameraShakeAndForceFeedback_C>();
 	}
 };
-static_assert(alignof(UBP_CameraShakeAndForceFeedback_C) == 0x000010, "Wrong alignment on UBP_CameraShakeAndForceFeedback_C");
-static_assert(sizeof(UBP_CameraShakeAndForceFeedback_C) == 0x0001E0, "Wrong size on UBP_CameraShakeAndForceFeedback_C");
-static_assert(offsetof(UBP_CameraShakeAndForceFeedback_C, ForceFeedbackEffect) == 0x0001D0, "Member 'UBP_CameraShakeAndForceFeedback_C::ForceFeedbackEffect' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_CameraShakeAndForceFeedback_C;
 
 }
 

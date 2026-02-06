@@ -32,22 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_BindStateBoneCollision_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_BindStateBoneCollision_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_BindStateBoneCollision_C")
 	}
 	static class UBP_SM_BindStateBoneCollision_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_BindStateBoneCollision_C>();
 	}
 };
-static_assert(alignof(UBP_SM_BindStateBoneCollision_C) == 0x000008, "Wrong alignment on UBP_SM_BindStateBoneCollision_C");
-static_assert(sizeof(UBP_SM_BindStateBoneCollision_C) == 0x000048, "Wrong size on UBP_SM_BindStateBoneCollision_C");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 骨骼名) == 0x000030, "Member 'UBP_SM_BindStateBoneCollision_C::骨骼名' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 阻挡角色) == 0x000040, "Member 'UBP_SM_BindStateBoneCollision_C::阻挡角色' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 阻挡子弹) == 0x000041, "Member 'UBP_SM_BindStateBoneCollision_C::阻挡子弹' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 阻挡镜头) == 0x000042, "Member 'UBP_SM_BindStateBoneCollision_C::阻挡镜头' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 退出节点时阻挡角色) == 0x000043, "Member 'UBP_SM_BindStateBoneCollision_C::退出节点时阻挡角色' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 退出节点时阻挡子弹) == 0x000044, "Member 'UBP_SM_BindStateBoneCollision_C::退出节点时阻挡子弹' has a wrong offset!");
-static_assert(offsetof(UBP_SM_BindStateBoneCollision_C, 退出节点时阻挡镜头) == 0x000045, "Member 'UBP_SM_BindStateBoneCollision_C::退出节点时阻挡镜头' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_BindStateBoneCollision_C;
 
 }
 

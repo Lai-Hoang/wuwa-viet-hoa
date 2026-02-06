@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SNpcHookPartMaterial_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -29,12 +29,7 @@ public:
 	TArray<struct FMorphTargetPreviewItem>        MorphTargets_9_26ABFC144AE3204702DE29838B963BE7;   // 0x0040(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSNpcHookPartMaterial>          MaterialInfos_14_8D714215486CBB612558F282D33CFB0E; // 0x0050(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSNpcHookPart) == 0x000010, "Wrong alignment on FSNpcHookPart");
-static_assert(sizeof(FSNpcHookPart) == 0x000060, "Wrong size on FSNpcHookPart");
-static_assert(offsetof(FSNpcHookPart, Mesh_5_5771A2684471ED0CB70046B15B01AEB1) == 0x000000, "Member 'FSNpcHookPart::Mesh_5_5771A2684471ED0CB70046B15B01AEB1' has a wrong offset!");
-static_assert(offsetof(FSNpcHookPart, Transform_4_B8BFEFDC4ADC550DB69D1B8E3C2C84E4) == 0x000010, "Member 'FSNpcHookPart::Transform_4_B8BFEFDC4ADC550DB69D1B8E3C2C84E4' has a wrong offset!");
-static_assert(offsetof(FSNpcHookPart, MorphTargets_9_26ABFC144AE3204702DE29838B963BE7) == 0x000040, "Member 'FSNpcHookPart::MorphTargets_9_26ABFC144AE3204702DE29838B963BE7' has a wrong offset!");
-static_assert(offsetof(FSNpcHookPart, MaterialInfos_14_8D714215486CBB612558F282D33CFB0E) == 0x000050, "Member 'FSNpcHookPart::MaterialInfos_14_8D714215486CBB612558F282D33CFB0E' has a wrong offset!");
+DUMPER7_ASSERTS_FSNpcHookPart;
 
 }
 

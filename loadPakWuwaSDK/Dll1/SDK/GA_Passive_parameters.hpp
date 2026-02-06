@@ -22,10 +22,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bWasCancelled;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(Ga_Passive_C_ExecuteUbergraph_Ga_Passive) == 0x000004, "Wrong alignment on Ga_Passive_C_ExecuteUbergraph_Ga_Passive");
-static_assert(sizeof(Ga_Passive_C_ExecuteUbergraph_Ga_Passive) == 0x000008, "Wrong size on Ga_Passive_C_ExecuteUbergraph_Ga_Passive");
-static_assert(offsetof(Ga_Passive_C_ExecuteUbergraph_Ga_Passive, EntryPoint) == 0x000000, "Member 'Ga_Passive_C_ExecuteUbergraph_Ga_Passive::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Ga_Passive_C_ExecuteUbergraph_Ga_Passive, K2Node_Event_bWasCancelled) == 0x000004, "Member 'Ga_Passive_C_ExecuteUbergraph_Ga_Passive::K2Node_Event_bWasCancelled' has a wrong offset!");
+DUMPER7_ASSERTS_Ga_Passive_C_ExecuteUbergraph_Ga_Passive;
 
 // Function GA_Passive.Ga_Passive_C.K2_OnEndAbility
 // 0x0001 (0x0001 - 0x0000)
@@ -34,9 +31,7 @@ struct Ga_Passive_C_K2_OnEndAbility final
 public:
 	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(Ga_Passive_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on Ga_Passive_C_K2_OnEndAbility");
-static_assert(sizeof(Ga_Passive_C_K2_OnEndAbility) == 0x000001, "Wrong size on Ga_Passive_C_K2_OnEndAbility");
-static_assert(offsetof(Ga_Passive_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'Ga_Passive_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
+DUMPER7_ASSERTS_Ga_Passive_C_K2_OnEndAbility;
 
 }
 

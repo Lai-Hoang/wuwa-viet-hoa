@@ -30,20 +30,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_AIGearStrategy_C">();
+		BP_STATIC_CLASS_IMPL("BP_AIGearStrategy_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_AIGearStrategy_C")
 	}
 	static class UBP_AIGearStrategy_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_AIGearStrategy_C>();
 	}
 };
-static_assert(alignof(UBP_AIGearStrategy_C) == 0x000008, "Wrong alignment on UBP_AIGearStrategy_C");
-static_assert(sizeof(UBP_AIGearStrategy_C) == 0x000050, "Wrong size on UBP_AIGearStrategy_C");
-static_assert(offsetof(UBP_AIGearStrategy_C, LostWeight) == 0x000038, "Member 'UBP_AIGearStrategy_C::LostWeight' has a wrong offset!");
-static_assert(offsetof(UBP_AIGearStrategy_C, RoundDecay) == 0x00003C, "Member 'UBP_AIGearStrategy_C::RoundDecay' has a wrong offset!");
-static_assert(offsetof(UBP_AIGearStrategy_C, IterationCount) == 0x000040, "Member 'UBP_AIGearStrategy_C::IterationCount' has a wrong offset!");
-static_assert(offsetof(UBP_AIGearStrategy_C, PlayerIterationCount) == 0x000044, "Member 'UBP_AIGearStrategy_C::PlayerIterationCount' has a wrong offset!");
-static_assert(offsetof(UBP_AIGearStrategy_C, IterationDecay) == 0x000048, "Member 'UBP_AIGearStrategy_C::IterationDecay' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_AIGearStrategy_C;
 
 }
 

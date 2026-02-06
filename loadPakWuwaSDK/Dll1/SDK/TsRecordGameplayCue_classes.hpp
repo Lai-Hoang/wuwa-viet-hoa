@@ -41,20 +41,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsRecordGameplayCue_C">();
+		BP_STATIC_CLASS_IMPL("TsRecordGameplayCue_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsRecordGameplayCue_C")
 	}
 	static class ATsRecordGameplayCue_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsRecordGameplayCue_C>();
 	}
 };
-static_assert(alignof(ATsRecordGameplayCue_C) == 0x000008, "Wrong alignment on ATsRecordGameplayCue_C");
-static_assert(sizeof(ATsRecordGameplayCue_C) == 0x0002E8, "Wrong size on ATsRecordGameplayCue_C");
-static_assert(offsetof(ATsRecordGameplayCue_C, UberGraphFrame) == 0x0002B0, "Member 'ATsRecordGameplayCue_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsRecordGameplayCue_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsRecordGameplayCue_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ATsRecordGameplayCue_C, Position0) == 0x0002C0, "Member 'ATsRecordGameplayCue_C::Position0' has a wrong offset!");
-static_assert(offsetof(ATsRecordGameplayCue_C, Path) == 0x0002D0, "Member 'ATsRecordGameplayCue_C::Path' has a wrong offset!");
-static_assert(offsetof(ATsRecordGameplayCue_C, BeamData) == 0x0002E0, "Member 'ATsRecordGameplayCue_C::BeamData' has a wrong offset!");
+DUMPER7_ASSERTS_ATsRecordGameplayCue_C;
 
 }
 

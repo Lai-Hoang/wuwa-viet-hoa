@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "E_Cloud_Presents_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "AkAudio_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK::Params
@@ -75,47 +75,7 @@ public:
 	bool                                          ___bool_IsClosed_Variable_1;                       // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ___bool_Has_Been_Initd_Variable_1;                 // 0x0152(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew");
-static_assert(sizeof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew) == 0x000158, "Wrong size on BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, EntryPoint) == 0x000000, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_Loaded) == 0x000008, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___bool_Has_Been_Initd_Variable) == 0x000010, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_Event_DeltaSeconds_1) == 0x000014, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_CloudPresents) == 0x000018, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_CloudPresents' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_ChangeSpeed_1) == 0x00001C, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_ChangeSpeed_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_IsInEditor_1) == 0x000020, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_IsInEditor_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_bOverrideCloudRotation) == 0x000021, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_bOverrideCloudRotation' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_SwitchEnum_CmpSuccess) == 0x000022, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___bool_IsClosed_Variable) == 0x000023, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___delegate_Variable) == 0x000028, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___delegate_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_Asset) == 0x000050, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_Asset' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_ChangeSpeed) == 0x000080, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_IsInEditor) == 0x000084, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_IsInEditor' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CustomEvent_IsAudio) == 0x000085, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CustomEvent_IsAudio' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000088, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsPD_Cloud_Prefab) == 0x000090, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsPD_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_CreateDelegate_OutputDelegate) == 0x0000A0, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x0000C8, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_Event_DeltaSeconds) == 0x0000D8, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_PostEvent_ReturnValue) == 0x0000DC, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_PostEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_GetWorldFeatureLevel_ReturnValue) == 0x0000E0, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_GetWorldFeatureLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x0000E1, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x0000E8, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess_1) == 0x0000F0, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsBP_Cloud_Prefab_1) == 0x0000F8, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsBP_Cloud_Prefab_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess_2) == 0x000100, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___object_Variable) == 0x000108, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsPD_Cloud_Prefab_1) == 0x000110, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsPD_Cloud_Prefab_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess_3) == 0x000118, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsBP_Cloud_Prefab_2) == 0x000120, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsBP_Cloud_Prefab_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess_4) == 0x000128, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_GetPathName_ReturnValue) == 0x000130, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_GetPathName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000140, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_AsBP_Cloud_Prefab_3) == 0x000148, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_AsBP_Cloud_Prefab_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, K2Node_DynamicCast_bSuccess_5) == 0x000150, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___bool_IsClosed_Variable_1) == 0x000151, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew, ___bool_Has_Been_Initd_Variable_1) == 0x000152, "Member 'BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew::___bool_Has_Been_Initd_Variable_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_ExecuteUbergraph_BP_CloudFuBenNew;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -124,9 +84,7 @@ struct BP_CloudFuBenNew_C_EditorTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_EditorTick) == 0x000004, "Wrong alignment on BP_CloudFuBenNew_C_EditorTick");
-static_assert(sizeof(BP_CloudFuBenNew_C_EditorTick) == 0x000004, "Wrong size on BP_CloudFuBenNew_C_EditorTick");
-static_assert(offsetof(BP_CloudFuBenNew_C_EditorTick, DeltaSeconds) == 0x000000, "Member 'BP_CloudFuBenNew_C_EditorTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_EditorTick;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.LoadAndSwitch
 // 0x0038 (0x0038 - 0x0000)
@@ -138,12 +96,7 @@ public:
 	bool                                          IsInEditor;                                        // 0x0034(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsAudio;                                           // 0x0035(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_LoadAndSwitch) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_LoadAndSwitch");
-static_assert(sizeof(BP_CloudFuBenNew_C_LoadAndSwitch) == 0x000038, "Wrong size on BP_CloudFuBenNew_C_LoadAndSwitch");
-static_assert(offsetof(BP_CloudFuBenNew_C_LoadAndSwitch, Asset) == 0x000000, "Member 'BP_CloudFuBenNew_C_LoadAndSwitch::Asset' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_LoadAndSwitch, ChangeSpeed) == 0x000030, "Member 'BP_CloudFuBenNew_C_LoadAndSwitch::ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_LoadAndSwitch, IsInEditor) == 0x000034, "Member 'BP_CloudFuBenNew_C_LoadAndSwitch::IsInEditor' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_LoadAndSwitch, IsAudio) == 0x000035, "Member 'BP_CloudFuBenNew_C_LoadAndSwitch::IsAudio' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_LoadAndSwitch;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Switch Clouds
 // 0x000C (0x000C - 0x0000)
@@ -156,12 +109,7 @@ public:
 	bool                                          IsInEditor;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bOverrideCloudRotation;                            // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Switch_Clouds) == 0x000004, "Wrong alignment on BP_CloudFuBenNew_C_Switch_Clouds");
-static_assert(sizeof(BP_CloudFuBenNew_C_Switch_Clouds) == 0x00000C, "Wrong size on BP_CloudFuBenNew_C_Switch_Clouds");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds, CloudPresents) == 0x000000, "Member 'BP_CloudFuBenNew_C_Switch_Clouds::CloudPresents' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds, ChangeSpeed) == 0x000004, "Member 'BP_CloudFuBenNew_C_Switch_Clouds::ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds, IsInEditor) == 0x000008, "Member 'BP_CloudFuBenNew_C_Switch_Clouds::IsInEditor' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds, bOverrideCloudRotation) == 0x000009, "Member 'BP_CloudFuBenNew_C_Switch_Clouds::bOverrideCloudRotation' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Switch_Clouds;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -170,9 +118,7 @@ struct BP_CloudFuBenNew_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CloudFuBenNew_C_ReceiveTick");
-static_assert(sizeof(BP_CloudFuBenNew_C_ReceiveTick) == 0x000004, "Wrong size on BP_CloudFuBenNew_C_ReceiveTick");
-static_assert(offsetof(BP_CloudFuBenNew_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CloudFuBenNew_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_ReceiveTick;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.OnLoaded_B83844664BD317A13AA3988948C763B1
 // 0x0008 (0x0008 - 0x0000)
@@ -181,9 +127,7 @@ struct BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1 final
 public:
 	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1");
-static_assert(sizeof(BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1) == 0x000008, "Wrong size on BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1");
-static_assert(offsetof(BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1, Loaded) == 0x000000, "Member 'BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1::Loaded' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_OnLoaded_B83844664BD317A13AA3988948C763B1;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Hide BPCloudFuBen Check
 // 0x0002 (0x0002 - 0x0000)
@@ -193,10 +137,7 @@ public:
 	E_Cloud_Presents                              In_Type;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check) == 0x000001, "Wrong alignment on BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check");
-static_assert(sizeof(BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check) == 0x000002, "Wrong size on BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check");
-static_assert(offsetof(BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check, In_Type) == 0x000000, "Member 'BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check::In_Type' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Hide_BPCloudFuBen_Check;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Switch Clouds Sub
 // 0x0038 (0x0038 - 0x0000)
@@ -218,19 +159,7 @@ public:
 	int32                                         CallFunc_Array_Get_Item;                           // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Switch_Clouds_Sub) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_Switch_Clouds_Sub");
-static_assert(sizeof(BP_CloudFuBenNew_C_Switch_Clouds_Sub) == 0x000038, "Wrong size on BP_CloudFuBenNew_C_Switch_Clouds_Sub");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CloudPresents) == 0x000000, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CloudPresents' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, ChangeSpeed) == 0x000008, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CallFunc_Not_PreBool_ReturnValue) == 0x00000C, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CallFunc_IsValid_ReturnValue) == 0x00000D, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x000010, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, K2Node_DynamicCast_AsBP_Cloud_Prefab_1) == 0x000020, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::K2Node_DynamicCast_AsBP_Cloud_Prefab_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, K2Node_DynamicCast_bSuccess_1) == 0x000028, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CallFunc_Array_Get_Item) == 0x00002C, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Switch_Clouds_Sub, CallFunc_Array_Get_Item_1) == 0x000030, "Member 'BP_CloudFuBenNew_C_Switch_Clouds_Sub::CallFunc_Array_Get_Item_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Switch_Clouds_Sub;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Set Cloud Parameters
 // 0x0028 (0x0028 - 0x0000)
@@ -244,14 +173,7 @@ public:
 	class ABP_CloudPrefab_C*                      K2Node_DynamicCast_AsBP_Cloud_Prefab;              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Set_Cloud_Parameters) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_Set_Cloud_Parameters");
-static_assert(sizeof(BP_CloudFuBenNew_C_Set_Cloud_Parameters) == 0x000028, "Wrong size on BP_CloudFuBenNew_C_Set_Cloud_Parameters");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, CloudPrefab) == 0x000000, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::CloudPrefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, CloudActorComponent) == 0x000008, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::CloudActorComponent' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, ChangeSpeed) == 0x000010, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::ChangeSpeed' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, TransSortNumber) == 0x000014, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::TransSortNumber' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x000018, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Set_Cloud_Parameters, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_CloudFuBenNew_C_Set_Cloud_Parameters::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Set_Cloud_Parameters;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Cloud Main Params Update
 // 0x0020 (0x0020 - 0x0000)
@@ -264,12 +186,7 @@ public:
 	class ABP_CloudPrefab_C*                      K2Node_DynamicCast_AsBP_Cloud_Prefab_1;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_Cloud_Main_Params_Update");
-static_assert(sizeof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update) == 0x000020, "Wrong size on BP_CloudFuBenNew_C_Cloud_Main_Params_Update");
-static_assert(offsetof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x000000, "Member 'BP_CloudFuBenNew_C_Cloud_Main_Params_Update::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update, K2Node_DynamicCast_bSuccess) == 0x000008, "Member 'BP_CloudFuBenNew_C_Cloud_Main_Params_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update, K2Node_DynamicCast_AsBP_Cloud_Prefab_1) == 0x000010, "Member 'BP_CloudFuBenNew_C_Cloud_Main_Params_Update::K2Node_DynamicCast_AsBP_Cloud_Prefab_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Cloud_Main_Params_Update, K2Node_DynamicCast_bSuccess_1) == 0x000018, "Member 'BP_CloudFuBenNew_C_Cloud_Main_Params_Update::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Cloud_Main_Params_Update;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Change Start
 // 0x0010 (0x0010 - 0x0000)
@@ -279,10 +196,7 @@ public:
 	class AGameModeBase*                          CallFunc_GetGameMode_ReturnValue;                  // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Change_Start) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_Change_Start");
-static_assert(sizeof(BP_CloudFuBenNew_C_Change_Start) == 0x000010, "Wrong size on BP_CloudFuBenNew_C_Change_Start");
-static_assert(offsetof(BP_CloudFuBenNew_C_Change_Start, CallFunc_GetGameMode_ReturnValue) == 0x000000, "Member 'BP_CloudFuBenNew_C_Change_Start::CallFunc_GetGameMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Change_Start, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CloudFuBenNew_C_Change_Start::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Change_Start;
 
 // Function BP_CloudFuBenNew.BP_CloudFuBenNew_C.Timer
 // 0x0030 (0x0030 - 0x0000)
@@ -300,15 +214,7 @@ public:
 	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CloudFuBenNew_C_Timer) == 0x000008, "Wrong alignment on BP_CloudFuBenNew_C_Timer");
-static_assert(sizeof(BP_CloudFuBenNew_C_Timer) == 0x000030, "Wrong size on BP_CloudFuBenNew_C_Timer");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, DeltaTime) == 0x000000, "Member 'BP_CloudFuBenNew_C_Timer::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, K2Node_DynamicCast_AsBP_Cloud_Prefab) == 0x000008, "Member 'BP_CloudFuBenNew_C_Timer::K2Node_DynamicCast_AsBP_Cloud_Prefab' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_CloudFuBenNew_C_Timer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, K2Node_DynamicCast_AsBP_Cloud_Prefab_1) == 0x000018, "Member 'BP_CloudFuBenNew_C_Timer::K2Node_DynamicCast_AsBP_Cloud_Prefab_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, K2Node_DynamicCast_bSuccess_1) == 0x000020, "Member 'BP_CloudFuBenNew_C_Timer::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, CallFunc_Add_FloatFloat_ReturnValue) == 0x000024, "Member 'BP_CloudFuBenNew_C_Timer::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudFuBenNew_C_Timer, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_CloudFuBenNew_C_Timer::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CloudFuBenNew_C_Timer;
 
 }
 

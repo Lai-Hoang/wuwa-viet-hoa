@@ -33,17 +33,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyChangeAcceleration_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyChangeAcceleration_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyChangeAcceleration_C")
 	}
 	static class UTsAnimNotifyChangeAcceleration_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyChangeAcceleration_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyChangeAcceleration_C) == 0x000008, "Wrong alignment on UTsAnimNotifyChangeAcceleration_C");
-static_assert(sizeof(UTsAnimNotifyChangeAcceleration_C) == 0x000050, "Wrong size on UTsAnimNotifyChangeAcceleration_C");
-static_assert(offsetof(UTsAnimNotifyChangeAcceleration_C, Time) == 0x000048, "Member 'UTsAnimNotifyChangeAcceleration_C::Time' has a wrong offset!");
-static_assert(offsetof(UTsAnimNotifyChangeAcceleration_C, MoveState) == 0x00004C, "Member 'UTsAnimNotifyChangeAcceleration_C::MoveState' has a wrong offset!");
+DUMPER7_ASSERTS_UTsAnimNotifyChangeAcceleration_C;
 
 }
 

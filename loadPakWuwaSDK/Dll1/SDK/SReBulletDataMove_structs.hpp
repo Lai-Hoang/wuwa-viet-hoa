@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "EBulletFollowType_structs.hpp"
-#include "EMoveTrajectory_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EInitialVelocityDirection_structs.hpp"
-#include "EBulletBeginVelocityLimit_structs.hpp"
-#include "EBulletTarget_structs.hpp"
 #include "EBulletDestOffset_structs.hpp"
+#include "EInitialVelocityDirection_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EBulletBeginVelocityLimit_structs.hpp"
+#include "EMoveTrajectory_structs.hpp"
+#include "EBulletTarget_structs.hpp"
 
 
 namespace SDK
@@ -59,31 +59,7 @@ public:
 	struct FVector                                终点偏移_84_BAA0EAE04CE0509C1618BBB676F21F13;      // 0x010C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 运动轨迹目标骨骼_88_FCDEE9544E4356CB4AFA7E8C20AC25A3; // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataMove) == 0x000008, "Wrong alignment on FSReBulletDataMove");
-static_assert(sizeof(FSReBulletDataMove) == 0x000128, "Wrong size on FSReBulletDataMove");
-static_assert(offsetof(FSReBulletDataMove, 子弹跟随类型_2_EB5082884D16B3159947BDB3926672B5) == 0x000000, "Member 'FSReBulletDataMove::子弹跟随类型_2_EB5082884D16B3159947BDB3926672B5' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 骨骼网格体名字_61_E169A0B04CE09357DB8758934EA7CD6C) == 0x000008, "Member 'FSReBulletDataMove::骨骼网格体名字_61_E169A0B04CE09357DB8758934EA7CD6C' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 骨骼名字_5_1C057FDA46EDF710761477879134309D) == 0x000018, "Member 'FSReBulletDataMove::骨骼名字_5_1C057FDA46EDF710761477879134309D' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 是否锁定缩放_66_CBE2E645497A50C3B48B88948DDAB243) == 0x000024, "Member 'FSReBulletDataMove::是否锁定缩放_66_CBE2E645497A50C3B48B88948DDAB243' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 技能结束解除跟随骨骼_69_7B7BB2C64C1DDD77822A8393FFE83837) == 0x000025, "Member 'FSReBulletDataMove::技能结束解除跟随骨骼_69_7B7BB2C64C1DDD77822A8393FFE83837' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 跟随骨骼限制旋转_51_B89892594FF2D13179CC8199B01E4500) == 0x000028, "Member 'FSReBulletDataMove::跟随骨骼限制旋转_51_B89892594FF2D13179CC8199B01E4500' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 出生初速度方向基准_9_C4601AD243E5197E0937BABFDECF3BEF) == 0x000034, "Member 'FSReBulletDataMove::出生初速度方向基准_9_C4601AD243E5197E0937BABFDECF3BEF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 出生初速度方向基准参数_57_542BC7F644326C2294D1A59FE7EF063E) == 0x000038, "Member 'FSReBulletDataMove::出生初速度方向基准参数_57_542BC7F644326C2294D1A59FE7EF063E' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 初速度仅Z轴朝向_71_A3FBC7F84629358CB5D0819858CBC5E9) == 0x000048, "Member 'FSReBulletDataMove::初速度仅Z轴朝向_71_A3FBC7F84629358CB5D0819858CBC5E9' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 初速度偏移方向_12_16E263C84612F9DDCC83C8BCC745D51D) == 0x00004C, "Member 'FSReBulletDataMove::初速度偏移方向_12_16E263C84612F9DDCC83C8BCC745D51D' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 初速度方向随机_64_4D99572140F7A24F84F5068EEEF8ACB9) == 0x000058, "Member 'FSReBulletDataMove::初速度方向随机_64_4D99572140F7A24F84F5068EEEF8ACB9' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 初速度角度限制_78_40E4764E4323CDB665D34D850690CE6F) == 0x000068, "Member 'FSReBulletDataMove::初速度角度限制_78_40E4764E4323CDB665D34D850690CE6F' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 发射上下角度限制_44_A74EF1D64032174BE09628BD2BAB1253) == 0x0000B8, "Member 'FSReBulletDataMove::发射上下角度限制_44_A74EF1D64032174BE09628BD2BAB1253' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 移动速度_15_0867008540C745BFF942DEA84478F4BF) == 0x0000BC, "Member 'FSReBulletDataMove::移动速度_15_0867008540C745BFF942DEA84478F4BF' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 移动速度曲线_20_6768D55B4A7949D724CB058942BF8EE7) == 0x0000C0, "Member 'FSReBulletDataMove::移动速度曲线_20_6768D55B4A7949D724CB058942BF8EE7' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹类型_23_FA54415C44156416BD518BB47A5A83A5) == 0x0000C8, "Member 'FSReBulletDataMove::运动轨迹类型_23_FA54415C44156416BD518BB47A5A83A5' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹参数数据_28_B34275AA4398086E6BDACBA6F1F3CA22) == 0x0000D0, "Member 'FSReBulletDataMove::运动轨迹参数数据_28_B34275AA4398086E6BDACBA6F1F3CA22' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹参数曲线_31_B291C2B941480A8B6803558B93E5CE0D) == 0x0000E0, "Member 'FSReBulletDataMove::运动轨迹参数曲线_31_B291C2B941480A8B6803558B93E5CE0D' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹参数目标_38_84B1F6734BA590844BCABEA762FB1477) == 0x0000F0, "Member 'FSReBulletDataMove::运动轨迹参数目标_38_84B1F6734BA590844BCABEA762FB1477' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹目标黑板Key值_54_DC248A864350C9632CB9BFA691107080) == 0x0000F8, "Member 'FSReBulletDataMove::运动轨迹目标黑板Key值_54_DC248A864350C9632CB9BFA691107080' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 终点偏移基准朝向_85_B86582EB47A8E045A3BE9196E20929B0) == 0x000108, "Member 'FSReBulletDataMove::终点偏移基准朝向_85_B86582EB47A8E045A3BE9196E20929B0' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 终点偏移_84_BAA0EAE04CE0509C1618BBB676F21F13) == 0x00010C, "Member 'FSReBulletDataMove::终点偏移_84_BAA0EAE04CE0509C1618BBB676F21F13' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMove, 运动轨迹目标骨骼_88_FCDEE9544E4356CB4AFA7E8C20AC25A3) == 0x000118, "Member 'FSReBulletDataMove::运动轨迹目标骨骼_88_FCDEE9544E4356CB4AFA7E8C20AC25A3' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataMove;
 
 }
 

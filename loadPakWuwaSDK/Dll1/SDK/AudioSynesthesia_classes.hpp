@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AudioAnalyzer_classes.hpp"
-#include "AudioSynesthesia_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AudioSynesthesia_structs.hpp"
 
 
 namespace SDK
@@ -25,15 +25,18 @@ class UAudioSynesthesiaNRT : public UAudioAnalyzerNRT
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioSynesthesiaNRT">();
+		STATIC_CLASS_IMPL("AudioSynesthesiaNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSynesthesiaNRT")
 	}
 	static class UAudioSynesthesiaNRT* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
 	}
 };
-static_assert(alignof(UAudioSynesthesiaNRT) == 0x000008, "Wrong alignment on UAudioSynesthesiaNRT");
-static_assert(sizeof(UAudioSynesthesiaNRT) == 0x000080, "Wrong size on UAudioSynesthesiaNRT");
+DUMPER7_ASSERTS_UAudioSynesthesiaNRT;
 
 // Class AudioSynesthesia.OnsetNRT
 // 0x0008 (0x0088 - 0x0080)
@@ -49,16 +52,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnsetNRT">();
+		STATIC_CLASS_IMPL("OnsetNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnsetNRT")
 	}
 	static class UOnsetNRT* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnsetNRT>();
 	}
 };
-static_assert(alignof(UOnsetNRT) == 0x000008, "Wrong alignment on UOnsetNRT");
-static_assert(sizeof(UOnsetNRT) == 0x000088, "Wrong size on UOnsetNRT");
-static_assert(offsetof(UOnsetNRT, Settings) == 0x000080, "Member 'UOnsetNRT::Settings' has a wrong offset!");
+DUMPER7_ASSERTS_UOnsetNRT;
 
 // Class AudioSynesthesia.AudioSynesthesiaNRTSettings
 // 0x0000 (0x0030 - 0x0030)
@@ -67,15 +72,18 @@ class UAudioSynesthesiaNRTSettings : public UAudioAnalyzerNRTSettings
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AudioSynesthesiaNRTSettings">();
+		STATIC_CLASS_IMPL("AudioSynesthesiaNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AudioSynesthesiaNRTSettings")
 	}
 	static class UAudioSynesthesiaNRTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAudioSynesthesiaNRTSettings>();
 	}
 };
-static_assert(alignof(UAudioSynesthesiaNRTSettings) == 0x000008, "Wrong alignment on UAudioSynesthesiaNRTSettings");
-static_assert(sizeof(UAudioSynesthesiaNRTSettings) == 0x000030, "Wrong size on UAudioSynesthesiaNRTSettings");
+DUMPER7_ASSERTS_UAudioSynesthesiaNRTSettings;
 
 // Class AudioSynesthesia.ConstantQNRTSettings
 // 0x0020 (0x0050 - 0x0030)
@@ -98,26 +106,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConstantQNRTSettings">();
+		STATIC_CLASS_IMPL("ConstantQNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConstantQNRTSettings")
 	}
 	static class UConstantQNRTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConstantQNRTSettings>();
 	}
 };
-static_assert(alignof(UConstantQNRTSettings) == 0x000008, "Wrong alignment on UConstantQNRTSettings");
-static_assert(sizeof(UConstantQNRTSettings) == 0x000050, "Wrong size on UConstantQNRTSettings");
-static_assert(offsetof(UConstantQNRTSettings, StartingFrequency) == 0x000030, "Member 'UConstantQNRTSettings::StartingFrequency' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, NumBands) == 0x000034, "Member 'UConstantQNRTSettings::NumBands' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, NumBandsPerOctave) == 0x000038, "Member 'UConstantQNRTSettings::NumBandsPerOctave' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, AnalysisPeriod) == 0x00003C, "Member 'UConstantQNRTSettings::AnalysisPeriod' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, bDownmixToMono) == 0x000040, "Member 'UConstantQNRTSettings::bDownmixToMono' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, FFTSize) == 0x000041, "Member 'UConstantQNRTSettings::FFTSize' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, WindowType) == 0x000042, "Member 'UConstantQNRTSettings::WindowType' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, SpectrumType) == 0x000043, "Member 'UConstantQNRTSettings::SpectrumType' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, BandWidthStretch) == 0x000044, "Member 'UConstantQNRTSettings::BandWidthStretch' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, CQTNormalization) == 0x000048, "Member 'UConstantQNRTSettings::CQTNormalization' has a wrong offset!");
-static_assert(offsetof(UConstantQNRTSettings, NoiseFloorDb) == 0x00004C, "Member 'UConstantQNRTSettings::NoiseFloorDb' has a wrong offset!");
+DUMPER7_ASSERTS_UConstantQNRTSettings;
 
 // Class AudioSynesthesia.ConstantQNRT
 // 0x0008 (0x0088 - 0x0080)
@@ -133,16 +133,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ConstantQNRT">();
+		STATIC_CLASS_IMPL("ConstantQNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConstantQNRT")
 	}
 	static class UConstantQNRT* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UConstantQNRT>();
 	}
 };
-static_assert(alignof(UConstantQNRT) == 0x000008, "Wrong alignment on UConstantQNRT");
-static_assert(sizeof(UConstantQNRT) == 0x000088, "Wrong size on UConstantQNRT");
-static_assert(offsetof(UConstantQNRT, Settings) == 0x000080, "Member 'UConstantQNRT::Settings' has a wrong offset!");
+DUMPER7_ASSERTS_UConstantQNRT;
 
 // Class AudioSynesthesia.LoudnessNRTSettings
 // 0x0018 (0x0048 - 0x0030)
@@ -160,20 +162,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LoudnessNRTSettings">();
+		STATIC_CLASS_IMPL("LoudnessNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LoudnessNRTSettings")
 	}
 	static class ULoudnessNRTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULoudnessNRTSettings>();
 	}
 };
-static_assert(alignof(ULoudnessNRTSettings) == 0x000008, "Wrong alignment on ULoudnessNRTSettings");
-static_assert(sizeof(ULoudnessNRTSettings) == 0x000048, "Wrong size on ULoudnessNRTSettings");
-static_assert(offsetof(ULoudnessNRTSettings, AnalysisPeriod) == 0x000030, "Member 'ULoudnessNRTSettings::AnalysisPeriod' has a wrong offset!");
-static_assert(offsetof(ULoudnessNRTSettings, MinimumFrequency) == 0x000034, "Member 'ULoudnessNRTSettings::MinimumFrequency' has a wrong offset!");
-static_assert(offsetof(ULoudnessNRTSettings, MaximumFrequency) == 0x000038, "Member 'ULoudnessNRTSettings::MaximumFrequency' has a wrong offset!");
-static_assert(offsetof(ULoudnessNRTSettings, CurveType) == 0x00003C, "Member 'ULoudnessNRTSettings::CurveType' has a wrong offset!");
-static_assert(offsetof(ULoudnessNRTSettings, NoiseFloorDb) == 0x000040, "Member 'ULoudnessNRTSettings::NoiseFloorDb' has a wrong offset!");
+DUMPER7_ASSERTS_ULoudnessNRTSettings;
 
 // Class AudioSynesthesia.LoudnessNRT
 // 0x0008 (0x0088 - 0x0080)
@@ -191,16 +191,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LoudnessNRT">();
+		STATIC_CLASS_IMPL("LoudnessNRT")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LoudnessNRT")
 	}
 	static class ULoudnessNRT* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULoudnessNRT>();
 	}
 };
-static_assert(alignof(ULoudnessNRT) == 0x000008, "Wrong alignment on ULoudnessNRT");
-static_assert(sizeof(ULoudnessNRT) == 0x000088, "Wrong size on ULoudnessNRT");
-static_assert(offsetof(ULoudnessNRT, Settings) == 0x000080, "Member 'ULoudnessNRT::Settings' has a wrong offset!");
+DUMPER7_ASSERTS_ULoudnessNRT;
 
 // Class AudioSynesthesia.OnsetNRTSettings
 // 0x0018 (0x0048 - 0x0030)
@@ -218,20 +220,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"OnsetNRTSettings">();
+		STATIC_CLASS_IMPL("OnsetNRTSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"OnsetNRTSettings")
 	}
 	static class UOnsetNRTSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UOnsetNRTSettings>();
 	}
 };
-static_assert(alignof(UOnsetNRTSettings) == 0x000008, "Wrong alignment on UOnsetNRTSettings");
-static_assert(sizeof(UOnsetNRTSettings) == 0x000048, "Wrong size on UOnsetNRTSettings");
-static_assert(offsetof(UOnsetNRTSettings, bDownmixToMono) == 0x000030, "Member 'UOnsetNRTSettings::bDownmixToMono' has a wrong offset!");
-static_assert(offsetof(UOnsetNRTSettings, GranularityInSeconds) == 0x000034, "Member 'UOnsetNRTSettings::GranularityInSeconds' has a wrong offset!");
-static_assert(offsetof(UOnsetNRTSettings, Sensitivity) == 0x000038, "Member 'UOnsetNRTSettings::Sensitivity' has a wrong offset!");
-static_assert(offsetof(UOnsetNRTSettings, MinimumFrequency) == 0x00003C, "Member 'UOnsetNRTSettings::MinimumFrequency' has a wrong offset!");
-static_assert(offsetof(UOnsetNRTSettings, MaximumFrequency) == 0x000040, "Member 'UOnsetNRTSettings::MaximumFrequency' has a wrong offset!");
+DUMPER7_ASSERTS_UOnsetNRTSettings;
 
 }
 

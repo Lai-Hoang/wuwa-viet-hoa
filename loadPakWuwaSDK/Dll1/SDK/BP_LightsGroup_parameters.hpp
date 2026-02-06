@@ -16,159 +16,61 @@
 namespace SDK::Params
 {
 
-// Function BP_LightsGroup.BP_LightsGroup_C.LightsColorChange
-// 0x0080 (0x0080 - 0x0000)
-struct BP_LightsGroup_C_LightsColorChange final
+// Function BP_LightsGroup.BP_LightsGroup_C.ExecuteUbergraph_BP_LightsGroup
+// 0x0008 (0x0008 - 0x0000)
+struct BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup final
 {
 public:
-	float                                         ElapsedTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorOriginal_0;                                   // 0x0004(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorTarget_0;                                     // 0x0014(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue;              // 0x0034(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0048(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_LightsGroup_C_LightsColorChange) == 0x000008, "Wrong alignment on BP_LightsGroup_C_LightsColorChange");
-static_assert(sizeof(BP_LightsGroup_C_LightsColorChange) == 0x000080, "Wrong size on BP_LightsGroup_C_LightsColorChange");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_LightsColorChange::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, ColorOriginal_0) == 0x000004, "Member 'BP_LightsGroup_C_LightsColorChange::ColorOriginal_0' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, ColorTarget_0) == 0x000014, "Member 'BP_LightsGroup_C_LightsColorChange::ColorTarget_0' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, ___int_Array_Index_Variable) == 0x000024, "Member 'BP_LightsGroup_C_LightsColorChange::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, ___int_Loop_Counter_Variable) == 0x00002C, "Member 'BP_LightsGroup_C_LightsColorChange::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_LinearColorLerp_ReturnValue) == 0x000034, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_LinearColorLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_GetAttachedActors_OutActors) == 0x000048, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Array_Length_ReturnValue) == 0x000058, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Array_Get_Item) == 0x000060, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_IsValid_ReturnValue) == 0x000069, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_GetComponentByClass_ReturnValue) == 0x000070, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_LightsColorChange, CallFunc_IsValid_ReturnValue_1) == 0x000078, "Member 'BP_LightsGroup_C_LightsColorChange::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup;
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsColorChange
-// 0x000C (0x000C - 0x0000)
-struct BP_LightsGroup_C_ToggleLightsColorChange final
+// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_LightsGroup_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds_0;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LightsGroup_C_ReceiveTick;
+
+// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLights
+// 0x0050 (0x0050 - 0x0000)
+struct BP_LightsGroup_C_ToggleLights final
+{
+public:
+	bool                                          inEnable;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Array_Index_Variable;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0018(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base;   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_LightsGroup_C_ToggleLights;
+
+// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsIntensity
+// 0x0010 (0x0010 - 0x0000)
+struct BP_LightsGroup_C_ToggleLightsIntensity final
 {
 public:
 	float                                         CallFunc_Timer_ElapsedTime;                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Timer_ElapsedTime_1;                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Timer_ElapsedTime_1;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LightsGroup_C_ToggleLightsColorChange) == 0x000004, "Wrong alignment on BP_LightsGroup_C_ToggleLightsColorChange");
-static_assert(sizeof(BP_LightsGroup_C_ToggleLightsColorChange) == 0x00000C, "Wrong size on BP_LightsGroup_C_ToggleLightsColorChange");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsColorChange, CallFunc_Timer_ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_ToggleLightsColorChange::CallFunc_Timer_ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsColorChange, CallFunc_Timer_ElapsedTime_1) == 0x000004, "Member 'BP_LightsGroup_C_ToggleLightsColorChange::CallFunc_Timer_ElapsedTime_1' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsColorChange, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_LightsGroup_C_ToggleLightsColorChange::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsColorChange, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x000009, "Member 'BP_LightsGroup_C_ToggleLightsColorChange::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-
-// Function BP_LightsGroup.BP_LightsGroup_C.GetLightsIntensity
-// 0x0048 (0x0048 - 0x0000)
-struct BP_LightsGroup_C_GetLightsIntensity final
-{
-public:
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0008(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Array_Index_Variable;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_LightsGroup_C_GetLightsIntensity) == 0x000008, "Wrong alignment on BP_LightsGroup_C_GetLightsIntensity");
-static_assert(sizeof(BP_LightsGroup_C_GetLightsIntensity) == 0x000048, "Wrong size on BP_LightsGroup_C_GetLightsIntensity");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, ___int_Loop_Counter_Variable) == 0x000000, "Member 'BP_LightsGroup_C_GetLightsIntensity::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_GetAttachedActors_OutActors) == 0x000008, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_Array_Length_ReturnValue) == 0x00001C, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, ___int_Array_Index_Variable) == 0x000024, "Member 'BP_LightsGroup_C_GetLightsIntensity::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_GetComponentByClass_ReturnValue) == 0x000038, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_IsValid_ReturnValue_1) == 0x000040, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_GetLightsIntensity, CallFunc_Array_Add_ReturnValue) == 0x000044, "Member 'BP_LightsGroup_C_GetLightsIntensity::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-
-// Function BP_LightsGroup.BP_LightsGroup_C.Timer
-// 0x0008 (0x0008 - 0x0000)
-struct BP_LightsGroup_C_Timer final
-{
-public:
-	float                                         ElapsedTime;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_LightsGroup_C_Timer) == 0x000004, "Wrong alignment on BP_LightsGroup_C_Timer");
-static_assert(sizeof(BP_LightsGroup_C_Timer) == 0x000008, "Wrong size on BP_LightsGroup_C_Timer");
-static_assert(offsetof(BP_LightsGroup_C_Timer, ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_Timer::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_Timer, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_LightsGroup_C_Timer::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-
-// Function BP_LightsGroup.BP_LightsGroup_C.TurnOnLights
-// 0x0058 (0x0058 - 0x0000)
-struct BP_LightsGroup_C_TurnOnLights final
-{
-public:
-	float                                         ElapsedTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable;                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0020(0x0010)(ReferenceParm)
-	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_LightsGroup_C_TurnOnLights) == 0x000008, "Wrong alignment on BP_LightsGroup_C_TurnOnLights");
-static_assert(sizeof(BP_LightsGroup_C_TurnOnLights) == 0x000058, "Wrong size on BP_LightsGroup_C_TurnOnLights");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_TurnOnLights::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, ___int_Loop_Counter_Variable) == 0x000004, "Member 'BP_LightsGroup_C_TurnOnLights::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, ___int_Array_Index_Variable) == 0x00000C, "Member 'BP_LightsGroup_C_TurnOnLights::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000010, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x00001C, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_GetAttachedActors_OutActors) == 0x000020, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Lerp_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Array_Length_ReturnValue) == 0x000040, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_IsValid_ReturnValue) == 0x000044, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Less_IntInt_ReturnValue) == 0x000045, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000050, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOnLights, CallFunc_IsValid_ReturnValue_1) == 0x000051, "Member 'BP_LightsGroup_C_TurnOnLights::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightsGroup_C_ToggleLightsIntensity;
 
 // Function BP_LightsGroup.BP_LightsGroup_C.TurnOffLights
 // 0x0058 (0x0058 - 0x0000)
@@ -197,103 +99,106 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LightsGroup_C_TurnOffLights) == 0x000008, "Wrong alignment on BP_LightsGroup_C_TurnOffLights");
-static_assert(sizeof(BP_LightsGroup_C_TurnOffLights) == 0x000058, "Wrong size on BP_LightsGroup_C_TurnOffLights");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_TurnOffLights::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, ___int_Loop_Counter_Variable) == 0x000004, "Member 'BP_LightsGroup_C_TurnOffLights::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, ___int_Array_Index_Variable) == 0x000010, "Member 'BP_LightsGroup_C_TurnOffLights::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000014, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_GetAttachedActors_OutActors) == 0x000020, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Array_Get_Item) == 0x000038, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Lerp_ReturnValue) == 0x000040, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_IsValid_ReturnValue) == 0x000044, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_IsValid_ReturnValue_1) == 0x000054, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_TurnOffLights, CallFunc_Less_IntInt_ReturnValue) == 0x000055, "Member 'BP_LightsGroup_C_TurnOffLights::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightsGroup_C_TurnOffLights;
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsIntensity
-// 0x0010 (0x0010 - 0x0000)
-struct BP_LightsGroup_C_ToggleLightsIntensity final
+// Function BP_LightsGroup.BP_LightsGroup_C.TurnOnLights
+// 0x0058 (0x0058 - 0x0000)
+struct BP_LightsGroup_C_TurnOnLights final
+{
+public:
+	float                                         ElapsedTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Array_Index_Variable;                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0020(0x0010)(ReferenceParm)
+	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BP_LightsGroup_C_TurnOnLights;
+
+// Function BP_LightsGroup.BP_LightsGroup_C.Timer
+// 0x0008 (0x0008 - 0x0000)
+struct BP_LightsGroup_C_Timer final
+{
+public:
+	float                                         ElapsedTime;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LightsGroup_C_Timer;
+
+// Function BP_LightsGroup.BP_LightsGroup_C.GetLightsIntensity
+// 0x0048 (0x0048 - 0x0000)
+struct BP_LightsGroup_C_GetLightsIntensity final
+{
+public:
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0008(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Array_Index_Variable;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_LightsGroup_C_GetLightsIntensity;
+
+// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLightsColorChange
+// 0x000C (0x000C - 0x0000)
+struct BP_LightsGroup_C_ToggleLightsColorChange final
 {
 public:
 	float                                         CallFunc_Timer_ElapsedTime;                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Timer_ElapsedTime_1;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_Timer_ElapsedTime_1;                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LightsGroup_C_ToggleLightsIntensity) == 0x000004, "Wrong alignment on BP_LightsGroup_C_ToggleLightsIntensity");
-static_assert(sizeof(BP_LightsGroup_C_ToggleLightsIntensity) == 0x000010, "Wrong size on BP_LightsGroup_C_ToggleLightsIntensity");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_Timer_ElapsedTime) == 0x000000, "Member 'BP_LightsGroup_C_ToggleLightsIntensity::CallFunc_Timer_ElapsedTime' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_LightsGroup_C_ToggleLightsIntensity::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_Timer_ElapsedTime_1) == 0x000008, "Member 'BP_LightsGroup_C_ToggleLightsIntensity::CallFunc_Timer_ElapsedTime_1' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x00000C, "Member 'BP_LightsGroup_C_ToggleLightsIntensity::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightsGroup_C_ToggleLightsColorChange;
 
-// Function BP_LightsGroup.BP_LightsGroup_C.ToggleLights
-// 0x0050 (0x0050 - 0x0000)
-struct BP_LightsGroup_C_ToggleLights final
+// Function BP_LightsGroup.BP_LightsGroup_C.LightsColorChange
+// 0x0080 (0x0080 - 0x0000)
+struct BP_LightsGroup_C_LightsColorChange final
 {
 public:
-	bool                                          inEnable;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Array_Index_Variable;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0018(0x0010)(ReferenceParm)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base;   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorOriginal_0;                                   // 0x0004(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorTarget_0;                                     // 0x0014(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Array_Index_Variable;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_LinearColorLerp_ReturnValue;              // 0x0034(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0048(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULightComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LightsGroup_C_ToggleLights) == 0x000008, "Wrong alignment on BP_LightsGroup_C_ToggleLights");
-static_assert(sizeof(BP_LightsGroup_C_ToggleLights) == 0x000050, "Wrong size on BP_LightsGroup_C_ToggleLights");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, inEnable) == 0x000000, "Member 'BP_LightsGroup_C_ToggleLights::inEnable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, ___int_Array_Index_Variable) == 0x000004, "Member 'BP_LightsGroup_C_ToggleLights::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, ___int_Loop_Counter_Variable) == 0x00000C, "Member 'BP_LightsGroup_C_ToggleLights::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_GetAttachedActors_OutActors) == 0x000018, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_GetObjectClass_ReturnValue) == 0x000038, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base) == 0x000040, "Member 'BP_LightsGroup_C_ToggleLights::K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ToggleLights, K2Node_ClassDynamicCast_bSuccess) == 0x000048, "Member 'BP_LightsGroup_C_ToggleLights::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_LightsGroup.BP_LightsGroup_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_LightsGroup_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds_0;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_LightsGroup_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_LightsGroup_C_ReceiveTick");
-static_assert(sizeof(BP_LightsGroup_C_ReceiveTick) == 0x000004, "Wrong size on BP_LightsGroup_C_ReceiveTick");
-static_assert(offsetof(BP_LightsGroup_C_ReceiveTick, DeltaSeconds_0) == 0x000000, "Member 'BP_LightsGroup_C_ReceiveTick::DeltaSeconds_0' has a wrong offset!");
-
-// Function BP_LightsGroup.BP_LightsGroup_C.ExecuteUbergraph_BP_LightsGroup
-// 0x0008 (0x0008 - 0x0000)
-struct BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup) == 0x000004, "Wrong alignment on BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup");
-static_assert(sizeof(BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup) == 0x000008, "Wrong size on BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup");
-static_assert(offsetof(BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup, EntryPoint) == 0x000000, "Member 'BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_LightsGroup_C_ExecuteUbergraph_BP_LightsGroup::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_LightsGroup_C_LightsColorChange;
 
 }
 

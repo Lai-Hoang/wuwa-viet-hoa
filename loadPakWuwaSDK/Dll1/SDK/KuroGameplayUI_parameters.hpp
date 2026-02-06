@@ -25,10 +25,7 @@ public:
 	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDamageUiManager*                       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_CreateInstance) == 0x000008, "Wrong alignment on DamageUiManager_CreateInstance");
-static_assert(sizeof(DamageUiManager_CreateInstance) == 0x000010, "Wrong size on DamageUiManager_CreateInstance");
-static_assert(offsetof(DamageUiManager_CreateInstance, Outer_0) == 0x000000, "Member 'DamageUiManager_CreateInstance::Outer_0' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_CreateInstance, ReturnValue) == 0x000008, "Member 'DamageUiManager_CreateInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_CreateInstance;
 
 // Function KuroGameplayUI.DamageUiManager.GetInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -37,9 +34,7 @@ struct DamageUiManager_GetInstance final
 public:
 	class UDamageUiManager*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_GetInstance) == 0x000008, "Wrong alignment on DamageUiManager_GetInstance");
-static_assert(sizeof(DamageUiManager_GetInstance) == 0x000008, "Wrong size on DamageUiManager_GetInstance");
-static_assert(offsetof(DamageUiManager_GetInstance, ReturnValue) == 0x000000, "Member 'DamageUiManager_GetInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_GetInstance;
 
 // Function KuroGameplayUI.DamageUiManager.AddCritNiagara
 // 0x0008 (0x0008 - 0x0000)
@@ -48,9 +43,7 @@ struct DamageUiManager_AddCritNiagara final
 public:
 	class UNiagaraSystem*                         CritNiagara;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_AddCritNiagara) == 0x000008, "Wrong alignment on DamageUiManager_AddCritNiagara");
-static_assert(sizeof(DamageUiManager_AddCritNiagara) == 0x000008, "Wrong size on DamageUiManager_AddCritNiagara");
-static_assert(offsetof(DamageUiManager_AddCritNiagara, CritNiagara) == 0x000000, "Member 'DamageUiManager_AddCritNiagara::CritNiagara' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_AddCritNiagara;
 
 // Function KuroGameplayUI.DamageUiManager.AddDamageInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -59,9 +52,7 @@ struct DamageUiManager_AddDamageInfo final
 public:
 	struct FDamageInfo                            DamageInfo;                                        // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_AddDamageInfo) == 0x000008, "Wrong alignment on DamageUiManager_AddDamageInfo");
-static_assert(sizeof(DamageUiManager_AddDamageInfo) == 0x000038, "Wrong size on DamageUiManager_AddDamageInfo");
-static_assert(offsetof(DamageUiManager_AddDamageInfo, DamageInfo) == 0x000000, "Member 'DamageUiManager_AddDamageInfo::DamageInfo' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_AddDamageInfo;
 
 // Function KuroGameplayUI.DamageUiManager.AddDamageViewData
 // 0x0034 (0x0034 - 0x0000)
@@ -70,9 +61,7 @@ struct DamageUiManager_AddDamageViewData final
 public:
 	struct FDamageViewData                        InDamageViewData;                                  // 0x0000(0x0034)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_AddDamageViewData) == 0x000004, "Wrong alignment on DamageUiManager_AddDamageViewData");
-static_assert(sizeof(DamageUiManager_AddDamageViewData) == 0x000034, "Wrong size on DamageUiManager_AddDamageViewData");
-static_assert(offsetof(DamageUiManager_AddDamageViewData, InDamageViewData) == 0x000000, "Member 'DamageUiManager_AddDamageViewData::InDamageViewData' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_AddDamageViewData;
 
 // Function KuroGameplayUI.DamageUiManager.InitAllRes
 // 0x0020 (0x0020 - 0x0000)
@@ -86,24 +75,16 @@ public:
 	bool                                          bMobilePlatform;                                   // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(DamageUiManager_InitAllRes) == 0x000008, "Wrong alignment on DamageUiManager_InitAllRes");
-static_assert(sizeof(DamageUiManager_InitAllRes) == 0x000020, "Wrong size on DamageUiManager_InitAllRes");
-static_assert(offsetof(DamageUiManager_InitAllRes, Parent) == 0x000000, "Member 'DamageUiManager_InitAllRes::Parent' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_InitAllRes, DynamicBatchActor) == 0x000008, "Member 'DamageUiManager_InitAllRes::DynamicBatchActor' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_InitAllRes, DamageActor) == 0x000010, "Member 'DamageUiManager_InitAllRes::DamageActor' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_InitAllRes, PreloadCount) == 0x000018, "Member 'DamageUiManager_InitAllRes::PreloadCount' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_InitAllRes, bMobilePlatform) == 0x00001C, "Member 'DamageUiManager_InitAllRes::bMobilePlatform' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_InitAllRes;
 
 // Function KuroGameplayUI.DamageUiManager.InitDamageConfig
-// 0x0038 (0x0038 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct DamageUiManager_InitDamageConfig final
 {
 public:
-	struct FDamageConfig                          InDamageConfig;                                    // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDamageConfig                          InDamageConfig;                                    // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_InitDamageConfig) == 0x000004, "Wrong alignment on DamageUiManager_InitDamageConfig");
-static_assert(sizeof(DamageUiManager_InitDamageConfig) == 0x000038, "Wrong size on DamageUiManager_InitDamageConfig");
-static_assert(offsetof(DamageUiManager_InitDamageConfig, InDamageConfig) == 0x000000, "Member 'DamageUiManager_InitDamageConfig::InDamageConfig' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_InitDamageConfig;
 
 // Function KuroGameplayUI.DamageUiManager.Update
 // 0x0028 (0x0028 - 0x0000)
@@ -115,11 +96,7 @@ public:
 	struct FVectorDouble                          CameraLocation;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class APlayerController*                      Player;                                            // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DamageUiManager_Update) == 0x000008, "Wrong alignment on DamageUiManager_Update");
-static_assert(sizeof(DamageUiManager_Update) == 0x000028, "Wrong size on DamageUiManager_Update");
-static_assert(offsetof(DamageUiManager_Update, DeltaTime) == 0x000000, "Member 'DamageUiManager_Update::DeltaTime' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_Update, CameraLocation) == 0x000008, "Member 'DamageUiManager_Update::CameraLocation' has a wrong offset!");
-static_assert(offsetof(DamageUiManager_Update, Player) == 0x000020, "Member 'DamageUiManager_Update::Player' has a wrong offset!");
+DUMPER7_ASSERTS_DamageUiManager_Update;
 
 // Function KuroGameplayUI.KSC_HeadStateManager.CreateInstance
 // 0x0010 (0x0010 - 0x0000)
@@ -129,10 +106,7 @@ public:
 	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKSC_HeadStateManager*                  ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_HeadStateManager_CreateInstance) == 0x000008, "Wrong alignment on KSC_HeadStateManager_CreateInstance");
-static_assert(sizeof(KSC_HeadStateManager_CreateInstance) == 0x000010, "Wrong size on KSC_HeadStateManager_CreateInstance");
-static_assert(offsetof(KSC_HeadStateManager_CreateInstance, Outer_0) == 0x000000, "Member 'KSC_HeadStateManager_CreateInstance::Outer_0' has a wrong offset!");
-static_assert(offsetof(KSC_HeadStateManager_CreateInstance, ReturnValue) == 0x000008, "Member 'KSC_HeadStateManager_CreateInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_HeadStateManager_CreateInstance;
 
 // Function KuroGameplayUI.KSC_HeadStateManager.GetInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -141,9 +115,7 @@ struct KSC_HeadStateManager_GetInstance final
 public:
 	class UKSC_HeadStateManager*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_HeadStateManager_GetInstance) == 0x000008, "Wrong alignment on KSC_HeadStateManager_GetInstance");
-static_assert(sizeof(KSC_HeadStateManager_GetInstance) == 0x000008, "Wrong size on KSC_HeadStateManager_GetInstance");
-static_assert(offsetof(KSC_HeadStateManager_GetInstance, ReturnValue) == 0x000000, "Member 'KSC_HeadStateManager_GetInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_HeadStateManager_GetInstance;
 
 // Function KuroGameplayUI.KSC_HeadStateManager.InitAllRes
 // 0x0020 (0x0020 - 0x0000)
@@ -155,12 +127,7 @@ public:
 	class AUIBaseActor*                           HeadStateActor;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            ScaleCurve;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_HeadStateManager_InitAllRes) == 0x000008, "Wrong alignment on KSC_HeadStateManager_InitAllRes");
-static_assert(sizeof(KSC_HeadStateManager_InitAllRes) == 0x000020, "Wrong size on KSC_HeadStateManager_InitAllRes");
-static_assert(offsetof(KSC_HeadStateManager_InitAllRes, Parent) == 0x000000, "Member 'KSC_HeadStateManager_InitAllRes::Parent' has a wrong offset!");
-static_assert(offsetof(KSC_HeadStateManager_InitAllRes, DynamicBatchActor) == 0x000008, "Member 'KSC_HeadStateManager_InitAllRes::DynamicBatchActor' has a wrong offset!");
-static_assert(offsetof(KSC_HeadStateManager_InitAllRes, HeadStateActor) == 0x000010, "Member 'KSC_HeadStateManager_InitAllRes::HeadStateActor' has a wrong offset!");
-static_assert(offsetof(KSC_HeadStateManager_InitAllRes, ScaleCurve) == 0x000018, "Member 'KSC_HeadStateManager_InitAllRes::ScaleCurve' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_HeadStateManager_InitAllRes;
 
 // Function KuroGameplayUI.KSC_HeadStateManager.Update
 // 0x0020 (0x0020 - 0x0000)
@@ -171,10 +138,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVectorDouble                          CameraLocation;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KSC_HeadStateManager_Update) == 0x000008, "Wrong alignment on KSC_HeadStateManager_Update");
-static_assert(sizeof(KSC_HeadStateManager_Update) == 0x000020, "Wrong size on KSC_HeadStateManager_Update");
-static_assert(offsetof(KSC_HeadStateManager_Update, DeltaTime) == 0x000000, "Member 'KSC_HeadStateManager_Update::DeltaTime' has a wrong offset!");
-static_assert(offsetof(KSC_HeadStateManager_Update, CameraLocation) == 0x000008, "Member 'KSC_HeadStateManager_Update::CameraLocation' has a wrong offset!");
+DUMPER7_ASSERTS_KSC_HeadStateManager_Update;
 
 }
 

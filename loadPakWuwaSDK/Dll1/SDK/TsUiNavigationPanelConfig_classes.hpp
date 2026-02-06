@@ -51,28 +51,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiNavigationPanelConfig_C">();
+		BP_STATIC_CLASS_IMPL("TsUiNavigationPanelConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiNavigationPanelConfig_C")
 	}
 	static class UTsUiNavigationPanelConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiNavigationPanelConfig_C>();
 	}
 };
-static_assert(alignof(UTsUiNavigationPanelConfig_C) == 0x000008, "Wrong alignment on UTsUiNavigationPanelConfig_C");
-static_assert(sizeof(UTsUiNavigationPanelConfig_C) == 0x000280, "Wrong size on UTsUiNavigationPanelConfig_C");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, UberGraphFrame) == 0x000100, "Member 'UTsUiNavigationPanelConfig_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, ViewName) == 0x000108, "Member 'UTsUiNavigationPanelConfig_C::ViewName' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, Independent) == 0x000118, "Member 'UTsUiNavigationPanelConfig_C::Independent' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, NormalGroup) == 0x000120, "Member 'UTsUiNavigationPanelConfig_C::NormalGroup' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, BookmarkGroup) == 0x000130, "Member 'UTsUiNavigationPanelConfig_C::BookmarkGroup' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, ScrollBarGroup) == 0x000140, "Member 'UTsUiNavigationPanelConfig_C::ScrollBarGroup' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, DefaultNavigationActor) == 0x0001F8, "Member 'UTsUiNavigationPanelConfig_C::DefaultNavigationActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, IsChildPanel) == 0x000208, "Member 'UTsUiNavigationPanelConfig_C::IsChildPanel' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, AllowNavigateInKeyBoard) == 0x000209, "Member 'UTsUiNavigationPanelConfig_C::AllowNavigateInKeyBoard' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, DynamicListenerConfigMap) == 0x000210, "Member 'UTsUiNavigationPanelConfig_C::DynamicListenerConfigMap' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, InteractiveTag) == 0x000260, "Member 'UTsUiNavigationPanelConfig_C::InteractiveTag' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, GamepadMouseActor) == 0x000270, "Member 'UTsUiNavigationPanelConfig_C::GamepadMouseActor' has a wrong offset!");
-static_assert(offsetof(UTsUiNavigationPanelConfig_C, FirstFindFromSubPanelWhenFindNone) == 0x000278, "Member 'UTsUiNavigationPanelConfig_C::FirstFindFromSubPanelWhenFindNone' has a wrong offset!");
+DUMPER7_ASSERTS_UTsUiNavigationPanelConfig_C;
 
 }
 

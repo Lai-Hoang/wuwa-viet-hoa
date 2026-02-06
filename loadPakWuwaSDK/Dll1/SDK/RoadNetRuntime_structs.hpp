@@ -36,12 +36,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<int32>                                   LinkIDs;                                           // 0x0020(0x0050)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRoadNetNode) == 0x000008, "Wrong alignment on FRoadNetNode");
-static_assert(sizeof(FRoadNetNode) == 0x000070, "Wrong size on FRoadNetNode");
-static_assert(offsetof(FRoadNetNode, NodeID) == 0x000000, "Member 'FRoadNetNode::NodeID' has a wrong offset!");
-static_assert(offsetof(FRoadNetNode, Pos) == 0x000004, "Member 'FRoadNetNode::Pos' has a wrong offset!");
-static_assert(offsetof(FRoadNetNode, TilePos) == 0x000010, "Member 'FRoadNetNode::TilePos' has a wrong offset!");
-static_assert(offsetof(FRoadNetNode, LinkIDs) == 0x000020, "Member 'FRoadNetNode::LinkIDs' has a wrong offset!");
+DUMPER7_ASSERTS_FRoadNetNode;
 
 }
 

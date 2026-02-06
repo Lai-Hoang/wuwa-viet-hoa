@@ -55,20 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsBasePlayerController_C">();
+		BP_STATIC_CLASS_IMPL("TsBasePlayerController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsBasePlayerController_C")
 	}
 	static class ATsBasePlayerController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsBasePlayerController_C>();
 	}
 };
-static_assert(alignof(ATsBasePlayerController_C) == 0x000008, "Wrong alignment on ATsBasePlayerController_C");
-static_assert(sizeof(ATsBasePlayerController_C) == 0x000788, "Wrong size on ATsBasePlayerController_C");
-static_assert(offsetof(ATsBasePlayerController_C, UberGraphFrame) == 0x0006D0, "Member 'ATsBasePlayerController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsBasePlayerController_C, ActionHandleClass) == 0x0006D8, "Member 'ATsBasePlayerController_C::ActionHandleClass' has a wrong offset!");
-static_assert(offsetof(ATsBasePlayerController_C, ActionHandleMap) == 0x0006E0, "Member 'ATsBasePlayerController_C::ActionHandleMap' has a wrong offset!");
-static_assert(offsetof(ATsBasePlayerController_C, AxisHandleClass) == 0x000730, "Member 'ATsBasePlayerController_C::AxisHandleClass' has a wrong offset!");
-static_assert(offsetof(ATsBasePlayerController_C, AxisHandleMap) == 0x000738, "Member 'ATsBasePlayerController_C::AxisHandleMap' has a wrong offset!");
+DUMPER7_ASSERTS_ATsBasePlayerController_C;
 
 }
 

@@ -699,5 +699,35 @@ void UTsVehicleBlueprintFunctionLibrary_C::SetMotorAndroidInitParams(class UKuro
 	Func->FunctionFlags = Flgs;
 }
 
+
+// Function TsVehicleBlueprintFunctionLibrary.TsVehicleBlueprintFunctionLibrary_C.NeedSimulateMotorIk
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTsVehicleBlueprintFunctionLibrary_C::NeedSimulateMotorIk(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsVehicleBlueprintFunctionLibrary_C", "NeedSimulateMotorIk");
+
+	Params::TsVehicleBlueprintFunctionLibrary_C_NeedSimulateMotorIk Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
 }
 

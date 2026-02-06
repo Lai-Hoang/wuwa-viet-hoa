@@ -46,15 +46,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroVariableFunctionLibrary">();
+		STATIC_CLASS_IMPL("KuroVariableFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroVariableFunctionLibrary")
 	}
 	static class UKuroVariableFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroVariableFunctionLibrary>();
 	}
 };
-static_assert(alignof(UKuroVariableFunctionLibrary) == 0x000008, "Wrong alignment on UKuroVariableFunctionLibrary");
-static_assert(sizeof(UKuroVariableFunctionLibrary) == 0x000030, "Wrong size on UKuroVariableFunctionLibrary");
+DUMPER7_ASSERTS_UKuroVariableFunctionLibrary;
 
 }
 

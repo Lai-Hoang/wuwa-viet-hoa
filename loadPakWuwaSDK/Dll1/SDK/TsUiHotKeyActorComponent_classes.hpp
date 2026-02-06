@@ -28,29 +28,28 @@ public:
 	bool                                          IsUsePool;                                         // 0x011C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void OnDestroyBP();
-	void StartBP();
-	void AwakeBP();
-	void OnEnableBP();
-	void OnDisableBP();
 	void ExecuteUbergraph_TsUiHotKeyActorComponent(int32 EntryPoint);
+	void OnDisableBP();
+	void OnEnableBP();
+	void AwakeBP();
+	void StartBP();
+	void OnDestroyBP();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsUiHotKeyActorComponent_C">();
+		BP_STATIC_CLASS_IMPL("TsUiHotKeyActorComponent_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsUiHotKeyActorComponent_C")
 	}
 	static class UTsUiHotKeyActorComponent_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsUiHotKeyActorComponent_C>();
 	}
 };
-static_assert(alignof(UTsUiHotKeyActorComponent_C) == 0x000008, "Wrong alignment on UTsUiHotKeyActorComponent_C");
-static_assert(sizeof(UTsUiHotKeyActorComponent_C) == 0x000120, "Wrong size on UTsUiHotKeyActorComponent_C");
-static_assert(offsetof(UTsUiHotKeyActorComponent_C, UberGraphFrame) == 0x000100, "Member 'UTsUiHotKeyActorComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTsUiHotKeyActorComponent_C, Mode) == 0x000108, "Member 'UTsUiHotKeyActorComponent_C::Mode' has a wrong offset!");
-static_assert(offsetof(UTsUiHotKeyActorComponent_C, Index_0) == 0x000118, "Member 'UTsUiHotKeyActorComponent_C::Index_0' has a wrong offset!");
-static_assert(offsetof(UTsUiHotKeyActorComponent_C, IsUsePool) == 0x00011C, "Member 'UTsUiHotKeyActorComponent_C::IsUsePool' has a wrong offset!");
+DUMPER7_ASSERTS_UTsUiHotKeyActorComponent_C;
 
 }
 

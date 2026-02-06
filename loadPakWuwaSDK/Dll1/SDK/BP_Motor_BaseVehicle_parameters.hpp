@@ -27,12 +27,7 @@ public:
 	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm)
 	class UKuroConfigHelper*                      CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle) == 0x000008, "Wrong alignment on BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle");
-static_assert(sizeof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle) == 0x000020, "Wrong size on BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle, EntryPoint) == 0x000000, "Member 'BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle, K2Node_MakeArray_Array) == 0x000008, "Member 'BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle, CallFunc_SpawnObject_ReturnValue) == 0x000018, "Member 'BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle;
 
 // Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -41,9 +36,7 @@ struct BP_Motor_BaseVehicle_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Motor_BaseVehicle_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_Motor_BaseVehicle_C_ReceiveTick");
-static_assert(sizeof(BP_Motor_BaseVehicle_C_ReceiveTick) == 0x000004, "Wrong size on BP_Motor_BaseVehicle_C_ReceiveTick");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_Motor_BaseVehicle_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_ReceiveTick;
 
 // Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.GetConfigDataByKeyName
 // 0x0098 (0x0098 - 0x0000)
@@ -56,12 +49,7 @@ public:
 	struct FSMotorConfigs                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0050(0x0040)(HasGetValueTypeHash)
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName) == 0x000008, "Wrong alignment on BP_Motor_BaseVehicle_C_GetConfigDataByKeyName");
-static_assert(sizeof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName) == 0x000098, "Wrong size on BP_Motor_BaseVehicle_C_GetConfigDataByKeyName");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName, Name_0) == 0x000000, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataByKeyName::Name_0' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName, Result) == 0x000010, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataByKeyName::Result' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName, CallFunc_GetDataTableRowFromName_OutRow) == 0x000050, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataByKeyName::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataByKeyName, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000090, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataByKeyName::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_GetConfigDataByKeyName;
 
 // Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.GetConfigDataNameTagMap
 // 0x00E0 (0x00E0 - 0x0000)
@@ -79,18 +67,7 @@ public:
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x00CC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap) == 0x000008, "Wrong alignment on BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap");
-static_assert(sizeof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap) == 0x0000E0, "Wrong size on BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, Result) == 0x000000, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::Result' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, NameToTag) == 0x000050, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::NameToTag' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, ___int_Array_Index_Variable) == 0x0000A0, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, ___int_Loop_Counter_Variable) == 0x0000A4, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, ___struct_Variable) == 0x0000AC, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::___struct_Variable' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, CallFunc_GetDataTableRowNames_OutRowNames) == 0x0000B8, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::CallFunc_GetDataTableRowNames_OutRowNames' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, CallFunc_Array_Length_ReturnValue) == 0x0000C8, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, CallFunc_Array_Get_Item) == 0x0000CC, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap, CallFunc_Less_IntInt_ReturnValue) == 0x0000D8, "Member 'BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap;
 
 }
 

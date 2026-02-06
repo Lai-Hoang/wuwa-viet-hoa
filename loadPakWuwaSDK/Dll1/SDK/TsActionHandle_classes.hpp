@@ -31,17 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsActionHandle_C">();
+		BP_STATIC_CLASS_IMPL("TsActionHandle_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsActionHandle_C")
 	}
 	static class UTsActionHandle_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsActionHandle_C>();
 	}
 };
-static_assert(alignof(UTsActionHandle_C) == 0x000008, "Wrong alignment on UTsActionHandle_C");
-static_assert(sizeof(UTsActionHandle_C) == 0x000048, "Wrong size on UTsActionHandle_C");
-static_assert(offsetof(UTsActionHandle_C, PlayerController) == 0x000030, "Member 'UTsActionHandle_C::PlayerController' has a wrong offset!");
-static_assert(offsetof(UTsActionHandle_C, ActionName) == 0x000038, "Member 'UTsActionHandle_C::ActionName' has a wrong offset!");
+DUMPER7_ASSERTS_UTsActionHandle_C;
 
 }
 

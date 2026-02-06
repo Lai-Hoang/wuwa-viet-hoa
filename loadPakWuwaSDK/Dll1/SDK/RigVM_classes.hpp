@@ -65,24 +65,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RigVM">();
+		STATIC_CLASS_IMPL("RigVM")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"RigVM")
 	}
 	static class URigVM* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<URigVM>();
 	}
 };
-static_assert(alignof(URigVM) == 0x000008, "Wrong alignment on URigVM");
-static_assert(sizeof(URigVM) == 0x000308, "Wrong size on URigVM");
-static_assert(offsetof(URigVM, WorkMemoryStorage) == 0x000030, "Member 'URigVM::WorkMemoryStorage' has a wrong offset!");
-static_assert(offsetof(URigVM, LiteralMemoryStorage) == 0x0000D8, "Member 'URigVM::LiteralMemoryStorage' has a wrong offset!");
-static_assert(offsetof(URigVM, ByteCodeStorage) == 0x000180, "Member 'URigVM::ByteCodeStorage' has a wrong offset!");
-static_assert(offsetof(URigVM, Instructions) == 0x0001B8, "Member 'URigVM::Instructions' has a wrong offset!");
-static_assert(offsetof(URigVM, Context) == 0x0001C8, "Member 'URigVM::Context' has a wrong offset!");
-static_assert(offsetof(URigVM, FunctionNamesStorage) == 0x000228, "Member 'URigVM::FunctionNamesStorage' has a wrong offset!");
-static_assert(offsetof(URigVM, Parameters) == 0x000258, "Member 'URigVM::Parameters' has a wrong offset!");
-static_assert(offsetof(URigVM, ParametersNameMap) == 0x000268, "Member 'URigVM::ParametersNameMap' has a wrong offset!");
-static_assert(offsetof(URigVM, DeferredVMToCopy) == 0x000300, "Member 'URigVM::DeferredVMToCopy' has a wrong offset!");
+DUMPER7_ASSERTS_URigVM;
 
 }
 

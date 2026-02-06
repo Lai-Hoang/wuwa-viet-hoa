@@ -66,40 +66,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KuroProjectilePathTracer_C">();
+		BP_STATIC_CLASS_IMPL("BP_KuroProjectilePathTracer_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KuroProjectilePathTracer_C")
 	}
 	static class ABP_KuroProjectilePathTracer_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_KuroProjectilePathTracer_C>();
 	}
 };
-static_assert(alignof(ABP_KuroProjectilePathTracer_C) == 0x000008, "Wrong alignment on ABP_KuroProjectilePathTracer_C");
-static_assert(sizeof(ABP_KuroProjectilePathTracer_C) == 0x000360, "Wrong size on ABP_KuroProjectilePathTracer_C");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_KuroProjectilePathTracer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, Decal) == 0x0002B8, "Member 'ABP_KuroProjectilePathTracer_C::Decal' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, HierarchicalInstancedStaticMesh) == 0x0002C0, "Member 'ABP_KuroProjectilePathTracer_C::HierarchicalInstancedStaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, Spline) == 0x0002C8, "Member 'ABP_KuroProjectilePathTracer_C::Spline' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, DefaultSceneRoot) == 0x0002D0, "Member 'ABP_KuroProjectilePathTracer_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, Visible) == 0x0002D8, "Member 'ABP_KuroProjectilePathTracer_C::Visible' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, DistanceRecordMesh) == 0x0002E0, "Member 'ABP_KuroProjectilePathTracer_C::DistanceRecordMesh' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, DisplayDistancePerRecord) == 0x0002E8, "Member 'ABP_KuroProjectilePathTracer_C::DisplayDistancePerRecord' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, MaxPlaceCount) == 0x0002EC, "Member 'ABP_KuroProjectilePathTracer_C::MaxPlaceCount' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, RecordDeltaAngle) == 0x0002F0, "Member 'ABP_KuroProjectilePathTracer_C::RecordDeltaAngle' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, AnimationDelta) == 0x0002F4, "Member 'ABP_KuroProjectilePathTracer_C::AnimationDelta' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, AnimationSpeed) == 0x0002F8, "Member 'ABP_KuroProjectilePathTracer_C::AnimationSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedPathPositions) == 0x000300, "Member 'ABP_KuroProjectilePathTracer_C::CachedPathPositions' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedLastTraceDestination) == 0x000310, "Member 'ABP_KuroProjectilePathTracer_C::CachedLastTraceDestination' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedReturnValue) == 0x00031C, "Member 'ABP_KuroProjectilePathTracer_C::CachedReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedImpactPoint) == 0x000320, "Member 'ABP_KuroProjectilePathTracer_C::CachedImpactPoint' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedImpactNormal) == 0x00032C, "Member 'ABP_KuroProjectilePathTracer_C::CachedImpactNormal' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, CachedEnable) == 0x000338, "Member 'ABP_KuroProjectilePathTracer_C::CachedEnable' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, TargetDeltaAngle) == 0x00033C, "Member 'ABP_KuroProjectilePathTracer_C::TargetDeltaAngle' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, TargetSize) == 0x000340, "Member 'ABP_KuroProjectilePathTracer_C::TargetSize' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, TargetThreshold) == 0x000344, "Member 'ABP_KuroProjectilePathTracer_C::TargetThreshold' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, KuroProjectileAsset) == 0x000348, "Member 'ABP_KuroProjectilePathTracer_C::KuroProjectileAsset' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, RecordSize) == 0x000350, "Member 'ABP_KuroProjectilePathTracer_C::RecordSize' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, UseTargetDecal) == 0x000354, "Member 'ABP_KuroProjectilePathTracer_C::UseTargetDecal' has a wrong offset!");
-static_assert(offsetof(ABP_KuroProjectilePathTracer_C, TargetDecalMat) == 0x000358, "Member 'ABP_KuroProjectilePathTracer_C::TargetDecalMat' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_KuroProjectilePathTracer_C;
 
 }
 

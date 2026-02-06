@@ -48,15 +48,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPL_CharacterUtility_C">();
+		BP_STATIC_CLASS_IMPL("BPL_CharacterUtility_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPL_CharacterUtility_C")
 	}
 	static class UBPL_CharacterUtility_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBPL_CharacterUtility_C>();
 	}
 };
-static_assert(alignof(UBPL_CharacterUtility_C) == 0x000008, "Wrong alignment on UBPL_CharacterUtility_C");
-static_assert(sizeof(UBPL_CharacterUtility_C) == 0x000030, "Wrong size on UBPL_CharacterUtility_C");
+DUMPER7_ASSERTS_UBPL_CharacterUtility_C;
 
 }
 

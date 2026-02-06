@@ -17,144 +17,19 @@
 namespace SDK
 {
 
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcMesh
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideMesh
 // (Native, Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTsHideActorBlueprintFunctionLibrary_C::ShowNpcMesh(class UObject* __WorldContext)
+void UTsHideActorBlueprintFunctionLibrary_C::HideMesh(class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowNpcMesh");
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideMesh");
 
-	Params::TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcEffect
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsHideActorBlueprintFunctionLibrary_C::ShowNpcEffect(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowNpcEffect");
-
-	Params::TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcEffect
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsHideActorBlueprintFunctionLibrary_C::HideNpcEffect(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideNpcEffect");
-
-	Params::TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcMesh
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsHideActorBlueprintFunctionLibrary_C::HideNpcMesh(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideNpcMesh");
-
-	Params::TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowEffect
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsHideActorBlueprintFunctionLibrary_C::ShowEffect(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowEffect");
-
-	Params::TsHideActorBlueprintFunctionLibrary_C_ShowEffect Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowMesh
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTsHideActorBlueprintFunctionLibrary_C::ShowMesh(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowMesh");
-
-	Params::TsHideActorBlueprintFunctionLibrary_C_ShowMesh Parms{};
+	Params::TsHideActorBlueprintFunctionLibrary_C_HideMesh Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 
@@ -192,19 +67,198 @@ void UTsHideActorBlueprintFunctionLibrary_C::HideEffect(class UObject* __WorldCo
 }
 
 
-// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideMesh
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowMesh
 // (Native, Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTsHideActorBlueprintFunctionLibrary_C::HideMesh(class UObject* __WorldContext)
+void UTsHideActorBlueprintFunctionLibrary_C::ShowMesh(class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideMesh");
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowMesh");
 
-	Params::TsHideActorBlueprintFunctionLibrary_C_HideMesh Parms{};
+	Params::TsHideActorBlueprintFunctionLibrary_C_ShowMesh Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowEffect
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::ShowEffect(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowEffect");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_ShowEffect Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcMesh
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::HideNpcMesh(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideNpcMesh");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_HideNpcMesh Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.HideNpcEffect
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::HideNpcEffect(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "HideNpcEffect");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_HideNpcEffect Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcEffect
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::ShowNpcEffect(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowNpcEffect");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_ShowNpcEffect Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ShowNpcMesh
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::ShowNpcMesh(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ShowNpcMesh");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_ShowNpcMesh Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.SetHideParameter
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             boneName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::SetHideParameter(float distance, class FName boneName, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "SetHideParameter");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_SetHideParameter Parms{};
+
+	Parms.distance = distance;
+	Parms.boneName = boneName;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsHideActorBlueprintFunctionLibrary.TsHideActorBlueprintFunctionLibrary_C.ResetHideParameter
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsHideActorBlueprintFunctionLibrary_C::ResetHideParameter(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsHideActorBlueprintFunctionLibrary_C", "ResetHideParameter");
+
+	Params::TsHideActorBlueprintFunctionLibrary_C_ResetHideParameter Parms{};
 
 	Parms.__WorldContext = __WorldContext;
 

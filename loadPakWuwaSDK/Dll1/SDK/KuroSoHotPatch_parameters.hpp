@@ -21,9 +21,7 @@ struct KuroAndroidModelTools_GetAndroidVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAndroidModelTools_GetAndroidVersion) == 0x000008, "Wrong alignment on KuroAndroidModelTools_GetAndroidVersion");
-static_assert(sizeof(KuroAndroidModelTools_GetAndroidVersion) == 0x000010, "Wrong size on KuroAndroidModelTools_GetAndroidVersion");
-static_assert(offsetof(KuroAndroidModelTools_GetAndroidVersion, ReturnValue) == 0x000000, "Member 'KuroAndroidModelTools_GetAndroidVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAndroidModelTools_GetAndroidVersion;
 
 // Function KuroSoHotPatch.KuroAndroidModelTools.GetAppParallel
 // 0x0010 (0x0010 - 0x0000)
@@ -32,9 +30,7 @@ struct KuroAndroidModelTools_GetAppParallel final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAndroidModelTools_GetAppParallel) == 0x000008, "Wrong alignment on KuroAndroidModelTools_GetAppParallel");
-static_assert(sizeof(KuroAndroidModelTools_GetAppParallel) == 0x000010, "Wrong size on KuroAndroidModelTools_GetAppParallel");
-static_assert(offsetof(KuroAndroidModelTools_GetAppParallel, ReturnValue) == 0x000000, "Member 'KuroAndroidModelTools_GetAppParallel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAndroidModelTools_GetAppParallel;
 
 // Function KuroSoHotPatch.KuroAndroidModelTools.GetBrand
 // 0x0010 (0x0010 - 0x0000)
@@ -43,9 +39,7 @@ struct KuroAndroidModelTools_GetBrand final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAndroidModelTools_GetBrand) == 0x000008, "Wrong alignment on KuroAndroidModelTools_GetBrand");
-static_assert(sizeof(KuroAndroidModelTools_GetBrand) == 0x000010, "Wrong size on KuroAndroidModelTools_GetBrand");
-static_assert(offsetof(KuroAndroidModelTools_GetBrand, ReturnValue) == 0x000000, "Member 'KuroAndroidModelTools_GetBrand::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAndroidModelTools_GetBrand;
 
 // Function KuroSoHotPatch.KuroAndroidModelTools.GetManufacturer
 // 0x0010 (0x0010 - 0x0000)
@@ -54,9 +48,7 @@ struct KuroAndroidModelTools_GetManufacturer final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAndroidModelTools_GetManufacturer) == 0x000008, "Wrong alignment on KuroAndroidModelTools_GetManufacturer");
-static_assert(sizeof(KuroAndroidModelTools_GetManufacturer) == 0x000010, "Wrong size on KuroAndroidModelTools_GetManufacturer");
-static_assert(offsetof(KuroAndroidModelTools_GetManufacturer, ReturnValue) == 0x000000, "Member 'KuroAndroidModelTools_GetManufacturer::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAndroidModelTools_GetManufacturer;
 
 // Function KuroSoHotPatch.KuroAndroidModelTools.GetModel
 // 0x0010 (0x0010 - 0x0000)
@@ -65,9 +57,7 @@ struct KuroAndroidModelTools_GetModel final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroAndroidModelTools_GetModel) == 0x000008, "Wrong alignment on KuroAndroidModelTools_GetModel");
-static_assert(sizeof(KuroAndroidModelTools_GetModel) == 0x000010, "Wrong size on KuroAndroidModelTools_GetModel");
-static_assert(offsetof(KuroAndroidModelTools_GetModel, ReturnValue) == 0x000000, "Member 'KuroAndroidModelTools_GetModel::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroAndroidModelTools_GetModel;
 
 // Function KuroSoHotPatch.KuroOnPatchCallback.GetInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -76,9 +66,7 @@ struct KuroOnPatchCallback_GetInstance final
 public:
 	class UKuroOnPatchCallback*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroOnPatchCallback_GetInstance) == 0x000008, "Wrong alignment on KuroOnPatchCallback_GetInstance");
-static_assert(sizeof(KuroOnPatchCallback_GetInstance) == 0x000008, "Wrong size on KuroOnPatchCallback_GetInstance");
-static_assert(offsetof(KuroOnPatchCallback_GetInstance, ReturnValue) == 0x000000, "Member 'KuroOnPatchCallback_GetInstance::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroOnPatchCallback_GetInstance;
 
 // Function KuroSoHotPatch.KuroSPTools.GetSoVersionUpdateTime
 // 0x0004 (0x0004 - 0x0000)
@@ -87,9 +75,7 @@ struct KuroSPTools_GetSoVersionUpdateTime final
 public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSPTools_GetSoVersionUpdateTime) == 0x000004, "Wrong alignment on KuroSPTools_GetSoVersionUpdateTime");
-static_assert(sizeof(KuroSPTools_GetSoVersionUpdateTime) == 0x000004, "Wrong size on KuroSPTools_GetSoVersionUpdateTime");
-static_assert(offsetof(KuroSPTools_GetSoVersionUpdateTime, ReturnValue) == 0x000000, "Member 'KuroSPTools_GetSoVersionUpdateTime::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSPTools_GetSoVersionUpdateTime;
 
 // Function KuroSoHotPatch.KuroSPTools.SetCDNConfig
 // 0x0020 (0x0020 - 0x0000)
@@ -99,10 +85,7 @@ public:
 	class FString                                 CDNPrefix;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 CDNPath;                                           // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSPTools_SetCDNConfig) == 0x000008, "Wrong alignment on KuroSPTools_SetCDNConfig");
-static_assert(sizeof(KuroSPTools_SetCDNConfig) == 0x000020, "Wrong size on KuroSPTools_SetCDNConfig");
-static_assert(offsetof(KuroSPTools_SetCDNConfig, CDNPrefix) == 0x000000, "Member 'KuroSPTools_SetCDNConfig::CDNPrefix' has a wrong offset!");
-static_assert(offsetof(KuroSPTools_SetCDNConfig, CDNPath) == 0x000010, "Member 'KuroSPTools_SetCDNConfig::CDNPath' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSPTools_SetCDNConfig;
 
 // Function KuroSoHotPatch.KuroSPTools.SetChannelId
 // 0x0010 (0x0010 - 0x0000)
@@ -111,9 +94,7 @@ struct KuroSPTools_SetChannelId final
 public:
 	class FString                                 ChannelID;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSPTools_SetChannelId) == 0x000008, "Wrong alignment on KuroSPTools_SetChannelId");
-static_assert(sizeof(KuroSPTools_SetChannelId) == 0x000010, "Wrong size on KuroSPTools_SetChannelId");
-static_assert(offsetof(KuroSPTools_SetChannelId, ChannelID) == 0x000000, "Member 'KuroSPTools_SetChannelId::ChannelID' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSPTools_SetChannelId;
 
 // Function KuroSoHotPatch.KuroSPTools.SetSoVersionUpdateTime
 // 0x0004 (0x0004 - 0x0000)
@@ -122,9 +103,7 @@ struct KuroSPTools_SetSoVersionUpdateTime final
 public:
 	int32                                         UpdateTime;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroSPTools_SetSoVersionUpdateTime) == 0x000004, "Wrong alignment on KuroSPTools_SetSoVersionUpdateTime");
-static_assert(sizeof(KuroSPTools_SetSoVersionUpdateTime) == 0x000004, "Wrong size on KuroSPTools_SetSoVersionUpdateTime");
-static_assert(offsetof(KuroSPTools_SetSoVersionUpdateTime, UpdateTime) == 0x000000, "Member 'KuroSPTools_SetSoVersionUpdateTime::UpdateTime' has a wrong offset!");
+DUMPER7_ASSERTS_KuroSPTools_SetSoVersionUpdateTime;
 
 // Function KuroSoHotPatch.KuroTinkerTools.GetCurApplyingVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -133,9 +112,7 @@ struct KuroTinkerTools_GetCurApplyingVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_GetCurApplyingVersion) == 0x000008, "Wrong alignment on KuroTinkerTools_GetCurApplyingVersion");
-static_assert(sizeof(KuroTinkerTools_GetCurApplyingVersion) == 0x000010, "Wrong size on KuroTinkerTools_GetCurApplyingVersion");
-static_assert(offsetof(KuroTinkerTools_GetCurApplyingVersion, ReturnValue) == 0x000000, "Member 'KuroTinkerTools_GetCurApplyingVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_GetCurApplyingVersion;
 
 // Function KuroSoHotPatch.KuroTinkerTools.GetCurLoadingVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -144,9 +121,7 @@ struct KuroTinkerTools_GetCurLoadingVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_GetCurLoadingVersion) == 0x000008, "Wrong alignment on KuroTinkerTools_GetCurLoadingVersion");
-static_assert(sizeof(KuroTinkerTools_GetCurLoadingVersion) == 0x000010, "Wrong size on KuroTinkerTools_GetCurLoadingVersion");
-static_assert(offsetof(KuroTinkerTools_GetCurLoadingVersion, ReturnValue) == 0x000000, "Member 'KuroTinkerTools_GetCurLoadingVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_GetCurLoadingVersion;
 
 // Function KuroSoHotPatch.KuroTinkerTools.GetCurUsingVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -155,9 +130,7 @@ struct KuroTinkerTools_GetCurUsingVersion final
 public:
 	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_GetCurUsingVersion) == 0x000008, "Wrong alignment on KuroTinkerTools_GetCurUsingVersion");
-static_assert(sizeof(KuroTinkerTools_GetCurUsingVersion) == 0x000010, "Wrong size on KuroTinkerTools_GetCurUsingVersion");
-static_assert(offsetof(KuroTinkerTools_GetCurUsingVersion, ReturnValue) == 0x000000, "Member 'KuroTinkerTools_GetCurUsingVersion::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_GetCurUsingVersion;
 
 // Function KuroSoHotPatch.KuroTinkerTools.IsTinkerPackaged
 // 0x0001 (0x0001 - 0x0000)
@@ -166,9 +139,7 @@ struct KuroTinkerTools_IsTinkerPackaged final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_IsTinkerPackaged) == 0x000001, "Wrong alignment on KuroTinkerTools_IsTinkerPackaged");
-static_assert(sizeof(KuroTinkerTools_IsTinkerPackaged) == 0x000001, "Wrong size on KuroTinkerTools_IsTinkerPackaged");
-static_assert(offsetof(KuroTinkerTools_IsTinkerPackaged, ReturnValue) == 0x000000, "Member 'KuroTinkerTools_IsTinkerPackaged::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_IsTinkerPackaged;
 
 // Function KuroSoHotPatch.KuroTinkerTools.LoadPatch
 // 0x0010 (0x0010 - 0x0000)
@@ -177,9 +148,7 @@ struct KuroTinkerTools_LoadPatch final
 public:
 	class FString                                 PatchPath;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_LoadPatch) == 0x000008, "Wrong alignment on KuroTinkerTools_LoadPatch");
-static_assert(sizeof(KuroTinkerTools_LoadPatch) == 0x000010, "Wrong size on KuroTinkerTools_LoadPatch");
-static_assert(offsetof(KuroTinkerTools_LoadPatch, PatchPath) == 0x000000, "Member 'KuroTinkerTools_LoadPatch::PatchPath' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_LoadPatch;
 
 // Function KuroSoHotPatch.KuroTinkerTools.SetCurLoadingVersion
 // 0x0010 (0x0010 - 0x0000)
@@ -188,9 +157,7 @@ struct KuroTinkerTools_SetCurLoadingVersion final
 public:
 	class FString                                 Version;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroTinkerTools_SetCurLoadingVersion) == 0x000008, "Wrong alignment on KuroTinkerTools_SetCurLoadingVersion");
-static_assert(sizeof(KuroTinkerTools_SetCurLoadingVersion) == 0x000010, "Wrong size on KuroTinkerTools_SetCurLoadingVersion");
-static_assert(offsetof(KuroTinkerTools_SetCurLoadingVersion, Version) == 0x000000, "Member 'KuroTinkerTools_SetCurLoadingVersion::Version' has a wrong offset!");
+DUMPER7_ASSERTS_KuroTinkerTools_SetCurLoadingVersion;
 
 }
 

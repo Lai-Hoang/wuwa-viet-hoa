@@ -64,10 +64,7 @@ public:
 	class FString                                 Desc;                                              // 0x0010(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutoCompleteCommand) == 0x000008, "Wrong alignment on FAutoCompleteCommand");
-static_assert(sizeof(FAutoCompleteCommand) == 0x000028, "Wrong size on FAutoCompleteCommand");
-static_assert(offsetof(FAutoCompleteCommand, Command) == 0x000000, "Member 'FAutoCompleteCommand::Command' has a wrong offset!");
-static_assert(offsetof(FAutoCompleteCommand, Desc) == 0x000010, "Member 'FAutoCompleteCommand::Desc' has a wrong offset!");
+DUMPER7_ASSERTS_FAutoCompleteCommand;
 
 // ScriptStruct EngineSettings.GameModeName
 // 0x0030 (0x0030 - 0x0000)
@@ -77,10 +74,7 @@ public:
 	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftClassPath                         GameMode;                                          // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameModeName) == 0x000008, "Wrong alignment on FGameModeName");
-static_assert(sizeof(FGameModeName) == 0x000030, "Wrong size on FGameModeName");
-static_assert(offsetof(FGameModeName, Name) == 0x000000, "Member 'FGameModeName::Name' has a wrong offset!");
-static_assert(offsetof(FGameModeName, GameMode) == 0x000010, "Member 'FGameModeName::GameMode' has a wrong offset!");
+DUMPER7_ASSERTS_FGameModeName;
 
 }
 

@@ -34,23 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SummonGongduolaConfig_C">();
+		BP_STATIC_CLASS_IMPL("BP_SummonGongduolaConfig_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SummonGongduolaConfig_C")
 	}
 	static class UBP_SummonGongduolaConfig_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SummonGongduolaConfig_C>();
 	}
 };
-static_assert(alignof(UBP_SummonGongduolaConfig_C) == 0x000008, "Wrong alignment on UBP_SummonGongduolaConfig_C");
-static_assert(sizeof(UBP_SummonGongduolaConfig_C) == 0x000058, "Wrong size on UBP_SummonGongduolaConfig_C");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, FadeInTime) == 0x000038, "Member 'UBP_SummonGongduolaConfig_C::FadeInTime' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, StayTime) == 0x00003C, "Member 'UBP_SummonGongduolaConfig_C::StayTime' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, FadeOutTime) == 0x000040, "Member 'UBP_SummonGongduolaConfig_C::FadeOutTime' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, Priority) == 0x000044, "Member 'UBP_SummonGongduolaConfig_C::Priority' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, OffsetZ) == 0x000048, "Member 'UBP_SummonGongduolaConfig_C::OffsetZ' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, BanInput) == 0x00004C, "Member 'UBP_SummonGongduolaConfig_C::BanInput' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, ResummonDistance) == 0x000050, "Member 'UBP_SummonGongduolaConfig_C::ResummonDistance' has a wrong offset!");
-static_assert(offsetof(UBP_SummonGongduolaConfig_C, LockCamera) == 0x000054, "Member 'UBP_SummonGongduolaConfig_C::LockCamera' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SummonGongduolaConfig_C;
 
 }
 

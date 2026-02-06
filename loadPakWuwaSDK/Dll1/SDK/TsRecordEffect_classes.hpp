@@ -31,32 +31,29 @@ public:
 	float                                         ManualProcessTime;                                 // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TryAddEffectView();
-	void OnStop();
-	void OnPlay();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_TsRecordEffect(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void OnPlay();
+	void OnStop();
+	void TryAddEffectView();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsRecordEffect_C">();
+		BP_STATIC_CLASS_IMPL("TsRecordEffect_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsRecordEffect_C")
 	}
 	static class ATsRecordEffect_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsRecordEffect_C>();
 	}
 };
-static_assert(alignof(ATsRecordEffect_C) == 0x000008, "Wrong alignment on ATsRecordEffect_C");
-static_assert(sizeof(ATsRecordEffect_C) == 0x0002E8, "Wrong size on ATsRecordEffect_C");
-static_assert(offsetof(ATsRecordEffect_C, UberGraphFrame) == 0x0002B0, "Member 'ATsRecordEffect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsRecordEffect_C, DefaultSceneRoot) == 0x0002B8, "Member 'ATsRecordEffect_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ATsRecordEffect_C, EffectModelData) == 0x0002C0, "Member 'ATsRecordEffect_C::EffectModelData' has a wrong offset!");
-static_assert(offsetof(ATsRecordEffect_C, LifeTimeType) == 0x0002C8, "Member 'ATsRecordEffect_C::LifeTimeType' has a wrong offset!");
-static_assert(offsetof(ATsRecordEffect_C, EffectModelDataPath) == 0x0002D0, "Member 'ATsRecordEffect_C::EffectModelDataPath' has a wrong offset!");
-static_assert(offsetof(ATsRecordEffect_C, ManualProcessTime) == 0x0002E0, "Member 'ATsRecordEffect_C::ManualProcessTime' has a wrong offset!");
+DUMPER7_ASSERTS_ATsRecordEffect_C;
 
 }
 

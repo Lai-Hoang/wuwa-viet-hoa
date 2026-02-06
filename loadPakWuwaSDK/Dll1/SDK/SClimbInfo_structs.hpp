@@ -27,12 +27,7 @@ public:
 	struct FVector2D                              攀爬输入向量_9_E61A76D344EB9FFDE7C7D2AF9EC669C7;   // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          攀爬受阻_13_AB45DCEA40C4FAF4521863930901D629;      // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSClimbInfo) == 0x000004, "Wrong alignment on FSClimbInfo");
-static_assert(sizeof(FSClimbInfo) == 0x00001C, "Wrong size on FSClimbInfo");
-static_assert(offsetof(FSClimbInfo, 攀爬速度向量_2_D9B3D54A4F8A6F202BFA5FA5F1299CE3) == 0x000000, "Member 'FSClimbInfo::攀爬速度向量_2_D9B3D54A4F8A6F202BFA5FA5F1299CE3' has a wrong offset!");
-static_assert(offsetof(FSClimbInfo, 攀爬移动中_12_F50B2F19448F5ED24ABDA48713D38446) == 0x00000C, "Member 'FSClimbInfo::攀爬移动中_12_F50B2F19448F5ED24ABDA48713D38446' has a wrong offset!");
-static_assert(offsetof(FSClimbInfo, 攀爬输入向量_9_E61A76D344EB9FFDE7C7D2AF9EC669C7) == 0x000010, "Member 'FSClimbInfo::攀爬输入向量_9_E61A76D344EB9FFDE7C7D2AF9EC669C7' has a wrong offset!");
-static_assert(offsetof(FSClimbInfo, 攀爬受阻_13_AB45DCEA40C4FAF4521863930901D629) == 0x000018, "Member 'FSClimbInfo::攀爬受阻_13_AB45DCEA40C4FAF4521863930901D629' has a wrong offset!");
+DUMPER7_ASSERTS_FSClimbInfo;
 
 }
 

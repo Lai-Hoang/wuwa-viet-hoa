@@ -31,15 +31,7 @@ public:
 	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FlyEffectTriggerHeight_21_FEE024B54C781A2D90163C8F1B52CD75; // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSWaterEffectSubConfig) == 0x000008, "Wrong alignment on FSWaterEffectSubConfig");
-static_assert(sizeof(FSWaterEffectSubConfig) == 0x000050, "Wrong size on FSWaterEffectSubConfig");
-static_assert(offsetof(FSWaterEffectSubConfig, MoveEffects_3_6E9928D34A9AEF0FF7608A939435817B) == 0x000000, "Member 'FSWaterEffectSubConfig::MoveEffects_3_6E9928D34A9AEF0FF7608A939435817B' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, FallEffects_8_29B1A3F44073694D54DF4383F5C6E36E) == 0x000010, "Member 'FSWaterEffectSubConfig::FallEffects_8_29B1A3F44073694D54DF4383F5C6E36E' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, JumpEffects_9_AE8499094F1316836E711488A749EA57) == 0x000020, "Member 'FSWaterEffectSubConfig::JumpEffects_9_AE8499094F1316836E711488A749EA57' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, FlyEffects_18_26D3628146B97A63C5FAC7B199075379) == 0x000030, "Member 'FSWaterEffectSubConfig::FlyEffects_18_26D3628146B97A63C5FAC7B199075379' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, FallJumpDepthThreshold_12_6C43EAC147AB1D7BB6840586FC19C70A) == 0x000040, "Member 'FSWaterEffectSubConfig::FallJumpDepthThreshold_12_6C43EAC147AB1D7BB6840586FC19C70A' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, TriggerInGrass_14_AC44DEDB4468681159611B981214D029) == 0x000044, "Member 'FSWaterEffectSubConfig::TriggerInGrass_14_AC44DEDB4468681159611B981214D029' has a wrong offset!");
-static_assert(offsetof(FSWaterEffectSubConfig, FlyEffectTriggerHeight_21_FEE024B54C781A2D90163C8F1B52CD75) == 0x000048, "Member 'FSWaterEffectSubConfig::FlyEffectTriggerHeight_21_FEE024B54C781A2D90163C8F1B52CD75' has a wrong offset!");
+DUMPER7_ASSERTS_FSWaterEffectSubConfig;
 
 }
 

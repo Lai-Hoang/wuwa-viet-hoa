@@ -17,41 +17,55 @@
 namespace SDK
 {
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ExecuteUbergraph_TsParkourCheckPoint
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    effectPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsParkourCheckPoint_C::GenerateFxByPath(const class FString& effectPath)
+void ATsParkourCheckPoint_C::ExecuteUbergraph_TsParkourCheckPoint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsParkourCheckPoint_C", "GenerateFxByPath");
+		Func = Class->GetFunction("TsParkourCheckPoint_C", "ExecuteUbergraph_TsParkourCheckPoint");
 
-	Params::TsParkourCheckPoint_C_GenerateFxByPath Parms{};
+	Params::TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint Parms{};
 
-	Parms.effectPath = std::move(effectPath);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFx
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectModelBase*                 inModelBase1                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveBeginPlay
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
-void ATsParkourCheckPoint_C::GenerateFx(class UEffectModelBase* inModelBase1)
+void ATsParkourCheckPoint_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsParkourCheckPoint_C", "GenerateFx");
+		Func = Class->GetFunction("TsParkourCheckPoint_C", "ReceiveBeginPlay");
 
-	Params::TsParkourCheckPoint_C_GenerateFx Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.inModelBase1 = inModelBase1;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsParkourCheckPoint_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsParkourCheckPoint_C", "ReceiveEndPlay");
+
+	Params::TsParkourCheckPoint_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,55 +91,41 @@ void ATsParkourCheckPoint_C::SetDetectSphere(float inRadius1)
 }
 
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFx
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UEffectModelBase*                 inModelBase1                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsParkourCheckPoint_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void ATsParkourCheckPoint_C::GenerateFx(class UEffectModelBase* inModelBase1)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsParkourCheckPoint_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("TsParkourCheckPoint_C", "GenerateFx");
 
-	Params::TsParkourCheckPoint_C_ReceiveEndPlay Parms{};
+	Params::TsParkourCheckPoint_C_GenerateFx Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	Parms.inModelBase1 = inModelBase1;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveBeginPlay
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void ATsParkourCheckPoint_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsParkourCheckPoint_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ExecuteUbergraph_TsParkourCheckPoint
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    effectPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
 
-void ATsParkourCheckPoint_C::ExecuteUbergraph_TsParkourCheckPoint(int32 EntryPoint)
+void ATsParkourCheckPoint_C::GenerateFxByPath(const class FString& effectPath)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsParkourCheckPoint_C", "ExecuteUbergraph_TsParkourCheckPoint");
+		Func = Class->GetFunction("TsParkourCheckPoint_C", "GenerateFxByPath");
 
-	Params::TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint Parms{};
+	Params::TsParkourCheckPoint_C_GenerateFxByPath Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.effectPath = std::move(effectPath);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

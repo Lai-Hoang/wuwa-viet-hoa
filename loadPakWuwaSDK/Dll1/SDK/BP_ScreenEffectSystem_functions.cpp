@@ -17,250 +17,183 @@
 namespace SDK
 {
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraStateDebug
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ExecuteUbergraph_BP_ScreenEffectSystem
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::SetEffectExtraStateDebug()
+void ABP_ScreenEffectSystem_C::ExecuteUbergraph_BP_ScreenEffectSystem(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetEffectExtraStateDebug");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ExecuteUbergraph_BP_ScreenEffectSystem");
+
+	Params::BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ReceiveTick");
+
+	Params::BP_ScreenEffectSystem_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectScreenPlayData_C*          EffectScreenPlayData                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ExtraState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::SetEffectExtraState(class UEffectScreenPlayData_C* EffectScreenPlayData, int32 ExtraState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetEffectExtraState");
-
-	Params::BP_ScreenEffectSystem_C_SetEffectExtraState Parms{};
-
-	Parms.EffectScreenPlayData = EffectScreenPlayData;
-	Parms.ExtraState = ExtraState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateEnvironmentFactorDebug
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ScreenEffectSystem_C::UpdateEnvironmentFactorDebug()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateEnvironmentFactorDebug");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateSEEnvironmentFactor
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   EnvironmentFactor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::UpdateSEEnvironmentFactor(class UEffectScreenPlayData_C* Data, float EnvironmentFactor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateSEEnvironmentFactor");
-
-	Params::BP_ScreenEffectSystem_C_UpdateSEEnvironmentFactor Parms{};
-
-	Parms.Data = Data;
-	Parms.EnvironmentFactor = EnvironmentFactor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.DestroyScreenEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::DestroyScreenEffect(class UEffectScreenPlayData_C* Data)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "DestroyScreenEffect");
-
-	Params::BP_ScreenEffectSystem_C_DestroyScreenEffect Parms{};
-
-	Parms.Data = Data;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SpawnPlayer
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.AddEffect
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_ScreenEffectPlayer_C**        OutputPlayer                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    TickWhenPaused                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class ABP_ScreenEffectPlayer_C**        EffectPlayer                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::SpawnPlayer(class UEffectScreenPlayData_C* Data, class ABP_ScreenEffectPlayer_C** OutputPlayer)
+void ABP_ScreenEffectSystem_C::AddEffect(class UEffectScreenPlayData_C* Data, bool TickWhenPaused, class ABP_ScreenEffectPlayer_C** EffectPlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SpawnPlayer");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "AddEffect");
 
-	Params::BP_ScreenEffectSystem_C_SpawnPlayer Parms{};
+	Params::BP_ScreenEffectSystem_C_AddEffect Parms{};
+
+	Parms.Data = Data;
+	Parms.TickWhenPaused = TickWhenPaused;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (EffectPlayer != nullptr)
+		*EffectPlayer = Parms.EffectPlayer;
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.PlayScreenEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::PlayScreenEffect(class UEffectScreenPlayData_C* Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "PlayScreenEffect");
+
+	Params::BP_ScreenEffectSystem_C_PlayScreenEffect Parms{};
 
 	Parms.Data = Data;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutputPlayer != nullptr)
-		*OutputPlayer = Parms.OutputPlayer;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectGeneralRoot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AUIContainerActor**               ScreenEffectGeneralRoot_0                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.PlayEffectDebug
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::GetScreenEffectGeneralRoot(class AUIContainerActor** ScreenEffectGeneralRoot_0)
+void ABP_ScreenEffectSystem_C::PlayEffectDebug()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectGeneralRoot");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "PlayEffectDebug");
 
-	Params::BP_ScreenEffectSystem_C_GetScreenEffectGeneralRoot Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.PlayScreenEffectNoPaused
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::PlayScreenEffectNoPaused(class UEffectScreenPlayData_C* Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "PlayScreenEffectNoPaused");
+
+	Params::BP_ScreenEffectSystem_C_PlayScreenEffectNoPaused Parms{};
+
+	Parms.Data = Data;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ScreenEffectGeneralRoot_0 != nullptr)
-		*ScreenEffectGeneralRoot_0 = Parms.ScreenEffectGeneralRoot_0;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEGeneralRoot
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EvaluateOrderEffects
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::Init_SEGeneralRoot()
+void ABP_ScreenEffectSystem_C::EvaluateOrderEffects()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEGeneralRoot");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EvaluateOrderEffects");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectPlotRoot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EndScreenEffect
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AUIContainerActor**               ScreenEffectPlotRoot_0                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::GetScreenEffectPlotRoot(class AUIContainerActor** ScreenEffectPlotRoot_0)
+void ABP_ScreenEffectSystem_C::EndScreenEffect(class UEffectScreenPlayData_C* Data)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectPlotRoot");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EndScreenEffect");
 
-	Params::BP_ScreenEffectSystem_C_GetScreenEffectPlotRoot Parms{};
+	Params::BP_ScreenEffectSystem_C_EndScreenEffect Parms{};
+
+	Parms.Data = Data;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ScreenEffectPlotRoot_0 != nullptr)
-		*ScreenEffectPlotRoot_0 = Parms.ScreenEffectPlotRoot_0;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEPlotRoot
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EndEffectDebug
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::Init_SEPlotRoot()
+void ABP_ScreenEffectSystem_C::EndEffectDebug()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEPlotRoot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectFightRoot
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AUIContainerActor**               ScreenEffectFightRoot_0                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::GetScreenEffectFightRoot(class AUIContainerActor** ScreenEffectFightRoot_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectFightRoot");
-
-	Params::BP_ScreenEffectSystem_C_GetScreenEffectFightRoot Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ScreenEffectFightRoot_0 != nullptr)
-		*ScreenEffectFightRoot_0 = Parms.ScreenEffectFightRoot_0;
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEFight Root
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void ABP_ScreenEffectSystem_C::Init_SEFight_Root()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEFight Root");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateLGUIMaterialParams
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void ABP_ScreenEffectSystem_C::UpdateLGUIMaterialParams()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateLGUIMaterialParams");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ClearSystem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_ScreenEffectSystem_C::ClearSystem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ClearSystem");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EndEffectDebug");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -290,163 +223,251 @@ void ABP_ScreenEffectSystem_C::SetVisibilityOfSystem(bool Visibility, bool bOver
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EndEffectDebug
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ClearSystem
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::EndEffectDebug()
+void ABP_ScreenEffectSystem_C::ClearSystem()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EndEffectDebug");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ClearSystem");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EndScreenEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateLGUIMaterialParams
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::EndScreenEffect(class UEffectScreenPlayData_C* Data)
+void ABP_ScreenEffectSystem_C::UpdateLGUIMaterialParams()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EndScreenEffect");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateLGUIMaterialParams");
 
-	Params::BP_ScreenEffectSystem_C_EndScreenEffect Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Data = Data;
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEFight Root
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::Init_SEFight_Root()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEFight Root");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectFightRoot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AUIContainerActor**               ScreenEffectFightRoot_0                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::GetScreenEffectFightRoot(class AUIContainerActor** ScreenEffectFightRoot_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectFightRoot");
+
+	Params::BP_ScreenEffectSystem_C_GetScreenEffectFightRoot Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScreenEffectFightRoot_0 != nullptr)
+		*ScreenEffectFightRoot_0 = Parms.ScreenEffectFightRoot_0;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.EvaluateOrderEffects
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEPlotRoot
 // (Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_ScreenEffectSystem_C::EvaluateOrderEffects()
+void ABP_ScreenEffectSystem_C::Init_SEPlotRoot()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "EvaluateOrderEffects");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEPlotRoot");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.PlayEffectDebug
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void ABP_ScreenEffectSystem_C::PlayEffectDebug()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "PlayEffectDebug");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.PlayScreenEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectPlotRoot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AUIContainerActor**               ScreenEffectPlotRoot_0                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::PlayScreenEffect(class UEffectScreenPlayData_C* Data)
+void ABP_ScreenEffectSystem_C::GetScreenEffectPlotRoot(class AUIContainerActor** ScreenEffectPlotRoot_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "PlayScreenEffect");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectPlotRoot");
 
-	Params::BP_ScreenEffectSystem_C_PlayScreenEffect Parms{};
-
-	Parms.Data = Data;
+	Params::BP_ScreenEffectSystem_C_GetScreenEffectPlotRoot Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScreenEffectPlotRoot_0 != nullptr)
+		*ScreenEffectPlotRoot_0 = Parms.ScreenEffectPlotRoot_0;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.AddEffect
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SEGeneralRoot
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::Init_SEGeneralRoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SEGeneralRoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectGeneralRoot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AUIContainerActor**               ScreenEffectGeneralRoot_0                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::GetScreenEffectGeneralRoot(class AUIContainerActor** ScreenEffectGeneralRoot_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectGeneralRoot");
+
+	Params::BP_ScreenEffectSystem_C_GetScreenEffectGeneralRoot Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScreenEffectGeneralRoot_0 != nullptr)
+		*ScreenEffectGeneralRoot_0 = Parms.ScreenEffectGeneralRoot_0;
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.Init SECoverLoadingRoot
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::Init_SECoverLoadingRoot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "Init SECoverLoadingRoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.GetScreenEffectCoverLoadingRoot
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AUIContainerActor**               ScreenEffectCoverLoadingRoot_0                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::GetScreenEffectCoverLoadingRoot(class AUIContainerActor** ScreenEffectCoverLoadingRoot_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "GetScreenEffectCoverLoadingRoot");
+
+	Params::BP_ScreenEffectSystem_C_GetScreenEffectCoverLoadingRoot Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScreenEffectCoverLoadingRoot_0 != nullptr)
+		*ScreenEffectCoverLoadingRoot_0 = Parms.ScreenEffectCoverLoadingRoot_0;
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SpawnPlayer
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ABP_ScreenEffectPlayer_C**        EffectPlayer                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ABP_ScreenEffectPlayer_C**        OutputPlayer                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::AddEffect(class UEffectScreenPlayData_C* Data, class ABP_ScreenEffectPlayer_C** EffectPlayer)
+void ABP_ScreenEffectSystem_C::SpawnPlayer(class UEffectScreenPlayData_C* Data, class ABP_ScreenEffectPlayer_C** OutputPlayer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "AddEffect");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SpawnPlayer");
 
-	Params::BP_ScreenEffectSystem_C_AddEffect Parms{};
+	Params::BP_ScreenEffectSystem_C_SpawnPlayer Parms{};
 
 	Parms.Data = Data;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (EffectPlayer != nullptr)
-		*EffectPlayer = Parms.EffectPlayer;
+	if (OutputPlayer != nullptr)
+		*OutputPlayer = Parms.OutputPlayer;
 }
 
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.DestroyScreenEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ScreenEffectSystem_C::ReceiveBeginPlay()
+void ABP_ScreenEffectSystem_C::DestroyScreenEffect(class UEffectScreenPlayData_C* Data)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "DestroyScreenEffect");
+
+	Params::BP_ScreenEffectSystem_C_DestroyScreenEffect Parms{};
+
+	Parms.Data = Data;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateSEEnvironmentFactor
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   EnvironmentFactor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::UpdateSEEnvironmentFactor(class UEffectScreenPlayData_C* Data, float EnvironmentFactor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateSEEnvironmentFactor");
+
+	Params::BP_ScreenEffectSystem_C_UpdateSEEnvironmentFactor Parms{};
+
+	Parms.Data = Data;
+	Parms.EnvironmentFactor = EnvironmentFactor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateEnvironmentFactorDebug
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::UpdateEnvironmentFactorDebug()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "UpdateEnvironmentFactorDebug");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ReceiveTick");
-
-	Params::BP_ScreenEffectSystem_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.ExecuteUbergraph_BP_ScreenEffectSystem
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::ExecuteUbergraph_BP_ScreenEffectSystem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "ExecuteUbergraph_BP_ScreenEffectSystem");
-
-	Params::BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -469,6 +490,42 @@ void ABP_ScreenEffectSystem_C::TweenEffectParameter(class UEffectScreenPlayData_
 	Parms.targetProgress = targetProgress;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          EffectScreenPlayData                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ExtraState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::SetEffectExtraState(class UEffectScreenPlayData_C* EffectScreenPlayData, int32 ExtraState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetEffectExtraState");
+
+	Params::BP_ScreenEffectSystem_C_SetEffectExtraState Parms{};
+
+	Parms.EffectScreenPlayData = EffectScreenPlayData;
+	Parms.ExtraState = ExtraState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraStateDebug
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ScreenEffectSystem_C::SetEffectExtraStateDebug()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetEffectExtraStateDebug");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

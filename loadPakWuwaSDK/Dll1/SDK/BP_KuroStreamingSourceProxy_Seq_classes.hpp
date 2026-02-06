@@ -18,35 +18,34 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_KuroStreamingSourceProxy_Seq.BP_KuroStreamingSourceProxy_Seq_C
-// 0x0028 (0x03E0 - 0x03B8)
+// 0x0028 (0x03F0 - 0x03C8)
 class ABP_KuroStreamingSourceProxy_Seq_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CurrSpeed;                                         // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, HasGetValueTypeHash)
-	float                                         velocity;                                          // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CurrSpeed;                                         // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, HasGetValueTypeHash)
+	float                                         velocity;                                          // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void EditorTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_KuroStreamingSourceProxy_Seq(int32 EntryPoint);
+	void EditorTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_KuroStreamingSourceProxy_Seq_C">();
+		BP_STATIC_CLASS_IMPL("BP_KuroStreamingSourceProxy_Seq_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_KuroStreamingSourceProxy_Seq_C")
 	}
 	static class ABP_KuroStreamingSourceProxy_Seq_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_KuroStreamingSourceProxy_Seq_C>();
 	}
 };
-static_assert(alignof(ABP_KuroStreamingSourceProxy_Seq_C) == 0x000008, "Wrong alignment on ABP_KuroStreamingSourceProxy_Seq_C");
-static_assert(sizeof(ABP_KuroStreamingSourceProxy_Seq_C) == 0x0003E0, "Wrong size on ABP_KuroStreamingSourceProxy_Seq_C");
-static_assert(offsetof(ABP_KuroStreamingSourceProxy_Seq_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_KuroStreamingSourceProxy_Seq_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroStreamingSourceProxy_Seq_C, DefaultSceneRoot) == 0x0003C0, "Member 'ABP_KuroStreamingSourceProxy_Seq_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_KuroStreamingSourceProxy_Seq_C, CurrSpeed) == 0x0003C8, "Member 'ABP_KuroStreamingSourceProxy_Seq_C::CurrSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroStreamingSourceProxy_Seq_C, velocity) == 0x0003D8, "Member 'ABP_KuroStreamingSourceProxy_Seq_C::velocity' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_KuroStreamingSourceProxy_Seq_C;
 
 }
 

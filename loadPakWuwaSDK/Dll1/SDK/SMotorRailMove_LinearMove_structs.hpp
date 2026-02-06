@@ -22,10 +22,7 @@ public:
 	float                                         MinSpeed_14_06ABCFCE41EA5450989BB481BC3759EE;      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MaxSpeed_15_2E2AD3FC4BCFD857E3DC72895B429626;      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSMotorRailMove_LinearMove) == 0x000004, "Wrong alignment on FSMotorRailMove_LinearMove");
-static_assert(sizeof(FSMotorRailMove_LinearMove) == 0x000008, "Wrong size on FSMotorRailMove_LinearMove");
-static_assert(offsetof(FSMotorRailMove_LinearMove, MinSpeed_14_06ABCFCE41EA5450989BB481BC3759EE) == 0x000000, "Member 'FSMotorRailMove_LinearMove::MinSpeed_14_06ABCFCE41EA5450989BB481BC3759EE' has a wrong offset!");
-static_assert(offsetof(FSMotorRailMove_LinearMove, MaxSpeed_15_2E2AD3FC4BCFD857E3DC72895B429626) == 0x000004, "Member 'FSMotorRailMove_LinearMove::MaxSpeed_15_2E2AD3FC4BCFD857E3DC72895B429626' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMove_LinearMove;
 
 }
 

@@ -32,32 +32,28 @@ public:
 	class FString                                 CheckTag;                                          // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	void GenerateFxByPath(const class FString& effectPath);
-	void GenerateFx(class UEffectModelBase* inModelBase1);
-	void SetDetectSphere(float inRadius1);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_TsParkourCheckPoint(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void SetDetectSphere(float inRadius1);
+	void GenerateFx(class UEffectModelBase* inModelBase1);
+	void GenerateFxByPath(const class FString& effectPath);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsParkourCheckPoint_C">();
+		BP_STATIC_CLASS_IMPL("TsParkourCheckPoint_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsParkourCheckPoint_C")
 	}
 	static class ATsParkourCheckPoint_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ATsParkourCheckPoint_C>();
 	}
 };
-static_assert(alignof(ATsParkourCheckPoint_C) == 0x000008, "Wrong alignment on ATsParkourCheckPoint_C");
-static_assert(sizeof(ATsParkourCheckPoint_C) == 0x0002F0, "Wrong size on ATsParkourCheckPoint_C");
-static_assert(offsetof(ATsParkourCheckPoint_C, UberGraphFrame) == 0x0002B0, "Member 'ATsParkourCheckPoint_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, SphereComponent) == 0x0002B8, "Member 'ATsParkourCheckPoint_C::SphereComponent' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, CheckPointIndex) == 0x0002C0, "Member 'ATsParkourCheckPoint_C::CheckPointIndex' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, DestroyEffectModelBasePath) == 0x0002C8, "Member 'ATsParkourCheckPoint_C::DestroyEffectModelBasePath' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, ParkourId) == 0x0002D8, "Member 'ATsParkourCheckPoint_C::ParkourId' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, IndexInGroup) == 0x0002DC, "Member 'ATsParkourCheckPoint_C::IndexInGroup' has a wrong offset!");
-static_assert(offsetof(ATsParkourCheckPoint_C, CheckTag) == 0x0002E0, "Member 'ATsParkourCheckPoint_C::CheckTag' has a wrong offset!");
+DUMPER7_ASSERTS_ATsParkourCheckPoint_C;
 
 }
 

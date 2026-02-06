@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "Slate_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -25,9 +25,7 @@ struct TsHotFixActionHandle_C_OnPressAction final
 public:
 	struct FKey                                   key;                                               // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnPressAction) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_OnPressAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnPressAction) == 0x000020, "Wrong size on TsHotFixActionHandle_C_OnPressAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnPressAction, key) == 0x000000, "Member 'TsHotFixActionHandle_C_OnPressAction::key' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnPressAction;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnReleaseAction
 // 0x0020 (0x0020 - 0x0000)
@@ -36,9 +34,7 @@ struct TsHotFixActionHandle_C_OnReleaseAction final
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnReleaseAction) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_OnReleaseAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnReleaseAction) == 0x000020, "Wrong size on TsHotFixActionHandle_C_OnReleaseAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnReleaseAction, Key) == 0x000000, "Member 'TsHotFixActionHandle_C_OnReleaseAction::Key' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnReleaseAction;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddPressBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -49,11 +45,7 @@ public:
 	class ABasePlayerController*                  controller;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddPressBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddPressBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddPressBinding) == 0x000028, "Wrong size on TsHotFixActionHandle_C_AddPressBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddPressBinding, actionName) == 0x000000, "Member 'TsHotFixActionHandle_C_AddPressBinding::actionName' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddPressBinding, controller) == 0x000010, "Member 'TsHotFixActionHandle_C_AddPressBinding::controller' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddPressBinding, CallFunc_Conv_StringToName_ReturnValue) == 0x000018, "Member 'TsHotFixActionHandle_C_AddPressBinding::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddPressBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddReleaseBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -64,11 +56,7 @@ public:
 	class ABasePlayerController*                  controller;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddReleaseBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddReleaseBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddReleaseBinding) == 0x000028, "Wrong size on TsHotFixActionHandle_C_AddReleaseBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddReleaseBinding, actionName) == 0x000000, "Member 'TsHotFixActionHandle_C_AddReleaseBinding::actionName' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddReleaseBinding, controller) == 0x000010, "Member 'TsHotFixActionHandle_C_AddReleaseBinding::controller' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddReleaseBinding, CallFunc_Conv_StringToName_ReturnValue) == 0x000018, "Member 'TsHotFixActionHandle_C_AddReleaseBinding::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddReleaseBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddTouchPressBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -77,9 +65,7 @@ struct TsHotFixActionHandle_C_AddTouchPressBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddTouchPressBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddTouchPressBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddTouchPressBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_AddTouchPressBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddTouchPressBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_AddTouchPressBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddTouchPressBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddTouchReleaseBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -88,9 +74,7 @@ struct TsHotFixActionHandle_C_AddTouchReleaseBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddTouchReleaseBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddTouchReleaseBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddTouchReleaseBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_AddTouchReleaseBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddTouchReleaseBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_AddTouchReleaseBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddTouchReleaseBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnTouchPressAction
 // 0x0010 (0x0010 - 0x0000)
@@ -101,10 +85,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                position;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnTouchPressAction) == 0x000004, "Wrong alignment on TsHotFixActionHandle_C_OnTouchPressAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnTouchPressAction) == 0x000010, "Wrong size on TsHotFixActionHandle_C_OnTouchPressAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchPressAction, touchIndex) == 0x000000, "Member 'TsHotFixActionHandle_C_OnTouchPressAction::touchIndex' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchPressAction, position) == 0x000004, "Member 'TsHotFixActionHandle_C_OnTouchPressAction::position' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnTouchPressAction;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnTouchReleaseAction
 // 0x0010 (0x0010 - 0x0000)
@@ -115,10 +96,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                position;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnTouchReleaseAction) == 0x000004, "Wrong alignment on TsHotFixActionHandle_C_OnTouchReleaseAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnTouchReleaseAction) == 0x000010, "Wrong size on TsHotFixActionHandle_C_OnTouchReleaseAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchReleaseAction, touchIndex) == 0x000000, "Member 'TsHotFixActionHandle_C_OnTouchReleaseAction::touchIndex' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchReleaseAction, position) == 0x000004, "Member 'TsHotFixActionHandle_C_OnTouchReleaseAction::position' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnTouchReleaseAction;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.ClearActionBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -127,9 +105,7 @@ struct TsHotFixActionHandle_C_ClearActionBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_ClearActionBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_ClearActionBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_ClearActionBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_ClearActionBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_ClearActionBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_ClearActionBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_ClearActionBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnTouchMoveAction
 // 0x0010 (0x0010 - 0x0000)
@@ -140,10 +116,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                position;                                          // 0x0004(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnTouchMoveAction) == 0x000004, "Wrong alignment on TsHotFixActionHandle_C_OnTouchMoveAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnTouchMoveAction) == 0x000010, "Wrong size on TsHotFixActionHandle_C_OnTouchMoveAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchMoveAction, touchindex) == 0x000000, "Member 'TsHotFixActionHandle_C_OnTouchMoveAction::touchindex' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_OnTouchMoveAction, position) == 0x000004, "Member 'TsHotFixActionHandle_C_OnTouchMoveAction::position' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnTouchMoveAction;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddTouchMoveBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -152,9 +125,7 @@ struct TsHotFixActionHandle_C_AddTouchMoveBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddTouchMoveBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddTouchMoveBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddTouchMoveBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_AddTouchMoveBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddTouchMoveBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_AddTouchMoveBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddTouchMoveBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddAxisBinding
 // 0x0028 (0x0028 - 0x0000)
@@ -165,11 +136,7 @@ public:
 	class ABasePlayerController*                  controller;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddAxisBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddAxisBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_AddAxisBinding) == 0x000028, "Wrong size on TsHotFixActionHandle_C_AddAxisBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAxisBinding, axisName) == 0x000000, "Member 'TsHotFixActionHandle_C_AddAxisBinding::axisName' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAxisBinding, controller) == 0x000010, "Member 'TsHotFixActionHandle_C_AddAxisBinding::controller' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAxisBinding, CallFunc_Conv_StringToName_ReturnValue) == 0x000018, "Member 'TsHotFixActionHandle_C_AddAxisBinding::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddAxisBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnAxisInput
 // 0x0004 (0x0004 - 0x0000)
@@ -178,9 +145,7 @@ struct TsHotFixActionHandle_C_OnAxisInput final
 public:
 	float                                         value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnAxisInput) == 0x000004, "Wrong alignment on TsHotFixActionHandle_C_OnAxisInput");
-static_assert(sizeof(TsHotFixActionHandle_C_OnAxisInput) == 0x000004, "Wrong size on TsHotFixActionHandle_C_OnAxisInput");
-static_assert(offsetof(TsHotFixActionHandle_C_OnAxisInput, value) == 0x000000, "Member 'TsHotFixActionHandle_C_OnAxisInput::value' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnAxisInput;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.ClearAxisBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -189,9 +154,7 @@ struct TsHotFixActionHandle_C_ClearAxisBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_ClearAxisBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_ClearAxisBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_ClearAxisBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_ClearAxisBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_ClearAxisBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_ClearAxisBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_ClearAxisBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.AddAnyKeyPress
 // 0x0040 (0x0040 - 0x0000)
@@ -202,11 +165,7 @@ public:
 	struct FInputChord                            chord;                                             // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 	class FName                                   AnyKeyPressAction;                                 // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_AddAnyKeyPress) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_AddAnyKeyPress");
-static_assert(sizeof(TsHotFixActionHandle_C_AddAnyKeyPress) == 0x000040, "Wrong size on TsHotFixActionHandle_C_AddAnyKeyPress");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAnyKeyPress, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_AddAnyKeyPress::controller' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAnyKeyPress, chord) == 0x000008, "Member 'TsHotFixActionHandle_C_AddAnyKeyPress::chord' has a wrong offset!");
-static_assert(offsetof(TsHotFixActionHandle_C_AddAnyKeyPress, AnyKeyPressAction) == 0x000030, "Member 'TsHotFixActionHandle_C_AddAnyKeyPress::AnyKeyPressAction' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_AddAnyKeyPress;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.ClearKeyBinding
 // 0x0008 (0x0008 - 0x0000)
@@ -215,9 +174,7 @@ struct TsHotFixActionHandle_C_ClearKeyBinding final
 public:
 	class ABasePlayerController*                  controller;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_ClearKeyBinding) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_ClearKeyBinding");
-static_assert(sizeof(TsHotFixActionHandle_C_ClearKeyBinding) == 0x000008, "Wrong size on TsHotFixActionHandle_C_ClearKeyBinding");
-static_assert(offsetof(TsHotFixActionHandle_C_ClearKeyBinding, controller) == 0x000000, "Member 'TsHotFixActionHandle_C_ClearKeyBinding::controller' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_ClearKeyBinding;
 
 // Function TsHotFixActionHandle.TsHotFixActionHandle_C.OnAnyKeyPressAction
 // 0x0020 (0x0020 - 0x0000)
@@ -226,9 +183,7 @@ struct TsHotFixActionHandle_C_OnAnyKeyPressAction final
 public:
 	struct FKey                                   key;                                               // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(TsHotFixActionHandle_C_OnAnyKeyPressAction) == 0x000008, "Wrong alignment on TsHotFixActionHandle_C_OnAnyKeyPressAction");
-static_assert(sizeof(TsHotFixActionHandle_C_OnAnyKeyPressAction) == 0x000020, "Wrong size on TsHotFixActionHandle_C_OnAnyKeyPressAction");
-static_assert(offsetof(TsHotFixActionHandle_C_OnAnyKeyPressAction, key) == 0x000000, "Member 'TsHotFixActionHandle_C_OnAnyKeyPressAction::key' has a wrong offset!");
+DUMPER7_ASSERTS_TsHotFixActionHandle_C_OnAnyKeyPressAction;
 
 }
 

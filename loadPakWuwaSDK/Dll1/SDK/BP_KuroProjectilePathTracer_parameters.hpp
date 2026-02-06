@@ -25,10 +25,7 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer) == 0x000004, "Wrong alignment on BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer) == 0x000008, "Wrong size on BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer, EntryPoint) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer::K2Node_Event_DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_ExecuteUbergraph_BP_KuroProjectilePathTracer;
 
 // Function BP_KuroProjectilePathTracer.BP_KuroProjectilePathTracer_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -37,9 +34,7 @@ struct BP_KuroProjectilePathTracer_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_KuroProjectilePathTracer_C_ReceiveTick");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_ReceiveTick) == 0x000004, "Wrong size on BP_KuroProjectilePathTracer_C_ReceiveTick");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_ReceiveTick;
 
 // Function BP_KuroProjectilePathTracer.BP_KuroProjectilePathTracer_C.SetVisible
 // 0x0001 (0x0001 - 0x0000)
@@ -48,9 +43,7 @@ struct BP_KuroProjectilePathTracer_C_SetVisible final
 public:
 	bool                                          IsVisible;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_SetVisible) == 0x000001, "Wrong alignment on BP_KuroProjectilePathTracer_C_SetVisible");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_SetVisible) == 0x000001, "Wrong size on BP_KuroProjectilePathTracer_C_SetVisible");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetVisible, IsVisible) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_SetVisible::IsVisible' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_SetVisible;
 
 // Function BP_KuroProjectilePathTracer.BP_KuroProjectilePathTracer_C.UpdateDisplay
 // 0x03E0 (0x03E0 - 0x0000)
@@ -124,64 +117,7 @@ public:
 	uint8                                         Pad_3D1[0x3];                                      // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_UpdateDisplay) == 0x000010, "Wrong alignment on BP_KuroProjectilePathTracer_C_UpdateDisplay");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_UpdateDisplay) == 0x0003E0, "Wrong size on BP_KuroProjectilePathTracer_C_UpdateDisplay");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, TempInstanceArray) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::TempInstanceArray' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, TempCount) == 0x000010, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::TempCount' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, TempDistance) == 0x000014, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::TempDistance' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeVector_ReturnValue) == 0x000018, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeVector_ReturnValue_1) == 0x000024, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeRotFromZ_ReturnValue) == 0x000030, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeRotFromZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetUpVector_ReturnValue) == 0x00003C, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetForwardVector_ReturnValue) == 0x000048, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_RotateAngleAxis_ReturnValue) == 0x000054, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeRotFromXZ_ReturnValue) == 0x000060, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeRotFromXZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x00006C, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakRotIntoAxes_X) == 0x000070, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakRotIntoAxes_X' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakRotIntoAxes_Y) == 0x00007C, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakRotIntoAxes_Y' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakRotIntoAxes_Z) == 0x000088, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakRotIntoAxes_Z' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000094, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeRotationFromAxes_ReturnValue) == 0x000098, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeRotationFromAxes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetUpVector_ReturnValue_1) == 0x0000A4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetUpVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x0000B0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000BC, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Add_VectorVector_ReturnValue) == 0x0000C0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeTransform_ReturnValue) == 0x0000D0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000100, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Conv_TransformToTransformDouble_ReturnValue) == 0x000110, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Conv_TransformToTransformDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_D_K2_SetWorldTransform_SweepHitResult) == 0x000150, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_D_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x0001E4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeTransformDouble_ReturnValue) == 0x0001F0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeTransformDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_D_K2_SetWorldTransform_SweepHitResult_1) == 0x000230, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_D_K2_SetWorldTransform_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, ___bool_Variable) == 0x0002C4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Not_PreBool_ReturnValue) == 0x0002C5, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Array_Length_ReturnValue) == 0x0002C8, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, ___int_Variable) == 0x0002CC, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Greater_IntInt_ReturnValue) == 0x0002D0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0002D4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Add_IntInt_ReturnValue) == 0x0002D8, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0002DC, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BooleanAND_ReturnValue) == 0x0002DD, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x0002E0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetSplineLength_ReturnValue) == 0x0002E4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetSplineLength_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0002E8, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x0002EC, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_AddInstances_ReturnValue) == 0x0002F0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_AddInstances_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Abs_ReturnValue) == 0x000300, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Less_FloatFloat_ReturnValue) == 0x000304, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x000305, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetTransformAtDistanceAlongSpline_ReturnValue) == 0x000310, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetTransformAtDistanceAlongSpline_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BooleanAND_ReturnValue_1) == 0x000340, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakTransform_Location) == 0x000344, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakTransform_Rotation) == 0x000350, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_BreakTransform_Scale) == 0x00035C, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetForwardVector_ReturnValue_1) == 0x000368, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_GetUpVector_ReturnValue_2) == 0x000374, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_GetUpVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_RotateAngleAxis_ReturnValue_1) == 0x000380, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_RotateAngleAxis_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeRotFromXZ_ReturnValue_1) == 0x00038C, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeRotFromXZ_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_MakeTransform_ReturnValue_1) == 0x0003A0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_SetStaticMesh_ReturnValue) == 0x0003D0, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDisplay, CallFunc_Array_Add_ReturnValue) == 0x0003D4, "Member 'BP_KuroProjectilePathTracer_C_UpdateDisplay::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_UpdateDisplay;
 
 // Function BP_KuroProjectilePathTracer.BP_KuroProjectilePathTracer_C.SetPredictProjectileInfo
 // 0x0148 (0x0148 - 0x0000)
@@ -214,30 +150,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo) == 0x000008, "Wrong alignment on BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo) == 0x000148, "Wrong size on BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, ReturnValue) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, OutPathPosition) == 0x000008, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::OutPathPosition' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, OutLastTraceDestination) == 0x000018, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::OutLastTraceDestination' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, OutHit) == 0x000024, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::OutHit' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_bBlockingHit) == 0x0000B8, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_bInitialOverlap) == 0x0000B9, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_Time) == 0x0000BC, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_Distance) == 0x0000C0, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_Location) == 0x0000C4, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_ImpactPoint) == 0x0000D0, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_Normal) == 0x0000DC, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_ImpactNormal) == 0x0000E8, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_PhysMat) == 0x0000F8, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_HitActor) == 0x000100, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_HitComponent) == 0x000108, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_HitBoneName) == 0x000110, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_HitItem) == 0x00011C, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_FaceIndex) == 0x000120, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_TraceStart) == 0x000124, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_BreakHitResult_TraceEnd) == 0x000130, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_Array_Length_ReturnValue) == 0x00013C, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000140, "Member 'BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_SetPredictProjectileInfo;
 
 // Function BP_KuroProjectilePathTracer.BP_KuroProjectilePathTracer_C.UpdateDataAsset
 // 0x0001 (0x0001 - 0x0000)
@@ -246,9 +159,7 @@ struct BP_KuroProjectilePathTracer_C_UpdateDataAsset final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroProjectilePathTracer_C_UpdateDataAsset) == 0x000001, "Wrong alignment on BP_KuroProjectilePathTracer_C_UpdateDataAsset");
-static_assert(sizeof(BP_KuroProjectilePathTracer_C_UpdateDataAsset) == 0x000001, "Wrong size on BP_KuroProjectilePathTracer_C_UpdateDataAsset");
-static_assert(offsetof(BP_KuroProjectilePathTracer_C_UpdateDataAsset, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_KuroProjectilePathTracer_C_UpdateDataAsset::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_KuroProjectilePathTracer_C_UpdateDataAsset;
 
 }
 

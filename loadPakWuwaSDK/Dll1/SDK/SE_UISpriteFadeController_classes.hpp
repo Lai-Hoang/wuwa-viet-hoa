@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "SE_UISpriteController_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -32,16 +32,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"SE_UISpriteFadeController_C">();
+		BP_STATIC_CLASS_IMPL("SE_UISpriteFadeController_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SE_UISpriteFadeController_C")
 	}
 	static class USE_UISpriteFadeController_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<USE_UISpriteFadeController_C>();
 	}
 };
-static_assert(alignof(USE_UISpriteFadeController_C) == 0x000008, "Wrong alignment on USE_UISpriteFadeController_C");
-static_assert(sizeof(USE_UISpriteFadeController_C) == 0x0000F0, "Wrong size on USE_UISpriteFadeController_C");
-static_assert(offsetof(USE_UISpriteFadeController_C, UberGraphFrame_SE_UISpriteFadeController_C) == 0x0000E8, "Member 'USE_UISpriteFadeController_C::UberGraphFrame_SE_UISpriteFadeController_C' has a wrong offset!");
+DUMPER7_ASSERTS_USE_UISpriteFadeController_C;
 
 }
 

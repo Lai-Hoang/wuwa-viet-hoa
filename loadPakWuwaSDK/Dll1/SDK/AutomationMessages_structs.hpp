@@ -25,10 +25,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ErrorMessage;                                      // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerPerformanceDataResponse) == 0x000008, "Wrong alignment on FAutomationWorkerPerformanceDataResponse");
-static_assert(sizeof(FAutomationWorkerPerformanceDataResponse) == 0x000018, "Wrong size on FAutomationWorkerPerformanceDataResponse");
-static_assert(offsetof(FAutomationWorkerPerformanceDataResponse, bSuccess) == 0x000000, "Member 'FAutomationWorkerPerformanceDataResponse::bSuccess' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerPerformanceDataResponse, ErrorMessage) == 0x000008, "Member 'FAutomationWorkerPerformanceDataResponse::ErrorMessage' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerPerformanceDataResponse;
 
 // ScriptStruct AutomationMessages.AutomationWorkerPerformanceDataRequest
 // 0x0040 (0x0040 - 0x0000)
@@ -40,12 +37,7 @@ public:
 	class FString                                 TestName;                                          // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<double>                                DataPoints;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerPerformanceDataRequest) == 0x000008, "Wrong alignment on FAutomationWorkerPerformanceDataRequest");
-static_assert(sizeof(FAutomationWorkerPerformanceDataRequest) == 0x000040, "Wrong size on FAutomationWorkerPerformanceDataRequest");
-static_assert(offsetof(FAutomationWorkerPerformanceDataRequest, Platform) == 0x000000, "Member 'FAutomationWorkerPerformanceDataRequest::Platform' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerPerformanceDataRequest, Hardware) == 0x000010, "Member 'FAutomationWorkerPerformanceDataRequest::Hardware' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerPerformanceDataRequest, TestName) == 0x000020, "Member 'FAutomationWorkerPerformanceDataRequest::TestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerPerformanceDataRequest, DataPoints) == 0x000030, "Member 'FAutomationWorkerPerformanceDataRequest::DataPoints' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerPerformanceDataRequest;
 
 // ScriptStruct AutomationMessages.AutomationWorkerTestDataResponse
 // 0x0018 (0x0018 - 0x0000)
@@ -56,10 +48,7 @@ public:
 	bool                                          bIsNew;                                            // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerTestDataResponse) == 0x000008, "Wrong alignment on FAutomationWorkerTestDataResponse");
-static_assert(sizeof(FAutomationWorkerTestDataResponse) == 0x000018, "Wrong size on FAutomationWorkerTestDataResponse");
-static_assert(offsetof(FAutomationWorkerTestDataResponse, JsonData) == 0x000000, "Member 'FAutomationWorkerTestDataResponse::JsonData' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerTestDataResponse, bIsNew) == 0x000010, "Member 'FAutomationWorkerTestDataResponse::bIsNew' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerTestDataResponse;
 
 // ScriptStruct AutomationMessages.AutomationWorkerTestDataRequest
 // 0x0050 (0x0050 - 0x0000)
@@ -72,13 +61,7 @@ public:
 	class FString                                 DataName;                                          // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 JsonData;                                          // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerTestDataRequest) == 0x000008, "Wrong alignment on FAutomationWorkerTestDataRequest");
-static_assert(sizeof(FAutomationWorkerTestDataRequest) == 0x000050, "Wrong size on FAutomationWorkerTestDataRequest");
-static_assert(offsetof(FAutomationWorkerTestDataRequest, DataType) == 0x000000, "Member 'FAutomationWorkerTestDataRequest::DataType' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerTestDataRequest, DataPlatform) == 0x000010, "Member 'FAutomationWorkerTestDataRequest::DataPlatform' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerTestDataRequest, DataTestName) == 0x000020, "Member 'FAutomationWorkerTestDataRequest::DataTestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerTestDataRequest, DataName) == 0x000030, "Member 'FAutomationWorkerTestDataRequest::DataName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerTestDataRequest, JsonData) == 0x000040, "Member 'FAutomationWorkerTestDataRequest::JsonData' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerTestDataRequest;
 
 // ScriptStruct AutomationMessages.AutomationWorkerImageComparisonResults
 // 0x0038 (0x0038 - 0x0000)
@@ -93,14 +76,7 @@ public:
 	double                                        GlobalDifference;                                  // 0x0020(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ErrorMessage;                                      // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerImageComparisonResults) == 0x000008, "Wrong alignment on FAutomationWorkerImageComparisonResults");
-static_assert(sizeof(FAutomationWorkerImageComparisonResults) == 0x000038, "Wrong size on FAutomationWorkerImageComparisonResults");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, UniqueId) == 0x000000, "Member 'FAutomationWorkerImageComparisonResults::UniqueId' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, bNew) == 0x000010, "Member 'FAutomationWorkerImageComparisonResults::bNew' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, bSimilar) == 0x000011, "Member 'FAutomationWorkerImageComparisonResults::bSimilar' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, MaxLocalDifference) == 0x000018, "Member 'FAutomationWorkerImageComparisonResults::MaxLocalDifference' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, GlobalDifference) == 0x000020, "Member 'FAutomationWorkerImageComparisonResults::GlobalDifference' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerImageComparisonResults, ErrorMessage) == 0x000028, "Member 'FAutomationWorkerImageComparisonResults::ErrorMessage' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerImageComparisonResults;
 
 // ScriptStruct AutomationMessages.AutomationScreenshotMetadata
 // 0x0128 (0x0128 - 0x0000)
@@ -148,45 +124,7 @@ public:
 	bool                                          bIgnoreColors;                                     // 0x0125(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_126[0x2];                                      // 0x0126(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationScreenshotMetadata) == 0x000008, "Wrong alignment on FAutomationScreenshotMetadata");
-static_assert(sizeof(FAutomationScreenshotMetadata) == 0x000128, "Wrong size on FAutomationScreenshotMetadata");
-static_assert(offsetof(FAutomationScreenshotMetadata, ScreenShotName) == 0x000000, "Member 'FAutomationScreenshotMetadata::ScreenShotName' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Context) == 0x000010, "Member 'FAutomationScreenshotMetadata::Context' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, TestName) == 0x000020, "Member 'FAutomationScreenshotMetadata::TestName' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Notes) == 0x000030, "Member 'FAutomationScreenshotMetadata::Notes' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Id) == 0x000040, "Member 'FAutomationScreenshotMetadata::Id' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Commit) == 0x000050, "Member 'FAutomationScreenshotMetadata::Commit' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Width) == 0x000060, "Member 'FAutomationScreenshotMetadata::Width' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Height) == 0x000064, "Member 'FAutomationScreenshotMetadata::Height' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Rhi) == 0x000068, "Member 'FAutomationScreenshotMetadata::Rhi' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Platform) == 0x000078, "Member 'FAutomationScreenshotMetadata::Platform' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, FeatureLevel) == 0x000088, "Member 'FAutomationScreenshotMetadata::FeatureLevel' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, bIsStereo) == 0x000098, "Member 'FAutomationScreenshotMetadata::bIsStereo' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, Vendor) == 0x0000A0, "Member 'FAutomationScreenshotMetadata::Vendor' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, AdapterName) == 0x0000B0, "Member 'FAutomationScreenshotMetadata::AdapterName' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, AdapterInternalDriverVersion) == 0x0000C0, "Member 'FAutomationScreenshotMetadata::AdapterInternalDriverVersion' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, AdapterUserDriverVersion) == 0x0000D0, "Member 'FAutomationScreenshotMetadata::AdapterUserDriverVersion' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, UniqueDeviceId) == 0x0000E0, "Member 'FAutomationScreenshotMetadata::UniqueDeviceId' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ResolutionQuality) == 0x0000F0, "Member 'FAutomationScreenshotMetadata::ResolutionQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ViewDistanceQuality) == 0x0000F4, "Member 'FAutomationScreenshotMetadata::ViewDistanceQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, AntiAliasingQuality) == 0x0000F8, "Member 'FAutomationScreenshotMetadata::AntiAliasingQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ShadowQuality) == 0x0000FC, "Member 'FAutomationScreenshotMetadata::ShadowQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, PostProcessQuality) == 0x000100, "Member 'FAutomationScreenshotMetadata::PostProcessQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, TextureQuality) == 0x000104, "Member 'FAutomationScreenshotMetadata::TextureQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, EffectsQuality) == 0x000108, "Member 'FAutomationScreenshotMetadata::EffectsQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, FoliageQuality) == 0x00010C, "Member 'FAutomationScreenshotMetadata::FoliageQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ShadingQuality) == 0x000110, "Member 'FAutomationScreenshotMetadata::ShadingQuality' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, bHasComparisonRules) == 0x000114, "Member 'FAutomationScreenshotMetadata::bHasComparisonRules' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceRed) == 0x000115, "Member 'FAutomationScreenshotMetadata::ToleranceRed' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceGreen) == 0x000116, "Member 'FAutomationScreenshotMetadata::ToleranceGreen' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceBlue) == 0x000117, "Member 'FAutomationScreenshotMetadata::ToleranceBlue' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceAlpha) == 0x000118, "Member 'FAutomationScreenshotMetadata::ToleranceAlpha' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceMinBrightness) == 0x000119, "Member 'FAutomationScreenshotMetadata::ToleranceMinBrightness' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, ToleranceMaxBrightness) == 0x00011A, "Member 'FAutomationScreenshotMetadata::ToleranceMaxBrightness' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, MaximumLocalError) == 0x00011C, "Member 'FAutomationScreenshotMetadata::MaximumLocalError' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, MaximumGlobalError) == 0x000120, "Member 'FAutomationScreenshotMetadata::MaximumGlobalError' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, bIgnoreAntiAliasing) == 0x000124, "Member 'FAutomationScreenshotMetadata::bIgnoreAntiAliasing' has a wrong offset!");
-static_assert(offsetof(FAutomationScreenshotMetadata, bIgnoreColors) == 0x000125, "Member 'FAutomationScreenshotMetadata::bIgnoreColors' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationScreenshotMetadata;
 
 // ScriptStruct AutomationMessages.AutomationWorkerScreenImage
 // 0x0158 (0x0158 - 0x0000)
@@ -198,12 +136,7 @@ public:
 	class FString                                 ScreenShotName;                                    // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAutomationScreenshotMetadata          Metadata;                                          // 0x0030(0x0128)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerScreenImage) == 0x000008, "Wrong alignment on FAutomationWorkerScreenImage");
-static_assert(sizeof(FAutomationWorkerScreenImage) == 0x000158, "Wrong size on FAutomationWorkerScreenImage");
-static_assert(offsetof(FAutomationWorkerScreenImage, ScreenImage) == 0x000000, "Member 'FAutomationWorkerScreenImage::ScreenImage' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerScreenImage, FrameTrace) == 0x000010, "Member 'FAutomationWorkerScreenImage::FrameTrace' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerScreenImage, ScreenShotName) == 0x000020, "Member 'FAutomationWorkerScreenImage::ScreenShotName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerScreenImage, Metadata) == 0x000030, "Member 'FAutomationWorkerScreenImage::Metadata' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerScreenImage;
 
 // ScriptStruct AutomationMessages.AutomationWorkerNextNetworkCommandReply
 // 0x0001 (0x0001 - 0x0000)
@@ -212,8 +145,7 @@ struct FAutomationWorkerNextNetworkCommandReply final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerNextNetworkCommandReply) == 0x000001, "Wrong alignment on FAutomationWorkerNextNetworkCommandReply");
-static_assert(sizeof(FAutomationWorkerNextNetworkCommandReply) == 0x000001, "Wrong size on FAutomationWorkerNextNetworkCommandReply");
+DUMPER7_ASSERTS_FAutomationWorkerNextNetworkCommandReply;
 
 // ScriptStruct AutomationMessages.AutomationWorkerRequestNextNetworkCommand
 // 0x0004 (0x0004 - 0x0000)
@@ -222,9 +154,7 @@ struct FAutomationWorkerRequestNextNetworkCommand final
 public:
 	uint32                                        ExecutionCount;                                    // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerRequestNextNetworkCommand) == 0x000004, "Wrong alignment on FAutomationWorkerRequestNextNetworkCommand");
-static_assert(sizeof(FAutomationWorkerRequestNextNetworkCommand) == 0x000004, "Wrong size on FAutomationWorkerRequestNextNetworkCommand");
-static_assert(offsetof(FAutomationWorkerRequestNextNetworkCommand, ExecutionCount) == 0x000000, "Member 'FAutomationWorkerRequestNextNetworkCommand::ExecutionCount' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerRequestNextNetworkCommand;
 
 // ScriptStruct AutomationMessages.AutomationWorkerRunTestsReply
 // 0x0038 (0x0038 - 0x0000)
@@ -240,15 +170,7 @@ public:
 	bool                                          Success;                                           // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerRunTestsReply) == 0x000008, "Wrong alignment on FAutomationWorkerRunTestsReply");
-static_assert(sizeof(FAutomationWorkerRunTestsReply) == 0x000038, "Wrong size on FAutomationWorkerRunTestsReply");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, TestName) == 0x000000, "Member 'FAutomationWorkerRunTestsReply::TestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, Entries) == 0x000010, "Member 'FAutomationWorkerRunTestsReply::Entries' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, WarningTotal) == 0x000020, "Member 'FAutomationWorkerRunTestsReply::WarningTotal' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, ErrorTotal) == 0x000024, "Member 'FAutomationWorkerRunTestsReply::ErrorTotal' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, Duration) == 0x000028, "Member 'FAutomationWorkerRunTestsReply::Duration' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, ExecutionCount) == 0x00002C, "Member 'FAutomationWorkerRunTestsReply::ExecutionCount' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTestsReply, Success) == 0x000030, "Member 'FAutomationWorkerRunTestsReply::Success' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerRunTestsReply;
 
 // ScriptStruct AutomationMessages.AutomationWorkerRunTests
 // 0x0030 (0x0030 - 0x0000)
@@ -262,13 +184,7 @@ public:
 	bool                                          bSendAnalytics;                                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerRunTests) == 0x000008, "Wrong alignment on FAutomationWorkerRunTests");
-static_assert(sizeof(FAutomationWorkerRunTests) == 0x000030, "Wrong size on FAutomationWorkerRunTests");
-static_assert(offsetof(FAutomationWorkerRunTests, ExecutionCount) == 0x000000, "Member 'FAutomationWorkerRunTests::ExecutionCount' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTests, RoleIndex) == 0x000004, "Member 'FAutomationWorkerRunTests::RoleIndex' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTests, TestName) == 0x000008, "Member 'FAutomationWorkerRunTests::TestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTests, BeautifiedTestName) == 0x000018, "Member 'FAutomationWorkerRunTests::BeautifiedTestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRunTests, bSendAnalytics) == 0x000028, "Member 'FAutomationWorkerRunTests::bSendAnalytics' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerRunTests;
 
 // ScriptStruct AutomationMessages.AutomationWorkerSingleTestReply
 // 0x0080 (0x0080 - 0x0000)
@@ -287,18 +203,7 @@ public:
 	uint32                                        TestFlags;                                         // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        NumParticipantsRequired;                           // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerSingleTestReply) == 0x000008, "Wrong alignment on FAutomationWorkerSingleTestReply");
-static_assert(sizeof(FAutomationWorkerSingleTestReply) == 0x000080, "Wrong size on FAutomationWorkerSingleTestReply");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, DisplayName) == 0x000000, "Member 'FAutomationWorkerSingleTestReply::DisplayName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, FullTestPath) == 0x000010, "Member 'FAutomationWorkerSingleTestReply::FullTestPath' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, TestName) == 0x000020, "Member 'FAutomationWorkerSingleTestReply::TestName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, TestParameter) == 0x000030, "Member 'FAutomationWorkerSingleTestReply::TestParameter' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, SourceFile) == 0x000040, "Member 'FAutomationWorkerSingleTestReply::SourceFile' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, SourceFileLine) == 0x000050, "Member 'FAutomationWorkerSingleTestReply::SourceFileLine' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, AssetPath) == 0x000058, "Member 'FAutomationWorkerSingleTestReply::AssetPath' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, OpenCommand) == 0x000068, "Member 'FAutomationWorkerSingleTestReply::OpenCommand' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, TestFlags) == 0x000078, "Member 'FAutomationWorkerSingleTestReply::TestFlags' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerSingleTestReply, NumParticipantsRequired) == 0x00007C, "Member 'FAutomationWorkerSingleTestReply::NumParticipantsRequired' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerSingleTestReply;
 
 // ScriptStruct AutomationMessages.AutomationWorkerRequestTestsReplyComplete
 // 0x0010 (0x0010 - 0x0000)
@@ -307,9 +212,7 @@ struct FAutomationWorkerRequestTestsReplyComplete final
 public:
 	TArray<struct FAutomationWorkerSingleTestReply> Tests;                                           // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerRequestTestsReplyComplete) == 0x000008, "Wrong alignment on FAutomationWorkerRequestTestsReplyComplete");
-static_assert(sizeof(FAutomationWorkerRequestTestsReplyComplete) == 0x000010, "Wrong size on FAutomationWorkerRequestTestsReplyComplete");
-static_assert(offsetof(FAutomationWorkerRequestTestsReplyComplete, Tests) == 0x000000, "Member 'FAutomationWorkerRequestTestsReplyComplete::Tests' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerRequestTestsReplyComplete;
 
 // ScriptStruct AutomationMessages.AutomationWorkerRequestTests
 // 0x0008 (0x0008 - 0x0000)
@@ -320,10 +223,7 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	uint32                                        RequestedTestFlags;                                // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerRequestTests) == 0x000004, "Wrong alignment on FAutomationWorkerRequestTests");
-static_assert(sizeof(FAutomationWorkerRequestTests) == 0x000008, "Wrong size on FAutomationWorkerRequestTests");
-static_assert(offsetof(FAutomationWorkerRequestTests, DeveloperDirectoryIncluded) == 0x000000, "Member 'FAutomationWorkerRequestTests::DeveloperDirectoryIncluded' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerRequestTests, RequestedTestFlags) == 0x000004, "Member 'FAutomationWorkerRequestTests::RequestedTestFlags' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerRequestTests;
 
 // ScriptStruct AutomationMessages.AutomationWorkerPong
 // 0x0001 (0x0001 - 0x0000)
@@ -332,8 +232,7 @@ struct FAutomationWorkerPong final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerPong) == 0x000001, "Wrong alignment on FAutomationWorkerPong");
-static_assert(sizeof(FAutomationWorkerPong) == 0x000001, "Wrong size on FAutomationWorkerPong");
+DUMPER7_ASSERTS_FAutomationWorkerPong;
 
 // ScriptStruct AutomationMessages.AutomationWorkerStopTests
 // 0x0001 (0x0001 - 0x0000)
@@ -342,8 +241,7 @@ struct FAutomationWorkerStopTests final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerStopTests) == 0x000001, "Wrong alignment on FAutomationWorkerStopTests");
-static_assert(sizeof(FAutomationWorkerStopTests) == 0x000001, "Wrong size on FAutomationWorkerStopTests");
+DUMPER7_ASSERTS_FAutomationWorkerStopTests;
 
 // ScriptStruct AutomationMessages.AutomationWorkerResetTests
 // 0x0001 (0x0001 - 0x0000)
@@ -352,8 +250,7 @@ struct FAutomationWorkerResetTests final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerResetTests) == 0x000001, "Wrong alignment on FAutomationWorkerResetTests");
-static_assert(sizeof(FAutomationWorkerResetTests) == 0x000001, "Wrong size on FAutomationWorkerResetTests");
+DUMPER7_ASSERTS_FAutomationWorkerResetTests;
 
 // ScriptStruct AutomationMessages.AutomationWorkerPing
 // 0x0001 (0x0001 - 0x0000)
@@ -362,8 +259,7 @@ struct FAutomationWorkerPing final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerPing) == 0x000001, "Wrong alignment on FAutomationWorkerPing");
-static_assert(sizeof(FAutomationWorkerPing) == 0x000001, "Wrong size on FAutomationWorkerPing");
+DUMPER7_ASSERTS_FAutomationWorkerPing;
 
 // ScriptStruct AutomationMessages.AutomationWorkerWorkerOffline
 // 0x0001 (0x0001 - 0x0000)
@@ -372,8 +268,7 @@ struct FAutomationWorkerWorkerOffline final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAutomationWorkerWorkerOffline) == 0x000001, "Wrong alignment on FAutomationWorkerWorkerOffline");
-static_assert(sizeof(FAutomationWorkerWorkerOffline) == 0x000001, "Wrong size on FAutomationWorkerWorkerOffline");
+DUMPER7_ASSERTS_FAutomationWorkerWorkerOffline;
 
 // ScriptStruct AutomationMessages.AutomationWorkerFindWorkersResponse
 // 0x0098 (0x0098 - 0x0000)
@@ -392,18 +287,7 @@ public:
 	class FString                                 RenderModeName;                                    // 0x0078(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  SessionId;                                         // 0x0088(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerFindWorkersResponse) == 0x000008, "Wrong alignment on FAutomationWorkerFindWorkersResponse");
-static_assert(sizeof(FAutomationWorkerFindWorkersResponse) == 0x000098, "Wrong size on FAutomationWorkerFindWorkersResponse");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, DeviceName) == 0x000000, "Member 'FAutomationWorkerFindWorkersResponse::DeviceName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, InstanceName) == 0x000010, "Member 'FAutomationWorkerFindWorkersResponse::InstanceName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, Platform) == 0x000020, "Member 'FAutomationWorkerFindWorkersResponse::Platform' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, OSVersionName) == 0x000030, "Member 'FAutomationWorkerFindWorkersResponse::OSVersionName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, ModelName) == 0x000040, "Member 'FAutomationWorkerFindWorkersResponse::ModelName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, GPUName) == 0x000050, "Member 'FAutomationWorkerFindWorkersResponse::GPUName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, CPUModelName) == 0x000060, "Member 'FAutomationWorkerFindWorkersResponse::CPUModelName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, RAMInGB) == 0x000070, "Member 'FAutomationWorkerFindWorkersResponse::RAMInGB' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, RenderModeName) == 0x000078, "Member 'FAutomationWorkerFindWorkersResponse::RenderModeName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkersResponse, SessionId) == 0x000088, "Member 'FAutomationWorkerFindWorkersResponse::SessionId' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerFindWorkersResponse;
 
 // ScriptStruct AutomationMessages.AutomationWorkerFindWorkers
 // 0x0038 (0x0038 - 0x0000)
@@ -416,12 +300,7 @@ public:
 	class FString                                 ProcessName;                                       // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  SessionId;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAutomationWorkerFindWorkers) == 0x000008, "Wrong alignment on FAutomationWorkerFindWorkers");
-static_assert(sizeof(FAutomationWorkerFindWorkers) == 0x000038, "Wrong size on FAutomationWorkerFindWorkers");
-static_assert(offsetof(FAutomationWorkerFindWorkers, Changelist) == 0x000000, "Member 'FAutomationWorkerFindWorkers::Changelist' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkers, GameName) == 0x000008, "Member 'FAutomationWorkerFindWorkers::GameName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkers, ProcessName) == 0x000018, "Member 'FAutomationWorkerFindWorkers::ProcessName' has a wrong offset!");
-static_assert(offsetof(FAutomationWorkerFindWorkers, SessionId) == 0x000028, "Member 'FAutomationWorkerFindWorkers::SessionId' has a wrong offset!");
+DUMPER7_ASSERTS_FAutomationWorkerFindWorkers;
 
 }
 

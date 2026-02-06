@@ -27,11 +27,7 @@ public:
 	int32                                         IntValue_8_DDD797BB48FE5C3D69A3598C98583BCB;       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           TagValue_9_9904A5DF4B3961B5B39896AE6EF742EA;       // 0x0008(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSInputCommand) == 0x000004, "Wrong alignment on FSInputCommand");
-static_assert(sizeof(FSInputCommand) == 0x000014, "Wrong size on FSInputCommand");
-static_assert(offsetof(FSInputCommand, CommandType_3_2DB55B5D4B1F6969B7B815BA8B0C09A7) == 0x000000, "Member 'FSInputCommand::CommandType_3_2DB55B5D4B1F6969B7B815BA8B0C09A7' has a wrong offset!");
-static_assert(offsetof(FSInputCommand, IntValue_8_DDD797BB48FE5C3D69A3598C98583BCB) == 0x000004, "Member 'FSInputCommand::IntValue_8_DDD797BB48FE5C3D69A3598C98583BCB' has a wrong offset!");
-static_assert(offsetof(FSInputCommand, TagValue_9_9904A5DF4B3961B5B39896AE6EF742EA) == 0x000008, "Member 'FSInputCommand::TagValue_9_9904A5DF4B3961B5B39896AE6EF742EA' has a wrong offset!");
+DUMPER7_ASSERTS_FSInputCommand;
 
 }
 

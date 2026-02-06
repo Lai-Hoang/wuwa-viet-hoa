@@ -29,18 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MoviePlayerSettings">();
+		STATIC_CLASS_IMPL("MoviePlayerSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MoviePlayerSettings")
 	}
 	static class UMoviePlayerSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMoviePlayerSettings>();
 	}
 };
-static_assert(alignof(UMoviePlayerSettings) == 0x000008, "Wrong alignment on UMoviePlayerSettings");
-static_assert(sizeof(UMoviePlayerSettings) == 0x000048, "Wrong size on UMoviePlayerSettings");
-static_assert(offsetof(UMoviePlayerSettings, bWaitForMoviesToComplete) == 0x000030, "Member 'UMoviePlayerSettings::bWaitForMoviesToComplete' has a wrong offset!");
-static_assert(offsetof(UMoviePlayerSettings, bMoviesAreSkippable) == 0x000031, "Member 'UMoviePlayerSettings::bMoviesAreSkippable' has a wrong offset!");
-static_assert(offsetof(UMoviePlayerSettings, StartupMovies) == 0x000038, "Member 'UMoviePlayerSettings::StartupMovies' has a wrong offset!");
+DUMPER7_ASSERTS_UMoviePlayerSettings;
 
 }
 

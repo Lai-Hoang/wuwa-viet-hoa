@@ -21,9 +21,7 @@ struct FSMotorRailMove_EventHandler final
 public:
 	TMap<int32, bool>                             ModifyCues_6_4E9D391C4B3A3813DB0134BE71FE0E1B;     // 0x0000(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSMotorRailMove_EventHandler) == 0x000008, "Wrong alignment on FSMotorRailMove_EventHandler");
-static_assert(sizeof(FSMotorRailMove_EventHandler) == 0x000050, "Wrong size on FSMotorRailMove_EventHandler");
-static_assert(offsetof(FSMotorRailMove_EventHandler, ModifyCues_6_4E9D391C4B3A3813DB0134BE71FE0E1B) == 0x000000, "Member 'FSMotorRailMove_EventHandler::ModifyCues_6_4E9D391C4B3A3813DB0134BE71FE0E1B' has a wrong offset!");
+DUMPER7_ASSERTS_FSMotorRailMove_EventHandler;
 
 }
 

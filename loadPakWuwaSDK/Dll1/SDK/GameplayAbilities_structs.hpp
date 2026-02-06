@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -386,11 +386,7 @@ public:
 	TFieldPath<class FProperty>                   Attribute;                                         // 0x0010(0x0020)(Edit, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UStruct*                                AttributeOwner;                                    // 0x0030(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FGameplayAttribute) == 0x000008, "Wrong alignment on FGameplayAttribute");
-static_assert(sizeof(FGameplayAttribute) == 0x000038, "Wrong size on FGameplayAttribute");
-static_assert(offsetof(FGameplayAttribute, AttributeName) == 0x000000, "Member 'FGameplayAttribute::AttributeName' has a wrong offset!");
-static_assert(offsetof(FGameplayAttribute, Attribute) == 0x000010, "Member 'FGameplayAttribute::Attribute' has a wrong offset!");
-static_assert(offsetof(FGameplayAttribute, AttributeOwner) == 0x000030, "Member 'FGameplayAttribute::AttributeOwner' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAttribute;
 
 // ScriptStruct GameplayAbilities.GameplayEffectModifiedAttribute
 // 0x0040 (0x0040 - 0x0000)
@@ -401,10 +397,7 @@ public:
 	float                                         TotalMagnitude;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectModifiedAttribute) == 0x000008, "Wrong alignment on FGameplayEffectModifiedAttribute");
-static_assert(sizeof(FGameplayEffectModifiedAttribute) == 0x000040, "Wrong size on FGameplayEffectModifiedAttribute");
-static_assert(offsetof(FGameplayEffectModifiedAttribute, Attribute) == 0x000000, "Member 'FGameplayEffectModifiedAttribute::Attribute' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectModifiedAttribute, TotalMagnitude) == 0x000038, "Member 'FGameplayEffectModifiedAttribute::TotalMagnitude' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectModifiedAttribute;
 
 // ScriptStruct GameplayAbilities.GameplayEffectAttributeCaptureDefinition
 // 0x0058 (0x0058 - 0x0000)
@@ -419,13 +412,7 @@ public:
 	struct FGameplayTag                           DataTag2;                                          // 0x0048(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectAttributeCaptureDefinition) == 0x000008, "Wrong alignment on FGameplayEffectAttributeCaptureDefinition");
-static_assert(sizeof(FGameplayEffectAttributeCaptureDefinition) == 0x000058, "Wrong size on FGameplayEffectAttributeCaptureDefinition");
-static_assert(offsetof(FGameplayEffectAttributeCaptureDefinition, AttributeToCapture) == 0x000000, "Member 'FGameplayEffectAttributeCaptureDefinition::AttributeToCapture' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureDefinition, AttributeSource) == 0x000038, "Member 'FGameplayEffectAttributeCaptureDefinition::AttributeSource' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureDefinition, bSnapshot) == 0x000039, "Member 'FGameplayEffectAttributeCaptureDefinition::bSnapshot' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureDefinition, DataTag) == 0x00003C, "Member 'FGameplayEffectAttributeCaptureDefinition::DataTag' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureDefinition, DataTag2) == 0x000048, "Member 'FGameplayEffectAttributeCaptureDefinition::DataTag2' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectAttributeCaptureDefinition;
 
 // ScriptStruct GameplayAbilities.GameplayEffectAttributeCaptureSpec
 // 0x0068 (0x0068 - 0x0000)
@@ -435,9 +422,7 @@ public:
 	struct FGameplayEffectAttributeCaptureDefinition BackingDefinition;                              // 0x0000(0x0058)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_58[0x10];                                      // 0x0058(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectAttributeCaptureSpec) == 0x000008, "Wrong alignment on FGameplayEffectAttributeCaptureSpec");
-static_assert(sizeof(FGameplayEffectAttributeCaptureSpec) == 0x000068, "Wrong size on FGameplayEffectAttributeCaptureSpec");
-static_assert(offsetof(FGameplayEffectAttributeCaptureSpec, BackingDefinition) == 0x000000, "Member 'FGameplayEffectAttributeCaptureSpec::BackingDefinition' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectAttributeCaptureSpec;
 
 // ScriptStruct GameplayAbilities.GameplayEffectAttributeCaptureSpecContainer
 // 0x0028 (0x0028 - 0x0000)
@@ -449,11 +434,7 @@ public:
 	bool                                          bHasNonSnapshottedAttributes;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectAttributeCaptureSpecContainer) == 0x000008, "Wrong alignment on FGameplayEffectAttributeCaptureSpecContainer");
-static_assert(sizeof(FGameplayEffectAttributeCaptureSpecContainer) == 0x000028, "Wrong size on FGameplayEffectAttributeCaptureSpecContainer");
-static_assert(offsetof(FGameplayEffectAttributeCaptureSpecContainer, SourceAttributes) == 0x000000, "Member 'FGameplayEffectAttributeCaptureSpecContainer::SourceAttributes' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureSpecContainer, TargetAttributes) == 0x000010, "Member 'FGameplayEffectAttributeCaptureSpecContainer::TargetAttributes' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectAttributeCaptureSpecContainer, bHasNonSnapshottedAttributes) == 0x000020, "Member 'FGameplayEffectAttributeCaptureSpecContainer::bHasNonSnapshottedAttributes' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectAttributeCaptureSpecContainer;
 
 // ScriptStruct GameplayAbilities.TagContainerAggregator
 // 0x0088 (0x0088 - 0x0000)
@@ -465,11 +446,7 @@ public:
 	struct FGameplayTagContainer                  ScopedTags;                                        // 0x0040(0x0020)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_60[0x28];                                      // 0x0060(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTagContainerAggregator) == 0x000008, "Wrong alignment on FTagContainerAggregator");
-static_assert(sizeof(FTagContainerAggregator) == 0x000088, "Wrong size on FTagContainerAggregator");
-static_assert(offsetof(FTagContainerAggregator, CapturedActorTags) == 0x000000, "Member 'FTagContainerAggregator::CapturedActorTags' has a wrong offset!");
-static_assert(offsetof(FTagContainerAggregator, CapturedSpecTags) == 0x000020, "Member 'FTagContainerAggregator::CapturedSpecTags' has a wrong offset!");
-static_assert(offsetof(FTagContainerAggregator, ScopedTags) == 0x000040, "Member 'FTagContainerAggregator::ScopedTags' has a wrong offset!");
+DUMPER7_ASSERTS_FTagContainerAggregator;
 
 // ScriptStruct GameplayAbilities.ScalableFloat
 // 0x0028 (0x0028 - 0x0000)
@@ -481,10 +458,7 @@ public:
 	struct FCurveTableRowHandle                   Curve;                                             // 0x0008(0x0018)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FScalableFloat) == 0x000008, "Wrong alignment on FScalableFloat");
-static_assert(sizeof(FScalableFloat) == 0x000028, "Wrong size on FScalableFloat");
-static_assert(offsetof(FScalableFloat, Value) == 0x000000, "Member 'FScalableFloat::Value' has a wrong offset!");
-static_assert(offsetof(FScalableFloat, Curve) == 0x000008, "Member 'FScalableFloat::Curve' has a wrong offset!");
+DUMPER7_ASSERTS_FScalableFloat;
 
 // ScriptStruct GameplayAbilities.GameplayAbilitySpecHandle
 // 0x0004 (0x0004 - 0x0000)
@@ -493,9 +467,7 @@ struct FGameplayAbilitySpecHandle final
 public:
 	int32                                         Handle;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FGameplayAbilitySpecHandle) == 0x000004, "Wrong alignment on FGameplayAbilitySpecHandle");
-static_assert(sizeof(FGameplayAbilitySpecHandle) == 0x000004, "Wrong size on FGameplayAbilitySpecHandle");
-static_assert(offsetof(FGameplayAbilitySpecHandle, Handle) == 0x000000, "Member 'FGameplayAbilitySpecHandle::Handle' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilitySpecHandle;
 
 // ScriptStruct GameplayAbilities.GameplayAbilitySpecDef
 // 0x0098 (0x0098 - 0x0000)
@@ -512,14 +484,7 @@ public:
 	struct FGameplayAbilitySpecHandle             AssignedHandle;                                    // 0x0090(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAbilitySpecDef) == 0x000008, "Wrong alignment on FGameplayAbilitySpecDef");
-static_assert(sizeof(FGameplayAbilitySpecDef) == 0x000098, "Wrong size on FGameplayAbilitySpecDef");
-static_assert(offsetof(FGameplayAbilitySpecDef, Ability) == 0x000000, "Member 'FGameplayAbilitySpecDef::Ability' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecDef, LevelScalableFloat) == 0x000008, "Member 'FGameplayAbilitySpecDef::LevelScalableFloat' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecDef, InputID) == 0x000030, "Member 'FGameplayAbilitySpecDef::InputID' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecDef, RemovalPolicy) == 0x000034, "Member 'FGameplayAbilitySpecDef::RemovalPolicy' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecDef, SourceObject) == 0x000038, "Member 'FGameplayAbilitySpecDef::SourceObject' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecDef, AssignedHandle) == 0x000090, "Member 'FGameplayAbilitySpecDef::AssignedHandle' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilitySpecDef;
 
 // ScriptStruct GameplayAbilities.ModifierSpec
 // 0x0004 (0x0004 - 0x0000)
@@ -528,9 +493,7 @@ struct FModifierSpec final
 public:
 	float                                         EvaluatedMagnitude;                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FModifierSpec) == 0x000004, "Wrong alignment on FModifierSpec");
-static_assert(sizeof(FModifierSpec) == 0x000004, "Wrong size on FModifierSpec");
-static_assert(offsetof(FModifierSpec, EvaluatedMagnitude) == 0x000000, "Member 'FModifierSpec::EvaluatedMagnitude' has a wrong offset!");
+DUMPER7_ASSERTS_FModifierSpec;
 
 // ScriptStruct GameplayAbilities.GameplayEffectContextHandle
 // 0x0018 (0x0018 - 0x0000)
@@ -539,8 +502,7 @@ struct alignas(0x08) FGameplayEffectContextHandle final
 public:
 	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectContextHandle) == 0x000008, "Wrong alignment on FGameplayEffectContextHandle");
-static_assert(sizeof(FGameplayEffectContextHandle) == 0x000018, "Wrong size on FGameplayEffectContextHandle");
+DUMPER7_ASSERTS_FGameplayEffectContextHandle;
 
 // ScriptStruct GameplayAbilities.GameplayEffectSpec
 // 0x02B0 (0x02B0 - 0x0000)
@@ -576,26 +538,7 @@ public:
 	float                                         Level;                                             // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectSpec) == 0x000008, "Wrong alignment on FGameplayEffectSpec");
-static_assert(sizeof(FGameplayEffectSpec) == 0x0002B0, "Wrong size on FGameplayEffectSpec");
-static_assert(offsetof(FGameplayEffectSpec, FromRemote) == 0x000000, "Member 'FGameplayEffectSpec::FromRemote' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, GameplayEffectServerId) == 0x000008, "Member 'FGameplayEffectSpec::GameplayEffectServerId' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, CurrentSpecTarget) == 0x000010, "Member 'FGameplayEffectSpec::CurrentSpecTarget' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, Def) == 0x000018, "Member 'FGameplayEffectSpec::Def' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, ModifiedAttributes) == 0x000020, "Member 'FGameplayEffectSpec::ModifiedAttributes' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, CapturedRelevantAttributes) == 0x000030, "Member 'FGameplayEffectSpec::CapturedRelevantAttributes' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, Duration) == 0x000068, "Member 'FGameplayEffectSpec::Duration' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, Period) == 0x00006C, "Member 'FGameplayEffectSpec::Period' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, ChanceToApplyToTarget) == 0x000070, "Member 'FGameplayEffectSpec::ChanceToApplyToTarget' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, CapturedSourceTags) == 0x000078, "Member 'FGameplayEffectSpec::CapturedSourceTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, CapturedTargetTags) == 0x000100, "Member 'FGameplayEffectSpec::CapturedTargetTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, DynamicGrantedTags) == 0x000188, "Member 'FGameplayEffectSpec::DynamicGrantedTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, DynamicAssetTags) == 0x0001A8, "Member 'FGameplayEffectSpec::DynamicAssetTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, Modifiers) == 0x0001C8, "Member 'FGameplayEffectSpec::Modifiers' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, StackCount) == 0x0001D8, "Member 'FGameplayEffectSpec::StackCount' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, GrantedAbilitySpecs) == 0x0001E0, "Member 'FGameplayEffectSpec::GrantedAbilitySpecs' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, EffectContext) == 0x000290, "Member 'FGameplayEffectSpec::EffectContext' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpec, Level) == 0x0002A8, "Member 'FGameplayEffectSpec::Level' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectSpec;
 
 // ScriptStruct GameplayAbilities.PredictionKey
 // 0x0010 (0x0010 - 0x0000)
@@ -609,13 +552,7 @@ public:
 	bool                                          bIsServerInitiated;                                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPredictionKey) == 0x000008, "Wrong alignment on FPredictionKey");
-static_assert(sizeof(FPredictionKey) == 0x000010, "Wrong size on FPredictionKey");
-static_assert(offsetof(FPredictionKey, PredictiveConnection) == 0x000000, "Member 'FPredictionKey::PredictiveConnection' has a wrong offset!");
-static_assert(offsetof(FPredictionKey, Current) == 0x000008, "Member 'FPredictionKey::Current' has a wrong offset!");
-static_assert(offsetof(FPredictionKey, Base) == 0x00000A, "Member 'FPredictionKey::Base' has a wrong offset!");
-static_assert(offsetof(FPredictionKey, bIsStale) == 0x00000C, "Member 'FPredictionKey::bIsStale' has a wrong offset!");
-static_assert(offsetof(FPredictionKey, bIsServerInitiated) == 0x00000D, "Member 'FPredictionKey::bIsServerInitiated' has a wrong offset!");
+DUMPER7_ASSERTS_FPredictionKey;
 
 // ScriptStruct GameplayAbilities.ActiveGameplayEffect
 // 0x0374 (0x0380 - 0x000C)
@@ -632,15 +569,53 @@ public:
 	bool                                          bIsInhibited;                                      // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2E9[0x97];                                     // 0x02E9(0x0097)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FActiveGameplayEffect) == 0x000008, "Wrong alignment on FActiveGameplayEffect");
-static_assert(sizeof(FActiveGameplayEffect) == 0x000380, "Wrong size on FActiveGameplayEffect");
-static_assert(offsetof(FActiveGameplayEffect, Spec) == 0x000018, "Member 'FActiveGameplayEffect::Spec' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, PredictionKey) == 0x0002C8, "Member 'FActiveGameplayEffect::PredictionKey' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, StartServerWorldTime) == 0x0002D8, "Member 'FActiveGameplayEffect::StartServerWorldTime' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, CachedStartServerWorldTime) == 0x0002DC, "Member 'FActiveGameplayEffect::CachedStartServerWorldTime' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, StartWorldTime) == 0x0002E0, "Member 'FActiveGameplayEffect::StartWorldTime' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, PauseStartTime) == 0x0002E4, "Member 'FActiveGameplayEffect::PauseStartTime' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffect, bIsInhibited) == 0x0002E8, "Member 'FActiveGameplayEffect::bIsInhibited' has a wrong offset!");
+DUMPER7_ASSERTS_FActiveGameplayEffect;
+
+// ScriptStruct GameplayAbilities.PreallocationInfo
+// 0x0068 (0x0068 - 0x0000)
+struct FPreallocationInfo final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSubclassOf<class AGameplayCueNotify_Actor>> ClassesNeedingPreallocation;                 // 0x0050(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPreallocationInfo;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityActivationInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FGameplayAbilityActivationInfo final
+{
+public:
+	EGameplayAbilityActivationMode                ActivationMode;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bCanBeEndedByOtherInstance : 1;                    // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         PredictionKeyWhenActivated;                        // 0x0008(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FGameplayAbilityActivationInfo;
+
+// ScriptStruct GameplayAbilities.GameplayTagBlueprintPropertyMapping
+// 0x0058 (0x0058 - 0x0000)
+struct FGameplayTagBlueprintPropertyMapping final
+{
+public:
+	struct FGameplayTag                           TagToMap;                                          // 0x0000(0x000C)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TFieldPath<class FProperty>                   PropertyToEdit;                                    // 0x0010(0x0020)(Edit, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x0030(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  PropertyGuid;                                      // 0x003C(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0xC];                                       // 0x004C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayTagBlueprintPropertyMapping;
+
+// ScriptStruct GameplayAbilities.GameplayTargetDataFilterHandle
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FGameplayTargetDataFilterHandle final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayTargetDataFilterHandle;
 
 // ScriptStruct GameplayAbilities.GameplayAbilityTargetData
 // 0x0008 (0x0008 - 0x0000)
@@ -649,8 +624,7 @@ struct alignas(0x08) FGameplayAbilityTargetData
 public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAbilityTargetData) == 0x000008, "Wrong alignment on FGameplayAbilityTargetData");
-static_assert(sizeof(FGameplayAbilityTargetData) == 0x000008, "Wrong size on FGameplayAbilityTargetData");
+DUMPER7_ASSERTS_FGameplayAbilityTargetData;
 
 // ScriptStruct GameplayAbilities.GameplayAbilityTargetData_SingleTargetHit
 // 0x0098 (0x00A0 - 0x0008)
@@ -661,93 +635,17 @@ public:
 	bool                                          bHitReplaced;                                      // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAbilityTargetData_SingleTargetHit) == 0x000008, "Wrong alignment on FGameplayAbilityTargetData_SingleTargetHit");
-static_assert(sizeof(FGameplayAbilityTargetData_SingleTargetHit) == 0x0000A0, "Wrong size on FGameplayAbilityTargetData_SingleTargetHit");
-static_assert(offsetof(FGameplayAbilityTargetData_SingleTargetHit, HitResult) == 0x000008, "Member 'FGameplayAbilityTargetData_SingleTargetHit::HitResult' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetData_SingleTargetHit, bHitReplaced) == 0x00009C, "Member 'FGameplayAbilityTargetData_SingleTargetHit::bHitReplaced' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilityTargetData_SingleTargetHit;
 
-// ScriptStruct GameplayAbilities.GameplayAbilityTargetDataHandle
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FGameplayAbilityTargetDataHandle final
+// ScriptStruct GameplayAbilities.SetByCallerFloat
+// 0x0010 (0x0010 - 0x0000)
+struct FSetByCallerFloat final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         DataKey;                                           // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           DataTag;                                           // 0x0004(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayAbilityTargetDataHandle) == 0x000008, "Wrong alignment on FGameplayAbilityTargetDataHandle");
-static_assert(sizeof(FGameplayAbilityTargetDataHandle) == 0x000028, "Wrong size on FGameplayAbilityTargetDataHandle");
-
-// ScriptStruct GameplayAbilities.ServerAbilityRPCBatch
-// 0x0048 (0x0048 - 0x0000)
-struct GameplayAbilities::FServerAbilityRPCBatch final
-{
-public:
-	struct FGameplayAbilitySpecHandle             AbilitySpecHandle;                                 // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0018(0x0028)(NativeAccessSpecifierPublic)
-	bool                                          InputPressed;                                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Ended;                                             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Started;                                           // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GameplayAbilities::FServerAbilityRPCBatch) == 0x000008, "Wrong alignment on GameplayAbilities::FServerAbilityRPCBatch");
-static_assert(sizeof(GameplayAbilities::FServerAbilityRPCBatch) == 0x000048, "Wrong size on GameplayAbilities::FServerAbilityRPCBatch");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, AbilitySpecHandle) == 0x000000, "Member 'GameplayAbilities::FServerAbilityRPCBatch::AbilitySpecHandle' has a wrong offset!");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, PredictionKey) == 0x000008, "Member 'GameplayAbilities::FServerAbilityRPCBatch::PredictionKey' has a wrong offset!");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, TargetData) == 0x000018, "Member 'GameplayAbilities::FServerAbilityRPCBatch::TargetData' has a wrong offset!");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, InputPressed) == 0x000040, "Member 'GameplayAbilities::FServerAbilityRPCBatch::InputPressed' has a wrong offset!");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, Ended) == 0x000041, "Member 'GameplayAbilities::FServerAbilityRPCBatch::Ended' has a wrong offset!");
-static_assert(offsetof(GameplayAbilities::FServerAbilityRPCBatch, Started) == 0x000042, "Member 'GameplayAbilities::FServerAbilityRPCBatch::Started' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityTargetingLocationInfo
-// 0x0080 (0x0080 - 0x0000)
-struct FGameplayAbilityTargetingLocationInfo final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	EGameplayAbilityTargetingLocationType         LocationType;                                      // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LiteralTransform;                                  // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	class AActor*                                 SourceActor;                                       // 0x0050(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMeshComponent*                         SourceComponent;                                   // 0x0058(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGameplayAbility*                       SourceAbility;                                     // 0x0060(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SourceSocketName;                                  // 0x0068(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayAbilityTargetingLocationInfo) == 0x000010, "Wrong alignment on FGameplayAbilityTargetingLocationInfo");
-static_assert(sizeof(FGameplayAbilityTargetingLocationInfo) == 0x000080, "Wrong size on FGameplayAbilityTargetingLocationInfo");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, LocationType) == 0x000010, "Member 'FGameplayAbilityTargetingLocationInfo::LocationType' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, LiteralTransform) == 0x000020, "Member 'FGameplayAbilityTargetingLocationInfo::LiteralTransform' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, SourceActor) == 0x000050, "Member 'FGameplayAbilityTargetingLocationInfo::SourceActor' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, SourceComponent) == 0x000058, "Member 'FGameplayAbilityTargetingLocationInfo::SourceComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, SourceAbility) == 0x000060, "Member 'FGameplayAbilityTargetingLocationInfo::SourceAbility' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetingLocationInfo, SourceSocketName) == 0x000068, "Member 'FGameplayAbilityTargetingLocationInfo::SourceSocketName' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityTargetData_ActorArray
-// 0x0098 (0x00A0 - 0x0008)
-struct FGameplayAbilityTargetData_ActorArray final : public FGameplayAbilityTargetData
-{
-public:
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetingLocationInfo  SourceLocation;                                    // 0x0010(0x0080)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<TWeakObjectPtr<class AActor>>          TargetActorArray;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayAbilityTargetData_ActorArray) == 0x000010, "Wrong alignment on FGameplayAbilityTargetData_ActorArray");
-static_assert(sizeof(FGameplayAbilityTargetData_ActorArray) == 0x0000A0, "Wrong size on FGameplayAbilityTargetData_ActorArray");
-static_assert(offsetof(FGameplayAbilityTargetData_ActorArray, SourceLocation) == 0x000010, "Member 'FGameplayAbilityTargetData_ActorArray::SourceLocation' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetData_ActorArray, TargetActorArray) == 0x000090, "Member 'FGameplayAbilityTargetData_ActorArray::TargetActorArray' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayCueTranslationLink
-// 0x0018 (0x0018 - 0x0000)
-struct FGameplayCueTranslationLink final
-{
-public:
-	class UGameplayCueTranslator*                 RulesCDO;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayCueTranslationLink) == 0x000008, "Wrong alignment on FGameplayCueTranslationLink");
-static_assert(sizeof(FGameplayCueTranslationLink) == 0x000018, "Wrong size on FGameplayCueTranslationLink");
-static_assert(offsetof(FGameplayCueTranslationLink, RulesCDO) == 0x000000, "Member 'FGameplayCueTranslationLink::RulesCDO' has a wrong offset!");
+DUMPER7_ASSERTS_FSetByCallerFloat;
 
 // ScriptStruct GameplayAbilities.AttributeBasedFloat
 // 0x0130 (0x0130 - 0x0000)
@@ -765,157 +663,34 @@ public:
 	struct FGameplayTagContainer                  SourceTagFilter;                                   // 0x00F0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  TargetTagFilter;                                   // 0x0110(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAttributeBasedFloat) == 0x000008, "Wrong alignment on FAttributeBasedFloat");
-static_assert(sizeof(FAttributeBasedFloat) == 0x000130, "Wrong size on FAttributeBasedFloat");
-static_assert(offsetof(FAttributeBasedFloat, Coefficient) == 0x000000, "Member 'FAttributeBasedFloat::Coefficient' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, PreMultiplyAdditiveValue) == 0x000028, "Member 'FAttributeBasedFloat::PreMultiplyAdditiveValue' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, PostMultiplyAdditiveValue) == 0x000050, "Member 'FAttributeBasedFloat::PostMultiplyAdditiveValue' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, BackingAttribute) == 0x000078, "Member 'FAttributeBasedFloat::BackingAttribute' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, AttributeCurve) == 0x0000D0, "Member 'FAttributeBasedFloat::AttributeCurve' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, AttributeCalculationType) == 0x0000E8, "Member 'FAttributeBasedFloat::AttributeCalculationType' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, FinalChannel) == 0x0000E9, "Member 'FAttributeBasedFloat::FinalChannel' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, SourceTagFilter) == 0x0000F0, "Member 'FAttributeBasedFloat::SourceTagFilter' has a wrong offset!");
-static_assert(offsetof(FAttributeBasedFloat, TargetTagFilter) == 0x000110, "Member 'FAttributeBasedFloat::TargetTagFilter' has a wrong offset!");
+DUMPER7_ASSERTS_FAttributeBasedFloat;
 
-// ScriptStruct GameplayAbilities.GameplayCueNotifyData
-// 0x0040 (0x0040 - 0x0000)
-struct FGameplayCueNotifyData final
+// ScriptStruct GameplayAbilities.CustomCalculationBasedFloat
+// 0x0098 (0x0098 - 0x0000)
+struct FCustomCalculationBasedFloat final
 {
 public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x000C)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftObjectPath                        GameplayCueNotifyObj;                              // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 LoadedGameplayCueClass;                            // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UGameplayModMagnitudeCalculation> CalculationClassMagnitude;                   // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FScalableFloat                         Coefficient;                                       // 0x0008(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FScalableFloat                         PreMultiplyAdditiveValue;                          // 0x0030(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FScalableFloat                         PostMultiplyAdditiveValue;                         // 0x0058(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FCurveTableRowHandle                   FinalLookupCurve;                                  // 0x0080(0x0018)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayCueNotifyData) == 0x000008, "Wrong alignment on FGameplayCueNotifyData");
-static_assert(sizeof(FGameplayCueNotifyData) == 0x000040, "Wrong size on FGameplayCueNotifyData");
-static_assert(offsetof(FGameplayCueNotifyData, GameplayCueTag) == 0x000000, "Member 'FGameplayCueNotifyData::GameplayCueTag' has a wrong offset!");
-static_assert(offsetof(FGameplayCueNotifyData, GameplayCueNotifyObj) == 0x000010, "Member 'FGameplayCueNotifyData::GameplayCueNotifyObj' has a wrong offset!");
-static_assert(offsetof(FGameplayCueNotifyData, LoadedGameplayCueClass) == 0x000030, "Member 'FGameplayCueNotifyData::LoadedGameplayCueClass' has a wrong offset!");
+DUMPER7_ASSERTS_FCustomCalculationBasedFloat;
 
-// ScriptStruct GameplayAbilities.InheritedTagContainer
-// 0x0060 (0x0060 - 0x0000)
-struct FInheritedTagContainer final
+// ScriptStruct GameplayAbilities.GameplayEffectModifierMagnitude
+// 0x0208 (0x0208 - 0x0000)
+struct FGameplayEffectModifierMagnitude final
 {
 public:
-	struct FGameplayTagContainer                  CombinedTags;                                      // 0x0000(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  Added;                                             // 0x0020(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  Removed;                                           // 0x0040(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EGameplayEffectMagnitudeCalculation           MagnitudeCalculationType;                          // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         ScalableFloatMagnitude;                            // 0x0008(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FAttributeBasedFloat                   AttributeBasedMagnitude;                           // 0x0030(0x0130)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FCustomCalculationBasedFloat           CustomMagnitude;                                   // 0x0160(0x0098)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FSetByCallerFloat                      SetByCallerMagnitude;                              // 0x01F8(0x0010)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FInheritedTagContainer) == 0x000008, "Wrong alignment on FInheritedTagContainer");
-static_assert(sizeof(FInheritedTagContainer) == 0x000060, "Wrong size on FInheritedTagContainer");
-static_assert(offsetof(FInheritedTagContainer, CombinedTags) == 0x000000, "Member 'FInheritedTagContainer::CombinedTags' has a wrong offset!");
-static_assert(offsetof(FInheritedTagContainer, Added) == 0x000020, "Member 'FInheritedTagContainer::Added' has a wrong offset!");
-static_assert(offsetof(FInheritedTagContainer, Removed) == 0x000040, "Member 'FInheritedTagContainer::Removed' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayCueTranslatorNodeIndex
-// 0x0004 (0x0004 - 0x0000)
-struct FGameplayCueTranslatorNodeIndex final
-{
-public:
-	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayCueTranslatorNodeIndex) == 0x000004, "Wrong alignment on FGameplayCueTranslatorNodeIndex");
-static_assert(sizeof(FGameplayCueTranslatorNodeIndex) == 0x000004, "Wrong size on FGameplayCueTranslatorNodeIndex");
-static_assert(offsetof(FGameplayCueTranslatorNodeIndex, Index) == 0x000000, "Member 'FGameplayCueTranslatorNodeIndex::Index' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.ReplicatedPredictionKeyItem
-// 0x0014 (0x0020 - 0x000C)
-struct FReplicatedPredictionKeyItem final : public FFastArraySerializerItem
-{
-public:
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0010(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReplicatedPredictionKeyItem) == 0x000008, "Wrong alignment on FReplicatedPredictionKeyItem");
-static_assert(sizeof(FReplicatedPredictionKeyItem) == 0x000020, "Wrong size on FReplicatedPredictionKeyItem");
-static_assert(offsetof(FReplicatedPredictionKeyItem, PredictionKey) == 0x000010, "Member 'FReplicatedPredictionKeyItem::PredictionKey' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.ReplicatedPredictionKeyMap
-// 0x0010 (0x0118 - 0x0108)
-struct FReplicatedPredictionKeyMap final : public FFastArraySerializer
-{
-public:
-	TArray<struct FReplicatedPredictionKeyItem>   PredictionKeys;                                    // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FReplicatedPredictionKeyMap) == 0x000008, "Wrong alignment on FReplicatedPredictionKeyMap");
-static_assert(sizeof(FReplicatedPredictionKeyMap) == 0x000118, "Wrong size on FReplicatedPredictionKeyMap");
-static_assert(offsetof(FReplicatedPredictionKeyMap, PredictionKeys) == 0x000108, "Member 'FReplicatedPredictionKeyMap::PredictionKeys' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayCueTranslatorNode
-// 0x0080 (0x0080 - 0x0000)
-struct FGameplayCueTranslatorNode final
-{
-public:
-	TArray<struct FGameplayCueTranslationLink>    Links;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGameplayCueTranslatorNodeIndex        CachedIndex;                                       // 0x0010(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           CachedGameplayTag;                                 // 0x0014(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   CachedGameplayTagName;                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x54];                                      // 0x002C(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayCueTranslatorNode) == 0x000008, "Wrong alignment on FGameplayCueTranslatorNode");
-static_assert(sizeof(FGameplayCueTranslatorNode) == 0x000080, "Wrong size on FGameplayCueTranslatorNode");
-static_assert(offsetof(FGameplayCueTranslatorNode, Links) == 0x000000, "Member 'FGameplayCueTranslatorNode::Links' has a wrong offset!");
-static_assert(offsetof(FGameplayCueTranslatorNode, CachedIndex) == 0x000010, "Member 'FGameplayCueTranslatorNode::CachedIndex' has a wrong offset!");
-static_assert(offsetof(FGameplayCueTranslatorNode, CachedGameplayTag) == 0x000014, "Member 'FGameplayCueTranslatorNode::CachedGameplayTag' has a wrong offset!");
-static_assert(offsetof(FGameplayCueTranslatorNode, CachedGameplayTagName) == 0x000020, "Member 'FGameplayCueTranslatorNode::CachedGameplayTagName' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityActivationInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FGameplayAbilityActivationInfo final
-{
-public:
-	EGameplayAbilityActivationMode                ActivationMode;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bCanBeEndedByOtherInstance : 1;                    // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKeyWhenActivated;                        // 0x0008(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FGameplayAbilityActivationInfo) == 0x000008, "Wrong alignment on FGameplayAbilityActivationInfo");
-static_assert(sizeof(FGameplayAbilityActivationInfo) == 0x000018, "Wrong size on FGameplayAbilityActivationInfo");
-static_assert(offsetof(FGameplayAbilityActivationInfo, ActivationMode) == 0x000000, "Member 'FGameplayAbilityActivationInfo::ActivationMode' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActivationInfo, PredictionKeyWhenActivated) == 0x000008, "Member 'FGameplayAbilityActivationInfo::PredictionKeyWhenActivated' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayCueParameters
-// 0x00C0 (0x00C0 - 0x0000)
-struct FGameplayCueParameters final
-{
-public:
-	float                                         NormalizedMagnitude;                               // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RawMagnitude;                                      // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           MatchedTagName;                                    // 0x0020(0x000C)(BlueprintVisible, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           OriginalTag;                                       // 0x002C(0x000C)(BlueprintVisible, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x0038(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0058(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantize10                  Location;                                          // 0x0078(0x000C)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector_NetQuantizeNormal              Normal;                                            // 0x0084(0x000C)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  Instigator;                                        // 0x0090(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class AActor>                  EffectCauser;                                      // 0x0098(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UObject>                 SourceObject;                                      // 0x00A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UPhysicalMaterial>       PhysicalMaterial;                                  // 0x00A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GameplayEffectLevel;                               // 0x00B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AbilityLevel;                                      // 0x00B4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class USceneComponent>         TargetAttachComponent;                             // 0x00B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayCueParameters) == 0x000008, "Wrong alignment on FGameplayCueParameters");
-static_assert(sizeof(FGameplayCueParameters) == 0x0000C0, "Wrong size on FGameplayCueParameters");
-static_assert(offsetof(FGameplayCueParameters, NormalizedMagnitude) == 0x000000, "Member 'FGameplayCueParameters::NormalizedMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, RawMagnitude) == 0x000004, "Member 'FGameplayCueParameters::RawMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, EffectContext) == 0x000008, "Member 'FGameplayCueParameters::EffectContext' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, MatchedTagName) == 0x000020, "Member 'FGameplayCueParameters::MatchedTagName' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, OriginalTag) == 0x00002C, "Member 'FGameplayCueParameters::OriginalTag' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, AggregatedSourceTags) == 0x000038, "Member 'FGameplayCueParameters::AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, AggregatedTargetTags) == 0x000058, "Member 'FGameplayCueParameters::AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, Location) == 0x000078, "Member 'FGameplayCueParameters::Location' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, Normal) == 0x000084, "Member 'FGameplayCueParameters::Normal' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, Instigator) == 0x000090, "Member 'FGameplayCueParameters::Instigator' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, EffectCauser) == 0x000098, "Member 'FGameplayCueParameters::EffectCauser' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, SourceObject) == 0x0000A0, "Member 'FGameplayCueParameters::SourceObject' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, PhysicalMaterial) == 0x0000A8, "Member 'FGameplayCueParameters::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, GameplayEffectLevel) == 0x0000B0, "Member 'FGameplayCueParameters::GameplayEffectLevel' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, AbilityLevel) == 0x0000B4, "Member 'FGameplayCueParameters::AbilityLevel' has a wrong offset!");
-static_assert(offsetof(FGameplayCueParameters, TargetAttachComponent) == 0x0000B8, "Member 'FGameplayCueParameters::TargetAttachComponent' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectModifierMagnitude;
 
 // ScriptStruct GameplayAbilities.ActiveGameplayEffectHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -926,21 +701,26 @@ public:
 	bool                                          bPassedFiltersAndWasExecuted;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FActiveGameplayEffectHandle) == 0x000004, "Wrong alignment on FActiveGameplayEffectHandle");
-static_assert(sizeof(FActiveGameplayEffectHandle) == 0x000008, "Wrong size on FActiveGameplayEffectHandle");
-static_assert(offsetof(FActiveGameplayEffectHandle, Handle) == 0x000000, "Member 'FActiveGameplayEffectHandle::Handle' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffectHandle, bPassedFiltersAndWasExecuted) == 0x000004, "Member 'FActiveGameplayEffectHandle::bPassedFiltersAndWasExecuted' has a wrong offset!");
+DUMPER7_ASSERTS_FActiveGameplayEffectHandle;
 
-// ScriptStruct GameplayAbilities.NetSerializeScriptStructCache
-// 0x0010 (0x0010 - 0x0000)
-struct FNetSerializeScriptStructCache final
+// ScriptStruct GameplayAbilities.ReplicatedPredictionKeyItem
+// 0x0014 (0x0020 - 0x000C)
+struct FReplicatedPredictionKeyItem final : public FFastArraySerializerItem
 {
 public:
-	TArray<class UScriptStruct*>                  ScriptStructs;                                     // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         PredictionKey;                                     // 0x0010(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNetSerializeScriptStructCache) == 0x000008, "Wrong alignment on FNetSerializeScriptStructCache");
-static_assert(sizeof(FNetSerializeScriptStructCache) == 0x000010, "Wrong size on FNetSerializeScriptStructCache");
-static_assert(offsetof(FNetSerializeScriptStructCache, ScriptStructs) == 0x000000, "Member 'FNetSerializeScriptStructCache::ScriptStructs' has a wrong offset!");
+DUMPER7_ASSERTS_FReplicatedPredictionKeyItem;
+
+// ScriptStruct GameplayAbilities.WorldReticleParameters
+// 0x000C (0x000C - 0x0000)
+struct FWorldReticleParameters final
+{
+public:
+	struct FVector                                AOEScale;                                          // 0x0000(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FWorldReticleParameters;
 
 // ScriptStruct GameplayAbilities.GameplayEffectSpecHandle
 // 0x0010 (0x0010 - 0x0000)
@@ -949,8 +729,17 @@ struct alignas(0x08) FGameplayEffectSpecHandle final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectSpecHandle) == 0x000008, "Wrong alignment on FGameplayEffectSpecHandle");
-static_assert(sizeof(FGameplayEffectSpecHandle) == 0x000010, "Wrong size on FGameplayEffectSpecHandle");
+DUMPER7_ASSERTS_FGameplayEffectSpecHandle;
+
+// ScriptStruct GameplayAbilities.GameplayAbilitySpecHandleAndPredictionKey
+// 0x0008 (0x0008 - 0x0000)
+struct FGameplayAbilitySpecHandleAndPredictionKey final
+{
+public:
+	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PredictionKeyAtCreation;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayAbilitySpecHandleAndPredictionKey;
 
 // ScriptStruct GameplayAbilities.GameplayEffectRemovalInfo
 // 0x0020 (0x0020 - 0x0000)
@@ -962,247 +751,7 @@ public:
 	int32                                         StackCount;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayEffectRemovalInfo) == 0x000008, "Wrong alignment on FGameplayEffectRemovalInfo");
-static_assert(sizeof(FGameplayEffectRemovalInfo) == 0x000020, "Wrong size on FGameplayEffectRemovalInfo");
-static_assert(offsetof(FGameplayEffectRemovalInfo, bPrematureRemoval) == 0x000000, "Member 'FGameplayEffectRemovalInfo::bPrematureRemoval' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectRemovalInfo, StackCount) == 0x000004, "Member 'FGameplayEffectRemovalInfo::StackCount' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectRemovalInfo, EffectContext) == 0x000008, "Member 'FGameplayEffectRemovalInfo::EffectContext' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayEventData
-// 0x00B8 (0x00B8 - 0x0000)
-struct FGameplayEventData final
-{
-public:
-	struct FGameplayTag                           EventTag;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Instigator;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Target;                                            // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                OptionalObject;                                    // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                OptionalObject2;                                   // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           ContextHandle;                                     // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  InstigatorTags;                                    // 0x0048(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  TargetTags;                                        // 0x0068(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         EventMagnitude;                                    // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0090(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayEventData) == 0x000008, "Wrong alignment on FGameplayEventData");
-static_assert(sizeof(FGameplayEventData) == 0x0000B8, "Wrong size on FGameplayEventData");
-static_assert(offsetof(FGameplayEventData, EventTag) == 0x000000, "Member 'FGameplayEventData::EventTag' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, Instigator) == 0x000010, "Member 'FGameplayEventData::Instigator' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, Target) == 0x000018, "Member 'FGameplayEventData::Target' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, OptionalObject) == 0x000020, "Member 'FGameplayEventData::OptionalObject' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, OptionalObject2) == 0x000028, "Member 'FGameplayEventData::OptionalObject2' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, ContextHandle) == 0x000030, "Member 'FGameplayEventData::ContextHandle' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, InstigatorTags) == 0x000048, "Member 'FGameplayEventData::InstigatorTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, TargetTags) == 0x000068, "Member 'FGameplayEventData::TargetTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, EventMagnitude) == 0x000088, "Member 'FGameplayEventData::EventMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayEventData, TargetData) == 0x000090, "Member 'FGameplayEventData::TargetData' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayEffectQuery
-// 0x0168 (0x0168 - 0x0000)
-struct FGameplayEffectQuery final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FActiveGameplayEffect& Effect, bool* bMatches)> CustomMatchDelegate_BP; // 0x0010(0x0028)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      OwningTagQuery;                                    // 0x0038(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      EffectTagQuery;                                    // 0x0080(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayTagQuery                      SourceTagQuery;                                    // 0x00C8(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     ModifyingAttribute;                                // 0x0110(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                EffectSource;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UGameplayEffect>            EffectDefinition;                                  // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158[0x10];                                     // 0x0158(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayEffectQuery) == 0x000008, "Wrong alignment on FGameplayEffectQuery");
-static_assert(sizeof(FGameplayEffectQuery) == 0x000168, "Wrong size on FGameplayEffectQuery");
-static_assert(offsetof(FGameplayEffectQuery, CustomMatchDelegate_BP) == 0x000010, "Member 'FGameplayEffectQuery::CustomMatchDelegate_BP' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, OwningTagQuery) == 0x000038, "Member 'FGameplayEffectQuery::OwningTagQuery' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, EffectTagQuery) == 0x000080, "Member 'FGameplayEffectQuery::EffectTagQuery' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, SourceTagQuery) == 0x0000C8, "Member 'FGameplayEffectQuery::SourceTagQuery' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, ModifyingAttribute) == 0x000110, "Member 'FGameplayEffectQuery::ModifyingAttribute' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, EffectSource) == 0x000148, "Member 'FGameplayEffectQuery::EffectSource' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectQuery, EffectDefinition) == 0x000150, "Member 'FGameplayEffectQuery::EffectDefinition' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayEffectSpecForRPC
-// 0x0078 (0x0078 - 0x0000)
-struct FGameplayEffectSpecForRPC final
-{
-public:
-	class UGameplayEffect*                        Def;                                               // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayEffectModifiedAttribute> ModifiedAttributes;                              // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0018(0x0018)(NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x0030(0x0020)(NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0050(0x0020)(NativeAccessSpecifierPublic)
-	float                                         Level;                                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AbilityLevel;                                      // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayEffectSpecForRPC) == 0x000008, "Wrong alignment on FGameplayEffectSpecForRPC");
-static_assert(sizeof(FGameplayEffectSpecForRPC) == 0x000078, "Wrong size on FGameplayEffectSpecForRPC");
-static_assert(offsetof(FGameplayEffectSpecForRPC, Def) == 0x000000, "Member 'FGameplayEffectSpecForRPC::Def' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, ModifiedAttributes) == 0x000008, "Member 'FGameplayEffectSpecForRPC::ModifiedAttributes' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, EffectContext) == 0x000018, "Member 'FGameplayEffectSpecForRPC::EffectContext' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, AggregatedSourceTags) == 0x000030, "Member 'FGameplayEffectSpecForRPC::AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, AggregatedTargetTags) == 0x000050, "Member 'FGameplayEffectSpecForRPC::AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, Level) == 0x000070, "Member 'FGameplayEffectSpecForRPC::Level' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectSpecForRPC, AbilityLevel) == 0x000074, "Member 'FGameplayEffectSpecForRPC::AbilityLevel' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.MinimalReplicationTagCountMap
-// 0x0060 (0x0060 - 0x0000)
-struct FMinimalReplicationTagCountMap final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                Owner;                                             // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMinimalReplicationTagCountMap) == 0x000008, "Wrong alignment on FMinimalReplicationTagCountMap");
-static_assert(sizeof(FMinimalReplicationTagCountMap) == 0x000060, "Wrong size on FMinimalReplicationTagCountMap");
-static_assert(offsetof(FMinimalReplicationTagCountMap, Owner) == 0x000050, "Member 'FMinimalReplicationTagCountMap::Owner' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.AttributeMetaData
-// 0x0028 (0x0030 - 0x0008)
-struct FAttributeMetaData final : public FTableRowBase
-{
-public:
-	float                                         BaseValue;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinValue;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxValue;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DerivedAttributeInfo;                              // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanStack;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAttributeMetaData) == 0x000008, "Wrong alignment on FAttributeMetaData");
-static_assert(sizeof(FAttributeMetaData) == 0x000030, "Wrong size on FAttributeMetaData");
-static_assert(offsetof(FAttributeMetaData, BaseValue) == 0x000008, "Member 'FAttributeMetaData::BaseValue' has a wrong offset!");
-static_assert(offsetof(FAttributeMetaData, MinValue) == 0x00000C, "Member 'FAttributeMetaData::MinValue' has a wrong offset!");
-static_assert(offsetof(FAttributeMetaData, MaxValue) == 0x000010, "Member 'FAttributeMetaData::MaxValue' has a wrong offset!");
-static_assert(offsetof(FAttributeMetaData, DerivedAttributeInfo) == 0x000018, "Member 'FAttributeMetaData::DerivedAttributeInfo' has a wrong offset!");
-static_assert(offsetof(FAttributeMetaData, bCanStack) == 0x000028, "Member 'FAttributeMetaData::bCanStack' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.ActiveGameplayCue
-// 0x00E4 (0x00F0 - 0x000C)
-struct FActiveGameplayCue final : public FFastArraySerializerItem
-{
-public:
-	struct FGameplayTag                           GameplayCueTag;                                    // 0x000C(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPredictionKey                         PredictionKey;                                     // 0x0018(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0028(0x00C0)(ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bPredictivelyRemoved;                              // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FActiveGameplayCue) == 0x000008, "Wrong alignment on FActiveGameplayCue");
-static_assert(sizeof(FActiveGameplayCue) == 0x0000F0, "Wrong size on FActiveGameplayCue");
-static_assert(offsetof(FActiveGameplayCue, GameplayCueTag) == 0x00000C, "Member 'FActiveGameplayCue::GameplayCueTag' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayCue, PredictionKey) == 0x000018, "Member 'FActiveGameplayCue::PredictionKey' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayCue, Parameters) == 0x000028, "Member 'FActiveGameplayCue::Parameters' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayCue, bPredictivelyRemoved) == 0x0000E8, "Member 'FActiveGameplayCue::bPredictivelyRemoved' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.ActiveGameplayCueContainer
-// 0x0020 (0x0128 - 0x0108)
-struct FActiveGameplayCueContainer final : public FFastArraySerializer
-{
-public:
-	TArray<struct FActiveGameplayCue>             GameplayCues;                                      // 0x0108(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                Owner;                                             // 0x0120(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FActiveGameplayCueContainer) == 0x000008, "Wrong alignment on FActiveGameplayCueContainer");
-static_assert(sizeof(FActiveGameplayCueContainer) == 0x000128, "Wrong size on FActiveGameplayCueContainer");
-static_assert(offsetof(FActiveGameplayCueContainer, GameplayCues) == 0x000108, "Member 'FActiveGameplayCueContainer::GameplayCues' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayCueContainer, Owner) == 0x000120, "Member 'FActiveGameplayCueContainer::Owner' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityBindInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FGameplayAbilityBindInfo final
-{
-public:
-	EGameplayAbilityInputBinds                    Command;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UGameplayAbility>           GameplayAbilityClass;                              // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayAbilityBindInfo) == 0x000008, "Wrong alignment on FGameplayAbilityBindInfo");
-static_assert(sizeof(FGameplayAbilityBindInfo) == 0x000010, "Wrong size on FGameplayAbilityBindInfo");
-static_assert(offsetof(FGameplayAbilityBindInfo, Command) == 0x000000, "Member 'FGameplayAbilityBindInfo::Command' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityBindInfo, GameplayAbilityClass) == 0x000008, "Member 'FGameplayAbilityBindInfo::GameplayAbilityClass' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.MinimalGameplayCueReplicationProxy
-// 0x0240 (0x0240 - 0x0000)
-struct alignas(0x10) FMinimalGameplayCueReplicationProxy final
-{
-public:
-	uint8                                         Pad_0[0x230];                                      // 0x0000(0x0230)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                Owner;                                             // 0x0230(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMinimalGameplayCueReplicationProxy) == 0x000010, "Wrong alignment on FMinimalGameplayCueReplicationProxy");
-static_assert(sizeof(FMinimalGameplayCueReplicationProxy) == 0x000240, "Wrong size on FMinimalGameplayCueReplicationProxy");
-static_assert(offsetof(FMinimalGameplayCueReplicationProxy, Owner) == 0x000230, "Member 'FMinimalGameplayCueReplicationProxy::Owner' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.ActiveGameplayEffectsContainer
-// 0x03A8 (0x04B0 - 0x0108)
-struct FActiveGameplayEffectsContainer final : public FFastArraySerializer
-{
-public:
-	uint8                                         Pad_108[0x58];                                     // 0x0108(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FActiveGameplayEffect>          GameplayEffects_Internal;                          // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_170[0x318];                                    // 0x0170(0x0318)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UGameplayEffect*>                ApplicationImmunityQueryEffects;                   // 0x0488(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_498[0x18];                                     // 0x0498(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FActiveGameplayEffectsContainer) == 0x000008, "Wrong alignment on FActiveGameplayEffectsContainer");
-static_assert(sizeof(FActiveGameplayEffectsContainer) == 0x0004B0, "Wrong size on FActiveGameplayEffectsContainer");
-static_assert(offsetof(FActiveGameplayEffectsContainer, GameplayEffects_Internal) == 0x000160, "Member 'FActiveGameplayEffectsContainer::GameplayEffects_Internal' has a wrong offset!");
-static_assert(offsetof(FActiveGameplayEffectsContainer, ApplicationImmunityQueryEffects) == 0x000488, "Member 'FActiveGameplayEffectsContainer::ApplicationImmunityQueryEffects' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityLocalAnimMontage
-// 0x0028 (0x0028 - 0x0000)
-struct FGameplayAbilityLocalAnimMontage final
-{
-public:
-	class UAnimMontage*                           AnimMontage;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          PlayBit;                                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0010(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGameplayAbility*                       AnimatingAbility;                                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayAbilityLocalAnimMontage) == 0x000008, "Wrong alignment on FGameplayAbilityLocalAnimMontage");
-static_assert(sizeof(FGameplayAbilityLocalAnimMontage) == 0x000028, "Wrong size on FGameplayAbilityLocalAnimMontage");
-static_assert(offsetof(FGameplayAbilityLocalAnimMontage, AnimMontage) == 0x000000, "Member 'FGameplayAbilityLocalAnimMontage::AnimMontage' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityLocalAnimMontage, PlayBit) == 0x000008, "Member 'FGameplayAbilityLocalAnimMontage::PlayBit' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityLocalAnimMontage, PredictionKey) == 0x000010, "Member 'FGameplayAbilityLocalAnimMontage::PredictionKey' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityLocalAnimMontage, AnimatingAbility) == 0x000020, "Member 'FGameplayAbilityLocalAnimMontage::AnimatingAbility' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilityRepAnimMontage
-// 0x0030 (0x0030 - 0x0000)
-struct FGameplayAbilityRepAnimMontage final
-{
-public:
-	class UAnimMontage*                           AnimMontage;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayRate;                                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Position;                                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         NextSectionID;                                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bRepPosition : 1;                                  // 0x0015(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         IsStopped : 1;                                     // 0x0015(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         ForcePlayBit : 1;                                  // 0x0015(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         SkipPositionCorrection : 1;                        // 0x0015(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSkipPlayRate : 1;                                 // 0x0015(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPredictionKey                         PredictionKey;                                     // 0x0018(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         SectionIdToPlay;                                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayAbilityRepAnimMontage) == 0x000008, "Wrong alignment on FGameplayAbilityRepAnimMontage");
-static_assert(sizeof(FGameplayAbilityRepAnimMontage) == 0x000030, "Wrong size on FGameplayAbilityRepAnimMontage");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, AnimMontage) == 0x000000, "Member 'FGameplayAbilityRepAnimMontage::AnimMontage' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, PlayRate) == 0x000008, "Member 'FGameplayAbilityRepAnimMontage::PlayRate' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, Position) == 0x00000C, "Member 'FGameplayAbilityRepAnimMontage::Position' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, BlendTime) == 0x000010, "Member 'FGameplayAbilityRepAnimMontage::BlendTime' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, NextSectionID) == 0x000014, "Member 'FGameplayAbilityRepAnimMontage::NextSectionID' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, PredictionKey) == 0x000018, "Member 'FGameplayAbilityRepAnimMontage::PredictionKey' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityRepAnimMontage, SectionIdToPlay) == 0x000028, "Member 'FGameplayAbilityRepAnimMontage::SectionIdToPlay' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectRemovalInfo;
 
 // ScriptStruct GameplayAbilities.GameplayAbilitySpec
 // 0x00D4 (0x00E0 - 0x000C)
@@ -1227,19 +776,125 @@ public:
 	struct FActiveGameplayEffectHandle            GameplayEffectHandle;                              // 0x0088(0x0008)(RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_90[0x50];                                      // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAbilitySpec) == 0x000008, "Wrong alignment on FGameplayAbilitySpec");
-static_assert(sizeof(FGameplayAbilitySpec) == 0x0000E0, "Wrong size on FGameplayAbilitySpec");
-static_assert(offsetof(FGameplayAbilitySpec, Handle) == 0x00000C, "Member 'FGameplayAbilitySpec::Handle' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, Ability) == 0x000010, "Member 'FGameplayAbilitySpec::Ability' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, Level) == 0x000018, "Member 'FGameplayAbilitySpec::Level' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, InputID) == 0x00001C, "Member 'FGameplayAbilitySpec::InputID' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, SourceObject) == 0x000020, "Member 'FGameplayAbilitySpec::SourceObject' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, ActiveCount) == 0x000028, "Member 'FGameplayAbilitySpec::ActiveCount' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, ActivationInfo) == 0x000030, "Member 'FGameplayAbilitySpec::ActivationInfo' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, DynamicAbilityTags) == 0x000048, "Member 'FGameplayAbilitySpec::DynamicAbilityTags' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, NonReplicatedInstances) == 0x000068, "Member 'FGameplayAbilitySpec::NonReplicatedInstances' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, ReplicatedInstances) == 0x000078, "Member 'FGameplayAbilitySpec::ReplicatedInstances' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpec, GameplayEffectHandle) == 0x000088, "Member 'FGameplayAbilitySpec::GameplayEffectHandle' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilitySpec;
+
+// ScriptStruct GameplayAbilities.GameplayCueTranslationLink
+// 0x0018 (0x0018 - 0x0000)
+struct FGameplayCueTranslationLink final
+{
+public:
+	class UGameplayCueTranslator*                 RulesCDO;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayCueTranslationLink;
+
+// ScriptStruct GameplayAbilities.GameplayCueTranslatorNodeIndex
+// 0x0004 (0x0004 - 0x0000)
+struct FGameplayCueTranslatorNodeIndex final
+{
+public:
+	int32                                         Index;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayCueTranslatorNodeIndex;
+
+// ScriptStruct GameplayAbilities.GameplayCueTranslatorNode
+// 0x0080 (0x0080 - 0x0000)
+struct FGameplayCueTranslatorNode final
+{
+public:
+	TArray<struct FGameplayCueTranslationLink>    Links;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGameplayCueTranslatorNodeIndex        CachedIndex;                                       // 0x0010(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           CachedGameplayTag;                                 // 0x0014(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   CachedGameplayTagName;                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x54];                                      // 0x002C(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayCueTranslatorNode;
+
+// ScriptStruct GameplayAbilities.GameplayCueTranslationManager
+// 0x0080 (0x0080 - 0x0000)
+struct FGameplayCueTranslationManager final
+{
+public:
+	TArray<struct FGameplayCueTranslatorNode>     TranslationLUT;                                    // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FGameplayCueTranslatorNodeIndex> TranslationNameToIndexMap;             // 0x0010(0x0050)(NativeAccessSpecifierPrivate)
+	class UGameplayTagsManager*                   TagManager;                                        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayCueTranslationManager;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityTargetDataHandle
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FGameplayAbilityTargetDataHandle final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayAbilityTargetDataHandle;
+
+// ScriptStruct GameplayAbilities.GameplayEventData
+// 0x00B8 (0x00B8 - 0x0000)
+struct FGameplayEventData final
+{
+public:
+	struct FGameplayTag                           EventTag;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Instigator;                                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Target;                                            // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                OptionalObject;                                    // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                OptionalObject2;                                   // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           ContextHandle;                                     // 0x0030(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  InstigatorTags;                                    // 0x0048(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  TargetTags;                                        // 0x0068(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         EventMagnitude;                                    // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0090(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayEventData;
+
+// ScriptStruct GameplayAbilities.GameplayModifierEvaluatedData
+// 0x0050 (0x0050 - 0x0000)
+struct FGameplayModifierEvaluatedData final
+{
+public:
+	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0038)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGameplayModOp                                ModifierOp;                                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Magnitude;                                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FActiveGameplayEffectHandle            Handle;                                            // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsValid;                                           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayModifierEvaluatedData;
+
+// ScriptStruct GameplayAbilities.GameplayEffectCustomExecutionOutput
+// 0x0018 (0x0018 - 0x0000)
+struct FGameplayEffectCustomExecutionOutput final
+{
+public:
+	TArray<struct FGameplayModifierEvaluatedData> OutputModifiers;                                   // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         bTriggerConditionalGameplayEffects : 1;            // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bHandledStackCountManually : 1;                    // 0x0010(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bHandledGameplayCuesManually : 1;                  // 0x0010(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayEffectCustomExecutionOutput;
+
+// ScriptStruct GameplayAbilities.GameplayEffectQuery
+// 0x0168 (0x0168 - 0x0000)
+struct FGameplayEffectQuery final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FActiveGameplayEffect& Effect, bool* bMatches)> CustomMatchDelegate_BP; // 0x0010(0x0028)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      OwningTagQuery;                                    // 0x0038(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      EffectTagQuery;                                    // 0x0080(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTagQuery                      SourceTagQuery;                                    // 0x00C8(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     ModifyingAttribute;                                // 0x0110(0x0038)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                EffectSource;                                      // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UGameplayEffect>            EffectDefinition;                                  // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x10];                                     // 0x0158(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayEffectQuery;
 
 // ScriptStruct GameplayAbilities.GameplayAbilitySpecContainer
 // 0x0018 (0x0120 - 0x0108)
@@ -1249,10 +904,204 @@ public:
 	TArray<struct FGameplayAbilitySpec>           Items;                                             // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	class UAbilitySystemComponent*                Owner;                                             // 0x0118(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayAbilitySpecContainer) == 0x000008, "Wrong alignment on FGameplayAbilitySpecContainer");
-static_assert(sizeof(FGameplayAbilitySpecContainer) == 0x000120, "Wrong size on FGameplayAbilitySpecContainer");
-static_assert(offsetof(FGameplayAbilitySpecContainer, Items) == 0x000108, "Member 'FGameplayAbilitySpecContainer::Items' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecContainer, Owner) == 0x000118, "Member 'FGameplayAbilitySpecContainer::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilitySpecContainer;
+
+// ScriptStruct GameplayAbilities.GameplayCueParameters
+// 0x00C0 (0x00C0 - 0x0000)
+struct FGameplayCueParameters final
+{
+public:
+	float                                         NormalizedMagnitude;                               // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RawMagnitude;                                      // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0008(0x0018)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           MatchedTagName;                                    // 0x0020(0x000C)(BlueprintVisible, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           OriginalTag;                                       // 0x002C(0x000C)(BlueprintVisible, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x0038(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0058(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantize10                  Location;                                          // 0x0078(0x000C)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector_NetQuantizeNormal              Normal;                                            // 0x0084(0x000C)(BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  Instigator;                                        // 0x0090(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class AActor>                  EffectCauser;                                      // 0x0098(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UObject>                 SourceObject;                                      // 0x00A0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UPhysicalMaterial>       PhysicalMaterial;                                  // 0x00A8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GameplayEffectLevel;                               // 0x00B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AbilityLevel;                                      // 0x00B4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class USceneComponent>         TargetAttachComponent;                             // 0x00B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayCueParameters;
+
+// ScriptStruct GameplayAbilities.GameplayEffectSpecForRPC
+// 0x0078 (0x0078 - 0x0000)
+struct FGameplayEffectSpecForRPC final
+{
+public:
+	class UGameplayEffect*                        Def;                                               // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayEffectModifiedAttribute> ModifiedAttributes;                              // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x0018(0x0018)(NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  AggregatedSourceTags;                              // 0x0030(0x0020)(NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  AggregatedTargetTags;                              // 0x0050(0x0020)(NativeAccessSpecifierPublic)
+	float                                         Level;                                             // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AbilityLevel;                                      // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayEffectSpecForRPC;
+
+// ScriptStruct GameplayAbilities.ServerAbilityRPCBatch
+// 0x0048 (0x0048 - 0x0000)
+struct GameplayAbilities::FServerAbilityRPCBatch final
+{
+public:
+	struct FGameplayAbilitySpecHandle             AbilitySpecHandle;                                 // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         PredictionKey;                                     // 0x0008(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAbilityTargetDataHandle       TargetData;                                        // 0x0018(0x0028)(NativeAccessSpecifierPublic)
+	bool                                          InputPressed;                                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Ended;                                             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Started;                                           // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameplayAbilities__FServerAbilityRPCBatch;
+
+// ScriptStruct GameplayAbilities.NetSerializeScriptStructCache
+// 0x0010 (0x0010 - 0x0000)
+struct FNetSerializeScriptStructCache final
+{
+public:
+	TArray<class UScriptStruct*>                  ScriptStructs;                                     // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FNetSerializeScriptStructCache;
+
+// ScriptStruct GameplayAbilities.ReplicatedPredictionKeyMap
+// 0x0010 (0x0118 - 0x0108)
+struct FReplicatedPredictionKeyMap final : public FFastArraySerializer
+{
+public:
+	TArray<struct FReplicatedPredictionKeyItem>   PredictionKeys;                                    // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FReplicatedPredictionKeyMap;
+
+// ScriptStruct GameplayAbilities.MinimalReplicationTagCountMap
+// 0x0060 (0x0060 - 0x0000)
+struct FMinimalReplicationTagCountMap final
+{
+public:
+	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                Owner;                                             // 0x0050(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMinimalReplicationTagCountMap;
+
+// ScriptStruct GameplayAbilities.ActiveGameplayCue
+// 0x00E4 (0x00F0 - 0x000C)
+struct FActiveGameplayCue final : public FFastArraySerializerItem
+{
+public:
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x000C(0x000C)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPredictionKey                         PredictionKey;                                     // 0x0018(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0028(0x00C0)(ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bPredictivelyRemoved;                              // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FActiveGameplayCue;
+
+// ScriptStruct GameplayAbilities.ActiveGameplayCueContainer
+// 0x0020 (0x0128 - 0x0108)
+struct FActiveGameplayCueContainer final : public FFastArraySerializer
+{
+public:
+	TArray<struct FActiveGameplayCue>             GameplayCues;                                      // 0x0108(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                Owner;                                             // 0x0120(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FActiveGameplayCueContainer;
+
+// ScriptStruct GameplayAbilities.AttributeMetaData
+// 0x0028 (0x0030 - 0x0008)
+struct FAttributeMetaData final : public FTableRowBase
+{
+public:
+	float                                         BaseValue;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinValue;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxValue;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DerivedAttributeInfo;                              // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanStack;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAttributeMetaData;
+
+// ScriptStruct GameplayAbilities.ActiveGameplayEffectQuery
+// 0x0088 (0x0088 - 0x0000)
+struct alignas(0x08) FActiveGameplayEffectQuery final
+{
+public:
+	uint8                                         Pad_0[0x88];                                       // 0x0000(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FActiveGameplayEffectQuery;
+
+// ScriptStruct GameplayAbilities.ActiveGameplayEffectsContainer
+// 0x03A8 (0x04B0 - 0x0108)
+struct FActiveGameplayEffectsContainer final : public FFastArraySerializer
+{
+public:
+	uint8                                         Pad_108[0x58];                                     // 0x0108(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FActiveGameplayEffect>          GameplayEffects_Internal;                          // 0x0160(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_170[0x318];                                    // 0x0170(0x0318)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UGameplayEffect*>                ApplicationImmunityQueryEffects;                   // 0x0488(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_498[0x18];                                     // 0x0498(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FActiveGameplayEffectsContainer;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityLocalAnimMontage
+// 0x0028 (0x0028 - 0x0000)
+struct FGameplayAbilityLocalAnimMontage final
+{
+public:
+	class UAnimMontage*                           AnimMontage;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PlayBit;                                           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         PredictionKey;                                     // 0x0010(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayAbility*                       AnimatingAbility;                                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayAbilityLocalAnimMontage;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityRepAnimMontage
+// 0x0030 (0x0030 - 0x0000)
+struct FGameplayAbilityRepAnimMontage final
+{
+public:
+	class UAnimMontage*                           AnimMontage;                                       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Position;                                          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         NextSectionID;                                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bRepPosition : 1;                                  // 0x0015(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         IsStopped : 1;                                     // 0x0015(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         ForcePlayBit : 1;                                  // 0x0015(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         SkipPositionCorrection : 1;                        // 0x0015(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSkipPlayRate : 1;                                 // 0x0015(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPredictionKey                         PredictionKey;                                     // 0x0018(0x0010)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         SectionIdToPlay;                                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayAbilityRepAnimMontage;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityTargetingLocationInfo
+// 0x0080 (0x0080 - 0x0000)
+struct FGameplayAbilityTargetingLocationInfo final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	EGameplayAbilityTargetingLocationType         LocationType;                                      // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LiteralTransform;                                  // 0x0020(0x0030)(BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	class AActor*                                 SourceActor;                                       // 0x0050(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMeshComponent*                         SourceComponent;                                   // 0x0058(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGameplayAbility*                       SourceAbility;                                     // 0x0060(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SourceSocketName;                                  // 0x0068(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGameplayAbilityTargetingLocationInfo;
 
 // ScriptStruct GameplayAbilities.AttributeDefaults
 // 0x0010 (0x0010 - 0x0000)
@@ -1262,10 +1111,7 @@ public:
 	TSubclassOf<class UAttributeSet>              Attributes;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                             DefaultStartingTable;                              // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAttributeDefaults) == 0x000008, "Wrong alignment on FAttributeDefaults");
-static_assert(sizeof(FAttributeDefaults) == 0x000010, "Wrong size on FAttributeDefaults");
-static_assert(offsetof(FAttributeDefaults, Attributes) == 0x000000, "Member 'FAttributeDefaults::Attributes' has a wrong offset!");
-static_assert(offsetof(FAttributeDefaults, DefaultStartingTable) == 0x000008, "Member 'FAttributeDefaults::DefaultStartingTable' has a wrong offset!");
+DUMPER7_ASSERTS_FAttributeDefaults;
 
 // ScriptStruct GameplayAbilities.GameplayAttributeData
 // 0x0018 (0x0018 - 0x0000)
@@ -1278,11 +1124,7 @@ public:
 	int32                                         AttributeType;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAttributeData) == 0x000008, "Wrong alignment on FGameplayAttributeData");
-static_assert(sizeof(FGameplayAttributeData) == 0x000018, "Wrong size on FGameplayAttributeData");
-static_assert(offsetof(FGameplayAttributeData, BaseValue) == 0x000008, "Member 'FGameplayAttributeData::BaseValue' has a wrong offset!");
-static_assert(offsetof(FGameplayAttributeData, CurrentValue) == 0x00000C, "Member 'FGameplayAttributeData::CurrentValue' has a wrong offset!");
-static_assert(offsetof(FGameplayAttributeData, AttributeType) == 0x000010, "Member 'FGameplayAttributeData::AttributeType' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAttributeData;
 
 // ScriptStruct GameplayAbilities.AbilityTriggerData
 // 0x0010 (0x0010 - 0x0000)
@@ -1293,20 +1135,18 @@ public:
 	EGameplayAbilityTriggerSource                 TriggerSource;                                     // 0x000C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAbilityTriggerData) == 0x000004, "Wrong alignment on FAbilityTriggerData");
-static_assert(sizeof(FAbilityTriggerData) == 0x000010, "Wrong size on FAbilityTriggerData");
-static_assert(offsetof(FAbilityTriggerData, TriggerTag) == 0x000000, "Member 'FAbilityTriggerData::TriggerTag' has a wrong offset!");
-static_assert(offsetof(FAbilityTriggerData, TriggerSource) == 0x00000C, "Member 'FAbilityTriggerData::TriggerSource' has a wrong offset!");
+DUMPER7_ASSERTS_FAbilityTriggerData;
 
-// ScriptStruct GameplayAbilities.GameplayTargetDataFilterHandle
+// ScriptStruct GameplayAbilities.GameplayAbilityBindInfo
 // 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FGameplayTargetDataFilterHandle final
+struct FGameplayAbilityBindInfo final
 {
 public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EGameplayAbilityInputBinds                    Command;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UGameplayAbility>           GameplayAbilityClass;                              // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayTargetDataFilterHandle) == 0x000008, "Wrong alignment on FGameplayTargetDataFilterHandle");
-static_assert(sizeof(FGameplayTargetDataFilterHandle) == 0x000010, "Wrong size on FGameplayTargetDataFilterHandle");
+DUMPER7_ASSERTS_FGameplayAbilityBindInfo;
 
 // ScriptStruct GameplayAbilities.GameplayTargetDataFilter
 // 0x0020 (0x0020 - 0x0000)
@@ -1320,12 +1160,18 @@ public:
 	bool                                          bReverseFilter;                                    // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTargetDataFilter) == 0x000008, "Wrong alignment on FGameplayTargetDataFilter");
-static_assert(sizeof(FGameplayTargetDataFilter) == 0x000020, "Wrong size on FGameplayTargetDataFilter");
-static_assert(offsetof(FGameplayTargetDataFilter, SelfActor) == 0x000008, "Member 'FGameplayTargetDataFilter::SelfActor' has a wrong offset!");
-static_assert(offsetof(FGameplayTargetDataFilter, RequiredActorClass) == 0x000010, "Member 'FGameplayTargetDataFilter::RequiredActorClass' has a wrong offset!");
-static_assert(offsetof(FGameplayTargetDataFilter, SelfFilter) == 0x000018, "Member 'FGameplayTargetDataFilter::SelfFilter' has a wrong offset!");
-static_assert(offsetof(FGameplayTargetDataFilter, bReverseFilter) == 0x000019, "Member 'FGameplayTargetDataFilter::bReverseFilter' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTargetDataFilter;
+
+// ScriptStruct GameplayAbilities.GameplayAbilityTargetData_ActorArray
+// 0x0098 (0x00A0 - 0x0008)
+struct FGameplayAbilityTargetData_ActorArray final : public FGameplayAbilityTargetData
+{
+public:
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetingLocationInfo  SourceLocation;                                    // 0x0010(0x0080)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class AActor>>          TargetActorArray;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameplayAbilityTargetData_ActorArray;
 
 // ScriptStruct GameplayAbilities.GameplayAbilityTargetData_LocationInfo
 // 0x0108 (0x0110 - 0x0008)
@@ -1336,23 +1182,7 @@ public:
 	struct FGameplayAbilityTargetingLocationInfo  SourceLocation;                                    // 0x0010(0x0080)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FGameplayAbilityTargetingLocationInfo  TargetLocation;                                    // 0x0090(0x0080)(Edit, BlueprintVisible, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayAbilityTargetData_LocationInfo) == 0x000010, "Wrong alignment on FGameplayAbilityTargetData_LocationInfo");
-static_assert(sizeof(FGameplayAbilityTargetData_LocationInfo) == 0x000110, "Wrong size on FGameplayAbilityTargetData_LocationInfo");
-static_assert(offsetof(FGameplayAbilityTargetData_LocationInfo, SourceLocation) == 0x000010, "Member 'FGameplayAbilityTargetData_LocationInfo::SourceLocation' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityTargetData_LocationInfo, TargetLocation) == 0x000090, "Member 'FGameplayAbilityTargetData_LocationInfo::TargetLocation' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayAbilitySpecHandleAndPredictionKey
-// 0x0008 (0x0008 - 0x0000)
-struct FGameplayAbilitySpecHandleAndPredictionKey final
-{
-public:
-	struct FGameplayAbilitySpecHandle             AbilityHandle;                                     // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PredictionKeyAtCreation;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayAbilitySpecHandleAndPredictionKey) == 0x000004, "Wrong alignment on FGameplayAbilitySpecHandleAndPredictionKey");
-static_assert(sizeof(FGameplayAbilitySpecHandleAndPredictionKey) == 0x000008, "Wrong size on FGameplayAbilitySpecHandleAndPredictionKey");
-static_assert(offsetof(FGameplayAbilitySpecHandleAndPredictionKey, AbilityHandle) == 0x000000, "Member 'FGameplayAbilitySpecHandleAndPredictionKey::AbilityHandle' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilitySpecHandleAndPredictionKey, PredictionKeyAtCreation) == 0x000004, "Member 'FGameplayAbilitySpecHandleAndPredictionKey::PredictionKeyAtCreation' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilityTargetData_LocationInfo;
 
 // ScriptStruct GameplayAbilities.AbilityTaskDebugMessage
 // 0x0018 (0x0018 - 0x0000)
@@ -1362,10 +1192,7 @@ public:
 	class UGameplayTask*                          FromTask;                                          // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Message;                                           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAbilityTaskDebugMessage) == 0x000008, "Wrong alignment on FAbilityTaskDebugMessage");
-static_assert(sizeof(FAbilityTaskDebugMessage) == 0x000018, "Wrong size on FAbilityTaskDebugMessage");
-static_assert(offsetof(FAbilityTaskDebugMessage, FromTask) == 0x000000, "Member 'FAbilityTaskDebugMessage::FromTask' has a wrong offset!");
-static_assert(offsetof(FAbilityTaskDebugMessage, Message) == 0x000008, "Member 'FAbilityTaskDebugMessage::Message' has a wrong offset!");
+DUMPER7_ASSERTS_FAbilityTaskDebugMessage;
 
 // ScriptStruct GameplayAbilities.AbilityEndedData
 // 0x0010 (0x0010 - 0x0000)
@@ -1378,12 +1205,7 @@ public:
 	bool                                          bWasCancelled;                                     // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FAbilityEndedData) == 0x000008, "Wrong alignment on FAbilityEndedData");
-static_assert(sizeof(FAbilityEndedData) == 0x000010, "Wrong size on FAbilityEndedData");
-static_assert(offsetof(FAbilityEndedData, AbilityThatEnded) == 0x000000, "Member 'FAbilityEndedData::AbilityThatEnded' has a wrong offset!");
-static_assert(offsetof(FAbilityEndedData, AbilitySpecHandle) == 0x000008, "Member 'FAbilityEndedData::AbilitySpecHandle' has a wrong offset!");
-static_assert(offsetof(FAbilityEndedData, bReplicateEndAbility) == 0x00000C, "Member 'FAbilityEndedData::bReplicateEndAbility' has a wrong offset!");
-static_assert(offsetof(FAbilityEndedData, bWasCancelled) == 0x00000D, "Member 'FAbilityEndedData::bWasCancelled' has a wrong offset!");
+DUMPER7_ASSERTS_FAbilityEndedData;
 
 // ScriptStruct GameplayAbilities.GameplayAbilityActorInfo
 // 0x0050 (0x0050 - 0x0000)
@@ -1401,40 +1223,7 @@ public:
 	class FName                                   AffectedAnimInstanceTag;                           // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayAbilityActorInfo) == 0x000008, "Wrong alignment on FGameplayAbilityActorInfo");
-static_assert(sizeof(FGameplayAbilityActorInfo) == 0x000050, "Wrong size on FGameplayAbilityActorInfo");
-static_assert(offsetof(FGameplayAbilityActorInfo, OwnerActor) == 0x000008, "Member 'FGameplayAbilityActorInfo::OwnerActor' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, AvatarActor) == 0x000010, "Member 'FGameplayAbilityActorInfo::AvatarActor' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, PlayerController) == 0x000018, "Member 'FGameplayAbilityActorInfo::PlayerController' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, AbilitySystemComponent) == 0x000020, "Member 'FGameplayAbilityActorInfo::AbilitySystemComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, SkeletalMeshComponent) == 0x000028, "Member 'FGameplayAbilityActorInfo::SkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, AnimInstance) == 0x000030, "Member 'FGameplayAbilityActorInfo::AnimInstance' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, MovementComponent) == 0x000038, "Member 'FGameplayAbilityActorInfo::MovementComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayAbilityActorInfo, AffectedAnimInstanceTag) == 0x000040, "Member 'FGameplayAbilityActorInfo::AffectedAnimInstanceTag' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.WorldReticleParameters
-// 0x000C (0x000C - 0x0000)
-struct FWorldReticleParameters final
-{
-public:
-	struct FVector                                AOEScale;                                          // 0x0000(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWorldReticleParameters) == 0x000004, "Wrong alignment on FWorldReticleParameters");
-static_assert(sizeof(FWorldReticleParameters) == 0x00000C, "Wrong size on FWorldReticleParameters");
-static_assert(offsetof(FWorldReticleParameters, AOEScale) == 0x000000, "Member 'FWorldReticleParameters::AOEScale' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.PreallocationInfo
-// 0x0068 (0x0068 - 0x0000)
-struct FPreallocationInfo final
-{
-public:
-	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSubclassOf<class AGameplayCueNotify_Actor>> ClassesNeedingPreallocation;                 // 0x0050(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPreallocationInfo) == 0x000008, "Wrong alignment on FPreallocationInfo");
-static_assert(sizeof(FPreallocationInfo) == 0x000068, "Wrong size on FPreallocationInfo");
-static_assert(offsetof(FPreallocationInfo, ClassesNeedingPreallocation) == 0x000050, "Member 'FPreallocationInfo::ClassesNeedingPreallocation' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayAbilityActorInfo;
 
 // ScriptStruct GameplayAbilities.GameplayCuePendingExecute
 // 0x0178 (0x0178 - 0x0000)
@@ -1449,13 +1238,18 @@ public:
 	struct FGameplayEffectSpecForRPC              FromSpec;                                          // 0x0040(0x0078)(NativeAccessSpecifierPublic)
 	struct FGameplayCueParameters                 CueParameters;                                     // 0x00B8(0x00C0)(ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayCuePendingExecute) == 0x000008, "Wrong alignment on FGameplayCuePendingExecute");
-static_assert(sizeof(FGameplayCuePendingExecute) == 0x000178, "Wrong size on FGameplayCuePendingExecute");
-static_assert(offsetof(FGameplayCuePendingExecute, PredictionKey) == 0x000020, "Member 'FGameplayCuePendingExecute::PredictionKey' has a wrong offset!");
-static_assert(offsetof(FGameplayCuePendingExecute, PayloadType) == 0x000030, "Member 'FGameplayCuePendingExecute::PayloadType' has a wrong offset!");
-static_assert(offsetof(FGameplayCuePendingExecute, OwningComponent) == 0x000038, "Member 'FGameplayCuePendingExecute::OwningComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayCuePendingExecute, FromSpec) == 0x000040, "Member 'FGameplayCuePendingExecute::FromSpec' has a wrong offset!");
-static_assert(offsetof(FGameplayCuePendingExecute, CueParameters) == 0x0000B8, "Member 'FGameplayCuePendingExecute::CueParameters' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayCuePendingExecute;
+
+// ScriptStruct GameplayAbilities.MinimalGameplayCueReplicationProxy
+// 0x0240 (0x0240 - 0x0000)
+struct alignas(0x10) FMinimalGameplayCueReplicationProxy final
+{
+public:
+	uint8                                         Pad_0[0x230];                                      // 0x0000(0x0230)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                Owner;                                             // 0x0230(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMinimalGameplayCueReplicationProxy;
 
 // ScriptStruct GameplayAbilities.GameplayCueTag
 // 0x000C (0x000C - 0x0000)
@@ -1464,9 +1258,7 @@ struct FGameplayCueTag final
 public:
 	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayCueTag) == 0x000004, "Wrong alignment on FGameplayCueTag");
-static_assert(sizeof(FGameplayCueTag) == 0x00000C, "Wrong size on FGameplayCueTag");
-static_assert(offsetof(FGameplayCueTag, GameplayCueTag) == 0x000000, "Member 'FGameplayCueTag::GameplayCueTag' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayCueTag;
 
 // ScriptStruct GameplayAbilities.GameplayCueObjectLibrary
 // 0x0050 (0x0050 - 0x0000)
@@ -1484,42 +1276,31 @@ public:
 	bool                                          bShouldSyncLoad;                                   // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasBeenInitialized;                               // 0x004F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayCueObjectLibrary) == 0x000008, "Wrong alignment on FGameplayCueObjectLibrary");
-static_assert(sizeof(FGameplayCueObjectLibrary) == 0x000050, "Wrong size on FGameplayCueObjectLibrary");
-static_assert(offsetof(FGameplayCueObjectLibrary, Paths) == 0x000000, "Member 'FGameplayCueObjectLibrary::Paths' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, ActorObjectLibrary) == 0x000030, "Member 'FGameplayCueObjectLibrary::ActorObjectLibrary' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, StaticObjectLibrary) == 0x000038, "Member 'FGameplayCueObjectLibrary::StaticObjectLibrary' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, CueSet) == 0x000040, "Member 'FGameplayCueObjectLibrary::CueSet' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, bShouldSyncScan) == 0x00004C, "Member 'FGameplayCueObjectLibrary::bShouldSyncScan' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, bShouldAsyncLoad) == 0x00004D, "Member 'FGameplayCueObjectLibrary::bShouldAsyncLoad' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, bShouldSyncLoad) == 0x00004E, "Member 'FGameplayCueObjectLibrary::bShouldSyncLoad' has a wrong offset!");
-static_assert(offsetof(FGameplayCueObjectLibrary, bHasBeenInitialized) == 0x00004F, "Member 'FGameplayCueObjectLibrary::bHasBeenInitialized' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayCueObjectLibrary;
 
-// ScriptStruct GameplayAbilities.GameplayCueTranslationManager
-// 0x0080 (0x0080 - 0x0000)
-struct FGameplayCueTranslationManager final
+// ScriptStruct GameplayAbilities.GameplayCueNotifyData
+// 0x0040 (0x0040 - 0x0000)
+struct FGameplayCueNotifyData final
 {
 public:
-	TArray<struct FGameplayCueTranslatorNode>     TranslationLUT;                                    // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<class FName, struct FGameplayCueTranslatorNodeIndex> TranslationNameToIndexMap;             // 0x0010(0x0050)(NativeAccessSpecifierPrivate)
-	class UGameplayTagsManager*                   TagManager;                                        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           GameplayCueTag;                                    // 0x0000(0x000C)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftObjectPath                        GameplayCueNotifyObj;                              // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 LoadedGameplayCueClass;                            // 0x0030(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayCueTranslationManager) == 0x000008, "Wrong alignment on FGameplayCueTranslationManager");
-static_assert(sizeof(FGameplayCueTranslationManager) == 0x000080, "Wrong size on FGameplayCueTranslationManager");
-static_assert(offsetof(FGameplayCueTranslationManager, TranslationLUT) == 0x000000, "Member 'FGameplayCueTranslationManager::TranslationLUT' has a wrong offset!");
-static_assert(offsetof(FGameplayCueTranslationManager, TranslationNameToIndexMap) == 0x000010, "Member 'FGameplayCueTranslationManager::TranslationNameToIndexMap' has a wrong offset!");
-static_assert(offsetof(FGameplayCueTranslationManager, TagManager) == 0x000060, "Member 'FGameplayCueTranslationManager::TagManager' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayCueNotifyData;
 
-// ScriptStruct GameplayAbilities.ActiveGameplayEffectQuery
-// 0x0088 (0x0088 - 0x0000)
-struct alignas(0x08) FActiveGameplayEffectQuery final
+// ScriptStruct GameplayAbilities.InheritedTagContainer
+// 0x0060 (0x0060 - 0x0000)
+struct FInheritedTagContainer final
 {
 public:
-	uint8                                         Pad_0[0x88];                                       // 0x0000(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CombinedTags;                                      // 0x0000(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  Added;                                             // 0x0020(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  Removed;                                           // 0x0040(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FActiveGameplayEffectQuery) == 0x000008, "Wrong alignment on FActiveGameplayEffectQuery");
-static_assert(sizeof(FActiveGameplayEffectQuery) == 0x000088, "Wrong size on FActiveGameplayEffectQuery");
+DUMPER7_ASSERTS_FInheritedTagContainer;
 
 // ScriptStruct GameplayAbilities.GameplayEffectCue
 // 0x0060 (0x0060 - 0x0000)
@@ -1531,12 +1312,7 @@ public:
 	float                                         MaxLevel;                                          // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  GameplayCueTags;                                   // 0x0040(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayEffectCue) == 0x000008, "Wrong alignment on FGameplayEffectCue");
-static_assert(sizeof(FGameplayEffectCue) == 0x000060, "Wrong size on FGameplayEffectCue");
-static_assert(offsetof(FGameplayEffectCue, MagnitudeAttribute) == 0x000000, "Member 'FGameplayEffectCue::MagnitudeAttribute' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectCue, MinLevel) == 0x000038, "Member 'FGameplayEffectCue::MinLevel' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectCue, MaxLevel) == 0x00003C, "Member 'FGameplayEffectCue::MaxLevel' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectCue, GameplayCueTags) == 0x000040, "Member 'FGameplayEffectCue::GameplayCueTags' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectCue;
 
 // ScriptStruct GameplayAbilities.GameplayModEvaluationChannelSettings
 // 0x0001 (0x0001 - 0x0000)
@@ -1545,61 +1321,7 @@ struct FGameplayModEvaluationChannelSettings final
 public:
 	EGameplayModEvaluationChannel                 Channel;                                           // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FGameplayModEvaluationChannelSettings) == 0x000001, "Wrong alignment on FGameplayModEvaluationChannelSettings");
-static_assert(sizeof(FGameplayModEvaluationChannelSettings) == 0x000001, "Wrong size on FGameplayModEvaluationChannelSettings");
-static_assert(offsetof(FGameplayModEvaluationChannelSettings, Channel) == 0x000000, "Member 'FGameplayModEvaluationChannelSettings::Channel' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.SetByCallerFloat
-// 0x0010 (0x0010 - 0x0000)
-struct FSetByCallerFloat final
-{
-public:
-	int32                                         DataKey;                                           // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           DataTag;                                           // 0x0004(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSetByCallerFloat) == 0x000004, "Wrong alignment on FSetByCallerFloat");
-static_assert(sizeof(FSetByCallerFloat) == 0x000010, "Wrong size on FSetByCallerFloat");
-static_assert(offsetof(FSetByCallerFloat, DataKey) == 0x000000, "Member 'FSetByCallerFloat::DataKey' has a wrong offset!");
-static_assert(offsetof(FSetByCallerFloat, DataTag) == 0x000004, "Member 'FSetByCallerFloat::DataTag' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.CustomCalculationBasedFloat
-// 0x0098 (0x0098 - 0x0000)
-struct FCustomCalculationBasedFloat final
-{
-public:
-	TSubclassOf<class UGameplayModMagnitudeCalculation> CalculationClassMagnitude;                   // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         Coefficient;                                       // 0x0008(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         PreMultiplyAdditiveValue;                          // 0x0030(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FScalableFloat                         PostMultiplyAdditiveValue;                         // 0x0058(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FCurveTableRowHandle                   FinalLookupCurve;                                  // 0x0080(0x0018)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCustomCalculationBasedFloat) == 0x000008, "Wrong alignment on FCustomCalculationBasedFloat");
-static_assert(sizeof(FCustomCalculationBasedFloat) == 0x000098, "Wrong size on FCustomCalculationBasedFloat");
-static_assert(offsetof(FCustomCalculationBasedFloat, CalculationClassMagnitude) == 0x000000, "Member 'FCustomCalculationBasedFloat::CalculationClassMagnitude' has a wrong offset!");
-static_assert(offsetof(FCustomCalculationBasedFloat, Coefficient) == 0x000008, "Member 'FCustomCalculationBasedFloat::Coefficient' has a wrong offset!");
-static_assert(offsetof(FCustomCalculationBasedFloat, PreMultiplyAdditiveValue) == 0x000030, "Member 'FCustomCalculationBasedFloat::PreMultiplyAdditiveValue' has a wrong offset!");
-static_assert(offsetof(FCustomCalculationBasedFloat, PostMultiplyAdditiveValue) == 0x000058, "Member 'FCustomCalculationBasedFloat::PostMultiplyAdditiveValue' has a wrong offset!");
-static_assert(offsetof(FCustomCalculationBasedFloat, FinalLookupCurve) == 0x000080, "Member 'FCustomCalculationBasedFloat::FinalLookupCurve' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayEffectModifierMagnitude
-// 0x0208 (0x0208 - 0x0000)
-struct FGameplayEffectModifierMagnitude final
-{
-public:
-	EGameplayEffectMagnitudeCalculation           MagnitudeCalculationType;                          // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         ScalableFloatMagnitude;                            // 0x0008(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FAttributeBasedFloat                   AttributeBasedMagnitude;                           // 0x0030(0x0130)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FCustomCalculationBasedFloat           CustomMagnitude;                                   // 0x0160(0x0098)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	struct FSetByCallerFloat                      SetByCallerMagnitude;                              // 0x01F8(0x0010)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-};
-static_assert(alignof(FGameplayEffectModifierMagnitude) == 0x000008, "Wrong alignment on FGameplayEffectModifierMagnitude");
-static_assert(sizeof(FGameplayEffectModifierMagnitude) == 0x000208, "Wrong size on FGameplayEffectModifierMagnitude");
-static_assert(offsetof(FGameplayEffectModifierMagnitude, MagnitudeCalculationType) == 0x000000, "Member 'FGameplayEffectModifierMagnitude::MagnitudeCalculationType' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectModifierMagnitude, ScalableFloatMagnitude) == 0x000008, "Member 'FGameplayEffectModifierMagnitude::ScalableFloatMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectModifierMagnitude, AttributeBasedMagnitude) == 0x000030, "Member 'FGameplayEffectModifierMagnitude::AttributeBasedMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectModifierMagnitude, CustomMagnitude) == 0x000160, "Member 'FGameplayEffectModifierMagnitude::CustomMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectModifierMagnitude, SetByCallerMagnitude) == 0x0001F8, "Member 'FGameplayEffectModifierMagnitude::SetByCallerMagnitude' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayModEvaluationChannelSettings;
 
 // ScriptStruct GameplayAbilities.GameplayTagRequirements
 // 0x0048 (0x0048 - 0x0000)
@@ -1613,13 +1335,7 @@ public:
 	bool                                          bCombineLogicalOperator;                           // 0x0042(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagRequirements) == 0x000008, "Wrong alignment on FGameplayTagRequirements");
-static_assert(sizeof(FGameplayTagRequirements) == 0x000048, "Wrong size on FGameplayTagRequirements");
-static_assert(offsetof(FGameplayTagRequirements, RequireTags) == 0x000000, "Member 'FGameplayTagRequirements::RequireTags' has a wrong offset!");
-static_assert(offsetof(FGameplayTagRequirements, IgnoreTags) == 0x000020, "Member 'FGameplayTagRequirements::IgnoreTags' has a wrong offset!");
-static_assert(offsetof(FGameplayTagRequirements, bRequireLogicalOperator) == 0x000040, "Member 'FGameplayTagRequirements::bRequireLogicalOperator' has a wrong offset!");
-static_assert(offsetof(FGameplayTagRequirements, bIgnoreLogicalOperator) == 0x000041, "Member 'FGameplayTagRequirements::bIgnoreLogicalOperator' has a wrong offset!");
-static_assert(offsetof(FGameplayTagRequirements, bCombineLogicalOperator) == 0x000042, "Member 'FGameplayTagRequirements::bCombineLogicalOperator' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTagRequirements;
 
 // ScriptStruct GameplayAbilities.GameplayModifierInfo
 // 0x0308 (0x0308 - 0x0000)
@@ -1636,15 +1352,7 @@ public:
 	struct FGameplayTagRequirements               SourceTags;                                        // 0x0278(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FGameplayTagRequirements               TargetTags;                                        // 0x02C0(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayModifierInfo) == 0x000008, "Wrong alignment on FGameplayModifierInfo");
-static_assert(sizeof(FGameplayModifierInfo) == 0x000308, "Wrong size on FGameplayModifierInfo");
-static_assert(offsetof(FGameplayModifierInfo, Attribute) == 0x000000, "Member 'FGameplayModifierInfo::Attribute' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, ModifierOp) == 0x000038, "Member 'FGameplayModifierInfo::ModifierOp' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, Magnitude) == 0x000040, "Member 'FGameplayModifierInfo::Magnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, ModifierMagnitude) == 0x000068, "Member 'FGameplayModifierInfo::ModifierMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, EvaluationChannelSettings) == 0x000270, "Member 'FGameplayModifierInfo::EvaluationChannelSettings' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, SourceTags) == 0x000278, "Member 'FGameplayModifierInfo::SourceTags' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierInfo, TargetTags) == 0x0002C0, "Member 'FGameplayModifierInfo::TargetTags' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayModifierInfo;
 
 // ScriptStruct GameplayAbilities.GameplayEffectExecutionScopedModifierInfo
 // 0x0308 (0x0308 - 0x0000)
@@ -1662,16 +1370,7 @@ public:
 	struct FGameplayTagRequirements               SourceTags;                                        // 0x0278(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	struct FGameplayTagRequirements               TargetTags;                                        // 0x02C0(0x0048)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayEffectExecutionScopedModifierInfo) == 0x000008, "Wrong alignment on FGameplayEffectExecutionScopedModifierInfo");
-static_assert(sizeof(FGameplayEffectExecutionScopedModifierInfo) == 0x000308, "Wrong size on FGameplayEffectExecutionScopedModifierInfo");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, CapturedAttribute) == 0x000000, "Member 'FGameplayEffectExecutionScopedModifierInfo::CapturedAttribute' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, TransientAggregatorIdentifier) == 0x000058, "Member 'FGameplayEffectExecutionScopedModifierInfo::TransientAggregatorIdentifier' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, AggregatorType) == 0x000064, "Member 'FGameplayEffectExecutionScopedModifierInfo::AggregatorType' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, ModifierOp) == 0x000065, "Member 'FGameplayEffectExecutionScopedModifierInfo::ModifierOp' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, ModifierMagnitude) == 0x000068, "Member 'FGameplayEffectExecutionScopedModifierInfo::ModifierMagnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, EvaluationChannelSettings) == 0x000270, "Member 'FGameplayEffectExecutionScopedModifierInfo::EvaluationChannelSettings' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, SourceTags) == 0x000278, "Member 'FGameplayEffectExecutionScopedModifierInfo::SourceTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionScopedModifierInfo, TargetTags) == 0x0002C0, "Member 'FGameplayEffectExecutionScopedModifierInfo::TargetTags' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectExecutionScopedModifierInfo;
 
 // ScriptStruct GameplayAbilities.ConditionalGameplayEffect
 // 0x0028 (0x0028 - 0x0000)
@@ -1681,10 +1380,7 @@ public:
 	TSubclassOf<class UGameplayEffect>            EffectClass;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGameplayTagContainer                  RequiredSourceTags;                                // 0x0008(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FConditionalGameplayEffect) == 0x000008, "Wrong alignment on FConditionalGameplayEffect");
-static_assert(sizeof(FConditionalGameplayEffect) == 0x000028, "Wrong size on FConditionalGameplayEffect");
-static_assert(offsetof(FConditionalGameplayEffect, EffectClass) == 0x000000, "Member 'FConditionalGameplayEffect::EffectClass' has a wrong offset!");
-static_assert(offsetof(FConditionalGameplayEffect, RequiredSourceTags) == 0x000008, "Member 'FConditionalGameplayEffect::RequiredSourceTags' has a wrong offset!");
+DUMPER7_ASSERTS_FConditionalGameplayEffect;
 
 // ScriptStruct GameplayAbilities.GameplayEffectExecutionDefinition
 // 0x0058 (0x0058 - 0x0000)
@@ -1697,49 +1393,7 @@ public:
 	TArray<TSubclassOf<class UGameplayEffect>>    ConditionalGameplayEffectClasses;                  // 0x0038(0x0010)(ZeroConstructor, Deprecated, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<struct FConditionalGameplayEffect>     ConditionalGameplayEffects;                        // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayEffectExecutionDefinition) == 0x000008, "Wrong alignment on FGameplayEffectExecutionDefinition");
-static_assert(sizeof(FGameplayEffectExecutionDefinition) == 0x000058, "Wrong size on FGameplayEffectExecutionDefinition");
-static_assert(offsetof(FGameplayEffectExecutionDefinition, CalculationClass) == 0x000000, "Member 'FGameplayEffectExecutionDefinition::CalculationClass' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionDefinition, PassedInTags) == 0x000008, "Member 'FGameplayEffectExecutionDefinition::PassedInTags' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionDefinition, CalculationModifiers) == 0x000028, "Member 'FGameplayEffectExecutionDefinition::CalculationModifiers' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionDefinition, ConditionalGameplayEffectClasses) == 0x000038, "Member 'FGameplayEffectExecutionDefinition::ConditionalGameplayEffectClasses' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectExecutionDefinition, ConditionalGameplayEffects) == 0x000048, "Member 'FGameplayEffectExecutionDefinition::ConditionalGameplayEffects' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayModifierEvaluatedData
-// 0x0050 (0x0050 - 0x0000)
-struct FGameplayModifierEvaluatedData final
-{
-public:
-	struct FGameplayAttribute                     Attribute;                                         // 0x0000(0x0038)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGameplayModOp                                ModifierOp;                                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Magnitude;                                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FActiveGameplayEffectHandle            Handle;                                            // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsValid;                                           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayModifierEvaluatedData) == 0x000008, "Wrong alignment on FGameplayModifierEvaluatedData");
-static_assert(sizeof(FGameplayModifierEvaluatedData) == 0x000050, "Wrong size on FGameplayModifierEvaluatedData");
-static_assert(offsetof(FGameplayModifierEvaluatedData, Attribute) == 0x000000, "Member 'FGameplayModifierEvaluatedData::Attribute' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierEvaluatedData, ModifierOp) == 0x000038, "Member 'FGameplayModifierEvaluatedData::ModifierOp' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierEvaluatedData, Magnitude) == 0x00003C, "Member 'FGameplayModifierEvaluatedData::Magnitude' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierEvaluatedData, Handle) == 0x000040, "Member 'FGameplayModifierEvaluatedData::Handle' has a wrong offset!");
-static_assert(offsetof(FGameplayModifierEvaluatedData, IsValid) == 0x000048, "Member 'FGameplayModifierEvaluatedData::IsValid' has a wrong offset!");
-
-// ScriptStruct GameplayAbilities.GameplayEffectCustomExecutionOutput
-// 0x0018 (0x0018 - 0x0000)
-struct FGameplayEffectCustomExecutionOutput final
-{
-public:
-	TArray<struct FGameplayModifierEvaluatedData> OutputModifiers;                                   // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         bTriggerConditionalGameplayEffects : 1;            // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bHandledStackCountManually : 1;                    // 0x0010(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bHandledGameplayCuesManually : 1;                  // 0x0010(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayEffectCustomExecutionOutput) == 0x000008, "Wrong alignment on FGameplayEffectCustomExecutionOutput");
-static_assert(sizeof(FGameplayEffectCustomExecutionOutput) == 0x000018, "Wrong size on FGameplayEffectCustomExecutionOutput");
-static_assert(offsetof(FGameplayEffectCustomExecutionOutput, OutputModifiers) == 0x000000, "Member 'FGameplayEffectCustomExecutionOutput::OutputModifiers' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectExecutionDefinition;
 
 // ScriptStruct GameplayAbilities.GameplayEffectCustomExecutionParameters
 // 0x00F0 (0x00F0 - 0x0000)
@@ -1748,27 +1402,7 @@ struct alignas(0x08) FGameplayEffectCustomExecutionParameters final
 public:
 	uint8                                         Pad_0[0xF0];                                       // 0x0000(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectCustomExecutionParameters) == 0x000008, "Wrong alignment on FGameplayEffectCustomExecutionParameters");
-static_assert(sizeof(FGameplayEffectCustomExecutionParameters) == 0x0000F0, "Wrong size on FGameplayEffectCustomExecutionParameters");
-
-// ScriptStruct GameplayAbilities.GameplayTagBlueprintPropertyMapping
-// 0x0058 (0x0058 - 0x0000)
-struct FGameplayTagBlueprintPropertyMapping final
-{
-public:
-	struct FGameplayTag                           TagToMap;                                          // 0x0000(0x000C)(Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TFieldPath<class FProperty>                   PropertyToEdit;                                    // 0x0010(0x0020)(Edit, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyName;                                      // 0x0030(0x000C)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  PropertyGuid;                                      // 0x003C(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0xC];                                       // 0x004C(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGameplayTagBlueprintPropertyMapping) == 0x000008, "Wrong alignment on FGameplayTagBlueprintPropertyMapping");
-static_assert(sizeof(FGameplayTagBlueprintPropertyMapping) == 0x000058, "Wrong size on FGameplayTagBlueprintPropertyMapping");
-static_assert(offsetof(FGameplayTagBlueprintPropertyMapping, TagToMap) == 0x000000, "Member 'FGameplayTagBlueprintPropertyMapping::TagToMap' has a wrong offset!");
-static_assert(offsetof(FGameplayTagBlueprintPropertyMapping, PropertyToEdit) == 0x000010, "Member 'FGameplayTagBlueprintPropertyMapping::PropertyToEdit' has a wrong offset!");
-static_assert(offsetof(FGameplayTagBlueprintPropertyMapping, PropertyName) == 0x000030, "Member 'FGameplayTagBlueprintPropertyMapping::PropertyName' has a wrong offset!");
-static_assert(offsetof(FGameplayTagBlueprintPropertyMapping, PropertyGuid) == 0x00003C, "Member 'FGameplayTagBlueprintPropertyMapping::PropertyGuid' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectCustomExecutionParameters;
 
 // ScriptStruct GameplayAbilities.GameplayTagBlueprintPropertyMap
 // 0x0020 (0x0020 - 0x0000)
@@ -1778,9 +1412,7 @@ public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGameplayTagBlueprintPropertyMapping> PropertyMappings;                            // 0x0010(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FGameplayTagBlueprintPropertyMap) == 0x000008, "Wrong alignment on FGameplayTagBlueprintPropertyMap");
-static_assert(sizeof(FGameplayTagBlueprintPropertyMap) == 0x000020, "Wrong size on FGameplayTagBlueprintPropertyMap");
-static_assert(offsetof(FGameplayTagBlueprintPropertyMap, PropertyMappings) == 0x000010, "Member 'FGameplayTagBlueprintPropertyMap::PropertyMappings' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTagBlueprintPropertyMap;
 
 // ScriptStruct GameplayAbilities.GameplayEffectContext
 // 0x0070 (0x0070 - 0x0000)
@@ -1803,17 +1435,7 @@ public:
 	uint8                                         bReplicateSourceObject : 1;                        // 0x006C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
 	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayEffectContext) == 0x000008, "Wrong alignment on FGameplayEffectContext");
-static_assert(sizeof(FGameplayEffectContext) == 0x000070, "Wrong size on FGameplayEffectContext");
-static_assert(offsetof(FGameplayEffectContext, Instigator) == 0x000008, "Member 'FGameplayEffectContext::Instigator' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, EffectCauser) == 0x000010, "Member 'FGameplayEffectContext::EffectCauser' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, AbilityCDO) == 0x000018, "Member 'FGameplayEffectContext::AbilityCDO' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, AbilityInstanceNotReplicated) == 0x000020, "Member 'FGameplayEffectContext::AbilityInstanceNotReplicated' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, AbilityLevel) == 0x000028, "Member 'FGameplayEffectContext::AbilityLevel' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, SourceObject) == 0x00002C, "Member 'FGameplayEffectContext::SourceObject' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, InstigatorAbilitySystemComponent) == 0x000034, "Member 'FGameplayEffectContext::InstigatorAbilitySystemComponent' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, Actors) == 0x000040, "Member 'FGameplayEffectContext::Actors' has a wrong offset!");
-static_assert(offsetof(FGameplayEffectContext, WorldOrigin) == 0x000060, "Member 'FGameplayEffectContext::WorldOrigin' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayEffectContext;
 
 // ScriptStruct GameplayAbilities.GameplayTagReponsePair
 // 0x0030 (0x0030 - 0x0000)
@@ -1827,12 +1449,7 @@ public:
 	int32                                         SoftCountCap;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FGameplayTagReponsePair) == 0x000008, "Wrong alignment on FGameplayTagReponsePair");
-static_assert(sizeof(FGameplayTagReponsePair) == 0x000030, "Wrong size on FGameplayTagReponsePair");
-static_assert(offsetof(FGameplayTagReponsePair, Tag) == 0x000000, "Member 'FGameplayTagReponsePair::Tag' has a wrong offset!");
-static_assert(offsetof(FGameplayTagReponsePair, ResponseGameplayEffect) == 0x000010, "Member 'FGameplayTagReponsePair::ResponseGameplayEffect' has a wrong offset!");
-static_assert(offsetof(FGameplayTagReponsePair, ResponseGameplayEffects) == 0x000018, "Member 'FGameplayTagReponsePair::ResponseGameplayEffects' has a wrong offset!");
-static_assert(offsetof(FGameplayTagReponsePair, SoftCountCap) == 0x000028, "Member 'FGameplayTagReponsePair::SoftCountCap' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTagReponsePair;
 
 // ScriptStruct GameplayAbilities.GameplayTagResponseTableEntry
 // 0x0060 (0x0060 - 0x0000)
@@ -1842,10 +1459,7 @@ public:
 	struct FGameplayTagReponsePair                Positive;                                          // 0x0000(0x0030)(Edit, NativeAccessSpecifierPublic)
 	struct FGameplayTagReponsePair                Negative;                                          // 0x0030(0x0030)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FGameplayTagResponseTableEntry) == 0x000008, "Wrong alignment on FGameplayTagResponseTableEntry");
-static_assert(sizeof(FGameplayTagResponseTableEntry) == 0x000060, "Wrong size on FGameplayTagResponseTableEntry");
-static_assert(offsetof(FGameplayTagResponseTableEntry, Positive) == 0x000000, "Member 'FGameplayTagResponseTableEntry::Positive' has a wrong offset!");
-static_assert(offsetof(FGameplayTagResponseTableEntry, Negative) == 0x000030, "Member 'FGameplayTagResponseTableEntry::Negative' has a wrong offset!");
+DUMPER7_ASSERTS_FGameplayTagResponseTableEntry;
 
 }
 

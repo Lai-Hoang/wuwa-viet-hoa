@@ -21,14 +21,18 @@ namespace SDK
 class IBPI_EffectInterface_C final
 {
 public:
-	void RemoveHandle();
-	void SetHandle(int32 Handle);
 	void GetHandle(int32* Handle);
+	void SetHandle(int32 Handle);
+	void RemoveHandle();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BPI_EffectInterface_C">();
+		BP_STATIC_CLASS_IMPL("BPI_EffectInterface_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BPI_EffectInterface_C")
 	}
 	static class IBPI_EffectInterface_C* GetDefaultObj()
 	{
@@ -44,8 +48,7 @@ public:
 		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(IBPI_EffectInterface_C) == 0x000001, "Wrong alignment on IBPI_EffectInterface_C");
-static_assert(sizeof(IBPI_EffectInterface_C) == 0x000001, "Wrong size on IBPI_EffectInterface_C");
+DUMPER7_ASSERTS_IBPI_EffectInterface_C;
 
 }
 

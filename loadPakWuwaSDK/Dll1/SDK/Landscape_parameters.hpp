@@ -23,9 +23,7 @@ struct LandscapeProxy_GetKuroLandscapeFOVFactor final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_GetKuroLandscapeFOVFactor) == 0x000004, "Wrong alignment on LandscapeProxy_GetKuroLandscapeFOVFactor");
-static_assert(sizeof(LandscapeProxy_GetKuroLandscapeFOVFactor) == 0x000004, "Wrong size on LandscapeProxy_GetKuroLandscapeFOVFactor");
-static_assert(offsetof(LandscapeProxy_GetKuroLandscapeFOVFactor, ReturnValue) == 0x000000, "Member 'LandscapeProxy_GetKuroLandscapeFOVFactor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_GetKuroLandscapeFOVFactor;
 
 // Function Landscape.LandscapeProxy.GetKuroLandscapeFOVFactorByCamera
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +32,7 @@ struct LandscapeProxy_GetKuroLandscapeFOVFactorByCamera final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_GetKuroLandscapeFOVFactorByCamera) == 0x000004, "Wrong alignment on LandscapeProxy_GetKuroLandscapeFOVFactorByCamera");
-static_assert(sizeof(LandscapeProxy_GetKuroLandscapeFOVFactorByCamera) == 0x000004, "Wrong size on LandscapeProxy_GetKuroLandscapeFOVFactorByCamera");
-static_assert(offsetof(LandscapeProxy_GetKuroLandscapeFOVFactorByCamera, ReturnValue) == 0x000000, "Member 'LandscapeProxy_GetKuroLandscapeFOVFactorByCamera::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_GetKuroLandscapeFOVFactorByCamera;
 
 // Function Landscape.LandscapeProxy.SetKuroLandscapeFOVFactor
 // 0x0004 (0x0004 - 0x0000)
@@ -45,9 +41,7 @@ struct LandscapeProxy_SetKuroLandscapeFOVFactor final
 public:
 	float                                         InFOVFactor;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_SetKuroLandscapeFOVFactor) == 0x000004, "Wrong alignment on LandscapeProxy_SetKuroLandscapeFOVFactor");
-static_assert(sizeof(LandscapeProxy_SetKuroLandscapeFOVFactor) == 0x000004, "Wrong size on LandscapeProxy_SetKuroLandscapeFOVFactor");
-static_assert(offsetof(LandscapeProxy_SetKuroLandscapeFOVFactor, InFOVFactor) == 0x000000, "Member 'LandscapeProxy_SetKuroLandscapeFOVFactor::InFOVFactor' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_SetKuroLandscapeFOVFactor;
 
 // Function Landscape.LandscapeProxy.SetKuroLandscapeFOVFactorByCamera
 // 0x0004 (0x0004 - 0x0000)
@@ -56,9 +50,7 @@ struct LandscapeProxy_SetKuroLandscapeFOVFactorByCamera final
 public:
 	float                                         InFOVFactor;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_SetKuroLandscapeFOVFactorByCamera) == 0x000004, "Wrong alignment on LandscapeProxy_SetKuroLandscapeFOVFactorByCamera");
-static_assert(sizeof(LandscapeProxy_SetKuroLandscapeFOVFactorByCamera) == 0x000004, "Wrong size on LandscapeProxy_SetKuroLandscapeFOVFactorByCamera");
-static_assert(offsetof(LandscapeProxy_SetKuroLandscapeFOVFactorByCamera, InFOVFactor) == 0x000000, "Member 'LandscapeProxy_SetKuroLandscapeFOVFactorByCamera::InFOVFactor' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_SetKuroLandscapeFOVFactorByCamera;
 
 // Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
 // 0x0004 (0x0004 - 0x0000)
@@ -67,9 +59,7 @@ struct LandscapeProxy_ChangeComponentScreenSizeToUseSubSections final
 public:
 	float                                         InComponentScreenSizeToUseSubSections;             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_ChangeComponentScreenSizeToUseSubSections) == 0x000004, "Wrong alignment on LandscapeProxy_ChangeComponentScreenSizeToUseSubSections");
-static_assert(sizeof(LandscapeProxy_ChangeComponentScreenSizeToUseSubSections) == 0x000004, "Wrong size on LandscapeProxy_ChangeComponentScreenSizeToUseSubSections");
-static_assert(offsetof(LandscapeProxy_ChangeComponentScreenSizeToUseSubSections, InComponentScreenSizeToUseSubSections) == 0x000000, "Member 'LandscapeProxy_ChangeComponentScreenSizeToUseSubSections::InComponentScreenSizeToUseSubSections' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_ChangeComponentScreenSizeToUseSubSections;
 
 // Function Landscape.LandscapeProxy.ChangeLODDistanceFactor
 // 0x0004 (0x0004 - 0x0000)
@@ -78,9 +68,7 @@ struct LandscapeProxy_ChangeLODDistanceFactor final
 public:
 	float                                         InLODDistanceFactor;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_ChangeLODDistanceFactor) == 0x000004, "Wrong alignment on LandscapeProxy_ChangeLODDistanceFactor");
-static_assert(sizeof(LandscapeProxy_ChangeLODDistanceFactor) == 0x000004, "Wrong size on LandscapeProxy_ChangeLODDistanceFactor");
-static_assert(offsetof(LandscapeProxy_ChangeLODDistanceFactor, InLODDistanceFactor) == 0x000000, "Member 'LandscapeProxy_ChangeLODDistanceFactor::InLODDistanceFactor' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_ChangeLODDistanceFactor;
 
 // Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize
 // 0x0004 (0x0004 - 0x0000)
@@ -89,9 +77,7 @@ struct LandscapeProxy_ChangeTessellationComponentScreenSize final
 public:
 	float                                         InTessellationComponentScreenSize;                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_ChangeTessellationComponentScreenSize) == 0x000004, "Wrong alignment on LandscapeProxy_ChangeTessellationComponentScreenSize");
-static_assert(sizeof(LandscapeProxy_ChangeTessellationComponentScreenSize) == 0x000004, "Wrong size on LandscapeProxy_ChangeTessellationComponentScreenSize");
-static_assert(offsetof(LandscapeProxy_ChangeTessellationComponentScreenSize, InTessellationComponentScreenSize) == 0x000000, "Member 'LandscapeProxy_ChangeTessellationComponentScreenSize::InTessellationComponentScreenSize' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_ChangeTessellationComponentScreenSize;
 
 // Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff
 // 0x0004 (0x0004 - 0x0000)
@@ -100,9 +86,7 @@ struct LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff final
 public:
 	float                                         InUseTessellationComponentScreenSizeFalloff;       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff) == 0x000004, "Wrong alignment on LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff");
-static_assert(sizeof(LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff) == 0x000004, "Wrong size on LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff");
-static_assert(offsetof(LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff, InUseTessellationComponentScreenSizeFalloff) == 0x000000, "Member 'LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff::InUseTessellationComponentScreenSizeFalloff' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_ChangeTessellationComponentScreenSizeFalloff;
 
 // Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff
 // 0x0001 (0x0001 - 0x0000)
@@ -111,9 +95,7 @@ struct LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff final
 public:
 	bool                                          InComponentScreenSizeToUseSubSections;             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff) == 0x000001, "Wrong alignment on LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff");
-static_assert(sizeof(LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff) == 0x000001, "Wrong size on LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff");
-static_assert(offsetof(LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff, InComponentScreenSizeToUseSubSections) == 0x000000, "Member 'LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff::InComponentScreenSizeToUseSubSections' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff;
 
 // Function Landscape.LandscapeProxy.EditorApplySpline
 // 0x0040 (0x0040 - 0x0000)
@@ -135,20 +117,7 @@ public:
 	class FName                                   EditLayerName;                                     // 0x0030(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LandscapeProxy_EditorApplySpline) == 0x000008, "Wrong alignment on LandscapeProxy_EditorApplySpline");
-static_assert(sizeof(LandscapeProxy_EditorApplySpline) == 0x000040, "Wrong size on LandscapeProxy_EditorApplySpline");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, InSplineComponent) == 0x000000, "Member 'LandscapeProxy_EditorApplySpline::InSplineComponent' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, StartWidth) == 0x000008, "Member 'LandscapeProxy_EditorApplySpline::StartWidth' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, EndWidth) == 0x00000C, "Member 'LandscapeProxy_EditorApplySpline::EndWidth' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, StartSideFalloff) == 0x000010, "Member 'LandscapeProxy_EditorApplySpline::StartSideFalloff' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, EndSideFalloff) == 0x000014, "Member 'LandscapeProxy_EditorApplySpline::EndSideFalloff' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, StartRoll) == 0x000018, "Member 'LandscapeProxy_EditorApplySpline::StartRoll' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, EndRoll) == 0x00001C, "Member 'LandscapeProxy_EditorApplySpline::EndRoll' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, NumSubdivisions) == 0x000020, "Member 'LandscapeProxy_EditorApplySpline::NumSubdivisions' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, bRaiseHeights) == 0x000024, "Member 'LandscapeProxy_EditorApplySpline::bRaiseHeights' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, bLowerHeights) == 0x000025, "Member 'LandscapeProxy_EditorApplySpline::bLowerHeights' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, PaintLayer) == 0x000028, "Member 'LandscapeProxy_EditorApplySpline::PaintLayer' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_EditorApplySpline, EditLayerName) == 0x000030, "Member 'LandscapeProxy_EditorApplySpline::EditLayerName' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_EditorApplySpline;
 
 // Function Landscape.LandscapeProxy.EditorSetKuroColormapTexture
 // 0x0008 (0x0008 - 0x0000)
@@ -157,9 +126,7 @@ struct LandscapeProxy_EditorSetKuroColormapTexture final
 public:
 	class UTexture2D*                             NewKuroColormapTexture;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_EditorSetKuroColormapTexture) == 0x000008, "Wrong alignment on LandscapeProxy_EditorSetKuroColormapTexture");
-static_assert(sizeof(LandscapeProxy_EditorSetKuroColormapTexture) == 0x000008, "Wrong size on LandscapeProxy_EditorSetKuroColormapTexture");
-static_assert(offsetof(LandscapeProxy_EditorSetKuroColormapTexture, NewKuroColormapTexture) == 0x000000, "Member 'LandscapeProxy_EditorSetKuroColormapTexture::NewKuroColormapTexture' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_EditorSetKuroColormapTexture;
 
 // Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial
 // 0x0008 (0x0008 - 0x0000)
@@ -168,9 +135,7 @@ struct LandscapeProxy_EditorSetLandscapeMaterial final
 public:
 	class UMaterialInterface*                     NewLandscapeMaterial;                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_EditorSetLandscapeMaterial) == 0x000008, "Wrong alignment on LandscapeProxy_EditorSetLandscapeMaterial");
-static_assert(sizeof(LandscapeProxy_EditorSetLandscapeMaterial) == 0x000008, "Wrong size on LandscapeProxy_EditorSetLandscapeMaterial");
-static_assert(offsetof(LandscapeProxy_EditorSetLandscapeMaterial, NewLandscapeMaterial) == 0x000000, "Member 'LandscapeProxy_EditorSetLandscapeMaterial::NewLandscapeMaterial' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_EditorSetLandscapeMaterial;
 
 // Function Landscape.LandscapeProxy.LandscapeExportHeightmapToRenderTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -183,12 +148,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget) == 0x000008, "Wrong alignment on LandscapeProxy_LandscapeExportHeightmapToRenderTarget");
-static_assert(sizeof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget) == 0x000010, "Wrong size on LandscapeProxy_LandscapeExportHeightmapToRenderTarget");
-static_assert(offsetof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget, InRenderTarget) == 0x000000, "Member 'LandscapeProxy_LandscapeExportHeightmapToRenderTarget::InRenderTarget' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget, InExportHeightIntoRGChannel) == 0x000008, "Member 'LandscapeProxy_LandscapeExportHeightmapToRenderTarget::InExportHeightIntoRGChannel' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget, InExportLandscapeProxies) == 0x000009, "Member 'LandscapeProxy_LandscapeExportHeightmapToRenderTarget::InExportLandscapeProxies' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget, ReturnValue) == 0x00000A, "Member 'LandscapeProxy_LandscapeExportHeightmapToRenderTarget::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_LandscapeExportHeightmapToRenderTarget;
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue
 // 0x0010 (0x0010 - 0x0000)
@@ -198,10 +158,7 @@ public:
 	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_SetLandscapeMaterialScalarParameterValue) == 0x000004, "Wrong alignment on LandscapeProxy_SetLandscapeMaterialScalarParameterValue");
-static_assert(sizeof(LandscapeProxy_SetLandscapeMaterialScalarParameterValue) == 0x000010, "Wrong size on LandscapeProxy_SetLandscapeMaterialScalarParameterValue");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialScalarParameterValue, ParameterName) == 0x000000, "Member 'LandscapeProxy_SetLandscapeMaterialScalarParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialScalarParameterValue, Value) == 0x00000C, "Member 'LandscapeProxy_SetLandscapeMaterialScalarParameterValue::Value' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_SetLandscapeMaterialScalarParameterValue;
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue
 // 0x0018 (0x0018 - 0x0000)
@@ -212,10 +169,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               Value;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_SetLandscapeMaterialTextureParameterValue) == 0x000008, "Wrong alignment on LandscapeProxy_SetLandscapeMaterialTextureParameterValue");
-static_assert(sizeof(LandscapeProxy_SetLandscapeMaterialTextureParameterValue) == 0x000018, "Wrong size on LandscapeProxy_SetLandscapeMaterialTextureParameterValue");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialTextureParameterValue, ParameterName) == 0x000000, "Member 'LandscapeProxy_SetLandscapeMaterialTextureParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialTextureParameterValue, Value) == 0x000010, "Member 'LandscapeProxy_SetLandscapeMaterialTextureParameterValue::Value' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_SetLandscapeMaterialTextureParameterValue;
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue
 // 0x001C (0x001C - 0x0000)
@@ -225,10 +179,7 @@ public:
 	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeProxy_SetLandscapeMaterialVectorParameterValue) == 0x000004, "Wrong alignment on LandscapeProxy_SetLandscapeMaterialVectorParameterValue");
-static_assert(sizeof(LandscapeProxy_SetLandscapeMaterialVectorParameterValue) == 0x00001C, "Wrong size on LandscapeProxy_SetLandscapeMaterialVectorParameterValue");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialVectorParameterValue, ParameterName) == 0x000000, "Member 'LandscapeProxy_SetLandscapeMaterialVectorParameterValue::ParameterName' has a wrong offset!");
-static_assert(offsetof(LandscapeProxy_SetLandscapeMaterialVectorParameterValue, Value) == 0x00000C, "Member 'LandscapeProxy_SetLandscapeMaterialVectorParameterValue::Value' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeProxy_SetLandscapeMaterialVectorParameterValue;
 
 // Function Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies
 // 0x0010 (0x0010 - 0x0000)
@@ -237,9 +188,7 @@ struct LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies final
 public:
 	TArray<class UObject*>                        OutStreamableAssets;                               // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies) == 0x000008, "Wrong alignment on LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies");
-static_assert(sizeof(LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies) == 0x000010, "Wrong size on LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies");
-static_assert(offsetof(LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies, OutStreamableAssets) == 0x000000, "Member 'LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies::OutStreamableAssets' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeBlueprintBrushBase_GetBlueprintRenderDependencies;
 
 // Function Landscape.LandscapeBlueprintBrushBase.Initialize
 // 0x0040 (0x0040 - 0x0000)
@@ -250,11 +199,7 @@ public:
 	struct FIntPoint                              InLandscapeSize;                                   // 0x0030(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                              InLandscapeRenderTargetSize;                       // 0x0038(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeBlueprintBrushBase_Initialize) == 0x000010, "Wrong alignment on LandscapeBlueprintBrushBase_Initialize");
-static_assert(sizeof(LandscapeBlueprintBrushBase_Initialize) == 0x000040, "Wrong size on LandscapeBlueprintBrushBase_Initialize");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Initialize, InLandscapeTransform) == 0x000000, "Member 'LandscapeBlueprintBrushBase_Initialize::InLandscapeTransform' has a wrong offset!");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Initialize, InLandscapeSize) == 0x000030, "Member 'LandscapeBlueprintBrushBase_Initialize::InLandscapeSize' has a wrong offset!");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Initialize, InLandscapeRenderTargetSize) == 0x000038, "Member 'LandscapeBlueprintBrushBase_Initialize::InLandscapeRenderTargetSize' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeBlueprintBrushBase_Initialize;
 
 // Function Landscape.LandscapeBlueprintBrushBase.Render
 // 0x0028 (0x0028 - 0x0000)
@@ -268,12 +213,7 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeBlueprintBrushBase_Render) == 0x000008, "Wrong alignment on LandscapeBlueprintBrushBase_Render");
-static_assert(sizeof(LandscapeBlueprintBrushBase_Render) == 0x000028, "Wrong size on LandscapeBlueprintBrushBase_Render");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InIsHeightmap) == 0x000000, "Member 'LandscapeBlueprintBrushBase_Render::InIsHeightmap' has a wrong offset!");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InCombinedResult) == 0x000008, "Member 'LandscapeBlueprintBrushBase_Render::InCombinedResult' has a wrong offset!");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InWeightmapLayerName) == 0x000010, "Member 'LandscapeBlueprintBrushBase_Render::InWeightmapLayerName' has a wrong offset!");
-static_assert(offsetof(LandscapeBlueprintBrushBase_Render, ReturnValue) == 0x000020, "Member 'LandscapeBlueprintBrushBase_Render::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeBlueprintBrushBase_Render;
 
 // Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation
 // 0x0020 (0x0020 - 0x0000)
@@ -286,11 +226,7 @@ public:
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation) == 0x000008, "Wrong alignment on LandscapeComponent_EditorGetPaintLayerWeightAtLocation");
-static_assert(sizeof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation) == 0x000020, "Wrong size on LandscapeComponent_EditorGetPaintLayerWeightAtLocation");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation, InLocation) == 0x000000, "Member 'LandscapeComponent_EditorGetPaintLayerWeightAtLocation::InLocation' has a wrong offset!");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation, PaintLayer) == 0x000010, "Member 'LandscapeComponent_EditorGetPaintLayerWeightAtLocation::PaintLayer' has a wrong offset!");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation, ReturnValue) == 0x000018, "Member 'LandscapeComponent_EditorGetPaintLayerWeightAtLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeComponent_EditorGetPaintLayerWeightAtLocation;
 
 // Function Landscape.LandscapeComponent.EditorGetPaintLayerWeightByNameAtLocation
 // 0x001C (0x001C - 0x0000)
@@ -301,11 +237,7 @@ public:
 	class FName                                   InPaintLayerName;                                  // 0x000C(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation) == 0x000004, "Wrong alignment on LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation");
-static_assert(sizeof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation) == 0x00001C, "Wrong size on LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation, InLocation) == 0x000000, "Member 'LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation::InLocation' has a wrong offset!");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation, InPaintLayerName) == 0x00000C, "Member 'LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation::InPaintLayerName' has a wrong offset!");
-static_assert(offsetof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation, ReturnValue) == 0x000018, "Member 'LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation;
 
 // Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
 // 0x0010 (0x0010 - 0x0000)
@@ -316,10 +248,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeComponent_GetMaterialInstanceDynamic) == 0x000008, "Wrong alignment on LandscapeComponent_GetMaterialInstanceDynamic");
-static_assert(sizeof(LandscapeComponent_GetMaterialInstanceDynamic) == 0x000010, "Wrong size on LandscapeComponent_GetMaterialInstanceDynamic");
-static_assert(offsetof(LandscapeComponent_GetMaterialInstanceDynamic, InIndex) == 0x000000, "Member 'LandscapeComponent_GetMaterialInstanceDynamic::InIndex' has a wrong offset!");
-static_assert(offsetof(LandscapeComponent_GetMaterialInstanceDynamic, ReturnValue) == 0x000008, "Member 'LandscapeComponent_GetMaterialInstanceDynamic::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeComponent_GetMaterialInstanceDynamic;
 
 // Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -328,9 +257,7 @@ struct LandscapeHeightfieldCollisionComponent_GetRenderComponent final
 public:
 	class ULandscapeComponent*                    ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeHeightfieldCollisionComponent_GetRenderComponent) == 0x000008, "Wrong alignment on LandscapeHeightfieldCollisionComponent_GetRenderComponent");
-static_assert(sizeof(LandscapeHeightfieldCollisionComponent_GetRenderComponent) == 0x000008, "Wrong size on LandscapeHeightfieldCollisionComponent_GetRenderComponent");
-static_assert(offsetof(LandscapeHeightfieldCollisionComponent_GetRenderComponent, ReturnValue) == 0x000000, "Member 'LandscapeHeightfieldCollisionComponent_GetRenderComponent::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeHeightfieldCollisionComponent_GetRenderComponent;
 
 // Function Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
 // 0x0010 (0x0010 - 0x0000)
@@ -339,9 +266,7 @@ struct LandscapeSplinesComponent_GetSplineMeshComponents final
 public:
 	TArray<class USplineMeshComponent*>           ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LandscapeSplinesComponent_GetSplineMeshComponents) == 0x000008, "Wrong alignment on LandscapeSplinesComponent_GetSplineMeshComponents");
-static_assert(sizeof(LandscapeSplinesComponent_GetSplineMeshComponents) == 0x000010, "Wrong size on LandscapeSplinesComponent_GetSplineMeshComponents");
-static_assert(offsetof(LandscapeSplinesComponent_GetSplineMeshComponents, ReturnValue) == 0x000000, "Member 'LandscapeSplinesComponent_GetSplineMeshComponents::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_LandscapeSplinesComponent_GetSplineMeshComponents;
 
 }
 

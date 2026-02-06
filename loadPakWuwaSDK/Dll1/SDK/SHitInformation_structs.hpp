@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SHitEffect_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SReBulletDataMain_structs.hpp"
 
 
@@ -19,46 +19,29 @@ namespace SDK
 {
 
 // UserDefinedStruct SHitInformation.SHitInformation
-// 0x08D0 (0x08D0 - 0x0000)
+// 0x08D8 (0x08D8 - 0x0000)
 struct FSHitInformation final
 {
 public:
 	class ATsBaseCharacter_C*                     攻击者_38_171701BC40560E46FBA466B48E6092AF;        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ATsBaseCharacter_C*                     受击者_39_84434570491D5319B5E0A28FB784340B;        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSHitEffect                            被击效果_10_588E7221426E70635B148DB0E91D6534;      // 0x0010(0x00A0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         子弹ID_48_1E4506B74B8A70B3C7EEAC9C734EDD15;        // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                受击特效位置_17_082ABA0A4774F062BDD0CD85E02D245C;  // 0x00B4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               受击特效旋转_18_1B99B9D14B3E3AA96D24208CA7EF3AC0;  // 0x00C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          是否震动_19_46F239D24A594AD6CF8C4E8BFE560FFB;      // 0x00CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   受击部位_31_22F05A814007A12DB636C28A4A53DC93;      // 0x00D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                受击位置_34_0BAA9188472BB0AD5BA5E89384D7DD53;      // 0x00DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         技能等级_37_EF2705B7409667DBD656E28F30DB8ABD;      // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSReBulletDataMain                     重构子弹数据_42_2A698CA94C88094FBE5335969E4202DF;  // 0x00F0(0x07B8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class UBulletLogicType_C*                     子弹逻辑预设_45_237399E449F92834C865BB8BE2C9B167;  // 0x08A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 子弹表ID_51_E036400F47F81D1CF5EE9EB67BEF720E;      // 0x08B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         伤害类型_54_A569275640B11C33F860DB89E62832EF;      // 0x08C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8C4[0x4];                                      // 0x08C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         伤害ID_57_29F9DDF24FD9DB08990EE5B5CBAC2C2F;        // 0x08C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSHitEffect                            被击效果_10_588E7221426E70635B148DB0E91D6534;      // 0x0010(0x00A4)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         子弹ID_48_1E4506B74B8A70B3C7EEAC9C734EDD15;        // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                受击特效位置_17_082ABA0A4774F062BDD0CD85E02D245C;  // 0x00B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               受击特效旋转_18_1B99B9D14B3E3AA96D24208CA7EF3AC0;  // 0x00C4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          是否震动_19_46F239D24A594AD6CF8C4E8BFE560FFB;      // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   受击部位_31_22F05A814007A12DB636C28A4A53DC93;      // 0x00D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                受击位置_34_0BAA9188472BB0AD5BA5E89384D7DD53;      // 0x00E0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         技能等级_37_EF2705B7409667DBD656E28F30DB8ABD;      // 0x00EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSReBulletDataMain                     重构子弹数据_42_2A698CA94C88094FBE5335969E4202DF;  // 0x00F0(0x07C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UBulletLogicType_C*                     子弹逻辑预设_45_237399E449F92834C865BB8BE2C9B167;  // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 子弹表ID_51_E036400F47F81D1CF5EE9EB67BEF720E;      // 0x08B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         伤害类型_54_A569275640B11C33F860DB89E62832EF;      // 0x08C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8CC[0x4];                                      // 0x08CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         伤害ID_57_29F9DDF24FD9DB08990EE5B5CBAC2C2F;        // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSHitInformation) == 0x000008, "Wrong alignment on FSHitInformation");
-static_assert(sizeof(FSHitInformation) == 0x0008D0, "Wrong size on FSHitInformation");
-static_assert(offsetof(FSHitInformation, 攻击者_38_171701BC40560E46FBA466B48E6092AF) == 0x000000, "Member 'FSHitInformation::攻击者_38_171701BC40560E46FBA466B48E6092AF' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 受击者_39_84434570491D5319B5E0A28FB784340B) == 0x000008, "Member 'FSHitInformation::受击者_39_84434570491D5319B5E0A28FB784340B' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 被击效果_10_588E7221426E70635B148DB0E91D6534) == 0x000010, "Member 'FSHitInformation::被击效果_10_588E7221426E70635B148DB0E91D6534' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 子弹ID_48_1E4506B74B8A70B3C7EEAC9C734EDD15) == 0x0000B0, "Member 'FSHitInformation::子弹ID_48_1E4506B74B8A70B3C7EEAC9C734EDD15' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 受击特效位置_17_082ABA0A4774F062BDD0CD85E02D245C) == 0x0000B4, "Member 'FSHitInformation::受击特效位置_17_082ABA0A4774F062BDD0CD85E02D245C' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 受击特效旋转_18_1B99B9D14B3E3AA96D24208CA7EF3AC0) == 0x0000C0, "Member 'FSHitInformation::受击特效旋转_18_1B99B9D14B3E3AA96D24208CA7EF3AC0' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 是否震动_19_46F239D24A594AD6CF8C4E8BFE560FFB) == 0x0000CC, "Member 'FSHitInformation::是否震动_19_46F239D24A594AD6CF8C4E8BFE560FFB' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 受击部位_31_22F05A814007A12DB636C28A4A53DC93) == 0x0000D0, "Member 'FSHitInformation::受击部位_31_22F05A814007A12DB636C28A4A53DC93' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 受击位置_34_0BAA9188472BB0AD5BA5E89384D7DD53) == 0x0000DC, "Member 'FSHitInformation::受击位置_34_0BAA9188472BB0AD5BA5E89384D7DD53' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 技能等级_37_EF2705B7409667DBD656E28F30DB8ABD) == 0x0000E8, "Member 'FSHitInformation::技能等级_37_EF2705B7409667DBD656E28F30DB8ABD' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 重构子弹数据_42_2A698CA94C88094FBE5335969E4202DF) == 0x0000F0, "Member 'FSHitInformation::重构子弹数据_42_2A698CA94C88094FBE5335969E4202DF' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 子弹逻辑预设_45_237399E449F92834C865BB8BE2C9B167) == 0x0008A8, "Member 'FSHitInformation::子弹逻辑预设_45_237399E449F92834C865BB8BE2C9B167' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 子弹表ID_51_E036400F47F81D1CF5EE9EB67BEF720E) == 0x0008B0, "Member 'FSHitInformation::子弹表ID_51_E036400F47F81D1CF5EE9EB67BEF720E' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 伤害类型_54_A569275640B11C33F860DB89E62832EF) == 0x0008C0, "Member 'FSHitInformation::伤害类型_54_A569275640B11C33F860DB89E62832EF' has a wrong offset!");
-static_assert(offsetof(FSHitInformation, 伤害ID_57_29F9DDF24FD9DB08990EE5B5CBAC2C2F) == 0x0008C8, "Member 'FSHitInformation::伤害ID_57_29F9DDF24FD9DB08990EE5B5CBAC2C2F' has a wrong offset!");
+DUMPER7_ASSERTS_FSHitInformation;
 
 }
 

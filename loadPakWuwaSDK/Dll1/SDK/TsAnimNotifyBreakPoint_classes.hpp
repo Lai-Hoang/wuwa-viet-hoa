@@ -28,15 +28,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"TsAnimNotifyBreakPoint_C">();
+		BP_STATIC_CLASS_IMPL("TsAnimNotifyBreakPoint_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TsAnimNotifyBreakPoint_C")
 	}
 	static class UTsAnimNotifyBreakPoint_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UTsAnimNotifyBreakPoint_C>();
 	}
 };
-static_assert(alignof(UTsAnimNotifyBreakPoint_C) == 0x000008, "Wrong alignment on UTsAnimNotifyBreakPoint_C");
-static_assert(sizeof(UTsAnimNotifyBreakPoint_C) == 0x000048, "Wrong size on UTsAnimNotifyBreakPoint_C");
+DUMPER7_ASSERTS_UTsAnimNotifyBreakPoint_C;
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
@@ -94,74 +94,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Common_NPC_Seq_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Common_NPC_Seq_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Common_NPC_Seq_C")
 	}
 	static class UABP_Common_NPC_Seq_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Common_NPC_Seq_C>();
 	}
 };
-static_assert(alignof(UABP_Common_NPC_Seq_C) == 0x000010, "Wrong alignment on UABP_Common_NPC_Seq_C");
-static_assert(sizeof(UABP_Common_NPC_Seq_C) == 0x0025D0, "Wrong size on UABP_Common_NPC_Seq_C");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, UberGraphFrame) == 0x000730, "Member 'UABP_Common_NPC_Seq_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_LinkedInputPose) == 0x000770, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_6) == 0x0008A8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_CurveSource) == 0x000908, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_CurveSource' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_LocalToComponentSpace) == 0x000948, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_17) == 0x000968, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_17' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_16) == 0x000A90, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_16' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_15) == 0x000BB8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_15' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ComponentToLocalSpace) == 0x000CE0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_5) == 0x000D00, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_CurveFix) == 0x000D60, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_CurveFix' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_4) == 0x000D90, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_CombineCurves_1) == 0x000DF0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_CombineCurves_1' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_CombineCurves) == 0x000E50, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_CombineCurves' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_14) == 0x000EB0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_14' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_13) == 0x000FD8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_13' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_12) == 0x001100, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_12' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_11) == 0x001228, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_11' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_10) == 0x001350, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_10' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_9) == 0x001478, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_9' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_8) == 0x0015A0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_8' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_7) == 0x0016C8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_7' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_6) == 0x0017F0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_6' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_3) == 0x001918, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_LayeredBoneBlend_1) == 0x001978, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_2) == 0x001A38, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_LayeredBoneBlend) == 0x001A98, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_5) == 0x001B58, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_5' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_4) == 0x001C80, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_4' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_3) == 0x001DA8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_3' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_2) == 0x001ED0, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_2' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone_1) == 0x001FF8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone_1' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_ModifyBone) == 0x002120, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot_1) == 0x002248, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_Slot) == 0x0022A8, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AnimGraphNode_KuroModifyBones) == 0x002308, "Member 'UABP_Common_NPC_Seq_C::AnimGraphNode_KuroModifyBones' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001Head) == 0x002498, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001Head' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001Neck) == 0x0024A4, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001Neck' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001Spine_2) == 0x0024B0, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001Spine_2' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, MouthAlpha) == 0x0024BC, "Member 'UABP_Common_NPC_Seq_C::MouthAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001LClavicle) == 0x0024C0, "Member 'UABP_Common_NPC_Seq_C::AddBip001LClavicle' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001LUpperArm) == 0x0024CC, "Member 'UABP_Common_NPC_Seq_C::AddBip001LUpperArm' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001LForearm) == 0x0024D8, "Member 'UABP_Common_NPC_Seq_C::AddBip001LForearm' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001RClavicle) == 0x0024E4, "Member 'UABP_Common_NPC_Seq_C::AddBip001RClavicle' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001RUpperArm) == 0x0024F0, "Member 'UABP_Common_NPC_Seq_C::AddBip001RUpperArm' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, AddBip001RForearm) == 0x0024FC, "Member 'UABP_Common_NPC_Seq_C::AddBip001RForearm' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001Spine_1) == 0x002508, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001Spine_1' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001LHand) == 0x002514, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001LHand' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001RHand) == 0x002520, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001RHand' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, SeqLHandWeight) == 0x00252C, "Member 'UABP_Common_NPC_Seq_C::SeqLHandWeight' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, SeqRHandWeight) == 0x002530, "Member 'UABP_Common_NPC_Seq_C::SeqRHandWeight' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001LThigh) == 0x002534, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001LThigh' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001LCalf) == 0x002540, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001LCalf' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001LFoot) == 0x00254C, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001LFoot' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001RThigh) == 0x002558, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001RThigh' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001RCalf) == 0x002564, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001RCalf' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Add_Bip_001RFoot) == 0x002570, "Member 'UABP_Common_NPC_Seq_C::Add_Bip_001RFoot' has a wrong offset!");
-static_assert(offsetof(UABP_Common_NPC_Seq_C, Vector_Curve_Data) == 0x002580, "Member 'UABP_Common_NPC_Seq_C::Vector_Curve_Data' has a wrong offset!");
+DUMPER7_ASSERTS_UABP_Common_NPC_Seq_C;
 
 }
 

@@ -26,12 +26,7 @@ public:
 	float                                         SquaredOffsetLength_11_5CF5FE2840660705AF2AA5AF0C47CA8B; // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success_10_65941456459F87653FBB5DA1F7149A4A;       // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSSimpleInteractResult) == 0x000004, "Wrong alignment on FSSimpleInteractResult");
-static_assert(sizeof(FSSimpleInteractResult) == 0x000020, "Wrong size on FSSimpleInteractResult");
-static_assert(offsetof(FSSimpleInteractResult, Location_2_5C6F8BEA4044EA9D8BB53C9F616B09BA) == 0x000000, "Member 'FSSimpleInteractResult::Location_2_5C6F8BEA4044EA9D8BB53C9F616B09BA' has a wrong offset!");
-static_assert(offsetof(FSSimpleInteractResult, Rotator_5_6571C08F4632B8082AC5C8A2356CC070) == 0x00000C, "Member 'FSSimpleInteractResult::Rotator_5_6571C08F4632B8082AC5C8A2356CC070' has a wrong offset!");
-static_assert(offsetof(FSSimpleInteractResult, SquaredOffsetLength_11_5CF5FE2840660705AF2AA5AF0C47CA8B) == 0x000018, "Member 'FSSimpleInteractResult::SquaredOffsetLength_11_5CF5FE2840660705AF2AA5AF0C47CA8B' has a wrong offset!");
-static_assert(offsetof(FSSimpleInteractResult, Success_10_65941456459F87653FBB5DA1F7149A4A) == 0x00001C, "Member 'FSSimpleInteractResult::Success_10_65941456459F87653FBB5DA1F7149A4A' has a wrong offset!");
+DUMPER7_ASSERTS_FSSimpleInteractResult;
 
 }
 

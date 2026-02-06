@@ -23,15 +23,18 @@ class UInputCoreTypes final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"InputCoreTypes">();
+		STATIC_CLASS_IMPL("InputCoreTypes")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"InputCoreTypes")
 	}
 	static class UInputCoreTypes* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UInputCoreTypes>();
 	}
 };
-static_assert(alignof(UInputCoreTypes) == 0x000008, "Wrong alignment on UInputCoreTypes");
-static_assert(sizeof(UInputCoreTypes) == 0x000030, "Wrong size on UInputCoreTypes");
+DUMPER7_ASSERTS_UInputCoreTypes;
 
 }
 

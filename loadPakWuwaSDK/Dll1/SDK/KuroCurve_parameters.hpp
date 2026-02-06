@@ -28,12 +28,7 @@ public:
 	TArray<struct FVector2D>                      KeyValues;                                         // 0x0008(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FKuroCurveFloat                        ReturnValue;                                       // 0x0018(0x0090)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCurveLibrary_CreateCurveFloat) == 0x000008, "Wrong alignment on KuroCurveLibrary_CreateCurveFloat");
-static_assert(sizeof(KuroCurveLibrary_CreateCurveFloat) == 0x0000A8, "Wrong size on KuroCurveLibrary_CreateCurveFloat");
-static_assert(offsetof(KuroCurveLibrary_CreateCurveFloat, bUseCurve) == 0x000000, "Member 'KuroCurveLibrary_CreateCurveFloat::bUseCurve' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_CreateCurveFloat, Constant) == 0x000004, "Member 'KuroCurveLibrary_CreateCurveFloat::Constant' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_CreateCurveFloat, KeyValues) == 0x000008, "Member 'KuroCurveLibrary_CreateCurveFloat::KeyValues' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_CreateCurveFloat, ReturnValue) == 0x000018, "Member 'KuroCurveLibrary_CreateCurveFloat::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_CreateCurveFloat;
 
 // Function KuroCurve.KuroCurveLibrary.GetValue_Float
 // 0x0098 (0x0098 - 0x0000)
@@ -44,11 +39,7 @@ public:
 	float                                         Time;                                              // 0x0090(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0094(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCurveLibrary_GetValue_Float) == 0x000008, "Wrong alignment on KuroCurveLibrary_GetValue_Float");
-static_assert(sizeof(KuroCurveLibrary_GetValue_Float) == 0x000098, "Wrong size on KuroCurveLibrary_GetValue_Float");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Float, CurveFloat) == 0x000000, "Member 'KuroCurveLibrary_GetValue_Float::CurveFloat' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Float, Time) == 0x000090, "Member 'KuroCurveLibrary_GetValue_Float::Time' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Float, ReturnValue) == 0x000094, "Member 'KuroCurveLibrary_GetValue_Float::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_GetValue_Float;
 
 // Function KuroCurve.KuroCurveLibrary.GetValue_LinearColor
 // 0x0238 (0x0238 - 0x0000)
@@ -60,11 +51,7 @@ public:
 	struct FLinearColor                           ReturnValue;                                       // 0x0224(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_GetValue_LinearColor) == 0x000008, "Wrong alignment on KuroCurveLibrary_GetValue_LinearColor");
-static_assert(sizeof(KuroCurveLibrary_GetValue_LinearColor) == 0x000238, "Wrong size on KuroCurveLibrary_GetValue_LinearColor");
-static_assert(offsetof(KuroCurveLibrary_GetValue_LinearColor, CurveLinearColor) == 0x000000, "Member 'KuroCurveLibrary_GetValue_LinearColor::CurveLinearColor' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_LinearColor, Time) == 0x000220, "Member 'KuroCurveLibrary_GetValue_LinearColor::Time' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_LinearColor, ReturnValue) == 0x000224, "Member 'KuroCurveLibrary_GetValue_LinearColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_GetValue_LinearColor;
 
 // Function KuroCurve.KuroCurveLibrary.GetValue_Vector
 // 0x01B8 (0x01B8 - 0x0000)
@@ -75,11 +62,7 @@ public:
 	float                                         Time;                                              // 0x01A8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ReturnValue;                                       // 0x01AC(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(KuroCurveLibrary_GetValue_Vector) == 0x000008, "Wrong alignment on KuroCurveLibrary_GetValue_Vector");
-static_assert(sizeof(KuroCurveLibrary_GetValue_Vector) == 0x0001B8, "Wrong size on KuroCurveLibrary_GetValue_Vector");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector, CurveVector) == 0x000000, "Member 'KuroCurveLibrary_GetValue_Vector::CurveVector' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector, Time) == 0x0001A8, "Member 'KuroCurveLibrary_GetValue_Vector::Time' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector, ReturnValue) == 0x0001AC, "Member 'KuroCurveLibrary_GetValue_Vector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_GetValue_Vector;
 
 // Function KuroCurve.KuroCurveLibrary.GetValue_Vector2D
 // 0x0130 (0x0130 - 0x0000)
@@ -91,11 +74,7 @@ public:
 	struct FVector2D                              ReturnValue;                                       // 0x0124(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_GetValue_Vector2D) == 0x000008, "Wrong alignment on KuroCurveLibrary_GetValue_Vector2D");
-static_assert(sizeof(KuroCurveLibrary_GetValue_Vector2D) == 0x000130, "Wrong size on KuroCurveLibrary_GetValue_Vector2D");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector2D, CurveVector2D) == 0x000000, "Member 'KuroCurveLibrary_GetValue_Vector2D::CurveVector2D' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector2D, Time) == 0x000120, "Member 'KuroCurveLibrary_GetValue_Vector2D::Time' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_GetValue_Vector2D, ReturnValue) == 0x000124, "Member 'KuroCurveLibrary_GetValue_Vector2D::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_GetValue_Vector2D;
 
 // Function KuroCurve.KuroCurveLibrary.UseCurve_Float
 // 0x0098 (0x0098 - 0x0000)
@@ -106,10 +85,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_UseCurve_Float) == 0x000008, "Wrong alignment on KuroCurveLibrary_UseCurve_Float");
-static_assert(sizeof(KuroCurveLibrary_UseCurve_Float) == 0x000098, "Wrong size on KuroCurveLibrary_UseCurve_Float");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Float, CurveFloat) == 0x000000, "Member 'KuroCurveLibrary_UseCurve_Float::CurveFloat' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Float, ReturnValue) == 0x000090, "Member 'KuroCurveLibrary_UseCurve_Float::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_UseCurve_Float;
 
 // Function KuroCurve.KuroCurveLibrary.UseCurve_LinearColor
 // 0x0228 (0x0228 - 0x0000)
@@ -120,10 +96,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0220(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_UseCurve_LinearColor) == 0x000008, "Wrong alignment on KuroCurveLibrary_UseCurve_LinearColor");
-static_assert(sizeof(KuroCurveLibrary_UseCurve_LinearColor) == 0x000228, "Wrong size on KuroCurveLibrary_UseCurve_LinearColor");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_LinearColor, CurveLinearColor) == 0x000000, "Member 'KuroCurveLibrary_UseCurve_LinearColor::CurveLinearColor' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_LinearColor, ReturnValue) == 0x000220, "Member 'KuroCurveLibrary_UseCurve_LinearColor::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_UseCurve_LinearColor;
 
 // Function KuroCurve.KuroCurveLibrary.UseCurve_Vector
 // 0x01B0 (0x01B0 - 0x0000)
@@ -134,10 +107,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x01A8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_UseCurve_Vector) == 0x000008, "Wrong alignment on KuroCurveLibrary_UseCurve_Vector");
-static_assert(sizeof(KuroCurveLibrary_UseCurve_Vector) == 0x0001B0, "Wrong size on KuroCurveLibrary_UseCurve_Vector");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Vector, CurveVector) == 0x000000, "Member 'KuroCurveLibrary_UseCurve_Vector::CurveVector' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Vector, ReturnValue) == 0x0001A8, "Member 'KuroCurveLibrary_UseCurve_Vector::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_UseCurve_Vector;
 
 // Function KuroCurve.KuroCurveLibrary.UseCurve_Vector2D
 // 0x0128 (0x0128 - 0x0000)
@@ -148,10 +118,7 @@ public:
 	bool                                          ReturnValue;                                       // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroCurveLibrary_UseCurve_Vector2D) == 0x000008, "Wrong alignment on KuroCurveLibrary_UseCurve_Vector2D");
-static_assert(sizeof(KuroCurveLibrary_UseCurve_Vector2D) == 0x000128, "Wrong size on KuroCurveLibrary_UseCurve_Vector2D");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Vector2D, CurveVector2D) == 0x000000, "Member 'KuroCurveLibrary_UseCurve_Vector2D::CurveVector2D' has a wrong offset!");
-static_assert(offsetof(KuroCurveLibrary_UseCurve_Vector2D, ReturnValue) == 0x000120, "Member 'KuroCurveLibrary_UseCurve_Vector2D::ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_KuroCurveLibrary_UseCurve_Vector2D;
 
 }
 

@@ -37,15 +37,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"StreamlineLibraryReflex">();
+		STATIC_CLASS_IMPL("StreamlineLibraryReflex")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"StreamlineLibraryReflex")
 	}
 	static class UStreamlineLibraryReflex* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UStreamlineLibraryReflex>();
 	}
 };
-static_assert(alignof(UStreamlineLibraryReflex) == 0x000008, "Wrong alignment on UStreamlineLibraryReflex");
-static_assert(sizeof(UStreamlineLibraryReflex) == 0x000030, "Wrong size on UStreamlineLibraryReflex");
+DUMPER7_ASSERTS_UStreamlineLibraryReflex;
 
 }
 

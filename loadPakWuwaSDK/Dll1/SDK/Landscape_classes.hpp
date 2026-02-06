@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Landscape_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Landscape_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -31,16 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlPointMeshActor">();
+		STATIC_CLASS_IMPL("ControlPointMeshActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlPointMeshActor")
 	}
 	static class AControlPointMeshActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AControlPointMeshActor>();
 	}
 };
-static_assert(alignof(AControlPointMeshActor) == 0x000008, "Wrong alignment on AControlPointMeshActor");
-static_assert(sizeof(AControlPointMeshActor) == 0x0002B8, "Wrong size on AControlPointMeshActor");
-static_assert(offsetof(AControlPointMeshActor, ControlPointMeshComponent) == 0x0002B0, "Member 'AControlPointMeshActor::ControlPointMeshComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AControlPointMeshActor;
 
 // Class Landscape.ControlPointMeshComponent
 // 0x0000 (0x05F0 - 0x05F0)
@@ -53,16 +55,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ControlPointMeshComponent">();
+		STATIC_CLASS_IMPL("ControlPointMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ControlPointMeshComponent")
 	}
 	static class UControlPointMeshComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UControlPointMeshComponent>();
 	}
 };
-static_assert(alignof(UControlPointMeshComponent) == 0x000010, "Wrong alignment on UControlPointMeshComponent");
-static_assert(sizeof(UControlPointMeshComponent) == 0x0005F0, "Wrong size on UControlPointMeshComponent");
-static_assert(offsetof(UControlPointMeshComponent, VirtualTextureMainPassMaxDrawDistance) == 0x0005E8, "Member 'UControlPointMeshComponent::VirtualTextureMainPassMaxDrawDistance' has a wrong offset!");
+DUMPER7_ASSERTS_UControlPointMeshComponent;
 
 // Class Landscape.LandscapeProxy
 // 0x03F0 (0x06A0 - 0x02B0)
@@ -191,7 +195,11 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeProxy">();
+		STATIC_CLASS_IMPL("LandscapeProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeProxy")
 	}
 	static class ALandscapeProxy* GetDefaultObj()
 	{
@@ -199,64 +207,7 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(ALandscapeProxy) == 0x000010, "Wrong alignment on ALandscapeProxy");
-static_assert(sizeof(ALandscapeProxy) == 0x0006A0, "Wrong size on ALandscapeProxy");
-static_assert(offsetof(ALandscapeProxy, SplineComponent) == 0x0002B0, "Member 'ALandscapeProxy::SplineComponent' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeGuid) == 0x0002B8, "Member 'ALandscapeProxy::LandscapeGuid' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeSectionOffset) == 0x0002C8, "Member 'ALandscapeProxy::LandscapeSectionOffset' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, MaxLODLevel) == 0x0002D0, "Member 'ALandscapeProxy::MaxLODLevel' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LODDistanceFactor) == 0x0002D4, "Member 'ALandscapeProxy::LODDistanceFactor' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LODFalloff) == 0x0002D8, "Member 'ALandscapeProxy::LODFalloff' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, ComponentScreenSizeToUseSubSections) == 0x0002DC, "Member 'ALandscapeProxy::ComponentScreenSizeToUseSubSections' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LOD0ScreenSize) == 0x0002E0, "Member 'ALandscapeProxy::LOD0ScreenSize' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LOD0DistributionSetting) == 0x0002E4, "Member 'ALandscapeProxy::LOD0DistributionSetting' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LODDistributionSetting) == 0x0002E8, "Member 'ALandscapeProxy::LODDistributionSetting' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, TessellationComponentScreenSize) == 0x0002EC, "Member 'ALandscapeProxy::TessellationComponentScreenSize' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, UseTessellationComponentScreenSizeFalloff) == 0x0002F0, "Member 'ALandscapeProxy::UseTessellationComponentScreenSizeFalloff' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, TessellationComponentScreenSizeFalloff) == 0x0002F4, "Member 'ALandscapeProxy::TessellationComponentScreenSizeFalloff' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, OccluderGeometryLOD) == 0x0002F8, "Member 'ALandscapeProxy::OccluderGeometryLOD' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, StaticLightingLOD) == 0x0002FC, "Member 'ALandscapeProxy::StaticLightingLOD' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, DefaultPhysMaterial) == 0x000300, "Member 'ALandscapeProxy::DefaultPhysMaterial' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, StreamingDistanceMultiplier) == 0x000308, "Member 'ALandscapeProxy::StreamingDistanceMultiplier' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeMaterial) == 0x000310, "Member 'ALandscapeProxy::LandscapeMaterial' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeLayerParams) == 0x000318, "Member 'ALandscapeProxy::LandscapeLayerParams' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, KuroColormapTexture) == 0x000330, "Member 'ALandscapeProxy::KuroColormapTexture' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, SectionBaseMinAndRange) == 0x000340, "Member 'ALandscapeProxy::SectionBaseMinAndRange' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeHoleMaterial) == 0x000370, "Member 'ALandscapeProxy::LandscapeHoleMaterial' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeMaterialsOverride) == 0x000378, "Member 'ALandscapeProxy::LandscapeMaterialsOverride' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CustomLayerPhysicalMaterial) == 0x000388, "Member 'ALandscapeProxy::CustomLayerPhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, bMeshHoles) == 0x000398, "Member 'ALandscapeProxy::bMeshHoles' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, MeshHolesMaxLod) == 0x000399, "Member 'ALandscapeProxy::MeshHolesMaxLod' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, RuntimeVirtualTextures) == 0x0003A0, "Member 'ALandscapeProxy::RuntimeVirtualTextures' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, VirtualTextureNumLods) == 0x0003B0, "Member 'ALandscapeProxy::VirtualTextureNumLods' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, VirtualTextureLodBias) == 0x0003B4, "Member 'ALandscapeProxy::VirtualTextureLodBias' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, VirtualTextureRenderPassType) == 0x0003B8, "Member 'ALandscapeProxy::VirtualTextureRenderPassType' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, NegativeZBoundsExtension) == 0x0003BC, "Member 'ALandscapeProxy::NegativeZBoundsExtension' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, PositiveZBoundsExtension) == 0x0003C0, "Member 'ALandscapeProxy::PositiveZBoundsExtension' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeComponents) == 0x0003C8, "Member 'ALandscapeProxy::LandscapeComponents' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LandscapeBatch) == 0x0003D8, "Member 'ALandscapeProxy::LandscapeBatch' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CollisionComponents) == 0x0003E0, "Member 'ALandscapeProxy::CollisionComponents' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, FoliageComponents) == 0x0003F0, "Member 'ALandscapeProxy::FoliageComponents' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, bHasLandscapeGrass) == 0x000464, "Member 'ALandscapeProxy::bHasLandscapeGrass' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, StaticLightingResolution) == 0x000468, "Member 'ALandscapeProxy::StaticLightingResolution' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LightingChannels) == 0x00047D, "Member 'ALandscapeProxy::LightingChannels' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CustomDepthStencilWriteMask) == 0x000484, "Member 'ALandscapeProxy::CustomDepthStencilWriteMask' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CustomDepthStencilValue) == 0x000488, "Member 'ALandscapeProxy::CustomDepthStencilValue' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LDMaxDrawDistance) == 0x00048C, "Member 'ALandscapeProxy::LDMaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, KuroRenderingLODBias) == 0x000490, "Member 'ALandscapeProxy::KuroRenderingLODBias' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, LightmassSettings) == 0x000494, "Member 'ALandscapeProxy::LightmassSettings' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CollisionMipLevel) == 0x0004AC, "Member 'ALandscapeProxy::CollisionMipLevel' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, SimpleCollisionMipLevel) == 0x0004B0, "Member 'ALandscapeProxy::SimpleCollisionMipLevel' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, CollisionThickness) == 0x0004B4, "Member 'ALandscapeProxy::CollisionThickness' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, BodyInstance) == 0x0004B8, "Member 'ALandscapeProxy::BodyInstance' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, ComponentSizeQuads) == 0x000634, "Member 'ALandscapeProxy::ComponentSizeQuads' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, SubsectionSizeQuads) == 0x000638, "Member 'ALandscapeProxy::SubsectionSizeQuads' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, NumSubsections) == 0x00063C, "Member 'ALandscapeProxy::NumSubsections' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, bUseDynamicMaterialInstance) == 0x000644, "Member 'ALandscapeProxy::bUseDynamicMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, NavigationGeometryGatheringMode) == 0x000645, "Member 'ALandscapeProxy::NavigationGeometryGatheringMode' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, bUseLandscapeForCullingInvisibleHLODVertices) == 0x000646, "Member 'ALandscapeProxy::bUseLandscapeForCullingInvisibleHLODVertices' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, bHasLayersContent) == 0x000647, "Member 'ALandscapeProxy::bHasLayersContent' has a wrong offset!");
-static_assert(offsetof(ALandscapeProxy, WeightmapUsageMap) == 0x000648, "Member 'ALandscapeProxy::WeightmapUsageMap' has a wrong offset!");
+DUMPER7_ASSERTS_ALandscapeProxy;
 
 // Class Landscape.Landscape
 // 0x0000 (0x06A0 - 0x06A0)
@@ -265,15 +216,18 @@ class ALandscape final : public ALandscapeProxy
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Landscape">();
+		STATIC_CLASS_IMPL("Landscape")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"Landscape")
 	}
 	static class ALandscape* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscape>();
 	}
 };
-static_assert(alignof(ALandscape) == 0x000010, "Wrong alignment on ALandscape");
-static_assert(sizeof(ALandscape) == 0x0006A0, "Wrong size on ALandscape");
+DUMPER7_ASSERTS_ALandscape;
 
 // Class Landscape.LandscapeBatchComponent
 // 0x00D0 (0x0600 - 0x0530)
@@ -293,21 +247,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeBatchComponent">();
+		STATIC_CLASS_IMPL("LandscapeBatchComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeBatchComponent")
 	}
 	static class ULandscapeBatchComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeBatchComponent>();
 	}
 };
-static_assert(alignof(ULandscapeBatchComponent) == 0x000010, "Wrong alignment on ULandscapeBatchComponent");
-static_assert(sizeof(ULandscapeBatchComponent) == 0x000600, "Wrong size on ULandscapeBatchComponent");
-static_assert(offsetof(ULandscapeBatchComponent, MaterialInterfaces) == 0x000548, "Member 'ULandscapeBatchComponent::MaterialInterfaces' has a wrong offset!");
-static_assert(offsetof(ULandscapeBatchComponent, OrdedComponents) == 0x000558, "Member 'ULandscapeBatchComponent::OrdedComponents' has a wrong offset!");
-static_assert(offsetof(ULandscapeBatchComponent, WeightmapArrays) == 0x000568, "Member 'ULandscapeBatchComponent::WeightmapArrays' has a wrong offset!");
-static_assert(offsetof(ULandscapeBatchComponent, ComponentVertexStarts) == 0x000578, "Member 'ULandscapeBatchComponent::ComponentVertexStarts' has a wrong offset!");
-static_assert(offsetof(ULandscapeBatchComponent, IndirectMode) == 0x000588, "Member 'ULandscapeBatchComponent::IndirectMode' has a wrong offset!");
-static_assert(offsetof(ULandscapeBatchComponent, CompressedGeometryData) == 0x000590, "Member 'ULandscapeBatchComponent::CompressedGeometryData' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeBatchComponent;
 
 // Class Landscape.LandscapeBlueprintBrushBase
 // 0x0000 (0x02B0 - 0x02B0)
@@ -322,15 +273,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeBlueprintBrushBase">();
+		STATIC_CLASS_IMPL("LandscapeBlueprintBrushBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeBlueprintBrushBase")
 	}
 	static class ALandscapeBlueprintBrushBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscapeBlueprintBrushBase>();
 	}
 };
-static_assert(alignof(ALandscapeBlueprintBrushBase) == 0x000008, "Wrong alignment on ALandscapeBlueprintBrushBase");
-static_assert(sizeof(ALandscapeBlueprintBrushBase) == 0x0002B0, "Wrong size on ALandscapeBlueprintBrushBase");
+DUMPER7_ASSERTS_ALandscapeBlueprintBrushBase;
 
 // Class Landscape.LandscapeLODStreamingProxy
 // 0x0008 (0x00C0 - 0x00B8)
@@ -342,15 +296,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeLODStreamingProxy">();
+		STATIC_CLASS_IMPL("LandscapeLODStreamingProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeLODStreamingProxy")
 	}
 	static class ULandscapeLODStreamingProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeLODStreamingProxy>();
 	}
 };
-static_assert(alignof(ULandscapeLODStreamingProxy) == 0x000008, "Wrong alignment on ULandscapeLODStreamingProxy");
-static_assert(sizeof(ULandscapeLODStreamingProxy) == 0x0000C0, "Wrong size on ULandscapeLODStreamingProxy");
+DUMPER7_ASSERTS_ULandscapeLODStreamingProxy;
 
 // Class Landscape.LandscapeComponent
 // 0x0280 (0x07B0 - 0x0530)
@@ -423,63 +380,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeComponent">();
+		STATIC_CLASS_IMPL("LandscapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeComponent")
 	}
 	static class ULandscapeComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeComponent>();
 	}
 };
-static_assert(alignof(ULandscapeComponent) == 0x000010, "Wrong alignment on ULandscapeComponent");
-static_assert(sizeof(ULandscapeComponent) == 0x0007B0, "Wrong size on ULandscapeComponent");
-static_assert(offsetof(ULandscapeComponent, SectionBaseX) == 0x000528, "Member 'ULandscapeComponent::SectionBaseX' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, SectionBaseY) == 0x00052C, "Member 'ULandscapeComponent::SectionBaseY' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, ComponentSizeQuads) == 0x000530, "Member 'ULandscapeComponent::ComponentSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, SubsectionSizeQuads) == 0x000534, "Member 'ULandscapeComponent::SubsectionSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, NumSubsections) == 0x000538, "Member 'ULandscapeComponent::NumSubsections' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, OverrideMaterial) == 0x000540, "Member 'ULandscapeComponent::OverrideMaterial' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, OverrideHoleMaterial) == 0x000548, "Member 'ULandscapeComponent::OverrideHoleMaterial' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, OverrideMaterials) == 0x000550, "Member 'ULandscapeComponent::OverrideMaterials' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MaterialInstances) == 0x000560, "Member 'ULandscapeComponent::MaterialInstances' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MaterialInstancesDynamic) == 0x000570, "Member 'ULandscapeComponent::MaterialInstancesDynamic' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, LODIndexToMaterialIndex) == 0x000580, "Member 'ULandscapeComponent::LODIndexToMaterialIndex' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MaterialIndexToDisabledTessellationMaterial) == 0x000590, "Member 'ULandscapeComponent::MaterialIndexToDisabledTessellationMaterial' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, IndexmapTexture) == 0x0005A0, "Member 'ULandscapeComponent::IndexmapTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, BlendmapTexture) == 0x0005A8, "Member 'ULandscapeComponent::BlendmapTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, IndexWeightsTexture) == 0x0005B0, "Member 'ULandscapeComponent::IndexWeightsTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, IndexWeightsTexture2) == 0x0005B8, "Member 'ULandscapeComponent::IndexWeightsTexture2' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, XYOffsetmapTexture) == 0x0005C0, "Member 'ULandscapeComponent::XYOffsetmapTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, WeightmapScaleBias) == 0x0005D0, "Member 'ULandscapeComponent::WeightmapScaleBias' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, WeightmapSubsectionOffset) == 0x0005E0, "Member 'ULandscapeComponent::WeightmapSubsectionOffset' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, HeightmapScaleBias) == 0x0005F0, "Member 'ULandscapeComponent::HeightmapScaleBias' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, CachedLocalBox) == 0x000600, "Member 'ULandscapeComponent::CachedLocalBox' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, CollisionComponent) == 0x00061C, "Member 'ULandscapeComponent::CollisionComponent' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, HeightmapTexture) == 0x000638, "Member 'ULandscapeComponent::HeightmapTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, WeightmapLayerAllocations) == 0x000640, "Member 'ULandscapeComponent::WeightmapLayerAllocations' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, WeightmapTextures) == 0x000650, "Member 'ULandscapeComponent::WeightmapTextures' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, LODStreamingProxy) == 0x000660, "Member 'ULandscapeComponent::LODStreamingProxy' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MapBuildDataId) == 0x000668, "Member 'ULandscapeComponent::MapBuildDataId' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, IrrelevantLights) == 0x000678, "Member 'ULandscapeComponent::IrrelevantLights' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, CollisionMipLevel) == 0x000688, "Member 'ULandscapeComponent::CollisionMipLevel' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, SimpleCollisionMipLevel) == 0x00068C, "Member 'ULandscapeComponent::SimpleCollisionMipLevel' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, NegativeZBoundsExtension) == 0x000690, "Member 'ULandscapeComponent::NegativeZBoundsExtension' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, PositiveZBoundsExtension) == 0x000694, "Member 'ULandscapeComponent::PositiveZBoundsExtension' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, StaticLightingResolution) == 0x000698, "Member 'ULandscapeComponent::StaticLightingResolution' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, ForcedLOD) == 0x00069C, "Member 'ULandscapeComponent::ForcedLOD' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, LODBias) == 0x0006A0, "Member 'ULandscapeComponent::LODBias' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, KuroRenderingLODBias) == 0x0006A4, "Member 'ULandscapeComponent::KuroRenderingLODBias' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, bLimitMaxKuroFOVFactorForLODCalculation) == 0x0006A8, "Member 'ULandscapeComponent::bLimitMaxKuroFOVFactorForLODCalculation' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, bDisableSubsectionFrustumCull) == 0x0006A9, "Member 'ULandscapeComponent::bDisableSubsectionFrustumCull' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, StateId) == 0x0006AC, "Member 'ULandscapeComponent::StateId' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, BakedTextureMaterialGuid) == 0x0006BC, "Member 'ULandscapeComponent::BakedTextureMaterialGuid' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, GIBakedBaseColorTexture) == 0x0006D0, "Member 'ULandscapeComponent::GIBakedBaseColorTexture' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MobileBlendableLayerMask) == 0x0006D8, "Member 'ULandscapeComponent::MobileBlendableLayerMask' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MobileMaterialInterface) == 0x0006E0, "Member 'ULandscapeComponent::MobileMaterialInterface' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MobileMaterialInterfaces) == 0x0006E8, "Member 'ULandscapeComponent::MobileMaterialInterfaces' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, MobileWeightmapTextures) == 0x0006F8, "Member 'ULandscapeComponent::MobileWeightmapTextures' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, LocalHeightDelta) == 0x000710, "Member 'ULandscapeComponent::LocalHeightDelta' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, SubSectionLocalBoxes) == 0x000720, "Member 'ULandscapeComponent::SubSectionLocalBoxes' has a wrong offset!");
-static_assert(offsetof(ULandscapeComponent, SubSectionLocalBoxes_AllVertices) == 0x000730, "Member 'ULandscapeComponent::SubSectionLocalBoxes_AllVertices' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeComponent;
 
 // Class Landscape.LandscapeGizmoActor
 // 0x0000 (0x02B0 - 0x02B0)
@@ -488,15 +400,18 @@ class ALandscapeGizmoActor : public AActor
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeGizmoActor">();
+		STATIC_CLASS_IMPL("LandscapeGizmoActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeGizmoActor")
 	}
 	static class ALandscapeGizmoActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscapeGizmoActor>();
 	}
 };
-static_assert(alignof(ALandscapeGizmoActor) == 0x000008, "Wrong alignment on ALandscapeGizmoActor");
-static_assert(sizeof(ALandscapeGizmoActor) == 0x0002B0, "Wrong size on ALandscapeGizmoActor");
+DUMPER7_ASSERTS_ALandscapeGizmoActor;
 
 // Class Landscape.LandscapeGizmoActiveActor
 // 0x0050 (0x0300 - 0x02B0)
@@ -508,15 +423,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeGizmoActiveActor">();
+		STATIC_CLASS_IMPL("LandscapeGizmoActiveActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeGizmoActiveActor")
 	}
 	static class ALandscapeGizmoActiveActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscapeGizmoActiveActor>();
 	}
 };
-static_assert(alignof(ALandscapeGizmoActiveActor) == 0x000008, "Wrong alignment on ALandscapeGizmoActiveActor");
-static_assert(sizeof(ALandscapeGizmoActiveActor) == 0x000300, "Wrong size on ALandscapeGizmoActiveActor");
+DUMPER7_ASSERTS_ALandscapeGizmoActiveActor;
 
 // Class Landscape.LandscapeGizmoRenderComponent
 // 0x0000 (0x0530 - 0x0530)
@@ -525,15 +443,18 @@ class ULandscapeGizmoRenderComponent final : public UPrimitiveComponent
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeGizmoRenderComponent">();
+		STATIC_CLASS_IMPL("LandscapeGizmoRenderComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeGizmoRenderComponent")
 	}
 	static class ULandscapeGizmoRenderComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeGizmoRenderComponent>();
 	}
 };
-static_assert(alignof(ULandscapeGizmoRenderComponent) == 0x000010, "Wrong alignment on ULandscapeGizmoRenderComponent");
-static_assert(sizeof(ULandscapeGizmoRenderComponent) == 0x000530, "Wrong size on ULandscapeGizmoRenderComponent");
+DUMPER7_ASSERTS_ULandscapeGizmoRenderComponent;
 
 // Class Landscape.LandscapeGrassType
 // 0x0038 (0x0068 - 0x0030)
@@ -555,23 +476,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeGrassType">();
+		STATIC_CLASS_IMPL("LandscapeGrassType")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeGrassType")
 	}
 	static class ULandscapeGrassType* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeGrassType>();
 	}
 };
-static_assert(alignof(ULandscapeGrassType) == 0x000008, "Wrong alignment on ULandscapeGrassType");
-static_assert(sizeof(ULandscapeGrassType) == 0x000068, "Wrong size on ULandscapeGrassType");
-static_assert(offsetof(ULandscapeGrassType, GrassVarieties) == 0x000030, "Member 'ULandscapeGrassType::GrassVarieties' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, GrassMesh) == 0x000048, "Member 'ULandscapeGrassType::GrassMesh' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, GrassDensity) == 0x000050, "Member 'ULandscapeGrassType::GrassDensity' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, PlacementJitter) == 0x000054, "Member 'ULandscapeGrassType::PlacementJitter' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, StartCullDistance) == 0x000058, "Member 'ULandscapeGrassType::StartCullDistance' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, EndCullDistance) == 0x00005C, "Member 'ULandscapeGrassType::EndCullDistance' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, RandomRotation) == 0x000060, "Member 'ULandscapeGrassType::RandomRotation' has a wrong offset!");
-static_assert(offsetof(ULandscapeGrassType, AlignToSurface) == 0x000061, "Member 'ULandscapeGrassType::AlignToSurface' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeGrassType;
 
 // Class Landscape.LandscapeHeightfieldCollisionComponent
 // 0x00E0 (0x0610 - 0x0530)
@@ -592,7 +508,7 @@ public:
 	uint8                                         Pad_5A8[0x10];                                     // 0x05A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UPhysicalMaterial*>              CookedPhysicalMaterials;                           // 0x05B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5C8[0x40];                                     // 0x05C8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bRuntimeDisableCollision;                          // 0x0608(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRuntimeDisableCollision;                          // 0x0608(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_609[0x7];                                      // 0x0609(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -601,27 +517,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeHeightfieldCollisionComponent">();
+		STATIC_CLASS_IMPL("LandscapeHeightfieldCollisionComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeHeightfieldCollisionComponent")
 	}
 	static class ULandscapeHeightfieldCollisionComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeHeightfieldCollisionComponent>();
 	}
 };
-static_assert(alignof(ULandscapeHeightfieldCollisionComponent) == 0x000010, "Wrong alignment on ULandscapeHeightfieldCollisionComponent");
-static_assert(sizeof(ULandscapeHeightfieldCollisionComponent) == 0x000610, "Wrong size on ULandscapeHeightfieldCollisionComponent");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, ComponentLayerInfos) == 0x000528, "Member 'ULandscapeHeightfieldCollisionComponent::ComponentLayerInfos' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, SectionBaseX) == 0x000538, "Member 'ULandscapeHeightfieldCollisionComponent::SectionBaseX' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, SectionBaseY) == 0x00053C, "Member 'ULandscapeHeightfieldCollisionComponent::SectionBaseY' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, CollisionSizeQuads) == 0x000540, "Member 'ULandscapeHeightfieldCollisionComponent::CollisionSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, CollisionScale) == 0x000544, "Member 'ULandscapeHeightfieldCollisionComponent::CollisionScale' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, SimpleCollisionSizeQuads) == 0x000548, "Member 'ULandscapeHeightfieldCollisionComponent::SimpleCollisionSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, CollisionQuadFlags) == 0x000550, "Member 'ULandscapeHeightfieldCollisionComponent::CollisionQuadFlags' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, HeightfieldGuid) == 0x000560, "Member 'ULandscapeHeightfieldCollisionComponent::HeightfieldGuid' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, CachedLocalBox) == 0x000570, "Member 'ULandscapeHeightfieldCollisionComponent::CachedLocalBox' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, RenderComponent) == 0x00058C, "Member 'ULandscapeHeightfieldCollisionComponent::RenderComponent' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, CookedPhysicalMaterials) == 0x0005B8, "Member 'ULandscapeHeightfieldCollisionComponent::CookedPhysicalMaterials' has a wrong offset!");
-static_assert(offsetof(ULandscapeHeightfieldCollisionComponent, bRuntimeDisableCollision) == 0x000608, "Member 'ULandscapeHeightfieldCollisionComponent::bRuntimeDisableCollision' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeHeightfieldCollisionComponent;
 
 // Class Landscape.LandscapeInfo
 // 0x01E8 (0x0218 - 0x0030)
@@ -641,22 +548,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeInfo">();
+		STATIC_CLASS_IMPL("LandscapeInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeInfo")
 	}
 	static class ULandscapeInfo* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeInfo>();
 	}
 };
-static_assert(alignof(ULandscapeInfo) == 0x000008, "Wrong alignment on ULandscapeInfo");
-static_assert(sizeof(ULandscapeInfo) == 0x000218, "Wrong size on ULandscapeInfo");
-static_assert(offsetof(ULandscapeInfo, LandscapeActor) == 0x000030, "Member 'ULandscapeInfo::LandscapeActor' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, LandscapeGuid) == 0x00004C, "Member 'ULandscapeInfo::LandscapeGuid' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, ComponentSizeQuads) == 0x00005C, "Member 'ULandscapeInfo::ComponentSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, SubsectionSizeQuads) == 0x000060, "Member 'ULandscapeInfo::SubsectionSizeQuads' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, ComponentNumSubsections) == 0x000064, "Member 'ULandscapeInfo::ComponentNumSubsections' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, DrawScale) == 0x000068, "Member 'ULandscapeInfo::DrawScale' has a wrong offset!");
-static_assert(offsetof(ULandscapeInfo, Proxies) == 0x000118, "Member 'ULandscapeInfo::Proxies' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeInfo;
 
 // Class Landscape.LandscapeInfoMap
 // 0x0058 (0x0088 - 0x0030)
@@ -668,15 +571,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeInfoMap">();
+		STATIC_CLASS_IMPL("LandscapeInfoMap")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeInfoMap")
 	}
 	static class ULandscapeInfoMap* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeInfoMap>();
 	}
 };
-static_assert(alignof(ULandscapeInfoMap) == 0x000008, "Wrong alignment on ULandscapeInfoMap");
-static_assert(sizeof(ULandscapeInfoMap) == 0x000088, "Wrong size on ULandscapeInfoMap");
+DUMPER7_ASSERTS_ULandscapeInfoMap;
 
 // Class Landscape.LandscapeLayerInfoObject
 // 0x0030 (0x0060 - 0x0030)
@@ -693,45 +599,46 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeLayerInfoObject">();
+		STATIC_CLASS_IMPL("LandscapeLayerInfoObject")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeLayerInfoObject")
 	}
 	static class ULandscapeLayerInfoObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeLayerInfoObject>();
 	}
 };
-static_assert(alignof(ULandscapeLayerInfoObject) == 0x000008, "Wrong alignment on ULandscapeLayerInfoObject");
-static_assert(sizeof(ULandscapeLayerInfoObject) == 0x000060, "Wrong size on ULandscapeLayerInfoObject");
-static_assert(offsetof(ULandscapeLayerInfoObject, LayerName) == 0x000030, "Member 'ULandscapeLayerInfoObject::LayerName' has a wrong offset!");
-static_assert(offsetof(ULandscapeLayerInfoObject, PhysMaterial) == 0x000040, "Member 'ULandscapeLayerInfoObject::PhysMaterial' has a wrong offset!");
-static_assert(offsetof(ULandscapeLayerInfoObject, Hardness) == 0x000048, "Member 'ULandscapeLayerInfoObject::Hardness' has a wrong offset!");
-static_assert(offsetof(ULandscapeLayerInfoObject, LayerUsageDebugColor) == 0x00004C, "Member 'ULandscapeLayerInfoObject::LayerUsageDebugColor' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeLayerInfoObject;
 
 // Class Landscape.LandscapeMaterialInstanceConstant
-// 0x0018 (0x0430 - 0x0418)
+// 0x0018 (0x0438 - 0x0420)
 class ULandscapeMaterialInstanceConstant final : public UMaterialInstanceConstant
 {
 public:
-	TArray<struct FLandscapeMaterialTextureStreamingInfo> TextureStreamingInfo;                      // 0x0418(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         bIsLayerThumbnail : 1;                             // 0x0428(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDisableTessellation : 1;                          // 0x0428(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bMobile : 1;                                       // 0x0428(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEditorToolUsage : 1;                              // 0x0428(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_429[0x7];                                      // 0x0429(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FLandscapeMaterialTextureStreamingInfo> TextureStreamingInfo;                      // 0x0420(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         bIsLayerThumbnail : 1;                             // 0x0430(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDisableTessellation : 1;                          // 0x0430(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bMobile : 1;                                       // 0x0430(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEditorToolUsage : 1;                              // 0x0430(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeMaterialInstanceConstant">();
+		STATIC_CLASS_IMPL("LandscapeMaterialInstanceConstant")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeMaterialInstanceConstant")
 	}
 	static class ULandscapeMaterialInstanceConstant* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeMaterialInstanceConstant>();
 	}
 };
-static_assert(alignof(ULandscapeMaterialInstanceConstant) == 0x000008, "Wrong alignment on ULandscapeMaterialInstanceConstant");
-static_assert(sizeof(ULandscapeMaterialInstanceConstant) == 0x000430, "Wrong size on ULandscapeMaterialInstanceConstant");
-static_assert(offsetof(ULandscapeMaterialInstanceConstant, TextureStreamingInfo) == 0x000418, "Member 'ULandscapeMaterialInstanceConstant::TextureStreamingInfo' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeMaterialInstanceConstant;
 
 // Class Landscape.LandscapeMeshCollisionComponent
 // 0x0020 (0x0630 - 0x0610)
@@ -744,16 +651,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeMeshCollisionComponent">();
+		STATIC_CLASS_IMPL("LandscapeMeshCollisionComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeMeshCollisionComponent")
 	}
 	static class ULandscapeMeshCollisionComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeMeshCollisionComponent>();
 	}
 };
-static_assert(alignof(ULandscapeMeshCollisionComponent) == 0x000010, "Wrong alignment on ULandscapeMeshCollisionComponent");
-static_assert(sizeof(ULandscapeMeshCollisionComponent) == 0x000630, "Wrong size on ULandscapeMeshCollisionComponent");
-static_assert(offsetof(ULandscapeMeshCollisionComponent, MeshGuid) == 0x000610, "Member 'ULandscapeMeshCollisionComponent::MeshGuid' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeMeshCollisionComponent;
 
 // Class Landscape.LandscapeMeshProxyActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -765,16 +674,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeMeshProxyActor">();
+		STATIC_CLASS_IMPL("LandscapeMeshProxyActor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeMeshProxyActor")
 	}
 	static class ALandscapeMeshProxyActor* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscapeMeshProxyActor>();
 	}
 };
-static_assert(alignof(ALandscapeMeshProxyActor) == 0x000008, "Wrong alignment on ALandscapeMeshProxyActor");
-static_assert(sizeof(ALandscapeMeshProxyActor) == 0x0002B8, "Wrong size on ALandscapeMeshProxyActor");
-static_assert(offsetof(ALandscapeMeshProxyActor, LandscapeMeshProxyComponent) == 0x0002B0, "Member 'ALandscapeMeshProxyActor::LandscapeMeshProxyComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ALandscapeMeshProxyActor;
 
 // Class Landscape.LandscapeMeshProxyComponent
 // 0x0020 (0x0610 - 0x05F0)
@@ -789,18 +700,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeMeshProxyComponent">();
+		STATIC_CLASS_IMPL("LandscapeMeshProxyComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeMeshProxyComponent")
 	}
 	static class ULandscapeMeshProxyComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeMeshProxyComponent>();
 	}
 };
-static_assert(alignof(ULandscapeMeshProxyComponent) == 0x000010, "Wrong alignment on ULandscapeMeshProxyComponent");
-static_assert(sizeof(ULandscapeMeshProxyComponent) == 0x000610, "Wrong size on ULandscapeMeshProxyComponent");
-static_assert(offsetof(ULandscapeMeshProxyComponent, LandscapeGuid) == 0x0005E8, "Member 'ULandscapeMeshProxyComponent::LandscapeGuid' has a wrong offset!");
-static_assert(offsetof(ULandscapeMeshProxyComponent, ProxyComponentBases) == 0x0005F8, "Member 'ULandscapeMeshProxyComponent::ProxyComponentBases' has a wrong offset!");
-static_assert(offsetof(ULandscapeMeshProxyComponent, ProxyLOD) == 0x000608, "Member 'ULandscapeMeshProxyComponent::ProxyLOD' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeMeshProxyComponent;
 
 // Class Landscape.LandscapeSettings
 // 0x0008 (0x0050 - 0x0048)
@@ -813,16 +724,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeSettings">();
+		STATIC_CLASS_IMPL("LandscapeSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeSettings")
 	}
 	static class ULandscapeSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeSettings>();
 	}
 };
-static_assert(alignof(ULandscapeSettings) == 0x000008, "Wrong alignment on ULandscapeSettings");
-static_assert(sizeof(ULandscapeSettings) == 0x000050, "Wrong size on ULandscapeSettings");
-static_assert(offsetof(ULandscapeSettings, MaxNumberOfLayers) == 0x000048, "Member 'ULandscapeSettings::MaxNumberOfLayers' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeSettings;
 
 // Class Landscape.LandscapeSplinesComponent
 // 0x0030 (0x0560 - 0x0530)
@@ -840,18 +753,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeSplinesComponent">();
+		STATIC_CLASS_IMPL("LandscapeSplinesComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeSplinesComponent")
 	}
 	static class ULandscapeSplinesComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeSplinesComponent>();
 	}
 };
-static_assert(alignof(ULandscapeSplinesComponent) == 0x000010, "Wrong alignment on ULandscapeSplinesComponent");
-static_assert(sizeof(ULandscapeSplinesComponent) == 0x000560, "Wrong size on ULandscapeSplinesComponent");
-static_assert(offsetof(ULandscapeSplinesComponent, ControlPoints) == 0x000528, "Member 'ULandscapeSplinesComponent::ControlPoints' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplinesComponent, Segments) == 0x000538, "Member 'ULandscapeSplinesComponent::Segments' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplinesComponent, CookedForeignMeshComponents) == 0x000548, "Member 'ULandscapeSplinesComponent::CookedForeignMeshComponents' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeSplinesComponent;
 
 // Class Landscape.LandscapeSplineControlPoint
 // 0x0080 (0x00B0 - 0x0030)
@@ -877,29 +790,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeSplineControlPoint">();
+		STATIC_CLASS_IMPL("LandscapeSplineControlPoint")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeSplineControlPoint")
 	}
 	static class ULandscapeSplineControlPoint* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeSplineControlPoint>();
 	}
 };
-static_assert(alignof(ULandscapeSplineControlPoint) == 0x000008, "Wrong alignment on ULandscapeSplineControlPoint");
-static_assert(sizeof(ULandscapeSplineControlPoint) == 0x0000B0, "Wrong size on ULandscapeSplineControlPoint");
-static_assert(offsetof(ULandscapeSplineControlPoint, Location) == 0x000030, "Member 'ULandscapeSplineControlPoint::Location' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, Rotation) == 0x00003C, "Member 'ULandscapeSplineControlPoint::Rotation' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, Width) == 0x000048, "Member 'ULandscapeSplineControlPoint::Width' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, LayerWidthRatio) == 0x00004C, "Member 'ULandscapeSplineControlPoint::LayerWidthRatio' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, SideFalloff) == 0x000050, "Member 'ULandscapeSplineControlPoint::SideFalloff' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, LeftSideFalloffFactor) == 0x000054, "Member 'ULandscapeSplineControlPoint::LeftSideFalloffFactor' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, RightSideFalloffFactor) == 0x000058, "Member 'ULandscapeSplineControlPoint::RightSideFalloffFactor' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, LeftSideLayerFalloffFactor) == 0x00005C, "Member 'ULandscapeSplineControlPoint::LeftSideLayerFalloffFactor' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, RightSideLayerFalloffFactor) == 0x000060, "Member 'ULandscapeSplineControlPoint::RightSideLayerFalloffFactor' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, EndFalloff) == 0x000064, "Member 'ULandscapeSplineControlPoint::EndFalloff' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, ConnectedSegments) == 0x000068, "Member 'ULandscapeSplineControlPoint::ConnectedSegments' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, Points) == 0x000078, "Member 'ULandscapeSplineControlPoint::Points' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, Bounds) == 0x000088, "Member 'ULandscapeSplineControlPoint::Bounds' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineControlPoint, LocalMeshComponent) == 0x0000A8, "Member 'ULandscapeSplineControlPoint::LocalMeshComponent' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeSplineControlPoint;
 
 // Class Landscape.LandscapeSplineSegment
 // 0x0088 (0x00B8 - 0x0030)
@@ -916,20 +818,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeSplineSegment">();
+		STATIC_CLASS_IMPL("LandscapeSplineSegment")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeSplineSegment")
 	}
 	static class ULandscapeSplineSegment* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeSplineSegment>();
 	}
 };
-static_assert(alignof(ULandscapeSplineSegment) == 0x000008, "Wrong alignment on ULandscapeSplineSegment");
-static_assert(sizeof(ULandscapeSplineSegment) == 0x0000B8, "Wrong size on ULandscapeSplineSegment");
-static_assert(offsetof(ULandscapeSplineSegment, Connections) == 0x000030, "Member 'ULandscapeSplineSegment::Connections' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineSegment, SplineInfo) == 0x000060, "Member 'ULandscapeSplineSegment::SplineInfo' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineSegment, Points) == 0x000078, "Member 'ULandscapeSplineSegment::Points' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineSegment, Bounds) == 0x000088, "Member 'ULandscapeSplineSegment::Bounds' has a wrong offset!");
-static_assert(offsetof(ULandscapeSplineSegment, LocalMeshComponents) == 0x0000A8, "Member 'ULandscapeSplineSegment::LocalMeshComponents' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeSplineSegment;
 
 // Class Landscape.LandscapeStreamingProxy
 // 0x0020 (0x06C0 - 0x06A0)
@@ -942,16 +842,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeStreamingProxy">();
+		STATIC_CLASS_IMPL("LandscapeStreamingProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeStreamingProxy")
 	}
 	static class ALandscapeStreamingProxy* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ALandscapeStreamingProxy>();
 	}
 };
-static_assert(alignof(ALandscapeStreamingProxy) == 0x000010, "Wrong alignment on ALandscapeStreamingProxy");
-static_assert(sizeof(ALandscapeStreamingProxy) == 0x0006C0, "Wrong size on ALandscapeStreamingProxy");
-static_assert(offsetof(ALandscapeStreamingProxy, LandscapeActor) == 0x000698, "Member 'ALandscapeStreamingProxy::LandscapeActor' has a wrong offset!");
+DUMPER7_ASSERTS_ALandscapeStreamingProxy;
 
 // Class Landscape.LandscapeSubsystem
 // 0x0018 (0x0050 - 0x0038)
@@ -963,15 +865,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeSubsystem">();
+		STATIC_CLASS_IMPL("LandscapeSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeSubsystem")
 	}
 	static class ULandscapeSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeSubsystem>();
 	}
 };
-static_assert(alignof(ULandscapeSubsystem) == 0x000008, "Wrong alignment on ULandscapeSubsystem");
-static_assert(sizeof(ULandscapeSubsystem) == 0x000050, "Wrong size on ULandscapeSubsystem");
+DUMPER7_ASSERTS_ULandscapeSubsystem;
 
 // Class Landscape.LandscapeWeightmapUsage
 // 0x0030 (0x0060 - 0x0030)
@@ -984,17 +889,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LandscapeWeightmapUsage">();
+		STATIC_CLASS_IMPL("LandscapeWeightmapUsage")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LandscapeWeightmapUsage")
 	}
 	static class ULandscapeWeightmapUsage* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ULandscapeWeightmapUsage>();
 	}
 };
-static_assert(alignof(ULandscapeWeightmapUsage) == 0x000008, "Wrong alignment on ULandscapeWeightmapUsage");
-static_assert(sizeof(ULandscapeWeightmapUsage) == 0x000060, "Wrong size on ULandscapeWeightmapUsage");
-static_assert(offsetof(ULandscapeWeightmapUsage, ChannelUsage) == 0x000030, "Member 'ULandscapeWeightmapUsage::ChannelUsage' has a wrong offset!");
-static_assert(offsetof(ULandscapeWeightmapUsage, LayerGuid) == 0x000050, "Member 'ULandscapeWeightmapUsage::LayerGuid' has a wrong offset!");
+DUMPER7_ASSERTS_ULandscapeWeightmapUsage;
 
 // Class Landscape.MaterialExpressionLandscapeDefineLayer
 // 0x0020 (0x0068 - 0x0048)
@@ -1007,17 +913,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeDefineLayer">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeDefineLayer")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeDefineLayer")
 	}
 	static class UMaterialExpressionLandscapeDefineLayer* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeDefineLayer>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeDefineLayer) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeDefineLayer");
-static_assert(sizeof(UMaterialExpressionLandscapeDefineLayer) == 0x000068, "Wrong size on UMaterialExpressionLandscapeDefineLayer");
-static_assert(offsetof(UMaterialExpressionLandscapeDefineLayer, ExpressionGUID) == 0x000048, "Member 'UMaterialExpressionLandscapeDefineLayer::ExpressionGUID' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeDefineLayer, LayerNames) == 0x000058, "Member 'UMaterialExpressionLandscapeDefineLayer::LayerNames' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeDefineLayer;
 
 // Class Landscape.MaterialExpressionLandscapeGrassOutput
 // 0x0010 (0x0058 - 0x0048)
@@ -1029,16 +936,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeGrassOutput">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeGrassOutput")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeGrassOutput")
 	}
 	static class UMaterialExpressionLandscapeGrassOutput* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeGrassOutput>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeGrassOutput) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeGrassOutput");
-static_assert(sizeof(UMaterialExpressionLandscapeGrassOutput) == 0x000058, "Wrong size on UMaterialExpressionLandscapeGrassOutput");
-static_assert(offsetof(UMaterialExpressionLandscapeGrassOutput, GrassTypes) == 0x000048, "Member 'UMaterialExpressionLandscapeGrassOutput::GrassTypes' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeGrassOutput;
 
 // Class Landscape.MaterialExpressionLandscapeLayerBlend
 // 0x0020 (0x0068 - 0x0048)
@@ -1051,17 +960,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerBlend">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerBlend")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerBlend")
 	}
 	static class UMaterialExpressionLandscapeLayerBlend* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerBlend>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerBlend) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerBlend");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerBlend) == 0x000068, "Wrong size on UMaterialExpressionLandscapeLayerBlend");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerBlend, Layers) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerBlend::Layers' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerBlend, ExpressionGUID) == 0x000058, "Member 'UMaterialExpressionLandscapeLayerBlend::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerBlend;
 
 // Class Landscape.MaterialExpressionLandscapeLayerCoords
 // 0x0018 (0x0060 - 0x0048)
@@ -1080,21 +990,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerCoords">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerCoords")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerCoords")
 	}
 	static class UMaterialExpressionLandscapeLayerCoords* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerCoords>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerCoords) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerCoords");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerCoords) == 0x000060, "Wrong size on UMaterialExpressionLandscapeLayerCoords");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, MappingType) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerCoords::MappingType' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, CustomUVType) == 0x000049, "Member 'UMaterialExpressionLandscapeLayerCoords::CustomUVType' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, MappingScale) == 0x00004C, "Member 'UMaterialExpressionLandscapeLayerCoords::MappingScale' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, MappingRotation) == 0x000050, "Member 'UMaterialExpressionLandscapeLayerCoords::MappingRotation' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, MappingPanU) == 0x000054, "Member 'UMaterialExpressionLandscapeLayerCoords::MappingPanU' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerCoords, MappingPanV) == 0x000058, "Member 'UMaterialExpressionLandscapeLayerCoords::MappingPanV' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerCoords;
 
 // Class Landscape.MaterialExpressionLandscapeLayerIndex
 // 0x0010 (0x0058 - 0x0048)
@@ -1106,16 +1013,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerIndex">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerIndex")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerIndex")
 	}
 	static class UMaterialExpressionLandscapeLayerIndex* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerIndex>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerIndex) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerIndex");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerIndex) == 0x000058, "Wrong size on UMaterialExpressionLandscapeLayerIndex");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerIndex, ExpressionGUID) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerIndex::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerIndex;
 
 // Class Landscape.MaterialExpressionLandscapeKuroBlend
 // 0x0010 (0x0058 - 0x0048)
@@ -1127,16 +1036,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeKuroBlend">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeKuroBlend")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeKuroBlend")
 	}
 	static class UMaterialExpressionLandscapeKuroBlend* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeKuroBlend>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeKuroBlend) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeKuroBlend");
-static_assert(sizeof(UMaterialExpressionLandscapeKuroBlend) == 0x000058, "Wrong size on UMaterialExpressionLandscapeKuroBlend");
-static_assert(offsetof(UMaterialExpressionLandscapeKuroBlend, ExpressionGUID) == 0x000048, "Member 'UMaterialExpressionLandscapeKuroBlend::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeKuroBlend;
 
 // Class Landscape.MaterialExpressionLandscapeColormap
 // 0x0030 (0x0078 - 0x0048)
@@ -1150,17 +1061,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeColormap">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeColormap")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeColormap")
 	}
 	static class UMaterialExpressionLandscapeColormap* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeColormap>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeColormap) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeColormap");
-static_assert(sizeof(UMaterialExpressionLandscapeColormap) == 0x000078, "Wrong size on UMaterialExpressionLandscapeColormap");
-static_assert(offsetof(UMaterialExpressionLandscapeColormap, ExpressionGUID) == 0x000048, "Member 'UMaterialExpressionLandscapeColormap::ExpressionGUID' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeColormap, UV) == 0x000058, "Member 'UMaterialExpressionLandscapeColormap::UV' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeColormap;
 
 // Class Landscape.MaterialExpressionLandscapeLayerParams
 // 0x0050 (0x0098 - 0x0048)
@@ -1178,19 +1090,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerParams">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerParams")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerParams")
 	}
 	static class UMaterialExpressionLandscapeLayerParams* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerParams>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerParams) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerParams");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerParams) == 0x000098, "Wrong size on UMaterialExpressionLandscapeLayerParams");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerParams, BufferIndex) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerParams::BufferIndex' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerParams, LayerIndex) == 0x000064, "Member 'UMaterialExpressionLandscapeLayerParams::LayerIndex' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerParams, LayerCount) == 0x000080, "Member 'UMaterialExpressionLandscapeLayerParams::LayerCount' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerParams, ExpressionGUID) == 0x000084, "Member 'UMaterialExpressionLandscapeLayerParams::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerParams;
 
 // Class Landscape.MaterialExpressionLandscapeLayerSample
 // 0x0020 (0x0068 - 0x0048)
@@ -1204,18 +1115,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerSample">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerSample")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerSample")
 	}
 	static class UMaterialExpressionLandscapeLayerSample* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerSample>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerSample) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerSample");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerSample) == 0x000068, "Wrong size on UMaterialExpressionLandscapeLayerSample");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSample, ParameterName) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerSample::ParameterName' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSample, PreviewWeight) == 0x000054, "Member 'UMaterialExpressionLandscapeLayerSample::PreviewWeight' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSample, ExpressionGUID) == 0x000058, "Member 'UMaterialExpressionLandscapeLayerSample::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerSample;
 
 // Class Landscape.MaterialExpressionLandscapeLayerSwitch
 // 0x0058 (0x00A0 - 0x0048)
@@ -1234,19 +1145,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerSwitch">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerSwitch")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerSwitch")
 	}
 	static class UMaterialExpressionLandscapeLayerSwitch* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerSwitch>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerSwitch) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerSwitch");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerSwitch) == 0x0000A0, "Wrong size on UMaterialExpressionLandscapeLayerSwitch");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSwitch, LayerUsed) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerSwitch::LayerUsed' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSwitch, LayerNotUsed) == 0x000064, "Member 'UMaterialExpressionLandscapeLayerSwitch::LayerNotUsed' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSwitch, ParameterName) == 0x000080, "Member 'UMaterialExpressionLandscapeLayerSwitch::ParameterName' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerSwitch, ExpressionGUID) == 0x000090, "Member 'UMaterialExpressionLandscapeLayerSwitch::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerSwitch;
 
 // Class Landscape.MaterialExpressionLandscapeLayerWeight
 // 0x0068 (0x00B0 - 0x0048)
@@ -1266,21 +1176,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeLayerWeight">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeLayerWeight")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeLayerWeight")
 	}
 	static class UMaterialExpressionLandscapeLayerWeight* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeLayerWeight>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeLayerWeight) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeLayerWeight");
-static_assert(sizeof(UMaterialExpressionLandscapeLayerWeight) == 0x0000B0, "Wrong size on UMaterialExpressionLandscapeLayerWeight");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, Base) == 0x000048, "Member 'UMaterialExpressionLandscapeLayerWeight::Base' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, Layer) == 0x000064, "Member 'UMaterialExpressionLandscapeLayerWeight::Layer' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, ParameterName) == 0x000080, "Member 'UMaterialExpressionLandscapeLayerWeight::ParameterName' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, PreviewWeight) == 0x00008C, "Member 'UMaterialExpressionLandscapeLayerWeight::PreviewWeight' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, ConstBase) == 0x000090, "Member 'UMaterialExpressionLandscapeLayerWeight::ConstBase' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeLayerWeight, ExpressionGUID) == 0x00009C, "Member 'UMaterialExpressionLandscapeLayerWeight::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeLayerWeight;
 
 // Class Landscape.MaterialExpressionLandscapePhysicalMaterialOutput
 // 0x0010 (0x0058 - 0x0048)
@@ -1292,16 +1199,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapePhysicalMaterialOutput">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapePhysicalMaterialOutput")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapePhysicalMaterialOutput")
 	}
 	static class UMaterialExpressionLandscapePhysicalMaterialOutput* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapePhysicalMaterialOutput>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapePhysicalMaterialOutput) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapePhysicalMaterialOutput");
-static_assert(sizeof(UMaterialExpressionLandscapePhysicalMaterialOutput) == 0x000058, "Wrong size on UMaterialExpressionLandscapePhysicalMaterialOutput");
-static_assert(offsetof(UMaterialExpressionLandscapePhysicalMaterialOutput, Inputs) == 0x000048, "Member 'UMaterialExpressionLandscapePhysicalMaterialOutput::Inputs' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapePhysicalMaterialOutput;
 
 // Class Landscape.MaterialExpressionLandscapeRetainNode
 // 0x0038 (0x0080 - 0x0048)
@@ -1315,17 +1224,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeRetainNode">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeRetainNode")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeRetainNode")
 	}
 	static class UMaterialExpressionLandscapeRetainNode* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeRetainNode>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeRetainNode) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeRetainNode");
-static_assert(sizeof(UMaterialExpressionLandscapeRetainNode) == 0x000080, "Wrong size on UMaterialExpressionLandscapeRetainNode");
-static_assert(offsetof(UMaterialExpressionLandscapeRetainNode, MaterialAttribute) == 0x000048, "Member 'UMaterialExpressionLandscapeRetainNode::MaterialAttribute' has a wrong offset!");
-static_assert(offsetof(UMaterialExpressionLandscapeRetainNode, ExpressionGUID) == 0x000070, "Member 'UMaterialExpressionLandscapeRetainNode::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeRetainNode;
 
 // Class Landscape.MaterialExpressionLandscapeVisibilityMask
 // 0x0010 (0x0058 - 0x0048)
@@ -1337,16 +1247,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MaterialExpressionLandscapeVisibilityMask">();
+		STATIC_CLASS_IMPL("MaterialExpressionLandscapeVisibilityMask")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MaterialExpressionLandscapeVisibilityMask")
 	}
 	static class UMaterialExpressionLandscapeVisibilityMask* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMaterialExpressionLandscapeVisibilityMask>();
 	}
 };
-static_assert(alignof(UMaterialExpressionLandscapeVisibilityMask) == 0x000008, "Wrong alignment on UMaterialExpressionLandscapeVisibilityMask");
-static_assert(sizeof(UMaterialExpressionLandscapeVisibilityMask) == 0x000058, "Wrong size on UMaterialExpressionLandscapeVisibilityMask");
-static_assert(offsetof(UMaterialExpressionLandscapeVisibilityMask, ExpressionGUID) == 0x000048, "Member 'UMaterialExpressionLandscapeVisibilityMask::ExpressionGUID' has a wrong offset!");
+DUMPER7_ASSERTS_UMaterialExpressionLandscapeVisibilityMask;
 
 }
 

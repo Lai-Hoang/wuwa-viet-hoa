@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "E_BillboardMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "E_BillboardMode_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HaloPointLight.BP_HaloPointLight_C
-// 0x00C0 (0x0388 - 0x02C8)
+// 0x00C8 (0x0390 - 0x02C8)
 class ABP_HaloPointLight_C final : public APointLight
 {
 public:
@@ -65,6 +65,7 @@ public:
 	ELightQualityType                             Quality;                                           // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_381[0x3];                                      // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CurrentQuality;                                    // 0x0384(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BoundsScale;                                       // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_HaloPointLight(int32 EntryPoint);
@@ -80,49 +81,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_HaloPointLight_C">();
+		BP_STATIC_CLASS_IMPL("BP_HaloPointLight_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_HaloPointLight_C")
 	}
 	static class ABP_HaloPointLight_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_HaloPointLight_C>();
 	}
 };
-static_assert(alignof(ABP_HaloPointLight_C) == 0x000008, "Wrong alignment on ABP_HaloPointLight_C");
-static_assert(sizeof(ABP_HaloPointLight_C) == 0x000388, "Wrong size on ABP_HaloPointLight_C");
-static_assert(offsetof(ABP_HaloPointLight_C, UberGraphFrame) == 0x0002C8, "Member 'ABP_HaloPointLight_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, DynamicMaterialInstance) == 0x0002D0, "Member 'ABP_HaloPointLight_C::DynamicMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, Enable) == 0x0002D8, "Member 'ABP_HaloPointLight_C::Enable' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, bAcceptGI) == 0x0002D9, "Member 'ABP_HaloPointLight_C::bAcceptGI' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, Enable_Black) == 0x0002DA, "Member 'ABP_HaloPointLight_C::Enable_Black' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, FaceToCamera) == 0x0002DB, "Member 'ABP_HaloPointLight_C::FaceToCamera' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, SizeScale) == 0x0002DC, "Member 'ABP_HaloPointLight_C::SizeScale' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, IntensityScale) == 0x0002E0, "Member 'ABP_HaloPointLight_C::IntensityScale' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, LightExponent) == 0x0002E4, "Member 'ABP_HaloPointLight_C::LightExponent' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, FadeStartRadius) == 0x0002E8, "Member 'ABP_HaloPointLight_C::FadeStartRadius' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, FadeEndRadius) == 0x0002EC, "Member 'ABP_HaloPointLight_C::FadeEndRadius' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloComponent) == 0x0002F0, "Member 'ABP_HaloPointLight_C::HaloComponent' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, DepthFadeDistance) == 0x0002F8, "Member 'ABP_HaloPointLight_C::DepthFadeDistance' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, AspectRatio) == 0x0002FC, "Member 'ABP_HaloPointLight_C::AspectRatio' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, FaceCameraMode) == 0x000300, "Member 'ABP_HaloPointLight_C::FaceCameraMode' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloMesh) == 0x000308, "Member 'ABP_HaloPointLight_C::HaloMesh' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, MinDrawDistance) == 0x000310, "Member 'ABP_HaloPointLight_C::MinDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, MaxDrawDistance) == 0x000314, "Member 'ABP_HaloPointLight_C::MaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, MinDrawRange) == 0x000318, "Member 'ABP_HaloPointLight_C::MinDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, MaxDrawRange) == 0x00031C, "Member 'ABP_HaloPointLight_C::MaxDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, UseShapeTex) == 0x000320, "Member 'ABP_HaloPointLight_C::UseShapeTex' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, VolumeTex) == 0x000328, "Member 'ABP_HaloPointLight_C::VolumeTex' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, PointLinghtIntenty) == 0x000330, "Member 'ABP_HaloPointLight_C::PointLinghtIntenty' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloPointConfig) == 0x000338, "Member 'ABP_HaloPointLight_C::HaloPointConfig' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, CurrentFeatureLevel) == 0x000340, "Member 'ABP_HaloPointLight_C::CurrentFeatureLevel' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloMaterial) == 0x000348, "Member 'ABP_HaloPointLight_C::HaloMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloMaterial_NoBillboard) == 0x000350, "Member 'ABP_HaloPointLight_C::HaloMaterial_NoBillboard' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, NoFaceCameraSize) == 0x000358, "Member 'ABP_HaloPointLight_C::NoFaceCameraSize' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloMaterial_NoBillboard_Black) == 0x000368, "Member 'ABP_HaloPointLight_C::HaloMaterial_NoBillboard_Black' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, HaloMaterial_Black) == 0x000370, "Member 'ABP_HaloPointLight_C::HaloMaterial_Black' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, TranslucentSortPriority) == 0x000378, "Member 'ABP_HaloPointLight_C::TranslucentSortPriority' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, FrameCount) == 0x00037C, "Member 'ABP_HaloPointLight_C::FrameCount' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, Quality) == 0x000380, "Member 'ABP_HaloPointLight_C::Quality' has a wrong offset!");
-static_assert(offsetof(ABP_HaloPointLight_C, CurrentQuality) == 0x000384, "Member 'ABP_HaloPointLight_C::CurrentQuality' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_HaloPointLight_C;
 
 }
 

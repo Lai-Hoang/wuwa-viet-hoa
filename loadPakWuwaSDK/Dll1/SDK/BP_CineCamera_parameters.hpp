@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "CinematicCamera_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SUiCameraAnimationSettings_structs.hpp"
 
@@ -25,8 +25,7 @@ struct BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NeedFlowAdaption_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieSceneDialogueSubsystem*           CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_TimeLength;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,27 +36,11 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_TryGetAutoTransformByOffsetTime_OutTrans; // 0x0030(0x0030)(IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue; // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NeedFlowAdaption_ReturnValue_1;           // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_62[0xE];                                       // 0x0062(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_61[0xF];                                       // 0x0061(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_TryGetAutoTransformByOffsetTime_OutTrans_1; // 0x0070(0x0030)(IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue_1; // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera) == 0x000010, "Wrong alignment on BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera");
-static_assert(sizeof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera) == 0x0000B0, "Wrong size on BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, EntryPoint) == 0x000000, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_NeedFlowAdaption_ReturnValue) == 0x000004, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_NeedFlowAdaption_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000008, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, K2Node_Event_TimeLength) == 0x000010, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::K2Node_Event_TimeLength' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, K2Node_Event_DeltaSeconds) == 0x000018, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_Add_FloatFloat_ReturnValue) == 0x00001C, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_GetWorldSubsystem_ReturnValue_1) == 0x000020, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_GetWorldSubsystem_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_Less_FloatFloat_ReturnValue) == 0x000028, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_TryGetAutoTransformByOffsetTime_OutTrans) == 0x000030, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_TryGetAutoTransformByOffsetTime_OutTrans' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue) == 0x000060, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_NeedFlowAdaption_ReturnValue_1) == 0x000061, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_NeedFlowAdaption_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_TryGetAutoTransformByOffsetTime_OutTrans_1) == 0x000070, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_TryGetAutoTransformByOffsetTime_OutTrans_1' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera, CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue_1) == 0x0000A0, "Member 'BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera::CallFunc_TryGetAutoTransformByOffsetTime_ReturnValue_1' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera;
 
 // Function BP_CineCamera.BP_CineCamera_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -66,9 +49,7 @@ struct BP_CineCamera_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CineCamera_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CineCamera_C_ReceiveTick");
-static_assert(sizeof(BP_CineCamera_C_ReceiveTick) == 0x000004, "Wrong size on BP_CineCamera_C_ReceiveTick");
-static_assert(offsetof(BP_CineCamera_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CineCamera_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CineCamera_C_ReceiveTick;
 
 // Function BP_CineCamera.BP_CineCamera_C.BeginAutoTransform
 // 0x0004 (0x0004 - 0x0000)
@@ -77,12 +58,10 @@ struct BP_CineCamera_C_BeginAutoTransform final
 public:
 	float                                         TimeLength;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CineCamera_C_BeginAutoTransform) == 0x000004, "Wrong alignment on BP_CineCamera_C_BeginAutoTransform");
-static_assert(sizeof(BP_CineCamera_C_BeginAutoTransform) == 0x000004, "Wrong size on BP_CineCamera_C_BeginAutoTransform");
-static_assert(offsetof(BP_CineCamera_C_BeginAutoTransform, TimeLength) == 0x000000, "Member 'BP_CineCamera_C_BeginAutoTransform::TimeLength' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CineCamera_C_BeginAutoTransform;
 
 // Function BP_CineCamera.BP_CineCamera_C.ApplyUiCameraSettings
-// 0x0368 (0x0368 - 0x0000)
+// 0x0380 (0x0380 - 0x0000)
 struct BP_CineCamera_C_ApplyUiCameraSettings final
 {
 public:
@@ -94,35 +73,19 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_NameToText_ReturnValue;              // 0x0020(0x0018)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0040)(HasGetValueTypeHash)
-	struct FSUiCameraAnimationSettings            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x01A8)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0228(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0238(0x0018)()
-	struct FCameraFocusSettings                   K2Node_MakeStruct_CameraFocusSettings;             // 0x0250(0x0060)()
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x02B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_K2_SetActorLocation_SweepHitResult;     // 0x02D0(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_D_K2_SetActorLocation_ReturnValue;        // 0x0364(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSUiCameraAnimationSettings            CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x01C0)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0240(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0250(0x0018)()
+	struct FCameraFocusSettings                   K2Node_MakeStruct_CameraFocusSettings;             // 0x0268(0x0060)()
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_D_K2_SetActorLocation_SweepHitResult;     // 0x02E8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_D_K2_SetActorLocation_ReturnValue;        // 0x037C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CineCamera_C_ApplyUiCameraSettings) == 0x000008, "Wrong alignment on BP_CineCamera_C_ApplyUiCameraSettings");
-static_assert(sizeof(BP_CineCamera_C_ApplyUiCameraSettings) == 0x000368, "Wrong size on BP_CineCamera_C_ApplyUiCameraSettings");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CineCameraComponent) == 0x000000, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CineCameraComponent' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_GetCineCameraComponent_ReturnValue) == 0x000010, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_GetCineCameraComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_Conv_NameToText_ReturnValue) == 0x000020, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_Conv_NameToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, K2Node_MakeStruct_FormatArgumentData) == 0x000038, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x000078, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000220, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, K2Node_MakeArray_Array) == 0x000228, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_Format_ReturnValue) == 0x000238, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, K2Node_MakeStruct_CameraFocusSettings) == 0x000250, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::K2Node_MakeStruct_CameraFocusSettings' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0002B0, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x0002B8, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_D_K2_SetActorLocation_SweepHitResult) == 0x0002D0, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_D_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ApplyUiCameraSettings, CallFunc_D_K2_SetActorLocation_ReturnValue) == 0x000364, "Member 'BP_CineCamera_C_ApplyUiCameraSettings::CallFunc_D_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CineCamera_C_ApplyUiCameraSettings;
 
 // Function BP_CineCamera.BP_CineCamera_C.ResetSeqCineCamSetting
 // 0x0140 (0x0140 - 0x0000)
@@ -137,13 +100,7 @@ public:
 	class UCineCameraComponent*                   K2Node_DynamicCast_As_______;                      // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_CineCamera_C_ResetSeqCineCamSetting) == 0x000010, "Wrong alignment on BP_CineCamera_C_ResetSeqCineCamSetting");
-static_assert(sizeof(BP_CineCamera_C_ResetSeqCineCamSetting) == 0x000140, "Wrong size on BP_CineCamera_C_ResetSeqCineCamSetting");
-static_assert(offsetof(BP_CineCamera_C_ResetSeqCineCamSetting, K2Node_MakeStruct_CameraLookatTrackingSettings) == 0x000000, "Member 'BP_CineCamera_C_ResetSeqCineCamSetting::K2Node_MakeStruct_CameraLookatTrackingSettings' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ResetSeqCineCamSetting, CallFunc_MakeTransform_ReturnValue) == 0x000060, "Member 'BP_CineCamera_C_ResetSeqCineCamSetting::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ResetSeqCineCamSetting, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000090, "Member 'BP_CineCamera_C_ResetSeqCineCamSetting::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ResetSeqCineCamSetting, K2Node_DynamicCast_As_______) == 0x000128, "Member 'BP_CineCamera_C_ResetSeqCineCamSetting::K2Node_DynamicCast_As_______' has a wrong offset!");
-static_assert(offsetof(BP_CineCamera_C_ResetSeqCineCamSetting, K2Node_DynamicCast_bSuccess) == 0x000130, "Member 'BP_CineCamera_C_ResetSeqCineCamSetting::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+DUMPER7_ASSERTS_BP_CineCamera_C_ResetSeqCineCamSetting;
 
 }
 

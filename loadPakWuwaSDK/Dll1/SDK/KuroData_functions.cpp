@@ -669,5 +669,34 @@ void UTraceBoxElement::SetBoxOrientation(float Pitch, float Yaw, float Roll)
 	Func->FunctionFlags = Flgs;
 }
 
+
+// Function KuroData.TraceCapsuleElement.SetCapsuleOrientation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Pitch                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Yaw                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Roll                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UTraceCapsuleElement::SetCapsuleOrientation(float Pitch, float Yaw, float Roll)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TraceCapsuleElement", "SetCapsuleOrientation");
+
+	Params::TraceCapsuleElement_SetCapsuleOrientation Parms{};
+
+	Parms.Pitch = Pitch;
+	Parms.Yaw = Yaw;
+	Parms.Roll = Roll;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

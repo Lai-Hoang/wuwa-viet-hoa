@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EAttributeType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "SAiAttributeRate_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EAttributeType_structs.hpp"
 #include "SConDitionGroupType_structs.hpp"
 
 
@@ -30,12 +30,7 @@ public:
 	TArray<struct FSAiAttributeRate>              AttributeRates_19_C3DF664E4C1D37C3BACB0991D0314C13; // 0x00A0(0x0010)(Edit, BlueprintVisible)
 	ESConditionGroupType                          Logic_12_50D4930B45AF7BF2FB88A59DD464602F;         // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSAiConditions) == 0x000008, "Wrong alignment on FSAiConditions");
-static_assert(sizeof(FSAiConditions) == 0x0000B8, "Wrong size on FSAiConditions");
-static_assert(offsetof(FSAiConditions, Tags_13_97F071C5493C572E35E8B7A8F8D0DD84) == 0x000000, "Member 'FSAiConditions::Tags_13_97F071C5493C572E35E8B7A8F8D0DD84' has a wrong offset!");
-static_assert(offsetof(FSAiConditions, Attributes_14_8111FBCE46CB5FD4258D4AB283B3367A) == 0x000050, "Member 'FSAiConditions::Attributes_14_8111FBCE46CB5FD4258D4AB283B3367A' has a wrong offset!");
-static_assert(offsetof(FSAiConditions, AttributeRates_19_C3DF664E4C1D37C3BACB0991D0314C13) == 0x0000A0, "Member 'FSAiConditions::AttributeRates_19_C3DF664E4C1D37C3BACB0991D0314C13' has a wrong offset!");
-static_assert(offsetof(FSAiConditions, Logic_12_50D4930B45AF7BF2FB88A59DD464602F) == 0x0000B0, "Member 'FSAiConditions::Logic_12_50D4930B45AF7BF2FB88A59DD464602F' has a wrong offset!");
+DUMPER7_ASSERTS_FSAiConditions;
 
 }
 

@@ -26,12 +26,7 @@ public:
 	float                                         受击特效生成位置偏移_34_13D8E34F4E3C7EE2DE062FA8822192B1; // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FSBulletTailEffect>             子弹拖尾特效_41_647DAC6D4EACC3937B513389BC05E63B;  // 0x0038(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSBulletDataEffect) == 0x000008, "Wrong alignment on FSBulletDataEffect");
-static_assert(sizeof(FSBulletDataEffect) == 0x000048, "Wrong size on FSBulletDataEffect");
-static_assert(offsetof(FSBulletDataEffect, 受击震屏_58_D3ECBBE744A771F0C77987A67B7BC3BB) == 0x000000, "Member 'FSBulletDataEffect::受击震屏_58_D3ECBBE744A771F0C77987A67B7BC3BB' has a wrong offset!");
-static_assert(offsetof(FSBulletDataEffect, 最大震动次数_10_4230A2C34465CBEA30E4A287475FD130) == 0x000030, "Member 'FSBulletDataEffect::最大震动次数_10_4230A2C34465CBEA30E4A287475FD130' has a wrong offset!");
-static_assert(offsetof(FSBulletDataEffect, 受击特效生成位置偏移_34_13D8E34F4E3C7EE2DE062FA8822192B1) == 0x000034, "Member 'FSBulletDataEffect::受击特效生成位置偏移_34_13D8E34F4E3C7EE2DE062FA8822192B1' has a wrong offset!");
-static_assert(offsetof(FSBulletDataEffect, 子弹拖尾特效_41_647DAC6D4EACC3937B513389BC05E63B) == 0x000038, "Member 'FSBulletDataEffect::子弹拖尾特效_41_647DAC6D4EACC3937B513389BC05E63B' has a wrong offset!");
+DUMPER7_ASSERTS_FSBulletDataEffect;
 
 }
 

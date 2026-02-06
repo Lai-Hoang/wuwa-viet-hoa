@@ -23,15 +23,18 @@ class UEffectModelGroup_C final : public UEffectModelGroup
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"EffectModelGroup_C">();
+		BP_STATIC_CLASS_IMPL("EffectModelGroup_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelGroup_C")
 	}
 	static class UEffectModelGroup_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UEffectModelGroup_C>();
 	}
 };
-static_assert(alignof(UEffectModelGroup_C) == 0x000008, "Wrong alignment on UEffectModelGroup_C");
-static_assert(sizeof(UEffectModelGroup_C) == 0x0005A8, "Wrong size on UEffectModelGroup_C");
+DUMPER7_ASSERTS_UEffectModelGroup_C;
 
 }
 

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "KuroCurve_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -101,10 +101,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Value;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroParameterFloat) == 0x000004, "Wrong alignment on FKuroParameterFloat");
-static_assert(sizeof(FKuroParameterFloat) == 0x000010, "Wrong size on FKuroParameterFloat");
-static_assert(offsetof(FKuroParameterFloat, Name) == 0x000000, "Member 'FKuroParameterFloat::Name' has a wrong offset!");
-static_assert(offsetof(FKuroParameterFloat, Value) == 0x00000C, "Member 'FKuroParameterFloat::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroParameterFloat;
 
 // ScriptStruct KuroGameplay.EffectModelNiagaraExtraState
 // 0x00F0 (0x00F0 - 0x0000)
@@ -115,11 +112,31 @@ public:
 	TMap<class FName, struct FKuroCurveLinearColor> ColorParameters;                                 // 0x0050(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TMap<class FName, struct FKuroCurveVector>    VectorParameters;                                  // 0x00A0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FEffectModelNiagaraExtraState) == 0x000008, "Wrong alignment on FEffectModelNiagaraExtraState");
-static_assert(sizeof(FEffectModelNiagaraExtraState) == 0x0000F0, "Wrong size on FEffectModelNiagaraExtraState");
-static_assert(offsetof(FEffectModelNiagaraExtraState, FloatParameters) == 0x000000, "Member 'FEffectModelNiagaraExtraState::FloatParameters' has a wrong offset!");
-static_assert(offsetof(FEffectModelNiagaraExtraState, ColorParameters) == 0x000050, "Member 'FEffectModelNiagaraExtraState::ColorParameters' has a wrong offset!");
-static_assert(offsetof(FEffectModelNiagaraExtraState, VectorParameters) == 0x0000A0, "Member 'FEffectModelNiagaraExtraState::VectorParameters' has a wrong offset!");
+DUMPER7_ASSERTS_FEffectModelNiagaraExtraState;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsUnitRecord
+// 0x0028 (0x0028 - 0x0000)
+struct FPerformanceStatisticsUnitRecord final
+{
+public:
+	int32                                         FrameCount;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Mode;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsUnitRecord;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsSectionRecordSerialize
+// 0x0020 (0x0020 - 0x0000)
+struct FPerformanceStatisticsSectionRecordSerialize final
+{
+public:
+	class FName                                   SectionName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPerformanceStatisticsUnitRecord> UnitRecordValues;                                // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsSectionRecordSerialize;
 
 // ScriptStruct KuroGameplay.KuroEffectPostProcessSkyBoxSetting
 // 0x20E0 (0x20E0 - 0x0000)
@@ -180,34 +197,16 @@ public:
 	struct FKuroCurveLinearColor                  ST_DomeColorTint;                                  // 0x1E30(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FKuroCurveFloat                        ST_TopWidth;                                       // 0x2050(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEffectPostProcessSkyBoxSetting) == 0x000008, "Wrong alignment on FKuroEffectPostProcessSkyBoxSetting");
-static_assert(sizeof(FKuroEffectPostProcessSkyBoxSetting) == 0x0020E0, "Wrong size on FKuroEffectPostProcessSkyBoxSetting");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, ZenithColor) == 0x000008, "Member 'FKuroEffectPostProcessSkyBoxSetting::ZenithColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, NadirColor) == 0x000228, "Member 'FKuroEffectPostProcessSkyBoxSetting::NadirColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, NadirFalloff) == 0x000448, "Member 'FKuroEffectPostProcessSkyBoxSetting::NadirFalloff' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, NadirFalloff_Mobile) == 0x0004D8, "Member 'FKuroEffectPostProcessSkyBoxSetting::NadirFalloff_Mobile' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, HorizonColor) == 0x000568, "Member 'FKuroEffectPostProcessSkyBoxSetting::HorizonColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, HorizonFalloff) == 0x000788, "Member 'FKuroEffectPostProcessSkyBoxSetting::HorizonFalloff' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, TopColor) == 0x000818, "Member 'FKuroEffectPostProcessSkyBoxSetting::TopColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, TopFalloff) == 0x000A38, "Member 'FKuroEffectPostProcessSkyBoxSetting::TopFalloff' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, TopColorMobile) == 0x000AC8, "Member 'FKuroEffectPostProcessSkyBoxSetting::TopColorMobile' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, TopFalloffMobile) == 0x000CE8, "Member 'FKuroEffectPostProcessSkyBoxSetting::TopFalloffMobile' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunDiscColor) == 0x000D78, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunDiscColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunScatterColor) == 0x000F98, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunScatterColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunSize) == 0x0011B8, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunSize' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunScatterSize) == 0x001248, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunScatterSize' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunMeshScale) == 0x0012D8, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunMeshScale' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, SunMeshColor) == 0x001368, "Member 'FKuroEffectPostProcessSkyBoxSetting::SunMeshColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonDiscColor) == 0x001588, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonDiscColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonTexture) == 0x0017A8, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonTexture' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonPhase) == 0x0017B0, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonPhase' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonScatterColor) == 0x001840, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonScatterColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonSize) == 0x001A60, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonSize' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, MoonScatterSize) == 0x001AF0, "Member 'FKuroEffectPostProcessSkyBoxSetting::MoonScatterSize' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, ExtremeWeatherWeight) == 0x001B80, "Member 'FKuroEffectPostProcessSkyBoxSetting::ExtremeWeatherWeight' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, ST_TopColor) == 0x001C10, "Member 'FKuroEffectPostProcessSkyBoxSetting::ST_TopColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, ST_DomeColorTint) == 0x001E30, "Member 'FKuroEffectPostProcessSkyBoxSetting::ST_DomeColorTint' has a wrong offset!");
-static_assert(offsetof(FKuroEffectPostProcessSkyBoxSetting, ST_TopWidth) == 0x002050, "Member 'FKuroEffectPostProcessSkyBoxSetting::ST_TopWidth' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectPostProcessSkyBoxSetting;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsSectionsSerialize
+// 0x0010 (0x0010 - 0x0000)
+struct FPerformanceStatisticsSectionsSerialize final
+{
+public:
+	TArray<struct FPerformanceStatisticsSectionRecordSerialize> SectionRecords;                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsSectionsSerialize;
 
 // ScriptStruct KuroGameplay.KuroSceneTeamItem
 // 0x0008 (0x0008 - 0x0000)
@@ -218,10 +217,7 @@ public:
 	bool                                          IsMyRole;                                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroSceneTeamItem) == 0x000004, "Wrong alignment on FKuroSceneTeamItem");
-static_assert(sizeof(FKuroSceneTeamItem) == 0x000008, "Wrong size on FKuroSceneTeamItem");
-static_assert(offsetof(FKuroSceneTeamItem, EntityId) == 0x000000, "Member 'FKuroSceneTeamItem::EntityId' has a wrong offset!");
-static_assert(offsetof(FKuroSceneTeamItem, IsMyRole) == 0x000004, "Member 'FKuroSceneTeamItem::IsMyRole' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroSceneTeamItem;
 
 // ScriptStruct KuroGameplay.KuroParameterLinearColor
 // 0x001C (0x001C - 0x0000)
@@ -231,10 +227,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroParameterLinearColor) == 0x000004, "Wrong alignment on FKuroParameterLinearColor");
-static_assert(sizeof(FKuroParameterLinearColor) == 0x00001C, "Wrong size on FKuroParameterLinearColor");
-static_assert(offsetof(FKuroParameterLinearColor, Name) == 0x000000, "Member 'FKuroParameterLinearColor::Name' has a wrong offset!");
-static_assert(offsetof(FKuroParameterLinearColor, Value) == 0x00000C, "Member 'FKuroParameterLinearColor::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroParameterLinearColor;
 
 // ScriptStruct KuroGameplay.KuroParameterVector
 // 0x0018 (0x0018 - 0x0000)
@@ -244,10 +237,7 @@ public:
 	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Value;                                             // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroParameterVector) == 0x000004, "Wrong alignment on FKuroParameterVector");
-static_assert(sizeof(FKuroParameterVector) == 0x000018, "Wrong size on FKuroParameterVector");
-static_assert(offsetof(FKuroParameterVector, Name) == 0x000000, "Member 'FKuroParameterVector::Name' has a wrong offset!");
-static_assert(offsetof(FKuroParameterVector, Value) == 0x00000C, "Member 'FKuroParameterVector::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroParameterVector;
 
 // ScriptStruct KuroGameplay.KuroParameterArrayVector
 // 0x0020 (0x0020 - 0x0000)
@@ -258,10 +248,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        Value;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroParameterArrayVector) == 0x000008, "Wrong alignment on FKuroParameterArrayVector");
-static_assert(sizeof(FKuroParameterArrayVector) == 0x000020, "Wrong size on FKuroParameterArrayVector");
-static_assert(offsetof(FKuroParameterArrayVector, Name) == 0x000000, "Member 'FKuroParameterArrayVector::Name' has a wrong offset!");
-static_assert(offsetof(FKuroParameterArrayVector, Value) == 0x000010, "Member 'FKuroParameterArrayVector::Value' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroParameterArrayVector;
 
 // ScriptStruct KuroGameplay.KuroEffectNiagaraParametersStruct
 // 0x0060 (0x0060 - 0x0000)
@@ -275,14 +262,21 @@ public:
 	TArray<struct FKuroParameterFloat>            MaterialParameterFloat;                            // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FKuroParameterLinearColor>      MaterialParameterColor;                            // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEffectNiagaraParametersStruct) == 0x000008, "Wrong alignment on FKuroEffectNiagaraParametersStruct");
-static_assert(sizeof(FKuroEffectNiagaraParametersStruct) == 0x000060, "Wrong size on FKuroEffectNiagaraParametersStruct");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, UserParameterFloat) == 0x000000, "Member 'FKuroEffectNiagaraParametersStruct::UserParameterFloat' has a wrong offset!");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, UserParameterColor) == 0x000010, "Member 'FKuroEffectNiagaraParametersStruct::UserParameterColor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, UserParameterVector) == 0x000020, "Member 'FKuroEffectNiagaraParametersStruct::UserParameterVector' has a wrong offset!");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, UserParameterArrayVector) == 0x000030, "Member 'FKuroEffectNiagaraParametersStruct::UserParameterArrayVector' has a wrong offset!");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, MaterialParameterFloat) == 0x000040, "Member 'FKuroEffectNiagaraParametersStruct::MaterialParameterFloat' has a wrong offset!");
-static_assert(offsetof(FKuroEffectNiagaraParametersStruct, MaterialParameterColor) == 0x000050, "Member 'FKuroEffectNiagaraParametersStruct::MaterialParameterColor' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectNiagaraParametersStruct;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagNode
+// 0x0088 (0x0088 - 0x0000)
+struct alignas(0x08) FPerformanceStatisticsTagNode final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x6C];                                      // 0x001C(0x006C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagNode;
 
 // ScriptStruct KuroGameplay.KuroEffectSpecData
 // 0x0018 (0x0018 - 0x0000)
@@ -296,13 +290,17 @@ public:
 	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         LifeTime;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEffectSpecData) == 0x000004, "Wrong alignment on FKuroEffectSpecData");
-static_assert(sizeof(FKuroEffectSpecData) == 0x000018, "Wrong size on FKuroEffectSpecData");
-static_assert(offsetof(FKuroEffectSpecData, Id) == 0x000000, "Member 'FKuroEffectSpecData::Id' has a wrong offset!");
-static_assert(offsetof(FKuroEffectSpecData, Path) == 0x000004, "Member 'FKuroEffectSpecData::Path' has a wrong offset!");
-static_assert(offsetof(FKuroEffectSpecData, SpecType) == 0x000010, "Member 'FKuroEffectSpecData::SpecType' has a wrong offset!");
-static_assert(offsetof(FKuroEffectSpecData, EffectRegularType) == 0x000011, "Member 'FKuroEffectSpecData::EffectRegularType' has a wrong offset!");
-static_assert(offsetof(FKuroEffectSpecData, LifeTime) == 0x000014, "Member 'FKuroEffectSpecData::LifeTime' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectSpecData;
+
+// ScriptStruct KuroGameplay.SequencerBindingRuntimeProxy
+// 0x0018 (0x0018 - 0x0000)
+struct FSequencerBindingRuntimeProxy final
+{
+public:
+	struct FGuid                                  BindingID;                                         // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSequencerBindingRuntimeProxy;
 
 // ScriptStruct KuroGameplay.KuroEffectContext
 // 0x0030 (0x0030 - 0x0000)
@@ -322,17 +320,19 @@ public:
 	int32                                         HitEffectType;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   AnsSlotName;                                       // 0x0024(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEffectContext) == 0x000008, "Wrong alignment on FKuroEffectContext");
-static_assert(sizeof(FKuroEffectContext) == 0x000030, "Wrong size on FKuroEffectContext");
-static_assert(offsetof(FKuroEffectContext, EntityId) == 0x000000, "Member 'FKuroEffectContext::EntityId' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, SourceObject) == 0x000008, "Member 'FKuroEffectContext::SourceObject' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, DisablePostProcess) == 0x000010, "Member 'FKuroEffectContext::DisablePostProcess' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, CreateFromType) == 0x000014, "Member 'FKuroEffectContext::CreateFromType' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, PlayFlag) == 0x000018, "Member 'FKuroEffectContext::PlayFlag' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, CreateFromBpEffectActor) == 0x00001C, "Member 'FKuroEffectContext::CreateFromBpEffectActor' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, ContextType) == 0x00001D, "Member 'FKuroEffectContext::ContextType' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, HitEffectType) == 0x000020, "Member 'FKuroEffectContext::HitEffectType' has a wrong offset!");
-static_assert(offsetof(FKuroEffectContext, AnsSlotName) == 0x000024, "Member 'FKuroEffectContext::AnsSlotName' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectContext;
+
+// ScriptStruct KuroGameplay.KuroProgressBarStyle
+// 0x0240 (0x0248 - 0x0008)
+struct FKuroProgressBarStyle final : public FSlateWidgetStyle
+{
+public:
+	struct FSlateBrush                            BackgroundImage;                                   // 0x0008(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FillImageMiddle;                                   // 0x0098(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FillImage;                                         // 0x0128(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            MarqueeImage;                                      // 0x01B8(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroProgressBarStyle;
 
 // ScriptStruct KuroGameplay.KuroSkeletalMeshEffectContext
 // 0x0010 (0x0040 - 0x0030)
@@ -344,11 +344,20 @@ public:
 	bool                                          IsSyncEventTimeToEffectTime;                       // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroSkeletalMeshEffectContext) == 0x000008, "Wrong alignment on FKuroSkeletalMeshEffectContext");
-static_assert(sizeof(FKuroSkeletalMeshEffectContext) == 0x000040, "Wrong size on FKuroSkeletalMeshEffectContext");
-static_assert(offsetof(FKuroSkeletalMeshEffectContext, SkeletalMeshComponent) == 0x000030, "Member 'FKuroSkeletalMeshEffectContext::SkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(FKuroSkeletalMeshEffectContext, IsSyncTimeDilation) == 0x000038, "Member 'FKuroSkeletalMeshEffectContext::IsSyncTimeDilation' has a wrong offset!");
-static_assert(offsetof(FKuroSkeletalMeshEffectContext, IsSyncEventTimeToEffectTime) == 0x000039, "Member 'FKuroSkeletalMeshEffectContext::IsSyncEventTimeToEffectTime' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroSkeletalMeshEffectContext;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeNodeSerialize
+// 0x0028 (0x0028 - 0x0000)
+struct FPerformanceStatisticsTagTreeNodeSerialize final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Mode;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeNodeSerialize;
 
 // ScriptStruct KuroGameplay.KuroEffectRuntimeGhostEffectContext
 // 0x0010 (0x0050 - 0x0040)
@@ -361,12 +370,17 @@ public:
 	float                                         SpawnInterval;                                     // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GhostLifeTime;                                     // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroEffectRuntimeGhostEffectContext) == 0x000008, "Wrong alignment on FKuroEffectRuntimeGhostEffectContext");
-static_assert(sizeof(FKuroEffectRuntimeGhostEffectContext) == 0x000050, "Wrong size on FKuroEffectRuntimeGhostEffectContext");
-static_assert(offsetof(FKuroEffectRuntimeGhostEffectContext, SpawnRate) == 0x000040, "Member 'FKuroEffectRuntimeGhostEffectContext::SpawnRate' has a wrong offset!");
-static_assert(offsetof(FKuroEffectRuntimeGhostEffectContext, UseSpawnRate) == 0x000044, "Member 'FKuroEffectRuntimeGhostEffectContext::UseSpawnRate' has a wrong offset!");
-static_assert(offsetof(FKuroEffectRuntimeGhostEffectContext, SpawnInterval) == 0x000048, "Member 'FKuroEffectRuntimeGhostEffectContext::SpawnInterval' has a wrong offset!");
-static_assert(offsetof(FKuroEffectRuntimeGhostEffectContext, GhostLifeTime) == 0x00004C, "Member 'FKuroEffectRuntimeGhostEffectContext::GhostLifeTime' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectRuntimeGhostEffectContext;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeSerialize
+// 0x0038 (0x0038 - 0x0000)
+struct FPerformanceStatisticsTagTreeSerialize final
+{
+public:
+	struct FPerformanceStatisticsTagTreeNodeSerialize NodeSerialize;                                 // 0x0000(0x0028)(NativeAccessSpecifierPublic)
+	TArray<struct FPerformanceStatisticsTagTreeNodeSerialize> ChildTags;                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeSerialize;
 
 // ScriptStruct KuroGameplay.KuroEffectAudioContext
 // 0x0008 (0x0038 - 0x0030)
@@ -376,9 +390,7 @@ public:
 	bool                                          FromPrimaryRole;                                   // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroEffectAudioContext) == 0x000008, "Wrong alignment on FKuroEffectAudioContext");
-static_assert(sizeof(FKuroEffectAudioContext) == 0x000038, "Wrong size on FKuroEffectAudioContext");
-static_assert(offsetof(FKuroEffectAudioContext, FromPrimaryRole) == 0x000030, "Member 'FKuroEffectAudioContext::FromPrimaryRole' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroEffectAudioContext;
 
 // ScriptStruct KuroGameplay.KuroGASMessageParams
 // 0x0010 (0x0010 - 0x0000)
@@ -387,8 +399,20 @@ struct alignas(0x08) FKuroGASMessageParams final
 public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroGASMessageParams) == 0x000008, "Wrong alignment on FKuroGASMessageParams");
-static_assert(sizeof(FKuroGASMessageParams) == 0x000010, "Wrong size on FKuroGASMessageParams");
+DUMPER7_ASSERTS_FKuroGASMessageParams;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagNodeForSerialize
+// 0x001C (0x001C - 0x0000)
+struct FPerformanceStatisticsTagNodeForSerialize final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagNodeForSerialize;
 
 // ScriptStruct KuroGameplay.KuroInputDefine
 // 0x0001 (0x0001 - 0x0000)
@@ -397,8 +421,17 @@ struct FKuroInputDefine final
 public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroInputDefine) == 0x000001, "Wrong alignment on FKuroInputDefine");
-static_assert(sizeof(FKuroInputDefine) == 0x000001, "Wrong size on FKuroInputDefine");
+DUMPER7_ASSERTS_FKuroInputDefine;
+
+// ScriptStruct KuroGameplay.TrailSegment
+// 0x0028 (0x0028 - 0x0000)
+struct FTrailSegment final
+{
+public:
+	class UBoxComponent*                          Box;                                               // 0x0000(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x20];                                       // 0x0008(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTrailSegment;
 
 // ScriptStruct KuroGameplay.KuroLevelSwitchMaterialData
 // 0x0030 (0x0030 - 0x0000)
@@ -414,44 +447,7 @@ public:
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      ExitMaterial;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FKuroLevelSwitchMaterialData) == 0x000008, "Wrong alignment on FKuroLevelSwitchMaterialData");
-static_assert(sizeof(FKuroLevelSwitchMaterialData) == 0x000030, "Wrong size on FKuroLevelSwitchMaterialData");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, Actor) == 0x000000, "Member 'FKuroLevelSwitchMaterialData::Actor' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, bIncludeChildren) == 0x000008, "Member 'FKuroLevelSwitchMaterialData::bIncludeChildren' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, EnterMaterial) == 0x000010, "Member 'FKuroLevelSwitchMaterialData::EnterMaterial' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, MaterialAsset) == 0x000018, "Member 'FKuroLevelSwitchMaterialData::MaterialAsset' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, bExitReverse) == 0x000020, "Member 'FKuroLevelSwitchMaterialData::bExitReverse' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, ExitMaterial) == 0x000028, "Member 'FKuroLevelSwitchMaterialData::ExitMaterial' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.KuroProgressBarStyle
-// 0x0240 (0x0248 - 0x0008)
-struct FKuroProgressBarStyle final : public FSlateWidgetStyle
-{
-public:
-	struct FSlateBrush                            BackgroundImage;                                   // 0x0008(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FillImageMiddle;                                   // 0x0098(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FillImage;                                         // 0x0128(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            MarqueeImage;                                      // 0x01B8(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKuroProgressBarStyle) == 0x000008, "Wrong alignment on FKuroProgressBarStyle");
-static_assert(sizeof(FKuroProgressBarStyle) == 0x000248, "Wrong size on FKuroProgressBarStyle");
-static_assert(offsetof(FKuroProgressBarStyle, BackgroundImage) == 0x000008, "Member 'FKuroProgressBarStyle::BackgroundImage' has a wrong offset!");
-static_assert(offsetof(FKuroProgressBarStyle, FillImageMiddle) == 0x000098, "Member 'FKuroProgressBarStyle::FillImageMiddle' has a wrong offset!");
-static_assert(offsetof(FKuroProgressBarStyle, FillImage) == 0x000128, "Member 'FKuroProgressBarStyle::FillImage' has a wrong offset!");
-static_assert(offsetof(FKuroProgressBarStyle, MarqueeImage) == 0x0001B8, "Member 'FKuroProgressBarStyle::MarqueeImage' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.SequencerBindingRuntimeProxy
-// 0x0018 (0x0018 - 0x0000)
-struct FSequencerBindingRuntimeProxy final
-{
-public:
-	struct FGuid                                  BindingID;                                         // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneSequence*                    Sequence;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSequencerBindingRuntimeProxy) == 0x000008, "Wrong alignment on FSequencerBindingRuntimeProxy");
-static_assert(sizeof(FSequencerBindingRuntimeProxy) == 0x000018, "Wrong size on FSequencerBindingRuntimeProxy");
-static_assert(offsetof(FSequencerBindingRuntimeProxy, BindingID) == 0x000000, "Member 'FSequencerBindingRuntimeProxy::BindingID' has a wrong offset!");
-static_assert(offsetof(FSequencerBindingRuntimeProxy, Sequence) == 0x000010, "Member 'FSequencerBindingRuntimeProxy::Sequence' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroLevelSwitchMaterialData;
 
 // ScriptStruct KuroGameplay.KuroSplineParams
 // 0x0018 (0x0018 - 0x0000)
@@ -462,10 +458,7 @@ public:
 	bool                                          bClosedLoop;                                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroSplineParams) == 0x000008, "Wrong alignment on FKuroSplineParams");
-static_assert(sizeof(FKuroSplineParams) == 0x000018, "Wrong size on FKuroSplineParams");
-static_assert(offsetof(FKuroSplineParams, Points) == 0x000000, "Member 'FKuroSplineParams::Points' has a wrong offset!");
-static_assert(offsetof(FKuroSplineParams, bClosedLoop) == 0x000010, "Member 'FKuroSplineParams::bClosedLoop' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroSplineParams;
 
 // ScriptStruct KuroGameplay.RoadwayCreateParam
 // 0x0058 (0x0058 - 0x0000)
@@ -486,19 +479,7 @@ public:
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        IntersectCells;                                    // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRoadwayCreateParam) == 0x000008, "Wrong alignment on FRoadwayCreateParam");
-static_assert(sizeof(FRoadwayCreateParam) == 0x000058, "Wrong size on FRoadwayCreateParam");
-static_assert(offsetof(FRoadwayCreateParam, Position) == 0x000000, "Member 'FRoadwayCreateParam::Position' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, Rotator) == 0x00000C, "Member 'FRoadwayCreateParam::Rotator' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, SplineData) == 0x000018, "Member 'FRoadwayCreateParam::SplineData' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, RoadwayId) == 0x000028, "Member 'FRoadwayCreateParam::RoadwayId' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, RoadwayWidth) == 0x00002C, "Member 'FRoadwayCreateParam::RoadwayWidth' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, bAffectTerrain) == 0x000030, "Member 'FRoadwayCreateParam::bAffectTerrain' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, OpposingRoadId) == 0x000034, "Member 'FRoadwayCreateParam::OpposingRoadId' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, LastRoadId) == 0x000038, "Member 'FRoadwayCreateParam::LastRoadId' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, NextRoadId) == 0x00003C, "Member 'FRoadwayCreateParam::NextRoadId' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, PavedRoadConfig) == 0x000040, "Member 'FRoadwayCreateParam::PavedRoadConfig' has a wrong offset!");
-static_assert(offsetof(FRoadwayCreateParam, IntersectCells) == 0x000048, "Member 'FRoadwayCreateParam::IntersectCells' has a wrong offset!");
+DUMPER7_ASSERTS_FRoadwayCreateParam;
 
 // ScriptStruct KuroGameplay.RoadSegmentInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -509,125 +490,7 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroRoadway*                           RoadInfo;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRoadSegmentInfo) == 0x000008, "Wrong alignment on FRoadSegmentInfo");
-static_assert(sizeof(FRoadSegmentInfo) == 0x000010, "Wrong size on FRoadSegmentInfo");
-static_assert(offsetof(FRoadSegmentInfo, StartKey) == 0x000000, "Member 'FRoadSegmentInfo::StartKey' has a wrong offset!");
-static_assert(offsetof(FRoadSegmentInfo, RoadInfo) == 0x000008, "Member 'FRoadSegmentInfo::RoadInfo' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeNodeSerialize
-// 0x0028 (0x0028 - 0x0000)
-struct FPerformanceStatisticsTagTreeNodeSerialize final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Mode;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsTagTreeNodeSerialize) == 0x000008, "Wrong alignment on FPerformanceStatisticsTagTreeNodeSerialize");
-static_assert(sizeof(FPerformanceStatisticsTagTreeNodeSerialize) == 0x000028, "Wrong size on FPerformanceStatisticsTagTreeNodeSerialize");
-static_assert(offsetof(FPerformanceStatisticsTagTreeNodeSerialize, Tag) == 0x000000, "Member 'FPerformanceStatisticsTagTreeNodeSerialize::Tag' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagTreeNodeSerialize, AverageTime) == 0x00000C, "Member 'FPerformanceStatisticsTagTreeNodeSerialize::AverageTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagTreeNodeSerialize, MaxTime) == 0x000010, "Member 'FPerformanceStatisticsTagTreeNodeSerialize::MaxTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagTreeNodeSerialize, Mode) == 0x000014, "Member 'FPerformanceStatisticsTagTreeNodeSerialize::Mode' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagTreeNodeSerialize, UserDefineMessage) == 0x000018, "Member 'FPerformanceStatisticsTagTreeNodeSerialize::UserDefineMessage' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeSerialize
-// 0x0038 (0x0038 - 0x0000)
-struct FPerformanceStatisticsTagTreeSerialize final
-{
-public:
-	struct FPerformanceStatisticsTagTreeNodeSerialize NodeSerialize;                                 // 0x0000(0x0028)(NativeAccessSpecifierPublic)
-	TArray<struct FPerformanceStatisticsTagTreeNodeSerialize> ChildTags;                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsTagTreeSerialize) == 0x000008, "Wrong alignment on FPerformanceStatisticsTagTreeSerialize");
-static_assert(sizeof(FPerformanceStatisticsTagTreeSerialize) == 0x000038, "Wrong size on FPerformanceStatisticsTagTreeSerialize");
-static_assert(offsetof(FPerformanceStatisticsTagTreeSerialize, NodeSerialize) == 0x000000, "Member 'FPerformanceStatisticsTagTreeSerialize::NodeSerialize' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagTreeSerialize, ChildTags) == 0x000028, "Member 'FPerformanceStatisticsTagTreeSerialize::ChildTags' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsUnitRecord
-// 0x0028 (0x0028 - 0x0000)
-struct FPerformanceStatisticsUnitRecord final
-{
-public:
-	int32                                         FrameCount;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Tag;                                               // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Mode;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsUnitRecord) == 0x000008, "Wrong alignment on FPerformanceStatisticsUnitRecord");
-static_assert(sizeof(FPerformanceStatisticsUnitRecord) == 0x000028, "Wrong size on FPerformanceStatisticsUnitRecord");
-static_assert(offsetof(FPerformanceStatisticsUnitRecord, FrameCount) == 0x000000, "Member 'FPerformanceStatisticsUnitRecord::FrameCount' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsUnitRecord, Tag) == 0x000004, "Member 'FPerformanceStatisticsUnitRecord::Tag' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsUnitRecord, Mode) == 0x000010, "Member 'FPerformanceStatisticsUnitRecord::Mode' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsUnitRecord, Time) == 0x000014, "Member 'FPerformanceStatisticsUnitRecord::Time' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsUnitRecord, UserDefineMessage) == 0x000018, "Member 'FPerformanceStatisticsUnitRecord::UserDefineMessage' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsSectionRecordSerialize
-// 0x0020 (0x0020 - 0x0000)
-struct FPerformanceStatisticsSectionRecordSerialize final
-{
-public:
-	class FName                                   SectionName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPerformanceStatisticsUnitRecord> UnitRecordValues;                                // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsSectionRecordSerialize) == 0x000008, "Wrong alignment on FPerformanceStatisticsSectionRecordSerialize");
-static_assert(sizeof(FPerformanceStatisticsSectionRecordSerialize) == 0x000020, "Wrong size on FPerformanceStatisticsSectionRecordSerialize");
-static_assert(offsetof(FPerformanceStatisticsSectionRecordSerialize, SectionName) == 0x000000, "Member 'FPerformanceStatisticsSectionRecordSerialize::SectionName' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsSectionRecordSerialize, UnitRecordValues) == 0x000010, "Member 'FPerformanceStatisticsSectionRecordSerialize::UnitRecordValues' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsSectionsSerialize
-// 0x0010 (0x0010 - 0x0000)
-struct FPerformanceStatisticsSectionsSerialize final
-{
-public:
-	TArray<struct FPerformanceStatisticsSectionRecordSerialize> SectionRecords;                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsSectionsSerialize) == 0x000008, "Wrong alignment on FPerformanceStatisticsSectionsSerialize");
-static_assert(sizeof(FPerformanceStatisticsSectionsSerialize) == 0x000010, "Wrong size on FPerformanceStatisticsSectionsSerialize");
-static_assert(offsetof(FPerformanceStatisticsSectionsSerialize, SectionRecords) == 0x000000, "Member 'FPerformanceStatisticsSectionsSerialize::SectionRecords' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagNode
-// 0x0088 (0x0088 - 0x0000)
-struct alignas(0x08) FPerformanceStatisticsTagNode final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x6C];                                      // 0x001C(0x006C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPerformanceStatisticsTagNode) == 0x000008, "Wrong alignment on FPerformanceStatisticsTagNode");
-static_assert(sizeof(FPerformanceStatisticsTagNode) == 0x000088, "Wrong size on FPerformanceStatisticsTagNode");
-static_assert(offsetof(FPerformanceStatisticsTagNode, Tag) == 0x000000, "Member 'FPerformanceStatisticsTagNode::Tag' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNode, RecordFramesCount) == 0x00000C, "Member 'FPerformanceStatisticsTagNode::RecordFramesCount' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNode, TotalTime) == 0x000010, "Member 'FPerformanceStatisticsTagNode::TotalTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNode, AverageTime) == 0x000014, "Member 'FPerformanceStatisticsTagNode::AverageTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNode, MaxTime) == 0x000018, "Member 'FPerformanceStatisticsTagNode::MaxTime' has a wrong offset!");
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagNodeForSerialize
-// 0x001C (0x001C - 0x0000)
-struct FPerformanceStatisticsTagNodeForSerialize final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPerformanceStatisticsTagNodeForSerialize) == 0x000004, "Wrong alignment on FPerformanceStatisticsTagNodeForSerialize");
-static_assert(sizeof(FPerformanceStatisticsTagNodeForSerialize) == 0x00001C, "Wrong size on FPerformanceStatisticsTagNodeForSerialize");
-static_assert(offsetof(FPerformanceStatisticsTagNodeForSerialize, Tag) == 0x000000, "Member 'FPerformanceStatisticsTagNodeForSerialize::Tag' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNodeForSerialize, RecordFramesCount) == 0x00000C, "Member 'FPerformanceStatisticsTagNodeForSerialize::RecordFramesCount' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNodeForSerialize, TotalTime) == 0x000010, "Member 'FPerformanceStatisticsTagNodeForSerialize::TotalTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNodeForSerialize, AverageTime) == 0x000014, "Member 'FPerformanceStatisticsTagNodeForSerialize::AverageTime' has a wrong offset!");
-static_assert(offsetof(FPerformanceStatisticsTagNodeForSerialize, MaxTime) == 0x000018, "Member 'FPerformanceStatisticsTagNodeForSerialize::MaxTime' has a wrong offset!");
+DUMPER7_ASSERTS_FRoadSegmentInfo;
 
 }
 

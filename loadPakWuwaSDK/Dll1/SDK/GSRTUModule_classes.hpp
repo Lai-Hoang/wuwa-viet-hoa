@@ -34,21 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GSRSettings">();
+		STATIC_CLASS_IMPL("GSRSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GSRSettings")
 	}
 	static class UGSRSettings* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGSRSettings>();
 	}
 };
-static_assert(alignof(UGSRSettings) == 0x000008, "Wrong alignment on UGSRSettings");
-static_assert(sizeof(UGSRSettings) == 0x000058, "Wrong size on UGSRSettings");
-static_assert(offsetof(UGSRSettings, bEnabled) == 0x000048, "Member 'UGSRSettings::bEnabled' has a wrong offset!");
-static_assert(offsetof(UGSRSettings, AutoExposure) == 0x000049, "Member 'UGSRSettings::AutoExposure' has a wrong offset!");
-static_assert(offsetof(UGSRSettings, QualityMode) == 0x00004C, "Member 'UGSRSettings::QualityMode' has a wrong offset!");
-static_assert(offsetof(UGSRSettings, HistoryFormat) == 0x000050, "Member 'UGSRSettings::HistoryFormat' has a wrong offset!");
-static_assert(offsetof(UGSRSettings, AdjustMipBias) == 0x000054, "Member 'UGSRSettings::AdjustMipBias' has a wrong offset!");
-static_assert(offsetof(UGSRSettings, ForceVertexDeformationOutputsVelocity) == 0x000055, "Member 'UGSRSettings::ForceVertexDeformationOutputsVelocity' has a wrong offset!");
+DUMPER7_ASSERTS_UGSRSettings;
 
 }
 

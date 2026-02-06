@@ -50,27 +50,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_ControlTodTime_C">();
+		BP_STATIC_CLASS_IMPL("BP_ControlTodTime_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_ControlTodTime_C")
 	}
 	static class ABP_ControlTodTime_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_ControlTodTime_C>();
 	}
 };
-static_assert(alignof(ABP_ControlTodTime_C) == 0x000008, "Wrong alignment on ABP_ControlTodTime_C");
-static_assert(sizeof(ABP_ControlTodTime_C) == 0x0003D0, "Wrong size on ABP_ControlTodTime_C");
-static_assert(offsetof(ABP_ControlTodTime_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_ControlTodTime_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_ControlTodTime_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, TodTime) == 0x0002C0, "Member 'ABP_ControlTodTime_C::TodTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableTodTime) == 0x0002C4, "Member 'ABP_ControlTodTime_C::EnableTodTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, SunVerticalAngle) == 0x0002C8, "Member 'ABP_ControlTodTime_C::SunVerticalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableSunVerticalAngle) == 0x0002CC, "Member 'ABP_ControlTodTime_C::EnableSunVerticalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, SunHorizontalAngle) == 0x0002D0, "Member 'ABP_ControlTodTime_C::SunHorizontalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableSunHorizontalAngle) == 0x0002D4, "Member 'ABP_ControlTodTime_C::EnableSunHorizontalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, AccumulatedTime) == 0x0002D8, "Member 'ABP_ControlTodTime_C::AccumulatedTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, CameraChangedTime) == 0x0002E0, "Member 'ABP_ControlTodTime_C::CameraChangedTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, TSetCall) == 0x000330, "Member 'ABP_ControlTodTime_C::TSetCall' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, TSetUncall) == 0x000380, "Member 'ABP_ControlTodTime_C::TSetUncall' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_ControlTodTime_C;
 
 }
 

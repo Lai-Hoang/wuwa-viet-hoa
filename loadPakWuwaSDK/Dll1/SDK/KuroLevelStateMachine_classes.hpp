@@ -29,16 +29,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelStateAction">();
+		STATIC_CLASS_IMPL("KuroLevelStateAction")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelStateAction")
 	}
 	static class UKuroLevelStateAction* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelStateAction>();
 	}
 };
-static_assert(alignof(UKuroLevelStateAction) == 0x000008, "Wrong alignment on UKuroLevelStateAction");
-static_assert(sizeof(UKuroLevelStateAction) == 0x000040, "Wrong size on UKuroLevelStateAction");
-static_assert(offsetof(UKuroLevelStateAction, Owner) == 0x000030, "Member 'UKuroLevelStateAction::Owner' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelStateAction;
 
 // Class KuroLevelStateMachine.KuroLevelPlayMontage
 // 0x0018 (0x0058 - 0x0040)
@@ -54,19 +56,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelPlayMontage">();
+		STATIC_CLASS_IMPL("KuroLevelPlayMontage")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlayMontage")
 	}
 	static class UKuroLevelPlayMontage* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelPlayMontage>();
 	}
 };
-static_assert(alignof(UKuroLevelPlayMontage) == 0x000008, "Wrong alignment on UKuroLevelPlayMontage");
-static_assert(sizeof(UKuroLevelPlayMontage) == 0x000058, "Wrong size on UKuroLevelPlayMontage");
-static_assert(offsetof(UKuroLevelPlayMontage, TargetActor) == 0x000040, "Member 'UKuroLevelPlayMontage::TargetActor' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, Montage) == 0x000048, "Member 'UKuroLevelPlayMontage::Montage' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, bLooping) == 0x000050, "Member 'UKuroLevelPlayMontage::bLooping' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, PlayRate) == 0x000054, "Member 'UKuroLevelPlayMontage::PlayRate' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelPlayMontage;
 
 // Class KuroLevelStateMachine.KuroLevelPlaySequence
 // 0x0080 (0x00C0 - 0x0040)
@@ -84,19 +85,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelPlaySequence">();
+		STATIC_CLASS_IMPL("KuroLevelPlaySequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlaySequence")
 	}
 	static class UKuroLevelPlaySequence* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelPlaySequence>();
 	}
 };
-static_assert(alignof(UKuroLevelPlaySequence) == 0x000008, "Wrong alignment on UKuroLevelPlaySequence");
-static_assert(sizeof(UKuroLevelPlaySequence) == 0x0000C0, "Wrong size on UKuroLevelPlaySequence");
-static_assert(offsetof(UKuroLevelPlaySequence, LevelSequence) == 0x000050, "Member 'UKuroLevelPlaySequence::LevelSequence' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, bIsLoop) == 0x000058, "Member 'UKuroLevelPlaySequence::bIsLoop' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, PlayRate) == 0x00005C, "Member 'UKuroLevelPlaySequence::PlayRate' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, OverrideData) == 0x000060, "Member 'UKuroLevelPlaySequence::OverrideData' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelPlaySequence;
 
 // Class KuroLevelStateMachine.KuroLevelStateMachine
 // 0x0008 (0x02B8 - 0x02B0)
@@ -108,16 +108,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelStateMachine">();
+		STATIC_CLASS_IMPL("KuroLevelStateMachine")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelStateMachine")
 	}
 	static class AKuroLevelStateMachine* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<AKuroLevelStateMachine>();
 	}
 };
-static_assert(alignof(AKuroLevelStateMachine) == 0x000008, "Wrong alignment on AKuroLevelStateMachine");
-static_assert(sizeof(AKuroLevelStateMachine) == 0x0002B8, "Wrong size on AKuroLevelStateMachine");
-static_assert(offsetof(AKuroLevelStateMachine, LevelStateMachineComponent) == 0x0002B0, "Member 'AKuroLevelStateMachine::LevelStateMachineComponent' has a wrong offset!");
+DUMPER7_ASSERTS_AKuroLevelStateMachine;
 
 // Class KuroLevelStateMachine.KuroLevelStateMachineComponent
 // 0x0090 (0x02B0 - 0x0220)
@@ -140,18 +142,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelStateMachineComponent">();
+		STATIC_CLASS_IMPL("KuroLevelStateMachineComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelStateMachineComponent")
 	}
 	static class UKuroLevelStateMachineComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelStateMachineComponent>();
 	}
 };
-static_assert(alignof(UKuroLevelStateMachineComponent) == 0x000010, "Wrong alignment on UKuroLevelStateMachineComponent");
-static_assert(sizeof(UKuroLevelStateMachineComponent) == 0x0002B0, "Wrong size on UKuroLevelStateMachineComponent");
-static_assert(offsetof(UKuroLevelStateMachineComponent, Layers) == 0x000220, "Member 'UKuroLevelStateMachineComponent::Layers' has a wrong offset!");
-static_assert(offsetof(UKuroLevelStateMachineComponent, SequencePlayer) == 0x000230, "Member 'UKuroLevelStateMachineComponent::SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UKuroLevelStateMachineComponent, SequenceActor) == 0x000238, "Member 'UKuroLevelStateMachineComponent::SequenceActor' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelStateMachineComponent;
 
 // Class KuroLevelStateMachine.KuroLevelSwitchCollision
 // 0x0060 (0x00A0 - 0x0040)
@@ -164,16 +166,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelSwitchCollision">();
+		STATIC_CLASS_IMPL("KuroLevelSwitchCollision")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelSwitchCollision")
 	}
 	static class UKuroLevelSwitchCollision* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelSwitchCollision>();
 	}
 };
-static_assert(alignof(UKuroLevelSwitchCollision) == 0x000008, "Wrong alignment on UKuroLevelSwitchCollision");
-static_assert(sizeof(UKuroLevelSwitchCollision) == 0x0000A0, "Wrong size on UKuroLevelSwitchCollision");
-static_assert(offsetof(UKuroLevelSwitchCollision, Collisions) == 0x000040, "Member 'UKuroLevelSwitchCollision::Collisions' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelSwitchCollision;
 
 // Class KuroLevelStateMachine.KuroLevelToggleActive
 // 0x0060 (0x00A0 - 0x0040)
@@ -186,16 +190,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KuroLevelToggleActive">();
+		STATIC_CLASS_IMPL("KuroLevelToggleActive")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelToggleActive")
 	}
 	static class UKuroLevelToggleActive* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UKuroLevelToggleActive>();
 	}
 };
-static_assert(alignof(UKuroLevelToggleActive) == 0x000008, "Wrong alignment on UKuroLevelToggleActive");
-static_assert(sizeof(UKuroLevelToggleActive) == 0x0000A0, "Wrong size on UKuroLevelToggleActive");
-static_assert(offsetof(UKuroLevelToggleActive, Actives) == 0x000040, "Member 'UKuroLevelToggleActive::Actives' has a wrong offset!");
+DUMPER7_ASSERTS_UKuroLevelToggleActive;
 
 }
 

@@ -15,12 +15,13 @@ namespace SDK
 {
 
 // UserDefinedEnum EGameplayABPType.EGameplayABPType
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EGameplayABPType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
-	EGameplayABPType_MAX                     = 2,
+	NewEnumerator3                           = 2,
+	EGameplayABPType_MAX                     = 3,
 };
 
 }

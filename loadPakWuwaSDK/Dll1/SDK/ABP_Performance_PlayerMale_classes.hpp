@@ -23,15 +23,18 @@ class UABP_Performance_PlayerMale_C final : public UABP_PerformanceRole_C
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"ABP_Performance_PlayerMale_C">();
+		BP_STATIC_CLASS_IMPL("ABP_Performance_PlayerMale_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ABP_Performance_PlayerMale_C")
 	}
 	static class UABP_Performance_PlayerMale_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UABP_Performance_PlayerMale_C>();
 	}
 };
-static_assert(alignof(UABP_Performance_PlayerMale_C) == 0x000010, "Wrong alignment on UABP_Performance_PlayerMale_C");
-static_assert(sizeof(UABP_Performance_PlayerMale_C) == 0x007370, "Wrong size on UABP_Performance_PlayerMale_C");
+DUMPER7_ASSERTS_UABP_Performance_PlayerMale_C;
 
 }
 

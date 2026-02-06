@@ -970,6 +970,44 @@ class AActor* UKuroCollectActorComponent::GetActorWithTag(class FName Tag, EColl
 }
 
 
+// Function KuroUtility.KuroCollectActorComponent.AddCollectActorComponentInEditor
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCollectActorComponent::AddCollectActorComponentInEditor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCollectActorComponent", "AddCollectActorComponentInEditor");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroCollectActorComponent.RemoveCollectActorComponentInEditor
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCollectActorComponent::RemoveCollectActorComponentInEditor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCollectActorComponent", "RemoveCollectActorComponentInEditor");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroUtility.KuroCompressLibrary.CompressFileOrFolder
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -5103,6 +5141,87 @@ void UKuroStaticLibrary::SetBaseAndSaveBaseLocation(class UCharacterMovementComp
 
 	Parms.CharacterMovementComp = CharacterMovementComp;
 	Parms.NewBase = NewBase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Float
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InCVar                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroStaticLibrary::SetConsoleVariableWithCurrentPriority_Float(const class FString& InCVar, float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "SetConsoleVariableWithCurrentPriority_Float");
+
+	Params::KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Float Parms{};
+
+	Parms.InCVar = std::move(InCVar);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_Int
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InCVar                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroStaticLibrary::SetConsoleVariableWithCurrentPriority_Int(const class FString& InCVar, int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "SetConsoleVariableWithCurrentPriority_Int");
+
+	Params::KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_Int Parms{};
+
+	Parms.InCVar = std::move(InCVar);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.SetConsoleVariableWithCurrentPriority_String
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InCVar                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroStaticLibrary::SetConsoleVariableWithCurrentPriority_String(const class FString& InCVar, const class FString& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "SetConsoleVariableWithCurrentPriority_String");
+
+	Params::KuroStaticLibrary_SetConsoleVariableWithCurrentPriority_String Parms{};
+
+	Parms.InCVar = std::move(InCVar);
+	Parms.InValue = std::move(InValue);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

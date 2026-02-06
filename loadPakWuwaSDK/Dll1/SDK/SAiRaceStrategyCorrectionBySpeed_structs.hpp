@@ -26,11 +26,7 @@ public:
 	TArray<struct FSAiRaceStrategyOneParamFunction> CalcTargetSpeedByDeltaAbsSpeedConfig_43_C886A6E745869034C2EB0CA3FCD143AA; // 0x0008(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSAiRaceStrategyOneParamFunction> CalcTargetSpeedByRivalAbsSpeedConfig_50_5B6E5EFA481CA51ED91938964B3A581A; // 0x0018(0x0010)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSAiRaceStrategyCorrectionBySpeed) == 0x000008, "Wrong alignment on FSAiRaceStrategyCorrectionBySpeed");
-static_assert(sizeof(FSAiRaceStrategyCorrectionBySpeed) == 0x000028, "Wrong size on FSAiRaceStrategyCorrectionBySpeed");
-static_assert(offsetof(FSAiRaceStrategyCorrectionBySpeed, Enable_8_990BD65148AE83829208A5ABE39ECF8C) == 0x000000, "Member 'FSAiRaceStrategyCorrectionBySpeed::Enable_8_990BD65148AE83829208A5ABE39ECF8C' has a wrong offset!");
-static_assert(offsetof(FSAiRaceStrategyCorrectionBySpeed, CalcTargetSpeedByDeltaAbsSpeedConfig_43_C886A6E745869034C2EB0CA3FCD143AA) == 0x000008, "Member 'FSAiRaceStrategyCorrectionBySpeed::CalcTargetSpeedByDeltaAbsSpeedConfig_43_C886A6E745869034C2EB0CA3FCD143AA' has a wrong offset!");
-static_assert(offsetof(FSAiRaceStrategyCorrectionBySpeed, CalcTargetSpeedByRivalAbsSpeedConfig_50_5B6E5EFA481CA51ED91938964B3A581A) == 0x000018, "Member 'FSAiRaceStrategyCorrectionBySpeed::CalcTargetSpeedByRivalAbsSpeedConfig_50_5B6E5EFA481CA51ED91938964B3A581A' has a wrong offset!");
+DUMPER7_ASSERTS_FSAiRaceStrategyCorrectionBySpeed;
 
 }
 

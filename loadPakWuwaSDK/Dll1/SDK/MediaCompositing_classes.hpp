@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "MovieScene_classes.hpp"
 #include "MovieSceneTracks_classes.hpp"
+#include "MovieScene_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -30,37 +30,41 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneMediaPlayerPropertySection">();
+		STATIC_CLASS_IMPL("MovieSceneMediaPlayerPropertySection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMediaPlayerPropertySection")
 	}
 	static class UMovieSceneMediaPlayerPropertySection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneMediaPlayerPropertySection>();
 	}
 };
-static_assert(alignof(UMovieSceneMediaPlayerPropertySection) == 0x000008, "Wrong alignment on UMovieSceneMediaPlayerPropertySection");
-static_assert(sizeof(UMovieSceneMediaPlayerPropertySection) == 0x000108, "Wrong size on UMovieSceneMediaPlayerPropertySection");
-static_assert(offsetof(UMovieSceneMediaPlayerPropertySection, MediaSource) == 0x0000F8, "Member 'UMovieSceneMediaPlayerPropertySection::MediaSource' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaPlayerPropertySection, bLoop) == 0x000100, "Member 'UMovieSceneMediaPlayerPropertySection::bLoop' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneMediaPlayerPropertySection;
 
 // Class MediaCompositing.MovieSceneMediaPlayerPropertyTrack
-// 0x0008 (0x00C0 - 0x00B8)
+// 0x0008 (0x00D8 - 0x00D0)
 class UMovieSceneMediaPlayerPropertyTrack final : public UMovieScenePropertyTrack
 {
 public:
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneMediaPlayerPropertyTrack">();
+		STATIC_CLASS_IMPL("MovieSceneMediaPlayerPropertyTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMediaPlayerPropertyTrack")
 	}
 	static class UMovieSceneMediaPlayerPropertyTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneMediaPlayerPropertyTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneMediaPlayerPropertyTrack) == 0x000008, "Wrong alignment on UMovieSceneMediaPlayerPropertyTrack");
-static_assert(sizeof(UMovieSceneMediaPlayerPropertyTrack) == 0x0000C0, "Wrong size on UMovieSceneMediaPlayerPropertyTrack");
+DUMPER7_ASSERTS_UMovieSceneMediaPlayerPropertyTrack;
 
 // Class MediaCompositing.MovieSceneMediaSection
 // 0x0030 (0x0128 - 0x00F8)
@@ -80,44 +84,42 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneMediaSection">();
+		STATIC_CLASS_IMPL("MovieSceneMediaSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMediaSection")
 	}
 	static class UMovieSceneMediaSection* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneMediaSection>();
 	}
 };
-static_assert(alignof(UMovieSceneMediaSection) == 0x000008, "Wrong alignment on UMovieSceneMediaSection");
-static_assert(sizeof(UMovieSceneMediaSection) == 0x000128, "Wrong size on UMovieSceneMediaSection");
-static_assert(offsetof(UMovieSceneMediaSection, MediaSource) == 0x0000F8, "Member 'UMovieSceneMediaSection::MediaSource' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, bLooping) == 0x000100, "Member 'UMovieSceneMediaSection::bLooping' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, StartFrameOffset) == 0x000104, "Member 'UMovieSceneMediaSection::StartFrameOffset' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, MediaTexture) == 0x000108, "Member 'UMovieSceneMediaSection::MediaTexture' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, MediaSoundComponent) == 0x000110, "Member 'UMovieSceneMediaSection::MediaSoundComponent' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, bUseExternalMediaPlayer) == 0x000118, "Member 'UMovieSceneMediaSection::bUseExternalMediaPlayer' has a wrong offset!");
-static_assert(offsetof(UMovieSceneMediaSection, ExternalMediaPlayer) == 0x000120, "Member 'UMovieSceneMediaSection::ExternalMediaPlayer' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneMediaSection;
 
 // Class MediaCompositing.MovieSceneMediaTrack
-// 0x0018 (0x0098 - 0x0080)
+// 0x0018 (0x00B0 - 0x0098)
 class UMovieSceneMediaTrack final : public UMovieSceneNameableTrack
 {
 public:
-	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMovieSceneSection*>             MediaSections;                                     // 0x0088(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             MediaSections;                                     // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneMediaTrack">();
+		STATIC_CLASS_IMPL("MovieSceneMediaTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMediaTrack")
 	}
 	static class UMovieSceneMediaTrack* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMovieSceneMediaTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneMediaTrack) == 0x000008, "Wrong alignment on UMovieSceneMediaTrack");
-static_assert(sizeof(UMovieSceneMediaTrack) == 0x000098, "Wrong size on UMovieSceneMediaTrack");
-static_assert(offsetof(UMovieSceneMediaTrack, MediaSections) == 0x000088, "Member 'UMovieSceneMediaTrack::MediaSections' has a wrong offset!");
+DUMPER7_ASSERTS_UMovieSceneMediaTrack;
 
 }
 

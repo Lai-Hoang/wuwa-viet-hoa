@@ -17,78 +17,23 @@
 namespace SDK
 {
 
-// Function TsEffectActor.TsEffectActor_C.GetHandle
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function TsEffectActor.TsEffectActor_C.ExecuteUbergraph_TsEffectActor
+// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32*                                  Handle                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ATsEffectActor_C::GetHandle(int32* Handle)
+void ATsEffectActor_C::ExecuteUbergraph_TsEffectActor(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsEffectActor_C", "GetHandle");
+		Func = Class->GetFunction("TsEffectActor_C", "ExecuteUbergraph_TsEffectActor");
 
-	Params::TsEffectActor_C_GetHandle Parms{};
+	Params::TsEffectActor_C_ExecuteUbergraph_TsEffectActor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Handle != nullptr)
-		*Handle = Parms.Handle;
-}
-
-
-// Function TsEffectActor.TsEffectActor_C.GetEffectPath
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString ATsEffectActor_C::GetEffectPath()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsEffectActor_C", "GetEffectPath");
-
-	Params::TsEffectActor_C_GetEffectPath Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TsEffectActor.TsEffectActor_C.SetHandle
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATsEffectActor_C::SetHandle(int32 Handle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsEffectActor_C", "SetHandle");
-
-	Params::TsEffectActor_C_SetHandle Parms{};
-
-	Parms.Handle = Handle;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TsEffectActor.TsEffectActor_C.RemoveHandle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ATsEffectActor_C::RemoveHandle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsEffectActor_C", "RemoveHandle");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -112,23 +57,78 @@ void ATsEffectActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function TsEffectActor.TsEffectActor_C.ExecuteUbergraph_TsEffectActor
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TsEffectActor.TsEffectActor_C.RemoveHandle
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ATsEffectActor_C::ExecuteUbergraph_TsEffectActor(int32 EntryPoint)
+void ATsEffectActor_C::RemoveHandle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TsEffectActor_C", "ExecuteUbergraph_TsEffectActor");
+		Func = Class->GetFunction("TsEffectActor_C", "RemoveHandle");
 
-	Params::TsEffectActor_C_ExecuteUbergraph_TsEffectActor Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function TsEffectActor.TsEffectActor_C.SetHandle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsEffectActor_C::SetHandle(int32 Handle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsEffectActor_C", "SetHandle");
+
+	Params::TsEffectActor_C_SetHandle Parms{};
+
+	Parms.Handle = Handle;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TsEffectActor.TsEffectActor_C.GetEffectPath
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString ATsEffectActor_C::GetEffectPath()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsEffectActor_C", "GetEffectPath");
+
+	Params::TsEffectActor_C_GetEffectPath Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsEffectActor.TsEffectActor_C.GetHandle
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32*                                  Handle                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsEffectActor_C::GetHandle(int32* Handle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsEffectActor_C", "GetHandle");
+
+	Params::TsEffectActor_C_GetHandle Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Handle != nullptr)
+		*Handle = Parms.Handle;
 }
 
 }

@@ -23,15 +23,18 @@ class UMeshDescription final : public UObject
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshDescription">();
+		STATIC_CLASS_IMPL("MeshDescription")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshDescription")
 	}
 	static class UMeshDescription* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMeshDescription>();
 	}
 };
-static_assert(alignof(UMeshDescription) == 0x000008, "Wrong alignment on UMeshDescription");
-static_assert(sizeof(UMeshDescription) == 0x000030, "Wrong size on UMeshDescription");
+DUMPER7_ASSERTS_UMeshDescription;
 
 // Class MeshDescription.MeshDescriptionBase
 // 0x0398 (0x03C8 - 0x0030)
@@ -131,15 +134,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshDescriptionBase">();
+		STATIC_CLASS_IMPL("MeshDescriptionBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MeshDescriptionBase")
 	}
 	static class UMeshDescriptionBase* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMeshDescriptionBase>();
 	}
 };
-static_assert(alignof(UMeshDescriptionBase) == 0x000008, "Wrong alignment on UMeshDescriptionBase");
-static_assert(sizeof(UMeshDescriptionBase) == 0x0003C8, "Wrong size on UMeshDescriptionBase");
+DUMPER7_ASSERTS_UMeshDescriptionBase;
 
 }
 

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "SReBulletDataScale_structs.hpp"
-#include "SReBulletDataPerformance_structs.hpp"
 #include "SReBulletDataBase_structs.hpp"
+#include "SReBulletDataPerformance_structs.hpp"
 #include "SReBulletDataLogic_structs.hpp"
 #include "SReBulletDataAimed_structs.hpp"
-#include "SReBulletDataExe_structs.hpp"
 #include "SReBulletDataMove_structs.hpp"
 #include "SReBulletDataTime_structs.hpp"
+#include "SReBulletDataExe_structs.hpp"
+#include "SReBulletDataScale_structs.hpp"
 #include "SReBulletDataEntity_structs.hpp"
 #include "SReBulletDataChildren_structs.hpp"
 #include "SReBulletDataObstacles_structs.hpp"
@@ -28,41 +28,27 @@ namespace SDK
 {
 
 // UserDefinedStruct SReBulletDataMain.SReBulletDataMain
-// 0x07B8 (0x07B8 - 0x0000)
+// 0x07C0 (0x07C0 - 0x0000)
 struct FSReBulletDataMain final
 {
 public:
 	class FName                                   子弹名称_7_6540B50A408454F29A76BE82C9E7A7EE;       // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSReBulletDataBase                     基础设置_4_79DD8853421793BB64AFC1AF40E367EE;       // 0x0010(0x01F8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataLogic                    逻辑设置_10_E48A858741AECD2050D8DF96A1724561;      // 0x0208(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataAimed                    瞄准设置_16_F37949D744675D753BF35E8FFA4039AE;      // 0x0238(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSReBulletDataMove                     移动设置_19_85D9FB2247A92EE6810C08BE6A5A39E4;      // 0x0248(0x0128)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataPerformance              表现效果设置_22_5C0DF755416C4F66255121B3C51BB235;  // 0x0370(0x0248)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataTime                     时间膨胀_26_9A9A47524D033C87C99AEFAF67E8E658;      // 0x05B8(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataExe                      执行逻辑_29_DA932229486C32AC9B350099A3629641;      // 0x0640(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSReBulletDataScale                    缩放设置_32_46B47447413BDA060B34548642F39355;      // 0x0710(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSReBulletDataEntity                   召唤实体_40_0029109543752FEC7353FBAFC4EC9AB8;      // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSReBulletDataChildren>         子子弹设置_36_B42C5C6E49483C9DC367D89449F8B0A6;    // 0x0738(0x0010)(Edit, BlueprintVisible)
-	struct FSReBulletDataObstacles                障碍检测_43_CBF3D15645D9FE6F375A9D9C345833BC;      // 0x0748(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSReBulletDataInteraction              环境交互_46_E0FE1D47416E043AB7702EB50F8F168A;      // 0x0758(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataBase                     基础设置_4_79DD8853421793BB64AFC1AF40E367EE;       // 0x0010(0x0200)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataLogic                    逻辑设置_10_E48A858741AECD2050D8DF96A1724561;      // 0x0210(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataAimed                    瞄准设置_16_F37949D744675D753BF35E8FFA4039AE;      // 0x0240(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSReBulletDataMove                     移动设置_19_85D9FB2247A92EE6810C08BE6A5A39E4;      // 0x0250(0x0128)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataPerformance              表现效果设置_22_5C0DF755416C4F66255121B3C51BB235;  // 0x0378(0x0248)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataTime                     时间膨胀_26_9A9A47524D033C87C99AEFAF67E8E658;      // 0x05C0(0x0088)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataExe                      执行逻辑_29_DA932229486C32AC9B350099A3629641;      // 0x0648(0x00D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSReBulletDataScale                    缩放设置_32_46B47447413BDA060B34548642F39355;      // 0x0718(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSReBulletDataEntity                   召唤实体_40_0029109543752FEC7353FBAFC4EC9AB8;      // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSReBulletDataChildren>         子子弹设置_36_B42C5C6E49483C9DC367D89449F8B0A6;    // 0x0740(0x0010)(Edit, BlueprintVisible)
+	struct FSReBulletDataObstacles                障碍检测_43_CBF3D15645D9FE6F375A9D9C345833BC;      // 0x0750(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSReBulletDataInteraction              环境交互_46_E0FE1D47416E043AB7702EB50F8F168A;      // 0x0760(0x0060)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
-static_assert(alignof(FSReBulletDataMain) == 0x000008, "Wrong alignment on FSReBulletDataMain");
-static_assert(sizeof(FSReBulletDataMain) == 0x0007B8, "Wrong size on FSReBulletDataMain");
-static_assert(offsetof(FSReBulletDataMain, 子弹名称_7_6540B50A408454F29A76BE82C9E7A7EE) == 0x000000, "Member 'FSReBulletDataMain::子弹名称_7_6540B50A408454F29A76BE82C9E7A7EE' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 基础设置_4_79DD8853421793BB64AFC1AF40E367EE) == 0x000010, "Member 'FSReBulletDataMain::基础设置_4_79DD8853421793BB64AFC1AF40E367EE' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 逻辑设置_10_E48A858741AECD2050D8DF96A1724561) == 0x000208, "Member 'FSReBulletDataMain::逻辑设置_10_E48A858741AECD2050D8DF96A1724561' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 瞄准设置_16_F37949D744675D753BF35E8FFA4039AE) == 0x000238, "Member 'FSReBulletDataMain::瞄准设置_16_F37949D744675D753BF35E8FFA4039AE' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 移动设置_19_85D9FB2247A92EE6810C08BE6A5A39E4) == 0x000248, "Member 'FSReBulletDataMain::移动设置_19_85D9FB2247A92EE6810C08BE6A5A39E4' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 表现效果设置_22_5C0DF755416C4F66255121B3C51BB235) == 0x000370, "Member 'FSReBulletDataMain::表现效果设置_22_5C0DF755416C4F66255121B3C51BB235' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 时间膨胀_26_9A9A47524D033C87C99AEFAF67E8E658) == 0x0005B8, "Member 'FSReBulletDataMain::时间膨胀_26_9A9A47524D033C87C99AEFAF67E8E658' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 执行逻辑_29_DA932229486C32AC9B350099A3629641) == 0x000640, "Member 'FSReBulletDataMain::执行逻辑_29_DA932229486C32AC9B350099A3629641' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 缩放设置_32_46B47447413BDA060B34548642F39355) == 0x000710, "Member 'FSReBulletDataMain::缩放设置_32_46B47447413BDA060B34548642F39355' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 召唤实体_40_0029109543752FEC7353FBAFC4EC9AB8) == 0x000730, "Member 'FSReBulletDataMain::召唤实体_40_0029109543752FEC7353FBAFC4EC9AB8' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 子子弹设置_36_B42C5C6E49483C9DC367D89449F8B0A6) == 0x000738, "Member 'FSReBulletDataMain::子子弹设置_36_B42C5C6E49483C9DC367D89449F8B0A6' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 障碍检测_43_CBF3D15645D9FE6F375A9D9C345833BC) == 0x000748, "Member 'FSReBulletDataMain::障碍检测_43_CBF3D15645D9FE6F375A9D9C345833BC' has a wrong offset!");
-static_assert(offsetof(FSReBulletDataMain, 环境交互_46_E0FE1D47416E043AB7702EB50F8F168A) == 0x000758, "Member 'FSReBulletDataMain::环境交互_46_E0FE1D47416E043AB7702EB50F8F168A' has a wrong offset!");
+DUMPER7_ASSERTS_FSReBulletDataMain;
 
 }
 

@@ -54,6 +54,15 @@ enum class EKuroAudioVolumeChannel : uint8
 	EKuroAudioVolumeChannel_MAX              = 3,
 };
 
+// ScriptStruct KuroAudio.MovieSceneKuroAudioEventTemplate
+// 0x0008 (0x0028 - 0x0020)
+struct FMovieSceneKuroAudioEventTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	class UMovieSceneKuroAudioEventSection*       Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieSceneKuroAudioEventTemplate;
+
 // ScriptStruct KuroAudio.KuroAudioEnvironmentInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FKuroAudioEnvironmentInfo final
@@ -63,21 +72,7 @@ public:
 	bool                                          bEnableDynamicReverb;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FKuroAudioEnvironmentInfo) == 0x000008, "Wrong alignment on FKuroAudioEnvironmentInfo");
-static_assert(sizeof(FKuroAudioEnvironmentInfo) == 0x000018, "Wrong size on FKuroAudioEnvironmentInfo");
-static_assert(offsetof(FKuroAudioEnvironmentInfo, StateEvent) == 0x000000, "Member 'FKuroAudioEnvironmentInfo::StateEvent' has a wrong offset!");
-static_assert(offsetof(FKuroAudioEnvironmentInfo, bEnableDynamicReverb) == 0x000010, "Member 'FKuroAudioEnvironmentInfo::bEnableDynamicReverb' has a wrong offset!");
-
-// ScriptStruct KuroAudio.MovieSceneKuroAudioEventTemplate
-// 0x0008 (0x0028 - 0x0020)
-struct FMovieSceneKuroAudioEventTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	class UMovieSceneKuroAudioEventSection*       Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieSceneKuroAudioEventTemplate) == 0x000008, "Wrong alignment on FMovieSceneKuroAudioEventTemplate");
-static_assert(sizeof(FMovieSceneKuroAudioEventTemplate) == 0x000028, "Wrong size on FMovieSceneKuroAudioEventTemplate");
-static_assert(offsetof(FMovieSceneKuroAudioEventTemplate, Section) == 0x000020, "Member 'FMovieSceneKuroAudioEventTemplate::Section' has a wrong offset!");
+DUMPER7_ASSERTS_FKuroAudioEnvironmentInfo;
 
 }
 

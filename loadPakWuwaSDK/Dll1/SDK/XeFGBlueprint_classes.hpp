@@ -31,15 +31,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"XeFGBlueprintLibrary">();
+		STATIC_CLASS_IMPL("XeFGBlueprintLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"XeFGBlueprintLibrary")
 	}
 	static class UXeFGBlueprintLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UXeFGBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UXeFGBlueprintLibrary) == 0x000008, "Wrong alignment on UXeFGBlueprintLibrary");
-static_assert(sizeof(UXeFGBlueprintLibrary) == 0x000030, "Wrong size on UXeFGBlueprintLibrary");
+DUMPER7_ASSERTS_UXeFGBlueprintLibrary;
 
 }
 

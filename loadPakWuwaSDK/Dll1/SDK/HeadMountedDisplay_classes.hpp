@@ -70,15 +70,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HeadMountedDisplayFunctionLibrary">();
+		STATIC_CLASS_IMPL("HeadMountedDisplayFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"HeadMountedDisplayFunctionLibrary")
 	}
 	static class UHeadMountedDisplayFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UHeadMountedDisplayFunctionLibrary>();
 	}
 };
-static_assert(alignof(UHeadMountedDisplayFunctionLibrary) == 0x000008, "Wrong alignment on UHeadMountedDisplayFunctionLibrary");
-static_assert(sizeof(UHeadMountedDisplayFunctionLibrary) == 0x000030, "Wrong size on UHeadMountedDisplayFunctionLibrary");
+DUMPER7_ASSERTS_UHeadMountedDisplayFunctionLibrary;
 
 // Class HeadMountedDisplay.MotionControllerComponent
 // 0x00C0 (0x05F0 - 0x0530)
@@ -118,24 +121,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MotionControllerComponent">();
+		STATIC_CLASS_IMPL("MotionControllerComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionControllerComponent")
 	}
 	static class UMotionControllerComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMotionControllerComponent>();
 	}
 };
-static_assert(alignof(UMotionControllerComponent) == 0x000010, "Wrong alignment on UMotionControllerComponent");
-static_assert(sizeof(UMotionControllerComponent) == 0x0005F0, "Wrong size on UMotionControllerComponent");
-static_assert(offsetof(UMotionControllerComponent, PlayerIndex) == 0x000528, "Member 'UMotionControllerComponent::PlayerIndex' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, Hand) == 0x00052C, "Member 'UMotionControllerComponent::Hand' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, MotionSource) == 0x000530, "Member 'UMotionControllerComponent::MotionSource' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, CurrentTrackingStatus) == 0x000540, "Member 'UMotionControllerComponent::CurrentTrackingStatus' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, bDisplayDeviceModel) == 0x000541, "Member 'UMotionControllerComponent::bDisplayDeviceModel' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayModelSource) == 0x000544, "Member 'UMotionControllerComponent::DisplayModelSource' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, CustomDisplayMesh) == 0x000550, "Member 'UMotionControllerComponent::CustomDisplayMesh' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayMeshMaterialOverrides) == 0x000558, "Member 'UMotionControllerComponent::DisplayMeshMaterialOverrides' has a wrong offset!");
-static_assert(offsetof(UMotionControllerComponent, DisplayComponent) == 0x0005D0, "Member 'UMotionControllerComponent::DisplayComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UMotionControllerComponent;
 
 // Class HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -164,15 +161,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MotionTrackedDeviceFunctionLibrary">();
+		STATIC_CLASS_IMPL("MotionTrackedDeviceFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MotionTrackedDeviceFunctionLibrary")
 	}
 	static class UMotionTrackedDeviceFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UMotionTrackedDeviceFunctionLibrary>();
 	}
 };
-static_assert(alignof(UMotionTrackedDeviceFunctionLibrary) == 0x000008, "Wrong alignment on UMotionTrackedDeviceFunctionLibrary");
-static_assert(sizeof(UMotionTrackedDeviceFunctionLibrary) == 0x000030, "Wrong size on UMotionTrackedDeviceFunctionLibrary");
+DUMPER7_ASSERTS_UMotionTrackedDeviceFunctionLibrary;
 
 // Class HeadMountedDisplay.VRNotificationsComponent
 // 0x0090 (0x0150 - 0x00C0)
@@ -192,24 +192,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VRNotificationsComponent">();
+		STATIC_CLASS_IMPL("VRNotificationsComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"VRNotificationsComponent")
 	}
 	static class UVRNotificationsComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UVRNotificationsComponent>();
 	}
 };
-static_assert(alignof(UVRNotificationsComponent) == 0x000008, "Wrong alignment on UVRNotificationsComponent");
-static_assert(sizeof(UVRNotificationsComponent) == 0x000150, "Wrong size on UVRNotificationsComponent");
-static_assert(offsetof(UVRNotificationsComponent, HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate) == 0x0000C0, "Member 'UVRNotificationsComponent::HMDTrackingInitializingAndNeedsHMDToBeTrackedDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDTrackingInitializedDelegate) == 0x0000D0, "Member 'UVRNotificationsComponent::HMDTrackingInitializedDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDRecenteredDelegate) == 0x0000E0, "Member 'UVRNotificationsComponent::HMDRecenteredDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDLostDelegate) == 0x0000F0, "Member 'UVRNotificationsComponent::HMDLostDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDReconnectedDelegate) == 0x000100, "Member 'UVRNotificationsComponent::HMDReconnectedDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDConnectCanceledDelegate) == 0x000110, "Member 'UVRNotificationsComponent::HMDConnectCanceledDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDPutOnHeadDelegate) == 0x000120, "Member 'UVRNotificationsComponent::HMDPutOnHeadDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, HMDRemovedFromHeadDelegate) == 0x000130, "Member 'UVRNotificationsComponent::HMDRemovedFromHeadDelegate' has a wrong offset!");
-static_assert(offsetof(UVRNotificationsComponent, VRControllerRecenteredDelegate) == 0x000140, "Member 'UVRNotificationsComponent::VRControllerRecenteredDelegate' has a wrong offset!");
+DUMPER7_ASSERTS_UVRNotificationsComponent;
 
 // Class HeadMountedDisplay.XRAssetFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -222,15 +216,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"XRAssetFunctionLibrary">();
+		STATIC_CLASS_IMPL("XRAssetFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"XRAssetFunctionLibrary")
 	}
 	static class UXRAssetFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UXRAssetFunctionLibrary>();
 	}
 };
-static_assert(alignof(UXRAssetFunctionLibrary) == 0x000008, "Wrong alignment on UXRAssetFunctionLibrary");
-static_assert(sizeof(UXRAssetFunctionLibrary) == 0x000030, "Wrong size on UXRAssetFunctionLibrary");
+DUMPER7_ASSERTS_UXRAssetFunctionLibrary;
 
 // Class HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent
 // 0x0030 (0x0068 - 0x0038)
@@ -249,18 +246,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncTask_LoadXRDeviceVisComponent">();
+		STATIC_CLASS_IMPL("AsyncTask_LoadXRDeviceVisComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncTask_LoadXRDeviceVisComponent")
 	}
 	static class UAsyncTask_LoadXRDeviceVisComponent* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncTask_LoadXRDeviceVisComponent>();
 	}
 };
-static_assert(alignof(UAsyncTask_LoadXRDeviceVisComponent) == 0x000008, "Wrong alignment on UAsyncTask_LoadXRDeviceVisComponent");
-static_assert(sizeof(UAsyncTask_LoadXRDeviceVisComponent) == 0x000068, "Wrong size on UAsyncTask_LoadXRDeviceVisComponent");
-static_assert(offsetof(UAsyncTask_LoadXRDeviceVisComponent, OnModelLoaded) == 0x000038, "Member 'UAsyncTask_LoadXRDeviceVisComponent::OnModelLoaded' has a wrong offset!");
-static_assert(offsetof(UAsyncTask_LoadXRDeviceVisComponent, OnLoadFailure) == 0x000048, "Member 'UAsyncTask_LoadXRDeviceVisComponent::OnLoadFailure' has a wrong offset!");
-static_assert(offsetof(UAsyncTask_LoadXRDeviceVisComponent, SpawnedComponent) == 0x000060, "Member 'UAsyncTask_LoadXRDeviceVisComponent::SpawnedComponent' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncTask_LoadXRDeviceVisComponent;
 
 // Class HeadMountedDisplay.XRLoadingScreenFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -276,15 +273,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"XRLoadingScreenFunctionLibrary">();
+		STATIC_CLASS_IMPL("XRLoadingScreenFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"XRLoadingScreenFunctionLibrary")
 	}
 	static class UXRLoadingScreenFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UXRLoadingScreenFunctionLibrary>();
 	}
 };
-static_assert(alignof(UXRLoadingScreenFunctionLibrary) == 0x000008, "Wrong alignment on UXRLoadingScreenFunctionLibrary");
-static_assert(sizeof(UXRLoadingScreenFunctionLibrary) == 0x000030, "Wrong size on UXRLoadingScreenFunctionLibrary");
+DUMPER7_ASSERTS_UXRLoadingScreenFunctionLibrary;
 
 }
 

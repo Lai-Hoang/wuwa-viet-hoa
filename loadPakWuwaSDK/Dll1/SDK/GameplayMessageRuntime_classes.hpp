@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "GameplayMessageRuntime_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -34,16 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AsyncAction_ListenForGameplayMessage">();
+		STATIC_CLASS_IMPL("AsyncAction_ListenForGameplayMessage")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AsyncAction_ListenForGameplayMessage")
 	}
 	static class UAsyncAction_ListenForGameplayMessage* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UAsyncAction_ListenForGameplayMessage>();
 	}
 };
-static_assert(alignof(UAsyncAction_ListenForGameplayMessage) == 0x000008, "Wrong alignment on UAsyncAction_ListenForGameplayMessage");
-static_assert(sizeof(UAsyncAction_ListenForGameplayMessage) == 0x000090, "Wrong size on UAsyncAction_ListenForGameplayMessage");
-static_assert(offsetof(UAsyncAction_ListenForGameplayMessage, OnMessageReceived) == 0x000038, "Member 'UAsyncAction_ListenForGameplayMessage::OnMessageReceived' has a wrong offset!");
+DUMPER7_ASSERTS_UAsyncAction_ListenForGameplayMessage;
 
 // Class GameplayMessageRuntime.GameplayMessageSubsystem
 // 0x0050 (0x0088 - 0x0038)
@@ -58,15 +60,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GameplayMessageSubsystem">();
+		STATIC_CLASS_IMPL("GameplayMessageSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayMessageSubsystem")
 	}
 	static class UGameplayMessageSubsystem* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UGameplayMessageSubsystem>();
 	}
 };
-static_assert(alignof(UGameplayMessageSubsystem) == 0x000008, "Wrong alignment on UGameplayMessageSubsystem");
-static_assert(sizeof(UGameplayMessageSubsystem) == 0x000088, "Wrong size on UGameplayMessageSubsystem");
+DUMPER7_ASSERTS_UGameplayMessageSubsystem;
 
 }
 

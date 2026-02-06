@@ -35,19 +35,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_EffectPreview_C">();
+		BP_STATIC_CLASS_IMPL("BP_EffectPreview_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_EffectPreview_C")
 	}
 	static class ABP_EffectPreview_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<ABP_EffectPreview_C>();
 	}
 };
-static_assert(alignof(ABP_EffectPreview_C) == 0x000008, "Wrong alignment on ABP_EffectPreview_C");
-static_assert(sizeof(ABP_EffectPreview_C) == 0x0002D0, "Wrong size on ABP_EffectPreview_C");
-static_assert(offsetof(ABP_EffectPreview_C, UberGraphFrame) == 0x0002B8, "Member 'ABP_EffectPreview_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_EffectPreview_C, DefaultSceneRoot) == 0x0002C0, "Member 'ABP_EffectPreview_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_EffectPreview_C, EffectView) == 0x0002C8, "Member 'ABP_EffectPreview_C::EffectView' has a wrong offset!");
-static_assert(offsetof(ABP_EffectPreview_C, Transient) == 0x0002CC, "Member 'ABP_EffectPreview_C::Transient' has a wrong offset!");
+DUMPER7_ASSERTS_ABP_EffectPreview_C;
 
 }
 

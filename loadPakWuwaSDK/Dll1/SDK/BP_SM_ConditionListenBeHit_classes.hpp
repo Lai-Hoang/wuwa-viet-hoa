@@ -34,23 +34,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"BP_SM_ConditionListenBeHit_C">();
+		BP_STATIC_CLASS_IMPL("BP_SM_ConditionListenBeHit_C")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BP_SM_ConditionListenBeHit_C")
 	}
 	static class UBP_SM_ConditionListenBeHit_C* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UBP_SM_ConditionListenBeHit_C>();
 	}
 };
-static_assert(alignof(UBP_SM_ConditionListenBeHit_C) == 0x000008, "Wrong alignment on UBP_SM_ConditionListenBeHit_C");
-static_assert(sizeof(UBP_SM_ConditionListenBeHit_C) == 0x000048, "Wrong size on UBP_SM_ConditionListenBeHit_C");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 无受击动作) == 0x000038, "Member 'UBP_SM_ConditionListenBeHit_C::无受击动作' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 轻击) == 0x000039, "Member 'UBP_SM_ConditionListenBeHit_C::轻击' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 重击) == 0x00003A, "Member 'UBP_SM_ConditionListenBeHit_C::重击' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 击飞) == 0x00003B, "Member 'UBP_SM_ConditionListenBeHit_C::击飞' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 击倒) == 0x00003C, "Member 'UBP_SM_ConditionListenBeHit_C::击倒' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 被弹反) == 0x00003D, "Member 'UBP_SM_ConditionListenBeHit_C::被弹反' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 被破弱) == 0x00003E, "Member 'UBP_SM_ConditionListenBeHit_C::被破弱' has a wrong offset!");
-static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 策略技Id) == 0x000040, "Member 'UBP_SM_ConditionListenBeHit_C::策略技Id' has a wrong offset!");
+DUMPER7_ASSERTS_UBP_SM_ConditionListenBeHit_C;
 
 }
 

@@ -21,9 +21,7 @@ struct TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor fina
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor) == 0x000004, "Wrong alignment on TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor");
-static_assert(sizeof(TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor) == 0x000004, "Wrong size on TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor");
-static_assert(offsetof(TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor, EntryPoint) == 0x000000, "Member 'TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor::EntryPoint' has a wrong offset!");
+DUMPER7_ASSERTS_TsTowerDefenseEventActor_C_ExecuteUbergraph_TsTowerDefenseEventActor;
 
 }
 

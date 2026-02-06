@@ -35,16 +35,7 @@ public:
 	struct FVectorDouble                          PlayerLocationInGravity_32_F0E31B69413887762AE60EAE75C64532; // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               PlayerRotatorInGravity_35_E56740774654569E6818249FC70E151F; // 0x0078(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(FSCameraDebugTool_CameraModeInfo) == 0x000008, "Wrong alignment on FSCameraDebugTool_CameraModeInfo");
-static_assert(sizeof(FSCameraDebugTool_CameraModeInfo) == 0x000088, "Wrong size on FSCameraDebugTool_CameraModeInfo");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, CurrentCameraMode_9_FBE5D92649640985526E46A3B7BD3356) == 0x000000, "Member 'FSCameraDebugTool_CameraModeInfo::CurrentCameraMode_9_FBE5D92649640985526E46A3B7BD3356' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, CameraModeEnabledArray_17_5326FF18411EE5D3DE8DC4972809A7DE) == 0x000008, "Member 'FSCameraDebugTool_CameraModeInfo::CameraModeEnabledArray_17_5326FF18411EE5D3DE8DC4972809A7DE' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, CurrentCameraGravityMode_26_84F77DA64FA3A622E4775E8D914278A8) == 0x000018, "Member 'FSCameraDebugTool_CameraModeInfo::CurrentCameraGravityMode_26_84F77DA64FA3A622E4775E8D914278A8' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, CameraGravityDirect_23_1AD1D0884BA82E5C085E5A931960603C) == 0x000020, "Member 'FSCameraDebugTool_CameraModeInfo::CameraGravityDirect_23_1AD1D0884BA82E5C085E5A931960603C' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, PlayerGravityDirect_25_13FD04B545ECFE1D5F3AEA80BCD04098) == 0x000038, "Member 'FSCameraDebugTool_CameraModeInfo::PlayerGravityDirect_25_13FD04B545ECFE1D5F3AEA80BCD04098' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, CameraRotationInGravity_36_8179267D467047E2E87ED3BB6F9B9AD9) == 0x000050, "Member 'FSCameraDebugTool_CameraModeInfo::CameraRotationInGravity_36_8179267D467047E2E87ED3BB6F9B9AD9' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, PlayerLocationInGravity_32_F0E31B69413887762AE60EAE75C64532) == 0x000060, "Member 'FSCameraDebugTool_CameraModeInfo::PlayerLocationInGravity_32_F0E31B69413887762AE60EAE75C64532' has a wrong offset!");
-static_assert(offsetof(FSCameraDebugTool_CameraModeInfo, PlayerRotatorInGravity_35_E56740774654569E6818249FC70E151F) == 0x000078, "Member 'FSCameraDebugTool_CameraModeInfo::PlayerRotatorInGravity_35_E56740774654569E6818249FC70E151F' has a wrong offset!");
+DUMPER7_ASSERTS_FSCameraDebugTool_CameraModeInfo;
 
 }
 

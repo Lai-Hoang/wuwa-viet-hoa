@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PrefabSystem_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PrefabSystem_structs.hpp"
 
 
 namespace SDK
@@ -43,28 +43,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ActorComponentPrefabData">();
+		STATIC_CLASS_IMPL("ActorComponentPrefabData")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ActorComponentPrefabData")
 	}
 	static class UActorComponentPrefabData* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UActorComponentPrefabData>();
 	}
 };
-static_assert(alignof(UActorComponentPrefabData) == 0x000008, "Wrong alignment on UActorComponentPrefabData");
-static_assert(sizeof(UActorComponentPrefabData) == 0x000218, "Wrong size on UActorComponentPrefabData");
-static_assert(offsetof(UActorComponentPrefabData, PrefabInstanceGuid) == 0x000030, "Member 'UActorComponentPrefabData::PrefabInstanceGuid' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, SourcePrefabGuid) == 0x000040, "Member 'UActorComponentPrefabData::SourcePrefabGuid' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, SourceComponentFileID) == 0x000050, "Member 'UActorComponentPrefabData::SourceComponentFileID' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, SourceActorFileID) == 0x000054, "Member 'UActorComponentPrefabData::SourceActorFileID' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, OuterPrefabGuid) == 0x000058, "Member 'UActorComponentPrefabData::OuterPrefabGuid' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, OuterPrefabInstanceFileID) == 0x000068, "Member 'UActorComponentPrefabData::OuterPrefabInstanceFileID' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, OuterPrefabInstanceGuid) == 0x00006C, "Member 'UActorComponentPrefabData::OuterPrefabInstanceGuid' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, WithinOuterPrefabActorFileIDMap) == 0x000080, "Member 'UActorComponentPrefabData::WithinOuterPrefabActorFileIDMap' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, WithinOuterPrefabComponentFileIDMap) == 0x0000D0, "Member 'UActorComponentPrefabData::WithinOuterPrefabComponentFileIDMap' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, ModifiedPropertyFNames) == 0x000120, "Member 'UActorComponentPrefabData::ModifiedPropertyFNames' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, OuterPrefabModifedPropertiesMap) == 0x000170, "Member 'UActorComponentPrefabData::OuterPrefabModifedPropertiesMap' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, DeepCopyObjectsFileIDMap) == 0x0001C0, "Member 'UActorComponentPrefabData::DeepCopyObjectsFileIDMap' has a wrong offset!");
-static_assert(offsetof(UActorComponentPrefabData, bIsAnyPrefabInstanceRoot) == 0x000210, "Member 'UActorComponentPrefabData::bIsAnyPrefabInstanceRoot' has a wrong offset!");
+DUMPER7_ASSERTS_UActorComponentPrefabData;
 
 // Class PrefabSystem.PrefabAsset
 // 0x00B8 (0x00F0 - 0x0038)
@@ -89,28 +79,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PrefabAsset">();
+		STATIC_CLASS_IMPL("PrefabAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PrefabAsset")
 	}
 	static class UPrefabAsset* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPrefabAsset>();
 	}
 };
-static_assert(alignof(UPrefabAsset) == 0x000008, "Wrong alignment on UPrefabAsset");
-static_assert(sizeof(UPrefabAsset) == 0x0000F0, "Wrong size on UPrefabAsset");
-static_assert(offsetof(UPrefabAsset, NextFileID) == 0x000038, "Member 'UPrefabAsset::NextFileID' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, Version) == 0x00003C, "Member 'UPrefabAsset::Version' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, Guid) == 0x000040, "Member 'UPrefabAsset::Guid' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, ReferenceAssets) == 0x000050, "Member 'UPrefabAsset::ReferenceAssets' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, ReferenceFNames) == 0x000060, "Member 'UPrefabAsset::ReferenceFNames' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, ReferenceClasses) == 0x000070, "Member 'UPrefabAsset::ReferenceClasses' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, SoftReferenceData) == 0x000080, "Member 'UPrefabAsset::SoftReferenceData' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, ActorsSerializeData) == 0x000090, "Member 'UPrefabAsset::ActorsSerializeData' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, ComponentsSerializeData) == 0x0000A0, "Member 'UPrefabAsset::ComponentsSerializeData' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, NestedPrefabInstancesData) == 0x0000B0, "Member 'UPrefabAsset::NestedPrefabInstancesData' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, NestedPrefabInstanceChains) == 0x0000C0, "Member 'UPrefabAsset::NestedPrefabInstanceChains' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, VirtualObjectsSerializeData) == 0x0000D0, "Member 'UPrefabAsset::VirtualObjectsSerializeData' has a wrong offset!");
-static_assert(offsetof(UPrefabAsset, PropertyModificationsSerializeData) == 0x0000E0, "Member 'UPrefabAsset::PropertyModificationsSerializeData' has a wrong offset!");
+DUMPER7_ASSERTS_UPrefabAsset;
 
 // Class PrefabSystem.PrefabAssetManager
 // 0x00A0 (0x00D0 - 0x0030)
@@ -122,15 +102,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PrefabAssetManager">();
+		STATIC_CLASS_IMPL("PrefabAssetManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PrefabAssetManager")
 	}
 	static class UPrefabAssetManager* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPrefabAssetManager>();
 	}
 };
-static_assert(alignof(UPrefabAssetManager) == 0x000008, "Wrong alignment on UPrefabAssetManager");
-static_assert(sizeof(UPrefabAssetManager) == 0x0000D0, "Wrong size on UPrefabAssetManager");
+DUMPER7_ASSERTS_UPrefabAssetManager;
 
 // Class PrefabSystem.PrefabBlueprintFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -143,15 +126,18 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"PrefabBlueprintFunctionLibrary">();
+		STATIC_CLASS_IMPL("PrefabBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PrefabBlueprintFunctionLibrary")
 	}
 	static class UPrefabBlueprintFunctionLibrary* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UPrefabBlueprintFunctionLibrary>();
 	}
 };
-static_assert(alignof(UPrefabBlueprintFunctionLibrary) == 0x000008, "Wrong alignment on UPrefabBlueprintFunctionLibrary");
-static_assert(sizeof(UPrefabBlueprintFunctionLibrary) == 0x000030, "Wrong size on UPrefabBlueprintFunctionLibrary");
+DUMPER7_ASSERTS_UPrefabBlueprintFunctionLibrary;
 
 }
 
