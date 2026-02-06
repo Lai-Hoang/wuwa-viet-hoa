@@ -2,13 +2,8 @@
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white&style=for-the-badge"/>
 </a>
 
-# 05/02/2026 Gặp vấn đề ở 3.1 nên sẽ ~~ko~~ có update. ~~Vậy nên tìm những app dùng OCR để dịch trên màn hình.~~ Chờ....
-~~## Đừng chờ update. ko update đc đâu :).~~ 
-## Sẽ cập nhật dịch nhiệm vụ ở giai đoạn 1. Đến giai đoạn nhiệm vụ ở giai đoạn 2 có khóa mở khóa tập tin thì cập nhật tiếp. 
-## Ngày mai hoặc ngày kia sẽ cập nhật.
-
-## 2 file dll để bypass ở phiên bản trước thì vẫn sài bình thường.
-<img width="501" height="163" alt="Screenshot 2026-02-03 131109" src="https://github.com/user-attachments/assets/4b02eed8-5af1-46ca-88d1-4952fbe85d5b" />
+# 06/02/2026 Update 3.1  
+## Cập nhật dịch nhiệm vụ ở giai đoạn 1. Đến giai đoạn nhiệm vụ ở giai đoạn 2 có khóa mở khóa tập tin thì cập nhật tiếp. 
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
