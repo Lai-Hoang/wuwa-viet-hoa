@@ -24,6 +24,11 @@ Font FixedsysExcelsior
 ![FixedsysExcelsior_100_P](Hinh/FixedsysExcelsior_100_P.jpg)
 
 <br>
+Font TSMaka-SemiboldFont
+
+![TSMaka-SemiboldFont_100_P](Hinh/TSMaka-SemiboldFont_100_P.jpg)
+
+<br>
 Font MontserratBold
 
 ![MontserratBold_Font_100_P](Hinh/MontserratBold_Font_100_P.jpg)
