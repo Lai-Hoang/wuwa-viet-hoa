@@ -66,7 +66,6 @@ MAIN_YHX_12_19,"Nhưng nếu họ khiến ai đó cảm nhận được điều 
 MAIN_YHX_12_20,"Này, nghe này. Nghe thấy bài hát đang phát trong khán phòng không? Đó là bản demo chưa hoàn thành tôi để lại trên trang của mình."
 MAIN_YHX_12_21,Thật đáng tiếc. Đáng lẽ tôi phải hoàn thành nó trước buổi tập. Giờ nó chỉ còn là... bản nhạc nhỏ tưởng nhớ tôi thôi. Haha.
 MAIN_YHX_12_22,...
-MAIN_YHX_12_23,Đi thôi! Soliskin đang gọi chúng ta.
 MAIN_YHX_12_24,Đó là đại diện học sinh của Học viện Rabelle à? Bài phát biểu thật táo bạo…
 MAIN_YHX_12_25,"Haha, cô ấy đang phát biểu chào mừng hay chiêu mộ cho câu lạc bộ phiêu lưu vũ trụ vậy? Ôi trời, mấy vị giáo sư trông có vẻ không vui rồi."
 MAIN_YHX_12_26,"Nhưng cô ấy nói cũng có lý, phải không? Đó chẳng phải chính là niềm đam mê, lý do duy nhất khiến chúng ta có mặt ở đây sao? Để một lần nữa khám phá những điều đang chờ đợi ngoài kia?"
@@ -79,7 +78,6 @@ MAIN_YHX_12_32,"Thật là một cảm giác tuyệt vời khi được có mặ
 MAIN_YHX_12_33,Hôm nay chỉ thiếu một thứ duy nhất thôi... Giá như gia đình tôi có thể có mặt ở đây để nghe điều này.
 MAIN_YHX_12_34,"Vậy nên, với {Male=anh ấy;Female=cô ấy}, tôi muốn nói rằng: Tôi đang rất ổn. Và tôi hạnh phúc. Mọi thứ đều diễn ra đúng như những gì bạn mong đợi. Vì vậy, xin đừng lo lắng cho tôi."
 MAIN_YHX_12_35,Nhìn lại… quả thực tôi rất nhớ những ngày tháng ấy.
-MAIN_YHX_12_36,"Học viện Startorch là một nơi rất tuyệt. Tôi cũng gây ra không ít rắc rối, nhưng các giáo sư chưa bao giờ đuổi tôi ra khỏi buổi giảng."
 MAIN_YHX_12_37,"Bạn đã cứu Lahai-Roi, Aemeath. Nhưng bạn phải đánh đổi bằng tương lai của mình, và chẳng ai hay biết..."
 MAIN_YHX_12_38,Bạn có cảm thấy cô đơn không?
 MAIN_YHX_12_39,Bạn có thấy hối tiếc không?
@@ -604,7 +602,6 @@ MAIN_YHX_107_13,"Bạn đã có thời gian nghỉ ngơi rồi đấy, {PlayerNa
 MAIN_YHX_107_14,Luuk Herssen thông báo với bạn rằng hoạt động của Bão Hư Không đã gia tăng do Exostrider đang tự chẩn đoán. Anh ấy khuyên bạn không nên rời khỏi Học viện trong thời gian này.
 MAIN_YHX_108_1,(Có vẻ như Aemeath đang ở khán phòng. Cô ấy làm gì ở đó nhỉ?)
 MAIN_YHX_109_1,Bạn biết không? Tôi vừa nảy ra một ý tưởng tuyệt vời đấy!
-MAIN_YHX_109_2,Sao tôi lại có cảm giác như sắp có ai đó gặp rắc rối khi cậu nói như vậy nhỉ?
 MAIN_YHX_109_3,Này! Đó là một định kiến hoàn toàn bất công từ hồi tôi còn nhỏ khi chơi với <te href=750041>Bọt Tuyết Nhỏ</te> đấy!
 MAIN_YHX_109_4,"Giờ mọi người đã có thể nhìn thấy tôi, tôi đang nghĩ... biết đâu mình có thể tổ chức một buổi gặp gỡ người hâm mộ cho riêng mình."
 MAIN_YHX_109_5,"""Một khúc ca dang dở, cuối cùng cũng được hoàn thành sau ngần ấy năm!"" Nghe thật tuyệt vời phải không?"
@@ -1002,7 +999,7 @@ MAIN_YHX_105_6,Vậy nên tôi muốn làm điều gì đó cho {Male=anh ấy;F
 MAIN_YHX_105_7,"{Male=Anh ấy;Female=Cô ấy} không nói ra, nhưng tôi có thể thấy. Tất cả những thứ chất chứa bên trong {Male=anh ấy;Female=cô ấy}."
 MAIN_YHX_105_8,"Càng che giấu, càng ít chia sẻ."
 MAIN_YHX_105_9,Nhưng gần đây tôi có gặp {PlayerName}. Và tôi thấy {Male=anh ấy;Female=cô ấy} có vẻ thoải mái hơn trước nhiều.
-MAIN_YHX_105_10,"Ánh nắng ở Jinzhou, hoa trên Bãi Đen, những cơn gió của Rinascita… {Male=Anh ấy;Female:Cô ấy} đã kể cho tôi tất cả về chuyến hành trình mới này."
+MAIN_YHX_105_10,"Ánh nắng ở Jinzhou, hoa trên Bãi Đen, những cơn gió của Rinascita… {Male=Anh ấy;Female=Cô ấy} đã kể cho tôi tất cả về chuyến hành trình mới này."
 MAIN_YHX_105_11,Nó khiến tôi hạnh phúc. Thực sự hạnh phúc cho {Male=anh ấy;Female=cô ấy}.
 MAIN_YHX_105_12,"Có lẽ... quên lãng cũng là một điều may mắn. Nếu không nhớ điều gì, nó sẽ không thể làm tổn thương bạn."
 MAIN_YHX_105_13,"Vậy nên tôi bắt đầu nghĩ, có lẽ tôi không nên kể cho {Male=anh ấy;Female=cô ấy} nghe những gì mình đã thấy trong Không Gian Hư Vô."
@@ -1349,3 +1346,6 @@ MAIN_YHX_1202_29,Tôi nên chọn cái nào đây?
 MAIN_YHX_1202_30,Có lẽ là mô hình?
 MAIN_YHX_1202_31,Thợ làm bánh ngọt?
 MAIN_YHX_65_2,Đừng lo. Mọi chuyện ổn cả rồi.
+MAIN_YHX_12_23,Đi thôi! Soliskin đang gọi chúng ta.
+MAIN_YHX_12_36,"Học viện Startorch là một nơi tuyệt vời. Ý tôi là, tôi cũng gây ra không ít rắc rối, nhưng các giáo sư chưa bao giờ đuổi tôi ra khỏi lớp học."
+MAIN_YHX_109_2,Sao tớ có cảm giác cậu sắp khiến ai đó gặp rắc rối khi nói như vậy nhỉ?
