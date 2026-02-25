@@ -132,3 +132,23 @@ Font SVN-Steady
 Font SVN-TradeMark
 
 ![SVN-TradeMark_100_P](Hinh/SVN-TradeMark_100_P.jpg)
+
+<br>
+Font SourceSans3-Medium
+
+![SourceSans3-Medium_100_P](Hinh/SourceSans3-Medium_100_P.jpg)
+
+<br>
+Font SourceSans3-SemiBold
+
+![SourceSans3-SemiBold_100_P](Hinh/SourceSans3-SemiBold_100_P.jpg)
+
+<br>
+Font SourceSans3-Bold
+
+![SourceSans3-Bold_100_P](Hinh/SourceSans3-Bold_100_P.jpg)
+
+<br>
+Font SourceSans3-Black_100_P
+
+![SourceSans3-Black_100_P](Hinh/SourceSans3-Black_100_P.jpg)
