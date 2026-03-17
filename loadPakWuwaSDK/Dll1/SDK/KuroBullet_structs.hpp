@@ -10,13 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
+
+// Enum KuroBullet.EInheritedVelocityMode
+// NumValues: 0x0004
+enum class EInheritedVelocityMode : uint8
+{
+	None                                     = 0,
+	AffectDirection                          = 1,
+	AffectSpeedAndDirection                  = 2,
+	EInheritedVelocityMode_MAX               = 3,
+};
 
 // Enum KuroBullet.EKuroBulletChildrenType
 // NumValues: 0x0004
@@ -50,10 +60,11 @@ enum class EKuroBulletEffectParam : uint8
 };
 
 // Enum KuroBullet.EKuroBulletMoveTrajectory
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EKuroBulletMoveTrajectory : uint8
 {
 	Default                                  = 0,
+	Track                                    = 1,
 	SurroundCenter                           = 3,
 	EKuroBulletMoveTrajectory_MAX            = 4,
 };
@@ -121,23 +132,24 @@ enum class EKuroBulletShape : uint8
 	EKuroBulletShape_MAX                     = 5,
 };
 
+// Enum KuroBullet.EBulletContextType
+// NumValues: 0x0003
+enum class EBulletContextType : uint8
+{
+	KSCEntity                                = 0,
+	TsEntity                                 = 1,
+	EBulletContextType_MAX                   = 2,
+};
+
 // Enum KuroBullet.EBulletHitActorType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EBulletHitActorType : uint8
 {
 	Ignore                                   = 0,
 	KSCEntity                                = 1,
 	Obstacles                                = 2,
-	EBulletHitActorType_MAX                  = 3,
-};
-
-// Enum KuroBullet.EBulletOwnerType
-// NumValues: 0x0003
-enum class EBulletOwnerType : uint8
-{
-	KSCEntity                                = 0,
-	TsEntity                                 = 1,
-	EBulletOwnerType_MAX                     = 2,
+	TsEntity                                 = 3,
+	EBulletHitActorType_MAX                  = 4,
 };
 
 // Enum KuroBullet.EKSC_BuffBulletInitTrans
@@ -168,16 +180,33 @@ enum class EKSC_BulletTarget : uint8
 	EKSC_MAX                                 = 3,
 };
 
-// ScriptStruct KuroBullet.KSC_SkillKuroBullet
-// 0x0010 (0x0010 - 0x0000)
-struct FKSC_SkillKuroBullet final
+// Enum KuroBullet.EEmitterStackType
+// NumValues: 0x0004
+enum class EEmitterStackType : uint8
 {
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         BulletId;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	VerticalSection                          = 0,
+	RotationStack                            = 1,
+	ScaleStack1D                             = 2,
+	EEmitterStackType_MAX                    = 3,
 };
-DUMPER7_ASSERTS_FKSC_SkillKuroBullet;
+
+// Enum KuroBullet.EEmitterSpawnPositionBase
+// NumValues: 0x0003
+enum class EEmitterSpawnPositionBase : uint8
+{
+	CasterPosition                           = 0,
+	SkillTargetPosition                      = 1,
+	EEmitterSpawnPositionBase_MAX            = 2,
+};
+
+// Enum KuroBullet.EBulletPatternDestroyType
+// NumValues: 0x0003
+enum class EBulletPatternDestroyType : uint8
+{
+	TimeEnd                                  = 0,
+	EmitterEmpty                             = 1,
+	EBulletPatternDestroyType_MAX            = 2,
+};
 
 // ScriptStruct KuroBullet.KuroBulletDataBase
 // 0x0080 (0x0088 - 0x0008)
@@ -287,6 +316,129 @@ public:
 	TArray<struct FKuroBulletDataChild>           Children;                                          // 0x0200(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroBulletData;
+
+// ScriptStruct KuroBullet.BulletSpawnParams
+// 0x0050 (0x0050 - 0x0000)
+struct FBulletSpawnParams final
+{
+public:
+	struct FTransformDouble                       InitialTransform;                                  // 0x0000(0x0040)(BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                InheritedVelocity;                                 // 0x0040(0x000C)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInheritedVelocityMode                        InheritedVelocityMode;                             // 0x004C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBulletSpawnParams;
+
+// ScriptStruct KuroBullet.KSC_SkillKuroBullet
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_SkillKuroBullet final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         BulletId;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_SkillKuroBullet;
+
+// ScriptStruct KuroBullet.StarEmitterSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FStarEmitterSettings final
+{
+public:
+	int32                                         StarCorners;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OuterRadius;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InnerRadius;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FillCorners;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStarEmitterSettings;
+
+// ScriptStruct KuroBullet.PolygonEmitterSettings
+// 0x0028 (0x0028 - 0x0000)
+struct FPolygonEmitterSettings final
+{
+public:
+	int32                                         PolygonSides;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PolygonRadius;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FillSides;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PolygonLayers;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEmitterStackType                             StackType;                                         // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StackParameter;                                    // 0x0014(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerHalfHeight;                                   // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerSpawnInterval;                                // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPolygonEmitterSettings;
+
+// ScriptStruct KuroBullet.SphereEmitterSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FSphereEmitterSettings final
+{
+public:
+	struct FVector                                SphereFillAngle;                                   // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SphereRadius;                                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSphereEmitterSettings;
+
+// ScriptStruct KuroBullet.CircleEmitterSettings
+// 0x0024 (0x0024 - 0x0000)
+struct FCircleEmitterSettings final
+{
+public:
+	float                                         CircleRadius;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FillAngle;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CircleLayers;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEmitterStackType                             StackType;                                         // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StackParameter;                                    // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerHalfHeight;                                   // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerSpawnInterval;                                // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCircleEmitterSettings;
+
+// ScriptStruct KuroBullet.EmitterMovementSettings
+// 0x0098 (0x0098 - 0x0000)
+struct FEmitterMovementSettings final
+{
+public:
+	EKuroBulletFollowType                         FollowType;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   SocketName;                                        // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroBulletInitVelocityDirection              VelocityDirection;                                 // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               InitVelocityRot;                                   // 0x0014(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            SpeedCurve;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroBulletMoveTrajectory                     Trajectory;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroBulletTarget                             TrackTarget;                                       // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        TrackParams;                                       // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, class UCurveFloat*>               TrackParamCurves;                                  // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FEmitterMovementSettings;
+
+// ScriptStruct KuroBullet.EmitterBasicSettings
+// 0x0048 (0x0048 - 0x0000)
+struct FEmitterBasicSettings final
+{
+public:
+	class FName                                   EmitterName;                                       // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEmitterSpawnPositionBase                     SpawnPositionBase;                                 // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SpawnPositionOffset;                               // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartDelay;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FireInterval;                                      // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxFireCount;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         BulletId;                                          // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPerShot;                                        // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInheritedVelocityMode                        InheritedVelocityMode;                             // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InheritVelocityFactor;                             // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FEmitterBasicSettings;
 
 }
 

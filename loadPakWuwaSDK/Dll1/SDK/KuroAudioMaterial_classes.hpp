@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroAudioMaterial_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "KuroAudioMaterial_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 

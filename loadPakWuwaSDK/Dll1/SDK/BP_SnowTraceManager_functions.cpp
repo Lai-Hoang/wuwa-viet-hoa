@@ -91,6 +91,20 @@ void ABP_SnowTraceManager_C::ReceiveActorEndOverlap(class AActor* OtherActor)
 }
 
 
+// Function BP_SnowTraceManager.BP_SnowTraceManager_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_SnowTraceManager_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SnowTraceManager_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_SnowTraceManager.BP_SnowTraceManager_C.ReceiveActorBeginOverlap
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -108,20 +122,6 @@ void ABP_SnowTraceManager_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	Parms.OtherActor = OtherActor;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SnowTraceManager.BP_SnowTraceManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_SnowTraceManager_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SnowTraceManager_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

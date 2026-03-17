@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroSceneModifier_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroSceneModifier_structs.hpp"
 
 
 namespace SDK

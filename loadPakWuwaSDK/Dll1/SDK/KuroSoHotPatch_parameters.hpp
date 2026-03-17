@@ -105,6 +105,17 @@ public:
 };
 DUMPER7_ASSERTS_KuroSPTools_SetSoVersionUpdateTime;
 
+// Function KuroSoHotPatch.KuroTinkerTools.CheckLib
+// 0x0018 (0x0018 - 0x0000)
+struct KuroTinkerTools_CheckLib final
+{
+public:
+	int32                                         ObjId;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Hash;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroTinkerTools_CheckLib;
+
 // Function KuroSoHotPatch.KuroTinkerTools.GetCurApplyingVersion
 // 0x0010 (0x0010 - 0x0000)
 struct KuroTinkerTools_GetCurApplyingVersion final
@@ -158,6 +169,15 @@ public:
 	class FString                                 Version;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroTinkerTools_SetCurLoadingVersion;
+
+// Function KuroSoHotPatch.KuroVerify.CheckLib
+// 0x0010 (0x0010 - 0x0000)
+struct KuroVerify_CheckLib final
+{
+public:
+	class FString                                 Hash;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroVerify_CheckLib;
 
 }
 

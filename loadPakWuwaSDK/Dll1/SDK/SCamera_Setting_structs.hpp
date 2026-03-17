@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EFightCameraType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EFightCameraType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

@@ -37,6 +37,26 @@ void ABP_SeqNPC_C::ExecuteUbergraph_BP_SeqNPC(int32 EntryPoint)
 }
 
 
+// Function BP_SeqNPC.BP_SeqNPC_C.EditorTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_SeqNPC_C::EditorTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SeqNPC_C", "EditorTick");
+
+	Params::BP_SeqNPC_C_EditorTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_SeqNPC.BP_SeqNPC_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

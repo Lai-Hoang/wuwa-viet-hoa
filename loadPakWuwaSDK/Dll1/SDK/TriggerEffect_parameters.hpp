@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "TriggerEffect_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "TriggerEffect_structs.hpp"
 
 
 namespace SDK::Params

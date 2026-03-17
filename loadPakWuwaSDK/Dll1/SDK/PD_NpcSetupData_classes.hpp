@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ENpcSetupType_structs.hpp"
 #include "SNpcHookPart_structs.hpp"
+#include "ENpcSetupType_structs.hpp"
+#include "SNpcChildPart_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -20,7 +21,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PD_NpcSetupData.PD_NpcSetupData_C
-// 0x01B0 (0x01E8 - 0x0038)
+// 0x01D0 (0x0208 - 0x0038)
 class UPD_NpcSetupData_C final : public UPrimaryDataAsset
 {
 public:
@@ -72,6 +73,8 @@ public:
 	TArray<class UMaterialInstance*>              Skel_BodyUp_Mat_Extra;                             // 0x01B8(0x0010)(Edit, BlueprintVisible)
 	TArray<class UMaterialInstance*>              Skel_BodyDown_Mat_Extra;                           // 0x01C8(0x0010)(Edit, BlueprintVisible)
 	TArray<class UMaterialInterface*>             ReferencedOulineMaterials;                         // 0x01D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, AdvancedDisplay)
+	TArray<struct FSNpcChildPart>                 ChildParts;                                        // 0x01E8(0x0010)(Edit, BlueprintVisible)
+	TArray<class FName>                           HideParentBoneNames;                               // 0x01F8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void IsEmpty(bool* Result);

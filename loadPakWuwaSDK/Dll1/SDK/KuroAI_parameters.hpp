@@ -24,6 +24,19 @@ public:
 };
 DUMPER7_ASSERTS_KuroAILibrary_GetCurrentRootNode;
 
+// Function KuroAI.KuroAILibrary.LoadBehaviorTreeNodeInfo
+// 0x0060 (0x0060 - 0x0000)
+struct KuroAILibrary_LoadBehaviorTreeNodeInfo final
+{
+public:
+	class UBehaviorTreeComponent*                 BTComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            InSavedInfoMap;                                    // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         MaxNodeNum;                                        // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x005C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroAILibrary_LoadBehaviorTreeNodeInfo;
+
 // Function KuroAI.KuroAILibrary.ResetRandomNode
 // 0x0020 (0x0020 - 0x0000)
 struct KuroAILibrary_ResetRandomNode final
@@ -34,6 +47,19 @@ public:
 	TArray<int32>                                 WeightsOverride;                                   // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroAILibrary_ResetRandomNode;
+
+// Function KuroAI.KuroAILibrary.SaveBehaviorTreeNodeInfo
+// 0x0060 (0x0060 - 0x0000)
+struct KuroAILibrary_SaveBehaviorTreeNodeInfo final
+{
+public:
+	class UBehaviorTreeComponent*                 BTComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<int32, int32>                            OutSavedInfoMap;                                   // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+	int32                                         MaxNodeNum;                                        // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x005C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroAILibrary_SaveBehaviorTreeNodeInfo;
 
 }
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "SCameraModifier_Condition_structs.hpp"
-#include "SCameraModifier_Settings_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
+#include "SCameraModifier_Settings_structs.hpp"
+#include "SCameraModifier_Condition_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -21,7 +21,7 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass TsAnimNotifyCameraModify.TsAnimNotifyCameraModify_C
-// 0x0160 (0x01A8 - 0x0048)
+// 0x0178 (0x01C0 - 0x0048)
 class UTsAnimNotifyCameraModify_C final : public UKuroAnimNotify
 {
 public:
@@ -31,11 +31,11 @@ public:
 	float                                         淡出时间;                                          // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         打断淡出时间;                                      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSCameraModifier_Settings              相机修改配置;                                      // 0x0068(0x0118)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	ECameraAnsEffectiveClientType                 生效客户端类型;                                    // 0x0180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CameraAttachSocket;                                // 0x0188(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FSCameraModifier_Condition>     条件;                                              // 0x0198(0x0010)(Edit, BlueprintVisible)
+	struct FSCameraModifier_Settings              相机修改配置;                                      // 0x0068(0x0130)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	ECameraAnsEffectiveClientType                 生效客户端类型;                                    // 0x0198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CameraAttachSocket;                                // 0x01A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FSCameraModifier_Condition>     条件;                                              // 0x01B0(0x0010)(Edit, BlueprintVisible)
 
 public:
 	bool K2_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);

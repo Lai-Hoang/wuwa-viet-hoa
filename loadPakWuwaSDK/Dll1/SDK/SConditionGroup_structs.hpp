@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SConDitionGroupType_structs.hpp"
 #include "SCondition_structs.hpp"
+#include "SConDitionGroupType_structs.hpp"
 
 
 namespace SDK

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "KuroAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroAudio_structs.hpp"
 #include "MovieScene_classes.hpp"
 
 
@@ -82,6 +82,7 @@ public:
 	static int32 GetSourcePlayPosition(const int32 PlayingId);
 	static bool IsAndroidApiUsingOpenSL();
 	static bool IsDolbyAtmosGameSupported();
+	static void PostEventWithMidiNote(const class UAkAudioEvent* AudioEvent, const uint8 Note, const class AActor* Actor);
 	static void PostNotifyEvent(const class UAkAudioEvent* NotifyEvent, const class AActor* Actor);
 	static void SeekOnEventName(const class FString& EventName, const int32 Position, const class AActor* Actor, const int32 PlayingId, const bool bSnapToMarker);
 	static void SetIosAuditPackage(bool IsAuditPackage);
@@ -141,11 +142,12 @@ public:
 DUMPER7_ASSERTS_UKuroAmbientSoundComponent;
 
 // Class KuroAudio.KuroAmbientSoundPositionsProxyComponent
-// 0x0000 (0x06B0 - 0x06B0)
+// 0x0010 (0x0700 - 0x06F0)
 class UKuroAmbientSoundPositionsProxyComponent final : public UInstancedStaticMeshComponent
 {
 public:
-	class UKuroAmbientSoundComponent*             TargetComponent;                                   // 0x06A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UKuroAmbientSoundComponent*             TargetComponent;                                   // 0x06F0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -101,6 +101,7 @@ DUMPER7_ASSERTS_UKuroSPTools;
 class UKuroTinkerTools final : public UBlueprintFunctionLibrary
 {
 public:
+	static void CheckLib(int32 ObjId, const class FString& Hash);
 	static void CleanPatch();
 	static class FString GetCurApplyingVersion();
 	static class FString GetCurLoadingVersion();
@@ -124,6 +125,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroTinkerTools;
+
+// Class KuroSoHotPatch.KuroVerify
+// 0x0018 (0x0048 - 0x0030)
+class UKuroVerify final : public UObject
+{
+public:
+	TMulticastInlineDelegate<void(int32 ResultCode)> CheckCallback;                                  // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void CheckLib(const class FString& Hash);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroVerify")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroVerify")
+	}
+	static class UKuroVerify* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroVerify>();
+	}
+};
+DUMPER7_ASSERTS_UKuroVerify;
 
 }
 

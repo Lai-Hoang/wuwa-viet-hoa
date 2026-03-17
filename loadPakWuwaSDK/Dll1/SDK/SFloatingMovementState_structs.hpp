@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EFloatingMovementType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EFloatingMovementType_structs.hpp"
 
 
 namespace SDK

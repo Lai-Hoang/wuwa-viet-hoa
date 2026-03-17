@@ -18,35 +18,6 @@
 namespace SDK
 {
 
-// Class GameplayTasks.GameplayTaskOwnerInterface
-// 0x0000 (0x0000 - 0x0000)
-class IGameplayTaskOwnerInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayTaskOwnerInterface")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayTaskOwnerInterface")
-	}
-	static class IGameplayTaskOwnerInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IGameplayTaskOwnerInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
-
 // Class GameplayTasks.GameplayTasksComponent
 // 0x0070 (0x0130 - 0x00C0)
 class UGameplayTasksComponent : public UActorComponent
@@ -116,30 +87,6 @@ public:
 };
 DUMPER7_ASSERTS_UGameplayTask;
 
-// Class GameplayTasks.GameplayTask_ClaimResource
-// 0x0000 (0x0070 - 0x0070)
-class UGameplayTask_ClaimResource final : public UGameplayTask
-{
-public:
-	static class UGameplayTask_ClaimResource* ClaimResource(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, TSubclassOf<class UGameplayTaskResource> ResourceClass, const uint8 Priority, const class FName TaskInstanceName);
-	static class UGameplayTask_ClaimResource* ClaimResources(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, const TArray<TSubclassOf<class UGameplayTaskResource>>& ResourceClasses, const uint8 Priority, const class FName TaskInstanceName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameplayTask_ClaimResource")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameplayTask_ClaimResource")
-	}
-	static class UGameplayTask_ClaimResource* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameplayTask_ClaimResource>();
-	}
-};
-DUMPER7_ASSERTS_UGameplayTask_ClaimResource;
-
 // Class GameplayTasks.GameplayTask_SpawnActor
 // 0x0040 (0x00B0 - 0x0070)
 class UGameplayTask_SpawnActor final : public UGameplayTask
@@ -171,6 +118,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGameplayTask_SpawnActor;
+
+// Class GameplayTasks.GameplayTask_ClaimResource
+// 0x0000 (0x0070 - 0x0070)
+class UGameplayTask_ClaimResource final : public UGameplayTask
+{
+public:
+	static class UGameplayTask_ClaimResource* ClaimResource(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, TSubclassOf<class UGameplayTaskResource> ResourceClass, const uint8 Priority, const class FName TaskInstanceName);
+	static class UGameplayTask_ClaimResource* ClaimResources(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, const TArray<TSubclassOf<class UGameplayTaskResource>>& ResourceClasses, const uint8 Priority, const class FName TaskInstanceName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayTask_ClaimResource")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTask_ClaimResource")
+	}
+	static class UGameplayTask_ClaimResource* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameplayTask_ClaimResource>();
+	}
+};
+DUMPER7_ASSERTS_UGameplayTask_ClaimResource;
 
 // Class GameplayTasks.GameplayTask_TimeLimitedExecution
 // 0x0030 (0x00A0 - 0x0070)
@@ -226,6 +197,35 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UGameplayTask_WaitDelay;
+
+// Class GameplayTasks.GameplayTaskOwnerInterface
+// 0x0000 (0x0000 - 0x0000)
+class IGameplayTaskOwnerInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("GameplayTaskOwnerInterface")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"GameplayTaskOwnerInterface")
+	}
+	static class IGameplayTaskOwnerInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IGameplayTaskOwnerInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IGameplayTaskOwnerInterface;
 
 // Class GameplayTasks.GameplayTaskResource
 // 0x0010 (0x0040 - 0x0030)

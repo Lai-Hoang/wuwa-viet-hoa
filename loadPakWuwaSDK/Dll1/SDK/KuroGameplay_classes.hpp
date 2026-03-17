@@ -12,21 +12,21 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroAudio_structs.hpp"
 #include "Niagara_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "InputCore_structs.hpp"
 #include "KuroCurve_structs.hpp"
+#include "Slate_structs.hpp"
 #include "KuroGameplay_structs.hpp"
-#include "KuroBuildingGridSystem_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "KuroBuildingGridSystem_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "KuroLevelStateMachine_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "Slate_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -159,7 +159,8 @@ public:
 	int32                                         FadeOutTime;                                       // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAudioFadeCurve                               FadeOutCurve;                                      // 0x007C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          KeepAlive;                                         // 0x007D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          EnableOcclusion;                                   // 0x007E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7F[0x1];                                       // 0x007F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          TrailingAudioEvent;                                // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -305,7 +306,7 @@ public:
 DUMPER7_ASSERTS_UKuroSplineVolumeBuilderPolyhedron;
 
 // Class KuroGameplay.EffectModelDecal
-// 0x05A8 (0x0608 - 0x0060)
+// 0x05B0 (0x0610 - 0x0060)
 class UEffectModelDecal final : public UEffectModelBase
 {
 public:
@@ -313,10 +314,12 @@ public:
 	struct FKuroCurveVector                       Location;                                          // 0x0068(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FKuroCurveVector                       Rotation;                                          // 0x0210(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FKuroCurveVector                       Scale;                                             // 0x03B8(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         ZfadingFactor;                                     // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ZfadingPower;                                      // 0x0564(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FKuroCurveFloat>     MaterialFloatParameters;                           // 0x0568(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FKuroCurveLinearColor> MaterialColorParameters;                         // 0x05B8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         SortOrder;                                         // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ZfadingFactor;                                     // 0x0564(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ZfadingPower;                                      // 0x0568(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FKuroCurveFloat>     MaterialFloatParameters;                           // 0x0570(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FKuroCurveLinearColor> MaterialColorParameters;                         // 0x05C0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1276,6 +1279,7 @@ public:
 	static void ForceCheckPendingInit(int32 Handle);
 	static void FreezeHandle(int32 Id, bool bFreeze, bool bForce);
 	static int32 GetActiveEffectCount();
+	static bool GetAdditionTimeScaleEnable(int32 SourceType);
 	static int32 GetEffectCount();
 	static int32 GetEffectLruCapacity();
 	static int32 GetEffectLruCount(const class FString& Path);
@@ -1296,6 +1300,7 @@ public:
 	static void HandleSeekToTimeWithProcess(int32 Id, float Time, bool bSeekContinue, float Delta);
 	static bool HasEffectForSpecData();
 	static bool HasInitialize();
+	static bool HasNiagaraComponentHandle(int32 Id);
 	static bool Initialize(class UGameInstance* GameInstance, const TArray<struct FKuroEffectSpecData>& SpecDataArray, bool InIsGameRunning, float InBoundsVisibleThreshold, float InMaxVisibleCullDeltaTime, float InWasRecentlyRenderInterval, bool InUseVisibilityTestPass, class UClass* EffectViewClass, bool IsResetSpecData);
 	static void InitStaticGlobalData(bool bUseLog, bool bIsInEditorTick, bool bUseDbConfig);
 	static bool IsEffectActorValid(int32 Id);
@@ -1313,6 +1318,8 @@ public:
 	static void RegisterJsFunction(const TDelegate<void(float Opacity, class UActorComponent* CharRenderingComponent, class USkeletalMeshComponent* SkeletalMeshComponent, class AActor* Owner)>& InSkeletalMeshSpec_OnBodyEffectChange, const TDelegate<void(class UActorComponent* CharRenderingComponent, class USkeletalMeshComponent* SkeletalMeshComponent, class AActor* Owner)>& InSkeletalMeshSpec_CreateRenderingComponent, const TDelegate<void(class AActor* EffectActor, class UActorComponent* CharRenderingComponent)>& InSkeletalMeshSpec_DestroyRenderingComponent, const TDelegate<void(int32 EntityId)>& InEffectHandle_GetEntityOwnerActor, const TDelegate<void(int32 EntityId)>& InEffectHandle_GetEntityModelConfigId, const TDelegate<void(float EffectEnableRange)>& InEffectHandle_GetOrAddEffectDynamicGroup, const TDelegate<void(bool FromPrimaryRole, class AActor* Actor)>& InAudioSystem_GetAkComponent, const TDelegate<void(int32 EventHandle, float FadeOutTime)>& InAudioSystem_ExecuteActionStop, const TDelegate<void(const class FString& EventName, const struct FTransformDouble& Transform)>& InAudioSystem_PostEventTransform, const TDelegate<void(const class FString& EventName, class UAkComponent* AkComponent)>& InAudioSystem_PostEventAkComponent, const TDelegate<void(int32 EntityId)>& InNiagaraSpec_IsNeedQualityBias, const TDelegate<void(int32 EntityId, bool VisibleForProtoPlayer)>& InPostProcessSpec_IsNeedPostEffect, const TDelegate<void(int32 EntityId)>& InPostProcessSpec_IsDisableInUltraSkill, const TDelegate<void(TSubclassOf<class AActor> Class, const struct FTransformDouble& Transform)>& InActorSystem_Get, const TDelegate<void(const class FString& Reason, class AActor* Actor)>& InActorSystem_Put, const TDelegate<void(class AActor* Actor, int32 EffectId)>& InEffectSystem_SetEffectView, const TDelegate<void(int32 EntityId)>& InEffectSystem_CheckIsNetPlayer, const TDelegate<void(const class FString& Path)>& InEffectSystem_CheckMobileBlackEffect, const TDelegate<void(int32 EffectId, class AActor* EffectActor, class USkeletalMeshComponent* ContextMeshComponent, class UObject* ContextSourceObject, class UEffectModelBase* EffectModel)>& InEffectSpec_RegisterBodyEffect, const TDelegate<void(int32 EffectId, class AActor* EffectActor, class USkeletalMeshComponent* ContextMeshComponent, class UObject* ContextSourceObject, class UEffectModelBase* EffectModel)>& InEffectSpec_UnregisterBodyEffect, const TDelegate<void(int32 EntityId, class UObject* ContextSourceObject)>& InMaterialSpec_GetRenderingComponentByContext, const TDelegate<void(class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_GetRenderingComponentBySkeletal, const TDelegate<void(class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_SpawnRenderActor, const TDelegate<void(class AActor* Actor, class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_GetRenderingComponentByRenderActor, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent, class UKuroMaterialControllerDataAsset* DataAsset)>& InMaterialSpec_AddMaterialControllerData, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent, int32 MaterialControllerHandle)>& InMaterialSpec_RemoveMaterialControllerData, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent)>& InMaterialSpec_DestroyRenderingComponent, const TDelegate<void(class UEffectModelAudio* EffectModel, class AActor* EffectActor, int32 EffectType)>& InEffectAudioController_AddPlayEffectAudio, const TDelegate<void(class UEffectModelAudio* EffectModel, class AActor* EffectActor, int32 EffectType, int32 Priority)>& InEffectAudioController_AddPlayEffectAudioPriority, const TDelegate<void(int32 Uid, const class FString& Context)>& InEffectAudioController_OnStopEffectAudio);
 	static void RemoveFinishCallback(int32 Id);
 	static void ReplayEffect(int32 Id, const class FString& Reason, const struct FTransformDouble& Transform, bool bResetTransform);
+	static void SetAdditionTimeScale(int32 SourceType, int32 Id, float TimeScale);
+	static void SetAdditionTimeScaleEnable(int32 SourceType, bool Enable);
 	static void SetEffectDataFloatConstParam(int32 Id, class FName ParamName, float Value);
 	static void SetEffectExtraState(int32 EffectId, int32 ExtraState);
 	static void SetEffectHidden(int32 Handle, bool bHidden, const class FString& Reason, bool bIsLogic);
@@ -1899,16 +1906,17 @@ public:
 DUMPER7_ASSERTS_UKuroLevelPlayCollisionEventRelayComponent;
 
 // Class KuroGameplay.KuroLevelPlayCustomCollisionComponent
-// 0x0030 (0x0560 - 0x0530)
+// 0x0040 (0x05B0 - 0x0570)
 class UKuroLevelPlayCustomCollisionComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_528[0x8];                                      // 0x0528(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCollisionProfileName                  CollisionProfileName;                              // 0x0530(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                WaterStaticMeshNormal;                             // 0x053C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                WaterNormal;                                       // 0x0548(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_554[0x4];                                      // 0x0554(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBodySetup*                             BodySetup;                                         // 0x0558(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_570[0x8];                                      // 0x0570(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCollisionProfileName                  CollisionProfileName;                              // 0x0578(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                WaterStaticMeshNormal;                             // 0x0584(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                WaterNormal;                                       // 0x0590(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59C[0x4];                                      // 0x059C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBodySetup*                             BodySetup;                                         // 0x05A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5A8[0x8];                                      // 0x05A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanEnableCollision() const;
@@ -2115,15 +2123,14 @@ public:
 DUMPER7_ASSERTS_UKuroLevelSwitchMaterial;
 
 // Class KuroGameplay.KuroLockAxisCollisionComponent
-// 0x0010 (0x0540 - 0x0530)
+// 0x0010 (0x0580 - 0x0570)
 class UKuroLockAxisCollisionComponent final : public UPrimitiveComponent
 {
 public:
-	class UStaticMesh*                            StaticMesh;                                        // 0x0528(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELockAxis                                     LockAxis;                                          // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_531[0x3];                                      // 0x0531(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AxisValue;                                         // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_538[0x8];                                      // 0x0538(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            StaticMesh;                                        // 0x0570(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELockAxis                                     LockAxis;                                          // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_579[0x3];                                      // 0x0579(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AxisValue;                                         // 0x057C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetAxisValue(float InAxisValue);
@@ -2204,13 +2211,18 @@ public:
 	class UObject* GetAsset(const int32 HandleId);
 	int32 LoadAsyncWithId(const class FString& Path, const int32 HandleId, const int32 Priority);
 	int32 LoadAsyncWithIdAndTag(const class FString& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
+	int32 LoadAsyncWithIdAndTagByName(const class FName& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
+	int32 LoadAsyncWithIdByName(const class FName& Path, const int32 HandleId, const int32 Priority);
 	int32 LoadWithId(const class FString& Path, const int32 HandleId);
 	int32 LoadWithIdAndTag(const class FString& Path, const int32 HandleId, class FName MemTag);
+	int32 LoadWithIdAndTagByName(const class FName& Path, const int32 HandleId, class FName MemTag);
+	int32 LoadWithIdByName(const class FName& Path, const int32 HandleId);
 	void Release(const int32 HandleId);
 	bool WaitComplete(const int32 HandleId, const float Timeout);
 
 	void DebugDumpLoadingAssets() const;
 	class UObject* GetLoadedAsset(const class FString& Path) const;
+	class UObject* GetLoadedAssetByName(const class FName& Path) const;
 
 public:
 	static class UClass* StaticClass()
@@ -2254,7 +2266,7 @@ public:
 DUMPER7_ASSERTS_UKuroResourceSystemFunctionLibrary;
 
 // Class KuroGameplay.KuroRoadwayStaticMeshComponent
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x0630 - 0x0630)
 class UKuroRoadwayStaticMeshComponent final : public UStaticMeshComponent
 {
 public:
@@ -2472,13 +2484,12 @@ public:
 DUMPER7_ASSERTS_UKuroTransportNetworkSubsystem;
 
 // Class KuroGameplay.KuroWaterInteractionComponent
-// 0x0010 (0x0600 - 0x05F0)
+// 0x0010 (0x0640 - 0x0630)
 class UKuroWaterInteractionComponent : public UStaticMeshComponent
 {
 public:
-	uint8                                         Pad_5E8[0x8];                                      // 0x05E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Invoker;                                           // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F8[0x8];                                      // 0x05F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_630[0x8];                                      // 0x0630(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Invoker;                                           // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void HandleWaterDetectedEnd();

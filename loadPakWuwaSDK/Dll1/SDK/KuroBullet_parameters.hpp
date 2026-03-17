@@ -40,16 +40,16 @@ public:
 DUMPER7_ASSERTS_BulletWorld_AddCommonBulletDataTable;
 
 // Function KuroBullet.BulletWorld.CreateBullet
-// 0x0070 (0x0070 - 0x0000)
+// 0x0080 (0x0080 - 0x0000)
 struct BulletWorld_CreateBullet final
 {
 public:
-	TScriptInterface<class IBulletOwner>          BulletOwner;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TScriptInterface<class IBulletContext>        BulletContext;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	int64                                         BulletConfigId;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransformDouble                       InitialTransform;                                  // 0x0020(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0xC];                                       // 0x0064(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBulletSpawnParams                     SpawnParams;                                       // 0x0020(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BulletWorld_CreateBullet;
 
@@ -68,7 +68,7 @@ struct BulletWorld_DestroyBullet final
 {
 public:
 	class UBulletEntity*                          BulletEntity;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClearOwner;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearContext;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BulletWorld_DestroyBullet;
@@ -79,10 +79,28 @@ struct BulletWorld_DestroyBulletById final
 {
 public:
 	int32                                         BulletEntityId;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClearOwner;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearContext;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_BulletWorld_DestroyBulletById;
+
+// Function KuroBullet.BulletWorld.DestroyPattern
+// 0x0004 (0x0004 - 0x0000)
+struct BulletWorld_DestroyPattern final
+{
+public:
+	int32                                         PatternId;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BulletWorld_DestroyPattern;
+
+// Function KuroBullet.BulletWorld.DestroyPatternsByOwner
+// 0x0008 (0x0008 - 0x0000)
+struct BulletWorld_DestroyPatternsByOwner final
+{
+public:
+	const class AActor*                           Owner;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BulletWorld_DestroyPatternsByOwner;
 
 // Function KuroBullet.BulletWorld.EnableFlatGround
 // 0x0008 (0x0008 - 0x0000)
@@ -137,6 +155,18 @@ public:
 };
 DUMPER7_ASSERTS_BulletWorld_SetShowBulletCollision;
 
+// Function KuroBullet.BulletWorld.SpawnPattern
+// 0x0020 (0x0020 - 0x0000)
+struct BulletWorld_SpawnPattern final
+{
+public:
+	TScriptInterface<class IBulletContext>        PatternContext;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	const class UKuroBulletPatternDataAsset*      PatternDA;                                         // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BulletWorld_SpawnPattern;
+
 // Function KuroBullet.KuroBulletFunctionLibrary.CreateBullet
 // 0x0070 (0x0070 - 0x0000)
 struct KuroBulletFunctionLibrary_CreateBullet final
@@ -163,6 +193,24 @@ public:
 };
 DUMPER7_ASSERTS_KuroBulletFunctionLibrary_DestroyBulletById;
 
+// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPattern
+// 0x0004 (0x0004 - 0x0000)
+struct KuroBulletFunctionLibrary_DestroyPattern final
+{
+public:
+	int32                                         PatternId;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_DestroyPattern;
+
+// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPatternsByOwner
+// 0x0008 (0x0008 - 0x0000)
+struct KuroBulletFunctionLibrary_DestroyPatternsByOwner final
+{
+public:
+	const class AActor*                           Owner;                                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_DestroyPatternsByOwner;
+
 // Function KuroBullet.KuroBulletFunctionLibrary.SetShowBulletCollision
 // 0x0001 (0x0001 - 0x0000)
 struct KuroBulletFunctionLibrary_SetShowBulletCollision final
@@ -171,6 +219,18 @@ public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroBulletFunctionLibrary_SetShowBulletCollision;
+
+// Function KuroBullet.KuroBulletFunctionLibrary.SpawnPattern
+// 0x0020 (0x0020 - 0x0000)
+struct KuroBulletFunctionLibrary_SpawnPattern final
+{
+public:
+	TScriptInterface<class IBulletContext>        PatternContext;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	const class UKuroBulletPatternDataAsset*      PatternDA;                                         // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroBulletFunctionLibrary_SpawnPattern;
 
 // Function KuroBullet.KuroBulletSubsystem.CreateWorld
 // 0x0008 (0x0008 - 0x0000)

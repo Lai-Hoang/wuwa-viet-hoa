@@ -81,6 +81,19 @@ enum class EMoveHitType : uint8
 	EMoveHitType_MAX                         = 3,
 };
 
+// ScriptStruct KuroMovement.OverlapActorRecord
+// 0x0018 (0x0018 - 0x0000)
+struct FOverlapActorRecord final
+{
+public:
+	ETriggerAreaType                              Area;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnterOverlap;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FOverlapActorRecord;
+
 // ScriptStruct KuroMovement.BaseRecord
 // 0x0044 (0x0044 - 0x0000)
 struct FBaseRecord final
@@ -95,19 +108,6 @@ public:
 	uint8                                         Pad_3D[0x7];                                       // 0x003D(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBaseRecord;
-
-// ScriptStruct KuroMovement.OverlapActorRecord
-// 0x0018 (0x0018 - 0x0000)
-struct FOverlapActorRecord final
-{
-public:
-	ETriggerAreaType                              Area;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnterOverlap;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FOverlapActorRecord;
 
 // ScriptStruct KuroMovement.DebugModifyRecord
 // 0x0058 (0x0058 - 0x0000)

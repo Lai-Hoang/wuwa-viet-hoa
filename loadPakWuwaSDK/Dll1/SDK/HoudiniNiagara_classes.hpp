@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_classes.hpp"
 #include "HoudiniNiagara_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK

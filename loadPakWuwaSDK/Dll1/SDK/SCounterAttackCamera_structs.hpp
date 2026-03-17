@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SCounterAttackCamera.SCounterAttackCamera
-// 0x0148 (0x0148 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct FSCounterAttackCamera final
 {
 public:
@@ -29,7 +29,7 @@ public:
 	float                                         打断淡出时间_12_2392BC1040C7E8D2A871E5838CA1AE01;  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CameraAttachSocket_18_6C5DA6F14E99C3E47A533BAC2B020FBD; // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FSCameraModifier_Settings              摄像机配置_9_0D23F3FF4B053EADB03E308C9B93B190;     // 0x0030(0x0118)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSCameraModifier_Settings              摄像机配置_9_0D23F3FF4B053EADB03E308C9B93B190;     // 0x0030(0x0130)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSCounterAttackCamera;
 

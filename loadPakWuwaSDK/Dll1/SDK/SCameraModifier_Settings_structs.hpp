@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "SCameraModifier_Settings_ArmLengthDynamicValue_structs.hpp"
 #include "SCameraModifier_SettingsAdditional_structs.hpp"
 
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SCameraModifier_Settings.SCameraModifier_Settings
-// 0x0118 (0x0118 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct FSCameraModifier_Settings final
 {
 public:
@@ -54,13 +55,16 @@ public:
 	bool                                          IsResetFinalArmLengthToSpecificValue_204_D7743AE64930C1C3692EBC84B290FF1A; // 0x0061(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_62[0x2];                                       // 0x0062(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ResetFinalArmLengthToSpecificValue_207_E55092A1464EA622173DBCBEF34A8EF9; // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLockInput_86_CDDE4FA4418F23E40016969CB0D3623C;   // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsLerpArmLocation_111_5A5B00E645FAC54E063E8A93C1764D62; // 0x0069(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsSwitchModifier_113_0BCB940D4AB7A06EB3485D98E853EC0A; // 0x006A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsForcePlayModify_177_F5B3348F48031F5374647B85AB011967; // 0x006B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          StopModifyOnZoomInput_225_FDE50C654DD3E283ABF86C82C125979E; // 0x006C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSCameraModifier_SettingsAdditional    ModifySettingsAdditional_222_7DE2E3E64B6017435B7C1A8AA32C25C1; // 0x0070(0x00A8)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          IsResetFinalArmLengthToDynamicValue_227_D91A84A5457379F82ABF3B9EC1627F4E; // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSCameraModifier_Settings_ArmLengthDynamicValue> ResetFinalArmLengthToDynamicValue_231_2B7515F544CBB319E4E6C184EA8039E7; // 0x0070(0x0010)(Edit, BlueprintVisible)
+	bool                                          IsLockInput_86_CDDE4FA4418F23E40016969CB0D3623C;   // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsLerpArmLocation_111_5A5B00E645FAC54E063E8A93C1764D62; // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsSwitchModifier_113_0BCB940D4AB7A06EB3485D98E853EC0A; // 0x0082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsForcePlayModify_177_F5B3348F48031F5374647B85AB011967; // 0x0083(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          StopModifyOnZoomInput_225_FDE50C654DD3E283ABF86C82C125979E; // 0x0084(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSCameraModifier_SettingsAdditional    ModifySettingsAdditional_222_7DE2E3E64B6017435B7C1A8AA32C25C1; // 0x0088(0x00A8)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSCameraModifier_Settings;
 

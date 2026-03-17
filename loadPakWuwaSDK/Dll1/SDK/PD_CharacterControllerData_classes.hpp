@@ -11,19 +11,19 @@
 #include "Basic.hpp"
 
 #include "ECharacterControllerType_structs.hpp"
-#include "ECharacterMeshPart_structs.hpp"
 #include "ECharacterBodySpecifiedType_structs.hpp"
-#include "SMaterialControllerFloatGroup_structs.hpp"
+#include "ECharacterMeshPart_structs.hpp"
 #include "ECharacterSlotSpecifiedType_structs.hpp"
+#include "SMaterialControllerFloatGroup_structs.hpp"
 #include "ECharacterControllerApplyType_structs.hpp"
-#include "SMaterialControllerLoopTime_structs.hpp"
 #include "ECharacterControllerChannelSwitch_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "SMaterialControllerLoopTime_structs.hpp"
 #include "SMaterialControllerColorGroup_structs.hpp"
 #include "ECharacterControllerUVSwitch_structs.hpp"
 #include "SMaterialControllerFloatParameter_structs.hpp"
 #include "SMaterialControllerColorParameter_structs.hpp"
 #include "SMaterialControllerTextureParameter_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK

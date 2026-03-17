@@ -18,6 +18,15 @@
 namespace SDK
 {
 
+// Enum KuroAnim.EBoneBindType
+// NumValues: 0x0003
+enum class EBoneBindType : uint8
+{
+	TPoseFix                                 = 0,
+	KuroCacheAdditive                        = 1,
+	EBoneBindType_MAX                        = 2,
+};
+
 // Enum KuroAnim.ECombineCurveMode
 // NumValues: 0x0005
 enum class ECombineCurveMode : uint8
@@ -313,64 +322,15 @@ enum class EKuroHumanIKMode : uint8
 	KuroHumanIKMode_MAX                      = 5,
 };
 
-// ScriptStruct KuroAnim.BoneBlock
-// 0x0060 (0x0060 - 0x0000)
-struct FBoneBlock final
-{
-public:
-	TArray<class FName>                           Groups;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<int32, float>                            Link;                                              // 0x0010(0x0050)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBoneBlock;
-
-// ScriptStruct KuroAnim.SpecialBoneShakeData
+// ScriptStruct KuroAnim.BoneBindInfo
 // 0x0018 (0x0018 - 0x0000)
-struct FSpecialBoneShakeData final
+struct FBoneBindInfo final
 {
 public:
-	TArray<class FName>                           Groups;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         Influence;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShakeTime;                                         // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Weights;                                           // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSpecialBoneShakeData;
-
-// ScriptStruct KuroAnim.SkeletonGroup
-// 0x0020 (0x0020 - 0x0000)
-struct FSkeletonGroup final
-{
-public:
-	TArray<struct FBoneBlock>                     Blocks;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FSpecialBoneShakeData>          SpeicalBoneShakeData;                              // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSkeletonGroup;
-
-// ScriptStruct KuroAnim.HitBones
-// 0x0010 (0x0010 - 0x0000)
-struct FHitBones final
-{
-public:
-	TArray<class FName>                           Bones;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FHitBones;
-
-// ScriptStruct KuroAnim.AnimNode_Feedback
-// 0x0190 (0x0278 - 0x00E8)
-struct FAnimNode_Feedback final : public FAnimNode_SkeletalControlBase
-{
-public:
-	struct FSkeletonGroup                         SkeletonBlockInfo;                                 // 0x00E8(0x0020)(Edit, NativeAccessSpecifierPublic)
-	float                                         DeltaTime;                                         // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UnitTime;                                          // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Hit;                                               // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          NotEffectToChild;                                  // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ShakeRate;                                         // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitBones                              HitBoneNames;                                      // 0x0118(0x0010)(Edit, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            Curve;                                             // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebug;                                            // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_131[0x147];                                    // 0x0131(0x0147)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_Feedback;
+DUMPER7_ASSERTS_FBoneBindInfo;
 
 // ScriptStruct KuroAnim.AdditiveBlendAlpha
 // 0x000C (0x000C - 0x0000)
@@ -444,6 +404,29 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_BoneRotateToLocation;
 
+// ScriptStruct KuroAnim.BonesBindToConfigParams
+// 0x0030 (0x0030 - 0x0000)
+struct FBonesBindToConfigParams final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBoneBindInfo>                  BindTos;                                           // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	EBoneBindType                                 BindType;                                          // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBonesBindToConfigParams;
+
+// ScriptStruct KuroAnim.AnimNode_BonesBindTo
+// 0x0028 (0x0110 - 0x00E8)
+struct FAnimNode_BonesBindTo final : public FAnimNode_SkeletalControlBase
+{
+public:
+	TArray<struct FBonesBindToConfigParams>       Configs;                                           // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x18];                                      // 0x00F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_BonesBindTo;
+
 // ScriptStruct KuroAnim.AnimNode_CombineCurves
 // 0x0050 (0x0060 - 0x0010)
 struct FAnimNode_CombineCurves final : public FAnimNode_Base
@@ -472,6 +455,121 @@ public:
 	uint8                                         Pad_21[0xD3F];                                     // 0x0021(0x0D3F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_ExtraFollowAnims;
+
+// ScriptStruct KuroAnim.BoneBlock
+// 0x0060 (0x0060 - 0x0000)
+struct FBoneBlock final
+{
+public:
+	TArray<class FName>                           Groups;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, float>                            Link;                                              // 0x0010(0x0050)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBoneBlock;
+
+// ScriptStruct KuroAnim.SpecialBoneShakeData
+// 0x0018 (0x0018 - 0x0000)
+struct FSpecialBoneShakeData final
+{
+public:
+	TArray<class FName>                           Groups;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         Influence;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShakeTime;                                         // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSpecialBoneShakeData;
+
+// ScriptStruct KuroAnim.SkeletonGroup
+// 0x0020 (0x0020 - 0x0000)
+struct FSkeletonGroup final
+{
+public:
+	TArray<struct FBoneBlock>                     Blocks;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FSpecialBoneShakeData>          SpeicalBoneShakeData;                              // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSkeletonGroup;
+
+// ScriptStruct KuroAnim.HitBones
+// 0x0010 (0x0010 - 0x0000)
+struct FHitBones final
+{
+public:
+	TArray<class FName>                           Bones;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FHitBones;
+
+// ScriptStruct KuroAnim.AnimNode_Feedback
+// 0x0190 (0x0278 - 0x00E8)
+struct FAnimNode_Feedback final : public FAnimNode_SkeletalControlBase
+{
+public:
+	struct FSkeletonGroup                         SkeletonBlockInfo;                                 // 0x00E8(0x0020)(Edit, NativeAccessSpecifierPublic)
+	float                                         DeltaTime;                                         // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UnitTime;                                          // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Hit;                                               // 0x0110(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NotEffectToChild;                                  // 0x0111(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_112[0x2];                                      // 0x0112(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ShakeRate;                                         // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitBones                              HitBoneNames;                                      // 0x0118(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            Curve;                                             // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebug;                                            // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_131[0x147];                                    // 0x0131(0x0147)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_Feedback;
+
+// ScriptStruct KuroAnim.BoneFeedbackAnimConfig
+// 0x0070 (0x0070 - 0x0000)
+struct FBoneFeedbackAnimConfig final
+{
+public:
+	TArray<class FName>                           BoneGroups;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FName                                   EffectBoneName;                                    // 0x0010(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Up;                                                // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Forward;                                           // 0x0028(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 AngleSplit;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UAnimSequence*>                  AnimSequences;                                     // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         StateAlpha[0x3];                                   // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HitAlpha[0x2];                                     // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LinkAlpha;                                         // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBoneFeedbackAnimConfig;
+
+// ScriptStruct KuroAnim.BoneFeedbackAnimConfigGroup
+// 0x0010 (0x0010 - 0x0000)
+struct FBoneFeedbackAnimConfigGroup final
+{
+public:
+	TArray<struct FBoneFeedbackAnimConfig>        Array;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBoneFeedbackAnimConfigGroup;
+
+// ScriptStruct KuroAnim.BoneFeedbackAnimHitInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FBoneFeedbackAnimHitInfo final
+{
+public:
+	TArray<class FName>                           FirstHitBoneNames;                                 // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           HitBoneNames;                                      // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          AttackPoint;                                       // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                HitVector;                                         // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StateType;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HitType;                                           // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBoneFeedbackAnimHitInfo;
+
+// ScriptStruct KuroAnim.AnimNode_FeedbackAnim
+// 0x00D8 (0x00E8 - 0x0010)
+struct FAnimNode_FeedbackAnim final : public FAnimNode_Base
+{
+public:
+	struct FBoneFeedbackAnimConfigGroup           FeedbackConfigGroup;                               // 0x0010(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FPoseLink                              BasePose;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          NewHit;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneFeedbackAnimHitInfo               HitInfo;                                           // 0x0038(0x0050)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x60];                                      // 0x0088(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_FeedbackAnim;
 
 // ScriptStruct KuroAnim.AnimNode_FeedbackRotate
 // 0x0238 (0x0320 - 0x00E8)
@@ -757,20 +855,6 @@ public:
 };
 DUMPER7_ASSERTS_FPhyClothLine;
 
-// ScriptStruct KuroAnim.PhyClothCollision
-// 0x0038 (0x0038 - 0x0000)
-struct FPhyClothCollision final
-{
-public:
-	ECollisionType                                Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         BindBone;                                          // 0x0004(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                CenterPos;                                         // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0024(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              Size;                                              // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPhyClothCollision;
-
 // ScriptStruct KuroAnim.PhyClothConfig
 // 0x002C (0x002C - 0x0000)
 struct FPhyClothConfig final
@@ -787,6 +871,20 @@ public:
 	float                                         StrengthRateForInverseLink;                        // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPhyClothConfig;
+
+// ScriptStruct KuroAnim.PhyClothCollision
+// 0x0038 (0x0038 - 0x0000)
+struct FPhyClothCollision final
+{
+public:
+	ECollisionType                                Type;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         BindBone;                                          // 0x0004(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                CenterPos;                                         // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0024(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector2D                              Size;                                              // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPhyClothCollision;
 
 // ScriptStruct KuroAnim.PhyClothGroup
 // 0x0090 (0x0090 - 0x0000)

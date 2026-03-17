@@ -42,6 +42,25 @@ void UTsUiHotKeyActorComponent_C::ExecuteUbergraph_TsUiHotKeyActorComponent(int3
 }
 
 
+// Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnPreDestroyBP
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTsUiHotKeyActorComponent_C::OnPreDestroyBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "OnPreDestroyBP");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnDisableBP
 // (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -108,25 +127,6 @@ void UTsUiHotKeyActorComponent_C::StartBP()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "StartBP");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnDestroyBP
-// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTsUiHotKeyActorComponent_C::OnDestroyBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "OnDestroyBP");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

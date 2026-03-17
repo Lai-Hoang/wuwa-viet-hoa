@@ -17,6 +17,32 @@
 namespace SDK
 {
 
+// Class KuroAI.KuroAILibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroAILibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UBTNode* GetCurrentRootNode(class UBehaviorTreeComponent* BTComp);
+	static bool LoadBehaviorTreeNodeInfo(class UBehaviorTreeComponent* BTComp, const TMap<int32, int32>& InSavedInfoMap, int32 MaxNodeNum);
+	static void ResetRandomNode(class UBehaviorTreeComponent* BTComp, class UBTNode* Node, const TArray<int32>& WeightsOverride);
+	static bool SaveBehaviorTreeNodeInfo(class UBehaviorTreeComponent* BTComp, TMap<int32, int32>* OutSavedInfoMap, int32 MaxNodeNum);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroAILibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroAILibrary")
+	}
+	static class UKuroAILibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroAILibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKuroAILibrary;
+
 // Class KuroAI.BTComposite_ParallelNode
 // 0x0008 (0x00A0 - 0x0098)
 class UBTComposite_ParallelNode final : public UBTCompositeNode
@@ -87,29 +113,69 @@ public:
 };
 DUMPER7_ASSERTS_UBTDecorator_ForceFailure;
 
-// Class KuroAI.KuroAILibrary
-// 0x0000 (0x0030 - 0x0030)
-class UKuroAILibrary final : public UBlueprintFunctionLibrary
+// Class KuroAI.BTSaveLoadCompositeNode
+// 0x0008 (0x00A0 - 0x0098)
+class UBTSaveLoadCompositeNode : public UBTCompositeNode
 {
 public:
-	static class UBTNode* GetCurrentRootNode(class UBehaviorTreeComponent* BTComp);
-	static void ResetRandomNode(class UBehaviorTreeComponent* BTComp, class UBTNode* Node, const TArray<int32>& WeightsOverride);
+	int32                                         UniqueID;                                          // 0x0098(0x0004)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroAILibrary")
+		STATIC_CLASS_IMPL("BTSaveLoadCompositeNode")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroAILibrary")
+		STATIC_NAME_IMPL(L"BTSaveLoadCompositeNode")
 	}
-	static class UKuroAILibrary* GetDefaultObj()
+	static class UBTSaveLoadCompositeNode* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroAILibrary>();
+		return GetDefaultObjImpl<UBTSaveLoadCompositeNode>();
 	}
 };
-DUMPER7_ASSERTS_UKuroAILibrary;
+DUMPER7_ASSERTS_UBTSaveLoadCompositeNode;
+
+// Class KuroAI.BTSaveLoadComposite_Selector
+// 0x0000 (0x00A0 - 0x00A0)
+class UBTSaveLoadComposite_Selector final : public UBTSaveLoadCompositeNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BTSaveLoadComposite_Selector")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BTSaveLoadComposite_Selector")
+	}
+	static class UBTSaveLoadComposite_Selector* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBTSaveLoadComposite_Selector>();
+	}
+};
+DUMPER7_ASSERTS_UBTSaveLoadComposite_Selector;
+
+// Class KuroAI.BTSaveLoadComposite_Sequence
+// 0x0000 (0x00A0 - 0x00A0)
+class UBTSaveLoadComposite_Sequence final : public UBTSaveLoadCompositeNode
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("BTSaveLoadComposite_Sequence")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"BTSaveLoadComposite_Sequence")
+	}
+	static class UBTSaveLoadComposite_Sequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBTSaveLoadComposite_Sequence>();
+	}
+};
+DUMPER7_ASSERTS_UBTSaveLoadComposite_Sequence;
 
 }
 

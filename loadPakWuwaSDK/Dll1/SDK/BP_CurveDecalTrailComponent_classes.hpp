@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CurveDecalTrailComponent.BP_CurveDecalTrailComponent_C
-// 0x0000 (0x06E0 - 0x06E0)
+// 0x0000 (0x0720 - 0x0720)
 class UBP_CurveDecalTrailComponent_C final : public UKuroCurveTrailDecalComponent
 {
 public:

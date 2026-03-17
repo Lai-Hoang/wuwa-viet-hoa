@@ -113,16 +113,6 @@ enum class EKuroPlatformFlags : uint8
 	EKuroPlatformFlags_MAX                   = 5,
 };
 
-// ScriptStruct KuroGameBudget.GameBudgetBoundsScreenRadiusConfig
-// 0x0008 (0x0008 - 0x0000)
-struct FGameBudgetBoundsScreenRadiusConfig final
-{
-public:
-	float                                         TickReductionStartScreenRatio;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TickReductionIntervalScreenRatio;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FGameBudgetBoundsScreenRadiusConfig;
-
 // ScriptStruct KuroGameBudget.KuroGameBudgetBlueprint
 // 0x0048 (0x0048 - 0x0000)
 struct alignas(0x08) FKuroGameBudgetBlueprint final
@@ -157,6 +147,16 @@ public:
 	uint8                                         Pad_1C[0xB4];                                      // 0x001C(0x00B4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGameBudgetAllocatorGroupConfig;
+
+// ScriptStruct KuroGameBudget.GameBudgetBoundsScreenRadiusConfig
+// 0x0008 (0x0008 - 0x0000)
+struct FGameBudgetBoundsScreenRadiusConfig final
+{
+public:
+	float                                         TickReductionStartScreenRatio;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TickReductionIntervalScreenRatio;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FGameBudgetBoundsScreenRadiusConfig;
 
 // ScriptStruct KuroGameBudget.GameBudgetAllocatorTickDetailConfig
 // 0x0010 (0x0010 - 0x0000)

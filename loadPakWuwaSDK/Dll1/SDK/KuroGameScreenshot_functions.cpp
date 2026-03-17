@@ -159,6 +159,34 @@ bool UGameScreenshotTask::TakeScreenshot()
 }
 
 
+// Function KuroGameScreenshot.GameScreenshotTask.TakeScreenshotHighRes
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   MultiplierScale                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGameScreenshotTask::TakeScreenshotHighRes(int32 MultiplierScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameScreenshotTask", "TakeScreenshotHighRes");
+
+	Params::GameScreenshotTask_TakeScreenshotHighRes Parms{};
+
+	Parms.MultiplierScale = MultiplierScale;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.CompressConvertColorsToBitmap
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:

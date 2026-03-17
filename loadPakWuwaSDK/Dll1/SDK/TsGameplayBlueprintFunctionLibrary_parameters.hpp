@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
-#include "SCharacterLocationsAndRadius_structs.hpp"
-#include "SSkillTarget_structs.hpp"
-#include "SGravityHookLockInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "SSkillBehaviorAction_structs.hpp"
-#include "EMorphType_structs.hpp"
-#include "EAimViewState_structs.hpp"
 #include "EFishingSkillType_structs.hpp"
+#include "SCharacterLocationsAndRadius_structs.hpp"
+#include "SGravityHookLockInfo_structs.hpp"
+#include "SSkillTarget_structs.hpp"
+#include "SVisionCounterAttack_structs.hpp"
+#include "SSkillBehaviorAction_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EMorphType_structs.hpp"
 #include "ECharacterLoadType_structs.hpp"
 #include "EHookInteractTypeBp_structs.hpp"
 #include "EVisionType_structs.hpp"
 #include "SSkillBehaviorCondition_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "EHitAnim_structs.hpp"
 #include "ESkillTargetDirection_structs.hpp"
-#include "SVisionCounterAttack_structs.hpp"
+#include "EAimViewState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
 #include "ECharParentMoveState_structs.hpp"
 #include "ECharState_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SSkillInfo_structs.hpp"
 #include "SCounterAttackBuff_structs.hpp"
 #include "SCounterAttack_structs.hpp"
@@ -911,14 +911,14 @@ public:
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetToughDecreaseValue;
 
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetCounterAttackInfoInternal
-// 0x03F0 (0x03F0 - 0x0000)
+// 0x0420 (0x0420 - 0x0000)
 struct TsGameplayBlueprintFunctionLibrary_C_GetCounterAttackInfoInternal final
 {
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSCounterAttack                        ReturnValue;                                       // 0x0010(0x03E0)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	struct FSCounterAttack                        ReturnValue;                                       // 0x0010(0x0410)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetCounterAttackInfoInternal;
 
@@ -2349,14 +2349,14 @@ public:
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_DynamicAttachEntityToActor;
 
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetVisionCounterAttackInfoInternal
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct TsGameplayBlueprintFunctionLibrary_C_GetVisionCounterAttackInfoInternal final
 {
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSVisionCounterAttack                  ReturnValue;                                       // 0x0010(0x01D8)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
+	struct FSVisionCounterAttack                  ReturnValue;                                       // 0x0010(0x01F0)(Parm, OutParm, ReturnParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetVisionCounterAttackInfoInternal;
 
@@ -2534,15 +2534,15 @@ public:
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetBeHitAnimType;
 
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.SkillBehaviorBegin
-// 0x02E8 (0x02E8 - 0x0000)
+// 0x0300 (0x0300 - 0x0000)
 struct TsGameplayBlueprintFunctionLibrary_C_SkillBehaviorBegin final
 {
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGA_Base_C*                             ga;                                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02D0)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02E8)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_SkillBehaviorBegin;
 
@@ -3051,30 +3051,30 @@ public:
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_StopGroup1Skill;
 
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetLocationByAction
-// 0x0300 (0x0300 - 0x0000)
+// 0x0318 (0x0318 - 0x0000)
 struct TsGameplayBlueprintFunctionLibrary_C_GetLocationByAction final
 {
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGA_Base_C*                             ga;                                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02D0)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          ReturnValue;                                       // 0x02E8(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02E8)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          ReturnValue;                                       // 0x0300(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetLocationByAction;
 
 // Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.GetRotationByAction
-// 0x02F8 (0x02F8 - 0x0000)
+// 0x0310 (0x0310 - 0x0000)
 struct TsGameplayBlueprintFunctionLibrary_C_GetRotationByAction final
 {
 public:
 	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGA_Base_C*                             ga;                                                // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02D0)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ReturnValue;                                       // 0x02E8(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	struct FSSkillBehaviorAction                  action;                                            // 0x0010(0x02E8)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ReturnValue;                                       // 0x0300(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_GetRotationByAction;
 
@@ -3716,6 +3716,53 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_SetGameplayCueEffectForceRecycle;
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.XigelikaAddBean
+// 0x0028 (0x0028 - 0x0000)
+struct TsGameplayBlueprintFunctionLibrary_C_XigelikaAddBean final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 bean;                                              // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_XigelikaAddBean;
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.XigelikaConsumeBean
+// 0x0010 (0x0010 - 0x0000)
+struct TsGameplayBlueprintFunctionLibrary_C_XigelikaConsumeBean final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_XigelikaConsumeBean;
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.XigelikaResetBean
+// 0x0010 (0x0010 - 0x0000)
+struct TsGameplayBlueprintFunctionLibrary_C_XigelikaResetBean final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_XigelikaResetBean;
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.XigelikaGetBeanResultant
+// 0x0018 (0x0018 - 0x0000)
+struct TsGameplayBlueprintFunctionLibrary_C_XigelikaGetBeanResultant final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsGameplayBlueprintFunctionLibrary_C_XigelikaGetBeanResultant;
 
 }
 

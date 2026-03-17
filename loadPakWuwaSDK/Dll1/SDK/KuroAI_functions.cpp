@@ -45,6 +45,38 @@ class UBTNode* UKuroAILibrary::GetCurrentRootNode(class UBehaviorTreeComponent* 
 }
 
 
+// Function KuroAI.KuroAILibrary.LoadBehaviorTreeNodeInfo
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UBehaviorTreeComponent*           BTComp                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<int32, int32>&               InSavedInfoMap                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// int32                                   MaxNodeNum                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAILibrary::LoadBehaviorTreeNodeInfo(class UBehaviorTreeComponent* BTComp, const TMap<int32, int32>& InSavedInfoMap, int32 MaxNodeNum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAILibrary", "LoadBehaviorTreeNodeInfo");
+
+	Params::KuroAILibrary_LoadBehaviorTreeNodeInfo Parms{};
+
+	Parms.BTComp = BTComp;
+	Parms.InSavedInfoMap = std::move(InSavedInfoMap);
+	Parms.MaxNodeNum = MaxNodeNum;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroAI.KuroAILibrary.ResetRandomNode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -71,6 +103,40 @@ void UKuroAILibrary::ResetRandomNode(class UBehaviorTreeComponent* BTComp, class
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAI.KuroAILibrary.SaveBehaviorTreeNodeInfo
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UBehaviorTreeComponent*           BTComp                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TMap<int32, int32>*                     OutSavedInfoMap                                        (Parm, OutParm, NativeAccessSpecifierPublic)
+// int32                                   MaxNodeNum                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAILibrary::SaveBehaviorTreeNodeInfo(class UBehaviorTreeComponent* BTComp, TMap<int32, int32>* OutSavedInfoMap, int32 MaxNodeNum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAILibrary", "SaveBehaviorTreeNodeInfo");
+
+	Params::KuroAILibrary_SaveBehaviorTreeNodeInfo Parms{};
+
+	Parms.BTComp = BTComp;
+	Parms.MaxNodeNum = MaxNodeNum;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSavedInfoMap != nullptr)
+		*OutSavedInfoMap = std::move(Parms.OutSavedInfoMap);
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -1100,16 +1100,6 @@ public:
 };
 DUMPER7_ASSERTS_FLGUIAtlasData;
 
-// ScriptStruct LGUI.AudioPlayInfo
-// 0x0048 (0x0048 - 0x0000)
-struct FAudioPlayInfo final
-{
-public:
-	struct FSoftObjectPath                        AkAudioEvent;                                      // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const class FString& eventName)> OnPostAudioEvent;                                // 0x0020(0x0028)(Edit, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAudioPlayInfo;
-
 // ScriptStruct LGUI.LGUIMaterialArrayContainer
 // 0x0010 (0x0010 - 0x0000)
 struct FLGUIMaterialArrayContainer final
@@ -1118,29 +1108,6 @@ public:
 	TArray<class UMaterialInstanceDynamic*>       MaterialList;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FLGUIMaterialArrayContainer;
-
-// ScriptStruct LGUI.LGUIDrawableEventData
-// 0x0080 (0x0080 - 0x0000)
-struct FLGUIDrawableEventData final
-{
-public:
-	class AActor*                                 targetActor;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 componentClass;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   componentName;                                     // 0x0010(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   functionName;                                      // 0x001C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELGUIDrawableEventParameterType               ParamType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<uint8>                                 ParamBuffer;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UObject*                                ReferenceObject;                                   // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 ReferenceActor;                                    // 0x0048(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 ReferenceClass;                                    // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReferenceString;                                   // 0x0058(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          UseNativeParameter;                                // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFunction*                              CacheFunction;                                     // 0x0070(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UObject*                                CacheTarget;                                       // 0x0078(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FLGUIDrawableEventData;
 
 // ScriptStruct LGUI.LGUIComponentReference
 // 0x0028 (0x0028 - 0x0000)
@@ -1154,6 +1121,15 @@ public:
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLGUIComponentReference;
+
+// ScriptStruct LGUI.UIItemInfo
+// 0x0001 (0x0001 - 0x0000)
+struct FUIItemInfo final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FUIItemInfo;
 
 // ScriptStruct LGUI.RegisterRuntimeData
 // 0x0020 (0x0020 - 0x0000)
@@ -1188,29 +1164,6 @@ public:
 };
 DUMPER7_ASSERTS_FRegisteredComponents;
 
-// ScriptStruct LGUI.SequenceInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FSequenceInfo final
-{
-public:
-	struct FSoftObjectPath                        LevelSequence;                                     // 0x0000(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAsHardRef;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ChildrenInteractiveDuringPlaying;                  // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          BlockAllEventWhilePlaying;                         // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequencePlaybackSettings    PlaySetting;                                       // 0x0024(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSequenceInfo;
-
-// ScriptStruct LGUI.UIItemInfo
-// 0x0001 (0x0001 - 0x0000)
-struct FUIItemInfo final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FUIItemInfo;
-
 // ScriptStruct LGUI.LGUIDelegateHandleWrapper
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FLGUIDelegateHandleWrapper final
@@ -1219,6 +1172,29 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLGUIDelegateHandleWrapper;
+
+// ScriptStruct LGUI.LGUIDrawableEventData
+// 0x0080 (0x0080 - 0x0000)
+struct FLGUIDrawableEventData final
+{
+public:
+	class AActor*                                 targetActor;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 componentClass;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   componentName;                                     // 0x0010(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   functionName;                                      // 0x001C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELGUIDrawableEventParameterType               ParamType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<uint8>                                 ParamBuffer;                                       // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UObject*                                ReferenceObject;                                   // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 ReferenceActor;                                    // 0x0048(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 ReferenceClass;                                    // 0x0050(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReferenceString;                                   // 0x0058(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseNativeParameter;                                // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFunction*                              CacheFunction;                                     // 0x0070(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UObject*                                CacheTarget;                                       // 0x0078(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FLGUIDrawableEventData;
 
 // ScriptStruct LGUI.LGUIDrawableEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -1410,6 +1386,49 @@ public:
 	uint8                                         Pad_18[0x18];                                      // 0x0018(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLGUIDrawableEvent_Int8;
+
+// ScriptStruct LGUI.RenderableAdditionalInfo
+// 0x000C (0x000C - 0x0000)
+struct FRenderableAdditionalInfo final
+{
+public:
+	uint8                                         bIsGray : 1;                                       // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bIsColorRevert : 1;                                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUseChangeColor : 1;                               // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 ChangeColor;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpriteRotation;                                    // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FRenderableAdditionalInfo;
+
+// ScriptStruct LGUI.TextureTransitionOfState
+// 0x0028 (0x0028 - 0x0000)
+struct FTextureTransitionOfState final
+{
+public:
+	struct FColor                                 Color;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Texture;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSnapSize;                                         // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bGradualChange : 1;                                // 0x0011(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GradualDuration;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRenderableAdditionalInfo              AdditionalInfo;                                    // 0x0018(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTextureTransitionOfState;
+
+// ScriptStruct LGUI.TextureTransitionInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct FTextureTransitionInfo final
+{
+public:
+	struct FTextureTransitionOfState              NormalTransition;                                  // 0x0000(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTextureTransitionOfState              HighlightedTransition;                             // 0x0028(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTextureTransitionOfState              PressedTransition;                                 // 0x0050(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTextureTransitionOfState              DisabledTransition;                                // 0x0078(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FTextureTransitionInfo;
 
 // ScriptStruct LGUI.LGUIDrawableEvent_Double
 // 0x0018 (0x0030 - 0x0018)
@@ -1683,6 +1702,25 @@ public:
 };
 DUMPER7_ASSERTS_FLevelSequencerActor;
 
+// ScriptStruct LGUI.SpriteSlot
+// 0x0018 (0x0018 - 0x0000)
+struct FSpriteSlot final
+{
+public:
+	class UUISpriteBase*                          Sprite;                                            // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSpriteSlot;
+
+// ScriptStruct LGUI.SpriteCollection
+// 0x0010 (0x0010 - 0x0000)
+struct FSpriteCollection final
+{
+public:
+	TArray<struct FSpriteSlot>                    SpriteSlots;                                       // 0x0000(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSpriteCollection;
+
 // ScriptStruct LGUI.LGUILevelSequenceBindings
 // 0x0050 (0x0050 - 0x0000)
 struct FLGUILevelSequenceBindings final
@@ -1691,6 +1729,33 @@ public:
 	TMap<struct FGuid, class UObject*>            BindingsMap;                                       // 0x0000(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FLGUILevelSequenceBindings;
+
+// ScriptStruct LGUI.UIDropdownOptionData
+// 0x0030 (0x0030 - 0x0000)
+struct FUIDropdownOptionData final
+{
+public:
+	class FString                                 TextOrConfigTableName;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULGUISpriteData_BaseObject*             Sprite;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TextId;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SecondText;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FUIDropdownOptionData;
+
+// ScriptStruct LGUI.SequenceInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FSequenceInfo final
+{
+public:
+	struct FSoftObjectPath                        LevelSequence;                                     // 0x0000(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAsHardRef;                                     // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ChildrenInteractiveDuringPlaying;                  // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BlockAllEventWhilePlaying;                         // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneSequencePlaybackSettings    PlaySetting;                                       // 0x0024(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSequenceInfo;
 
 // ScriptStruct LGUI.SpineRenderBuffer
 // 0x00C8 (0x00C8 - 0x0000)
@@ -1735,37 +1800,15 @@ public:
 };
 DUMPER7_ASSERTS_FLGUIGeometryVertex;
 
-// ScriptStruct LGUI.UIDropdownOptionData
-// 0x0030 (0x0030 - 0x0000)
-struct FUIDropdownOptionData final
+// ScriptStruct LGUI.AudioPlayInfo
+// 0x0048 (0x0048 - 0x0000)
+struct FAudioPlayInfo final
 {
 public:
-	class FString                                 TextOrConfigTableName;                             // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULGUISpriteData_BaseObject*             Sprite;                                            // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TextId;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SecondText;                                        // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        AkAudioEvent;                                      // 0x0000(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& eventName)> OnPostAudioEvent;                                // 0x0020(0x0028)(Edit, ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FUIDropdownOptionData;
-
-// ScriptStruct LGUI.SpriteSlot
-// 0x0018 (0x0018 - 0x0000)
-struct FSpriteSlot final
-{
-public:
-	class UUISpriteBase*                          Sprite;                                            // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x10];                                       // 0x0008(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSpriteSlot;
-
-// ScriptStruct LGUI.SpriteCollection
-// 0x0010 (0x0010 - 0x0000)
-struct FSpriteCollection final
-{
-public:
-	TArray<struct FSpriteSlot>                    SpriteSlots;                                       // 0x0000(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSpriteCollection;
+DUMPER7_ASSERTS_FAudioPlayInfo;
 
 // ScriptStruct LGUI.LoadingPathRenderableMap
 // 0x0050 (0x0050 - 0x0000)
@@ -1834,20 +1877,6 @@ public:
 	struct FToggleAnimationPlayInfo               UniAnimation;                                      // 0x0058(0x0048)(Edit, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FToggleStateAnimation;
-
-// ScriptStruct LGUI.RenderableAdditionalInfo
-// 0x000C (0x000C - 0x0000)
-struct FRenderableAdditionalInfo final
-{
-public:
-	uint8                                         bIsGray : 1;                                       // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bIsColorRevert : 1;                                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUseChangeColor : 1;                               // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 ChangeColor;                                       // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpriteRotation;                                    // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FRenderableAdditionalInfo;
 
 // ScriptStruct LGUI.SpriteTransitionOfState
 // 0x0020 (0x0020 - 0x0000)
@@ -1918,23 +1947,6 @@ public:
 	struct FTextTransitionInfoOfState             UnDeterminePressedState;                           // 0x00C4(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FExtendToggleTextTransitionState;
-
-// ScriptStruct LGUI.TextureTransitionOfState
-// 0x0028 (0x0028 - 0x0000)
-struct FTextureTransitionOfState final
-{
-public:
-	struct FColor                                 Color;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Texture;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSnapSize;                                         // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bGradualChange : 1;                                // 0x0011(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GradualDuration;                                   // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRenderableAdditionalInfo              AdditionalInfo;                                    // 0x0018(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTextureTransitionOfState;
 
 // ScriptStruct LGUI.ExtendToggleTextureTransitionState
 // 0x016F (0x0170 - 0x0001)
@@ -2111,18 +2123,6 @@ public:
 	struct FTextTransitionInfoOfState             DisabledTransition;                                // 0x0048(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FTextTransitionInfo;
-
-// ScriptStruct LGUI.TextureTransitionInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct FTextureTransitionInfo final
-{
-public:
-	struct FTextureTransitionOfState              NormalTransition;                                  // 0x0000(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTextureTransitionOfState              HighlightedTransition;                             // 0x0028(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTextureTransitionOfState              PressedTransition;                                 // 0x0050(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTextureTransitionOfState              DisabledTransition;                                // 0x0078(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FTextureTransitionInfo;
 
 // ScriptStruct LGUI.UIWidget
 // 0x0054 (0x0054 - 0x0000)

@@ -42,6 +42,25 @@ void UTsUiNavigationBehaviorListener_C::ExecuteUbergraph_TsUiNavigationBehaviorL
 }
 
 
+// Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnPreDestroyBP
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+
+void UTsUiNavigationBehaviorListener_C::OnPreDestroyBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnPreDestroyBP");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnDisableBP
 // (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -177,25 +196,6 @@ void UTsUiNavigationBehaviorListener_C::OnNotifyInteractiveBP()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnNotifyInteractiveBP");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnDestroyBP
-// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void UTsUiNavigationBehaviorListener_C::OnDestroyBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnDestroyBP");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

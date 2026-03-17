@@ -10,9 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
-#include "MovieScene_classes.hpp"
-#include "UMG_classes.hpp"
 #include "AkAudio_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
@@ -20,6 +17,9 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "MovieScene_structs.hpp"
+#include "MovieScene_classes.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -201,6 +201,37 @@ public:
 };
 DUMPER7_ASSERTS_AAkAcousticPortal;
 
+// Class AkAudio.AkWwiseTree
+// 0x0040 (0x01B0 - 0x0170)
+class UAkWwiseTree final : public UWidget
+{
+public:
+	TMulticastInlineDelegate<void(const struct FGuid& ItemSelectedID)> OnSelectionChanged;           // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FGuid& ItemDraggedID, const class FString& ItemDraggedName)> OnItemDragged; // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_190[0x20];                                     // 0x0190(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSearchText(const class FString& newText);
+
+	class FString GetSearchText() const;
+	struct FAkWwiseObjectDetails GetSelectedItem() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkWwiseTree")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkWwiseTree")
+	}
+	static class UAkWwiseTree* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkWwiseTree>();
+	}
+};
+DUMPER7_ASSERTS_UAkWwiseTree;
+
 // Class AkAudio.AkAcousticTexture
 // 0x0010 (0x0068 - 0x0058)
 class UAkAcousticTexture final : public UAkAudioType
@@ -330,6 +361,26 @@ public:
 };
 DUMPER7_ASSERTS_UAkPlatformInfo;
 
+// Class AkAudio.AkXboxSeriesXPlatformInfo
+// 0x0000 (0x0078 - 0x0078)
+class UAkXboxSeriesXPlatformInfo final : public UAkPlatformInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkXboxSeriesXPlatformInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkXboxSeriesXPlatformInfo")
+	}
+	static class UAkXboxSeriesXPlatformInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkXboxSeriesXPlatformInfo>();
+	}
+};
+DUMPER7_ASSERTS_UAkXboxSeriesXPlatformInfo;
+
 // Class AkAudio.AkAndroidPlatformInfo
 // 0x0000 (0x0078 - 0x0078)
 class UAkAndroidPlatformInfo final : public UAkPlatformInfo
@@ -414,6 +465,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAkAudioEvent;
+
+// Class AkAudio.MovieSceneAkAudioRTPCSection
+// 0x0168 (0x0260 - 0x00F8)
+class UMovieSceneAkAudioRTPCSection final : public UMovieSceneSection
+{
+public:
+	class UAkRtpc*                                RTPC;                                              // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 Name_0;                                            // 0x0100(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRichCurve                             FloatCurve;                                        // 0x0110(0x0080)(Protected, NativeAccessSpecifierProtected)
+	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;               // 0x0190(0x0030)(Protected, NativeAccessSpecifierProtected)
+	struct FMovieSceneFloatChannel                RTPCChannel;                                       // 0x01C0(0x00A0)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneAkAudioRTPCSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneAkAudioRTPCSection")
+	}
+	static class UMovieSceneAkAudioRTPCSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneAkAudioRTPCSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneAkAudioRTPCSection;
 
 // Class AkAudio.AkGameObject
 // 0x0020 (0x0240 - 0x0220)
@@ -744,7 +822,7 @@ public:
 DUMPER7_ASSERTS_UAkFolder;
 
 // Class AkAudio.DrawPortalComponent
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0570 - 0x0570)
 class UDrawPortalComponent final : public UPrimitiveComponent
 {
 public:
@@ -764,7 +842,7 @@ public:
 DUMPER7_ASSERTS_UDrawPortalComponent;
 
 // Class AkAudio.DrawRoomComponent
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0570 - 0x0570)
 class UDrawRoomComponent final : public UPrimitiveComponent
 {
 public:
@@ -2245,36 +2323,94 @@ public:
 };
 DUMPER7_ASSERTS_UAkWindowsPlatformInfo;
 
-// Class AkAudio.AkWwiseTree
-// 0x0040 (0x01B0 - 0x0170)
-class UAkWwiseTree final : public UWidget
+// Class AkAudio.AkWinGDKInitializationSettings
+// 0x00F8 (0x0128 - 0x0030)
+class UAkWinGDKInitializationSettings : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(const struct FGuid& ItemSelectedID)> OnSelectionChanged;           // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FGuid& ItemDraggedID, const class FString& ItemDraggedName)> OnItemDragged; // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190[0x20];                                     // 0x0190(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                             // 0x0038(0x0078)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00B0(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkWinGDKAdvancedInitializationSettings AdvancedSettings;                                 // 0x00D0(0x0058)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
-	void SetSearchText(const class FString& newText);
-
-	class FString GetSearchText() const;
-	struct FAkWwiseObjectDetails GetSelectedItem() const;
+	void MigrateMultiCoreRendering(bool NewValue);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("AkWwiseTree")
+		STATIC_CLASS_IMPL("AkWinGDKInitializationSettings")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"AkWwiseTree")
+		STATIC_NAME_IMPL(L"AkWinGDKInitializationSettings")
 	}
-	static class UAkWwiseTree* GetDefaultObj()
+	static class UAkWinGDKInitializationSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAkWwiseTree>();
+		return GetDefaultObjImpl<UAkWinGDKInitializationSettings>();
 	}
 };
-DUMPER7_ASSERTS_UAkWwiseTree;
+DUMPER7_ASSERTS_UAkWinGDKInitializationSettings;
+
+// Class AkAudio.AkWinAnvilInitializationSettings
+// 0x0000 (0x0128 - 0x0128)
+class UAkWinAnvilInitializationSettings final : public UAkWinGDKInitializationSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkWinAnvilInitializationSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkWinAnvilInitializationSettings")
+	}
+	static class UAkWinAnvilInitializationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkWinAnvilInitializationSettings>();
+	}
+};
+DUMPER7_ASSERTS_UAkWinAnvilInitializationSettings;
+
+// Class AkAudio.AkWinGDKPlatformInfo
+// 0x0000 (0x0078 - 0x0078)
+class UAkWinGDKPlatformInfo : public UAkPlatformInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkWinGDKPlatformInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkWinGDKPlatformInfo")
+	}
+	static class UAkWinGDKPlatformInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkWinGDKPlatformInfo>();
+	}
+};
+DUMPER7_ASSERTS_UAkWinGDKPlatformInfo;
+
+// Class AkAudio.AkWinAnvilPlatformInfo
+// 0x0000 (0x0078 - 0x0078)
+class UAkWinAnvilPlatformInfo final : public UAkWinGDKPlatformInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkWinAnvilPlatformInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkWinAnvilPlatformInfo")
+	}
+	static class UAkWinAnvilPlatformInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkWinAnvilPlatformInfo>();
+	}
+};
+DUMPER7_ASSERTS_UAkWinAnvilPlatformInfo;
 
 // Class AkAudio.AkWwiseTreeSelector
 // 0x0060 (0x01D0 - 0x0170)
@@ -2300,6 +2436,57 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAkWwiseTreeSelector;
+
+// Class AkAudio.AkXboxSeriesXInitializationSettings
+// 0x0100 (0x0130 - 0x0030)
+class UAkXboxSeriesXInitializationSettings : public UObject
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0038(0x0070)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkXSXApuHeapInitializationSettings    ApuHeapSettings;                                   // 0x00A8(0x0008)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                   // 0x00B0(0x0020)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkXSXAdvancedInitializationSettings   AdvancedSettings;                                  // 0x00D0(0x005C)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkXboxSeriesXInitializationSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkXboxSeriesXInitializationSettings")
+	}
+	static class UAkXboxSeriesXInitializationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkXboxSeriesXInitializationSettings>();
+	}
+};
+DUMPER7_ASSERTS_UAkXboxSeriesXInitializationSettings;
+
+// Class AkAudio.AkMPXInitializationSettings
+// 0x0000 (0x0130 - 0x0130)
+class UAkMPXInitializationSettings final : public UAkXboxSeriesXInitializationSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkMPXInitializationSettings")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkMPXInitializationSettings")
+	}
+	static class UAkMPXInitializationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkMPXInitializationSettings>();
+	}
+};
+DUMPER7_ASSERTS_UAkMPXInitializationSettings;
 
 // Class AkAudio.MovieSceneAkAudioEventSection
 // 0x0090 (0x0188 - 0x00F8)
@@ -2384,33 +2571,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneAkAudioEventTrack;
-
-// Class AkAudio.MovieSceneAkAudioRTPCSection
-// 0x0168 (0x0260 - 0x00F8)
-class UMovieSceneAkAudioRTPCSection final : public UMovieSceneSection
-{
-public:
-	class UAkRtpc*                                RTPC;                                              // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 Name_0;                                            // 0x0100(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRichCurve                             FloatCurve;                                        // 0x0110(0x0080)(Protected, NativeAccessSpecifierProtected)
-	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;               // 0x0190(0x0030)(Protected, NativeAccessSpecifierProtected)
-	struct FMovieSceneFloatChannel                RTPCChannel;                                       // 0x01C0(0x00A0)(Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneAkAudioRTPCSection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneAkAudioRTPCSection")
-	}
-	static class UMovieSceneAkAudioRTPCSection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneAkAudioRTPCSection>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneAkAudioRTPCSection;
 
 // Class AkAudio.MovieSceneAkAudioRTPCTrack
 // 0x0008 (0x00B8 - 0x00B0)

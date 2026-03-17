@@ -77,7 +77,9 @@ public:
 	TMap<TWeakObjectPtr<class UKuroEnviInteractionComponent>, struct FKuroEnviInteractionData> EnviInteractionCollections; // 0x0040(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> SPModelEICompCollections; // 0x0090(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> NDIKuroRenderingCollections; // 0x00E0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_130[0x150];                                    // 0x0130(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_130[0x144];                                    // 0x0130(0x0144)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GrassCutReadBack;                                  // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialParameterCollection*           WaterSimMPC;                                       // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_288[0x88];                                     // 0x0288(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 

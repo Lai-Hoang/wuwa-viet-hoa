@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SAiLevelVar_structs.hpp"
-#include "EQuestStepState_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EQuestStepState_structs.hpp"
 
 
 namespace SDK::Params

@@ -114,30 +114,6 @@ public:
 };
 DUMPER7_ASSERTS_FEffectModelNiagaraExtraState;
 
-// ScriptStruct KuroGameplay.PerformanceStatisticsUnitRecord
-// 0x0028 (0x0028 - 0x0000)
-struct FPerformanceStatisticsUnitRecord final
-{
-public:
-	int32                                         FrameCount;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Tag;                                               // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Mode;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Time;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsUnitRecord;
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsSectionRecordSerialize
-// 0x0020 (0x0020 - 0x0000)
-struct FPerformanceStatisticsSectionRecordSerialize final
-{
-public:
-	class FName                                   SectionName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPerformanceStatisticsUnitRecord> UnitRecordValues;                                // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsSectionRecordSerialize;
-
 // ScriptStruct KuroGameplay.KuroEffectPostProcessSkyBoxSetting
 // 0x20E0 (0x20E0 - 0x0000)
 struct FKuroEffectPostProcessSkyBoxSetting final
@@ -199,15 +175,6 @@ public:
 };
 DUMPER7_ASSERTS_FKuroEffectPostProcessSkyBoxSetting;
 
-// ScriptStruct KuroGameplay.PerformanceStatisticsSectionsSerialize
-// 0x0010 (0x0010 - 0x0000)
-struct FPerformanceStatisticsSectionsSerialize final
-{
-public:
-	TArray<struct FPerformanceStatisticsSectionRecordSerialize> SectionRecords;                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsSectionsSerialize;
-
 // ScriptStruct KuroGameplay.KuroSceneTeamItem
 // 0x0008 (0x0008 - 0x0000)
 struct FKuroSceneTeamItem final
@@ -264,20 +231,6 @@ public:
 };
 DUMPER7_ASSERTS_FKuroEffectNiagaraParametersStruct;
 
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagNode
-// 0x0088 (0x0088 - 0x0000)
-struct alignas(0x08) FPerformanceStatisticsTagNode final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x6C];                                      // 0x001C(0x006C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsTagNode;
-
 // ScriptStruct KuroGameplay.KuroEffectSpecData
 // 0x0018 (0x0018 - 0x0000)
 struct FKuroEffectSpecData final
@@ -291,16 +244,6 @@ public:
 	float                                         LifeTime;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroEffectSpecData;
-
-// ScriptStruct KuroGameplay.SequencerBindingRuntimeProxy
-// 0x0018 (0x0018 - 0x0000)
-struct FSequencerBindingRuntimeProxy final
-{
-public:
-	struct FGuid                                  BindingID;                                         // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneSequence*                    Sequence;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSequencerBindingRuntimeProxy;
 
 // ScriptStruct KuroGameplay.KuroEffectContext
 // 0x0030 (0x0030 - 0x0000)
@@ -322,18 +265,6 @@ public:
 };
 DUMPER7_ASSERTS_FKuroEffectContext;
 
-// ScriptStruct KuroGameplay.KuroProgressBarStyle
-// 0x0240 (0x0248 - 0x0008)
-struct FKuroProgressBarStyle final : public FSlateWidgetStyle
-{
-public:
-	struct FSlateBrush                            BackgroundImage;                                   // 0x0008(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FillImageMiddle;                                   // 0x0098(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            FillImage;                                         // 0x0128(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            MarqueeImage;                                      // 0x01B8(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroProgressBarStyle;
-
 // ScriptStruct KuroGameplay.KuroSkeletalMeshEffectContext
 // 0x0010 (0x0040 - 0x0030)
 struct FKuroSkeletalMeshEffectContext : public FKuroEffectContext
@@ -345,19 +276,6 @@ public:
 	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroSkeletalMeshEffectContext;
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeNodeSerialize
-// 0x0028 (0x0028 - 0x0000)
-struct FPerformanceStatisticsTagTreeNodeSerialize final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Mode;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeNodeSerialize;
 
 // ScriptStruct KuroGameplay.KuroEffectRuntimeGhostEffectContext
 // 0x0010 (0x0050 - 0x0040)
@@ -371,16 +289,6 @@ public:
 	float                                         GhostLifeTime;                                     // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroEffectRuntimeGhostEffectContext;
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeSerialize
-// 0x0038 (0x0038 - 0x0000)
-struct FPerformanceStatisticsTagTreeSerialize final
-{
-public:
-	struct FPerformanceStatisticsTagTreeNodeSerialize NodeSerialize;                                 // 0x0000(0x0028)(NativeAccessSpecifierPublic)
-	TArray<struct FPerformanceStatisticsTagTreeNodeSerialize> ChildTags;                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeSerialize;
 
 // ScriptStruct KuroGameplay.KuroEffectAudioContext
 // 0x0008 (0x0038 - 0x0030)
@@ -400,19 +308,6 @@ public:
 	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroGASMessageParams;
-
-// ScriptStruct KuroGameplay.PerformanceStatisticsTagNodeForSerialize
-// 0x001C (0x001C - 0x0000)
-struct FPerformanceStatisticsTagNodeForSerialize final
-{
-public:
-	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPerformanceStatisticsTagNodeForSerialize;
 
 // ScriptStruct KuroGameplay.KuroInputDefine
 // 0x0001 (0x0001 - 0x0000)
@@ -448,6 +343,28 @@ public:
 	class UMaterialInstance*                      ExitMaterial;                                      // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroLevelSwitchMaterialData;
+
+// ScriptStruct KuroGameplay.KuroProgressBarStyle
+// 0x0240 (0x0248 - 0x0008)
+struct FKuroProgressBarStyle final : public FSlateWidgetStyle
+{
+public:
+	struct FSlateBrush                            BackgroundImage;                                   // 0x0008(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FillImageMiddle;                                   // 0x0098(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            FillImage;                                         // 0x0128(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            MarqueeImage;                                      // 0x01B8(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroProgressBarStyle;
+
+// ScriptStruct KuroGameplay.SequencerBindingRuntimeProxy
+// 0x0018 (0x0018 - 0x0000)
+struct FSequencerBindingRuntimeProxy final
+{
+public:
+	struct FGuid                                  BindingID;                                         // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneSequence*                    Sequence;                                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSequencerBindingRuntimeProxy;
 
 // ScriptStruct KuroGameplay.KuroSplineParams
 // 0x0018 (0x0018 - 0x0000)
@@ -491,6 +408,89 @@ public:
 	class UKuroRoadway*                           RoadInfo;                                          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FRoadSegmentInfo;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeNodeSerialize
+// 0x0028 (0x0028 - 0x0000)
+struct FPerformanceStatisticsTagTreeNodeSerialize final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Mode;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeNodeSerialize;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagTreeSerialize
+// 0x0038 (0x0038 - 0x0000)
+struct FPerformanceStatisticsTagTreeSerialize final
+{
+public:
+	struct FPerformanceStatisticsTagTreeNodeSerialize NodeSerialize;                                 // 0x0000(0x0028)(NativeAccessSpecifierPublic)
+	TArray<struct FPerformanceStatisticsTagTreeNodeSerialize> ChildTags;                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagTreeSerialize;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsUnitRecord
+// 0x0028 (0x0028 - 0x0000)
+struct FPerformanceStatisticsUnitRecord final
+{
+public:
+	int32                                         FrameCount;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Mode;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefineMessage;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsUnitRecord;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsSectionRecordSerialize
+// 0x0020 (0x0020 - 0x0000)
+struct FPerformanceStatisticsSectionRecordSerialize final
+{
+public:
+	class FName                                   SectionName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPerformanceStatisticsUnitRecord> UnitRecordValues;                                // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsSectionRecordSerialize;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsSectionsSerialize
+// 0x0010 (0x0010 - 0x0000)
+struct FPerformanceStatisticsSectionsSerialize final
+{
+public:
+	TArray<struct FPerformanceStatisticsSectionRecordSerialize> SectionRecords;                      // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsSectionsSerialize;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagNode
+// 0x0088 (0x0088 - 0x0000)
+struct alignas(0x08) FPerformanceStatisticsTagNode final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x6C];                                      // 0x001C(0x006C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagNode;
+
+// ScriptStruct KuroGameplay.PerformanceStatisticsTagNodeForSerialize
+// 0x001C (0x001C - 0x0000)
+struct FPerformanceStatisticsTagNodeForSerialize final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RecordFramesCount;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalTime;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AverageTime;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTime;                                           // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPerformanceStatisticsTagNodeForSerialize;
 
 }
 

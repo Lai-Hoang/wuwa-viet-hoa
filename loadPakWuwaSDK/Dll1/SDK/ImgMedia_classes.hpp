@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "MediaAssets_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MediaAssets_classes.hpp"
 
 
 namespace SDK

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ActorSequence_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "ActorSequence_structs.hpp"
 #include "Engine_classes.hpp"
 
 

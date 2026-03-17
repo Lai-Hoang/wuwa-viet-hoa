@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "KuroAnim_structs.hpp"
+#include "EPerformanceRoleState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EPerformanceRoleState_structs.hpp"
+#include "KuroAnim_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "SPerformanceRoleInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SPerformanceRoleInfo_structs.hpp"
 
 
 namespace SDK

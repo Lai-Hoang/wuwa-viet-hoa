@@ -42,11 +42,11 @@ public:
 
 public:
 	void ExecuteUbergraph_TsUiNavigationPanelConfig(int32 EntryPoint);
+	void OnPreDestroyBP();
 	void StartBP();
 	void OnDisableBP();
 	void OnEnableBP();
 	void AwakeBP();
-	void OnDestroyBP();
 
 public:
 	static class UClass* StaticClass()

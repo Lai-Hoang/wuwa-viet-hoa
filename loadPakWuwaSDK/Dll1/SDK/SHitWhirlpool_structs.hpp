@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EVelocityCurveType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EVelocityCurveType_structs.hpp"
 
 
 namespace SDK

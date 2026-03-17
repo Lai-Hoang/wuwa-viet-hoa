@@ -273,6 +273,35 @@ bool UKuroAudioStatics::IsDolbyAtmosGameSupported()
 }
 
 
+// Function KuroAudio.KuroAudioStatics.PostEventWithMidiNote
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class UAkAudioEvent*              AudioEvent                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const uint8                             Note                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class AActor*                     Actor                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAudioStatics::PostEventWithMidiNote(const class UAkAudioEvent* AudioEvent, const uint8 Note, const class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAudioStatics", "PostEventWithMidiNote");
+
+	Params::KuroAudioStatics_PostEventWithMidiNote Parms{};
+
+	Parms.AudioEvent = AudioEvent;
+	Parms.Note = Note;
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroAudio.KuroAudioStatics.PostNotifyEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:

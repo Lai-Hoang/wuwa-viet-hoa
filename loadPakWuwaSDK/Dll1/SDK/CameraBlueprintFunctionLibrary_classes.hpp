@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
+#include "ECustomCameraMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ECameraGravityMode_structs.hpp"
 #include "EAimAssistMode_structs.hpp"
-#include "ECustomCameraMode_structs.hpp"
+#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
 
 

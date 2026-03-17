@@ -311,11 +311,13 @@ public:
 DUMPER7_ASSERTS_KuroKcpClient_SetKcpWndSize;
 
 // Function KuroNetwork.KuroKcpClient.StartTcpConnect
-// 0x0004 (0x0004 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct KuroKcpClient_StartTcpConnect final
 {
 public:
-	int32                                         Port;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Addr;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Port;                                              // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_KuroKcpClient_StartTcpConnect;
 

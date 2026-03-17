@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SMotorRailMoveConfig_SwitchRail_structs.hpp"
 #include "SMotorRailMoveConfig_Basic_structs.hpp"
-#include "SMotorRailMoveConfig_JumpOffRail_structs.hpp"
 #include "SMotorRailMoveConfig_DirectlyEnterRail_structs.hpp"
 #include "SMotorRailMoveConfig_AccelerateAlongRail_structs.hpp"
 #include "SMotorRailMoveConfig_JumpToRail_structs.hpp"
+#include "SMotorRailMoveConfig_SwitchRail_structs.hpp"
+#include "SMotorRailMoveConfig_JumpOffRail_structs.hpp"
 #include "SMotorRailMoveConfig_JumpAlongRail_structs.hpp"
 
 

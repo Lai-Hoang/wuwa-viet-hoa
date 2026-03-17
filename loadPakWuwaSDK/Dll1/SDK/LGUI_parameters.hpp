@@ -16,8 +16,8 @@
 #include "InputCore_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "KuroDynamicAtlas_structs.hpp"
 #include "MovieScene_structs.hpp"
+#include "KuroDynamicAtlas_structs.hpp"
 
 
 namespace SDK::Params

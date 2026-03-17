@@ -93,14 +93,14 @@ void UBulletWorld::ClearCommonBulletDataTable()
 
 
 // Function KuroBullet.BulletWorld.CreateBullet
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class IBulletOwner>    BulletOwner                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// TScriptInterface<class IBulletContext>  BulletContext                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
 // int64                                   BulletConfigId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTransformDouble&          InitialTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FBulletSpawnParams&        SpawnParams                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UBulletWorld::CreateBullet(TScriptInterface<class IBulletOwner> BulletOwner, int64 BulletConfigId, const struct FTransformDouble& InitialTransform)
+int32 UBulletWorld::CreateBullet(TScriptInterface<class IBulletContext> BulletContext, int64 BulletConfigId, const struct FBulletSpawnParams& SpawnParams)
 {
 	static class UFunction* Func = nullptr;
 
@@ -109,9 +109,9 @@ int32 UBulletWorld::CreateBullet(TScriptInterface<class IBulletOwner> BulletOwne
 
 	Params::BulletWorld_CreateBullet Parms{};
 
-	Parms.BulletOwner = BulletOwner;
+	Parms.BulletContext = BulletContext;
 	Parms.BulletConfigId = BulletConfigId;
-	Parms.InitialTransform = std::move(InitialTransform);
+	Parms.SpawnParams = std::move(SpawnParams);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -149,13 +149,32 @@ void UBulletWorld::DestroyAllBulletsByOwner(const class AActor* Owner)
 }
 
 
+// Function KuroBullet.BulletWorld.DestroyAllPatterns
+// (Final, Native, Public, BlueprintCallable)
+
+void UBulletWorld::DestroyAllPatterns()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletWorld", "DestroyAllPatterns");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroBullet.BulletWorld.DestroyBullet
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UBulletEntity*                    BulletEntity                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ClearOwner                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ClearContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearOwner)
+void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -165,7 +184,7 @@ void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearOw
 	Params::BulletWorld_DestroyBullet Parms{};
 
 	Parms.BulletEntity = BulletEntity;
-	Parms.ClearOwner = ClearOwner;
+	Parms.ClearContext = ClearContext;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -180,9 +199,9 @@ void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearOw
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   BulletEntityId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ClearOwner                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ClearContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::DestroyBulletById(int32 BulletEntityId, bool ClearOwner)
+void UBulletWorld::DestroyBulletById(int32 BulletEntityId, bool ClearContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -192,7 +211,57 @@ void UBulletWorld::DestroyBulletById(int32 BulletEntityId, bool ClearOwner)
 	Params::BulletWorld_DestroyBulletById Parms{};
 
 	Parms.BulletEntityId = BulletEntityId;
-	Parms.ClearOwner = ClearOwner;
+	Parms.ClearContext = ClearContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroBullet.BulletWorld.DestroyPattern
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   PatternId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBulletWorld::DestroyPattern(int32 PatternId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletWorld", "DestroyPattern");
+
+	Params::BulletWorld_DestroyPattern Parms{};
+
+	Parms.PatternId = PatternId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroBullet.BulletWorld.DestroyPatternsByOwner
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class AActor*                     Owner                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBulletWorld::DestroyPatternsByOwner(const class AActor* Owner)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletWorld", "DestroyPatternsByOwner");
+
+	Params::BulletWorld_DestroyPatternsByOwner Parms{};
+
+	Parms.Owner = Owner;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -363,6 +432,36 @@ void UBulletWorld::SetShowBulletCollision(bool Value)
 }
 
 
+// Function KuroBullet.BulletWorld.SpawnPattern
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IBulletContext>  PatternContext                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// const class UKuroBulletPatternDataAsset*PatternDA                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UBulletWorld::SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletWorld", "SpawnPattern");
+
+	Params::BulletWorld_SpawnPattern Parms{};
+
+	Parms.PatternContext = PatternContext;
+	Parms.PatternDA = PatternDA;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroBullet.KuroBulletFunctionLibrary.CreateBullet
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -426,6 +525,56 @@ void UKuroBulletFunctionLibrary::DestroyBulletById(int32 BulletEntityId, bool Cl
 }
 
 
+// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPattern
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   PatternId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroBulletFunctionLibrary::DestroyPattern(int32 PatternId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "DestroyPattern");
+
+	Params::KuroBulletFunctionLibrary_DestroyPattern Parms{};
+
+	Parms.PatternId = PatternId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPatternsByOwner
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class AActor*                     Owner                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroBulletFunctionLibrary::DestroyPatternsByOwner(const class AActor* Owner)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "DestroyPatternsByOwner");
+
+	Params::KuroBulletFunctionLibrary_DestroyPatternsByOwner Parms{};
+
+	Parms.Owner = Owner;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroBullet.KuroBulletFunctionLibrary.SetShowBulletCollision
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -448,6 +597,36 @@ void UKuroBulletFunctionLibrary::SetShowBulletCollision(bool Value)
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroBullet.KuroBulletFunctionLibrary.SpawnPattern
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IBulletContext>  PatternContext                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// const class UKuroBulletPatternDataAsset*PatternDA                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroBulletFunctionLibrary::SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "SpawnPattern");
+
+	Params::KuroBulletFunctionLibrary_SpawnPattern Parms{};
+
+	Parms.PatternContext = PatternContext;
+	Parms.PatternDA = PatternDA;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

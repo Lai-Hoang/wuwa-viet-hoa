@@ -35,6 +35,7 @@ public:
 	void RequestIOSPhotoLibraryAuthorization();
 	void Reset();
 	bool TakeScreenshot();
+	bool TakeScreenshotHighRes(int32 MultiplierScale);
 
 public:
 	static class UClass* StaticClass()

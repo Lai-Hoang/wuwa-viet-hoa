@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SMotorRailMove_EventHandler_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SMotorRailMove_EventHandler_structs.hpp"
 
 
 namespace SDK

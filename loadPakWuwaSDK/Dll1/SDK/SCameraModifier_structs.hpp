@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SCameraModifier.SCameraModifier
-// 0x0138 (0x0138 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct FSCameraModifier final
 {
 public:
@@ -26,9 +26,9 @@ public:
 	float                                         BlendInTime_21_3D943AE242CFA3E81426A0AF7032CAA0;   // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BlendOutTime_23_89AC5C7A45BD2E7C14127BA750374C33;  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BreakBlendOutTime_25_2DFC41B44379579C9E97B8B96748FB46; // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSCameraModifier_Settings              Settings_27_AFA995314C12BDFF81B03CA2548F123C;      // 0x0010(0x0118)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSBaseCurve                            BlendInCurve_29_355F2D4B4516215F0E9882B24357B6A8;  // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSBaseCurve                            BlendOutCurve_31_83684B51406A4C68E4E65FBD074A5596; // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCameraModifier_Settings              Settings_27_AFA995314C12BDFF81B03CA2548F123C;      // 0x0010(0x0130)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSBaseCurve                            BlendInCurve_29_355F2D4B4516215F0E9882B24357B6A8;  // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSBaseCurve                            BlendOutCurve_31_83684B51406A4C68E4E65FBD074A5596; // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSCameraModifier;
 

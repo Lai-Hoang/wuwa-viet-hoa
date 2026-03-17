@@ -28,6 +28,15 @@ enum class ERuntimeGenerationType : uint8
 	ERuntimeGenerationType_MAX               = 4,
 };
 
+// Enum NavigationSystem.ENavigationDataType
+// NumValues: 0x0003
+enum class ENavigationDataType : uint8
+{
+	Water                                    = 0,
+	Default                                  = 1,
+	ENavigationDataType_MAX                  = 2,
+};
+
 // Enum NavigationSystem.ENavCostDisplay
 // NumValues: 0x0004
 enum class ENavCostDisplay : uint8

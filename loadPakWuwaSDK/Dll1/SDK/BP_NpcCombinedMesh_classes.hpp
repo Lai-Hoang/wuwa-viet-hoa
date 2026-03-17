@@ -10,39 +10,46 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "SNpcSetupPartInfo_structs.hpp"
-#include "Engine_classes.hpp"
 #include "EBodyPartName_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NpcCombinedMesh.BP_NpcCombinedMesh_C
-// 0x0128 (0x03D8 - 0x02B0)
-class ABP_NpcCombinedMesh_C : public AActor
+// 0x0130 (0x04F8 - 0x03C8)
+class ABP_NpcCombinedMesh_C : public AKuroEditorTickActor
 {
 public:
-	class USkeletalMeshComponent*                 Skel_Main;                                         // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPD_NpcSetupData_C*                     NpcData;                                           // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OriginalSkeletalVisible;                           // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FSNpcSetupPartInfo>  AllSubSkeletalComponents;                          // 0x02D0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, ContainsInstancedReference)
-	class ABP_NpcCombinedMesh_C*                  Target;                                            // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, EBodyPartName>              AllBodyPartName;                                   // 0x0328(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	struct FLinearColor                           ColorNPC01;                                        // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ColorNPC02;                                        // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Forced_LOD;                                        // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkinColor;                                         // 0x039C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USkeletalMeshComponent*>         SkelMeshArray;                                     // 0x03B0(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	TArray<class UMaterialInstance*>              MINPCs;                                            // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          AdaptMaterialController;                           // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponent*                 Skel_Main;                                         // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPD_NpcSetupData_C*                     NpcData;                                           // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OriginalSkeletalVisible;                           // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FSNpcSetupPartInfo>  AllSubSkeletalComponents;                          // 0x03F0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, ContainsInstancedReference)
+	class ABP_NpcCombinedMesh_C*                  Target;                                            // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, EBodyPartName>              AllBodyPartName;                                   // 0x0448(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FLinearColor                           ColorNPC01;                                        // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ColorNPC02;                                        // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Forced_LOD;                                        // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkinColor;                                         // 0x04BC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMeshComponent*>         SkelMeshArray;                                     // 0x04D0(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	TArray<class UMaterialInstance*>              MINPCs;                                            // 0x04E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          AdaptMaterialController;                           // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          Ticked;                                            // 0x04F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetupNpcMesh(class UPD_NpcSetupData_C* Data, bool bIgnoreSockets, bool* IsSuc, TArray<class USkeletalMeshComponent*>* SkleMain);
+	void ExecuteUbergraph_BP_NpcCombinedMesh(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void UserConstructionScript();
+	void SetupNpcMesh(class UPD_NpcSetupData_C* Data, bool bIgnoreSockets, bool bIgnoreCastShadow, bool* IsSuc, TArray<class USkeletalMeshComponent*>* SkleMain);
 	void ResetNpcMesh();
 	void SetupSkeletalMeshComponents(bool* Suc);
 	void SetupSockets();
@@ -52,13 +59,16 @@ public:
 	void GetLegTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
 	void GetBackTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
 	void GetWaistTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
-	void SetupSkeletalMeshComponent(class USkeletalMesh* InSkeletalMesh, EBodyPartName BodyType, bool* Suc, class USkeletalMeshComponent** SkeletalComp);
+	void SetupSkeletalMeshComponent(class USkeletalMesh* InSkeletalMesh, EBodyPartName BodyType, int32 Index_0, bool* Suc, class USkeletalMeshComponent** SkeletalComp);
 	void AddSkeletalComponent(class FName Name_0, class USkeletalMeshComponent* SkeletalComp);
 	void SetSkeletonMeshDI(class USkeletalMeshComponent* SKMesh, class FName ParamName01, class FName ParamName02, EBodyPartName BodyType, class FName SkinColorName, TArray<class UMaterialInterface*>& Materials);
 	void GetHeadTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
 	void Test(class USkeletalMeshComponent* SKMesh, class UMaterialInstance* MI);
 	void 预览MorphTarget();
 	void SetSkeletalMeshMaterial(class UMaterialInterface* ReplaceMaterial, class USkeletalMeshComponent* SkeletalMeshComp, class FName ParamName01, class FName ParamName02, class FName SkinColorName, int32 NumSlots, int32 MaterialIndex);
+	void SetupChildParts();
+	void SetupHiddenBones();
+	void SetupCastShadow(bool bIgnoreCastShadow);
 
 public:
 	static class UClass* StaticClass()

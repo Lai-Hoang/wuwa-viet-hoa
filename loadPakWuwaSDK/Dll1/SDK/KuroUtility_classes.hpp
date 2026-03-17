@@ -1113,6 +1113,7 @@ public:
 	static class FString GetOnlineIdByUserId(class FString* userId);
 	static class FString GetPlayerIdByPlayerSessionId(class FString* playerSessionId);
 	static TArray<struct FProductData> GetStoreProducts();
+	static TArray<struct FProductData> GetStoreProductsWithParams(int32 ServiceLabel, int32 Offset, int32 Limit);
 	static struct FTrophyInfoData GetTrophyList(class FString* userId, int32* inputOffset, int32 length);
 	static struct FTrophyInfoData GetTrophyListWithContextIdAndHandleId(int32 context, int32 handle, int32* inputOffset, int32 length);
 	static void GetTrophyListWithContextIdAndHandleIdAsync(int32* inputOffset, int32 length, int32 context, int32 handle, const TDelegate<void(const struct FTrophyInfoData& data)>& callback);

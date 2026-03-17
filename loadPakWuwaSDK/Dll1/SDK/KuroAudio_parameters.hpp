@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroAudio_structs.hpp"
 
 
 namespace SDK::Params
@@ -111,6 +111,18 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroAudioStatics_IsDolbyAtmosGameSupported;
+
+// Function KuroAudio.KuroAudioStatics.PostEventWithMidiNote
+// 0x0018 (0x0018 - 0x0000)
+struct KuroAudioStatics_PostEventWithMidiNote final
+{
+public:
+	const class UAkAudioEvent*                    AudioEvent;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Note;                                              // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	const class AActor*                           Actor;                                             // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroAudioStatics_PostEventWithMidiNote;
 
 // Function KuroAudio.KuroAudioStatics.PostNotifyEvent
 // 0x0010 (0x0010 - 0x0000)

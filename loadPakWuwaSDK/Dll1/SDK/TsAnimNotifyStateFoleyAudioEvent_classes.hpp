@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_FoleyVariant_structs.hpp"
 #include "KuroAudio_structs.hpp"
+#include "E_FoleyVariant_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 

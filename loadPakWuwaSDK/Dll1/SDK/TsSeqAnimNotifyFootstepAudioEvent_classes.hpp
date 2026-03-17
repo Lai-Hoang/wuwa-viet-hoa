@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_FootstepVariant_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "E_FootstepVariant_structs.hpp"
 
 
 namespace SDK

@@ -44,6 +44,31 @@ void ABasePlayerController::SetKuroForceFeedbackConfig(EGlobalKuroForceFeedbackT
 }
 
 
+// Function KuroInput.BasePlayerController.SetUseGamepadState
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ABasePlayerController::SetUseGamepadState(bool value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BasePlayerController", "SetUseGamepadState");
+
+	Params::BasePlayerController_SetUseGamepadState Parms{};
+
+	Parms.value = value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroInput.BasePlayerController.SetUseSonyGamepadState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -647,6 +672,33 @@ struct FInputModeReply UKuroInputFunctionLibrary::SetUIOnlyInputMode(class APlay
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroInput.KuroInputFunctionLibrary.TryUseHighPrecisionMouseMovement
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class APlayerController*          InPlayerController                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUse                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroInputFunctionLibrary::TryUseHighPrecisionMouseMovement(const class APlayerController* InPlayerController, bool bUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInputFunctionLibrary", "TryUseHighPrecisionMouseMovement");
+
+	Params::KuroInputFunctionLibrary_TryUseHighPrecisionMouseMovement Parms{};
+
+	Parms.InPlayerController = InPlayerController;
+	Parms.bUse = bUse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

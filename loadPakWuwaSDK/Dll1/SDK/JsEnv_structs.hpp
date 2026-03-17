@@ -13,8 +13,8 @@
 #include "KuroGameBudget_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SCameraConfig_structs.hpp"
-#include "Engine_structs.hpp"
 #include "KuroSimpleCombat_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -45,18 +45,18 @@ public:
 	struct FSCameraConfig                         None_2;                                            // 0x0000(0x07E8)(HasGetValueTypeHash)
 	struct FVector2D                              None_3;                                            // 0x0000(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FIntPoint                              None_4;                                            // 0x0000(0x0008)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputAxisKeyMapping                   None_5;                                            // 0x0000(0x0030)(HasGetValueTypeHash)
-	struct FInputActionKeyMapping                 None_6;                                            // 0x0000(0x0030)(HasGetValueTypeHash)
-	int32                                         None_7;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 None_8;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  None_9;                                            // 0x0000(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   None_10;                                           // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 None_11;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKSC_MiniMapContext                    None_12;                                           // 0x0000(0x0028)(NoDestructor, HasGetValueTypeHash)
-	struct FKSC_HeadHpContext                     None_13;                                           // 0x0000(0x0038)(NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEvent                       None_14;                                           // 0x0000(0x00C8)(HasGetValueTypeHash)
-	class UAnimSequenceBase*                      None_15;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        None_16;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputActionKeyMapping                 None_5;                                            // 0x0000(0x0030)(HasGetValueTypeHash)
+	int32                                         None_6;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 None_7;                                            // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  None_8;                                            // 0x0000(0x0010)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   None_9;                                            // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 None_10;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKSC_MiniMapContext                    None_11;                                           // 0x0000(0x0028)(NoDestructor, HasGetValueTypeHash)
+	struct FKSC_HeadHpContext                     None_12;                                           // 0x0000(0x0038)(NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEvent                       None_13;                                           // 0x0000(0x00C8)(HasGetValueTypeHash)
+	class UAnimSequenceBase*                      None_14;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        None_15;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 None_16;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 None_17;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FPropertyMetaRoot;

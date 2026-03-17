@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SWeaponSocketItem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SFootstepAudioEventParam_structs.hpp"
+#include "SWeaponSocketItem_structs.hpp"
 
 
 namespace SDK::Params

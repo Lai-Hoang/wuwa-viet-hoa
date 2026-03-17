@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSettlementCamera.SSettlementCamera
-// 0x0170 (0x0170 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct FSSettlementCamera final
 {
 public:
@@ -32,8 +32,8 @@ public:
 	float                                         RightMaxYawRange_24_192450894F44F3746EC00FBF96F8C682; // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         MinValidYawRange_26_6CD241194E170E4953D55EB046C2B921; // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSCameraModifier                       CameraModifier_30_5BAEE0E5443E5FC96BE9359A1F0BEA53; // 0x0028(0x0138)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FVector                                CharacterOffset_34_12323EEA43408B6CC4A3F6A6DBD9A2FA; // 0x0160(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCameraModifier                       CameraModifier_30_5BAEE0E5443E5FC96BE9359A1F0BEA53; // 0x0028(0x0150)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FVector                                CharacterOffset_34_12323EEA43408B6CC4A3F6A6DBD9A2FA; // 0x0178(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSSettlementCamera;
 

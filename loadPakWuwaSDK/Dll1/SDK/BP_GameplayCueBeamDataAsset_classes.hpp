@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroUtility_classes.hpp"
 #include "SVectorArray_structs.hpp"
+#include "KuroUtility_classes.hpp"
 
 
 namespace SDK

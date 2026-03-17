@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "TriggerEffect_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "TriggerEffect_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

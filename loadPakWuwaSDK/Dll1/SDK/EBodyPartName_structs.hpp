@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EBodyPartName.EBodyPartName
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EBodyPartName : uint8
 {
 	NewEnumerator4                           = 0,
@@ -23,7 +23,8 @@ enum class EBodyPartName : uint8
 	NewEnumerator1                           = 2,
 	NewEnumerator2                           = 3,
 	NewEnumerator3                           = 4,
-	EBodyPartName_MAX                        = 5,
+	NewEnumerator5                           = 5,
+	EBodyPartName_MAX                        = 6,
 };
 
 }

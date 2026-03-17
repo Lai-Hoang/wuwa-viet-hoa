@@ -12,11 +12,11 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroGAS_classes.hpp"
+#include "KuroAnim_classes.hpp"
+#include "KuroVehicle_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroAnim_classes.hpp"
-#include "KuroGAS_classes.hpp"
-#include "KuroVehicle_structs.hpp"
 
 
 namespace SDK
@@ -125,7 +125,7 @@ public:
 DUMPER7_ASSERTS_UKuroConfigHelper;
 
 // Class KuroVehicle.MotorcycleConfigs
-// 0x0438 (0x0470 - 0x0038)
+// 0x0468 (0x04A0 - 0x0038)
 class UMotorcycleConfigs final : public UDataAsset
 {
 public:
@@ -138,14 +138,14 @@ public:
 	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMotorHangConfigParams                 MotorFrontWheelHang;                               // 0x0070(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMotorHangConfigParams                 MotorBackWheelHang;                                // 0x00B8(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorBodyPhys;                                     // 0x0100(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorFrontWheelPhys;                               // 0x0120(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorBackWheelPhys;                                // 0x0140(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorAccelConfig                      MotorAccelConfig;                                  // 0x0160(0x0180)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBoostConfig                      MotorBoostConfig;                                  // 0x02E0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBalanceConfig                    MotorBalanceConfig;                                // 0x0300(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBrakingTurnConfig                MotorBrakingTurnConfig;                            // 0x0430(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorTurnConfig                       MotorTurnConfig;                                   // 0x0440(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorContactPhysParams                MotorBodyPhys;                                     // 0x0100(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorContactPhysParams                MotorFrontWheelPhys;                               // 0x0130(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorContactPhysParams                MotorBackWheelPhys;                                // 0x0160(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorAccelConfig                      MotorAccelConfig;                                  // 0x0190(0x0180)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBoostConfig                      MotorBoostConfig;                                  // 0x0310(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBalanceConfig                    MotorBalanceConfig;                                // 0x0330(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBrakingTurnConfig                MotorBrakingTurnConfig;                            // 0x0460(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorTurnConfig                       MotorTurnConfig;                                   // 0x0470(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -164,7 +164,7 @@ public:
 DUMPER7_ASSERTS_UMotorcycleConfigs;
 
 // Class KuroVehicle.KuroVehicleMovementComponent
-// 0x09B0 (0x0B00 - 0x0150)
+// 0x09E0 (0x0B30 - 0x0150)
 class UKuroVehicleMovementComponent final : public UPawnMovementComponent
 {
 public:
@@ -278,24 +278,24 @@ public:
 	uint8                                         Pad_62C[0x4];                                      // 0x062C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMotorHangConfigParams                 MotorFrontWheelHang;                               // 0x0630(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMotorHangConfigParams                 MotorBackWheelHang;                                // 0x0678(0x0048)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorBodyPhys;                                     // 0x06C0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorFrontWheelPhys;                               // 0x06E0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorContactPhysParams                MotorBackWheelPhys;                                // 0x0700(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorAccelConfig                      MotorAccelConfig;                                  // 0x0720(0x0180)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBoostConfig                      MotorBoostConfig;                                  // 0x08A0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBalanceConfig                    MotorBalanceConfig;                                // 0x08C0(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorBrakingTurnConfig                MotorBrakingTurnConfig;                            // 0x09F0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMotorTurnConfig                       MotorTurnConfig;                                   // 0x0A00(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         RootMotionMask;                                    // 0x0A30(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A31[0x1];                                      // 0x0A31(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	EMotorSubState                                MotorSubState;                                     // 0x0A32(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A33[0x5];                                      // 0x0A33(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMotorWheelDisplayInfoObject*           WheelDisplayInfosObj;                              // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A40[0x24];                                     // 0x0A40(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
-	EMotorPart                                    LastMotorHitPart;                                  // 0x0A64(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A65[0xB];                                      // 0x0A65(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRootMotionMovementParams              AccumulatedRootMotionInMotorRailMove;              // 0x0A70(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AB0[0x50];                                     // 0x0AB0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMotorContactPhysParams                MotorBodyPhys;                                     // 0x06C0(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorContactPhysParams                MotorFrontWheelPhys;                               // 0x06F0(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorContactPhysParams                MotorBackWheelPhys;                                // 0x0720(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorAccelConfig                      MotorAccelConfig;                                  // 0x0750(0x0180)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBoostConfig                      MotorBoostConfig;                                  // 0x08D0(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBalanceConfig                    MotorBalanceConfig;                                // 0x08F0(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorBrakingTurnConfig                MotorBrakingTurnConfig;                            // 0x0A20(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMotorTurnConfig                       MotorTurnConfig;                                   // 0x0A30(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         RootMotionMask;                                    // 0x0A60(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A61[0x1];                                      // 0x0A61(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	EMotorSubState                                MotorSubState;                                     // 0x0A62(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A63[0x5];                                      // 0x0A63(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMotorWheelDisplayInfoObject*           WheelDisplayInfosObj;                              // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A70[0x24];                                     // 0x0A70(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
+	EMotorPart                                    LastMotorHitPart;                                  // 0x0A94(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A95[0xB];                                      // 0x0A95(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRootMotionMovementParams              AccumulatedRootMotionInMotorRailMove;              // 0x0AA0(0x0040)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AE0[0x50];                                     // 0x0AE0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BackToRecord(int32 Index_0);

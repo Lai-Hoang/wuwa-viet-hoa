@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AudioMixer_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "AudioMixer_structs.hpp"
 
 
 namespace SDK

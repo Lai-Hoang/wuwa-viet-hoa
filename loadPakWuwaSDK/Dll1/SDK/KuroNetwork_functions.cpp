@@ -843,9 +843,10 @@ void UKuroKcpClient::SetKcpWndSize(int32 SndWnd, int32 RcvWnd)
 // Function KuroNetwork.KuroKcpClient.StartTcpConnect
 // (Final, Native, Public)
 // Parameters:
+// const class FString&                    Addr                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             Port                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroKcpClient::StartTcpConnect(const int32 Port)
+void UKuroKcpClient::StartTcpConnect(const class FString& Addr, const int32 Port)
 {
 	static class UFunction* Func = nullptr;
 
@@ -854,6 +855,7 @@ void UKuroKcpClient::StartTcpConnect(const int32 Port)
 
 	Params::KuroKcpClient_StartTcpConnect Parms{};
 
+	Parms.Addr = std::move(Addr);
 	Parms.Port = Port;
 
 	auto Flgs = Func->FunctionFlags;

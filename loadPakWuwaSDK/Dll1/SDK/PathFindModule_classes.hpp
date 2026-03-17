@@ -159,7 +159,7 @@ public:
 DUMPER7_ASSERTS_AKuroNavMeshPartitionDebugInfo;
 
 // Class PathFindModule.NavMeshPartitionRenderingComponent
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0580 - 0x0580)
 class UNavMeshPartitionRenderingComponent final : public UNavMeshRenderingComponent
 {
 public:

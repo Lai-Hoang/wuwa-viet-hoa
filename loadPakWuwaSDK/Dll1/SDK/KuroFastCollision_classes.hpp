@@ -21,11 +21,11 @@ namespace SDK
 {
 
 // Class KuroFastCollision.KuroFastCollisionAlgorithm
-// 0x0048 (0x0078 - 0x0030)
+// 0x0050 (0x0080 - 0x0030)
 class UKuroFastCollisionAlgorithm : public UObject
 {
 public:
-	uint8                                         Pad_30[0x48];                                      // 0x0030(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Add(class UObject* Agent);
@@ -50,11 +50,11 @@ public:
 DUMPER7_ASSERTS_UKuroFastCollisionAlgorithm;
 
 // Class KuroFastCollision.KuroFastCollisionAlgorithm_Grid
-// 0x01F0 (0x0268 - 0x0078)
+// 0x01F0 (0x0270 - 0x0080)
 class UKuroFastCollisionAlgorithm_Grid final : public UKuroFastCollisionAlgorithm
 {
 public:
-	uint8                                         Pad_78[0x1F0];                                     // 0x0078(0x01F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80[0x1F0];                                     // 0x0080(0x01F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

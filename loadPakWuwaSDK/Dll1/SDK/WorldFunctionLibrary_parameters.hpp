@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "BPEEnableFollowShooter_structs.hpp"
-#include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "EInputAction_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EInputState_structs.hpp"
 #include "EDetachType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "BPEEnableFollowShooter_structs.hpp"
+#include "EInputState_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "ERelation_structs.hpp"
+#include "EInputAction_structs.hpp"
+#include "Engine_structs.hpp"
 #include "EPawnChannel_structs.hpp"
 #include "EWeatherState_structs.hpp"
 #include "EWuYinQuState_structs.hpp"
@@ -1927,6 +1927,29 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WorldFunctionLibrary_C_SetPlayerFollowerEnable;
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsBulletCreateByFollowShooter
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_IsBulletCreateByFollowShooter final
+{
+public:
+	int32                                         bulletId1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WorldFunctionLibrary_C_IsBulletCreateByFollowShooter;
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.CheckIsRoleTriggerActor
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_CheckIsRoleTriggerActor final
+{
+public:
+	class AActor*                                 actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WorldFunctionLibrary_C_CheckIsRoleTriggerActor;
 
 }
 

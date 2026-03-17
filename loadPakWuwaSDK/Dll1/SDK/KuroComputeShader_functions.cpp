@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "KuroComputeShader_classes.hpp"
+#include "KuroComputeShader_parameters.hpp"
 
 
 namespace SDK
@@ -234,6 +235,107 @@ void AKuroCS_liuShu::StopSimulation()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("KuroCS_liuShu", "StopSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSBalloons.InitShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSBalloons::InitShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSBalloons", "InitShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSBalloons.ReleaseShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSBalloons::ReleaseShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSBalloons", "ReleaseShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSBalloons.SaveParticlesToCSV
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    FilePath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroCSBalloons::SaveParticlesToCSV(const class FString& FilePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSBalloons", "SaveParticlesToCSV");
+
+	Params::KuroCSBalloons_SaveParticlesToCSV Parms{};
+
+	Parms.FilePath = std::move(FilePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSBalloons.StartSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSBalloons::StartSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSBalloons", "StartSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSBalloons.StopSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSBalloons::StopSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSBalloons", "StopSimulation");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

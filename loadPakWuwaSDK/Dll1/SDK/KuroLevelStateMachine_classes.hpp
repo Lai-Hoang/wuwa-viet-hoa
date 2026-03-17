@@ -42,6 +42,30 @@ public:
 };
 DUMPER7_ASSERTS_UKuroLevelStateAction;
 
+// Class KuroLevelStateMachine.KuroLevelSwitchCollision
+// 0x0060 (0x00A0 - 0x0040)
+class UKuroLevelSwitchCollision final : public UKuroLevelStateAction
+{
+public:
+	TArray<struct FKuroLevelSwitchCollisionData>  Collisions;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroLevelSwitchCollision")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelSwitchCollision")
+	}
+	static class UKuroLevelSwitchCollision* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelSwitchCollision>();
+	}
+};
+DUMPER7_ASSERTS_UKuroLevelSwitchCollision;
+
 // Class KuroLevelStateMachine.KuroLevelPlayMontage
 // 0x0018 (0x0058 - 0x0040)
 class UKuroLevelPlayMontage final : public UKuroLevelStateAction
@@ -154,30 +178,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroLevelStateMachineComponent;
-
-// Class KuroLevelStateMachine.KuroLevelSwitchCollision
-// 0x0060 (0x00A0 - 0x0040)
-class UKuroLevelSwitchCollision final : public UKuroLevelStateAction
-{
-public:
-	TArray<struct FKuroLevelSwitchCollisionData>  Collisions;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroLevelSwitchCollision")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroLevelSwitchCollision")
-	}
-	static class UKuroLevelSwitchCollision* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroLevelSwitchCollision>();
-	}
-};
-DUMPER7_ASSERTS_UKuroLevelSwitchCollision;
 
 // Class KuroLevelStateMachine.KuroLevelToggleActive
 // 0x0060 (0x00A0 - 0x0040)

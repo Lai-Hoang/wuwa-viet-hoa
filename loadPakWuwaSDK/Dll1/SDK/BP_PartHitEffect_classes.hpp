@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "SPartHitEffect_structs.hpp"
-#include "SAimPart_structs.hpp"
+#include "Engine_classes.hpp"
 #include "SLockOnPart_structs.hpp"
+#include "SAimPart_structs.hpp"
 #include "SLockOnConfig_structs.hpp"
 
 

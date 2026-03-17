@@ -189,6 +189,20 @@ void ULGUIBehaviour::OnEnableBP()
 }
 
 
+// Function LGUI.LGUIBehaviour.OnPreDestroyBP
+// (Event, Protected, BlueprintEvent)
+
+void ULGUIBehaviour::OnPreDestroyBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LGUIBehaviour", "OnPreDestroyBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function LGUI.LGUIBehaviour.OnUIActiveInHierarchyBP
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -1943,7 +1957,7 @@ void UUIItem::SetUIActive(bool bActive)
 
 
 // Function LGUI.UIItem.SetUIItemAlpha
-// (Final, Native, Private)
+// (Final, Native, Public)
 // Parameters:
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1968,7 +1982,7 @@ void UUIItem::SetUIItemAlpha(float Value)
 
 
 // Function LGUI.UIItem.SetUIItemScale
-// (Final, Native, Private, HasDefaults, BlueprintCallable)
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector&                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -16813,6 +16827,25 @@ bool UUIEffectTextAnimation_ColorProperty::GetUseHSV() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function LGUI.LGUIManagerActor.ForceClearBatchDestroyUIBaseActors
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void ALGUIManagerActor::ForceClearBatchDestroyUIBaseActors()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LGUIManagerActor", "ForceClearBatchDestroyUIBaseActors");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

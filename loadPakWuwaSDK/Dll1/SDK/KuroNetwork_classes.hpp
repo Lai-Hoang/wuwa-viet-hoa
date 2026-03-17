@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "KuroNetwork_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "JsEnv_structs.hpp"
+#include "KuroNetwork_structs.hpp"
 
 
 namespace SDK
@@ -129,7 +129,7 @@ public:
 DUMPER7_ASSERTS_UKuroHttpServerRouterProxy;
 
 // Class KuroNetwork.KuroKcpClient
-// 0x03A0 (0x03D0 - 0x0030)
+// 0x03A8 (0x03D8 - 0x0030)
 class UKuroKcpClient final : public UObject
 {
 public:
@@ -148,7 +148,7 @@ public:
 	TMulticastInlineDelegate<void()>              OnTcpConnected;                                    // 0x0118(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnTcpConnectFailed;                                // 0x0128(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	class UKuroTcpClient*                         TcpClient;                                         // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x290];                                    // 0x0140(0x0290)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_140[0x298];                                    // 0x0140(0x0298)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CloseTcpConnect();
@@ -167,7 +167,7 @@ public:
 	void SetKcpSegmentSize(int32 SegmentSize);
 	void SetKcpStream(bool bStream);
 	void SetKcpWndSize(int32 SndWnd, int32 RcvWnd);
-	void StartTcpConnect(const int32 Port);
+	void StartTcpConnect(const class FString& Addr, const int32 Port);
 	void TickOutside(float DeltaSeconds);
 
 	bool IsTcpConnectStart() const;

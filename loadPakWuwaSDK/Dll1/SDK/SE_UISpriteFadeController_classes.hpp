@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SE_UISpriteController_classes.hpp"
 #include "Engine_structs.hpp"
+#include "SE_UISpriteController_classes.hpp"
 
 
 namespace SDK

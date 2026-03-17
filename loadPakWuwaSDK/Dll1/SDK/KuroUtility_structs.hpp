@@ -47,6 +47,21 @@ enum class ESendStage : uint8
 	ESS_MAX                                  = 5,
 };
 
+// ScriptStruct KuroUtility.OverlapActorInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FOverlapActorInfo final
+{
+public:
+	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastEditTimestamp;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastEditPerson;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOverlapActorInfo;
+
 // ScriptStruct KuroUtility.TrophyDetailData
 // 0x0058 (0x0058 - 0x0000)
 struct FTrophyDetailData final
@@ -111,20 +126,14 @@ public:
 };
 DUMPER7_ASSERTS_FProductData;
 
-// ScriptStruct KuroUtility.OverlapActorInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FOverlapActorInfo final
+// ScriptStruct KuroUtility.PreloadObjectCollection
+// 0x0010 (0x0010 - 0x0000)
+struct FPreloadObjectCollection final
 {
 public:
-	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastEditTimestamp;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastEditPerson;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        Assets;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOverlapActorInfo;
+DUMPER7_ASSERTS_FPreloadObjectCollection;
 
 // ScriptStruct KuroUtility.BlockUserData
 // 0x0018 (0x0018 - 0x0000)
@@ -136,15 +145,6 @@ public:
 	TArray<class FString>                         blockUsers;                                        // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FBlockUserData;
-
-// ScriptStruct KuroUtility.PreloadObjectCollection
-// 0x0010 (0x0010 - 0x0000)
-struct FPreloadObjectCollection final
-{
-public:
-	TArray<class UObject*>                        Assets;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPreloadObjectCollection;
 
 // ScriptStruct KuroUtility.PropertyPair
 // 0x0010 (0x0010 - 0x0000)

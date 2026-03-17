@@ -36,16 +36,6 @@ public:
 };
 DUMPER7_ASSERTS_FSPModelSCPMap;
 
-// ScriptStruct KuroInteractionEffect.KuroInteractionPlacementTriggerActor
-// 0x0060 (0x0068 - 0x0008)
-struct FKuroInteractionPlacementTriggerActor final : public FTableRowBase
-{
-public:
-	TSoftObjectPtr<class UStaticMesh>             PlacementStaticMesh;                               // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UStaticMesh>             TriggerStaticMesh;                                 // 0x0038(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroInteractionPlacementTriggerActor;
-
 // ScriptStruct KuroInteractionEffect.KuroInteractionEffectTraceFoliage
 // 0x0050 (0x0058 - 0x0008)
 struct FKuroInteractionEffectTraceFoliage final : public FTableRowBase
@@ -60,6 +50,16 @@ public:
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroInteractionEffectTraceFoliage;
+
+// ScriptStruct KuroInteractionEffect.KuroInteractionPlacementTriggerActor
+// 0x0060 (0x0068 - 0x0008)
+struct FKuroInteractionPlacementTriggerActor final : public FTableRowBase
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             PlacementStaticMesh;                               // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UStaticMesh>             TriggerStaticMesh;                                 // 0x0038(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroInteractionPlacementTriggerActor;
 
 // ScriptStruct KuroInteractionEffect.KuroBushInteractionEffectParameter
 // 0x0060 (0x0068 - 0x0008)

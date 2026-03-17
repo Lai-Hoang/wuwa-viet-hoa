@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SnowTrailComponent_NPC.BP_SnowTrailComponent_NPC_C
-// 0x0070 (0x0130 - 0x00C0)
+// 0x0078 (0x0138 - 0x00C0)
 class UBP_SnowTrailComponent_NPC_C final : public UKuroBPActorComponent
 {
 public:
@@ -42,6 +42,8 @@ public:
 	bool                                          SelfEnable;                                        // 0x0124(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         FrameConter;                                       // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_SnowTrailComponent_NPC(int32 EntryPoint);

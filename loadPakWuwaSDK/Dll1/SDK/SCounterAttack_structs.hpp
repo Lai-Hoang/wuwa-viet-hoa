@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // UserDefinedStruct SCounterAttack.SCounterAttack
-// 0x03E0 (0x03E0 - 0x0000)
+// 0x0410 (0x0410 - 0x0000)
 struct FSCounterAttack final
 {
 public:
 	TArray<class FName>                           弹反部位_71_BE8FD36F4A493484450B19BC73EDC7FD;      // 0x0000(0x0010)(Edit, BlueprintVisible)
-	struct FSCounterAttackEffect                  无弹反动作效果_48_6BA4BD5340721A8BC381B7985973F481; // 0x0010(0x01C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FSCounterAttackEffect                  有弹反动作效果_51_B1D03EC34BA6773FAF72939D97EAE31F; // 0x01D0(0x01C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	float                                         削韧倍率_10_5FFEA61B4A6822B406F1E7AB634133B4;      // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         最大触发距离_12_B1E9072B4B14DF443199C8A0B257C149;  // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         最大触发夹角_14_9C54863B4F28F6D8229137908D84F815;  // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         被弹反者应用BuffID_52_3FD017324758D15AA7A88E8DDDF8F266; // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         攻击者应用BuffID_53_BCC3A4494643E23E0CBC8F8A2EE6977F; // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          受击动画忽略Buff检测_40_B75D26CA4B24DAB1F5CBF39BB2321401; // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B1[0x7];                                      // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSCounterAttackBuff>            检测Buff列表_57_5CD865994F901D76CB1C488EE5222C44;  // 0x03B8(0x0010)(Edit, BlueprintVisible)
-	int64                                         ANS期间被弹反者生效的BuffID_60_BB7B172C4B0C23B10BAFB89E83C222A2; // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           结束事件Tag_64_73DE9EC74B7E952793F7B38D76B33642;   // 0x03D0(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	bool                                          QTE弹刀忽略角度距离检测_74_B746849148775FB528669BA90AEF4AB6; // 0x03DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSCounterAttackEffect                  无弹反动作效果_48_6BA4BD5340721A8BC381B7985973F481; // 0x0010(0x01D8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FSCounterAttackEffect                  有弹反动作效果_51_B1D03EC34BA6773FAF72939D97EAE31F; // 0x01E8(0x01D8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	float                                         削韧倍率_10_5FFEA61B4A6822B406F1E7AB634133B4;      // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         最大触发距离_12_B1E9072B4B14DF443199C8A0B257C149;  // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         最大触发夹角_14_9C54863B4F28F6D8229137908D84F815;  // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         被弹反者应用BuffID_52_3FD017324758D15AA7A88E8DDDF8F266; // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         攻击者应用BuffID_53_BCC3A4494643E23E0CBC8F8A2EE6977F; // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          受击动画忽略Buff检测_40_B75D26CA4B24DAB1F5CBF39BB2321401; // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSCounterAttackBuff>            检测Buff列表_57_5CD865994F901D76CB1C488EE5222C44;  // 0x03E8(0x0010)(Edit, BlueprintVisible)
+	int64                                         ANS期间被弹反者生效的BuffID_60_BB7B172C4B0C23B10BAFB89E83C222A2; // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           结束事件Tag_64_73DE9EC74B7E952793F7B38D76B33642;   // 0x0400(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	bool                                          QTE弹刀忽略角度距离检测_74_B746849148775FB528669BA90AEF4AB6; // 0x040C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_FSCounterAttack;
 

@@ -258,27 +258,6 @@ public:
 };
 DUMPER7_ASSERTS_FLandscapeLayerComponentData;
 
-// ScriptStruct Landscape.LandscapeSplineConnection
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeSplineConnection final
-{
-public:
-	class ULandscapeSplineSegment*                Segment;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         End : 1;                                           // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FLandscapeSplineConnection;
-
-// ScriptStruct Landscape.LandscapeMaterialTextureStreamingInfo
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeMaterialTextureStreamingInfo final
-{
-public:
-	class FName                                   TextureName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TexelFactor;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLandscapeMaterialTextureStreamingInfo;
-
 // ScriptStruct Landscape.LandscapeComponentMaterialOverride
 // 0x0010 (0x0010 - 0x0000)
 struct FLandscapeComponentMaterialOverride final
@@ -298,15 +277,6 @@ public:
 	uint8                                         Pad_0[0x50];                                       // 0x0000(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FGizmoSelectData;
-
-// ScriptStruct Landscape.LandscapeLayerStruct
-// 0x0008 (0x0008 - 0x0000)
-struct FLandscapeLayerStruct final
-{
-public:
-	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLandscapeLayerStruct;
 
 // ScriptStruct Landscape.GrassVariety
 // 0x0058 (0x0058 - 0x0000)
@@ -349,6 +319,16 @@ public:
 };
 DUMPER7_ASSERTS_FLandscapeInfoLayerSettings;
 
+// ScriptStruct Landscape.LandscapeMaterialTextureStreamingInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeMaterialTextureStreamingInfo final
+{
+public:
+	class FName                                   TextureName;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TexelFactor;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLandscapeMaterialTextureStreamingInfo;
+
 // ScriptStruct Landscape.LandscapeProxyCustomLayerPhysicalMaterial
 // 0x0018 (0x0018 - 0x0000)
 struct FLandscapeProxyCustomLayerPhysicalMaterial final
@@ -380,6 +360,15 @@ public:
 };
 DUMPER7_ASSERTS_FLandscapeImportLayerInfo;
 
+// ScriptStruct Landscape.LandscapeLayerStruct
+// 0x0008 (0x0008 - 0x0000)
+struct FLandscapeLayerStruct final
+{
+public:
+	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLandscapeLayerStruct;
+
 // ScriptStruct Landscape.LandscapeEditorLayerSettings
 // 0x0001 (0x0001 - 0x0000)
 struct FLandscapeEditorLayerSettings final
@@ -388,6 +377,17 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FLandscapeEditorLayerSettings;
+
+// ScriptStruct Landscape.LandscapeSplineConnection
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeSplineConnection final
+{
+public:
+	class ULandscapeSplineSegment*                Segment;                                           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         End : 1;                                           // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FLandscapeSplineConnection;
 
 // ScriptStruct Landscape.ForeignWorldSplineData
 // 0x0001 (0x0001 - 0x0000)

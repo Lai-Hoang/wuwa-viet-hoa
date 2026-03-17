@@ -348,12 +348,12 @@ class UNavigationPath* UNavigationSystemV1::D_FindPathToLocationSynchronously(cl
 // const struct FVectorDouble&             Point                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FVectorDouble&             QueryExtent                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32*                                  AreaID                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ENavigationDataType                     NavigationDataType                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavigationQueryFilter>FilterClass                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ANavigationData*                  NavData                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class UObject*                    Querier                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UNavigationSystemV1::D_GetNearestPolyAreaID(class UObject* WorldContextObject, const struct FVectorDouble& Point, const struct FVectorDouble& QueryExtent, int32* AreaID, TSubclassOf<class UNavigationQueryFilter> FilterClass, class ANavigationData* NavData, const class UObject* Querier)
+bool UNavigationSystemV1::D_GetNearestPolyAreaID(class UObject* WorldContextObject, const struct FVectorDouble& Point, const struct FVectorDouble& QueryExtent, int32* AreaID, ENavigationDataType NavigationDataType, TSubclassOf<class UNavigationQueryFilter> FilterClass, const class UObject* Querier)
 {
 	static class UFunction* Func = nullptr;
 
@@ -365,8 +365,8 @@ bool UNavigationSystemV1::D_GetNearestPolyAreaID(class UObject* WorldContextObje
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.Point = std::move(Point);
 	Parms.QueryExtent = std::move(QueryExtent);
+	Parms.NavigationDataType = NavigationDataType;
 	Parms.FilterClass = FilterClass;
-	Parms.NavData = NavData;
 	Parms.Querier = Querier;
 
 	auto Flgs = Func->FunctionFlags;
@@ -598,9 +598,10 @@ bool UNavigationSystemV1::D_NavigationGetWaterDeep(class UObject* WorldContextOb
 // float*                                  WaterTop                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           PathfindingContext                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavigationQueryFilter>FilterClass                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   WaterBottomTolerance                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UNavigationSystemV1::D_NavigationGetWaterSurface(class UObject* WorldContextObject, const struct FVectorDouble& Pos, const struct FVectorDouble& Extend, float* WaterTop, class AActor* PathfindingContext, TSubclassOf<class UNavigationQueryFilter> FilterClass)
+bool UNavigationSystemV1::D_NavigationGetWaterSurface(class UObject* WorldContextObject, const struct FVectorDouble& Pos, const struct FVectorDouble& Extend, float* WaterTop, class AActor* PathfindingContext, TSubclassOf<class UNavigationQueryFilter> FilterClass, float WaterBottomTolerance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -614,6 +615,7 @@ bool UNavigationSystemV1::D_NavigationGetWaterSurface(class UObject* WorldContex
 	Parms.Extend = std::move(Extend);
 	Parms.PathfindingContext = PathfindingContext;
 	Parms.FilterClass = FilterClass;
+	Parms.WaterBottomTolerance = WaterBottomTolerance;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

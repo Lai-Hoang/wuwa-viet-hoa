@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ESkillBehaviorConditionType_structs.hpp"
-#include "ESkillBehaviorComparisonLogic_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "ESkillBehaviorComparisonLogic_structs.hpp"
+#include "ESkillBehaviorConditionType_structs.hpp"
 
 
 namespace SDK

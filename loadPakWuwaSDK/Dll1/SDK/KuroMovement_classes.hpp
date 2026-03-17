@@ -69,14 +69,14 @@ public:
 DUMPER7_ASSERTS_UKuroClimbObject;
 
 // Class KuroMovement.KuroDebugMovementComponent
-// 0x01A0 (0x06D0 - 0x0530)
+// 0x01A0 (0x0710 - 0x0570)
 class UKuroDebugMovementComponent final : public UPrimitiveComponent
 {
 public:
-	int32                                         DrawDebugCount;                                    // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bShowLog : 1;                                      // 0x052C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	EKDMDrawDebugType                             bDrawDebug;                                        // 0x052D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52E[0x1A2];                                    // 0x052E(0x01A2)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         DrawDebugCount;                                    // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bShowLog : 1;                                      // 0x0574(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EKDMDrawDebugType                             bDrawDebug;                                        // 0x0575(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_576[0x19A];                                    // 0x0576(0x019A)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class FString KuroDebugMovementBaseRecordToString(const struct FBaseRecord& Record);

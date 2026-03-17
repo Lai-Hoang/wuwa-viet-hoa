@@ -983,6 +983,20 @@ void UABP_BaseRoleNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRol
 }
 
 
+// Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRoleNPC_AnimGraphNode_TransitionResult_450F039C420169024E44EAAF4AE788C8
+// (BlueprintEvent)
+
+void UABP_BaseRoleNPC_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRoleNPC_AnimGraphNode_TransitionResult_450F039C420169024E44EAAF4AE788C8()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRoleNPC_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRoleNPC_AnimGraphNode_TransitionResult_450F039C420169024E44EAAF4AE788C8");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_BaseRoleNPC.ABP_BaseRoleNPC_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRoleNPC_AnimGraphNode_TransitionResult_2F16FC824EC60FFD922634B397D4F99F
 // (BlueprintEvent)
 

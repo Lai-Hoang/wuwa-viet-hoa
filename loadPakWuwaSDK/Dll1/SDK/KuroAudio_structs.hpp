@@ -54,15 +54,6 @@ enum class EKuroAudioVolumeChannel : uint8
 	EKuroAudioVolumeChannel_MAX              = 3,
 };
 
-// ScriptStruct KuroAudio.MovieSceneKuroAudioEventTemplate
-// 0x0008 (0x0028 - 0x0020)
-struct FMovieSceneKuroAudioEventTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	class UMovieSceneKuroAudioEventSection*       Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMovieSceneKuroAudioEventTemplate;
-
 // ScriptStruct KuroAudio.KuroAudioEnvironmentInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FKuroAudioEnvironmentInfo final
@@ -73,6 +64,15 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroAudioEnvironmentInfo;
+
+// ScriptStruct KuroAudio.MovieSceneKuroAudioEventTemplate
+// 0x0008 (0x0028 - 0x0020)
+struct FMovieSceneKuroAudioEventTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	class UMovieSceneKuroAudioEventSection*       Section;                                           // 0x0020(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMovieSceneKuroAudioEventTemplate;
 
 }
 

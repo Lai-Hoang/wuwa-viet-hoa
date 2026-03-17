@@ -17,16 +17,16 @@ namespace SDK
 {
 
 // UserDefinedStruct SVisionCounterAttack.SVisionCounterAttack
-// 0x01D8 (0x01D8 - 0x0000)
+// 0x01F0 (0x01F0 - 0x0000)
 struct FSVisionCounterAttack final
 {
 public:
-	struct FSCounterAttackEffect                  对策动作效果_3_C49F3CD947BF3CCBAE02BB87703A0690;   // 0x0000(0x01C0)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	int64                                         被对策者应用BuffID_6_B107430041EE7889780ABFB2BF439935; // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int64                                         攻击者应用BuffID_8_770DF1D74885F20C854E60A1CCB1823E; // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          广播对策事件_15_05D42AC24F81951811435A9B67880249;  // 0x01D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         对策事件ID_11_6A13DC214E971B0DF65BC788698B4A73;    // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCounterAttackEffect                  对策动作效果_3_C49F3CD947BF3CCBAE02BB87703A0690;   // 0x0000(0x01D8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int64                                         被对策者应用BuffID_6_B107430041EE7889780ABFB2BF439935; // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         攻击者应用BuffID_8_770DF1D74885F20C854E60A1CCB1823E; // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          广播对策事件_15_05D42AC24F81951811435A9B67880249;  // 0x01E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E9[0x3];                                      // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         对策事件ID_11_6A13DC214E971B0DF65BC788698B4A73;    // 0x01EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSVisionCounterAttack;
 

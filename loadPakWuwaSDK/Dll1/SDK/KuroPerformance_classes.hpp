@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroPerformance_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroPerformance_structs.hpp"
 
 
 namespace SDK

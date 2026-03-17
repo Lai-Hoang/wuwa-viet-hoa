@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "KuroAnim_structs.hpp"
-#include "ECharState_structs.hpp"
-#include "SClimbState_structs.hpp"
-#include "EHitAnim_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ECharParentMoveState_structs.hpp"
-#include "SClimbInfo_structs.hpp"
+#include "EHitAnim_structs.hpp"
+#include "SClimbState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
+#include "SClimbInfo_structs.hpp"
+#include "ECharState_structs.hpp"
+#include "ECharParentMoveState_structs.hpp"
+#include "KuroAnim_structs.hpp"
 
 
 namespace SDK

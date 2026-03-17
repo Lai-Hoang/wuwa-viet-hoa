@@ -262,6 +262,34 @@ bool UNiagaraComponent::HasAnyEmittersComplete()
 }
 
 
+// Function Niagara.NiagaraComponent.HasDataInterface
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                           DataInterfaceClass                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::HasDataInterface(class UClass* DataInterfaceClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "HasDataInterface");
+
+	Params::NiagaraComponent_HasDataInterface Parms{};
+
+	Parms.DataInterfaceClass = DataInterfaceClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Niagara.NiagaraComponent.HasSkeletalMeshDataInterface
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -395,6 +423,31 @@ void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
 	Params::NiagaraComponent_SetAgeUpdateMode Parms{};
 
 	Parms.InAgeUpdateMode = InAgeUpdateMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetAllowOcclusionCulling
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInAllowOcclusionCulling                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetAllowOcclusionCulling(bool bInAllowOcclusionCulling)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetAllowOcclusionCulling");
+
+	Params::NiagaraComponent_SetAllowOcclusionCulling Parms{};
+
+	Parms.bInAllowOcclusionCulling = bInAllowOcclusionCulling;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

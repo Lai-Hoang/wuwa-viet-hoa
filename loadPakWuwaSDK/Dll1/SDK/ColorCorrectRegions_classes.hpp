@@ -59,7 +59,8 @@ DUMPER7_ASSERTS_AColorCorrectRegion;
 class UColorCorrectRegionsSubsystem final : public UWorldSubsystem
 {
 public:
-	uint8                                         Pad_38[0x50];                                      // 0x0038(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<TWeakObjectPtr<class AColorCorrectRegion>> Regions;                                       // 0x0038(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x40];                                      // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnActorDeleted(class AActor* InActor);

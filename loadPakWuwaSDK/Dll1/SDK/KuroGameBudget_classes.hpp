@@ -18,48 +18,42 @@
 namespace SDK
 {
 
-// Class KuroGameBudget.KuroGameBudgetComponent
-// 0x00B0 (0x0170 - 0x00C0)
-class UKuroGameBudgetComponent final : public UActorComponent
+// Class KuroGameBudget.GameBudgetAllocator
+// 0x0640 (0x0670 - 0x0030)
+class UGameBudgetAllocator final : public UObject
 {
 public:
-	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x00C8(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x0120(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x0168(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x640];                                     // 0x0030(0x0640)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ManualRegisterTick();
-	void ManualUnregisterTick();
-	void MarkSpecialBlueprintActor();
-	void OnEnvInteractChanged(bool bEnableEnvInteract);
-	void OnInvisible();
-	void OnLogicDisable();
-	void OnLogicEnable();
-	void OnVisible();
-	void OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType);
-	void PauseGameBudget();
-	void ResumeGameBudget();
-	void UpdateOverrideBounds(const TArray<class AActor*>& InActors);
-	void UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors);
+	void AfterTickOutside(float DeltaSeconds);
+	void SetCenterActor(class AActor* CenterActor);
+	void SetDefaultTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
+	void SetDefaultTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
+	void SetGlobalMode(EGameBudgetAllocatorGlobalMode Mode);
+	void SetGroupConfig(class FName GroupName, const struct FGameBudgetAllocatorGroupConfig& Config);
+	void SetMaximumFrameRate(uint32 MaxFPS);
+	void SetPauseFrame(uint64 Frame);
+	void SetTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
+	void SetTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
+	void TickOutside(float DeltaSeconds);
+	void UpdateMinUpdateFIFOBudgetTime(float Time);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroGameBudgetComponent")
+		STATIC_CLASS_IMPL("GameBudgetAllocator")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroGameBudgetComponent")
+		STATIC_NAME_IMPL(L"GameBudgetAllocator")
 	}
-	static class UKuroGameBudgetComponent* GetDefaultObj()
+	static class UGameBudgetAllocator* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroGameBudgetComponent>();
+		return GetDefaultObjImpl<UGameBudgetAllocator>();
 	}
 };
-DUMPER7_ASSERTS_UKuroGameBudgetComponent;
+DUMPER7_ASSERTS_UGameBudgetAllocator;
 
 // Class KuroGameBudget.KuroGameBudgetBlueprintActor
 // 0x0108 (0x03B8 - 0x02B0)
@@ -105,43 +99,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AKuroGameBudgetBlueprintActor;
-
-// Class KuroGameBudget.GameBudgetAllocator
-// 0x0640 (0x0670 - 0x0030)
-class UGameBudgetAllocator final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x640];                                     // 0x0030(0x0640)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AfterTickOutside(float DeltaSeconds);
-	void SetCenterActor(class AActor* CenterActor);
-	void SetDefaultTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
-	void SetDefaultTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
-	void SetGlobalMode(EGameBudgetAllocatorGlobalMode Mode);
-	void SetGroupConfig(class FName GroupName, const struct FGameBudgetAllocatorGroupConfig& Config);
-	void SetMaximumFrameRate(uint32 MaxFPS);
-	void SetPauseFrame(uint64 Frame);
-	void SetTickIntervalDetailConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, uint32 MaxTickInterval, uint16 TickReductionStartSize, uint16 TickReductionIntervalSize);
-	void SetTickIntervalDetailScreenRadiusConfig(struct FGameBudgetAllocatorGroupConfig* Config, EGameBudgetAllocatorGlobalMode GlobalMode, EGameBudgetAllocatorActorMode ActorMode, float TickReductionStartScreenRatio, float TickReductionIntervalScreenRatio);
-	void TickOutside(float DeltaSeconds);
-	void UpdateMinUpdateFIFOBudgetTime(float Time);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("GameBudgetAllocator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"GameBudgetAllocator")
-	}
-	static class UGameBudgetAllocator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameBudgetAllocator>();
-	}
-};
-DUMPER7_ASSERTS_UGameBudgetAllocator;
 
 // Class KuroGameBudget.Interface_KuroGameBudgetBlueprint
 // 0x0000 (0x0000 - 0x0000)
@@ -197,11 +154,11 @@ public:
 DUMPER7_ASSERTS_UKuroGameBudgetBlueprintDefine;
 
 // Class KuroGameBudget.KuroGameBudgetBoundsComponent
-// 0x0020 (0x0550 - 0x0530)
+// 0x0020 (0x0590 - 0x0570)
 class UKuroGameBudgetBoundsComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_528[0x28];                                     // 0x0528(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_570[0x20];                                     // 0x0570(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -218,6 +175,49 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroGameBudgetBoundsComponent;
+
+// Class KuroGameBudget.KuroGameBudgetComponent
+// 0x00B0 (0x0170 - 0x00C0)
+class UKuroGameBudgetComponent final : public UActorComponent
+{
+public:
+	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UActorComponent*>                  TickActorComponents;                               // 0x00C8(0x0050)(ExportObject, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroGameBudgetBlueprint               GameBudgetBlueprint;                               // 0x0120(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EGameBudgetBlueprintEnvironment               GameBudgetBlueprintEnvironment;                    // 0x0168(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ManualRegisterTick();
+	void ManualUnregisterTick();
+	void MarkSpecialBlueprintActor();
+	void OnEnvInteractChanged(bool bEnableEnvInteract);
+	void OnInvisible();
+	void OnLogicDisable();
+	void OnLogicEnable();
+	void OnVisible();
+	void OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType);
+	void PauseGameBudget();
+	void ResumeGameBudget();
+	void UpdateOverrideBounds(const TArray<class AActor*>& InActors);
+	void UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroGameBudgetComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroGameBudgetComponent")
+	}
+	static class UKuroGameBudgetComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroGameBudgetComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroGameBudgetComponent;
 
 // Class KuroGameBudget.KuroGameBudgetSubSystem
 // 0x0018 (0x0050 - 0x0038)

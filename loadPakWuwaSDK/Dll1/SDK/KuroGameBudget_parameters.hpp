@@ -16,78 +16,6 @@
 namespace SDK::Params
 {
 
-// Function KuroGameBudget.KuroGameBudgetComponent.OnEnvInteractChanged
-// 0x0001 (0x0001 - 0x0000)
-struct KuroGameBudgetComponent_OnEnvInteractChanged final
-{
-public:
-	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetComponent_OnEnvInteractChanged;
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OverrideGameBudgetGroupType
-// 0x0001 (0x0001 - 0x0000)
-struct KuroGameBudgetComponent_OverrideGameBudgetGroupType final
-{
-public:
-	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetComponent_OverrideGameBudgetGroupType;
-
-// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBounds
-// 0x0010 (0x0010 - 0x0000)
-struct KuroGameBudgetComponent_UpdateOverrideBounds final
-{
-public:
-	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBounds;
-
-// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBoundsFromSet
-// 0x0050 (0x0050 - 0x0000)
-struct KuroGameBudgetComponent_UpdateOverrideBoundsFromSet final
-{
-public:
-	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBoundsFromSet;
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnEnvInteractChanged
-// 0x0001 (0x0001 - 0x0000)
-struct KuroGameBudgetBlueprintActor_OnEnvInteractChanged final
-{
-public:
-	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OnEnvInteractChanged;
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
-// 0x0001 (0x0001 - 0x0000)
-struct KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType final
-{
-public:
-	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType;
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
-// 0x0010 (0x0010 - 0x0000)
-struct KuroGameBudgetBlueprintActor_UpdateOverrideBounds final
-{
-public:
-	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBounds;
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
-// 0x0050 (0x0050 - 0x0000)
-struct KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet final
-{
-public:
-	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet;
-
 // Function KuroGameBudget.GameBudgetAllocator.AfterTickOutside
 // 0x0004 (0x0004 - 0x0000)
 struct GameBudgetAllocator_AfterTickOutside final
@@ -213,6 +141,42 @@ public:
 };
 DUMPER7_ASSERTS_GameBudgetAllocator_UpdateMinUpdateFIFOBudgetTime;
 
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnEnvInteractChanged
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetBlueprintActor_OnEnvInteractChanged final
+{
+public:
+	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OnEnvInteractChanged;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType final
+{
+public:
+	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
+// 0x0010 (0x0010 - 0x0000)
+struct KuroGameBudgetBlueprintActor_UpdateOverrideBounds final
+{
+public:
+	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBounds;
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
+// 0x0050 (0x0050 - 0x0000)
+struct KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet final
+{
+public:
+	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet;
+
 // Function KuroGameBudget.KuroGameBudgetBlueprintDefine.Initialize
 // 0x0010 (0x0010 - 0x0000)
 struct KuroGameBudgetBlueprintDefine_Initialize final
@@ -221,6 +185,42 @@ public:
 	TArray<struct FGameBudgetBlueprintGroupConfig> GroupConfigs;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroGameBudgetBlueprintDefine_Initialize;
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnEnvInteractChanged
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetComponent_OnEnvInteractChanged final
+{
+public:
+	bool                                          bEnableEnvInteract;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetComponent_OnEnvInteractChanged;
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OverrideGameBudgetGroupType
+// 0x0001 (0x0001 - 0x0000)
+struct KuroGameBudgetComponent_OverrideGameBudgetGroupType final
+{
+public:
+	EGameBudgetBlueprintGroup                     InOverrideGroupType;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetComponent_OverrideGameBudgetGroupType;
+
+// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBounds
+// 0x0010 (0x0010 - 0x0000)
+struct KuroGameBudgetComponent_UpdateOverrideBounds final
+{
+public:
+	TArray<class AActor*>                         InActors;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBounds;
+
+// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBoundsFromSet
+// 0x0050 (0x0050 - 0x0000)
+struct KuroGameBudgetComponent_UpdateOverrideBoundsFromSet final
+{
+public:
+	TSet<class AActor*>                           InActors;                                          // 0x0000(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroGameBudgetComponent_UpdateOverrideBoundsFromSet;
 
 // Function KuroGameBudget.KuroGameBudgetSubSystem.SetEnvInteractChange
 // 0x0001 (0x0001 - 0x0000)

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "KuroInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
@@ -29,6 +29,7 @@ public:
 
 public:
 	static void SetKuroForceFeedbackConfig(EGlobalKuroForceFeedbackType FeedbackConfig, int32 GlobalFeedbackCoef);
+	static void SetUseGamepadState(bool value);
 	static void SetUseSonyGamepadState(bool value);
 
 	void AddActionBinding(const class FName& ActionName, const EInputEvent KeyEvent, class UObject* Object, const class FName& FuncName);
@@ -105,6 +106,7 @@ public:
 	static struct FInputModeReply SetGameAndUIInputMode(class APlayerController* InPlayerController, const class FString& Reason, bool bLockMouseToViewport, bool bHideCursorDuringCapture);
 	static struct FInputModeReply SetGameOnlyInputMode(class APlayerController* InPlayerController, const class FString& Reason);
 	static struct FInputModeReply SetUIOnlyInputMode(class APlayerController* InPlayerController, const class FString& Reason, bool bLockMouseToViewport);
+	static void TryUseHighPrecisionMouseMovement(const class APlayerController* InPlayerController, bool bUse);
 
 public:
 	static class UClass* StaticClass()
@@ -130,12 +132,13 @@ public:
 	EGlobalKuroForceFeedbackType                  FeedbackConfig;                                    // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GlobalFeedbackSize;                                // 0x0034(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsUseSonyFeedback;                                 // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EInputMode                                    DefaultInputMode;                                  // 0x0039(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsDefaultLockMouseToViewport;                      // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsDefaultHideCursorDuringCapture;                  // 0x003B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsPrintDebugLog;                                   // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          IsUseGamepad;                                      // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseSonyFeedback;                                 // 0x0039(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EInputMode                                    DefaultInputMode;                                  // 0x003A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsDefaultLockMouseToViewport;                      // 0x003B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsDefaultHideCursorDuringCapture;                  // 0x003C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsPrintDebugLog;                                   // 0x003D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

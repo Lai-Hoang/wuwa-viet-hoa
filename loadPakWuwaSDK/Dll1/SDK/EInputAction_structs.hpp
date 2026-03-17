@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EInputAction.EInputAction
-// NumValues: 0x0011
+// NumValues: 0x0013
 enum class EInputAction : uint8
 {
 	NewEnumerator0                           = 0,
@@ -34,7 +34,9 @@ enum class EInputAction : uint8
 	NewEnumerator27                          = 13,
 	NewEnumerator28                          = 14,
 	NewEnumerator39                          = 15,
-	EInputAction_MAX                         = 16,
+	NewEnumerator40                          = 16,
+	NewEnumerator41                          = 17,
+	EInputAction_MAX                         = 18,
 };
 
 }

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroMath_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroMath_structs.hpp"
 
 
 namespace SDK

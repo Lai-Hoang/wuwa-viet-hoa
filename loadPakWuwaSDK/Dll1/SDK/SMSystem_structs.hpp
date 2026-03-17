@@ -90,42 +90,6 @@ enum class ETransitionPredictionType : uint8
 	Prediction_MAX                           = 3,
 };
 
-// ScriptStruct SMSystem.SMTransaction_Base
-// 0x0003 (0x0003 - 0x0000)
-struct FSMTransaction_Base
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	ESMTransactionType                            TransactionType;                                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOriginatedFromServer : 1;                         // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-};
-DUMPER7_ASSERTS_FSMTransaction_Base;
-
-// ScriptStruct SMSystem.SMInitializeTransaction
-// 0x000D (0x0010 - 0x0003)
-struct FSMInitializeTransaction final : public FSMTransaction_Base
-{
-public:
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Context;                                           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSMInitializeTransaction;
-
-// ScriptStruct SMSystem.SMInfo_Base
-// 0x0060 (0x0060 - 0x0000)
-struct FSMInfo_Base
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 NodeName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  Guid;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  OwnerGuid;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  NodeGuid;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  OwnerNodeGuid;                                     // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USMNodeInstance*                        NodeInstance;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSMInfo_Base;
-
 // ScriptStruct SMSystem.SMExposedFunctionHandler
 // 0x0028 (0x0028 - 0x0000)
 struct FSMExposedFunctionHandler final
@@ -169,20 +133,20 @@ public:
 };
 DUMPER7_ASSERTS_FSMNode_Base;
 
-// ScriptStruct SMSystem.SMState_Base
-// 0x0050 (0x0120 - 0x00D0)
-struct FSMState_Base : public FSMNode_Base
+// ScriptStruct SMSystem.SMInfo_Base
+// 0x0060 (0x0060 - 0x0000)
+struct FSMInfo_Base
 {
 public:
-	uint8                                         bIsRootNode : 1;                                   // 0x00D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAlwaysUpdate : 1;                                 // 0x00D0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bEvalTransitionsOnStart : 1;                       // 0x00D0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDisableTickTransitionEvaluation : 1;              // 0x00D0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bStayActiveOnStateChange : 1;                      // 0x00D0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAllowParallelReentry : 1;                         // 0x00D0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D1[0x4F];                                      // 0x00D1(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 NodeName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  OwnerGuid;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  NodeGuid;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  OwnerNodeGuid;                                     // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USMNodeInstance*                        NodeInstance;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FSMState_Base;
+DUMPER7_ASSERTS_FSMInfo_Base;
 
 // ScriptStruct SMSystem.SMTransitionInfo
 // 0x0038 (0x0098 - 0x0060)
@@ -198,16 +162,6 @@ public:
 };
 DUMPER7_ASSERTS_FSMTransitionInfo;
 
-// ScriptStruct SMSystem.SMReferenceContainer
-// 0x0018 (0x0018 - 0x0000)
-struct FSMReferenceContainer final
-{
-public:
-	struct FGuid                                  PathGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USMInstance*                            Reference;                                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSMReferenceContainer;
-
 // ScriptStruct SMSystem.SMStateInfo
 // 0x0020 (0x0080 - 0x0060)
 struct FSMStateInfo final : public FSMInfo_Base
@@ -218,6 +172,21 @@ public:
 	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSMStateInfo;
+
+// ScriptStruct SMSystem.SMState_Base
+// 0x0050 (0x0120 - 0x00D0)
+struct FSMState_Base : public FSMNode_Base
+{
+public:
+	uint8                                         bIsRootNode : 1;                                   // 0x00D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAlwaysUpdate : 1;                                 // 0x00D0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEvalTransitionsOnStart : 1;                       // 0x00D0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDisableTickTransitionEvaluation : 1;              // 0x00D0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bStayActiveOnStateChange : 1;                      // 0x00D0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAllowParallelReentry : 1;                         // 0x00D0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_D1[0x4F];                                      // 0x00D1(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FSMState_Base;
 
 // ScriptStruct SMSystem.SMConduit
 // 0x0030 (0x0150 - 0x0120)
@@ -234,6 +203,16 @@ public:
 	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSMConduit;
+
+// ScriptStruct SMSystem.SMReferenceContainer
+// 0x0018 (0x0018 - 0x0000)
+struct FSMReferenceContainer final
+{
+public:
+	struct FGuid                                  PathGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USMInstance*                            Reference;                                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSMReferenceContainer;
 
 // ScriptStruct SMSystem.SMDebugStateMachine
 // 0x0001 (0x0001 - 0x0000)
@@ -305,6 +284,17 @@ public:
 };
 DUMPER7_ASSERTS_FSMStateMachine;
 
+// ScriptStruct SMSystem.SMTransaction_Base
+// 0x0003 (0x0003 - 0x0000)
+struct FSMTransaction_Base
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	ESMTransactionType                            TransactionType;                                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOriginatedFromServer : 1;                         // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+DUMPER7_ASSERTS_FSMTransaction_Base;
+
 // ScriptStruct SMSystem.SMFullSyncStateTransaction
 // 0x0015 (0x0018 - 0x0003)
 struct FSMFullSyncStateTransaction final : public FSMTransaction_Base
@@ -357,6 +347,16 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSMTransitionTransaction;
+
+// ScriptStruct SMSystem.SMInitializeTransaction
+// 0x000D (0x0010 - 0x0003)
+struct FSMInitializeTransaction final : public FSMTransaction_Base
+{
+public:
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Context;                                           // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSMInitializeTransaction;
 
 // ScriptStruct SMSystem.SMTransition
 // 0x0098 (0x0168 - 0x00D0)

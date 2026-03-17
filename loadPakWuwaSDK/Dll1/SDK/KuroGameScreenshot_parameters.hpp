@@ -54,6 +54,17 @@ public:
 };
 DUMPER7_ASSERTS_GameScreenshotTask_TakeScreenshot;
 
+// Function KuroGameScreenshot.GameScreenshotTask.TakeScreenshotHighRes
+// 0x0008 (0x0008 - 0x0000)
+struct GameScreenshotTask_TakeScreenshotHighRes final
+{
+public:
+	int32                                         MultiplierScale;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_GameScreenshotTask_TakeScreenshotHighRes;
+
 // Function KuroGameScreenshot.KuroGameScreenshotBPLibrary.CompressConvertColorsToBitmap
 // 0x0028 (0x0028 - 0x0000)
 struct KuroGameScreenshotBPLibrary_CompressConvertColorsToBitmap final

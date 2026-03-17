@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroCrowdAi_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroCrowdAi_structs.hpp"
 
 
 namespace SDK

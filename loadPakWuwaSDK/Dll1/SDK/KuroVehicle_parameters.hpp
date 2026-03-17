@@ -12,8 +12,8 @@
 
 #include "KuroVehicle_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "KuroAnim_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

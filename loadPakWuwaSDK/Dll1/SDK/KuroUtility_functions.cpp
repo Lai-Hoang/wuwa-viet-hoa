@@ -7014,6 +7014,38 @@ TArray<struct FProductData> UKuroStaticPS5Library::GetStoreProducts()
 }
 
 
+// Function KuroUtility.KuroStaticPS5Library.GetStoreProductsWithParams
+// (Final, Native, Static, Public)
+// Parameters:
+// int32                                   ServiceLabel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Offset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Limit                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FProductData>             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FProductData> UKuroStaticPS5Library::GetStoreProductsWithParams(int32 ServiceLabel, int32 Offset, int32 Limit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticPS5Library", "GetStoreProductsWithParams");
+
+	Params::KuroStaticPS5Library_GetStoreProductsWithParams Parms{};
+
+	Parms.ServiceLabel = ServiceLabel;
+	Parms.Offset = Offset;
+	Parms.Limit = Limit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroStaticPS5Library.GetTrophyList
 // (Final, Native, Static, Public, HasOutParams)
 // Parameters:

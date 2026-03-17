@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KRDataAnalyticsPlugin_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KRDataAnalyticsPlugin_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 

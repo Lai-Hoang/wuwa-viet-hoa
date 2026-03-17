@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "KuroCurve_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroCurve_structs.hpp"
 
 
 namespace SDK

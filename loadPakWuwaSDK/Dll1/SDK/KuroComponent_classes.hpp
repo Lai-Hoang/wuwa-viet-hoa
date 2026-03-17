@@ -20,50 +20,6 @@
 namespace SDK
 {
 
-// Class KuroComponent.KuroRegionShapeComponent
-// 0x0000 (0x0220 - 0x0220)
-class UKuroRegionShapeComponent : public USceneComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroRegionShapeComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroRegionShapeComponent")
-	}
-	static class UKuroRegionShapeComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionShapeComponent>();
-	}
-};
-DUMPER7_ASSERTS_UKuroRegionShapeComponent;
-
-// Class KuroComponent.KuroRegionSphereComponent
-// 0x0010 (0x0230 - 0x0220)
-class UKuroRegionSphereComponent final : public UKuroRegionShapeComponent
-{
-public:
-	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroRegionSphereComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroRegionSphereComponent")
-	}
-	static class UKuroRegionSphereComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionSphereComponent>();
-	}
-};
-DUMPER7_ASSERTS_UKuroRegionSphereComponent;
-
 // Class KuroComponent.GpuNpcAvoidComponent
 // 0x00B8 (0x0178 - 0x00C0)
 class UGpuNpcAvoidComponent final : public UActorComponent
@@ -178,35 +134,34 @@ public:
 DUMPER7_ASSERTS_UKuroAnimPerfTestComponent;
 
 // Class KuroComponent.KuroChainComponent
-// 0x0110 (0x0670 - 0x0560)
-#pragma pack(push, 0x1)
-class alignas(0x10) UKuroChainComponent : public UMeshComponent
+// 0x0100 (0x06B0 - 0x05B0)
+class UKuroChainComponent : public UMeshComponent
 {
 public:
-	class UStaticMesh*                            ChainMesh;                                         // 0x0560(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0568(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Segments;                                          // 0x0574(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AdditiveRotation;                                  // 0x0578(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChainLength;                                       // 0x0584(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                EndPoint;                                          // 0x0588(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttachStart;                                       // 0x0594(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_595[0x3];                                      // 0x0595(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComponentReference                    AttachStartTo;                                     // 0x0598(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FName                                   AttachStartToSocket;                               // 0x05C8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttachEnd;                                         // 0x05D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5D5[0x3];                                      // 0x05D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FComponentReference                    AttachEndTo;                                       // 0x05D8(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FName                                   AttachEndToSocket;                                 // 0x0608(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Gravity;                                           // 0x0614(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Stiffness;                                         // 0x0618(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SelfCollision;                                     // 0x061C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            ChainMesh;                                         // 0x05A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x05B0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Segments;                                          // 0x05BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AdditiveRotation;                                  // 0x05C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChainLength;                                       // 0x05CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                EndPoint;                                          // 0x05D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachStart;                                       // 0x05DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5DD[0x3];                                      // 0x05DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FComponentReference                    AttachStartTo;                                     // 0x05E0(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FName                                   AttachStartToSocket;                               // 0x0610(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachEnd;                                         // 0x061C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_61D[0x3];                                      // 0x061D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SelfCollisionWidth;                                // 0x0620(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SelfCollisionThreshold;                            // 0x0624(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameSkip;                                         // 0x0628(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_62C[0x4];                                      // 0x062C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInstancedStaticMeshComponent*          InstanceComponent;                                 // 0x0630(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_638[0x30];                                     // 0x0638(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FComponentReference                    AttachEndTo;                                       // 0x0620(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FName                                   AttachEndToSocket;                                 // 0x0650(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Gravity;                                           // 0x065C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Stiffness;                                         // 0x0660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SelfCollision;                                     // 0x0664(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_665[0x3];                                      // 0x0665(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SelfCollisionWidth;                                // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SelfCollisionThreshold;                            // 0x066C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameSkip;                                         // 0x0670(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_674[0x4];                                      // 0x0674(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInstancedStaticMeshComponent*          InstanceComponent;                                 // 0x0678(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_680[0x30];                                     // 0x0680(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitChain();
@@ -225,33 +180,7 @@ public:
 		return GetDefaultObjImpl<UKuroChainComponent>();
 	}
 };
-#pragma pack(pop)
 DUMPER7_ASSERTS_UKuroChainComponent;
-
-// Class KuroComponent.KuroRegionCylinderComponent
-// 0x0010 (0x0230 - 0x0220)
-class UKuroRegionCylinderComponent final : public UKuroRegionShapeComponent
-{
-public:
-	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         HalfHeight;                                        // 0x0224(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroRegionCylinderComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroRegionCylinderComponent")
-	}
-	static class UKuroRegionCylinderComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRegionCylinderComponent>();
-	}
-};
-DUMPER7_ASSERTS_UKuroRegionCylinderComponent;
 
 // Class KuroComponent.KuroCharacterAnimationComponent
 // 0x0150 (0x0210 - 0x00C0)
@@ -288,6 +217,26 @@ public:
 };
 DUMPER7_ASSERTS_UKuroCharacterAnimationComponent;
 
+// Class KuroComponent.KuroRegionShapeComponent
+// 0x0000 (0x0220 - 0x0220)
+class UKuroRegionShapeComponent : public USceneComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionShapeComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionShapeComponent")
+	}
+	static class UKuroRegionShapeComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionShapeComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionShapeComponent;
+
 // Class KuroComponent.KuroRegionBoxComponent
 // 0x0010 (0x0230 - 0x0220)
 class UKuroRegionBoxComponent final : public UKuroRegionShapeComponent
@@ -311,6 +260,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroRegionBoxComponent;
+
+// Class KuroComponent.KuroRegionCylinderComponent
+// 0x0010 (0x0230 - 0x0220)
+class UKuroRegionCylinderComponent final : public UKuroRegionShapeComponent
+{
+public:
+	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         HalfHeight;                                        // 0x0224(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_228[0x8];                                      // 0x0228(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionCylinderComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionCylinderComponent")
+	}
+	static class UKuroRegionCylinderComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionCylinderComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionCylinderComponent;
 
 // Class KuroComponent.KuroRegionDetectComponent
 // 0x00A8 (0x0168 - 0x00C0)
@@ -397,6 +371,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroRegionSectorComponent;
+
+// Class KuroComponent.KuroRegionSphereComponent
+// 0x0010 (0x0230 - 0x0220)
+class UKuroRegionSphereComponent final : public UKuroRegionShapeComponent
+{
+public:
+	float                                         Radius;                                            // 0x0220(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRegionSphereComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRegionSphereComponent")
+	}
+	static class UKuroRegionSphereComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRegionSphereComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRegionSphereComponent;
 
 // Class KuroComponent.KuroSceneItemGuidePathComponent
 // 0x0058 (0x0118 - 0x00C0)
@@ -544,18 +542,18 @@ public:
 DUMPER7_ASSERTS_UKuroSceneItemMoveComponent;
 
 // Class KuroComponent.KuroSplineChainComponent
-// 0x0030 (0x06A0 - 0x0670)
+// 0x0030 (0x06E0 - 0x06B0)
 class UKuroSplineChainComponent final : public UKuroChainComponent
 {
 public:
-	float                                         SplineMaxLength;                                   // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshMinScale;                                      // 0x066C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshMaxScale;                                      // 0x0670(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MeshXYScaleRatio;                                  // 0x0674(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SegmentLengthMinScale;                             // 0x0678(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SegmentLengthMaxScale;                             // 0x067C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USplineComponent*                       SplineComponent;                                   // 0x0680(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_688[0x18];                                     // 0x0688(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SplineMaxLength;                                   // 0x06B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshMinScale;                                      // 0x06B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshMaxScale;                                      // 0x06B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MeshXYScaleRatio;                                  // 0x06BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SegmentLengthMinScale;                             // 0x06C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SegmentLengthMaxScale;                             // 0x06C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USplineComponent*                       SplineComponent;                                   // 0x06C8(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6D0[0x10];                                     // 0x06D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void UpdateSplineChainIndex();

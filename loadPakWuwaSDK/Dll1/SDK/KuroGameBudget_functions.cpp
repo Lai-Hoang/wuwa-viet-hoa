@@ -17,498 +17,6 @@
 namespace SDK
 {
 
-// Function KuroGameBudget.KuroGameBudgetComponent.ManualRegisterTick
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroGameBudgetComponent::ManualRegisterTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "ManualRegisterTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.ManualUnregisterTick
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroGameBudgetComponent::ManualUnregisterTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "ManualUnregisterTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.MarkSpecialBlueprintActor
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroGameBudgetComponent::MarkSpecialBlueprintActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "MarkSpecialBlueprintActor");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OnEnvInteractChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    bEnableEnvInteract                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroGameBudgetComponent::OnEnvInteractChanged(bool bEnableEnvInteract)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OnEnvInteractChanged");
-
-	Params::KuroGameBudgetComponent_OnEnvInteractChanged Parms{};
-
-	Parms.bEnableEnvInteract = bEnableEnvInteract;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OnInvisible
-// (Event, Public, BlueprintEvent)
-
-void UKuroGameBudgetComponent::OnInvisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OnInvisible");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OnLogicDisable
-// (Event, Public, BlueprintEvent)
-
-void UKuroGameBudgetComponent::OnLogicDisable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OnLogicDisable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OnLogicEnable
-// (Event, Public, BlueprintEvent)
-
-void UKuroGameBudgetComponent::OnLogicEnable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OnLogicEnable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OnVisible
-// (Event, Public, BlueprintEvent)
-
-void UKuroGameBudgetComponent::OnVisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OnVisible");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.OverrideGameBudgetGroupType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EGameBudgetBlueprintGroup               InOverrideGroupType                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroGameBudgetComponent::OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "OverrideGameBudgetGroupType");
-
-	Params::KuroGameBudgetComponent_OverrideGameBudgetGroupType Parms{};
-
-	Parms.InOverrideGroupType = InOverrideGroupType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.PauseGameBudget
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroGameBudgetComponent::PauseGameBudget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "PauseGameBudget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.ResumeGameBudget
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroGameBudgetComponent::ResumeGameBudget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "ResumeGameBudget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBounds
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TArray<class AActor*>&            InActors                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UKuroGameBudgetComponent::UpdateOverrideBounds(const TArray<class AActor*>& InActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "UpdateOverrideBounds");
-
-	Params::KuroGameBudgetComponent_UpdateOverrideBounds Parms{};
-
-	Parms.InActors = std::move(InActors);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBoundsFromSet
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TSet<class AActor*>&              InActors                                               (Parm, NativeAccessSpecifierPublic)
-
-void UKuroGameBudgetComponent::UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetComponent", "UpdateOverrideBoundsFromSet");
-
-	Params::KuroGameBudgetComponent_UpdateOverrideBoundsFromSet Parms{};
-
-	Parms.InActors = std::move(InActors);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ManualRegisterTick
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGameBudgetBlueprintActor::ManualRegisterTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ManualRegisterTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ManualUnregisterTick
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGameBudgetBlueprintActor::ManualUnregisterTick()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ManualUnregisterTick");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.MarkSpecialBlueprintActor
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGameBudgetBlueprintActor::MarkSpecialBlueprintActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "MarkSpecialBlueprintActor");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnEnvInteractChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    bEnableEnvInteract                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGameBudgetBlueprintActor::OnEnvInteractChanged(bool bEnableEnvInteract)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnEnvInteractChanged");
-
-	Params::KuroGameBudgetBlueprintActor_OnEnvInteractChanged Parms{};
-
-	Parms.bEnableEnvInteract = bEnableEnvInteract;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnInvisible
-// (Event, Public, BlueprintEvent)
-
-void AKuroGameBudgetBlueprintActor::OnInvisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnInvisible");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnLogicDisable
-// (Event, Public, BlueprintEvent)
-
-void AKuroGameBudgetBlueprintActor::OnLogicDisable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnLogicDisable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnLogicEnable
-// (Event, Public, BlueprintEvent)
-
-void AKuroGameBudgetBlueprintActor::OnLogicEnable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnLogicEnable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnVisible
-// (Event, Public, BlueprintEvent)
-
-void AKuroGameBudgetBlueprintActor::OnVisible()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnVisible");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// EGameBudgetBlueprintGroup               InOverrideGroupType                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGameBudgetBlueprintActor::OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OverrideGameBudgetGroupType");
-
-	Params::KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType Parms{};
-
-	Parms.InOverrideGroupType = InOverrideGroupType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.PauseGameBudget
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGameBudgetBlueprintActor::PauseGameBudget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "PauseGameBudget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ResumeGameBudget
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGameBudgetBlueprintActor::ResumeGameBudget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ResumeGameBudget");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TArray<class AActor*>&            InActors                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void AKuroGameBudgetBlueprintActor::UpdateOverrideBounds(const TArray<class AActor*>& InActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "UpdateOverrideBounds");
-
-	Params::KuroGameBudgetBlueprintActor_UpdateOverrideBounds Parms{};
-
-	Parms.InActors = std::move(InActors);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const TSet<class AActor*>&              InActors                                               (Parm, NativeAccessSpecifierPublic)
-
-void AKuroGameBudgetBlueprintActor::UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "UpdateOverrideBoundsFromSet");
-
-	Params::KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet Parms{};
-
-	Parms.InActors = std::move(InActors);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function KuroGameBudget.GameBudgetAllocator.AfterTickOutside
 // (Final, Native, Public)
 // Parameters:
@@ -847,6 +355,252 @@ void UGameBudgetAllocator::UpdateMinUpdateFIFOBudgetTime(float Time)
 }
 
 
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ManualRegisterTick
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGameBudgetBlueprintActor::ManualRegisterTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ManualRegisterTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ManualUnregisterTick
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGameBudgetBlueprintActor::ManualUnregisterTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ManualUnregisterTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.MarkSpecialBlueprintActor
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGameBudgetBlueprintActor::MarkSpecialBlueprintActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "MarkSpecialBlueprintActor");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnEnvInteractChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    bEnableEnvInteract                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGameBudgetBlueprintActor::OnEnvInteractChanged(bool bEnableEnvInteract)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnEnvInteractChanged");
+
+	Params::KuroGameBudgetBlueprintActor_OnEnvInteractChanged Parms{};
+
+	Parms.bEnableEnvInteract = bEnableEnvInteract;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnInvisible
+// (Event, Public, BlueprintEvent)
+
+void AKuroGameBudgetBlueprintActor::OnInvisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnInvisible");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnLogicDisable
+// (Event, Public, BlueprintEvent)
+
+void AKuroGameBudgetBlueprintActor::OnLogicDisable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnLogicDisable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnLogicEnable
+// (Event, Public, BlueprintEvent)
+
+void AKuroGameBudgetBlueprintActor::OnLogicEnable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnLogicEnable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OnVisible
+// (Event, Public, BlueprintEvent)
+
+void AKuroGameBudgetBlueprintActor::OnVisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OnVisible");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.OverrideGameBudgetGroupType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EGameBudgetBlueprintGroup               InOverrideGroupType                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGameBudgetBlueprintActor::OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "OverrideGameBudgetGroupType");
+
+	Params::KuroGameBudgetBlueprintActor_OverrideGameBudgetGroupType Parms{};
+
+	Parms.InOverrideGroupType = InOverrideGroupType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.PauseGameBudget
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGameBudgetBlueprintActor::PauseGameBudget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "PauseGameBudget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.ResumeGameBudget
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGameBudgetBlueprintActor::ResumeGameBudget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "ResumeGameBudget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBounds
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TArray<class AActor*>&            InActors                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void AKuroGameBudgetBlueprintActor::UpdateOverrideBounds(const TArray<class AActor*>& InActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "UpdateOverrideBounds");
+
+	Params::KuroGameBudgetBlueprintActor_UpdateOverrideBounds Parms{};
+
+	Parms.InActors = std::move(InActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetBlueprintActor.UpdateOverrideBoundsFromSet
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TSet<class AActor*>&              InActors                                               (Parm, NativeAccessSpecifierPublic)
+
+void AKuroGameBudgetBlueprintActor::UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetBlueprintActor", "UpdateOverrideBoundsFromSet");
+
+	Params::KuroGameBudgetBlueprintActor_UpdateOverrideBoundsFromSet Parms{};
+
+	Parms.InActors = std::move(InActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroGameBudget.KuroGameBudgetBlueprintDefine.Clear
 // (Final, Native, Static, Public, BlueprintCallable)
 
@@ -886,6 +640,252 @@ void UKuroGameBudgetBlueprintDefine::Initialize(const TArray<struct FGameBudgetB
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.ManualRegisterTick
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroGameBudgetComponent::ManualRegisterTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "ManualRegisterTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.ManualUnregisterTick
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroGameBudgetComponent::ManualUnregisterTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "ManualUnregisterTick");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.MarkSpecialBlueprintActor
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroGameBudgetComponent::MarkSpecialBlueprintActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "MarkSpecialBlueprintActor");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnEnvInteractChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    bEnableEnvInteract                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGameBudgetComponent::OnEnvInteractChanged(bool bEnableEnvInteract)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OnEnvInteractChanged");
+
+	Params::KuroGameBudgetComponent_OnEnvInteractChanged Parms{};
+
+	Parms.bEnableEnvInteract = bEnableEnvInteract;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnInvisible
+// (Event, Public, BlueprintEvent)
+
+void UKuroGameBudgetComponent::OnInvisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OnInvisible");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnLogicDisable
+// (Event, Public, BlueprintEvent)
+
+void UKuroGameBudgetComponent::OnLogicDisable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OnLogicDisable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnLogicEnable
+// (Event, Public, BlueprintEvent)
+
+void UKuroGameBudgetComponent::OnLogicEnable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OnLogicEnable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OnVisible
+// (Event, Public, BlueprintEvent)
+
+void UKuroGameBudgetComponent::OnVisible()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OnVisible");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.OverrideGameBudgetGroupType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EGameBudgetBlueprintGroup               InOverrideGroupType                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGameBudgetComponent::OverrideGameBudgetGroupType(EGameBudgetBlueprintGroup InOverrideGroupType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "OverrideGameBudgetGroupType");
+
+	Params::KuroGameBudgetComponent_OverrideGameBudgetGroupType Parms{};
+
+	Parms.InOverrideGroupType = InOverrideGroupType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.PauseGameBudget
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroGameBudgetComponent::PauseGameBudget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "PauseGameBudget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.ResumeGameBudget
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroGameBudgetComponent::ResumeGameBudget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "ResumeGameBudget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBounds
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TArray<class AActor*>&            InActors                                               (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroGameBudgetComponent::UpdateOverrideBounds(const TArray<class AActor*>& InActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "UpdateOverrideBounds");
+
+	Params::KuroGameBudgetComponent_UpdateOverrideBounds Parms{};
+
+	Parms.InActors = std::move(InActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGameBudget.KuroGameBudgetComponent.UpdateOverrideBoundsFromSet
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TSet<class AActor*>&              InActors                                               (Parm, NativeAccessSpecifierPublic)
+
+void UKuroGameBudgetComponent::UpdateOverrideBoundsFromSet(const TSet<class AActor*>& InActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGameBudgetComponent", "UpdateOverrideBoundsFromSet");
+
+	Params::KuroGameBudgetComponent_UpdateOverrideBoundsFromSet Parms{};
+
+	Parms.InActors = std::move(InActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

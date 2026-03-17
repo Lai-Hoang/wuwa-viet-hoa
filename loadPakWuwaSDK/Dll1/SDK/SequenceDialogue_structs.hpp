@@ -59,6 +59,15 @@ enum class ETranslateCountry : uint8
 	ETranslateCountry_MAX                    = 14,
 };
 
+// ScriptStruct SequenceDialogue.DialogueStateStruct
+// 0x0001 (0x0001 - 0x0000)
+struct FDialogueStateStruct final
+{
+public:
+	EDialogueStateEnum                            State;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FDialogueStateStruct;
+
 // ScriptStruct SequenceDialogue.SpineData
 // 0x0018 (0x0018 - 0x0000)
 struct FSpineData final
@@ -116,6 +125,24 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneQteEventParam;
 
+// ScriptStruct SequenceDialogue.MovieSceneAutoTransformExecutionHelper
+// 0x0001 (0x0001 - 0x0000)
+struct FMovieSceneAutoTransformExecutionHelper final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneAutoTransformExecutionHelper;
+
+// ScriptStruct SequenceDialogue.MovieSceneAutoTransformSectionTemplate
+// 0x0010 (0x0030 - 0x0020)
+struct FMovieSceneAutoTransformSectionTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneAutoTransformSectionTemplate;
+
 // ScriptStruct SequenceDialogue.MovieSceneDialogueAudioSharedTrack
 // 0x0000 (0x0020 - 0x0020)
 struct FMovieSceneDialogueAudioSharedTrack final : public FMovieSceneEvalTemplate
@@ -133,6 +160,51 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FMovieSceneDialogueAudioSectionTemplate;
+
+// ScriptStruct SequenceDialogue.MovieSceneDialogueStateTemplate
+// 0x0000 (0x0020 - 0x0020)
+struct FMovieSceneDialogueStateTemplate final : public FMovieSceneEvalTemplate
+{
+};
+DUMPER7_ASSERTS_FMovieSceneDialogueStateTemplate;
+
+// ScriptStruct SequenceDialogue.Translate
+// 0x00D0 (0x00D0 - 0x0000)
+struct alignas(0x08) FTranslate final
+{
+public:
+	uint8                                         Pad_0[0xD0];                                       // 0x0000(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTranslate;
+
+// ScriptStruct SequenceDialogue.MovieSceneDialogueSharedTrack
+// 0x0000 (0x0020 - 0x0020)
+struct FMovieSceneDialogueSharedTrack final : public FMovieSceneEvalTemplate
+{
+};
+DUMPER7_ASSERTS_FMovieSceneDialogueSharedTrack;
+
+// ScriptStruct SequenceDialogue.MovieSceneDialogueSectionTemplate
+// 0x0090 (0x00B0 - 0x0020)
+struct FMovieSceneDialogueSectionTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	class FText                                   DialogueInfo;                                      // 0x0020(0x0018)(NativeAccessSpecifierPrivate)
+	class FText                                   SpeakerName;                                       // 0x0038(0x0018)(NativeAccessSpecifierPrivate)
+	class FText                                   DialogueID;                                        // 0x0050(0x0018)(NativeAccessSpecifierPrivate)
+	int32                                         GuardTime;                                         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         AudioDelay;                                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         AudioTransitionDuration;                           // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FText>                           Options;                                           // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	class FText                                   DialogueKey;                                       // 0x0088(0x0018)(NativeAccessSpecifierPrivate)
+	int32                                         SpeakerID;                                         // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ELanguageAudio                                LanguageType;                                      // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         QteId;                                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         AutoPlayDelay;                                     // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+DUMPER7_ASSERTS_FMovieSceneDialogueSectionTemplate;
 
 // ScriptStruct SequenceDialogue.MovieSceneQteAnimExtraParams
 // 0x0028 (0x0028 - 0x0000)
@@ -182,6 +254,15 @@ public:
 };
 DUMPER7_ASSERTS_FMovieSceneQteParams;
 
+// ScriptStruct SequenceDialogue.MovieSceneQteTemplate
+// 0x00A0 (0x00C0 - 0x0020)
+struct FMovieSceneQteTemplate final : public FMovieSceneEvalTemplate
+{
+public:
+	uint8                                         Pad_20[0xA0];                                      // 0x0020(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneQteTemplate;
+
 // ScriptStruct SequenceDialogue.MovieSceneQteTemplateParams
 // 0x0008 (0x00A0 - 0x0098)
 struct FMovieSceneQteTemplateParams final : public FMovieSceneQteParams
@@ -191,87 +272,6 @@ public:
 	struct FFrameNumber                           SectionEndTime;                                    // 0x009C(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMovieSceneQteTemplateParams;
-
-// ScriptStruct SequenceDialogue.MovieSceneAutoTransformExecutionHelper
-// 0x0001 (0x0001 - 0x0000)
-struct FMovieSceneAutoTransformExecutionHelper final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieSceneAutoTransformExecutionHelper;
-
-// ScriptStruct SequenceDialogue.MovieSceneAutoTransformSectionTemplate
-// 0x0010 (0x0030 - 0x0020)
-struct FMovieSceneAutoTransformSectionTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	uint8                                         Pad_20[0x10];                                      // 0x0020(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieSceneAutoTransformSectionTemplate;
-
-// ScriptStruct SequenceDialogue.DialogueStateStruct
-// 0x0001 (0x0001 - 0x0000)
-struct FDialogueStateStruct final
-{
-public:
-	EDialogueStateEnum                            State;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FDialogueStateStruct;
-
-// ScriptStruct SequenceDialogue.MovieSceneDialogueStateTemplate
-// 0x0000 (0x0020 - 0x0020)
-struct FMovieSceneDialogueStateTemplate final : public FMovieSceneEvalTemplate
-{
-};
-DUMPER7_ASSERTS_FMovieSceneDialogueStateTemplate;
-
-// ScriptStruct SequenceDialogue.Translate
-// 0x00D0 (0x00D0 - 0x0000)
-struct alignas(0x08) FTranslate final
-{
-public:
-	uint8                                         Pad_0[0xD0];                                       // 0x0000(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTranslate;
-
-// ScriptStruct SequenceDialogue.MovieSceneDialogueSharedTrack
-// 0x0000 (0x0020 - 0x0020)
-struct FMovieSceneDialogueSharedTrack final : public FMovieSceneEvalTemplate
-{
-};
-DUMPER7_ASSERTS_FMovieSceneDialogueSharedTrack;
-
-// ScriptStruct SequenceDialogue.MovieSceneDialogueSectionTemplate
-// 0x0090 (0x00B0 - 0x0020)
-struct FMovieSceneDialogueSectionTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	class FText                                   DialogueInfo;                                      // 0x0020(0x0018)(NativeAccessSpecifierPrivate)
-	class FText                                   SpeakerName;                                       // 0x0038(0x0018)(NativeAccessSpecifierPrivate)
-	class FText                                   DialogueID;                                        // 0x0050(0x0018)(NativeAccessSpecifierPrivate)
-	int32                                         GuardTime;                                         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         AudioDelay;                                        // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         AudioTransitionDuration;                           // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FText>                           Options;                                           // 0x0078(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	class FText                                   DialogueKey;                                       // 0x0088(0x0018)(NativeAccessSpecifierPrivate)
-	int32                                         SpeakerID;                                         // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ELanguageAudio                                LanguageType;                                      // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         QteId;                                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         AutoPlayDelay;                                     // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-DUMPER7_ASSERTS_FMovieSceneDialogueSectionTemplate;
-
-// ScriptStruct SequenceDialogue.MovieSceneQteTemplate
-// 0x00A0 (0x00C0 - 0x0020)
-struct FMovieSceneQteTemplate final : public FMovieSceneEvalTemplate
-{
-public:
-	uint8                                         Pad_20[0xA0];                                      // 0x0020(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FMovieSceneQteTemplate;
 
 // ScriptStruct SequenceDialogue.MovieSceneQteTriggerChannel
 // 0x0080 (0x0088 - 0x0008)

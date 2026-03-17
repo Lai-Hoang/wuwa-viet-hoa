@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "JsEnv_structs.hpp"
 #include "KuroUtility_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "JsEnv_structs.hpp"
 
 
 namespace SDK::Params
@@ -2529,6 +2529,19 @@ public:
 	TArray<struct FProductData>                   ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroStaticPS5Library_GetStoreProducts;
+
+// Function KuroUtility.KuroStaticPS5Library.GetStoreProductsWithParams
+// 0x0020 (0x0020 - 0x0000)
+struct KuroStaticPS5Library_GetStoreProductsWithParams final
+{
+public:
+	int32                                         ServiceLabel;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Offset;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Limit;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FProductData>                   ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroStaticPS5Library_GetStoreProductsWithParams;
 
 // Function KuroUtility.KuroStaticPS5Library.GetTrophyList
 // 0x0040 (0x0040 - 0x0000)

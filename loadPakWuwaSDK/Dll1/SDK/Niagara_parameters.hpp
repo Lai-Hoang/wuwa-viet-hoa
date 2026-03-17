@@ -107,6 +107,17 @@ public:
 };
 DUMPER7_ASSERTS_NiagaraComponent_HasAnyEmittersComplete;
 
+// Function Niagara.NiagaraComponent.HasDataInterface
+// 0x0010 (0x0010 - 0x0000)
+struct NiagaraComponent_HasDataInterface final
+{
+public:
+	class UClass*                                 DataInterfaceClass;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_NiagaraComponent_HasDataInterface;
+
 // Function Niagara.NiagaraComponent.HasSkeletalMeshDataInterface
 // 0x0001 (0x0001 - 0x0000)
 struct NiagaraComponent_HasSkeletalMeshDataInterface final
@@ -146,6 +157,15 @@ public:
 	ENiagaraAgeUpdateMode                         InAgeUpdateMode;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NiagaraComponent_SetAgeUpdateMode;
+
+// Function Niagara.NiagaraComponent.SetAllowOcclusionCulling
+// 0x0001 (0x0001 - 0x0000)
+struct NiagaraComponent_SetAllowOcclusionCulling final
+{
+public:
+	bool                                          bInAllowOcclusionCulling;                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NiagaraComponent_SetAllowOcclusionCulling;
 
 // Function Niagara.NiagaraComponent.SetAllowScalability
 // 0x0001 (0x0001 - 0x0000)

@@ -17,15 +17,16 @@ namespace SDK
 {
 
 // Class KuroSplines.KuroMoveSplineComponent
-// 0x0050 (0x0670 - 0x0620)
+// 0x0050 (0x06C0 - 0x0670)
 class UKuroMoveSplineComponent final : public USplineComponent
 {
 public:
-	TArray<int32>                                 MoveStates;                                        // 0x0620(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 MoveSpeeds;                                        // 0x0630(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 IgnorePoints;                                      // 0x0640(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 StayTimes;                                         // 0x0650(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 IsHides;                                           // 0x0660(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 MoveStates;                                        // 0x0668(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 MoveSpeeds;                                        // 0x0678(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 IgnorePoints;                                      // 0x0688(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 StayTimes;                                         // 0x0698(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 IsHides;                                           // 0x06A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6B8[0x8];                                      // 0x06B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetIgnorePoint(int32 Index_0);
@@ -51,13 +52,14 @@ public:
 DUMPER7_ASSERTS_UKuroMoveSplineComponent;
 
 // Class KuroSplines.KuroParkourSplineComponent
-// 0x0030 (0x0650 - 0x0620)
+// 0x0030 (0x06A0 - 0x0670)
 class UKuroParkourSplineComponent final : public USplineComponent
 {
 public:
-	TArray<float>                                 RadiusGroup;                                       // 0x0620(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 ModifiedTimes;                                     // 0x0630(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 BuffIds;                                           // 0x0640(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 RadiusGroup;                                       // 0x0668(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 ModifiedTimes;                                     // 0x0678(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 BuffIds;                                           // 0x0688(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_698[0x8];                                      // 0x0698(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 GetBuffId(int32 Index_0);

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESkillEffectType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "ESkillEffectType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 

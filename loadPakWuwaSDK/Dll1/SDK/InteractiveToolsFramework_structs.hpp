@@ -206,11 +206,11 @@ public:
 DUMPER7_ASSERTS_FBehaviorInfo;
 
 // ScriptStruct InteractiveToolsFramework.InputRayHit
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct alignas(0x08) FInputRayHit final
 {
 public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FInputRayHit;
 

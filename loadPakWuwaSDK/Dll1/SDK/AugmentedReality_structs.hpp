@@ -568,6 +568,17 @@ public:
 };
 DUMPER7_ASSERTS_FARGeoAnchorUpdatePayload;
 
+// ScriptStruct AugmentedReality.ARSessionStatus
+// 0x0018 (0x0018 - 0x0000)
+struct FARSessionStatus final
+{
+public:
+	class FString                                 AdditionalInfo;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EARSessionStatus                              Status;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FARSessionStatus;
+
 // ScriptStruct AugmentedReality.ARMeshUpdatePayload
 // 0x0060 (0x0060 - 0x0000)
 struct FARMeshUpdatePayload final
@@ -755,17 +766,6 @@ public:
 	int32                                         Height;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FARVideoFormat;
-
-// ScriptStruct AugmentedReality.ARSessionStatus
-// 0x0018 (0x0018 - 0x0000)
-struct FARSessionStatus final
-{
-public:
-	class FString                                 AdditionalInfo;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EARSessionStatus                              Status;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FARSessionStatus;
 
 }
 

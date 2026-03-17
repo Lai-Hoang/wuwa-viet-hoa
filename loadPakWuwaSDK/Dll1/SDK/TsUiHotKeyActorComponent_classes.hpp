@@ -29,11 +29,11 @@ public:
 
 public:
 	void ExecuteUbergraph_TsUiHotKeyActorComponent(int32 EntryPoint);
+	void OnPreDestroyBP();
 	void OnDisableBP();
 	void OnEnableBP();
 	void AwakeBP();
 	void StartBP();
-	void OnDestroyBP();
 
 public:
 	static class UClass* StaticClass()

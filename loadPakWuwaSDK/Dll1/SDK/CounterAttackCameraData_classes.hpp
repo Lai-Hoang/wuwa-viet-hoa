@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SCounterAttackCamera_structs.hpp"
 #include "STimeScale_structs.hpp"
+#include "SCounterAttackCamera_structs.hpp"
 #include "KuroUtility_classes.hpp"
 
 
@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass CounterAttackCameraData.CounterAttackCameraData_C
-// 0x0180 (0x01B8 - 0x0038)
+// 0x0198 (0x01D0 - 0x0038)
 class UCounterAttackCameraData_C final : public UKuroBpDataAsset
 {
 public:
-	struct FSCounterAttackCamera                  CameraData;                                        // 0x0038(0x0148)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FSTimeScale                            AttackerTimeScale;                                 // 0x0180(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CameraShake;                                       // 0x0198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSTimeScale                            VictimTimeScale;                                   // 0x01A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCounterAttackCamera                  CameraData;                                        // 0x0038(0x0160)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FSTimeScale                            AttackerTimeScale;                                 // 0x0198(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CameraShake;                                       // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSTimeScale                            VictimTimeScale;                                   // 0x01B8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

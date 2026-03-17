@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ECharacterRenderingType_structs.hpp"
-#include "ECharacterDitherType_structs.hpp"
 #include "ECamp_structs.hpp"
+#include "ECharacterRenderingType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroGAS_classes.hpp"
+#include "ECharacterDitherType_structs.hpp"
 
 
 namespace SDK

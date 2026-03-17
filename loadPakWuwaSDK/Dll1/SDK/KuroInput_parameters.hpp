@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Slate_structs.hpp"
-#include "KuroInput_structs.hpp"
 #include "Engine_structs.hpp"
+#include "KuroInput_structs.hpp"
+#include "Slate_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,6 +28,15 @@ public:
 	int32                                         GlobalFeedbackCoef;                                // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_BasePlayerController_SetKuroForceFeedbackConfig;
+
+// Function KuroInput.BasePlayerController.SetUseGamepadState
+// 0x0001 (0x0001 - 0x0000)
+struct BasePlayerController_SetUseGamepadState final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BasePlayerController_SetUseGamepadState;
 
 // Function KuroInput.BasePlayerController.SetUseSonyGamepadState
 // 0x0001 (0x0001 - 0x0000)
@@ -215,6 +224,17 @@ public:
 	struct FInputModeReply                        ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroInputFunctionLibrary_SetUIOnlyInputMode;
+
+// Function KuroInput.KuroInputFunctionLibrary.TryUseHighPrecisionMouseMovement
+// 0x0010 (0x0010 - 0x0000)
+struct KuroInputFunctionLibrary_TryUseHighPrecisionMouseMovement final
+{
+public:
+	const class APlayerController*                InPlayerController;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUse;                                              // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroInputFunctionLibrary_TryUseHighPrecisionMouseMovement;
 
 }
 

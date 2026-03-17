@@ -19,109 +19,6 @@
 namespace SDK
 {
 
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
-// 0x0010 (0x0050 - 0x0040)
-class UAnimNotify_PlayMontageNotify final : public UAnimNotify
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotify")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotify")
-	}
-	static class UAnimNotify_PlayMontageNotify* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
-	}
-};
-DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
-
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0010 (0x0740 - 0x0730)
-class UAnimSequencerInstance : public UAnimInstance
-{
-public:
-	uint8                                         Pad_730[0x10];                                     // 0x0730(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimSequencerInstance")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimSequencerInstance")
-	}
-	static class UAnimSequencerInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
-	}
-};
-DUMPER7_ASSERTS_UAnimSequencerInstance;
-
-// Class AnimGraphRuntime.KismetAnimationLibrary
-// 0x0000 (0x0030 - 0x0030)
-class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static float K2_CalculateVelocityFromPositionHistory(float DeltaSeconds, const struct FVector& Position, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax);
-	static float K2_CalculateVelocityFromSockets(float DeltaSeconds, class USkeletalMeshComponent* Component, const class FName SocketOrBoneName, const class FName ReferenceSocketOrBone, ERelativeTransformSpace SocketSpace, const struct FVector& OffsetInBoneSpace, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax, EEasingFuncType EasingType, const struct FRuntimeFloatCurve& CustomCurve);
-	static struct FVector K2_DirectionBetweenSockets(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameFrom, const class FName SocketOrBoneNameTo);
-	static float K2_DistanceBetweenTwoSocketsAndMapRange(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameA, ERelativeTransformSpace SocketSpaceA, const class FName SocketOrBoneNameB, ERelativeTransformSpace SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax);
-	static float K2_EndProfilingTimer(bool bLog, const class FString& LogPrefix);
-	static struct FTransform K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree);
-	static float K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax);
-	static struct FVector K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ);
-	static void K2_StartProfilingTimer();
-	static void K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, struct FVector* OutJointPos, struct FVector* OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KismetAnimationLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KismetAnimationLibrary")
-	}
-	static class UKismetAnimationLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKismetAnimationLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UKismetAnimationLibrary;
-
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
-// 0x0010 (0x0050 - 0x0040)
-class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotifyWindow")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotifyWindow")
-	}
-	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
-	}
-};
-DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
-
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
 // 0x0080 (0x00B0 - 0x0030)
 class UPlayMontageCallbackProxy final : public UObject
@@ -157,6 +54,109 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlayMontageCallbackProxy;
+
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0010 (0x0740 - 0x0730)
+class UAnimSequencerInstance : public UAnimInstance
+{
+public:
+	uint8                                         Pad_730[0x10];                                     // 0x0730(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimSequencerInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimSequencerInstance")
+	}
+	static class UAnimSequencerInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
+	}
+};
+DUMPER7_ASSERTS_UAnimSequencerInstance;
+
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
+// 0x0010 (0x0050 - 0x0040)
+class UAnimNotify_PlayMontageNotify final : public UAnimNotify
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotify")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotify")
+	}
+	static class UAnimNotify_PlayMontageNotify* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
+	}
+};
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotify;
+
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
+// 0x0010 (0x0050 - 0x0040)
+class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0040(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AnimNotify_PlayMontageNotifyWindow")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AnimNotify_PlayMontageNotifyWindow")
+	}
+	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
+	}
+};
+DUMPER7_ASSERTS_UAnimNotify_PlayMontageNotifyWindow;
+
+// Class AnimGraphRuntime.KismetAnimationLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static float K2_CalculateVelocityFromPositionHistory(float DeltaSeconds, const struct FVector& Position, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax);
+	static float K2_CalculateVelocityFromSockets(float DeltaSeconds, class USkeletalMeshComponent* Component, const class FName SocketOrBoneName, const class FName ReferenceSocketOrBone, ERelativeTransformSpace SocketSpace, const struct FVector& OffsetInBoneSpace, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax, EEasingFuncType EasingType, const struct FRuntimeFloatCurve& CustomCurve);
+	static struct FVector K2_DirectionBetweenSockets(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameFrom, const class FName SocketOrBoneNameTo);
+	static float K2_DistanceBetweenTwoSocketsAndMapRange(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameA, ERelativeTransformSpace SocketSpaceA, const class FName SocketOrBoneNameB, ERelativeTransformSpace SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax);
+	static float K2_EndProfilingTimer(bool bLog, const class FString& LogPrefix);
+	static struct FTransform K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree);
+	static float K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax);
+	static struct FVector K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ);
+	static void K2_StartProfilingTimer();
+	static void K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, struct FVector* OutJointPos, struct FVector* OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KismetAnimationLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KismetAnimationLibrary")
+	}
+	static class UKismetAnimationLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKismetAnimationLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKismetAnimationLibrary;
 
 // Class AnimGraphRuntime.SequencerAnimationSupport
 // 0x0000 (0x0000 - 0x0000)

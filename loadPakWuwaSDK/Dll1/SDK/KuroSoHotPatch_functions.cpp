@@ -269,6 +269,33 @@ void UKuroSPTools::SetSoVersionUpdateTime(int32 UpdateTime)
 }
 
 
+// Function KuroSoHotPatch.KuroTinkerTools.CheckLib
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ObjId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroTinkerTools::CheckLib(int32 ObjId, const class FString& Hash)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroTinkerTools", "CheckLib");
+
+	Params::KuroTinkerTools_CheckLib Parms{};
+
+	Parms.ObjId = ObjId;
+	Parms.Hash = std::move(Hash);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroSoHotPatch.KuroTinkerTools.CleanPatch
 // (Final, Native, Static, Public, BlueprintCallable)
 
@@ -433,6 +460,31 @@ void UKuroTinkerTools::SetCurLoadingVersion(const class FString& Version)
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSoHotPatch.KuroVerify.CheckLib
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Hash                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVerify::CheckLib(const class FString& Hash)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVerify", "CheckLib");
+
+	Params::KuroVerify_CheckLib Parms{};
+
+	Parms.Hash = std::move(Hash);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

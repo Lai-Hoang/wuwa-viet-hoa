@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "EHookInteractTypeBp_structs.hpp"
+#include "EVisionType_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EMorphType_structs.hpp"
-#include "ECharacterLoadType_structs.hpp"
-#include "EAimViewState_structs.hpp"
 #include "EFishingSkillType_structs.hpp"
-#include "EVisionType_structs.hpp"
-#include "EHitAnim_structs.hpp"
 #include "ESkillTargetDirection_structs.hpp"
+#include "ECharacterLoadType_structs.hpp"
+#include "EHookInteractTypeBp_structs.hpp"
+#include "EHitAnim_structs.hpp"
+#include "EAimViewState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
 #include "ECharParentMoveState_structs.hpp"
 #include "ECharState_structs.hpp"
@@ -336,6 +336,10 @@ public:
 	static int32 GetHookOverrideSpeed(int32 entityId, class UObject* __WorldContext);
 	static float GetVehicleCatapultUnitRisingTime(int32 entityId, class UObject* __WorldContext);
 	static void SetGameplayCueEffectForceRecycle(int32 entityId, int64 cueId, class UObject* __WorldContext);
+	static int32 XigelikaAddBean(int32 entityId, const class FString& bean, class UObject* __WorldContext);
+	static void XigelikaConsumeBean(int32 entityId, class UObject* __WorldContext);
+	static void XigelikaResetBean(int32 entityId, class UObject* __WorldContext);
+	static int32 XigelikaGetBeanResultant(int32 entityId, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
