@@ -914,7 +914,6 @@ Main_LahaiRoi_YXBLDHJ_54_7,Vậy thì hãy cùng nhau giải câu đố này nà
 Main_LahaiRoi_YXBLDHJ_54_8,Ừ! Chúng ta có thể dịch chuyển từ đây. Nhưng… Dòng Chảy của Danh Chân Thật bị đảo ngược.
 Main_LahaiRoi_YXBLDHJ_54_9,Tôi biết rồi… thử cái này xem! Bùa này có thể sửa nó cho cậu!
 Main_LahaiRoi_YXBLDHJ_55_1,Huyền văn đó trông giống như cái tôi thấy hôm qua.
-Main_LahaiRoi_YXBLDHJ_55_2,Tôi đã giải mã nó trước đây rồi.
 Main_LahaiRoi_YXBLDHJ_56_1,Câu đố đã được giải rồi! Tôi biết hai cậu làm được mà!
 Main_LahaiRoi_YXBLDHJ_56_2,Không câu đố nào có thể cản trở hai người các cậu!
 Main_LahaiRoi_YXBLDHJ_56_3,Cố lên! Tôi ủng hộ bạn!
@@ -1260,7 +1259,6 @@ Main_LahaiRoi_YXBLDHJ_128_21,Thừa nhận đi… nghe hay hơn nhiều phải k
 Main_LahaiRoi_YXBLDHJ_128_22,<ano=Hãy giữ vững lựa chọn của bạn>Không còn áp lực từ kỳ vọng của gia đình hay bạn bè.</ano>
 Main_LahaiRoi_YXBLDHJ_128_23,Hay thực ra tất cả chỉ là để chứng minh bản thân?
 Main_LahaiRoi_YXBLDHJ_128_24,"Bạn cần phải nghỉ ngơi ""tồi tệ"" thôi."
-Main_LahaiRoi_YXBLDHJ_128_25,<ano=Bạn tiến về phía trước theo cách của riêng mình!>Không còn những câu hỏi bất tận từ các giáo sư. Không còn áp lực phải trở nên hoàn hảo hơn.</ano>
 Main_LahaiRoi_YXBLDHJ_128_26,"Dù có chuyện gì xảy ra đi chăng nữa, cậu, tôi, {PlayerName}, Tiến sĩ Luuk... chúng ta sẽ không để phe Hắc Ám hủy hoại Học viện."
 Main_LahaiRoi_YXBLDHJ_128_27,"<ano=Tỉnh lại đi! Sigrika!>À, còn vị tiền bối đáng kính của cậu... cậu cũng không cần phải bận tâm đến {Male=sự kỳ vọng của anh ấy;Female=sự kỳ vọng của cô ấy} đâu.</ano>"
 Main_LahaiRoi_YXBLDHJ_128_28,Người Sigrika mà tôi biết sẽ luôn chọn tiếp tục tiến lên.
@@ -1298,3 +1296,5 @@ Main_LahaiRoi_YXBLDHJ_119_15,"Bạn đuổi theo con thỏ ngày càng sâu hơn
 Trong tuyệt vọng, bạn thét gọi tên cô ấy."
 Main_LahaiRoi_YXBLDHJ_67_26,"Sau khi giải được vài câu đố, bạn tiến vào căn phòng cuối cùng, nơi một ký tự phép thuật lơ lửng đặt ra câu hỏi. Nhưng đến lúc đó, bất kỳ câu trả lời nào bạn đưa ra, dù đúng hay sai, đều bị Bóng Tối bác bỏ. Đúng lúc tình thế trở nên tuyệt vọng, một đĩa nhạc xuất hiện, dẫn lối cho bạn thoát ra an toàn."
 Main_LahaiRoi_YXBLDHJ_41_2,[Một bức ảnh về câu đố.]
+Main_LahaiRoi_YXBLDHJ_55_2,Tôi sẽ đi giải mã nó.
+Main_LahaiRoi_YXBLDHJ_128_25,<ano=Cậu tự bước đi theo cách của mình!>Không còn những câu hỏi bất tận từ các giáo sư</ano>. Không còn áp lực phải trở nên hơn thế nữa.
