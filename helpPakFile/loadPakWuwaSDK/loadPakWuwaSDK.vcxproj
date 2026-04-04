@@ -22,9 +22,9 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{bab22b8d-2852-4840-a160-07de940d7c48}</ProjectGuid>
-    <RootNamespace>Dll1</RootNamespace>
+    <RootNamespace>loadPakWuwaSDK</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>wuwaVietHoa</ProjectName>
+    <ProjectName>loadPakWuwaSDK</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
