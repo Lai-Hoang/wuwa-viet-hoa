@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "GameplayTags_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "SCameraModifier_Settings_structs.hpp"
 #include "SCameraModifier_Condition_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK

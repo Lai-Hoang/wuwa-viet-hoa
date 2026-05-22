@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "KuroInput_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Slate_structs.hpp"
 
 

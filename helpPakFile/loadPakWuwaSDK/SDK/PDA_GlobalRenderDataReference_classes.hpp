@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PDA_GlobalRenderDataReference.PDA_GlobalRenderDataReference_C
-// 0x0048 (0x0080 - 0x0038)
+// 0x0050 (0x0088 - 0x0038)
 class UPDA_GlobalRenderDataReference_C final : public UPrimaryDataAsset
 {
 public:
@@ -30,6 +30,7 @@ public:
 	class UMaterialInterface*                     EmptyMaterial;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialParameterCollection*           MPC_ShowColorSetting;                              // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialParameterCollection*           MPC_GroundFogMask;                                 // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialParameterCollection*           MPC_SceneCaptureParameter;                         // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

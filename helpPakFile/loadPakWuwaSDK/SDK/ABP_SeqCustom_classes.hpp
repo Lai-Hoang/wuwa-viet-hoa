@@ -21,26 +21,26 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_SeqCustom.ABP_SeqCustom_C
-// 0x06B0 (0x0DE0 - 0x0730)
+// 0x06B0 (0x0E80 - 0x07D0)
 class UABP_SeqCustom_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x0770(0x0060)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x07D0(0x0060)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0830(0x0138)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0968(0x0060)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x09C8(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x09E8(0x0020)()
-	struct FAnimNode_KuroModifyBones              AnimGraphNode_KuroModifyBones;                     // 0x0A08(0x0190)()
-	struct FAnimNode_CurveSource                  AnimGraphNode_CurveSource;                         // 0x0B98(0x0040)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0BD8(0x0060)()
-	struct FAnimNode_CurveFix                     AnimGraphNode_CurveFix;                            // 0x0C38(0x0030)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0C68(0x0060)()
-	struct FAnimNode_CombineCurves                AnimGraphNode_CombineCurves_1;                     // 0x0CC8(0x0060)()
-	struct FAnimNode_CombineCurves                AnimGraphNode_CombineCurves;                       // 0x0D28(0x0060)()
-	TMap<class FName, struct FTransform>          Vector_Curve_Data;                                 // 0x0D88(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0038)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x0810(0x0060)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x0870(0x0060)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x08D0(0x0138)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0A08(0x0060)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0A68(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0A88(0x0020)()
+	struct FAnimNode_KuroModifyBones              AnimGraphNode_KuroModifyBones;                     // 0x0AA8(0x0190)()
+	struct FAnimNode_CurveSource                  AnimGraphNode_CurveSource;                         // 0x0C38(0x0040)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0C78(0x0060)()
+	struct FAnimNode_CurveFix                     AnimGraphNode_CurveFix;                            // 0x0CD8(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0D08(0x0060)()
+	struct FAnimNode_CombineCurves                AnimGraphNode_CombineCurves_1;                     // 0x0D68(0x0060)()
+	struct FAnimNode_CombineCurves                AnimGraphNode_CombineCurves;                       // 0x0DC8(0x0060)()
+	TMap<class FName, struct FTransform>          Vector_Curve_Data;                                 // 0x0E28(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_ABP_SeqCustom(int32 EntryPoint);

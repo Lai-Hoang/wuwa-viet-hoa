@@ -216,6 +216,15 @@ enum class EKuroPPLensflareType : uint8
 	EKuroPPLensflareType_MAX                 = 17,
 };
 
+// Enum KuroRenderingRuntimeBPPlugin.ECircleStampBlendMode
+// NumValues: 0x0003
+enum class ECircleStampBlendMode : uint8
+{
+	Max                                      = 0,
+	Min                                      = 1,
+	ECircleStampBlendMode_MAX                = 2,
+};
+
 // Enum KuroRenderingRuntimeBPPlugin.EBillboardMode
 // NumValues: 0x0005
 enum class EBillboardMode : uint8
@@ -274,6 +283,17 @@ enum class EKuroUI3DState : uint8
 	Loading                                  = 1,
 	Loaded                                   = 2,
 	EKuroUI3DState_MAX                       = 3,
+};
+
+// Enum KuroRenderingRuntimeBPPlugin.HeatMap_Platform
+// NumValues: 0x0005
+enum class EHeatMap_Platform : uint8
+{
+	Platform_Desktop                         = 0,
+	Platform_Mobile                          = 1,
+	Platform_All                             = 2,
+	None                                     = 3,
+	HeatMap_MAX                              = 4,
 };
 
 // Enum KuroRenderingRuntimeBPPlugin.EKuroCharacterControllerApplyType
@@ -550,93 +570,6 @@ enum class ERhythmGameNoteState : uint8
 	ERhythmGameNoteState_MAX                 = 6,
 };
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.LumenGISettings
-// 0x001C (0x001C - 0x0000)
-struct FLumenGISettings final
-{
-public:
-	uint8                                         bOverride_LumenDirectionalLightColorSaturation : 1; // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenDirectionalLightColorValueMut : 1;  // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenSkyLightColorSaturation : 1;        // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenSkyLightColorValueMut : 1;          // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenDirectionalIndirectLightingIntensity : 1; // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenSkylightLeaking : 1;                // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LumenDirectionalLightColorSaturation;              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenDirectionalLightColorValueMut;                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenSkyLightColorSaturation;                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenSkyLightColorValueMut;                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenDirectionalIndirectLightingIntensity;         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenSkylightLeaking;                              // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLumenGISettings;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.OriginSkyAtmosphereSetting
-// 0x0070 (0x0070 - 0x0000)
-struct FOriginSkyAtmosphereSetting final
-{
-public:
-	uint8                                         bOverride_SkyAtmosLerp : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_SkyAtmosAffectSkyBox : 1;                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_SkyAtmosAffectHeightFog : 1;             // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_MieScatteringScale : 1;                  // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_MieAbsorptionScale : 1;                  // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_MieAnisotropy : 1;                       // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_RayLeighScatteringScale : 1;             // 0x0000(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_SkyLuminanceFactor : 1;                  // 0x0000(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_AbsorptionScale : 1;                     // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_Absorption : 1;                          // 0x0001(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_HeightFogInscatteringColor : 1;          // 0x0001(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_HeightFogDirectionalInscatteringExponent : 1; // 0x0001(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_HeightFogDirectionalInscatteringColor : 1; // 0x0001(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BottomRadius : 1;                        // 0x0001(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_AtmosphereHeight : 1;                    // 0x0001(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkyAtmosLerp;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SkyAtmosAffectSkyBox;                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SkyAtmosAffectHeightFog;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SkyLuminanceFactor;                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MieScatteringScale;                                // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MieAbsorptionScale;                                // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MieAnisotropy;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RayLeighScatteringScale;                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           HeightFogInscatteringColor;                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HeightFogDirectionalInscatteringExponent;          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           HeightFogDirectionalInscatteringColor;             // 0x0044(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AbsorptionScale;                                   // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Absorption;                                        // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BottomRadius;                                      // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AtmosphereHeight;                                  // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FOriginSkyAtmosphereSetting;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerColorGroup
-// 0x0660 (0x0660 - 0x0000)
-struct FKuroCharMaterialControllerColorGroup final
-{
-public:
-	struct FKuroCurveLinearColor                  Start;                                             // 0x0000(0x0220)(Edit, NativeAccessSpecifierPublic)
-	struct FKuroCurveLinearColor                  Loop;                                              // 0x0220(0x0220)(Edit, NativeAccessSpecifierPublic)
-	struct FKuroCurveLinearColor                  End;                                               // 0x0440(0x0220)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroCharMaterialControllerColorGroup;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroDestructibleEffect
-// 0x0050 (0x0050 - 0x0000)
-struct FKuroDestructibleEffect final
-{
-public:
-	class FName                                   EffectModelPath;                                   // 0x0000(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Offset;                                            // 0x0010(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   Socket;                                            // 0x0040(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttachLocation;                                    // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttachRotation;                                    // 0x004D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AttachScale;                                       // 0x004E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DetachOnEnd;                                       // 0x004F(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroDestructibleEffect;
-
 // ScriptStruct KuroRenderingRuntimeBPPlugin.DistanceFieldSettings
 // 0x0024 (0x0024 - 0x0000)
 struct FDistanceFieldSettings final
@@ -656,47 +589,106 @@ public:
 };
 DUMPER7_ASSERTS_FDistanceFieldSettings;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCloudTopData
-// 0x0040 (0x0040 - 0x0000)
-struct FKuroCloudTopData final
+// ScriptStruct KuroRenderingRuntimeBPPlugin.CloudParameters
+// 0x00C8 (0x00C8 - 0x0000)
+struct FCloudParameters final
 {
 public:
-	struct FVector                                Rotator;                                           // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Offset;                                            // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TextureIdx;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaControl;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaMax;                                          // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaMin;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Brightness;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeOutTime;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeInTime;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FullStayTime;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisappearTime;                                     // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bYesUV1NoUV2;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCloudRotation;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSDF;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Mask;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UVTiling;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudAngle;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudSpeed;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseSpeed;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseStrength;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseTilling;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroCurveFloat                        SDFTime;                                           // 0x0030(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      OverrideMaterial;                                  // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKuroCloudTopData;
+DUMPER7_ASSERTS_FCloudParameters;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.BookPavingDataStruct
-// 0x00C0 (0x00C0 - 0x0000)
-struct FBookPavingDataStruct final
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroSceneEffectActorManager
+// 0x0028 (0x0028 - 0x0000)
+struct FKuroSceneEffectActorManager final
 {
 public:
-	class UStaticMeshComponent*                   MeshComponent;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransformDouble                       TransformOld;                                      // 0x0010(0x0040)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransformDouble                       TransformNew;                                      // 0x0050(0x0040)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          PageTurning;                                       // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Tick_Add;                                          // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaSeconds_Add;                                  // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          PavingState;                                       // 0x009C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 PageTimes;                                         // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         PavingTime;                                        // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Speed;                                             // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class AKuroSceneEffectActor*>          SceneEffectActorsHiding;                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AKuroSceneEffectActor*>          SceneEffectActorsShowing;                          // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FBookPavingDataStruct;
+DUMPER7_ASSERTS_FKuroSceneEffectActorManager;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroDestructibleEffect
+// 0x0050 (0x0050 - 0x0000)
+struct FKuroDestructibleEffect final
+{
+public:
+	class FName                                   EffectModelPath;                                   // 0x0000(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Offset;                                            // 0x0010(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket;                                            // 0x0040(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachLocation;                                    // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachRotation;                                    // 0x004D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AttachScale;                                       // 0x004E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DetachOnEnd;                                       // 0x004F(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroDestructibleEffect;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerFloatGroup
+// 0x01B0 (0x01B0 - 0x0000)
+struct FKuroCharMaterialControllerFloatGroup final
+{
+public:
+	struct FKuroCurveFloat                        Start;                                             // 0x0000(0x0090)(Edit, NativeAccessSpecifierPublic)
+	struct FKuroCurveFloat                        Loop;                                              // 0x0090(0x0090)(Edit, NativeAccessSpecifierPublic)
+	struct FKuroCurveFloat                        End;                                               // 0x0120(0x0090)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCharMaterialControllerFloatGroup;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroEffectColorGradingSettings
+// 0x0018 (0x0018 - 0x0000)
+struct FKuroEffectColorGradingSettings final
+{
+public:
+	uint8                                         bOverride_Desaturate : 1;                          // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_Tint : 1;                                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Desaturate;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Tint;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroEffectColorGradingSettings;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroHeightMapOffset
+// 0x0008 (0x0010 - 0x0008)
+struct FKuroHeightMapOffset final : public FTableRowBase
+{
+public:
+	float                                         ShotHeight;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroHeightMapOffset;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialCurveColorGroup_SI
+// 0x0220 (0x0220 - 0x0000)
+struct FKuroMaterialCurveColorGroup_SI final
+{
+public:
+	struct FKuroCurveLinearColor                  Curve;                                             // 0x0000(0x0220)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialCurveColorGroup_SI;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_SI_AddEmission
+// 0x0220 (0x0220 - 0x0000)
+struct FKuroMaterialControllerParam_SI_AddEmission final
+{
+public:
+	struct FKuroMaterialCurveColorGroup_SI        AddEmissionColor;                                  // 0x0000(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialControllerParam_SI_AddEmission;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGICustomTag
 // 0x001C (0x001C - 0x0000)
@@ -707,20 +699,6 @@ public:
 	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroGICustomTag;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_OutlineConst
-// 0x001C (0x001C - 0x0000)
-struct FKuroMaterialControllerParam_OutlineConst final
-{
-public:
-	bool                                          bOutlineUseTex;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOuterOutlineEffect;                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OutlineWidth;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           OutlineColor;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutlineIntensity;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialControllerParam_OutlineConst;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.MainLightSetting
 // 0x0088 (0x0088 - 0x0000)
@@ -1099,6 +1077,45 @@ public:
 	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FVolumetricFogSetting;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.OriginSkyAtmosphereSetting
+// 0x0070 (0x0070 - 0x0000)
+struct FOriginSkyAtmosphereSetting final
+{
+public:
+	uint8                                         bOverride_SkyAtmosLerp : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_SkyAtmosAffectSkyBox : 1;                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_SkyAtmosAffectHeightFog : 1;             // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MieScatteringScale : 1;                  // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MieAbsorptionScale : 1;                  // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MieAnisotropy : 1;                       // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_RayLeighScatteringScale : 1;             // 0x0000(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_SkyLuminanceFactor : 1;                  // 0x0000(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_AbsorptionScale : 1;                     // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_Absorption : 1;                          // 0x0001(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_HeightFogInscatteringColor : 1;          // 0x0001(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_HeightFogDirectionalInscatteringExponent : 1; // 0x0001(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_HeightFogDirectionalInscatteringColor : 1; // 0x0001(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BottomRadius : 1;                        // 0x0001(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_AtmosphereHeight : 1;                    // 0x0001(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkyAtmosLerp;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyAtmosAffectSkyBox;                              // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyAtmosAffectHeightFog;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SkyLuminanceFactor;                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MieScatteringScale;                                // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MieAbsorptionScale;                                // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MieAnisotropy;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RayLeighScatteringScale;                           // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           HeightFogInscatteringColor;                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HeightFogDirectionalInscatteringExponent;          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           HeightFogDirectionalInscatteringColor;             // 0x0044(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AbsorptionScale;                                   // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Absorption;                                        // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BottomRadius;                                      // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AtmosphereHeight;                                  // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOriginSkyAtmosphereSetting;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.SkyAtmosphereSetting
 // 0x0010 (0x0010 - 0x0000)
@@ -1650,8 +1667,32 @@ public:
 };
 DUMPER7_ASSERTS_FKuroGIMPCSetting;
 
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGIExtendedMPCEntry
+// 0x00B8 (0x00B8 - 0x0000)
+struct FKuroGIExtendedMPCEntry final
+{
+public:
+	class UMaterialParameterCollection*           MPC;                                               // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_FloatParameters : 1;                     // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, float>                      FloatParameters;                                   // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_ColorParameters : 1;                     // 0x0060(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FLinearColor>        ColorParameters;                                   // 0x0068(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroGIExtendedMPCEntry;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGIExtendedMPCSetting
+// 0x0010 (0x0010 - 0x0000)
+struct FKuroGIExtendedMPCSetting final
+{
+public:
+	TArray<struct FKuroGIExtendedMPCEntry>        Entries;                                           // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroGIExtendedMPCSetting;
+
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroPostProcessSetting
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F8 (0x00F8 - 0x0000)
 struct FKuroPostProcessSetting final
 {
 public:
@@ -1694,17 +1735,22 @@ public:
 	uint8                                         bOverride_SSFSLuminanceWeighting : 1;              // 0x0008(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_SSFSVolumetricFogILSIntensity : 1;       // 0x0008(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_SSFSStartDistance : 1;                   // 0x0008(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LocalExposureHighlightContrastScale : 1; // 0x0008(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LocalExposureShadowContrastScale : 1;    // 0x0008(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LocalExposureHighlightThreshold : 1;     // 0x0008(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LocalExposureShadowThreshold : 1;        // 0x0009(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenLocalExposureHighlightContrastScale : 1; // 0x0009(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenLocalExposureShadowContrastScale : 1; // 0x0009(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenLocalExposureHighlightThreshold : 1; // 0x0009(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LumenLocalExposureShadowThreshold : 1;   // 0x0009(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_IndirectLightingIntensity : 1;           // 0x0009(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_IndirectLightingColor : 1;               // 0x0009(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverride_EnableMobileSSFS : 1;                    // 0x0008(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MobileSSFSFogDensity : 1;                // 0x0008(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MobileSSFSIntensity : 1;                 // 0x0008(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MobileSSFSRadius : 1;                    // 0x0009(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_MobileSSFSStartDistance : 1;             // 0x0009(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LocalExposureHighlightContrastScale : 1; // 0x0009(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LocalExposureShadowContrastScale : 1;    // 0x0009(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LocalExposureHighlightThreshold : 1;     // 0x0009(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LocalExposureShadowThreshold : 1;        // 0x0009(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenLocalExposureHighlightContrastScale : 1; // 0x0009(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenLocalExposureShadowContrastScale : 1; // 0x0009(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenLocalExposureHighlightThreshold : 1; // 0x000A(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenLocalExposureShadowThreshold : 1;   // 0x000A(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_IndirectLightingIntensity : 1;           // 0x000A(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_IndirectLightingColor : 1;               // 0x000A(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         KuroBloomIntensity;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LumenKuroBloomIntensityOffset;                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         KuroBloomThreshold;                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1744,17 +1790,22 @@ public:
 	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SSFSVolumetricFogILSIntensity;                     // 0x00A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SSFSStartDistance;                                 // 0x00AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalExposureHighlightContrastScale;               // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalExposureShadowContrastScale;                  // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalExposureHighlightThreshold;                   // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalExposureShadowThreshold;                      // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenLocalExposureHighlightContrastScale;          // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenLocalExposureShadowContrastScale;             // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenLocalExposureHighlightThreshold;              // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LumenLocalExposureShadowThreshold;                 // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           IndirectLightingColor;                             // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IndirectLightingIntensity;                         // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         EnableMobileSSFS : 1;                              // 0x00B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MobileSSFSFogDensity;                              // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MobileSSFSIntensity;                               // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MobileSSFSRadius;                                  // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MobileSSFSStartDistance;                           // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalExposureHighlightContrastScale;               // 0x00C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalExposureShadowContrastScale;                  // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalExposureHighlightThreshold;                   // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalExposureShadowThreshold;                      // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenLocalExposureHighlightContrastScale;          // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenLocalExposureShadowContrastScale;             // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenLocalExposureHighlightThreshold;              // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenLocalExposureShadowThreshold;                 // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           IndirectLightingColor;                             // 0x00E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IndirectLightingIntensity;                         // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroPostProcessSetting;
 
@@ -1848,6 +1899,27 @@ public:
 };
 DUMPER7_ASSERTS_FGlobalLightSetting;
 
+// ScriptStruct KuroRenderingRuntimeBPPlugin.LumenGISettings
+// 0x001C (0x001C - 0x0000)
+struct FLumenGISettings final
+{
+public:
+	uint8                                         bOverride_LumenDirectionalLightColorSaturation : 1; // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenDirectionalLightColorValueMut : 1;  // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenSkyLightColorSaturation : 1;        // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenSkyLightColorValueMut : 1;          // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenDirectionalIndirectLightingIntensity : 1; // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LumenSkylightLeaking : 1;                // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LumenDirectionalLightColorSaturation;              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenDirectionalLightColorValueMut;                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenSkyLightColorSaturation;                      // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenSkyLightColorValueMut;                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenDirectionalIndirectLightingIntensity;         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LumenSkylightLeaking;                              // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLumenGISettings;
+
 // ScriptStruct KuroRenderingRuntimeBPPlugin.RayTracingSettings
 // 0x001C (0x001C - 0x0000)
 struct FRayTracingSettings final
@@ -1874,21 +1946,8 @@ public:
 };
 DUMPER7_ASSERTS_FCascadeLightingVolumeSettings;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroEffectColorGradingSettings
-// 0x0018 (0x0018 - 0x0000)
-struct FKuroEffectColorGradingSettings final
-{
-public:
-	uint8                                         bOverride_Desaturate : 1;                          // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_Tint : 1;                                // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Desaturate;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Tint;                                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroEffectColorGradingSettings;
-
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGISetting
-// 0x1160 (0x1160 - 0x0000)
+// 0x1180 (0x1180 - 0x0000)
 struct FKuroGISetting final
 {
 public:
@@ -1919,17 +1978,282 @@ public:
 	struct FGIMiscSetting                         MiscSetting;                                       // 0x0940(0x0280)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGIClusteredStuffSetting               ClusteredStuffSetting;                             // 0x0BC0(0x0030)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
 	struct FKuroGIMPCSetting                      GIMPCSetting;                                      // 0x0BF0(0x00B0)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
-	struct FKuroPostProcessSetting                KuroPostProcess;                                   // 0x0CA0(0x00E8)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FKuroScreenSoftSetting                 KuroScreenSoft;                                    // 0x0D88(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FKuroFFTBloomSetting                   FFTBloomSetting;                                   // 0x0DB8(0x0038)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGlobalLightSetting                    GlobalLightSetting;                                // 0x0DF0(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRayTracingSettings                    RayTracingSettings;                                // 0x0E08(0x001C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCascadeLightingVolumeSettings         CascadeLightingVolumeSettings;                     // 0x0E24(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FDistanceFieldSettings                 DistanceFieldSettings;                             // 0x0E44(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FKuroEffectColorGradingSettings        EffectColorGradingSettings;                        // 0x0E68(0x0018)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E80[0x2E0];                                    // 0x0E80(0x02E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKuroGIExtendedMPCSetting              ExtendedMPCSetting;                                // 0x0CA0(0x0010)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
+	struct FKuroPostProcessSetting                KuroPostProcess;                                   // 0x0CB0(0x00F8)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroScreenSoftSetting                 KuroScreenSoft;                                    // 0x0DA8(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroFFTBloomSetting                   FFTBloomSetting;                                   // 0x0DD8(0x0038)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGlobalLightSetting                    GlobalLightSetting;                                // 0x0E10(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRayTracingSettings                    RayTracingSettings;                                // 0x0E28(0x001C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCascadeLightingVolumeSettings         CascadeLightingVolumeSettings;                     // 0x0E44(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDistanceFieldSettings                 DistanceFieldSettings;                             // 0x0E64(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroEffectColorGradingSettings        EffectColorGradingSettings;                        // 0x0E88(0x0018)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EA0[0x2E0];                                    // 0x0EA0(0x02E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroGISetting;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerFloatParameter
+// 0x00A0 (0x00A0 - 0x0000)
+struct FKuroCharMaterialControllerFloatParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroCurveFloat                        ParameterValue;                                    // 0x0010(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCharMaterialControllerFloatParameter;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_BaseMaterialReplace
+// 0x0028 (0x0028 - 0x0000)
+struct FKuroMaterialControllerParam_BaseMaterialReplace final
+{
+public:
+	bool                                          bMatchMaterialIndex;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             ReplaceBaseMaterials;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             ReplaceBaseMaterialsMobile;                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialControllerParam_BaseMaterialReplace;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroInterpolateRangeTime_SI
+// 0x000C (0x000C - 0x0000)
+struct FKuroInterpolateRangeTime_SI final
+{
+public:
+	float                                         Start;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Loop;                                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         End;                                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroInterpolateRangeTime_SI;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.HeatMapDrawRequest
+// 0x0048 (0x0048 - 0x0000)
+struct FHeatMapDrawRequest final
+{
+public:
+	TWeakObjectPtr<class UTextureRenderTarget2D>  TargetRT;                                          // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPersistenceRequest;                               // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x1F];                                       // 0x0009(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         QueryRadius;                                       // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class AActor>                     TargetActorClass;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DataLayerLabel;                                    // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FHeatMapDrawRequest;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.WPCoord
+// 0x0008 (0x0008 - 0x0000)
+struct FWPCoord final
+{
+public:
+	int32                                         X;                                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FWPCoord;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControlFilter
+// 0x0070 (0x0070 - 0x0000)
+struct FKuroMaterialControlFilter final
+{
+public:
+	EKuroCharBodySpecifiedType                    BodySpecifiedType;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroCharSlotSpecifiedType                    SlotSpecifiedType;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           WeaponCases;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+	TArray<class FName>                           OtherCases;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+	TArray<class FName>                           ExtraBodyNames;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+	bool                                          AlwaysApplyToExtraBodies;                          // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKuroCharMeshPart>                     SpecifiedParts;                                    // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CustomParts;                                       // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CustomExcludeParts;                                // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialControlFilter;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.AnomaliesParameters
+// 0x0038 (0x0038 - 0x0000)
+struct FAnomaliesParameters final
+{
+public:
+	bool                                          bRotation;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Color;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudAngle;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseSpeed;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseStrength;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseTilling;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Luminance;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnomaliesParameters;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.PostprocessGIDebugInfo
+// 0x00B8 (0x00B8 - 0x0000)
+struct FPostprocessGIDebugInfo final
+{
+public:
+	TWeakObjectPtr<class AActor>                  OwnerActor;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OwnerActorName;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ActorFolderPath;                                   // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ActorLabel;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsVolume;                                          // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ComponentName;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Priority;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         WorldPriority;                                     // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalBlendWeight;                                  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendWeight;                                       // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUnbound;                                         // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 WeatherDAPath;                                     // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UKuroWeatherDataAsset>   WeatherDAData;                                     // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TodDAPath;                                         // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UKuroTODData>            TodDAData;                                         // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         OverridedProperties;                               // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 PostProcessMaterialPath;                           // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPostprocessGIDebugInfo;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGIPostProcessCustomData
+// 0x0050 (0x0050 - 0x0000)
+struct FKuroGIPostProcessCustomData final
+{
+public:
+	TMap<class FName, struct FKuroGICustomTag>    CustomTags;                                        // 0x0000(0x0050)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroGIPostProcessCustomData;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialNamedColor_SI
+// 0x001C (0x001C - 0x0000)
+struct FKuroMaterialNamedColor_SI final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialNamedColor_SI;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerColorGroup
+// 0x0660 (0x0660 - 0x0000)
+struct FKuroCharMaterialControllerColorGroup final
+{
+public:
+	struct FKuroCurveLinearColor                  Start;                                             // 0x0000(0x0220)(Edit, NativeAccessSpecifierPublic)
+	struct FKuroCurveLinearColor                  Loop;                                              // 0x0220(0x0220)(Edit, NativeAccessSpecifierPublic)
+	struct FKuroCurveLinearColor                  End;                                               // 0x0440(0x0220)(Edit, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCharMaterialControllerColorGroup;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.FloatingBillboardCloudParameters
+// 0x0020 (0x0020 - 0x0000)
+struct FFloatingBillboardCloudParameters final
+{
+public:
+	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CloudAngle;                                        // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FFloatingBillboardCloudParameters;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroTODEntryData
+// 0x000C (0x000C - 0x0000)
+struct FKuroTODEntryData final
+{
+public:
+	struct FVector2D                              StartEndTime;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataIndex;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroTODEntryData;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGrassInstanceInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FKuroGrassInstanceInfo final
+{
+public:
+	struct FMatrix                                TransformMatrix;                                   // 0x0000(0x0040)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RandomValue;                                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroGrassInstanceInfo;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCloudTopData
+// 0x0040 (0x0040 - 0x0000)
+struct FKuroCloudTopData final
+{
+public:
+	struct FVector                                Rotator;                                           // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Offset;                                            // 0x000C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TextureIdx;                                        // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaControl;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaMax;                                          // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaMin;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Brightness;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeOutTime;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeInTime;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FullStayTime;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisappearTime;                                     // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCloudTopData;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroSmartLightCustomParameterFloat
+// 0x0014 (0x0014 - 0x0000)
+struct FKuroSmartLightCustomParameterFloat final
+{
+public:
+	class FName                                   ParamName;                                         // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightOffValue;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightOnValue;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroSmartLightCustomParameterFloat;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.POICloudParameters
+// 0x0040 (0x0040 - 0x0000)
+struct FPOICloudParameters final
+{
+public:
+	bool                                          bYesUV1NoUV2;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCloudRotation;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSDF;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Mask;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UVTiling;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudAngle;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudSpeed;                                        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseSpeed;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseStrength;                                     // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseTilling;                                      // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPOICloudParameters;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCloudCircleData
+// 0x0048 (0x0048 - 0x0000)
+struct FKuroCloudCircleData final
+{
+public:
+	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Rotator;                                           // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TextureIdx;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HorizontalOffset;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Offset;                                            // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaControl;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaMax;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AlphaMin;                                          // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Brightness;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeOutTime;                                       // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeInTime;                                        // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FullStayTime;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisappearTime;                                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCloudCircleData;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.CapsuleStamp2D
 // 0x002C (0x002C - 0x0000)
@@ -1949,15 +2273,85 @@ public:
 };
 DUMPER7_ASSERTS_FCapsuleStamp2D;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.WPCoord
-// 0x0008 (0x0008 - 0x0000)
-struct FWPCoord final
+// ScriptStruct KuroRenderingRuntimeBPPlugin.BookPavingDataStruct
+// 0x00C0 (0x00C0 - 0x0000)
+struct FBookPavingDataStruct final
 {
 public:
-	int32                                         X;                                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Y;                                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMeshComponent*                   MeshComponent;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformDouble                       TransformOld;                                      // 0x0010(0x0040)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransformDouble                       TransformNew;                                      // 0x0050(0x0040)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          PageTurning;                                       // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Tick_Add;                                          // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaSeconds_Add;                                  // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PavingState;                                       // 0x009C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 PageTimes;                                         // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         PavingTime;                                        // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FWPCoord;
+DUMPER7_ASSERTS_FBookPavingDataStruct;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerColorParameter
+// 0x0230 (0x0230 - 0x0000)
+struct FKuroCharMaterialControllerColorParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroCurveLinearColor                  ParameterValue;                                    // 0x0010(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroCharMaterialControllerColorParameter;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroDestructiblePieceInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FKuroDestructiblePieceInfo final
+{
+public:
+	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InitialTransform;                                  // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   RelativeBoneName;                                  // 0x0040(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroDestructiblePieceInfo;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.GrassInstanceData
+// 0x0028 (0x0028 - 0x0000)
+struct FGrassInstanceData final
+{
+public:
+	class UHierarchicalInstancedStaticMeshComponent* HISM;                                           // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 InstanceIndices;                                   // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FName                                   ComponentName;                                     // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FGrassInstanceData;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.MountainParameters
+// 0x0010 (0x0010 - 0x0000)
+struct FMountainParameters final
+{
+public:
+	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMountainParameters;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.CloudCover
+// 0x0018 (0x0018 - 0x0000)
+struct FCloudCover final
+{
+public:
+	class UMaterialInterface*                     CoverMaterial;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CloudAngle;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCloudCover;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCloudLayerSetting
 // 0x00D0 (0x00D0 - 0x0000)
@@ -2032,6 +2426,19 @@ public:
 };
 DUMPER7_ASSERTS_FKuroCloudLayerSetting;
 
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGPUParticleMeshInfo
+// 0x0028 (0x0028 - 0x0000)
+struct FKuroGPUParticleMeshInfo final
+{
+public:
+	int32                                         StartFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EndFrame;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsCenter;                                      // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BoundsSize;                                        // 0x0014(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroGPUParticleMeshInfo;
+
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialCurveFloatGroup
 // 0x01B0 (0x01B0 - 0x0000)
 struct FKuroMaterialCurveFloatGroup final
@@ -2088,360 +2495,6 @@ public:
 	TArray<struct FKuroMaterialNamedColorGroup>   ReplaceMaterialColorParameters;                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroMaterialControllerParam_MaterialReplace;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_BaseMaterialReplace
-// 0x0028 (0x0028 - 0x0000)
-struct FKuroMaterialControllerParam_BaseMaterialReplace final
-{
-public:
-	bool                                          bMatchMaterialIndex;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             ReplaceBaseMaterials;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UMaterialInterface*>             ReplaceBaseMaterialsMobile;                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialControllerParam_BaseMaterialReplace;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_ColorConst
-// 0x002C (0x002C - 0x0000)
-struct FKuroMaterialControllerParam_ColorConst final
-{
-public:
-	struct FLinearColor                           BaseColor;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseIntensity;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           EmissionColor;                                     // 0x0014(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EmissionIntensity;                                 // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBaseUseTex;                                       // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEmissionUseTex;                                   // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroMaterialControllerParam_ColorConst;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroHeightMapOffset
-// 0x0008 (0x0010 - 0x0008)
-struct FKuroHeightMapOffset final : public FTableRowBase
-{
-public:
-	float                                         ShotHeight;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroHeightMapOffset;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControlFilter
-// 0x0070 (0x0070 - 0x0000)
-struct FKuroMaterialControlFilter final
-{
-public:
-	EKuroCharBodySpecifiedType                    BodySpecifiedType;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKuroCharSlotSpecifiedType                    SlotSpecifiedType;                                 // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           WeaponCases;                                       // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-	TArray<class FName>                           OtherCases;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-	TArray<class FName>                           ExtraBodyNames;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-	bool                                          AlwaysApplyToExtraBodies;                          // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EKuroCharMeshPart>                     SpecifiedParts;                                    // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-	TArray<class FString>                         CustomParts;                                       // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-	TArray<class FString>                         CustomExcludeParts;                                // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Interp, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialControlFilter;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroWorldRainCustomData
-// 0x00A8 (0x00A8 - 0x0000)
-struct FKuroWorldRainCustomData final
-{
-public:
-	class FName                                   CurveName;                                         // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CustomRandomIndex;                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKuroWorldRainCustomRandomDriver              Driver;                                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroCurveFloat                        Curve;                                             // 0x0018(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroWorldRainCustomData;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroRainActorSpawnProperties
-// 0x0048 (0x0048 - 0x0000)
-struct FKuroRainActorSpawnProperties final
-{
-public:
-	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnRate;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnInnerRadius;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnOuterRadius;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LifeTimeMin;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LifeTimeMax;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                VelocityMin;                                       // 0x0024(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                VelocityMax;                                       // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ScaleMin;                                          // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ScaleMax;                                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseMass;                                          // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroRainActorSpawnProperties;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerFloatGroup
-// 0x01B0 (0x01B0 - 0x0000)
-struct FKuroCharMaterialControllerFloatGroup final
-{
-public:
-	struct FKuroCurveFloat                        Start;                                             // 0x0000(0x0090)(Edit, NativeAccessSpecifierPublic)
-	struct FKuroCurveFloat                        Loop;                                              // 0x0090(0x0090)(Edit, NativeAccessSpecifierPublic)
-	struct FKuroCurveFloat                        End;                                               // 0x0120(0x0090)(Edit, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroCharMaterialControllerFloatGroup;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.FloatingBillboardCloudParameters
-// 0x0020 (0x0020 - 0x0000)
-struct FFloatingBillboardCloudParameters final
-{
-public:
-	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CloudAngle;                                        // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FFloatingBillboardCloudParameters;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.PostprocessGIDebugInfo
-// 0x00B8 (0x00B8 - 0x0000)
-struct FPostprocessGIDebugInfo final
-{
-public:
-	TWeakObjectPtr<class AActor>                  OwnerActor;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OwnerActorName;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ActorFolderPath;                                   // 0x0018(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ActorLabel;                                        // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsVolume;                                          // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ComponentName;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Priority;                                          // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         WorldPriority;                                     // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalBlendWeight;                                  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendWeight;                                       // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsUnbound;                                         // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 WeatherDAPath;                                     // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UKuroWeatherDataAsset>   WeatherDAData;                                     // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TodDAPath;                                         // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UKuroTODData>            TodDAData;                                         // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         OverridedProperties;                               // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FString                                 PostProcessMaterialPath;                           // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPostprocessGIDebugInfo;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.CapsuleStampWorld2D
-// 0x0048 (0x0048 - 0x0000)
-struct FCapsuleStampWorld2D final
-{
-public:
-	struct FVectorDouble                          WorldA;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVectorDouble                          WorldB;                                            // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RadiusWorld;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SoftEdgeWidthWorld;                                // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseEndValues;                                     // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Value;                                             // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ValueA;                                            // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ValueB;                                            // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCapsuleStampWorld2D;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.POICloudParameters
-// 0x0040 (0x0040 - 0x0000)
-struct FPOICloudParameters final
-{
-public:
-	bool                                          bYesUV1NoUV2;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCloudRotation;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSDF;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Mask;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            Mesh;                                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UVTiling;                                          // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudAngle;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudSpeed;                                        // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseSpeed;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseStrength;                                     // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseTilling;                                      // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPOICloudParameters;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.MountainParameters
-// 0x0010 (0x0010 - 0x0000)
-struct FMountainParameters final
-{
-public:
-	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      OverrideMaterial;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMountainParameters;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroTODEntryData
-// 0x000C (0x000C - 0x0000)
-struct FKuroTODEntryData final
-{
-public:
-	struct FVector2D                              StartEndTime;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DataIndex;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroTODEntryData;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCloudCircleData
-// 0x0048 (0x0048 - 0x0000)
-struct FKuroCloudCircleData final
-{
-public:
-	float                                         Distance;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Rotator;                                           // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TextureIdx;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HorizontalOffset;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Offset;                                            // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaControl;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaMax;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AlphaMin;                                          // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Brightness;                                        // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeOutTime;                                       // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeInTime;                                        // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FullStayTime;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisappearTime;                                     // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroCloudCircleData;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGrassInstanceInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FKuroGrassInstanceInfo final
-{
-public:
-	struct FMatrix                                TransformMatrix;                                   // 0x0000(0x0040)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         RandomValue;                                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroGrassInstanceInfo;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.CloudParameters
-// 0x00C8 (0x00C8 - 0x0000)
-struct FCloudParameters final
-{
-public:
-	bool                                          bYesUV1NoUV2;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCloudRotation;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSDF;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Mask;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UVTiling;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudAngle;                                        // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudSpeed;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseSpeed;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseStrength;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseTilling;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroCurveFloat                        SDFTime;                                           // 0x0030(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UMaterialInstance*                      OverrideMaterial;                                  // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCloudParameters;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.GrassInstanceData
-// 0x0028 (0x0028 - 0x0000)
-struct FGrassInstanceData final
-{
-public:
-	class UHierarchicalInstancedStaticMeshComponent* HISM;                                           // 0x0000(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 InstanceIndices;                                   // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class FName                                   ComponentName;                                     // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FGrassInstanceData;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.CloudCover
-// 0x0018 (0x0018 - 0x0000)
-struct FCloudCover final
-{
-public:
-	class UMaterialInterface*                     CoverMaterial;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            Mesh;                                              // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudAngle;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCloudCover;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerColorParameter
-// 0x0230 (0x0230 - 0x0000)
-struct FKuroCharMaterialControllerColorParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroCurveLinearColor                  ParameterValue;                                    // 0x0010(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroCharMaterialControllerColorParameter;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.AnomaliesParameters
-// 0x0038 (0x0038 - 0x0000)
-struct FAnomaliesParameters final
-{
-public:
-	bool                                          bRotation;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Color;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               NoiseMap;                                          // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            Mesh;                                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CloudAngle;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseSpeed;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseStrength;                                     // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseTilling;                                      // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Luminance;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnomaliesParameters;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroCharMaterialControllerFloatParameter
-// 0x00A0 (0x00A0 - 0x0000)
-struct FKuroCharMaterialControllerFloatParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroCurveFloat                        ParameterValue;                                    // 0x0010(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroCharMaterialControllerFloatParameter;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroDestructiblePieceInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FKuroDestructiblePieceInfo final
-{
-public:
-	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InitialTransform;                                  // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   RelativeBoneName;                                  // 0x0040(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroDestructiblePieceInfo;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGIPostProcessCustomData
-// 0x0050 (0x0050 - 0x0000)
-struct FKuroGIPostProcessCustomData final
-{
-public:
-	TMap<class FName, struct FKuroGICustomTag>    CustomTags;                                        // 0x0000(0x0050)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroGIPostProcessCustomData;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroGPUParticleMeshInfo
-// 0x0028 (0x0028 - 0x0000)
-struct FKuroGPUParticleMeshInfo final
-{
-public:
-	int32                                         StartFrame;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EndFrame;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsCenter;                                      // 0x0008(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                BoundsSize;                                        // 0x0014(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            Mesh;                                              // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroGPUParticleMeshInfo;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialNamedFloat
 // 0x0010 (0x0010 - 0x0000)
@@ -2650,6 +2703,21 @@ public:
 };
 DUMPER7_ASSERTS_FKuroMaterialControllerParam_Color;
 
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_ColorConst
+// 0x002C (0x002C - 0x0000)
+struct FKuroMaterialControllerParam_ColorConst final
+{
+public:
+	struct FLinearColor                           BaseColor;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseIntensity;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           EmissionColor;                                     // 0x0014(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EmissionIntensity;                                 // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBaseUseTex;                                       // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEmissionUseTex;                                   // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroMaterialControllerParam_ColorConst;
+
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_Outline
 // 0x09C8 (0x09C8 - 0x0000)
 struct FKuroMaterialControllerParam_Outline final
@@ -2663,6 +2731,20 @@ public:
 	struct FKuroMaterialCurveFloatGroup           OutlineIntensity;                                  // 0x0818(0x01B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroMaterialControllerParam_Outline;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_OutlineConst
+// 0x001C (0x001C - 0x0000)
+struct FKuroMaterialControllerParam_OutlineConst final
+{
+public:
+	bool                                          bOutlineUseTex;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOuterOutlineEffect;                            // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OutlineWidth;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           OutlineColor;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutlineIntensity;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMaterialControllerParam_OutlineConst;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_Dissolve
 // 0x0B78 (0x0B78 - 0x0000)
@@ -2889,6 +2971,36 @@ public:
 };
 DUMPER7_ASSERTS_FKuroRainMaterialFloatParameter;
 
+// ScriptStruct KuroRenderingRuntimeBPPlugin.CapsuleStampWorld2D
+// 0x0048 (0x0048 - 0x0000)
+struct FCapsuleStampWorld2D final
+{
+public:
+	struct FVectorDouble                          WorldA;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          WorldB;                                            // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RadiusWorld;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoftEdgeWidthWorld;                                // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseEndValues;                                     // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ValueA;                                            // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ValueB;                                            // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCapsuleStampWorld2D;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.CircleStampWorld2D
+// 0x0028 (0x0028 - 0x0000)
+struct FCircleStampWorld2D final
+{
+public:
+	struct FVectorDouble                          CenterWorld;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RadiusWorld;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoftEdgeWidthWorld;                                // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCircleStampWorld2D;
+
 // ScriptStruct KuroRenderingRuntimeBPPlugin.MoveData_splineMover
 // 0x0010 (0x0010 - 0x0000)
 struct FMoveData_splineMover final
@@ -3026,17 +3138,6 @@ public:
 };
 DUMPER7_ASSERTS_FNiagaraDiKuroRenderingParameters;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroSceneEffectActorManager
-// 0x0028 (0x0028 - 0x0000)
-struct FKuroSceneEffectActorManager final
-{
-public:
-	TArray<class AKuroSceneEffectActor*>          SceneEffectActorsHiding;                           // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class AKuroSceneEffectActor*>          SceneEffectActorsShowing;                          // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroSceneEffectActorManager;
-
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialCurveFloatGroup_SI
 // 0x0090 (0x0090 - 0x0000)
 struct FKuroMaterialCurveFloatGroup_SI final
@@ -3045,15 +3146,6 @@ public:
 	struct FKuroCurveFloat                        Curve;                                             // 0x0000(0x0090)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroMaterialCurveFloatGroup_SI;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialCurveColorGroup_SI
-// 0x0220 (0x0220 - 0x0000)
-struct FKuroMaterialCurveColorGroup_SI final
-{
-public:
-	struct FKuroCurveLinearColor                  Curve;                                             // 0x0000(0x0220)(Edit, BlueprintVisible, Interp, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialCurveColorGroup_SI;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_SI_Dissolve
 // 0x08A0 (0x08A0 - 0x0000)
@@ -3106,15 +3198,6 @@ public:
 	struct FLinearColor                           EmissionLightColorChangeColor;                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroMaterialControllerParam_SI_EmissionChangeConst;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_SI_AddEmission
-// 0x0220 (0x0220 - 0x0000)
-struct FKuroMaterialControllerParam_SI_AddEmission final
-{
-public:
-	struct FKuroMaterialCurveColorGroup_SI        AddEmissionColor;                                  // 0x0000(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialControllerParam_SI_AddEmission;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialControllerParam_SI_AddEmissionConst
 // 0x0010 (0x0010 - 0x0000)
@@ -3185,16 +3268,6 @@ public:
 };
 DUMPER7_ASSERTS_FKuroMaterialControllerParam_SI_RimConst;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialNamedColor_SI
-// 0x001C (0x001C - 0x0000)
-struct FKuroMaterialNamedColor_SI final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMaterialNamedColor_SI;
-
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroMaterialNamedFloat_SI
 // 0x0010 (0x0010 - 0x0000)
 struct FKuroMaterialNamedFloat_SI final
@@ -3205,16 +3278,25 @@ public:
 };
 DUMPER7_ASSERTS_FKuroMaterialNamedFloat_SI;
 
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroInterpolateRangeTime_SI
-// 0x000C (0x000C - 0x0000)
-struct FKuroInterpolateRangeTime_SI final
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroRainActorSpawnProperties
+// 0x0048 (0x0048 - 0x0000)
+struct FKuroRainActorSpawnProperties final
 {
 public:
-	float                                         Start;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Loop;                                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         End;                                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            Mesh;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Material;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnRate;                                         // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnInnerRadius;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpawnOuterRadius;                                  // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LifeTimeMin;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LifeTimeMax;                                       // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                VelocityMin;                                       // 0x0024(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                VelocityMax;                                       // 0x0030(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ScaleMin;                                          // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ScaleMax;                                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseMass;                                          // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKuroInterpolateRangeTime_SI;
+DUMPER7_ASSERTS_FKuroRainActorSpawnProperties;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroPoseSequence
 // 0x0018 (0x0018 - 0x0000)
@@ -3236,17 +3318,6 @@ public:
 	struct FLinearColor                           LightOnValue;                                      // 0x001C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroSmartLightCustomParameterLinearColor;
-
-// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroSmartLightCustomParameterFloat
-// 0x0014 (0x0014 - 0x0000)
-struct FKuroSmartLightCustomParameterFloat final
-{
-public:
-	class FName                                   ParamName;                                         // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightOffValue;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightOnValue;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroSmartLightCustomParameterFloat;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroSplitTextureStreamer
 // 0x0050 (0x0050 - 0x0000)
@@ -3342,6 +3413,19 @@ public:
 	struct FBox                                   Bounds;                                            // 0x003C(0x001C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroLandscapeInfo;
+
+// ScriptStruct KuroRenderingRuntimeBPPlugin.KuroWorldRainCustomData
+// 0x00A8 (0x00A8 - 0x0000)
+struct FKuroWorldRainCustomData final
+{
+public:
+	class FName                                   CurveName;                                         // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CustomRandomIndex;                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroWorldRainCustomRandomDriver              Driver;                                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroCurveFloat                        Curve;                                             // 0x0018(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroWorldRainCustomData;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.KuroWorldRainSpawnInfo
 // 0x0058 (0x0058 - 0x0000)
@@ -3487,21 +3571,35 @@ public:
 DUMPER7_ASSERTS_FRhythmGameNoteInfo;
 
 // ScriptStruct KuroRenderingRuntimeBPPlugin.SimpleShatterNode
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct FSimpleShatterNode final
 {
 public:
 	int32                                         NodeID;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsDestroyed;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 ParentNodeIDs;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<int32, float>                            ParentWeights;                                     // 0x0018(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<int32>                                 ChildNodeIDs;                                      // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	class AActor*                                 OwnerActor;                                        // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             InitialTransform;                                  // 0x0080(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<class AStaticMeshActor*>               AfterDestroyed;                                    // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         DestroyDelay;                                      // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0xC];                                       // 0x00C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 NodeName;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDestroyed;                                      // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsShattered;                                      // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoShatterOnDestroy;                             // 0x001A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ParentNodeIDs;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, float>                            ParentWeights;                                     // 0x0030(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ChildNodeIDs;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UStaticMeshComponent*                   OwnerComponent;                                    // 0x0090(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_98[0x8];                                       // 0x0098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InitialTransform;                                  // 0x00A0(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class UStaticMesh*>                    AfterDestroyed;                                    // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AStaticMeshActor*>               AfterDestroyedActor;                               // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FTransform                             LastFrameWorldTransform;                           // 0x00F0(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                CurSpeed;                                          // 0x0120(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDissolve;                                   // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WaitingDitherTime;                                 // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Dither;                                            // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsDithering;                                      // 0x0144(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_145[0xB];                                      // 0x0145(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSimpleShatterNode;
 

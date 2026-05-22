@@ -16,33 +16,14 @@
 namespace SDK::Params
 {
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ExecuteUbergraph_TsParkourCheckPoint
-// 0x0008 (0x0008 - 0x0000)
-struct TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint final
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
+// 0x0010 (0x0010 - 0x0000)
+struct TsParkourCheckPoint_C_GenerateFxByPath final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 effectPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint;
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct TsParkourCheckPoint_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsParkourCheckPoint_C_ReceiveEndPlay;
-
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.SetDetectSphere
-// 0x0004 (0x0004 - 0x0000)
-struct TsParkourCheckPoint_C_SetDetectSphere final
-{
-public:
-	float                                         inRadius1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsParkourCheckPoint_C_SetDetectSphere;
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_GenerateFxByPath;
 
 // Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFx
 // 0x0008 (0x0008 - 0x0000)
@@ -53,14 +34,33 @@ public:
 };
 DUMPER7_ASSERTS_TsParkourCheckPoint_C_GenerateFx;
 
-// Function TsParkourCheckPoint.TsParkourCheckPoint_C.GenerateFxByPath
-// 0x0010 (0x0010 - 0x0000)
-struct TsParkourCheckPoint_C_GenerateFxByPath final
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.SetDetectSphere
+// 0x0004 (0x0004 - 0x0000)
+struct TsParkourCheckPoint_C_SetDetectSphere final
 {
 public:
-	class FString                                 effectPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                         inRadius1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsParkourCheckPoint_C_GenerateFxByPath;
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_SetDetectSphere;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct TsParkourCheckPoint_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_ReceiveEndPlay;
+
+// Function TsParkourCheckPoint.TsParkourCheckPoint_C.ExecuteUbergraph_TsParkourCheckPoint
+// 0x0008 (0x0008 - 0x0000)
+struct TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsParkourCheckPoint_C_ExecuteUbergraph_TsParkourCheckPoint;
 
 }
 

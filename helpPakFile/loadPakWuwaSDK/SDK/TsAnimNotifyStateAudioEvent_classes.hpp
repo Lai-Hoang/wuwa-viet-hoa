@@ -36,8 +36,8 @@ public:
 	struct FSAudioEventProbabilityCooldownInfo    TagProbabilityInfo;                                // 0x0110(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
+	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 
 	class FString GetNotifyName() const;
 

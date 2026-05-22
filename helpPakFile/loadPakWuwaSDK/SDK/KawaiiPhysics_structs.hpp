@@ -94,6 +94,15 @@ public:
 };
 DUMPER7_ASSERTS_FCollisionLimitBase;
 
+// ScriptStruct KawaiiPhysics.PlanarLimit
+// 0x0010 (0x0060 - 0x0050)
+struct FPlanarLimit final : public FCollisionLimitBase
+{
+public:
+	struct FPlane                                 Plane;                                             // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPlanarLimit;
+
 // ScriptStruct KawaiiPhysics.SphericalLimit
 // 0x0010 (0x0060 - 0x0050)
 struct FSphericalLimit final : public FCollisionLimitBase
@@ -116,17 +125,8 @@ public:
 };
 DUMPER7_ASSERTS_FCapsuleLimit;
 
-// ScriptStruct KawaiiPhysics.PlanarLimit
-// 0x0010 (0x0060 - 0x0050)
-struct FPlanarLimit final : public FCollisionLimitBase
-{
-public:
-	struct FPlane                                 Plane;                                             // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPlanarLimit;
-
 // ScriptStruct KawaiiPhysics.KawaiiPhysicsModifyBone
-// 0x00C0 (0x00C0 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct FKawaiiPhysicsModifyBone final
 {
 public:
@@ -144,15 +144,20 @@ public:
 	float                                         LengthFromRoot;                                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDummy;                                            // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         IgnoreMechanics;                                   // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PrevBasePosition;                                  // 0x00A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindCurveRate;                                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                PrevBasePosition;                                  // 0x00A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindCurveRate;                                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, float>                            WeightsMap;                                        // 0x00B8(0x0050)(NativeAccessSpecifierPublic)
+	float                                         SumWeight;                                         // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, float>                            PoseLocationLengthsMap;                            // 0x0110(0x0050)(NativeAccessSpecifierPublic)
+	int32                                         LevelIdx;                                          // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_164[0x4C];                                     // 0x0164(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKawaiiPhysicsModifyBone;
 
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysicsBase
-// 0x0198 (0x0280 - 0x00E8)
+// 0x01A8 (0x0290 - 0x00E8)
 #pragma pack(push, 0x1)
 struct alignas(0x10) FAnimNode_KawaiiPhysicsBase : public FAnimNode_SkeletalControlBase
 {
@@ -193,38 +198,70 @@ public:
 	float                                         WindScale;                                         // 0x01F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKawaiiPhysicsModifyBone>       ModifyBones;                                       // 0x01F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bEnableSimulate;                                   // 0x0208(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AlphaScale;                                        // 0x020C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalBoneLength;                                   // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_214[0xC];                                      // 0x0214(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             PreSkelCompTransform;                              // 0x0220(0x0030)(IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bInitPhysicsSettings;                              // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_251[0x27];                                     // 0x0251(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_208[0x10];                                     // 0x0208(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableSimulate;                                   // 0x0218(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_219[0x3];                                      // 0x0219(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AlphaScale;                                        // 0x021C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalBoneLength;                                   // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             PreSkelCompTransform;                              // 0x0230(0x0030)(IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bInitPhysicsSettings;                              // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_261[0x27];                                     // 0x0261(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 #pragma pack(pop)
 DUMPER7_ASSERTS_FAnimNode_KawaiiPhysicsBase;
 
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysics
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02A0 - 0x0290)
 struct FAnimNode_KawaiiPhysics final : public FAnimNode_KawaiiPhysicsBase
 {
 public:
-	struct FBoneReference                         RootBone;                                          // 0x0278(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         RootBone;                                          // 0x0288(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_KawaiiPhysics;
 
+// ScriptStruct KawaiiPhysics.KawaiiMultiFix
+// 0x0038 (0x0038 - 0x0000)
+struct FKawaiiMultiFix final
+{
+public:
+	struct FBoneReference                         Root;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         RootWeight;                                        // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 OtherFixBones;                                     // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 OtherWeights;                                      // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKawaiiMultiFix;
+
+// ScriptStruct KawaiiPhysics.KawaiiBoneBind
+// 0x0028 (0x0028 - 0x0000)
+struct FKawaiiBoneBind final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         BindBone;                                          // 0x0014(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKawaiiBoneBind;
+
 // ScriptStruct KawaiiPhysics.AnimNode_KawaiiPhysicsGroup
-// 0x0020 (0x02A0 - 0x0280)
+// 0x0060 (0x02F0 - 0x0290)
 struct FAnimNode_KawaiiPhysicsGroup final : public FAnimNode_KawaiiPhysicsBase
 {
 public:
-	TArray<struct FBoneReference>                 RootBones;                                         // 0x0278(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            WindCurve;                                         // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StandardWindSpeed;                                 // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceToWindRate;                                // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FBoneReference>                 RootBones;                                         // 0x0288(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FKawaiiMultiFix>                MultFixParamsArray;                                // 0x0298(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bUseInMultFix;                                     // 0x02A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A9[0x3];                                      // 0x02A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MultiFixMaxScale;                                  // 0x02AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MultiFixGradientDescentAlpha;                      // 0x02B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MultiFixMaxIter;                                   // 0x02B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKawaiiBoneBind>                BindInfos;                                         // 0x02B8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bBindLockRotation;                                 // 0x02C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            WindCurve;                                         // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StandardWindSpeed;                                 // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceToWindRate;                                // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E0[0x10];                                     // 0x02E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_KawaiiPhysicsGroup;
 

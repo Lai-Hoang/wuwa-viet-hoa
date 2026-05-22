@@ -19,6 +19,39 @@
 namespace SDK::Params
 {
 
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
+// 0x0018 (0x0018 - 0x0000)
+struct MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices final
+{
+public:
+	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices;
+
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
+// 0x0018 (0x0018 - 0x0000)
+struct MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices final
+{
+public:
+	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices;
+
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
+// 0x0018 (0x0018 - 0x0000)
+struct MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices final
+{
+public:
+	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices;
+
 // Function MediaAssets.MediaSource.SetMediaOptionBool
 // 0x0010 (0x0010 - 0x0000)
 struct MediaSource_SetMediaOptionBool final
@@ -88,39 +121,6 @@ public:
 	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FileMediaSource_SetFilePath;
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-// 0x0018 (0x0018 - 0x0000)
-struct MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices final
-{
-public:
-	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices;
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-// 0x0018 (0x0018 - 0x0000)
-struct MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices final
-{
-public:
-	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices;
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-// 0x0018 (0x0018 - 0x0000)
-struct MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices final
-{
-public:
-	TArray<struct FMediaCaptureDevice>            OutDevices;                                        // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         Filter;                                            // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices;
 
 // Function MediaAssets.MediaComponent.GetMediaPlayer
 // 0x0008 (0x0008 - 0x0000)

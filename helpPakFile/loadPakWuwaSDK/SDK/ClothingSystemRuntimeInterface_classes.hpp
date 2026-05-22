@@ -58,6 +58,26 @@ public:
 };
 DUMPER7_ASSERTS_UClothingSimulationFactory;
 
+// Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
+// 0x0000 (0x0030 - 0x0030)
+class UClothSharedSimConfigBase final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ClothSharedSimConfigBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ClothSharedSimConfigBase")
+	}
+	static class UClothSharedSimConfigBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothSharedSimConfigBase>();
+	}
+};
+DUMPER7_ASSERTS_UClothSharedSimConfigBase;
+
 // Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
 // 0x0008 (0x0038 - 0x0030)
 class UClothingSimulationInteractor : public UObject
@@ -94,26 +114,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UClothingSimulationInteractor;
-
-// Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
-// 0x0000 (0x0030 - 0x0030)
-class UClothSharedSimConfigBase final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ClothSharedSimConfigBase")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ClothSharedSimConfigBase")
-	}
-	static class UClothSharedSimConfigBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothSharedSimConfigBase>();
-	}
-};
-DUMPER7_ASSERTS_UClothSharedSimConfigBase;
 
 // Class ClothingSystemRuntimeInterface.ClothingAssetBase
 // 0x0020 (0x0050 - 0x0030)

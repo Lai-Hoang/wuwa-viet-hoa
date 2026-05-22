@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Renderer_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Renderer_structs.hpp"
 
 
 namespace SDK

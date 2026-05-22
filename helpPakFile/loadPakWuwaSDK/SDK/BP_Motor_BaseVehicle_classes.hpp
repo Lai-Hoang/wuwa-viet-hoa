@@ -42,11 +42,12 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_Motor_BaseVehicle(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 	void GetConfigDataByKeyName(class FName Name_0, struct FSMotorConfigs* Result);
 	void GetConfigDataNameTagMap(TMap<class FName, struct FGameplayTag>* Result);
 	void 刷新配置();
+	void 解锁二段跳_蓄力跳_新退场技();
 
 public:
 	static class UClass* StaticClass()

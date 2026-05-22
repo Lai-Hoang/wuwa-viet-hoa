@@ -48,8 +48,8 @@ public:
 	void 触发切镜();
 	void 打开章节提示(int32 ChapterState, int32 ChapterId);
 	void 展示游戏Logo(float time);
-	void 显示预览图(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop);
-	void 显示预览图_数组_(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray);
+	void 显示预览图(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop, bool useFullscreenAdaptAnchor);
+	void 显示预览图_数组_(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray, bool useFullscreenAdaptAnchor);
 	void 关闭预览图();
 	void 播放预览图动画(const class FString& seqName);
 	void 执行实体帧事件(const class FString& Key, int32 EntityId);

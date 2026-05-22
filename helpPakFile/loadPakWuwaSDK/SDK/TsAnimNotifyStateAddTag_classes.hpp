@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -26,8 +26,8 @@ public:
 	bool                                          给召唤者添加;                                      // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
+	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 
 	class FString GetNotifyName() const;
 

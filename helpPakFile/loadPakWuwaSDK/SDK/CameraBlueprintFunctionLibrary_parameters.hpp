@@ -11,20 +11,20 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "ECameraGravityMode_structs.hpp"
-#include "SCameraDebugTool_CameraModeInfo_structs.hpp"
-#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
-#include "ECameraAnsEffectiveClientType_structs.hpp"
-#include "SCameraDebugTool_ControllerModification_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SCameraDebugTool_SubCameraModification_structs.hpp"
-#include "EAimAssistMode_structs.hpp"
 #include "SSequenceCamera_Settings_structs.hpp"
+#include "SCameraDebugTool_SubCameraModification_structs.hpp"
+#include "ECameraGravityMode_structs.hpp"
+#include "EAimAssistMode_structs.hpp"
+#include "SCameraDebugTool_CameraModeInfo_structs.hpp"
+#include "SCameraModifier_Condition_structs.hpp"
+#include "SCameraDebugTool_ControllerModification_structs.hpp"
+#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "SCameraModifier_Settings_structs.hpp"
 #include "SBaseCurve_structs.hpp"
-#include "SCameraModifier_Condition_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ECustomCameraMode_structs.hpp"
+#include "ECameraAnsEffectiveClientType_structs.hpp"
 
 
 namespace SDK::Params
@@ -350,29 +350,29 @@ public:
 DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_ExitSpecialGameplayCamera2;
 
 // Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.PlayCameraSequence
-// 0x0098 (0x0098 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct CameraBlueprintFunctionLibrary_C_PlayCameraSequence final
 {
 public:
 	ESequenceCameraAnsEffectiveClientType         生效客户端;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         entityId;                                          // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSequenceCamera_Settings              settings;                                          // 0x0008(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	bool                                          resetLockOnCamera;                                 // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               additiveRotation;                                  // 0x0044(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class FString                                 cameraAttachSocket;                                // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 cameraDetectSocket;                                // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                extraSphereLocation;                               // 0x0070(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         extraDetectSphereRadius;                           // 0x007C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isShowExtraSphere;                                 // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          isIgnoreCharacterCollision;                        // 0x0081(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          disableMovementInput;                              // 0x0082(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          disableLookAtInput;                                // 0x0083(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          disableMotionBlur;                                 // 0x0084(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	struct FSSequenceCamera_Settings              settings;                                          // 0x0008(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	bool                                          resetLockOnCamera;                                 // 0x0050(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               additiveRotation;                                  // 0x0054(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FString                                 cameraAttachSocket;                                // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 cameraDetectSocket;                                // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                extraSphereLocation;                               // 0x0080(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         extraDetectSphereRadius;                           // 0x008C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isShowExtraSphere;                                 // 0x0090(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          isIgnoreCharacterCollision;                        // 0x0091(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          disableMovementInput;                              // 0x0092(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          disableLookAtInput;                                // 0x0093(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          disableMotionBlur;                                 // 0x0094(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0098(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x00A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_CameraBlueprintFunctionLibrary_C_PlayCameraSequence;
 

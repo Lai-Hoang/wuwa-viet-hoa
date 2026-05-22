@@ -22,10 +22,12 @@ class UPerfSightHelper final : public UBlueprintFunctionLibrary
 {
 public:
 	static void BeginExclude();
+	static void BeginExtTag(const class FString& TagName);
 	static void BeginTag(const class FString& TagName);
 	static void BeginTupleWrap(const class FString& key);
 	static void EnableDebugMode();
 	static void EndExclude();
+	static void EndExtTag(const class FString& TagName);
 	static void EndTag();
 	static void EndTupleWrap();
 	static int32 GetDeviceLevelByQcc(const class FString& configName, const class FString& gpuFamily);
@@ -47,8 +49,10 @@ public:
 	static void SetMatchId(const class FString& matchId);
 	static void SetPCAppVersion(const class FString& appVer);
 	static void SetPCServerURL(const class FString& url);
+	static void SetPostValueStrMaxLen(int32 length);
 	static void SetQuality(int32 quality);
 	static void SetTargetFrameRate(int32 target);
+	static void SetUploadServerURL(const class FString& url);
 	static void SetUserId(const class FString& UserId);
 	static void SetVersionIden(const class FString& versionName);
 	static void UpdateNetLatency(int32 latency, const class FString& customInfo, const class FString& ipAddress);

@@ -119,7 +119,9 @@ DUMPER7_ASSERTS_UKuroPointCloudCache;
 class UKuroPointCloudFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static bool BindPointCloudComponent(class UKuroPointCloudWorldComponent* PointCloudComponent, int32* BindingKey);
 	static bool SetNiagaraKuroPointCloudCache(class UNiagaraComponent* NiagaraComponent, class UKuroPointCloudCache* KuroPointCloudCache, class FName ParameterName);
+	static bool SetNiagaraKuroPointCloudCollectionName(class UNiagaraComponent* NiagaraComponent, class FName WorldCollecitonName, class FName ParameterName);
 
 public:
 	static class UClass* StaticClass()
@@ -203,13 +205,16 @@ public:
 DUMPER7_ASSERTS_UKuroPointCloudStreamingConfig;
 
 // Class KuroPointCloud.KuroPointCloudStreamingActor
-// 0x0028 (0x02D8 - 0x02B0)
+// 0x0030 (0x02E0 - 0x02B0)
 class AKuroPointCloudStreamingActor final : public AActor
 {
 public:
 	class USceneComponent*                        SceneRoot;                                         // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UKuroPointCloudWorldComponent*          PointCloudWorldComponent;                          // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C0[0x18];                                     // 0x02C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C0[0x8];                                      // 0x02C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CellX;                                             // 0x02C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CellY;                                             // 0x02CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D0[0x10];                                     // 0x02D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -284,7 +289,7 @@ public:
 DUMPER7_ASSERTS_AKuroPointCloudWorldActor;
 
 // Class KuroPointCloud.KuroPointCloudWorldComponent
-// 0x0030 (0x0250 - 0x0220)
+// 0x00D0 (0x02F0 - 0x0220)
 class UKuroPointCloudWorldComponent final : public USceneComponent
 {
 public:
@@ -294,14 +299,35 @@ public:
 	EKPCWorldComponentDynamicPointMode            DynamicPointMode;                                  // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKPCWDynamicPointSocketInfo>    SocketInfos;                                       // 0x0240(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, struct FKuroPointCloudDataSet>    CustomPointsDataSet;                               // 0x0250(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<int32, struct FKPCWRingBufferData>       RingBufferDataSet;                                 // 0x02A0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
+	void AddRingBufferTransform(int32 EffectId, const struct FTransform& Transform);
+	void AddRingBufferTransforms(int32 EffectId, const TArray<struct FTransform>& Transforms);
+	void CommitRingBufferProcessed(int32 EffectId);
+	void FillDynamicPoints(int32 EffectId, int32 NumPoints, const struct FTransform& Transform, bool bPointVisible);
 	class UKuroPointCloudInstance* GetInstance(bool bCreateIfNull);
 	void MarkUpdate();
+	void RegisterToWorldSystem();
+	void RemoveEffectRingBuffer(int32 EffectId);
+	void SetDynamicPointVisible(int32 EffectId, int32 Index_0, bool bPointVisible);
 	void SetInstance(class UKuroPointCloudInstance* Instance);
+	void SetNiagaraCollectionName(class FName CollectionName);
+	void UpdateDynamicPoint(int32 EffectId, int32 Index_0, const struct FTransform& NewTransform);
+	void UpdateDynamicPoints(int32 EffectId, const TArray<struct FTransform>& Transforms);
 
+	bool GetBindingKey(int32* OutKey) const;
+	class FName GetCollectionName() const;
+	EKPCWorldComponentDynamicPointMode GetComponentUsageMode() const;
 	int32 GetNumDynamicPoints() const;
+	int32 GetNumDynamicPointsByEffectID(int32 EffectId) const;
+	int32 GetRingBufferAvailableCount(int32 EffectId, int32 NewReadIndex) const;
+	int32 GetRingBufferPendingCount(int32 EffectId, int32 NewReadIndex) const;
+	int32 GetRingBufferWriteIndex(int32 EffectId) const;
 	bool SampleDynamicPoint(int32 Index_0, struct FTransform* OutTransform) const;
+	bool SampleDynamicVisiblePoint(int32 EffectId, int32 Index_0, int32 NewReadIndex, struct FTransform* OutTransform, int32* bPointVisible) const;
+	bool SampleRingBufferPoint(int32 EffectId, int32 SampleIndex, int32 NewReadIndex, struct FTransform* OutTransform, int32* OutVisible) const;
 
 public:
 	static class UClass* StaticClass()
@@ -320,7 +346,7 @@ public:
 DUMPER7_ASSERTS_UKuroPointCloudWorldComponent;
 
 // Class KuroPointCloud.KuroPointCloudWorldSystem
-// 0x0078 (0x00B0 - 0x0038)
+// 0x0080 (0x00B8 - 0x0038)
 class UKuroPointCloudWorldSystem final : public UWorldSubsystem
 {
 public:
@@ -328,9 +354,11 @@ public:
 	class UKuroPointCloudStreamer*                Streamer;                                          // 0x0040(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FKuroPointCloudWorldCollection> Collections;                            // 0x0050(0x0050)(ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NextAvailableKey;                                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A4[0x14];                                      // 0x00A4(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	int32 GetNextAvailableKey();
 	void SetStreamingConfig(class UKuroPointCloudStreamingConfig* Config, float StreamingDistance);
 
 public:

@@ -19,33 +19,6 @@
 namespace SDK
 {
 
-// Class MovieScene.MovieSceneTrackInstance
-// 0x0028 (0x0058 - 0x0030)
-class UMovieSceneTrackInstance : public UObject
-{
-public:
-	class UObject*                                AnimatedObject;                                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsMasterTrackInstance;                            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FMovieSceneTrackInstanceInput>  Inputs;                                            // 0x0048(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneTrackInstance")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneTrackInstance")
-	}
-	static class UMovieSceneTrackInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneTrackInstance>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneTrackInstance;
-
 // Class MovieScene.MovieSceneSignedObject
 // 0x0028 (0x0058 - 0x0030)
 class UMovieSceneSignedObject : public UObject
@@ -133,6 +106,62 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneSection;
 
+// Class MovieScene.MovieSceneSubSection
+// 0x0078 (0x0170 - 0x00F8)
+class UMovieSceneSubSection : public UMovieSceneSection
+{
+public:
+	struct FMovieSceneSectionParameters           Parameters;                                        // 0x00F8(0x0024)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         StartOffset;                                       // 0x011C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         TimeScale;                                         // 0x0120(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         PrerollTime;                                       // 0x0124(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieSceneSequence*                    SubSequence;                                       // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TLazyObjectPtr<class AActor>                  ActorToRecord;                                     // 0x0130(0x001C)(Edit, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TargetSequenceName;                                // 0x0150(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDirectoryPath                         TargetPathToRecordTo;                              // 0x0160(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void SetSequence(class UMovieSceneSequence* Sequence);
+
+	class UMovieSceneSequence* GetSequence() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneSubSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSubSection")
+	}
+	static class UMovieSceneSubSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneSubSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneSubSection;
+
+// Class MovieScene.MovieSceneNodeGroup
+// 0x0000 (0x0030 - 0x0030)
+class UMovieSceneNodeGroup final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneNodeGroup")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneNodeGroup")
+	}
+	static class UMovieSceneNodeGroup* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneNodeGroup>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneNodeGroup;
+
 // Class MovieScene.MovieSceneTrack
 // 0x0040 (0x0098 - 0x0058)
 class UMovieSceneTrack : public UMovieSceneSignedObject
@@ -164,84 +193,66 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneTrack;
 
-// Class MovieScene.MovieSceneSpawnTrack
-// 0x0020 (0x00B8 - 0x0098)
-class UMovieSceneSpawnTrack final : public UMovieSceneTrack
+// Class MovieScene.MovieSceneNameableTrack
+// 0x0000 (0x0098 - 0x0098)
+class UMovieSceneNameableTrack : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	struct FGuid                                  ObjectGuid;                                        // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneNameableTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneNameableTrack")
+	}
+	static class UMovieSceneNameableTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneNameableTrack>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneNameableTrack;
+
+// Class MovieScene.MovieSceneSequence
+// 0x0010 (0x0068 - 0x0058)
+class UMovieSceneSequence : public UMovieSceneSignedObject
+{
+public:
+	class UMovieSceneCompiledData*                CompiledData;                                      // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EMovieSceneCompletionMode                     DefaultCompletionMode;                             // 0x0060(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bParentContextsAreSignificant;                     // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPlayableDirectly;                                 // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMovieSceneSequenceFlags                      SequenceFlags;                                     // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FMovieSceneObjectBindingID FindBindingByTag(class FName InBindingName) const;
+	const TArray<struct FMovieSceneObjectBindingID> FindBindingsByBothTags(const TArray<class FName>& InBindingNames) const;
+	const TArray<struct FMovieSceneObjectBindingID> FindBindingsByTag(class FName InBindingName) const;
+	class UMovieSceneTrack* FindMasterTrackByTag(class FName InTrackTagName) const;
+	const TArray<class UMovieSceneTrack*> FindMasterTracksByBothTags(const TArray<class FName>& InTrackTagNames) const;
+	const TArray<class UMovieSceneTrack*> FindMasterTracksByTag(class FName InTrackTagName) const;
+	bool HasBindingTag(class FName InBindingName, bool IncludeSubSequence) const;
+	bool HasMasterTrackTag(class FName InTrackTagName, bool IncludeSubSequence) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieSceneSpawnTrack")
+		STATIC_CLASS_IMPL("MovieSceneSequence")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieSceneSpawnTrack")
+		STATIC_NAME_IMPL(L"MovieSceneSequence")
 	}
-	static class UMovieSceneSpawnTrack* GetDefaultObj()
+	static class UMovieSceneSequence* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieSceneSpawnTrack>();
+		return GetDefaultObjImpl<UMovieSceneSequence>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneSpawnTrack;
-
-// Class MovieScene.MovieSceneEntitySystem
-// 0x0018 (0x0048 - 0x0030)
-class UMovieSceneEntitySystem : public UObject
-{
-public:
-	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneEntitySystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneEntitySystem")
-	}
-	static class UMovieSceneEntitySystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneEntitySystem>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneEntitySystem;
-
-// Class MovieScene.MovieSceneCompiledDataManager
-// 0x0208 (0x0238 - 0x0030)
-class UMovieSceneCompiledDataManager final : public UObject
-{
-public:
-	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, struct FMovieSceneSequenceHierarchy> Hierarchies;                                    // 0x00E0(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<int32, struct FMovieSceneEvaluationTemplate> TrackTemplates;                                // 0x0130(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	TMap<int32, struct FMovieSceneEvaluationField> TrackTemplateFields;                              // 0x0180(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<int32, struct FMovieSceneEntityComponentField> EntityComponentFields;                       // 0x01D0(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_220[0x18];                                     // 0x0220(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneCompiledDataManager")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneCompiledDataManager")
-	}
-	static class UMovieSceneCompiledDataManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneCompiledDataManager>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneCompiledDataManager;
+DUMPER7_ASSERTS_UMovieSceneSequence;
 
 // Class MovieScene.MovieSceneSequencePlayer
-// 0x06C8 (0x06F8 - 0x0030)
+// 0x06E0 (0x0710 - 0x0030)
 class UMovieSceneSequencePlayer : public UObject
 {
 public:
@@ -252,26 +263,26 @@ public:
 	TMulticastInlineDelegate<void()>              OnPause;                                           // 0x0448(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnInterrupt;                                       // 0x0458(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnFinished;                                        // 0x0468(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_478[0x30];                                     // 0x0478(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	EMovieScenePlayerStatus                       Status;                                            // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A9[0x3];                                      // 0x04A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bReversePlayback : 1;                              // 0x04AC(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 KeyFrames;                                         // 0x04B0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C0[0x8];                                      // 0x04C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMovieSceneSequence*                    Sequence;                                          // 0x04C8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FFrameNumber                           StartTime;                                         // 0x04D0(0x0004)(Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         DurationFrames;                                    // 0x04D4(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DurationSubFrames;                                 // 0x04D8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         CurrentNumLoops;                                   // 0x04DC(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x04E0(0x0014)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4F4[0x4];                                      // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;                           // 0x04F8(0x00F8)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5F0[0x68];                                     // 0x05F0(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequenceReplProperties      NetSyncProps;                                      // 0x0658(0x0010)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	TScriptInterface<class IMovieScenePlaybackClient> PlaybackClient;                                // 0x0668(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UMovieSceneSequenceTickManager*         TickManager;                                       // 0x0678(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_680[0x78];                                     // 0x0680(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_478[0x48];                                     // 0x0478(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	EMovieScenePlayerStatus                       Status;                                            // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C1[0x3];                                      // 0x04C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bReversePlayback : 1;                              // 0x04C4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_4C5[0x3];                                      // 0x04C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 KeyFrames;                                         // 0x04C8(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4D8[0x8];                                      // 0x04D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneSequence*                    Sequence;                                          // 0x04E0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FFrameNumber                           StartTime;                                         // 0x04E8(0x0004)(Net, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         DurationFrames;                                    // 0x04EC(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DurationSubFrames;                                 // 0x04F0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         CurrentNumLoops;                                   // 0x04F4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x04F8(0x0014)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneRootEvaluationTemplateInstance RootTemplateInstance;                           // 0x0510(0x00F8)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_608[0x68];                                     // 0x0608(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneSequenceReplProperties      NetSyncProps;                                      // 0x0670(0x0010)(Net, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	TScriptInterface<class IMovieScenePlaybackClient> PlaybackClient;                                // 0x0680(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	class UMovieSceneSequenceTickManager*         TickManager;                                       // 0x0690(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_698[0x78];                                     // 0x0698(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ChangePlaybackDirection();
@@ -341,25 +352,69 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneSequencePlayer;
 
-// Class MovieScene.MovieSceneNameableTrack
-// 0x0000 (0x0098 - 0x0098)
-class UMovieSceneNameableTrack : public UMovieSceneTrack
+// Class MovieScene.MovieSceneEntitySystem
+// 0x0018 (0x0048 - 0x0030)
+class UMovieSceneEntitySystem : public UObject
+{
+public:
+	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneEntitySystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneEntitySystem")
+	}
+	static class UMovieSceneEntitySystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneEntitySystem>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneEntitySystem;
+
+// Class MovieScene.MovieSceneEntityInstantiatorSystem
+// 0x0000 (0x0048 - 0x0048)
+class UMovieSceneEntityInstantiatorSystem : public UMovieSceneEntitySystem
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MovieSceneNameableTrack")
+		STATIC_CLASS_IMPL("MovieSceneEntityInstantiatorSystem")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MovieSceneNameableTrack")
+		STATIC_NAME_IMPL(L"MovieSceneEntityInstantiatorSystem")
 	}
-	static class UMovieSceneNameableTrack* GetDefaultObj()
+	static class UMovieSceneEntityInstantiatorSystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieSceneNameableTrack>();
+		return GetDefaultObjImpl<UMovieSceneEntityInstantiatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UMovieSceneNameableTrack;
+DUMPER7_ASSERTS_UMovieSceneEntityInstantiatorSystem;
+
+// Class MovieScene.MovieSceneMasterInstantiatorSystem
+// 0x0000 (0x0048 - 0x0048)
+class UMovieSceneMasterInstantiatorSystem final : public UMovieSceneEntityInstantiatorSystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneMasterInstantiatorSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneMasterInstantiatorSystem")
+	}
+	static class UMovieSceneMasterInstantiatorSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneMasterInstantiatorSystem>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneMasterInstantiatorSystem;
 
 // Class MovieScene.MovieSceneSubTrack
 // 0x0010 (0x00A8 - 0x0098)
@@ -383,123 +438,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneSubTrack;
-
-// Class MovieScene.TestMovieSceneSubTrack
-// 0x0010 (0x00B8 - 0x00A8)
-class UTestMovieSceneSubTrack final : public UMovieSceneSubTrack
-{
-public:
-	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TestMovieSceneSubTrack")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TestMovieSceneSubTrack")
-	}
-	static class UTestMovieSceneSubTrack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTestMovieSceneSubTrack>();
-	}
-};
-DUMPER7_ASSERTS_UTestMovieSceneSubTrack;
-
-// Class MovieScene.MovieSceneSequence
-// 0x0010 (0x0068 - 0x0058)
-class UMovieSceneSequence : public UMovieSceneSignedObject
-{
-public:
-	class UMovieSceneCompiledData*                CompiledData;                                      // 0x0058(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	EMovieSceneCompletionMode                     DefaultCompletionMode;                             // 0x0060(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bParentContextsAreSignificant;                     // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPlayableDirectly;                                 // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMovieSceneSequenceFlags                      SequenceFlags;                                     // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FMovieSceneObjectBindingID FindBindingByTag(class FName InBindingName) const;
-	const TArray<struct FMovieSceneObjectBindingID> FindBindingsByBothTags(const TArray<class FName>& InBindingNames) const;
-	const TArray<struct FMovieSceneObjectBindingID> FindBindingsByTag(class FName InBindingName) const;
-	class UMovieSceneTrack* FindMasterTrackByTag(class FName InTrackTagName) const;
-	const TArray<class UMovieSceneTrack*> FindMasterTracksByBothTags(const TArray<class FName>& InTrackTagNames) const;
-	const TArray<class UMovieSceneTrack*> FindMasterTracksByTag(class FName InTrackTagName) const;
-	bool HasBindingTag(class FName InBindingName, bool IncludeSubSequence) const;
-	bool HasMasterTrackTag(class FName InTrackTagName, bool IncludeSubSequence) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneSequence")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneSequence")
-	}
-	static class UMovieSceneSequence* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneSequence>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneSequence;
-
-// Class MovieScene.MovieSceneSubSection
-// 0x0078 (0x0170 - 0x00F8)
-class UMovieSceneSubSection : public UMovieSceneSection
-{
-public:
-	struct FMovieSceneSectionParameters           Parameters;                                        // 0x00F8(0x0024)(Edit, BlueprintVisible, Config, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         StartOffset;                                       // 0x011C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         TimeScale;                                         // 0x0120(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         PrerollTime;                                       // 0x0124(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieSceneSequence*                    SubSequence;                                       // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TLazyObjectPtr<class AActor>                  ActorToRecord;                                     // 0x0130(0x001C)(Edit, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TargetSequenceName;                                // 0x0150(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FDirectoryPath                         TargetPathToRecordTo;                              // 0x0160(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void SetSequence(class UMovieSceneSequence* Sequence);
-
-	class UMovieSceneSequence* GetSequence() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneSubSection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneSubSection")
-	}
-	static class UMovieSceneSubSection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneSubSection>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneSubSection;
-
-// Class MovieScene.MovieSceneSpawnablesSystem
-// 0x0000 (0x0048 - 0x0048)
-class UMovieSceneSpawnablesSystem final : public UMovieSceneEntitySystem
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneSpawnablesSystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneSpawnablesSystem")
-	}
-	static class UMovieSceneSpawnablesSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneSpawnablesSystem>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneSpawnablesSystem;
 
 // Class MovieScene.MovieSceneCustomClockSource
 // 0x0000 (0x0000 - 0x0000)
@@ -651,26 +589,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_INodeAndChannelMappings;
-
-// Class MovieScene.MovieSceneNodeGroup
-// 0x0000 (0x0030 - 0x0030)
-class UMovieSceneNodeGroup final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneNodeGroup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneNodeGroup")
-	}
-	static class UMovieSceneNodeGroup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneNodeGroup>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneNodeGroup;
 
 // Class MovieScene.MovieSceneNodeGroupCollection
 // 0x0000 (0x0030 - 0x0030)
@@ -835,26 +753,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneBoolSection;
 
-// Class MovieScene.MovieSceneEntityInstantiatorSystem
-// 0x0000 (0x0048 - 0x0048)
-class UMovieSceneEntityInstantiatorSystem : public UMovieSceneEntitySystem
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneEntityInstantiatorSystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneEntityInstantiatorSystem")
-	}
-	static class UMovieSceneEntityInstantiatorSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneEntityInstantiatorSystem>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneEntityInstantiatorSystem;
-
 // Class MovieScene.MovieSceneGenericBoundObjectInstantiator
 // 0x0000 (0x0048 - 0x0048)
 class UMovieSceneGenericBoundObjectInstantiator final : public UMovieSceneEntityInstantiatorSystem
@@ -956,6 +854,34 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneCompiledData;
+
+// Class MovieScene.MovieSceneCompiledDataManager
+// 0x0208 (0x0238 - 0x0030)
+class UMovieSceneCompiledDataManager final : public UObject
+{
+public:
+	uint8                                         Pad_30[0xB0];                                      // 0x0030(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FMovieSceneSequenceHierarchy> Hierarchies;                                    // 0x00E0(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<int32, struct FMovieSceneEvaluationTemplate> TrackTemplates;                                // 0x0130(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	TMap<int32, struct FMovieSceneEvaluationField> TrackTemplateFields;                              // 0x0180(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<int32, struct FMovieSceneEntityComponentField> EntityComponentFields;                       // 0x01D0(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_220[0x18];                                     // 0x0220(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneCompiledDataManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneCompiledDataManager")
+	}
+	static class UMovieSceneCompiledDataManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneCompiledDataManager>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneCompiledDataManager;
 
 // Class MovieScene.MovieSceneFloatDecomposer
 // 0x0000 (0x0000 - 0x0000)
@@ -1172,26 +1098,6 @@ public:
 };
 DUMPER7_ASSERTS_IMovieSceneKeyProxy;
 
-// Class MovieScene.MovieSceneMasterInstantiatorSystem
-// 0x0000 (0x0048 - 0x0048)
-class UMovieSceneMasterInstantiatorSystem final : public UMovieSceneEntityInstantiatorSystem
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneMasterInstantiatorSystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneMasterInstantiatorSystem")
-	}
-	static class UMovieSceneMasterInstantiatorSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneMasterInstantiatorSystem>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneMasterInstantiatorSystem;
-
 // Class MovieScene.MovieScenePreAnimatedStateSystemInterface
 // 0x0000 (0x0000 - 0x0000)
 class IMovieScenePreAnimatedStateSystemInterface final
@@ -1287,6 +1193,26 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneSequenceTickManager;
 
+// Class MovieScene.MovieSceneSpawnablesSystem
+// 0x0000 (0x0048 - 0x0048)
+class UMovieSceneSpawnablesSystem final : public UMovieSceneEntitySystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneSpawnablesSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSpawnablesSystem")
+	}
+	static class UMovieSceneSpawnablesSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneSpawnablesSystem>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneSpawnablesSystem;
+
 // Class MovieScene.MovieSceneSpawnSection
 // 0x0008 (0x0198 - 0x0190)
 class UMovieSceneSpawnSection final : public UMovieSceneBoolSection
@@ -1309,6 +1235,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneSpawnSection;
+
+// Class MovieScene.MovieSceneSpawnTrack
+// 0x0020 (0x00B8 - 0x0098)
+class UMovieSceneSpawnTrack final : public UMovieSceneTrack
+{
+public:
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                  ObjectGuid;                                        // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneSpawnTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneSpawnTrack")
+	}
+	static class UMovieSceneSpawnTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneSpawnTrack>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneSpawnTrack;
 
 // Class MovieScene.TestMovieSceneTrack
 // 0x0020 (0x00B8 - 0x0098)
@@ -1379,6 +1329,29 @@ public:
 };
 DUMPER7_ASSERTS_UTestMovieSceneSequence;
 
+// Class MovieScene.TestMovieSceneSubTrack
+// 0x0010 (0x00B8 - 0x00A8)
+class UTestMovieSceneSubTrack final : public UMovieSceneSubTrack
+{
+public:
+	TArray<class UMovieSceneSection*>             SectionArray;                                      // 0x00A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("TestMovieSceneSubTrack")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"TestMovieSceneSubTrack")
+	}
+	static class UTestMovieSceneSubTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTestMovieSceneSubTrack>();
+	}
+};
+DUMPER7_ASSERTS_UTestMovieSceneSubTrack;
+
 // Class MovieScene.TestMovieSceneSubSection
 // 0x0000 (0x0170 - 0x0170)
 class UTestMovieSceneSubSection final : public UMovieSceneSubSection
@@ -1398,6 +1371,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UTestMovieSceneSubSection;
+
+// Class MovieScene.MovieSceneTrackInstance
+// 0x0028 (0x0058 - 0x0030)
+class UMovieSceneTrackInstance : public UObject
+{
+public:
+	class UObject*                                AnimatedObject;                                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsMasterTrackInstance;                            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMovieSceneEntitySystemLinker*          Linker;                                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FMovieSceneTrackInstanceInput>  Inputs;                                            // 0x0048(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneTrackInstance")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneTrackInstance")
+	}
+	static class UMovieSceneTrackInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneTrackInstance>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneTrackInstance;
 
 // Class MovieScene.MovieSceneTrackInstanceInstantiator
 // 0x00B0 (0x00F8 - 0x0048)

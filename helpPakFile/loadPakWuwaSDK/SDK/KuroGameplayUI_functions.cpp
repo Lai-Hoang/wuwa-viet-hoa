@@ -142,7 +142,7 @@ void UDamageUiManager::AddDamageInfo(const struct FDamageInfo& DamageInfo)
 // Function KuroGameplayUI.DamageUiManager.AddDamageViewData
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const struct FDamageViewData&           InDamageViewData                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FDamageViewData&           InDamageViewData                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void UDamageUiManager::AddDamageViewData(const struct FDamageViewData& InDamageViewData)
 {

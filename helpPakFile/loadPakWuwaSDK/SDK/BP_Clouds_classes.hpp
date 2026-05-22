@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "Engine_structs.hpp"
-#include "AkAudio_structs.hpp"
 #include "E_Cloud_Presents_structs.hpp"
+#include "AkAudio_structs.hpp"
 
 
 namespace SDK
@@ -50,11 +50,12 @@ public:
 	uint8                                         Pad_46D[0x3];                                      // 0x046D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ReversedZHeightBias;                               // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EKuroFeatureLevel                             FeatureLevel;                                      // 0x0474(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHiddenClouds;                                    // 0x0475(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_Clouds(int32 EntryPoint);
 	void LoadAndSwitch(TSoftObjectPtr<class UObject> Asset, float ChangeSpeed, bool IsInEditor, bool IsAudio);
-	void Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsInEditor, bool bOverrideCloudRotation, float CloudSpeed, float CloudOffset);
+	void Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsInEditor, bool bOverrideCloudRotation, float CloudSpeed, float CloudOffset, bool ControlSeqCloud);
 	void ChangeCloud();
 	void EditorTick(float DeltaSeconds);
 	void ReceiveTick(float DeltaSeconds);

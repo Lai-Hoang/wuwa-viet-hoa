@@ -12,11 +12,11 @@
 
 #include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "EAimViewState_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EAimViewState_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SSkillInfo_structs.hpp"
 #include "EPawnChannel_structs.hpp"
+#include "SSkillInfo_structs.hpp"
 
 
 namespace SDK::Params
@@ -94,28 +94,28 @@ public:
 DUMPER7_ASSERTS_GA_Base_C_获取当前技能配置Id;
 
 // Function GA_Base.GA_Base_C.获取当前技能配置
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct GA_Base_C_获取当前技能配置 final
 {
 public:
-	struct FSSkillInfo                            当前技能数据_0;                                    // 0x0000(0x01A8)(Parm, OutParm, HasGetValueTypeHash)
+	struct FSSkillInfo                            当前技能数据_0;                                    // 0x0000(0x01D0)(Parm, OutParm, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Base_C_获取当前技能配置;
 
 // Function GA_Base.GA_Base_C.获取技能动画
-// 0x0378 (0x0378 - 0x0000)
+// 0x03C8 (0x03C8 - 0x0000)
 struct GA_Base_C_获取技能动画 final
 {
 public:
 	int32                                         编号;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimMontage*                           动画;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillInfo                            SkillInfo;                                         // 0x0010(0x01A8)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class UAnimMontage*                           Montage;                                           // 0x01B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_______EntityId_EntityId;                  // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSSkillInfo                            CallFunc________________;                          // 0x01C8(0x01A8)(HasGetValueTypeHash)
-	class UAnimMontage*                           CallFunc_GetSkillMontageInstance_ReturnValue;      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillInfo                            SkillInfo;                                         // 0x0010(0x01D0)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class UAnimMontage*                           Montage;                                           // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_______EntityId_EntityId;                  // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSSkillInfo                            CallFunc________________;                          // 0x01F0(0x01D0)(HasGetValueTypeHash)
+	class UAnimMontage*                           CallFunc_GetSkillMontageInstance_ReturnValue;      // 0x03C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Base_C_获取技能动画;
 
@@ -140,12 +140,12 @@ public:
 DUMPER7_ASSERTS_GA_Base_C_获取技能所有动画;
 
 // Function GA_Base.GA_Base_C.获取技能标签
-// 0x01B8 (0x01B8 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct GA_Base_C_获取技能标签 final
 {
 public:
 	TArray<struct FGameplayTag>                   技能标签;                                          // 0x0000(0x0010)(Parm, OutParm)
-	struct FSSkillInfo                            CallFunc________________;                          // 0x0010(0x01A8)(HasGetValueTypeHash)
+	struct FSSkillInfo                            CallFunc________________;                          // 0x0010(0x01D0)(HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Base_C_获取技能标签;
 
@@ -698,7 +698,7 @@ public:
 DUMPER7_ASSERTS_GA_Base_C_通过ID获取对象Buff层数;
 
 // Function GA_Base.GA_Base_C.获取当前技能攻速
-// 0x01D0 (0x01D0 - 0x0000)
+// 0x01F8 (0x01F8 - 0x0000)
 struct GA_Base_C_获取当前技能攻速 final
 {
 public:
@@ -707,12 +707,12 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ATsBaseCharacter_C*                     CallFunc__________;                                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillInfo                            CallFunc________________;                          // 0x0018(0x01A8)(HasGetValueTypeHash)
-	float                                         CallFunc___Current_______;                         // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C6[0x2];                                      // 0x01C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc___Current________1;                       // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillInfo                            CallFunc________________;                          // 0x0018(0x01D0)(HasGetValueTypeHash)
+	float                                         CallFunc___Current_______;                         // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1EE[0x2];                                      // 0x01EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc___Current________1;                       // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_GA_Base_C_获取当前技能攻速;
 

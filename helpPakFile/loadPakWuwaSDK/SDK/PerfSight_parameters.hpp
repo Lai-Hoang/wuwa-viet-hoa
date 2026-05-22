@@ -14,6 +14,15 @@
 namespace SDK::Params
 {
 
+// Function PerfSight.PerfSightHelper.BeginExtTag
+// 0x0010 (0x0010 - 0x0000)
+struct PerfSightHelper_BeginExtTag final
+{
+public:
+	class FString                                 TagName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PerfSightHelper_BeginExtTag;
+
 // Function PerfSight.PerfSightHelper.BeginTag
 // 0x0010 (0x0010 - 0x0000)
 struct PerfSightHelper_BeginTag final
@@ -31,6 +40,15 @@ public:
 	class FString                                 key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PerfSightHelper_BeginTupleWrap;
+
+// Function PerfSight.PerfSightHelper.EndExtTag
+// 0x0010 (0x0010 - 0x0000)
+struct PerfSightHelper_EndExtTag final
+{
+public:
+	class FString                                 TagName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PerfSightHelper_EndExtTag;
 
 // Function PerfSight.PerfSightHelper.GetDeviceLevelByQcc
 // 0x0028 (0x0028 - 0x0000)
@@ -219,6 +237,15 @@ public:
 };
 DUMPER7_ASSERTS_PerfSightHelper_SetPCServerURL;
 
+// Function PerfSight.PerfSightHelper.SetPostValueStrMaxLen
+// 0x0004 (0x0004 - 0x0000)
+struct PerfSightHelper_SetPostValueStrMaxLen final
+{
+public:
+	int32                                         length;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PerfSightHelper_SetPostValueStrMaxLen;
+
 // Function PerfSight.PerfSightHelper.SetQuality
 // 0x0004 (0x0004 - 0x0000)
 struct PerfSightHelper_SetQuality final
@@ -236,6 +263,15 @@ public:
 	int32                                         target;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_PerfSightHelper_SetTargetFrameRate;
+
+// Function PerfSight.PerfSightHelper.SetUploadServerURL
+// 0x0010 (0x0010 - 0x0000)
+struct PerfSightHelper_SetUploadServerURL final
+{
+public:
+	class FString                                 url;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PerfSightHelper_SetUploadServerURL;
 
 // Function PerfSight.PerfSightHelper.SetUserId
 // 0x0010 (0x0010 - 0x0000)

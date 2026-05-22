@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "SSkillCooldownInfo_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ESkillMode_structs.hpp"
+#include "SSkillTarget_structs.hpp"
+#include "SSkillTrigger_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "SSkillBehavior_structs.hpp"
 #include "ESkillGenre_structs.hpp"
 #include "ESkillTargetDirection_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SSkillTarget_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "ESkillMode_structs.hpp"
-#include "SSkillTrigger_structs.hpp"
-#include "SSkillBehavior_structs.hpp"
-#include "SSkillCooldownInfo_structs.hpp"
 #include "ESkillOverrideType_structs.hpp"
 
 
@@ -26,7 +26,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSkillInfo.SSkillInfo
-// 0x01A8 (0x01A8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct FSSkillInfo final
 {
 public:
@@ -34,7 +34,8 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        SkillIcon_197_2BF3BB3144DFB00F4B135CA6A25894FD;    // 0x0010(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	ESkillMode                                    SkillMode_263_700294234859C1051A2CCABFD9291CBF;    // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          MontageDelayOneFrame_321_9FAD7B32474B0261DC4D03BEAE127CB2; // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSSkillTrigger>                 SkillTriggers_291_3E462E16414BBA1C928C9C9B1B5626E3; // 0x0038(0x0010)(Edit, BlueprintVisible)
 	TArray<struct FSSkillBehavior>                SkillBehaviorGroup_271_092A9D7D4439AC3AB24993A6F3C3C7FD; // 0x0048(0x0010)(Edit, BlueprintVisible)
 	struct FSoftClassPath                         SkillGA_258_DBD75290442DE8B7E7E1A8BA76125F7F;      // 0x0058(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
@@ -53,24 +54,27 @@ public:
 	bool                                          WalkOffLedge_247_48F816A340444353040EA08425D3DF62; // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int64>                                 SkillStartBuff_250_24A0EF3F4A3AA940A64D57AD87670B32; // 0x0138(0x0010)(Edit, BlueprintVisible)
-	TArray<int64>                                 SkillBuff_253_04317C1041148C5E5CFED8B6B60BF7ED;    // 0x0148(0x0010)(Edit, BlueprintVisible)
-	TArray<int64>                                 SkillEndBuff_251_A5B793A745BC193DD976889B018E090E; // 0x0158(0x0010)(Edit, BlueprintVisible)
-	float                                         ToughRatio_248_505390BC44202CA0730CAEA4B2A9D438;   // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StrengthCost_241_8DDC6A4643C65E8CA4B5A48AA65C0657; // 0x016C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFullBodySkill_257_87A2542343A253D2903D5396668A9A82; // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          AutonomouslyBySimulate_214_FE883CA049FE760F8726F88E8FFDC7CF; // 0x0171(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_172[0x2];                                      // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MoveControllerTime_219_4EFBCF714CDDCFEA57C75CBB68F35855; // 0x0174(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ImmuneFallDamageTime_254_30E9B0B44896C7E042215E9157EAD285; // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OverrideHit_215_ABBDBA0E47F33607DBF5B8B561ED43CA;  // 0x017C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESkillOverrideType                            OverrideType_276_9E4DE49042E6EB8A684440B4F78E1CBF; // 0x017D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17E[0x2];                                      // 0x017E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSoftObjectPath>                ExportSpecialAnim_287_9181271C401FEB3D8A026C9ED3DA5752; // 0x0180(0x0010)(Edit, BlueprintVisible)
-	bool                                          SkillStepUp_293_F165FA024DD97820BBAC7A900EAC7C43;  // 0x0190(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          SkillCanBeginWithoutControl_304_073A44B74B03C28BAE48E6B6C2E3F4F2; // 0x0191(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<int64>                                 StartRemoveBuffIds_318_0C1E3D6D4F838C30647EB7A4FCFEA406; // 0x0148(0x0010)(Edit, BlueprintVisible)
+	TArray<int64>                                 SkillBuff_253_04317C1041148C5E5CFED8B6B60BF7ED;    // 0x0158(0x0010)(Edit, BlueprintVisible)
+	TArray<int64>                                 SkillEndBuff_251_A5B793A745BC193DD976889B018E090E; // 0x0168(0x0010)(Edit, BlueprintVisible)
+	TArray<int64>                                 EndRemoveBuffIds_319_4658453D4A4C32F5FB76ACA55BA4E135; // 0x0178(0x0010)(Edit, BlueprintVisible)
+	float                                         ToughRatio_248_505390BC44202CA0730CAEA4B2A9D438;   // 0x0188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         StrengthCost_241_8DDC6A4643C65E8CA4B5A48AA65C0657; // 0x018C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFullBodySkill_257_87A2542343A253D2903D5396668A9A82; // 0x0190(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          AutonomouslyBySimulate_214_FE883CA049FE760F8726F88E8FFDC7CF; // 0x0191(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_192[0x2];                                      // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxCounterCount_307_EF26A0C144CC939C38497AAF9B613CCA; // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<int64>                                 SpecialBuffInCode_311_A1A6B39D4ABC2363D160E89BCC36CABA; // 0x0198(0x0010)(Edit, BlueprintVisible)
+	float                                         MoveControllerTime_219_4EFBCF714CDDCFEA57C75CBB68F35855; // 0x0194(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ImmuneFallDamageTime_254_30E9B0B44896C7E042215E9157EAD285; // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OverrideHit_215_ABBDBA0E47F33607DBF5B8B561ED43CA;  // 0x019C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESkillOverrideType                            OverrideType_276_9E4DE49042E6EB8A684440B4F78E1CBF; // 0x019D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoftObjectPath>                ExportSpecialAnim_287_9181271C401FEB3D8A026C9ED3DA5752; // 0x01A0(0x0010)(Edit, BlueprintVisible)
+	bool                                          SkillStepUp_293_F165FA024DD97820BBAC7A900EAC7C43;  // 0x01B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          SkillCanBeginWithoutControl_304_073A44B74B03C28BAE48E6B6C2E3F4F2; // 0x01B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxCounterCount_307_EF26A0C144CC939C38497AAF9B613CCA; // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int64>                                 SpecialBuffInCode_311_A1A6B39D4ABC2363D160E89BCC36CABA; // 0x01B8(0x0010)(Edit, BlueprintVisible)
+	float                                         BurstLockTime_324_3867E4CD4D08E96BA9CC97A5432569BD; // 0x01C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSSkillInfo;
 

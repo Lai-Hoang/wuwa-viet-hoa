@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "EInputState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ERelation_structs.hpp"
 #include "BPEEnableFollowShooter_structs.hpp"
 #include "EInputAction_structs.hpp"
-#include "EInputState_structs.hpp"
 #include "EDetachType_structs.hpp"
-#include "ERelation_structs.hpp"
-#include "EPawnChannel_structs.hpp"
 #include "EWeatherState_structs.hpp"
+#include "EPawnChannel_structs.hpp"
 #include "EWuYinQuState_structs.hpp"
 
 
@@ -190,6 +190,8 @@ public:
 	static void SetPlayerFollowerEnable(bool enable, EBPEEnableFollowShooter enableType, class UObject* __WorldContext);
 	static bool IsBulletCreateByFollowShooter(int32 bulletId1, class UObject* __WorldContext);
 	static bool CheckIsRoleTriggerActor(class AActor* actor, class UObject* __WorldContext);
+	static bool IsMale(class UObject* __WorldContext);
+	static void ReleaseFromMediaPlayActor(TScriptInterface<class IBPI_SceneBp_C> sceneBpActor, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

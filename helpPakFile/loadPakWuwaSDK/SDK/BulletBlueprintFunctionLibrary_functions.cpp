@@ -1044,5 +1044,119 @@ bool UBulletBlueprintFunctionLibrary_C::DestroyBullet(int32 id, bool isSummonChi
 	return Parms.ReturnValue;
 }
 
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.GetCampRelationship
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   camp1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   camp2                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UBulletBlueprintFunctionLibrary_C::GetCampRelationship(int32 camp1, int32 camp2, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "GetCampRelationship");
+
+	Params::BulletBlueprintFunctionLibrary_C_GetCampRelationship Parms{};
+
+	Parms.camp1 = camp1;
+	Parms.camp2 = camp2;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.GetCamp
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UBulletBlueprintFunctionLibrary_C::GetCamp(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "GetCamp");
+
+	Params::BulletBlueprintFunctionLibrary_C_GetCamp Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.NotifyProcessKuroBulletOperationList
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBulletBlueprintFunctionLibrary_C::NotifyProcessKuroBulletOperationList(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "NotifyProcessKuroBulletOperationList");
+
+	Params::BulletBlueprintFunctionLibrary_C_NotifyProcessKuroBulletOperationList Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.NotifyExistedImmediatelyOperation
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FBulletHitWorldEntityOperation&operation                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBulletBlueprintFunctionLibrary_C::NotifyExistedImmediatelyOperation(const struct FBulletHitWorldEntityOperation& operation, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "NotifyExistedImmediatelyOperation");
+
+	Params::BulletBlueprintFunctionLibrary_C_NotifyExistedImmediatelyOperation Parms{};
+
+	Parms.operation = std::move(operation);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

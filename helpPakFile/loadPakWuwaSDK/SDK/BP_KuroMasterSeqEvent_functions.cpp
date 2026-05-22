@@ -291,8 +291,9 @@ void ABP_KuroMasterSeqEvent_C::展示游戏Logo(float time)
 // const class FString&                    maleSpineName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const class FString&                    femaleSpineName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    needLoop                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    useFullscreenAdaptAnchor                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_KuroMasterSeqEvent_C::显示预览图(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop)
+void ABP_KuroMasterSeqEvent_C::显示预览图(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop, bool useFullscreenAdaptAnchor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -306,6 +307,7 @@ void ABP_KuroMasterSeqEvent_C::显示预览图(const class FString& MaleAssetPat
 	Parms.maleSpineName = std::move(maleSpineName);
 	Parms.femaleSpineName = std::move(femaleSpineName);
 	Parms.needLoop = needLoop;
+	Parms.useFullscreenAdaptAnchor = useFullscreenAdaptAnchor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -318,8 +320,9 @@ void ABP_KuroMasterSeqEvent_C::显示预览图(const class FString& MaleAssetPat
 // const class FString&                    FemaleAssetPath                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // TArray<struct FSpineThingsInfo>&        maleSpineArray                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FSpineThingsInfo>&        femaleSpineArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    useFullscreenAdaptAnchor                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_KuroMasterSeqEvent_C::显示预览图_数组_(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray)
+void ABP_KuroMasterSeqEvent_C::显示预览图_数组_(const class FString& MaleAssetPath, const class FString& FemaleAssetPath, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray, bool useFullscreenAdaptAnchor)
 {
 	static class UFunction* Func = nullptr;
 
@@ -332,6 +335,7 @@ void ABP_KuroMasterSeqEvent_C::显示预览图_数组_(const class FString& Male
 	Parms.FemaleAssetPath = std::move(FemaleAssetPath);
 	Parms.maleSpineArray = std::move(maleSpineArray);
 	Parms.femaleSpineArray = std::move(femaleSpineArray);
+	Parms.useFullscreenAdaptAnchor = useFullscreenAdaptAnchor;
 
 	UObject::ProcessEvent(Func, &Parms);
 

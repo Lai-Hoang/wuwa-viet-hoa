@@ -559,29 +559,24 @@ enum class EAkFitToGeometryMode : uint8
 	EAkFitToGeometryMode_MAX                 = 3,
 };
 
-// ScriptStruct AkAudio.AkExternalSourceInfo
-// 0x0038 (0x0038 - 0x0000)
-struct FAkExternalSourceInfo final
+// ScriptStruct AkAudio.AkMidiEventBase
+// 0x0002 (0x0002 - 0x0000)
+struct FAkMidiEventBase
 {
 public:
-	class FString                                 ExternalSrcName;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAkCodecId                                    CodecID;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FileName;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkExternalMediaAsset*                  ExternalSourceAsset;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsStreamed;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAkExternalSourceInfo;
+DUMPER7_ASSERTS_FAkMidiEventBase;
 
-// ScriptStruct AkAudio.AkBoolPropertyToControl
-// 0x0010 (0x0010 - 0x0000)
-struct FAkBoolPropertyToControl final
+// ScriptStruct AkAudio.AkMidiProgramChange
+// 0x0001 (0x0003 - 0x0002)
+struct FAkMidiProgramChange final : public FAkMidiEventBase
 {
 public:
-	class FString                                 ItemProperty;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ProgramNum;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAkBoolPropertyToControl;
+DUMPER7_ASSERTS_FAkMidiProgramChange;
 
 // ScriptStruct AkAudio.AKWaapiJsonObject
 // 0x0010 (0x0010 - 0x0000)
@@ -600,23 +595,6 @@ public:
 	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAkWaapiSubscriptionId;
-
-// ScriptStruct AkAudio.AkSegmentInfo
-// 0x0024 (0x0024 - 0x0000)
-struct FAkSegmentInfo final
-{
-public:
-	int32                                         CurrentPosition;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PreEntryDuration;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ActiveDuration;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PostExitDuration;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RemainingLookAheadTime;                            // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BeatDuration;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BarDuration;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GridDuration;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GridOffset;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FAkSegmentInfo;
 
 // ScriptStruct AkAudio.AkAdvancedInitializationSettings
 // 0x0044 (0x0044 - 0x0000)
@@ -684,24 +662,37 @@ public:
 };
 DUMPER7_ASSERTS_FAkAudioSession;
 
-// ScriptStruct AkAudio.AkMidiEventBase
-// 0x0002 (0x0002 - 0x0000)
-struct FAkMidiEventBase
+// ScriptStruct AkAudio.AkExternalSourceInfo
+// 0x0038 (0x0038 - 0x0000)
+struct FAkExternalSourceInfo final
 {
 public:
-	EAkMidiEventType                              Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Chan;                                              // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ExternalSrcName;                                   // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkCodecId                                    CodecID;                                           // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FileName;                                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkExternalMediaAsset*                  ExternalSourceAsset;                               // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsStreamed;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FAkMidiEventBase;
+DUMPER7_ASSERTS_FAkExternalSourceInfo;
 
-// ScriptStruct AkAudio.AkMidiProgramChange
-// 0x0001 (0x0003 - 0x0002)
-struct FAkMidiProgramChange final : public FAkMidiEventBase
+// ScriptStruct AkAudio.AkSegmentInfo
+// 0x0024 (0x0024 - 0x0000)
+struct FAkSegmentInfo final
 {
 public:
-	uint8                                         ProgramNum;                                        // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CurrentPosition;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PreEntryDuration;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ActiveDuration;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PostExitDuration;                                  // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RemainingLookAheadTime;                            // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BeatDuration;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BarDuration;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GridDuration;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GridOffset;                                        // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FAkMidiProgramChange;
+DUMPER7_ASSERTS_FAkSegmentInfo;
 
 // ScriptStruct AkAudio.AkMidiChannelAftertouch
 // 0x0001 (0x0003 - 0x0002)
@@ -940,6 +931,15 @@ public:
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAkCommunicationSettingsWithSystemInitialization;
+
+// ScriptStruct AkAudio.AkBoolPropertyToControl
+// 0x0010 (0x0010 - 0x0000)
+struct FAkBoolPropertyToControl final
+{
+public:
+	class FString                                 ItemProperty;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FAkBoolPropertyToControl;
 
 // ScriptStruct AkAudio.AkPropertyToControl
 // 0x0010 (0x0010 - 0x0000)

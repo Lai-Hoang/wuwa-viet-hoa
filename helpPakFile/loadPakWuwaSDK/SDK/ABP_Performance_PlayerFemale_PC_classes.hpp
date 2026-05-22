@@ -20,33 +20,33 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Performance_PlayerFemale_PC.ABP_Performance_PlayerFemale_PC_C
-// 0x1CE0 (0x2410 - 0x0730)
+// 0x1FB0 (0x2780 - 0x07D0)
 class UABP_Performance_PlayerFemale_PC_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x0738(0x0038)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0770(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0790(0x0020)()
-	struct FAnimNode_MountBuffer                  AnimGraphNode_MountBuffer;                         // 0x07B0(0x01E0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_8;                // 0x0990(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_7;                // 0x0C30(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_6;                // 0x0ED0(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_5;                // 0x1170(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_4;                // 0x1410(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_3;                // 0x16B0(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_2;                // 0x1950(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_1;                // 0x1BF0(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x1E90(0x02A0)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x2130(0x0138)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x2268(0x0038)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x22A0(0x00C0)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x2360(0x00A8)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x07D8(0x0038)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0810(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0830(0x0020)()
+	struct FAnimNode_MountBuffer                  AnimGraphNode_MountBuffer;                         // 0x0850(0x01E0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_8;                // 0x0A30(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_7;                // 0x0D20(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_6;                // 0x1010(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_5;                // 0x1300(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_4;                // 0x15F0(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_3;                // 0x18E0(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_2;                // 0x1BD0(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_1;                // 0x1EC0(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x21B0(0x02F0)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x24A0(0x0138)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x25D8(0x0038)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x2610(0x00C0)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x26D0(0x00A8)()
 
 public:
-	void ExecuteUbergraph_ABP_Performance_PlayerFemale_PC(int32 EntryPoint);
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
 	void PhyCloth(const struct FPoseLink& InPose, struct FPoseLink* PhyCloth_0);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_ABP_Performance_PlayerFemale_PC(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

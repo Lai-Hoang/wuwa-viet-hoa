@@ -17,6 +17,56 @@
 namespace SDK
 {
 
+// Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&InConstraintBindingID                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieScene3DConstraintSection::SetConstraintBindingID(const struct FMovieSceneObjectBindingID& InConstraintBindingID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieScene3DConstraintSection", "SetConstraintBindingID");
+
+	Params::MovieScene3DConstraintSection_SetConstraintBindingID Parms{};
+
+	Parms.InConstraintBindingID = std::move(InConstraintBindingID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMovieSceneObjectBindingID ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const struct FMovieSceneObjectBindingID UMovieScene3DConstraintSection::GetConstraintBindingID() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieScene3DConstraintSection", "GetConstraintBindingID");
+
+	Params::MovieScene3DConstraintSection_GetConstraintBindingID Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MovieSceneTracks.MovieSceneParameterSection.AddBoolParameterKey
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -400,56 +450,6 @@ struct FTransform IMovieSceneTransformOrigin::BP_GetTransformOrigin() const
 	Params::MovieSceneTransformOrigin_BP_GetTransformOrigin Parms{};
 
 	AsUObject()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// const struct FMovieSceneObjectBindingID&InConstraintBindingID                                  (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieScene3DConstraintSection::SetConstraintBindingID(const struct FMovieSceneObjectBindingID& InConstraintBindingID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieScene3DConstraintSection", "SetConstraintBindingID");
-
-	Params::MovieScene3DConstraintSection_SetConstraintBindingID Parms{};
-
-	Parms.InConstraintBindingID = std::move(InConstraintBindingID);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MovieSceneTracks.MovieScene3DConstraintSection.GetConstraintBindingID
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMovieSceneObjectBindingID ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const struct FMovieSceneObjectBindingID UMovieScene3DConstraintSection::GetConstraintBindingID() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieScene3DConstraintSection", "GetConstraintBindingID");
-
-	Params::MovieScene3DConstraintSection_GetConstraintBindingID Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

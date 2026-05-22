@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSequencesKeyFrames.SSequencesKeyFrames
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A0 (0x00A0 - 0x0000)
 struct FSSequencesKeyFrames final
 {
 public:
@@ -24,6 +24,7 @@ public:
 	TArray<int32>                                 ShotStartFrames_34_325581D445CA2CC41983DEB93F56A542; // 0x0020(0x0010)(Edit, BlueprintVisible)
 	TArray<int32>                                 ShotEndFrames_36_03DCDFBB4CEF2B4BC37968A8FA1EDC53; // 0x0030(0x0010)(Edit, BlueprintVisible)
 	TMap<class FString, int32>                    FrameEventFrames_43_F683B0DD4A6DA8C0E5FD129EE5704AF5; // 0x0040(0x0050)(Edit, BlueprintVisible)
+	TArray<int32>                                 KeyFrames_47_61EBD83B4C1471D6146415996CB00570;     // 0x0090(0x0010)(Edit, BlueprintVisible)
 };
 DUMPER7_ASSERTS_FSSequencesKeyFrames;
 

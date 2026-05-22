@@ -21,14 +21,14 @@ namespace SDK
 class IBPI_NpcEcological_C final
 {
 public:
-	void HandleWeatherChanged();
-	void HandleDayStateChanged();
-	void HandleQuestChanged();
-	void HandlePlayerEnter();
-	void HandlePlayerExit();
-	void HandlePlayerImpact();
-	void HandlePlayerImpactEnd();
 	void HandlePlayerAttack();
+	void HandlePlayerImpactEnd();
+	void HandlePlayerImpact();
+	void HandlePlayerExit();
+	void HandlePlayerEnter();
+	void HandleQuestChanged();
+	void HandleDayStateChanged();
+	void HandleWeatherChanged();
 	void HandlePlayerAttackEnd();
 
 public:

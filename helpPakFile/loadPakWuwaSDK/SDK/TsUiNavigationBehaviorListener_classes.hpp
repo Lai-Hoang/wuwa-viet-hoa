@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SNavigationCursor_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EHotKeyNameStateType_structs.hpp"
 #include "LGUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SNavigationCursor_structs.hpp"
 #include "SNavigationMode_structs.hpp"
 
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SSeqOptionJumpGroup_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ESeqSwtichType_structs.hpp"
+#include "SSeqOptionJumpGroup_structs.hpp"
 #include "SeqCameraMode_structs.hpp"
 
 

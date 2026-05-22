@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "KuroInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 

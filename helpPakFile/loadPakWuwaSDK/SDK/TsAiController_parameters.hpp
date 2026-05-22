@@ -425,5 +425,14 @@ public:
 };
 DUMPER7_ASSERTS_TsAiController_C_AddLevelVarIntEventBinder;
 
+// Function TsAiController.TsAiController_C.渲染状态改变时
+// 0x0001 (0x0001 - 0x0000)
+struct TsAiController_C_渲染状态改变时 final
+{
+public:
+	bool                                          wasRendered;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_TsAiController_C_渲染状态改变时;
+
 }
 

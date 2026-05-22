@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "KuroNetwork_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "JsEnv_structs.hpp"
-#include "KuroNetwork_structs.hpp"
 
 
 namespace SDK

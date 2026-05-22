@@ -57,7 +57,7 @@ DUMPER7_ASSERTS_KuroFastCollisionSubsystem_Get;
 struct KuroFastCollisionSubsystem_CreateAlgorithm final
 {
 public:
-	TSubclassOf<class UKuroFastCollisionAlgorithm> Class_0;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UKuroFastCollisionAlgorithm> AlgorithmClass;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTickEnabled;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UKuroFastCollisionAlgorithm*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -72,15 +72,6 @@ public:
 	class UKuroFastCollisionAlgorithm*            Algorithm;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroFastCollisionSubsystem_DestroyAlgorithm;
-
-// Function KuroFastCollision.KuroFastCollisionSubsystem.GetDefaultAlgorithm
-// 0x0008 (0x0008 - 0x0000)
-struct KuroFastCollisionSubsystem_GetDefaultAlgorithm final
-{
-public:
-	class UKuroFastCollisionAlgorithm*            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KuroFastCollisionSubsystem_GetDefaultAlgorithm;
 
 }
 

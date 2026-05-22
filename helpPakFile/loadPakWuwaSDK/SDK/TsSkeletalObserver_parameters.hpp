@@ -14,6 +14,15 @@
 namespace SDK::Params
 {
 
+// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct TsSkeletalObserver_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsSkeletalObserver_C_ReceiveTick;
+
 // Function TsSkeletalObserver.TsSkeletalObserver_C.ExecuteUbergraph_TsSkeletalObserver
 // 0x0008 (0x0008 - 0x0000)
 struct TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver final
@@ -23,15 +32,6 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_TsSkeletalObserver_C_ExecuteUbergraph_TsSkeletalObserver;
-
-// Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct TsSkeletalObserver_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsSkeletalObserver_C_ReceiveTick;
 
 }
 

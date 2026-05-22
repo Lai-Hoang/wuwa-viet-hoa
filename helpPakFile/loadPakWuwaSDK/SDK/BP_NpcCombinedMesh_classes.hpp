@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EBodyPartName_structs.hpp"
 #include "SNpcSetupPartInfo_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
-#include "EBodyPartName_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

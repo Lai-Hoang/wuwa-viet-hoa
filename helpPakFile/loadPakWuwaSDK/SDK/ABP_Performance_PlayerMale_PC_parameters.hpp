@@ -16,14 +16,15 @@
 namespace SDK::Params
 {
 
-// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.ExecuteUbergraph_ABP_Performance_PlayerMale_PC
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC final
+// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.PhyCloth
+// 0x0020 (0x0020 - 0x0000)
+struct ABP_Performance_PlayerMale_PC_C_PhyCloth final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              PhyCloth_0;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
 };
-DUMPER7_ASSERTS_ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC;
+DUMPER7_ASSERTS_ABP_Performance_PlayerMale_PC_C_PhyCloth;
 
 // Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
@@ -34,15 +35,14 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Performance_PlayerMale_PC_C_AnimGraph;
 
-// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.PhyCloth
-// 0x0020 (0x0020 - 0x0000)
-struct ABP_Performance_PlayerMale_PC_C_PhyCloth final
+// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.ExecuteUbergraph_ABP_Performance_PlayerMale_PC
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC final
 {
 public:
-	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FPoseLink                              PhyCloth_0;                                        // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_ABP_Performance_PlayerMale_PC_C_PhyCloth;
+DUMPER7_ASSERTS_ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC;
 
 }
 

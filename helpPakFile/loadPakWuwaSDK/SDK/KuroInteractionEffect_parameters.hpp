@@ -18,11 +18,11 @@ namespace SDK::Params
 {
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.GetEnviInteractionData
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct KuroEnviInteractionComponent_GetEnviInteractionData final
 {
 public:
-	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x00D8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x00E8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroEnviInteractionComponent_GetEnviInteractionData;
 
@@ -126,6 +126,34 @@ public:
 	struct FSoftObjectPath                        ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor;
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionStaticMeshConfig
+// 0x0068 (0x0068 - 0x0000)
+struct KuroInteractionEffectSystem_SearchInteractionStaticMeshConfig final
+{
+public:
+	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroInteractionEffectTraceStaticMesh  ReturnValue;                                       // 0x0008(0x0060)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_SearchInteractionStaticMeshConfig;
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SetGlobalUINiagaraPause
+// 0x0001 (0x0001 - 0x0000)
+struct KuroInteractionEffectSystem_SetGlobalUINiagaraPause final
+{
+public:
+	bool                                          bPause;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_SetGlobalUINiagaraPause;
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.GetGlobalUINiagaraPause
+// 0x0001 (0x0001 - 0x0000)
+struct KuroInteractionEffectSystem_GetGlobalUINiagaraPause final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroInteractionEffectSystem_GetGlobalUINiagaraPause;
 
 }
 

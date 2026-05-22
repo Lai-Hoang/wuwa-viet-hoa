@@ -229,14 +229,23 @@ enum class EUserInterfaceActionType : uint8
 	EUserInterfaceActionType_MAX             = 6,
 };
 
-// ScriptStruct Slate.VirtualKeyboardOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FVirtualKeyboardOptions final
+// ScriptStruct Slate.CustomizedToolMenuEntry
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuEntry final
 {
 public:
-	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FVirtualKeyboardOptions;
+DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
+
+// ScriptStruct Slate.CustomizedToolMenuSection
+// 0x0004 (0x0004 - 0x0000)
+struct FCustomizedToolMenuSection final
+{
+public:
+	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FCustomizedToolMenuSection;
 
 // ScriptStruct Slate.CustomizedToolMenuNameArray
 // 0x0010 (0x0010 - 0x0000)
@@ -246,6 +255,30 @@ public:
 	TArray<class FName>                           Names;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FCustomizedToolMenuNameArray;
+
+// ScriptStruct Slate.CustomizedToolMenu
+// 0x01F0 (0x01F0 - 0x0000)
+struct FCustomizedToolMenu final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0010(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0060(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00B0(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class FName>                           SectionOrder;                                      // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0xE0];                                     // 0x0110(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FCustomizedToolMenu;
+
+// ScriptStruct Slate.VirtualKeyboardOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FVirtualKeyboardOptions final
+{
+public:
+	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVirtualKeyboardOptions;
 
 // ScriptStruct Slate.InputChord
 // 0x0028 (0x0028 - 0x0000)
@@ -270,39 +303,6 @@ public:
 	struct FVector2D                              Maximum;                                           // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FAnchors;
-
-// ScriptStruct Slate.CustomizedToolMenuEntry
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuEntry final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuEntry;
-
-// ScriptStruct Slate.CustomizedToolMenuSection
-// 0x0004 (0x0004 - 0x0000)
-struct FCustomizedToolMenuSection final
-{
-public:
-	ECustomizedToolMenuVisibility                 Visibility;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FCustomizedToolMenuSection;
-
-// ScriptStruct Slate.CustomizedToolMenu
-// 0x01F0 (0x01F0 - 0x0000)
-struct FCustomizedToolMenu final
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FCustomizedToolMenuEntry> Entries;                                      // 0x0010(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuSection> Sections;                                   // 0x0060(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FCustomizedToolMenuNameArray> EntryOrder;                               // 0x00B0(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class FName>                           SectionOrder;                                      // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_110[0xE0];                                     // 0x0110(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FCustomizedToolMenu;
 
 }
 

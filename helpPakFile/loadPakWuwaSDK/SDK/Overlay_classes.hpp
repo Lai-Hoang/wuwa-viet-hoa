@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Overlay_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Overlay_structs.hpp"
 
 
 namespace SDK

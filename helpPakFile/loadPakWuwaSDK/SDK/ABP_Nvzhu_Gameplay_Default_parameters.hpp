@@ -16,15 +16,6 @@
 namespace SDK::Params
 {
 
-// Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default;
-
 // Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.AnimGraph
 // 0x0010 (0x0010 - 0x0000)
 struct ABP_Nvzhu_Gameplay_Default_C_AnimGraph final
@@ -33,6 +24,15 @@ public:
 	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
 };
 DUMPER7_ASSERTS_ABP_Nvzhu_Gameplay_Default_C_AnimGraph;
+
+// Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default;
 
 }
 

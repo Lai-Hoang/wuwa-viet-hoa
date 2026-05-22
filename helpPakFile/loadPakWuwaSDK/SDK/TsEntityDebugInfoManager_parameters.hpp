@@ -14,78 +14,25 @@
 namespace SDK::Params
 {
 
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetInteractionDebugInfos
-// 0x0018 (0x0018 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetInteractionDebugInfos final
-{
-public:
-	int32                                         entityId1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetInteractionDebugInfos;
-
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugEntityNameList
-// 0x0010 (0x0010 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetDebugEntityNameList final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
-};
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugEntityNameList;
-
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugEntityName
-// 0x0018 (0x0018 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetDebugEntityName final
-{
-public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugEntityName;
-
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityCommonTagDebugString
-// 0x0018 (0x0018 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetEntityCommonTagDebugString final
-{
-public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityCommonTagDebugString;
-
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityPbDataId
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityTimeScale
 // 0x0008 (0x0008 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetEntityPbDataId final
+struct TsEntityDebugInfoManager_C_GetEntityTimeScale final
 {
 public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityPbDataId;
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityTimeScale;
 
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetSelectedEntityId
-// 0x0018 (0x0018 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetSelectedEntityId final
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.SetEntityTimeScale
+// 0x0008 (0x0008 - 0x0000)
+struct TsEntityDebugInfoManager_C_SetEntityTimeScale final
 {
 public:
-	class FString                                 label;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         timeScale;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetSelectedEntityId;
-
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugBaseInfo
-// 0x0018 (0x0018 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetDebugBaseInfo final
-{
-public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugBaseInfo;
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_SetEntityTimeScale;
 
 // Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugEntityActor
 // 0x0010 (0x0010 - 0x0000)
@@ -98,25 +45,78 @@ public:
 };
 DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugEntityActor;
 
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.SetEntityTimeScale
-// 0x0008 (0x0008 - 0x0000)
-struct TsEntityDebugInfoManager_C_SetEntityTimeScale final
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugBaseInfo
+// 0x0018 (0x0018 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetDebugBaseInfo final
 {
 public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         timeScale;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_SetEntityTimeScale;
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugBaseInfo;
 
-// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityTimeScale
-// 0x0008 (0x0008 - 0x0000)
-struct TsEntityDebugInfoManager_C_GetEntityTimeScale final
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetSelectedEntityId
+// 0x0018 (0x0018 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetSelectedEntityId final
 {
 public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 label;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityTimeScale;
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetSelectedEntityId;
+
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityPbDataId
+// 0x0008 (0x0008 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetEntityPbDataId final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityPbDataId;
+
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetEntityCommonTagDebugString
+// 0x0018 (0x0018 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetEntityCommonTagDebugString final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetEntityCommonTagDebugString;
+
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugEntityName
+// 0x0018 (0x0018 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetDebugEntityName final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugEntityName;
+
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetDebugEntityNameList
+// 0x0010 (0x0010 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetDebugEntityNameList final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm)
+};
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetDebugEntityNameList;
+
+// Function TsEntityDebugInfoManager.TsEntityDebugInfoManager_C.GetInteractionDebugInfos
+// 0x0018 (0x0018 - 0x0000)
+struct TsEntityDebugInfoManager_C_GetInteractionDebugInfos final
+{
+public:
+	int32                                         entityId1;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsEntityDebugInfoManager_C_GetInteractionDebugInfos;
 
 }
 

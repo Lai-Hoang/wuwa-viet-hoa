@@ -69,7 +69,7 @@ public:
 DUMPER7_ASSERTS_UKuroEnviInteractionComponent;
 
 // Class KuroInteractionEffect.KuroInteractionEffectSystem
-// 0x02D8 (0x0310 - 0x0038)
+// 0x0328 (0x0360 - 0x0038)
 class alignas(0x10) UKuroInteractionEffectSystem final : public UWorldSubsystem
 {
 public:
@@ -77,11 +77,11 @@ public:
 	TMap<TWeakObjectPtr<class UKuroEnviInteractionComponent>, struct FKuroEnviInteractionData> EnviInteractionCollections; // 0x0040(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> SPModelEICompCollections; // 0x0090(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> NDIKuroRenderingCollections; // 0x00E0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_130[0x144];                                    // 0x0130(0x0144)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GrassCutReadBack;                                  // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_278[0x8];                                      // 0x0278(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           WaterSimMPC;                                       // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_288[0x88];                                     // 0x0288(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_130[0x194];                                    // 0x0130(0x0194)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GrassCutReadBack;                                  // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           WaterSimMPC;                                       // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2D8[0x88];                                     // 0x02D8(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UKuroInteractionEffectSystem* GetKuroInteractionEffectSystem(class UWorld* World);
@@ -91,6 +91,10 @@ public:
 	int32 SearchInteractionFoliage(const class FString& FoliageTypeName);
 	TArray<int32> SearchInteractionFoliageArray(const TArray<class FString>& FoliageTypeNames);
 	struct FSoftObjectPath SearchInteractionPlacementTriggerActor(class UStaticMesh* PlacementMesh);
+	struct FKuroInteractionEffectTraceStaticMesh SearchInteractionStaticMeshConfig(class UStaticMesh* StaticMesh);
+	void SetGlobalUINiagaraPause(bool bPause);
+
+	bool GetGlobalUINiagaraPause() const;
 
 public:
 	static class UClass* StaticClass()

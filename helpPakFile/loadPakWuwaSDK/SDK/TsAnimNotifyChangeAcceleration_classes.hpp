@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ECharState_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "ECharState_structs.hpp"
 
 
 namespace SDK

@@ -15,14 +15,16 @@ namespace SDK
 {
 
 // UserDefinedEnum EDangoPerformType.EDangoPerformType
-// NumValues: 0x0005
+// NumValues: 0x0007
 enum class EDangoPerformType : uint8
 {
 	NewEnumerator3                           = 0,
 	NewEnumerator0                           = 1,
 	NewEnumerator1                           = 2,
 	NewEnumerator2                           = 3,
-	EDangoPerformType_MAX                    = 4,
+	NewEnumerator5                           = 4,
+	NewEnumerator6                           = 5,
+	EDangoPerformType_MAX                    = 6,
 };
 
 }

@@ -16,14 +16,14 @@
 namespace SDK::Params
 {
 
-// Function BP_BasePathLine.BP_BasePathLine_C.ExecuteUbergraph_BP_BasePathLine
-// 0x0004 (0x0004 - 0x0000)
-struct BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine final
+// Function BP_BasePathLine.BP_BasePathLine_C.Save
+// 0x000C (0x000C - 0x0000)
+struct BP_BasePathLine_C_Save final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine;
+DUMPER7_ASSERTS_BP_BasePathLine_C_Save;
 
 // Function BP_BasePathLine.BP_BasePathLine_C.贴地处理
 // 0x002C (0x002C - 0x0000)
@@ -41,14 +41,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_BasePathLine_C_贴地处理;
 
-// Function BP_BasePathLine.BP_BasePathLine_C.Save
-// 0x000C (0x000C - 0x0000)
-struct BP_BasePathLine_C_Save final
+// Function BP_BasePathLine.BP_BasePathLine_C.ExecuteUbergraph_BP_BasePathLine
+// 0x0004 (0x0004 - 0x0000)
+struct BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine final
 {
 public:
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BasePathLine_C_Save;
+DUMPER7_ASSERTS_BP_BasePathLine_C_ExecuteUbergraph_BP_BasePathLine;
 
 }
 

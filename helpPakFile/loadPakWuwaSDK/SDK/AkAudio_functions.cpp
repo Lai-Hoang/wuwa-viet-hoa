@@ -262,81 +262,6 @@ EAkAcousticPortalState AAkAcousticPortal::GetCurrentState() const
 }
 
 
-// Function AkAudio.AkWwiseTree.SetSearchText
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    newText                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAkWwiseTree::SetSearchText(const class FString& newText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkWwiseTree", "SetSearchText");
-
-	Params::AkWwiseTree_SetSearchText Parms{};
-
-	Parms.newText = std::move(newText);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AkAudio.AkWwiseTree.GetSearchText
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UAkWwiseTree::GetSearchText() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkWwiseTree", "GetSearchText");
-
-	Params::AkWwiseTree_GetSearchText Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AkAudio.AkWwiseTree.GetSelectedItem
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FAkWwiseObjectDetails            ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FAkWwiseObjectDetails UAkWwiseTree::GetSelectedItem() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkWwiseTree", "GetSelectedItem");
-
-	Params::AkWwiseTree_GetSelectedItem Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AkAudio.AkAmbientSound.StartAmbientSound
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 
@@ -5357,6 +5282,81 @@ void UAkWinGDKInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkWwiseTree.SetSearchText
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    newText                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAkWwiseTree::SetSearchText(const class FString& newText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkWwiseTree", "SetSearchText");
+
+	Params::AkWwiseTree_SetSearchText Parms{};
+
+	Parms.newText = std::move(newText);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkWwiseTree.GetSearchText
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UAkWwiseTree::GetSearchText() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkWwiseTree", "GetSearchText");
+
+	Params::AkWwiseTree_GetSearchText Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AkAudio.AkWwiseTree.GetSelectedItem
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FAkWwiseObjectDetails            ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FAkWwiseObjectDetails UAkWwiseTree::GetSelectedItem() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkWwiseTree", "GetSelectedItem");
+
+	Params::AkWwiseTree_GetSelectedItem Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

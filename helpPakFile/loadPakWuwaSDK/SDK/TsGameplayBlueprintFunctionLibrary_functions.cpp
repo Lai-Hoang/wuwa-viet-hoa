@@ -9270,5 +9270,35 @@ int32 UTsGameplayBlueprintFunctionLibrary_C::XigelikaGetBeanResultant(int32 enti
 	return Parms.ReturnValue;
 }
 
+
+// Function TsGameplayBlueprintFunctionLibrary.TsGameplayBlueprintFunctionLibrary_C.FunctionOpen
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   functionType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTsGameplayBlueprintFunctionLibrary_C::FunctionOpen(int32 functionType, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsGameplayBlueprintFunctionLibrary_C", "FunctionOpen");
+
+	Params::TsGameplayBlueprintFunctionLibrary_C_FunctionOpen Parms{};
+
+	Parms.functionType = functionType;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
 }
 

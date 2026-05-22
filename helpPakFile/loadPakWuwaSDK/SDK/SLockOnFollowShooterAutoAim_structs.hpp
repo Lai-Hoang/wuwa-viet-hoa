@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SLockOnFollowShooterAttachmentRule_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SLockOnFollowShooterAttachmentRule_structs.hpp"
 
 
 namespace SDK

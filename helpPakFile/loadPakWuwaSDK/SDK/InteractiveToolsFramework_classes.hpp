@@ -436,11 +436,12 @@ public:
 DUMPER7_ASSERTS_USingleSelectionTool;
 
 // Class InteractiveToolsFramework.MeshSurfacePointTool
-// 0x0038 (0x00E0 - 0x00A8)
+// 0x0040 (0x00E8 - 0x00A8)
 class UMeshSurfacePointTool : public USingleSelectionTool
 {
 public:
-	uint8                                         Pad_A8[0x38];                                      // 0x00A8(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x38];                                      // 0x00A8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UWorld>                  TargetWorld;                                       // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -459,18 +460,18 @@ public:
 DUMPER7_ASSERTS_UMeshSurfacePointTool;
 
 // Class InteractiveToolsFramework.BaseBrushTool
-// 0x0110 (0x01F0 - 0x00E0)
+// 0x0110 (0x01F8 - 0x00E8)
 class UBaseBrushTool final : public UMeshSurfacePointTool
 {
 public:
-	class UBrushBaseProperties*                   BrushProperties;                                   // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInBrushStroke;                                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WorldToLocalScale;                                 // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBrushStampData                        LastBrushStamp;                                    // 0x00F0(0x00B4)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A4[0x14];                                     // 0x01A4(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   PropertyClass;                                     // 0x01B8(0x0030)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBrushStampIndicator*                   BrushStampIndicator;                               // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrushBaseProperties*                   BrushProperties;                                   // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInBrushStroke;                                    // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WorldToLocalScale;                                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBrushStampData                        LastBrushStamp;                                    // 0x00F8(0x00B4)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x14];                                     // 0x01AC(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   PropertyClass;                                     // 0x01C0(0x0030)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBrushStampIndicator*                   BrushStampIndicator;                               // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -1383,16 +1384,16 @@ public:
 DUMPER7_ASSERTS_IToolContextTransactionProvider;
 
 // Class InteractiveToolsFramework.InteractiveToolManager
-// 0x0150 (0x0180 - 0x0030)
+// 0x0168 (0x0198 - 0x0030)
 class UInteractiveToolManager final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x30];                                      // 0x0030(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class UInteractiveTool*                       ActiveLeftTool;                                    // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInteractiveTool*                       ActiveRightTool;                                   // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x68];                                      // 0x0070(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class UInteractiveToolBuilder*> ToolBuilders;                                // 0x00D8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_128[0x58];                                     // 0x0128(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x48];                                      // 0x0030(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInteractiveTool*                       ActiveLeftTool;                                    // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInteractiveTool*                       ActiveRightTool;                                   // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x68];                                      // 0x0088(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class UInteractiveToolBuilder*> ToolBuilders;                                // 0x00F0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_140[0x58];                                     // 0x0140(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2209,6 +2210,64 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPlanePositionGizmo;
+
+// Class InteractiveToolsFramework.SceneComponentBackedTarget
+// 0x0000 (0x0000 - 0x0000)
+class ISceneComponentBackedTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("SceneComponentBackedTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"SceneComponentBackedTarget")
+	}
+	static class ISceneComponentBackedTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISceneComponentBackedTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_ISceneComponentBackedTarget;
+
+// Class InteractiveToolsFramework.PrimitiveComponentBackedTarget
+// 0x0000 (0x0000 - 0x0000)
+class IPrimitiveComponentBackedTarget final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PrimitiveComponentBackedTarget")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PrimitiveComponentBackedTarget")
+	}
+	static class IPrimitiveComponentBackedTarget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IPrimitiveComponentBackedTarget>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IPrimitiveComponentBackedTarget;
 
 // Class InteractiveToolsFramework.SelectionSet
 // 0x0018 (0x0048 - 0x0030)

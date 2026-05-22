@@ -506,14 +506,15 @@ void UPlotBlueprintFunctionLibrary_C::CloseUiView(class UObject* __WorldContext)
 // Function PlotBlueprintFunctionLibrary.PlotBlueprintFunctionLibrary_C.OpenUiView
 // (Native, Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    maleAssetName1                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    femaleAssetName1                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    maleSpineName1                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    femaleSpineName1                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    needLoop                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FString&                    maleAssetName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    femaleAssetName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    maleSpineName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    femaleSpineName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    needLoop1                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    useFullscreenAdaptAnchor                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPlotBlueprintFunctionLibrary_C::OpenUiView(const class FString& maleAssetName1, const class FString& femaleAssetName1, const class FString& maleSpineName1, const class FString& femaleSpineName1, bool needLoop, class UObject* __WorldContext)
+void UPlotBlueprintFunctionLibrary_C::OpenUiView(const class FString& maleAssetName, const class FString& femaleAssetName, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop1, bool useFullscreenAdaptAnchor, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -522,11 +523,12 @@ void UPlotBlueprintFunctionLibrary_C::OpenUiView(const class FString& maleAssetN
 
 	Params::PlotBlueprintFunctionLibrary_C_OpenUiView Parms{};
 
-	Parms.maleAssetName1 = std::move(maleAssetName1);
-	Parms.femaleAssetName1 = std::move(femaleAssetName1);
-	Parms.maleSpineName1 = std::move(maleSpineName1);
-	Parms.femaleSpineName1 = std::move(femaleSpineName1);
-	Parms.needLoop = needLoop;
+	Parms.maleAssetName = std::move(maleAssetName);
+	Parms.femaleAssetName = std::move(femaleAssetName);
+	Parms.maleSpineName = std::move(maleSpineName);
+	Parms.femaleSpineName = std::move(femaleSpineName);
+	Parms.needLoop1 = needLoop1;
+	Parms.useFullscreenAdaptAnchor = useFullscreenAdaptAnchor;
 	Parms.__WorldContext = __WorldContext;
 
 	auto Flgs = Func->FunctionFlags;
@@ -657,13 +659,14 @@ void UPlotBlueprintFunctionLibrary_C::PlaySpineAnim(const class FString& spineNa
 // Function PlotBlueprintFunctionLibrary.PlotBlueprintFunctionLibrary_C.OpenUiViewInArray
 // (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    maleAssetName1                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    femaleAssetName1                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TArray<struct FSpineThingsInfo>&        maleSpineArray1                                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FSpineThingsInfo>&        femaleSpineArray1                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FString&                    maleAssetName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    femaleAssetName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<struct FSpineThingsInfo>&        maleSpineArray                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FSpineThingsInfo>&        femaleSpineArray                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    useFullscreenAdaptAnchor                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPlotBlueprintFunctionLibrary_C::OpenUiViewInArray(const class FString& maleAssetName1, const class FString& femaleAssetName1, TArray<struct FSpineThingsInfo>& maleSpineArray1, TArray<struct FSpineThingsInfo>& femaleSpineArray1, class UObject* __WorldContext)
+void UPlotBlueprintFunctionLibrary_C::OpenUiViewInArray(const class FString& maleAssetName, const class FString& femaleAssetName, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray, bool useFullscreenAdaptAnchor, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -672,10 +675,11 @@ void UPlotBlueprintFunctionLibrary_C::OpenUiViewInArray(const class FString& mal
 
 	Params::PlotBlueprintFunctionLibrary_C_OpenUiViewInArray Parms{};
 
-	Parms.maleAssetName1 = std::move(maleAssetName1);
-	Parms.femaleAssetName1 = std::move(femaleAssetName1);
-	Parms.maleSpineArray1 = std::move(maleSpineArray1);
-	Parms.femaleSpineArray1 = std::move(femaleSpineArray1);
+	Parms.maleAssetName = std::move(maleAssetName);
+	Parms.femaleAssetName = std::move(femaleAssetName);
+	Parms.maleSpineArray = std::move(maleSpineArray);
+	Parms.femaleSpineArray = std::move(femaleSpineArray);
+	Parms.useFullscreenAdaptAnchor = useFullscreenAdaptAnchor;
 	Parms.__WorldContext = __WorldContext;
 
 	auto Flgs = Func->FunctionFlags;
@@ -685,8 +689,8 @@ void UPlotBlueprintFunctionLibrary_C::OpenUiViewInArray(const class FString& mal
 
 	Func->FunctionFlags = Flgs;
 
-	maleSpineArray1 = std::move(Parms.maleSpineArray1);
-	femaleSpineArray1 = std::move(Parms.femaleSpineArray1);
+	maleSpineArray = std::move(Parms.maleSpineArray);
+	femaleSpineArray = std::move(Parms.femaleSpineArray);
 }
 
 

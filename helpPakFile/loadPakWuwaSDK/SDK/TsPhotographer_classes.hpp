@@ -27,19 +27,19 @@ public:
 	class UCapsuleComponent*                      CapsuleCollision;                                  // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_TsPhotographer(int32 EntryPoint);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveDestroyed();
-	void AddSourceYawInput(float yaw);
-	void SetCameraInitializeTransform(const struct FTransform& transform);
-	struct FTransform GetCameraInitializeTransform();
-	void SetFov(float length);
-	float GetFov();
-	void ResetCamera();
-	void AddSourcePitchInput(float pitch);
-	void SetPlayerSourceLocation(const struct FVector& location);
-	void Initialize();
 	void RefreshDitherEffect();
+	void Initialize();
+	void SetPlayerSourceLocation(const struct FVector& location);
+	void AddSourcePitchInput(float pitch);
+	void ResetCamera();
+	float GetFov();
+	void SetFov(float length);
+	struct FTransform GetCameraInitializeTransform();
+	void SetCameraInitializeTransform(const struct FTransform& transform);
+	void AddSourceYawInput(float yaw);
+	void ReceiveDestroyed();
+	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_TsPhotographer(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -118,6 +118,17 @@ public:
 };
 DUMPER7_ASSERTS_KuroCollisionLibrary_GetCollisionResponseToChannel;
 
+// Function KuroCollision.KuroCollisionLibrary.GetHitResultBodyInstance
+// 0x0210 (0x0210 - 0x0000)
+struct KuroCollisionLibrary_GetHitResultBodyInstance final
+{
+public:
+	struct FHitResult                             HitResult;                                         // 0x0000(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBodyInstance                          ReturnValue;                                       // 0x0098(0x0178)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroCollisionLibrary_GetHitResultBodyInstance;
+
 // Function KuroCollision.KuroCollisionLibrary.GetOverlappingComponents
 // 0x0028 (0x0028 - 0x0000)
 struct KuroCollisionLibrary_GetOverlappingComponents final

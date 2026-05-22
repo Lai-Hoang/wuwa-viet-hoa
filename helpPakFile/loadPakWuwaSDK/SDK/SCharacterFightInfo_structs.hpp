@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "ECharacterLoadType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EMorphType_structs.hpp"
 #include "SCharacterMorphInfo_structs.hpp"
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SCharacterFightInfo.SCharacterFightInfo
-// 0x02B0 (0x02B0 - 0x0000)
+// 0x02E0 (0x02E0 - 0x0000)
 struct FSCharacterFightInfo final
 {
 public:
@@ -35,6 +35,7 @@ public:
 	TSoftClassPtr<class UClass>                   LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF; // 0x0200(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDataTable>              CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F; // 0x0230(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TMap<EMorphType, struct FSCharacterMorphInfo> MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F; // 0x0260(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
+	TSoftObjectPtr<class UDataTable>              KuroBulletDataTable_77_2195FB25436E72AC3BE644AD5DDC662C; // 0x02B0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FSCharacterFightInfo;
 

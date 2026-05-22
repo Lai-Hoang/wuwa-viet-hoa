@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Seq_Nvzhu_Final.ABP_Seq_Nvzhu_Final_C
-// 0x0240 (0x0970 - 0x0730)
+// 0x0240 (0x0A10 - 0x07D0)
 class UABP_Seq_Nvzhu_Final_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x0770(0x00A8)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x0818(0x00A8)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x08C0(0x00A8)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0038)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x0810(0x00A8)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x08B8(0x00A8)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x0960(0x00A8)()
 
 public:
 	void ExecuteUbergraph_ABP_Seq_Nvzhu_Final(int32 EntryPoint);

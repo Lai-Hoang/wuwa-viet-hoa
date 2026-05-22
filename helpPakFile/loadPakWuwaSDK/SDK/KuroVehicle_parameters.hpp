@@ -120,6 +120,16 @@ public:
 };
 DUMPER7_ASSERTS_KuroVehicleMovementComponent_BackToRecord;
 
+// Function KuroVehicle.KuroVehicleMovementComponent.BackToRecordByTimeDelta
+// 0x0008 (0x0008 - 0x0000)
+struct KuroVehicleMovementComponent_BackToRecordByTimeDelta final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_BackToRecordByTimeDelta;
+
 // Function KuroVehicle.KuroVehicleMovementComponent.EnableFixFlyMode
 // 0x0002 (0x0002 - 0x0000)
 struct KuroVehicleMovementComponent_EnableFixFlyMode final
@@ -287,7 +297,9 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  QuatDelta;                                         // 0x0010(0x0010)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bSweep;                                            // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0xF];                                       // 0x0021(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_KuroVehicleMovementComponent_MoveMotorcycle;
 
@@ -313,6 +325,15 @@ public:
 };
 DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMotorRotateSpeed;
 
+// Function KuroVehicle.KuroVehicleMovementComponent.SetMotorSubState
+// 0x0001 (0x0001 - 0x0000)
+struct KuroVehicleMovementComponent_SetMotorSubState final
+{
+public:
+	EMotorSubState                                NewSubState;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMotorSubState;
+
 // Function KuroVehicle.KuroVehicleMovementComponent.SetMovementMode
 // 0x0002 (0x0002 - 0x0000)
 struct KuroVehicleMovementComponent_SetMovementMode final
@@ -322,6 +343,16 @@ public:
 	uint8                                         NewCustomMode;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetMovementMode;
+
+// Function KuroVehicle.KuroVehicleMovementComponent.SetRecordTimeLengthAndPeriod
+// 0x0008 (0x0008 - 0x0000)
+struct KuroVehicleMovementComponent_SetRecordTimeLengthAndPeriod final
+{
+public:
+	float                                         InMaxTimeLength;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InPeriod;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroVehicleMovementComponent_SetRecordTimeLengthAndPeriod;
 
 // Function KuroVehicle.KuroVehicleMovementComponent.SetSimulatedMotorWheelInfos
 // 0x0010 (0x0010 - 0x0000)

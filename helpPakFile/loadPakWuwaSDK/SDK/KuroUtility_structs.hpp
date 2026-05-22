@@ -47,20 +47,14 @@ enum class ESendStage : uint8
 	ESS_MAX                                  = 5,
 };
 
-// ScriptStruct KuroUtility.OverlapActorInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FOverlapActorInfo final
+// ScriptStruct KuroUtility.PreloadObjectCollection
+// 0x0010 (0x0010 - 0x0000)
+struct FPreloadObjectCollection final
 {
 public:
-	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              LastEditTimestamp;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastEditPerson;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        Assets;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FOverlapActorInfo;
+DUMPER7_ASSERTS_FPreloadObjectCollection;
 
 // ScriptStruct KuroUtility.TrophyDetailData
 // 0x0058 (0x0058 - 0x0000)
@@ -109,43 +103,6 @@ public:
 };
 DUMPER7_ASSERTS_FTrophyInfoData;
 
-// ScriptStruct KuroUtility.ProductData
-// 0x0090 (0x0090 - 0x0000)
-struct FProductData final
-{
-public:
-	class FString                                 id;                                                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 type;                                              // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         price;                                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   displayPrice;                                      // 0x0028(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   description;                                       // 0x0040(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   displayName;                                       // 0x0058(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   label;                                             // 0x0070(0x0018)(NativeAccessSpecifierPublic)
-	struct FDateTime                              endData;                                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FProductData;
-
-// ScriptStruct KuroUtility.PreloadObjectCollection
-// 0x0010 (0x0010 - 0x0000)
-struct FPreloadObjectCollection final
-{
-public:
-	TArray<class UObject*>                        Assets;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPreloadObjectCollection;
-
-// ScriptStruct KuroUtility.BlockUserData
-// 0x0018 (0x0018 - 0x0000)
-struct FBlockUserData final
-{
-public:
-	int32                                         nextOffset;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         previousOffset;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         blockUsers;                                        // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FBlockUserData;
-
 // ScriptStruct KuroUtility.PropertyPair
 // 0x0010 (0x0010 - 0x0000)
 struct FPropertyPair final
@@ -168,6 +125,49 @@ public:
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBasicPresenceData;
+
+// ScriptStruct KuroUtility.BlockUserData
+// 0x0018 (0x0018 - 0x0000)
+struct FBlockUserData final
+{
+public:
+	int32                                         nextOffset;                                        // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         previousOffset;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         blockUsers;                                        // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FBlockUserData;
+
+// ScriptStruct KuroUtility.OverlapActorInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FOverlapActorInfo final
+{
+public:
+	class FString                                 ActorLabel;                                        // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorType;                                         // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorPath;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              LastEditTimestamp;                                 // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastEditPerson;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FOverlapActorInfo;
+
+// ScriptStruct KuroUtility.ProductData
+// 0x0090 (0x0090 - 0x0000)
+struct FProductData final
+{
+public:
+	class FString                                 id;                                                // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 type;                                              // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         price;                                             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   displayPrice;                                      // 0x0028(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   description;                                       // 0x0040(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   displayName;                                       // 0x0058(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   label;                                             // 0x0070(0x0018)(NativeAccessSpecifierPublic)
+	struct FDateTime                              endData;                                           // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FProductData;
 
 }
 

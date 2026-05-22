@@ -213,11 +213,11 @@ public:
 DUMPER7_ASSERTS_ATemplateSequenceActor;
 
 // Class TemplateSequence.TemplateSequencePlayer
-// 0x0008 (0x0700 - 0x06F8)
+// 0x0008 (0x0718 - 0x0710)
 class UTemplateSequencePlayer final : public UMovieSceneSequencePlayer
 {
 public:
-	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_710[0x8];                                      // 0x0710(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UTemplateSequencePlayer* CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor);

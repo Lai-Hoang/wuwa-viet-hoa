@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 #include "Sharphereal_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -293,6 +293,45 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKooSharpRuntimeSettings;
+
+// Class Sharphereal.ConsoleCommandBPL
+// 0x0000 (0x0030 - 0x0030)
+class UConsoleCommandBPL final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool GetConsoleBoolVariable(const class FString& Name_0, bool* Result);
+	static bool GetConsoleFloatVariable(const class FString& Name_0, float* Result);
+	static bool GetConsoleIntVariable(const class FString& Name_0, int32* Result);
+	static bool GetConsoleStringVariable(const class FString& Name_0, class FString* Result);
+	static void RegisterConsoleBoolVariable(const class FString& Name_0, bool DefaultValue, const class FString& Help, uint32 Flags_0);
+	static void RegisterConsoleCommand(const class FString& Name_0, const class FString& Help, const TDelegate<void()>& Command, uint32 Flags_0);
+	static void RegisterConsoleCommandWithArgs(const class FString& Name_0, const class FString& Help, const TDelegate<void(const TArray<class FString>& Args)>& Command, uint32 Flags_0);
+	static void RegisterConsoleCommandWithWorld(const class FString& Name_0, const class FString& Help, const TDelegate<void(class UWorld* World)>& Command, uint32 Flags_0);
+	static void RegisterConsoleCommandWithWorldAndArgs(const class FString& Name_0, const class FString& Help, const TDelegate<void(const TArray<class FString>& Args, class UWorld* World)>& Command, uint32 Flags_0);
+	static void RegisterConsoleFloatVariable(const class FString& Name_0, float DefaultValue, const class FString& Help, uint32 Flags_0);
+	static void RegisterConsoleIntVariable(const class FString& Name_0, int32 DefaultValue, const class FString& Help, uint32 Flags_0);
+	static void RegisterConsoleStringVariable(const class FString& Name_0, const class FString& DefaultValue, const class FString& Help, uint32 Flags_0);
+	static bool SetConsoleBoolVariable(const class FString& Name_0, bool Value, uint32 Flags_0);
+	static bool SetConsoleFloatVariable(const class FString& Name_0, float Value, uint32 Flags_0);
+	static bool SetConsoleIntVariable(const class FString& Name_0, int32 Value, uint32 Flags_0);
+	static bool SetConsoleStringVariable(const class FString& Name_0, const class FString& Value, uint32 Flags_0);
+	static void UnregisterConsoleObject(const class FString& Name_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ConsoleCommandBPL")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ConsoleCommandBPL")
+	}
+	static class UConsoleCommandBPL* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UConsoleCommandBPL>();
+	}
+};
+DUMPER7_ASSERTS_UConsoleCommandBPL;
 
 }
 

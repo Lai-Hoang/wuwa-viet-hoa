@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "AIModule_structs.hpp"
 #include "GameplayTasks_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
@@ -228,6 +228,17 @@ public:
 };
 DUMPER7_ASSERTS_AIController_HasPartialPath;
 
+// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
+// 0x0008 (0x0008 - 0x0000)
+struct AIAsyncTaskBlueprintProxy_OnMoveCompleted final
+{
+public:
+	struct FAIRequestID                           RequestID;                                         // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPathFollowingResult                          MovementResult;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_AIAsyncTaskBlueprintProxy_OnMoveCompleted;
+
 // Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject
 // 0x0038 (0x0038 - 0x0000)
 struct AIBlueprintHelperLibrary_CreateMoveToProxyObject final
@@ -426,380 +437,6 @@ public:
 };
 DUMPER7_ASSERTS_AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation;
 
-// Function AIModule.AISense_Hearing.ReportNoiseEvent
-// 0x0030 (0x0030 - 0x0000)
-struct AISense_Hearing_ReportNoiseEvent final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NoiseLocation;                                     // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Loudness;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxRange;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Tag;                                               // 0x0024(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AISense_Hearing_ReportNoiseEvent;
-
-// Function AIModule.BTFunctionLibrary.ClearBlackboardValue
-// 0x0038 (0x0038 - 0x0000)
-struct BTFunctionLibrary_ClearBlackboardValue final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_ClearBlackboardValue;
-
-// Function AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector
-// 0x0038 (0x0038 - 0x0000)
-struct BTFunctionLibrary_ClearBlackboardValueAsVector final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_ClearBlackboardValueAsVector;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsActor
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsActor final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class AActor*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsActor;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsBool
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsBool final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsBool;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsClass
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsClass final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UClass*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsClass;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsEnum final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsEnum;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsFloat final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsFloat;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsInt
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsInt final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsInt;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsName
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsName final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsName;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsObject final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsObject;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsRotator final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRotator                               ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsRotator;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsString final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsString;
-
-// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsVector
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_GetBlackboardValueAsVector final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsVector;
-
-// Function AIModule.BTFunctionLibrary.GetOwnerComponent
-// 0x0010 (0x0010 - 0x0000)
-struct BTFunctionLibrary_GetOwnerComponent final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBehaviorTreeComponent*                 ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetOwnerComponent;
-
-// Function AIModule.BTFunctionLibrary.GetOwnersBlackboard
-// 0x0010 (0x0010 - 0x0000)
-struct BTFunctionLibrary_GetOwnersBlackboard final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBlackboardComponent*                   ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_GetOwnersBlackboard;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsBool
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsBool final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          Value;                                             // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsBool;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsClass
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsClass final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UClass*                                 Value;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsClass;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsEnum final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	uint8                                         Value;                                             // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsEnum;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsFloat final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsFloat;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsInt
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsInt final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsInt;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsName
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsName final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FName                                   Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsName;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
-// 0x0040 (0x0040 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsObject final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UObject*                                Value;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsObject;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsRotator final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FRotator                               Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsRotator;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsString final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsString;
-
-// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsVector
-// 0x0048 (0x0048 - 0x0000)
-struct BTFunctionLibrary_SetBlackboardValueAsVector final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVector                                Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsVector;
-
-// Function AIModule.BTFunctionLibrary.StartUsingExternalEvent
-// 0x0010 (0x0010 - 0x0000)
-struct BTFunctionLibrary_StartUsingExternalEvent final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OwningActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_StartUsingExternalEvent;
-
-// Function AIModule.BTFunctionLibrary.StopUsingExternalEvent
-// 0x0008 (0x0008 - 0x0000)
-struct BTFunctionLibrary_StopUsingExternalEvent final
-{
-public:
-	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTFunctionLibrary_StopUsingExternalEvent;
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
-// 0x0020 (0x0020 - 0x0000)
-struct EnvQueryContext_BlueprintBase_ProvideActorsSet final
-{
-public:
-	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         ResultingActorsSet;                                // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideActorsSet;
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
-// 0x0020 (0x0020 - 0x0000)
-struct EnvQueryContext_BlueprintBase_ProvideLocationsSet final
-{
-public:
-	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        ResultingLocationSet;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideLocationsSet;
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
-// 0x0018 (0x0018 - 0x0000)
-struct EnvQueryContext_BlueprintBase_ProvideSingleActor final
-{
-public:
-	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 ResultingActor;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideSingleActor;
-
-// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
-// 0x0020 (0x0020 - 0x0000)
-struct EnvQueryContext_BlueprintBase_ProvideSingleLocation final
-{
-public:
-	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ResultingLocation;                                 // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideSingleLocation;
-
-// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
-// 0x0008 (0x0008 - 0x0000)
-struct AIAsyncTaskBlueprintProxy_OnMoveCompleted final
-{
-public:
-	struct FAIRequestID                           RequestID;                                         // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPathFollowingResult                          MovementResult;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_AIAsyncTaskBlueprintProxy_OnMoveCompleted;
-
 // Function AIModule.AIPerceptionComponent.GetActorsPerception
 // 0x0030 (0x0030 - 0x0000)
 struct AIPerceptionComponent_GetActorsPerception final
@@ -956,6 +593,150 @@ public:
 };
 DUMPER7_ASSERTS_AIPerceptionSystem_ReportEvent;
 
+// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_PerformConditionCheck final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_PerformConditionCheck;
+
+// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
+// 0x0018 (0x0018 - 0x0000)
+struct BTDecorator_BlueprintBase_PerformConditionCheckAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_PerformConditionCheckAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveExecutionFinish final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBTNodeResult                                 NodeResult;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionFinish;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
+// 0x0018 (0x0018 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveExecutionFinishAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBTNodeResult                                 NodeResult;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionFinishAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
+// 0x0008 (0x0008 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveExecutionStart final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionStart;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveExecutionStartAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionStartAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
+// 0x0008 (0x0008 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveObserverActivated final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverActivated;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveObserverActivatedAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverActivatedAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
+// 0x0008 (0x0008 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveObserverDeactivated final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverDeactivated;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveTick
+// 0x0010 (0x0010 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveTick final
+{
+public:
+	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveTick;
+
+// Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
+// 0x0018 (0x0018 - 0x0000)
+struct BTDecorator_BlueprintBase_ReceiveTickAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaSeconds;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveTickAI;
+
+// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
+// 0x0001 (0x0001 - 0x0000)
+struct BTDecorator_BlueprintBase_IsDecoratorExecutionActive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_IsDecoratorExecutionActive;
+
+// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
+// 0x0001 (0x0001 - 0x0000)
+struct BTDecorator_BlueprintBase_IsDecoratorObserverActive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTDecorator_BlueprintBase_IsDecoratorObserverActive;
+
 // Function AIModule.AISense_Blueprint.K2_OnNewPawn
 // 0x0008 (0x0008 - 0x0000)
 struct AISense_Blueprint_K2_OnNewPawn final
@@ -1038,6 +819,20 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_AISense_Damage_ReportDamageEvent;
+
+// Function AIModule.AISense_Hearing.ReportNoiseEvent
+// 0x0030 (0x0030 - 0x0000)
+struct AISense_Hearing_ReportNoiseEvent final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NoiseLocation;                                     // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Loudness;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxRange;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0024(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AISense_Hearing_ReportNoiseEvent;
 
 // Function AIModule.AISense_Prediction.RequestControllerPredictionEvent
 // 0x0018 (0x0018 - 0x0000)
@@ -1418,188 +1213,309 @@ public:
 };
 DUMPER7_ASSERTS_BlackboardComponent_IsVectorValueSet;
 
-// Function AIModule.PathFollowingComponent.OnActorBump
-// 0x00B0 (0x00B0 - 0x0000)
-struct PathFollowingComponent_OnActorBump final
+// Function AIModule.BTFunctionLibrary.ClearBlackboardValue
+// 0x0038 (0x0038 - 0x0000)
+struct BTFunctionLibrary_ClearBlackboardValue final
 {
 public:
-	class AActor*                                 SelfActor;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NormalImpulse;                                     // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x001C(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PathFollowingComponent_OnActorBump;
+DUMPER7_ASSERTS_BTFunctionLibrary_ClearBlackboardValue;
 
-// Function AIModule.PathFollowingComponent.OnNavDataRegistered
+// Function AIModule.BTFunctionLibrary.ClearBlackboardValueAsVector
+// 0x0038 (0x0038 - 0x0000)
+struct BTFunctionLibrary_ClearBlackboardValueAsVector final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_ClearBlackboardValueAsVector;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsActor
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsActor final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsActor;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsBool
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsBool final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsBool;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsClass
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsClass final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UClass*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsClass;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsEnum
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsEnum final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsEnum;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsFloat
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsFloat final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsFloat;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsInt
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsInt final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsInt;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsName
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsName final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsName;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsObject
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsObject final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsObject;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsRotator
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsRotator final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsRotator;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsString
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsString final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsString;
+
+// Function AIModule.BTFunctionLibrary.GetBlackboardValueAsVector
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_GetBlackboardValueAsVector final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0038(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetBlackboardValueAsVector;
+
+// Function AIModule.BTFunctionLibrary.GetOwnerComponent
+// 0x0010 (0x0010 - 0x0000)
+struct BTFunctionLibrary_GetOwnerComponent final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBehaviorTreeComponent*                 ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetOwnerComponent;
+
+// Function AIModule.BTFunctionLibrary.GetOwnersBlackboard
+// 0x0010 (0x0010 - 0x0000)
+struct BTFunctionLibrary_GetOwnersBlackboard final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBlackboardComponent*                   ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_GetOwnersBlackboard;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsBool
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsBool final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsBool;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsClass
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsClass final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UClass*                                 Value;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsClass;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsEnum
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsEnum final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	uint8                                         Value;                                             // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsEnum;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsFloat
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsFloat final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsFloat;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsInt
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsInt final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsInt;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsName
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsName final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsName;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsObject
+// 0x0040 (0x0040 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsObject final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UObject*                                Value;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsObject;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsRotator
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsRotator final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRotator                               Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsRotator;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsString
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsString final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsString;
+
+// Function AIModule.BTFunctionLibrary.SetBlackboardValueAsVector
+// 0x0048 (0x0048 - 0x0000)
+struct BTFunctionLibrary_SetBlackboardValueAsVector final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlackboardKeySelector                 Key;                                               // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0038(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_SetBlackboardValueAsVector;
+
+// Function AIModule.BTFunctionLibrary.StartUsingExternalEvent
+// 0x0010 (0x0010 - 0x0000)
+struct BTFunctionLibrary_StartUsingExternalEvent final
+{
+public:
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OwningActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_BTFunctionLibrary_StartUsingExternalEvent;
+
+// Function AIModule.BTFunctionLibrary.StopUsingExternalEvent
 // 0x0008 (0x0008 - 0x0000)
-struct PathFollowingComponent_OnNavDataRegistered final
+struct BTFunctionLibrary_StopUsingExternalEvent final
 {
 public:
-	class ANavigationData*                        NavData;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBTNode*                                NodeOwner;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_PathFollowingComponent_OnNavDataRegistered;
-
-// Function AIModule.PathFollowingComponent.GetPathActionType
-// 0x0001 (0x0001 - 0x0000)
-struct PathFollowingComponent_GetPathActionType final
-{
-public:
-	EPathFollowingAction                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PathFollowingComponent_GetPathActionType;
-
-// Function AIModule.PathFollowingComponent.GetPathDestination
-// 0x000C (0x000C - 0x0000)
-struct PathFollowingComponent_GetPathDestination final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_PathFollowingComponent_GetPathDestination;
-
-// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheck
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_PerformConditionCheck final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_PerformConditionCheck;
-
-// Function AIModule.BTDecorator_BlueprintBase.PerformConditionCheckAI
-// 0x0018 (0x0018 - 0x0000)
-struct BTDecorator_BlueprintBase_PerformConditionCheckAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_PerformConditionCheckAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinish
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveExecutionFinish final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBTNodeResult                                 NodeResult;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionFinish;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionFinishAI
-// 0x0018 (0x0018 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveExecutionFinishAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBTNodeResult                                 NodeResult;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionFinishAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStart
-// 0x0008 (0x0008 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveExecutionStart final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionStart;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveExecutionStartAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveExecutionStartAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveExecutionStartAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivated
-// 0x0008 (0x0008 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveObserverActivated final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverActivated;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverActivatedAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveObserverActivatedAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverActivatedAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivated
-// 0x0008 (0x0008 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveObserverDeactivated final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverDeactivated;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveObserverDeactivatedAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveTick
-// 0x0010 (0x0010 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveTick final
-{
-public:
-	class AActor*                                 OwnerActor;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveTick;
-
-// Function AIModule.BTDecorator_BlueprintBase.ReceiveTickAI
-// 0x0018 (0x0018 - 0x0000)
-struct BTDecorator_BlueprintBase_ReceiveTickAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaSeconds;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_ReceiveTickAI;
-
-// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
-// 0x0001 (0x0001 - 0x0000)
-struct BTDecorator_BlueprintBase_IsDecoratorExecutionActive final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_IsDecoratorExecutionActive;
-
-// Function AIModule.BTDecorator_BlueprintBase.IsDecoratorObserverActive
-// 0x0001 (0x0001 - 0x0000)
-struct BTDecorator_BlueprintBase_IsDecoratorObserverActive final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_BTDecorator_BlueprintBase_IsDecoratorObserverActive;
+DUMPER7_ASSERTS_BTFunctionLibrary_StopUsingExternalEvent;
 
 // Function AIModule.BTService_BlueprintBase.ReceiveActivation
 // 0x0008 (0x0008 - 0x0000)
@@ -1797,6 +1713,45 @@ public:
 };
 DUMPER7_ASSERTS_BTTask_BlueprintBase_IsTaskExecuting;
 
+// Function AIModule.PathFollowingComponent.OnActorBump
+// 0x00B0 (0x00B0 - 0x0000)
+struct PathFollowingComponent_OnActorBump final
+{
+public:
+	class AActor*                                 SelfActor;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NormalImpulse;                                     // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x001C(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PathFollowingComponent_OnActorBump;
+
+// Function AIModule.PathFollowingComponent.OnNavDataRegistered
+// 0x0008 (0x0008 - 0x0000)
+struct PathFollowingComponent_OnNavDataRegistered final
+{
+public:
+	class ANavigationData*                        NavData;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PathFollowingComponent_OnNavDataRegistered;
+
+// Function AIModule.PathFollowingComponent.GetPathActionType
+// 0x0001 (0x0001 - 0x0000)
+struct PathFollowingComponent_GetPathActionType final
+{
+public:
+	EPathFollowingAction                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PathFollowingComponent_GetPathActionType;
+
+// Function AIModule.PathFollowingComponent.GetPathDestination
+// 0x000C (0x000C - 0x0000)
+struct PathFollowingComponent_GetPathDestination final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_PathFollowingComponent_GetPathDestination;
+
 // Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 // 0x0001 (0x0001 - 0x0000)
 struct CrowdFollowingComponent_SuspendCrowdSteering final
@@ -1805,6 +1760,51 @@ public:
 	bool                                          bSuspend;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_CrowdFollowingComponent_SuspendCrowdSteering;
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideActorsSet
+// 0x0020 (0x0020 - 0x0000)
+struct EnvQueryContext_BlueprintBase_ProvideActorsSet final
+{
+public:
+	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         ResultingActorsSet;                                // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideActorsSet;
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideLocationsSet
+// 0x0020 (0x0020 - 0x0000)
+struct EnvQueryContext_BlueprintBase_ProvideLocationsSet final
+{
+public:
+	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        ResultingLocationSet;                              // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideLocationsSet;
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleActor
+// 0x0018 (0x0018 - 0x0000)
+struct EnvQueryContext_BlueprintBase_ProvideSingleActor final
+{
+public:
+	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 ResultingActor;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideSingleActor;
+
+// Function AIModule.EnvQueryContext_BlueprintBase.ProvideSingleLocation
+// 0x0020 (0x0020 - 0x0000)
+struct EnvQueryContext_BlueprintBase_ProvideSingleLocation final
+{
+public:
+	class UObject*                                QuerierObject;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 QuerierActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ResultingLocation;                                 // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_EnvQueryContext_BlueprintBase_ProvideSingleLocation;
 
 // Function AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
 // 0x0008 (0x0008 - 0x0000)

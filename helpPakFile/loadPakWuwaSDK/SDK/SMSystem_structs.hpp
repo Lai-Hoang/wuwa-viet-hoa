@@ -90,6 +90,21 @@ enum class ETransitionPredictionType : uint8
 	Prediction_MAX                           = 3,
 };
 
+// ScriptStruct SMSystem.SMInfo_Base
+// 0x0060 (0x0060 - 0x0000)
+struct FSMInfo_Base
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 NodeName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  OwnerGuid;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  NodeGuid;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  OwnerNodeGuid;                                     // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USMNodeInstance*                        NodeInstance;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSMInfo_Base;
+
 // ScriptStruct SMSystem.SMExposedFunctionHandler
 // 0x0028 (0x0028 - 0x0000)
 struct FSMExposedFunctionHandler final
@@ -132,21 +147,6 @@ public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FSMNode_Base;
-
-// ScriptStruct SMSystem.SMInfo_Base
-// 0x0060 (0x0060 - 0x0000)
-struct FSMInfo_Base
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 NodeName;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  Guid;                                              // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  OwnerGuid;                                         // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  NodeGuid;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  OwnerNodeGuid;                                     // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USMNodeInstance*                        NodeInstance;                                      // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSMInfo_Base;
 
 // ScriptStruct SMSystem.SMTransitionInfo
 // 0x0038 (0x0098 - 0x0060)

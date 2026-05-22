@@ -31,12 +31,12 @@ public:
 	float                                         ManualProcessTime;                                 // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_TsRecordEffect(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void OnPlay();
 	void OnStop();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_TsRecordEffect(int32 EntryPoint);
+	void OnPlay();
 	void TryAddEffectView();
 
 public:

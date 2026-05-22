@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "SNpcChildPart_structs.hpp"
-#include "SNpcHookPart_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EBodyPartName_structs.hpp"
-#include "SNpcSetupPartInfo_structs.hpp"
 #include "SNpcHookPartMaterial_structs.hpp"
+#include "SNpcChildPart_structs.hpp"
+#include "SNpcSetupPartInfo_structs.hpp"
+#include "EBodyPartName_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SNpcHookPart_structs.hpp"
 
 
 namespace SDK::Params

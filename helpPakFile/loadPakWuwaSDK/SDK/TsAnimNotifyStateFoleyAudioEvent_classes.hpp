@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "KuroAudio_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "E_FoleyVariant_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
 namespace SDK
@@ -28,8 +28,8 @@ public:
 	E_FoleyVariant                                Variant;                                           // 0x004D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 	bool K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
+	bool K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration);
 
 public:
 	static class UClass* StaticClass()

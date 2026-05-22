@@ -36,18 +36,37 @@ public:
 };
 DUMPER7_ASSERTS_FSPModelSCPMap;
 
-// ScriptStruct KuroInteractionEffect.KuroInteractionEffectTraceFoliage
-// 0x0050 (0x0058 - 0x0008)
-struct FKuroInteractionEffectTraceFoliage final : public FTableRowBase
+// ScriptStruct KuroInteractionEffect.KuroInteractionEffectNDCConfigBase
+// 0x0028 (0x0030 - 0x0008)
+struct FKuroInteractionEffectNDCConfigBase : public FTableRowBase
 {
 public:
-	TSoftObjectPtr<class UFoliageType_InstancedStaticMesh> FoliageMesh;                              // 0x0008(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpawnNum;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HeightClamp;                                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Weight;                                            // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TypeIndex;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlayerSpawnOffset;                                 // 0x0048(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SpawnNum;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HeightClamp;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Weight;                                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoveSpawn;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WeaponSpawn;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EffectIndex;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TypeIndex;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlayerSpawnOffset;                                 // 0x0024(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroInteractionEffectNDCConfigBase;
+
+// ScriptStruct KuroInteractionEffect.KuroInteractionEffectTraceStaticMesh
+// 0x0030 (0x0060 - 0x0030)
+struct FKuroInteractionEffectTraceStaticMesh final : public FKuroInteractionEffectNDCConfigBase
+{
+public:
+	TSoftObjectPtr<class UStaticMesh>             StaticMesh;                                        // 0x0030(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroInteractionEffectTraceStaticMesh;
+
+// ScriptStruct KuroInteractionEffect.KuroInteractionEffectTraceFoliage
+// 0x0030 (0x0060 - 0x0030)
+struct FKuroInteractionEffectTraceFoliage final : public FKuroInteractionEffectNDCConfigBase
+{
+public:
+	TSoftObjectPtr<class UFoliageType_InstancedStaticMesh> FoliageMesh;                              // 0x0030(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroInteractionEffectTraceFoliage;
 
@@ -62,7 +81,7 @@ public:
 DUMPER7_ASSERTS_FKuroInteractionPlacementTriggerActor;
 
 // ScriptStruct KuroInteractionEffect.KuroBushInteractionEffectParameter
-// 0x0060 (0x0068 - 0x0008)
+// 0x0070 (0x0078 - 0x0008)
 struct FKuroBushInteractionEffectParameter final : public FTableRowBase
 {
 public:
@@ -75,6 +94,10 @@ public:
 	int32                                         UVIndexEnd;                                        // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnSizeScale;                             // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnCountScale;                            // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoaringSpeedScale;                                 // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoaringLifeTimeScale;                              // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TreeEffectTypeIndex;                               // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BushEffectTypeIndex;                               // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroBushInteractionEffectParameter;
 
@@ -93,7 +116,7 @@ public:
 DUMPER7_ASSERTS_FKuroLinkNiagaraParameter;
 
 // ScriptStruct KuroInteractionEffect.KuroBushIEParameter
-// 0x0030 (0x0030 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct FKuroBushIEParameter final
 {
 public:
@@ -105,11 +128,15 @@ public:
 	int32                                         UVIndexEnd;                                        // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnSizeScale;                             // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoaringSpawnCountScale;                            // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoaringSpeedScale;                                 // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoaringLifeTimeScale;                              // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TreeEffectTypeIndex;                               // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BushEffectTypeIndex;                               // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroBushIEParameter;
 
 // ScriptStruct KuroInteractionEffect.KuroEnviInteractionData
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct FKuroEnviInteractionData final
 {
 public:
@@ -134,13 +161,13 @@ public:
 	struct FVector                                TriggerHitPoint;                                   // 0x0070(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HitBushLUTIndex;                                   // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class AActor>                  HitBushActor;                                      // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroBushIEParameter                   BushIEParam;                                       // 0x0088(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          OverlapTriggerMesh;                                // 0x00B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                OverlapTriggerParam0;                              // 0x00BC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTouchBlackWave;                                   // 0x00C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroBushIEParameter                   BushIEParam;                                       // 0x0088(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          OverlapTriggerMesh;                                // 0x00C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitWaterLocationWithOffset;                        // 0x00CC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OverlapTriggerParam0;                              // 0x00CC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTouchBlackWave;                                   // 0x00D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HitWaterLocationWithOffset;                        // 0x00DC(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroEnviInteractionData;
 

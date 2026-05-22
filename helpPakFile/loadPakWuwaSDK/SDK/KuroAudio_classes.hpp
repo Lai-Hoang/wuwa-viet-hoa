@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroAudio_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "MovieScene_classes.hpp"
 
 
@@ -288,8 +288,10 @@ public:
 	int32                                         FadeDuration;                                      // 0x00FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAudioFadeCurve                               FadeCurve;                                         // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSyncAudio;                                        // 0x0101(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoMatchLength;                                  // 0x0102(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_103[0x5];                                      // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bTriggerOnSeqReverse;                              // 0x0102(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFreezeOnAttachmentLost;                           // 0x0103(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoMatchLength;                                  // 0x0104(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          AudioEvent;                                        // 0x0108(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TSoftObjectPtr<class UAkAudioEvent>           SoftAudioEvent;                                    // 0x0110(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 

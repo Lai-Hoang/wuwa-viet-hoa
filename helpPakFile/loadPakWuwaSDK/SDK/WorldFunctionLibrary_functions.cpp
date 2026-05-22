@@ -4876,5 +4876,60 @@ bool UWorldFunctionLibrary_C::CheckIsRoleTriggerActor(class AActor* actor, class
 	return Parms.ReturnValue;
 }
 
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsMale
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UWorldFunctionLibrary_C::IsMale(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "IsMale");
+
+	Params::WorldFunctionLibrary_C_IsMale Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.ReleaseFromMediaPlayActor
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TScriptInterface<class IBPI_SceneBp_C>  sceneBpActor                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::ReleaseFromMediaPlayActor(TScriptInterface<class IBPI_SceneBp_C> sceneBpActor, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "ReleaseFromMediaPlayActor");
+
+	Params::WorldFunctionLibrary_C_ReleaseFromMediaPlayActor Parms{};
+
+	Parms.sceneBpActor = sceneBpActor;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

@@ -16,69 +16,14 @@
 namespace SDK::Params
 {
 
-// Function TsPhotographer.TsPhotographer_C.ExecuteUbergraph_TsPhotographer
-// 0x0008 (0x0008 - 0x0000)
-struct TsPhotographer_C_ExecuteUbergraph_TsPhotographer final
+// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
+// 0x000C (0x000C - 0x0000)
+struct TsPhotographer_C_SetPlayerSourceLocation final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsPhotographer_C_ExecuteUbergraph_TsPhotographer;
-
-// Function TsPhotographer.TsPhotographer_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_ReceiveTick;
-
-// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_AddSourceYawInput final
-{
-public:
-	float                                         yaw;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_AddSourceYawInput;
-
-// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
-// 0x0030 (0x0030 - 0x0000)
-struct TsPhotographer_C_SetCameraInitializeTransform final
-{
-public:
-	struct FTransform                             transform;                                         // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_SetCameraInitializeTransform;
-
-// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
-// 0x0030 (0x0030 - 0x0000)
-struct TsPhotographer_C_GetCameraInitializeTransform final
-{
-public:
-	struct FTransform                             ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_GetCameraInitializeTransform;
-
-// Function TsPhotographer.TsPhotographer_C.SetFov
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_SetFov final
-{
-public:
-	float                                         length;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_SetFov;
-
-// Function TsPhotographer.TsPhotographer_C.GetFov
-// 0x0004 (0x0004 - 0x0000)
-struct TsPhotographer_C_GetFov final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_TsPhotographer_C_GetFov;
+DUMPER7_ASSERTS_TsPhotographer_C_SetPlayerSourceLocation;
 
 // Function TsPhotographer.TsPhotographer_C.AddSourcePitchInput
 // 0x0004 (0x0004 - 0x0000)
@@ -89,14 +34,69 @@ public:
 };
 DUMPER7_ASSERTS_TsPhotographer_C_AddSourcePitchInput;
 
-// Function TsPhotographer.TsPhotographer_C.SetPlayerSourceLocation
-// 0x000C (0x000C - 0x0000)
-struct TsPhotographer_C_SetPlayerSourceLocation final
+// Function TsPhotographer.TsPhotographer_C.GetFov
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_GetFov final
 {
 public:
-	struct FVector                                location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_TsPhotographer_C_SetPlayerSourceLocation;
+DUMPER7_ASSERTS_TsPhotographer_C_GetFov;
+
+// Function TsPhotographer.TsPhotographer_C.SetFov
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_SetFov final
+{
+public:
+	float                                         length;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_SetFov;
+
+// Function TsPhotographer.TsPhotographer_C.GetCameraInitializeTransform
+// 0x0030 (0x0030 - 0x0000)
+struct TsPhotographer_C_GetCameraInitializeTransform final
+{
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_GetCameraInitializeTransform;
+
+// Function TsPhotographer.TsPhotographer_C.SetCameraInitializeTransform
+// 0x0030 (0x0030 - 0x0000)
+struct TsPhotographer_C_SetCameraInitializeTransform final
+{
+public:
+	struct FTransform                             transform;                                         // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_SetCameraInitializeTransform;
+
+// Function TsPhotographer.TsPhotographer_C.AddSourceYawInput
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_AddSourceYawInput final
+{
+public:
+	float                                         yaw;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_AddSourceYawInput;
+
+// Function TsPhotographer.TsPhotographer_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct TsPhotographer_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_ReceiveTick;
+
+// Function TsPhotographer.TsPhotographer_C.ExecuteUbergraph_TsPhotographer
+// 0x0008 (0x0008 - 0x0000)
+struct TsPhotographer_C_ExecuteUbergraph_TsPhotographer final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_TsPhotographer_C_ExecuteUbergraph_TsPhotographer;
 
 }
 

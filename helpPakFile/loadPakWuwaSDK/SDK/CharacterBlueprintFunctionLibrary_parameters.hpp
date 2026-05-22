@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SEntityTimeDilation_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ESelfCenteredMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SEntityTimeDilation_structs.hpp"
 
 
 namespace SDK::Params

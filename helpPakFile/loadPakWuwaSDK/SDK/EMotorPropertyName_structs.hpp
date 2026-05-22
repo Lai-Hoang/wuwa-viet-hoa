@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EMotorPropertyName.EMotorPropertyName
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EMotorPropertyName : uint8
 {
 	NewEnumerator1                           = 0,
@@ -27,7 +27,8 @@ enum class EMotorPropertyName : uint8
 	NewEnumerator7                           = 6,
 	NewEnumerator8                           = 7,
 	NewEnumerator9                           = 8,
-	EMotorPropertyName_MAX                   = 9,
+	NewEnumerator10                          = 9,
+	EMotorPropertyName_MAX                   = 10,
 };
 
 }

@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "EDangoPerformType_structs.hpp"
 #include "SBaseCurve_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SDangoPerformData_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EDangoPerformType_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DangoGlobalConfig.BP_DangoGlobalConfig_C
-// 0x00E0 (0x0118 - 0x0038)
+// 0x00E8 (0x0120 - 0x0038)
 class UBP_DangoGlobalConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -50,6 +50,7 @@ public:
 	TMap<EDangoPerformType, struct FSDangoPerformData> 动作表现;                                     // 0x00B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FName                                   堆叠绑定骨骼名称;                                  // 0x0108(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         堆叠间隔;                                          // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            黑洞下降偏移曲线;                                  // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()

@@ -10,46 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "LevelSequence_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UMG_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "UMG_classes.hpp"
+#include "LevelSequence_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class LevelSequence.LevelSequenceBurnInOptions
-// 0x0030 (0x0060 - 0x0030)
-class ULevelSequenceBurnInOptions final : public UObject
+// Class LevelSequence.DefaultLevelSequenceInstanceData
+// 0x0050 (0x0080 - 0x0030)
+class UDefaultLevelSequenceInstanceData final : public UObject
 {
 public:
-	bool                                          bUseBurnIn;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoftClassPath                         BurnInClass;                                       // 0x0038(0x0020)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequenceBurnInInitSettings*       Settings;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TransformOriginActor;                              // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ApplyWorldOrigin;                                  // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LevelSequenceBurnInOptions")
+		STATIC_CLASS_IMPL("DefaultLevelSequenceInstanceData")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LevelSequenceBurnInOptions")
+		STATIC_NAME_IMPL(L"DefaultLevelSequenceInstanceData")
 	}
-	static class ULevelSequenceBurnInOptions* GetDefaultObj()
+	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULevelSequenceBurnInOptions>();
+		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
 	}
 };
-DUMPER7_ASSERTS_ULevelSequenceBurnInOptions;
+DUMPER7_ASSERTS_UDefaultLevelSequenceInstanceData;
 
 // Class LevelSequence.LevelSequenceActor
 // 0x0098 (0x0348 - 0x02B0)
@@ -115,34 +113,25 @@ public:
 };
 DUMPER7_ASSERTS_ALevelSequenceActor;
 
-// Class LevelSequence.LevelSequenceMetaData
-// 0x0000 (0x0000 - 0x0000)
-class ILevelSequenceMetaData final
+// Class LevelSequence.LevelSequenceBurnInInitSettings
+// 0x0000 (0x0030 - 0x0030)
+class ULevelSequenceBurnInInitSettings final : public UObject
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LevelSequenceMetaData")
+		STATIC_CLASS_IMPL("LevelSequenceBurnInInitSettings")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LevelSequenceMetaData")
+		STATIC_NAME_IMPL(L"LevelSequenceBurnInInitSettings")
 	}
-	static class ILevelSequenceMetaData* GetDefaultObj()
+	static class ULevelSequenceBurnInInitSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ILevelSequenceMetaData>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
+		return GetDefaultObjImpl<ULevelSequenceBurnInInitSettings>();
 	}
 };
-DUMPER7_ASSERTS_ILevelSequenceMetaData;
+DUMPER7_ASSERTS_ULevelSequenceBurnInInitSettings;
 
 // Class LevelSequence.LevelSequence
 // 0x01E0 (0x0248 - 0x0068)
@@ -218,32 +207,34 @@ public:
 };
 DUMPER7_ASSERTS_UAnimSequenceLevelSequenceLink;
 
-// Class LevelSequence.DefaultLevelSequenceInstanceData
-// 0x0050 (0x0080 - 0x0030)
-class UDefaultLevelSequenceInstanceData final : public UObject
+// Class LevelSequence.LevelSequenceMetaData
+// 0x0000 (0x0000 - 0x0000)
+class ILevelSequenceMetaData final
 {
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TransformOriginActor;                              // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ApplyWorldOrigin;                                  // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("DefaultLevelSequenceInstanceData")
+		STATIC_CLASS_IMPL("LevelSequenceMetaData")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"DefaultLevelSequenceInstanceData")
+		STATIC_NAME_IMPL(L"LevelSequenceMetaData")
 	}
-	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
+	static class ILevelSequenceMetaData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
+		return GetDefaultObjImpl<ILevelSequenceMetaData>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-DUMPER7_ASSERTS_UDefaultLevelSequenceInstanceData;
+DUMPER7_ASSERTS_ILevelSequenceMetaData;
 
 // Class LevelSequence.KuroSequenceConsoleCommandDataAsset
 // 0x0048 (0x0080 - 0x0038)
@@ -274,25 +265,34 @@ public:
 };
 DUMPER7_ASSERTS_UKuroSequenceConsoleCommandDataAsset;
 
-// Class LevelSequence.LevelSequenceBurnInInitSettings
-// 0x0000 (0x0030 - 0x0030)
-class ULevelSequenceBurnInInitSettings final : public UObject
+// Class LevelSequence.LevelSequenceBurnInOptions
+// 0x0030 (0x0060 - 0x0030)
+class ULevelSequenceBurnInOptions final : public UObject
 {
+public:
+	bool                                          bUseBurnIn;                                        // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoftClassPath                         BurnInClass;                                       // 0x0038(0x0020)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequenceBurnInInitSettings*       Settings;                                          // 0x0058(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
+
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("LevelSequenceBurnInInitSettings")
+		STATIC_CLASS_IMPL("LevelSequenceBurnInOptions")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"LevelSequenceBurnInInitSettings")
+		STATIC_NAME_IMPL(L"LevelSequenceBurnInOptions")
 	}
-	static class ULevelSequenceBurnInInitSettings* GetDefaultObj()
+	static class ULevelSequenceBurnInOptions* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULevelSequenceBurnInInitSettings>();
+		return GetDefaultObjImpl<ULevelSequenceBurnInOptions>();
 	}
 };
-DUMPER7_ASSERTS_ULevelSequenceBurnInInitSettings;
+DUMPER7_ASSERTS_ULevelSequenceBurnInOptions;
 
 // Class LevelSequence.KuroLevelSequenceActorConfig
 // 0x0020 (0x0050 - 0x0030)
@@ -423,13 +423,13 @@ public:
 DUMPER7_ASSERTS_ULegacyLevelSequenceDirectorBlueprint;
 
 // Class LevelSequence.LevelSequencePlayer
-// 0x0138 (0x0830 - 0x06F8)
+// 0x0138 (0x0848 - 0x0710)
 class ULevelSequencePlayer final : public UMovieSceneSequencePlayer
 {
 public:
-	TMulticastInlineDelegate<void(class UCameraComponent* CameraComponent)> OnCameraCut;             // 0x06F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class ULevelSequence* LevelSequence, const struct FGuid& Guid, class UObject* Object)> OnSequenceObjectSpawned; // 0x0708(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_718[0x118];                                    // 0x0718(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UCameraComponent* CameraComponent)> OnCameraCut;             // 0x0710(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class ULevelSequence* LevelSequence, const struct FGuid& Guid, class UObject* Object)> OnSequenceObjectSpawned; // 0x0720(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_730[0x118];                                    // 0x0730(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);

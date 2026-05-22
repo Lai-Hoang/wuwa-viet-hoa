@@ -17,6 +17,93 @@
 namespace SDK
 {
 
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateAudioCaptureDevices");
+
+	Params::MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices Parms{};
+
+	Parms.Filter = Filter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDevices != nullptr)
+		*OutDevices = std::move(Parms.OutDevices);
+}
+
+
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateVideoCaptureDevices");
+
+	Params::MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices Parms{};
+
+	Parms.Filter = Filter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDevices != nullptr)
+		*OutDevices = std::move(Parms.OutDevices);
+}
+
+
+// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaBlueprintFunctionLibrary::EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateWebcamCaptureDevices");
+
+	Params::MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices Parms{};
+
+	Parms.Filter = Filter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDevices != nullptr)
+		*OutDevices = std::move(Parms.OutDevices);
+}
+
+
 // Function MediaAssets.MediaSource.SetMediaOptionBool
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -197,93 +284,6 @@ void UFileMediaSource::SetFilePath(const class FString& Path)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateAudioCaptureDevices");
-
-	Params::MediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices Parms{};
-
-	Parms.Filter = Filter;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutDevices != nullptr)
-		*OutDevices = std::move(Parms.OutDevices);
-}
-
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateVideoCaptureDevices");
-
-	Params::MediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices Parms{};
-
-	Parms.Filter = Filter;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutDevices != nullptr)
-		*OutDevices = std::move(Parms.OutDevices);
-}
-
-
-// Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FMediaCaptureDevice>*     OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaBlueprintFunctionLibrary::EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MediaBlueprintFunctionLibrary", "EnumerateWebcamCaptureDevices");
-
-	Params::MediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices Parms{};
-
-	Parms.Filter = Filter;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutDevices != nullptr)
-		*OutDevices = std::move(Parms.OutDevices);
 }
 
 

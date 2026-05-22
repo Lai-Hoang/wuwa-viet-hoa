@@ -177,11 +177,13 @@ public:
 DUMPER7_ASSERTS_NiagaraComponent_SetAllowScalability;
 
 // Function Niagara.NiagaraComponent.SetAsset
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct NiagaraComponent_SetAsset final
 {
 public:
 	class UNiagaraSystem*                         InAsset;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResetExistingOverrideParameters;                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_NiagaraComponent_SetAsset;
 
@@ -314,6 +316,15 @@ public:
 	struct FVector4                               InVector;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NiagaraComponent_SetKuroNiagaraEmitterVectorParam;
+
+// Function Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
+// 0x0001 (0x0001 - 0x0000)
+struct NiagaraComponent_SetLockDesiredAgeDeltaTimeToSeekDelta final
+{
+public:
+	bool                                          bLock;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NiagaraComponent_SetLockDesiredAgeDeltaTimeToSeekDelta;
 
 // Function Niagara.NiagaraComponent.SetMaterialUseLocalTime
 // 0x0001 (0x0001 - 0x0000)
@@ -674,6 +685,15 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NiagaraComponent_GetForceSolo;
+
+// Function Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
+// 0x0001 (0x0001 - 0x0000)
+struct NiagaraComponent_GetLockDesiredAgeDeltaTimeToSeekDelta final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_NiagaraComponent_GetLockDesiredAgeDeltaTimeToSeekDelta;
 
 // Function Niagara.NiagaraComponent.GetMaxSimTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1496,11 +1516,11 @@ public:
 DUMPER7_ASSERTS_NiagaraDataInterfaceGrid3DCollection_GetTextureSize;
 
 // Function Niagara.NiagaraFunctionLibrary.GetGlobalInfo
-// 0x0010 (0x0010 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct NiagaraFunctionLibrary_GetGlobalInfo final
 {
 public:
-	struct FNiagaraGlobalInfoInHUD                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FNiagaraGlobalInfoInHUD                ReturnValue;                                       // 0x0000(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NiagaraFunctionLibrary_GetGlobalInfo;
 
@@ -1556,6 +1576,34 @@ public:
 	class UStaticMeshComponent*                   StaticMeshComponent;                               // 0x0018(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_NiagaraFunctionLibrary_OverrideSystemUserVariableStaticMeshComponent;
+
+// Function Niagara.NiagaraFunctionLibrary.SetNiagaraEmitterMaterial
+// 0x0028 (0x0028 - 0x0000)
+struct NiagaraFunctionLibrary_SetNiagaraEmitterMaterial final
+{
+public:
+	class UNiagaraSystem*                         System;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EmitterName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     Material;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaterialIndex;                                     // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_NiagaraFunctionLibrary_SetNiagaraEmitterMaterial;
+
+// Function Niagara.NiagaraFunctionLibrary.SetNiagaraEmitterMesh
+// 0x0028 (0x0028 - 0x0000)
+struct NiagaraFunctionLibrary_SetNiagaraEmitterMesh final
+{
+public:
+	class UNiagaraSystem*                         System;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EmitterName;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            NewMesh;                                           // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MeshIndex;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_NiagaraFunctionLibrary_SetNiagaraEmitterMesh;
 
 // Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
 // 0x0028 (0x0028 - 0x0000)

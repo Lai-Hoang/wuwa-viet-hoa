@@ -49,17 +49,6 @@ enum class EUKuroSDKEventType : uint8
 	UKuroSDKEventType_MAX                    = 18,
 };
 
-// ScriptStruct KuroSDK.AchievementStruct
-// 0x0018 (0x0018 - 0x0000)
-struct FAchievementStruct final
-{
-public:
-	class FString                                 AchievementId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Progress;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAchievementStruct;
-
 // ScriptStruct KuroSDK.LoginStruct
 // 0x0058 (0x0058 - 0x0000)
 struct FLoginStruct final
@@ -87,6 +76,17 @@ public:
 	class FString                                 ExtraInfo;                                         // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPaymentStruct;
+
+// ScriptStruct KuroSDK.AchievementStruct
+// 0x0018 (0x0018 - 0x0000)
+struct FAchievementStruct final
+{
+public:
+	class FString                                 AchievementId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Progress;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAchievementStruct;
 
 // ScriptStruct KuroSDK.BasicInfo
 // 0x0048 (0x0048 - 0x0000)

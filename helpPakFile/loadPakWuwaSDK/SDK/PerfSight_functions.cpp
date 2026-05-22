@@ -36,6 +36,31 @@ void UPerfSightHelper::BeginExclude()
 }
 
 
+// Function PerfSight.PerfSightHelper.BeginExtTag
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    TagName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPerfSightHelper::BeginExtTag(const class FString& TagName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PerfSightHelper", "BeginExtTag");
+
+	Params::PerfSightHelper_BeginExtTag Parms{};
+
+	Parms.TagName = std::move(TagName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PerfSight.PerfSightHelper.BeginTag
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -119,6 +144,31 @@ void UPerfSightHelper::EndExclude()
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PerfSight.PerfSightHelper.EndExtTag
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    TagName                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPerfSightHelper::EndExtTag(const class FString& TagName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PerfSightHelper", "EndExtTag");
+
+	Params::PerfSightHelper_EndExtTag Parms{};
+
+	Parms.TagName = std::move(TagName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -678,6 +728,31 @@ void UPerfSightHelper::SetPCServerURL(const class FString& url)
 }
 
 
+// Function PerfSight.PerfSightHelper.SetPostValueStrMaxLen
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   length                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPerfSightHelper::SetPostValueStrMaxLen(int32 length)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PerfSightHelper", "SetPostValueStrMaxLen");
+
+	Params::PerfSightHelper_SetPostValueStrMaxLen Parms{};
+
+	Parms.length = length;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PerfSight.PerfSightHelper.SetQuality
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -718,6 +793,31 @@ void UPerfSightHelper::SetTargetFrameRate(int32 target)
 	Params::PerfSightHelper_SetTargetFrameRate Parms{};
 
 	Parms.target = target;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PerfSight.PerfSightHelper.SetUploadServerURL
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    url                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPerfSightHelper::SetUploadServerURL(const class FString& url)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PerfSightHelper", "SetUploadServerURL");
+
+	Params::PerfSightHelper_SetUploadServerURL Parms{};
+
+	Parms.url = std::move(url);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

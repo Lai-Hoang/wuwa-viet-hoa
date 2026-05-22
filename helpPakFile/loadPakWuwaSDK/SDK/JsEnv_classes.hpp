@@ -19,28 +19,28 @@
 namespace SDK
 {
 
-// Class JsEnv.JSAnimGeneratedClass
-// 0x0020 (0x05F0 - 0x05D0)
-class UJSAnimGeneratedClass final : public UAnimBlueprintGeneratedClass
+// Class JsEnv.KuroPreloadJSCallback
+// 0x0028 (0x0058 - 0x0030)
+class UKuroPreloadJSCallback final : public UObject
 {
 public:
-	uint8                                         Pad_5D0[0x20];                                     // 0x05D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             CompletedDelegate;                                 // 0x0030(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("JSAnimGeneratedClass")
+		STATIC_CLASS_IMPL("KuroPreloadJSCallback")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"JSAnimGeneratedClass")
+		STATIC_NAME_IMPL(L"KuroPreloadJSCallback")
 	}
-	static class UJSAnimGeneratedClass* GetDefaultObj()
+	static class UKuroPreloadJSCallback* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UJSAnimGeneratedClass>();
+		return GetDefaultObjImpl<UKuroPreloadJSCallback>();
 	}
 };
-DUMPER7_ASSERTS_UJSAnimGeneratedClass;
+DUMPER7_ASSERTS_UKuroPreloadJSCallback;
 
 // Class JsEnv.DynamicDelegateProxy
 // 0x0078 (0x00A8 - 0x0030)
@@ -167,6 +167,72 @@ public:
 };
 DUMPER7_ASSERTS_UDynamicDelegateProxy;
 
+// Class JsEnv.JSWidgetGeneratedClass
+// 0x0020 (0x0398 - 0x0378)
+class UJSWidgetGeneratedClass final : public UWidgetBlueprintGeneratedClass
+{
+public:
+	uint8                                         Pad_378[0x20];                                     // 0x0378(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("JSWidgetGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSWidgetGeneratedClass")
+	}
+	static class UJSWidgetGeneratedClass* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UJSWidgetGeneratedClass>();
+	}
+};
+DUMPER7_ASSERTS_UJSWidgetGeneratedClass;
+
+// Class JsEnv.ExtensionMethods
+// 0x0000 (0x0030 - 0x0030)
+class UExtensionMethods final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ExtensionMethods")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ExtensionMethods")
+	}
+	static class UExtensionMethods* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UExtensionMethods>();
+	}
+};
+DUMPER7_ASSERTS_UExtensionMethods;
+
+// Class JsEnv.JSAnimGeneratedClass
+// 0x0020 (0x05F0 - 0x05D0)
+class UJSAnimGeneratedClass final : public UAnimBlueprintGeneratedClass
+{
+public:
+	uint8                                         Pad_5D0[0x20];                                     // 0x05D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("JSAnimGeneratedClass")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"JSAnimGeneratedClass")
+	}
+	static class UJSAnimGeneratedClass* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UJSAnimGeneratedClass>();
+	}
+};
+DUMPER7_ASSERTS_UJSAnimGeneratedClass;
+
 // Class JsEnv.JsEnvSetting
 // 0x00A8 (0x00D8 - 0x0030)
 class UJsEnvSetting final : public UObject
@@ -225,26 +291,6 @@ public:
 };
 DUMPER7_ASSERTS_UJsEnvSetting;
 
-// Class JsEnv.ExtensionMethods
-// 0x0000 (0x0030 - 0x0030)
-class UExtensionMethods final : public UBlueprintFunctionLibrary
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ExtensionMethods")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ExtensionMethods")
-	}
-	static class UExtensionMethods* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UExtensionMethods>();
-	}
-};
-DUMPER7_ASSERTS_UExtensionMethods;
-
 // Class JsEnv.JSGeneratedClass
 // 0x0020 (0x0358 - 0x0338)
 class UJSGeneratedClass final : public UBlueprintGeneratedClass
@@ -290,52 +336,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UJSGeneratedFunction;
-
-// Class JsEnv.JSWidgetGeneratedClass
-// 0x0020 (0x0398 - 0x0378)
-class UJSWidgetGeneratedClass final : public UWidgetBlueprintGeneratedClass
-{
-public:
-	uint8                                         Pad_378[0x20];                                     // 0x0378(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("JSWidgetGeneratedClass")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"JSWidgetGeneratedClass")
-	}
-	static class UJSWidgetGeneratedClass* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UJSWidgetGeneratedClass>();
-	}
-};
-DUMPER7_ASSERTS_UJSWidgetGeneratedClass;
-
-// Class JsEnv.KuroPreloadJSCallback
-// 0x0028 (0x0058 - 0x0030)
-class UKuroPreloadJSCallback final : public UObject
-{
-public:
-	TDelegate<void()>                             CompletedDelegate;                                 // 0x0030(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroPreloadJSCallback")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroPreloadJSCallback")
-	}
-	static class UKuroPreloadJSCallback* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroPreloadJSCallback>();
-	}
-};
-DUMPER7_ASSERTS_UKuroPreloadJSCallback;
 
 // Class JsEnv.TypeScriptBlueprint
 // 0x0000 (0x00A8 - 0x00A8)

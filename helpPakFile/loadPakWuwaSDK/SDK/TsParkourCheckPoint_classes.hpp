@@ -32,12 +32,12 @@ public:
 	class FString                                 CheckTag;                                          // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_TsParkourCheckPoint(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void SetDetectSphere(float inRadius1);
-	void GenerateFx(class UEffectModelBase* inModelBase1);
 	void GenerateFxByPath(const class FString& effectPath);
+	void GenerateFx(class UEffectModelBase* inModelBase1);
+	void SetDetectSphere(float inRadius1);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_TsParkourCheckPoint(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -28,13 +28,13 @@ public:
 	float                                         value;                                             // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetAirWall(float value_0);
-	void SetToxicFog(float Value);
-	void EnableVolume();
-	void DisableVolume();
-	void SetEffect(float Value);
-	void SetWall_Debug();
 	void SetToxicFog_Debug();
+	void SetWall_Debug();
+	void SetEffect(float Value);
+	void DisableVolume();
+	void EnableVolume();
+	void SetToxicFog(float Value);
+	void SetAirWall(float value_0);
 
 public:
 	static class UClass* StaticClass()

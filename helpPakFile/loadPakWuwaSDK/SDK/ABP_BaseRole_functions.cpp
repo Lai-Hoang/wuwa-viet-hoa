@@ -255,15 +255,15 @@ void UABP_BaseRole_C::InterfaceSimulateJump(float Speed)
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380
 // (BlueprintEvent)
 
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503()
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503");
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -353,15 +353,15 @@ void UABP_BaseRole_C::AnimNotify_开始登上()
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17
 // (BlueprintEvent)
 
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380()
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E0A69F7D489D13678C3D0092B6A2A380");
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -527,15 +527,15 @@ void UABP_BaseRole_C::BlueprintInitializeAnimation()
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0
 // (BlueprintEvent)
 
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17()
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E11C80A144C3D81C3C91679BF6DB9B17");
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -589,20 +589,6 @@ void UABP_BaseRole_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0
-// (BlueprintEvent)
-
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_769339DA4DA19221FB7F069AC58459B0");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_83C9AFCC4DBB4B2A160410AA9C50AD66
 // (BlueprintEvent)
 
@@ -631,20 +617,6 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94
-// (BlueprintEvent)
-
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_D305261A4AF95802EDBA24967DFC13A9
 // (BlueprintEvent)
 
@@ -654,6 +626,20 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_D305261A4AF95802EDBA24967DFC13A9");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3E085E4042962FC67A9EA89936D45B94");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -701,20 +687,6 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473
-// (BlueprintEvent)
-
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_1C1D4784404C7A054DCE70B3D005D71E
 // (BlueprintEvent)
 
@@ -724,6 +696,20 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_1C1D4784404C7A054DCE70B3D005D71E");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FC39E741453367FCD88A6BB834BDB473");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -771,20 +757,6 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8
-// (BlueprintEvent)
-
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E92C9C154183602E7D1028A30578DB13
 // (BlueprintEvent)
 
@@ -794,6 +766,20 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_E92C9C154183602E7D1028A30578DB13");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B443B6D4F05EFCFAFB6ABAA551B13F8");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -827,20 +813,6 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE
-// (BlueprintEvent)
-
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B8499D841B6121A5FE955B93DE12EB2
 // (BlueprintEvent)
 
@@ -850,6 +822,20 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_3B8499D841B6121A5FE955B93DE12EB2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_7F3A04B04BD03C9E3E4396A86F12D1BE");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -1359,15 +1345,15 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
-// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_89361E394E36938A2AF009A02B9E9A1D
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FD2E0E66497B44F7BE0D37A641030499
 // (BlueprintEvent)
 
-void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_89361E394E36938A2AF009A02B9E9A1D()
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FD2E0E66497B44F7BE0D37A641030499()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_89361E394E36938A2AF009A02B9E9A1D");
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_FD2E0E66497B44F7BE0D37A641030499");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -5573,6 +5559,34 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 }
 
 
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_SimpleDCC_118ECA644BDEFC7A62BF0C9D2BE3C855
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_SimpleDCC_118ECA644BDEFC7A62BF0C9D2BE3C855()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_SimpleDCC_118ECA644BDEFC7A62BF0C9D2BE3C855");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_CombineCurves_F0864A8E41AB03ECB57B8084ABC864CE
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_CombineCurves_F0864A8E41AB03ECB57B8084ABC864CE()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_CombineCurves_F0864A8E41AB03ECB57B8084ABC864CE");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_BlendListByBool_00A404344DA24364925BB5911B3A9132
 // (BlueprintEvent)
 
@@ -5582,6 +5596,20 @@ void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_A
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_BlendListByBool_00A404344DA24364925BB5911B3A9132");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_BaseRole.ABP_BaseRole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503
+// (BlueprintEvent)
+
+void UABP_BaseRole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_BaseRole_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BaseRole_AnimGraphNode_TransitionResult_20EB755F46F0BF64E4EE81AA6DC26503");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

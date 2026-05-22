@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "KuroBullet_structs.hpp"
 #include "SReBulletDataMain_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -434,6 +435,49 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BulletBlueprintFunctionLibrary_C_DestroyBullet;
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.GetCampRelationship
+// 0x0018 (0x0018 - 0x0000)
+struct BulletBlueprintFunctionLibrary_C_GetCampRelationship final
+{
+public:
+	int32                                         camp1;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         camp2;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BulletBlueprintFunctionLibrary_C_GetCampRelationship;
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.GetCamp
+// 0x0018 (0x0018 - 0x0000)
+struct BulletBlueprintFunctionLibrary_C_GetCamp final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BulletBlueprintFunctionLibrary_C_GetCamp;
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.NotifyProcessKuroBulletOperationList
+// 0x0008 (0x0008 - 0x0000)
+struct BulletBlueprintFunctionLibrary_C_NotifyProcessKuroBulletOperationList final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BulletBlueprintFunctionLibrary_C_NotifyProcessKuroBulletOperationList;
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.NotifyExistedImmediatelyOperation
+// 0x0060 (0x0060 - 0x0000)
+struct BulletBlueprintFunctionLibrary_C_NotifyExistedImmediatelyOperation final
+{
+public:
+	struct FBulletHitWorldEntityOperation         operation;                                         // 0x0000(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	class UObject*                                __WorldContext;                                    // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BulletBlueprintFunctionLibrary_C_NotifyExistedImmediatelyOperation;
 
 }
 

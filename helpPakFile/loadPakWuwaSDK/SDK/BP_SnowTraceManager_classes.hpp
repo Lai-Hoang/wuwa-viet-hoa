@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
 
@@ -92,8 +92,8 @@ public:
 	void ChangeSettings();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveActorEndOverlap(class AActor* OtherActor);
-	void ReceiveBeginPlay();
 	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void Initialize();
 	void CalculateLocation();

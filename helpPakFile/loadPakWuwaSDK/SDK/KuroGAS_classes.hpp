@@ -15,8 +15,8 @@
 #include "GameplayAbilities_classes.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTasks_classes.hpp"
-#include "KuroGAS_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "KuroGAS_structs.hpp"
 
 
 namespace SDK

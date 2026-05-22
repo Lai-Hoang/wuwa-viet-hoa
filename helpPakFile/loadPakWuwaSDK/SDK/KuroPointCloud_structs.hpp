@@ -17,13 +17,15 @@ namespace SDK
 {
 
 // Enum KuroPointCloud.EKPCWorldComponentDynamicPointMode
-// NumValues: 0x0004
+// NumValues: 0x0006
 enum class EKPCWorldComponentDynamicPointMode : uint8
 {
 	None                                     = 0,
 	SkeletalMeshSockets                      = 1,
-	Max                                      = 2,
-	EKPCWorldComponentDynamicPointMode_MAX   = 3,
+	CustomPoints                             = 2,
+	RingBufferPoints                         = 3,
+	Max                                      = 4,
+	EKPCWorldComponentDynamicPointMode_MAX   = 5,
 };
 
 // ScriptStruct KuroPointCloud.KuroPointCloudCacheCustomFloat
@@ -115,6 +117,39 @@ public:
 	TArray<struct FKuroPointCloudCollectionInstance> InstanceData;                                   // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroPointCloudStreamingCell;
+
+// ScriptStruct KuroPointCloud.KPCWRingBufferData
+// 0x0020 (0x0020 - 0x0000)
+struct FKPCWRingBufferData final
+{
+public:
+	TArray<struct FTransform>                     Transforms;                                        // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         WriteIndex;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReadIndex;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NextReadIndex;                                     // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKPCWRingBufferData;
+
+// ScriptStruct KuroPointCloud.KPCWDynamicCustomPointInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FKPCWDynamicCustomPointInfo final
+{
+public:
+	bool                                          bPointVisible;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             PointTransform;                                    // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKPCWDynamicCustomPointInfo;
+
+// ScriptStruct KuroPointCloud.KuroPointCloudDataSet
+// 0x0010 (0x0010 - 0x0000)
+struct FKuroPointCloudDataSet final
+{
+public:
+	TArray<struct FKPCWDynamicCustomPointInfo>    CustomPointInfos;                                  // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroPointCloudDataSet;
 
 // ScriptStruct KuroPointCloud.KPCWDynamicPointSocketInfo
 // 0x0040 (0x0040 - 0x0000)

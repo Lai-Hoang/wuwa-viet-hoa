@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroComputeShader_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroComputeShader_structs.hpp"
 #include "Engine_classes.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 
@@ -174,8 +174,8 @@ public:
 DUMPER7_ASSERTS_AKuroCS_liuShu;
 
 // Class KuroComputeShader.KuroCSBalloons
-// 0x0108 (0x04C0 - 0x03B8)
-class AKuroCSBalloons final : public AKuroBPActor
+// 0x0110 (0x04C8 - 0x03B8)
+class AKuroCSBalloons final : public AKuroPhysicActor
 {
 public:
 	class USceneComponent*                        Root;                                              // 0x03B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -216,7 +216,7 @@ public:
 	struct FVector                                BoxBoundMax;                                       // 0x0498(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKuroCSParticle_Balloons>       ParticlesArr;                                      // 0x04A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4B8[0x8];                                      // 0x04B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B8[0x10];                                     // 0x04B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitShaderManager();
@@ -507,6 +507,62 @@ public:
 };
 DUMPER7_ASSERTS_AKuroCSGenericCloth;
 
+// Class KuroComputeShader.KuroCSGenericCloth_33
+// 0x00C0 (0x0478 - 0x03B8)
+class AKuroCSGenericCloth_33 final : public AKuroBPActor
+{
+public:
+	class USceneComponent*                        Root;                                              // 0x03B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          useExternalRT;                                     // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 RenderTarget_N;                                    // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowParticleArraysInDetails;                      // 0x03D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroCSParticle_genericCloth_33> ParticlesArr;                                     // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FKuroCSParticle_genericCloth_33> DebugArr;                                         // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                playerPos;                                         // 0x0400(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         collisionR;                                        // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ParticleCount;                                     // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         substepCount;                                      // 0x0414(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                accel_ext;                                         // 0x0418(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                actorPos;                                          // 0x0424(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                actorRotator;                                      // 0x0430(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCPURead;                                    // 0x043C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_43D[0x3];                                      // 0x043D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         XCount;                                            // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisStiffness;                                      // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BendingStiffness;                                  // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         pushStrength;                                      // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         forcePlayerCol;                                    // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         deadNodeHold;                                      // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         deltaTime;                                         // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45C[0x4];                                      // 0x045C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroCSUnifiedCollider_genericCloth_33> Colliders;                                 // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_470[0x8];                                      // 0x0470(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitShaderManager();
+	void ReleaseShaderManager();
+	void StartSimulation();
+	void StopSimulation();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroCSGenericCloth_33")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCSGenericCloth_33")
+	}
+	static class AKuroCSGenericCloth_33* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroCSGenericCloth_33>();
+	}
+};
+DUMPER7_ASSERTS_AKuroCSGenericCloth_33;
+
 // Class KuroComputeShader.KuroCSPlantAnim
 // 0x00A8 (0x0358 - 0x02B0)
 class AKuroCSPlantAnim final : public AActor
@@ -554,7 +610,7 @@ public:
 DUMPER7_ASSERTS_AKuroCSPlantAnim;
 
 // Class KuroComputeShader.KuroCSReadback
-// 0x0028 (0x02D8 - 0x02B0)
+// 0x0030 (0x02E0 - 0x02B0)
 class AKuroCSReadback final : public AActor
 {
 public:
@@ -564,8 +620,9 @@ public:
 	int32                                         ReadbackY;                                         // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EReadbackChannel                              ReadbackChannel;                                   // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C9[0x3];                                      // 0x02C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReadbackValue;                                     // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D0[0x8];                                      // 0x02D0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ReadbackInterval;                                  // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReadbackValue;                                     // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D4[0xC];                                      // 0x02D4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitShaderManager();
@@ -591,7 +648,7 @@ DUMPER7_ASSERTS_AKuroCSReadback;
 
 // Class KuroComputeShader.KuroCSRpbd
 // 0x00B8 (0x0470 - 0x03B8)
-class AKuroCSRpbd final : public AKuroBPActor
+class AKuroCSRpbd final : public AKuroPhysicActor
 {
 public:
 	class USceneComponent*                        Root;                                              // 0x03B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

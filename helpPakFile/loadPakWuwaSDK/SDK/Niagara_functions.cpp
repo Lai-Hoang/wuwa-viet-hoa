@@ -487,8 +487,9 @@ void UNiagaraComponent::SetAllowScalability(bool bAllow)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class UNiagaraSystem*                   InAsset                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bResetExistingOverrideParameters                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
+void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters)
 {
 	static class UFunction* Func = nullptr;
 
@@ -498,6 +499,7 @@ void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset)
 	Params::NiagaraComponent_SetAsset Parms{};
 
 	Parms.InAsset = InAsset;
+	Parms.bResetExistingOverrideParameters = bResetExistingOverrideParameters;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -845,6 +847,31 @@ void UNiagaraComponent::SetKuroNiagaraEmitterVectorParam(const class FString& In
 	Parms.InEmitterName = std::move(InEmitterName);
 	Parms.InVariableName = std::move(InVariableName);
 	Parms.InVector = std::move(InVector);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bLock                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetLockDesiredAgeDeltaTimeToSeekDelta(bool bLock)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetLockDesiredAgeDeltaTimeToSeekDelta");
+
+	Params::NiagaraComponent_SetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
+
+	Parms.bLock = bLock;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1791,6 +1818,31 @@ bool UNiagaraComponent::GetForceSolo() const
 		Func = Class->GetFunction("NiagaraComponent", "GetForceSolo");
 
 	Params::NiagaraComponent_GetForceSolo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetLockDesiredAgeDeltaTimeToSeekDelta() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetLockDesiredAgeDeltaTimeToSeekDelta");
+
+	Params::NiagaraComponent_GetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3166,6 +3218,25 @@ int32 UNiagaraDataChannelWriter::Num() const
 }
 
 
+// Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
+// (Final, Native, Public)
+
+void UNiagaraScript::RaiseOnGPUCompilationComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraScript", "RaiseOnGPUCompilationComplete");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
@@ -4089,6 +4160,74 @@ void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(clas
 }
 
 
+// Function Niagara.NiagaraFunctionLibrary.SetNiagaraEmitterMaterial
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraSystem*                   System                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    EmitterName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInterface*               Material                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MaterialIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraFunctionLibrary::SetNiagaraEmitterMaterial(class UNiagaraSystem* System, const class FString& EmitterName, class UMaterialInterface* Material, int32 MaterialIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetNiagaraEmitterMaterial");
+
+	Params::NiagaraFunctionLibrary_SetNiagaraEmitterMaterial Parms{};
+
+	Parms.System = System;
+	Parms.EmitterName = std::move(EmitterName);
+	Parms.Material = Material;
+	Parms.MaterialIndex = MaterialIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetNiagaraEmitterMesh
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraSystem*                   System                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    EmitterName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMesh*                      NewMesh                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MeshIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraFunctionLibrary::SetNiagaraEmitterMesh(class UNiagaraSystem* System, const class FString& EmitterName, class UStaticMesh* NewMesh, int32 MeshIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetNiagaraEmitterMesh");
+
+	Params::NiagaraFunctionLibrary_SetNiagaraEmitterMesh Parms{};
+
+	Parms.System = System;
+	Parms.EmitterName = std::move(EmitterName);
+	Parms.NewMesh = NewMesh;
+	Parms.MeshIndex = MeshIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -4896,25 +5035,6 @@ void ANiagaraPreviewGrid::SetPaused(bool bPaused)
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-// (Final, Native, Public)
-
-void UNiagaraScript::RaiseOnGPUCompilationComplete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraScript", "RaiseOnGPUCompilationComplete");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

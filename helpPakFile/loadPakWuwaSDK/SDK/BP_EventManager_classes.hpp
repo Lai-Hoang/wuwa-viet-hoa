@@ -10,19 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "ECaughtResultType_structs.hpp"
-#include "ECharacterState_structs.hpp"
-#include "SHitInformation_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BP_ManagerBase_classes.hpp"
+#include "SHitInformation_structs.hpp"
+#include "ECaughtResultType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EPlotState_structs.hpp"
+#include "ECharacterState_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EventManager.BP_EventManager_C
-// 0x0220 (0x0268 - 0x0048)
+// 0x0230 (0x0278 - 0x0048)
 class UBP_EventManager_C final : public UBP_ManagerBase_C
 {
 public:
@@ -60,6 +61,7 @@ public:
 	TMulticastInlineDelegate<void(const class FString& MusicEventType)> 音乐节拍事件触发时;          // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void()>              当触发结算镜头时;                                  // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void()>              当触发相机注视时;                                  // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& PlotId, EPlotState State)> 演出状态改变时; // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()

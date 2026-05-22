@@ -14,17 +14,17 @@
 namespace SDK::Params
 {
 
-// Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.K2_NotifyBegin
+// Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.K2_NotifyTick
 // 0x0018 (0x0018 - 0x0000)
-struct TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyBegin final
+struct TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyTick final
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TotalDuration;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyBegin;
+DUMPER7_ASSERTS_TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyTick;
 
 // Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.K2_NotifyEnd
 // 0x0018 (0x0018 - 0x0000)
@@ -37,17 +37,17 @@ public:
 };
 DUMPER7_ASSERTS_TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyEnd;
 
-// Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.K2_NotifyTick
+// Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.K2_NotifyBegin
 // 0x0018 (0x0018 - 0x0000)
-struct TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyTick final
+struct TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyBegin final
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TotalDuration;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyTick;
+DUMPER7_ASSERTS_TsAnimNotifyStateShowUiCalabashEffect_C_K2_NotifyBegin;
 
 // Function TsAnimNotifyStateShowUiCalabashEffect.TsAnimNotifyStateShowUiCalabashEffect_C.GetNotifyName
 // 0x0010 (0x0010 - 0x0000)

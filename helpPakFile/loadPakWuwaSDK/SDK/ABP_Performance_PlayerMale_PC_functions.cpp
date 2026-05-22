@@ -17,23 +17,27 @@
 namespace SDK
 {
 
-// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.ExecuteUbergraph_ABP_Performance_PlayerMale_PC
-// (Final, UbergraphFunction)
+// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.PhyCloth
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       PhyCloth_0                                             (Parm, OutParm, NoDestructor)
 
-void UABP_Performance_PlayerMale_PC_C::ExecuteUbergraph_ABP_Performance_PlayerMale_PC(int32 EntryPoint)
+void UABP_Performance_PlayerMale_PC_C::PhyCloth(const struct FPoseLink& InPose, struct FPoseLink* PhyCloth_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Performance_PlayerMale_PC_C", "ExecuteUbergraph_ABP_Performance_PlayerMale_PC");
+		Func = Class->GetFunction("ABP_Performance_PlayerMale_PC_C", "PhyCloth");
 
-	Params::ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC Parms{};
+	Params::ABP_Performance_PlayerMale_PC_C_PhyCloth Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InPose = std::move(InPose);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (PhyCloth_0 != nullptr)
+		*PhyCloth_0 = std::move(Parms.PhyCloth_0);
 }
 
 
@@ -58,27 +62,23 @@ void UABP_Performance_PlayerMale_PC_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 }
 
 
-// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.PhyCloth
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ABP_Performance_PlayerMale_PC.ABP_Performance_PlayerMale_PC_C.ExecuteUbergraph_ABP_Performance_PlayerMale_PC
+// (Final, UbergraphFunction)
 // Parameters:
-// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FPoseLink*                       PhyCloth_0                                             (Parm, OutParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABP_Performance_PlayerMale_PC_C::PhyCloth(const struct FPoseLink& InPose, struct FPoseLink* PhyCloth_0)
+void UABP_Performance_PlayerMale_PC_C::ExecuteUbergraph_ABP_Performance_PlayerMale_PC(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Performance_PlayerMale_PC_C", "PhyCloth");
+		Func = Class->GetFunction("ABP_Performance_PlayerMale_PC_C", "ExecuteUbergraph_ABP_Performance_PlayerMale_PC");
 
-	Params::ABP_Performance_PlayerMale_PC_C_PhyCloth Parms{};
+	Params::ABP_Performance_PlayerMale_PC_C_ExecuteUbergraph_ABP_Performance_PlayerMale_PC Parms{};
 
-	Parms.InPose = std::move(InPose);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (PhyCloth_0 != nullptr)
-		*PhyCloth_0 = std::move(Parms.PhyCloth_0);
 }
 
 }

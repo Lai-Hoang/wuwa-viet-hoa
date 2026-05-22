@@ -955,5 +955,25 @@ void ATsAiController_C::AddLevelVarIntEventBinder(const struct FSAiLevelVar& lev
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function TsAiController.TsAiController_C.渲染状态改变时
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    wasRendered                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ATsAiController_C::渲染状态改变时(bool wasRendered)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsAiController_C", "渲染状态改变时");
+
+	Params::TsAiController_C_渲染状态改变时 Parms{};
+
+	Parms.wasRendered = wasRendered;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

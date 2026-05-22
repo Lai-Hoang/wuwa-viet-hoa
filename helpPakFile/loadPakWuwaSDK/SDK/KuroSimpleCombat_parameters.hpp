@@ -72,105 +72,6 @@ public:
 };
 DUMPER7_ASSERTS_KSC_AttrSet_RemoveAttrListen;
 
-// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownMax
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Skill_GetSkillCoolDownMax final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownMax;
-
-// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownRemain
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Skill_GetSkillCoolDownRemain final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownRemain;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_AddEntity
-// 0x0050 (0x0050 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_AddEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          InIsPreview;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_AddEntity;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_DelayRemoveEntity
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_DelayRemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DelayTime;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_DelayRemoveEntity;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_InitData
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_InitData final
-{
-public:
-	class UKSC_DA_EntityRender*                   DaEntityRender;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_InitData;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_RemoveEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_RemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_RemoveEntity;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_SetActorTransform_AnyThread
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread;
-
-// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_UpdateEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityInterface_KSC_UpdateEntity final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_UpdateEntity;
-
-// Function KuroSimpleCombat.KSC_DamageId.AddDamageData
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_DamageId_AddDamageData final
-{
-public:
-	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKSCDamage                             Data;                                              // 0x0004(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_DamageId_AddDamageData;
-
-// Function KuroSimpleCombat.KSC_DamageId.UpdateDamageAmplify
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_DamageId_UpdateDamageAmplify final
-{
-public:
-	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Amplify;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_DamageId_UpdateDamageAmplify;
-
 // Function KuroSimpleCombat.KSC_Buff_DiffTransferAddAttr.OnAttrChange
 // 0x0008 (0x0008 - 0x0000)
 struct KSC_Buff_DiffTransferAddAttr_OnAttrChange final
@@ -181,6 +82,28 @@ public:
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KSC_Buff_DiffTransferAddAttr_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_Buff_ListenEvent.OnAttrChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Buff_ListenEvent_OnAttrChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Buff_ListenEvent_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_Entity.ApplyBuffByOther
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Entity_ApplyBuffByOther final
+{
+public:
+	class UKSC_DA_Buff*                           DaBuff;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EntityId;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_ApplyBuffByOther;
 
 // Function KuroSimpleCombat.KSC_Entity.ApplyBuffSelf
 // 0x0008 (0x0008 - 0x0000)
@@ -199,6 +122,15 @@ public:
 	int32                                         KillBy;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KSC_Entity_Dead;
+
+// Function KuroSimpleCombat.KSC_Entity.GetAnimComponent
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_GetAnimComponent final
+{
+public:
+	class UKSC_Anim*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_GetAnimComponent;
 
 // Function KuroSimpleCombat.KSC_Entity.GetMoveComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -246,6 +178,16 @@ public:
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KSC_Entity_SetAttr;
+
+// Function KuroSimpleCombat.KSC_Entity.SetEntityActive
+// 0x0002 (0x0002 - 0x0000)
+struct KSC_Entity_SetEntityActive final
+{
+public:
+	bool                                          InActive;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Entity_SetEntityActive;
 
 // Function KuroSimpleCombat.KSC_Entity.SetFaction
 // 0x0001 (0x0001 - 0x0000)
@@ -330,100 +272,14 @@ public:
 };
 DUMPER7_ASSERTS_KSC_Entity_GetSkillComp;
 
-// Function KuroSimpleCombat.KSC_Entity_AssistMachine.D_Fire
-// 0x0050 (0x0050 - 0x0000)
-struct KSC_Entity_AssistMachine_D_Fire final
+// Function KuroSimpleCombat.KSC_Shape2D_Entity.AssignSkillStateChange
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_Shape2D_Entity_AssignSkillStateChange final
 {
 public:
-	struct FTransformDouble                       D_FireTrans;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         SkillIndex;                                        // 0x0040(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 SkillIndex, EKSC_Skill_State State)> InDelegate;                            // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_KSC_Entity_AssistMachine_D_Fire;
-
-// Function KuroSimpleCombat.KSC_Entity_AssistMachine.SetSkillAutoCast
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Entity_AssistMachine_SetSkillAutoCast final
-{
-public:
-	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_SkillAutoCast                            AutoCast;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KSC_Entity_AssistMachine_SetSkillAutoCast;
-
-// Function KuroSimpleCombat.KSC_Buff_ListenEvent.OnAttrChange
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Buff_ListenEvent_OnAttrChange final
-{
-public:
-	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Buff_ListenEvent_OnAttrChange;
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_AddMaterial
-// 0x0018 (0x0018 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_AddMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLoop;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_AddMaterial;
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_ApplyBeHitMaterial
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial;
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_DelayAddMaterial
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Delay;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial;
-
-// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_RemoveMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HandleId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial;
-
-// Function KuroSimpleCombat.KSC_Move_MultiStage.SetSpline
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_MultiStage_SetSpline final
-{
-public:
-	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_MultiStage_SetSpline;
-
-// Function KuroSimpleCombat.KSC_Move_MultiStage.SetTargetEntity
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_MultiStage_SetTargetEntity final
-{
-public:
-	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_MultiStage_SetTargetEntity;
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_AssignSkillStateChange;
 
 // Function KuroSimpleCombat.KSC_Buff_Period.OnAttackSpeedChange
 // 0x0008 (0x0008 - 0x0000)
@@ -435,237 +291,6 @@ public:
 	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KSC_Buff_Period_OnAttackSpeedChange;
-
-// Function KuroSimpleCombat.KSC_Buff_TransferAddAttr.OnAttrChange
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Buff_TransferAddAttr_OnAttrChange final
-{
-public:
-	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Buff_TransferAddAttr_OnAttrChange;
-
-// Function KuroSimpleCombat.KSC_BuffId.AddBuffDA
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_BuffId_AddBuffDA final
-{
-public:
-	int64                                         BuffId;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_Buff*                           Data;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_BuffId_AddBuffDA;
-
-// Function KuroSimpleCombat.KSC_SceneMovement.D_SetMovementTarget
-// 0x0018 (0x0018 - 0x0000)
-struct KSC_SceneMovement_D_SetMovementTarget final
-{
-public:
-	struct FVectorDouble                          NewMovementTarget;                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_SceneMovement_D_SetMovementTarget;
-
-// Function KuroSimpleCombat.KSC_SceneMovement.SetMovementDirection
-// 0x000C (0x000C - 0x0000)
-struct KSC_SceneMovement_SetMovementDirection final
-{
-public:
-	struct FVector                                NewMovementDirection;                              // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_SceneMovement_SetMovementDirection;
-
-// Function KuroSimpleCombat.KSC_SceneMovement.SetSceneSegment
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_SceneMovement_SetSceneSegment final
-{
-public:
-	class UKSC_DA_SceneSegmentContainer*          NewSceneSegment;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GenerateCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KSC_SceneMovement_SetSceneSegment;
-
-// Function KuroSimpleCombat.KSC_SceneMovement.SetSegmentRotation
-// 0x000C (0x000C - 0x0000)
-struct KSC_SceneMovement_SetSegmentRotation final
-{
-public:
-	struct FRotator                               NewSegmentRotation;                                // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_SceneMovement_SetSegmentRotation;
-
-// Function KuroSimpleCombat.KSC_Skill_BulletPierceAttack.OnBulletHits
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_Skill_BulletPierceAttack_OnBulletHits final
-{
-public:
-	TArray<class UKSC_SkillComp*>                 Hits;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Skill_BulletPierceAttack_OnBulletHits;
-
-// Function KuroSimpleCombat.KSC_Move_Approach.SetTargetEntity
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_Approach_SetTargetEntity final
-{
-public:
-	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_Approach_SetTargetEntity;
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSpline
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_Move_Spline_SetSpline final
-{
-public:
-	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_Spline_SetSpline;
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineHeight
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Move_Spline_SetSplineHeight final
-{
-public:
-	float                                         Height;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineHeight;
-
-// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineWide
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_Move_Spline_SetSplineWide final
-{
-public:
-	float                                         Width;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineWide;
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_AddEntity
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_AddEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_AddEntity;
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_RemoveEntity
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity;
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetActorLocation
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation;
-
-// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetHP
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityHeadUIInterface_KSC_SetHP final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Percent;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetHP;
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_PauseAnim
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_PauseAnim final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_PauseAnim;
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_ResumeAnim
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_ResumeAnim final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_ResumeAnim;
-
-// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_UpdateAnimState
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_RenderEntityAnimInterface_KSC_UpdateAnimState final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_GPUNPCAnimState                          EnemyState;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_UpdateAnimState;
-
-// Function KuroSimpleCombat.KSC_GPUHeadUI.InitHeadUIInternal
-// 0x0010 (0x0010 - 0x0000)
-struct KSC_GPUHeadUI_InitHeadUIInternal final
-{
-public:
-	class UInstancedStaticMeshComponent*          InComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               InMI;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_GPUHeadUI_InitHeadUIInternal;
-
-// Function KuroSimpleCombat.KSC_PlayerHeadUiHandle.OnAttrChange
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_PlayerHeadUiHandle_OnAttrChange final
-{
-public:
-	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_PlayerHeadUiHandle_OnAttrChange;
-
-// Function KuroSimpleCombat.KSC_Skill_BulletAttack.OnBulletHit
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_Skill_BulletAttack_OnBulletHit final
-{
-public:
-	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Skill_BulletAttack_OnBulletHit;
-
-// Function KuroSimpleCombat.KSC_Skill_ManualBulletAttack.OnBulletHit
-// 0x0040 (0x0040 - 0x0000)
-struct KSC_Skill_ManualBulletAttack_OnBulletHit final
-{
-public:
-	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_Skill_ManualBulletAttack_OnBulletHit;
-
-// Function KuroSimpleCombat.KSC_SkillComp.GetSkillCollDown
-// 0x0004 (0x0004 - 0x0000)
-struct KSC_SkillComp_GetSkillCollDown final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_SkillComp_GetSkillCollDown;
-
-// Function KuroSimpleCombat.KSC_TopBossHeadUiHandle.OnAttrChange
-// 0x0008 (0x0008 - 0x0000)
-struct KSC_TopBossHeadUiHandle_OnAttrChange final
-{
-public:
-	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_KSC_TopBossHeadUiHandle_OnAttrChange;
 
 // Function KuroSimpleCombat.KSC_World.AddDaEntity
 // 0x0050 (0x0050 - 0x0000)
@@ -721,6 +346,15 @@ public:
 	TDelegate<void(const struct FTransformDouble& OwnerTransform, const TArray<struct FKSC_SpawnEntity>& SpawnEntities)> InDelegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KSC_World_AssignKSCEntitySpawn;
+
+// Function KuroSimpleCombat.KSC_World.AssignKSCEntitySummon
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_World_AssignKSCEntitySummon final
+{
+public:
+	TDelegate<void(const struct FTransformDouble& OwnerTransform, const TArray<struct FKSC_SpawnEntity>& SummonEntities, int32 SummonerID)> InDelegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_AssignKSCEntitySummon;
 
 // Function KuroSimpleCombat.KSC_World.AssignLandFireSpawnDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -958,6 +592,33 @@ public:
 };
 DUMPER7_ASSERTS_KSC_World_RemoveWorldAttrListen;
 
+// Function KuroSimpleCombat.KSC_World.SetBroadcastBuffIdList
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_World_SetBroadcastBuffIdList final
+{
+public:
+	TArray<int32>                                 InBuffIdList;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_SetBroadcastBuffIdList;
+
+// Function KuroSimpleCombat.KSC_World.SetDamageHandler
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_World_SetDamageHandler final
+{
+public:
+	TSubclassOf<class UKSC_DamageHandler>         HandlerClass;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_SetDamageHandler;
+
+// Function KuroSimpleCombat.KSC_World.SetKFCAlgorithm
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_World_SetKFCAlgorithm final
+{
+public:
+	class UKuroFastCollisionAlgorithm*            Algorithm;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_World_SetKFCAlgorithm;
+
 // Function KuroSimpleCombat.KSC_World.SetObstacleSegments
 // 0x0010 (0x0010 - 0x0000)
 struct KSC_World_SetObstacleSegments final
@@ -1005,12 +666,634 @@ public:
 };
 DUMPER7_ASSERTS_KSC_World_GetBuffData;
 
-// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.CreateWorld
+// Function KuroSimpleCombat.KSC_Shape2D_World.AddDamageEffectData
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_Shape2D_World_AddDamageEffectData final
+{
+public:
+	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSC_Shape2D_DamageEffect              Data;                                              // 0x0004(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_AddDamageEffectData;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.AssignRelaunchPlayer
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_Shape2D_World_AssignRelaunchPlayer final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_AssignRelaunchPlayer;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.AssignTeamAllDead
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_Shape2D_World_AssignTeamAllDead final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_AssignTeamAllDead;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.AssignWorldUpdateOnce
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_Shape2D_World_AssignWorldUpdateOnce final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_AssignWorldUpdateOnce;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.GetDamageInfo
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_Shape2D_World_GetDamageInfo final
+{
+public:
+	TMap<int32, int32>                            OutInfos;                                          // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_GetDamageInfo;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.GetDamageTotalInfo
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Shape2D_World_GetDamageTotalInfo final
+{
+public:
+	TArray<struct FKSC_Shape2D_DamageTotalInfo>   OutInfos;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_GetDamageTotalInfo;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.InitTeamPlayerEntityIds
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Shape2D_World_InitTeamPlayerEntityIds final
+{
+public:
+	TArray<int32>                                 PlayerEntityIds;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_InitTeamPlayerEntityIds;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.RebuildWorldBounds
 // 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2D_World_RebuildWorldBounds final
+{
+public:
+	class UKSC_DA_WorldBounds*                    DA_WorldBounds;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_RebuildWorldBounds;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.SetShape2DWorldDA
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2D_World_SetShape2DWorldDA final
+{
+public:
+	class UKSC_DA_Shape2D_World*                  DA_ShapeWorld;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_SetShape2DWorldDA;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.SetShapeMaterialDT
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2D_World_SetShapeMaterialDT final
+{
+public:
+	class UDataTable*                             DataTable;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_SetShapeMaterialDT;
+
+// Function KuroSimpleCombat.KSC_Shape2D_World.SetWorldOrigin
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_Shape2D_World_SetWorldOrigin final
+{
+public:
+	struct FVectorDouble                          NewOrigin;                                         // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_World_SetWorldOrigin;
+
+// Function KuroSimpleCombat.KSC_Buff_TransferAddAttr.OnAttrChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Buff_TransferAddAttr_OnAttrChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Buff_TransferAddAttr_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_AddEntity
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_AddEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          InIsPreview;                                       // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_AddEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_DelayRemoveEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_DelayRemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DelayTime;                                         // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_DelayRemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_InitData
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_InitData final
+{
+public:
+	class UKSC_DA_EntityRender*                   DaEntityRender;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_InitData;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_RemoveEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_RemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_RemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_SetActorTransform_AnyThread
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_SetActorTransform_AnyThread;
+
+// Function KuroSimpleCombat.KSC_RenderEntityInterface.KSC_UpdateEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityInterface_KSC_UpdateEntity final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityInterface_KSC_UpdateEntity;
+
+// Function KuroSimpleCombat.KSC_DamageId.AddDamageData
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_DamageId_AddDamageData final
+{
+public:
+	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             Data;                                              // 0x0004(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_DamageId_AddDamageData;
+
+// Function KuroSimpleCombat.KSC_DamageId.UpdateDamageAmplify
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_DamageId_UpdateDamageAmplify final
+{
+public:
+	int32                                         DamageId;                                          // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Amplify;                                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_DamageId_UpdateDamageAmplify;
+
+// Function KuroSimpleCombat.KSC_BuffId.AddBuffDA
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_BuffId_AddBuffDA final
+{
+public:
+	int64                                         BuffId;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Buff*                           Data;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_BuffId_AddBuffDA;
+
+// Function KuroSimpleCombat.KSC_Entity_AssistMachine.D_Fire
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_Entity_AssistMachine_D_Fire final
+{
+public:
+	struct FTransformDouble                       D_FireTrans;                                       // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         SkillIndex;                                        // 0x0040(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_AssistMachine_D_Fire;
+
+// Function KuroSimpleCombat.KSC_Entity_AssistMachine.SetSkillAutoCast
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Entity_AssistMachine_SetSkillAutoCast final
+{
+public:
+	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_SkillAutoCast                            AutoCast;                                          // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Entity_AssistMachine_SetSkillAutoCast;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_TeamPlayer.UseSkill
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2D_Entity_TeamPlayer_UseSkill final
+{
+public:
+	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseMainPlayerSkill;                              // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_TeamPlayer_UseSkill;
+
+// Function KuroSimpleCombat.KSC_PlayerHeadUiHandle.OnAttrChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_PlayerHeadUiHandle_OnAttrChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_PlayerHeadUiHandle_OnAttrChange;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_AddEntity
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_AddEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_AddEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_RemoveEntity
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_RemoveEntity;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetActorLocation
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InLocation;                                        // 0x0004(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetActorLocation;
+
+// Function KuroSimpleCombat.KSC_RenderEntityHeadUIInterface.KSC_SetHP
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityHeadUIInterface_KSC_SetHP final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Percent;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityHeadUIInterface_KSC_SetHP;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_PauseAnim
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_PauseAnim final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_PauseAnim;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_ResumeAnim
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_ResumeAnim final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_ResumeAnim;
+
+// Function KuroSimpleCombat.KSC_RenderEntityAnimInterface.KSC_UpdateAnimState
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityAnimInterface_KSC_UpdateAnimState final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_GPUNPCAnimState                          EnemyState;                                        // 0x0004(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_RenderEntityAnimInterface_KSC_UpdateAnimState;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_AddMaterial
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_AddMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLoop;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_AddMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_ApplyBeHitMaterial
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_ApplyBeHitMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_DelayAddMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Delay;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKuroMaterialControllerDataAsset*       DataAsset;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_DelayAddMaterial;
+
+// Function KuroSimpleCombat.KSC_RenderEntityMaterialInterface.KSC_RemoveMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HandleId;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_RenderEntityMaterialInterface_KSC_RemoveMaterial;
+
+// Function KuroSimpleCombat.KSC_GPUHeadUI.InitHeadUIInternal
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_GPUHeadUI_InitHeadUIInternal final
+{
+public:
+	class UInstancedStaticMeshComponent*          InComp;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               InMI;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_GPUHeadUI_InitHeadUIInternal;
+
+// Function KuroSimpleCombat.KSC_Move_Approach.SetTargetEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_Approach_SetTargetEntity final
+{
+public:
+	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Approach_SetTargetEntity;
+
+// Function KuroSimpleCombat.KSC_Move_MultiStage.SetSpline
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_MultiStage_SetSpline final
+{
+public:
+	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_MultiStage_SetSpline;
+
+// Function KuroSimpleCombat.KSC_Move_MultiStage.SetTargetEntity
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_MultiStage_SetTargetEntity final
+{
+public:
+	class AKSC_Entity*                            Entity;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_MultiStage_SetTargetEntity;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSpline
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Move_Spline_SetSpline final
+{
+public:
+	class USplineComponent*                       SplineComp;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSpline;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineHeight
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Move_Spline_SetSplineHeight final
+{
+public:
+	float                                         Height;                                            // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineHeight;
+
+// Function KuroSimpleCombat.KSC_Move_Spline.SetSplineWide
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Move_Spline_SetSplineWide final
+{
+public:
+	float                                         Width;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Move_Spline_SetSplineWide;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.D_SetMovementTarget
+// 0x0018 (0x0018 - 0x0000)
+struct KSC_SceneMovement_D_SetMovementTarget final
+{
+public:
+	struct FVectorDouble                          NewMovementTarget;                                 // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_D_SetMovementTarget;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetMovementDirection
+// 0x000C (0x000C - 0x0000)
+struct KSC_SceneMovement_SetMovementDirection final
+{
+public:
+	struct FVector                                NewMovementDirection;                              // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetMovementDirection;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetSceneSegment
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_SceneMovement_SetSceneSegment final
+{
+public:
+	class UKSC_DA_SceneSegmentContainer*          NewSceneSegment;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GenerateCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetSceneSegment;
+
+// Function KuroSimpleCombat.KSC_SceneMovement.SetSegmentRotation
+// 0x000C (0x000C - 0x0000)
+struct KSC_SceneMovement_SetSegmentRotation final
+{
+public:
+	struct FRotator                               NewSegmentRotation;                                // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SceneMovement_SetSegmentRotation;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.AssignPlayerStateChange
+// 0x0028 (0x0028 - 0x0000)
+struct KSC_Shape2D_Entity_Player_AssignPlayerStateChange final
+{
+public:
+	TDelegate<void(bool IsAlive)>                 InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_AssignPlayerStateChange;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.OnLifeChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2D_Entity_Player_OnLifeChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_OnLifeChange;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.SetEntityTransformDebug
+// 0x0030 (0x0030 - 0x0000)
+struct KSC_Shape2D_Entity_Player_SetEntityTransformDebug final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_SetEntityTransformDebug;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.SetIsEnable
+// 0x0001 (0x0001 - 0x0000)
+struct KSC_Shape2D_Entity_Player_SetIsEnable final
+{
+public:
+	bool                                          InIsEnable;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_SetIsEnable;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.UseSkill
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Shape2D_Entity_Player_UseSkill final
+{
+public:
+	int32                                         SkillIndex;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_UseSkill;
+
+// Function KuroSimpleCombat.KSC_Shape2D_Entity_Player.GetIsEnable
+// 0x0001 (0x0001 - 0x0000)
+struct KSC_Shape2D_Entity_Player_GetIsEnable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2D_Entity_Player_GetIsEnable;
+
+// Function KuroSimpleCombat.KSC_Shape2DAnim.OnSpineAnimComplete
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_Shape2DAnim_OnSpineAnimComplete final
+{
+public:
+	class UTrackEntry*                            entry;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2DAnim_OnSpineAnimComplete;
+
+// Function KuroSimpleCombat.KSC_Shape2DAnim.SetBaseStateAndClearOverrideStates
+// 0x0001 (0x0001 - 0x0000)
+struct KSC_Shape2DAnim_SetBaseStateAndClearOverrideStates final
+{
+public:
+	EKSC_Shape2D_BaseAnimState                    InBaseState;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Shape2DAnim_SetBaseStateAndClearOverrideStates;
+
+// Function KuroSimpleCombat.KSC_Shape2DMove.Launch
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Shape2DMove_Launch final
+{
+public:
+	float                                         LaunchSpeed;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              Direction;                                         // 0x0004(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ResetFilter;                                       // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PlayEffect;                                        // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KSC_Shape2DMove_Launch;
+
+// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownMax
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Skill_GetSkillCoolDownMax final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownMax;
+
+// Function KuroSimpleCombat.KSC_Skill.GetSkillCoolDownRemain
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_Skill_GetSkillCoolDownRemain final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_GetSkillCoolDownRemain;
+
+// Function KuroSimpleCombat.KSC_Skill_BulletAttack.OnBulletHit
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_Skill_BulletAttack_OnBulletHit final
+{
+public:
+	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_BulletAttack_OnBulletHit;
+
+// Function KuroSimpleCombat.KSC_Skill_BulletPierceAttack.OnBulletHits
+// 0x0010 (0x0010 - 0x0000)
+struct KSC_Skill_BulletPierceAttack_OnBulletHits final
+{
+public:
+	TArray<class UKSC_SkillComp*>                 Hits;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_BulletPierceAttack_OnBulletHits;
+
+// Function KuroSimpleCombat.KSC_Skill_ManualBulletAttack.OnBulletHit
+// 0x0040 (0x0040 - 0x0000)
+struct KSC_Skill_ManualBulletAttack_OnBulletHit final
+{
+public:
+	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_Skill_ManualBulletAttack_OnBulletHit;
+
+// Function KuroSimpleCombat.KSC_SkillComp.GetAllBuffs
+// 0x0050 (0x0050 - 0x0000)
+struct KSC_SkillComp_GetAllBuffs final
+{
+public:
+	TMap<class UKSC_DA_Buff*, int32>              OutBuffs;                                          // 0x0000(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SkillComp_GetAllBuffs;
+
+// Function KuroSimpleCombat.KSC_SkillComp.GetSkillCollDown
+// 0x0004 (0x0004 - 0x0000)
+struct KSC_SkillComp_GetSkillCollDown final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_SkillComp_GetSkillCollDown;
+
+// Function KuroSimpleCombat.KSC_TopBossHeadUiHandle.OnAttrChange
+// 0x0008 (0x0008 - 0x0000)
+struct KSC_TopBossHeadUiHandle_OnAttrChange final
+{
+public:
+	EKSC_AttrType                                 AttrType;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KSC_TopBossHeadUiHandle_OnAttrChange;
+
+// Function KuroSimpleCombat.KuroSimpleCombatSubsystem.CreateWorld
+// 0x0010 (0x0010 - 0x0000)
 struct KuroSimpleCombatSubsystem_CreateWorld final
 {
 public:
-	class UKSC_World*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UKSC_World>                 WorldClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_World*                             ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroSimpleCombatSubsystem_CreateWorld;
 

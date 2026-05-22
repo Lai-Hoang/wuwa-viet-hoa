@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EAttributeOperation_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "EAttributeTarget_structs.hpp"
-#include "EAttributeOperation_structs.hpp"
 
 
 namespace SDK

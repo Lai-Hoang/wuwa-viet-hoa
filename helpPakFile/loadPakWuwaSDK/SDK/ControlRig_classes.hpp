@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "ControlRig_structs.hpp"
+#include "LevelSequence_classes.hpp"
+#include "PropertyPath_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "PropertyPath_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "LevelSequence_classes.hpp"
 #include "AnimGraphRuntime_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "MovieScene_structs.hpp"
@@ -100,7 +100,7 @@ public:
 DUMPER7_ASSERTS_UAdditiveControlRig;
 
 // Class ControlRig.ControlRigAnimInstance
-// 0x0000 (0x0730 - 0x0730)
+// 0x0000 (0x07D0 - 0x07D0)
 class UControlRigAnimInstance final : public UAnimInstance
 {
 public:
@@ -343,11 +343,11 @@ public:
 DUMPER7_ASSERTS_UControlRigGizmoLibrary;
 
 // Class ControlRig.ControlRigLayerInstance
-// 0x0010 (0x0740 - 0x0730)
+// 0x0010 (0x07E0 - 0x07D0)
 class UControlRigLayerInstance final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_730[0x10];                                     // 0x0730(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D0[0x10];                                     // 0x07D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -469,7 +469,7 @@ public:
 DUMPER7_ASSERTS_UControlRigSequence;
 
 // Class ControlRig.ControlRigSequencerAnimInstance
-// 0x0000 (0x0740 - 0x0740)
+// 0x0000 (0x07E0 - 0x07E0)
 class UControlRigSequencerAnimInstance final : public UAnimSequencerInstance
 {
 public:

@@ -13,12 +13,12 @@
 #include "AkAudio_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "WwiseResourceLoader_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "SlateCore_structs.hpp"
+#include "WwiseResourceLoader_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -201,37 +201,6 @@ public:
 };
 DUMPER7_ASSERTS_AAkAcousticPortal;
 
-// Class AkAudio.AkWwiseTree
-// 0x0040 (0x01B0 - 0x0170)
-class UAkWwiseTree final : public UWidget
-{
-public:
-	TMulticastInlineDelegate<void(const struct FGuid& ItemSelectedID)> OnSelectionChanged;           // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const struct FGuid& ItemDraggedID, const class FString& ItemDraggedName)> OnItemDragged; // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190[0x20];                                     // 0x0190(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetSearchText(const class FString& newText);
-
-	class FString GetSearchText() const;
-	struct FAkWwiseObjectDetails GetSelectedItem() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AkWwiseTree")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AkWwiseTree")
-	}
-	static class UAkWwiseTree* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkWwiseTree>();
-	}
-};
-DUMPER7_ASSERTS_UAkWwiseTree;
-
 // Class AkAudio.AkAcousticTexture
 // 0x0010 (0x0068 - 0x0058)
 class UAkAcousticTexture final : public UAkAudioType
@@ -361,26 +330,6 @@ public:
 };
 DUMPER7_ASSERTS_UAkPlatformInfo;
 
-// Class AkAudio.AkXboxSeriesXPlatformInfo
-// 0x0000 (0x0078 - 0x0078)
-class UAkXboxSeriesXPlatformInfo final : public UAkPlatformInfo
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("AkXboxSeriesXPlatformInfo")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"AkXboxSeriesXPlatformInfo")
-	}
-	static class UAkXboxSeriesXPlatformInfo* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkXboxSeriesXPlatformInfo>();
-	}
-};
-DUMPER7_ASSERTS_UAkXboxSeriesXPlatformInfo;
-
 // Class AkAudio.AkAndroidPlatformInfo
 // 0x0000 (0x0078 - 0x0078)
 class UAkAndroidPlatformInfo final : public UAkPlatformInfo
@@ -465,33 +414,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAkAudioEvent;
-
-// Class AkAudio.MovieSceneAkAudioRTPCSection
-// 0x0168 (0x0260 - 0x00F8)
-class UMovieSceneAkAudioRTPCSection final : public UMovieSceneSection
-{
-public:
-	class UAkRtpc*                                RTPC;                                              // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 Name_0;                                            // 0x0100(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRichCurve                             FloatCurve;                                        // 0x0110(0x0080)(Protected, NativeAccessSpecifierProtected)
-	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;               // 0x0190(0x0030)(Protected, NativeAccessSpecifierProtected)
-	struct FMovieSceneFloatChannel                RTPCChannel;                                       // 0x01C0(0x00A0)(Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneAkAudioRTPCSection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneAkAudioRTPCSection")
-	}
-	static class UMovieSceneAkAudioRTPCSection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneAkAudioRTPCSection>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneAkAudioRTPCSection;
 
 // Class AkAudio.AkGameObject
 // 0x0020 (0x0240 - 0x0220)
@@ -2412,6 +2334,37 @@ public:
 };
 DUMPER7_ASSERTS_UAkWinAnvilPlatformInfo;
 
+// Class AkAudio.AkWwiseTree
+// 0x0040 (0x01B0 - 0x0170)
+class UAkWwiseTree final : public UWidget
+{
+public:
+	TMulticastInlineDelegate<void(const struct FGuid& ItemSelectedID)> OnSelectionChanged;           // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FGuid& ItemDraggedID, const class FString& ItemDraggedName)> OnItemDragged; // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_190[0x20];                                     // 0x0190(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSearchText(const class FString& newText);
+
+	class FString GetSearchText() const;
+	struct FAkWwiseObjectDetails GetSelectedItem() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkWwiseTree")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkWwiseTree")
+	}
+	static class UAkWwiseTree* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkWwiseTree>();
+	}
+};
+DUMPER7_ASSERTS_UAkWwiseTree;
+
 // Class AkAudio.AkWwiseTreeSelector
 // 0x0060 (0x01D0 - 0x0170)
 class UAkWwiseTreeSelector final : public UWidget
@@ -2487,6 +2440,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UAkMPXInitializationSettings;
+
+// Class AkAudio.AkXboxSeriesXPlatformInfo
+// 0x0000 (0x0078 - 0x0078)
+class UAkXboxSeriesXPlatformInfo final : public UAkPlatformInfo
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("AkXboxSeriesXPlatformInfo")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"AkXboxSeriesXPlatformInfo")
+	}
+	static class UAkXboxSeriesXPlatformInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkXboxSeriesXPlatformInfo>();
+	}
+};
+DUMPER7_ASSERTS_UAkXboxSeriesXPlatformInfo;
 
 // Class AkAudio.MovieSceneAkAudioEventSection
 // 0x0090 (0x0188 - 0x00F8)
@@ -2571,6 +2544,33 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneAkAudioEventTrack;
+
+// Class AkAudio.MovieSceneAkAudioRTPCSection
+// 0x0168 (0x0260 - 0x00F8)
+class UMovieSceneAkAudioRTPCSection final : public UMovieSceneSection
+{
+public:
+	class UAkRtpc*                                RTPC;                                              // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 Name_0;                                            // 0x0100(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRichCurve                             FloatCurve;                                        // 0x0110(0x0080)(Protected, NativeAccessSpecifierProtected)
+	struct FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;               // 0x0190(0x0030)(Protected, NativeAccessSpecifierProtected)
+	struct FMovieSceneFloatChannel                RTPCChannel;                                       // 0x01C0(0x00A0)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneAkAudioRTPCSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneAkAudioRTPCSection")
+	}
+	static class UMovieSceneAkAudioRTPCSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneAkAudioRTPCSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneAkAudioRTPCSection;
 
 // Class AkAudio.MovieSceneAkAudioRTPCTrack
 // 0x0008 (0x00B8 - 0x00B0)

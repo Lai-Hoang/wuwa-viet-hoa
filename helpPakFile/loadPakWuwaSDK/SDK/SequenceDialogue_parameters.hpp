@@ -18,8 +18,17 @@
 namespace SDK::Params
 {
 
+// Function SequenceDialogue.MovieSceneDialogueSection.GetEmotionNames
+// 0x0010 (0x0010 - 0x0000)
+struct MovieSceneDialogueSection_GetEmotionNames final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_MovieSceneDialogueSection_GetEmotionNames;
+
 // Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogue
-// 0x0038 (0x0038 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct MovieSceneDialogueSubsystem_ShowDialogue final
 {
 public:
@@ -32,7 +41,8 @@ public:
 	ELanguageAudio                                LanguageType;                                      // 0x002C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AutoPlayDelay;                                     // 0x0030(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 UnisonIdList;                                      // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MovieSceneDialogueSubsystem_ShowDialogue;
 

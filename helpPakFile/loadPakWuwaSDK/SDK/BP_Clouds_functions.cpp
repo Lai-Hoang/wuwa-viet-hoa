@@ -72,8 +72,9 @@ void ABP_Clouds_C::LoadAndSwitch(TSoftObjectPtr<class UObject> Asset, float Chan
 // bool                                    bOverrideCloudRotation                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   CloudSpeed                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   CloudOffset                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ControlSeqCloud                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_Clouds_C::Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsInEditor, bool bOverrideCloudRotation, float CloudSpeed, float CloudOffset)
+void ABP_Clouds_C::Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpeed, bool IsInEditor, bool bOverrideCloudRotation, float CloudSpeed, float CloudOffset, bool ControlSeqCloud)
 {
 	static class UFunction* Func = nullptr;
 
@@ -88,6 +89,7 @@ void ABP_Clouds_C::Switch_Clouds(E_Cloud_Presents CloudPresents, float ChangeSpe
 	Parms.bOverrideCloudRotation = bOverrideCloudRotation;
 	Parms.CloudSpeed = CloudSpeed;
 	Parms.CloudOffset = CloudOffset;
+	Parms.ControlSeqCloud = ControlSeqCloud;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

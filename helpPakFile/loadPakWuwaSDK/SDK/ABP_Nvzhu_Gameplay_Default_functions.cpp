@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_Nvzhu_Gameplay_Default_C::ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Nvzhu_Gameplay_Default_C", "ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default");
-
-	Params::ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.AnimGraph
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -55,6 +35,26 @@ void UABP_Nvzhu_Gameplay_Default_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 
 	if (AnimGraph_0 != nullptr)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
+// Function ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C.ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UABP_Nvzhu_Gameplay_Default_C::ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Nvzhu_Gameplay_Default_C", "ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default");
+
+	Params::ABP_Nvzhu_Gameplay_Default_C_ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

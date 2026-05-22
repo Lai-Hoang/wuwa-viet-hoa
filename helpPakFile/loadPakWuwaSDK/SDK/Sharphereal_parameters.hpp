@@ -89,5 +89,222 @@ public:
 };
 DUMPER7_ASSERTS_JsBridgetBlueprintFunctionLibrary_CSharpCallJavascript;
 
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleBoolVariable
+// 0x0018 (0x0018 - 0x0000)
+struct ConsoleCommandBPL_GetConsoleBoolVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Result;                                            // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_GetConsoleBoolVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleFloatVariable
+// 0x0018 (0x0018 - 0x0000)
+struct ConsoleCommandBPL_GetConsoleFloatVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Result;                                            // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_GetConsoleFloatVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleIntVariable
+// 0x0018 (0x0018 - 0x0000)
+struct ConsoleCommandBPL_GetConsoleIntVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Result;                                            // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_GetConsoleIntVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleStringVariable
+// 0x0028 (0x0028 - 0x0000)
+struct ConsoleCommandBPL_GetConsoleStringVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Result;                                            // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_GetConsoleStringVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleBoolVariable
+// 0x0030 (0x0030 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleBoolVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DefaultValue;                                      // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Help;                                              // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleBoolVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommand
+// 0x0050 (0x0050 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleCommand final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Help;                                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             Command;                                           // 0x0020(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleCommand;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithArgs
+// 0x0050 (0x0050 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleCommandWithArgs final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Help;                                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<class FString>& Args)> Command;                                      // 0x0020(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleCommandWithArgs;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithWorld
+// 0x0050 (0x0050 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleCommandWithWorld final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Help;                                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class UWorld* World)>          Command;                                           // 0x0020(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleCommandWithWorld;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithWorldAndArgs
+// 0x0050 (0x0050 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleCommandWithWorldAndArgs final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Help;                                              // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<class FString>& Args, class UWorld* World)> Command;                 // 0x0020(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0048(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleCommandWithWorldAndArgs;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleFloatVariable
+// 0x0030 (0x0030 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleFloatVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultValue;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Help;                                              // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleFloatVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleIntVariable
+// 0x0030 (0x0030 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleIntVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DefaultValue;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Help;                                              // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleIntVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleStringVariable
+// 0x0038 (0x0038 - 0x0000)
+struct ConsoleCommandBPL_RegisterConsoleStringVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DefaultValue;                                      // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Help;                                              // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_RegisterConsoleStringVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleBoolVariable
+// 0x0020 (0x0020 - 0x0000)
+struct ConsoleCommandBPL_SetConsoleBoolVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        Flags_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_SetConsoleBoolVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleFloatVariable
+// 0x0020 (0x0020 - 0x0000)
+struct ConsoleCommandBPL_SetConsoleFloatVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_SetConsoleFloatVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleIntVariable
+// 0x0020 (0x0020 - 0x0000)
+struct ConsoleCommandBPL_SetConsoleIntVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_SetConsoleIntVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleStringVariable
+// 0x0028 (0x0028 - 0x0000)
+struct ConsoleCommandBPL_SetConsoleStringVariable final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Flags_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_SetConsoleStringVariable;
+
+// Function Sharphereal.ConsoleCommandBPL.UnregisterConsoleObject
+// 0x0010 (0x0010 - 0x0000)
+struct ConsoleCommandBPL_UnregisterConsoleObject final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ConsoleCommandBPL_UnregisterConsoleObject;
+
 }
 

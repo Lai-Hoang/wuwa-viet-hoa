@@ -332,6 +332,27 @@ public:
 };
 DUMPER7_ASSERTS_KuroApplicationLibrary_UnBind;
 
+// Function KuroUtility.KuroCameraFunctionLibrary.DelaySetNearClipPlane
+// 0x0004 (0x0004 - 0x0000)
+struct KuroCameraFunctionLibrary_DelaySetNearClipPlane final
+{
+public:
+	float                                         distance;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroCameraFunctionLibrary_DelaySetNearClipPlane;
+
+// Function KuroUtility.KuroCollectActorComponent.GetActorsWithTag
+// 0x0020 (0x0020 - 0x0000)
+struct KuroCollectActorComponent_GetActorsWithTag final
+{
+public:
+	class FName                                   Tag;                                               // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollectActorType                             Type;                                              // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         OutResult;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroCollectActorComponent_GetActorsWithTag;
+
 // Function KuroUtility.KuroCollectActorComponent.GetActorWithTag
 // 0x0018 (0x0018 - 0x0000)
 struct KuroCollectActorComponent_GetActorWithTag final
@@ -373,6 +394,149 @@ public:
 	int64                                         MaxSingleFileReadSize;                             // 0x00A0(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroCompressLibrary_CompressFilesOrFoldersAsync;
+
+// Function KuroUtility.KuroDemoInteractiveActor.BroadcastMulticastDelegateProperty
+// 0x0010 (0x0010 - 0x0000)
+struct KuroDemoInteractiveActor_BroadcastMulticastDelegateProperty final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_BroadcastMulticastDelegateProperty;
+
+// Function KuroUtility.KuroDemoInteractiveActor.CallFunction
+// 0x0010 (0x0010 - 0x0000)
+struct KuroDemoInteractiveActor_CallFunction final
+{
+public:
+	class FName                                   FunctionName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_CallFunction;
+
+// Function KuroUtility.KuroDemoInteractiveActor.ExecuteSingleDelegateProperty
+// 0x0010 (0x0010 - 0x0000)
+struct KuroDemoInteractiveActor_ExecuteSingleDelegateProperty final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_ExecuteSingleDelegateProperty;
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetBoolPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct KuroDemoInteractiveActor_GetBoolPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutValue;                                          // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_GetBoolPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetFloatPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct KuroDemoInteractiveActor_GetFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutValue;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_GetFloatPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetIntPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct KuroDemoInteractiveActor_GetIntPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutValue;                                          // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_GetIntPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetPropertyOffsetFromContainer
+// 0x0014 (0x0014 - 0x0000)
+struct KuroDemoInteractiveActor_GetPropertyOffsetFromContainer final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutOffset;                                         // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_GetPropertyOffsetFromContainer;
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetStringPropertyValue
+// 0x0028 (0x0028 - 0x0000)
+struct KuroDemoInteractiveActor_GetStringPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutValue;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_GetStringPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetBoolPropertyValue
+// 0x0010 (0x0010 - 0x0000)
+struct KuroDemoInteractiveActor_SetBoolPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_SetBoolPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetFloatPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct KuroDemoInteractiveActor_SetFloatPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_SetFloatPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetIntPropertyValue
+// 0x0014 (0x0014 - 0x0000)
+struct KuroDemoInteractiveActor_SetIntPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x000C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_SetIntPropertyValue;
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetStringPropertyValue
+// 0x0028 (0x0028 - 0x0000)
+struct KuroDemoInteractiveActor_SetStringPropertyValue final
+{
+public:
+	class FName                                   PropertyName;                                      // 0x0000(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Value;                                             // 0x0010(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroDemoInteractiveActor_SetStringPropertyValue;
 
 // Function KuroUtility.KuroDemoInteractSubSystem.GetDemoInteractiveActor
 // 0x0018 (0x0018 - 0x0000)
@@ -625,6 +789,78 @@ public:
 	TArray<int32>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroPolypartition_BuildTriangleByVertex2D;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.ComputePhysicalScreenDensity
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_ComputePhysicalScreenDensity final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_ComputePhysicalScreenDensity;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetDisplayScreenResolution
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetDisplayScreenResolution final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetDisplayScreenResolution;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenDensityDPI
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenDensityDPI final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenDensityDPI;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenResolution
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolution final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolution;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenResolutionV2
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolutionV2 final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolutionV2;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenDensityDPI
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetScreenDensityDPI final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetScreenDensityDPI;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenLogicalDensity
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetScreenLogicalDensity final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetScreenLogicalDensity;
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenScaledDensity
+// 0x0008 (0x0008 - 0x0000)
+struct KuroScreenBlueprintFunctionLibrary_GetScreenScaledDensity final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroScreenBlueprintFunctionLibrary_GetScreenScaledDensity;
 
 // Function KuroUtility.KuroStaticAndroidLibrary.AddAndroidScreenChangeDelegate
 // 0x0028 (0x0028 - 0x0000)

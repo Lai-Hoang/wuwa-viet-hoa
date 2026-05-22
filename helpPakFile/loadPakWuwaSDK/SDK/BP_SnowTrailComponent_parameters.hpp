@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function BP_SnowTrailComponent.BP_SnowTrailComponent_C.ExecuteUbergraph_BP_SnowTrailComponent
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct BP_SnowTrailComponent_C_ExecuteUbergraph_BP_SnowTrailComponent final
 {
 public:
@@ -59,23 +59,23 @@ public:
 	float                                         CallFunc_GetScaledCapsuleHalfHeight_ReturnValue;   // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UKuroEnviInteractionComponent*          CallFunc_GetComponentByClass_ReturnValue;          // 0x0130(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Conv_FloatToDouble_ReturnValue;           // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKuroEnviInteractionData               CallFunc_GetEnviInteractionData_ReturnValue;       // 0x0140(0x00D8)(ContainsInstancedReference)
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_1;         // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue;        // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0240(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue_1;      // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Abs_ReturnValue;                        // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue_2;      // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Vector_Distance_ReturnValue_1;            // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_D_FMax_ReturnValue;                       // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Divide_FloatFloat_ReturnValue;          // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_284[0x4];                                      // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FVectorDouble& OriginPoint, class UBP_SceneBattleInteract_C* Config, int32 Id)> K2Node_CreateDelegate_OutputDelegate; // 0x0288(0x0028)(ZeroConstructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FKuroEnviInteractionData               CallFunc_GetEnviInteractionData_ReturnValue;       // 0x0140(0x00E8)(ContainsInstancedReference)
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue_1;         // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue;        // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_VectorDoubleToVector_ReturnValue;    // 0x0250(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue_1;      // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Abs_ReturnValue;                        // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue_2;      // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Vector_Distance_ReturnValue_1;            // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_D_FMax_ReturnValue;                       // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Divide_FloatFloat_ReturnValue;          // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FVectorDouble& OriginPoint, class UBP_SceneBattleInteract_C* Config, int32 Id)> K2Node_CreateDelegate_OutputDelegate; // 0x0298(0x0028)(ZeroConstructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_SnowTrailComponent_C_ExecuteUbergraph_BP_SnowTrailComponent;
 

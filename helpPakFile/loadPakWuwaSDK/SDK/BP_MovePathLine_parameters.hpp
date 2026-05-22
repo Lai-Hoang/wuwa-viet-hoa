@@ -16,24 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_MovePathLine.BP_MovePathLine_C.ExecuteUbergraph_BP_MovePathLine
-// 0x0004 (0x0004 - 0x0000)
-struct BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine;
-
-// Function BP_MovePathLine.BP_MovePathLine_C.Save
-// 0x000C (0x000C - 0x0000)
-struct BP_MovePathLine_C_Save final
-{
-public:
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-DUMPER7_ASSERTS_BP_MovePathLine_C_Save;
-
 // Function BP_MovePathLine.BP_MovePathLine_C.贴地处理
 // 0x002C (0x002C - 0x0000)
 struct BP_MovePathLine_C_贴地处理 final
@@ -49,6 +31,24 @@ public:
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_MovePathLine_C_贴地处理;
+
+// Function BP_MovePathLine.BP_MovePathLine_C.Save
+// 0x000C (0x000C - 0x0000)
+struct BP_MovePathLine_C_Save final
+{
+public:
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_MovePathLine_C_Save;
+
+// Function BP_MovePathLine.BP_MovePathLine_C.ExecuteUbergraph_BP_MovePathLine
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_MovePathLine_C_ExecuteUbergraph_BP_MovePathLine;
 
 }
 

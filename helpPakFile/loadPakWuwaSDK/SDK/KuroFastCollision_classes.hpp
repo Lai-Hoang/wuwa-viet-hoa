@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "KuroFastCollision_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroFastCollision_structs.hpp"
 
 
 namespace SDK
@@ -50,11 +50,11 @@ public:
 DUMPER7_ASSERTS_UKuroFastCollisionAlgorithm;
 
 // Class KuroFastCollision.KuroFastCollisionAlgorithm_Grid
-// 0x01F0 (0x0270 - 0x0080)
-class UKuroFastCollisionAlgorithm_Grid final : public UKuroFastCollisionAlgorithm
+// 0x0240 (0x02C0 - 0x0080)
+class UKuroFastCollisionAlgorithm_Grid : public UKuroFastCollisionAlgorithm
 {
 public:
-	uint8                                         Pad_80[0x1F0];                                     // 0x0080(0x01F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_80[0x240];                                     // 0x0080(0x0240)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -71,6 +71,29 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroFastCollisionAlgorithm_Grid;
+
+// Class KuroFastCollision.KuroFastCollisionAlgorithm_PhysicalGrid
+// 0x00B8 (0x0378 - 0x02C0)
+class UKuroFastCollisionAlgorithm_PhysicalGrid final : public UKuroFastCollisionAlgorithm_Grid
+{
+public:
+	uint8                                         Pad_2C0[0xB8];                                     // 0x02C0(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroFastCollisionAlgorithm_PhysicalGrid")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroFastCollisionAlgorithm_PhysicalGrid")
+	}
+	static class UKuroFastCollisionAlgorithm_PhysicalGrid* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroFastCollisionAlgorithm_PhysicalGrid>();
+	}
+};
+DUMPER7_ASSERTS_UKuroFastCollisionAlgorithm_PhysicalGrid;
 
 // Class KuroFastCollision.KuroFastCollisionInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -170,19 +193,17 @@ public:
 DUMPER7_ASSERTS_UKuroFastCollisionShapeComponent;
 
 // Class KuroFastCollision.KuroFastCollisionSubsystem
-// 0x0058 (0x0090 - 0x0038)
+// 0x0050 (0x0088 - 0x0038)
 class UKuroFastCollisionSubsystem final : public UWorldSubsystem
 {
 public:
 	TSet<class UKuroFastCollisionAlgorithm*>      LiveAlgorithms;                                    // 0x0038(0x0050)(NativeAccessSpecifierPrivate)
-	class UKuroFastCollisionAlgorithm*            DefaultAlgorithm;                                  // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UKuroFastCollisionSubsystem* Get(const class UObject* WorldContextObject);
 
-	class UKuroFastCollisionAlgorithm* CreateAlgorithm(TSubclassOf<class UKuroFastCollisionAlgorithm> Class_0, bool bTickEnabled);
+	class UKuroFastCollisionAlgorithm* CreateAlgorithm(TSubclassOf<class UKuroFastCollisionAlgorithm> AlgorithmClass, bool bTickEnabled);
 	void DestroyAlgorithm(class UKuroFastCollisionAlgorithm* Algorithm);
-	class UKuroFastCollisionAlgorithm* GetDefaultAlgorithm();
 
 public:
 	static class UClass* StaticClass()

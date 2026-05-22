@@ -53,6 +53,10 @@ public:
 	static int32 GetSpecifiedBulletCount(int32 ownerId, class FName bulletName, class UObject* __WorldContext);
 	static void DestroySpecifiedBullet(int32 ownerId, class FName bulletName, bool summonChild, int32 includeTeammate, float interval, class UObject* __WorldContext);
 	static bool DestroyBullet(int32 id, bool isSummonChildBullet, bool destroyEffectImmediately, class UObject* __WorldContext);
+	static int32 GetCampRelationship(int32 camp1, int32 camp2, class UObject* __WorldContext);
+	static int32 GetCamp(int32 entityId, class UObject* __WorldContext);
+	static void NotifyProcessKuroBulletOperationList(class UObject* __WorldContext);
+	static void NotifyExistedImmediatelyOperation(const struct FBulletHitWorldEntityOperation& operation, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

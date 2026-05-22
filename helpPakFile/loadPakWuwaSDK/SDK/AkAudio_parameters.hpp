@@ -13,8 +13,8 @@
 #include "AkAudio_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "WwiseObjectUtils_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -73,33 +73,6 @@ public:
 	EAkAcousticPortalState                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AkAcousticPortal_GetCurrentState;
-
-// Function AkAudio.AkWwiseTree.SetSearchText
-// 0x0010 (0x0010 - 0x0000)
-struct AkWwiseTree_SetSearchText final
-{
-public:
-	class FString                                 newText;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AkWwiseTree_SetSearchText;
-
-// Function AkAudio.AkWwiseTree.GetSearchText
-// 0x0010 (0x0010 - 0x0000)
-struct AkWwiseTree_GetSearchText final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AkWwiseTree_GetSearchText;
-
-// Function AkAudio.AkWwiseTree.GetSelectedItem
-// 0x0030 (0x0030 - 0x0000)
-struct AkWwiseTree_GetSelectedItem final
-{
-public:
-	struct FAkWwiseObjectDetails                  ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_AkWwiseTree_GetSelectedItem;
 
 // Function AkAudio.AkAndroidInitializationSettings.MigrateMultiCoreRendering
 // 0x0001 (0x0001 - 0x0000)
@@ -1888,6 +1861,33 @@ public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AkWinGDKInitializationSettings_MigrateMultiCoreRendering;
+
+// Function AkAudio.AkWwiseTree.SetSearchText
+// 0x0010 (0x0010 - 0x0000)
+struct AkWwiseTree_SetSearchText final
+{
+public:
+	class FString                                 newText;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AkWwiseTree_SetSearchText;
+
+// Function AkAudio.AkWwiseTree.GetSearchText
+// 0x0010 (0x0010 - 0x0000)
+struct AkWwiseTree_GetSearchText final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AkWwiseTree_GetSearchText;
+
+// Function AkAudio.AkWwiseTree.GetSelectedItem
+// 0x0030 (0x0030 - 0x0000)
+struct AkWwiseTree_GetSelectedItem final
+{
+public:
+	struct FAkWwiseObjectDetails                  ReturnValue;                                       // 0x0000(0x0030)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_AkWwiseTree_GetSelectedItem;
 
 // Function AkAudio.AkXboxSeriesXInitializationSettings.MigrateMultiCoreRendering
 // 0x0001 (0x0001 - 0x0000)

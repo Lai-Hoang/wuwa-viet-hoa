@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Nvzhu_Gameplay_Default.ABP_Nvzhu_Gameplay_Default_C
-// 0x0040 (0x0770 - 0x0730)
+// 0x0040 (0x0810 - 0x07D0)
 class UABP_Nvzhu_Gameplay_Default_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0038)()
 
 public:
-	void ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default(int32 EntryPoint);
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_ABP_Nvzhu_Gameplay_Default(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

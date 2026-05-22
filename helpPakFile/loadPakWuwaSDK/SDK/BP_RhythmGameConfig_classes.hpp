@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "RhythmGamePerformanceCameraConfig_structs.hpp"
+#include "Engine_classes.hpp"
 #include "KuroRhythmGame_structs.hpp"
 #include "RhythmGameSpeedLevelConfig_structs.hpp"
-#include "Engine_classes.hpp"
-#include "RhythmGamePerformanceCameraConfig_structs.hpp"
 #include "RhythmGameFreeFlyCameraConfig_structs.hpp"
 
 

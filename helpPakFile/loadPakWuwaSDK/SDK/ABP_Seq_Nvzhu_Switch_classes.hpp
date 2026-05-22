@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Seq_Nvzhu_Switch.ABP_Seq_Nvzhu_Switch_C
-// 0x0000 (0x0A50 - 0x0A50)
+// 0x0000 (0x0AF0 - 0x0AF0)
 class UABP_Seq_Nvzhu_Switch_C final : public UABP_Switch_Seq_V2_C
 {
 public:

@@ -997,6 +997,26 @@ struct FLinearColor ABP_GlobalGI_C::Clamp_Luminance(const struct FLinearColor& I
 }
 
 
+// Function BP_GlobalGI.BP_GlobalGI_C.SetLevelSequenceCloudControl
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABP_SeqControlClouds_C*           SeqCloudsController_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_GlobalGI_C::SetLevelSequenceCloudControl(class ABP_SeqControlClouds_C* SeqCloudsController_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_GlobalGI_C", "SetLevelSequenceCloudControl");
+
+	Params::BP_GlobalGI_C_SetLevelSequenceCloudControl Parms{};
+
+	Parms.SeqCloudsController_0 = SeqCloudsController_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_GlobalGI.BP_GlobalGI_C.GetParallaxCorrectCachedShadowDirection
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

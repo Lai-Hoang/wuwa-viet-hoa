@@ -17,101 +17,251 @@
 namespace SDK
 {
 
-// Function KuroBullet.BulletEntity.OnObstacleTrace
-// (Final, Native, Public)
+// Function KuroBullet.BulletHitWorldEntityBridge.GetCamp
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    Result                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTraceBaseElement*                Element                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Frame                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// double                                  Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletEntity::OnObstacleTrace(bool Result, class UTraceBaseElement* Element, double Frame, double Index_0)
+int32 UBulletHitWorldEntityBridge::GetCamp(int32 EntityId)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletEntity", "OnObstacleTrace");
+		Func = Class->GetFunction("BulletHitWorldEntityBridge", "GetCamp");
 
-	Params::BulletEntity_OnObstacleTrace Parms{};
+	Params::BulletHitWorldEntityBridge_GetCamp Parms{};
 
-	Parms.Result = Result;
-	Parms.Element = Element;
-	Parms.Frame = Frame;
-	Parms.Index_0 = Index_0;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
+	Parms.EntityId = EntityId;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Func->FunctionFlags = Flgs;
+	return Parms.ReturnValue;
 }
 
 
-// Function KuroBullet.BulletWorld.AddCommonBulletDataTable
-// (Final, Native, Public, BlueprintCallable)
+// Function KuroBullet.BulletHitWorldEntityBridge.GetCampRelationship
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class UDataTable*                       DataTable                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Camp1                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Camp2                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::AddCommonBulletDataTable(class UDataTable* DataTable)
+int32 UBulletHitWorldEntityBridge::GetCampRelationship(int32 Camp1, int32 Camp2)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "AddCommonBulletDataTable");
+		Func = Class->GetFunction("BulletHitWorldEntityBridge", "GetCampRelationship");
 
-	Params::BulletWorld_AddCommonBulletDataTable Parms{};
+	Params::BulletHitWorldEntityBridge_GetCampRelationship Parms{};
 
-	Parms.DataTable = DataTable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
+	Parms.Camp1 = Camp1;
+	Parms.Camp2 = Camp2;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	Func->FunctionFlags = Flgs;
+	return Parms.ReturnValue;
 }
 
 
-// Function KuroBullet.BulletWorld.ClearCommonBulletDataTable
-// (Final, Native, Public, BlueprintCallable)
+// Function KuroBullet.BulletHitWorldEntityBridge.HasTag
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGameplayTag&              Tag                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::ClearCommonBulletDataTable()
+bool UBulletHitWorldEntityBridge::HasTag(int32 EntityId, const struct FGameplayTag& Tag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "ClearCommonBulletDataTable");
+		Func = Class->GetFunction("BulletHitWorldEntityBridge", "HasTag");
 
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
+	Params::BulletHitWorldEntityBridge_HasTag Parms{};
+
+	Parms.EntityId = EntityId;
+	Parms.Tag = std::move(Tag);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityBridge.NotifyExistedImmediatelyOperation
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FBulletHitWorldEntityOperation&Operation                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBulletHitWorldEntityBridge::NotifyExistedImmediatelyOperation(const struct FBulletHitWorldEntityOperation& Operation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletHitWorldEntityBridge", "NotifyExistedImmediatelyOperation");
+
+	Params::BulletHitWorldEntityBridge_NotifyExistedImmediatelyOperation Parms{};
+
+	Parms.Operation = std::move(Operation);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityBridge.NotifyExistedOperationList
+// (Event, Public, BlueprintEvent)
+
+void UBulletHitWorldEntityBridge::NotifyExistedOperationList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletHitWorldEntityBridge", "NotifyExistedOperationList");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityManager.CreateInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Outer_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UBulletHitWorldEntityManager*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UBulletHitWorldEntityManager* UBulletHitWorldEntityManager::CreateInstance(class UObject* Outer_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletHitWorldEntityManager", "CreateInstance");
+
+	Params::BulletHitWorldEntityManager_CreateInstance Parms{};
+
+	Parms.Outer_0 = Outer_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityManager.DestroyInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UBulletHitWorldEntityManager::DestroyInstance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletHitWorldEntityManager", "DestroyInstance");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function KuroBullet.BulletWorld.CreateBullet
+// Function KuroBullet.BulletHitWorldEntityManager.GetInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UBulletHitWorldEntityManager*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UBulletHitWorldEntityManager* UBulletHitWorldEntityManager::GetInstance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletHitWorldEntityManager", "GetInstance");
+
+	Params::BulletHitWorldEntityManager_GetInstance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityManager.GetBulletHitWorldEntityBridge
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBulletHitWorldEntityBridge*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UBulletHitWorldEntityBridge* UBulletHitWorldEntityManager::GetBulletHitWorldEntityBridge()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "GetBulletHitWorldEntityBridge");
+
+	Params::BulletHitWorldEntityManager_GetBulletHitWorldEntityBridge Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityManager.GetEntityCanDodge
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBulletHitWorldEntityManager::GetEntityCanDodge(int32 EntityId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "GetEntityCanDodge");
+
+	Params::BulletHitWorldEntityManager_GetEntityCanDodge Parms{};
+
+	Parms.EntityId = EntityId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroBullet.BulletHitWorldEntityManager.GetOperationList
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// TScriptInterface<class IBulletContext>  BulletContext                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-// int64                                   BulletConfigId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FBulletSpawnParams&        SpawnParams                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FBulletHitWorldEntityOperation>*OutOperationList                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-int32 UBulletWorld::CreateBullet(TScriptInterface<class IBulletContext> BulletContext, int64 BulletConfigId, const struct FBulletSpawnParams& SpawnParams)
+void UBulletHitWorldEntityManager::GetOperationList(TArray<struct FBulletHitWorldEntityOperation>* OutOperationList)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "CreateBullet");
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "GetOperationList");
 
-	Params::BulletWorld_CreateBullet Parms{};
-
-	Parms.BulletContext = BulletContext;
-	Parms.BulletConfigId = BulletConfigId;
-	Parms.SpawnParams = std::move(SpawnParams);
+	Params::BulletHitWorldEntityManager_GetOperationList Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -120,25 +270,26 @@ int32 UBulletWorld::CreateBullet(TScriptInterface<class IBulletContext> BulletCo
 
 	Func->FunctionFlags = Flgs;
 
-	return Parms.ReturnValue;
+	if (OutOperationList != nullptr)
+		*OutOperationList = std::move(Parms.OutOperationList);
 }
 
 
-// Function KuroBullet.BulletWorld.DestroyAllBulletsByOwner
+// Function KuroBullet.BulletHitWorldEntityManager.SetBulletHitWorldEntityBridge
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class AActor*                     Owner                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UBulletHitWorldEntityBridge*      Bridge                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::DestroyAllBulletsByOwner(const class AActor* Owner)
+void UBulletHitWorldEntityManager::SetBulletHitWorldEntityBridge(class UBulletHitWorldEntityBridge* Bridge)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyAllBulletsByOwner");
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "SetBulletHitWorldEntityBridge");
 
-	Params::BulletWorld_DestroyAllBulletsByOwner Parms{};
+	Params::BulletHitWorldEntityManager_SetBulletHitWorldEntityBridge Parms{};
 
-	Parms.Owner = Owner;
+	Parms.Bridge = Bridge;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -149,42 +300,23 @@ void UBulletWorld::DestroyAllBulletsByOwner(const class AActor* Owner)
 }
 
 
-// Function KuroBullet.BulletWorld.DestroyAllPatterns
-// (Final, Native, Public, BlueprintCallable)
-
-void UBulletWorld::DestroyAllPatterns()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyAllPatterns");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.DestroyBullet
+// Function KuroBullet.BulletHitWorldEntityManager.SetEntityCamp
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UBulletEntity*                    BulletEntity                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ClearContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Camp                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearContext)
+void UBulletHitWorldEntityManager::SetEntityCamp(int32 EntityId, int32 Camp)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyBullet");
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "SetEntityCamp");
 
-	Params::BulletWorld_DestroyBullet Parms{};
+	Params::BulletHitWorldEntityManager_SetEntityCamp Parms{};
 
-	Parms.BulletEntity = BulletEntity;
-	Parms.ClearContext = ClearContext;
+	Parms.EntityId = EntityId;
+	Parms.Camp = Camp;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -195,23 +327,23 @@ void UBulletWorld::DestroyBullet(class UBulletEntity* BulletEntity, bool ClearCo
 }
 
 
-// Function KuroBullet.BulletWorld.DestroyBulletById
+// Function KuroBullet.BulletHitWorldEntityManager.SetEntityCanDodge
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// int32                                   BulletEntityId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ClearContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   EntityId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bCanDodge                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBulletWorld::DestroyBulletById(int32 BulletEntityId, bool ClearContext)
+void UBulletHitWorldEntityManager::SetEntityCanDodge(int32 EntityId, bool bCanDodge)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyBulletById");
+		Func = Class->GetFunction("BulletHitWorldEntityManager", "SetEntityCanDodge");
 
-	Params::BulletWorld_DestroyBulletById Parms{};
+	Params::BulletHitWorldEntityManager_SetEntityCanDodge Parms{};
 
-	Parms.BulletEntityId = BulletEntityId;
-	Parms.ClearContext = ClearContext;
+	Parms.EntityId = EntityId;
+	Parms.bCanDodge = bCanDodge;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -222,402 +354,22 @@ void UBulletWorld::DestroyBulletById(int32 BulletEntityId, bool ClearContext)
 }
 
 
-// Function KuroBullet.BulletWorld.DestroyPattern
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   PatternId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBulletWorld::DestroyPattern(int32 PatternId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyPattern");
-
-	Params::BulletWorld_DestroyPattern Parms{};
-
-	Parms.PatternId = PatternId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.DestroyPatternsByOwner
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class AActor*                     Owner                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBulletWorld::DestroyPatternsByOwner(const class AActor* Owner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DestroyPatternsByOwner");
-
-	Params::BulletWorld_DestroyPatternsByOwner Parms{};
-
-	Parms.Owner = Owner;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.DisableFlatGround
-// (Final, Native, Public, BlueprintCallable)
-
-void UBulletWorld::DisableFlatGround()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "DisableFlatGround");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.EnableFlatGround
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// double                                  Height                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBulletWorld::EnableFlatGround(double Height)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "EnableFlatGround");
-
-	Params::BulletWorld_EnableFlatGround Parms{};
-
-	Parms.Height = Height;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.EnableFlatGroundByAbovePoint
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVectorDouble&             AbovePoint                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBulletWorld::EnableFlatGroundByAbovePoint(const struct FVectorDouble& AbovePoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "EnableFlatGroundByAbovePoint");
-
-	Params::BulletWorld_EnableFlatGroundByAbovePoint Parms{};
-
-	Parms.AbovePoint = std::move(AbovePoint);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.FindBulletConfig
-// (Final, Native, Public, HasOutParams)
-// Parameters:
-// int64                                   BulletConfigId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDataTable*                       OwnerBulletDataTable                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKuroBulletData*                 OutRow                                                 (Parm, OutParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBulletWorld::FindBulletConfig(int64 BulletConfigId, class UDataTable* OwnerBulletDataTable, struct FKuroBulletData* OutRow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "FindBulletConfig");
-
-	Params::BulletWorld_FindBulletConfig Parms{};
-
-	Parms.BulletConfigId = BulletConfigId;
-	Parms.OwnerBulletDataTable = OwnerBulletDataTable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutRow != nullptr)
-		*OutRow = std::move(Parms.OutRow);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroBullet.BulletWorld.InitBulletConfig
-// (Final, Native, Public)
-// Parameters:
-// class UBulletEntity*                    BulletEntity                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   BulletConfigId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDataTable*                       OwnerBulletDataTable                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBulletWorld::InitBulletConfig(class UBulletEntity* BulletEntity, int64 BulletConfigId, class UDataTable* OwnerBulletDataTable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "InitBulletConfig");
-
-	Params::BulletWorld_InitBulletConfig Parms{};
-
-	Parms.BulletEntity = BulletEntity;
-	Parms.BulletConfigId = BulletConfigId;
-	Parms.OwnerBulletDataTable = OwnerBulletDataTable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroBullet.BulletWorld.SetShowBulletCollision
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UBulletWorld::SetShowBulletCollision(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "SetShowBulletCollision");
-
-	Params::BulletWorld_SetShowBulletCollision Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.BulletWorld.SpawnPattern
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IBulletContext>  PatternContext                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-// const class UKuroBulletPatternDataAsset*PatternDA                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UBulletWorld::SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BulletWorld", "SpawnPattern");
-
-	Params::BulletWorld_SpawnPattern Parms{};
-
-	Parms.PatternContext = PatternContext;
-	Parms.PatternDA = PatternDA;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.CreateBullet
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class AKSC_Entity*                      KSC_Entity                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   BulletConfigId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FTransformDouble&          InitialTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// class UDataTable*                       OwnerBulletDataTable                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AKSC_Entity*                      SkillTarget                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UKuroBulletFunctionLibrary::CreateBullet(class AKSC_Entity* KSC_Entity, int64 BulletConfigId, const struct FTransformDouble& InitialTransform, class UDataTable* OwnerBulletDataTable, class AKSC_Entity* SkillTarget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "CreateBullet");
-
-	Params::KuroBulletFunctionLibrary_CreateBullet Parms{};
-
-	Parms.KSC_Entity = KSC_Entity;
-	Parms.BulletConfigId = BulletConfigId;
-	Parms.InitialTransform = std::move(InitialTransform);
-	Parms.OwnerBulletDataTable = OwnerBulletDataTable;
-	Parms.SkillTarget = SkillTarget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.DestroyBulletById
+// Function KuroBullet.KscBulletManager.CreateInstance
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int32                                   BulletEntityId                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ClearOwner                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Outer_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKscBulletManager*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroBulletFunctionLibrary::DestroyBulletById(int32 BulletEntityId, bool ClearOwner)
+class UKscBulletManager* UKscBulletManager::CreateInstance(class UObject* Outer_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "DestroyBulletById");
+		Func = StaticClass()->GetFunction("KscBulletManager", "CreateInstance");
 
-	Params::KuroBulletFunctionLibrary_DestroyBulletById Parms{};
+	Params::KscBulletManager_CreateInstance Parms{};
 
-	Parms.BulletEntityId = BulletEntityId;
-	Parms.ClearOwner = ClearOwner;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPattern
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int32                                   PatternId                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroBulletFunctionLibrary::DestroyPattern(int32 PatternId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "DestroyPattern");
-
-	Params::KuroBulletFunctionLibrary_DestroyPattern Parms{};
-
-	Parms.PatternId = PatternId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.DestroyPatternsByOwner
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class AActor*                     Owner                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroBulletFunctionLibrary::DestroyPatternsByOwner(const class AActor* Owner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "DestroyPatternsByOwner");
-
-	Params::KuroBulletFunctionLibrary_DestroyPatternsByOwner Parms{};
-
-	Parms.Owner = Owner;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.SetShowBulletCollision
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroBulletFunctionLibrary::SetShowBulletCollision(bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "SetShowBulletCollision");
-
-	Params::KuroBulletFunctionLibrary_SetShowBulletCollision Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroBullet.KuroBulletFunctionLibrary.SpawnPattern
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IBulletContext>  PatternContext                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-// const class UKuroBulletPatternDataAsset*PatternDA                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UKuroBulletFunctionLibrary::SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroBulletFunctionLibrary", "SpawnPattern");
-
-	Params::KuroBulletFunctionLibrary_SpawnPattern Parms{};
-
-	Parms.PatternContext = PatternContext;
-	Parms.PatternDA = PatternDA;
+	Parms.Outer_0 = Outer_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -630,68 +382,43 @@ int32 UKuroBulletFunctionLibrary::SpawnPattern(TScriptInterface<class IBulletCon
 }
 
 
-// Function KuroBullet.KuroBulletSubsystem.CreateWorld
-// (Final, Native, Private, BlueprintCallable)
-// Parameters:
-// class UBulletWorld*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function KuroBullet.KscBulletManager.DestroyInstance
+// (Final, Native, Static, Public, BlueprintCallable)
 
-class UBulletWorld* UKuroBulletSubsystem::CreateWorld()
+void UKscBulletManager::DestroyInstance()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroBulletSubsystem", "CreateWorld");
-
-	Params::KuroBulletSubsystem_CreateWorld Parms{};
+		Func = StaticClass()->GetFunction("KscBulletManager", "DestroyInstance");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroBullet.KuroBulletSubsystem.DestroyWorld
-// (Final, Native, Private, BlueprintCallable)
-
-void UKuroBulletSubsystem::DestroyWorld()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroBulletSubsystem", "DestroyWorld");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function KuroBullet.KuroBulletSubsystem.GetBulletWorld
-// (Final, Native, Private, BlueprintCallable)
+// Function KuroBullet.KscBulletManager.GetInstance
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UBulletWorld*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKscBulletManager*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UBulletWorld* UKuroBulletSubsystem::GetBulletWorld()
+class UKscBulletManager* UKscBulletManager::GetInstance()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroBulletSubsystem", "GetBulletWorld");
+		Func = StaticClass()->GetFunction("KscBulletManager", "GetInstance");
 
-	Params::KuroBulletSubsystem_GetBulletWorld Parms{};
+	Params::KscBulletManager_GetInstance Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 

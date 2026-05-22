@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Passive.Ga_Passive_C
-// 0x0008 (0x0598 - 0x0590)
+// 0x0008 (0x05C0 - 0x05B8)
 class UGa_Passive_C final : public UGA_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Ga_Passive_C;                       // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Ga_Passive_C;                       // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Ga_Passive(int32 EntryPoint);

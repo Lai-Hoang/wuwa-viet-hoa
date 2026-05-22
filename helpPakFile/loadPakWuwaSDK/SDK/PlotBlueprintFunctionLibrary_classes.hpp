@@ -39,12 +39,12 @@ public:
 	static void OpenChapterUi(int32 chapterState, int32 chapterId, class UObject* __WorldContext);
 	static void ShowLogo(float time, class UObject* __WorldContext);
 	static void CloseUiView(class UObject* __WorldContext);
-	static void OpenUiView(const class FString& maleAssetName1, const class FString& femaleAssetName1, const class FString& maleSpineName1, const class FString& femaleSpineName1, bool needLoop, class UObject* __WorldContext);
+	static void OpenUiView(const class FString& maleAssetName, const class FString& femaleAssetName, const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop1, bool useFullscreenAdaptAnchor, class UObject* __WorldContext);
 	static void PlayUiLevelSequence(const class FString& seqName, class UObject* __WorldContext);
 	static void ExecuteEntitySequenceEvents(const class FString& key, int32 entityId, class UObject* __WorldContext);
 	static void PlaySpineAnimForGender(const class FString& maleSpineName, const class FString& femaleSpineName, bool needLoop, class UObject* __WorldContext);
 	static void PlaySpineAnim(const class FString& spineName1, bool needLoop, class UObject* __WorldContext);
-	static void OpenUiViewInArray(const class FString& maleAssetName1, const class FString& femaleAssetName1, TArray<struct FSpineThingsInfo>& maleSpineArray1, TArray<struct FSpineThingsInfo>& femaleSpineArray1, class UObject* __WorldContext);
+	static void OpenUiViewInArray(const class FString& maleAssetName, const class FString& femaleAssetName, TArray<struct FSpineThingsInfo>& maleSpineArray, TArray<struct FSpineThingsInfo>& femaleSpineArray, bool useFullscreenAdaptAnchor, class UObject* __WorldContext);
 	static void PlaySpineAnimForGenderInArray(TArray<struct FSpineThingsInfo>& maleSpineArray1, TArray<struct FSpineThingsInfo>& femaleSpineArray1, class UObject* __WorldContext);
 	static void CloseSpineAnim(const class FString& spineName, class UObject* __WorldContext);
 	static void CloseSpineAnimInArray(TArray<class FString>& spineArray, class UObject* __WorldContext);

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Performance_PlayerFemale.ABP_Performance_PlayerFemale_C
-// 0x0000 (0x7370 - 0x7370)
+// 0x0000 (0x7440 - 0x7440)
 class UABP_Performance_PlayerFemale_C final : public UABP_PerformanceRole_C
 {
 public:

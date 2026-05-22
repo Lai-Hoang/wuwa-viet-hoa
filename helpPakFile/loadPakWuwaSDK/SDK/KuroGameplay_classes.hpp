@@ -12,26 +12,413 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "KuroAudio_structs.hpp"
-#include "Niagara_structs.hpp"
+#include "KuroGameplay_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
 #include "KuroCurve_structs.hpp"
-#include "Slate_structs.hpp"
-#include "KuroGameplay_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "Niagara_structs.hpp"
 #include "KuroBuildingGridSystem_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "KuroLevelStateMachine_classes.hpp"
 #include "SlateCore_structs.hpp"
+#include "Slate_structs.hpp"
 #include "UMG_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class KuroGameplay.KuroResourceManager
+// 0x0170 (0x01A0 - 0x0030)
+class UKuroResourceManager final : public UObject
+{
+public:
+	TDelegate<void(const int32 HandleId)>         LoadResourceDelegate;                              // 0x0030(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_58[0x148];                                     // 0x0058(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UObject* GetAsset(const int32 HandleId);
+	int32 LoadAsyncWithId(const class FString& Path, const int32 HandleId, const int32 Priority);
+	int32 LoadAsyncWithIdAndTag(const class FString& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
+	int32 LoadAsyncWithIdAndTagByName(const class FName& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
+	int32 LoadAsyncWithIdByName(const class FName& Path, const int32 HandleId, const int32 Priority);
+	int32 LoadWithId(const class FString& Path, const int32 HandleId);
+	int32 LoadWithIdAndTag(const class FString& Path, const int32 HandleId, class FName MemTag);
+	int32 LoadWithIdAndTagByName(const class FName& Path, const int32 HandleId, class FName MemTag);
+	int32 LoadWithIdByName(const class FName& Path, const int32 HandleId);
+	void Release(const int32 HandleId);
+	bool WaitComplete(const int32 HandleId, const float Timeout);
+
+	void DebugDumpLoadingAssets() const;
+	class UObject* GetLoadedAsset(const class FString& Path) const;
+	class UObject* GetLoadedAssetByName(const class FName& Path) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroResourceManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroResourceManager")
+	}
+	static class UKuroResourceManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroResourceManager>();
+	}
+};
+DUMPER7_ASSERTS_UKuroResourceManager;
+
+// Class KuroGameplay.EffectModelBase
+// 0x0028 (0x0060 - 0x0038)
+class UEffectModelBase : public UPrimaryDataAsset
+{
+public:
+	float                                         StartTime;                                         // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LoopTime;                                          // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndTime;                                           // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AutoPlay;                                          // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AutoDestroy;                                       // 0x0045(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ContinuousLoop;                                    // 0x0046(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IgnoreTimeDilation;                                // 0x0047(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IgnoreGlobalTimeDilation;                          // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UiScenePrimitive;                                  // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ImportanceLevel;                                   // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultManualTime;                                 // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultManualSpeed;                                // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IgnoreDisable;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DisableOnMobile;                                   // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          HideOnBurstSkill;                                  // 0x005A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NeedDisableWithActor;                              // 0x005B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SuperFarProgramFlag;                               // 0x005C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          HideForProtoPlayer;                                // 0x005D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugHidden;                                      // 0x005E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F[0x1];                                       // 0x005F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelBase")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelBase")
+	}
+	static class UEffectModelBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelBase>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelBase;
+
+// Class KuroGameplay.KuroResourceSystemFunctionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroResourceSystemFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void Clear();
+	static void Initialize(class UWorld* World, float TimeLimit);
+	static void SetCallbackTimeLimit(float TimeLimit);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroResourceSystemFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroResourceSystemFunctionLibrary")
+	}
+	static class UKuroResourceSystemFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroResourceSystemFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKuroResourceSystemFunctionLibrary;
+
+// Class KuroGameplay.EffectModelAudio
+// 0x0028 (0x0088 - 0x0060)
+class UEffectModelAudio : public UEffectModelBase
+{
+public:
+	class UAkAudioEvent*                          AudioEvent;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        LocationOffsets;                                   // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         FadeOutTime;                                       // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioFadeCurve                               FadeOutCurve;                                      // 0x007C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          KeepAlive;                                         // 0x007D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableOcclusion;                                   // 0x007E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7F[0x1];                                       // 0x007F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          TrailingAudioEvent;                                // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelAudio")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelAudio")
+	}
+	static class UEffectModelAudio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelAudio>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelAudio;
+
+// Class KuroGameplay.EffectModelBillboard
+// 0x0010 (0x0070 - 0x0060)
+class UEffectModelBillboard final : public UEffectModelBase
+{
+public:
+	bool                                          IsUpdateEveryFrame;                                // 0x0060(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBillboardMode                                OrientAxis;                                        // 0x0061(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFixSize;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_63[0x1];                                       // 0x0063(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ScaleSize;                                         // 0x0064(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinSize;                                           // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelBillboard")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelBillboard")
+	}
+	static class UEffectModelBillboard* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelBillboard>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelBillboard;
+
+// Class KuroGameplay.KuroRoadwayStaticMeshComponent
+// 0x0000 (0x0630 - 0x0630)
+class UKuroRoadwayStaticMeshComponent final : public UStaticMeshComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroRoadwayStaticMeshComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroRoadwayStaticMeshComponent")
+	}
+	static class UKuroRoadwayStaticMeshComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroRoadwayStaticMeshComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroRoadwayStaticMeshComponent;
+
+// Class KuroGameplay.EffectModelCurveTrailDecal
+// 0x0008 (0x0068 - 0x0060)
+class UEffectModelCurveTrailDecal final : public UEffectModelBase
+{
+public:
+	class UKuroCurveTrailDecalConfig*             Config;                                            // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelCurveTrailDecal")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelCurveTrailDecal")
+	}
+	static class UEffectModelCurveTrailDecal* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelCurveTrailDecal>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelCurveTrailDecal;
+
+// Class KuroGameplay.KuroSequenceEaseExecutor
+// 0x0008 (0x0038 - 0x0030)
+class UKuroSequenceEaseExecutor : public UObject
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void StopEase();
+	bool UpdateEase(float DeltaTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSequenceEaseExecutor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSequenceEaseExecutor")
+	}
+	static class UKuroSequenceEaseExecutor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroSequenceEaseExecutor>();
+	}
+};
+DUMPER7_ASSERTS_UKuroSequenceEaseExecutor;
+
+// Class KuroGameplay.EffectModelDecal
+// 0x05B0 (0x0610 - 0x0060)
+class UEffectModelDecal final : public UEffectModelBase
+{
+public:
+	class UMaterialInterface*                     DecalMaterialRef;                                  // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Location;                                          // 0x0068(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Rotation;                                          // 0x0210(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Scale;                                             // 0x03B8(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         SortOrder;                                         // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ZfadingFactor;                                     // 0x0564(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ZfadingPower;                                      // 0x0568(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ForceRenderScene;                                  // 0x056C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ForceRenderCharactor;                              // 0x056D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_56E[0x2];                                      // 0x056E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FKuroCurveFloat>     MaterialFloatParameters;                           // 0x0570(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FKuroCurveLinearColor> MaterialColorParameters;                         // 0x05C0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelDecal")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelDecal")
+	}
+	static class UEffectModelDecal* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelDecal>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelDecal;
+
+// Class KuroGameplay.KuroSequenceEaseFloatExecutor
+// 0x0010 (0x0048 - 0x0038)
+class UKuroSequenceEaseFloatExecutor final : public UKuroSequenceEaseExecutor
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            EaseCurve;                                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	float GetDuration() const;
+	float GetStartValue() const;
+	float GetTargetValue() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSequenceEaseFloatExecutor")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSequenceEaseFloatExecutor")
+	}
+	static class UKuroSequenceEaseFloatExecutor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroSequenceEaseFloatExecutor>();
+	}
+};
+DUMPER7_ASSERTS_UKuroSequenceEaseFloatExecutor;
+
+// Class KuroGameplay.EffectModelGhost
+// 0x0160 (0x01C0 - 0x0060)
+class UEffectModelGhost final : public UEffectModelBase
+{
+public:
+	class UMaterialInstance*                      MaterialRef;                                       // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          Mesh;                                              // 0x0068(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<EEffectModelGhostCppComponent>         MeshComponentsToUse;                               // 0x0070(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CustomComponentNames;                              // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FKuroCurveFloat                        AlphaCurve;                                        // 0x0090(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FKuroCurveFloat>     FloatParameters;                                   // 0x0120(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FKuroCurveLinearColor> ColorParameters;                                 // 0x0170(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelGhost")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelGhost")
+	}
+	static class UEffectModelGhost* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelGhost>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelGhost;
+
+// Class KuroGameplay.KuroSequenceRuntimeEaseComponent
+// 0x00A8 (0x0168 - 0x00C0)
+class UKuroSequenceRuntimeEaseComponent final : public UActorComponent
+{
+public:
+	TMap<int32, class UKuroSequenceEaseExecutor*> EaseExecutors;                                     // 0x00C0(0x0050)(BlueprintVisible, BlueprintReadOnly, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_110[0x58];                                     // 0x0110(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSequenceRuntimeEaseComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSequenceRuntimeEaseComponent")
+	}
+	static class UKuroSequenceRuntimeEaseComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroSequenceRuntimeEaseComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroSequenceRuntimeEaseComponent;
+
+// Class KuroGameplay.EffectModelGpuParticle
+// 0x05A0 (0x0600 - 0x0060)
+class UEffectModelGpuParticle final : public UEffectModelBase
+{
+public:
+	struct FKuroCurveVector                       Location;                                          // 0x0060(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Rotation;                                          // 0x0208(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Scale;                                             // 0x03B0(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class UKuroGPUParticleDA*                     Data;                                              // 0x0558(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroCurveFloat                        TimeScaler;                                        // 0x0560(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	bool                                          Loop;                                              // 0x05F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnablePingPong;                                    // 0x05F1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F2[0x2];                                      // 0x05F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PingPongTime;                                      // 0x05F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReversePlay;                                       // 0x05F8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("EffectModelGpuParticle")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"EffectModelGpuParticle")
+	}
+	static class UEffectModelGpuParticle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEffectModelGpuParticle>();
+	}
+};
+DUMPER7_ASSERTS_UEffectModelGpuParticle;
 
 // Class KuroGameplay.KuroSequenceRuntimeFunctionLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -81,46 +468,31 @@ public:
 };
 DUMPER7_ASSERTS_UKuroSequenceRuntimeFunctionLibrary;
 
-// Class KuroGameplay.EffectModelBase
-// 0x0028 (0x0060 - 0x0038)
-class UEffectModelBase : public UPrimaryDataAsset
+// Class KuroGameplay.EffectModelGroup
+// 0x0548 (0x05A8 - 0x0060)
+class UEffectModelGroup : public UEffectModelBase
 {
 public:
-	float                                         StartTime;                                         // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LoopTime;                                          // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndTime;                                           // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AutoPlay;                                          // 0x0044(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AutoDestroy;                                       // 0x0045(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IgnoreTimeDilation;                                // 0x0046(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IgnoreGlobalTimeDilation;                          // 0x0047(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          UiScenePrimitive;                                  // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ImportanceLevel;                                   // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultManualTime;                                 // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultManualSpeed;                                // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IgnoreDisable;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DisableOnMobile;                                   // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          HideOnBurstSkill;                                  // 0x005A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          NeedDisableWithActor;                              // 0x005B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SuperFarProgramFlag;                               // 0x005C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          HideForProtoPlayer;                                // 0x005D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKuroCurveVector                       Location;                                          // 0x0060(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Rotation;                                          // 0x0208(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FKuroCurveVector                       Scale;                                             // 0x03B0(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TMap<class UEffectModelBase*, float>          EffectData;                                        // 0x0558(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("EffectModelBase")
+		STATIC_CLASS_IMPL("EffectModelGroup")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"EffectModelBase")
+		STATIC_NAME_IMPL(L"EffectModelGroup")
 	}
-	static class UEffectModelBase* GetDefaultObj()
+	static class UEffectModelGroup* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UEffectModelBase>();
+		return GetDefaultObjImpl<UEffectModelGroup>();
 	}
 };
-DUMPER7_ASSERTS_UEffectModelBase;
+DUMPER7_ASSERTS_UEffectModelGroup;
 
 // Class KuroGameplay.KuroSplineCylinderTriggerActor
 // 0x0038 (0x02E8 - 0x02B0)
@@ -148,306 +520,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_AKuroSplineCylinderTriggerActor;
-
-// Class KuroGameplay.EffectModelAudio
-// 0x0028 (0x0088 - 0x0060)
-class UEffectModelAudio : public UEffectModelBase
-{
-public:
-	class UAkAudioEvent*                          AudioEvent;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        LocationOffsets;                                   // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         FadeOutTime;                                       // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioFadeCurve                               FadeOutCurve;                                      // 0x007C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          KeepAlive;                                         // 0x007D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableOcclusion;                                   // 0x007E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7F[0x1];                                       // 0x007F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkAudioEvent*                          TrailingAudioEvent;                                // 0x0080(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelAudio")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelAudio")
-	}
-	static class UEffectModelAudio* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelAudio>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelAudio;
-
-// Class KuroGameplay.KuroSplineVolumeBuilder
-// 0x0020 (0x0050 - 0x0030)
-class UKuroSplineVolumeBuilder : public UObject
-{
-public:
-	TArray<struct FVector>                        Vertices;                                          // 0x0030(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FBuilderPoly>                   Polys;                                             // 0x0040(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSplineVolumeBuilder")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilder")
-	}
-	static class UKuroSplineVolumeBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroSplineVolumeBuilder>();
-	}
-};
-DUMPER7_ASSERTS_UKuroSplineVolumeBuilder;
-
-// Class KuroGameplay.EffectModelBillboard
-// 0x0010 (0x0070 - 0x0060)
-class UEffectModelBillboard final : public UEffectModelBase
-{
-public:
-	bool                                          IsUpdateEveryFrame;                                // 0x0060(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EBillboardMode                                OrientAxis;                                        // 0x0061(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFixSize;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_63[0x1];                                       // 0x0063(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ScaleSize;                                         // 0x0064(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistance;                                       // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinSize;                                           // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelBillboard")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelBillboard")
-	}
-	static class UEffectModelBillboard* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelBillboard>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelBillboard;
-
-// Class KuroGameplay.KuroSplineVolumeBuilderBorder
-// 0x0010 (0x0060 - 0x0050)
-class UKuroSplineVolumeBuilderBorder final : public UKuroSplineVolumeBuilder
-{
-public:
-	float                                         HalfBoundsWidth;                                   // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowerBoundsHeight;                                 // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UpperBoundsHeight;                                 // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSplineVolumeBuilderBorder")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilderBorder")
-	}
-	static class UKuroSplineVolumeBuilderBorder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroSplineVolumeBuilderBorder>();
-	}
-};
-DUMPER7_ASSERTS_UKuroSplineVolumeBuilderBorder;
-
-// Class KuroGameplay.EffectModelCurveTrailDecal
-// 0x0008 (0x0068 - 0x0060)
-class UEffectModelCurveTrailDecal final : public UEffectModelBase
-{
-public:
-	class UKuroCurveTrailDecalConfig*             Config;                                            // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelCurveTrailDecal")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelCurveTrailDecal")
-	}
-	static class UEffectModelCurveTrailDecal* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelCurveTrailDecal>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelCurveTrailDecal;
-
-// Class KuroGameplay.KuroSplineVolumeBuilderPolyhedron
-// 0x0008 (0x0058 - 0x0050)
-class UKuroSplineVolumeBuilderPolyhedron final : public UKuroSplineVolumeBuilder
-{
-public:
-	float                                         LowerBoundsHeight;                                 // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UpperBoundsHeight;                                 // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSplineVolumeBuilderPolyhedron")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilderPolyhedron")
-	}
-	static class UKuroSplineVolumeBuilderPolyhedron* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroSplineVolumeBuilderPolyhedron>();
-	}
-};
-DUMPER7_ASSERTS_UKuroSplineVolumeBuilderPolyhedron;
-
-// Class KuroGameplay.EffectModelDecal
-// 0x05B0 (0x0610 - 0x0060)
-class UEffectModelDecal final : public UEffectModelBase
-{
-public:
-	class UMaterialInterface*                     DecalMaterialRef;                                  // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Location;                                          // 0x0068(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Rotation;                                          // 0x0210(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Scale;                                             // 0x03B8(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         SortOrder;                                         // 0x0560(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ZfadingFactor;                                     // 0x0564(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ZfadingPower;                                      // 0x0568(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_56C[0x4];                                      // 0x056C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, struct FKuroCurveFloat>     MaterialFloatParameters;                           // 0x0570(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FKuroCurveLinearColor> MaterialColorParameters;                         // 0x05C0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelDecal")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelDecal")
-	}
-	static class UEffectModelDecal* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelDecal>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelDecal;
-
-// Class KuroGameplay.KuroSplineVolumeGenerator
-// 0x0000 (0x02B0 - 0x02B0)
-class AKuroSplineVolumeGenerator final : public AActor
-{
-public:
-	void Generate(class USplineComponent* InSplineComponent, const TSubclassOf<class ABrush> InVolumeClass, class UKuroSplineVolumeBuilder* InSplineVolumeBuilder);
-	void GeneratePolyhedron(class USplineComponent* InSplineComponent, const TSubclassOf<class ABrush> InVolumeClass, const float LowerBoundsHeight, const float UpperBoundsHeight);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSplineVolumeGenerator")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSplineVolumeGenerator")
-	}
-	static class AKuroSplineVolumeGenerator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AKuroSplineVolumeGenerator>();
-	}
-};
-DUMPER7_ASSERTS_AKuroSplineVolumeGenerator;
-
-// Class KuroGameplay.EffectModelGhost
-// 0x0160 (0x01C0 - 0x0060)
-class UEffectModelGhost final : public UEffectModelBase
-{
-public:
-	class UMaterialInstance*                      MaterialRef;                                       // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USkeletalMesh*                          Mesh;                                              // 0x0068(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<EEffectModelGhostCppComponent>         MeshComponentsToUse;                               // 0x0070(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FName>                           CustomComponentNames;                              // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FKuroCurveFloat                        AlphaCurve;                                        // 0x0090(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FKuroCurveFloat>     FloatParameters;                                   // 0x0120(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FKuroCurveLinearColor> ColorParameters;                                 // 0x0170(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelGhost")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelGhost")
-	}
-	static class UEffectModelGhost* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelGhost>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelGhost;
-
-// Class KuroGameplay.EffectModelGpuParticle
-// 0x05A0 (0x0600 - 0x0060)
-class UEffectModelGpuParticle final : public UEffectModelBase
-{
-public:
-	struct FKuroCurveVector                       Location;                                          // 0x0060(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Rotation;                                          // 0x0208(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Scale;                                             // 0x03B0(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UKuroGPUParticleDA*                     Data;                                              // 0x0558(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroCurveFloat                        TimeScaler;                                        // 0x0560(0x0090)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	bool                                          Loop;                                              // 0x05F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnablePingPong;                                    // 0x05F1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F2[0x2];                                      // 0x05F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PingPongTime;                                      // 0x05F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReversePlay;                                       // 0x05F8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F9[0x7];                                      // 0x05F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelGpuParticle")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelGpuParticle")
-	}
-	static class UEffectModelGpuParticle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelGpuParticle>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelGpuParticle;
-
-// Class KuroGameplay.EffectModelGroup
-// 0x0548 (0x05A8 - 0x0060)
-class UEffectModelGroup : public UEffectModelBase
-{
-public:
-	struct FKuroCurveVector                       Location;                                          // 0x0060(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Rotation;                                          // 0x0208(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FKuroCurveVector                       Scale;                                             // 0x03B0(0x01A8)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TMap<class UEffectModelBase*, float>          EffectData;                                        // 0x0558(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("EffectModelGroup")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"EffectModelGroup")
-	}
-	static class UEffectModelGroup* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEffectModelGroup>();
-	}
-};
-DUMPER7_ASSERTS_UEffectModelGroup;
 
 // Class KuroGameplay.EffectModelLight
 // 0x07B8 (0x0818 - 0x0060)
@@ -508,6 +580,30 @@ public:
 };
 DUMPER7_ASSERTS_UEffectModelLight;
 
+// Class KuroGameplay.KuroSplineVolumeBuilder
+// 0x0020 (0x0050 - 0x0030)
+class UKuroSplineVolumeBuilder : public UObject
+{
+public:
+	TArray<struct FVector>                        Vertices;                                          // 0x0030(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FBuilderPoly>                   Polys;                                             // 0x0040(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSplineVolumeBuilder")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilder")
+	}
+	static class UKuroSplineVolumeBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroSplineVolumeBuilder>();
+	}
+};
+DUMPER7_ASSERTS_UKuroSplineVolumeBuilder;
+
 // Class KuroGameplay.EffectModelMaterialController
 // 0x0010 (0x0070 - 0x0060)
 class UEffectModelMaterialController final : public UEffectModelBase
@@ -532,42 +628,31 @@ public:
 };
 DUMPER7_ASSERTS_UEffectModelMaterialController;
 
-// Class KuroGameplay.KuroStair
-// 0x01B8 (0x0570 - 0x03B8)
-class alignas(0x10) AKuroStair final : public AKuroBPActor
+// Class KuroGameplay.KuroSplineVolumeBuilderBorder
+// 0x0010 (0x0060 - 0x0050)
+class UKuroSplineVolumeBuilderBorder final : public UKuroSplineVolumeBuilder
 {
 public:
-	int32                                         StairCount;                                        // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TailHorizontalStairCount;                          // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         HeadHorizontalStairCount;                          // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                MoveDelta;                                         // 0x03C4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OneStairTime;                                      // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            StairMesh;                                         // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UStaticMesh*                            WholeStairMesh;                                    // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoxCollisionHeight;                                // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoxCollisionWidth;                                 // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F0[0x180];                                    // 0x03F0(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnConveyBase(float DeltaSeconds, const struct FVector& FloorLocation, class UCharacterMovementComponent* CharacterMovement);
-	void OnHorizontalConveyBase(float DeltaSeconds, const struct FVector& FloorLocation, class UCharacterMovementComponent* CharacterMovement);
+	float                                         HalfBoundsWidth;                                   // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowerBoundsHeight;                                 // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UpperBoundsHeight;                                 // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroStair")
+		STATIC_CLASS_IMPL("KuroSplineVolumeBuilderBorder")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroStair")
+		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilderBorder")
 	}
-	static class AKuroStair* GetDefaultObj()
+	static class UKuroSplineVolumeBuilderBorder* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AKuroStair>();
+		return GetDefaultObjImpl<UKuroSplineVolumeBuilderBorder>();
 	}
 };
-DUMPER7_ASSERTS_AKuroStair;
+DUMPER7_ASSERTS_UKuroSplineVolumeBuilderBorder;
 
 // Class KuroGameplay.EffectModelMultiEffect
 // 0x0018 (0x0078 - 0x0060)
@@ -597,29 +682,6 @@ public:
 };
 DUMPER7_ASSERTS_UEffectModelMultiEffect;
 
-// Class KuroGameplay.KuroStaticMeshLibrary
-// 0x0000 (0x0030 - 0x0030)
-class UKuroStaticMeshLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static void MergeSimpleCollisions(class UStaticMeshComponent* TemplateComponent, const TArray<struct FTransform>& LocalTransforms);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroStaticMeshLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroStaticMeshLibrary")
-	}
-	static class UKuroStaticMeshLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroStaticMeshLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UKuroStaticMeshLibrary;
-
 // Class KuroGameplay.EffectModelNDC
 // 0x0018 (0x0078 - 0x0060)
 class UEffectModelNDC final : public UEffectModelBase
@@ -645,30 +707,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UEffectModelNDC;
-
-// Class KuroGameplay.KuroTimerSystemFunctionLibrary
-// 0x0000 (0x0030 - 0x0030)
-class UKuroTimerSystemFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static void Clear();
-	static void Initialize(class UGameInstance* World);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroTimerSystemFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroTimerSystemFunctionLibrary")
-	}
-	static class UKuroTimerSystemFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroTimerSystemFunctionLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UKuroTimerSystemFunctionLibrary;
 
 // Class KuroGameplay.EffectModelNiagara
 // 0x09A8 (0x0A08 - 0x0060)
@@ -696,7 +734,8 @@ public:
 	struct FKuroCurveLinearColor                  GlobalColor;                                       // 0x0750(0x0220)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FKuroCurveFloat                        GlobalAlpha;                                       // 0x0970(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bBodyOpacityUseGlobalAlpha;                        // 0x0A00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A01[0x7];                                      // 0x0A01(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bPointCloudNiagara;                                // 0x0A01(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A02[0x6];                                      // 0x0A02(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -713,29 +752,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UEffectModelNiagara;
-
-// Class KuroGameplay.TransportNetwork
-// 0x0008 (0x02B8 - 0x02B0)
-class ATransportNetwork final : public AActor
-{
-public:
-	class UKuroTransportNetworkComponent*         TransportNetworkComponent;                         // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("TransportNetwork")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"TransportNetwork")
-	}
-	static class ATransportNetwork* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ATransportNetwork>();
-	}
-};
-DUMPER7_ASSERTS_ATransportNetwork;
 
 // Class KuroGameplay.EffectModelPostProcess
 // 0x7238 (0x7298 - 0x0060)
@@ -963,46 +979,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UEffectModelPostProcess;
-
-// Class KuroGameplay.KuroRoadway
-// 0x0058 (0x0088 - 0x0030)
-class UKuroRoadway : public UObject
-{
-public:
-	class USplineComponent*                       RoadSpline;                                        // 0x0030(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OpposingId;                                        // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Width;                                             // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Length;                                            // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 Nexts;                                             // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Lasts;                                             // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bEnable;                                           // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectTerrain;                                    // 0x0081(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PavedRoadConfig;                                   // 0x0084(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	struct FVectorDouble D_GetEndPosition();
-	void D_GetNearestPointToPosition(const struct FVectorDouble& WorldPosition, struct FVectorDouble* OutputNearestPoint, float* OutputNearestPointKey, float* OutputDistance);
-	struct FVectorDouble D_GetStartPosition();
-	void DebugDraw(const struct FLinearColor& Color, float LifeTime, int32 StartPointIndex, int32 EndPointIndex);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroRoadway")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroRoadway")
-	}
-	static class UKuroRoadway* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroRoadway>();
-	}
-};
-DUMPER7_ASSERTS_UKuroRoadway;
 
 // Class KuroGameplay.EffectModelSequencePose
 // 0x0110 (0x0170 - 0x0060)
@@ -1285,6 +1261,7 @@ public:
 	static int32 GetEffectLruCount(const class FString& Path);
 	static int32 GetEffectLruSize();
 	static class UEffectModelBase* GetEffectModel(int32 Id);
+	static uint8 GetEffectSpecDataType(const class FName& EffectPath);
 	static float GetLastPlayTime(int32 Id);
 	static float GetLastStopTime(int32 Id);
 	static float GetPassTime(int32 Id);
@@ -1301,9 +1278,10 @@ public:
 	static bool HasEffectForSpecData();
 	static bool HasInitialize();
 	static bool HasNiagaraComponentHandle(int32 Id);
-	static bool Initialize(class UGameInstance* GameInstance, const TArray<struct FKuroEffectSpecData>& SpecDataArray, bool InIsGameRunning, float InBoundsVisibleThreshold, float InMaxVisibleCullDeltaTime, float InWasRecentlyRenderInterval, bool InUseVisibilityTestPass, class UClass* EffectViewClass, bool IsResetSpecData);
+	static bool Initialize(class UGameInstance* GameInstance, const TArray<struct FKuroEffectSpecData>& SpecDataArray, const TArray<struct FKuroEffectSpecChildData>& SpecChildDataArray, bool InIsGameRunning, float InBoundsVisibleThreshold, float InMaxVisibleCullDeltaTime, float InWasRecentlyRenderInterval, bool InUseVisibilityTestPass, class UClass* EffectViewClass, bool IsResetSpecData);
 	static void InitStaticGlobalData(bool bUseLog, bool bIsInEditorTick, bool bUseDbConfig);
 	static bool IsEffectActorValid(int32 Id);
+	static bool IsEffectSpecDataContainsType(const class FName& EffectPath, uint8 Type);
 	static bool IsEffectValid(int32 Id);
 	static bool IsHandleFreeze(int32 Id);
 	static bool IsPlaying(int32 Id);
@@ -1314,7 +1292,7 @@ public:
 	static void OnPlayerEffectContainerFormationLoaded(const TArray<struct FKuroSceneTeamItem>& SceneTeamItems);
 	static void OnTickSystemPausedChange(bool bIsPaused);
 	static void OnUiSceneStateChange(EKuroUI3DState UiSceneState);
-	static void RefreshEffectForSpecData(const TArray<struct FKuroEffectSpecData>& SpecDataArray, bool IsRefresh);
+	static void RefreshEffectForSpecData(const TArray<struct FKuroEffectSpecData>& SpecDataArray, const TArray<struct FKuroEffectSpecChildData>& SpecChildDataArray, bool IsRefresh);
 	static void RegisterJsFunction(const TDelegate<void(float Opacity, class UActorComponent* CharRenderingComponent, class USkeletalMeshComponent* SkeletalMeshComponent, class AActor* Owner)>& InSkeletalMeshSpec_OnBodyEffectChange, const TDelegate<void(class UActorComponent* CharRenderingComponent, class USkeletalMeshComponent* SkeletalMeshComponent, class AActor* Owner)>& InSkeletalMeshSpec_CreateRenderingComponent, const TDelegate<void(class AActor* EffectActor, class UActorComponent* CharRenderingComponent)>& InSkeletalMeshSpec_DestroyRenderingComponent, const TDelegate<void(int32 EntityId)>& InEffectHandle_GetEntityOwnerActor, const TDelegate<void(int32 EntityId)>& InEffectHandle_GetEntityModelConfigId, const TDelegate<void(float EffectEnableRange)>& InEffectHandle_GetOrAddEffectDynamicGroup, const TDelegate<void(bool FromPrimaryRole, class AActor* Actor)>& InAudioSystem_GetAkComponent, const TDelegate<void(int32 EventHandle, float FadeOutTime)>& InAudioSystem_ExecuteActionStop, const TDelegate<void(const class FString& EventName, const struct FTransformDouble& Transform)>& InAudioSystem_PostEventTransform, const TDelegate<void(const class FString& EventName, class UAkComponent* AkComponent)>& InAudioSystem_PostEventAkComponent, const TDelegate<void(int32 EntityId)>& InNiagaraSpec_IsNeedQualityBias, const TDelegate<void(int32 EntityId, bool VisibleForProtoPlayer)>& InPostProcessSpec_IsNeedPostEffect, const TDelegate<void(int32 EntityId)>& InPostProcessSpec_IsDisableInUltraSkill, const TDelegate<void(TSubclassOf<class AActor> Class, const struct FTransformDouble& Transform)>& InActorSystem_Get, const TDelegate<void(const class FString& Reason, class AActor* Actor)>& InActorSystem_Put, const TDelegate<void(class AActor* Actor, int32 EffectId)>& InEffectSystem_SetEffectView, const TDelegate<void(int32 EntityId)>& InEffectSystem_CheckIsNetPlayer, const TDelegate<void(const class FString& Path)>& InEffectSystem_CheckMobileBlackEffect, const TDelegate<void(int32 EffectId, class AActor* EffectActor, class USkeletalMeshComponent* ContextMeshComponent, class UObject* ContextSourceObject, class UEffectModelBase* EffectModel)>& InEffectSpec_RegisterBodyEffect, const TDelegate<void(int32 EffectId, class AActor* EffectActor, class USkeletalMeshComponent* ContextMeshComponent, class UObject* ContextSourceObject, class UEffectModelBase* EffectModel)>& InEffectSpec_UnregisterBodyEffect, const TDelegate<void(int32 EntityId, class UObject* ContextSourceObject)>& InMaterialSpec_GetRenderingComponentByContext, const TDelegate<void(class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_GetRenderingComponentBySkeletal, const TDelegate<void(class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_SpawnRenderActor, const TDelegate<void(class AActor* Actor, class USkeletalMeshComponent* SkeletalMeshComponent)>& InMaterialSpec_GetRenderingComponentByRenderActor, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent, class UKuroMaterialControllerDataAsset* DataAsset)>& InMaterialSpec_AddMaterialControllerData, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent, int32 MaterialControllerHandle)>& InMaterialSpec_RemoveMaterialControllerData, const TDelegate<void(class UKuroCharRenderingComponent* RenderComponent)>& InMaterialSpec_DestroyRenderingComponent, const TDelegate<void(class UEffectModelAudio* EffectModel, class AActor* EffectActor, int32 EffectType)>& InEffectAudioController_AddPlayEffectAudio, const TDelegate<void(class UEffectModelAudio* EffectModel, class AActor* EffectActor, int32 EffectType, int32 Priority)>& InEffectAudioController_AddPlayEffectAudioPriority, const TDelegate<void(int32 Uid, const class FString& Context)>& InEffectAudioController_OnStopEffectAudio);
 	static void RemoveFinishCallback(int32 Id);
 	static void ReplayEffect(int32 Id, const class FString& Reason, const struct FTransformDouble& Transform, bool bResetTransform);
@@ -1347,6 +1325,8 @@ public:
 	static int32 SpawnUnloopedEffectFromGhostContext(class UObject* WorldContext, const struct FTransformDouble& Transform, const class FString& Path, const class FString& Reason, const struct FKuroEffectRuntimeGhostEffectContext& Context, const TDelegate<void(int32 Handle)>& BeforeInitCallback, const TDelegate<void(uint8 Result, int32 Handle)>& Callback, const TDelegate<void(int32 Handle)>& BeforePlayCallback, const TDelegate<void()>& OnClearCallback, uint8 EffectType, bool bPrepare, bool bForceCreateActor);
 	static int32 SpawnUnloopedEffectFromSkeletalContext(class UObject* WorldContext, const struct FTransformDouble& Transform, const class FString& Path, const class FString& Reason, const struct FKuroSkeletalMeshEffectContext& Context, const TDelegate<void(int32 Handle)>& BeforeInitCallback, const TDelegate<void(uint8 Result, int32 Handle)>& Callback, const TDelegate<void(int32 Handle)>& BeforePlayCallback, const TDelegate<void()>& OnClearCallback, uint8 EffectType, bool bPrepare, bool bForceCreateActor);
 	static bool StopEffectById(int32 Handle, const class FString& Reason, bool Immediately, bool bDestroyActor);
+	static void StopEffectFromEntity(int32 EntityId, class FName FilterName, bool Immediately);
+	static void StopLimitedEffectFromEntityImmediately(int32 EntityId, bool RootOnly);
 	static void TickHandleInEditor(int32 Id, float Delta);
 	static void UpdateBodyEffect(int32 Id, float Opacity, bool bVisible, bool bCastShadow);
 	static void UpdateIsGameRunning(bool bIsGameRunning);
@@ -1937,6 +1917,93 @@ public:
 };
 DUMPER7_ASSERTS_UKuroLevelPlayCustomCollisionComponent;
 
+// Class KuroGameplay.KuroLevelPlaySplineCircularCluster
+// 0x0018 (0x0050 - 0x0038)
+class UKuroLevelPlaySplineCircularCluster final : public UDataAsset
+{
+public:
+	float                                         DiffusionRadius;                                   // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroLevelPlayCircle>           Circles;                                           // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroLevelPlaySplineCircularCluster")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlaySplineCircularCluster")
+	}
+	static class UKuroLevelPlaySplineCircularCluster* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlaySplineCircularCluster>();
+	}
+};
+DUMPER7_ASSERTS_UKuroLevelPlaySplineCircularCluster;
+
+// Class KuroGameplay.KuroLevelPlayObstacleConvexHull
+// 0x0028 (0x0060 - 0x0038)
+class UKuroLevelPlayObstacleConvexHull final : public UDataAsset
+{
+public:
+	struct FVector                                Normal;                                            // 0x0038(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Origin;                                            // 0x0044(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      ConvexHullPoints;                                  // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroLevelPlayObstacleConvexHull")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlayObstacleConvexHull")
+	}
+	static class UKuroLevelPlayObstacleConvexHull* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlayObstacleConvexHull>();
+	}
+};
+DUMPER7_ASSERTS_UKuroLevelPlayObstacleConvexHull;
+
+// Class KuroGameplay.KuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset
+// 0x00C8 (0x0100 - 0x0038)
+class UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset final : public UPrimaryDataAsset
+{
+public:
+	TMap<int32, class UKuroLevelPlaySplineCircularCluster*> SplineClusters;                          // 0x0038(0x0050)(Edit, BlueprintVisible, ExportObject, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<int32, class UKuroLevelPlayObstacleConvexHull*> ConvexHulls;                                // 0x0088(0x0050)(Edit, BlueprintVisible, ExportObject, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bEnableAutoFade;                                   // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AutoFadeDurating;                                  // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SoftEdgeWidthWorldRatio;                           // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RenderTargetWorldRadius;                           // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RenderTargetSizeX;                                 // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RenderTargetSizeY;                                 // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TArray<class FString> GetInstancedFoliageTypeOptions() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset")
+	}
+	static class UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset>();
+	}
+};
+DUMPER7_ASSERTS_UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset;
+
 // Class KuroGameplay.KuroLevelPlayEffect
 // 0x0078 (0x00B8 - 0x0040)
 class UKuroLevelPlayEffect final : public UKuroLevelStateAction
@@ -1963,6 +2030,48 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroLevelPlayEffect;
+
+// Class KuroGameplay.KuroLevelPlayFlowerPollutionComponent
+// 0x01B8 (0x0278 - 0x00C0)
+class UKuroLevelPlayFlowerPollutionComponent final : public UActorComponent
+{
+public:
+	TArray<int32>                                 ObstaclePbDataIds;                                 // 0x00C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
+	TMap<int32, struct FKuroLevelPlayPointLight>  PointLights;                                       // 0x00D0(0x0050)(Edit, BlueprintVisible, Transient, EditConst, NativeAccessSpecifierPublic)
+	TMap<int32, bool>                             SplineValues;                                      // 0x0120(0x0050)(Edit, BlueprintVisible, Transient, EditConst, NativeAccessSpecifierPublic)
+	TScriptInterface<class IKuroRenderingStampConsumer> Consumer;                                    // 0x0170(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class UKuroLevelPlayCircularPackingAlongSplinePrimaryDataAsset* CircularPackingAlongSplinePrimaryDataAsset; // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 Source, int32 Target)> OnLightUpPointLight;                  // 0x0188(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 SplinePbDataId, bool bAllPolluted)> OnSplinePollutionStateChanged; // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	float                                         MaxFlowerRadius;                                   // 0x01A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroCircleStampData*                   CachedCircleData;                                  // 0x01B0(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1B8[0x8];                                      // 0x01B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGamePartition*                         FlowerPartition;                                   // 0x01C0(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FKuroLevelPlayFlower>           Flowers;                                           // 0x01C8(0x0010)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1D8[0xA0];                                     // 0x01D8(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Update();
+
+	bool IsPositionPolluted(const double QueryRadius, const struct FVectorDouble& Position) const;
+	bool PredictFlowerPollutionAtPosition(const struct FKuroLevelPlayFlower& Flower, const struct FVectorDouble& Position) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroLevelPlayFlowerPollutionComponent")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroLevelPlayFlowerPollutionComponent")
+	}
+	static class UKuroLevelPlayFlowerPollutionComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlayFlowerPollutionComponent>();
+	}
+};
+DUMPER7_ASSERTS_UKuroLevelPlayFlowerPollutionComponent;
 
 // Class KuroGameplay.KuroLevelPlayInterface
 // 0x0000 (0x0000 - 0x0000)
@@ -2001,6 +2110,7 @@ DUMPER7_ASSERTS_IKuroLevelPlayInterface;
 class UKuroLevelPlayLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static void ApplyWorldOffset(class USceneComponent* SceneComponent, const struct FVector& InWorldOffset, bool bWorldShift);
 	static void FakeAddAlwaysLoadedActorsToWorld(const class UWorld* World);
 	static void FakeRemoveAlwaysLoadedActorsFromWorld(const class UWorld* World);
 	static struct FBox GetActorComponentsBoundingBox(class AActor* Actor, bool bNonColliding, bool bIncludeFromChildActors);
@@ -2010,6 +2120,7 @@ public:
 	static int32 GetEntityIdByBaseItem(class AActor* Actor);
 	static void GetPersistentLevelActorsInPackage(const class FString& PackageName, TArray<class AActor*>* OutLevelActors);
 	static class UWorld* GetWorldInPackage(const class FString& PackageName);
+	static bool IsSimulatePhysics(class UPrimitiveComponent* PrimitiveComponent);
 	static void RegisterBaseItemInfo(class UClass* BaseItemClass, const class FString& EntityIdName);
 
 public:
@@ -2063,7 +2174,7 @@ public:
 DUMPER7_ASSERTS_UKuroLevelPlayMovementTrailCollisionComponent;
 
 // Class KuroGameplay.KuroLevelPlaySubsystem
-// 0x0090 (0x00C8 - 0x0038)
+// 0x0188 (0x01C0 - 0x0038)
 class UKuroLevelPlaySubsystem final : public UWorldSubsystem
 {
 public:
@@ -2072,13 +2183,19 @@ public:
 	TMulticastInlineDelegate<void(const struct FGameplayTagContainer& GameplayTags)> OnSpecificTagObjectStartRelayCollisionEvent; // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const struct FGameplayTagContainer& GameplayTags)> OnSpecificTagObjectEndRelayCollisionEvent; // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TSet<TWeakObjectPtr<class UObject>>           ManagedObjects;                                    // 0x0078(0x0050)(Edit, EditConst, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C8[0xF8];                                      // 0x00C8(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool D_FindTeleportSpot(class AActor* TestActor, class UPrimitiveComponent* TestPrimitiveComponent, const struct FVectorDouble& InPlaceLocation, const struct FRotator& TestRotation, uint8 Iterations, struct FVectorDouble* OutPlaceLocation);
 
+	int32 AssignLevelPlayId(const EKuroLevelPlayType PlayType);
+	const TSet<int32> GetLevelPlayIdsByType(EKuroLevelPlayType PlayType);
 	void ProcessAllItems();
+	void RegisterEntityToLevelPlay(int32 LevelPlayId, int32 EntityId);
 	void RegisterObject(class UObject* InKuroLevelPlayObject);
 	void UnregisterObject(class UObject* InKuroLevelPlayObject);
+
+	void WaitEntitiesByPbDataIds(const class UObject* WorldContextObject, const int32 LevelPlayId, const TArray<int32>& PbDataIds, const float Timeout, const struct FLatentActionInfo& LatentInfo) const;
 
 public:
 	static class UClass* StaticClass()
@@ -2153,6 +2270,77 @@ public:
 };
 DUMPER7_ASSERTS_UKuroLockAxisCollisionComponent;
 
+// Class KuroGameplay.KuroMp4PlayerPreviewable
+// 0x0000 (0x0000 - 0x0000)
+class IKuroMp4PlayerPreviewable final
+{
+public:
+	void OnMp4PlayRequested(class UMediaPlayer* InPlayer, class UMediaTexture* InTexture);
+	void OnMp4StopRequested();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroMp4PlayerPreviewable")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMp4PlayerPreviewable")
+	}
+	static class IKuroMp4PlayerPreviewable* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKuroMp4PlayerPreviewable>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+DUMPER7_ASSERTS_IKuroMp4PlayerPreviewable;
+
+// Class KuroGameplay.KuroMp4PlayerPreviewSubsystem
+// 0x0068 (0x00A0 - 0x0038)
+class UKuroMp4PlayerPreviewSubsystem final : public UWorldSubsystem
+{
+public:
+	int32                                         MaxActiveMP4PlayerActors;                          // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x64];                                      // 0x003C(0x0064)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UKuroMp4PlayerPreviewSubsystem* Get(const class UObject* WorldContextObject);
+
+	bool ForcePlayMP4PlayerActor(class UObject* InMP4PlayerActor);
+	void ForceStopAndReleaseAll();
+	void ForceStopMP4PlayerActor(class UObject* InMP4PlayerActor);
+	void RefreshActiveMP4PlayerActors();
+	void RegisterMP4PlayerActor(class UObject* InMP4PlayerActor);
+	bool RegisterPoolIfNeeded(const class FString& AssetPath);
+	void ReleaseForMP4PlayerActor(class UObject* InMP4PlayerActor);
+	bool TryAcquireForMP4PlayerActor(class UObject* InMP4PlayerActor, class UMediaPlayer** OutPlayer, class UMediaTexture** OutTexture);
+	void UnregisterMP4PlayerActor(class UObject* InMP4PlayerActor);
+	void UpdateDistanceAndRefresh(class UObject* InMP4PlayerActor, float InDistanceToCamera);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroMp4PlayerPreviewSubsystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroMp4PlayerPreviewSubsystem")
+	}
+	static class UKuroMp4PlayerPreviewSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroMp4PlayerPreviewSubsystem>();
+	}
+};
+DUMPER7_ASSERTS_UKuroMp4PlayerPreviewSubsystem;
+
 // Class KuroGameplay.KuroMultilBgProgressBar
 // 0x0320 (0x0490 - 0x0170)
 class UKuroMultilBgProgressBar final : public UWidget
@@ -2199,171 +2387,230 @@ public:
 };
 DUMPER7_ASSERTS_UKuroMultilBgProgressBar;
 
-// Class KuroGameplay.KuroResourceManager
-// 0x0170 (0x01A0 - 0x0030)
-class UKuroResourceManager final : public UObject
+// Class KuroGameplay.KuroPerceptionInterface
+// 0x0000 (0x0030 - 0x0030)
+class UKuroPerceptionInterface final : public UObject
 {
 public:
-	TDelegate<void(const int32 HandleId)>         LoadResourceDelegate;                              // 0x0030(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_58[0x148];                                     // 0x0058(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UObject* GetAsset(const int32 HandleId);
-	int32 LoadAsyncWithId(const class FString& Path, const int32 HandleId, const int32 Priority);
-	int32 LoadAsyncWithIdAndTag(const class FString& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
-	int32 LoadAsyncWithIdAndTagByName(const class FName& Path, const int32 HandleId, const int32 Priority, class FName MemTag);
-	int32 LoadAsyncWithIdByName(const class FName& Path, const int32 HandleId, const int32 Priority);
-	int32 LoadWithId(const class FString& Path, const int32 HandleId);
-	int32 LoadWithIdAndTag(const class FString& Path, const int32 HandleId, class FName MemTag);
-	int32 LoadWithIdAndTagByName(const class FName& Path, const int32 HandleId, class FName MemTag);
-	int32 LoadWithIdByName(const class FName& Path, const int32 HandleId);
-	void Release(const int32 HandleId);
-	bool WaitComplete(const int32 HandleId, const float Timeout);
-
-	void DebugDumpLoadingAssets() const;
-	class UObject* GetLoadedAsset(const class FString& Path) const;
-	class UObject* GetLoadedAssetByName(const class FName& Path) const;
+	static class FString GetPlayerPerceptionDebugString(const uint32 Token);
+	static void InitializeEnvironment(uint16 GridWidth, uint16 GridHeight, const TMap<class FName, uint32>& Groups, bool OnlyPlayer);
+	static void MarkElementDisable(uint32 Token, bool bIsDisable);
+	static void RefreshDynamicPerceptionRange(uint32 RangeToken);
+	static void RemovePerceptionRange(uint32 RangeToken);
+	static void UnregisterPlayerPerceptionEvent(const uint32 Token);
+	static void UpdatePerceptionEventDistance(const uint32 Token, float EnterDistance, float LeaveDistance);
+	static void UpdatePerceptionRange(uint32 RangeToken, float Range);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroResourceManager")
+		STATIC_CLASS_IMPL("KuroPerceptionInterface")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroResourceManager")
+		STATIC_NAME_IMPL(L"KuroPerceptionInterface")
 	}
-	static class UKuroResourceManager* GetDefaultObj()
+	static class UKuroPerceptionInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroResourceManager>();
+		return GetDefaultObjImpl<UKuroPerceptionInterface>();
 	}
 };
-DUMPER7_ASSERTS_UKuroResourceManager;
+DUMPER7_ASSERTS_UKuroPerceptionInterface;
 
-// Class KuroGameplay.KuroResourceSystemFunctionLibrary
+// Class KuroGameplay.KuroSplineVolumeBuilderPolyhedron
+// 0x0008 (0x0058 - 0x0050)
+class UKuroSplineVolumeBuilderPolyhedron final : public UKuroSplineVolumeBuilder
+{
+public:
+	float                                         LowerBoundsHeight;                                 // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UpperBoundsHeight;                                 // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSplineVolumeBuilderPolyhedron")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSplineVolumeBuilderPolyhedron")
+	}
+	static class UKuroSplineVolumeBuilderPolyhedron* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroSplineVolumeBuilderPolyhedron>();
+	}
+};
+DUMPER7_ASSERTS_UKuroSplineVolumeBuilderPolyhedron;
+
+// Class KuroGameplay.KuroSplineVolumeGenerator
+// 0x0000 (0x02B0 - 0x02B0)
+class AKuroSplineVolumeGenerator final : public AActor
+{
+public:
+	void Generate(class USplineComponent* InSplineComponent, const TSubclassOf<class ABrush> InVolumeClass, class UKuroSplineVolumeBuilder* InSplineVolumeBuilder);
+	void GeneratePolyhedron(class USplineComponent* InSplineComponent, const TSubclassOf<class ABrush> InVolumeClass, const float LowerBoundsHeight, const float UpperBoundsHeight);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroSplineVolumeGenerator")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroSplineVolumeGenerator")
+	}
+	static class AKuroSplineVolumeGenerator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroSplineVolumeGenerator>();
+	}
+};
+DUMPER7_ASSERTS_AKuroSplineVolumeGenerator;
+
+// Class KuroGameplay.KuroStair
+// 0x01B8 (0x0570 - 0x03B8)
+class alignas(0x10) AKuroStair final : public AKuroBPActor
+{
+public:
+	int32                                         StairCount;                                        // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TailHorizontalStairCount;                          // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HeadHorizontalStairCount;                          // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                MoveDelta;                                         // 0x03C4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OneStairTime;                                      // 0x03D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D4[0x4];                                      // 0x03D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            StairMesh;                                         // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UStaticMesh*                            WholeStairMesh;                                    // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoxCollisionHeight;                                // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoxCollisionWidth;                                 // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F0[0x180];                                    // 0x03F0(0x0180)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnConveyBase(float DeltaSeconds, const struct FVector& FloorLocation, class UCharacterMovementComponent* CharacterMovement);
+	void OnHorizontalConveyBase(float DeltaSeconds, const struct FVector& FloorLocation, class UCharacterMovementComponent* CharacterMovement);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroStair")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStair")
+	}
+	static class AKuroStair* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroStair>();
+	}
+};
+DUMPER7_ASSERTS_AKuroStair;
+
+// Class KuroGameplay.KuroStaticMeshLibrary
 // 0x0000 (0x0030 - 0x0030)
-class UKuroResourceSystemFunctionLibrary final : public UBlueprintFunctionLibrary
+class UKuroStaticMeshLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void MergeSimpleCollisions(class UStaticMeshComponent* TemplateComponent, const TArray<struct FTransform>& LocalTransforms);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroStaticMeshLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroStaticMeshLibrary")
+	}
+	static class UKuroStaticMeshLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroStaticMeshLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKuroStaticMeshLibrary;
+
+// Class KuroGameplay.KuroTimerSystemFunctionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroTimerSystemFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
 	static void Clear();
-	static void Initialize(class UWorld* World, float TimeLimit);
-	static void SetCallbackTimeLimit(float TimeLimit);
+	static void Initialize(class UGameInstance* World);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroResourceSystemFunctionLibrary")
+		STATIC_CLASS_IMPL("KuroTimerSystemFunctionLibrary")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroResourceSystemFunctionLibrary")
+		STATIC_NAME_IMPL(L"KuroTimerSystemFunctionLibrary")
 	}
-	static class UKuroResourceSystemFunctionLibrary* GetDefaultObj()
+	static class UKuroTimerSystemFunctionLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroResourceSystemFunctionLibrary>();
+		return GetDefaultObjImpl<UKuroTimerSystemFunctionLibrary>();
 	}
 };
-DUMPER7_ASSERTS_UKuroResourceSystemFunctionLibrary;
+DUMPER7_ASSERTS_UKuroTimerSystemFunctionLibrary;
 
-// Class KuroGameplay.KuroRoadwayStaticMeshComponent
-// 0x0000 (0x0630 - 0x0630)
-class UKuroRoadwayStaticMeshComponent final : public UStaticMeshComponent
+// Class KuroGameplay.TransportNetwork
+// 0x0008 (0x02B8 - 0x02B0)
+class ATransportNetwork final : public AActor
 {
 public:
+	class UKuroTransportNetworkComponent*         TransportNetworkComponent;                         // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroRoadwayStaticMeshComponent")
+		STATIC_CLASS_IMPL("TransportNetwork")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroRoadwayStaticMeshComponent")
+		STATIC_NAME_IMPL(L"TransportNetwork")
 	}
-	static class UKuroRoadwayStaticMeshComponent* GetDefaultObj()
+	static class ATransportNetwork* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroRoadwayStaticMeshComponent>();
+		return GetDefaultObjImpl<ATransportNetwork>();
 	}
 };
-DUMPER7_ASSERTS_UKuroRoadwayStaticMeshComponent;
+DUMPER7_ASSERTS_ATransportNetwork;
 
-// Class KuroGameplay.KuroSequenceEaseExecutor
-// 0x0008 (0x0038 - 0x0030)
-class UKuroSequenceEaseExecutor : public UObject
+// Class KuroGameplay.KuroRoadway
+// 0x0058 (0x0088 - 0x0030)
+class UKuroRoadway : public UObject
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class USplineComponent*                       RoadSpline;                                        // 0x0030(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Id;                                                // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OpposingId;                                        // 0x003C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Width;                                             // 0x0040(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Length;                                            // 0x0044(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Nexts;                                             // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Lasts;                                             // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectTerrain;                                    // 0x0081(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PavedRoadConfig;                                   // 0x0084(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	void StopEase();
-	bool UpdateEase(float DeltaTime);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSequenceEaseExecutor")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSequenceEaseExecutor")
-	}
-	static class UKuroSequenceEaseExecutor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroSequenceEaseExecutor>();
-	}
-};
-DUMPER7_ASSERTS_UKuroSequenceEaseExecutor;
-
-// Class KuroGameplay.KuroSequenceEaseFloatExecutor
-// 0x0010 (0x0048 - 0x0038)
-class UKuroSequenceEaseFloatExecutor final : public UKuroSequenceEaseExecutor
-{
-public:
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            EaseCurve;                                         // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	float GetDuration() const;
-	float GetStartValue() const;
-	float GetTargetValue() const;
+	struct FVectorDouble D_GetEndPosition();
+	void D_GetNearestPointToPosition(const struct FVectorDouble& WorldPosition, struct FVectorDouble* OutputNearestPoint, float* OutputNearestPointKey, float* OutputDistance);
+	struct FVectorDouble D_GetStartPosition();
+	void DebugDraw(const struct FLinearColor& Color, float LifeTime, int32 StartPointIndex, int32 EndPointIndex);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroSequenceEaseFloatExecutor")
+		STATIC_CLASS_IMPL("KuroRoadway")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroSequenceEaseFloatExecutor")
+		STATIC_NAME_IMPL(L"KuroRoadway")
 	}
-	static class UKuroSequenceEaseFloatExecutor* GetDefaultObj()
+	static class UKuroRoadway* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroSequenceEaseFloatExecutor>();
+		return GetDefaultObjImpl<UKuroRoadway>();
 	}
 };
-DUMPER7_ASSERTS_UKuroSequenceEaseFloatExecutor;
-
-// Class KuroGameplay.KuroSequenceRuntimeEaseComponent
-// 0x00A8 (0x0168 - 0x00C0)
-class UKuroSequenceRuntimeEaseComponent final : public UActorComponent
-{
-public:
-	TMap<int32, class UKuroSequenceEaseExecutor*> EaseExecutors;                                     // 0x00C0(0x0050)(BlueprintVisible, BlueprintReadOnly, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_110[0x58];                                     // 0x0110(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroSequenceRuntimeEaseComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroSequenceRuntimeEaseComponent")
-	}
-	static class UKuroSequenceRuntimeEaseComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroSequenceRuntimeEaseComponent>();
-	}
-};
-DUMPER7_ASSERTS_UKuroSequenceRuntimeEaseComponent;
+DUMPER7_ASSERTS_UKuroRoadway;
 
 // Class KuroGameplay.KuroRoadwayIntersection
 // 0x0018 (0x00A0 - 0x0088)
@@ -2539,6 +2786,30 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UPerformanceStatisticsLibrary;
+
+// Class KuroGameplay.MediaActorAsset
+// 0x0020 (0x0058 - 0x0038)
+class UMediaActorAsset final : public UPrimaryDataAsset
+{
+public:
+	TArray<class UMediaPlayer*>                   MediaPlayerArray;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UMediaTexture*>                  MediaTextureArray;                                 // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MediaActorAsset")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MediaActorAsset")
+	}
+	static class UMediaActorAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMediaActorAsset>();
+	}
+};
+DUMPER7_ASSERTS_UMediaActorAsset;
 
 }
 

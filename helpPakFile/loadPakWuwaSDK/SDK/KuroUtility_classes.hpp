@@ -481,6 +481,29 @@ public:
 };
 DUMPER7_ASSERTS_UKuroStateMachineConditionOr;
 
+// Class KuroUtility.KuroCameraFunctionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroCameraFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void DelaySetNearClipPlane(float distance);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroCameraFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCameraFunctionLibrary")
+	}
+	static class UKuroCameraFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroCameraFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKuroCameraFunctionLibrary;
+
 // Class KuroUtility.KuroCollectActorComponent
 // 0x0008 (0x00C8 - 0x00C0)
 class UKuroCollectActorComponent final : public UActorComponent
@@ -490,6 +513,7 @@ public:
 	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	static void GetActorsWithTag(class FName Tag, ECollectActorType Type, TArray<class AActor*>* OutResult);
 	static class AActor* GetActorWithTag(class FName Tag, ECollectActorType Type);
 
 	void AddCollectActorComponentInEditor();
@@ -539,6 +563,20 @@ DUMPER7_ASSERTS_UKuroCompressLibrary;
 // 0x0000 (0x02B0 - 0x02B0)
 class AKuroDemoInteractiveActor final : public AActor
 {
+public:
+	bool BroadcastMulticastDelegateProperty(const class FName PropertyName);
+	bool CallFunction(const class FName FunctionName);
+	bool ExecuteSingleDelegateProperty(const class FName PropertyName);
+	bool GetBoolPropertyValue(const class FName PropertyName, bool* OutValue);
+	bool GetFloatPropertyValue(const class FName PropertyName, float* OutValue);
+	bool GetIntPropertyValue(const class FName PropertyName, int32* OutValue);
+	bool GetPropertyOffsetFromContainer(const class FName PropertyName, int32* OutOffset);
+	bool GetStringPropertyValue(const class FName PropertyName, class FString* OutValue);
+	bool SetBoolPropertyValue(const class FName PropertyName, const bool Value);
+	bool SetFloatPropertyValue(const class FName PropertyName, const float Value);
+	bool SetIntPropertyValue(const class FName PropertyName, const int32 Value);
+	bool SetStringPropertyValue(const class FName PropertyName, const class FString& Value);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -803,6 +841,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKuroPolypartition;
+
+// Class KuroUtility.KuroScreenBlueprintFunctionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroScreenBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static double ComputePhysicalScreenDensity();
+	static struct FVector2D GetDisplayScreenResolution();
+	static double GetPhysicalScreenDensityDPI();
+	static struct FVector2D GetPhysicalScreenResolution();
+	static struct FVector2D GetPhysicalScreenResolutionV2();
+	static double GetScreenDensityDPI();
+	static double GetScreenLogicalDensity();
+	static double GetScreenScaledDensity();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroScreenBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroScreenBlueprintFunctionLibrary")
+	}
+	static class UKuroScreenBlueprintFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroScreenBlueprintFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UKuroScreenBlueprintFunctionLibrary;
 
 // Class KuroUtility.KuroSilenceGameMode
 // 0x0008 (0x03A8 - 0x03A0)

@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_EMotorcycleTrailMd10012.ABP_EMotorcycleTrailMd10012_C
-// 0x0460 (0x0B90 - 0x0730)
+// 0x04B0 (0x0C80 - 0x07D0)
 class UABP_EMotorcycleTrailMd10012_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0770(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0790(0x0020)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x07B0(0x02A0)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0A50(0x0138)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0038)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0810(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0830(0x0020)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x0850(0x02F0)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0B40(0x0138)()
 
 public:
 	void ExecuteUbergraph_ABP_EMotorcycleTrailMd10012(int32 EntryPoint);

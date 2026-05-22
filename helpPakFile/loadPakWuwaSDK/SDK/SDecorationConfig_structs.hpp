@@ -10,23 +10,32 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SDecorationConfig_Effect_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct SDecorationConfig.SDecorationConfig
-// 0x0088 (0x0088 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct FSDecorationConfig final
 {
 public:
-	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh_2_4FD5CE264703B5637BE6708E4214F790;   // 0x0000(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          SetMasterFollow_6_A5A65F16410B4E11F03B8ABA3EB8B576; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   AnimBlueprint_18_4F2AB1F44FBA056964FCAEB500FC44E7; // 0x0038(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TArray<class FName>                           AttachSocket_16_7A455EDF496D623244D552B3057039CE;  // 0x0068(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FTransform>                     AttachTrans_17_4279592D4D9E52CB64385EA1E9C7ACE5;   // 0x0078(0x0010)(Edit, BlueprintVisible)
+	class FString                                 Tips_30_41DA6BC4401F28872B512EB710F93871;          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class USkeletalMesh>           SkeletalMesh_2_4FD5CE264703B5637BE6708E4214F790;   // 0x0010(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          SetMasterFollow_6_A5A65F16410B4E11F03B8ABA3EB8B576; // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SubMeshName_35_73B3B2E8477EB4BB559CD583DD158340;   // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   AnimBlueprint_18_4F2AB1F44FBA056964FCAEB500FC44E7; // 0x0058(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class FName>                           AttachSocket_16_7A455EDF496D623244D552B3057039CE;  // 0x0088(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FTransform>                     AttachTrans_17_4279592D4D9E52CB64385EA1E9C7ACE5;   // 0x0098(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FSDecorationConfig_Effect>      Effects_27_A705422742479C1AF17A00921B4B4F3E;       // 0x00A8(0x0010)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  DisplayTags_51_06781227438DF3699BECB9BC375F929F;   // 0x00B8(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  HideTags_52_84A385114BE16F6C76874DB21F70CE1E;      // 0x00D8(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  UIDisplayTags_58_879057B84380ADCD99DA4D9D5556D3C8; // 0x00F8(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  UIHideTags_59_433539894BB1D527A72043835736A3DB;    // 0x0118(0x0020)(Edit, BlueprintVisible)
 };
 DUMPER7_ASSERTS_FSDecorationConfig;
 

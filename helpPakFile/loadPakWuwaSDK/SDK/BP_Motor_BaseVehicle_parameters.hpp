@@ -18,14 +18,16 @@ namespace SDK::Params
 {
 
 // Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.ExecuteUbergraph_BP_Motor_BaseVehicle
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm)
-	class UKuroConfigHelper*                      CallFunc_SpawnObject_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroConfigHelper*                      CallFunc_SpawnObject_ReturnValue;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ConstParm, ReferenceParm)
 };
 DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_ExecuteUbergraph_BP_Motor_BaseVehicle;
 
@@ -68,6 +70,23 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_GetConfigDataNameTagMap;
+
+// Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.解锁二段跳_蓄力跳_新退场技
+// 0x0038 (0x0038 - 0x0000)
+struct BP_Motor_BaseVehicle_C_解锁二段跳_蓄力跳_新退场技 final
+{
+public:
+	TArray<struct FGameplayTag>                   tags_1;                                            // 0x0000(0x0010)(Edit, BlueprintVisible)
+	int32                                         ___int_Array_Index_Variable;                       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTag>                   K2Node_MakeArray_Array;                            // 0x0018(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_BP_Motor_BaseVehicle_C_解锁二段跳_蓄力跳_新退场技;
 
 }
 

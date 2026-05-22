@@ -12,28 +12,28 @@
 
 #include "SSceneDecorationConfig_structs.hpp"
 #include "SDecorationConfig_structs.hpp"
-#include "SAiWeaponSocket_structs.hpp"
-#include "SGMOrderInfo_structs.hpp"
+#include "SWeaponSocket_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SWeaponSocketItem_structs.hpp"
-#include "ECamp_structs.hpp"
-#include "SWeaponSocket_structs.hpp"
 #include "SSceneUITagConfig_structs.hpp"
+#include "SAiWeaponSocket_structs.hpp"
 #include "SManipulateConfig_structs.hpp"
 #include "SCharacterFightInfo_structs.hpp"
 #include "SSkillMontage_structs.hpp"
-#include "SUiCameraAnimationSettings_structs.hpp"
 #include "SParkourConfig_structs.hpp"
+#include "SConditionGroup_structs.hpp"
 #include "SCamp_structs.hpp"
+#include "ECamp_structs.hpp"
+#include "SServerInfo_structs.hpp"
 #include "SHitMapping_structs.hpp"
 #include "SAIConfig_structs.hpp"
 #include "SUiCameraAnimationBlendSettings_structs.hpp"
+#include "SUiCameraAnimationSettings_structs.hpp"
 #include "SInteractionConfig_structs.hpp"
 #include "SCipherGameplay_structs.hpp"
-#include "SConditionGroup_structs.hpp"
+#include "SGMOrderInfo_structs.hpp"
 #include "SSequencesNetwork_structs.hpp"
 #include "SVisionData_structs.hpp"
-#include "SServerInfo_structs.hpp"
 #include "SModelConfig_structs.hpp"
 #include "SRoleQualityInfo_structs.hpp"
 
@@ -349,19 +349,19 @@ public:
 DUMPER7_ASSERTS_DataTableUtil_C_LoadAllSkillMontages;
 
 // Function DataTableUtil.DataTableUtil_C.LoadCharacterFightInfo
-// 0x0598 (0x0598 - 0x0000)
+// 0x05F8 (0x05F8 - 0x0000)
 struct DataTableUtil_C_LoadCharacterFightInfo final
 {
 public:
 	class UDataTable*                             CharacterFightInfo;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CharacterResourcePath;                             // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSCharacterFightInfo                   outInfo;                                           // 0x0020(0x02B0)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          outIsFound;                                        // 0x02D0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D1[0x3];                                      // 0x02D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x02D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSCharacterFightInfo                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x02E0(0x02B0)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSCharacterFightInfo                   outInfo;                                           // 0x0020(0x02E0)(Parm, OutParm, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          outIsFound;                                        // 0x0300(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_301[0x3];                                      // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0304(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCharacterFightInfo                   CallFunc_GetDataTableRowFromName_OutRow;           // 0x0310(0x02E0)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x05F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_DataTableUtil_C_LoadCharacterFightInfo;
 
@@ -510,7 +510,7 @@ public:
 DUMPER7_ASSERTS_DataTableUtil_C_GetDataTableOnEditor;
 
 // Function DataTableUtil.DataTableUtil_C.LoadDecorationConfig
-// 0x0148 (0x0148 - 0x0000)
+// 0x02A8 (0x02A8 - 0x0000)
 struct DataTableUtil_C_LoadDecorationConfig final
 {
 public:
@@ -518,11 +518,11 @@ public:
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSucc;                                             // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSDecorationConfig                     result;                                            // 0x0020(0x0088)(Parm, OutParm, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSDecorationConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x00B8(0x0088)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSDecorationConfig                     result;                                            // 0x0020(0x0138)(Parm, OutParm, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSDecorationConfig                     CallFunc_GetDataTableRowFromName_OutRow;           // 0x0168(0x0138)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_DataTableUtil_C_LoadDecorationConfig;
 

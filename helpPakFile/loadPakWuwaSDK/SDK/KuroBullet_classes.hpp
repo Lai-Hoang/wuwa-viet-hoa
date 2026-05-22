@@ -10,405 +10,168 @@
 
 #include "Basic.hpp"
 
+#include "KuroBulletCore_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "KuroSimpleCombat_structs.hpp"
 #include "KuroSimpleCombat_classes.hpp"
 #include "KuroBullet_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class KuroBullet.BulletActionBase
-// 0x0008 (0x0038 - 0x0030)
-class UBulletActionBase : public UObject
+// Class KuroBullet.KSC_Buff_KuroBullet
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_KuroBullet final : public UKSC_Buff
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_KuroBullet*                DaBuffKuroBullet_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BulletActionBase")
+		STATIC_CLASS_IMPL("KSC_Buff_KuroBullet")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BulletActionBase")
+		STATIC_NAME_IMPL(L"KSC_Buff_KuroBullet")
 	}
-	static class UBulletActionBase* GetDefaultObj()
+	static class UKSC_Buff_KuroBullet* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBulletActionBase>();
+		return GetDefaultObjImpl<UKSC_Buff_KuroBullet>();
 	}
 };
-DUMPER7_ASSERTS_UBulletActionBase;
+DUMPER7_ASSERTS_UKSC_Buff_KuroBullet;
 
-// Class KuroBullet.ActionChildBullet
+// Class KuroBullet.ActionUpdateCollisionKsc
 // 0x0000 (0x0038 - 0x0038)
-class UActionChildBullet final : public UBulletActionBase
+class UActionUpdateCollisionKsc final : public UActionUpdateCollision
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActionChildBullet")
+		STATIC_CLASS_IMPL("ActionUpdateCollisionKsc")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActionChildBullet")
+		STATIC_NAME_IMPL(L"ActionUpdateCollisionKsc")
 	}
-	static class UActionChildBullet* GetDefaultObj()
+	static class UActionUpdateCollisionKsc* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActionChildBullet>();
+		return GetDefaultObjImpl<UActionUpdateCollisionKsc>();
 	}
 };
-DUMPER7_ASSERTS_UActionChildBullet;
+DUMPER7_ASSERTS_UActionUpdateCollisionKsc;
 
-// Class KuroBullet.ActionDestroyBullet
+// Class KuroBullet.ActionUpdateCollisionWorldEntity
 // 0x0000 (0x0038 - 0x0038)
-class UActionDestroyBullet final : public UBulletActionBase
+class UActionUpdateCollisionWorldEntity final : public UActionUpdateCollision
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActionDestroyBullet")
+		STATIC_CLASS_IMPL("ActionUpdateCollisionWorldEntity")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActionDestroyBullet")
+		STATIC_NAME_IMPL(L"ActionUpdateCollisionWorldEntity")
 	}
-	static class UActionDestroyBullet* GetDefaultObj()
+	static class UActionUpdateCollisionWorldEntity* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActionDestroyBullet>();
+		return GetDefaultObjImpl<UActionUpdateCollisionWorldEntity>();
 	}
 };
-DUMPER7_ASSERTS_UActionDestroyBullet;
+DUMPER7_ASSERTS_UActionUpdateCollisionWorldEntity;
 
-// Class KuroBullet.ActionInitBullet
-// 0x0008 (0x0040 - 0x0038)
-class UActionInitBullet : public UBulletActionBase
-{
-public:
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionInitBullet")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionInitBullet")
-	}
-	static class UActionInitBullet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionInitBullet>();
-	}
-};
-DUMPER7_ASSERTS_UActionInitBullet;
-
-// Class KuroBullet.ActionInitBulletKFC
-// 0x0000 (0x0040 - 0x0040)
-class UActionInitBulletKFC final : public UActionInitBullet
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionInitBulletKFC")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionInitBulletKFC")
-	}
-	static class UActionInitBulletKFC* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionInitBulletKFC>();
-	}
-};
-DUMPER7_ASSERTS_UActionInitBulletKFC;
-
-// Class KuroBullet.ActionUpdateAtLast
+// Class KuroBullet.ActionUpdateMoveKsc
 // 0x0000 (0x0038 - 0x0038)
-class UActionUpdateAtLast final : public UBulletActionBase
+class UActionUpdateMoveKsc final : public UActionUpdateMove
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ActionUpdateAtLast")
+		STATIC_CLASS_IMPL("ActionUpdateMoveKsc")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ActionUpdateAtLast")
+		STATIC_NAME_IMPL(L"ActionUpdateMoveKsc")
 	}
-	static class UActionUpdateAtLast* GetDefaultObj()
+	static class UActionUpdateMoveKsc* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UActionUpdateAtLast>();
+		return GetDefaultObjImpl<UActionUpdateMoveKsc>();
 	}
 };
-DUMPER7_ASSERTS_UActionUpdateAtLast;
+DUMPER7_ASSERTS_UActionUpdateMoveKsc;
 
-// Class KuroBullet.ActionUpdateCollision
-// 0x0000 (0x0038 - 0x0038)
-class UActionUpdateCollision final : public UBulletActionBase
+// Class KuroBullet.BulletHitWorldEntityBridge
+// 0x0000 (0x0030 - 0x0030)
+class UBulletHitWorldEntityBridge : public UObject
 {
 public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionUpdateCollision")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionUpdateCollision")
-	}
-	static class UActionUpdateCollision* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionUpdateCollision>();
-	}
-};
-DUMPER7_ASSERTS_UActionUpdateCollision;
-
-// Class KuroBullet.ActionUpdateLiveTime
-// 0x0000 (0x0038 - 0x0038)
-class UActionUpdateLiveTime final : public UBulletActionBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionUpdateLiveTime")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionUpdateLiveTime")
-	}
-	static class UActionUpdateLiveTime* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionUpdateLiveTime>();
-	}
-};
-DUMPER7_ASSERTS_UActionUpdateLiveTime;
-
-// Class KuroBullet.ActionUpdateMove
-// 0x0000 (0x0038 - 0x0038)
-class UActionUpdateMove final : public UBulletActionBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionUpdateMove")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionUpdateMove")
-	}
-	static class UActionUpdateMove* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionUpdateMove>();
-	}
-};
-DUMPER7_ASSERTS_UActionUpdateMove;
-
-// Class KuroBullet.ActionUpdateTimeScale
-// 0x0000 (0x0038 - 0x0038)
-class UActionUpdateTimeScale final : public UBulletActionBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("ActionUpdateTimeScale")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"ActionUpdateTimeScale")
-	}
-	static class UActionUpdateTimeScale* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UActionUpdateTimeScale>();
-	}
-};
-DUMPER7_ASSERTS_UActionUpdateTimeScale;
-
-// Class KuroBullet.BulletContext
-// 0x0000 (0x0000 - 0x0000)
-class IBulletContext final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BulletContext")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BulletContext")
-	}
-	static class IBulletContext* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IBulletContext>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-DUMPER7_ASSERTS_IBulletContext;
-
-// Class KuroBullet.BulletEntity
-// 0x0350 (0x0380 - 0x0030)
-class alignas(0x10) UBulletEntity final : public UObject
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EntityId;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         ConfigId;                                          // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBulletContext>        BulletContext;                                     // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x70];                                      // 0x0060(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    CollisionComponent;                                // 0x00D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBulletKFCComponent*                    KFCComponent;                                      // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E0[0xC8];                                      // 0x00E0(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bNeedDetach;                                       // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A9[0x5F];                                     // 0x01A9(0x005F)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class AActor*, class UBulletHitActorData*> MapHitActorData;                                 // 0x0208(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class UBulletHitActorData*>            ArrayHitActorData;                                 // 0x0258(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class AActor*, class UBulletHitActorData*> LastMapHitActorData;                             // 0x0268(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class UBulletHitActorData*>            LastArrayHitActorData;                             // 0x02B8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8[0x8];                                      // 0x02C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTraceSphereElement*                    ObstacleTraceSphere;                               // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTraceBoxElement*                       ObstacleTraceBox;                                  // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E0[0x40];                                     // 0x02E0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBulletActionBase*>              TickActions;                                       // 0x0320(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_330[0x50];                                     // 0x0330(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnObstacleTrace(bool Result, class UTraceBaseElement* Element, double Frame, double Index_0);
+	int32 GetCamp(int32 EntityId);
+	int32 GetCampRelationship(int32 Camp1, int32 Camp2);
+	bool HasTag(int32 EntityId, const struct FGameplayTag& Tag);
+	void NotifyExistedImmediatelyOperation(const struct FBulletHitWorldEntityOperation& Operation);
+	void NotifyExistedOperationList();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BulletEntity")
+		STATIC_CLASS_IMPL("BulletHitWorldEntityBridge")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BulletEntity")
+		STATIC_NAME_IMPL(L"BulletHitWorldEntityBridge")
 	}
-	static class UBulletEntity* GetDefaultObj()
+	static class UBulletHitWorldEntityBridge* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBulletEntity>();
+		return GetDefaultObjImpl<UBulletHitWorldEntityBridge>();
 	}
 };
-DUMPER7_ASSERTS_UBulletEntity;
+DUMPER7_ASSERTS_UBulletHitWorldEntityBridge;
 
-// Class KuroBullet.BulletHitActorData
-// 0x0058 (0x0088 - 0x0030)
-class UBulletHitActorData final : public UObject
+// Class KuroBullet.BulletHitWorldEntityManager
+// 0x00D8 (0x0108 - 0x0030)
+class UBulletHitWorldEntityManager final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x58];                                      // 0x0030(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UBulletWorld*                           BulletWorld;                                       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBulletHitWorldEntityBridge*            BulletHitWorldEntityBridge;                        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0xC8];                                      // 0x0040(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UBulletHitWorldEntityManager* CreateInstance(class UObject* Outer_0);
+	static void DestroyInstance();
+	static class UBulletHitWorldEntityManager* GetInstance();
+
+	class UBulletHitWorldEntityBridge* GetBulletHitWorldEntityBridge();
+	bool GetEntityCanDodge(int32 EntityId);
+	void GetOperationList(TArray<struct FBulletHitWorldEntityOperation>* OutOperationList);
+	void SetBulletHitWorldEntityBridge(class UBulletHitWorldEntityBridge* Bridge);
+	void SetEntityCamp(int32 EntityId, int32 Camp);
+	void SetEntityCanDodge(int32 EntityId, bool bCanDodge);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("BulletHitActorData")
+		STATIC_CLASS_IMPL("BulletHitWorldEntityManager")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"BulletHitActorData")
+		STATIC_NAME_IMPL(L"BulletHitWorldEntityManager")
 	}
-	static class UBulletHitActorData* GetDefaultObj()
+	static class UBulletHitWorldEntityManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBulletHitActorData>();
+		return GetDefaultObjImpl<UBulletHitWorldEntityManager>();
 	}
 };
-DUMPER7_ASSERTS_UBulletHitActorData;
-
-// Class KuroBullet.BulletKFCComponent
-// 0x0090 (0x00C0 - 0x0030)
-class alignas(0x10) UBulletKFCComponent final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBulletEntity*                          BulletEntity;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_40[0x80];                                      // 0x0040(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BulletKFCComponent")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BulletKFCComponent")
-	}
-	static class UBulletKFCComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBulletKFCComponent>();
-	}
-};
-DUMPER7_ASSERTS_UBulletKFCComponent;
-
-// Class KuroBullet.BulletWorld
-// 0x0248 (0x0278 - 0x0030)
-class UBulletWorld final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTraceLineElement*                      StickGroundLineTrace;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlatGround;                                       // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        GroundZ;                                           // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ForceUpdateOverlap;                                // 0x0068(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 EntityId, int64 BuffId, bool bAdd)> OnBulletModifyBuff;      // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UKSC_World*                             KscWorld;                                          // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UDataTable*>                     CommonBulletDataTableList;                         // 0x0088(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<int32, class UBulletEntity*>             BulletEntityMap;                                   // 0x0098(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<int32, class UKuroBulletPattern*>        BulletPatternMap;                                  // 0x00E8(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_138[0x10];                                     // 0x0138(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UObject*>                        ObjectHold;                                        // 0x0148(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_158[0x120];                                    // 0x0158(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddCommonBulletDataTable(class UDataTable* DataTable);
-	void ClearCommonBulletDataTable();
-	int32 CreateBullet(TScriptInterface<class IBulletContext> BulletContext, int64 BulletConfigId, const struct FBulletSpawnParams& SpawnParams);
-	void DestroyAllBulletsByOwner(const class AActor* Owner);
-	void DestroyAllPatterns();
-	void DestroyBullet(class UBulletEntity* BulletEntity, bool ClearContext);
-	void DestroyBulletById(int32 BulletEntityId, bool ClearContext);
-	void DestroyPattern(int32 PatternId);
-	void DestroyPatternsByOwner(const class AActor* Owner);
-	void DisableFlatGround();
-	void EnableFlatGround(double Height);
-	void EnableFlatGroundByAbovePoint(const struct FVectorDouble& AbovePoint);
-	bool FindBulletConfig(int64 BulletConfigId, class UDataTable* OwnerBulletDataTable, struct FKuroBulletData* OutRow);
-	bool InitBulletConfig(class UBulletEntity* BulletEntity, int64 BulletConfigId, class UDataTable* OwnerBulletDataTable);
-	void SetShowBulletCollision(bool Value);
-	int32 SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("BulletWorld")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"BulletWorld")
-	}
-	static class UBulletWorld* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBulletWorld>();
-	}
-};
-DUMPER7_ASSERTS_UBulletWorld;
+DUMPER7_ASSERTS_UBulletHitWorldEntityManager;
 
 // Class KuroBullet.CustomBulletContext
 // 0x0050 (0x0080 - 0x0030)
-class UCustomBulletContext final : public UObject
+class UCustomBulletContext : public UObject
 {
 public:
 	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -419,7 +182,7 @@ public:
 	struct FVectorDouble                          TargetLocation;                                    // 0x0058(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDataTable*                             BulletDataTable;                                   // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Camp;                                              // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         OwnerEntityId;                                     // 0x007C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -461,30 +224,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKSC_DA_Buff_KuroBullet;
-
-// Class KuroBullet.KSC_Buff_KuroBullet
-// 0x0010 (0x0070 - 0x0060)
-class UKSC_Buff_KuroBullet final : public UKSC_Buff
-{
-public:
-	class UKSC_DA_Buff_KuroBullet*                DaBuffKuroBullet_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KSC_Buff_KuroBullet")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KSC_Buff_KuroBullet")
-	}
-	static class UKSC_Buff_KuroBullet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Buff_KuroBullet>();
-	}
-};
-DUMPER7_ASSERTS_UKSC_Buff_KuroBullet;
 
 // Class KuroBullet.KSC_DA_Buff_Period_KuroBullet
 // 0x0070 (0x02D0 - 0x0260)
@@ -543,17 +282,17 @@ public:
 DUMPER7_ASSERTS_UKSC_Buff_Period_KuroBullet;
 
 // Class KuroBullet.KSC_DA_Skill_KuroBullet
-// 0x0030 (0x01A0 - 0x0170)
+// 0x0030 (0x01B0 - 0x0180)
 class UKSC_DA_Skill_KuroBullet final : public UKSC_DA_Skill_Anim
 {
 public:
-	TArray<struct FKSC_SkillKuroBullet>           Bullets;                                           // 0x0170(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	EKSC_BulletTarget                             Target;                                            // 0x0180(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKuroBulletSkillDirection                     SkillDirection;                                    // 0x0181(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_182[0x2];                                      // 0x0182(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CastRangeMin;                                      // 0x0184(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int64>                                 AddBuffsToSelf;                                    // 0x0188(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FKSC_SkillKuroBullet>           Bullets;                                           // 0x0180(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_BulletTarget                             Target;                                            // 0x0190(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroBulletSkillDirection                     SkillDirection;                                    // 0x0191(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_192[0x2];                                      // 0x0192(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CastRangeMin;                                      // 0x0194(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int64>                                 AddBuffsToSelf;                                    // 0x0198(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A8[0x8];                                      // 0x01A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -595,375 +334,58 @@ public:
 };
 DUMPER7_ASSERTS_UKSC_Skill_KuroBullet;
 
-// Class KuroBullet.KSCBulletContext
-// 0x0048 (0x0078 - 0x0030)
-class UKSCBulletContext final : public UObject
+// Class KuroBullet.KscBulletManager
+// 0x0018 (0x0048 - 0x0030)
+class UKscBulletManager final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             OwnerBulletDataTable;                              // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_World*                             KscWorld;                                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UBulletWorld*                           BulletWorld;                                       // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_40[0x8];                                       // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UKscBulletManager* CreateInstance(class UObject* Outer_0);
+	static void DestroyInstance();
+	static class UKscBulletManager* GetInstance();
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KSCBulletContext")
+		STATIC_CLASS_IMPL("KscBulletManager")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KSCBulletContext")
+		STATIC_NAME_IMPL(L"KscBulletManager")
 	}
-	static class UKSCBulletContext* GetDefaultObj()
+	static class UKscBulletManager* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSCBulletContext>();
+		return GetDefaultObjImpl<UKscBulletManager>();
 	}
 };
-DUMPER7_ASSERTS_UKSCBulletContext;
+DUMPER7_ASSERTS_UKscBulletManager;
 
-// Class KuroBullet.KuroBulletEmitter
-// 0x00B0 (0x00E0 - 0x0030)
-class UKuroBulletEmitter : public UObject
+// Class KuroBullet.WorldEntityBulletContext
+// 0x0018 (0x0098 - 0x0080)
+class UWorldEntityBulletContext final : public UCustomBulletContext
 {
 public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroBulletPattern*                     OwnerPattern;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UKuroBulletEmitterConfig*               EmitterConfig;                                     // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 SpawnedBulletIds;                                  // 0x0060(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_70[0x70];                                      // 0x0070(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FWorldEntityBulletParam                ExtraParam;                                        // 0x0080(0x0018)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("KuroBulletEmitter")
+		STATIC_CLASS_IMPL("WorldEntityBulletContext")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"KuroBulletEmitter")
+		STATIC_NAME_IMPL(L"WorldEntityBulletContext")
 	}
-	static class UKuroBulletEmitter* GetDefaultObj()
+	static class UWorldEntityBulletContext* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKuroBulletEmitter>();
+		return GetDefaultObjImpl<UWorldEntityBulletContext>();
 	}
 };
-DUMPER7_ASSERTS_UKuroBulletEmitter;
-
-// Class KuroBullet.CircleKuroBulletEmitter
-// 0x0008 (0x00E8 - 0x00E0)
-class UCircleKuroBulletEmitter final : public UKuroBulletEmitter
-{
-public:
-	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CircleKuroBulletEmitter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CircleKuroBulletEmitter")
-	}
-	static class UCircleKuroBulletEmitter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCircleKuroBulletEmitter>();
-	}
-};
-DUMPER7_ASSERTS_UCircleKuroBulletEmitter;
-
-// Class KuroBullet.SphereKuroBulletEmitter
-// 0x0008 (0x00E8 - 0x00E0)
-class USphereKuroBulletEmitter final : public UKuroBulletEmitter
-{
-public:
-	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SphereKuroBulletEmitter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SphereKuroBulletEmitter")
-	}
-	static class USphereKuroBulletEmitter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USphereKuroBulletEmitter>();
-	}
-};
-DUMPER7_ASSERTS_USphereKuroBulletEmitter;
-
-// Class KuroBullet.PolygonKuroBulletEmitter
-// 0x0008 (0x00E8 - 0x00E0)
-class UPolygonKuroBulletEmitter final : public UKuroBulletEmitter
-{
-public:
-	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PolygonKuroBulletEmitter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PolygonKuroBulletEmitter")
-	}
-	static class UPolygonKuroBulletEmitter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPolygonKuroBulletEmitter>();
-	}
-};
-DUMPER7_ASSERTS_UPolygonKuroBulletEmitter;
-
-// Class KuroBullet.StarKuroBulletEmitter
-// 0x0008 (0x00E8 - 0x00E0)
-class UStarKuroBulletEmitter final : public UKuroBulletEmitter
-{
-public:
-	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("StarKuroBulletEmitter")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"StarKuroBulletEmitter")
-	}
-	static class UStarKuroBulletEmitter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStarKuroBulletEmitter>();
-	}
-};
-DUMPER7_ASSERTS_UStarKuroBulletEmitter;
-
-// Class KuroBullet.KuroBulletFunctionLibrary
-// 0x0000 (0x0030 - 0x0030)
-class UKuroBulletFunctionLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static int32 CreateBullet(class AKSC_Entity* KSC_Entity, int64 BulletConfigId, const struct FTransformDouble& InitialTransform, class UDataTable* OwnerBulletDataTable, class AKSC_Entity* SkillTarget);
-	static void DestroyBulletById(int32 BulletEntityId, bool ClearOwner);
-	static void DestroyPattern(int32 PatternId);
-	static void DestroyPatternsByOwner(const class AActor* Owner);
-	static void SetShowBulletCollision(bool Value);
-	static int32 SpawnPattern(TScriptInterface<class IBulletContext> PatternContext, const class UKuroBulletPatternDataAsset* PatternDA);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroBulletFunctionLibrary")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroBulletFunctionLibrary")
-	}
-	static class UKuroBulletFunctionLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroBulletFunctionLibrary>();
-	}
-};
-DUMPER7_ASSERTS_UKuroBulletFunctionLibrary;
-
-// Class KuroBullet.KuroBulletPattern
-// 0x0040 (0x0070 - 0x0030)
-class UKuroBulletPattern final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroBulletPatternDataAsset*            PatternDataAsset;                                  // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TScriptInterface<class IBulletContext>        PatternContext;                                    // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x8];                                       // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UKuroBulletEmitter*>             Emitters;                                          // 0x0058(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroBulletPattern")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroBulletPattern")
-	}
-	static class UKuroBulletPattern* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroBulletPattern>();
-	}
-};
-DUMPER7_ASSERTS_UKuroBulletPattern;
-
-// Class KuroBullet.KuroBulletEmitterConfig
-// 0x00E0 (0x0110 - 0x0030)
-class UKuroBulletEmitterConfig : public UObject
-{
-public:
-	struct FEmitterBasicSettings                  BasicSettings;                                     // 0x0030(0x0048)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FEmitterMovementSettings               MovementSettings;                                  // 0x0078(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroBulletEmitterConfig")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroBulletEmitterConfig")
-	}
-	static class UKuroBulletEmitterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroBulletEmitterConfig>();
-	}
-};
-DUMPER7_ASSERTS_UKuroBulletEmitterConfig;
-
-// Class KuroBullet.CircleKuroBulletEmitterConfig
-// 0x0028 (0x0138 - 0x0110)
-class UCircleKuroBulletEmitterConfig final : public UKuroBulletEmitterConfig
-{
-public:
-	struct FCircleEmitterSettings                 CircleSettings;                                    // 0x0110(0x0024)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("CircleKuroBulletEmitterConfig")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"CircleKuroBulletEmitterConfig")
-	}
-	static class UCircleKuroBulletEmitterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCircleKuroBulletEmitterConfig>();
-	}
-};
-DUMPER7_ASSERTS_UCircleKuroBulletEmitterConfig;
-
-// Class KuroBullet.SphereKuroBulletEmitterConfig
-// 0x0010 (0x0120 - 0x0110)
-class USphereKuroBulletEmitterConfig final : public UKuroBulletEmitterConfig
-{
-public:
-	struct FSphereEmitterSettings                 SphereSettings;                                    // 0x0110(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("SphereKuroBulletEmitterConfig")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"SphereKuroBulletEmitterConfig")
-	}
-	static class USphereKuroBulletEmitterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USphereKuroBulletEmitterConfig>();
-	}
-};
-DUMPER7_ASSERTS_USphereKuroBulletEmitterConfig;
-
-// Class KuroBullet.PolygonKuroBulletEmitterConfig
-// 0x0028 (0x0138 - 0x0110)
-class UPolygonKuroBulletEmitterConfig final : public UKuroBulletEmitterConfig
-{
-public:
-	struct FPolygonEmitterSettings                PolygonSettings;                                   // 0x0110(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PolygonKuroBulletEmitterConfig")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PolygonKuroBulletEmitterConfig")
-	}
-	static class UPolygonKuroBulletEmitterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPolygonKuroBulletEmitterConfig>();
-	}
-};
-DUMPER7_ASSERTS_UPolygonKuroBulletEmitterConfig;
-
-// Class KuroBullet.StarKuroBulletEmitterConfig
-// 0x0010 (0x0120 - 0x0110)
-class UStarKuroBulletEmitterConfig final : public UKuroBulletEmitterConfig
-{
-public:
-	struct FStarEmitterSettings                   StarSettings;                                      // 0x0110(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("StarKuroBulletEmitterConfig")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"StarKuroBulletEmitterConfig")
-	}
-	static class UStarKuroBulletEmitterConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStarKuroBulletEmitterConfig>();
-	}
-};
-DUMPER7_ASSERTS_UStarKuroBulletEmitterConfig;
-
-// Class KuroBullet.KuroBulletPatternDataAsset
-// 0x0020 (0x0058 - 0x0038)
-class UKuroBulletPatternDataAsset final : public UPrimaryDataAsset
-{
-public:
-	EBulletPatternDestroyType                     DestroyType;                                       // 0x0038(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PatternDuration;                                   // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             BulletDataTable;                                   // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UKuroBulletEmitterConfig*>       Emitters;                                          // 0x0048(0x0010)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroBulletPatternDataAsset")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroBulletPatternDataAsset")
-	}
-	static class UKuroBulletPatternDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroBulletPatternDataAsset>();
-	}
-};
-DUMPER7_ASSERTS_UKuroBulletPatternDataAsset;
-
-// Class KuroBullet.KuroBulletSubsystem
-// 0x0000 (0x0038 - 0x0038)
-class UKuroBulletSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	class UBulletWorld* CreateWorld();
-	void DestroyWorld();
-	class UBulletWorld* GetBulletWorld();
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("KuroBulletSubsystem")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"KuroBulletSubsystem")
-	}
-	static class UKuroBulletSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroBulletSubsystem>();
-	}
-};
-DUMPER7_ASSERTS_UKuroBulletSubsystem;
+DUMPER7_ASSERTS_UWorldEntityBulletContext;
 
 }
 

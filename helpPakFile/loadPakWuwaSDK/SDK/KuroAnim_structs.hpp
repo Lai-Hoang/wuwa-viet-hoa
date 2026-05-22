@@ -290,14 +290,18 @@ enum class ESightLockMode : uint8
 };
 
 // Enum KuroAnim.EndBoneIKMode
-// NumValues: 0x0005
+// NumValues: 0x0009
 enum class EndBoneIKMode : uint8
 {
 	None                                     = 0,
 	AxisModeLockX                            = 1,
 	AxisModeLockY                            = 2,
-	FullRotationMode                         = 3,
-	EndBoneIKMode_MAX                        = 4,
+	NewAxisModeLockX                         = 3,
+	NewAxisModeLockY                         = 4,
+	LockXAndLimitByAxis                      = 5,
+	LockYAndLimitByAxis                      = 6,
+	FullRotationMode                         = 7,
+	EndBoneIKMode_MAX                        = 8,
 };
 
 // Enum KuroAnim.KuroAnimIKMode
@@ -321,6 +325,19 @@ enum class EKuroHumanIKMode : uint8
 	RideMode                                 = 4,
 	KuroHumanIKMode_MAX                      = 5,
 };
+
+// ScriptStruct KuroAnim.IKTarget
+// 0x0030 (0x0030 - 0x0000)
+struct FIKTarget final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Alpha;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FIKTarget;
 
 // ScriptStruct KuroAnim.BoneBindInfo
 // 0x0018 (0x0018 - 0x0000)
@@ -384,6 +401,110 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_AdditiveBoneBlend;
 
+// ScriptStruct KuroAnim.StatureConfig
+// 0x0020 (0x0020 - 0x0000)
+struct FStatureConfig final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0014(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FStatureConfig;
+
+// ScriptStruct KuroAnim.VehicleAxisData
+// 0x0006 (0x0006 - 0x0000)
+struct FVehicleAxisData final
+{
+public:
+	EAxis                                         ForwardAxis;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForwardAxisReverse;                               // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         RightAxis;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRightAxisReverse;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         UpAxis;                                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpAxisReverse;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FVehicleAxisData;
+
+// ScriptStruct KuroAnim.TrailerConnector
+// 0x0110 (0x0110 - 0x0000)
+struct alignas(0x10) FTrailerConnector final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       Axis;                                              // 0x0014(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableYaw;                                        // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePitch;                                      // 0x001B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawLimitDeg;                                       // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchLimitDeg;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerYawMaxRateDegPerSec;                        // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerYawRateRatio;                               // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawArmFallback;                                    // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FTrailerConnector;
+
+// ScriptStruct KuroAnim.VehicleWheelData
+// 0x01A0 (0x01A0 - 0x0000)
+struct alignas(0x10) FVehicleWheelData final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       WheelAxis;                                         // 0x0014(0x0006)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bWheelSteer;                                       // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Radius;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSpinDegPerTick;                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxOffsetFromDefault;                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         StrutBone;                                         // 0x0028(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                StrutRotateAxis;                                   // 0x003C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStrutRotation;                                    // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuspension;                                       // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SuspensionMax;                                     // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionMin;                                     // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionStiffness;                               // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoContactDropSpeed;                                // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSteerDeg;                                       // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteerInterpSpeedDegPerSec;                         // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x13C];                                     // 0x0064(0x013C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FVehicleWheelData;
+
+// ScriptStruct KuroAnim.AnimNode_VehicleDetectFloor
+// 0x0138 (0x0220 - 0x00E8)
+struct alignas(0x10) FAnimNode_VehicleDetectFloor final : public FAnimNode_SkeletalControlBase
+{
+public:
+	struct FBoneReference                         BodyBone;                                          // 0x00E8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVehicleWheelData>              Wheels;                                            // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         WheelAutoTurnToForwardAlpha;                       // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTrailerConnector>              Connectors;                                        // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVehicleWheelData>              TrailerWheels;                                     // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         TrailerYawLag;                                     // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerPitchLag;                                   // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerSoftLimitDeg;                               // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraTraceDown;                                    // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETraceTypeQuery                               TraceChannel;                                      // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         RootUpAxis;                                        // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       BodyAxis;                                          // 0x014A(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ChassisTiltMaxDist;                                // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyChassisVerticalOffset;                       // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ChassisHeightLerp;                                 // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDraw;                                        // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugLog;                                         // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15E[0x2];                                      // 0x015E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlaneNormalInterpSpeed;                            // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlaneHeightInterpSpeed;                            // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoContactPointWeight;                              // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultChassisHeight;                              // 0x016C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableChassisAdjust;                               // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_171[0xAF];                                     // 0x0171(0x00AF)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_VehicleDetectFloor;
+
 // ScriptStruct KuroAnim.AnimNode_BoneRotateToLocation
 // 0x0050 (0x0138 - 0x00E8)
 struct FAnimNode_BoneRotateToLocation final : public FAnimNode_SkeletalControlBase
@@ -427,6 +548,15 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_BonesBindTo;
 
+// ScriptStruct KuroAnim.ExtraFollowTable
+// 0x0050 (0x0050 - 0x0000)
+struct FExtraFollowTable final
+{
+public:
+	TMap<class FName, class UAnimSequence*>       DataTable;                                         // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FExtraFollowTable;
+
 // ScriptStruct KuroAnim.AnimNode_CombineCurves
 // 0x0050 (0x0060 - 0x0010)
 struct FAnimNode_CombineCurves final : public FAnimNode_Base
@@ -450,9 +580,10 @@ struct alignas(0x10) FAnimNode_ExtraFollowAnims final : public FAnimNode_Base
 {
 public:
 	class FName                                   DefaultSequenceName;                               // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InternalTimeAccumulator;                           // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAllAnims;                                      // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0xD3F];                                     // 0x0021(0x0D3F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   SecondaryExtraFollowTableName;                     // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InternalTimeAccumulator;                           // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAllAnims;                                      // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0xD33];                                     // 0x002D(0x0D33)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_ExtraFollowAnims;
 
@@ -514,6 +645,77 @@ public:
 	uint8                                         Pad_131[0x147];                                    // 0x0131(0x0147)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_Feedback;
+
+// ScriptStruct KuroAnim.KuroMotorWheelIkParams
+// 0x005C (0x005C - 0x0000)
+struct FKuroMotorWheelIkParams final
+{
+public:
+	struct FBoneReference                         IkBone;                                            // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RotateAxis;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinTurnAngle;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTurnAngle;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTurnSpeed;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         IkWheelBone;                                       // 0x002C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                WheelRotateAxis;                                   // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HangRadius;                                        // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelRadius;                                       // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfWheelWidth;                                    // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AccurateCheckCount;                                // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroMotorWheelIkParams;
+
+// ScriptStruct KuroAnim.LeanAmount
+// 0x0008 (0x0008 - 0x0000)
+struct FLeanAmount final
+{
+public:
+	float                                         ForwardAndBackward;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LeftAndRight;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FLeanAmount;
+
+// ScriptStruct KuroAnim.KuroHumanIKPart
+// 0x0098 (0x0098 - 0x0000)
+struct FKuroHumanIKPart final
+{
+public:
+	EIKPartType                                   PartType;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         IKBone;                                            // 0x0004(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         TipBone;                                           // 0x0018(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TipEndOffset;                                      // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCurve;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BaseAngleCurveName;                                // 0x0034(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LocationCurveName;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AlphaCurveName;                                    // 0x0050(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LandingTimeCurveName;                              // 0x005C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxIkDist;                                         // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowerLimits[0x2];                                  // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndBoneLimits[0x6];                                // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TipAngleLimit[0x2];                                // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EndBoneIKMode                                 EndBoneIKMode;                                     // 0x0094(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugPrint;                                       // 0x0095(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroHumanIKPart;
+
+// ScriptStruct KuroAnim.AnimNode_MultiBonesIK
+// 0x0078 (0x0160 - 0x00E8)
+struct FAnimNode_MultiBonesIK final : public FAnimNode_SkeletalControlBase
+{
+public:
+	struct FBoneReference                         IKBone;                                            // 0x00E8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                IKBonePos;                                         // 0x00FC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         BeginBone;                                         // 0x0108(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         EndBone;                                           // 0x011C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	EKuroAnimIKMode                               bMode;                                             // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                OffsetOrTargetPosition;                            // 0x0134(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_140[0x20];                                     // 0x0140(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FAnimNode_MultiBonesIK;
 
 // ScriptStruct KuroAnim.BoneFeedbackAnimConfig
 // 0x0070 (0x0070 - 0x0000)
@@ -635,53 +837,15 @@ public:
 DUMPER7_ASSERTS_FAnimNode_HumanTwoBoneIK;
 
 // ScriptStruct KuroAnim.AnimNode_KuroCacheBones
-// 0x0060 (0x0148 - 0x00E8)
+// 0x0068 (0x0150 - 0x00E8)
 struct FAnimNode_KuroCacheBones final : public FAnimNode_SkeletalControlBase
 {
 public:
 	TArray<class FName>                           BoneNames;                                         // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8[0x50];                                      // 0x00F8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bEnable;                                           // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x57];                                      // 0x00F9(0x0057)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_KuroCacheBones;
-
-// ScriptStruct KuroAnim.KuroHumanIKPart
-// 0x0098 (0x0098 - 0x0000)
-struct FKuroHumanIKPart final
-{
-public:
-	EIKPartType                                   PartType;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         IKBone;                                            // 0x0004(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         TipBone;                                           // 0x0018(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         TipEndOffset;                                      // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCurve;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BaseAngleCurveName;                                // 0x0034(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LocationCurveName;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AlphaCurveName;                                    // 0x0050(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LandingTimeCurveName;                              // 0x005C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxIkDist;                                         // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowerLimits[0x2];                                  // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndBoneLimits[0x6];                                // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TipAngleLimit[0x2];                                // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EndBoneIKMode                                 EndBoneIKMode;                                     // 0x0094(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugPrint;                                       // 0x0095(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKuroHumanIKPart;
-
-// ScriptStruct KuroAnim.IKTarget
-// 0x0030 (0x0030 - 0x0000)
-struct FIKTarget final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Alpha;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FIKTarget;
 
 // ScriptStruct KuroAnim.AnimNode_KuroHumanIK
 // 0x0208 (0x02F0 - 0x00E8)
@@ -747,25 +911,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_KuroModifyBones;
 
-// ScriptStruct KuroAnim.KuroMotorWheelIkParams
-// 0x005C (0x005C - 0x0000)
-struct FKuroMotorWheelIkParams final
-{
-public:
-	struct FBoneReference                         IkBone;                                            // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RotateAxis;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinTurnAngle;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTurnAngle;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxTurnSpeed;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         IkWheelBone;                                       // 0x002C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                WheelRotateAxis;                                   // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HangRadius;                                        // 0x004C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WheelRadius;                                       // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HalfWheelWidth;                                    // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AccurateCheckCount;                                // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKuroMotorWheelIkParams;
-
 // ScriptStruct KuroAnim.AnimNode_KuroMotorIK
 // 0x0070 (0x0158 - 0x00E8)
 struct FAnimNode_KuroMotorIK final : public FAnimNode_SkeletalControlBase
@@ -814,22 +959,6 @@ public:
 	uint8                                         Pad_10C[0xD4];                                     // 0x010C(0x00D4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FAnimNode_MountBuffer;
-
-// ScriptStruct KuroAnim.AnimNode_MultiBonesIK
-// 0x0078 (0x0160 - 0x00E8)
-struct FAnimNode_MultiBonesIK final : public FAnimNode_SkeletalControlBase
-{
-public:
-	struct FBoneReference                         IKBone;                                            // 0x00E8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                IKBonePos;                                         // 0x00FC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         BeginBone;                                         // 0x0108(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         EndBone;                                           // 0x011C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	EKuroAnimIKMode                               bMode;                                             // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_131[0x3];                                      // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                OffsetOrTargetPosition;                            // 0x0134(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x20];                                     // 0x0140(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_MultiBonesIK;
 
 // ScriptStruct KuroAnim.AnimNode_MultiTaskBlend
 // 0x0038 (0x0048 - 0x0010)
@@ -1012,16 +1141,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_SlotBlend;
 
-// ScriptStruct KuroAnim.StatureConfig
-// 0x0020 (0x0020 - 0x0000)
-struct FStatureConfig final
-{
-public:
-	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0014(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FStatureConfig;
-
 // ScriptStruct KuroAnim.AnimNode_StatureScale
 // 0x0070 (0x0080 - 0x0010)
 struct FAnimNode_StatureScale final : public FAnimNode_Base
@@ -1093,100 +1212,6 @@ public:
 };
 DUMPER7_ASSERTS_FAnimNode_TextureFace;
 
-// ScriptStruct KuroAnim.VehicleAxisData
-// 0x0006 (0x0006 - 0x0000)
-struct FVehicleAxisData final
-{
-public:
-	EAxis                                         ForwardAxis;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForwardAxisReverse;                               // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         RightAxis;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRightAxisReverse;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         UpAxis;                                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUpAxisReverse;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FVehicleAxisData;
-
-// ScriptStruct KuroAnim.VehicleWheelData
-// 0x01A0 (0x01A0 - 0x0000)
-struct alignas(0x10) FVehicleWheelData final
-{
-public:
-	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVehicleAxisData                       WheelAxis;                                         // 0x0014(0x0006)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bWheelSteer;                                       // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Radius;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSpinDegPerTick;                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxOffsetFromDefault;                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         StrutBone;                                         // 0x0028(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                StrutRotateAxis;                                   // 0x003C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStrutRotation;                                    // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSuspension;                                       // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SuspensionMax;                                     // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuspensionMin;                                     // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SuspensionStiffness;                               // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoContactDropSpeed;                                // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSteerDeg;                                       // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SteerInterpSpeedDegPerSec;                         // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x13C];                                     // 0x0064(0x013C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FVehicleWheelData;
-
-// ScriptStruct KuroAnim.TrailerConnector
-// 0x0110 (0x0110 - 0x0000)
-struct alignas(0x10) FTrailerConnector final
-{
-public:
-	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVehicleAxisData                       Axis;                                              // 0x0014(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bEnableYaw;                                        // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePitch;                                      // 0x001B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YawLimitDeg;                                       // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchLimitDeg;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrailerYawMaxRateDegPerSec;                        // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrailerYawRateRatio;                               // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YawArmFallback;                                    // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FTrailerConnector;
-
-// ScriptStruct KuroAnim.AnimNode_VehicleDetectFloor
-// 0x0138 (0x0220 - 0x00E8)
-struct alignas(0x10) FAnimNode_VehicleDetectFloor final : public FAnimNode_SkeletalControlBase
-{
-public:
-	struct FBoneReference                         BodyBone;                                          // 0x00E8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVehicleWheelData>              Wheels;                                            // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         WheelAutoTurnToForwardAlpha;                       // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTrailerConnector>              Connectors;                                        // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVehicleWheelData>              TrailerWheels;                                     // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         TrailerYawLag;                                     // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrailerPitchLag;                                   // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TrailerSoftLimitDeg;                               // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtraTraceDown;                                    // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETraceTypeQuery                               TraceChannel;                                      // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         RootUpAxis;                                        // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVehicleAxisData                       BodyAxis;                                          // 0x014A(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ChassisTiltMaxDist;                                // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyChassisVerticalOffset;                       // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ChassisHeightLerp;                                 // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugDraw;                                        // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugLog;                                         // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E[0x2];                                      // 0x015E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlaneNormalInterpSpeed;                            // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlaneHeightInterpSpeed;                            // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoContactPointWeight;                              // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultChassisHeight;                              // 0x016C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableChassisAdjust;                               // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_171[0xAF];                                     // 0x0171(0x00AF)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FAnimNode_VehicleDetectFloor;
-
 // ScriptStruct KuroAnim.ClimbStateStruct
 // 0x0003 (0x0003 - 0x0000)
 struct FClimbStateStruct final
@@ -1220,16 +1245,6 @@ public:
 	float                                         WheelAccel;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMotorWheelDisplayInfo;
-
-// ScriptStruct KuroAnim.LeanAmount
-// 0x0008 (0x0008 - 0x0000)
-struct FLeanAmount final
-{
-public:
-	float                                         ForwardAndBackward;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LeftAndRight;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FLeanAmount;
 
 // ScriptStruct KuroAnim.VeloctiyBlend
 // 0x0010 (0x0010 - 0x0000)

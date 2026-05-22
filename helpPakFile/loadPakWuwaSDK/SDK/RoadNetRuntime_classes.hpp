@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "RoadNetRuntime_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "RoadNetRuntime_structs.hpp"
 
 
 namespace SDK

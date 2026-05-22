@@ -10,18 +10,212 @@
 
 #include "Basic.hpp"
 
-#include "LTween_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "LGUI_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
-#include "MovieScene_structs.hpp"
 #include "KuroDynamicAtlas_structs.hpp"
+#include "Engine_structs.hpp"
+#include "LTween_structs.hpp"
+#include "InputCore_structs.hpp"
+#include "MovieScene_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function LGUI.UIBaseActor.GetLoadStateOfSequenceByKey
+// 0x0018 (0x0018 - 0x0000)
+struct UIBaseActor_GetLoadStateOfSequenceByKey final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESequenceLoadState                            ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIBaseActor_GetLoadStateOfSequenceByKey;
+
+// Function LGUI.UIBaseActor.GetSeqInfoByKey
+// 0x0048 (0x0048 - 0x0000)
+struct UIBaseActor_GetSeqInfoByKey final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSequenceInfo                          ReturnValue;                                       // 0x0010(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_GetSeqInfoByKey;
+
+// Function LGUI.UIBaseActor.GetSequencePlayContextOfKey
+// 0x0018 (0x0018 - 0x0000)
+struct UIBaseActor_GetSequencePlayContextOfKey final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USequencePlayContext*                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_GetSequencePlayContextOfKey;
+
+// Function LGUI.UIBaseActor.GetSequencePlayerByKey
+// 0x0018 (0x0018 - 0x0000)
+struct UIBaseActor_GetSequencePlayerByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_GetSequencePlayerByKey;
+
+// Function LGUI.UIBaseActor.LoadSequenceAssetAsyncByKey
+// 0x0038 (0x0038 - 0x0000)
+struct UIBaseActor_LoadSequenceAssetAsyncByKey final
+{
+public:
+	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class ULevelSequence* Sequence)> OnLoaded;                                        // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_LoadSequenceAssetAsyncByKey;
+
+// Function LGUI.UIBaseActor.PauseSequenceByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_PauseSequenceByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_PauseSequenceByKey;
+
+// Function LGUI.UIBaseActor.PlayLevelSequenceByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_PlayLevelSequenceByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_PlayLevelSequenceByKey;
+
+// Function LGUI.UIBaseActor.ReplaySequenceByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_ReplaySequenceByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_ReplaySequenceByKey;
+
+// Function LGUI.UIBaseActor.ResumeSequenceByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_ResumeSequenceByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_ResumeSequenceByKey;
+
+// Function LGUI.UIBaseActor.SequenceJumpToEnd
+// 0x0020 (0x0020 - 0x0000)
+struct UIBaseActor_SequenceJumpToEnd final
+{
+public:
+	struct FSoftObjectPath                        SoftPath;                                          // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_SequenceJumpToEnd;
+
+// Function LGUI.UIBaseActor.SequenceJumpToSecondByKey
+// 0x0018 (0x0018 - 0x0000)
+struct UIBaseActor_SequenceJumpToSecondByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameTime                             Time;                                              // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_SequenceJumpToSecondByKey;
+
+// Function LGUI.UIBaseActor.SequencePlayReverseByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_SequencePlayReverseByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_SequencePlayReverseByKey;
+
+// Function LGUI.UIBaseActor.StopSequenceByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIBaseActor_StopSequenceByKey final
+{
+public:
+	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_StopSequenceByKey;
+
+// Function LGUI.UIBaseActor.ExecuteSequencePlayEvent
+// 0x0020 (0x0020 - 0x0000)
+struct UIBaseActor_ExecuteSequencePlayEvent final
+{
+public:
+	class FString                                 sequenceName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 eventName;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_ExecuteSequencePlayEvent;
+
+// Function LGUI.UIBaseActor.GetUIItem
+// 0x0008 (0x0008 - 0x0000)
+struct UIBaseActor_GetUIItem final
+{
+public:
+	class UUIItem*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseActor_GetUIItem;
+
+// Function LGUI.UINiagaraActor.GetUINiagara
+// 0x0008 (0x0008 - 0x0000)
+struct UINiagaraActor_GetUINiagara final
+{
+public:
+	class UUINiagara*                             ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagaraActor_GetUINiagara;
+
+// Function LGUI.LGUIBaseRayEmitter.GetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIBaseRayEmitter_GetClickThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIBaseRayEmitter_GetClickThreshold;
+
+// Function LGUI.LGUIBaseRayEmitter.GetInitialValue
+// 0x000C (0x000C - 0x0000)
+struct LGUIBaseRayEmitter_GetInitialValue final
+{
+public:
+	float                                         OutClickThreshold;                                 // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutHoldToDrag;                                     // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OutHoldToDragTime;                                 // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIBaseRayEmitter_GetInitialValue;
+
+// Function LGUI.LGUIBaseRayEmitter.SetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIBaseRayEmitter_SetClickThreshold final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIBaseRayEmitter_SetClickThreshold;
+
+// Function LGUI.LGUIBaseRayEmitter.SetInitialValue
+// 0x000C (0x000C - 0x0000)
+struct LGUIBaseRayEmitter_SetInitialValue final
+{
+public:
+	float                                         InClickThreshold;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InHoldToDrag;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InHoldToDragTime;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIBaseRayEmitter_SetInitialValue;
 
 // Function LGUI.LGUIBehaviour.InstantiateActor
 // 0x0018 (0x0018 - 0x0000)
@@ -191,2096 +385,194 @@ public:
 };
 DUMPER7_ASSERTS_LGUIBehaviour_GetRootSceneComponent;
 
-// Function LGUI.UILayoutElement.SetConstantSize
+// Function LGUI.UILayoutBase.SetGridAnimationInterval
 // 0x0004 (0x0004 - 0x0000)
-struct UILayoutElement_SetConstantSize final
+struct UILayoutBase_SetGridAnimationInterval final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UILayoutElement_SetConstantSize;
+DUMPER7_ASSERTS_UILayoutBase_SetGridAnimationInterval;
 
-// Function LGUI.UILayoutElement.SetLayoutType
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutElement_SetLayoutType final
-{
-public:
-	ELayoutElementType                            InType;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutElement_SetLayoutType;
-
-// Function LGUI.UILayoutElement.SetRatioSize
+// Function LGUI.UILayoutBase.SetGridAnimationStartTime
 // 0x0004 (0x0004 - 0x0000)
-struct UILayoutElement_SetRatioSize final
+struct UILayoutBase_SetGridAnimationStartTime final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UILayoutElement_SetRatioSize;
+DUMPER7_ASSERTS_UILayoutBase_SetGridAnimationStartTime;
 
-// Function LGUI.UILayoutElement.GetConstantSize
+// Function LGUI.UILayoutBase.SetInAnimation
+// 0x0001 (0x0001 - 0x0000)
+struct UILayoutBase_SetInAnimation final
+{
+public:
+	bool                                          state;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILayoutBase_SetInAnimation;
+
+// Function LGUI.UILayoutBase.GetGridAnimationInterval
 // 0x0004 (0x0004 - 0x0000)
-struct UILayoutElement_GetConstantSize final
+struct UILayoutBase_GetGridAnimationInterval final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UILayoutElement_GetConstantSize;
+DUMPER7_ASSERTS_UILayoutBase_GetGridAnimationInterval;
 
-// Function LGUI.UILayoutElement.GetIgnoreLayout
+// Function LGUI.UILayoutBase.GetGridAnimationStartTime
+// 0x0004 (0x0004 - 0x0000)
+struct UILayoutBase_GetGridAnimationStartTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILayoutBase_GetGridAnimationStartTime;
+
+// Function LGUI.UILayoutBase.GetInAnimation
 // 0x0001 (0x0001 - 0x0000)
-struct UILayoutElement_GetIgnoreLayout final
+struct UILayoutBase_GetInAnimation final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UILayoutElement_GetIgnoreLayout;
+DUMPER7_ASSERTS_UILayoutBase_GetInAnimation;
 
-// Function LGUI.UILayoutElement.GetLayoutType
+// Function LGUI.UILayoutWithAnimation.CancelAnimation
 // 0x0001 (0x0001 - 0x0000)
-struct UILayoutElement_GetLayoutType final
+struct UILayoutWithAnimation_CancelAnimation final
 {
 public:
-	ELayoutElementType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          callComplete;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UILayoutElement_GetLayoutType;
+DUMPER7_ASSERTS_UILayoutWithAnimation_CancelAnimation;
 
-// Function LGUI.UILayoutElement.GetRatioSize
+// Function LGUI.UILayoutWithAnimation.SetAnimationDuration
 // 0x0004 (0x0004 - 0x0000)
-struct UILayoutElement_GetRatioSize final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutElement_GetRatioSize;
-
-// Function LGUI.UIItem.GetAllAttachUIChildren
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_GetAllAttachUIChildren final
-{
-public:
-	TArray<class UUIItem*>                        OutArray;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAllAttachUIChildren;
-
-// Function LGUI.UIItem.GetLGUISpaceAbsolutePosition
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetLGUISpaceAbsolutePosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLGUISpaceAbsolutePosition;
-
-// Function LGUI.UIItem.GetLGUISpaceAbsolutePositionByPivot
-// 0x0014 (0x0014 - 0x0000)
-struct UIItem_GetLGUISpaceAbsolutePositionByPivot final
-{
-public:
-	struct FVector2D                              Pivot;                                             // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLGUISpaceAbsolutePositionByPivot;
-
-// Function LGUI.UIItem.GetLGUISpaceCenterAbsolutePosition
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetLGUISpaceCenterAbsolutePosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLGUISpaceCenterAbsolutePosition;
-
-// Function LGUI.UIItem.GetOverlapWith
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_GetOverlapWith final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIItem_GetOverlapWith;
-
-// Function LGUI.UIItem.GetParentAsUIItem
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetParentAsUIItem final
-{
-public:
-	class UUIItem*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetParentAsUIItem;
-
-// Function LGUI.UIItem.GetPositionInScreen
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetPositionInScreen final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInScreen;
-
-// Function LGUI.UIItem.GetPositionInScreenWithPivot
-// 0x0014 (0x0014 - 0x0000)
-struct UIItem_GetPositionInScreenWithPivot final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInScreenWithPivot;
-
-// Function LGUI.UIItem.GetPositionInViewPort
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetPositionInViewPort final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInViewPort;
-
-// Function LGUI.UIItem.GetPositionInViewPortOld
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetPositionInViewPortOld final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInViewPortOld;
-
-// Function LGUI.UIItem.GetPositionInViewportWithPivot
-// 0x0014 (0x0014 - 0x0000)
-struct UIItem_GetPositionInViewportWithPivot final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInViewportWithPivot;
-
-// Function LGUI.UIItem.GetPositionInViewportWithPivotNormalized
-// 0x0014 (0x0014 - 0x0000)
-struct UIItem_GetPositionInViewportWithPivotNormalized final
-{
-public:
-	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPositionInViewportWithPivotNormalized;
-
-// Function LGUI.UIItem.GetRenderCanvas
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetRenderCanvas final
-{
-public:
-	class ULGUICanvas*                            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetRenderCanvas;
-
-// Function LGUI.UIItem.GetUIWorldPosition
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetUIWorldPosition final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetUIWorldPosition;
-
-// Function LGUI.UIItem.IsBoundOutOfScreen
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsBoundOutOfScreen final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsBoundOutOfScreen;
-
-// Function LGUI.UIItem.IsRenderTargetUI
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsRenderTargetUI final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsRenderTargetUI;
-
-// Function LGUI.UIItem.IsScreenSpaceOverlayUI
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsScreenSpaceOverlayUI final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsScreenSpaceOverlayUI;
-
-// Function LGUI.UIItem.IsWorldSpaceUI
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsWorldSpaceUI final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsWorldSpaceUI;
-
-// Function LGUI.UIItem.PlayUIItemAlphaTween
-// 0x000C (0x000C - 0x0000)
-struct UIItem_PlayUIItemAlphaTween final
-{
-public:
-	float                                         StartValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_PlayUIItemAlphaTween;
-
-// Function LGUI.UIItem.PlayUIItemScaleTween
-// 0x000C (0x000C - 0x0000)
-struct UIItem_PlayUIItemScaleTween final
-{
-public:
-	float                                         StartValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_PlayUIItemScaleTween;
-
-// Function LGUI.UIItem.SetAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetAlpha final
-{
-public:
-	float                                         newAlpha;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAlpha;
-
-// Function LGUI.UIItem.SetAnchorAlign
-// 0x0002 (0x0002 - 0x0000)
-struct UIItem_SetAnchorAlign final
-{
-public:
-	EUIAnchorHorizontalAlign                      HAlign;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUIAnchorVerticalAlign                        VAlign;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorAlign;
-
-// Function LGUI.UIItem.SetAnchorHAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetAnchorHAlign final
-{
-public:
-	EUIAnchorHorizontalAlign                      align;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorHAlign;
-
-// Function LGUI.UIItem.SetAnchorOffset
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetAnchorOffset final
-{
-public:
-	struct FVector2D                              NewOffset;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorOffset;
-
-// Function LGUI.UIItem.SetAnchorOffsetX
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetAnchorOffsetX final
-{
-public:
-	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorOffsetX;
-
-// Function LGUI.UIItem.SetAnchorOffsetY
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetAnchorOffsetY final
-{
-public:
-	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorOffsetY;
-
-// Function LGUI.UIItem.SetAnchorVAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetAnchorVAlign final
-{
-public:
-	EUIAnchorVerticalAlign                        align;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetAnchorVAlign;
-
-// Function LGUI.UIItem.SetBubbleUpToParent
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetBubbleUpToParent final
-{
-public:
-	bool                                          NewBool;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetBubbleUpToParent;
-
-// Function LGUI.UIItem.SetChangeColor
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetChangeColor final
-{
-public:
-	bool                                          bUseChangeColor;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FColor                                 NewColor;                                          // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetChangeColor;
-
-// Function LGUI.UIItem.SetColor
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetColor final
-{
-public:
-	struct FColor                                 NewColor;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetColor;
-
-// Function LGUI.UIItem.SetDepth
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetDepth final
-{
-public:
-	int32                                         depth;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          propagateToChildren;                               // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIItem_SetDepth;
-
-// Function LGUI.UIItem.SetDisplayName
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_SetDisplayName final
-{
-public:
-	class FString                                 InName;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetDisplayName;
-
-// Function LGUI.UIItem.SetHeight
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetHeight final
-{
-public:
-	float                                         NewHeight;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetHeight;
-
-// Function LGUI.UIItem.SetHierarchyIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetHierarchyIndex final
-{
-public:
-	int32                                         InInt;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetHierarchyIndex;
-
-// Function LGUI.UIItem.SetHorizontalStretch
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetHorizontalStretch final
-{
-public:
-	struct FVector2D                              newStretch;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetHorizontalStretch;
-
-// Function LGUI.UIItem.SetIsUIActive
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetIsUIActive final
-{
-public:
-	bool                                          active;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetIsUIActive;
-
-// Function LGUI.UIItem.SetLGUISpaceAbsolutePosition
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetLGUISpaceAbsolutePosition final
-{
-public:
-	struct FVector                                Pos;                                               // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetLGUISpaceAbsolutePosition;
-
-// Function LGUI.UIItem.SetPivot
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetPivot final
-{
-public:
-	struct FVector2D                              NewPivot;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetPivot;
-
-// Function LGUI.UIItem.SetPivot_Raw
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetPivot_Raw final
-{
-public:
-	struct FVector2D                              NewPivot;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAdjustLocation;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIItem_SetPivot_Raw;
-
-// Function LGUI.UIItem.SetRaycastTarget
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetRaycastTarget final
-{
-public:
-	bool                                          NewBool;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetRaycastTarget;
-
-// Function LGUI.UIItem.SetStretchBottom
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetStretchBottom final
-{
-public:
-	float                                         newBottom;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetStretchBottom;
-
-// Function LGUI.UIItem.SetStretchLeft
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetStretchLeft final
-{
-public:
-	float                                         newLeft;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetStretchLeft;
-
-// Function LGUI.UIItem.SetStretchRight
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetStretchRight final
-{
-public:
-	float                                         newRight;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetStretchRight;
-
-// Function LGUI.UIItem.SetStretchTop
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetStretchTop final
-{
-public:
-	float                                         newTop;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetStretchTop;
-
-// Function LGUI.UIItem.SetTraceChannel
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetTraceChannel final
-{
-public:
-	ETraceTypeQuery                               InTraceChannel;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetTraceChannel;
-
-// Function LGUI.UIItem.SetUIActive
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetUIActive final
-{
-public:
-	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIActive;
-
-// Function LGUI.UIItem.SetUIItemAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetUIItemAlpha final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIItemAlpha;
-
-// Function LGUI.UIItem.SetUIItemScale
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIItemScale final
-{
-public:
-	struct FVector                                Value;                                             // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIItemScale;
-
-// Function LGUI.UIItem.SetUIParent
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_SetUIParent final
-{
-public:
-	class UUIItem*                                InParent;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          KeepWorldTransform;                                // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIItem_SetUIParent;
-
-// Function LGUI.UIItem.SetUIRelativeLocation
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIRelativeLocation final
-{
-public:
-	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRelativeLocation;
-
-// Function LGUI.UIItem.SetUIRelativeRotation
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIRelativeRotation final
-{
-public:
-	struct FRotator                               NewRotation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRelativeRotation;
-
-// Function LGUI.UIItem.SetUIRelativeScale3D
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIRelativeScale3D final
-{
-public:
-	struct FVector                                NewScale3D;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRelativeScale3D;
-
-// Function LGUI.UIItem.SetUIRenderAfterBlur
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetUIRenderAfterBlur final
-{
-public:
-	bool                                          bAfterBlur;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRenderAfterBlur;
-
-// Function LGUI.UIItem.SetUIRenderBeforeBloom
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetUIRenderBeforeBloom final
-{
-public:
-	bool                                          bBeforeBloom;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRenderBeforeBloom;
-
-// Function LGUI.UIItem.SetUIRenderBeforeUpScale
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_SetUIRenderBeforeUpScale final
-{
-public:
-	bool                                          bBeforeUpScale;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIRenderBeforeUpScale;
-
-// Function LGUI.UIItem.SetUIWorldLocation
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIWorldLocation final
-{
-public:
-	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIWorldLocation;
-
-// Function LGUI.UIItem.SetUIWorldRotation
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIWorldRotation final
-{
-public:
-	struct FRotator                               NewRotation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIWorldRotation;
-
-// Function LGUI.UIItem.SetUIWorldScale
-// 0x000C (0x000C - 0x0000)
-struct UIItem_SetUIWorldScale final
-{
-public:
-	struct FVector                                NewScale;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetUIWorldScale;
-
-// Function LGUI.UIItem.SetVerticalStretch
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_SetVerticalStretch final
-{
-public:
-	struct FVector2D                              newStretch;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetVerticalStretch;
-
-// Function LGUI.UIItem.SetWidget
-// 0x0054 (0x0054 - 0x0000)
-struct UIItem_SetWidget final
-{
-public:
-	struct FUIWidget                              inWidget;                                          // 0x0000(0x0054)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetWidget;
-
-// Function LGUI.UIItem.SetWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_SetWidth final
-{
-public:
-	float                                         NewWidth;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_SetWidth;
-
-// Function LGUI.UIItem.GetAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetAlpha final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAlpha;
-
-// Function LGUI.UIItem.GetAnchorHAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_GetAnchorHAlign final
-{
-public:
-	EUIAnchorHorizontalAlign                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAnchorHAlign;
-
-// Function LGUI.UIItem.GetAnchorOffset
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetAnchorOffset final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAnchorOffset;
-
-// Function LGUI.UIItem.GetAnchorOffsetX
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetAnchorOffsetX final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAnchorOffsetX;
-
-// Function LGUI.UIItem.GetAnchorOffsetY
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetAnchorOffsetY final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAnchorOffsetY;
-
-// Function LGUI.UIItem.GetAnchorVAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_GetAnchorVAlign final
-{
-public:
-	EUIAnchorVerticalAlign                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAnchorVAlign;
-
-// Function LGUI.UIItem.GetAttachUIChild
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_GetAttachUIChild final
-{
-public:
-	int32                                         index;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAttachUIChild;
-
-// Function LGUI.UIItem.GetAttachUIChildren
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_GetAttachUIChildren final
-{
-public:
-	TArray<class UUIItem*>                        ReturnValue;                                       // 0x0000(0x0010)(ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetAttachUIChildren;
-
-// Function LGUI.UIItem.GetCalculatedParentAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetCalculatedParentAlpha final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetCalculatedParentAlpha;
-
-// Function LGUI.UIItem.GetCalculatedParentColor
-// 0x000C (0x000C - 0x0000)
-struct UIItem_GetCalculatedParentColor final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetCalculatedParentColor;
-
-// Function LGUI.UIItem.GetCanvasScaler
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetCanvasScaler final
-{
-public:
-	class ULGUICanvasScaler*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetCanvasScaler;
-
-// Function LGUI.UIItem.GetColor
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetColor final
-{
-public:
-	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetColor;
-
-// Function LGUI.UIItem.GetDepth
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetDepth final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetDepth;
-
-// Function LGUI.UIItem.GetDisplayName
-// 0x0010 (0x0010 - 0x0000)
-struct UIItem_GetDisplayName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetDisplayName;
-
-// Function LGUI.UIItem.GetFlattenHierarchyIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetFlattenHierarchyIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetFlattenHierarchyIndex;
-
-// Function LGUI.UIItem.GetHeight
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetHeight final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetHeight;
-
-// Function LGUI.UIItem.GetHierarchyIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetHierarchyIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetHierarchyIndex;
-
-// Function LGUI.UIItem.GetInheritAlpha
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_GetInheritAlpha final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetInheritAlpha;
-
-// Function LGUI.UIItem.GetLocalSpaceBottom
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetLocalSpaceBottom final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceBottom;
-
-// Function LGUI.UIItem.GetLocalSpaceCenter
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetLocalSpaceCenter final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceCenter;
-
-// Function LGUI.UIItem.GetLocalSpaceLeft
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetLocalSpaceLeft final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceLeft;
-
-// Function LGUI.UIItem.GetLocalSpaceLeftBottomPoint
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetLocalSpaceLeftBottomPoint final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceLeftBottomPoint;
-
-// Function LGUI.UIItem.GetLocalSpaceRight
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetLocalSpaceRight final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceRight;
-
-// Function LGUI.UIItem.GetLocalSpaceRightTopPoint
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetLocalSpaceRightTopPoint final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceRightTopPoint;
-
-// Function LGUI.UIItem.GetLocalSpaceTop
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetLocalSpaceTop final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetLocalSpaceTop;
-
-// Function LGUI.UIItem.GetPivot
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetPivot final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetPivot;
-
-// Function LGUI.UIItem.GetRootCanvas
-// 0x0008 (0x0008 - 0x0000)
-struct UIItem_GetRootCanvas final
-{
-public:
-	class ULGUICanvas*                            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetRootCanvas;
-
-// Function LGUI.UIItem.GetStretchBottom
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetStretchBottom final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetStretchBottom;
-
-// Function LGUI.UIItem.GetStretchLeft
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetStretchLeft final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetStretchLeft;
-
-// Function LGUI.UIItem.GetStretchRight
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetStretchRight final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetStretchRight;
-
-// Function LGUI.UIItem.GetStretchTop
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetStretchTop final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetStretchTop;
-
-// Function LGUI.UIItem.GetTraceChannel
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_GetTraceChannel final
-{
-public:
-	ETraceTypeQuery                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetTraceChannel;
-
-// Function LGUI.UIItem.GetUIItemType
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_GetUIItemType final
-{
-public:
-	EUIItemType                                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetUIItemType;
-
-// Function LGUI.UIItem.GetWidget
-// 0x0054 (0x0054 - 0x0000)
-struct UIItem_GetWidget final
-{
-public:
-	struct FUIWidget                              ReturnValue;                                       // 0x0000(0x0054)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetWidget;
-
-// Function LGUI.UIItem.GetWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UIItem_GetWidth final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_GetWidth;
-
-// Function LGUI.UIItem.IsBubbleUpToParent
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsBubbleUpToParent final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsBubbleUpToParent;
-
-// Function LGUI.UIItem.IsRaycastTarget
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsRaycastTarget final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsRaycastTarget;
-
-// Function LGUI.UIItem.IsUIActiveInHierarchy
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsUIActiveInHierarchy final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsUIActiveInHierarchy;
-
-// Function LGUI.UIItem.IsUIActiveSelf
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsUIActiveSelf final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsUIActiveSelf;
-
-// Function LGUI.UIItem.IsUsedCustomMinMaxAnchor
-// 0x0001 (0x0001 - 0x0000)
-struct UIItem_IsUsedCustomMinMaxAnchor final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIItem_IsUsedCustomMinMaxAnchor;
-
-// Function LGUI.UIBaseRenderable.SetUIRenderAfterBlurPartial
-// 0x0001 (0x0001 - 0x0000)
-struct UIBaseRenderable_SetUIRenderAfterBlurPartial final
-{
-public:
-	bool                                          bAfterBlurPartial;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseRenderable_SetUIRenderAfterBlurPartial;
-
-// Function LGUI.UIBaseRenderable.GetUIRenderableType
-// 0x0001 (0x0001 - 0x0000)
-struct UIBaseRenderable_GetUIRenderableType final
-{
-public:
-	EUIRenderableType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseRenderable_GetUIRenderableType;
-
-// Function LGUI.UIBatchGeometryRenderable.GetRaycastComplex
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_GetRaycastComplex final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetRaycastComplex;
-
-// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialScalarParameter
-// 0x0010 (0x0010 - 0x0000)
-struct UIBatchGeometryRenderable_SetCustomMaterialScalarParameter final
-{
-public:
-	class FName                                   paramterName;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialScalarParameter;
-
-// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialTextureParameter
-// 0x0018 (0x0018 - 0x0000)
-struct UIBatchGeometryRenderable_SetCustomMaterialTextureParameter final
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               value;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialTextureParameter;
-
-// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialVectorParameter
-// 0x001C (0x001C - 0x0000)
-struct UIBatchGeometryRenderable_SetCustomMaterialVectorParameter final
-{
-public:
-	class FName                                   paramterName;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialVectorParameter;
-
-// Function LGUI.UIBatchGeometryRenderable.SetCustomUIMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_SetCustomUIMaterial final
-{
-public:
-	class UMaterialInterface*                     inMat;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomUIMaterial;
-
-// Function LGUI.UIBatchGeometryRenderable.SetIsColorRevert
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_SetIsColorRevert final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsColorRevert;
-
-// Function LGUI.UIBatchGeometryRenderable.SetIsGray
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_SetIsGray final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsGray;
-
-// Function LGUI.UIBatchGeometryRenderable.SetIsSelfRender
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_SetIsSelfRender final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsSelfRender;
-
-// Function LGUI.UIBatchGeometryRenderable.SetKuroRenderingMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_SetKuroRenderingMaterial final
-{
-public:
-	class UMaterialInstanceDynamic*               inMat;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetKuroRenderingMaterial;
-
-// Function LGUI.UIBatchGeometryRenderable.SetRaycastComplex
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_SetRaycastComplex final
-{
-public:
-	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetRaycastComplex;
-
-// Function LGUI.UIBatchGeometryRenderable.GetCustomUIMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_GetCustomUIMaterial final
-{
-public:
-	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetCustomUIMaterial;
-
-// Function LGUI.UIBatchGeometryRenderable.GetIsSelfRender
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_GetIsSelfRender final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetIsSelfRender;
-
-// Function LGUI.UIBatchGeometryRenderable.GetKuroRenderingMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_GetKuroRenderingMaterial final
-{
-public:
-	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetKuroRenderingMaterial;
-
-// Function LGUI.UIBatchGeometryRenderable.GetMaterialInstanceDynamic
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_GetMaterialInstanceDynamic final
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetMaterialInstanceDynamic;
-
-// Function LGUI.UIBatchGeometryRenderable.IsColorRevert
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_IsColorRevert final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_IsColorRevert;
-
-// Function LGUI.UIBatchGeometryRenderable.IsGray
-// 0x0001 (0x0001 - 0x0000)
-struct UIBatchGeometryRenderable_IsGray final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_IsGray;
-
-// Function LGUI.UISpriteBase.SetSprite
-// 0x0010 (0x0010 - 0x0000)
-struct UISpriteBase_SetSprite final
-{
-public:
-	class ULGUISpriteData_BaseObject*             newSprite;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          setSize;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISpriteBase_SetSprite;
-
-// Function LGUI.UISpriteBase.GetSprite
-// 0x0008 (0x0008 - 0x0000)
-struct UISpriteBase_GetSprite final
-{
-public:
-	class ULGUISpriteData_BaseObject*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteBase_GetSprite;
-
-// Function LGUI.UIPolygon.EndAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIPolygon_EndAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_EndAngleTo;
-
-// Function LGUI.UIPolygon.SetEndAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_SetEndAngle final
+struct UILayoutWithAnimation_SetAnimationDuration final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIPolygon_SetEndAngle;
+DUMPER7_ASSERTS_UILayoutWithAnimation_SetAnimationDuration;
 
-// Function LGUI.UIPolygon.SetSides
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_SetSides final
-{
-public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_SetSides;
-
-// Function LGUI.UIPolygon.SetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_SetStartAngle final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_SetStartAngle;
-
-// Function LGUI.UIPolygon.SetUVType
+// Function LGUI.UILayoutWithAnimation.SetAnimationType
 // 0x0001 (0x0001 - 0x0000)
-struct UIPolygon_SetUVType final
+struct UILayoutWithAnimation_SetAnimationType final
 {
 public:
-	EUIPolygonUVType                              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUILayoutChangePositionAnimationType          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIPolygon_SetUVType;
+DUMPER7_ASSERTS_UILayoutWithAnimation_SetAnimationType;
 
-// Function LGUI.UIPolygon.SetVertexOffsetArray
-// 0x0010 (0x0010 - 0x0000)
-struct UIPolygon_SetVertexOffsetArray final
-{
-public:
-	TArray<float>                                 value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_SetVertexOffsetArray;
-
-// Function LGUI.UIPolygon.StartAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIPolygon_StartAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_StartAngleTo;
-
-// Function LGUI.UIPolygon.GetEndAngle
+// Function LGUI.UILayoutWithAnimation.GetAnimationDuration
 // 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_GetEndAngle final
+struct UILayoutWithAnimation_GetAnimationDuration final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIPolygon_GetEndAngle;
+DUMPER7_ASSERTS_UILayoutWithAnimation_GetAnimationDuration;
 
-// Function LGUI.UIPolygon.GetSides
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_GetSides final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_GetSides;
-
-// Function LGUI.UIPolygon.GetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygon_GetStartAngle final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_GetStartAngle;
-
-// Function LGUI.UIPolygon.GetUVType
+// Function LGUI.UILayoutWithAnimation.GetAnimationType
 // 0x0001 (0x0001 - 0x0000)
-struct UIPolygon_GetUVType final
+struct UILayoutWithAnimation_GetAnimationType final
 {
 public:
-	EUIPolygonUVType                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUILayoutChangePositionAnimationType          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIPolygon_GetUVType;
+DUMPER7_ASSERTS_UILayoutWithAnimation_GetAnimationType;
 
-// Function LGUI.UIPolygon.GetVertexOffsetArray
-// 0x0010 (0x0010 - 0x0000)
-struct UIPolygon_GetVertexOffsetArray final
-{
-public:
-	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygon_GetVertexOffsetArray;
-
-// Function LGUI.LGUIBaseRayEmitter.GetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIBaseRayEmitter_GetClickThreshold final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIBaseRayEmitter_GetClickThreshold;
-
-// Function LGUI.LGUIBaseRayEmitter.GetInitialValue
-// 0x000C (0x000C - 0x0000)
-struct LGUIBaseRayEmitter_GetInitialValue final
-{
-public:
-	float                                         OutClickThreshold;                                 // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OutHoldToDrag;                                     // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OutHoldToDragTime;                                 // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIBaseRayEmitter_GetInitialValue;
-
-// Function LGUI.LGUIBaseRayEmitter.SetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIBaseRayEmitter_SetClickThreshold final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIBaseRayEmitter_SetClickThreshold;
-
-// Function LGUI.LGUIBaseRayEmitter.SetInitialValue
-// 0x000C (0x000C - 0x0000)
-struct LGUIBaseRayEmitter_SetInitialValue final
-{
-public:
-	float                                         InClickThreshold;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InHoldToDrag;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InHoldToDragTime;                                  // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIBaseRayEmitter_SetInitialValue;
-
-// Function LGUI.UIScrollViewComponent.GetDecelerationRateDegbug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_GetDecelerationRateDegbug final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetDecelerationRateDegbug;
-
-// Function LGUI.UIScrollViewComponent.GetElasticityDegbug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_GetElasticityDegbug final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetElasticityDegbug;
-
-// Function LGUI.UIScrollViewComponent.GetScrollOutOfRangeModulusDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_GetScrollOutOfRangeModulusDebug final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollOutOfRangeModulusDebug;
-
-// Function LGUI.UIScrollViewComponent.GetScrollSensitivityDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_GetScrollSensitivityDebug final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollSensitivityDebug;
-
-// Function LGUI.UIScrollViewComponent.GetScrollUseDebug
+// Function LGUI.UIMultiTemplateLayout.SetAutoAdjustScale
 // 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetScrollUseDebug final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollUseDebug;
-
-// Function LGUI.UIScrollViewComponent.SetDecelerationRateDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetDecelerationRateDebug final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetDecelerationRateDebug;
-
-// Function LGUI.UIScrollViewComponent.SetElasticityDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetElasticityDebug final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetElasticityDebug;
-
-// Function LGUI.UIScrollViewComponent.SetScrollOutOfRangeModulusDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetScrollOutOfRangeModulusDebug final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollOutOfRangeModulusDebug;
-
-// Function LGUI.UIScrollViewComponent.SetScrollSensitivityDebug
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetScrollSensitivityDebug final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollSensitivityDebug;
-
-// Function LGUI.UIScrollViewComponent.SetScrollUseDebug
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetScrollUseDebug final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollUseDebug;
-
-// Function LGUI.UIScrollViewComponent.SetCanScroll
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetCanScroll final
-{
-public:
-	bool                                          bCanScroll;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetCanScroll;
-
-// Function LGUI.UIScrollViewComponent.SetHorizontal
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetHorizontal final
+struct UIMultiTemplateLayout_SetAutoAdjustScale final
 {
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_SetHorizontal;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_SetAutoAdjustScale;
 
-// Function LGUI.UIScrollViewComponent.SetHorizontalVelocity
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetHorizontalVelocity final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetHorizontalVelocity;
-
-// Function LGUI.UIScrollViewComponent.SetRayCastTargetForScrollView
+// Function LGUI.UIMultiTemplateLayout.SetDirectionType
 // 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetRayCastTargetForScrollView final
+struct UIMultiTemplateLayout_SetDirectionType final
 {
 public:
-	bool                                          newRayCastTarget;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELGUILayoutDirectionType                      NewDirectionType;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_SetRayCastTargetForScrollView;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_SetDirectionType;
 
-// Function LGUI.UIScrollViewComponent.SetScrollProgress
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetScrollProgress final
+// Function LGUI.UIMultiTemplateLayout.SetPadding
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateLayout_SetPadding final
 {
 public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollProgress;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_SetPadding;
 
-// Function LGUI.UIScrollViewComponent.SetScrollProgressIncrement
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetScrollProgressIncrement final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollProgressIncrement;
-
-// Function LGUI.UIScrollViewComponent.SetScrollValue
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewComponent_SetScrollValue final
-{
-public:
-	struct FVector2D                              Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollValue;
-
-// Function LGUI.UIScrollViewComponent.SetUnderSizeScrollEnabled
+// Function LGUI.UIMultiTemplateLayout.SetSizeFitToChildren
 // 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetUnderSizeScrollEnabled final
-{
-public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetUnderSizeScrollEnabled;
-
-// Function LGUI.UIScrollViewComponent.SetVelocity
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetVelocity final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetVelocity;
-
-// Function LGUI.UIScrollViewComponent.SetVertical
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_SetVertical final
+struct UIMultiTemplateLayout_SetSizeFitToChildren final
 {
 public:
 	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_SetVertical;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_SetSizeFitToChildren;
 
-// Function LGUI.UIScrollViewComponent.SetVerticalVelocity
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollViewComponent_SetVerticalVelocity final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_SetVerticalVelocity;
-
-// Function LGUI.UIScrollViewComponent.CheckContentUnderSize
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_CheckContentUnderSize final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_CheckContentUnderSize;
-
-// Function LGUI.UIScrollViewComponent.GetCanScroll
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetCanScroll final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetCanScroll;
-
-// Function LGUI.UIScrollViewComponent.GetContent
+// Function LGUI.UIMultiTemplateLayout.SetSpacing
 // 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewComponent_GetContent final
+struct UIMultiTemplateLayout_SetSpacing final
 {
 public:
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_GetContent;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_SetSpacing;
 
-// Function LGUI.UIScrollViewComponent.GetHorizontal
+// Function LGUI.UIMultiTemplateLayout.GetAutoAdjustScale
 // 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetHorizontal final
+struct UIMultiTemplateLayout_GetAutoAdjustScale final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_GetHorizontal;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_GetAutoAdjustScale;
 
-// Function LGUI.UIScrollViewComponent.GetRayCastTargetForScrollView
+// Function LGUI.UIMultiTemplateLayout.GetDirectionType
 // 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetRayCastTargetForScrollView final
+struct UIMultiTemplateLayout_GetDirectionType final
+{
+public:
+	ELGUILayoutDirectionType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateLayout_GetDirectionType;
+
+// Function LGUI.UIMultiTemplateLayout.GetPadding
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateLayout_GetPadding final
+{
+public:
+	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateLayout_GetPadding;
+
+// Function LGUI.UIMultiTemplateLayout.GetSizeFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIMultiTemplateLayout_GetSizeFitToChildren final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_GetRayCastTargetForScrollView;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_GetSizeFitToChildren;
 
-// Function LGUI.UIScrollViewComponent.GetUnderSizeScrollEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetUnderSizeScrollEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetUnderSizeScrollEnabled;
-
-// Function LGUI.UIScrollViewComponent.GetVelocity
+// Function LGUI.UIMultiTemplateLayout.GetSpacing
 // 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewComponent_GetVelocity final
+struct UIMultiTemplateLayout_GetSpacing final
 {
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIScrollViewComponent_GetVelocity;
-
-// Function LGUI.UIScrollViewComponent.GetVertical
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewComponent_GetVertical final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewComponent_GetVertical;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.BindParentUIItem
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_BindParentUIItem final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_BindParentUIItem;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.FindNavigationComponent
-// 0x0020 (0x0020 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_FindNavigationComponent final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUINavigationWrapMode                         Mode;                                              // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasOtherNode;                                     // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUISelectableComponent*                 ReturnValue;                                       // 0x0018(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_FindNavigationComponent;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetOutOfBottomBoundsType
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetOutOfBottomBoundsType final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOutOfBoundsType                              OutOfTopOrBottomType;                              // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOutOfBoundsType                              OutOfLeftOrRightType;                              // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ErrorTolerance;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetOutOfBottomBoundsType;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollTo
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollTo final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollTo;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToBottom
-// 0x0018 (0x0018 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToBottom final
-{
-public:
-	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToBottom;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToBottomLater
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToBottomLater final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToBottomLater;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToLeft
-// 0x0018 (0x0018 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToLeft final
-{
-public:
-	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToLeft;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToLeftLater
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToLeftLater final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToLeftLater;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToRight
-// 0x0018 (0x0018 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToRight final
-{
-public:
-	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToRight;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToRightLater
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToRightLater final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToRightLater;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToSelectableComponent
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToSelectableComponent final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToSelectableComponent;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToTop
-// 0x0018 (0x0018 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToTop final
-{
-public:
-	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToTop;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToTopLater
-// 0x0010 (0x0010 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_ScrollToTopLater final
-{
-public:
-	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToTopLater;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.SetHorizontalScrollbarVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_SetHorizontalScrollbarVisibility final
-{
-public:
-	EScrollViewScrollbarVisibility                value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_SetHorizontalScrollbarVisibility;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.SetVerticalScrollbarVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_SetVerticalScrollbarVisibility final
-{
-public:
-	EScrollViewScrollbarVisibility                value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_SetVerticalScrollbarVisibility;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.UnBindParentUIItem
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_UnBindParentUIItem final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_UnBindParentUIItem;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetHorizontalScrollbar
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetHorizontalScrollbar final
-{
-public:
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetHorizontalScrollbar;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetHorizontalScrollbarVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetHorizontalScrollbarVisibility final
-{
-public:
-	EScrollViewScrollbarVisibility                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetHorizontalScrollbarVisibility;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetVerticalScrollbar
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetVerticalScrollbar final
-{
-public:
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetVerticalScrollbar;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetVerticalScrollbarVisibility
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetVerticalScrollbarVisibility final
-{
-public:
-	EScrollViewScrollbarVisibility                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetVerticalScrollbarVisibility;
-
-// Function LGUI.UIScrollViewWithScrollbarComponent.GetViewport
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollViewWithScrollbarComponent_GetViewport final
-{
-public:
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetViewport;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.FindNavigationIndex
-// 0x0028 (0x0028 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_FindNavigationIndex final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Direction;                                         // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUINavigationWrapMode                         WrapMode;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUINavigationPriorityMode                     PriorityMode;                                      // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NavigateTolerance;                                 // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NavigateToleranceReverse;                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_FindNavigationIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridIndexByChildComponent
-// 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetGridIndexByChildComponent final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridIndexByChildComponent;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridItem
-// 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetGridItem final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridItem;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridItemByChildComponent
-// 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetGridItemByChildComponent final
-{
-public:
-	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridItemByChildComponent;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetNavigationComponentByGridIndex
-// 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetNavigationComponentByGridIndex final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUISelectableComponent*                 ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetNavigationComponentByGridIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.IsAllItemDisplayed
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_IsAllItemDisplayed final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_IsAllItemDisplayed;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.IsInDisplayRange
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_IsInDisplayRange final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OnlyCheckData;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_IsInDisplayRange;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.RefreshByData
-// 0x0018 (0x0018 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_RefreshByData final
-{
-public:
-	TArray<int32>                                 InTemplateIndexArray;                              // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          KeepContentPosition;                               // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ScrollToItemIndex;                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_RefreshByData;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.ScrollToGridIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_ScrollToGridIndex final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_ScrollToGridIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.ScrollToGridIndexLater
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_ScrollToGridIndexLater final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_ScrollToGridIndexLater;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.TryScrollToGridIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_TryScrollToGridIndex final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_TryScrollToGridIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.CheckScrollViewValid
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_CheckScrollViewValid final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_CheckScrollViewValid;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaGridIndexRange
-// 0x000C (0x000C - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetAreaGridIndexRange final
-{
-public:
-	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutStartGridIndex;                                 // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutEndGridIndex;                                   // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaGridIndexRange;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaPadding
-// 0x0014 (0x0014 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetAreaPadding final
-{
-public:
-	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaPadding;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaSize
-// 0x000C (0x000C - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetAreaSize final
-{
-public:
-	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutWidth;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutHeight;                                         // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaSize;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetEndDisplayGridIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetEndDisplayGridIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetEndDisplayGridIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridSpacingInArea
-// 0x000C (0x000C - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetGridSpacingInArea final
-{
-public:
-	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridSpacingInArea;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridTemplateIndexInArea
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetGridTemplateIndexInArea final
-{
-public:
-	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridTemplateIndexInArea;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetLineHeightWhenVertical
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetLineHeightWhenVertical final
-{
-public:
-	int32                                         InLineIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetLineHeightWhenVertical;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetLineWidthWhenHorizontal
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetLineWidthWhenHorizontal final
-{
-public:
-	int32                                         InLineIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetLineWidthWhenHorizontal;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.GetStartDisplayGridIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_GetStartDisplayGridIndex final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetStartDisplayGridIndex;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetAlignGrid
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_SetContentOffsetAlignGrid final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bScrollToTop;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetAlignGrid;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetXWhenHorizontal
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_SetContentOffsetXWhenHorizontal final
-{
-public:
-	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetXWhenHorizontal;
-
-// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetYWhenVertical
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateScrollViewComponent_SetContentOffsetYWhenVertical final
-{
-public:
-	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetYWhenVertical;
+DUMPER7_ASSERTS_UIMultiTemplateLayout_GetSpacing;
 
 // Function LGUI.LGUI_PointerInputModule.GetCurrentInputKeyType
 // 0x0001 (0x0001 - 0x0000)
@@ -4779,6 +3071,19 @@ public:
 };
 DUMPER7_ASSERTS_LGUICanvas_IsUIRenderable;
 
+// Function LGUI.LGUICanvasScaler.CalculateAdaptedSizeAndScale
+// 0x0014 (0x0014 - 0x0000)
+struct LGUICanvasScaler_CalculateAdaptedSizeAndScale final
+{
+public:
+	float                                         Width;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutWidth;                                          // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutHeight;                                         // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutScale;                                          // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICanvasScaler_CalculateAdaptedSizeAndScale;
+
 // Function LGUI.LGUICanvasScaler.GetMatchFromWidthToHeight
 // 0x0004 (0x0004 - 0x0000)
 struct LGUICanvasScaler_GetMatchFromWidthToHeight final
@@ -4973,88 +3278,113 @@ public:
 };
 DUMPER7_ASSERTS_LGUIComponentsRegistry_SetComponents;
 
-// Function LGUI.UISelectableTransitionComponent.CollectTweener
+// Function LGUI.UIEffectTextAnimation_PropertyWithEase.SetEaseCurve
 // 0x0008 (0x0008 - 0x0000)
-struct UISelectableTransitionComponent_CollectTweener final
+struct UIEffectTextAnimation_PropertyWithEase_SetEaseCurve final
 {
 public:
-	class ULTweener*                              InItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISelectableTransitionComponent_CollectTweener;
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_SetEaseCurve;
 
-// Function LGUI.UISelectableTransitionComponent.CollectTweeners
-// 0x0050 (0x0050 - 0x0000)
-struct UISelectableTransitionComponent_CollectTweeners final
-{
-public:
-	TSet<class ULTweener*>                        InItems;                                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISelectableTransitionComponent_CollectTweeners;
-
-// Function LGUI.UISelectableTransitionComponent.OnDisabledBP
+// Function LGUI.UIEffectTextAnimation_PropertyWithEase.SetEaseType
 // 0x0001 (0x0001 - 0x0000)
-struct UISelectableTransitionComponent_OnDisabledBP final
+struct UIEffectTextAnimation_PropertyWithEase_SetEaseType final
 {
 public:
-	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISelectableTransitionComponent_OnDisabledBP;
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_SetEaseType;
 
-// Function LGUI.UISelectableTransitionComponent.OnHighlightedBP
+// Function LGUI.UIEffectTextAnimation_PropertyWithEase.GetCurveFloat
+// 0x0008 (0x0008 - 0x0000)
+struct UIEffectTextAnimation_PropertyWithEase_GetCurveFloat final
+{
+public:
+	class UCurveFloat*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_GetCurveFloat;
+
+// Function LGUI.UIEffectTextAnimation_PropertyWithEase.GetEaseType
 // 0x0001 (0x0001 - 0x0000)
-struct UISelectableTransitionComponent_OnHighlightedBP final
+struct UIEffectTextAnimation_PropertyWithEase_GetEaseType final
 {
 public:
-	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISelectableTransitionComponent_OnHighlightedBP;
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_GetEaseType;
 
-// Function LGUI.UISelectableTransitionComponent.OnNormalBP
-// 0x0001 (0x0001 - 0x0000)
-struct UISelectableTransitionComponent_OnNormalBP final
-{
-public:
-	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISelectableTransitionComponent_OnNormalBP;
-
-// Function LGUI.UISelectableTransitionComponent.OnPressedBP
-// 0x0001 (0x0001 - 0x0000)
-struct UISelectableTransitionComponent_OnPressedBP final
-{
-public:
-	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISelectableTransitionComponent_OnPressedBP;
-
-// Function LGUI.UISelectableTransitionComponent.OnStartCustomTransitionBP
-// 0x0010 (0x0010 - 0x0000)
-struct UISelectableTransitionComponent_OnStartCustomTransitionBP final
-{
-public:
-	class FName                                   InTransitionName;                                  // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InImmediateSet;                                    // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISelectableTransitionComponent_OnStartCustomTransitionBP;
-
-// Function LGUI.UIEffectTextAnimation_PropertyWithWave.SetFrequency
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetMax
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithWave_SetFrequency final
+struct UIEffectTextAnimation_ColorRandomProperty_SetMax final
 {
 public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithWave_SetFrequency;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetMax;
 
-// Function LGUI.UIEffectTextAnimation_PropertyWithWave.GetFrequency
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetMin
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithWave_GetFrequency final
+struct UIEffectTextAnimation_ColorRandomProperty_SetMin final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithWave_GetFrequency;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetMin;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetSeed
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_SetSeed final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetSeed;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetUseHSV
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_SetUseHSV final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetUseHSV;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetMax
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_GetMax final
+{
+public:
+	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetMax;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetMin
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_GetMin final
+{
+public:
+	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetMin;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetSeed
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_GetSeed final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetSeed;
+
+// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetUseHSV
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_ColorRandomProperty_GetUseHSV final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetUseHSV;
 
 // Function LGUI.LGUIEventSystem.GetLGUIEventSystemInstance
 // 0x0010 (0x0010 - 0x0000)
@@ -5211,6 +3541,80 @@ public:
 };
 DUMPER7_ASSERTS_LGUIEventSystem_IsNavigationActive;
 
+// Function LGUI.UISelectableTransitionComponent.CollectTweener
+// 0x0008 (0x0008 - 0x0000)
+struct UISelectableTransitionComponent_CollectTweener final
+{
+public:
+	class ULTweener*                              InItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_CollectTweener;
+
+// Function LGUI.UISelectableTransitionComponent.CollectTweeners
+// 0x0050 (0x0050 - 0x0000)
+struct UISelectableTransitionComponent_CollectTweeners final
+{
+public:
+	TSet<class ULTweener*>                        InItems;                                           // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_CollectTweeners;
+
+// Function LGUI.UISelectableTransitionComponent.OnDisabledBP
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableTransitionComponent_OnDisabledBP final
+{
+public:
+	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_OnDisabledBP;
+
+// Function LGUI.UISelectableTransitionComponent.OnHighlightedBP
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableTransitionComponent_OnHighlightedBP final
+{
+public:
+	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_OnHighlightedBP;
+
+// Function LGUI.UISelectableTransitionComponent.OnNormalBP
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableTransitionComponent_OnNormalBP final
+{
+public:
+	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_OnNormalBP;
+
+// Function LGUI.UISelectableTransitionComponent.OnPressedBP
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableTransitionComponent_OnPressedBP final
+{
+public:
+	bool                                          InImmediateSet;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_OnPressedBP;
+
+// Function LGUI.UISelectableTransitionComponent.OnStartCustomTransitionBP
+// 0x0010 (0x0010 - 0x0000)
+struct UISelectableTransitionComponent_OnStartCustomTransitionBP final
+{
+public:
+	class FName                                   InTransitionName;                                  // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InImmediateSet;                                    // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISelectableTransitionComponent_OnStartCustomTransitionBP;
+
+// Function LGUI.UISelectableStateHolder.SetAllTransitionsEnable
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableStateHolder_SetAllTransitionsEnable final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableStateHolder_SetAllTransitionsEnable;
+
 // Function LGUI.LGUIFontData.GetDefaultFont
 // 0x0008 (0x0008 - 0x0000)
 struct LGUIFontData_GetDefaultFont final
@@ -5291,6 +3695,3779 @@ public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LGUIFontData_GetUsedRectNum;
+
+// Function LGUI.UISafeZone.SetWidthAndHeightRadio
+// 0x0010 (0x0010 - 0x0000)
+struct UISafeZone_SetWidthAndHeightRadio final
+{
+public:
+	float                                         Left;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Right;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Top;                                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bottom;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISafeZone_SetWidthAndHeightRadio;
+
+// Function LGUI.LGUIImageSequencePlayer.SeekFrame
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIImageSequencePlayer_SeekFrame final
+{
+public:
+	int32                                         frameNumber;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_SeekFrame;
+
+// Function LGUI.LGUIImageSequencePlayer.SeekTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIImageSequencePlayer_SeekTime final
+{
+public:
+	float                                         time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_SeekTime;
+
+// Function LGUI.LGUIImageSequencePlayer.SetFps
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIImageSequencePlayer_SetFps final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_SetFps;
+
+// Function LGUI.LGUIImageSequencePlayer.SetLoop
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIImageSequencePlayer_SetLoop final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_SetLoop;
+
+// Function LGUI.LGUIImageSequencePlayer.GetDuration
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIImageSequencePlayer_GetDuration final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetDuration;
+
+// Function LGUI.LGUIImageSequencePlayer.GetFps
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIImageSequencePlayer_GetFps final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetFps;
+
+// Function LGUI.LGUIImageSequencePlayer.GetIsPlaying
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIImageSequencePlayer_GetIsPlaying final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetIsPlaying;
+
+// Function LGUI.LGUIImageSequencePlayer.GetLoop
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIImageSequencePlayer_GetLoop final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetLoop;
+
+// Function LGUI.UIEffectTextAnimation_AlphaProperty.SetAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_AlphaProperty_SetAlpha final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_AlphaProperty_SetAlpha;
+
+// Function LGUI.UIEffectTextAnimation_AlphaProperty.GetAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_AlphaProperty_GetAlpha final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_AlphaProperty_GetAlpha;
+
+// Function LGUI.LGUIManagerActor.GetDynamicSpriteAtlasMgr
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_GetDynamicSpriteAtlasMgr final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIDynamicSpriteAtlasMgr*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIManagerActor_GetDynamicSpriteAtlasMgr;
+
+// Function LGUI.LGUIManagerActor.GetGlobalUiBlurIndex
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_GetGlobalUiBlurIndex final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIManagerActor_GetGlobalUiBlurIndex;
+
+// Function LGUI.LGUIManagerActor.GetSequencerManager
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_GetSequencerManager final
+{
+public:
+	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USequencerManager*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIManagerActor_GetSequencerManager;
+
+// Function LGUI.LGUIManagerActor.GetUISpineManager
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_GetUISpineManager final
+{
+public:
+	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUISpineManager*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIManagerActor_GetUISpineManager;
+
+// Function LGUI.LGUIManagerActor.SetDebugRootLayer
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_SetDebugRootLayer final
+{
+public:
+	class UObject*                                WorldContextObj;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                LayerItem;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIManagerActor_SetDebugRootLayer;
+
+// Function LGUI.LGUIManagerActor.SetGlobalPlayRate
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIManagerActor_SetGlobalPlayRate final
+{
+public:
+	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIManagerActor_SetGlobalPlayRate;
+
+// Function LGUI.UIEffectTextAnimation_Selector.SetOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_Selector_SetOffset final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_Selector_SetOffset;
+
+// Function LGUI.UIEffectTextAnimation_Selector.GetOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_Selector_GetOffset final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_Selector_GetOffset;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.SetEnd
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_SetEnd final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetEnd;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.SetSeed
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_SetSeed final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetSeed;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.SetStart
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_SetStart final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetStart;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.GetEnd
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_GetEnd final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetEnd;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.GetSeed
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_GetSeed final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetSeed;
+
+// Function LGUI.UIEffectTextAnimation_RandomSelector.GetStart
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RandomSelector_GetStart final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetStart;
+
+// Function LGUI.LGUIPlayTween.RegisterOnComplete
+// 0x0030 (0x0030 - 0x0000)
+struct LGUIPlayTween_RegisterOnComplete final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPlayTween_RegisterOnComplete;
+
+// Function LGUI.LGUIPlayTween.UnregisterOnComplete
+// 0x0008 (0x0008 - 0x0000)
+struct LGUIPlayTween_UnregisterOnComplete final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPlayTween_UnregisterOnComplete;
+
+// Function LGUI.LGUIPlayTween.GetTweener
+// 0x0008 (0x0008 - 0x0000)
+struct LGUIPlayTween_GetTweener final
+{
+public:
+	class ULTweener*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPlayTween_GetTweener;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerBeginDrag
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerBeginDrag final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerBeginDrag;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerClick
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerClick final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerClick;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDeselect
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDeselect final
+{
+public:
+	TDelegate<void(class ULGUIBaseEventData* eventData)> InDelegate;                                 // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDeselect;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDown
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDown final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDown;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDrag
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDrag final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDrag;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragDrop
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDragDrop final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragDrop;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragEnter
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDragEnter final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragEnter;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragExit
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerDragExit final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragExit;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerEndDrag
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerEndDrag final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerEndDrag;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerEnter
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerEnter final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerEnter;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerExit
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerExit final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerExit;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerScroll
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerScroll final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerScroll;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerSelect
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerSelect final
+{
+public:
+	TDelegate<void(class ULGUIBaseEventData* eventData)> InDelegate;                                 // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerSelect;
+
+// Function LGUI.UIEventTriggerComponent.RegisterOnPointerUp
+// 0x0030 (0x0030 - 0x0000)
+struct UIEventTriggerComponent_RegisterOnPointerUp final
+{
+public:
+	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerUp;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerBeginDrag
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerBeginDrag final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerBeginDrag;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerClick
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerClick final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerClick;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDeselect
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDeselect final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDeselect;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDown
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDown final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDown;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDrag
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDrag final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDrag;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragDrop
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDragDrop final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragDrop;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragEnter
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDragEnter final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragEnter;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragExit
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerDragExit final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragExit;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerEndDrag
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerEndDrag final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerEndDrag;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerEnter
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerEnter final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerEnter;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerExit
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerExit final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerExit;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerScroll
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerScroll final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerScroll;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerSelect
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerSelect final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerSelect;
+
+// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerUp
+// 0x0008 (0x0008 - 0x0000)
+struct UIEventTriggerComponent_UnregisterOnPointerUp final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerUp;
+
+// Function LGUI.UIEffectTextAnimation_PropertyWithWave.SetFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_PropertyWithWave_SetFrequency final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithWave_SetFrequency;
+
+// Function LGUI.UIEffectTextAnimation_PropertyWithWave.GetFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_PropertyWithWave_GetFrequency final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithWave_GetFrequency;
+
+// Function LGUI.UIEffectTextAnimation_ScaleWaveProperty.SetScale
+// 0x000C (0x000C - 0x0000)
+struct UIEffectTextAnimation_ScaleWaveProperty_SetScale final
+{
+public:
+	struct FVector                                value;                                             // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ScaleWaveProperty_SetScale;
+
+// Function LGUI.UIEffectTextAnimation_ScaleWaveProperty.GetScale
+// 0x000C (0x000C - 0x0000)
+struct UIEffectTextAnimation_ScaleWaveProperty_GetScale final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_ScaleWaveProperty_GetScale;
+
+// Function LGUI.UIExtendToggleGroup.BindOnExtendToggleGroupActive
+// 0x0028 (0x0028 - 0x0000)
+struct UIExtendToggleGroup_BindOnExtendToggleGroupActive final
+{
+public:
+	TDelegate<void(class UUIExtendToggleGroup* ExtendToggleGroup, bool bCreate)> Delegate;           // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleGroup_BindOnExtendToggleGroupActive;
+
+// Function LGUI.UIExtendToggleGroup.GetAllowNoneSelect
+// 0x0001 (0x0001 - 0x0000)
+struct UIExtendToggleGroup_GetAllowNoneSelect final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleGroup_GetAllowNoneSelect;
+
+// Function LGUI.UIExtendToggleGroup.SetAllowNoneSelect
+// 0x0001 (0x0001 - 0x0000)
+struct UIExtendToggleGroup_SetAllowNoneSelect final
+{
+public:
+	bool                                          bAllowNoneSelection;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleGroup_SetAllowNoneSelect;
+
+// Function LGUI.UIExtendToggleGroup.SetGroupEnable
+// 0x0001 (0x0001 - 0x0000)
+struct UIExtendToggleGroup_SetGroupEnable final
+{
+public:
+	bool                                          bInEnable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleGroup_SetGroupEnable;
+
+// Function LGUI.UIExtendToggleGroup.GetCurSelection
+// 0x0008 (0x0008 - 0x0000)
+struct UIExtendToggleGroup_GetCurSelection final
+{
+public:
+	class UUIExtendToggle*                        ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleGroup_GetCurSelection;
+
+// Function LGUI.UIGridLayout.SetAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetAlign final
+{
+public:
+	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetAlign;
+
+// Function LGUI.UIGridLayout.SetCellScale
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_SetCellScale final
+{
+public:
+	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetCellScale;
+
+// Function LGUI.UIGridLayout.SetCellSize
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_SetCellSize final
+{
+public:
+	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetCellSize;
+
+// Function LGUI.UIGridLayout.SetDependOnSizeOrCount
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetDependOnSizeOrCount final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetDependOnSizeOrCount;
+
+// Function LGUI.UIGridLayout.SetExpendChildSize
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetExpendChildSize final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetExpendChildSize;
+
+// Function LGUI.UIGridLayout.SetHeightFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetHeightFitToChildren final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetHeightFitToChildren;
+
+// Function LGUI.UIGridLayout.SetHorizontalOrVertical
+// 0x0002 (0x0002 - 0x0000)
+struct UIGridLayout_SetHorizontalOrVertical final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUIGridLayoutStartCorner                      startCorner;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetHorizontalOrVertical;
+
+// Function LGUI.UIGridLayout.SetLastLineCanAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetLastLineCanAlign final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetLastLineCanAlign;
+
+// Function LGUI.UIGridLayout.SetLineCount
+// 0x0004 (0x0004 - 0x0000)
+struct UIGridLayout_SetLineCount final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetLineCount;
+
+// Function LGUI.UIGridLayout.SetMaxItemCountInOneLine
+// 0x0004 (0x0004 - 0x0000)
+struct UIGridLayout_SetMaxItemCountInOneLine final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetMaxItemCountInOneLine;
+
+// Function LGUI.UIGridLayout.SetPadding
+// 0x0010 (0x0010 - 0x0000)
+struct UIGridLayout_SetPadding final
+{
+public:
+	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetPadding;
+
+// Function LGUI.UIGridLayout.SetSpacing
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_SetSpacing final
+{
+public:
+	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetSpacing;
+
+// Function LGUI.UIGridLayout.SetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_SetWidthFitToChildren final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_SetWidthFitToChildren;
+
+// Function LGUI.UIGridLayout.GetActuralRange
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_GetActuralRange final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetActuralRange;
+
+// Function LGUI.UIGridLayout.GetAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetAlign final
+{
+public:
+	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetAlign;
+
+// Function LGUI.UIGridLayout.GetCellSize
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_GetCellSize final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetCellSize;
+
+// Function LGUI.UIGridLayout.GetDependOnSizeOrCount
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetDependOnSizeOrCount final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetDependOnSizeOrCount;
+
+// Function LGUI.UIGridLayout.GetExpendChildSize
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetExpendChildSize final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetExpendChildSize;
+
+// Function LGUI.UIGridLayout.GetHeightFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetHeightFitToChildren final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetHeightFitToChildren;
+
+// Function LGUI.UIGridLayout.GetHorizontalOrVertical
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetHorizontalOrVertical final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetHorizontalOrVertical;
+
+// Function LGUI.UIGridLayout.GetLastLineCanAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetLastLineCanAlign final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetLastLineCanAlign;
+
+// Function LGUI.UIGridLayout.GetLineCount
+// 0x0004 (0x0004 - 0x0000)
+struct UIGridLayout_GetLineCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetLineCount;
+
+// Function LGUI.UIGridLayout.GetMaxItemCountInOneLine
+// 0x0004 (0x0004 - 0x0000)
+struct UIGridLayout_GetMaxItemCountInOneLine final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetMaxItemCountInOneLine;
+
+// Function LGUI.UIGridLayout.GetPadding
+// 0x0010 (0x0010 - 0x0000)
+struct UIGridLayout_GetPadding final
+{
+public:
+	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetPadding;
+
+// Function LGUI.UIGridLayout.GetSpacing
+// 0x0008 (0x0008 - 0x0000)
+struct UIGridLayout_GetSpacing final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetSpacing;
+
+// Function LGUI.UIGridLayout.GetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIGridLayout_GetWidthFitToChildren final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIGridLayout_GetWidthFitToChildren;
+
+// Function LGUI.LGUIPlayTweenComponent.GetPlayTween
+// 0x0008 (0x0008 - 0x0000)
+struct LGUIPlayTweenComponent_GetPlayTween final
+{
+public:
+	class ULGUIPlayTween*                         ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPlayTweenComponent_GetPlayTween;
+
+// Function LGUI.UIFlyoutMenu.CreateFlyoutMenuFromArray
+// 0x0050 (0x0050 - 0x0000)
+struct UIFlyoutMenu_CreateFlyoutMenuFromArray final
+{
+public:
+	TArray<class FString>                         InItemNameArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 InSelectIndex, const class FString& InSelectItem)> InCallback;              // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class AUIBaseActor*                           InParentActor;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InWidth;                                           // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFlyoutMenuVerticalPosition                   InVerticalPosition;                                // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFlyoutMenuHorizontalAlignment                InHorizontalAlign;                                 // 0x0045(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIFlyoutMenu*                          ReturnValue;                                       // 0x0048(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIFlyoutMenu_CreateFlyoutMenuFromArray;
+
+// Function LGUI.LGUIPointerClickInterface.OnPointerClick
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerClickInterface_OnPointerClick final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerClickInterface_OnPointerClick;
+
+// Function LGUI.LGUIPointerDownUpInterface.OnPointerDown
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDownUpInterface_OnPointerDown final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDownUpInterface_OnPointerDown;
+
+// Function LGUI.LGUIPointerDownUpInterface.OnPointerUp
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDownUpInterface_OnPointerUp final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDownUpInterface_OnPointerUp;
+
+// Function LGUI.LGUIPointerDragDropInterface.OnPointerDragDrop
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragDropInterface_OnPointerDragDrop final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragDropInterface_OnPointerDragDrop;
+
+// Function LGUI.LGUIPointerDragEnterExitInterface.OnPointerDragEnter
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragEnterExitInterface_OnPointerDragEnter final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragEnterExitInterface_OnPointerDragEnter;
+
+// Function LGUI.LGUIPointerDragEnterExitInterface.OnPointerDragExit
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragEnterExitInterface_OnPointerDragExit final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragEnterExitInterface_OnPointerDragExit;
+
+// Function LGUI.LGUIPointerDragInterface.OnPointerBeginDrag
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragInterface_OnPointerBeginDrag final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerBeginDrag;
+
+// Function LGUI.LGUIPointerDragInterface.OnPointerDrag
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragInterface_OnPointerDrag final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerDrag;
+
+// Function LGUI.LGUIPointerDragInterface.OnPointerEndDrag
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerDragInterface_OnPointerEndDrag final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerEndDrag;
+
+// Function LGUI.LGUIPointerEnterExitInterface.OnPointerEnter
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerEnterExitInterface_OnPointerEnter final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerEnterExitInterface_OnPointerEnter;
+
+// Function LGUI.LGUIPointerEnterExitInterface.OnPointerExit
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerEnterExitInterface_OnPointerExit final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerEnterExitInterface_OnPointerExit;
+
+// Function LGUI.LGUIPointerEventData.GetCumulativeMoveDelta
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetCumulativeMoveDelta final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetCumulativeMoveDelta;
+
+// Function LGUI.LGUIPointerEventData.GetDragRayDirection
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetDragRayDirection final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetDragRayDirection;
+
+// Function LGUI.LGUIPointerEventData.GetDragRayOrigin
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetDragRayOrigin final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetDragRayOrigin;
+
+// Function LGUI.LGUIPointerEventData.GetLocalPointInPlane
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetLocalPointInPlane final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetLocalPointInPlane;
+
+// Function LGUI.LGUIPointerEventData.GetWorldPointInPlane
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetWorldPointInPlane final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetWorldPointInPlane;
+
+// Function LGUI.LGUIPointerEventData.GetWorldPointSpherical
+// 0x000C (0x000C - 0x0000)
+struct LGUIPointerEventData_GetWorldPointSpherical final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPointerEventData_GetWorldPointSpherical;
+
+// Function LGUI.LGUIPointerInterruptInterface.NeedInterrupt
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerInterruptInterface_NeedInterrupt final
+{
+public:
+	class ULGUIBaseEventData*                     EventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerInterruptInterface_NeedInterrupt;
+
+// Function LGUI.LGUIPointerScrollInterface.OnPointerScroll
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerScrollInterface_OnPointerScroll final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerScrollInterface_OnPointerScroll;
+
+// Function LGUI.LGUIPointerSelectDeselectInterface.OnPointerDeselect
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerSelectDeselectInterface_OnPointerDeselect final
+{
+public:
+	class ULGUIBaseEventData*                     eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerSelectDeselectInterface_OnPointerDeselect;
+
+// Function LGUI.LGUIPointerSelectDeselectInterface.OnPointerSelect
+// 0x0010 (0x0010 - 0x0000)
+struct LGUIPointerSelectDeselectInterface_OnPointerSelect final
+{
+public:
+	class ULGUIBaseEventData*                     eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_LGUIPointerSelectDeselectInterface_OnPointerSelect;
+
+// Function LGUI.UIInteractionGroup.SetIgnoreParentGroup
+// 0x0001 (0x0001 - 0x0000)
+struct UIInteractionGroup_SetIgnoreParentGroup final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInteractionGroup_SetIgnoreParentGroup;
+
+// Function LGUI.UIInteractionGroup.SetInteractable
+// 0x0001 (0x0001 - 0x0000)
+struct UIInteractionGroup_SetInteractable final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInteractionGroup_SetInteractable;
+
+// Function LGUI.UIInteractionGroup.GetIgnoreParentGroup
+// 0x0001 (0x0001 - 0x0000)
+struct UIInteractionGroup_GetIgnoreParentGroup final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInteractionGroup_GetIgnoreParentGroup;
+
+// Function LGUI.UIInteractionGroup.GetInteractable
+// 0x0001 (0x0001 - 0x0000)
+struct UIInteractionGroup_GetInteractable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInteractionGroup_GetInteractable;
+
+// Function LGUI.LGUIPrefabV2.LoadPrefab
+// 0x0020 (0x0020 - 0x0000)
+struct LGUIPrefabV2_LoadPrefab final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USceneComponent*                        InParent;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUseRuntimeData;                              // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SetRelativeTransformToIdentity;                    // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPrefabV2_LoadPrefab;
+
+// Function LGUI.LGUIPrefabV2.LoadPrefabWithTransform
+// 0x0040 (0x0040 - 0x0000)
+struct LGUIPrefabV2_LoadPrefabWithTransform final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USceneComponent*                        InParent;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUseRuntimeData;                              // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Location;                                          // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x002C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIPrefabV2_LoadPrefabWithTransform;
+
+// Function LGUI.UINavigationTextChangeListener.OnNotifyTextChangeBP
+// 0x0010 (0x0010 - 0x0000)
+struct UINavigationTextChangeListener_OnNotifyTextChangeBP final
+{
+public:
+	class FString                                 NotifyText;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationTextChangeListener_OnNotifyTextChangeBP;
+
+// Function LGUI.LGUIScreenSpaceInteraction.SetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteraction_SetClickThreshold final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetClickThreshold;
+
+// Function LGUI.LGUIScreenSpaceInteraction.SetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIScreenSpaceInteraction_SetHoldToDrag final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetHoldToDrag;
+
+// Function LGUI.LGUIScreenSpaceInteraction.SetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteraction_SetHoldToDragTime final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetHoldToDragTime;
+
+// Function LGUI.LGUIScreenSpaceInteraction.GetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteraction_GetClickThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetClickThreshold;
+
+// Function LGUI.LGUIScreenSpaceInteraction.GetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIScreenSpaceInteraction_GetHoldToDrag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetHoldToDrag;
+
+// Function LGUI.LGUIScreenSpaceInteraction.GetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteraction_GetHoldToDragTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetHoldToDragTime;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_SetClickThreshold final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetClickThreshold;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_SetHoldToDrag final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetHoldToDrag;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_SetHoldToDragTime final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetHoldToDragTime;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_GetClickThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetClickThreshold;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_GetHoldToDrag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetHoldToDrag;
+
+// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIScreenSpaceInteractionForNoneUI_GetHoldToDragTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetHoldToDragTime;
+
+// Function LGUI.UIItem.GetAllAttachUIChildren
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_GetAllAttachUIChildren final
+{
+public:
+	TArray<class UUIItem*>                        OutArray;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAllAttachUIChildren;
+
+// Function LGUI.UIItem.GetLGUISpaceAbsolutePosition
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetLGUISpaceAbsolutePosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLGUISpaceAbsolutePosition;
+
+// Function LGUI.UIItem.GetLGUISpaceAbsolutePositionByPivot
+// 0x0014 (0x0014 - 0x0000)
+struct UIItem_GetLGUISpaceAbsolutePositionByPivot final
+{
+public:
+	struct FVector2D                              Pivot;                                             // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLGUISpaceAbsolutePositionByPivot;
+
+// Function LGUI.UIItem.GetLGUISpaceCenterAbsolutePosition
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetLGUISpaceCenterAbsolutePosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLGUISpaceCenterAbsolutePosition;
+
+// Function LGUI.UIItem.GetOverlapWith
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_GetOverlapWith final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIItem_GetOverlapWith;
+
+// Function LGUI.UIItem.GetParentAsUIItem
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetParentAsUIItem final
+{
+public:
+	class UUIItem*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetParentAsUIItem;
+
+// Function LGUI.UIItem.GetPositionInScreen
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetPositionInScreen final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInScreen;
+
+// Function LGUI.UIItem.GetPositionInScreenWithPivot
+// 0x0014 (0x0014 - 0x0000)
+struct UIItem_GetPositionInScreenWithPivot final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInScreenWithPivot;
+
+// Function LGUI.UIItem.GetPositionInViewPort
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetPositionInViewPort final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInViewPort;
+
+// Function LGUI.UIItem.GetPositionInViewPortOld
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetPositionInViewPortOld final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInViewPortOld;
+
+// Function LGUI.UIItem.GetPositionInViewportWithPivot
+// 0x0014 (0x0014 - 0x0000)
+struct UIItem_GetPositionInViewportWithPivot final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInViewportWithPivot;
+
+// Function LGUI.UIItem.GetPositionInViewportWithPivotNormalized
+// 0x0014 (0x0014 - 0x0000)
+struct UIItem_GetPositionInViewportWithPivotNormalized final
+{
+public:
+	bool                                          bIsScaledByDPI;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SpecifiedPivot;                                    // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPositionInViewportWithPivotNormalized;
+
+// Function LGUI.UIItem.GetRenderCanvas
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetRenderCanvas final
+{
+public:
+	class ULGUICanvas*                            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetRenderCanvas;
+
+// Function LGUI.UIItem.GetUIWorldPosition
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetUIWorldPosition final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetUIWorldPosition;
+
+// Function LGUI.UIItem.IsBoundOutOfScreen
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsBoundOutOfScreen final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsBoundOutOfScreen;
+
+// Function LGUI.UIItem.IsRenderTargetUI
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsRenderTargetUI final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsRenderTargetUI;
+
+// Function LGUI.UIItem.IsScreenSpaceOverlayUI
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsScreenSpaceOverlayUI final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsScreenSpaceOverlayUI;
+
+// Function LGUI.UIItem.IsWorldSpaceUI
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsWorldSpaceUI final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsWorldSpaceUI;
+
+// Function LGUI.UIItem.PlayUIItemAlphaTween
+// 0x000C (0x000C - 0x0000)
+struct UIItem_PlayUIItemAlphaTween final
+{
+public:
+	float                                         StartValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_PlayUIItemAlphaTween;
+
+// Function LGUI.UIItem.PlayUIItemScaleTween
+// 0x000C (0x000C - 0x0000)
+struct UIItem_PlayUIItemScaleTween final
+{
+public:
+	float                                         StartValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndValue;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_PlayUIItemScaleTween;
+
+// Function LGUI.UIItem.SetAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetAlpha final
+{
+public:
+	float                                         newAlpha;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAlpha;
+
+// Function LGUI.UIItem.SetAnchorAlign
+// 0x0002 (0x0002 - 0x0000)
+struct UIItem_SetAnchorAlign final
+{
+public:
+	EUIAnchorHorizontalAlign                      HAlign;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUIAnchorVerticalAlign                        VAlign;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorAlign;
+
+// Function LGUI.UIItem.SetAnchorHAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetAnchorHAlign final
+{
+public:
+	EUIAnchorHorizontalAlign                      align;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorHAlign;
+
+// Function LGUI.UIItem.SetAnchorOffset
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetAnchorOffset final
+{
+public:
+	struct FVector2D                              NewOffset;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorOffset;
+
+// Function LGUI.UIItem.SetAnchorOffsetX
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetAnchorOffsetX final
+{
+public:
+	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorOffsetX;
+
+// Function LGUI.UIItem.SetAnchorOffsetY
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetAnchorOffsetY final
+{
+public:
+	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorOffsetY;
+
+// Function LGUI.UIItem.SetAnchorVAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetAnchorVAlign final
+{
+public:
+	EUIAnchorVerticalAlign                        align;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetAnchorVAlign;
+
+// Function LGUI.UIItem.SetBubbleUpToParent
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetBubbleUpToParent final
+{
+public:
+	bool                                          NewBool;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetBubbleUpToParent;
+
+// Function LGUI.UIItem.SetChangeColor
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetChangeColor final
+{
+public:
+	bool                                          bUseChangeColor;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FColor                                 NewColor;                                          // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetChangeColor;
+
+// Function LGUI.UIItem.SetColor
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetColor final
+{
+public:
+	struct FColor                                 NewColor;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetColor;
+
+// Function LGUI.UIItem.SetDepth
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetDepth final
+{
+public:
+	int32                                         depth;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          propagateToChildren;                               // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIItem_SetDepth;
+
+// Function LGUI.UIItem.SetDisplayName
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_SetDisplayName final
+{
+public:
+	class FString                                 InName;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetDisplayName;
+
+// Function LGUI.UIItem.SetHeight
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetHeight final
+{
+public:
+	float                                         NewHeight;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetHeight;
+
+// Function LGUI.UIItem.SetHierarchyIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetHierarchyIndex final
+{
+public:
+	int32                                         InInt;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetHierarchyIndex;
+
+// Function LGUI.UIItem.SetHorizontalStretch
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetHorizontalStretch final
+{
+public:
+	struct FVector2D                              newStretch;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetHorizontalStretch;
+
+// Function LGUI.UIItem.SetIsUIActive
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetIsUIActive final
+{
+public:
+	bool                                          active;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetIsUIActive;
+
+// Function LGUI.UIItem.SetLGUISpaceAbsolutePosition
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetLGUISpaceAbsolutePosition final
+{
+public:
+	struct FVector                                Pos;                                               // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetLGUISpaceAbsolutePosition;
+
+// Function LGUI.UIItem.SetPivot
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetPivot final
+{
+public:
+	struct FVector2D                              NewPivot;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetPivot;
+
+// Function LGUI.UIItem.SetPivot_Raw
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetPivot_Raw final
+{
+public:
+	struct FVector2D                              NewPivot;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAdjustLocation;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIItem_SetPivot_Raw;
+
+// Function LGUI.UIItem.SetRaycastTarget
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetRaycastTarget final
+{
+public:
+	bool                                          NewBool;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetRaycastTarget;
+
+// Function LGUI.UIItem.SetStretchBottom
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetStretchBottom final
+{
+public:
+	float                                         newBottom;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetStretchBottom;
+
+// Function LGUI.UIItem.SetStretchLeft
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetStretchLeft final
+{
+public:
+	float                                         newLeft;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetStretchLeft;
+
+// Function LGUI.UIItem.SetStretchRight
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetStretchRight final
+{
+public:
+	float                                         newRight;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetStretchRight;
+
+// Function LGUI.UIItem.SetStretchTop
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetStretchTop final
+{
+public:
+	float                                         newTop;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetStretchTop;
+
+// Function LGUI.UIItem.SetTraceChannel
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetTraceChannel final
+{
+public:
+	ETraceTypeQuery                               InTraceChannel;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetTraceChannel;
+
+// Function LGUI.UIItem.SetUIActive
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetUIActive final
+{
+public:
+	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIActive;
+
+// Function LGUI.UIItem.SetUIItemAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetUIItemAlpha final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIItemAlpha;
+
+// Function LGUI.UIItem.SetUIItemScale
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIItemScale final
+{
+public:
+	struct FVector                                Value;                                             // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIItemScale;
+
+// Function LGUI.UIItem.SetUIParent
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_SetUIParent final
+{
+public:
+	class UUIItem*                                InParent;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          KeepWorldTransform;                                // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIItem_SetUIParent;
+
+// Function LGUI.UIItem.SetUIRelativeLocation
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIRelativeLocation final
+{
+public:
+	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRelativeLocation;
+
+// Function LGUI.UIItem.SetUIRelativeRotation
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIRelativeRotation final
+{
+public:
+	struct FRotator                               NewRotation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRelativeRotation;
+
+// Function LGUI.UIItem.SetUIRelativeScale3D
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIRelativeScale3D final
+{
+public:
+	struct FVector                                NewScale3D;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRelativeScale3D;
+
+// Function LGUI.UIItem.SetUIRenderAfterBlur
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetUIRenderAfterBlur final
+{
+public:
+	bool                                          bAfterBlur;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRenderAfterBlur;
+
+// Function LGUI.UIItem.SetUIRenderBeforeBloom
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetUIRenderBeforeBloom final
+{
+public:
+	bool                                          bBeforeBloom;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRenderBeforeBloom;
+
+// Function LGUI.UIItem.SetUIRenderBeforeUpScale
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_SetUIRenderBeforeUpScale final
+{
+public:
+	bool                                          bBeforeUpScale;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIRenderBeforeUpScale;
+
+// Function LGUI.UIItem.SetUIWorldLocation
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIWorldLocation final
+{
+public:
+	struct FVector                                NewLocation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIWorldLocation;
+
+// Function LGUI.UIItem.SetUIWorldRotation
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIWorldRotation final
+{
+public:
+	struct FRotator                               NewRotation;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIWorldRotation;
+
+// Function LGUI.UIItem.SetUIWorldScale
+// 0x000C (0x000C - 0x0000)
+struct UIItem_SetUIWorldScale final
+{
+public:
+	struct FVector                                NewScale;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetUIWorldScale;
+
+// Function LGUI.UIItem.SetVerticalStretch
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_SetVerticalStretch final
+{
+public:
+	struct FVector2D                              newStretch;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetVerticalStretch;
+
+// Function LGUI.UIItem.SetWidget
+// 0x0054 (0x0054 - 0x0000)
+struct UIItem_SetWidget final
+{
+public:
+	struct FUIWidget                              inWidget;                                          // 0x0000(0x0054)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetWidget;
+
+// Function LGUI.UIItem.SetWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_SetWidth final
+{
+public:
+	float                                         NewWidth;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_SetWidth;
+
+// Function LGUI.UIItem.GetAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetAlpha final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAlpha;
+
+// Function LGUI.UIItem.GetAnchorHAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_GetAnchorHAlign final
+{
+public:
+	EUIAnchorHorizontalAlign                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAnchorHAlign;
+
+// Function LGUI.UIItem.GetAnchorOffset
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetAnchorOffset final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAnchorOffset;
+
+// Function LGUI.UIItem.GetAnchorOffsetX
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetAnchorOffsetX final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAnchorOffsetX;
+
+// Function LGUI.UIItem.GetAnchorOffsetY
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetAnchorOffsetY final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAnchorOffsetY;
+
+// Function LGUI.UIItem.GetAnchorVAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_GetAnchorVAlign final
+{
+public:
+	EUIAnchorVerticalAlign                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAnchorVAlign;
+
+// Function LGUI.UIItem.GetAttachUIChild
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_GetAttachUIChild final
+{
+public:
+	int32                                         index;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAttachUIChild;
+
+// Function LGUI.UIItem.GetAttachUIChildren
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_GetAttachUIChildren final
+{
+public:
+	TArray<class UUIItem*>                        ReturnValue;                                       // 0x0000(0x0010)(ConstParm, ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetAttachUIChildren;
+
+// Function LGUI.UIItem.GetCalculatedParentAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetCalculatedParentAlpha final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetCalculatedParentAlpha;
+
+// Function LGUI.UIItem.GetCalculatedParentColor
+// 0x000C (0x000C - 0x0000)
+struct UIItem_GetCalculatedParentColor final
+{
+public:
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetCalculatedParentColor;
+
+// Function LGUI.UIItem.GetCanvasScaler
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetCanvasScaler final
+{
+public:
+	class ULGUICanvasScaler*                      ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetCanvasScaler;
+
+// Function LGUI.UIItem.GetColor
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetColor final
+{
+public:
+	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetColor;
+
+// Function LGUI.UIItem.GetDepth
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetDepth final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetDepth;
+
+// Function LGUI.UIItem.GetDisplayName
+// 0x0010 (0x0010 - 0x0000)
+struct UIItem_GetDisplayName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetDisplayName;
+
+// Function LGUI.UIItem.GetFlattenHierarchyIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetFlattenHierarchyIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetFlattenHierarchyIndex;
+
+// Function LGUI.UIItem.GetHeight
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetHeight;
+
+// Function LGUI.UIItem.GetHierarchyIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetHierarchyIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetHierarchyIndex;
+
+// Function LGUI.UIItem.GetInheritAlpha
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_GetInheritAlpha final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetInheritAlpha;
+
+// Function LGUI.UIItem.GetLocalSpaceBottom
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetLocalSpaceBottom final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceBottom;
+
+// Function LGUI.UIItem.GetLocalSpaceCenter
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetLocalSpaceCenter final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceCenter;
+
+// Function LGUI.UIItem.GetLocalSpaceLeft
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetLocalSpaceLeft final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceLeft;
+
+// Function LGUI.UIItem.GetLocalSpaceLeftBottomPoint
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetLocalSpaceLeftBottomPoint final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceLeftBottomPoint;
+
+// Function LGUI.UIItem.GetLocalSpaceRight
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetLocalSpaceRight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceRight;
+
+// Function LGUI.UIItem.GetLocalSpaceRightTopPoint
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetLocalSpaceRightTopPoint final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceRightTopPoint;
+
+// Function LGUI.UIItem.GetLocalSpaceTop
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetLocalSpaceTop final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetLocalSpaceTop;
+
+// Function LGUI.UIItem.GetPivot
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetPivot final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetPivot;
+
+// Function LGUI.UIItem.GetRootCanvas
+// 0x0008 (0x0008 - 0x0000)
+struct UIItem_GetRootCanvas final
+{
+public:
+	class ULGUICanvas*                            ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetRootCanvas;
+
+// Function LGUI.UIItem.GetStretchBottom
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetStretchBottom final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetStretchBottom;
+
+// Function LGUI.UIItem.GetStretchLeft
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetStretchLeft final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetStretchLeft;
+
+// Function LGUI.UIItem.GetStretchRight
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetStretchRight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetStretchRight;
+
+// Function LGUI.UIItem.GetStretchTop
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetStretchTop final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetStretchTop;
+
+// Function LGUI.UIItem.GetTraceChannel
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_GetTraceChannel final
+{
+public:
+	ETraceTypeQuery                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetTraceChannel;
+
+// Function LGUI.UIItem.GetUIItemType
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_GetUIItemType final
+{
+public:
+	EUIItemType                                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetUIItemType;
+
+// Function LGUI.UIItem.GetWidget
+// 0x0054 (0x0054 - 0x0000)
+struct UIItem_GetWidget final
+{
+public:
+	struct FUIWidget                              ReturnValue;                                       // 0x0000(0x0054)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetWidget;
+
+// Function LGUI.UIItem.GetWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UIItem_GetWidth final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_GetWidth;
+
+// Function LGUI.UIItem.IsBubbleUpToParent
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsBubbleUpToParent final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsBubbleUpToParent;
+
+// Function LGUI.UIItem.IsRaycastTarget
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsRaycastTarget final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsRaycastTarget;
+
+// Function LGUI.UIItem.IsUIActiveInHierarchy
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsUIActiveInHierarchy final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsUIActiveInHierarchy;
+
+// Function LGUI.UIItem.IsUIActiveSelf
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsUIActiveSelf final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsUIActiveSelf;
+
+// Function LGUI.UIItem.IsUsedCustomMinMaxAnchor
+// 0x0001 (0x0001 - 0x0000)
+struct UIItem_IsUsedCustomMinMaxAnchor final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIItem_IsUsedCustomMinMaxAnchor;
+
+// Function LGUI.UIBaseRenderable.SetUIRenderAfterBlurPartial
+// 0x0001 (0x0001 - 0x0000)
+struct UIBaseRenderable_SetUIRenderAfterBlurPartial final
+{
+public:
+	bool                                          bAfterBlurPartial;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseRenderable_SetUIRenderAfterBlurPartial;
+
+// Function LGUI.UIBaseRenderable.GetUIRenderableType
+// 0x0001 (0x0001 - 0x0000)
+struct UIBaseRenderable_GetUIRenderableType final
+{
+public:
+	EUIRenderableType                             ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBaseRenderable_GetUIRenderableType;
+
+// Function LGUI.UIBatchGeometryRenderable.GetRaycastComplex
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_GetRaycastComplex final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetRaycastComplex;
+
+// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialScalarParameter
+// 0x0010 (0x0010 - 0x0000)
+struct UIBatchGeometryRenderable_SetCustomMaterialScalarParameter final
+{
+public:
+	class FName                                   paramterName;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         value;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialScalarParameter;
+
+// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialTextureParameter
+// 0x0018 (0x0018 - 0x0000)
+struct UIBatchGeometryRenderable_SetCustomMaterialTextureParameter final
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               value;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialTextureParameter;
+
+// Function LGUI.UIBatchGeometryRenderable.SetCustomMaterialVectorParameter
+// 0x001C (0x001C - 0x0000)
+struct UIBatchGeometryRenderable_SetCustomMaterialVectorParameter final
+{
+public:
+	class FName                                   paramterName;                                      // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Value;                                             // 0x000C(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomMaterialVectorParameter;
+
+// Function LGUI.UIBatchGeometryRenderable.SetCustomUIMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_SetCustomUIMaterial final
+{
+public:
+	class UMaterialInterface*                     inMat;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetCustomUIMaterial;
+
+// Function LGUI.UIBatchGeometryRenderable.SetIsColorRevert
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_SetIsColorRevert final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsColorRevert;
+
+// Function LGUI.UIBatchGeometryRenderable.SetIsGray
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_SetIsGray final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsGray;
+
+// Function LGUI.UIBatchGeometryRenderable.SetIsSelfRender
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_SetIsSelfRender final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetIsSelfRender;
+
+// Function LGUI.UIBatchGeometryRenderable.SetKuroRenderingMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_SetKuroRenderingMaterial final
+{
+public:
+	class UMaterialInstanceDynamic*               inMat;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetKuroRenderingMaterial;
+
+// Function LGUI.UIBatchGeometryRenderable.SetRaycastComplex
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_SetRaycastComplex final
+{
+public:
+	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_SetRaycastComplex;
+
+// Function LGUI.UIBatchGeometryRenderable.GetCustomUIMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_GetCustomUIMaterial final
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetCustomUIMaterial;
+
+// Function LGUI.UIBatchGeometryRenderable.GetIsSelfRender
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_GetIsSelfRender final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetIsSelfRender;
+
+// Function LGUI.UIBatchGeometryRenderable.GetKuroRenderingMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_GetKuroRenderingMaterial final
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetKuroRenderingMaterial;
+
+// Function LGUI.UIBatchGeometryRenderable.GetMaterialInstanceDynamic
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_GetMaterialInstanceDynamic final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_GetMaterialInstanceDynamic;
+
+// Function LGUI.UIBatchGeometryRenderable.IsColorRevert
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_IsColorRevert final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_IsColorRevert;
+
+// Function LGUI.UIBatchGeometryRenderable.IsGray
+// 0x0001 (0x0001 - 0x0000)
+struct UIBatchGeometryRenderable_IsGray final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_IsGray;
+
+// Function LGUI.UISpriteBase.SetSprite
+// 0x0010 (0x0010 - 0x0000)
+struct UISpriteBase_SetSprite final
+{
+public:
+	class ULGUISpriteData_BaseObject*             newSprite;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          setSize;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISpriteBase_SetSprite;
+
+// Function LGUI.UISpriteBase.GetSprite
+// 0x0008 (0x0008 - 0x0000)
+struct UISpriteBase_GetSprite final
+{
+public:
+	class ULGUISpriteData_BaseObject*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteBase_GetSprite;
+
+// Function LGUI.UI2DLineRendererBase.LineWidthTo
+// 0x0018 (0x0018 - 0x0000)
+struct UI2DLineRendererBase_LineWidthTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_LineWidthTo;
+
+// Function LGUI.UI2DLineRendererBase.SetEndType
+// 0x0001 (0x0001 - 0x0000)
+struct UI2DLineRendererBase_SetEndType final
+{
+public:
+	EUI2DLineRenderer_EndType                     newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_SetEndType;
+
+// Function LGUI.UI2DLineRendererBase.SetLineWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UI2DLineRendererBase_SetLineWidth final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_SetLineWidth;
+
+// Function LGUI.UI2DLineRendererBase.SetLineWidthOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UI2DLineRendererBase_SetLineWidthOffset final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_SetLineWidthOffset;
+
+// Function LGUI.UI2DLineRendererBase.GetEndType
+// 0x0001 (0x0001 - 0x0000)
+struct UI2DLineRendererBase_GetEndType final
+{
+public:
+	EUI2DLineRenderer_EndType                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_GetEndType;
+
+// Function LGUI.UI2DLineRendererBase.GetLineWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UI2DLineRendererBase_GetLineWidth final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_GetLineWidth;
+
+// Function LGUI.UI2DLineRendererBase.GetLineWidthOffset
+// 0x0004 (0x0004 - 0x0000)
+struct UI2DLineRendererBase_GetLineWidthOffset final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UI2DLineRendererBase_GetLineWidthOffset;
+
+// Function LGUI.UIRing.EndAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIRing_EndAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_EndAngleTo;
+
+// Function LGUI.UIRing.SetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_SetEndAngle final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_SetEndAngle;
+
+// Function LGUI.UIRing.SetSegment
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_SetSegment final
+{
+public:
+	int32                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_SetSegment;
+
+// Function LGUI.UIRing.SetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_SetStartAngle final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_SetStartAngle;
+
+// Function LGUI.UIRing.StartAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIRing_StartAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_StartAngleTo;
+
+// Function LGUI.UIRing.GetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_GetEndAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_GetEndAngle;
+
+// Function LGUI.UIRing.GetSegment
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_GetSegment final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_GetSegment;
+
+// Function LGUI.UIRing.GetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIRing_GetStartAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIRing_GetStartAngle;
+
+// Function LGUI.UIPolygon.EndAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIPolygon_EndAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_EndAngleTo;
+
+// Function LGUI.UIPolygon.SetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_SetEndAngle final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_SetEndAngle;
+
+// Function LGUI.UIPolygon.SetSides
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_SetSides final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_SetSides;
+
+// Function LGUI.UIPolygon.SetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_SetStartAngle final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_SetStartAngle;
+
+// Function LGUI.UIPolygon.SetUVType
+// 0x0001 (0x0001 - 0x0000)
+struct UIPolygon_SetUVType final
+{
+public:
+	EUIPolygonUVType                              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_SetUVType;
+
+// Function LGUI.UIPolygon.SetVertexOffsetArray
+// 0x0010 (0x0010 - 0x0000)
+struct UIPolygon_SetVertexOffsetArray final
+{
+public:
+	TArray<float>                                 value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_SetVertexOffsetArray;
+
+// Function LGUI.UIPolygon.StartAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIPolygon_StartAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_StartAngleTo;
+
+// Function LGUI.UIPolygon.GetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_GetEndAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_GetEndAngle;
+
+// Function LGUI.UIPolygon.GetSides
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_GetSides final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_GetSides;
+
+// Function LGUI.UIPolygon.GetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygon_GetStartAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_GetStartAngle;
+
+// Function LGUI.UIPolygon.GetUVType
+// 0x0001 (0x0001 - 0x0000)
+struct UIPolygon_GetUVType final
+{
+public:
+	EUIPolygonUVType                              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_GetUVType;
+
+// Function LGUI.UIPolygon.GetVertexOffsetArray
+// 0x0010 (0x0010 - 0x0000)
+struct UIPolygon_GetVertexOffsetArray final
+{
+public:
+	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygon_GetVertexOffsetArray;
+
+// Function LGUI.LGUISpriteData_BaseObject.GetAtlasTexture
+// 0x0008 (0x0008 - 0x0000)
+struct LGUISpriteData_BaseObject_GetAtlasTexture final
+{
+public:
+	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_BaseObject_GetAtlasTexture;
+
+// Function LGUI.LGUISpriteData_BaseObject.GetSpriteInfo
+// 0x0090 (0x0090 - 0x0000)
+struct LGUISpriteData_BaseObject_GetSpriteInfo final
+{
+public:
+	struct FLGUISpriteInfo                        ReturnValue;                                       // 0x0000(0x0090)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_BaseObject_GetSpriteInfo;
+
+// Function LGUI.LGUISpriteData_BaseObject.IsIndividual
+// 0x0001 (0x0001 - 0x0000)
+struct LGUISpriteData_BaseObject_IsIndividual final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_BaseObject_IsIndividual;
+
+// Function LGUI.UINavigationBehaviour.OnCheckCanSetNavigationBP
+// 0x0001 (0x0001 - 0x0000)
+struct UINavigationBehaviour_OnCheckCanSetNavigationBP final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationBehaviour_OnCheckCanSetNavigationBP;
+
+// Function LGUI.UINavigationBehaviour.OnCheckLoopScrollChangeNavigationBP
+// 0x0001 (0x0001 - 0x0000)
+struct UINavigationBehaviour_OnCheckLoopScrollChangeNavigationBP final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationBehaviour_OnCheckLoopScrollChangeNavigationBP;
+
+// Function LGUI.UINavigationBehaviour.OnNotifyNavigationEnterBP
+// 0x0008 (0x0008 - 0x0000)
+struct UINavigationBehaviour_OnNotifyNavigationEnterBP final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationBehaviour_OnNotifyNavigationEnterBP;
+
+// Function LGUI.UINavigationBehaviour.OnNotifyNavigationSelectBP
+// 0x0008 (0x0008 - 0x0000)
+struct UINavigationBehaviour_OnNotifyNavigationSelectBP final
+{
+public:
+	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationBehaviour_OnNotifyNavigationSelectBP;
+
+// Function LGUI.LGUISpriteData.CreateLGUISpriteData
+// 0x0038 (0x0038 - 0x0000)
+struct LGUISpriteData_CreateLGUISpriteData final
+{
+public:
+	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             inSpriteTexture;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              inHorizontalBorder;                                // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              inVerticalBorder;                                  // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   inPackingTag;                                      // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULGUISpriteData*                        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_CreateLGUISpriteData;
+
+// Function LGUI.LGUISpriteData.GetPackingTag
+// 0x000C (0x000C - 0x0000)
+struct LGUISpriteData_GetPackingTag final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_GetPackingTag;
+
+// Function LGUI.LGUISpriteData.GetSpriteTexture
+// 0x0008 (0x0008 - 0x0000)
+struct LGUISpriteData_GetSpriteTexture final
+{
+public:
+	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_GetSpriteTexture;
+
+// Function LGUI.LGUISpriteData.HavePackingTag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUISpriteData_HavePackingTag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUISpriteData_HavePackingTag;
+
+// Function LGUI.UISelectableGroupComponent.OnComponentHighlighted
+// 0x0008 (0x0008 - 0x0000)
+struct UISelectableGroupComponent_OnComponentHighlighted final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableGroupComponent_OnComponentHighlighted;
+
+// Function LGUI.UISelectableGroupComponent.OnComponentSelected
+// 0x0008 (0x0008 - 0x0000)
+struct UISelectableGroupComponent_OnComponentSelected final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableGroupComponent_OnComponentSelected;
+
+// Function LGUI.LGUIWorldSpaceInteraction.SetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteraction_SetClickThreshold final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetClickThreshold;
+
+// Function LGUI.LGUIWorldSpaceInteraction.SetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteraction_SetHoldToDrag final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetHoldToDrag;
+
+// Function LGUI.LGUIWorldSpaceInteraction.SetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteraction_SetHoldToDragTime final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetHoldToDragTime;
+
+// Function LGUI.LGUIWorldSpaceInteraction.SetInteractionSource
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteraction_SetInteractionSource final
+{
+public:
+	ELGUIWorldSpaceInteractionSource              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetInteractionSource;
+
+// Function LGUI.LGUIWorldSpaceInteraction.GetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteraction_GetClickThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetClickThreshold;
+
+// Function LGUI.LGUIWorldSpaceInteraction.GetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteraction_GetHoldToDrag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetHoldToDrag;
+
+// Function LGUI.LGUIWorldSpaceInteraction.GetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteraction_GetHoldToDragTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetHoldToDragTime;
+
+// Function LGUI.LGUIWorldSpaceInteraction.GetInteractionSource
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteraction_GetInteractionSource final
+{
+public:
+	ELGUIWorldSpaceInteractionSource              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetInteractionSource;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_SetClickThreshold final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetClickThreshold;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_SetHoldToDrag final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetHoldToDrag;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_SetHoldToDragTime final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetHoldToDragTime;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetInteractionSource
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_SetInteractionSource final
+{
+public:
+	ELGUIWorldSpaceInteractionSource              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetInteractionSource;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetClickThreshold
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_GetClickThreshold final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetClickThreshold;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetHoldToDrag
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_GetHoldToDrag final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetHoldToDrag;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetHoldToDragTime
+// 0x0004 (0x0004 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_GetHoldToDragTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetHoldToDragTime;
+
+// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetInteractionSource
+// 0x0001 (0x0001 - 0x0000)
+struct LGUIWorldSpaceInteractionForNoneUI_GetInteractionSource final
+{
+public:
+	ELGUIWorldSpaceInteractionSource              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetInteractionSource;
+
+// Function LGUI.SequencePlayContext.SetBatchRoots
+// 0x0010 (0x0010 - 0x0000)
+struct SequencePlayContext_SetBatchRoots final
+{
+public:
+	TArray<class AUIBaseActor*>                   BatchRoots;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencePlayContext_SetBatchRoots;
+
+// Function LGUI.UIPolygonLine.EndAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIPolygonLine_EndAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_EndAngleTo;
+
+// Function LGUI.UIPolygonLine.SetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_SetEndAngle final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_SetEndAngle;
+
+// Function LGUI.UIPolygonLine.SetSides
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_SetSides final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_SetSides;
+
+// Function LGUI.UIPolygonLine.SetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_SetStartAngle final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_SetStartAngle;
+
+// Function LGUI.UIPolygonLine.SetVertexOffsetArray
+// 0x0010 (0x0010 - 0x0000)
+struct UIPolygonLine_SetVertexOffsetArray final
+{
+public:
+	TArray<float>                                 value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_SetVertexOffsetArray;
+
+// Function LGUI.UIPolygonLine.StartAngleTo
+// 0x0018 (0x0018 - 0x0000)
+struct UIPolygonLine_StartAngleTo final
+{
+public:
+	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_StartAngleTo;
+
+// Function LGUI.UIPolygonLine.GetEndAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_GetEndAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_GetEndAngle;
+
+// Function LGUI.UIPolygonLine.GetSides
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_GetSides final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_GetSides;
+
+// Function LGUI.UIPolygonLine.GetStartAngle
+// 0x0004 (0x0004 - 0x0000)
+struct UIPolygonLine_GetStartAngle final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_GetStartAngle;
+
+// Function LGUI.UIPolygonLine.GetVertexOffsetArray
+// 0x0010 (0x0010 - 0x0000)
+struct UIPolygonLine_GetVertexOffsetArray final
+{
+public:
+	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPolygonLine_GetVertexOffsetArray;
+
+// Function LGUI.SequencerManager.BatchPlaySequenceOnActors
+// 0x0058 (0x0058 - 0x0000)
+struct SequencerManager_BatchPlaySequenceOnActors final
+{
+public:
+	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        SequencePath;                                      // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AUIBaseActor*>                   BatchRoots;                                        // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMovieSceneSequencePlaybackSettings    PlaySetting;                                       // 0x0038(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_BatchPlaySequenceOnActors;
+
+// Function LGUI.SequencerManager.GetBatchPlayContext
+// 0x0010 (0x0010 - 0x0000)
+struct SequencerManager_GetBatchPlayContext final
+{
+public:
+	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USequencePlayContext*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_GetBatchPlayContext;
+
+// Function LGUI.SequencerManager.GetSequenceLoadState
+// 0x0030 (0x0030 - 0x0000)
+struct SequencerManager_GetSequenceLoadState final
+{
+public:
+	const class UObject*                          Context;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESequenceLoadState                            ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_SequencerManager_GetSequenceLoadState;
+
+// Function LGUI.SequencerManager.LoadSequenceAssetAsync
+// 0x0050 (0x0050 - 0x0000)
+struct SequencerManager_LoadSequenceAssetAsync final
+{
+public:
+	const class UObject*                          Context;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(class ULevelSequence* Sequence)> OnLoad;                                          // 0x0028(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_LoadSequenceAssetAsync;
+
+// Function LGUI.SequencerManager.ClearInvalidBind
+// 0x0008 (0x0008 - 0x0000)
+struct SequencerManager_ClearInvalidBind final
+{
+public:
+	class ALevelSequenceActor*                    SeqActor;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_ClearInvalidBind;
+
+// Function LGUI.SequencerManager.SetGlobalPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct SequencerManager_SetGlobalPlayRate final
+{
+public:
+	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_SetGlobalPlayRate;
+
+// Function LGUI.SequencerManager.GetGlobalPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct SequencerManager_GetGlobalPlayRate final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_SequencerManager_GetGlobalPlayRate;
+
+// Function LGUI.UISizeControlByOther.SetAdditionalHeight
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByOther_SetAdditionalHeight final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_SetAdditionalHeight;
+
+// Function LGUI.UISizeControlByOther.SetAdditionalWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByOther_SetAdditionalWidth final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_SetAdditionalWidth;
+
+// Function LGUI.UISizeControlByOther.SetControlHeight
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByOther_SetControlHeight final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_SetControlHeight;
+
+// Function LGUI.UISizeControlByOther.SetControlWidth
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByOther_SetControlWidth final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_SetControlWidth;
+
+// Function LGUI.UISizeControlByOther.SetTargetActor
+// 0x0008 (0x0008 - 0x0000)
+struct UISizeControlByOther_SetTargetActor final
+{
+public:
+	class AUIBaseActor*                           NewTargetActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_SetTargetActor;
+
+// Function LGUI.UISizeControlByOther.GetAdditionalHeight
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByOther_GetAdditionalHeight final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_GetAdditionalHeight;
+
+// Function LGUI.UISizeControlByOther.GetAdditionalWidth
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByOther_GetAdditionalWidth final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_GetAdditionalWidth;
+
+// Function LGUI.UISizeControlByOther.GetControlHeight
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByOther_GetControlHeight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_GetControlHeight;
+
+// Function LGUI.UISizeControlByOther.GetControlWidth
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByOther_GetControlWidth final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_GetControlWidth;
+
+// Function LGUI.UISizeControlByOther.GetTargetActor
+// 0x0008 (0x0008 - 0x0000)
+struct UISizeControlByOther_GetTargetActor final
+{
+public:
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByOther_GetTargetActor;
+
+// Function LGUI.UI2DLineRaw.SetPoints
+// 0x0018 (0x0018 - 0x0000)
+struct UI2DLineRaw_SetPoints final
+{
+public:
+	TArray<struct FVector2D>                      InPoints;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bAdjustSize;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UI2DLineRaw_SetPoints;
+
+// Function LGUI.UISpriteBase_BP.OnCreateGeometry_BP
+// 0x0010 (0x0010 - 0x0000)
+struct UISpriteBase_BP_OnCreateGeometry_BP final
+{
+public:
+	class ULGUICreateGeometryHelper*              InCreateGeometryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULGUISpriteData_BaseObject*             InSpriteData;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteBase_BP_OnCreateGeometry_BP;
+
+// Function LGUI.UISpriteBase_BP.OnUpdateGeometry_BP
+// 0x0018 (0x0018 - 0x0000)
+struct UISpriteBase_BP_OnUpdateGeometry_BP final
+{
+public:
+	class ULGUIUpdateGeometryHelper*              InUpdateGoemetryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULGUISpriteData_BaseObject*             InSpriteData;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexPositionChanged;                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexUVChanged;                                 // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexColorChanged;                              // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISpriteBase_BP_OnUpdateGeometry_BP;
+
+// Function LGUI.UIAndroidBackComponent.GetActiveAndroidBackComponentSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIAndroidBackComponent_GetActiveAndroidBackComponentSize final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAndroidBackComponent_GetActiveAndroidBackComponentSize;
+
+// Function LGUI.UIAndroidBackComponent.GetTopActiveAndroidBack
+// 0x0008 (0x0008 - 0x0000)
+struct UIAndroidBackComponent_GetTopActiveAndroidBack final
+{
+public:
+	class UUIAndroidBackComponent*                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAndroidBackComponent_GetTopActiveAndroidBack;
+
+// Function LGUI.UIArtText.CheckTextValid
+// 0x0001 (0x0001 - 0x0000)
+struct UIArtText_CheckTextValid final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_CheckTextValid;
+
+// Function LGUI.UIArtText.SetArtTextData
+// 0x0008 (0x0008 - 0x0000)
+struct UIArtText_SetArtTextData final
+{
+public:
+	class ULGUIArtTextData*                       NewArtTextData;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetArtTextData;
+
+// Function LGUI.UIArtText.SetHorizontalAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIArtText_SetHorizontalAlign final
+{
+public:
+	EUIArtTextHorizontalAlign                     NewHorizontalAlign;                                // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetHorizontalAlign;
+
+// Function LGUI.UIArtText.SetIsWidthControlledByText
+// 0x0001 (0x0001 - 0x0000)
+struct UIArtText_SetIsWidthControlledByText final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetIsWidthControlledByText;
+
+// Function LGUI.UIArtText.SetSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIArtText_SetSize final
+{
+public:
+	float                                         NewSize;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetSize;
+
+// Function LGUI.UIArtText.SetSpace
+// 0x0008 (0x0008 - 0x0000)
+struct UIArtText_SetSpace final
+{
+public:
+	struct FVector2D                              NewSpace;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetSpace;
+
+// Function LGUI.UIArtText.SetText
+// 0x0010 (0x0010 - 0x0000)
+struct UIArtText_SetText final
+{
+public:
+	class FString                                 NewText;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_SetText;
+
+// Function LGUI.UIArtText.GetArtTextData
+// 0x0008 (0x0008 - 0x0000)
+struct UIArtText_GetArtTextData final
+{
+public:
+	class ULGUIArtTextData*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetArtTextData;
+
+// Function LGUI.UIArtText.GetHorizontalAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIArtText_GetHorizontalAlign final
+{
+public:
+	EUIArtTextHorizontalAlign                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetHorizontalAlign;
+
+// Function LGUI.UIArtText.GetIsWidthControlledByText
+// 0x0004 (0x0004 - 0x0000)
+struct UIArtText_GetIsWidthControlledByText final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetIsWidthControlledByText;
+
+// Function LGUI.UIArtText.GetSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIArtText_GetSize final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetSize;
+
+// Function LGUI.UIArtText.GetSpace
+// 0x0008 (0x0008 - 0x0000)
+struct UIArtText_GetSpace final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetSpace;
+
+// Function LGUI.UIArtText.GetText
+// 0x0010 (0x0010 - 0x0000)
+struct UIArtText_GetText final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIArtText_GetText;
+
+// Function LGUI.UISpineManager.SetGlobalPlayRate
+// 0x0004 (0x0004 - 0x0000)
+struct UISpineManager_SetGlobalPlayRate final
+{
+public:
+	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineManager_SetGlobalPlayRate;
+
+// Function LGUI.UISpineManager.GetGlobalPlayRate
+// 0x0008 (0x0008 - 0x0000)
+struct UISpineManager_GetGlobalPlayRate final
+{
+public:
+	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineManager_GetGlobalPlayRate;
+
+// Function LGUI.UISizeControlByAspectRatio.SetAspectRatio
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByAspectRatio_SetAspectRatio final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByAspectRatio_SetAspectRatio;
+
+// Function LGUI.UISizeControlByAspectRatio.SetControlMode
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByAspectRatio_SetControlMode final
+{
+public:
+	EUISizeControlByAspectRatioMode               value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByAspectRatio_SetControlMode;
+
+// Function LGUI.UISizeControlByAspectRatio.GetAspectRatio
+// 0x0004 (0x0004 - 0x0000)
+struct UISizeControlByAspectRatio_GetAspectRatio final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByAspectRatio_GetAspectRatio;
+
+// Function LGUI.UISizeControlByAspectRatio.GetControlMode
+// 0x0001 (0x0001 - 0x0000)
+struct UISizeControlByAspectRatio_GetControlMode final
+{
+public:
+	EUISizeControlByAspectRatioMode               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISizeControlByAspectRatio_GetControlMode;
+
+// Function LGUI.UIAudioManager.OnLevelSequenceEnd
+// 0x0010 (0x0010 - 0x0000)
+struct UIAudioManager_OnLevelSequenceEnd final
+{
+public:
+	class FString                                 SeqName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAudioManager_OnLevelSequenceEnd;
+
+// Function LGUI.UIAudioManager.OnLevelSequenceInterrupt
+// 0x0010 (0x0010 - 0x0000)
+struct UIAudioManager_OnLevelSequenceInterrupt final
+{
+public:
+	class FString                                 SeqName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAudioManager_OnLevelSequenceInterrupt;
+
+// Function LGUI.UIAudioManager.OnLevelSequencePlay
+// 0x0010 (0x0010 - 0x0000)
+struct UIAudioManager_OnLevelSequencePlay final
+{
+public:
+	class FString                                 SeqName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAudioManager_OnLevelSequencePlay;
+
+// Function LGUI.UIAudioManager.PlayAudioEventByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIAudioManager_PlayAudioEventByKey final
+{
+public:
+	class FString                                 EventKey;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAudioManager_PlayAudioEventByKey;
+
+// Function LGUI.UIAudioManager.StopAudioEventByKey
+// 0x0010 (0x0010 - 0x0000)
+struct UIAudioManager_StopAudioEventByKey final
+{
+public:
+	class FString                                 EventKey;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIAudioManager_StopAudioEventByKey;
+
+// Function LGUI.UIPostProcessRenderable.SetMaskTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UIPostProcessRenderable_SetMaskTexture final
+{
+public:
+	class UTexture2D*                             newValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPostProcessRenderable_SetMaskTexture;
+
+// Function LGUI.UIPostProcessRenderable.GetMaskTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UIPostProcessRenderable_GetMaskTexture final
+{
+public:
+	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIPostProcessRenderable_GetMaskTexture;
+
+// Function LGUI.UIBackgroundBlur.SetApplyAlphaToBlur
+// 0x0001 (0x0001 - 0x0000)
+struct UIBackgroundBlur_SetApplyAlphaToBlur final
+{
+public:
+	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_SetApplyAlphaToBlur;
+
+// Function LGUI.UIBackgroundBlur.SetBlurStrength
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundBlur_SetBlurStrength final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_SetBlurStrength;
+
+// Function LGUI.UIBackgroundBlur.SetMaxDownSampleLevel
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundBlur_SetMaxDownSampleLevel final
+{
+public:
+	int32                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_SetMaxDownSampleLevel;
+
+// Function LGUI.UIBackgroundBlur.SetStrengthTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UIBackgroundBlur_SetStrengthTexture final
+{
+public:
+	class UTexture2D*                             newValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_SetStrengthTexture;
+
+// Function LGUI.UIBackgroundBlur.GetApplyAlphaToBlur
+// 0x0001 (0x0001 - 0x0000)
+struct UIBackgroundBlur_GetApplyAlphaToBlur final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_GetApplyAlphaToBlur;
+
+// Function LGUI.UIBackgroundBlur.GetBlurStrength
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundBlur_GetBlurStrength final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_GetBlurStrength;
+
+// Function LGUI.UIBackgroundBlur.GetMaxDownSampleLevel
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundBlur_GetMaxDownSampleLevel final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_GetMaxDownSampleLevel;
+
+// Function LGUI.UIBackgroundBlur.GetStrengthTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UIBackgroundBlur_GetStrengthTexture final
+{
+public:
+	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundBlur_GetStrengthTexture;
+
+// Function LGUI.UIBackgroundPixelate.SetApplyAlphaToStrength
+// 0x0001 (0x0001 - 0x0000)
+struct UIBackgroundPixelate_SetApplyAlphaToStrength final
+{
+public:
+	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundPixelate_SetApplyAlphaToStrength;
+
+// Function LGUI.UIBackgroundPixelate.SetPixelateStrength
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundPixelate_SetPixelateStrength final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundPixelate_SetPixelateStrength;
+
+// Function LGUI.UIBackgroundPixelate.GetApplyAlphaToStrength
+// 0x0001 (0x0001 - 0x0000)
+struct UIBackgroundPixelate_GetApplyAlphaToStrength final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundPixelate_GetApplyAlphaToStrength;
+
+// Function LGUI.UIBackgroundPixelate.GetPixelateStrength
+// 0x0004 (0x0004 - 0x0000)
+struct UIBackgroundPixelate_GetPixelateStrength final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBackgroundPixelate_GetPixelateStrength;
+
+// Function LGUI.UISpriteSheetTexturePlayer.SetHeightCount
+// 0x0004 (0x0004 - 0x0000)
+struct UISpriteSheetTexturePlayer_SetHeightCount final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_SetHeightCount;
+
+// Function LGUI.UISpriteSheetTexturePlayer.SetWidthCount
+// 0x0004 (0x0004 - 0x0000)
+struct UISpriteSheetTexturePlayer_SetWidthCount final
+{
+public:
+	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_SetWidthCount;
+
+// Function LGUI.UISpriteSheetTexturePlayer.GetHeightCount
+// 0x0004 (0x0004 - 0x0000)
+struct UISpriteSheetTexturePlayer_GetHeightCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_GetHeightCount;
+
+// Function LGUI.UISpriteSheetTexturePlayer.GetWidthCount
+// 0x0004 (0x0004 - 0x0000)
+struct UISpriteSheetTexturePlayer_GetWidthCount final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_GetWidthCount;
+
+// Function LGUI.UISpineSequenceController.SetAnimTime
+// 0x0004 (0x0004 - 0x0000)
+struct UISpineSequenceController_SetAnimTime final
+{
+public:
+	float                                         NewAnimTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineSequenceController_SetAnimTime;
+
+// Function LGUI.UISpineSequenceController.GetAnimTime
+// 0x0004 (0x0004 - 0x0000)
+struct UISpineSequenceController_GetAnimTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineSequenceController_GetAnimTime;
+
+// Function LGUI.LGUICreateGeometryHelper.AddTriangle
+// 0x000C (0x000C - 0x0000)
+struct LGUICreateGeometryHelper_AddTriangle final
+{
+public:
+	int32                                         index0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         index1;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         index2;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddTriangle;
+
+// Function LGUI.LGUICreateGeometryHelper.AddVertexFull
+// 0x0048 (0x0048 - 0x0000)
+struct LGUICreateGeometryHelper_AddVertexFull final
+{
+public:
+	struct FVector                                position;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 color;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              uv0;                                               // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              uv1;                                               // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              uv2;                                               // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              uv3;                                               // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                normal;                                            // 0x0030(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                tangent;                                           // 0x003C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexFull;
+
+// Function LGUI.LGUICreateGeometryHelper.AddVertexSimple
+// 0x0018 (0x0018 - 0x0000)
+struct LGUICreateGeometryHelper_AddVertexSimple final
+{
+public:
+	struct FVector                                position;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 color;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              uv0;                                               // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexSimple;
+
+// Function LGUI.LGUICreateGeometryHelper.AddVertexStruct
+// 0x0048 (0x0048 - 0x0000)
+struct LGUICreateGeometryHelper_AddVertexStruct final
+{
+public:
+	struct FLGUIGeometryVertex                    vertex;                                            // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexStruct;
+
+// Function LGUI.UIDirectMeshRenderable.SetCustormUIMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct UIDirectMeshRenderable_SetCustormUIMaterial final
+{
+public:
+	class UMaterialInterface*                     NewMaterial;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIDirectMeshRenderable_SetCustormUIMaterial;
+
+// Function LGUI.UIStaticMesh.SetMesh
+// 0x0008 (0x0008 - 0x0000)
+struct UIStaticMesh_SetMesh final
+{
+public:
+	class UStaticMesh*                            value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIStaticMesh_SetMesh;
+
+// Function LGUI.UIStaticMesh.SetVertexColorType
+// 0x0001 (0x0001 - 0x0000)
+struct UIStaticMesh_SetVertexColorType final
+{
+public:
+	EUIStaticMeshVertexColorType                  value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIStaticMesh_SetVertexColorType;
+
+// Function LGUI.UIStaticMesh.GetMesh
+// 0x0008 (0x0008 - 0x0000)
+struct UIStaticMesh_GetMesh final
+{
+public:
+	class UStaticMesh*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIStaticMesh_GetMesh;
+
+// Function LGUI.UIStaticMesh.GetVertexColorType
+// 0x0001 (0x0001 - 0x0000)
+struct UIStaticMesh_GetVertexColorType final
+{
+public:
+	EUIStaticMeshVertexColorType                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIStaticMesh_GetVertexColorType;
+
+// Function LGUI.UIBatchGeometryRenderable_BP.OnCreateGeometry_BP
+// 0x0008 (0x0008 - 0x0000)
+struct UIBatchGeometryRenderable_BP_OnCreateGeometry_BP final
+{
+public:
+	class ULGUICreateGeometryHelper*              InCreateGeometryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_BP_OnCreateGeometry_BP;
+
+// Function LGUI.UIBatchGeometryRenderable_BP.OnUpdateGeometry_BP
+// 0x0010 (0x0010 - 0x0000)
+struct UIBatchGeometryRenderable_BP_OnUpdateGeometry_BP final
+{
+public:
+	class ULGUIUpdateGeometryHelper*              InUpdateGoemetryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexPositionChanged;                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexUVChanged;                                 // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InVertexColorChanged;                              // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIBatchGeometryRenderable_BP_OnUpdateGeometry_BP;
 
 // Function LGUI.UISelectableComponent.SetSelectableDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -5835,1991 +8012,20 @@ public:
 };
 DUMPER7_ASSERTS_UIButtonComponent_UnregisterClickEvent;
 
-// Function LGUI.UISelectableButtonComponent.SetForceSelect
-// 0x0001 (0x0001 - 0x0000)
-struct UISelectableButtonComponent_SetForceSelect final
-{
-public:
-	bool                                          forceSelect;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISelectableButtonComponent_SetForceSelect;
-
-// Function LGUI.LGUIImageSequencePlayer.SeekFrame
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIImageSequencePlayer_SeekFrame final
-{
-public:
-	int32                                         frameNumber;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_SeekFrame;
-
-// Function LGUI.LGUIImageSequencePlayer.SeekTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIImageSequencePlayer_SeekTime final
-{
-public:
-	float                                         time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_SeekTime;
-
-// Function LGUI.LGUIImageSequencePlayer.SetFps
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIImageSequencePlayer_SetFps final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_SetFps;
-
-// Function LGUI.LGUIImageSequencePlayer.SetLoop
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIImageSequencePlayer_SetLoop final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_SetLoop;
-
-// Function LGUI.LGUIImageSequencePlayer.GetDuration
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIImageSequencePlayer_GetDuration final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetDuration;
-
-// Function LGUI.LGUIImageSequencePlayer.GetFps
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIImageSequencePlayer_GetFps final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetFps;
-
-// Function LGUI.LGUIImageSequencePlayer.GetIsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIImageSequencePlayer_GetIsPlaying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetIsPlaying;
-
-// Function LGUI.LGUIImageSequencePlayer.GetLoop
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIImageSequencePlayer_GetLoop final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIImageSequencePlayer_GetLoop;
-
-// Function LGUI.UIEffectTextAnimation_PropertyWithEase.SetEaseCurve
-// 0x0008 (0x0008 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithEase_SetEaseCurve final
-{
-public:
-	class UCurveFloat*                            value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_SetEaseCurve;
-
-// Function LGUI.UIEffectTextAnimation_PropertyWithEase.SetEaseType
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithEase_SetEaseType final
-{
-public:
-	ELTweenEase                                   value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_SetEaseType;
-
-// Function LGUI.UIEffectTextAnimation_PropertyWithEase.GetCurveFloat
-// 0x0008 (0x0008 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithEase_GetCurveFloat final
-{
-public:
-	class UCurveFloat*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_GetCurveFloat;
-
-// Function LGUI.UIEffectTextAnimation_PropertyWithEase.GetEaseType
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_PropertyWithEase_GetEaseType final
-{
-public:
-	ELTweenEase                                   ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_PropertyWithEase_GetEaseType;
-
-// Function LGUI.UIEffectTextAnimation_ColorProperty.SetColor
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorProperty_SetColor final
-{
-public:
-	struct FColor                                 value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_SetColor;
-
-// Function LGUI.UIEffectTextAnimation_ColorProperty.SetUseHSV
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_ColorProperty_SetUseHSV final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_SetUseHSV;
-
-// Function LGUI.UIEffectTextAnimation_ColorProperty.GetColor
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorProperty_GetColor final
-{
-public:
-	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_GetColor;
-
-// Function LGUI.UIEffectTextAnimation_ColorProperty.GetUseHSV
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_ColorProperty_GetUseHSV final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_GetUseHSV;
-
-// Function LGUI.LGUIManagerActor.GetDynamicSpriteAtlasMgr
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_GetDynamicSpriteAtlasMgr final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIDynamicSpriteAtlasMgr*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIManagerActor_GetDynamicSpriteAtlasMgr;
-
-// Function LGUI.LGUIManagerActor.GetGlobalUiBlurIndex
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_GetGlobalUiBlurIndex final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIManagerActor_GetGlobalUiBlurIndex;
-
-// Function LGUI.LGUIManagerActor.GetSequencerManager
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_GetSequencerManager final
-{
-public:
-	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USequencerManager*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIManagerActor_GetSequencerManager;
-
-// Function LGUI.LGUIManagerActor.GetUISpineManager
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_GetUISpineManager final
-{
-public:
-	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUISpineManager*                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIManagerActor_GetUISpineManager;
-
-// Function LGUI.LGUIManagerActor.SetDebugRootLayer
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_SetDebugRootLayer final
-{
-public:
-	class UObject*                                WorldContextObj;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUIItem*                                LayerItem;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIManagerActor_SetDebugRootLayer;
-
-// Function LGUI.LGUIManagerActor.SetGlobalPlayRate
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIManagerActor_SetGlobalPlayRate final
-{
-public:
-	const class UObject*                          WorldContext;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PlayRate;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIManagerActor_SetGlobalPlayRate;
-
-// Function LGUI.UIEffectTextAnimation_Selector.SetOffset
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_Selector_SetOffset final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_Selector_SetOffset;
-
-// Function LGUI.UIEffectTextAnimation_Selector.GetOffset
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_Selector_GetOffset final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_Selector_GetOffset;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetFlipDirection
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_SetFlipDirection final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetFlipDirection;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetRange
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_SetRange final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetRange;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetTagName
-// 0x000C (0x000C - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_SetTagName final
-{
-public:
-	class FName                                   value;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetTagName;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetFlipDirection
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_GetFlipDirection final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetFlipDirection;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetRange
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_GetRange final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetRange;
-
-// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetTagName
-// 0x000C (0x000C - 0x0000)
-struct UIEffectTextAnimation_RichTextTagSelector_GetTagName final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetTagName;
-
-// Function LGUI.LGUIPlayTween.RegisterOnComplete
-// 0x0030 (0x0030 - 0x0000)
-struct LGUIPlayTween_RegisterOnComplete final
-{
-public:
-	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPlayTween_RegisterOnComplete;
-
-// Function LGUI.LGUIPlayTween.UnregisterOnComplete
-// 0x0008 (0x0008 - 0x0000)
-struct LGUIPlayTween_UnregisterOnComplete final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPlayTween_UnregisterOnComplete;
-
-// Function LGUI.LGUIPlayTween.GetTweener
-// 0x0008 (0x0008 - 0x0000)
-struct LGUIPlayTween_GetTweener final
-{
-public:
-	class ULTweener*                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPlayTween_GetTweener;
-
-// Function LGUI.UIExtendToggleTextureTransition.SetAllTransitionStateTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UIExtendToggleTextureTransition_SetAllTransitionStateTexture final
-{
-public:
-	class UTexture*                               Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggleTextureTransition_SetAllTransitionStateTexture;
-
-// Function LGUI.UIExtendToggleTextureTransition.SetTargetStateTexture
-// 0x0018 (0x0018 - 0x0000)
-struct UIExtendToggleTextureTransition_SetTargetStateTexture final
-{
-public:
-	EToggleTransitionState                        State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ForceNoTriggerOnChange;                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIExtendToggleTextureTransition_SetTargetStateTexture;
-
-// Function LGUI.UIExtendButtonComponent.SetDelegateForHelpClick
-// 0x0028 (0x0028 - 0x0000)
-struct UIExtendButtonComponent_SetDelegateForHelpClick final
-{
-public:
-	TDelegate<void(int32 helpGroupId)>            delegateObj;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendButtonComponent_SetDelegateForHelpClick;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.SetEnd
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_SetEnd final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetEnd;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.SetFlipDirection
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_SetFlipDirection final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetFlipDirection;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.SetRange
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_SetRange final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetRange;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.SetStart
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_SetStart final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetStart;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.GetEnd
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_GetEnd final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetEnd;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.GetFlipDirection
-// 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_GetFlipDirection final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetFlipDirection;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.GetRange
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_GetRange final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetRange;
-
-// Function LGUI.UIEffectTextAnimation_RangeSelector.GetStart
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RangeSelector_GetStart final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetStart;
-
-// Function LGUI.UIExtendToggleSpriteTransition.SetAllStateSprite
-// 0x0008 (0x0008 - 0x0000)
-struct UIExtendToggleSpriteTransition_SetAllStateSprite final
-{
-public:
-	class ULGUISpriteData_BaseObject*             NewSprite;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggleSpriteTransition_SetAllStateSprite;
-
-// Function LGUI.UIExtendToggleSpriteTransition.SetStateSprite
-// 0x0018 (0x0018 - 0x0000)
-struct UIExtendToggleSpriteTransition_SetStateSprite final
-{
-public:
-	EToggleTransitionState                        State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULGUISpriteData_BaseObject*             NewSprite;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ForceNoTriggerOnChange;                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIExtendToggleSpriteTransition_SetStateSprite;
-
-// Function LGUI.LGUIPlayTweenComponent.GetPlayTween
-// 0x0008 (0x0008 - 0x0000)
-struct LGUIPlayTweenComponent_GetPlayTween final
-{
-public:
-	class ULGUIPlayTween*                         ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPlayTweenComponent_GetPlayTween;
-
-// Function LGUI.LGUIPointerClickInterface.OnPointerClick
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerClickInterface_OnPointerClick final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerClickInterface_OnPointerClick;
-
-// Function LGUI.UIExtendToggle.SetAllTransitionsEnable
-// 0x0001 (0x0001 - 0x0000)
-struct UIExtendToggle_SetAllTransitionsEnable final
-{
-public:
-	bool                                          bIsEnable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_SetAllTransitionsEnable;
-
-// Function LGUI.UIExtendToggle.SetToggleGroup
-// 0x0008 (0x0008 - 0x0000)
-struct UIExtendToggle_SetToggleGroup final
-{
-public:
-	class AActor*                                 TogGroupActor;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_SetToggleGroup;
-
-// Function LGUI.UIExtendToggle.SetToggleState
-// 0x0005 (0x0005 - 0x0000)
-struct UIExtendToggle_SetToggleState final
-{
-public:
-	EToggleState                                  State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFireEvent;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIngnoreAnim;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bJumpToLastFrame;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EToggleChangeStateResult                      ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_SetToggleState;
-
-// Function LGUI.UIExtendToggle.SetToggleStateForce
-// 0x0004 (0x0004 - 0x0000)
-struct UIExtendToggle_SetToggleStateForce final
-{
-public:
-	EToggleState                                  State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFireEvent;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIngnoreAnim;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bJumpToLastFrame;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_SetToggleStateForce;
-
-// Function LGUI.UIExtendToggle.GetToggleGroup
-// 0x0008 (0x0008 - 0x0000)
-struct UIExtendToggle_GetToggleGroup final
-{
-public:
-	class UUIExtendToggleGroup*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_GetToggleGroup;
-
-// Function LGUI.UIExtendToggle.GetToggleState
-// 0x0001 (0x0001 - 0x0000)
-struct UIExtendToggle_GetToggleState final
-{
-public:
-	EToggleState                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggle_GetToggleState;
-
-// Function LGUI.LGUIPointerDownUpInterface.OnPointerDown
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDownUpInterface_OnPointerDown final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDownUpInterface_OnPointerDown;
-
-// Function LGUI.LGUIPointerDownUpInterface.OnPointerUp
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDownUpInterface_OnPointerUp final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDownUpInterface_OnPointerUp;
-
-// Function LGUI.LGUIPointerDragDropInterface.OnPointerDragDrop
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragDropInterface_OnPointerDragDrop final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragDropInterface_OnPointerDragDrop;
-
-// Function LGUI.LGUIPointerDragEnterExitInterface.OnPointerDragEnter
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragEnterExitInterface_OnPointerDragEnter final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragEnterExitInterface_OnPointerDragEnter;
-
-// Function LGUI.LGUIPointerDragEnterExitInterface.OnPointerDragExit
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragEnterExitInterface_OnPointerDragExit final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragEnterExitInterface_OnPointerDragExit;
-
-// Function LGUI.LGUIPointerDragInterface.OnPointerBeginDrag
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragInterface_OnPointerBeginDrag final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerBeginDrag;
-
-// Function LGUI.LGUIPointerDragInterface.OnPointerDrag
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragInterface_OnPointerDrag final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerDrag;
-
-// Function LGUI.LGUIPointerDragInterface.OnPointerEndDrag
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerDragInterface_OnPointerEndDrag final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerDragInterface_OnPointerEndDrag;
-
-// Function LGUI.UILoopScrollViewComponent.RefreshByData
-// 0x0010 (0x0010 - 0x0000)
-struct UILoopScrollViewComponent_RefreshByData final
-{
-public:
-	class AUIBaseActor*                           UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GridNum;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          KeepContentPosition;                               // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_RefreshByData;
-
-// Function LGUI.UILoopScrollViewComponent.ScrollToGridIndex
-// 0x0008 (0x0008 - 0x0000)
-struct UILoopScrollViewComponent_ScrollToGridIndex final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToGridIndex;
-
-// Function LGUI.UILoopScrollViewComponent.ScrollToGridIndexLater
-// 0x0008 (0x0008 - 0x0000)
-struct UILoopScrollViewComponent_ScrollToGridIndexLater final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTweenAnim;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToGridIndexLater;
-
-// Function LGUI.UILoopScrollViewComponent.ScrollToNextLine
-// 0x0001 (0x0001 - 0x0000)
-struct UILoopScrollViewComponent_ScrollToNextLine final
-{
-public:
-	bool                                          bReversed;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToNextLine;
-
-// Function LGUI.UILoopScrollViewComponent.ScrollToNextLineLater
-// 0x0001 (0x0001 - 0x0000)
-struct UILoopScrollViewComponent_ScrollToNextLineLater final
-{
-public:
-	bool                                          bReversed;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToNextLineLater;
-
-// Function LGUI.UILoopScrollViewComponent.SetGridAnimationInterval
-// 0x0004 (0x0004 - 0x0000)
-struct UILoopScrollViewComponent_SetGridAnimationInterval final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_SetGridAnimationInterval;
-
-// Function LGUI.UILoopScrollViewComponent.SetGridAnimationStartTime
-// 0x0004 (0x0004 - 0x0000)
-struct UILoopScrollViewComponent_SetGridAnimationStartTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_SetGridAnimationStartTime;
-
-// Function LGUI.UILoopScrollViewComponent.SetInAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct UILoopScrollViewComponent_SetInAnimation final
-{
-public:
-	bool                                          state;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_SetInAnimation;
-
-// Function LGUI.UILoopScrollViewComponent.SetNavigationIndex
-// 0x0004 (0x0004 - 0x0000)
-struct UILoopScrollViewComponent_SetNavigationIndex final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_SetNavigationIndex;
-
-// Function LGUI.UILoopScrollViewComponent.GetGrid
-// 0x0010 (0x0010 - 0x0000)
-struct UILoopScrollViewComponent_GetGrid final
-{
-public:
-	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGrid;
-
-// Function LGUI.UILoopScrollViewComponent.GetGridAnimationInterval
-// 0x0004 (0x0004 - 0x0000)
-struct UILoopScrollViewComponent_GetGridAnimationInterval final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGridAnimationInterval;
-
-// Function LGUI.UILoopScrollViewComponent.GetGridAnimationStartTime
-// 0x0004 (0x0004 - 0x0000)
-struct UILoopScrollViewComponent_GetGridAnimationStartTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGridAnimationStartTime;
-
-// Function LGUI.UILoopScrollViewComponent.GetInAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct UILoopScrollViewComponent_GetInAnimation final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILoopScrollViewComponent_GetInAnimation;
-
-// Function LGUI.LGUIPointerEnterExitInterface.OnPointerEnter
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerEnterExitInterface_OnPointerEnter final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerEnterExitInterface_OnPointerEnter;
-
-// Function LGUI.LGUIPointerEnterExitInterface.OnPointerExit
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerEnterExitInterface_OnPointerExit final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerEnterExitInterface_OnPointerExit;
-
-// Function LGUI.LGUIPointerEventData.GetCumulativeMoveDelta
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetCumulativeMoveDelta final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetCumulativeMoveDelta;
-
-// Function LGUI.LGUIPointerEventData.GetDragRayDirection
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetDragRayDirection final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetDragRayDirection;
-
-// Function LGUI.LGUIPointerEventData.GetDragRayOrigin
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetDragRayOrigin final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetDragRayOrigin;
-
-// Function LGUI.LGUIPointerEventData.GetLocalPointInPlane
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetLocalPointInPlane final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetLocalPointInPlane;
-
-// Function LGUI.LGUIPointerEventData.GetWorldPointInPlane
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetWorldPointInPlane final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetWorldPointInPlane;
-
-// Function LGUI.LGUIPointerEventData.GetWorldPointSpherical
-// 0x000C (0x000C - 0x0000)
-struct LGUIPointerEventData_GetWorldPointSpherical final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPointerEventData_GetWorldPointSpherical;
-
-// Function LGUI.LGUIPointerInterruptInterface.NeedInterrupt
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerInterruptInterface_NeedInterrupt final
-{
-public:
-	class ULGUIBaseEventData*                     EventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerInterruptInterface_NeedInterrupt;
-
-// Function LGUI.LGUIPointerScrollInterface.OnPointerScroll
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerScrollInterface_OnPointerScroll final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerScrollInterface_OnPointerScroll;
-
-// Function LGUI.LGUIPointerSelectDeselectInterface.OnPointerDeselect
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerSelectDeselectInterface_OnPointerDeselect final
-{
-public:
-	class ULGUIBaseEventData*                     eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerSelectDeselectInterface_OnPointerDeselect;
-
-// Function LGUI.LGUIPointerSelectDeselectInterface.OnPointerSelect
-// 0x0010 (0x0010 - 0x0000)
-struct LGUIPointerSelectDeselectInterface_OnPointerSelect final
-{
-public:
-	class ULGUIBaseEventData*                     eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_LGUIPointerSelectDeselectInterface_OnPointerSelect;
-
-// Function LGUI.UIInturnAnimController.Play
-// 0x0018 (0x0018 - 0x0000)
-struct UIInturnAnimController_Play final
-{
-public:
-	class FString                                 NewAnimName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AssignNum;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsScrollViewItem;                                 // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIInturnAnimController_Play;
-
-// Function LGUI.UIInturnAnimController.PlayWithActors
-// 0x0020 (0x0020 - 0x0000)
-struct UIInturnAnimController_PlayWithActors final
-{
-public:
-	TArray<TWeakObjectPtr<class AUIBaseActor>>    SpecChildren;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
-	class FString                                 NewAnimName;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInturnAnimController_PlayWithActors;
-
-// Function LGUI.UIInturnAnimController.PlayWithItems
-// 0x0020 (0x0020 - 0x0000)
-struct UIInturnAnimController_PlayWithItems final
-{
-public:
-	TArray<class UUIItem*>                        SpecChildren;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class FString                                 NewAnimName;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInturnAnimController_PlayWithItems;
-
-// Function LGUI.UIInturnAnimController.SetItemDefaultAlphaZero
-// 0x0001 (0x0001 - 0x0000)
-struct UIInturnAnimController_SetItemDefaultAlphaZero final
-{
-public:
-	bool                                          IsItemDefaultAlphaZero;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInturnAnimController_SetItemDefaultAlphaZero;
-
-// Function LGUI.UIInturnAnimController.GetItemDefaultAlphaZero
-// 0x0001 (0x0001 - 0x0000)
-struct UIInturnAnimController_GetItemDefaultAlphaZero final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInturnAnimController_GetItemDefaultAlphaZero;
-
-// Function LGUI.UIInturnAnimController.IsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct UIInturnAnimController_IsPlaying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInturnAnimController_IsPlaying;
-
-// Function LGUI.LGUIPrefabV2.LoadPrefab
-// 0x0020 (0x0020 - 0x0000)
-struct LGUIPrefabV2_LoadPrefab final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        InParent;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUseRuntimeData;                              // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SetRelativeTransformToIdentity;                    // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPrefabV2_LoadPrefab;
-
-// Function LGUI.LGUIPrefabV2.LoadPrefabWithTransform
-// 0x0040 (0x0040 - 0x0000)
-struct LGUIPrefabV2_LoadPrefabWithTransform final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        InParent;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUseRuntimeData;                              // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Location;                                          // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x002C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIPrefabV2_LoadPrefabWithTransform;
-
-// Function LGUI.UINiagara.ActivateSystem
-// 0x0001 (0x0001 - 0x0000)
-struct UINiagara_ActivateSystem final
-{
-public:
-	bool                                          Reset;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_ActivateSystem;
-
-// Function LGUI.UINiagara.GetIsActive
-// 0x0001 (0x0001 - 0x0000)
-struct UINiagara_GetIsActive final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_GetIsActive;
-
-// Function LGUI.UINiagara.GetNiagaraComponent
-// 0x0008 (0x0008 - 0x0000)
-struct UINiagara_GetNiagaraComponent final
-{
-public:
-	class ULGUINiagaraComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_GetNiagaraComponent;
-
-// Function LGUI.UINiagara.IsCircleClipEnable
-// 0x0001 (0x0001 - 0x0000)
-struct UINiagara_IsCircleClipEnable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_IsCircleClipEnable;
-
-// Function LGUI.UINiagara.SetCircleClipEnable
-// 0x0001 (0x0001 - 0x0000)
-struct UINiagara_SetCircleClipEnable final
-{
-public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetCircleClipEnable;
-
-// Function LGUI.UINiagara.SetCircleClipParameters
-// 0x0010 (0x0010 - 0x0000)
-struct UINiagara_SetCircleClipParameters final
-{
-public:
-	struct FCircleClipParameters                  NewCircleClipParameters;                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetCircleClipParameters;
-
-// Function LGUI.UINiagara.SetNiagaraEmitterCustomTexture
-// 0x0028 (0x0028 - 0x0000)
-struct UINiagara_SetNiagaraEmitterCustomTexture final
-{
-public:
-	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture*                               InTexture;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterCustomTexture;
-
-// Function LGUI.UINiagara.SetNiagaraEmitterFloatParam
-// 0x0028 (0x0028 - 0x0000)
-struct UINiagara_SetNiagaraEmitterFloatParam final
-{
-public:
-	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterFloatParam;
-
-// Function LGUI.UINiagara.SetNiagaraEmitterVectorParam
-// 0x0030 (0x0030 - 0x0000)
-struct UINiagara_SetNiagaraEmitterVectorParam final
-{
-public:
-	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               InVector;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterVectorParam;
-
-// Function LGUI.UINiagara.SetNiagaraSystem
-// 0x0008 (0x0008 - 0x0000)
-struct UINiagara_SetNiagaraSystem final
-{
-public:
-	class UNiagaraSystem*                         InSystem;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraSystem;
-
-// Function LGUI.UINiagara.SetNiagaraUIActive
-// 0x0002 (0x0002 - 0x0000)
-struct UINiagara_SetNiagaraUIActive final
-{
-public:
-	bool                                          active;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInResetNiagara;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraUIActive;
-
-// Function LGUI.UINiagara.SetNiagaraVarFloat
-// 0x0018 (0x0018 - 0x0000)
-struct UINiagara_SetNiagaraVarFloat final
-{
-public:
-	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraVarFloat;
-
-// Function LGUI.UINiagara.SetNiagaraVarInt
-// 0x0018 (0x0018 - 0x0000)
-struct UINiagara_SetNiagaraVarInt final
-{
-public:
-	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraVarInt;
-
-// Function LGUI.UINiagara.SetNiagaraVarLinearColor
-// 0x0020 (0x0020 - 0x0000)
-struct UINiagara_SetNiagaraVarLinearColor final
-{
-public:
-	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           Value;                                             // 0x0010(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_SetNiagaraVarLinearColor;
-
-// Function LGUI.UINiagara.GetCircleClipParameters
-// 0x0010 (0x0010 - 0x0000)
-struct UINiagara_GetCircleClipParameters final
-{
-public:
-	struct FCircleClipParameters                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagara_GetCircleClipParameters;
-
-// Function LGUI.LGUIScreenSpaceInteraction.SetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteraction_SetClickThreshold final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetClickThreshold;
-
-// Function LGUI.LGUIScreenSpaceInteraction.SetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIScreenSpaceInteraction_SetHoldToDrag final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetHoldToDrag;
-
-// Function LGUI.LGUIScreenSpaceInteraction.SetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteraction_SetHoldToDragTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_SetHoldToDragTime;
-
-// Function LGUI.LGUIScreenSpaceInteraction.GetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteraction_GetClickThreshold final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetClickThreshold;
-
-// Function LGUI.LGUIScreenSpaceInteraction.GetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIScreenSpaceInteraction_GetHoldToDrag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetHoldToDrag;
-
-// Function LGUI.LGUIScreenSpaceInteraction.GetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteraction_GetHoldToDragTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteraction_GetHoldToDragTime;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_SetClickThreshold final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetClickThreshold;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_SetHoldToDrag final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetHoldToDrag;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.SetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_SetHoldToDragTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_SetHoldToDragTime;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_GetClickThreshold final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetClickThreshold;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_GetHoldToDrag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetHoldToDrag;
-
-// Function LGUI.LGUIScreenSpaceInteractionForNoneUI.GetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIScreenSpaceInteractionForNoneUI_GetHoldToDragTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIScreenSpaceInteractionForNoneUI_GetHoldToDragTime;
-
-// Function LGUI.LGUICustomDeviceMarginsParam.GetMarginOptionNames
-// 0x0010 (0x0010 - 0x0000)
-struct LGUICustomDeviceMarginsParam_GetMarginOptionNames final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUICustomDeviceMarginsParam_GetMarginOptionNames;
-
-// Function LGUI.UI2DLineRendererBase.LineWidthTo
-// 0x0018 (0x0018 - 0x0000)
-struct UI2DLineRendererBase_LineWidthTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_LineWidthTo;
-
-// Function LGUI.UI2DLineRendererBase.SetEndType
-// 0x0001 (0x0001 - 0x0000)
-struct UI2DLineRendererBase_SetEndType final
-{
-public:
-	EUI2DLineRenderer_EndType                     newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_SetEndType;
-
-// Function LGUI.UI2DLineRendererBase.SetLineWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UI2DLineRendererBase_SetLineWidth final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_SetLineWidth;
-
-// Function LGUI.UI2DLineRendererBase.SetLineWidthOffset
-// 0x0004 (0x0004 - 0x0000)
-struct UI2DLineRendererBase_SetLineWidthOffset final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_SetLineWidthOffset;
-
-// Function LGUI.UI2DLineRendererBase.GetEndType
-// 0x0001 (0x0001 - 0x0000)
-struct UI2DLineRendererBase_GetEndType final
-{
-public:
-	EUI2DLineRenderer_EndType                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_GetEndType;
-
-// Function LGUI.UI2DLineRendererBase.GetLineWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UI2DLineRendererBase_GetLineWidth final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_GetLineWidth;
-
-// Function LGUI.UI2DLineRendererBase.GetLineWidthOffset
-// 0x0004 (0x0004 - 0x0000)
-struct UI2DLineRendererBase_GetLineWidthOffset final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UI2DLineRendererBase_GetLineWidthOffset;
-
-// Function LGUI.UIPolygonLine.EndAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIPolygonLine_EndAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_EndAngleTo;
-
-// Function LGUI.UIPolygonLine.SetEndAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_SetEndAngle final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_SetEndAngle;
-
-// Function LGUI.UIPolygonLine.SetSides
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_SetSides final
-{
-public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_SetSides;
-
-// Function LGUI.UIPolygonLine.SetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_SetStartAngle final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_SetStartAngle;
-
-// Function LGUI.UIPolygonLine.SetVertexOffsetArray
-// 0x0010 (0x0010 - 0x0000)
-struct UIPolygonLine_SetVertexOffsetArray final
-{
-public:
-	TArray<float>                                 value;                                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_SetVertexOffsetArray;
-
-// Function LGUI.UIPolygonLine.StartAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIPolygonLine_StartAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_StartAngleTo;
-
-// Function LGUI.UIPolygonLine.GetEndAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_GetEndAngle final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_GetEndAngle;
-
-// Function LGUI.UIPolygonLine.GetSides
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_GetSides final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_GetSides;
-
-// Function LGUI.UIPolygonLine.GetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIPolygonLine_GetStartAngle final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_GetStartAngle;
-
-// Function LGUI.UIPolygonLine.GetVertexOffsetArray
-// 0x0010 (0x0010 - 0x0000)
-struct UIPolygonLine_GetVertexOffsetArray final
-{
-public:
-	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPolygonLine_GetVertexOffsetArray;
-
-// Function LGUI.LGUISpriteData_BaseObject.GetAtlasTexture
-// 0x0008 (0x0008 - 0x0000)
-struct LGUISpriteData_BaseObject_GetAtlasTexture final
-{
-public:
-	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_BaseObject_GetAtlasTexture;
-
-// Function LGUI.LGUISpriteData_BaseObject.GetSpriteInfo
-// 0x0090 (0x0090 - 0x0000)
-struct LGUISpriteData_BaseObject_GetSpriteInfo final
-{
-public:
-	struct FLGUISpriteInfo                        ReturnValue;                                       // 0x0000(0x0090)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_BaseObject_GetSpriteInfo;
-
-// Function LGUI.LGUISpriteData_BaseObject.IsIndividual
-// 0x0001 (0x0001 - 0x0000)
-struct LGUISpriteData_BaseObject_IsIndividual final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_BaseObject_IsIndividual;
-
-// Function LGUI.UINavigationGroupComponent.SetNavigateGroupDelegate
-// 0x0028 (0x0028 - 0x0000)
-struct UINavigationGroupComponent_SetNavigateGroupDelegate final
-{
-public:
-	TDelegate<void(class UUINavigationGroupComponent* NavigationGroupComponent, EUINavigationGroupMode mode)> Delegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationGroupComponent_SetNavigateGroupDelegate;
-
-// Function LGUI.UINavigationGroupComponent.SetNavigateTolerance
-// 0x0004 (0x0004 - 0x0000)
-struct UINavigationGroupComponent_SetNavigateTolerance final
-{
-public:
-	float                                         Tolerance;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationGroupComponent_SetNavigateTolerance;
-
-// Function LGUI.UINavigationGroupComponent.GetRootNavigationGrade
-// 0x0010 (0x0010 - 0x0000)
-struct UINavigationGroupComponent_GetRootNavigationGrade final
-{
-public:
-	TArray<class UUISelectableComponent*>         Result;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationGroupComponent_GetRootNavigationGrade;
-
-// Function LGUI.LGUISpriteData.CreateLGUISpriteData
-// 0x0038 (0x0038 - 0x0000)
-struct LGUISpriteData_CreateLGUISpriteData final
-{
-public:
-	class UObject*                                Outer_0;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             inSpriteTexture;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              inHorizontalBorder;                                // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              inVerticalBorder;                                  // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   inPackingTag;                                      // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULGUISpriteData*                        ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_CreateLGUISpriteData;
-
-// Function LGUI.LGUISpriteData.GetPackingTag
-// 0x000C (0x000C - 0x0000)
-struct LGUISpriteData_GetPackingTag final
-{
-public:
-	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_GetPackingTag;
-
-// Function LGUI.LGUISpriteData.GetSpriteTexture
-// 0x0008 (0x0008 - 0x0000)
-struct LGUISpriteData_GetSpriteTexture final
-{
-public:
-	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_GetSpriteTexture;
-
-// Function LGUI.LGUISpriteData.HavePackingTag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUISpriteData_HavePackingTag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUISpriteData_HavePackingTag;
-
-// Function LGUI.UIBaseActor.GetLoadStateOfSequenceByKey
-// 0x0018 (0x0018 - 0x0000)
-struct UIBaseActor_GetLoadStateOfSequenceByKey final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceLoadState                            ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIBaseActor_GetLoadStateOfSequenceByKey;
-
-// Function LGUI.UIBaseActor.GetSeqInfoByKey
-// 0x0048 (0x0048 - 0x0000)
-struct UIBaseActor_GetSeqInfoByKey final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSequenceInfo                          ReturnValue;                                       // 0x0010(0x0038)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_GetSeqInfoByKey;
-
-// Function LGUI.UIBaseActor.GetSequencePlayContextOfKey
-// 0x0018 (0x0018 - 0x0000)
-struct UIBaseActor_GetSequencePlayContextOfKey final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USequencePlayContext*                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_GetSequencePlayContextOfKey;
-
-// Function LGUI.UIBaseActor.GetSequencePlayerByKey
-// 0x0018 (0x0018 - 0x0000)
-struct UIBaseActor_GetSequencePlayerByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_GetSequencePlayerByKey;
-
-// Function LGUI.UIBaseActor.LoadSequenceAssetAsyncByKey
-// 0x0038 (0x0038 - 0x0000)
-struct UIBaseActor_LoadSequenceAssetAsyncByKey final
-{
-public:
-	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class ULevelSequence* Sequence)> OnLoaded;                                        // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_LoadSequenceAssetAsyncByKey;
-
-// Function LGUI.UIBaseActor.PauseSequenceByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_PauseSequenceByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_PauseSequenceByKey;
-
-// Function LGUI.UIBaseActor.PlayLevelSequenceByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_PlayLevelSequenceByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_PlayLevelSequenceByKey;
-
-// Function LGUI.UIBaseActor.ReplaySequenceByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_ReplaySequenceByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_ReplaySequenceByKey;
-
-// Function LGUI.UIBaseActor.ResumeSequenceByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_ResumeSequenceByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_ResumeSequenceByKey;
-
-// Function LGUI.UIBaseActor.SequenceJumpToEnd
-// 0x0020 (0x0020 - 0x0000)
-struct UIBaseActor_SequenceJumpToEnd final
-{
-public:
-	struct FSoftObjectPath                        SoftPath;                                          // 0x0000(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_SequenceJumpToEnd;
-
-// Function LGUI.UIBaseActor.SequenceJumpToSecondByKey
-// 0x0018 (0x0018 - 0x0000)
-struct UIBaseActor_SequenceJumpToSecondByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameTime                             Time;                                              // 0x0010(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_SequenceJumpToSecondByKey;
-
-// Function LGUI.UIBaseActor.SequencePlayReverseByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_SequencePlayReverseByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_SequencePlayReverseByKey;
-
-// Function LGUI.UIBaseActor.StopSequenceByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIBaseActor_StopSequenceByKey final
-{
-public:
-	class FString                                 Name_0;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_StopSequenceByKey;
-
-// Function LGUI.UIBaseActor.ExecuteSequencePlayEvent
-// 0x0020 (0x0020 - 0x0000)
-struct UIBaseActor_ExecuteSequencePlayEvent final
-{
-public:
-	class FString                                 sequenceName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 eventName;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_ExecuteSequencePlayEvent;
-
-// Function LGUI.UIBaseActor.GetUIItem
-// 0x0008 (0x0008 - 0x0000)
-struct UIBaseActor_GetUIItem final
-{
-public:
-	class UUIItem*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBaseActor_GetUIItem;
-
-// Function LGUI.LGUIWorldSpaceInteraction.SetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteraction_SetClickThreshold final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetClickThreshold;
-
-// Function LGUI.LGUIWorldSpaceInteraction.SetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteraction_SetHoldToDrag final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetHoldToDrag;
-
-// Function LGUI.LGUIWorldSpaceInteraction.SetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteraction_SetHoldToDragTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetHoldToDragTime;
-
-// Function LGUI.LGUIWorldSpaceInteraction.SetInteractionSource
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteraction_SetInteractionSource final
-{
-public:
-	ELGUIWorldSpaceInteractionSource              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_SetInteractionSource;
-
-// Function LGUI.LGUIWorldSpaceInteraction.GetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteraction_GetClickThreshold final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetClickThreshold;
-
-// Function LGUI.LGUIWorldSpaceInteraction.GetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteraction_GetHoldToDrag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetHoldToDrag;
-
-// Function LGUI.LGUIWorldSpaceInteraction.GetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteraction_GetHoldToDragTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetHoldToDragTime;
-
-// Function LGUI.LGUIWorldSpaceInteraction.GetInteractionSource
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteraction_GetInteractionSource final
-{
-public:
-	ELGUIWorldSpaceInteractionSource              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteraction_GetInteractionSource;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_SetClickThreshold final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetClickThreshold;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_SetHoldToDrag final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetHoldToDrag;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_SetHoldToDragTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetHoldToDragTime;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.SetInteractionSource
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_SetInteractionSource final
-{
-public:
-	ELGUIWorldSpaceInteractionSource              value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_SetInteractionSource;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetClickThreshold
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_GetClickThreshold final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetClickThreshold;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetHoldToDrag
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_GetHoldToDrag final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetHoldToDrag;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetHoldToDragTime
-// 0x0004 (0x0004 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_GetHoldToDragTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetHoldToDragTime;
-
-// Function LGUI.LGUIWorldSpaceInteractionForNoneUI.GetInteractionSource
-// 0x0001 (0x0001 - 0x0000)
-struct LGUIWorldSpaceInteractionForNoneUI_GetInteractionSource final
-{
-public:
-	ELGUIWorldSpaceInteractionSource              ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUIWorldSpaceInteractionForNoneUI_GetInteractionSource;
-
-// Function LGUI.UIScrollbarComponent.SetScrollbarDelegate
-// 0x0028 (0x0028 - 0x0000)
-struct UIScrollbarComponent_SetScrollbarDelegate final
-{
-public:
-	TDelegate<void(class UUIScrollbarComponent* ScrollbarComponent, bool ativeOrInactive)> Delegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_SetScrollbarDelegate;
-
-// Function LGUI.UIScrollbarComponent.ChangeSchedule
-// 0x0001 (0x0001 - 0x0000)
-struct UIScrollbarComponent_ChangeSchedule final
-{
-public:
-	ELGUINavigationDirection                      InDirection;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_ChangeSchedule;
-
-// Function LGUI.UIScrollbarComponent.RegisterSlideEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UIScrollbarComponent_RegisterSlideEvent final
-{
-public:
-	TDelegate<void(float InFloat)>                InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_RegisterSlideEvent;
-
-// Function LGUI.UIScrollbarComponent.SetSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollbarComponent_SetSize final
-{
-public:
-	float                                         InSize;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_SetSize;
-
-// Function LGUI.UIScrollbarComponent.SetValue
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollbarComponent_SetValue final
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_SetValue;
-
-// Function LGUI.UIScrollbarComponent.SetValueAndSize
-// 0x000C (0x000C - 0x0000)
-struct UIScrollbarComponent_SetValueAndSize final
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InSize;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_SetValueAndSize;
-
-// Function LGUI.UIScrollbarComponent.UnregisterSlideEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UIScrollbarComponent_UnregisterSlideEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_UnregisterSlideEvent;
-
-// Function LGUI.UIScrollbarComponent.GetSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollbarComponent_GetSize final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_GetSize;
-
-// Function LGUI.UIScrollbarComponent.GetValue
-// 0x0004 (0x0004 - 0x0000)
-struct UIScrollbarComponent_GetValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIScrollbarComponent_GetValue;
-
-// Function LGUI.SequencePlayContext.SetBatchRoots
-// 0x0010 (0x0010 - 0x0000)
-struct SequencePlayContext_SetBatchRoots final
-{
-public:
-	TArray<class AUIBaseActor*>                   BatchRoots;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencePlayContext_SetBatchRoots;
-
-// Function LGUI.SequencerManager.BatchPlaySequenceOnActors
-// 0x0058 (0x0058 - 0x0000)
-struct SequencerManager_BatchPlaySequenceOnActors final
-{
-public:
-	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        SequencePath;                                      // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AUIBaseActor*>                   BatchRoots;                                        // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMovieSceneSequencePlaybackSettings    PlaySetting;                                       // 0x0038(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ALevelSequenceActor*                    ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencerManager_BatchPlaySequenceOnActors;
-
-// Function LGUI.SequencerManager.GetBatchPlayContext
-// 0x0010 (0x0010 - 0x0000)
-struct SequencerManager_GetBatchPlayContext final
-{
-public:
-	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USequencePlayContext*                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencerManager_GetBatchPlayContext;
-
-// Function LGUI.SequencerManager.GetSequenceLoadState
-// 0x0030 (0x0030 - 0x0000)
-struct SequencerManager_GetSequenceLoadState final
-{
-public:
-	const class UObject*                          Context;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESequenceLoadState                            ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_SequencerManager_GetSequenceLoadState;
-
-// Function LGUI.SequencerManager.LoadSequenceAssetAsync
+// Function LGUI.UIComboBox.CreateComboBoxFromArray
 // 0x0050 (0x0050 - 0x0000)
-struct SequencerManager_LoadSequenceAssetAsync final
+struct UIComboBox_CreateComboBoxFromArray final
 {
 public:
-	const class UObject*                          Context;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        Path;                                              // 0x0008(0x0020)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(class ULevelSequence* Sequence)> OnLoad;                                          // 0x0028(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FString>                         InItemNameArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 InSelectIndex, const class FString& InSelectItem)> InCallback;              // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class AUIBaseActor*                           InParentActor;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InSelectedItemIndex;                               // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EComboBoxPosition                             InPosition;                                        // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIComboBox*                            ReturnValue;                                       // 0x0048(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_SequencerManager_LoadSequenceAssetAsync;
-
-// Function LGUI.SequencerManager.ClearInvalidBind
-// 0x0008 (0x0008 - 0x0000)
-struct SequencerManager_ClearInvalidBind final
-{
-public:
-	class ALevelSequenceActor*                    SeqActor;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencerManager_ClearInvalidBind;
-
-// Function LGUI.SequencerManager.SetGlobalPlayRate
-// 0x0004 (0x0004 - 0x0000)
-struct SequencerManager_SetGlobalPlayRate final
-{
-public:
-	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencerManager_SetGlobalPlayRate;
-
-// Function LGUI.SequencerManager.GetGlobalPlayRate
-// 0x0004 (0x0004 - 0x0000)
-struct SequencerManager_GetGlobalPlayRate final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_SequencerManager_GetGlobalPlayRate;
-
-// Function LGUI.UISpineRenderable.AfterSkeletonUpdate
-// 0x0008 (0x0008 - 0x0000)
-struct UISpineRenderable_AfterSkeletonUpdate final
-{
-public:
-	class USpineSkeletonComponent*                SkeletonComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpineRenderable_AfterSkeletonUpdate;
-
-// Function LGUI.UISpineRenderable.GetMeshesNum
-// 0x0004 (0x0004 - 0x0000)
-struct UISpineRenderable_GetMeshesNum final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpineRenderable_GetMeshesNum;
-
-// Function LGUI.UISpineRenderable.GetTotalVerticeNum
-// 0x0004 (0x0004 - 0x0000)
-struct UISpineRenderable_GetTotalVerticeNum final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpineRenderable_GetTotalVerticeNum;
-
-// Function LGUI.UISpineRenderable.OnSpineAnimationEnd
-// 0x0008 (0x0008 - 0x0000)
-struct UISpineRenderable_OnSpineAnimationEnd final
-{
-public:
-	class UTrackEntry*                            entry;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpineRenderable_OnSpineAnimationEnd;
-
-// Function LGUI.UISpineRenderable.OnSpineAnimationStart
-// 0x0008 (0x0008 - 0x0000)
-struct UISpineRenderable_OnSpineAnimationStart final
-{
-public:
-	class UTrackEntry*                            entry;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpineRenderable_OnSpineAnimationStart;
-
-// Function LGUI.UI2DLineRaw.SetPoints
-// 0x0018 (0x0018 - 0x0000)
-struct UI2DLineRaw_SetPoints final
-{
-public:
-	TArray<struct FVector2D>                      InPoints;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bAdjustSize;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UI2DLineRaw_SetPoints;
+DUMPER7_ASSERTS_UIComboBox_CreateComboBoxFromArray;
 
 // Function LGUI.UISpriteTransition.SetAllTransitionSprite
 // 0x0008 (0x0008 - 0x0000)
@@ -7840,721 +8046,6 @@ public:
 	class ULGUISpriteData_BaseObject*             NewSprite;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UISpriteTransition_SetStateSprite;
-
-// Function LGUI.UIAndroidBackComponent.GetActiveAndroidBackComponentSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIAndroidBackComponent_GetActiveAndroidBackComponentSize final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIAndroidBackComponent_GetActiveAndroidBackComponentSize;
-
-// Function LGUI.UIAndroidBackComponent.GetTopActiveAndroidBack
-// 0x0008 (0x0008 - 0x0000)
-struct UIAndroidBackComponent_GetTopActiveAndroidBack final
-{
-public:
-	class UUIAndroidBackComponent*                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIAndroidBackComponent_GetTopActiveAndroidBack;
-
-// Function LGUI.UIArtText.CheckTextValid
-// 0x0001 (0x0001 - 0x0000)
-struct UIArtText_CheckTextValid final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_CheckTextValid;
-
-// Function LGUI.UIArtText.SetArtTextData
-// 0x0008 (0x0008 - 0x0000)
-struct UIArtText_SetArtTextData final
-{
-public:
-	class ULGUIArtTextData*                       NewArtTextData;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetArtTextData;
-
-// Function LGUI.UIArtText.SetHorizontalAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIArtText_SetHorizontalAlign final
-{
-public:
-	EUIArtTextHorizontalAlign                     NewHorizontalAlign;                                // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetHorizontalAlign;
-
-// Function LGUI.UIArtText.SetIsWidthControlledByText
-// 0x0001 (0x0001 - 0x0000)
-struct UIArtText_SetIsWidthControlledByText final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetIsWidthControlledByText;
-
-// Function LGUI.UIArtText.SetSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIArtText_SetSize final
-{
-public:
-	float                                         NewSize;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetSize;
-
-// Function LGUI.UIArtText.SetSpace
-// 0x0008 (0x0008 - 0x0000)
-struct UIArtText_SetSpace final
-{
-public:
-	struct FVector2D                              NewSpace;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetSpace;
-
-// Function LGUI.UIArtText.SetText
-// 0x0010 (0x0010 - 0x0000)
-struct UIArtText_SetText final
-{
-public:
-	class FString                                 NewText;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_SetText;
-
-// Function LGUI.UIArtText.GetArtTextData
-// 0x0008 (0x0008 - 0x0000)
-struct UIArtText_GetArtTextData final
-{
-public:
-	class ULGUIArtTextData*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetArtTextData;
-
-// Function LGUI.UIArtText.GetHorizontalAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIArtText_GetHorizontalAlign final
-{
-public:
-	EUIArtTextHorizontalAlign                     ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetHorizontalAlign;
-
-// Function LGUI.UIArtText.GetIsWidthControlledByText
-// 0x0004 (0x0004 - 0x0000)
-struct UIArtText_GetIsWidthControlledByText final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetIsWidthControlledByText;
-
-// Function LGUI.UIArtText.GetSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIArtText_GetSize final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetSize;
-
-// Function LGUI.UIArtText.GetSpace
-// 0x0008 (0x0008 - 0x0000)
-struct UIArtText_GetSpace final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetSpace;
-
-// Function LGUI.UIArtText.GetText
-// 0x0010 (0x0010 - 0x0000)
-struct UIArtText_GetText final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIArtText_GetText;
-
-// Function LGUI.UIAudioManager.PlayAudioEventByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIAudioManager_PlayAudioEventByKey final
-{
-public:
-	class FString                                 EventKey;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIAudioManager_PlayAudioEventByKey;
-
-// Function LGUI.UIAudioManager.StopAudioEventByKey
-// 0x0010 (0x0010 - 0x0000)
-struct UIAudioManager_StopAudioEventByKey final
-{
-public:
-	class FString                                 EventKey;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIAudioManager_StopAudioEventByKey;
-
-// Function LGUI.UISliderComponent.RegisterSlideEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UISliderComponent_RegisterSlideEvent final
-{
-public:
-	TDelegate<void(float InFloat)>                InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISliderComponent_RegisterSlideEvent;
-
-// Function LGUI.UISliderComponent.SetMaxValue
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_SetMaxValue final
-{
-public:
-	float                                         InMaxValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          KeepRelativeValue;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISliderComponent_SetMaxValue;
-
-// Function LGUI.UISliderComponent.SetMinValue
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_SetMinValue final
-{
-public:
-	float                                         InMinValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          KeepRelativeValue;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISliderComponent_SetMinValue;
-
-// Function LGUI.UISliderComponent.SetProgressIncrement
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_SetProgressIncrement final
-{
-public:
-	float                                         incrementValue;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          needRound;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          NeedAudio;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISliderComponent_SetProgressIncrement;
-
-// Function LGUI.UISliderComponent.SetValue
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_SetValue final
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISliderComponent_SetValue;
-
-// Function LGUI.UISliderComponent.SetValueWithAudio
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_SetValueWithAudio final
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISliderComponent_SetValueWithAudio;
-
-// Function LGUI.UISliderComponent.UnregisterSlideEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UISliderComponent_UnregisterSlideEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISliderComponent_UnregisterSlideEvent;
-
-// Function LGUI.UISliderComponent.GetMaxValue
-// 0x0004 (0x0004 - 0x0000)
-struct UISliderComponent_GetMaxValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISliderComponent_GetMaxValue;
-
-// Function LGUI.UISliderComponent.GetMinValue
-// 0x0004 (0x0004 - 0x0000)
-struct UISliderComponent_GetMinValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISliderComponent_GetMinValue;
-
-// Function LGUI.UISliderComponent.GetValue
-// 0x0004 (0x0004 - 0x0000)
-struct UISliderComponent_GetValue final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISliderComponent_GetValue;
-
-// Function LGUI.UIPostProcessRenderable.SetMaskTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UIPostProcessRenderable_SetMaskTexture final
-{
-public:
-	class UTexture2D*                             newValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPostProcessRenderable_SetMaskTexture;
-
-// Function LGUI.UIPostProcessRenderable.GetMaskTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UIPostProcessRenderable_GetMaskTexture final
-{
-public:
-	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIPostProcessRenderable_GetMaskTexture;
-
-// Function LGUI.UIBackgroundBlur.SetApplyAlphaToBlur
-// 0x0001 (0x0001 - 0x0000)
-struct UIBackgroundBlur_SetApplyAlphaToBlur final
-{
-public:
-	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_SetApplyAlphaToBlur;
-
-// Function LGUI.UIBackgroundBlur.SetBlurStrength
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundBlur_SetBlurStrength final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_SetBlurStrength;
-
-// Function LGUI.UIBackgroundBlur.SetMaxDownSampleLevel
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundBlur_SetMaxDownSampleLevel final
-{
-public:
-	int32                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_SetMaxDownSampleLevel;
-
-// Function LGUI.UIBackgroundBlur.SetStrengthTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UIBackgroundBlur_SetStrengthTexture final
-{
-public:
-	class UTexture2D*                             newValue;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_SetStrengthTexture;
-
-// Function LGUI.UIBackgroundBlur.GetApplyAlphaToBlur
-// 0x0001 (0x0001 - 0x0000)
-struct UIBackgroundBlur_GetApplyAlphaToBlur final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_GetApplyAlphaToBlur;
-
-// Function LGUI.UIBackgroundBlur.GetBlurStrength
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundBlur_GetBlurStrength final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_GetBlurStrength;
-
-// Function LGUI.UIBackgroundBlur.GetMaxDownSampleLevel
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundBlur_GetMaxDownSampleLevel final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_GetMaxDownSampleLevel;
-
-// Function LGUI.UIBackgroundBlur.GetStrengthTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UIBackgroundBlur_GetStrengthTexture final
-{
-public:
-	class UTexture2D*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundBlur_GetStrengthTexture;
-
-// Function LGUI.UISpriteSheetTexturePlayer.SetHeightCount
-// 0x0004 (0x0004 - 0x0000)
-struct UISpriteSheetTexturePlayer_SetHeightCount final
-{
-public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_SetHeightCount;
-
-// Function LGUI.UISpriteSheetTexturePlayer.SetWidthCount
-// 0x0004 (0x0004 - 0x0000)
-struct UISpriteSheetTexturePlayer_SetWidthCount final
-{
-public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_SetWidthCount;
-
-// Function LGUI.UISpriteSheetTexturePlayer.GetHeightCount
-// 0x0004 (0x0004 - 0x0000)
-struct UISpriteSheetTexturePlayer_GetHeightCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_GetHeightCount;
-
-// Function LGUI.UISpriteSheetTexturePlayer.GetWidthCount
-// 0x0004 (0x0004 - 0x0000)
-struct UISpriteSheetTexturePlayer_GetWidthCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteSheetTexturePlayer_GetWidthCount;
-
-// Function LGUI.UITextInputComponent.SetShowKeyboardDelegate
-// 0x0028 (0x0028 - 0x0000)
-struct UITextInputComponent_SetShowKeyboardDelegate final
-{
-public:
-	TDelegate<void(bool state)>                   InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_SetShowKeyboardDelegate;
-
-// Function LGUI.UITextInputComponent.IsInputActive
-// 0x0001 (0x0001 - 0x0000)
-struct UITextInputComponent_IsInputActive final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_IsInputActive;
-
-// Function LGUI.UITextInputComponent.RegisterInputActivateEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UITextInputComponent_RegisterInputActivateEvent final
-{
-public:
-	TDelegate<void(bool InActivate)>              InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_RegisterInputActivateEvent;
-
-// Function LGUI.UITextInputComponent.RegisterSubmitEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UITextInputComponent_RegisterSubmitEvent final
-{
-public:
-	TDelegate<void(const class FString& InString)> InDelegate;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_RegisterSubmitEvent;
-
-// Function LGUI.UITextInputComponent.RegisterValueChangeEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UITextInputComponent_RegisterValueChangeEvent final
-{
-public:
-	TDelegate<void(const class FString& InString)> InDelegate;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_RegisterValueChangeEvent;
-
-// Function LGUI.UITextInputComponent.SetCustomInputTypeFunction
-// 0x0028 (0x0028 - 0x0000)
-struct UITextInputComponent_SetCustomInputTypeFunction final
-{
-public:
-	TDelegate<void(const class FString& InString)> InFunction;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_SetCustomInputTypeFunction;
-
-// Function LGUI.UITextInputComponent.SetInputType
-// 0x0001 (0x0001 - 0x0000)
-struct UITextInputComponent_SetInputType final
-{
-public:
-	ELGUITextInputType                            newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_SetInputType;
-
-// Function LGUI.UITextInputComponent.SetText
-// 0x0018 (0x0018 - 0x0000)
-struct UITextInputComponent_SetText final
-{
-public:
-	class FString                                 InText;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InFireEvent;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UITextInputComponent_SetText;
-
-// Function LGUI.UITextInputComponent.UnregisterInputActivateEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UITextInputComponent_UnregisterInputActivateEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_UnregisterInputActivateEvent;
-
-// Function LGUI.UITextInputComponent.UnregisterSubmitEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UITextInputComponent_UnregisterSubmitEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_UnregisterSubmitEvent;
-
-// Function LGUI.UITextInputComponent.UnregisterValueChangeEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UITextInputComponent_UnregisterValueChangeEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_UnregisterValueChangeEvent;
-
-// Function LGUI.UITextInputComponent.GetInputType
-// 0x0001 (0x0001 - 0x0000)
-struct UITextInputComponent_GetInputType final
-{
-public:
-	ELGUITextInputType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_GetInputType;
-
-// Function LGUI.UITextInputComponent.GetText
-// 0x0010 (0x0010 - 0x0000)
-struct UITextInputComponent_GetText final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_GetText;
-
-// Function LGUI.UITextInputComponent.GetTextComponent
-// 0x0008 (0x0008 - 0x0000)
-struct UITextInputComponent_GetTextComponent final
-{
-public:
-	class UUIText*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextInputComponent_GetTextComponent;
-
-// Function LGUI.UIBackgroundPixelate.SetApplyAlphaToStrength
-// 0x0001 (0x0001 - 0x0000)
-struct UIBackgroundPixelate_SetApplyAlphaToStrength final
-{
-public:
-	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundPixelate_SetApplyAlphaToStrength;
-
-// Function LGUI.UIBackgroundPixelate.SetPixelateStrength
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundPixelate_SetPixelateStrength final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundPixelate_SetPixelateStrength;
-
-// Function LGUI.UIBackgroundPixelate.GetApplyAlphaToStrength
-// 0x0001 (0x0001 - 0x0000)
-struct UIBackgroundPixelate_GetApplyAlphaToStrength final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundPixelate_GetApplyAlphaToStrength;
-
-// Function LGUI.UIBackgroundPixelate.GetPixelateStrength
-// 0x0004 (0x0004 - 0x0000)
-struct UIBackgroundPixelate_GetPixelateStrength final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBackgroundPixelate_GetPixelateStrength;
-
-// Function LGUI.UISpriteBase_BP.OnCreateGeometry_BP
-// 0x0010 (0x0010 - 0x0000)
-struct UISpriteBase_BP_OnCreateGeometry_BP final
-{
-public:
-	class ULGUICreateGeometryHelper*              InCreateGeometryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULGUISpriteData_BaseObject*             InSpriteData;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISpriteBase_BP_OnCreateGeometry_BP;
-
-// Function LGUI.UISpriteBase_BP.OnUpdateGeometry_BP
-// 0x0018 (0x0018 - 0x0000)
-struct UISpriteBase_BP_OnUpdateGeometry_BP final
-{
-public:
-	class ULGUIUpdateGeometryHelper*              InUpdateGoemetryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULGUISpriteData_BaseObject*             InSpriteData;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexPositionChanged;                           // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexUVChanged;                                 // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexColorChanged;                              // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UISpriteBase_BP_OnUpdateGeometry_BP;
-
-// Function LGUI.LGUICreateGeometryHelper.AddTriangle
-// 0x000C (0x000C - 0x0000)
-struct LGUICreateGeometryHelper_AddTriangle final
-{
-public:
-	int32                                         index0;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         index1;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         index2;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddTriangle;
-
-// Function LGUI.LGUICreateGeometryHelper.AddVertexFull
-// 0x0048 (0x0048 - 0x0000)
-struct LGUICreateGeometryHelper_AddVertexFull final
-{
-public:
-	struct FVector                                position;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 color;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              uv0;                                               // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              uv1;                                               // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              uv2;                                               // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              uv3;                                               // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                normal;                                            // 0x0030(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                tangent;                                           // 0x003C(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexFull;
-
-// Function LGUI.LGUICreateGeometryHelper.AddVertexSimple
-// 0x0018 (0x0018 - 0x0000)
-struct LGUICreateGeometryHelper_AddVertexSimple final
-{
-public:
-	struct FVector                                position;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 color;                                             // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              uv0;                                               // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexSimple;
-
-// Function LGUI.LGUICreateGeometryHelper.AddVertexStruct
-// 0x0048 (0x0048 - 0x0000)
-struct LGUICreateGeometryHelper_AddVertexStruct final
-{
-public:
-	struct FLGUIGeometryVertex                    vertex;                                            // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LGUICreateGeometryHelper_AddVertexStruct;
-
-// Function LGUI.UIBatchGeometryRenderable_BP.OnCreateGeometry_BP
-// 0x0008 (0x0008 - 0x0000)
-struct UIBatchGeometryRenderable_BP_OnCreateGeometry_BP final
-{
-public:
-	class ULGUICreateGeometryHelper*              InCreateGeometryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_BP_OnCreateGeometry_BP;
-
-// Function LGUI.UIBatchGeometryRenderable_BP.OnUpdateGeometry_BP
-// 0x0010 (0x0010 - 0x0000)
-struct UIBatchGeometryRenderable_BP_OnUpdateGeometry_BP final
-{
-public:
-	class ULGUIUpdateGeometryHelper*              InUpdateGoemetryHelper;                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexPositionChanged;                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexUVChanged;                                 // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InVertexColorChanged;                              // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_UIBatchGeometryRenderable_BP_OnUpdateGeometry_BP;
-
-// Function LGUI.UITextureTransitionComponent.SetAllStateTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UITextureTransitionComponent_SetAllStateTexture final
-{
-public:
-	class UTexture*                               NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureTransitionComponent_SetAllStateTexture;
-
-// Function LGUI.UITextureTransitionComponent.SetStateTexture
-// 0x0010 (0x0010 - 0x0000)
-struct UITextureTransitionComponent_SetStateTexture final
-{
-public:
-	EUISelectableSelectionState                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               NewTexture;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureTransitionComponent_SetStateTexture;
-
-// Function LGUI.UIComboBox.CreateComboBoxFromArray
-// 0x0050 (0x0050 - 0x0000)
-struct UIComboBox_CreateComboBoxFromArray final
-{
-public:
-	TArray<class FString>                         InItemNameArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TDelegate<void(int32 InSelectIndex, const class FString& InSelectItem)> InCallback;              // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class AUIBaseActor*                           InParentActor;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InSelectedItemIndex;                               // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EComboBoxPosition                             InPosition;                                        // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIComboBox*                            ReturnValue;                                       // 0x0048(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIComboBox_CreateComboBoxFromArray;
-
-// Function LGUI.UITextureBase.OnDynamicAtlasSlotBuilt
-// 0x0010 (0x0010 - 0x0000)
-struct UITextureBase_OnDynamicAtlasSlotBuilt final
-{
-public:
-	struct FDynamicAtlasSlotManagedHandle         ManagedHandle;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureBase_OnDynamicAtlasSlotBuilt;
-
-// Function LGUI.UITextureBase.SetDynamicAtlasTextureAsync
-// 0x0030 (0x0030 - 0x0000)
-struct UITextureBase_SetDynamicAtlasTextureAsync final
-{
-public:
-	class FString                                 InAtlasTag;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        InSoftObjectPath;                                  // 0x0010(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureBase_SetDynamicAtlasTextureAsync;
-
-// Function LGUI.UITextureBase.SetTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UITextureBase_SetTexture final
-{
-public:
-	class UTexture*                               newTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureBase_SetTexture;
-
-// Function LGUI.UITextureBase.GetTexture
-// 0x0008 (0x0008 - 0x0000)
-struct UITextureBase_GetTexture final
-{
-public:
-	class UTexture*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITextureBase_GetTexture;
 
 // Function LGUI.UICustomDepthStencilMask.SetFullScreen
 // 0x0001 (0x0001 - 0x0000)
@@ -8610,105 +8101,6 @@ public:
 };
 DUMPER7_ASSERTS_UICustomDepthStencilMask_GetStencilValue;
 
-// Function LGUI.UILayoutBase.SetGridAnimationInterval
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutBase_SetGridAnimationInterval final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_SetGridAnimationInterval;
-
-// Function LGUI.UILayoutBase.SetGridAnimationStartTime
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutBase_SetGridAnimationStartTime final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_SetGridAnimationStartTime;
-
-// Function LGUI.UILayoutBase.SetInAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutBase_SetInAnimation final
-{
-public:
-	bool                                          state;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_SetInAnimation;
-
-// Function LGUI.UILayoutBase.GetGridAnimationInterval
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutBase_GetGridAnimationInterval final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_GetGridAnimationInterval;
-
-// Function LGUI.UILayoutBase.GetGridAnimationStartTime
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutBase_GetGridAnimationStartTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_GetGridAnimationStartTime;
-
-// Function LGUI.UILayoutBase.GetInAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutBase_GetInAnimation final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutBase_GetInAnimation;
-
-// Function LGUI.UILayoutWithAnimation.CancelAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutWithAnimation_CancelAnimation final
-{
-public:
-	bool                                          callComplete;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutWithAnimation_CancelAnimation;
-
-// Function LGUI.UILayoutWithAnimation.SetAnimationDuration
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutWithAnimation_SetAnimationDuration final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutWithAnimation_SetAnimationDuration;
-
-// Function LGUI.UILayoutWithAnimation.SetAnimationType
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutWithAnimation_SetAnimationType final
-{
-public:
-	EUILayoutChangePositionAnimationType          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutWithAnimation_SetAnimationType;
-
-// Function LGUI.UILayoutWithAnimation.GetAnimationDuration
-// 0x0004 (0x0004 - 0x0000)
-struct UILayoutWithAnimation_GetAnimationDuration final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutWithAnimation_GetAnimationDuration;
-
-// Function LGUI.UILayoutWithAnimation.GetAnimationType
-// 0x0001 (0x0001 - 0x0000)
-struct UILayoutWithAnimation_GetAnimationType final
-{
-public:
-	EUILayoutChangePositionAnimationType          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UILayoutWithAnimation_GetAnimationType;
-
 // Function LGUI.UICustomMesh.CreateMeshSection
 // 0x00D8 (0x00D8 - 0x0000)
 struct UICustomMesh_CreateMeshSection final
@@ -8741,228 +8133,275 @@ public:
 };
 DUMPER7_ASSERTS_UICustomMesh_ReadStaticMeshData;
 
-// Function LGUI.UITexture.SetCurFrame
-// 0x0004 (0x0004 - 0x0000)
-struct UITexture_SetCurFrame final
-{
-public:
-	float                                         newCurFrame;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_SetCurFrame;
-
-// Function LGUI.UITexture.SetFillAmount
-// 0x0004 (0x0004 - 0x0000)
-struct UITexture_SetFillAmount final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_SetFillAmount;
-
-// Function LGUI.UITexture.SetFillDirectionFlip
+// Function LGUI.UIVerticalLayout.SetAlign
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_SetFillDirectionFlip final
+struct UIVerticalLayout_SetAlign final
 {
 public:
-	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_SetFillDirectionFlip;
+DUMPER7_ASSERTS_UIVerticalLayout_SetAlign;
 
-// Function LGUI.UITexture.SetFillMethod
+// Function LGUI.UIVerticalLayout.SetExpendChildrenHeight
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_SetFillMethod final
+struct UIVerticalLayout_SetExpendChildrenHeight final
 {
 public:
-	EUISpriteFillMethod                           newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_SetFillMethod;
+DUMPER7_ASSERTS_UIVerticalLayout_SetExpendChildrenHeight;
 
-// Function LGUI.UITexture.SetFillOrigin
+// Function LGUI.UIVerticalLayout.SetExpendChildrenWidth
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_SetFillOrigin final
+struct UIVerticalLayout_SetExpendChildrenWidth final
 {
 public:
-	uint8                                         newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_SetFillOrigin;
+DUMPER7_ASSERTS_UIVerticalLayout_SetExpendChildrenWidth;
 
-// Function LGUI.UITexture.SetSpriteData
-// 0x0090 (0x0090 - 0x0000)
-struct UITexture_SetSpriteData final
-{
-public:
-	struct FLGUISpriteInfo                        newSpriteData;                                     // 0x0000(0x0090)(Parm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_SetSpriteData;
-
-// Function LGUI.UITexture.SetTextureData
-// 0x0008 (0x0008 - 0x0000)
-struct UITexture_SetTextureData final
-{
-public:
-	class ULGUITextureData*                       NewTextureData;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_SetTextureData;
-
-// Function LGUI.UITexture.SetTextureType
+// Function LGUI.UIVerticalLayout.SetHeightFitToChildren
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_SetTextureType final
+struct UIVerticalLayout_SetHeightFitToChildren final
 {
 public:
-	EUITextureType                                newType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_SetTextureType;
+DUMPER7_ASSERTS_UIVerticalLayout_SetHeightFitToChildren;
 
-// Function LGUI.UITexture.SetUVRect
+// Function LGUI.UIVerticalLayout.SetPadding
 // 0x0010 (0x0010 - 0x0000)
-struct UITexture_SetUVRect final
+struct UIVerticalLayout_SetPadding final
 {
 public:
-	struct FVector4                               newUVRect;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_SetUVRect;
+DUMPER7_ASSERTS_UIVerticalLayout_SetPadding;
 
-// Function LGUI.UITexture.GetFillAmount
+// Function LGUI.UIVerticalLayout.SetSpacing
 // 0x0004 (0x0004 - 0x0000)
-struct UITexture_GetFillAmount final
+struct UIVerticalLayout_SetSpacing final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIVerticalLayout_SetSpacing;
+
+// Function LGUI.UIVerticalLayout.SetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIVerticalLayout_SetWidthFitToChildren final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIVerticalLayout_SetWidthFitToChildren;
+
+// Function LGUI.UIVerticalLayout.GetActuralRange
+// 0x0004 (0x0004 - 0x0000)
+struct UIVerticalLayout_GetActuralRange final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_GetFillAmount;
+DUMPER7_ASSERTS_UIVerticalLayout_GetActuralRange;
 
-// Function LGUI.UITexture.GetFillDirectionFlip
+// Function LGUI.UIVerticalLayout.GetAlign
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_GetFillDirectionFlip final
+struct UIVerticalLayout_GetAlign final
+{
+public:
+	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIVerticalLayout_GetAlign;
+
+// Function LGUI.UIVerticalLayout.GetExpendChildrenHeight
+// 0x0001 (0x0001 - 0x0000)
+struct UIVerticalLayout_GetExpendChildrenHeight final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_GetFillDirectionFlip;
+DUMPER7_ASSERTS_UIVerticalLayout_GetExpendChildrenHeight;
 
-// Function LGUI.UITexture.GetFillMethod
+// Function LGUI.UIVerticalLayout.GetExpendChildrenWidth
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_GetFillMethod final
+struct UIVerticalLayout_GetExpendChildrenWidth final
 {
 public:
-	EUISpriteFillMethod                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_GetFillMethod;
+DUMPER7_ASSERTS_UIVerticalLayout_GetExpendChildrenWidth;
 
-// Function LGUI.UITexture.GetFillOrigin
+// Function LGUI.UIVerticalLayout.GetHeightFitToChildren
 // 0x0001 (0x0001 - 0x0000)
-struct UITexture_GetFillOrigin final
+struct UIVerticalLayout_GetHeightFitToChildren final
 {
 public:
-	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_GetFillOrigin;
+DUMPER7_ASSERTS_UIVerticalLayout_GetHeightFitToChildren;
 
-// Function LGUI.UITexture.GetSpriteData
-// 0x0090 (0x0090 - 0x0000)
-struct UITexture_GetSpriteData final
-{
-public:
-	struct FLGUISpriteInfo                        ReturnValue;                                       // 0x0000(0x0090)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_GetSpriteData;
-
-// Function LGUI.UITexture.GetTextureData
-// 0x0008 (0x0008 - 0x0000)
-struct UITexture_GetTextureData final
-{
-public:
-	class ULGUITextureData*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_GetTextureData;
-
-// Function LGUI.UITexture.GetTextureType
-// 0x0001 (0x0001 - 0x0000)
-struct UITexture_GetTextureType final
-{
-public:
-	EUITextureType                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UITexture_GetTextureType;
-
-// Function LGUI.UITexture.GetUVRect
+// Function LGUI.UIVerticalLayout.GetPadding
 // 0x0010 (0x0010 - 0x0000)
-struct UITexture_GetUVRect final
+struct UIVerticalLayout_GetPadding final
 {
 public:
-	struct FVector4                               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UITexture_GetUVRect;
+DUMPER7_ASSERTS_UIVerticalLayout_GetPadding;
 
-// Function LGUI.ViewportUITexture.GetSceneCapture
-// 0x0008 (0x0008 - 0x0000)
-struct ViewportUITexture_GetSceneCapture final
-{
-public:
-	class USceneCaptureComponent2D*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ViewportUITexture_GetSceneCapture;
-
-// Function LGUI.ViewportUITexture.ViewPointToWorld
-// 0x0020 (0x0020 - 0x0000)
-struct ViewportUITexture_ViewPointToWorld final
-{
-public:
-	struct FVector2D                              InViewPoint;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWorldLocation;                                  // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWorldDirection;                                 // 0x0014(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_ViewportUITexture_ViewPointToWorld;
-
-// Function LGUI.ViewportUITexture.WorldToViewPoint
-// 0x0018 (0x0018 - 0x0000)
-struct ViewportUITexture_WorldToViewPoint final
-{
-public:
-	struct FVector                                InWorldLocation;                                   // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              OutViewPoint;                                      // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_ViewportUITexture_WorldToViewPoint;
-
-// Function LGUI.UIDirectMeshRenderable.SetCustormUIMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct UIDirectMeshRenderable_SetCustormUIMaterial final
-{
-public:
-	class UMaterialInterface*                     NewMaterial;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIDirectMeshRenderable_SetCustormUIMaterial;
-
-// Function LGUI.UIInputAdaptZone.OnMouseMoved
+// Function LGUI.UIVerticalLayout.GetSpacing
 // 0x0004 (0x0004 - 0x0000)
-struct UIInputAdaptZone_OnMouseMoved final
+struct UIVerticalLayout_GetSpacing final
 {
 public:
-	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIInputAdaptZone_OnMouseMoved;
+DUMPER7_ASSERTS_UIVerticalLayout_GetSpacing;
 
-// Function LGUI.UIInputAdaptZone.OnPressAnyKey
-// 0x0020 (0x0020 - 0x0000)
-struct UIInputAdaptZone_OnPressAnyKey final
+// Function LGUI.UIVerticalLayout.GetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIVerticalLayout_GetWidthFitToChildren final
 {
 public:
-	struct FKey                                   Key;                                               // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIInputAdaptZone_OnPressAnyKey;
+DUMPER7_ASSERTS_UIVerticalLayout_GetWidthFitToChildren;
 
-// Function LGUI.UIInputAdaptZone.OnTouchBegin
+// Function LGUI.UIHorizontalLayout.SetAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_SetAlign final
+{
+public:
+	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetAlign;
+
+// Function LGUI.UIHorizontalLayout.SetExpendChildrenHeight
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_SetExpendChildrenHeight final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetExpendChildrenHeight;
+
+// Function LGUI.UIHorizontalLayout.SetExpendChildrenWidth
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_SetExpendChildrenWidth final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetExpendChildrenWidth;
+
+// Function LGUI.UIHorizontalLayout.SetHeightFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_SetHeightFitToChildren final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetHeightFitToChildren;
+
+// Function LGUI.UIHorizontalLayout.SetPadding
 // 0x0010 (0x0010 - 0x0000)
-struct UIInputAdaptZone_OnTouchBegin final
+struct UIHorizontalLayout_SetPadding final
 {
 public:
-	ETouchIndex                                   TouchIndex;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Location;                                          // 0x0004(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIInputAdaptZone_OnTouchBegin;
+DUMPER7_ASSERTS_UIHorizontalLayout_SetPadding;
+
+// Function LGUI.UIHorizontalLayout.SetSpacing
+// 0x0004 (0x0004 - 0x0000)
+struct UIHorizontalLayout_SetSpacing final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetSpacing;
+
+// Function LGUI.UIHorizontalLayout.SetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_SetWidthFitToChildren final
+{
+public:
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_SetWidthFitToChildren;
+
+// Function LGUI.UIHorizontalLayout.GetActuralRange
+// 0x0004 (0x0004 - 0x0000)
+struct UIHorizontalLayout_GetActuralRange final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetActuralRange;
+
+// Function LGUI.UIHorizontalLayout.GetAlign
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_GetAlign final
+{
+public:
+	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetAlign;
+
+// Function LGUI.UIHorizontalLayout.GetExpendChildrenHeight
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_GetExpendChildrenHeight final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetExpendChildrenHeight;
+
+// Function LGUI.UIHorizontalLayout.GetExpendChildrenWidth
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_GetExpendChildrenWidth final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetExpendChildrenWidth;
+
+// Function LGUI.UIHorizontalLayout.GetHeightFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_GetHeightFitToChildren final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetHeightFitToChildren;
+
+// Function LGUI.UIHorizontalLayout.GetPadding
+// 0x0010 (0x0010 - 0x0000)
+struct UIHorizontalLayout_GetPadding final
+{
+public:
+	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetPadding;
+
+// Function LGUI.UIHorizontalLayout.GetSpacing
+// 0x0004 (0x0004 - 0x0000)
+struct UIHorizontalLayout_GetSpacing final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetSpacing;
+
+// Function LGUI.UIHorizontalLayout.GetWidthFitToChildren
+// 0x0001 (0x0001 - 0x0000)
+struct UIHorizontalLayout_GetWidthFitToChildren final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIHorizontalLayout_GetWidthFitToChildren;
 
 // Function LGUI.UIDropdownComponent.AddOptions
 // 0x0010 (0x0010 - 0x0000)
@@ -9122,14 +8561,89 @@ public:
 };
 DUMPER7_ASSERTS_UIDropdownComponent_GetVerticalPosition;
 
-// Function LGUI.UIFrameAnimController.Play
-// 0x0001 (0x0001 - 0x0000)
-struct UIFrameAnimController_Play final
+// Function LGUI.UIToggleComponent.RegisterToggleEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UIToggleComponent_RegisterToggleEvent final
 {
 public:
-	bool                                          bLooping;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(bool InBool)>                  InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIFrameAnimController_Play;
+DUMPER7_ASSERTS_UIToggleComponent_RegisterToggleEvent;
+
+// Function LGUI.UIToggleComponent.SetState
+// 0x0002 (0x0002 - 0x0000)
+struct UIToggleComponent_SetState final
+{
+public:
+	bool                                          newState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          fireEvent;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_SetState;
+
+// Function LGUI.UIToggleComponent.SetToggleGroup
+// 0x0008 (0x0008 - 0x0000)
+struct UIToggleComponent_SetToggleGroup final
+{
+public:
+	class UUIToggleGroupComponent*                InGroupComp;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_SetToggleGroup;
+
+// Function LGUI.UIToggleComponent.SetValue
+// 0x0002 (0x0002 - 0x0000)
+struct UIToggleComponent_SetValue final
+{
+public:
+	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          fireEvent;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_SetValue;
+
+// Function LGUI.UIToggleComponent.UnregisterToggleEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UIToggleComponent_UnregisterToggleEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_UnregisterToggleEvent;
+
+// Function LGUI.UIToggleComponent.GetIndexInGroup
+// 0x0004 (0x0004 - 0x0000)
+struct UIToggleComponent_GetIndexInGroup final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_GetIndexInGroup;
+
+// Function LGUI.UIToggleComponent.GetState
+// 0x0001 (0x0001 - 0x0000)
+struct UIToggleComponent_GetState final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_GetState;
+
+// Function LGUI.UIToggleComponent.GetToggleGroupActor
+// 0x0008 (0x0008 - 0x0000)
+struct UIToggleComponent_GetToggleGroupActor final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_GetToggleGroupActor;
+
+// Function LGUI.UIToggleComponent.GetValue
+// 0x0001 (0x0001 - 0x0000)
+struct UIToggleComponent_GetValue final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIToggleComponent_GetValue;
 
 // Function LGUI.GeometryHandle.SetAdditionalUV
 // 0x000C (0x000C - 0x0000)
@@ -9149,42 +8663,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_GeometryHandle_IsGeometryValid;
-
-// Function LGUI.UIViewTweenParams.GetTweenAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIViewTweenParams_GetTweenAlpha final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIViewTweenParams_GetTweenAlpha;
-
-// Function LGUI.UIViewTweenParams.GetTweenSize
-// 0x0004 (0x0004 - 0x0000)
-struct UIViewTweenParams_GetTweenSize final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIViewTweenParams_GetTweenSize;
-
-// Function LGUI.UIViewTweenParams.GetTweenTime
-// 0x0004 (0x0004 - 0x0000)
-struct UIViewTweenParams_GetTweenTime final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIViewTweenParams_GetTweenTime;
-
-// Function LGUI.UIViewTweenParams.GetViewNameBlackList
-// 0x0010 (0x0010 - 0x0000)
-struct UIViewTweenParams_GetViewNameBlackList final
-{
-public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIViewTweenParams_GetViewNameBlackList;
 
 // Function LGUI.UIDynamicBatchMesh.AddBatchGeometryRenderable
 // 0x0010 (0x0010 - 0x0000)
@@ -9244,6 +8722,42 @@ public:
 };
 DUMPER7_ASSERTS_UIDynamicSpriteAtlasMgr_OnDynamicAtlasSlotBuilt;
 
+// Function LGUI.UIViewTweenParams.GetTweenAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct UIViewTweenParams_GetTweenAlpha final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIViewTweenParams_GetTweenAlpha;
+
+// Function LGUI.UIViewTweenParams.GetTweenSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIViewTweenParams_GetTweenSize final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIViewTweenParams_GetTweenSize;
+
+// Function LGUI.UIViewTweenParams.GetTweenTime
+// 0x0004 (0x0004 - 0x0000)
+struct UIViewTweenParams_GetTweenTime final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIViewTweenParams_GetTweenTime;
+
+// Function LGUI.UIViewTweenParams.GetViewNameBlackList
+// 0x0010 (0x0010 - 0x0000)
+struct UIViewTweenParams_GetViewNameBlackList final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIViewTweenParams_GetViewNameBlackList;
+
 // Function LGUI.UIDynmaicTextureAtlasMgr.OnDynamicAtlasExpandCallback
 // 0x0020 (0x0020 - 0x0000)
 struct UIDynmaicTextureAtlasMgr_OnDynamicAtlasExpandCallback final
@@ -9253,149 +8767,506 @@ public:
 };
 DUMPER7_ASSERTS_UIDynmaicTextureAtlasMgr_OnDynamicAtlasExpandCallback;
 
-// Function LGUI.WwiseAudioComponent.GetAudioStateSystemLevel
+// Function LGUI.UIScrollViewComponent.GetDecelerationRateDegbug
 // 0x0004 (0x0004 - 0x0000)
-struct WwiseAudioComponent_GetAudioStateSystemLevel final
+struct UIScrollViewComponent_GetDecelerationRateDegbug final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_WwiseAudioComponent_GetAudioStateSystemLevel;
+DUMPER7_ASSERTS_UIScrollViewComponent_GetDecelerationRateDegbug;
 
-// Function LGUI.UIVerticalLayout.SetAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_SetAlign final
-{
-public:
-	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIVerticalLayout_SetAlign;
-
-// Function LGUI.UIVerticalLayout.SetExpendChildrenHeight
-// 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_SetExpendChildrenHeight final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIVerticalLayout_SetExpendChildrenHeight;
-
-// Function LGUI.UIVerticalLayout.SetExpendChildrenWidth
-// 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_SetExpendChildrenWidth final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIVerticalLayout_SetExpendChildrenWidth;
-
-// Function LGUI.UIVerticalLayout.SetHeightFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_SetHeightFitToChildren final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIVerticalLayout_SetHeightFitToChildren;
-
-// Function LGUI.UIVerticalLayout.SetPadding
-// 0x0010 (0x0010 - 0x0000)
-struct UIVerticalLayout_SetPadding final
-{
-public:
-	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIVerticalLayout_SetPadding;
-
-// Function LGUI.UIVerticalLayout.SetSpacing
+// Function LGUI.UIScrollViewComponent.GetElasticityDegbug
 // 0x0004 (0x0004 - 0x0000)
-struct UIVerticalLayout_SetSpacing final
+struct UIScrollViewComponent_GetElasticityDegbug final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetElasticityDegbug;
+
+// Function LGUI.UIScrollViewComponent.GetScrollOutOfRangeModulusDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_GetScrollOutOfRangeModulusDebug final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollOutOfRangeModulusDebug;
+
+// Function LGUI.UIScrollViewComponent.GetScrollSensitivityDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_GetScrollSensitivityDebug final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollSensitivityDebug;
+
+// Function LGUI.UIScrollViewComponent.GetScrollUseDebug
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_GetScrollUseDebug final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetScrollUseDebug;
+
+// Function LGUI.UIScrollViewComponent.SetDecelerationRateDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetDecelerationRateDebug final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_SetSpacing;
+DUMPER7_ASSERTS_UIScrollViewComponent_SetDecelerationRateDebug;
 
-// Function LGUI.UIVerticalLayout.SetWidthFitToChildren
+// Function LGUI.UIScrollViewComponent.SetElasticityDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetElasticityDebug final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetElasticityDebug;
+
+// Function LGUI.UIScrollViewComponent.SetScrollOutOfRangeModulusDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetScrollOutOfRangeModulusDebug final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollOutOfRangeModulusDebug;
+
+// Function LGUI.UIScrollViewComponent.SetScrollSensitivityDebug
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetScrollSensitivityDebug final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollSensitivityDebug;
+
+// Function LGUI.UIScrollViewComponent.SetScrollUseDebug
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_SetWidthFitToChildren final
+struct UIScrollViewComponent_SetScrollUseDebug final
 {
 public:
 	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_SetWidthFitToChildren;
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollUseDebug;
 
-// Function LGUI.UIVerticalLayout.GetActuralRange
+// Function LGUI.UIScrollViewComponent.SetCanScroll
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_SetCanScroll final
+{
+public:
+	bool                                          bCanScroll;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetCanScroll;
+
+// Function LGUI.UIScrollViewComponent.SetHorizontal
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_SetHorizontal final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetHorizontal;
+
+// Function LGUI.UIScrollViewComponent.SetHorizontalVelocity
 // 0x0004 (0x0004 - 0x0000)
-struct UIVerticalLayout_GetActuralRange final
+struct UIScrollViewComponent_SetHorizontalVelocity final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetActuralRange;
+DUMPER7_ASSERTS_UIScrollViewComponent_SetHorizontalVelocity;
 
-// Function LGUI.UIVerticalLayout.GetAlign
+// Function LGUI.UIScrollViewComponent.SetRayCastTargetForScrollView
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_GetAlign final
+struct UIScrollViewComponent_SetRayCastTargetForScrollView final
 {
 public:
-	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          newRayCastTarget;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetAlign;
+DUMPER7_ASSERTS_UIScrollViewComponent_SetRayCastTargetForScrollView;
 
-// Function LGUI.UIVerticalLayout.GetExpendChildrenHeight
+// Function LGUI.UIScrollViewComponent.SetScrollProgress
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetScrollProgress final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollProgress;
+
+// Function LGUI.UIScrollViewComponent.SetScrollProgressIncrement
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetScrollProgressIncrement final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollProgressIncrement;
+
+// Function LGUI.UIScrollViewComponent.SetScrollValue
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewComponent_SetScrollValue final
+{
+public:
+	struct FVector2D                              Value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetScrollValue;
+
+// Function LGUI.UIScrollViewComponent.SetUnderSizeScrollEnabled
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_GetExpendChildrenHeight final
+struct UIScrollViewComponent_SetUnderSizeScrollEnabled final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetUnderSizeScrollEnabled;
+
+// Function LGUI.UIScrollViewComponent.SetVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetVelocity final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetVelocity;
+
+// Function LGUI.UIScrollViewComponent.SetVertical
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_SetVertical final
+{
+public:
+	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetVertical;
+
+// Function LGUI.UIScrollViewComponent.SetVerticalVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollViewComponent_SetVerticalVelocity final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_SetVerticalVelocity;
+
+// Function LGUI.UIScrollViewComponent.CheckContentUnderSize
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_CheckContentUnderSize final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetExpendChildrenHeight;
+DUMPER7_ASSERTS_UIScrollViewComponent_CheckContentUnderSize;
 
-// Function LGUI.UIVerticalLayout.GetExpendChildrenWidth
+// Function LGUI.UIScrollViewComponent.GetCanScroll
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_GetExpendChildrenWidth final
+struct UIScrollViewComponent_GetCanScroll final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetExpendChildrenWidth;
+DUMPER7_ASSERTS_UIScrollViewComponent_GetCanScroll;
 
-// Function LGUI.UIVerticalLayout.GetHeightFitToChildren
+// Function LGUI.UIScrollViewComponent.GetContent
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewComponent_GetContent final
+{
+public:
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetContent;
+
+// Function LGUI.UIScrollViewComponent.GetHorizontal
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_GetHeightFitToChildren final
+struct UIScrollViewComponent_GetHorizontal final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetHeightFitToChildren;
+DUMPER7_ASSERTS_UIScrollViewComponent_GetHorizontal;
 
-// Function LGUI.UIVerticalLayout.GetPadding
+// Function LGUI.UIScrollViewComponent.GetRayCastTargetForScrollView
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_GetRayCastTargetForScrollView final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetRayCastTargetForScrollView;
+
+// Function LGUI.UIScrollViewComponent.GetUnderSizeScrollEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_GetUnderSizeScrollEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetUnderSizeScrollEnabled;
+
+// Function LGUI.UIScrollViewComponent.GetVelocity
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewComponent_GetVelocity final
+{
+public:
+	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetVelocity;
+
+// Function LGUI.UIScrollViewComponent.GetVertical
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewComponent_GetVertical final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewComponent_GetVertical;
+
+// Function LGUI.UITextureTransitionComponent.SetAllStateTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UITextureTransitionComponent_SetAllStateTexture final
+{
+public:
+	class UTexture*                               NewTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextureTransitionComponent_SetAllStateTexture;
+
+// Function LGUI.UITextureTransitionComponent.SetStateTexture
 // 0x0010 (0x0010 - 0x0000)
-struct UIVerticalLayout_GetPadding final
+struct UITextureTransitionComponent_SetStateTexture final
 {
 public:
-	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	EUISelectableSelectionState                   State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               NewTexture;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetPadding;
+DUMPER7_ASSERTS_UITextureTransitionComponent_SetStateTexture;
 
-// Function LGUI.UIVerticalLayout.GetSpacing
-// 0x0004 (0x0004 - 0x0000)
-struct UIVerticalLayout_GetSpacing final
+// Function LGUI.UIScrollViewWithScrollbarComponent.BindParentUIItem
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_BindParentUIItem final
 {
 public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetSpacing;
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_BindParentUIItem;
 
-// Function LGUI.UIVerticalLayout.GetWidthFitToChildren
+// Function LGUI.UIScrollViewWithScrollbarComponent.FindNavigationComponent
+// 0x0020 (0x0020 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_FindNavigationComponent final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUINavigationWrapMode                         Mode;                                              // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasOtherNode;                                     // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUISelectableComponent*                 ReturnValue;                                       // 0x0018(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_FindNavigationComponent;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetOutOfBottomBoundsType
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetOutOfBottomBoundsType final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOutOfBoundsType                              OutOfTopOrBottomType;                              // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOutOfBoundsType                              OutOfLeftOrRightType;                              // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ErrorTolerance;                                    // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetOutOfBottomBoundsType;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollTo
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollTo final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollTo;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToBottom
+// 0x0018 (0x0018 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToBottom final
+{
+public:
+	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToBottom;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToBottomLater
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToBottomLater final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToBottomLater;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToLeft
+// 0x0018 (0x0018 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToLeft final
+{
+public:
+	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToLeft;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToLeftLater
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToLeftLater final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToLeftLater;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToRight
+// 0x0018 (0x0018 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToRight final
+{
+public:
+	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToRight;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToRightLater
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToRightLater final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToRightLater;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToSelectableComponent
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToSelectableComponent final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToSelectableComponent;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToTop
+// 0x0018 (0x0018 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToTop final
+{
+public:
+	struct FVector2D                              NewPosition;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                UIItem;                                            // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToTop;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.ScrollToTopLater
+// 0x0010 (0x0010 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_ScrollToTopLater final
+{
+public:
+	class UUIItem*                                UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_ScrollToTopLater;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.SetHorizontalScrollbarVisibility
 // 0x0001 (0x0001 - 0x0000)
-struct UIVerticalLayout_GetWidthFitToChildren final
+struct UIScrollViewWithScrollbarComponent_SetHorizontalScrollbarVisibility final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EScrollViewScrollbarVisibility                value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIVerticalLayout_GetWidthFitToChildren;
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_SetHorizontalScrollbarVisibility;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.SetVerticalScrollbarVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_SetVerticalScrollbarVisibility final
+{
+public:
+	EScrollViewScrollbarVisibility                value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_SetVerticalScrollbarVisibility;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.UnBindParentUIItem
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_UnBindParentUIItem final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_UnBindParentUIItem;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetHorizontalScrollbar
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetHorizontalScrollbar final
+{
+public:
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetHorizontalScrollbar;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetHorizontalScrollbarVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetHorizontalScrollbarVisibility final
+{
+public:
+	EScrollViewScrollbarVisibility                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetHorizontalScrollbarVisibility;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetVerticalScrollbar
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetVerticalScrollbar final
+{
+public:
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetVerticalScrollbar;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetVerticalScrollbarVisibility
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetVerticalScrollbarVisibility final
+{
+public:
+	EScrollViewScrollbarVisibility                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetVerticalScrollbarVisibility;
+
+// Function LGUI.UIScrollViewWithScrollbarComponent.GetViewport
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollViewWithScrollbarComponent_GetViewport final
+{
+public:
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollViewWithScrollbarComponent_GetViewport;
 
 // Function LGUI.UIDynScrollViewComponent.GetItemPositionToContent
 // 0x0018 (0x0018 - 0x0000)
@@ -9794,6 +9665,15 @@ public:
 };
 DUMPER7_ASSERTS_UIDynScrollViewComponent_IsAllItemDisplayed;
 
+// Function LGUI.WwiseAudioComponent.GetAudioStateSystemLevel
+// 0x0004 (0x0004 - 0x0000)
+struct WwiseAudioComponent_GetAudioStateSystemLevel final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_WwiseAudioComponent_GetAudioStateSystemLevel;
+
 // Function LGUI.UIEffectLongShadow.SetGradientColor
 // 0x0004 (0x0004 - 0x0000)
 struct UIEffectLongShadow_SetGradientColor final
@@ -9937,6 +9817,228 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_UIEffectOutline_GetUse8Direction;
+
+// Function LGUI.UITextureBase.OnDynamicAtlasSlotBuilt
+// 0x0010 (0x0010 - 0x0000)
+struct UITextureBase_OnDynamicAtlasSlotBuilt final
+{
+public:
+	struct FDynamicAtlasSlotManagedHandle         ManagedHandle;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextureBase_OnDynamicAtlasSlotBuilt;
+
+// Function LGUI.UITextureBase.SetDynamicAtlasTextureAsync
+// 0x0030 (0x0030 - 0x0000)
+struct UITextureBase_SetDynamicAtlasTextureAsync final
+{
+public:
+	class FString                                 InAtlasTag;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        InSoftObjectPath;                                  // 0x0010(0x0020)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextureBase_SetDynamicAtlasTextureAsync;
+
+// Function LGUI.UITextureBase.SetTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UITextureBase_SetTexture final
+{
+public:
+	class UTexture*                               newTexture;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextureBase_SetTexture;
+
+// Function LGUI.UITextureBase.GetTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UITextureBase_GetTexture final
+{
+public:
+	class UTexture*                               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextureBase_GetTexture;
+
+// Function LGUI.UITexture.SetCurFrame
+// 0x0004 (0x0004 - 0x0000)
+struct UITexture_SetCurFrame final
+{
+public:
+	float                                         newCurFrame;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetCurFrame;
+
+// Function LGUI.UITexture.SetFillAmount
+// 0x0004 (0x0004 - 0x0000)
+struct UITexture_SetFillAmount final
+{
+public:
+	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetFillAmount;
+
+// Function LGUI.UITexture.SetFillDirectionFlip
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_SetFillDirectionFlip final
+{
+public:
+	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetFillDirectionFlip;
+
+// Function LGUI.UITexture.SetFillMethod
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_SetFillMethod final
+{
+public:
+	EUISpriteFillMethod                           newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetFillMethod;
+
+// Function LGUI.UITexture.SetFillOrigin
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_SetFillOrigin final
+{
+public:
+	uint8                                         newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetFillOrigin;
+
+// Function LGUI.UITexture.SetSpriteData
+// 0x0090 (0x0090 - 0x0000)
+struct UITexture_SetSpriteData final
+{
+public:
+	struct FLGUISpriteInfo                        newSpriteData;                                     // 0x0000(0x0090)(Parm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetSpriteData;
+
+// Function LGUI.UITexture.SetTextureData
+// 0x0008 (0x0008 - 0x0000)
+struct UITexture_SetTextureData final
+{
+public:
+	class ULGUITextureData*                       NewTextureData;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetTextureData;
+
+// Function LGUI.UITexture.SetTextureType
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_SetTextureType final
+{
+public:
+	EUITextureType                                newType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetTextureType;
+
+// Function LGUI.UITexture.SetUVRect
+// 0x0010 (0x0010 - 0x0000)
+struct UITexture_SetUVRect final
+{
+public:
+	struct FVector4                               newUVRect;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_SetUVRect;
+
+// Function LGUI.UITexture.GetFillAmount
+// 0x0004 (0x0004 - 0x0000)
+struct UITexture_GetFillAmount final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetFillAmount;
+
+// Function LGUI.UITexture.GetFillDirectionFlip
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_GetFillDirectionFlip final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetFillDirectionFlip;
+
+// Function LGUI.UITexture.GetFillMethod
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_GetFillMethod final
+{
+public:
+	EUISpriteFillMethod                           ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetFillMethod;
+
+// Function LGUI.UITexture.GetFillOrigin
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_GetFillOrigin final
+{
+public:
+	uint8                                         ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetFillOrigin;
+
+// Function LGUI.UITexture.GetSpriteData
+// 0x0090 (0x0090 - 0x0000)
+struct UITexture_GetSpriteData final
+{
+public:
+	struct FLGUISpriteInfo                        ReturnValue;                                       // 0x0000(0x0090)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetSpriteData;
+
+// Function LGUI.UITexture.GetTextureData
+// 0x0008 (0x0008 - 0x0000)
+struct UITexture_GetTextureData final
+{
+public:
+	class ULGUITextureData*                       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetTextureData;
+
+// Function LGUI.UITexture.GetTextureType
+// 0x0001 (0x0001 - 0x0000)
+struct UITexture_GetTextureType final
+{
+public:
+	EUITextureType                                ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetTextureType;
+
+// Function LGUI.UITexture.GetUVRect
+// 0x0010 (0x0010 - 0x0000)
+struct UITexture_GetUVRect final
+{
+public:
+	struct FVector4                               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITexture_GetUVRect;
+
+// Function LGUI.ViewportUITexture.GetSceneCapture
+// 0x0008 (0x0008 - 0x0000)
+struct ViewportUITexture_GetSceneCapture final
+{
+public:
+	class USceneCaptureComponent2D*               ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ViewportUITexture_GetSceneCapture;
+
+// Function LGUI.ViewportUITexture.ViewPointToWorld
+// 0x0020 (0x0020 - 0x0000)
+struct ViewportUITexture_ViewPointToWorld final
+{
+public:
+	struct FVector2D                              InViewPoint;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWorldLocation;                                  // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWorldDirection;                                 // 0x0014(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_ViewportUITexture_ViewPointToWorld;
+
+// Function LGUI.ViewportUITexture.WorldToViewPoint
+// 0x0018 (0x0018 - 0x0000)
+struct ViewportUITexture_WorldToViewPoint final
+{
+public:
+	struct FVector                                InWorldLocation;                                   // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              OutViewPoint;                                      // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_ViewportUITexture_WorldToViewPoint;
 
 // Function LGUI.UIEffectShadow.SetShadowColor
 // 0x0004 (0x0004 - 0x0000)
@@ -10266,95 +10368,41 @@ public:
 };
 DUMPER7_ASSERTS_UIEffectTextAnimation_ScaleRandomProperty_GetSeed;
 
-// Function LGUI.UIEffectTextAnimation_AlphaProperty.SetAlpha
+// Function LGUI.UIEffectTextAnimation_ColorProperty.SetColor
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_AlphaProperty_SetAlpha final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_AlphaProperty_SetAlpha;
-
-// Function LGUI.UIEffectTextAnimation_AlphaProperty.GetAlpha
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_AlphaProperty_GetAlpha final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_AlphaProperty_GetAlpha;
-
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetMax
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_SetMax final
+struct UIEffectTextAnimation_ColorProperty_SetColor final
 {
 public:
 	struct FColor                                 value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetMax;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_SetColor;
 
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetMin
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_SetMin final
-{
-public:
-	struct FColor                                 value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetMin;
-
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetSeed
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_SetSeed final
-{
-public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetSeed;
-
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.SetUseHSV
+// Function LGUI.UIEffectTextAnimation_ColorProperty.SetUseHSV
 // 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_SetUseHSV final
+struct UIEffectTextAnimation_ColorProperty_SetUseHSV final
 {
 public:
 	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_SetUseHSV;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_SetUseHSV;
 
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetMax
+// Function LGUI.UIEffectTextAnimation_ColorProperty.GetColor
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_GetMax final
+struct UIEffectTextAnimation_ColorProperty_GetColor final
 {
 public:
 	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetMax;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_GetColor;
 
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetMin
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_GetMin final
-{
-public:
-	struct FColor                                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetMin;
-
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetSeed
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_GetSeed final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetSeed;
-
-// Function LGUI.UIEffectTextAnimation_ColorRandomProperty.GetUseHSV
+// Function LGUI.UIEffectTextAnimation_ColorProperty.GetUseHSV
 // 0x0001 (0x0001 - 0x0000)
-struct UIEffectTextAnimation_ColorRandomProperty_GetUseHSV final
+struct UIEffectTextAnimation_ColorProperty_GetUseHSV final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_ColorRandomProperty_GetUseHSV;
+DUMPER7_ASSERTS_UIEffectTextAnimation_ColorProperty_GetUseHSV;
 
 // Function LGUI.UIEffectTextAnimation_PositionWaveProperty.SetPosition
 // 0x000C (0x000C - 0x0000)
@@ -10392,1220 +10440,1273 @@ public:
 };
 DUMPER7_ASSERTS_UIEffectTextAnimation_RotationWaveProperty_GetRotator;
 
-// Function LGUI.UIEffectTextAnimation_ScaleWaveProperty.SetScale
-// 0x000C (0x000C - 0x0000)
-struct UIEffectTextAnimation_ScaleWaveProperty_SetScale final
-{
-public:
-	struct FVector                                value;                                             // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ScaleWaveProperty_SetScale;
-
-// Function LGUI.UIEffectTextAnimation_ScaleWaveProperty.GetScale
-// 0x000C (0x000C - 0x0000)
-struct UIEffectTextAnimation_ScaleWaveProperty_GetScale final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEffectTextAnimation_ScaleWaveProperty_GetScale;
-
-// Function LGUI.UIEffectTextAnimation_RandomSelector.SetEnd
+// Function LGUI.UIEffectTextAnimation_RangeSelector.SetEnd
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_SetEnd final
+struct UIEffectTextAnimation_RangeSelector_SetEnd final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetEnd;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetEnd;
 
-// Function LGUI.UIEffectTextAnimation_RandomSelector.SetSeed
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_SetSeed final
+// Function LGUI.UIEffectTextAnimation_RangeSelector.SetFlipDirection
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_RangeSelector_SetFlipDirection final
 {
 public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetSeed;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetFlipDirection;
 
-// Function LGUI.UIEffectTextAnimation_RandomSelector.SetStart
+// Function LGUI.UIEffectTextAnimation_RangeSelector.SetRange
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_SetStart final
+struct UIEffectTextAnimation_RangeSelector_SetRange final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_SetStart;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetRange;
 
-// Function LGUI.UIEffectTextAnimation_RandomSelector.GetEnd
+// Function LGUI.UIEffectTextAnimation_RangeSelector.SetStart
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_GetEnd final
+struct UIEffectTextAnimation_RangeSelector_SetStart final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_SetStart;
+
+// Function LGUI.UIEffectTextAnimation_RangeSelector.GetEnd
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RangeSelector_GetEnd final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetEnd;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetEnd;
 
-// Function LGUI.UIEffectTextAnimation_RandomSelector.GetSeed
-// 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_GetSeed final
+// Function LGUI.UIEffectTextAnimation_RangeSelector.GetFlipDirection
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_RangeSelector_GetFlipDirection final
 {
 public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetSeed;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetFlipDirection;
 
-// Function LGUI.UIEffectTextAnimation_RandomSelector.GetStart
+// Function LGUI.UIEffectTextAnimation_RangeSelector.GetRange
 // 0x0004 (0x0004 - 0x0000)
-struct UIEffectTextAnimation_RandomSelector_GetStart final
+struct UIEffectTextAnimation_RangeSelector_GetRange final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEffectTextAnimation_RandomSelector_GetStart;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetRange;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerBeginDrag
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerBeginDrag final
+// Function LGUI.UIEffectTextAnimation_RangeSelector.GetStart
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RangeSelector_GetStart final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerBeginDrag;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RangeSelector_GetStart;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerClick
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerClick final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetFlipDirection
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_SetFlipDirection final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerClick;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetFlipDirection;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDeselect
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDeselect final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetRange
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_SetRange final
 {
 public:
-	TDelegate<void(class ULGUIBaseEventData* eventData)> InDelegate;                                 // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDeselect;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetRange;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDown
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDown final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.SetTagName
+// 0x000C (0x000C - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_SetTagName final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   value;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDown;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_SetTagName;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDrag
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDrag final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetFlipDirection
+// 0x0001 (0x0001 - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_GetFlipDirection final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDrag;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetFlipDirection;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragDrop
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDragDrop final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetRange
+// 0x0004 (0x0004 - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_GetRange final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragDrop;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetRange;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragEnter
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDragEnter final
+// Function LGUI.UIEffectTextAnimation_RichTextTagSelector.GetTagName
+// 0x000C (0x000C - 0x0000)
+struct UIEffectTextAnimation_RichTextTagSelector_GetTagName final
 {
 public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragEnter;
+DUMPER7_ASSERTS_UIEffectTextAnimation_RichTextTagSelector_GetTagName;
 
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerDragExit
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerDragExit final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerDragExit;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerEndDrag
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerEndDrag final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerEndDrag;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerEnter
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerEnter final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerEnter;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerExit
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerExit final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerExit;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerScroll
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerScroll final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerScroll;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerSelect
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerSelect final
-{
-public:
-	TDelegate<void(class ULGUIBaseEventData* eventData)> InDelegate;                                 // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerSelect;
-
-// Function LGUI.UIEventTriggerComponent.RegisterOnPointerUp
-// 0x0030 (0x0030 - 0x0000)
-struct UIEventTriggerComponent_RegisterOnPointerUp final
-{
-public:
-	TDelegate<void(class ULGUIPointerEventData* pointerEventData)> InDelegate;                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_RegisterOnPointerUp;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerBeginDrag
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerBeginDrag final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerBeginDrag;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerClick
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerClick final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerClick;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDeselect
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDeselect final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDeselect;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDown
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDown final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDown;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDrag
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDrag final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDrag;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragDrop
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDragDrop final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragDrop;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragEnter
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDragEnter final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragEnter;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerDragExit
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerDragExit final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerDragExit;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerEndDrag
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerEndDrag final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerEndDrag;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerEnter
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerEnter final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerEnter;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerExit
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerExit final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerExit;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerScroll
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerScroll final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerScroll;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerSelect
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerSelect final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerSelect;
-
-// Function LGUI.UIEventTriggerComponent.UnregisterOnPointerUp
-// 0x0008 (0x0008 - 0x0000)
-struct UIEventTriggerComponent_UnregisterOnPointerUp final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIEventTriggerComponent_UnregisterOnPointerUp;
-
-// Function LGUI.UIExtendToggleGroup.BindOnExtendToggleGroupActive
+// Function LGUI.UIExtendButtonComponent.SetDelegateForHelpClick
 // 0x0028 (0x0028 - 0x0000)
-struct UIExtendToggleGroup_BindOnExtendToggleGroupActive final
+struct UIExtendButtonComponent_SetDelegateForHelpClick final
 {
 public:
-	TDelegate<void(class UUIExtendToggleGroup* ExtendToggleGroup, bool bCreate)> Delegate;           // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TDelegate<void(int32 helpGroupId)>            delegateObj;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIExtendToggleGroup_BindOnExtendToggleGroupActive;
+DUMPER7_ASSERTS_UIExtendButtonComponent_SetDelegateForHelpClick;
 
-// Function LGUI.UIExtendToggleGroup.GetAllowNoneSelect
+// Function LGUI.UIExtendToggle.SetAllTransitionsEnable
 // 0x0001 (0x0001 - 0x0000)
-struct UIExtendToggleGroup_GetAllowNoneSelect final
+struct UIExtendToggle_SetAllTransitionsEnable final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIExtendToggleGroup_GetAllowNoneSelect;
+DUMPER7_ASSERTS_UIExtendToggle_SetAllTransitionsEnable;
 
-// Function LGUI.UIExtendToggleGroup.SetAllowNoneSelect
-// 0x0001 (0x0001 - 0x0000)
-struct UIExtendToggleGroup_SetAllowNoneSelect final
-{
-public:
-	bool                                          bAllowNoneSelection;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggleGroup_SetAllowNoneSelect;
-
-// Function LGUI.UIExtendToggleGroup.SetGroupEnable
-// 0x0001 (0x0001 - 0x0000)
-struct UIExtendToggleGroup_SetGroupEnable final
-{
-public:
-	bool                                          bInEnable;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIExtendToggleGroup_SetGroupEnable;
-
-// Function LGUI.UIExtendToggleGroup.GetCurSelection
+// Function LGUI.UIExtendToggle.SetToggleGroup
 // 0x0008 (0x0008 - 0x0000)
-struct UIExtendToggleGroup_GetCurSelection final
+struct UIExtendToggle_SetToggleGroup final
 {
 public:
-	class UUIExtendToggle*                        ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 TogGroupActor;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIExtendToggleGroup_GetCurSelection;
+DUMPER7_ASSERTS_UIExtendToggle_SetToggleGroup;
 
-// Function LGUI.UIFlyoutMenu.CreateFlyoutMenuFromArray
-// 0x0050 (0x0050 - 0x0000)
-struct UIFlyoutMenu_CreateFlyoutMenuFromArray final
+// Function LGUI.UIExtendToggle.SetToggleState
+// 0x0005 (0x0005 - 0x0000)
+struct UIExtendToggle_SetToggleState final
 {
 public:
-	TArray<class FString>                         InItemNameArray;                                   // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TDelegate<void(int32 InSelectIndex, const class FString& InSelectItem)> InCallback;              // 0x0010(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	class AUIBaseActor*                           InParentActor;                                     // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InWidth;                                           // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFlyoutMenuVerticalPosition                   InVerticalPosition;                                // 0x0044(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFlyoutMenuHorizontalAlignment                InHorizontalAlign;                                 // 0x0045(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUIFlyoutMenu*                          ReturnValue;                                       // 0x0048(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EToggleState                                  State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFireEvent;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIngnoreAnim;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bJumpToLastFrame;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EToggleChangeStateResult                      ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIFlyoutMenu_CreateFlyoutMenuFromArray;
+DUMPER7_ASSERTS_UIExtendToggle_SetToggleState;
 
-// Function LGUI.UIGridLayout.SetAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetAlign final
-{
-public:
-	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetAlign;
-
-// Function LGUI.UIGridLayout.SetCellScale
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_SetCellScale final
-{
-public:
-	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetCellScale;
-
-// Function LGUI.UIGridLayout.SetCellSize
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_SetCellSize final
-{
-public:
-	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetCellSize;
-
-// Function LGUI.UIGridLayout.SetDependOnSizeOrCount
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetDependOnSizeOrCount final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetDependOnSizeOrCount;
-
-// Function LGUI.UIGridLayout.SetExpendChildSize
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetExpendChildSize final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetExpendChildSize;
-
-// Function LGUI.UIGridLayout.SetHeightFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetHeightFitToChildren final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetHeightFitToChildren;
-
-// Function LGUI.UIGridLayout.SetHorizontalOrVertical
-// 0x0002 (0x0002 - 0x0000)
-struct UIGridLayout_SetHorizontalOrVertical final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUIGridLayoutStartCorner                      startCorner;                                       // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetHorizontalOrVertical;
-
-// Function LGUI.UIGridLayout.SetLastLineCanAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetLastLineCanAlign final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_SetLastLineCanAlign;
-
-// Function LGUI.UIGridLayout.SetLineCount
+// Function LGUI.UIExtendToggle.SetToggleStateForce
 // 0x0004 (0x0004 - 0x0000)
-struct UIGridLayout_SetLineCount final
+struct UIExtendToggle_SetToggleStateForce final
 {
 public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EToggleState                                  State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFireEvent;                                        // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIngnoreAnim;                                      // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bJumpToLastFrame;                                  // 0x0003(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_SetLineCount;
+DUMPER7_ASSERTS_UIExtendToggle_SetToggleStateForce;
 
-// Function LGUI.UIGridLayout.SetMaxItemCountInOneLine
+// Function LGUI.UIExtendToggle.GetToggleGroup
+// 0x0008 (0x0008 - 0x0000)
+struct UIExtendToggle_GetToggleGroup final
+{
+public:
+	class UUIExtendToggleGroup*                   ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggle_GetToggleGroup;
+
+// Function LGUI.UIExtendToggle.GetToggleState
+// 0x0001 (0x0001 - 0x0000)
+struct UIExtendToggle_GetToggleState final
+{
+public:
+	EToggleState                                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggle_GetToggleState;
+
+// Function LGUI.UIExtendToggleSpriteTransition.SetAllStateSprite
+// 0x0008 (0x0008 - 0x0000)
+struct UIExtendToggleSpriteTransition_SetAllStateSprite final
+{
+public:
+	class ULGUISpriteData_BaseObject*             NewSprite;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleSpriteTransition_SetAllStateSprite;
+
+// Function LGUI.UIExtendToggleSpriteTransition.SetStateSprite
+// 0x0018 (0x0018 - 0x0000)
+struct UIExtendToggleSpriteTransition_SetStateSprite final
+{
+public:
+	EToggleTransitionState                        State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULGUISpriteData_BaseObject*             NewSprite;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ForceNoTriggerOnChange;                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIExtendToggleSpriteTransition_SetStateSprite;
+
+// Function LGUI.UIExtendToggleTextureTransition.SetAllTransitionStateTexture
+// 0x0008 (0x0008 - 0x0000)
+struct UIExtendToggleTextureTransition_SetAllTransitionStateTexture final
+{
+public:
+	class UTexture*                               Texture;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIExtendToggleTextureTransition_SetAllTransitionStateTexture;
+
+// Function LGUI.UIExtendToggleTextureTransition.SetTargetStateTexture
+// 0x0018 (0x0018 - 0x0000)
+struct UIExtendToggleTextureTransition_SetTargetStateTexture final
+{
+public:
+	EToggleTransitionState                        State;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               Texture;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ForceNoTriggerOnChange;                            // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIExtendToggleTextureTransition_SetTargetStateTexture;
+
+// Function LGUI.UIFrameAnimController.Play
+// 0x0001 (0x0001 - 0x0000)
+struct UIFrameAnimController_Play final
+{
+public:
+	bool                                          bLooping;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIFrameAnimController_Play;
+
+// Function LGUI.UIInputAdaptZone.OnMouseMoved
 // 0x0004 (0x0004 - 0x0000)
-struct UIGridLayout_SetMaxItemCountInOneLine final
+struct UIInputAdaptZone_OnMouseMoved final
 {
 public:
-	int32                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_SetMaxItemCountInOneLine;
+DUMPER7_ASSERTS_UIInputAdaptZone_OnMouseMoved;
 
-// Function LGUI.UIGridLayout.SetPadding
+// Function LGUI.UIInputAdaptZone.OnPressAnyKey
+// 0x0020 (0x0020 - 0x0000)
+struct UIInputAdaptZone_OnPressAnyKey final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInputAdaptZone_OnPressAnyKey;
+
+// Function LGUI.UIInputAdaptZone.OnTouchBegin
 // 0x0010 (0x0010 - 0x0000)
-struct UIGridLayout_SetPadding final
+struct UIInputAdaptZone_OnTouchBegin final
 {
 public:
-	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	ETouchIndex                                   TouchIndex;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Location;                                          // 0x0004(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_SetPadding;
+DUMPER7_ASSERTS_UIInputAdaptZone_OnTouchBegin;
 
-// Function LGUI.UIGridLayout.SetSpacing
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_SetSpacing final
+// Function LGUI.UIInturnAnimController.Play
+// 0x0018 (0x0018 - 0x0000)
+struct UIInturnAnimController_Play final
 {
 public:
-	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NewAnimName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AssignNum;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsScrollViewItem;                                 // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UIGridLayout_SetSpacing;
+DUMPER7_ASSERTS_UIInturnAnimController_Play;
 
-// Function LGUI.UIGridLayout.SetWidthFitToChildren
+// Function LGUI.UIInturnAnimController.PlayWithActors
+// 0x0020 (0x0020 - 0x0000)
+struct UIInturnAnimController_PlayWithActors final
+{
+public:
+	TArray<TWeakObjectPtr<class AUIBaseActor>>    SpecChildren;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, UObjectWrapper, NativeAccessSpecifierPublic)
+	class FString                                 NewAnimName;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInturnAnimController_PlayWithActors;
+
+// Function LGUI.UIInturnAnimController.PlayWithItems
+// 0x0020 (0x0020 - 0x0000)
+struct UIInturnAnimController_PlayWithItems final
+{
+public:
+	TArray<class UUIItem*>                        SpecChildren;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class FString                                 NewAnimName;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIInturnAnimController_PlayWithItems;
+
+// Function LGUI.UIInturnAnimController.SetItemDefaultAlphaZero
 // 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_SetWidthFitToChildren final
+struct UIInturnAnimController_SetItemDefaultAlphaZero final
 {
 public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsItemDefaultAlphaZero;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_SetWidthFitToChildren;
+DUMPER7_ASSERTS_UIInturnAnimController_SetItemDefaultAlphaZero;
 
-// Function LGUI.UIGridLayout.GetActuralRange
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_GetActuralRange final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetActuralRange;
-
-// Function LGUI.UIGridLayout.GetAlign
+// Function LGUI.UIInturnAnimController.GetItemDefaultAlphaZero
 // 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetAlign final
-{
-public:
-	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetAlign;
-
-// Function LGUI.UIGridLayout.GetCellSize
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_GetCellSize final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetCellSize;
-
-// Function LGUI.UIGridLayout.GetDependOnSizeOrCount
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetDependOnSizeOrCount final
+struct UIInturnAnimController_GetItemDefaultAlphaZero final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_GetDependOnSizeOrCount;
+DUMPER7_ASSERTS_UIInturnAnimController_GetItemDefaultAlphaZero;
 
-// Function LGUI.UIGridLayout.GetExpendChildSize
+// Function LGUI.UIInturnAnimController.IsPlaying
 // 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetExpendChildSize final
+struct UIInturnAnimController_IsPlaying final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIGridLayout_GetExpendChildSize;
+DUMPER7_ASSERTS_UIInturnAnimController_IsPlaying;
 
-// Function LGUI.UIGridLayout.GetHeightFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetHeightFitToChildren final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetHeightFitToChildren;
-
-// Function LGUI.UIGridLayout.GetHorizontalOrVertical
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetHorizontalOrVertical final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetHorizontalOrVertical;
-
-// Function LGUI.UIGridLayout.GetLastLineCanAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetLastLineCanAlign final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetLastLineCanAlign;
-
-// Function LGUI.UIGridLayout.GetLineCount
+// Function LGUI.UILayoutElement.SetConstantSize
 // 0x0004 (0x0004 - 0x0000)
-struct UIGridLayout_GetLineCount final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetLineCount;
-
-// Function LGUI.UIGridLayout.GetMaxItemCountInOneLine
-// 0x0004 (0x0004 - 0x0000)
-struct UIGridLayout_GetMaxItemCountInOneLine final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetMaxItemCountInOneLine;
-
-// Function LGUI.UIGridLayout.GetPadding
-// 0x0010 (0x0010 - 0x0000)
-struct UIGridLayout_GetPadding final
-{
-public:
-	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetPadding;
-
-// Function LGUI.UIGridLayout.GetSpacing
-// 0x0008 (0x0008 - 0x0000)
-struct UIGridLayout_GetSpacing final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetSpacing;
-
-// Function LGUI.UIGridLayout.GetWidthFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIGridLayout_GetWidthFitToChildren final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIGridLayout_GetWidthFitToChildren;
-
-// Function LGUI.UIHorizontalLayout.SetAlign
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_SetAlign final
-{
-public:
-	ELGUILayoutAlignmentType                      value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_SetAlign;
-
-// Function LGUI.UIHorizontalLayout.SetExpendChildrenHeight
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_SetExpendChildrenHeight final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_SetExpendChildrenHeight;
-
-// Function LGUI.UIHorizontalLayout.SetExpendChildrenWidth
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_SetExpendChildrenWidth final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_SetExpendChildrenWidth;
-
-// Function LGUI.UIHorizontalLayout.SetHeightFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_SetHeightFitToChildren final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_SetHeightFitToChildren;
-
-// Function LGUI.UIHorizontalLayout.SetPadding
-// 0x0010 (0x0010 - 0x0000)
-struct UIHorizontalLayout_SetPadding final
-{
-public:
-	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_SetPadding;
-
-// Function LGUI.UIHorizontalLayout.SetSpacing
-// 0x0004 (0x0004 - 0x0000)
-struct UIHorizontalLayout_SetSpacing final
+struct UILayoutElement_SetConstantSize final
 {
 public:
 	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_SetSpacing;
+DUMPER7_ASSERTS_UILayoutElement_SetConstantSize;
 
-// Function LGUI.UIHorizontalLayout.SetWidthFitToChildren
+// Function LGUI.UILayoutElement.SetLayoutType
 // 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_SetWidthFitToChildren final
+struct UILayoutElement_SetLayoutType final
 {
 public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELayoutElementType                            InType;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_SetWidthFitToChildren;
+DUMPER7_ASSERTS_UILayoutElement_SetLayoutType;
 
-// Function LGUI.UIHorizontalLayout.GetActuralRange
+// Function LGUI.UILayoutElement.SetRatioSize
 // 0x0004 (0x0004 - 0x0000)
-struct UIHorizontalLayout_GetActuralRange final
+struct UILayoutElement_SetRatioSize final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILayoutElement_SetRatioSize;
+
+// Function LGUI.UILayoutElement.GetConstantSize
+// 0x0004 (0x0004 - 0x0000)
+struct UILayoutElement_GetConstantSize final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_GetActuralRange;
+DUMPER7_ASSERTS_UILayoutElement_GetConstantSize;
 
-// Function LGUI.UIHorizontalLayout.GetAlign
+// Function LGUI.UILayoutElement.GetIgnoreLayout
 // 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_GetAlign final
-{
-public:
-	ELGUILayoutAlignmentType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_GetAlign;
-
-// Function LGUI.UIHorizontalLayout.GetExpendChildrenHeight
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_GetExpendChildrenHeight final
+struct UILayoutElement_GetIgnoreLayout final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_GetExpendChildrenHeight;
+DUMPER7_ASSERTS_UILayoutElement_GetIgnoreLayout;
 
-// Function LGUI.UIHorizontalLayout.GetExpendChildrenWidth
+// Function LGUI.UILayoutElement.GetLayoutType
 // 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_GetExpendChildrenWidth final
+struct UILayoutElement_GetLayoutType final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELayoutElementType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_GetExpendChildrenWidth;
+DUMPER7_ASSERTS_UILayoutElement_GetLayoutType;
 
-// Function LGUI.UIHorizontalLayout.GetHeightFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_GetHeightFitToChildren final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_GetHeightFitToChildren;
-
-// Function LGUI.UIHorizontalLayout.GetPadding
-// 0x0010 (0x0010 - 0x0000)
-struct UIHorizontalLayout_GetPadding final
-{
-public:
-	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_GetPadding;
-
-// Function LGUI.UIHorizontalLayout.GetSpacing
+// Function LGUI.UILayoutElement.GetRatioSize
 // 0x0004 (0x0004 - 0x0000)
-struct UIHorizontalLayout_GetSpacing final
+struct UILayoutElement_GetRatioSize final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIHorizontalLayout_GetSpacing;
+DUMPER7_ASSERTS_UILayoutElement_GetRatioSize;
 
-// Function LGUI.UIHorizontalLayout.GetWidthFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIHorizontalLayout_GetWidthFitToChildren final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIHorizontalLayout_GetWidthFitToChildren;
-
-// Function LGUI.UIInteractionGroup.SetIgnoreParentGroup
-// 0x0001 (0x0001 - 0x0000)
-struct UIInteractionGroup_SetIgnoreParentGroup final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInteractionGroup_SetIgnoreParentGroup;
-
-// Function LGUI.UIInteractionGroup.SetInteractable
-// 0x0001 (0x0001 - 0x0000)
-struct UIInteractionGroup_SetInteractable final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInteractionGroup_SetInteractable;
-
-// Function LGUI.UIInteractionGroup.GetIgnoreParentGroup
-// 0x0001 (0x0001 - 0x0000)
-struct UIInteractionGroup_GetIgnoreParentGroup final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInteractionGroup_GetIgnoreParentGroup;
-
-// Function LGUI.UIInteractionGroup.GetInteractable
-// 0x0001 (0x0001 - 0x0000)
-struct UIInteractionGroup_GetInteractable final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIInteractionGroup_GetInteractable;
-
-// Function LGUI.UIMultiTemplateLayout.SetAutoAdjustScale
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_SetAutoAdjustScale final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateLayout_SetAutoAdjustScale;
-
-// Function LGUI.UIMultiTemplateLayout.SetDirectionType
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_SetDirectionType final
-{
-public:
-	ELGUILayoutDirectionType                      NewDirectionType;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateLayout_SetDirectionType;
-
-// Function LGUI.UIMultiTemplateLayout.SetPadding
+// Function LGUI.UILoopScrollViewComponent.RefreshByData
 // 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateLayout_SetPadding final
+struct UILoopScrollViewComponent_RefreshByData final
 {
 public:
-	struct FMargin                                value;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class AUIBaseActor*                           UIItem;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GridNum;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          KeepContentPosition;                               // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UIMultiTemplateLayout_SetPadding;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_RefreshByData;
 
-// Function LGUI.UIMultiTemplateLayout.SetSizeFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_SetSizeFitToChildren final
-{
-public:
-	bool                                          Value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateLayout_SetSizeFitToChildren;
-
-// Function LGUI.UIMultiTemplateLayout.SetSpacing
+// Function LGUI.UILoopScrollViewComponent.ScrollToGridIndex
 // 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateLayout_SetSpacing final
+struct UILoopScrollViewComponent_ScrollToGridIndex final
 {
 public:
-	struct FVector2D                              value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UIMultiTemplateLayout_SetSpacing;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToGridIndex;
 
-// Function LGUI.UIMultiTemplateLayout.GetAutoAdjustScale
+// Function LGUI.UILoopScrollViewComponent.ScrollToGridIndexLater
+// 0x0008 (0x0008 - 0x0000)
+struct UILoopScrollViewComponent_ScrollToGridIndexLater final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTweenAnim;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToGridIndexLater;
+
+// Function LGUI.UILoopScrollViewComponent.ScrollToNextLine
 // 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_GetAutoAdjustScale final
+struct UILoopScrollViewComponent_ScrollToNextLine final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReversed;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIMultiTemplateLayout_GetAutoAdjustScale;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToNextLine;
 
-// Function LGUI.UIMultiTemplateLayout.GetDirectionType
+// Function LGUI.UILoopScrollViewComponent.ScrollToNextLineLater
 // 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_GetDirectionType final
+struct UILoopScrollViewComponent_ScrollToNextLineLater final
 {
 public:
-	ELGUILayoutDirectionType                      ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReversed;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIMultiTemplateLayout_GetDirectionType;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_ScrollToNextLineLater;
 
-// Function LGUI.UIMultiTemplateLayout.GetPadding
+// Function LGUI.UILoopScrollViewComponent.SetGridAnimationInterval
+// 0x0004 (0x0004 - 0x0000)
+struct UILoopScrollViewComponent_SetGridAnimationInterval final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILoopScrollViewComponent_SetGridAnimationInterval;
+
+// Function LGUI.UILoopScrollViewComponent.SetGridAnimationStartTime
+// 0x0004 (0x0004 - 0x0000)
+struct UILoopScrollViewComponent_SetGridAnimationStartTime final
+{
+public:
+	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILoopScrollViewComponent_SetGridAnimationStartTime;
+
+// Function LGUI.UILoopScrollViewComponent.SetInAnimation
+// 0x0001 (0x0001 - 0x0000)
+struct UILoopScrollViewComponent_SetInAnimation final
+{
+public:
+	bool                                          state;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILoopScrollViewComponent_SetInAnimation;
+
+// Function LGUI.UILoopScrollViewComponent.SetNavigationIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UILoopScrollViewComponent_SetNavigationIndex final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UILoopScrollViewComponent_SetNavigationIndex;
+
+// Function LGUI.UILoopScrollViewComponent.GetGrid
 // 0x0010 (0x0010 - 0x0000)
-struct UIMultiTemplateLayout_GetPadding final
+struct UILoopScrollViewComponent_GetGrid final
 {
 public:
-	struct FMargin                                ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AUIBaseActor*                           ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIMultiTemplateLayout_GetPadding;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGrid;
 
-// Function LGUI.UIMultiTemplateLayout.GetSizeFitToChildren
-// 0x0001 (0x0001 - 0x0000)
-struct UIMultiTemplateLayout_GetSizeFitToChildren final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateLayout_GetSizeFitToChildren;
-
-// Function LGUI.UIMultiTemplateLayout.GetSpacing
-// 0x0008 (0x0008 - 0x0000)
-struct UIMultiTemplateLayout_GetSpacing final
-{
-public:
-	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIMultiTemplateLayout_GetSpacing;
-
-// Function LGUI.UINavigationBehaviour.OnCheckCanSetNavigationBP
-// 0x0001 (0x0001 - 0x0000)
-struct UINavigationBehaviour_OnCheckCanSetNavigationBP final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationBehaviour_OnCheckCanSetNavigationBP;
-
-// Function LGUI.UINavigationBehaviour.OnCheckLoopScrollChangeNavigationBP
-// 0x0001 (0x0001 - 0x0000)
-struct UINavigationBehaviour_OnCheckLoopScrollChangeNavigationBP final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationBehaviour_OnCheckLoopScrollChangeNavigationBP;
-
-// Function LGUI.UINavigationBehaviour.OnNotifyNavigationEnterBP
-// 0x0008 (0x0008 - 0x0000)
-struct UINavigationBehaviour_OnNotifyNavigationEnterBP final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationBehaviour_OnNotifyNavigationEnterBP;
-
-// Function LGUI.UINavigationBehaviour.OnNotifyNavigationSelectBP
-// 0x0008 (0x0008 - 0x0000)
-struct UINavigationBehaviour_OnNotifyNavigationSelectBP final
-{
-public:
-	class ULGUIPointerEventData*                  eventData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationBehaviour_OnNotifyNavigationSelectBP;
-
-// Function LGUI.UINavigationTextChangeListener.OnNotifyTextChangeBP
-// 0x0010 (0x0010 - 0x0000)
-struct UINavigationTextChangeListener_OnNotifyTextChangeBP final
-{
-public:
-	class FString                                 NotifyText;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINavigationTextChangeListener_OnNotifyTextChangeBP;
-
-// Function LGUI.UINiagaraActor.GetUINiagara
-// 0x0008 (0x0008 - 0x0000)
-struct UINiagaraActor_GetUINiagara final
-{
-public:
-	class UUINiagara*                             ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UINiagaraActor_GetUINiagara;
-
-// Function LGUI.UIRing.EndAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIRing_EndAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_EndAngleTo;
-
-// Function LGUI.UIRing.SetEndAngle
+// Function LGUI.UILoopScrollViewComponent.GetGridAnimationInterval
 // 0x0004 (0x0004 - 0x0000)
-struct UIRing_SetEndAngle final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_SetEndAngle;
-
-// Function LGUI.UIRing.SetSegment
-// 0x0004 (0x0004 - 0x0000)
-struct UIRing_SetSegment final
-{
-public:
-	int32                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_SetSegment;
-
-// Function LGUI.UIRing.SetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIRing_SetStartAngle final
-{
-public:
-	float                                         newValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_SetStartAngle;
-
-// Function LGUI.UIRing.StartAngleTo
-// 0x0018 (0x0018 - 0x0000)
-struct UIRing_StartAngleTo final
-{
-public:
-	float                                         endValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         duration;                                          // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         delay;                                             // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELTweenEase                                   easeType;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULTweener*                              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_StartAngleTo;
-
-// Function LGUI.UIRing.GetEndAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIRing_GetEndAngle final
+struct UILoopScrollViewComponent_GetGridAnimationInterval final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIRing_GetEndAngle;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGridAnimationInterval;
 
-// Function LGUI.UIRing.GetSegment
+// Function LGUI.UILoopScrollViewComponent.GetGridAnimationStartTime
 // 0x0004 (0x0004 - 0x0000)
-struct UIRing_GetSegment final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIRing_GetSegment;
-
-// Function LGUI.UIRing.GetStartAngle
-// 0x0004 (0x0004 - 0x0000)
-struct UIRing_GetStartAngle final
+struct UILoopScrollViewComponent_GetGridAnimationStartTime final
 {
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UIRing_GetStartAngle;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_GetGridAnimationStartTime;
 
-// Function LGUI.UISafeZone.SetWidthAndHeightRadio
-// 0x0010 (0x0010 - 0x0000)
-struct UISafeZone_SetWidthAndHeightRadio final
+// Function LGUI.UILoopScrollViewComponent.GetInAnimation
+// 0x0001 (0x0001 - 0x0000)
+struct UILoopScrollViewComponent_GetInAnimation final
 {
 public:
-	float                                         Left;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Right;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Top;                                               // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bottom;                                            // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISafeZone_SetWidthAndHeightRadio;
+DUMPER7_ASSERTS_UILoopScrollViewComponent_GetInAnimation;
 
-// Function LGUI.UISelectableGroupComponent.OnComponentHighlighted
-// 0x0008 (0x0008 - 0x0000)
-struct UISelectableGroupComponent_OnComponentHighlighted final
+// Function LGUI.UIMultiTemplateScrollViewComponent.FindNavigationIndex
+// 0x0028 (0x0028 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_FindNavigationIndex final
 {
 public:
 	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUINavigationWrapMode                         WrapMode;                                          // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EUINavigationPriorityMode                     PriorityMode;                                      // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NavigateTolerance;                                 // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NavigateToleranceReverse;                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UISelectableGroupComponent_OnComponentHighlighted;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_FindNavigationIndex;
 
-// Function LGUI.UISelectableGroupComponent.OnComponentSelected
-// 0x0008 (0x0008 - 0x0000)
-struct UISelectableGroupComponent_OnComponentSelected final
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridIndexByChildComponent
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetGridIndexByChildComponent final
 {
 public:
 	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_UISelectableGroupComponent_OnComponentSelected;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridIndexByChildComponent;
 
-// Function LGUI.UISelectableStateHolder.SetAllTransitionsEnable
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridItem
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetGridItem final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridItem;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridItemByChildComponent
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetGridItemByChildComponent final
+{
+public:
+	class UUISelectableComponent*                 Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUIItem*                                ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridItemByChildComponent;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetNavigationComponentByGridIndex
+// 0x0010 (0x0010 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetNavigationComponentByGridIndex final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUISelectableComponent*                 ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetNavigationComponentByGridIndex;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.IsAllItemDisplayed
 // 0x0001 (0x0001 - 0x0000)
-struct UISelectableStateHolder_SetAllTransitionsEnable final
-{
-public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISelectableStateHolder_SetAllTransitionsEnable;
-
-// Function LGUI.UISizeControlByAspectRatio.SetAspectRatio
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByAspectRatio_SetAspectRatio final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByAspectRatio_SetAspectRatio;
-
-// Function LGUI.UISizeControlByAspectRatio.SetControlMode
-// 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByAspectRatio_SetControlMode final
-{
-public:
-	EUISizeControlByAspectRatioMode               value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByAspectRatio_SetControlMode;
-
-// Function LGUI.UISizeControlByAspectRatio.GetAspectRatio
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByAspectRatio_GetAspectRatio final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByAspectRatio_GetAspectRatio;
-
-// Function LGUI.UISizeControlByAspectRatio.GetControlMode
-// 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByAspectRatio_GetControlMode final
-{
-public:
-	EUISizeControlByAspectRatioMode               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByAspectRatio_GetControlMode;
-
-// Function LGUI.UISizeControlByOther.SetAdditionalHeight
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByOther_SetAdditionalHeight final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_SetAdditionalHeight;
-
-// Function LGUI.UISizeControlByOther.SetAdditionalWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByOther_SetAdditionalWidth final
-{
-public:
-	float                                         value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_SetAdditionalWidth;
-
-// Function LGUI.UISizeControlByOther.SetControlHeight
-// 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByOther_SetControlHeight final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_SetControlHeight;
-
-// Function LGUI.UISizeControlByOther.SetControlWidth
-// 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByOther_SetControlWidth final
-{
-public:
-	bool                                          value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_SetControlWidth;
-
-// Function LGUI.UISizeControlByOther.SetTargetActor
-// 0x0008 (0x0008 - 0x0000)
-struct UISizeControlByOther_SetTargetActor final
-{
-public:
-	class AUIBaseActor*                           NewTargetActor;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_SetTargetActor;
-
-// Function LGUI.UISizeControlByOther.GetAdditionalHeight
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByOther_GetAdditionalHeight final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_GetAdditionalHeight;
-
-// Function LGUI.UISizeControlByOther.GetAdditionalWidth
-// 0x0004 (0x0004 - 0x0000)
-struct UISizeControlByOther_GetAdditionalWidth final
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UISizeControlByOther_GetAdditionalWidth;
-
-// Function LGUI.UISizeControlByOther.GetControlHeight
-// 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByOther_GetControlHeight final
+struct UIMultiTemplateScrollViewComponent_IsAllItemDisplayed final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISizeControlByOther_GetControlHeight;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_IsAllItemDisplayed;
 
-// Function LGUI.UISizeControlByOther.GetControlWidth
+// Function LGUI.UIMultiTemplateScrollViewComponent.IsInDisplayRange
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_IsInDisplayRange final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OnlyCheckData;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_IsInDisplayRange;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.RefreshByData
+// 0x0018 (0x0018 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_RefreshByData final
+{
+public:
+	TArray<int32>                                 InTemplateIndexArray;                              // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          KeepContentPosition;                               // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ScrollToItemIndex;                                 // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_RefreshByData;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.ScrollToGridIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_ScrollToGridIndex final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_ScrollToGridIndex;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.ScrollToGridIndexLater
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_ScrollToGridIndexLater final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_ScrollToGridIndexLater;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.TryScrollToGridIndex
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_TryScrollToGridIndex final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bScrollToTop;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_TryScrollToGridIndex;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.CheckScrollViewValid
 // 0x0001 (0x0001 - 0x0000)
-struct UISizeControlByOther_GetControlWidth final
+struct UIMultiTemplateScrollViewComponent_CheckScrollViewValid final
 {
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISizeControlByOther_GetControlWidth;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_CheckScrollViewValid;
 
-// Function LGUI.UISizeControlByOther.GetTargetActor
-// 0x0008 (0x0008 - 0x0000)
-struct UISizeControlByOther_GetTargetActor final
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaGridIndexRange
+// 0x000C (0x000C - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetAreaGridIndexRange final
 {
 public:
-	class AUIBaseActor*                           ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutStartGridIndex;                                 // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutEndGridIndex;                                   // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISizeControlByOther_GetTargetActor;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaGridIndexRange;
 
-// Function LGUI.UISpineManager.SetGlobalPlayRate
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaPadding
+// 0x0014 (0x0014 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetAreaPadding final
+{
+public:
+	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                ReturnValue;                                       // 0x0004(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaPadding;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetAreaSize
+// 0x000C (0x000C - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetAreaSize final
+{
+public:
+	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutWidth;                                          // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutHeight;                                         // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetAreaSize;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetEndDisplayGridIndex
 // 0x0004 (0x0004 - 0x0000)
-struct UISpineManager_SetGlobalPlayRate final
+struct UIMultiTemplateScrollViewComponent_GetEndDisplayGridIndex final
 {
 public:
-	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISpineManager_SetGlobalPlayRate;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetEndDisplayGridIndex;
 
-// Function LGUI.UISpineManager.GetGlobalPlayRate
-// 0x0008 (0x0008 - 0x0000)
-struct UISpineManager_GetGlobalPlayRate final
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridSpacingInArea
+// 0x000C (0x000C - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetGridSpacingInArea final
 {
 public:
-	float                                         NewPlayRate;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridSpacingInArea;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetGridTemplateIndexInArea
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetGridTemplateIndexInArea final
+{
+public:
+	int32                                         InAreaIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetGridTemplateIndexInArea;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetLineHeightWhenVertical
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetLineHeightWhenVertical final
+{
+public:
+	int32                                         InLineIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_UISpineManager_GetGlobalPlayRate;
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetLineHeightWhenVertical;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetLineWidthWhenHorizontal
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetLineWidthWhenHorizontal final
+{
+public:
+	int32                                         InLineIndex;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetLineWidthWhenHorizontal;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.GetStartDisplayGridIndex
+// 0x0004 (0x0004 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_GetStartDisplayGridIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_GetStartDisplayGridIndex;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetAlignGrid
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_SetContentOffsetAlignGrid final
+{
+public:
+	int32                                         GridIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bScrollToTop;                                      // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetAlignGrid;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetXWhenHorizontal
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_SetContentOffsetXWhenHorizontal final
+{
+public:
+	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetXWhenHorizontal;
+
+// Function LGUI.UIMultiTemplateScrollViewComponent.SetContentOffsetYWhenVertical
+// 0x0008 (0x0008 - 0x0000)
+struct UIMultiTemplateScrollViewComponent_SetContentOffsetYWhenVertical final
+{
+public:
+	float                                         NewOffset;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClamp;                                            // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIMultiTemplateScrollViewComponent_SetContentOffsetYWhenVertical;
+
+// Function LGUI.UINavigationGroupComponent.SetNavigateGroupDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct UINavigationGroupComponent_SetNavigateGroupDelegate final
+{
+public:
+	TDelegate<void(class UUINavigationGroupComponent* NavigationGroupComponent, EUINavigationGroupMode mode)> Delegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationGroupComponent_SetNavigateGroupDelegate;
+
+// Function LGUI.UINavigationGroupComponent.SetNavigateTolerance
+// 0x0004 (0x0004 - 0x0000)
+struct UINavigationGroupComponent_SetNavigateTolerance final
+{
+public:
+	float                                         Tolerance;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationGroupComponent_SetNavigateTolerance;
+
+// Function LGUI.UINavigationGroupComponent.GetRootNavigationGrade
+// 0x0010 (0x0010 - 0x0000)
+struct UINavigationGroupComponent_GetRootNavigationGrade final
+{
+public:
+	TArray<class UUISelectableComponent*>         Result;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINavigationGroupComponent_GetRootNavigationGrade;
+
+// Function LGUI.UINiagara.ActivateSystem
+// 0x0001 (0x0001 - 0x0000)
+struct UINiagara_ActivateSystem final
+{
+public:
+	bool                                          Reset;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_ActivateSystem;
+
+// Function LGUI.UINiagara.GetIsActive
+// 0x0001 (0x0001 - 0x0000)
+struct UINiagara_GetIsActive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_GetIsActive;
+
+// Function LGUI.UINiagara.GetNiagaraComponent
+// 0x0008 (0x0008 - 0x0000)
+struct UINiagara_GetNiagaraComponent final
+{
+public:
+	class ULGUINiagaraComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_GetNiagaraComponent;
+
+// Function LGUI.UINiagara.IsCircleClipEnable
+// 0x0001 (0x0001 - 0x0000)
+struct UINiagara_IsCircleClipEnable final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_IsCircleClipEnable;
+
+// Function LGUI.UINiagara.SetCircleClipEnable
+// 0x0001 (0x0001 - 0x0000)
+struct UINiagara_SetCircleClipEnable final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetCircleClipEnable;
+
+// Function LGUI.UINiagara.SetCircleClipParameters
+// 0x0010 (0x0010 - 0x0000)
+struct UINiagara_SetCircleClipParameters final
+{
+public:
+	struct FCircleClipParameters                  NewCircleClipParameters;                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetCircleClipParameters;
+
+// Function LGUI.UINiagara.SetNiagaraEmitterCustomTexture
+// 0x0028 (0x0028 - 0x0000)
+struct UINiagara_SetNiagaraEmitterCustomTexture final
+{
+public:
+	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               InTexture;                                         // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterCustomTexture;
+
+// Function LGUI.UINiagara.SetNiagaraEmitterFloatParam
+// 0x0028 (0x0028 - 0x0000)
+struct UINiagara_SetNiagaraEmitterFloatParam final
+{
+public:
+	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterFloatParam;
+
+// Function LGUI.UINiagara.SetNiagaraEmitterVectorParam
+// 0x0030 (0x0030 - 0x0000)
+struct UINiagara_SetNiagaraEmitterVectorParam final
+{
+public:
+	class FString                                 InEmitterName;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InVariableName;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               InVector;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraEmitterVectorParam;
+
+// Function LGUI.UINiagara.SetNiagaraSystem
+// 0x0008 (0x0008 - 0x0000)
+struct UINiagara_SetNiagaraSystem final
+{
+public:
+	class UNiagaraSystem*                         InSystem;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraSystem;
+
+// Function LGUI.UINiagara.SetNiagaraUIActive
+// 0x0002 (0x0002 - 0x0000)
+struct UINiagara_SetNiagaraUIActive final
+{
+public:
+	bool                                          active;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInResetNiagara;                                   // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraUIActive;
+
+// Function LGUI.UINiagara.SetNiagaraVarFloat
+// 0x0018 (0x0018 - 0x0000)
+struct UINiagara_SetNiagaraVarFloat final
+{
+public:
+	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraVarFloat;
+
+// Function LGUI.UINiagara.SetNiagaraVarInt
+// 0x0018 (0x0018 - 0x0000)
+struct UINiagara_SetNiagaraVarInt final
+{
+public:
+	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraVarInt;
+
+// Function LGUI.UINiagara.SetNiagaraVarLinearColor
+// 0x0020 (0x0020 - 0x0000)
+struct UINiagara_SetNiagaraVarLinearColor final
+{
+public:
+	class FString                                 VarName;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Value;                                             // 0x0010(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_SetNiagaraVarLinearColor;
+
+// Function LGUI.UINiagara.GetCircleClipParameters
+// 0x0010 (0x0010 - 0x0000)
+struct UINiagara_GetCircleClipParameters final
+{
+public:
+	struct FCircleClipParameters                  ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINiagara_GetCircleClipParameters;
+
+// Function LGUI.UINumberLerpComponent.SetNumberShowType
+// 0x0001 (0x0001 - 0x0000)
+struct UINumberLerpComponent_SetNumberShowType final
+{
+public:
+	ENumberShowType                               InNumberShowType;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_SetNumberShowType;
+
+// Function LGUI.UINumberLerpComponent.SetPostfixContent
+// 0x0010 (0x0010 - 0x0000)
+struct UINumberLerpComponent_SetPostfixContent final
+{
+public:
+	class FString                                 InPostfixContent;                                  // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_SetPostfixContent;
+
+// Function LGUI.UINumberLerpComponent.SetPrefixContent
+// 0x0010 (0x0010 - 0x0000)
+struct UINumberLerpComponent_SetPrefixContent final
+{
+public:
+	class FString                                 InPrefixContent;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_SetPrefixContent;
+
+// Function LGUI.UINumberLerpComponent.SetValue
+// 0x0004 (0x0004 - 0x0000)
+struct UINumberLerpComponent_SetValue final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_SetValue;
+
+// Function LGUI.UINumberLerpComponent.GetNumberShowType
+// 0x0001 (0x0001 - 0x0000)
+struct UINumberLerpComponent_GetNumberShowType final
+{
+public:
+	ENumberShowType                               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_GetNumberShowType;
+
+// Function LGUI.UINumberLerpComponent.GetValue
+// 0x0004 (0x0004 - 0x0000)
+struct UINumberLerpComponent_GetValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UINumberLerpComponent_GetValue;
+
+// Function LGUI.LGUICustomDeviceMarginsParam.GetMarginOptionNames
+// 0x0010 (0x0010 - 0x0000)
+struct LGUICustomDeviceMarginsParam_GetMarginOptionNames final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LGUICustomDeviceMarginsParam_GetMarginOptionNames;
+
+// Function LGUI.UIScrollbarComponent.SetScrollbarDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct UIScrollbarComponent_SetScrollbarDelegate final
+{
+public:
+	TDelegate<void(class UUIScrollbarComponent* ScrollbarComponent, bool ativeOrInactive)> Delegate; // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_SetScrollbarDelegate;
+
+// Function LGUI.UIScrollbarComponent.ChangeSchedule
+// 0x0001 (0x0001 - 0x0000)
+struct UIScrollbarComponent_ChangeSchedule final
+{
+public:
+	ELGUINavigationDirection                      InDirection;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_ChangeSchedule;
+
+// Function LGUI.UIScrollbarComponent.RegisterSlideEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UIScrollbarComponent_RegisterSlideEvent final
+{
+public:
+	TDelegate<void(float InFloat)>                InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_RegisterSlideEvent;
+
+// Function LGUI.UIScrollbarComponent.SetSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollbarComponent_SetSize final
+{
+public:
+	float                                         InSize;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_SetSize;
+
+// Function LGUI.UIScrollbarComponent.SetValue
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollbarComponent_SetValue final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_SetValue;
+
+// Function LGUI.UIScrollbarComponent.SetValueAndSize
+// 0x000C (0x000C - 0x0000)
+struct UIScrollbarComponent_SetValueAndSize final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InSize;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_SetValueAndSize;
+
+// Function LGUI.UIScrollbarComponent.UnregisterSlideEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UIScrollbarComponent_UnregisterSlideEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_UnregisterSlideEvent;
+
+// Function LGUI.UIScrollbarComponent.GetSize
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollbarComponent_GetSize final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_GetSize;
+
+// Function LGUI.UIScrollbarComponent.GetValue
+// 0x0004 (0x0004 - 0x0000)
+struct UIScrollbarComponent_GetValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UIScrollbarComponent_GetValue;
+
+// Function LGUI.UISelectableButtonComponent.SetForceSelect
+// 0x0001 (0x0001 - 0x0000)
+struct UISelectableButtonComponent_SetForceSelect final
+{
+public:
+	bool                                          forceSelect;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISelectableButtonComponent_SetForceSelect;
+
+// Function LGUI.UISliderComponent.RegisterSlideEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UISliderComponent_RegisterSlideEvent final
+{
+public:
+	TDelegate<void(float InFloat)>                InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISliderComponent_RegisterSlideEvent;
+
+// Function LGUI.UISliderComponent.SetMaxValue
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_SetMaxValue final
+{
+public:
+	float                                         InMaxValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          KeepRelativeValue;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISliderComponent_SetMaxValue;
+
+// Function LGUI.UISliderComponent.SetMinValue
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_SetMinValue final
+{
+public:
+	float                                         InMinValue;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          KeepRelativeValue;                                 // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISliderComponent_SetMinValue;
+
+// Function LGUI.UISliderComponent.SetProgressIncrement
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_SetProgressIncrement final
+{
+public:
+	float                                         incrementValue;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          needRound;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NeedAudio;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISliderComponent_SetProgressIncrement;
+
+// Function LGUI.UISliderComponent.SetValue
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_SetValue final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISliderComponent_SetValue;
+
+// Function LGUI.UISliderComponent.SetValueWithAudio
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_SetValueWithAudio final
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FireEvent;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UISliderComponent_SetValueWithAudio;
+
+// Function LGUI.UISliderComponent.UnregisterSlideEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UISliderComponent_UnregisterSlideEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISliderComponent_UnregisterSlideEvent;
+
+// Function LGUI.UISliderComponent.GetMaxValue
+// 0x0004 (0x0004 - 0x0000)
+struct UISliderComponent_GetMaxValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISliderComponent_GetMaxValue;
+
+// Function LGUI.UISliderComponent.GetMinValue
+// 0x0004 (0x0004 - 0x0000)
+struct UISliderComponent_GetMinValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISliderComponent_GetMinValue;
+
+// Function LGUI.UISliderComponent.GetValue
+// 0x0004 (0x0004 - 0x0000)
+struct UISliderComponent_GetValue final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISliderComponent_GetValue;
+
+// Function LGUI.UISpineRenderable.AfterSkeletonUpdate
+// 0x0008 (0x0008 - 0x0000)
+struct UISpineRenderable_AfterSkeletonUpdate final
+{
+public:
+	class USpineSkeletonComponent*                SkeletonComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineRenderable_AfterSkeletonUpdate;
+
+// Function LGUI.UISpineRenderable.GetMeshesNum
+// 0x0004 (0x0004 - 0x0000)
+struct UISpineRenderable_GetMeshesNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineRenderable_GetMeshesNum;
+
+// Function LGUI.UISpineRenderable.GetTotalVerticeNum
+// 0x0004 (0x0004 - 0x0000)
+struct UISpineRenderable_GetTotalVerticeNum final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineRenderable_GetTotalVerticeNum;
+
+// Function LGUI.UISpineRenderable.OnSpineAnimationEnd
+// 0x0008 (0x0008 - 0x0000)
+struct UISpineRenderable_OnSpineAnimationEnd final
+{
+public:
+	class UTrackEntry*                            entry;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineRenderable_OnSpineAnimationEnd;
+
+// Function LGUI.UISpineRenderable.OnSpineAnimationStart
+// 0x0008 (0x0008 - 0x0000)
+struct UISpineRenderable_OnSpineAnimationStart final
+{
+public:
+	class UTrackEntry*                            entry;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UISpineRenderable_OnSpineAnimationStart;
 
 // Function LGUI.UISprite.SetFillAmount
 // 0x0004 (0x0004 - 0x0000)
@@ -11812,42 +11913,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_SpriteTransitionUtil_SetSpriteSize;
-
-// Function LGUI.UIStaticMesh.SetMesh
-// 0x0008 (0x0008 - 0x0000)
-struct UIStaticMesh_SetMesh final
-{
-public:
-	class UStaticMesh*                            value;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIStaticMesh_SetMesh;
-
-// Function LGUI.UIStaticMesh.SetVertexColorType
-// 0x0001 (0x0001 - 0x0000)
-struct UIStaticMesh_SetVertexColorType final
-{
-public:
-	EUIStaticMeshVertexColorType                  value;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIStaticMesh_SetVertexColorType;
-
-// Function LGUI.UIStaticMesh.GetMesh
-// 0x0008 (0x0008 - 0x0000)
-struct UIStaticMesh_GetMesh final
-{
-public:
-	class UStaticMesh*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIStaticMesh_GetMesh;
-
-// Function LGUI.UIStaticMesh.GetVertexColorType
-// 0x0001 (0x0001 - 0x0000)
-struct UIStaticMesh_GetVertexColorType final
-{
-public:
-	EUIStaticMeshVertexColorType                  ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIStaticMesh_GetVertexColorType;
 
 // Function LGUI.UIText.SetGmReplaceFontDelegate
 // 0x0028 (0x0028 - 0x0000)
@@ -12461,6 +12526,137 @@ public:
 };
 DUMPER7_ASSERTS_UITextAdditionalUVModifier_SetAdditionalUV;
 
+// Function LGUI.UITextInputComponent.SetShowKeyboardDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct UITextInputComponent_SetShowKeyboardDelegate final
+{
+public:
+	TDelegate<void(bool state)>                   InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_SetShowKeyboardDelegate;
+
+// Function LGUI.UITextInputComponent.IsInputActive
+// 0x0001 (0x0001 - 0x0000)
+struct UITextInputComponent_IsInputActive final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_IsInputActive;
+
+// Function LGUI.UITextInputComponent.RegisterInputActivateEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UITextInputComponent_RegisterInputActivateEvent final
+{
+public:
+	TDelegate<void(bool InActivate)>              InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_RegisterInputActivateEvent;
+
+// Function LGUI.UITextInputComponent.RegisterSubmitEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UITextInputComponent_RegisterSubmitEvent final
+{
+public:
+	TDelegate<void(const class FString& InString)> InDelegate;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_RegisterSubmitEvent;
+
+// Function LGUI.UITextInputComponent.RegisterValueChangeEvent
+// 0x0030 (0x0030 - 0x0000)
+struct UITextInputComponent_RegisterValueChangeEvent final
+{
+public:
+	TDelegate<void(const class FString& InString)> InDelegate;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_RegisterValueChangeEvent;
+
+// Function LGUI.UITextInputComponent.SetCustomInputTypeFunction
+// 0x0028 (0x0028 - 0x0000)
+struct UITextInputComponent_SetCustomInputTypeFunction final
+{
+public:
+	TDelegate<void(const class FString& InString)> InFunction;                                       // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_SetCustomInputTypeFunction;
+
+// Function LGUI.UITextInputComponent.SetInputType
+// 0x0001 (0x0001 - 0x0000)
+struct UITextInputComponent_SetInputType final
+{
+public:
+	ELGUITextInputType                            newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_SetInputType;
+
+// Function LGUI.UITextInputComponent.SetText
+// 0x0018 (0x0018 - 0x0000)
+struct UITextInputComponent_SetText final
+{
+public:
+	class FString                                 InText;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InFireEvent;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_UITextInputComponent_SetText;
+
+// Function LGUI.UITextInputComponent.UnregisterInputActivateEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UITextInputComponent_UnregisterInputActivateEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_UnregisterInputActivateEvent;
+
+// Function LGUI.UITextInputComponent.UnregisterSubmitEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UITextInputComponent_UnregisterSubmitEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_UnregisterSubmitEvent;
+
+// Function LGUI.UITextInputComponent.UnregisterValueChangeEvent
+// 0x0008 (0x0008 - 0x0000)
+struct UITextInputComponent_UnregisterValueChangeEvent final
+{
+public:
+	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_UnregisterValueChangeEvent;
+
+// Function LGUI.UITextInputComponent.GetInputType
+// 0x0001 (0x0001 - 0x0000)
+struct UITextInputComponent_GetInputType final
+{
+public:
+	ELGUITextInputType                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_GetInputType;
+
+// Function LGUI.UITextInputComponent.GetText
+// 0x0010 (0x0010 - 0x0000)
+struct UITextInputComponent_GetText final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_GetText;
+
+// Function LGUI.UITextInputComponent.GetTextComponent
+// 0x0008 (0x0008 - 0x0000)
+struct UITextInputComponent_GetTextComponent final
+{
+public:
+	class UUIText*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_UITextInputComponent_GetTextComponent;
+
 // Function LGUI.UITextureBase_BP.OnCreateGeometry_BP
 // 0x0008 (0x0008 - 0x0000)
 struct UITextureBase_BP_OnCreateGeometry_BP final
@@ -12506,90 +12702,6 @@ public:
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_TextureTransitionUtil_SetTextureSize;
-
-// Function LGUI.UIToggleComponent.RegisterToggleEvent
-// 0x0030 (0x0030 - 0x0000)
-struct UIToggleComponent_RegisterToggleEvent final
-{
-public:
-	TDelegate<void(bool InBool)>                  InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLGUIDelegateHandleWrapper             ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_RegisterToggleEvent;
-
-// Function LGUI.UIToggleComponent.SetState
-// 0x0002 (0x0002 - 0x0000)
-struct UIToggleComponent_SetState final
-{
-public:
-	bool                                          newState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          fireEvent;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_SetState;
-
-// Function LGUI.UIToggleComponent.SetToggleGroup
-// 0x0008 (0x0008 - 0x0000)
-struct UIToggleComponent_SetToggleGroup final
-{
-public:
-	class UUIToggleGroupComponent*                InGroupComp;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_SetToggleGroup;
-
-// Function LGUI.UIToggleComponent.SetValue
-// 0x0002 (0x0002 - 0x0000)
-struct UIToggleComponent_SetValue final
-{
-public:
-	bool                                          newValue;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          fireEvent;                                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_SetValue;
-
-// Function LGUI.UIToggleComponent.UnregisterToggleEvent
-// 0x0008 (0x0008 - 0x0000)
-struct UIToggleComponent_UnregisterToggleEvent final
-{
-public:
-	struct FLGUIDelegateHandleWrapper             InDelegateHandle;                                  // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_UnregisterToggleEvent;
-
-// Function LGUI.UIToggleComponent.GetIndexInGroup
-// 0x0004 (0x0004 - 0x0000)
-struct UIToggleComponent_GetIndexInGroup final
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_GetIndexInGroup;
-
-// Function LGUI.UIToggleComponent.GetState
-// 0x0001 (0x0001 - 0x0000)
-struct UIToggleComponent_GetState final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_GetState;
-
-// Function LGUI.UIToggleComponent.GetToggleGroupActor
-// 0x0008 (0x0008 - 0x0000)
-struct UIToggleComponent_GetToggleGroupActor final
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_GetToggleGroupActor;
-
-// Function LGUI.UIToggleComponent.GetValue
-// 0x0001 (0x0001 - 0x0000)
-struct UIToggleComponent_GetValue final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_UIToggleComponent_GetValue;
 
 // Function LGUI.UIToggleGroupComponent.OnComponentHighlighted
 // 0x0008 (0x0008 - 0x0000)

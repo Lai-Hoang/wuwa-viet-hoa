@@ -146,11 +146,11 @@ class UKuroFastCollisionSubsystem* UKuroFastCollisionSubsystem::Get(const class 
 // Function KuroFastCollision.KuroFastCollisionSubsystem.CreateAlgorithm
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// TSubclassOf<class UKuroFastCollisionAlgorithm>Class_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UKuroFastCollisionAlgorithm>AlgorithmClass                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bTickEnabled                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UKuroFastCollisionAlgorithm*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UKuroFastCollisionAlgorithm* UKuroFastCollisionSubsystem::CreateAlgorithm(TSubclassOf<class UKuroFastCollisionAlgorithm> Class_0, bool bTickEnabled)
+class UKuroFastCollisionAlgorithm* UKuroFastCollisionSubsystem::CreateAlgorithm(TSubclassOf<class UKuroFastCollisionAlgorithm> AlgorithmClass, bool bTickEnabled)
 {
 	static class UFunction* Func = nullptr;
 
@@ -159,7 +159,7 @@ class UKuroFastCollisionAlgorithm* UKuroFastCollisionSubsystem::CreateAlgorithm(
 
 	Params::KuroFastCollisionSubsystem_CreateAlgorithm Parms{};
 
-	Parms.Class_0 = Class_0;
+	Parms.AlgorithmClass = AlgorithmClass;
 	Parms.bTickEnabled = bTickEnabled;
 
 	auto Flgs = Func->FunctionFlags;
@@ -195,31 +195,6 @@ void UKuroFastCollisionSubsystem::DestroyAlgorithm(class UKuroFastCollisionAlgor
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroFastCollision.KuroFastCollisionSubsystem.GetDefaultAlgorithm
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UKuroFastCollisionAlgorithm*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UKuroFastCollisionAlgorithm* UKuroFastCollisionSubsystem::GetDefaultAlgorithm()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroFastCollisionSubsystem", "GetDefaultAlgorithm");
-
-	Params::KuroFastCollisionSubsystem_GetDefaultAlgorithm Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 }

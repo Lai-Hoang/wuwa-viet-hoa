@@ -367,6 +367,38 @@ bool UKuroPointCloudCache::CheckConsistency(bool Verbosity) const
 }
 
 
+// Function KuroPointCloud.KuroPointCloudFunctionLibrary.BindPointCloudComponent
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UKuroPointCloudWorldComponent*    PointCloudComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  BindingKey                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPointCloudFunctionLibrary::BindPointCloudComponent(class UKuroPointCloudWorldComponent* PointCloudComponent, int32* BindingKey)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPointCloudFunctionLibrary", "BindPointCloudComponent");
+
+	Params::KuroPointCloudFunctionLibrary_BindPointCloudComponent Parms{};
+
+	Parms.PointCloudComponent = PointCloudComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (BindingKey != nullptr)
+		*BindingKey = Parms.BindingKey;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroPointCloud.KuroPointCloudFunctionLibrary.SetNiagaraKuroPointCloudCache
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -386,6 +418,38 @@ bool UKuroPointCloudFunctionLibrary::SetNiagaraKuroPointCloudCache(class UNiagar
 
 	Parms.NiagaraComponent = NiagaraComponent;
 	Parms.KuroPointCloudCache = KuroPointCloudCache;
+	Parms.ParameterName = ParameterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudFunctionLibrary.SetNiagaraKuroPointCloudCollectionName
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraComponent                                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             WorldCollecitonName                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPointCloudFunctionLibrary::SetNiagaraKuroPointCloudCollectionName(class UNiagaraComponent* NiagaraComponent, class FName WorldCollecitonName, class FName ParameterName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPointCloudFunctionLibrary", "SetNiagaraKuroPointCloudCollectionName");
+
+	Params::KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCollectionName Parms{};
+
+	Parms.NiagaraComponent = NiagaraComponent;
+	Parms.WorldCollecitonName = WorldCollecitonName;
 	Parms.ParameterName = ParameterName;
 
 	auto Flgs = Func->FunctionFlags;
@@ -705,6 +769,116 @@ void AKuroPointCloudWorldActor::DeleteAllActorsInGroup(const class UObject* Worl
 }
 
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.AddRingBufferTransform
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Transform                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::AddRingBufferTransform(int32 EffectId, const struct FTransform& Transform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "AddRingBufferTransform");
+
+	Params::KuroPointCloudWorldComponent_AddRingBufferTransform Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Transform = std::move(Transform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.AddRingBufferTransforms
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::AddRingBufferTransforms(int32 EffectId, const TArray<struct FTransform>& Transforms)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "AddRingBufferTransforms");
+
+	Params::KuroPointCloudWorldComponent_AddRingBufferTransforms Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Transforms = std::move(Transforms);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.CommitRingBufferProcessed
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::CommitRingBufferProcessed(int32 EffectId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "CommitRingBufferProcessed");
+
+	Params::KuroPointCloudWorldComponent_CommitRingBufferProcessed Parms{};
+
+	Parms.EffectId = EffectId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.FillDynamicPoints
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NumPoints                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Transform                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bPointVisible                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::FillDynamicPoints(int32 EffectId, int32 NumPoints, const struct FTransform& Transform, bool bPointVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "FillDynamicPoints");
+
+	Params::KuroPointCloudWorldComponent_FillDynamicPoints Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.NumPoints = NumPoints;
+	Parms.Transform = std::move(Transform);
+	Parms.bPointVisible = bPointVisible;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.GetInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -752,6 +926,79 @@ void UKuroPointCloudWorldComponent::MarkUpdate()
 }
 
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.RegisterToWorldSystem
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroPointCloudWorldComponent::RegisterToWorldSystem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "RegisterToWorldSystem");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.RemoveEffectRingBuffer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::RemoveEffectRingBuffer(int32 EffectId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "RemoveEffectRingBuffer");
+
+	Params::KuroPointCloudWorldComponent_RemoveEffectRingBuffer Parms{};
+
+	Parms.EffectId = EffectId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SetDynamicPointVisible
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPointVisible                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::SetDynamicPointVisible(int32 EffectId, int32 Index_0, bool bPointVisible)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "SetDynamicPointVisible");
+
+	Params::KuroPointCloudWorldComponent_SetDynamicPointVisible Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Index_0 = Index_0;
+	Parms.bPointVisible = bPointVisible;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.SetInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -777,6 +1024,166 @@ void UKuroPointCloudWorldComponent::SetInstance(class UKuroPointCloudInstance* I
 }
 
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SetNiagaraCollectionName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             CollectionName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::SetNiagaraCollectionName(class FName CollectionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "SetNiagaraCollectionName");
+
+	Params::KuroPointCloudWorldComponent_SetNiagaraCollectionName Parms{};
+
+	Parms.CollectionName = CollectionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.UpdateDynamicPoint
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                NewTransform                                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::UpdateDynamicPoint(int32 EffectId, int32 Index_0, const struct FTransform& NewTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "UpdateDynamicPoint");
+
+	Params::KuroPointCloudWorldComponent_UpdateDynamicPoint Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Index_0 = Index_0;
+	Parms.NewTransform = std::move(NewTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.UpdateDynamicPoints
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroPointCloudWorldComponent::UpdateDynamicPoints(int32 EffectId, const TArray<struct FTransform>& Transforms)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "UpdateDynamicPoints");
+
+	Params::KuroPointCloudWorldComponent_UpdateDynamicPoints Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Transforms = std::move(Transforms);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetBindingKey
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32*                                  OutKey                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPointCloudWorldComponent::GetBindingKey(int32* OutKey) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetBindingKey");
+
+	Params::KuroPointCloudWorldComponent_GetBindingKey Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutKey != nullptr)
+		*OutKey = Parms.OutKey;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetCollectionName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName UKuroPointCloudWorldComponent::GetCollectionName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetCollectionName");
+
+	Params::KuroPointCloudWorldComponent_GetCollectionName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetComponentUsageMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EKPCWorldComponentDynamicPointMode      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EKPCWorldComponentDynamicPointMode UKuroPointCloudWorldComponent::GetComponentUsageMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetComponentUsageMode");
+
+	Params::KuroPointCloudWorldComponent_GetComponentUsageMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.GetNumDynamicPoints
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -790,6 +1197,122 @@ int32 UKuroPointCloudWorldComponent::GetNumDynamicPoints() const
 		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetNumDynamicPoints");
 
 	Params::KuroPointCloudWorldComponent_GetNumDynamicPoints Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetNumDynamicPointsByEffectID
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPointCloudWorldComponent::GetNumDynamicPointsByEffectID(int32 EffectId) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetNumDynamicPointsByEffectID");
+
+	Params::KuroPointCloudWorldComponent_GetNumDynamicPointsByEffectID Parms{};
+
+	Parms.EffectId = EffectId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferAvailableCount
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewReadIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPointCloudWorldComponent::GetRingBufferAvailableCount(int32 EffectId, int32 NewReadIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetRingBufferAvailableCount");
+
+	Params::KuroPointCloudWorldComponent_GetRingBufferAvailableCount Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.NewReadIndex = NewReadIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferPendingCount
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewReadIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPointCloudWorldComponent::GetRingBufferPendingCount(int32 EffectId, int32 NewReadIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetRingBufferPendingCount");
+
+	Params::KuroPointCloudWorldComponent_GetRingBufferPendingCount Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.NewReadIndex = NewReadIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferWriteIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPointCloudWorldComponent::GetRingBufferWriteIndex(int32 EffectId) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "GetRingBufferWriteIndex");
+
+	Params::KuroPointCloudWorldComponent_GetRingBufferWriteIndex Parms{};
+
+	Parms.EffectId = EffectId;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -829,6 +1352,111 @@ bool UKuroPointCloudWorldComponent::SampleDynamicPoint(int32 Index_0, struct FTr
 
 	if (OutTransform != nullptr)
 		*OutTransform = std::move(Parms.OutTransform);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SampleDynamicVisiblePoint
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewReadIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// int32*                                  bPointVisible                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPointCloudWorldComponent::SampleDynamicVisiblePoint(int32 EffectId, int32 Index_0, int32 NewReadIndex, struct FTransform* OutTransform, int32* bPointVisible) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "SampleDynamicVisiblePoint");
+
+	Params::KuroPointCloudWorldComponent_SampleDynamicVisiblePoint Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.Index_0 = Index_0;
+	Parms.NewReadIndex = NewReadIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	if (bPointVisible != nullptr)
+		*bPointVisible = Parms.bPointVisible;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SampleRingBufferPoint
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   EffectId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SampleIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewReadIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform*                      OutTransform                                           (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// int32*                                  OutVisible                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPointCloudWorldComponent::SampleRingBufferPoint(int32 EffectId, int32 SampleIndex, int32 NewReadIndex, struct FTransform* OutTransform, int32* OutVisible) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldComponent", "SampleRingBufferPoint");
+
+	Params::KuroPointCloudWorldComponent_SampleRingBufferPoint Parms{};
+
+	Parms.EffectId = EffectId;
+	Parms.SampleIndex = SampleIndex;
+	Parms.NewReadIndex = NewReadIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTransform != nullptr)
+		*OutTransform = std::move(Parms.OutTransform);
+
+	if (OutVisible != nullptr)
+		*OutVisible = Parms.OutVisible;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroPointCloud.KuroPointCloudWorldSystem.GetNextAvailableKey
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPointCloudWorldSystem::GetNextAvailableKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroPointCloudWorldSystem", "GetNextAvailableKey");
+
+	Params::KuroPointCloudWorldSystem_GetNextAvailableKey Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CineCamera.BP_CineCamera_C
-// 0x00D0 (0x0D60 - 0x0C90)
+// 0x00D0 (0x0D80 - 0x0CB0)
 class ABP_CineCamera_C final : public ACineCameraActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         ResolutionAdaptFactor;                             // 0x0C98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9C[0x4];                                      // 0x0C9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    UiCameraAnimationRow;                              // 0x0CA0(0x0018)(Edit, BlueprintVisible, NoDestructor)
-	bool                                          IsAutoTransform;                                   // 0x0CB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CB9[0x3];                                      // 0x0CB9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OffsetTime;                                        // 0x0CBC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxOffsetTime;                                     // 0x0CC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCameraFilmbackSettings                Filmback;                                          // 0x0CC4(0x000C)(Edit, BlueprintVisible, NoDestructor)
-	bool                                          Constrain_Aspect_Ratio;                            // 0x0CD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CD1[0x3];                                      // 0x0CD1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Current_Focal_Length;                              // 0x0CD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Current_Aperture;                                  // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CDC[0x4];                                      // 0x0CDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraFocusSettings                   Focus_Settings;                                    // 0x0CE0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FCameraLensSettings                    Lens_Settings;                                     // 0x0D40(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	float                                         FocalRegion;                                       // 0x0D58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CB0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         ResolutionAdaptFactor;                             // 0x0CB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CBC[0x4];                                      // 0x0CBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    UiCameraAnimationRow;                              // 0x0CC0(0x0018)(Edit, BlueprintVisible, NoDestructor)
+	bool                                          IsAutoTransform;                                   // 0x0CD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CD9[0x3];                                      // 0x0CD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OffsetTime;                                        // 0x0CDC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxOffsetTime;                                     // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCameraFilmbackSettings                Filmback;                                          // 0x0CE4(0x000C)(Edit, BlueprintVisible, NoDestructor)
+	bool                                          Constrain_Aspect_Ratio;                            // 0x0CF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CF1[0x3];                                      // 0x0CF1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Current_Focal_Length;                              // 0x0CF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Current_Aperture;                                  // 0x0CF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CFC[0x4];                                      // 0x0CFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraFocusSettings                   Focus_Settings;                                    // 0x0D00(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FCameraLensSettings                    Lens_Settings;                                     // 0x0D60(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	float                                         FocalRegion;                                       // 0x0D78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_CineCamera(int32 EntryPoint);

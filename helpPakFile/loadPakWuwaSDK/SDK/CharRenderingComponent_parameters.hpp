@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "ECharacterSlotSpecifiedType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ECharacterBodySpecifiedType_structs.hpp"
 #include "ECharacterControllerCaseType_structs.hpp"
 #include "ECharacterDitherType_structs.hpp"
+#include "ECharacterBodySpecifiedType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ECharacterSlotSpecifiedType_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
 
 

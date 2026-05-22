@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "KuroAnim_classes.hpp"
 
 
@@ -19,31 +19,31 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_LevelPrefabDaiyu.ABP_LevelPrefabDaiyu_C
-// 0x0780 (0x0FA0 - 0x0820)
+// 0x0780 (0x1090 - 0x0910)
 class UABP_LevelPrefabDaiyu_C final : public UKuroAnimInstance
 {
 public:
-	uint8                                         Pad_818[0x8];                                      // 0x0818(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0820(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0828(0x0038)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0860(0x0060)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x08C0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x08E8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0910(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0938(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0960(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0988(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x09B0(0x00D8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x0A88(0x0038)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0AC0(0x00D8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0B98(0x0038)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0BD0(0x00D8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x0CA8(0x0038)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0CE0(0x00D8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0DB8(0x0038)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0DF0(0x0198)()
-	class FString                                 State;                                             // 0x0F88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	float                                         PlayRate;                                          // 0x0F98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_908[0x8];                                      // 0x0908(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0910(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0918(0x0038)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0950(0x0060)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x09B0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x09D8(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x0A00(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0A28(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0A50(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0A78(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x0AA0(0x00D8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_3;                       // 0x0B78(0x0038)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0BB0(0x00D8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x0C88(0x0038)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x0CC0(0x00D8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x0D98(0x0038)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0DD0(0x00D8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0EA8(0x0038)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x0EE0(0x0198)()
+	class FString                                 State;                                             // 0x1078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	float                                         PlayRate;                                          // 0x1088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABP_LevelPrefabDaiyu(int32 EntryPoint);

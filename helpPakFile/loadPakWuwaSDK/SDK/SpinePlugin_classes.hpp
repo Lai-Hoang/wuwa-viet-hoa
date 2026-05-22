@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "SpinePlugin_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SpinePlugin_structs.hpp"
 #include "ProceduralMeshComponent_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
@@ -174,7 +174,7 @@ public:
 DUMPER7_ASSERTS_UTrackEntry;
 
 // Class SpinePlugin.SpineSkeletonComponent
-// 0x0058 (0x0118 - 0x00C0)
+// 0x00A8 (0x0168 - 0x00C0)
 class USpineSkeletonComponent : public UActorComponent
 {
 public:
@@ -182,7 +182,7 @@ public:
 	class USpineSkeletonDataAsset*                SkeletonData;                                      // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(class USpineSkeletonComponent* skeleton)> BeforeUpdateWorldTransform; // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(class USpineSkeletonComponent* skeleton)> AfterUpdateWorldTransform; // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F0[0x28];                                      // 0x00F0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F0[0x78];                                      // 0x00F0(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetAnimationDuration(const class FString& AnimationName);
@@ -226,22 +226,22 @@ public:
 DUMPER7_ASSERTS_USpineSkeletonComponent;
 
 // Class SpinePlugin.SpineSkeletonAnimationComponent
-// 0x0100 (0x0218 - 0x0118)
+// 0x0100 (0x0268 - 0x0168)
 class USpineSkeletonAnimationComponent final : public USpineSkeletonComponent
 {
 public:
-	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationStart;                         // 0x0118(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationInterrupt;                     // 0x0128(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTrackEntry* entry, const struct FSpineEvent& evt)> AnimationEvent; // 0x0138(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationComplete;                      // 0x0148(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationEnd;                           // 0x0158(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationDispose;                       // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class FString                                 PreviewAnimation;                                  // 0x0178(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PreviewSkin;                                       // 0x0188(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class UTrackEntry*>                      trackEntries;                                      // 0x01A0(0x0050)(Protected, NativeAccessSpecifierProtected)
-	bool                                          bAutoPlaying;                                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1F1[0x27];                                     // 0x01F1(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationStart;                         // 0x0168(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationInterrupt;                     // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UTrackEntry* entry, const struct FSpineEvent& evt)> AnimationEvent; // 0x0188(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationComplete;                      // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationEnd;                           // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UTrackEntry* entry)> AnimationDispose;                       // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FString                                 PreviewAnimation;                                  // 0x01C8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PreviewSkin;                                       // 0x01D8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UTrackEntry*>                      trackEntries;                                      // 0x01F0(0x0050)(Protected, NativeAccessSpecifierProtected)
+	bool                                          bAutoPlaying;                                      // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_241[0x27];                                     // 0x0241(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UTrackEntry* AddAnimation(int32 trackIndex, const class FString& animationName, bool loop, float delay);
@@ -306,7 +306,7 @@ public:
 DUMPER7_ASSERTS_USpineSkeletonDataAsset;
 
 // Class SpinePlugin.SpineSkeletonRendererComponent
-// 0x02D0 (0x08E0 - 0x0610)
+// 0x0310 (0x0920 - 0x0610)
 class USpineSkeletonRendererComponent final : public UProceduralMeshComponent
 {
 public:
@@ -328,7 +328,9 @@ public:
 	TArray<struct FVector>                        normals;                                           // 0x08A8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FVector2D>                      uvs;                                               // 0x08B8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FColor>                         colors;                                            // 0x08C8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8D8[0x8];                                      // 0x08D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_8D8[0x38];                                     // 0x08D8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bNeedParallelUpdate;                               // 0x0910(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_911[0xF];                                      // 0x0911(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

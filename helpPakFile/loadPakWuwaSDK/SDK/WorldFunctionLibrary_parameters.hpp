@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "BPEEnableFollowShooter_structs.hpp"
-#include "EInputAction_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "EInputState_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "EDetachType_structs.hpp"
 #include "ERelation_structs.hpp"
+#include "BPEEnableFollowShooter_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EDetachType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EInputAction_structs.hpp"
+#include "Engine_structs.hpp"
+#include "EInputState_structs.hpp"
 #include "EPawnChannel_structs.hpp"
 #include "EWeatherState_structs.hpp"
 #include "EWuYinQuState_structs.hpp"
@@ -1950,6 +1950,26 @@ public:
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WorldFunctionLibrary_C_CheckIsRoleTriggerActor;
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsMale
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_IsMale final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_WorldFunctionLibrary_C_IsMale;
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.ReleaseFromMediaPlayActor
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_ReleaseFromMediaPlayActor final
+{
+public:
+	TScriptInterface<class IBPI_SceneBp_C>        sceneBpActor;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_WorldFunctionLibrary_C_ReleaseFromMediaPlayActor;
 
 }
 

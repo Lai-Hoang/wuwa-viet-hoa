@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayMessageRuntime_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "GameplayMessageRuntime_structs.hpp"
 
 
 namespace SDK::Params

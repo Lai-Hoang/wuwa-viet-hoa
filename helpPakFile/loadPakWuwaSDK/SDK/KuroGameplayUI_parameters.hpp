@@ -55,11 +55,11 @@ public:
 DUMPER7_ASSERTS_DamageUiManager_AddDamageInfo;
 
 // Function KuroGameplayUI.DamageUiManager.AddDamageViewData
-// 0x0034 (0x0034 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct DamageUiManager_AddDamageViewData final
 {
 public:
-	struct FDamageViewData                        InDamageViewData;                                  // 0x0000(0x0034)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDamageViewData                        InDamageViewData;                                  // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DamageUiManager_AddDamageViewData;
 
@@ -78,11 +78,11 @@ public:
 DUMPER7_ASSERTS_DamageUiManager_InitAllRes;
 
 // Function KuroGameplayUI.DamageUiManager.InitDamageConfig
-// 0x0090 (0x0090 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct DamageUiManager_InitDamageConfig final
 {
 public:
-	struct FDamageConfig                          InDamageConfig;                                    // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FDamageConfig                          InDamageConfig;                                    // 0x0000(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_DamageUiManager_InitDamageConfig;
 

@@ -688,6 +688,82 @@ void AKuroCSGenericCloth::StopSimulation()
 }
 
 
+// Function KuroComputeShader.KuroCSGenericCloth_33.InitShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSGenericCloth_33::InitShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSGenericCloth_33", "InitShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSGenericCloth_33.ReleaseShaderManager
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSGenericCloth_33::ReleaseShaderManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSGenericCloth_33", "ReleaseShaderManager");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSGenericCloth_33.StartSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSGenericCloth_33::StartSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSGenericCloth_33", "StartSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComputeShader.KuroCSGenericCloth_33.StopSimulation
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCSGenericCloth_33::StopSimulation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCSGenericCloth_33", "StopSimulation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroComputeShader.KuroCSPlantAnim.AfterBeginPlay
 // (Final, Native, Public, BlueprintCallable)
 

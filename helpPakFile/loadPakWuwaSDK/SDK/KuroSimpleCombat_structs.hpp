@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // Enum KuroSimpleCombat.EKSC_AttrType
-// NumValues: 0x0051
+// NumValues: 0x006C
 enum class EKSC_AttrType : uint8
 {
 	EAttributeType_None                      = 0,
@@ -66,6 +66,28 @@ enum class EKSC_AttrType : uint8
 	DamageReduceElement6                     = 43,
 	DamageAmplify1                           = 44,
 	DamageAmplify2                           = 45,
+	ShieldMax                                = 50,
+	ShieldChange                             = 51,
+	LifeChange                               = 52,
+	DefChange                                = 53,
+	AtkExtra                                 = 54,
+	DefExtra                                 = 55,
+	LifeExtra                                = 56,
+	SpecialEnergy1                           = 70,
+	SpecialEnergy1Max                        = 71,
+	SpecialEnergy1RecoverSpeed               = 72,
+	SpecialEnergy1ConsumeSpeed               = 73,
+	SpecialEnergy1ChargeEfficiency           = 74,
+	SpecialEnergy2                           = 75,
+	SpecialEnergy2Max                        = 76,
+	SpecialEnergy2RecoverSpeed               = 77,
+	SpecialEnergy2ConsumeSpeed               = 78,
+	SpecialEnergy2ChargeEfficiency           = 79,
+	SpecialEnergy3                           = 80,
+	SpecialEnergy3Max                        = 81,
+	SpecialEnergy3RecoverSpeed               = 82,
+	SpecialEnergy3ConsumeSpeed               = 83,
+	SpecialEnergy3ChargeEfficiency           = 84,
 	IgnoreDefRate                            = 99,
 	IgnoreDamageResistancePhys               = 100,
 	IgnoreDamageResistanceElement1           = 101,
@@ -101,12 +123,17 @@ enum class EKSC_AttrType : uint8
 	SpecialChange9                           = 219,
 	AttackSpeed                              = 220,
 	AttackSpeedChange                        = 221,
+	SpecialDamageReduce1                     = 230,
+	SpecialDamageReduce2                     = 231,
+	SpecialDamageReduce3                     = 232,
+	SpecialDamageReduce4                     = 233,
+	SpecialDamageReduce5                     = 234,
 	AttributeType_Max                        = 255,
 	EKSC_MAX                                 = 256,
 };
 
 // Enum KuroSimpleCombat.EKSC_WorldAttrType
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class EKSC_WorldAttrType : uint8
 {
 	EAttributeType_None                      = 0,
@@ -116,7 +143,8 @@ enum class EKSC_WorldAttrType : uint8
 	WorldSpeed                               = 4,
 	WorldSpeedChange                         = 5,
 	BattleStage                              = 6,
-	EKSC_MAX                                 = 7,
+	Combo                                    = 7,
+	EKSC_MAX                                 = 8,
 };
 
 // Enum KuroSimpleCombat.EKSC_Faction
@@ -143,6 +171,20 @@ enum class EKSC_SkillAutoCast : uint8
 	AutoCast                                 = 1,
 	ManualCast                               = 2,
 	EKSC_MAX                                 = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_Skill_State
+// NumValues: 0x0008
+enum class EKSC_Skill_State : uint8
+{
+	Ready                                    = 0,
+	BeginSkill                               = 1,
+	PreCast                                  = 2,
+	BeginCast                                = 3,
+	EndCast                                  = 4,
+	EndSkill                                 = 5,
+	CoolDown                                 = 6,
+	EKSC_Skill_MAX                           = 7,
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_DurationType
@@ -177,7 +219,7 @@ enum class EKSC_Buff_Aura_TargetType : uint8
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ListenEvent_Response
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class EKSC_Buff_ListenEvent_Response : uint8
 {
 	AddTag                                   = 0,
@@ -188,11 +230,12 @@ enum class EKSC_Buff_ListenEvent_Response : uint8
 	RemoveBuff                               = 5,
 	AddMultiBuff                             = 6,
 	SpawnEntity                              = 7,
-	EKSC_Buff_ListenEvent_MAX                = 8,
+	TryStartSkill                            = 8,
+	EKSC_Buff_ListenEvent_MAX                = 9,
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ListenEvent_ListenType
-// NumValues: 0x000E
+// NumValues: 0x0013
 enum class EKSC_Buff_ListenEvent_ListenType : uint8
 {
 	OnDead                                   = 0,
@@ -208,7 +251,12 @@ enum class EKSC_Buff_ListenEvent_ListenType : uint8
 	OnBulletCreate                           = 10,
 	OnKill                                   = 11,
 	OnAttrChange                             = 12,
-	EKSC_Buff_ListenEvent_MAX                = 13,
+	DelayTime                                = 13,
+	OnTagChangeAdd                           = 14,
+	OnTagChangeRemove                        = 15,
+	OnDodge                                  = 16,
+	OnLifeChangeUp                           = 17,
+	EKSC_Buff_ListenEvent_MAX                = 18,
 };
 
 // Enum KuroSimpleCombat.EKSC_Buff_ModifyAttr_BeforeAfterHit_Target
@@ -250,6 +298,15 @@ enum class EKSC_Buff_StopAction_ActionType : uint8
 	EKSC_Buff_StopAction_MAX                 = 3,
 };
 
+// Enum KuroSimpleCombat.EKSC_SetShapeType
+// NumValues: 0x0003
+enum class EKSC_SetShapeType : uint8
+{
+	FixValue                                 = 0,
+	Scale                                    = 1,
+	EKSC_MAX                                 = 2,
+};
+
 // Enum KuroSimpleCombat.EKSC_PeriodBuffTagEffect
 // NumValues: 0x0003
 enum class EKSC_PeriodBuffTagEffect : uint8
@@ -260,7 +317,7 @@ enum class EKSC_PeriodBuffTagEffect : uint8
 };
 
 // Enum KuroSimpleCombat.EKSC_ComparisonSymbols
-// NumValues: 0x0006
+// NumValues: 0x0008
 enum class EKSC_ComparisonSymbols : uint8
 {
 	Less                                     = 0,
@@ -268,7 +325,22 @@ enum class EKSC_ComparisonSymbols : uint8
 	Greater                                  = 2,
 	GreaterEqual                             = 3,
 	Equal                                    = 4,
-	EKSC_MAX                                 = 5,
+	Increase                                 = 5,
+	Decrease                                 = 6,
+	EKSC_MAX                                 = 7,
+};
+
+// Enum KuroSimpleCombat.EKSC_EntityType
+// NumValues: 0x0007
+enum class EKSC_EntityType : uint8
+{
+	Default                                  = 0,
+	Player                                   = 1,
+	Monster                                  = 2,
+	EliteMonster                             = 3,
+	Boss                                     = 4,
+	SceneItem                                = 5,
+	EKSC_MAX                                 = 6,
 };
 
 // Enum KuroSimpleCombat.EKSC_BattleStage
@@ -282,7 +354,7 @@ enum class EKSC_BattleStage : uint8
 };
 
 // Enum KuroSimpleCombat.EKSC_HeadUiType
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EKSC_HeadUiType : uint8
 {
 	Default                                  = 0,
@@ -291,7 +363,8 @@ enum class EKSC_HeadUiType : uint8
 	BuffGate                                 = 3,
 	TopBoss                                  = 4,
 	Digital                                  = 5,
-	EKSC_MAX                                 = 6,
+	Marble                                   = 6,
+	EKSC_MAX                                 = 7,
 };
 
 // Enum KuroSimpleCombat.EKSC_LockTarget
@@ -399,22 +472,8 @@ enum class EKSC_FXType : uint8
 	EKSC_MAX                                 = 2,
 };
 
-// Enum KuroSimpleCombat.EKSC_Skill_State
-// NumValues: 0x0008
-enum class EKSC_Skill_State : uint8
-{
-	Ready                                    = 0,
-	BeginSkill                               = 1,
-	PreCast                                  = 2,
-	BeginCast                                = 3,
-	EndCast                                  = 4,
-	EndSkill                                 = 5,
-	CoolDown                                 = 6,
-	EKSC_Skill_MAX                           = 7,
-};
-
 // Enum KuroSimpleCombat.EKSC_CalculateType
-// NumValues: 0x0007
+// NumValues: 0x0009
 enum class EKSC_CalculateType : uint8
 {
 	Hurt                                     = 0,
@@ -423,11 +482,13 @@ enum class EKSC_CalculateType : uint8
 	MotorFightHurt                           = 3,
 	MotorCollisionHurt                       = 4,
 	MotorFightHeal                           = 5,
-	EKSC_MAX                                 = 6,
+	HurtMultiRelated                         = 6,
+	Shield                                   = 7,
+	EKSC_MAX                                 = 8,
 };
 
 // Enum KuroSimpleCombat.EKSC_Element
-// NumValues: 0x0009
+// NumValues: 0x000E
 enum class EKSC_Element : uint8
 {
 	Physical                                 = 0,
@@ -437,8 +498,13 @@ enum class EKSC_Element : uint8
 	Wind                                     = 4,
 	Light                                    = 5,
 	Dark                                     = 6,
-	ElementTypeMax                           = 7,
-	EKSC_MAX                                 = 8,
+	SpecialElement1                          = 7,
+	SpecialElement2                          = 8,
+	SpecialElement3                          = 9,
+	SpecialElement4                          = 10,
+	SpecialElement5                          = 11,
+	ElementTypeMax                           = 12,
+	EKSC_MAX                                 = 13,
 };
 
 // Enum KuroSimpleCombat.EKSC_TargetFaction
@@ -492,6 +558,166 @@ enum class EKSC_SkillCastMode : uint8
 	EKSC_MAX                                 = 2,
 };
 
+// Enum KuroSimpleCombat.EKSC_ListenCollisionEvent_ResponseTarget
+// NumValues: 0x0004
+enum class EKSC_ListenCollisionEvent_ResponseTarget : uint8
+{
+	CollisionTarget                          = 0,
+	CurrentPlayer                            = 1,
+	TeamPlayer                               = 2,
+	EKSC_ListenCollisionEvent_MAX            = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_ListenCollisionEvent_Response
+// NumValues: 0x0003
+enum class EKSC_ListenCollisionEvent_Response : uint8
+{
+	AddBuff                                  = 0,
+	CreateBullet                             = 1,
+	EKSC_ListenCollisionEvent_MAX            = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ListenCollisionEvent_CollisionType
+// NumValues: 0x0003
+enum class EKSC_ListenCollisionEvent_CollisionType : uint8
+{
+	Enemy                                    = 0,
+	MoveRangeLimit                           = 1,
+	EKSC_ListenCollisionEvent_MAX            = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ListenCollisionEvent_ListenType
+// NumValues: 0x0002
+enum class EKSC_ListenCollisionEvent_ListenType : uint8
+{
+	TeamCollisions                           = 0,
+	EKSC_ListenCollisionEvent_MAX            = 1,
+};
+
+// Enum KuroSimpleCombat.EKSC_Shape2D_CustomMovementMode
+// NumValues: 0x0003
+enum class EKSC_Shape2D_CustomMovementMode : uint8
+{
+	BaseOnDistance                           = 1,
+	BaseOnSpeed                              = 2,
+	EKSC_Shape2D_MAX                         = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_Shape2D_SelectTarget
+// NumValues: 0x0003
+enum class EKSC_Shape2D_SelectTarget : uint8
+{
+	Self                                     = 1,
+	SearchTarget                             = 2,
+	EKSC_Shape2D_MAX                         = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_SpineAnimNotifyType
+// NumValues: 0x0011
+enum class EKSC_SpineAnimNotifyType : uint8
+{
+	AddTag                                   = 0,
+	RemoveTag                                = 1,
+	ClearTag                                 = 2,
+	AddBuff                                  = 3,
+	RemoveBuff                               = 4,
+	RemoveBuffStacks                         = 5,
+	CreateBullet                             = 6,
+	PlayEffect                               = 7,
+	SearchTarget                             = 8,
+	ApplyMovement                            = 9,
+	Summon                                   = 10,
+	SetSpeed                                 = 11,
+	Charge                                   = 12,
+	MoveRangeLimit                           = 13,
+	SetPosition                              = 14,
+	ClearShield                              = 15,
+	EKSC_MAX                                 = 16,
+};
+
+// Enum KuroSimpleCombat.EKSC_Shape2D_SpecialAnimState
+// NumValues: 0x0006
+enum class EKSC_Shape2D_SpecialAnimState : uint8
+{
+	Empty                                    = 0,
+	BeHit                                    = 1,
+	Break                                    = 2,
+	Death                                    = 3,
+	Revive                                   = 4,
+	EKSC_Shape2D_MAX                         = 5,
+};
+
+// Enum KuroSimpleCombat.EKSC_Shape2D_BaseAnimState
+// NumValues: 0x0005
+enum class EKSC_Shape2D_BaseAnimState : uint8
+{
+	Idle                                     = 0,
+	Rise                                     = 2,
+	Fall                                     = 3,
+	Victory                                  = 4,
+	EKSC_Shape2D_MAX                         = 5,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeBarSide
+// NumValues: 0x0003
+enum class EKSC_ShapeBarSide : uint8
+{
+	Left                                     = 0,
+	Right                                    = 1,
+	EKSC_MAX                                 = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeCompType
+// NumValues: 0x0004
+enum class EKSC_ShapeCompType : uint8
+{
+	None                                     = 0,
+	Circle                                   = 1,
+	Box                                      = 2,
+	EKSC_MAX                                 = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeMaterial_BuffTarget
+// NumValues: 0x0003
+enum class EKSC_ShapeMaterial_BuffTarget : uint8
+{
+	CurrentPlayer                            = 0,
+	TeamPlayer                               = 1,
+	EKSC_ShapeMaterial_MAX                   = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeMaterial_EffectTarget
+// NumValues: 0x0004
+enum class EKSC_ShapeMaterial_EffectTarget : uint8
+{
+	PlayOnOwner                              = 0,
+	PlayOnTarget                             = 1,
+	PlayOnHitPoint                           = 2,
+	EKSC_ShapeMaterial_MAX                   = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeMaterial_GateDirection
+// NumValues: 0x0003
+enum class EKSC_ShapeMaterial_GateDirection : uint8
+{
+	Forward                                  = 0,
+	Reverse                                  = 1,
+	EKSC_ShapeMaterial_MAX                   = 2,
+};
+
+// Enum KuroSimpleCombat.EKSC_ShapeMaterial_TriggerType
+// NumValues: 0x0007
+enum class EKSC_ShapeMaterial_TriggerType : uint8
+{
+	None                                     = 0,
+	OneWayGate                               = 1,
+	DirectionalBounce                        = 2,
+	NoDirectionalBounce                      = 3,
+	Portal                                   = 4,
+	Trap                                     = 5,
+	EKSC_ShapeMaterial_MAX                   = 6,
+};
+
 // Enum KuroSimpleCombat.EKSC_GPUNPCAnimState
 // NumValues: 0x000E
 enum class EKSC_GPUNPCAnimState : uint8
@@ -533,6 +759,47 @@ enum class EKSC_MoveMode : uint8
 	KSC_MOVE_MAX                             = 4,
 };
 
+// Enum KuroSimpleCombat.EKSC_ShapeCollisionObjType
+// NumValues: 0x0006
+enum class EKSC_ShapeCollisionObjType : uint8
+{
+	None                                     = 0,
+	WorldBound                               = 1,
+	ShapeEntity                              = 2,
+	ShapeMachine                             = 4,
+	ShapeBar                                 = 8,
+	EKSC_MAX                                 = 9,
+};
+
+// Enum KuroSimpleCombat.EKSC_Shape2DType
+// NumValues: 0x0004
+enum class EKSC_Shape2DType : uint8
+{
+	None                                     = 0,
+	Circle                                   = 1,
+	Box                                      = 2,
+	EKSC_MAX                                 = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_SkillDirection
+// NumValues: 0x0003
+enum class EKSC_SkillDirection : uint8
+{
+	Target                                   = 0,
+	Self                                     = 2,
+	EKSC_MAX                                 = 3,
+};
+
+// Enum KuroSimpleCombat.EKSC_SkillTarget
+// NumValues: 0x0004
+enum class EKSC_SkillTarget : uint8
+{
+	None                                     = 0,
+	NearestEnemy                             = 1,
+	FieldOfView                              = 2,
+	EKSC_MAX                                 = 3,
+};
+
 // Enum KuroSimpleCombat.EKSC_HeadHpContextType
 // NumValues: 0x0004
 enum class EKSC_HeadHpContextType : uint8
@@ -542,43 +809,6 @@ enum class EKSC_HeadHpContextType : uint8
 	Remove                                   = 2,
 	EKSC_MAX                                 = 3,
 };
-
-// ScriptStruct KuroSimpleCombat.KSC_DamageTypeFilter
-// 0x0030 (0x0030 - 0x0000)
-struct FKSC_DamageTypeFilter final
-{
-public:
-	EKSC_CalculateType                            CalculateType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EKSC_CalculateType>                    CalculateTypes;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          IsNot;                                             // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EKSC_Element>                          ElementTypes;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKSC_DamageTypeFilter;
-
-// ScriptStruct KuroSimpleCombat.KSC_BulletTargetContext
-// 0x0040 (0x0040 - 0x0000)
-struct FKSC_BulletTargetContext final
-{
-public:
-	int32                                         TargetEntityId;                                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_SkillComp*                         SkillComp;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             TargetTrans;                                       // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKSC_BulletTargetContext;
-
-// ScriptStruct KuroSimpleCombat.KSC_Delay_KuroMatFX
-// 0x0010 (0x0010 - 0x0000)
-struct FKSC_Delay_KuroMatFX final
-{
-public:
-	float                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKSC_Delay_KuroMatFX;
 
 // ScriptStruct KuroSimpleCombat.KSC_RemoveContext
 // 0x0050 (0x0050 - 0x0000)
@@ -598,6 +828,27 @@ public:
 };
 DUMPER7_ASSERTS_FKSC_RemoveContext;
 
+// ScriptStruct KuroSimpleCombat.KSC_AttrBoundLocker
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FKSC_AttrBoundLocker final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKSC_AttrBoundLocker;
+
+// ScriptStruct KuroSimpleCombat.KSC_BulletTargetContext
+// 0x0040 (0x0040 - 0x0000)
+struct FKSC_BulletTargetContext final
+{
+public:
+	int32                                         TargetEntityId;                                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_SkillComp*                         SkillComp;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             TargetTrans;                                       // 0x0010(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_BulletTargetContext;
+
 // ScriptStruct KuroSimpleCombat.KSC_LandFireContext
 // 0x0060 (0x0060 - 0x0000)
 struct FKSC_LandFireContext final
@@ -612,8 +863,32 @@ public:
 };
 DUMPER7_ASSERTS_FKSC_LandFireContext;
 
+// ScriptStruct KuroSimpleCombat.KSC_Enemy_Delay_KuroMatFX
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_Enemy_Delay_KuroMatFX final
+{
+public:
+	float                                         Delay;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_Enemy_Delay_KuroMatFX;
+
+// ScriptStruct KuroSimpleCombat.KSC_SpawnEntity
+// 0x0060 (0x0060 - 0x0000)
+struct FKSC_SpawnEntity final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformDouble                       EntityTrans;                                       // 0x0010(0x0040)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          IsUseAbsoluteTrans;                                // 0x0050(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKSC_SpawnEntity;
+
 // ScriptStruct KuroSimpleCombat.KSC_ListenAttrEventBuff
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct FKSC_ListenAttrEventBuff final
 {
 public:
@@ -621,46 +896,11 @@ public:
 	EKSC_ComparisonSymbols                        Comparison;                                        // 0x0001(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         AttrValue;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ThresholdValue;                                    // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAccumulate;                                       // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKSC_ListenAttrEventBuff;
-
-// ScriptStruct KuroSimpleCombat.KSCTableRowBase
-// 0x0038 (0x0040 - 0x0008)
-struct FKSCTableRowBase : public FTableRowBase
-{
-public:
-	int32                                         Id;                                                // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UDataAsset>              RuntimeDA;                                         // 0x0010(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKSCTableRowBase;
-
-// ScriptStruct KuroSimpleCombat.KSCEntityTableRow
-// 0x0000 (0x0040 - 0x0040)
-struct FKSCEntityTableRow final : public FKSCTableRowBase
-{
-};
-DUMPER7_ASSERTS_FKSCEntityTableRow;
-
-// ScriptStruct KuroSimpleCombat.KSC_SpawnEntity
-// 0x0050 (0x0050 - 0x0000)
-struct FKSC_SpawnEntity final
-{
-public:
-	int32                                         EntityId;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransformDouble                       EntityTrans;                                       // 0x0010(0x0040)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FKSC_SpawnEntity;
-
-// ScriptStruct KuroSimpleCombat.KSC_AttrBoundLocker
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FKSC_AttrBoundLocker final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKSC_AttrBoundLocker;
 
 // ScriptStruct KuroSimpleCombat.KSC_KuroFX
 // 0x0050 (0x0050 - 0x0000)
@@ -677,6 +917,20 @@ public:
 	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKSC_KuroFX;
+
+// ScriptStruct KuroSimpleCombat.KSC_DamageTypeFilter
+// 0x0030 (0x0030 - 0x0000)
+struct FKSC_DamageTypeFilter final
+{
+public:
+	EKSC_CalculateType                            CalculateType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_CalculateType>                    CalculateTypes;                                    // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          IsNot;                                             // 0x0018(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_Element>                          ElementTypes;                                      // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_DamageTypeFilter;
 
 // ScriptStruct KuroSimpleCombat.KSC_TagFilter
 // 0x0028 (0x0028 - 0x0000)
@@ -702,19 +956,6 @@ public:
 	float                                         Radius;                                            // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKSC_Range;
-
-// ScriptStruct KuroSimpleCombat.KSC_MiniMapContext
-// 0x0028 (0x0028 - 0x0000)
-struct FKSC_MiniMapContext final
-{
-public:
-	int32                                         EnemyType;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Distance;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FKSC_MiniMapContext;
 
 // ScriptStruct KuroSimpleCombat.KSC_FXParam
 // 0x0020 (0x0020 - 0x0000)
@@ -770,19 +1011,111 @@ public:
 };
 DUMPER7_ASSERTS_FKSC_ModifyAttrFromOthers;
 
+// ScriptStruct KuroSimpleCombat.KSC_SpineAnimNotify
+// 0x0140 (0x0140 - 0x0000)
+struct FKSC_SpineAnimNotify final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseFullTime;                                     // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsTriggerOnce;                                     // 0x0005(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseCurrentPlayer;                                // 0x0006(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_SpineAnimNotifyType                      Type;                                              // 0x0007(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0008(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           Buff;                                              // 0x0018(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BuffStackNum;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Shape2D_SelectTarget                     SelectTarget;                                      // 0x0024(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BulletID;                                          // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseBulletDefaultRotation;                        // 0x002C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               BulletDefaultRotation;                             // 0x0030(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       Effect;                                            // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             EffectOffset;                                      // 0x0050(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SearchRange;                                       // 0x0080(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_EntityType, int32>                  SearchPriorityMap;                                 // 0x0088(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_Shape2D_CustomMovementMode               MovementMode;                                      // 0x00D8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MovementDuration;                                  // 0x00DC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MovementDistance;                                  // 0x00E0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MovementEndDistance;                               // 0x00E4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            MovementCurve;                                     // 0x00E8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MovementIsTrace;                                   // 0x00F0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MovementIsKeep;                                    // 0x00F1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MovementIsKeepEnd;                                 // 0x00F2(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F3[0x1];                                       // 0x00F3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MoveRangeLimitRadius;                              // 0x00F4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoveRangeLimitReflectSpeed;                        // 0x00F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoveRangeLimitDuration;                            // 0x00FC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKSC_SpawnEntity>               SummonEntities;                                    // 0x0100(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         SpeedValue;                                        // 0x0110(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsUseTargetDirection;                              // 0x0114(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_115[0x3];                                      // 0x0115(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              SpeedDirection;                                    // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChargeDuration;                                    // 0x0120(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Position;                                          // 0x0124(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PositionLerpTime;                                  // 0x0130(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            PositionLerpCurve;                                 // 0x0138(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_SpineAnimNotify;
+
+// ScriptStruct KuroSimpleCombat.KSC_SpineAnimItem
+// 0x0020 (0x0020 - 0x0000)
+struct FKSC_SpineAnimItem final
+{
+public:
+	class FString                                 AnimName;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x4];                                       // 0x0010(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           AnimTag;                                           // 0x0014(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_SpineAnimItem;
+
+// ScriptStruct KuroSimpleCombat.KSC_DA_Shape2D_WorldBounds_Item
+// 0x0030 (0x0030 - 0x0000)
+struct FKSC_DA_Shape2D_WorldBounds_Item final
+{
+public:
+	struct FVector2D                              StartPoint;                                        // 0x0000(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              EndPoint;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Thickness;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraWidth;                                        // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaterialID;                                        // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DebugText;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_DA_Shape2D_WorldBounds_Item;
+
 // ScriptStruct KuroSimpleCombat.KSCDamage
-// 0x000C (0x000C - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FKSCDamage final
 {
 public:
-	EKSC_CalculateType                            CalculateType;                                     // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_Element                                  Element;                                           // 0x0001(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Amplify;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_AttrType                                 RelatedProperty;                                   // 0x0008(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         DamageID;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_CalculateType                            CalculateType;                                     // 0x0004(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Element                                  Element;                                           // 0x0005(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Amplify;                                           // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_AttrType                                 RelatedProperty;                                   // 0x000C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BaseValue;                                         // 0x0010(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKSCDamage;
+
+// ScriptStruct KuroSimpleCombat.KSCTableRowBase
+// 0x0038 (0x0040 - 0x0008)
+struct FKSCTableRowBase : public FTableRowBase
+{
+public:
+	int32                                         Id;                                                // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UDataAsset>              RuntimeDA;                                         // 0x0010(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSCTableRowBase;
 
 // ScriptStruct KuroSimpleCombat.KSCSceneSegmentTableRow
 // 0x0000 (0x0040 - 0x0040)
@@ -814,16 +1147,55 @@ struct FKSCBuffTableRow final : public FKSCTableRowBase
 };
 DUMPER7_ASSERTS_FKSCBuffTableRow;
 
-// ScriptStruct KuroSimpleCombat.KSC_Enemy_Delay_KuroMatFX
-// 0x0010 (0x0010 - 0x0000)
-struct FKSC_Enemy_Delay_KuroMatFX final
+// ScriptStruct KuroSimpleCombat.KSCEntityTableRow
+// 0x0000 (0x0040 - 0x0040)
+struct FKSCEntityTableRow final : public FKSCTableRowBase
+{
+};
+DUMPER7_ASSERTS_FKSCEntityTableRow;
+
+// ScriptStruct KuroSimpleCombat.KSCShapeMaterialTableRow
+// 0x00B8 (0x00C0 - 0x0008)
+struct FKSCShapeMaterialTableRow final : public FTableRowBase
 {
 public:
-	float                                         Delay;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Desc;                                              // 0x0008(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceTangentSpeedRatio;                           // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceTangentSpeedValue;                           // 0x001C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceTangentSpeedMax;                             // 0x0020(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceTangentSpeedMin;                             // 0x0024(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceNormalSpeedRatio;                            // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceNormalSpeedValue;                            // 0x002C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceNormalSpeedMax;                              // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BounceNormalSpeedMin;                              // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnableTangentMove;                              // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TangentMoveIncidentAngle;                          // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrictionSpeedLost;                                 // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTrigger;                                        // 0x0044(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_ShapeMaterial_TriggerType                TriggerType;                                       // 0x0045(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSimpleTrigger;                                  // 0x0046(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_ShapeMaterial_GateDirection              GateDirection;                                     // 0x0047(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DotProductTolerance;                               // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsResetSpeed;                                      // 0x004C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFixPosition;                                     // 0x004D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TeleportPosition;                                  // 0x0050(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsRelativePosition;                                // 0x005C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         DamageId;                                          // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       TriggerEffect;                                     // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             EffectOffset;                                      // 0x0070(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	EKSC_ShapeMaterial_EffectTarget               EffectTarget;                                      // 0x00A0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsUseForBattle;                                   // 0x00A1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A2[0x6];                                       // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           Buff;                                              // 0x00A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_ShapeMaterial_BuffTarget                 BuffTarget;                                        // 0x00B0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BuffCD;                                            // 0x00B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkAudioEvent*                          CollisionAudioEvent;                               // 0x00B8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-DUMPER7_ASSERTS_FKSC_Enemy_Delay_KuroMatFX;
+DUMPER7_ASSERTS_FKSCShapeMaterialTableRow;
 
 // ScriptStruct KuroSimpleCombat.KSC_Enemy_Delay_KuroFX
 // 0x0060 (0x0060 - 0x0000)
@@ -848,6 +1220,17 @@ public:
 };
 DUMPER7_ASSERTS_FKSC_Delay_KuroFX;
 
+// ScriptStruct KuroSimpleCombat.KSC_Delay_KuroMatFX
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_Delay_KuroMatFX final
+{
+public:
+	float                                         Time;                                              // 0x0000(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       KuroMatFX;                                         // 0x0008(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_Delay_KuroMatFX;
+
 // ScriptStruct KuroSimpleCombat.KSC_TimeLineData
 // 0x0028 (0x0028 - 0x0000)
 struct FKSC_TimeLineData final
@@ -859,6 +1242,43 @@ public:
 	TArray<struct FKSC_Delay_KuroMatFX>           TimeLineMatFX;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKSC_TimeLineData;
+
+// ScriptStruct KuroSimpleCombat.KSC_Shape2D_DamageTotalInfo
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_Shape2D_DamageTotalInfo final
+{
+public:
+	int32                                         SourceEntityId;                                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TargetEntityId;                                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageId;                                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DamageValue;                                       // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_Shape2D_DamageTotalInfo;
+
+// ScriptStruct KuroSimpleCombat.KSC_Shape2D_DamageEffect
+// 0x0014 (0x0014 - 0x0000)
+struct FKSC_Shape2D_DamageEffect final
+{
+public:
+	bool                                          IsRecordedCombo;                                   // 0x0000(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RecoverSkillEnergy;                                // 0x0004(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RecoverSprintEnergy;                               // 0x0008(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RecoverFeverEnergy;                                // 0x000C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsRecoverTeamSkillEnergy;                          // 0x0010(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKSC_Shape2D_DamageEffect;
+
+// ScriptStruct KuroSimpleCombat.KSC_Shape2D_CollisionListenContext
+// 0x0010 (0x0010 - 0x0000)
+struct FKSC_Shape2D_CollisionListenContext final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Target;                                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKSC_Shape2D_CollisionListenContext;
 
 // ScriptStruct KuroSimpleCombat.KSC_EffectReuseData
 // 0x0030 (0x0030 - 0x0000)
@@ -886,6 +1306,19 @@ public:
 };
 DUMPER7_ASSERTS_FKSC_HeadHpContext;
 
+// ScriptStruct KuroSimpleCombat.KSC_MiniMapContext
+// 0x0028 (0x0028 - 0x0000)
+struct FKSC_MiniMapContext final
+{
+public:
+	int32                                         EnemyType;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Distance;                                          // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKSC_MiniMapContext;
+
 // ScriptStruct KuroSimpleCombat.KSC_HitContext
 // 0x0030 (0x0030 - 0x0000)
 struct FKSC_HitContext final
@@ -897,7 +1330,8 @@ public:
 	int32                                         Damage;                                            // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsCrit;                                            // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          IsCure;                                            // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsShield;                                          // 0x0026(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_27[0x1];                                       // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         EntityId;                                          // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };

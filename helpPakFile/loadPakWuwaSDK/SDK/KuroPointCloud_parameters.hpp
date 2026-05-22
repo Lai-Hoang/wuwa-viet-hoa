@@ -129,6 +129,18 @@ public:
 };
 DUMPER7_ASSERTS_KuroPointCloudCache_CheckConsistency;
 
+// Function KuroPointCloud.KuroPointCloudFunctionLibrary.BindPointCloudComponent
+// 0x0010 (0x0010 - 0x0000)
+struct KuroPointCloudFunctionLibrary_BindPointCloudComponent final
+{
+public:
+	class UKuroPointCloudWorldComponent*          PointCloudComponent;                               // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BindingKey;                                        // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudFunctionLibrary_BindPointCloudComponent;
+
 // Function KuroPointCloud.KuroPointCloudFunctionLibrary.SetNiagaraKuroPointCloudCache
 // 0x0020 (0x0020 - 0x0000)
 struct KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache final
@@ -141,6 +153,19 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache;
+
+// Function KuroPointCloud.KuroPointCloudFunctionLibrary.SetNiagaraKuroPointCloudCollectionName
+// 0x0028 (0x0028 - 0x0000)
+struct KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCollectionName final
+{
+public:
+	class UNiagaraComponent*                      NiagaraComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   WorldCollecitonName;                               // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ParameterName;                                     // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCollectionName;
 
 // Function KuroPointCloud.KuroPointCloudInstance.BuildFrom2DPoints
 // 0x0050 (0x0050 - 0x0000)
@@ -244,6 +269,51 @@ public:
 };
 DUMPER7_ASSERTS_KuroPointCloudWorldActor_DeleteAllActorsInGroup;
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.AddRingBufferTransform
+// 0x0040 (0x0040 - 0x0000)
+struct KuroPointCloudWorldComponent_AddRingBufferTransform final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_AddRingBufferTransform;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.AddRingBufferTransforms
+// 0x0018 (0x0018 - 0x0000)
+struct KuroPointCloudWorldComponent_AddRingBufferTransforms final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     Transforms;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_AddRingBufferTransforms;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.CommitRingBufferProcessed
+// 0x0004 (0x0004 - 0x0000)
+struct KuroPointCloudWorldComponent_CommitRingBufferProcessed final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_CommitRingBufferProcessed;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.FillDynamicPoints
+// 0x0050 (0x0050 - 0x0000)
+struct KuroPointCloudWorldComponent_FillDynamicPoints final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumPoints;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bPointVisible;                                     // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_FillDynamicPoints;
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.GetInstance
 // 0x0010 (0x0010 - 0x0000)
 struct KuroPointCloudWorldComponent_GetInstance final
@@ -255,6 +325,27 @@ public:
 };
 DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetInstance;
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.RemoveEffectRingBuffer
+// 0x0004 (0x0004 - 0x0000)
+struct KuroPointCloudWorldComponent_RemoveEffectRingBuffer final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_RemoveEffectRingBuffer;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SetDynamicPointVisible
+// 0x000C (0x000C - 0x0000)
+struct KuroPointCloudWorldComponent_SetDynamicPointVisible final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPointVisible;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SetDynamicPointVisible;
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.SetInstance
 // 0x0008 (0x0008 - 0x0000)
 struct KuroPointCloudWorldComponent_SetInstance final
@@ -264,6 +355,67 @@ public:
 };
 DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SetInstance;
 
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SetNiagaraCollectionName
+// 0x000C (0x000C - 0x0000)
+struct KuroPointCloudWorldComponent_SetNiagaraCollectionName final
+{
+public:
+	class FName                                   CollectionName;                                    // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SetNiagaraCollectionName;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.UpdateDynamicPoint
+// 0x0040 (0x0040 - 0x0000)
+struct KuroPointCloudWorldComponent_UpdateDynamicPoint final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             NewTransform;                                      // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_UpdateDynamicPoint;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.UpdateDynamicPoints
+// 0x0018 (0x0018 - 0x0000)
+struct KuroPointCloudWorldComponent_UpdateDynamicPoints final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     Transforms;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_UpdateDynamicPoints;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetBindingKey
+// 0x0008 (0x0008 - 0x0000)
+struct KuroPointCloudWorldComponent_GetBindingKey final
+{
+public:
+	int32                                         OutKey;                                            // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetBindingKey;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetCollectionName
+// 0x000C (0x000C - 0x0000)
+struct KuroPointCloudWorldComponent_GetCollectionName final
+{
+public:
+	class FName                                   ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetCollectionName;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetComponentUsageMode
+// 0x0001 (0x0001 - 0x0000)
+struct KuroPointCloudWorldComponent_GetComponentUsageMode final
+{
+public:
+	EKPCWorldComponentDynamicPointMode            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetComponentUsageMode;
+
 // Function KuroPointCloud.KuroPointCloudWorldComponent.GetNumDynamicPoints
 // 0x0004 (0x0004 - 0x0000)
 struct KuroPointCloudWorldComponent_GetNumDynamicPoints final
@@ -272,6 +424,48 @@ public:
 	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetNumDynamicPoints;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetNumDynamicPointsByEffectID
+// 0x0008 (0x0008 - 0x0000)
+struct KuroPointCloudWorldComponent_GetNumDynamicPointsByEffectID final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetNumDynamicPointsByEffectID;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferAvailableCount
+// 0x000C (0x000C - 0x0000)
+struct KuroPointCloudWorldComponent_GetRingBufferAvailableCount final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewReadIndex;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetRingBufferAvailableCount;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferPendingCount
+// 0x000C (0x000C - 0x0000)
+struct KuroPointCloudWorldComponent_GetRingBufferPendingCount final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewReadIndex;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetRingBufferPendingCount;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetRingBufferWriteIndex
+// 0x0008 (0x0008 - 0x0000)
+struct KuroPointCloudWorldComponent_GetRingBufferWriteIndex final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_GetRingBufferWriteIndex;
 
 // Function KuroPointCloud.KuroPointCloudWorldComponent.SampleDynamicPoint
 // 0x0050 (0x0050 - 0x0000)
@@ -285,6 +479,47 @@ public:
 	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SampleDynamicPoint;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SampleDynamicVisiblePoint
+// 0x0050 (0x0050 - 0x0000)
+struct KuroPointCloudWorldComponent_SampleDynamicVisiblePoint final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Index_0;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewReadIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         bPointVisible;                                     // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0044(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0xB];                                       // 0x0045(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SampleDynamicVisiblePoint;
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SampleRingBufferPoint
+// 0x0050 (0x0050 - 0x0000)
+struct KuroPointCloudWorldComponent_SampleRingBufferPoint final
+{
+public:
+	int32                                         EffectId;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SampleIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NewReadIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         OutVisible;                                        // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0044(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45[0xB];                                       // 0x0045(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldComponent_SampleRingBufferPoint;
+
+// Function KuroPointCloud.KuroPointCloudWorldSystem.GetNextAvailableKey
+// 0x0004 (0x0004 - 0x0000)
+struct KuroPointCloudWorldSystem_GetNextAvailableKey final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_KuroPointCloudWorldSystem_GetNextAvailableKey;
 
 // Function KuroPointCloud.KuroPointCloudWorldSystem.SetStreamingConfig
 // 0x0010 (0x0010 - 0x0000)

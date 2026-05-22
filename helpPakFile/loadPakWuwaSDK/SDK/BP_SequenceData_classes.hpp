@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EPlotSequenceType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EPlotSequenceType_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -53,6 +53,7 @@ public:
 	float                                         相机过渡时间;                                      // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          约束宽高比;                                        // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsEnableDynamicStreamingSource;                    // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          使用UI黑边;                                        // 0x0102(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()

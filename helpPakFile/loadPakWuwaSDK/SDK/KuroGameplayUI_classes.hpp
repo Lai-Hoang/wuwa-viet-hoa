@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class KuroGameplayUI.DamageBatchView
-// 0x0090 (0x00C0 - 0x0030)
+// 0x00E0 (0x0110 - 0x0030)
 class alignas(0x10) UDamageBatchView final : public UObject
 {
 public:
@@ -31,7 +31,7 @@ public:
 	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USimpleDamageViewInfo*>          UnusedSimpleDamageViewInfoList;                    // 0x0090(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<class USimpleDamageViewInfo*>          SimpleDamageViewInfoList;                          // 0x00A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x60];                                      // 0x00B0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -50,17 +50,16 @@ public:
 DUMPER7_ASSERTS_UDamageBatchView;
 
 // Class KuroGameplayUI.DamageUiManager
-// 0x0170 (0x01A0 - 0x0030)
+// 0x0180 (0x01B0 - 0x0030)
 class alignas(0x10) UDamageUiManager final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x140];                                     // 0x0030(0x0140)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UNiagaraSystem*>                 CritNiagaraList;                                   // 0x0170(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UDamageBatchView*                       DamageBatchView;                                   // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDamageViewVisible;                                // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_World*                             KscWorld;                                          // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x158];                                     // 0x0030(0x0158)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UNiagaraSystem*>                 CritNiagaraList;                                   // 0x0188(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UDamageBatchView*                       DamageBatchView;                                   // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDamageViewVisible;                                // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_World*                             KscWorld;                                          // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UDamageUiManager* CreateInstance(class UObject* Outer_0);

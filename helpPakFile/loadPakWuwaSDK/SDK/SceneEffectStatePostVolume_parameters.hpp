@@ -16,18 +16,16 @@
 namespace SDK::Params
 {
 
-// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetAirWall
-// 0x0030 (0x0030 - 0x0000)
-struct SceneEffectStatePostVolume_C_SetAirWall final
+// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetEffect
+// 0x000C (0x000C - 0x0000)
+struct SceneEffectStatePostVolume_C_SetEffect final
 {
 public:
-	float                                         value_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_SceneEffectStatePostVolume_C_SetAirWall;
+DUMPER7_ASSERTS_SceneEffectStatePostVolume_C_SetEffect;
 
 // Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetToxicFog
 // 0x0030 (0x0030 - 0x0000)
@@ -42,16 +40,18 @@ public:
 };
 DUMPER7_ASSERTS_SceneEffectStatePostVolume_C_SetToxicFog;
 
-// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetEffect
-// 0x000C (0x000C - 0x0000)
-struct SceneEffectStatePostVolume_C_SetEffect final
+// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetAirWall
+// 0x0030 (0x0030 - 0x0000)
+struct SceneEffectStatePostVolume_C_SetAirWall final
 {
 public:
-	float                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         value_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               K2Node_MakeStruct_Vector4;                         // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FClamp_ReturnValue;                       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_SceneEffectStatePostVolume_C_SetEffect;
+DUMPER7_ASSERTS_SceneEffectStatePostVolume_C_SetAirWall;
 
 }
 

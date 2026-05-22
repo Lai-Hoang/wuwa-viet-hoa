@@ -20,31 +20,31 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_R2T1PlayerMaleMd10011_PC.ABP_R2T1PlayerMaleMd10011_PC_C
-// 0x1660 (0x1D90 - 0x0730)
+// 0x1840 (0x2010 - 0x07D0)
 class UABP_R2T1PlayerMaleMd10011_PC_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x0738(0x0038)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0770(0x0138)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x08A8(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x08C8(0x0020)()
-	uint8                                         Pad_8E8[0x8];                                      // 0x08E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_MountBuffer                  AnimGraphNode_MountBuffer;                         // 0x08F0(0x01E0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_5;                // 0x0AD0(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_4;                // 0x0D70(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_3;                // 0x1010(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_2;                // 0x12B0(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_1;                // 0x1550(0x02A0)()
-	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x17F0(0x02A0)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1A90(0x0038)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x1AC8(0x00A8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x1B70(0x00C0)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x1C30(0x00A8)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x1CD8(0x00A8)()
-	bool                                          PhysicsClothSimulateEnable;                        // 0x1D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D81[0x3];                                     // 0x1D81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PhysicsClothSimulateScale;                         // 0x1D84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x07D8(0x0038)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0810(0x0138)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0948(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0968(0x0020)()
+	uint8                                         Pad_988[0x8];                                      // 0x0988(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_MountBuffer                  AnimGraphNode_MountBuffer;                         // 0x0990(0x01E0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_5;                // 0x0B70(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_4;                // 0x0E60(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_3;                // 0x1150(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_2;                // 0x1440(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup_1;                // 0x1730(0x02F0)()
+	struct FAnimNode_KawaiiPhysicsGroup           AnimGraphNode_KawaiiPhysicsGroup;                  // 0x1A20(0x02F0)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1D10(0x0038)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x1D48(0x00A8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x1DF0(0x00C0)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x1EB0(0x00A8)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x1F58(0x00A8)()
+	bool                                          PhysicsClothSimulateEnable;                        // 0x2000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2001[0x3];                                     // 0x2001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PhysicsClothSimulateScale;                         // 0x2004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABP_R2T1PlayerMaleMd10011_PC(int32 EntryPoint);

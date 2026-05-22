@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
+#include "ECharParentMoveState_structs.hpp"
+#include "EHitAnim_structs.hpp"
+#include "ECharState_structs.hpp"
+#include "SClimbInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "EHitAnim_structs.hpp"
-#include "SClimbState_structs.hpp"
-#include "ECharState_structs.hpp"
-#include "ECharParentMoveState_structs.hpp"
-#include "ECharViewDirectionState_structs.hpp"
 #include "KuroAnim_structs.hpp"
-#include "SClimbInfo_structs.hpp"
+#include "ECharViewDirectionState_structs.hpp"
+#include "SClimbState_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ABPLogicParams.BP_ABPLogicParams_C
-// 0x0130 (0x0160 - 0x0030)
+// 0x0140 (0x0170 - 0x0030)
 class UBP_ABPLogicParams_C final : public UObject
 {
 public:
@@ -70,8 +70,9 @@ public:
 	float                                         JumpUpRateRef;                                     // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              LookAtRef;                                         // 0x00E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableBlendSpaceLookAtRef;                         // 0x00EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsOnVehicle;                                       // 0x00ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsDriver;                                          // 0x00ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsOnVehicle;                                       // 0x00EE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EF[0x1];                                       // 0x00EF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIKTarget                              LeftHandIKTargetCS;                                // 0x00F0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	struct FIKTarget                              RightHandIKTargetCS;                               // 0x0120(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	bool                                          StateLowerBlend;                                   // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -82,8 +83,12 @@ public:
 	bool                                          IsHoldingHandsReachable;                           // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsAcceptingInvitation;                             // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          DisableBlinkRef;                                   // 0x0157(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	int32                                         VehicleType;                                       // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsRegionMoveModeRef;                               // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsOnVehicleWithOther;                              // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         VehicleType;                                       // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IgnoreMontageBlinkCurve;                           // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsRegionMoveModeRef;                               // 0x0161(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DisableHumanIkRef;                                 // 0x0162(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()

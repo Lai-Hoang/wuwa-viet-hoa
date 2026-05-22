@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "EPawnChannel_structs.hpp"
-#include "KuroGAS_classes.hpp"
-#include "SSkillInfo_structs.hpp"
 #include "EAimViewState_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SSkillInfo_structs.hpp"
+#include "KuroGAS_classes.hpp"
+#include "EPawnChannel_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Base.GA_Base_C
-// 0x01C8 (0x0590 - 0x03C8)
+// 0x01F0 (0x05B8 - 0x03C8)
 class UGA_Base_C : public UBaseGameplayAbility
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FSSkillInfo                            当前技能数据;                                      // 0x03D0(0x01A8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FString                                 当前技能数据名;                                    // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         SkillId;                                           // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSSkillInfo                            当前技能数据;                                      // 0x03D0(0x01D0)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FString                                 当前技能数据名;                                    // 0x05A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         SkillId;                                           // 0x05B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Base(int32 EntryPoint);

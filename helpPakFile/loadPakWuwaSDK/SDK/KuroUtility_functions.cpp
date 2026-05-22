@@ -940,6 +940,62 @@ bool UKuroApplicationLibrary::UnBind()
 }
 
 
+// Function KuroUtility.KuroCameraFunctionLibrary.DelaySetNearClipPlane
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                                   distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCameraFunctionLibrary::DelaySetNearClipPlane(float distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCameraFunctionLibrary", "DelaySetNearClipPlane");
+
+	Params::KuroCameraFunctionLibrary_DelaySetNearClipPlane Parms{};
+
+	Parms.distance = distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroCollectActorComponent.GetActorsWithTag
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Tag                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ECollectActorType                       Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>*                  OutResult                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroCollectActorComponent::GetActorsWithTag(class FName Tag, ECollectActorType Type, TArray<class AActor*>* OutResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCollectActorComponent", "GetActorsWithTag");
+
+	Params::KuroCollectActorComponent_GetActorsWithTag Parms{};
+
+	Parms.Tag = Tag;
+	Parms.Type = Type;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutResult != nullptr)
+		*OutResult = std::move(Parms.OutResult);
+}
+
+
 // Function KuroUtility.KuroCollectActorComponent.GetActorWithTag
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1077,6 +1133,370 @@ void UKuroCompressLibrary::CompressFilesOrFoldersAsync(const TArray<class FStrin
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.BroadcastMulticastDelegateProperty
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::BroadcastMulticastDelegateProperty(const class FName PropertyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "BroadcastMulticastDelegateProperty");
+
+	Params::KuroDemoInteractiveActor_BroadcastMulticastDelegateProperty Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.CallFunction
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       FunctionName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::CallFunction(const class FName FunctionName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "CallFunction");
+
+	Params::KuroDemoInteractiveActor_CallFunction Parms{};
+
+	Parms.FunctionName = FunctionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.ExecuteSingleDelegateProperty
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::ExecuteSingleDelegateProperty(const class FName PropertyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "ExecuteSingleDelegateProperty");
+
+	Params::KuroDemoInteractiveActor_ExecuteSingleDelegateProperty Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetBoolPropertyValue
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::GetBoolPropertyValue(const class FName PropertyName, bool* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "GetBoolPropertyValue");
+
+	Params::KuroDemoInteractiveActor_GetBoolPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetFloatPropertyValue
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::GetFloatPropertyValue(const class FName PropertyName, float* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "GetFloatPropertyValue");
+
+	Params::KuroDemoInteractiveActor_GetFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetIntPropertyValue
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::GetIntPropertyValue(const class FName PropertyName, int32* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "GetIntPropertyValue");
+
+	Params::KuroDemoInteractiveActor_GetIntPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetPropertyOffsetFromContainer
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutOffset                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::GetPropertyOffsetFromContainer(const class FName PropertyName, int32* OutOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "GetPropertyOffsetFromContainer");
+
+	Params::KuroDemoInteractiveActor_GetPropertyOffsetFromContainer Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutOffset != nullptr)
+		*OutOffset = Parms.OutOffset;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.GetStringPropertyValue
+// (Final, Native, Protected, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          OutValue                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::GetStringPropertyValue(const class FName PropertyName, class FString* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "GetStringPropertyValue");
+
+	Params::KuroDemoInteractiveActor_GetStringPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = std::move(Parms.OutValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetBoolPropertyValue
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::SetBoolPropertyValue(const class FName PropertyName, const bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "SetBoolPropertyValue");
+
+	Params::KuroDemoInteractiveActor_SetBoolPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetFloatPropertyValue
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::SetFloatPropertyValue(const class FName PropertyName, const float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "SetFloatPropertyValue");
+
+	Params::KuroDemoInteractiveActor_SetFloatPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetIntPropertyValue
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::SetIntPropertyValue(const class FName PropertyName, const int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "SetIntPropertyValue");
+
+	Params::KuroDemoInteractiveActor_SetIntPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroDemoInteractiveActor.SetStringPropertyValue
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroDemoInteractiveActor::SetStringPropertyValue(const class FName PropertyName, const class FString& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDemoInteractiveActor", "SetStringPropertyValue");
+
+	Params::KuroDemoInteractiveActor_SetStringPropertyValue Parms{};
+
+	Parms.PropertyName = PropertyName;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1709,6 +2129,206 @@ TArray<int32> UKuroPolypartition::BuildTriangleByVertex2D(const TArray<struct FV
 	Params::KuroPolypartition_BuildTriangleByVertex2D Parms{};
 
 	Parms.points = std::move(points);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.ComputePhysicalScreenDensity
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroScreenBlueprintFunctionLibrary::ComputePhysicalScreenDensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "ComputePhysicalScreenDensity");
+
+	Params::KuroScreenBlueprintFunctionLibrary_ComputePhysicalScreenDensity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetDisplayScreenResolution
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UKuroScreenBlueprintFunctionLibrary::GetDisplayScreenResolution()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetDisplayScreenResolution");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetDisplayScreenResolution Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenDensityDPI
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroScreenBlueprintFunctionLibrary::GetPhysicalScreenDensityDPI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetPhysicalScreenDensityDPI");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenDensityDPI Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenResolution
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UKuroScreenBlueprintFunctionLibrary::GetPhysicalScreenResolution()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetPhysicalScreenResolution");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolution Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetPhysicalScreenResolutionV2
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UKuroScreenBlueprintFunctionLibrary::GetPhysicalScreenResolutionV2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetPhysicalScreenResolutionV2");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetPhysicalScreenResolutionV2 Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenDensityDPI
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroScreenBlueprintFunctionLibrary::GetScreenDensityDPI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetScreenDensityDPI");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetScreenDensityDPI Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenLogicalDensity
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroScreenBlueprintFunctionLibrary::GetScreenLogicalDensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetScreenLogicalDensity");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetScreenLogicalDensity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroScreenBlueprintFunctionLibrary.GetScreenScaledDensity
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroScreenBlueprintFunctionLibrary::GetScreenScaledDensity()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroScreenBlueprintFunctionLibrary", "GetScreenScaledDensity");
+
+	Params::KuroScreenBlueprintFunctionLibrary_GetScreenScaledDensity Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

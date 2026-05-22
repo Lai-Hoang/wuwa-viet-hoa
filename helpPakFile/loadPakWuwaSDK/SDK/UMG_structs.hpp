@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "PropertyPath_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MovieScene_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "MovieScene_structs.hpp"
+#include "PropertyPath_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
 
@@ -231,14 +231,23 @@ public:
 };
 DUMPER7_ASSERTS_FEventReply;
 
-// ScriptStruct UMG.MovieScene2DTransformMask
-// 0x0004 (0x0004 - 0x0000)
-struct FMovieScene2DTransformMask final
+// ScriptStruct UMG.DynamicPropertyPath
+// 0x0000 (0x0028 - 0x0028)
+struct FDynamicPropertyPath final : public FCachedPropertyPath
+{
+};
+DUMPER7_ASSERTS_FDynamicPropertyPath;
+
+// ScriptStruct UMG.SlateChildSize
+// 0x0008 (0x0008 - 0x0000)
+struct FSlateChildSize final
 {
 public:
-	uint32                                        Mask;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlateSizeRule                                SizeRule;                                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-DUMPER7_ASSERTS_FMovieScene2DTransformMask;
+DUMPER7_ASSERTS_FSlateChildSize;
 
 // ScriptStruct UMG.WidgetTransform
 // 0x001C (0x001C - 0x0000)
@@ -251,6 +260,20 @@ public:
 	float                                         Angle;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FWidgetTransform;
+
+// ScriptStruct UMG.MovieSceneMarginSectionTemplate
+// 0x0288 (0x02C8 - 0x0040)
+struct FMovieSceneMarginSectionTemplate final : public FMovieScenePropertySectionTemplate
+{
+public:
+	struct FMovieSceneFloatChannel                TopCurve;                                          // 0x0040(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                LeftCurve;                                         // 0x00E0(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                RightCurve;                                        // 0x0180(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                BottomCurve;                                       // 0x0220(0x00A0)(NativeAccessSpecifierPrivate)
+	EMovieSceneBlendType                          BlendType;                                         // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FMovieSceneMarginSectionTemplate;
 
 // ScriptStruct UMG.ShapedTextOptions
 // 0x0003 (0x0003 - 0x0000)
@@ -275,26 +298,14 @@ public:
 };
 DUMPER7_ASSERTS_FAnchorData;
 
-// ScriptStruct UMG.DynamicPropertyPath
-// 0x0000 (0x0028 - 0x0028)
-struct FDynamicPropertyPath final : public FCachedPropertyPath
-{
-};
-DUMPER7_ASSERTS_FDynamicPropertyPath;
-
-// ScriptStruct UMG.MovieSceneMarginSectionTemplate
-// 0x0288 (0x02C8 - 0x0040)
-struct FMovieSceneMarginSectionTemplate final : public FMovieScenePropertySectionTemplate
+// ScriptStruct UMG.MovieScene2DTransformMask
+// 0x0004 (0x0004 - 0x0000)
+struct FMovieScene2DTransformMask final
 {
 public:
-	struct FMovieSceneFloatChannel                TopCurve;                                          // 0x0040(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                LeftCurve;                                         // 0x00E0(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                RightCurve;                                        // 0x0180(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                BottomCurve;                                       // 0x0220(0x00A0)(NativeAccessSpecifierPrivate)
-	EMovieSceneBlendType                          BlendType;                                         // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint32                                        Mask;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 };
-DUMPER7_ASSERTS_FMovieSceneMarginSectionTemplate;
+DUMPER7_ASSERTS_FMovieScene2DTransformMask;
 
 // ScriptStruct UMG.MovieSceneWidgetMaterialSectionTemplate
 // 0x0010 (0x0090 - 0x0080)
@@ -350,17 +361,6 @@ public:
 	struct FVector2D                              UV5;                                               // 0x0034(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FSlateMeshVertex;
-
-// ScriptStruct UMG.SlateChildSize
-// 0x0008 (0x0008 - 0x0000)
-struct FSlateChildSize final
-{
-public:
-	float                                         Value;                                             // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESlateSizeRule                                SizeRule;                                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FSlateChildSize;
 
 // ScriptStruct UMG.NamedSlotBinding
 // 0x0018 (0x0018 - 0x0000)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "KuroDynamicMeshBatch_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroDynamicMeshBatch_structs.hpp"
 
 
 namespace SDK

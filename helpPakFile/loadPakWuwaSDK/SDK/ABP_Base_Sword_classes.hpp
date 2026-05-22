@@ -20,20 +20,20 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Base_Sword.ABP_Base_Sword_C
-// 0x04F0 (0x0C20 - 0x0730)
+// 0x04F0 (0x0CC0 - 0x07D0)
 class UABP_Base_Sword_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
-	struct FAnimNode_PhyCloth                     AnimGraphNode_PhyCloth;                            // 0x0770(0x0450)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0BC0(0x0020)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0BE0(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0C00(0x0018)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x07D8(0x0038)()
+	struct FAnimNode_PhyCloth                     AnimGraphNode_PhyCloth;                            // 0x0810(0x0450)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0C60(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0C80(0x0020)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0CA0(0x0018)()
 
 public:
-	void ExecuteUbergraph_ABP_Base_Sword(int32 EntryPoint);
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void ExecuteUbergraph_ABP_Base_Sword(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

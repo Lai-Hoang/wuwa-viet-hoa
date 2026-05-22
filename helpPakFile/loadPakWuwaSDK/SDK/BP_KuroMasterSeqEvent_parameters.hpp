@@ -135,11 +135,12 @@ public:
 	class FString                                 maleSpineName;                                     // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 femaleSpineName;                                   // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	bool                                          needLoop;                                          // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          useFullscreenAdaptAnchor;                          // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_KuroMasterSeqEvent_C_显示预览图;
 
 // Function BP_KuroMasterSeqEvent.BP_KuroMasterSeqEvent_C.显示预览图(数组)
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct BP_KuroMasterSeqEvent_C_显示预览图_数组_ final
 {
 public:
@@ -147,6 +148,7 @@ public:
 	class FString                                 FemaleAssetPath;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	TArray<struct FSpineThingsInfo>               maleSpineArray;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FSpineThingsInfo>               femaleSpineArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          useFullscreenAdaptAnchor;                          // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_KuroMasterSeqEvent_C_显示预览图_数组_;
 

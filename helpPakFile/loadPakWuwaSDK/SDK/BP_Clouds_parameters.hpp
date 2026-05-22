@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AkAudio_structs.hpp"
 #include "E_Cloud_Presents_structs.hpp"
+#include "AkAudio_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
@@ -20,51 +20,52 @@ namespace SDK::Params
 {
 
 // Function BP_Clouds.BP_Clouds_C.ExecuteUbergraph_BP_Clouds
-// 0x0120 (0x0120 - 0x0000)
+// 0x0118 (0x0118 - 0x0000)
 struct BP_Clouds_C_ExecuteUbergraph_BP_Clouds final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> ___delegate_Variable; // 0x0010(0x0028)(ConstParm, ZeroConstructor)
-	bool                                          ___bool_Has_Been_Initd_Variable;                   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0048(0x0028)(ZeroConstructor)
-	E_Cloud_Presents                              K2Node_CustomEvent_CloudPresents;                  // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_CustomEvent_ChangeSpeed_1;                  // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsInEditor_1;                   // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_CustomEvent_bOverrideCloudRotation;         // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_CustomEvent_CloudSpeed;                     // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_CloudOffset;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 K2Node_CustomEvent_Asset;                          // 0x0088(0x0030)(HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_ChangeSpeed;                    // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_IsInEditor;                     // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_CustomEvent_IsAudio;                        // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BE[0x2];                                       // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ___bool_IsClosed_Variable;                         // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ___bool_IsClosed_Variable;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> ___delegate_Variable; // 0x0008(0x0028)(ConstParm, ZeroConstructor)
+	bool                                          ___bool_Has_Been_Initd_Variable;                   // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0040(0x0028)(ZeroConstructor)
+	E_Cloud_Presents                              K2Node_CustomEvent_CloudPresents;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_CustomEvent_ChangeSpeed_1;                  // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsInEditor_1;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_bOverrideCloudRotation;         // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_CustomEvent_CloudSpeed;                     // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_CloudOffset;                    // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_ControlSeqCloud;                // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 K2Node_CustomEvent_Asset;                          // 0x0080(0x0030)(HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_ChangeSpeed;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_IsInEditor;                     // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_IsAudio;                        // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B6[0x2];                                       // 0x00B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPD_CloudPrefab_C*                      K2Node_DynamicCast_AsPD_Cloud_Prefab;              // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPD_CloudPrefab_C*                      K2Node_DynamicCast_AsPD_Cloud_Prefab;              // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                ___object_Variable;                                // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetPathName_ReturnValue;                  // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UPD_CloudPrefab_C*                      K2Node_DynamicCast_AsPD_Cloud_Prefab_1;            // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EKuroFeatureLevel                             CallFunc_GetWorldFeatureLevel_ReturnValue;         // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x011B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FString                                 CallFunc_Conv_SoftObjectReferenceToString_ReturnValue; // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostEvent_ReturnValue;                    // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                ___object_Variable;                                // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetPathName_ReturnValue;                  // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UPD_CloudPrefab_C*                      K2Node_DynamicCast_AsPD_Cloud_Prefab_1;            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EKuroFeatureLevel                             CallFunc_GetWorldFeatureLevel_ReturnValue;         // 0x010A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x010B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BP_Clouds_C_ExecuteUbergraph_BP_Clouds;
 
@@ -81,7 +82,7 @@ public:
 DUMPER7_ASSERTS_BP_Clouds_C_LoadAndSwitch;
 
 // Function BP_Clouds.BP_Clouds_C.Switch Clouds
-// 0x0014 (0x0014 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BP_Clouds_C_Switch_Clouds final
 {
 public:
@@ -93,6 +94,7 @@ public:
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CloudSpeed;                                        // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CloudOffset;                                       // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ControlSeqCloud;                                   // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_Clouds_C_Switch_Clouds;
 

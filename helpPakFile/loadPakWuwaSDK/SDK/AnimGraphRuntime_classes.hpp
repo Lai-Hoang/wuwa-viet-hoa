@@ -19,48 +19,12 @@
 namespace SDK
 {
 
-// Class AnimGraphRuntime.PlayMontageCallbackProxy
-// 0x0080 (0x00B0 - 0x0030)
-class UPlayMontageCallbackProxy final : public UObject
-{
-public:
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, class FName StartingSection);
-
-	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
-	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
-	void OnNotifyBeginReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-	void OnNotifyEndReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("PlayMontageCallbackProxy")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"PlayMontageCallbackProxy")
-	}
-	static class UPlayMontageCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
-	}
-};
-DUMPER7_ASSERTS_UPlayMontageCallbackProxy;
-
 // Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0010 (0x0740 - 0x0730)
+// 0x0010 (0x07E0 - 0x07D0)
 class UAnimSequencerInstance : public UAnimInstance
 {
 public:
-	uint8                                         Pad_730[0x10];                                     // 0x0730(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_7D0[0x10];                                     // 0x07D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -157,6 +121,42 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UKismetAnimationLibrary;
+
+// Class AnimGraphRuntime.PlayMontageCallbackProxy
+// 0x0080 (0x00B0 - 0x0030)
+class UPlayMontageCallbackProxy final : public UObject
+{
+public:
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, class FName StartingSection);
+
+	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
+	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
+	void OnNotifyBeginReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
+	void OnNotifyEndReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("PlayMontageCallbackProxy")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"PlayMontageCallbackProxy")
+	}
+	static class UPlayMontageCallbackProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
+	}
+};
+DUMPER7_ASSERTS_UPlayMontageCallbackProxy;
 
 // Class AnimGraphRuntime.SequencerAnimationSupport
 // 0x0000 (0x0000 - 0x0000)

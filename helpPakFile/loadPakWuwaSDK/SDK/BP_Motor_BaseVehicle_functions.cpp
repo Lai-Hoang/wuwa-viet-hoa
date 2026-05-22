@@ -37,6 +37,20 @@ void ABP_Motor_BaseVehicle_C::ExecuteUbergraph_BP_Motor_BaseVehicle(int32 EntryP
 }
 
 
+// Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_Motor_BaseVehicle_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Motor_BaseVehicle_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -54,20 +68,6 @@ void ABP_Motor_BaseVehicle_C::ReceiveTick(float DeltaSeconds)
 	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_Motor_BaseVehicle_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Motor_BaseVehicle_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -125,6 +125,20 @@ void ABP_Motor_BaseVehicle_C::刷新配置()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_Motor_BaseVehicle_C", "刷新配置");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Motor_BaseVehicle.BP_Motor_BaseVehicle_C.解锁二段跳_蓄力跳_新退场技
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Motor_BaseVehicle_C::解锁二段跳_蓄力跳_新退场技()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Motor_BaseVehicle_C", "解锁二段跳_蓄力跳_新退场技");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

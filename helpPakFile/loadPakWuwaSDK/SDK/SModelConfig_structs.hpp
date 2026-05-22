@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "SModelDecorationConfig_structs.hpp"
+#include "EBodyType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "SNiagaraParam_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "ESceneInteractionEffect_structs.hpp"
-#include "EBodyType_structs.hpp"
+#include "SModelDecorationConfig_structs.hpp"
 
 
 namespace SDK

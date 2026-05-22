@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "SSequencesKeyFrames_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SSequencesKeyFrames_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SequenceData_Generated.BP_SequenceData_Generated_C
-// 0x0158 (0x0190 - 0x0038)
+// 0x0168 (0x01A0 - 0x0038)
 class UBP_SequenceData_Generated_C final : public UPrimaryDataAsset
 {
 public:
@@ -40,6 +40,7 @@ public:
 	TSoftClassPtr<class UClass>                   FemalePlayerBP;                                    // 0x0100(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class USkeletalMesh>           MaleMesh;                                          // 0x0130(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class USkeletalMesh>           FemaleMesh;                                        // 0x0160(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<int32>                                 QteId;                                             // 0x0190(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()

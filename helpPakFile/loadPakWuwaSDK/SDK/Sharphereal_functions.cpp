@@ -2658,5 +2658,534 @@ void UJsBridgetBlueprintFunctionLibrary::CSharpCallJavascript(uint32 EventId, in
 	Func->FunctionFlags = Flgs;
 }
 
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleBoolVariable
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::GetConsoleBoolVariable(const class FString& Name_0, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "GetConsoleBoolVariable");
+
+	Params::ConsoleCommandBPL_GetConsoleBoolVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleFloatVariable
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::GetConsoleFloatVariable(const class FString& Name_0, float* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "GetConsoleFloatVariable");
+
+	Params::ConsoleCommandBPL_GetConsoleFloatVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleIntVariable
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::GetConsoleIntVariable(const class FString& Name_0, int32* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "GetConsoleIntVariable");
+
+	Params::ConsoleCommandBPL_GetConsoleIntVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.GetConsoleStringVariable
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString*                          Result                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::GetConsoleStringVariable(const class FString& Name_0, class FString* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "GetConsoleStringVariable");
+
+	Params::ConsoleCommandBPL_GetConsoleStringVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleBoolVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleBoolVariable(const class FString& Name_0, bool DefaultValue, const class FString& Help, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleBoolVariable");
+
+	Params::ConsoleCommandBPL_RegisterConsoleBoolVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.DefaultValue = DefaultValue;
+	Parms.Help = std::move(Help);
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommand
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void()>&                Command                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleCommand(const class FString& Name_0, const class FString& Help, const TDelegate<void()>& Command, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleCommand");
+
+	Params::ConsoleCommandBPL_RegisterConsoleCommand Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Help = std::move(Help);
+	Parms.Command = Command;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithArgs
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const TArray<class FString>& Args)>&Command                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleCommandWithArgs(const class FString& Name_0, const class FString& Help, const TDelegate<void(const TArray<class FString>& Args)>& Command, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleCommandWithArgs");
+
+	Params::ConsoleCommandBPL_RegisterConsoleCommandWithArgs Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Help = std::move(Help);
+	Parms.Command = Command;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithWorld
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class UWorld* World)>&Command                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleCommandWithWorld(const class FString& Name_0, const class FString& Help, const TDelegate<void(class UWorld* World)>& Command, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleCommandWithWorld");
+
+	Params::ConsoleCommandBPL_RegisterConsoleCommandWithWorld Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Help = std::move(Help);
+	Parms.Command = Command;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleCommandWithWorldAndArgs
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const TArray<class FString>& Args, class UWorld* World)>&Command                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleCommandWithWorldAndArgs(const class FString& Name_0, const class FString& Help, const TDelegate<void(const TArray<class FString>& Args, class UWorld* World)>& Command, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleCommandWithWorldAndArgs");
+
+	Params::ConsoleCommandBPL_RegisterConsoleCommandWithWorldAndArgs Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Help = std::move(Help);
+	Parms.Command = Command;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleFloatVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleFloatVariable(const class FString& Name_0, float DefaultValue, const class FString& Help, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleFloatVariable");
+
+	Params::ConsoleCommandBPL_RegisterConsoleFloatVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.DefaultValue = DefaultValue;
+	Parms.Help = std::move(Help);
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleIntVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   DefaultValue                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleIntVariable(const class FString& Name_0, int32 DefaultValue, const class FString& Help, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleIntVariable");
+
+	Params::ConsoleCommandBPL_RegisterConsoleIntVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.DefaultValue = DefaultValue;
+	Parms.Help = std::move(Help);
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.RegisterConsoleStringVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    DefaultValue                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Help                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::RegisterConsoleStringVariable(const class FString& Name_0, const class FString& DefaultValue, const class FString& Help, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "RegisterConsoleStringVariable");
+
+	Params::ConsoleCommandBPL_RegisterConsoleStringVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.DefaultValue = std::move(DefaultValue);
+	Parms.Help = std::move(Help);
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleBoolVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::SetConsoleBoolVariable(const class FString& Name_0, bool Value, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "SetConsoleBoolVariable");
+
+	Params::ConsoleCommandBPL_SetConsoleBoolVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Value = Value;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleFloatVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::SetConsoleFloatVariable(const class FString& Name_0, float Value, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "SetConsoleFloatVariable");
+
+	Params::ConsoleCommandBPL_SetConsoleFloatVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Value = Value;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleIntVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::SetConsoleIntVariable(const class FString& Name_0, int32 Value, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "SetConsoleIntVariable");
+
+	Params::ConsoleCommandBPL_SetConsoleIntVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Value = Value;
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.SetConsoleStringVariable
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  Flags_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UConsoleCommandBPL::SetConsoleStringVariable(const class FString& Name_0, const class FString& Value, uint32 Flags_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "SetConsoleStringVariable");
+
+	Params::ConsoleCommandBPL_SetConsoleStringVariable Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Value = std::move(Value);
+	Parms.Flags_0 = Flags_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Sharphereal.ConsoleCommandBPL.UnregisterConsoleObject
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UConsoleCommandBPL::UnregisterConsoleObject(const class FString& Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ConsoleCommandBPL", "UnregisterConsoleObject");
+
+	Params::ConsoleCommandBPL_UnregisterConsoleObject Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

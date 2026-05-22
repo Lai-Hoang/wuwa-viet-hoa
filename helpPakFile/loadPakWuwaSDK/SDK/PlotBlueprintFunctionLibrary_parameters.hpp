@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "MovieScene_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "SpineThingsInfo_structs.hpp"
 
 
@@ -208,12 +208,13 @@ DUMPER7_ASSERTS_PlotBlueprintFunctionLibrary_C_CloseUiView;
 struct PlotBlueprintFunctionLibrary_C_OpenUiView final
 {
 public:
-	class FString                                 maleAssetName1;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 femaleAssetName1;                                  // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 maleSpineName1;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 femaleSpineName1;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          needLoop;                                          // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 maleAssetName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 femaleAssetName;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 maleSpineName;                                     // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 femaleSpineName;                                   // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          needLoop1;                                         // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          useFullscreenAdaptAnchor;                          // 0x0041(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_PlotBlueprintFunctionLibrary_C_OpenUiView;
@@ -266,15 +267,17 @@ public:
 DUMPER7_ASSERTS_PlotBlueprintFunctionLibrary_C_PlaySpineAnim;
 
 // Function PlotBlueprintFunctionLibrary.PlotBlueprintFunctionLibrary_C.OpenUiViewInArray
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct PlotBlueprintFunctionLibrary_C_OpenUiViewInArray final
 {
 public:
-	class FString                                 maleAssetName1;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 femaleAssetName1;                                  // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FSpineThingsInfo>               maleSpineArray1;                                   // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<struct FSpineThingsInfo>               femaleSpineArray1;                                 // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	class UObject*                                __WorldContext;                                    // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 maleAssetName;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 femaleAssetName;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	TArray<struct FSpineThingsInfo>               maleSpineArray;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FSpineThingsInfo>               femaleSpineArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          useFullscreenAdaptAnchor;                          // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_PlotBlueprintFunctionLibrary_C_OpenUiViewInArray;
 

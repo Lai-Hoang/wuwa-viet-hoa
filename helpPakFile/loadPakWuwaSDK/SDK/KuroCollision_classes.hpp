@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroCollision_structs.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // Class KuroCollision.CollisionClusterComponent
-// 0x0110 (0x0680 - 0x0570)
+// 0x0120 (0x0690 - 0x0570)
 class UCollisionClusterComponent final : public UPrimitiveComponent
 {
 public:
@@ -30,10 +30,11 @@ public:
 	TArray<struct FKAggregateGeom>                AggGeometries;                                     // 0x0610(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<class UBodySetup*>                     BodySetups;                                        // 0x0620(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_630[0x10];                                     // 0x0630(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 BodySetupComplexPhysicalMaterialNums;              // 0x0640(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_650[0x10];                                     // 0x0650(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       RelativeBounds;                                    // 0x0660(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_67C[0x4];                                      // 0x067C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UBodySetup*>                     StandaloneBodySetups;                              // 0x0640(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<int32>                                 BodySetupComplexPhysicalMaterialNums;              // 0x0650(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_660[0x10];                                     // 0x0660(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       RelativeBounds;                                    // 0x0670(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -89,6 +90,7 @@ public:
 	static struct FBodyInstance GetBodyInstance(const class UKuroHitResult* HitResult, int32 HitIndex);
 	static class FName GetCollisionProfileName(class UPrimitiveComponent* PrimitiveComponent, int32 InstanceIndex);
 	static ECollisionResponse GetCollisionResponseToChannel(class UPrimitiveComponent* PrimitiveComponent, ECollisionChannel Channel, int32 InstanceIndex);
+	static struct FBodyInstance GetHitResultBodyInstance(const struct FHitResult& HitResult);
 	static void GetOverlappingComponents(class UPrimitiveComponent* PrimitiveComponent, TArray<class UPrimitiveComponent*>* OutOverlappingComponents, TArray<int32>* OutOverlappingBodyIndices);
 	static const struct FWalkableSlopeOverride GetWalkableSlopeOverride(class UPrimitiveComponent* PrimitiveComponent, int32 InstanceIndex);
 	static void SetCollisionResponseToChannel(class UPrimitiveComponent* PrimitiveComponent, const ECollisionChannel Channel, const ECollisionResponse NewResponse, const int32 InstanceIndex);

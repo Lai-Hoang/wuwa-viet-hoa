@@ -316,6 +316,34 @@ ECollisionResponse UKuroCollisionLibrary::GetCollisionResponseToChannel(class UP
 }
 
 
+// Function KuroCollision.KuroCollisionLibrary.GetHitResultBodyInstance
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FHitResult&                HitResult                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FBodyInstance                    ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FBodyInstance UKuroCollisionLibrary::GetHitResultBodyInstance(const struct FHitResult& HitResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCollisionLibrary", "GetHitResultBodyInstance");
+
+	Params::KuroCollisionLibrary_GetHitResultBodyInstance Parms{};
+
+	Parms.HitResult = std::move(HitResult);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroCollision.KuroCollisionLibrary.GetOverlappingComponents
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:

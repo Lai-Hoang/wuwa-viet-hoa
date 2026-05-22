@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "S_SE_ControllerCommon_structs.hpp"
 #include "Engine_classes.hpp"
+#include "S_SE_ControllerCommon_structs.hpp"
 
 
 namespace SDK

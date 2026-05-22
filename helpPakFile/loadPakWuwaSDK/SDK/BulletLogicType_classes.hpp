@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EBulletHitDirectionType_structs.hpp"
 #include "EBulletType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EBulletHitDirectionType_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK

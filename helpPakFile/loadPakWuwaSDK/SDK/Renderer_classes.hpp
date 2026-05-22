@@ -17,6 +17,32 @@
 namespace SDK
 {
 
+// Class Renderer.KuroCaptureEventManager
+// 0x0010 (0x0040 - 0x0030)
+class UKuroCaptureEventManager final : public UObject
+{
+public:
+	TMulticastInlineDelegate<void()>              OnSceneColorCaptured;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+
+public:
+	static class UKuroCaptureEventManager* Get();
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("KuroCaptureEventManager")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"KuroCaptureEventManager")
+	}
+	static class UKuroCaptureEventManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroCaptureEventManager>();
+	}
+};
+DUMPER7_ASSERTS_UKuroCaptureEventManager;
+
 // Class Renderer.DebugViewOverdrawSettings
 // 0x0010 (0x0040 - 0x0030)
 class UDebugViewOverdrawSettings final : public UObject

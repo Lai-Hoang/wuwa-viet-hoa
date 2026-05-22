@@ -117,7 +117,7 @@ public:
 DUMPER7_ASSERTS_UMovieSceneDialogueAudioTrack;
 
 // Class SequenceDialogue.MovieSceneDialogueSection
-// 0x0098 (0x0190 - 0x00F8)
+// 0x00B8 (0x01B0 - 0x00F8)
 class UMovieSceneDialogueSection final : public UMovieSceneSection
 {
 public:
@@ -139,7 +139,13 @@ public:
 	int32                                         AutoPlayDelay;                                     // 0x0184(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          EnableGuardTime;                                   // 0x0188(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          EnableAutoPlayDelay;                               // 0x0189(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18A[0x6];                                      // 0x018A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 UnisonIdList;                                      // 0x0190(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	class FName                                   Emotion;                                           // 0x01A0(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TArray<class FString> GetEmotionNames() const;
 
 public:
 	static class UClass* StaticClass()
@@ -206,23 +212,24 @@ public:
 DUMPER7_ASSERTS_UMovieSceneDialogueStateTrack;
 
 // Class SequenceDialogue.MovieSceneDialogueSubsystem
-// 0x0088 (0x00C0 - 0x0038)
+// 0x0098 (0x00D0 - 0x0038)
 class UMovieSceneDialogueSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay)> OnShowDialogue; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration)> OnShowDialogueAudio; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UMovieSceneQteManager*                  QteManager;                                        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x10];                                      // 0x0068(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 AutoTransformActor;                                // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieScene3DTransformTrack*            AutoTransformDataTrack;                            // 0x0080(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieScene3DAttachTrack*               AutoTransformAttachTrack;                          // 0x0088(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class UMovieScenePropertyTrack*>       AutoTransformPropertyTracks;                       // 0x0090(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A0[0x20];                                      // 0x00A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay, const TArray<int32>& UnisonIdList)> OnShowDialogueWithUnison; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration)> OnShowDialogueAudio; // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UMovieSceneQteManager*                  QteManager;                                        // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x10];                                      // 0x0078(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 AutoTransformActor;                                // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieScene3DTransformTrack*            AutoTransformDataTrack;                            // 0x0090(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieScene3DAttachTrack*               AutoTransformAttachTrack;                          // 0x0098(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieScenePropertyTrack*>       AutoTransformPropertyTracks;                       // 0x00A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B0[0x20];                                      // 0x00B0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ShowDialogue(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay);
+	void ShowDialogue(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay, const TArray<int32>& UnisonIdList);
 	void ShowDialogueAudio(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration);
 	bool TryGetAutoTransformByOffsetTime(struct FTransform* OutTrans, float OffsetTime, bool bApplyCameraProperties);
 

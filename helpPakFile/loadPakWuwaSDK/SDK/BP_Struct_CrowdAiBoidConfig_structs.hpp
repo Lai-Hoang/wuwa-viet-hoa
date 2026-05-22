@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct BP_Struct_CrowdAiBoidConfig.BP_Struct_CrowdAiBoidConfig
-// 0x0130 (0x0130 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct FBP_Struct_CrowdAiBoidConfig final
 {
 public:
@@ -31,19 +31,21 @@ public:
 	float                                         移动半径缩放系数_53_95FCBF3B4EC9BBB3335BC9A473992817; // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         地面转向摩擦力_13_F8DBED9B46B9A6577A1FB098002AA3C7; // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         转向插值速度_15_9F1D271A40720687EBC4CABD621A3B27;  // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         转向触发阈值速度_17_BC586E5B4C5353896CEA79BFBE2E3F33; // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         斥力额外半径_47_138429BC4123AE54DF91859F9B59CB4D;  // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         移动斥力额外半径缩放系数_52_051727824B85EFB0C22D2E8BAA264E58; // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         临近目标减速距离_21_15D6589A46432B66AF91AF8394DEE2FB; // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         边界空气墙距离_23_7C991B224CD23978F61EAA988D0FDFCF; // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         额外探测距离_25_BCA99FDC48E5C916CCDD24AA98AB37EC;  // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         待机表演最小冷却时间_73_591B1AFF41A8CD1CD0DD8E83DD9FB65D; // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         待机表演最大冷却时间_75_952B2EAB4BFB2346B21646BC7255B1DC; // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         待机表演最大比例_78_144686D64ABF9E3D59666E8A86028987; // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<int32, EKuroCrowdAiBoidAnimState>        状态配置_69_6C441FB54AFF2B6890EA7F9C546CC9C8;      // 0x0078(0x0050)(Edit, BlueprintVisible)
-	TArray<struct FKuroCrowdAiAnimSequenceConfig> 动画配置_62_8DEBA2C04151634ED74D398B50E2F39A;      // 0x00C8(0x0010)(Edit, BlueprintVisible)
-	TMap<class UKuroMaterialControllerDataAsset*, int32> 材质贴图DA配置_67_9EC1E1564C67A36FBBC7A4B2D94E0125; // 0x00D8(0x0050)(Edit, BlueprintVisible)
-	class UGPUNPCData_C*                          GpuNpcDa_40_DA17B74640BA73DA4E2381A4F8C423E7;      // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         移动表现阈值速度_79_BC586E5B4C5353896CEA79BFBE2E3F33; // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         待机表现阈值速度_82_1D66A6C94B8CCC84F65CEB887F46515C; // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         斥力额外半径_47_138429BC4123AE54DF91859F9B59CB4D;  // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         移动斥力额外半径缩放系数_52_051727824B85EFB0C22D2E8BAA264E58; // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         临近目标减速距离_21_15D6589A46432B66AF91AF8394DEE2FB; // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         边界空气墙距离_23_7C991B224CD23978F61EAA988D0FDFCF; // 0x0068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         额外探测距离_25_BCA99FDC48E5C916CCDD24AA98AB37EC;  // 0x006C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         待机表演最小冷却时间_73_591B1AFF41A8CD1CD0DD8E83DD9FB65D; // 0x0070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         待机表演最大冷却时间_75_952B2EAB4BFB2346B21646BC7255B1DC; // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         待机表演最大比例_78_144686D64ABF9E3D59666E8A86028987; // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, EKuroCrowdAiBoidAnimState>        状态配置_69_6C441FB54AFF2B6890EA7F9C546CC9C8;      // 0x0080(0x0050)(Edit, BlueprintVisible)
+	TArray<struct FKuroCrowdAiAnimSequenceConfig> 动画配置_62_8DEBA2C04151634ED74D398B50E2F39A;      // 0x00D0(0x0010)(Edit, BlueprintVisible)
+	TMap<class UKuroMaterialControllerDataAsset*, int32> 材质贴图DA配置_67_9EC1E1564C67A36FBBC7A4B2D94E0125; // 0x00E0(0x0050)(Edit, BlueprintVisible)
+	class UGPUNPCData_C*                          GpuNpcDa_40_DA17B74640BA73DA4E2381A4F8C423E7;      // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_FBP_Struct_CrowdAiBoidConfig;
 

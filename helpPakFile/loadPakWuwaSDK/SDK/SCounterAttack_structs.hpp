@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SCounterAttackEffect_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SCounterAttackEffect_structs.hpp"
 #include "SCounterAttackBuff_structs.hpp"
 
 

@@ -58,6 +58,32 @@ enum class EMultiEffectType : uint8
 	EMultiEffectType_MAX                     = 1,
 };
 
+// Enum KuroGameplay.EKuroLevelPlaySplineCircularClusterSampleMethod
+// NumValues: 0x0003
+enum class EKuroLevelPlaySplineCircularClusterSampleMethod : uint8
+{
+	Parallel                                 = 0,
+	CircleFills                              = 1,
+	EKuroLevelPlaySplineCircularClusterSampleMethod_MAX = 2,
+};
+
+// Enum KuroGameplay.EKuroLevelPlayGamePartitionObjectType
+// NumValues: 0x0002
+enum class EKuroLevelPlayGamePartitionObjectType : uint8
+{
+	FollowerPollution                        = 1,
+	EKuroLevelPlayGamePartitionObjectType_MAX = 2,
+};
+
+// Enum KuroGameplay.EKuroLevelPlayType
+// NumValues: 0x0003
+enum class EKuroLevelPlayType : uint8
+{
+	FlowerPollution                          = 0,
+	Max                                      = 1,
+	EKuroLevelPlayType_MAX                   = 2,
+};
+
 // Enum KuroGameplay.ELockAxis
 // NumValues: 0x0007
 enum class ELockAxis : uint8
@@ -231,17 +257,27 @@ public:
 };
 DUMPER7_ASSERTS_FKuroEffectNiagaraParametersStruct;
 
-// ScriptStruct KuroGameplay.KuroEffectSpecData
+// ScriptStruct KuroGameplay.KuroEffectSpecChildData
 // 0x0018 (0x0018 - 0x0000)
+struct FKuroEffectSpecChildData final
+{
+public:
+	int32                                         Id;                                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Children;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroEffectSpecChildData;
+
+// ScriptStruct KuroGameplay.KuroEffectSpecData
+// 0x000C (0x000C - 0x0000)
 struct FKuroEffectSpecData final
 {
 public:
 	int32                                         Id;                                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Path;                                              // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         SpecType;                                          // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         EffectRegularType;                                 // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LifeTime;                                          // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         SpecType;                                          // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         EffectRegularType;                                 // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LifeTime;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FKuroEffectSpecData;
 
@@ -317,6 +353,71 @@ public:
 	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FKuroInputDefine;
+
+// ScriptStruct KuroGameplay.KuroLevelPlayFoliageTypeSelection
+// 0x0010 (0x0010 - 0x0000)
+struct FKuroLevelPlayFoliageTypeSelection final
+{
+public:
+	class FString                                 FoliageTypePath;                                   // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroLevelPlayFoliageTypeSelection;
+
+// ScriptStruct KuroGameplay.KuroLevelPlaySplineCircularClusterConfig
+// 0x001C (0x001C - 0x0000)
+struct FKuroLevelPlaySplineCircularClusterConfig final
+{
+public:
+	EKuroLevelPlaySplineCircularClusterSampleMethod SampleMethod;                                    // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Spacing;                                           // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinFoliageIntersectionDepth;                       // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ParallelCount;                                     // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Width;                                             // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDraw;                                        // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroLevelPlaySplineCircularClusterConfig;
+
+// ScriptStruct KuroGameplay.KuroLevelPlayCircle
+// 0x0020 (0x0020 - 0x0000)
+struct FKuroLevelPlayCircle final
+{
+public:
+	struct FVectorDouble                          Position;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroLevelPlayCircle;
+
+// ScriptStruct KuroGameplay.KuroLevelPlayFlower
+// 0x0038 (0x0038 - 0x0000)
+struct FKuroLevelPlayFlower final
+{
+public:
+	struct FKuroLevelPlayCircle                   Circle;                                            // 0x0000(0x0020)(Edit, BlueprintVisible, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GamePartitionID;                                   // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SplinePbDataId;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DiffusionRadius;                                   // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDirty;                                            // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FKuroLevelPlayFlower;
+
+// ScriptStruct KuroGameplay.KuroLevelPlayPointLight
+// 0x0020 (0x0020 - 0x0000)
+struct FKuroLevelPlayPointLight final
+{
+public:
+	float                                         Radius;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLit;                                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          Position;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FKuroLevelPlayPointLight;
 
 // ScriptStruct KuroGameplay.TrailSegment
 // 0x0028 (0x0028 - 0x0000)

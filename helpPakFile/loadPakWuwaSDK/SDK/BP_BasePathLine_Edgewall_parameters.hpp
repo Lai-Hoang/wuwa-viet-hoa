@@ -16,14 +16,14 @@
 namespace SDK::Params
 {
 
-// Function BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C.ExecuteUbergraph_BP_BasePathLine_Edgewall
-// 0x0004 (0x0004 - 0x0000)
-struct BP_BasePathLine_Edgewall_C_ExecuteUbergraph_BP_BasePathLine_Edgewall final
+// Function BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C.Save
+// 0x000C (0x000C - 0x0000)
+struct BP_BasePathLine_Edgewall_C_Save final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BasePathLine_Edgewall_C_ExecuteUbergraph_BP_BasePathLine_Edgewall;
+DUMPER7_ASSERTS_BP_BasePathLine_Edgewall_C_Save;
 
 // Function BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C.贴地处理
 // 0x002C (0x002C - 0x0000)
@@ -41,14 +41,14 @@ public:
 };
 DUMPER7_ASSERTS_BP_BasePathLine_Edgewall_C_贴地处理;
 
-// Function BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C.Save
-// 0x000C (0x000C - 0x0000)
-struct BP_BasePathLine_Edgewall_C_Save final
+// Function BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C.ExecuteUbergraph_BP_BasePathLine_Edgewall
+// 0x0004 (0x0004 - 0x0000)
+struct BP_BasePathLine_Edgewall_C_ExecuteUbergraph_BP_BasePathLine_Edgewall final
 {
 public:
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_BP_BasePathLine_Edgewall_C_Save;
+DUMPER7_ASSERTS_BP_BasePathLine_Edgewall_C_ExecuteUbergraph_BP_BasePathLine_Edgewall;
 
 }
 

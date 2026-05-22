@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "EMorphType_structs.hpp"
-#include "EFishingSkillType_structs.hpp"
-#include "ESkillTargetDirection_structs.hpp"
-#include "ECharacterLoadType_structs.hpp"
-#include "EVisionType_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EHookInteractTypeBp_structs.hpp"
+#include "ECharacterLoadType_structs.hpp"
+#include "EFishingSkillType_structs.hpp"
+#include "EVisionType_structs.hpp"
 #include "EHitAnim_structs.hpp"
+#include "ESkillTargetDirection_structs.hpp"
 #include "EAimViewState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
 #include "ECharParentMoveState_structs.hpp"
@@ -340,6 +340,7 @@ public:
 	static void XigelikaConsumeBean(int32 entityId, class UObject* __WorldContext);
 	static void XigelikaResetBean(int32 entityId, class UObject* __WorldContext);
 	static int32 XigelikaGetBeanResultant(int32 entityId, class UObject* __WorldContext);
+	static bool FunctionOpen(int32 functionType, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
