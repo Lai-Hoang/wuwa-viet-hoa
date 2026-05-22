@@ -1,0 +1,832 @@
+Id,Content
+Main_LahaiRoi_ZRJDYKX_1_1,Hi {PlayerName}. This is Arman from the Spacetrek Collective. Can you come by now?
+Main_LahaiRoi_ZRJDYKX_1_2,Denia is awake and being kept in isolation at the infirmary. We'd like to work with you on her case.
+Main_LahaiRoi_ZRJDYKX_1_3,Sure.
+Main_LahaiRoi_ZRJDYKX_1_4,Sure.
+Main_LahaiRoi_ZRJDYKX_1_5,Much appreciated. See you soon.
+Main_LahaiRoi_ZRJDYKX_10_1,"{PlayerName}, the approvals are through. Everything is set. You can pick up Denia at the station."
+Main_LahaiRoi_ZRJDYKX_11_1,"You're here, {PlayerName}. The procedure and contact list have been sent to your Terminal. All steps and contingency measures are included."
+Main_LahaiRoi_ZRJDYKX_11_2,Very detailed. I see a Resonance suppression device and declared contact entries. Everyone's agreed on those?
+Main_LahaiRoi_ZRJDYKX_11_3,"Yes. At Denia's request, we used her Terminal to schedule the meetings under a recovery discharge notice. She'll be approaching them today as a student."
+Main_LahaiRoi_ZRJDYKX_11_4,"The suppression device was... her idea, a guarantee of cooperation. She said it would make things fair, even though she doesn't really need it in her current state."
+Main_LahaiRoi_ZRJDYKX_11_5,"Here, take this. If she starts feeling unwell, have her use it. It should make her feel better."
+Main_LahaiRoi_ZRJDYKX_11_6,So you've found a way to relieve her frequency failure?
+Main_LahaiRoi_ZRJDYKX_11_7,No... these are only tranquillizers. We've adjusted the dosage for this operation. As for a treatment plan... we'll try and work out a revised version as soon as possible.
+Main_LahaiRoi_ZRJDYKX_11_8,(No wonder Denia behaved that way last time. She had already seen this coming.)
+Main_LahaiRoi_ZRJDYKX_11_9,What's the bottleneck?
+Main_LahaiRoi_ZRJDYKX_11_10,"The diagnosis from Rabelle College shows that the problem doesn't lie with her Resonance ability, but a failure in her self-regulation mechanism..."
+Main_LahaiRoi_ZRJDYKX_11_11,"We're still validating several hypotheses regarding the symptoms. Hopefully, we'll have answers soon."
+Main_LahaiRoi_ZRJDYKX_11_12,"(This is looking grimmer than I thought. Still, if it's related to Threnodian frequencies, the Black Shores might have better solutions.)"
+Main_LahaiRoi_ZRJDYKX_11_13,"Don't concern yourself with the research. For now, we'll need you to focus on today's operation. Please contact us if anything arises."
+Main_LahaiRoi_ZRJDYKX_11_14,Are we good to go?
+Main_LahaiRoi_ZRJDYKX_11_15,Yes. Hope you both have a pleasant day.
+Main_LahaiRoi_ZRJDYKX_11_16,"So, I'll be in your hands today, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_11_17,"You promised me a birthday, remember? Why the serious face?"
+Main_LahaiRoi_ZRJDYKX_11_18,I have to keep the operation under control.
+Main_LahaiRoi_ZRJDYKX_11_19,...You didn't sound like this last time.
+Main_LahaiRoi_ZRJDYKX_11_20,"Even so, you can't walk around with that face. People will notice something's off."
+Main_LahaiRoi_ZRJDYKX_11_21,"Because today, I'm Denia, a proud student of Startorch Academy."
+Main_LahaiRoi_ZRJDYKX_11_22,"Come on... Try it like me. Loosen your mouth, relax your eyes..."
+Main_LahaiRoi_ZRJDYKX_11_23,"I can do that. But remember your situation, don't—"
+Main_LahaiRoi_ZRJDYKX_11_24,"Yeah, yeah, I know."
+Main_LahaiRoi_ZRJDYKX_11_25,"Today is Denia's birthday. You head to the station to meet her.
+At the station, Arman gives you the day's schedule. The Spacetrek Collective has made thorough preparations to minimize any risks during Denia's time outside."
+Main_LahaiRoi_ZRJDYKX_11_26,There. See? You look nicer when you smile.
+Main_LahaiRoi_ZRJDYKX_129_1,The infirmary is closed at night.
+Main_LahaiRoi_ZRJDYKX_13_1,"Yawn... Finally, they let me out for a walk."
+Main_LahaiRoi_ZRJDYKX_13_2,"Feels kind of nice being a student, doesn't it, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_13_3,"Hmm, funny, you'd think there'd be more people here on a weekend."
+Main_LahaiRoi_ZRJDYKX_13_4,Don't tell me they heard I was coming and decided to hide?
+Main_LahaiRoi_ZRJDYKX_13_5,...
+Main_LahaiRoi_ZRJDYKX_13_6,"So that's a yes, then? You could at least say something nice."
+Main_LahaiRoi_ZRJDYKX_13_7,Campus security is still our responsibility.
+Main_LahaiRoi_ZRJDYKX_13_8,Ugh... That kills the mood.
+Main_LahaiRoi_ZRJDYKX_14_1,"This way leads to the Garden Zone, right?"
+Main_LahaiRoi_ZRJDYKX_14_2,Yes. This is where you're supposed to meet Sigrika.
+Main_LahaiRoi_ZRJDYKX_14_3,"...Ah, Sigrika."
+Main_LahaiRoi_ZRJDYKX_14_4,When was the last time we went shopping together...?
+Main_LahaiRoi_ZRJDYKX_15_1,"If the elevator breaks, do we get stuck here?"
+Main_LahaiRoi_ZRJDYKX_15_2,I can cut it open.
+Main_LahaiRoi_ZRJDYKX_15_3,Absolutely not. That's vandalism...
+Main_LahaiRoi_ZRJDYKX_16_1,"Hey, {PlayerName}, uh... Want to swing by the Arcade first?"
+Main_LahaiRoi_ZRJDYKX_16_2,Are you trying to avoid Sigrika?
+Main_LahaiRoi_ZRJDYKX_16_3,"Oh, so you saw..."
+Main_LahaiRoi_ZRJDYKX_16_4,This is your own request. Give me a reason to cancel it.
+Main_LahaiRoi_ZRJDYKX_16_5,The reason is... I-I'm not feeling so great. Maybe we should just—
+Main_LahaiRoi_ZRJDYKX_16_6,"Senior, Denia!"
+Main_LahaiRoi_ZRJDYKX_16_7,...!
+Main_LahaiRoi_ZRJDYKX_16_8,"Wow, hi, Siggy. Did I keep you waiting?"
+Main_LahaiRoi_ZRJDYKX_16_9,"No, I just got here too... Hmm? Why are you with Denia today, Senior?"
+Main_LahaiRoi_ZRJDYKX_16_10,The doctor asked me to keep her company.
+Main_LahaiRoi_ZRJDYKX_16_11,She wanted to go for a walk with me.
+Main_LahaiRoi_ZRJDYKX_16_12,"Oh, I see. I heard Denia's been in the ward for quite a few days."
+Main_LahaiRoi_ZRJDYKX_16_13,You...
+Main_LahaiRoi_ZRJDYKX_16_14,I didn't realize you were that close... But... but that's nice. At least Denia finally gets some fresh air.
+Main_LahaiRoi_ZRJDYKX_16_15,"Every time I went to the infirmary, Dr. Luuk said you still needed some rest... So, are you feeling better now?"
+Main_LahaiRoi_ZRJDYKX_16_16,"Oh, I was better a while ago... Yawn... Guess it's just bad sleep. I mean, a ward's never as comfy as your own room."
+Main_LahaiRoi_ZRJDYKX_16_17,Bad sleep... Have you been having nightmares again? I heard what happened last time really affected a lot of people...
+Main_LahaiRoi_ZRJDYKX_16_18,"You don't think it's because of the Voidmatter contamination, right?"
+Main_LahaiRoi_ZRJDYKX_16_19,Of course not... I just pretended to be sick for a bit longer so I don't have to get back to class so soon.
+Main_LahaiRoi_ZRJDYKX_16_20,"Relax. Having {PlayerName} watch over me is plenty. Come on, Siggy, didn't you want to go photograph the white bird in the garden? It'll be off duty if you don't hurry..."
+Main_LahaiRoi_ZRJDYKX_16_21,"Okay then... Make sure you catch up with us later on, Senior."
+Main_LahaiRoi_ZRJDYKX_16_22,"Did you know, Nia? The Photography Fan Club is planning to apply for a studio!"
+Main_LahaiRoi_ZRJDYKX_16_23,They have budget for that? Was it the prize they won from the campus event?
+Main_LahaiRoi_ZRJDYKX_16_24,Yeah. They won't stop talking about how much they owe you.
+Main_LahaiRoi_ZRJDYKX_16_25,"According to the schedule, you will meet up with Sigrika.
+Denia gets cold feet when she sees her, but Sigrika has already noticed the two of you.
+To keep her end of the deal, you and Denia will have to play along for a day of pretending in front of Sigrika."
+Main_LahaiRoi_ZRJDYKX_160_1,"Senior, do you remember Denia? You met her at the New Solar Celebration. She was the one who got us those tickets."
+Main_LahaiRoi_ZRJDYKX_160_2,She's been in the infirmary since the last incident. They're saying she's still not in any condition to take visitors.
+Main_LahaiRoi_ZRJDYKX_160_3,"If it's not too much trouble, could you check on her for me? I've been asking N.A.N.A. for updates, but she tells me the same thing every time... I'm worried."
+Main_LahaiRoi_ZRJDYKX_160_4,Got it.
+Main_LahaiRoi_ZRJDYKX_160_5,Got it.
+Main_LahaiRoi_ZRJDYKX_160_6,"Appreciate you, Senior! ヾ(ﾟ▽ﾟ)ノ"
+Main_LahaiRoi_ZRJDYKX_17_1,You're yawning more than usual today. Are you sure it's not some kind of aftereffect?
+Main_LahaiRoi_ZRJDYKX_17_2,No way. I've just been inside too long. Got a little sensitive to sunlight...
+Main_LahaiRoi_ZRJDYKX_17_3,"No, no, no. You can't stay shut in all the time. A little sunlight is good for you."
+Main_LahaiRoi_ZRJDYKX_17_4,"Oh, too bright..."
+Main_LahaiRoi_ZRJDYKX_18_1,Hello. Can I help you with something?
+Main_LahaiRoi_ZRJDYKX_18_2,(This guy's acting strange. I don't remember him on the contact list.)
+Main_LahaiRoi_ZRJDYKX_18_3,Please don't mind me. Denia is the one who needs your attention.
+Main_LahaiRoi_ZRJDYKX_18_4,...
+Main_LahaiRoi_ZRJDYKX_19_1,"Shh, don't look this way, {PlayerName}. We have to pretend we don't know each other."
+Main_LahaiRoi_ZRJDYKX_2_1,"So, Denia... You think she's alright?"
+Main_LahaiRoi_ZRJDYKX_2_2,(Denia... The Fractsidus made no move while she was unconscious. Have they really abandoned what they worked so hard to achieve? Or are they biding their time for something else?)
+Main_LahaiRoi_ZRJDYKX_2_3,Let's go see for ourselves.
+Main_LahaiRoi_ZRJDYKX_20_1,"Look, the Photography Fan Club's here. Wanna go say hi?"
+Main_LahaiRoi_ZRJDYKX_20_2,I'll pass... a bunch of camera-obsessed weirdos. Their prize money has nothing to do with me anyway.
+Main_LahaiRoi_ZRJDYKX_20_3,"What are you talking about? Without you, they would've shut down by now."
+Main_LahaiRoi_ZRJDYKX_20_4,Prize money?
+Main_LahaiRoi_ZRJDYKX_20_5,"It was for an academy promo thing... The theme was ""Startorch: Moments of Happiness."" Why?"
+Main_LahaiRoi_ZRJDYKX_20_6,You're good at photography?
+Main_LahaiRoi_ZRJDYKX_20_7,So you're a pro?
+Main_LahaiRoi_ZRJDYKX_20_8,"I was the model, actually. Someone came to me and said they'd buy me a luxury buffet if I agreed to pose for a couple of photos while eating... For a moment, I genuinely believed they were being generous."
+Main_LahaiRoi_ZRJDYKX_20_9,"I even skipped a meal on purpose. Turned out their ""luxury buffet"" was the cafeteria."
+Main_LahaiRoi_ZRJDYKX_20_10,"But the photos came out beautifully. They even made it to the F.U.E.L.'s ""A Seal-Proof Guide to Enrollment."""
+Main_LahaiRoi_ZRJDYKX_20_11,"It's just marketing for freshmen. You smile no matter what you're eating. That's what being a model feels like, I suppose... Besides, you know I never really liked taking photos."
+Main_LahaiRoi_ZRJDYKX_20_12,"Yeah, you're right. The only time we took a group photo was when Nivora insisted."
+Main_LahaiRoi_ZRJDYKX_20_13,"Sigh... Speaking of Nivora, I wonder how she's doing now."
+Main_LahaiRoi_ZRJDYKX_20_14,...Siggy.
+Main_LahaiRoi_ZRJDYKX_20_15,Hmm?
+Main_LahaiRoi_ZRJDYKX_20_16,Let's take another photo together.
+Main_LahaiRoi_ZRJDYKX_20_17,Really? That's a first for you!
+Main_LahaiRoi_ZRJDYKX_20_18,"Come on, {PlayerName}, you too. And... can I borrow your camera?"
+Main_LahaiRoi_ZRJDYKX_20_19,So this is what it's about?
+Main_LahaiRoi_ZRJDYKX_20_20,"Alright, ready... three, two, one—"
+Main_LahaiRoi_ZRJDYKX_20_21,Cheese!
+Main_LahaiRoi_ZRJDYKX_20_22,I'll save the photo on your Terminal for now. We can print it someday.
+Main_LahaiRoi_ZRJDYKX_20_23,"Look, in the photo! It's the white bird... It flew that way!"
+Main_LahaiRoi_ZRJDYKX_20_24,"You learn from Sigrika and Denia about small moments from their shared past. 
+When they speak of Nivora, Denia grows still, as if reaching some quiet resolution. 
+Then, at her invitation, the three of you come together for a group photograph."
+Main_LahaiRoi_ZRJDYKX_21_1,First time we nail this area... It's really quiet today.
+Main_LahaiRoi_ZRJDYKX_21_2,I heard there's a special arrangement. A lot of people weren't allowed over here this afternoon...
+Main_LahaiRoi_ZRJDYKX_21_3,Hold on... Did I just see a pink-haired girl?
+Main_LahaiRoi_ZRJDYKX_22_1,"You are... Denia's friend, right? I think I just saw you with her."
+Main_LahaiRoi_ZRJDYKX_22_2,Yes.
+Main_LahaiRoi_ZRJDYKX_22_3,No.
+Main_LahaiRoi_ZRJDYKX_22_4,That's good news. So she's been discharged already.
+Main_LahaiRoi_ZRJDYKX_22_5,"Oh, sorry, my bad. We must have been mistaken."
+Main_LahaiRoi_ZRJDYKX_22_6,Were you looking for her?
+Main_LahaiRoi_ZRJDYKX_22_7,Yep. Nothing urgent. It's just that the prize money from last time is still with the club. We were waiting to talk it over with her.
+Main_LahaiRoi_ZRJDYKX_22_8,"And honestly, things just don't feel the same without her."
+Main_LahaiRoi_ZRJDYKX_23_1,An unidentified rare species... the fabled pure white bird.
+Main_LahaiRoi_ZRJDYKX_23_2,"It's been a year since we first saw it, and we still haven't gotten a close look."
+Main_LahaiRoi_ZRJDYKX_23_3,"Heh... calm down. For all we know, it could just be someone's Resonance ability..."
+Main_LahaiRoi_ZRJDYKX_23_4,"As if. You and your dry humor, Nia."
+Main_LahaiRoi_ZRJDYKX_24_1,"Greetings, {PlayerName}! No suspicious individuals detected. Frequency readings are normal. Please proceed with your mission."
+Main_LahaiRoi_ZRJDYKX_24_2,Keep it down...
+Main_LahaiRoi_ZRJDYKX_24_3,"Understood. However, based on TARD-E's logic functions, if you don't want Denia to notice, then you should not be speaking with TARD-E!"
+Main_LahaiRoi_ZRJDYKX_241_1,Is Sigrika running faster than me?
+Main_LahaiRoi_ZRJDYKX_241_2,I'd like to be able to do that too...
+Main_LahaiRoi_ZRJDYKX_241_3,You can.
+Main_LahaiRoi_ZRJDYKX_242_1,...I died.
+Main_LahaiRoi_ZRJDYKX_25_1,I'm pretty sure it flew this way... where did it go?
+Main_LahaiRoi_ZRJDYKX_25_2,"Why don't we split up? You head that way, Siggy. {PlayerName} and I will check this way."
+Main_LahaiRoi_ZRJDYKX_25_3,Okay! Ping me on the Terminal if you find anything!
+Main_LahaiRoi_ZRJDYKX_26_1,"Could you come this way for a while, {PlayerName}...?"
+Main_LahaiRoi_ZRJDYKX_27_1,Hey... can you imagine her face if we told her the white bird is just Hiyuki's ability?
+Main_LahaiRoi_ZRJDYKX_27_2,You noticed it too?
+Main_LahaiRoi_ZRJDYKX_27_3,I don't think it'd be a big deal.
+Main_LahaiRoi_ZRJDYKX_27_4,...So it really is her. That kind of cold frequency is hard to forget.
+Main_LahaiRoi_ZRJDYKX_27_5,"It definitely would! Hiyuki is... well... kind of scary, isn't she? Always popping up out of nowhere with a blade..."
+Main_LahaiRoi_ZRJDYKX_27_6,Will she be watching us like this the whole time today?
+Main_LahaiRoi_ZRJDYKX_27_7,Hiyuki is just doing her job. And she's kinder than she looks.
+Main_LahaiRoi_ZRJDYKX_27_8,I know... She sometimes reminds me of you.
+Main_LahaiRoi_ZRJDYKX_27_9,"But unfortunately, that's my least favorite kind of person."
+Main_LahaiRoi_ZRJDYKX_27_10,Why?
+Main_LahaiRoi_ZRJDYKX_27_11,"What... Are you saying you care about my opinion, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_27_12,Sorry. Being straightforward doesn't do it for me.
+Main_LahaiRoi_ZRJDYKX_27_13,...
+Main_LahaiRoi_ZRJDYKX_27_14,"Okay, okay. I'll stop... I wonder how Sigrika's getting on. Let's go find her."
+Main_LahaiRoi_ZRJDYKX_28_1,"She headed this way, right? Where did she go?"
+Main_LahaiRoi_ZRJDYKX_29_1,"Senior, I lost track of you guys. I'm at the communications area right now.ヾ(✿ﾟ▽ﾟ)ノ"
+Main_LahaiRoi_ZRJDYKX_29_2,Got it.
+Main_LahaiRoi_ZRJDYKX_3_1,Impossible. We will not agree to that condition...
+Main_LahaiRoi_ZRJDYKX_3_2,"Please relay this message, Madam President. I'll take full responsibility."
+Main_LahaiRoi_ZRJDYKX_30_1,"You can't find it, either? Maybe not today then."
+Main_LahaiRoi_ZRJDYKX_30_2,"Seriously, Siggy. If you went into biology, you'd be a legend by now..."
+Main_LahaiRoi_ZRJDYKX_30_3,"Hehe, I just want to confirm a new species before I graduate."
+Main_LahaiRoi_ZRJDYKX_30_4,"And you really don't come out enough, Denia. A little more activity would be good for you."
+Main_LahaiRoi_ZRJDYKX_30_5,"Please, give me a break. I'm not exactly built for running or fighting like you are..."
+Main_LahaiRoi_ZRJDYKX_30_6,(Since when are you bad at fighting?)
+Main_LahaiRoi_ZRJDYKX_30_7,"Oh, right. Didn't you say you wanted to call home? The booth looks empty right now."
+Main_LahaiRoi_ZRJDYKX_30_8,Oh it is! That's rare. There's usually a line here...
+Main_LahaiRoi_ZRJDYKX_30_9,"Go on, before they start worrying. I've got some ""family matters"" to handle too, using {PlayerName}'s Terminal."
+Main_LahaiRoi_ZRJDYKX_30_11,Okay then... See you in a bit!
+Main_LahaiRoi_ZRJDYKX_31_1,"Yeah, I'm doing great today. Don't worry!"
+Main_LahaiRoi_ZRJDYKX_31_2,"Denia's out of the ward, so I'm taking a walk with her..."
+Main_LahaiRoi_ZRJDYKX_32_1,I know what you're worried about. I remember everything from back then... Why would I ever contact those people?
+Main_LahaiRoi_ZRJDYKX_32_2,...Then who are you calling?
+Main_LahaiRoi_ZRJDYKX_32_3,"This'll do. I'll just open the comm, and you can wait here with me for a while."
+Main_LahaiRoi_ZRJDYKX_32_4,You've been doing this all along?
+Main_LahaiRoi_ZRJDYKX_32_5,Yeah. It was all made up. To keep her happy. But I didn't realize how much effort it takes to keep a simple lie going.
+Main_LahaiRoi_ZRJDYKX_32_6,This will only complicate things.
+Main_LahaiRoi_ZRJDYKX_32_7,"But I can't be honest with her, can I? She's all cheerful on the outside, but she bears more than enough worries for her size... As her friend, that's the least I can do."
+Main_LahaiRoi_ZRJDYKX_32_8,"And besides... having a sweet, trusting friend like her around is a great cover, isn't it?"
+Main_LahaiRoi_ZRJDYKX_32_9,That's self-deluding.
+Main_LahaiRoi_ZRJDYKX_32_10,...I thought you'd put it more gently.
+Main_LahaiRoi_ZRJDYKX_32_11,Alright. Looks like she's finished her call. Let's head over.
+Main_LahaiRoi_ZRJDYKX_33_1,Perfect timing! We should go check out the new desserts!
+Main_LahaiRoi_ZRJDYKX_33_2,"This part, finally..."
+Main_LahaiRoi_ZRJDYKX_33_3,"What made you want to buy cake today, Denia?"
+Main_LahaiRoi_ZRJDYKX_33_4,You'll find out soon enough.
+Main_LahaiRoi_ZRJDYKX_34_1,"Today's new desserts include: Frostwort Dumpling, Fern Spore Kelp Biscuit, Pine Needle Lichen Roll, and—on special—Jarred Fish Muffin..."
+Main_LahaiRoi_ZRJDYKX_34_2,Those names sound... intense.
+Main_LahaiRoi_ZRJDYKX_34_3,Do you think you could assemble them into a cake?
+Main_LahaiRoi_ZRJDYKX_34_4,"What a terrifying thought, Nia..."
+Main_LahaiRoi_ZRJDYKX_34_5,"(Taste aside, the operational procedure was very clear about food intake. I should check with Arman...)"
+Main_LahaiRoi_ZRJDYKX_34_6,Patients need to be careful about food safety.
+Main_LahaiRoi_ZRJDYKX_34_7,I'm just going through the motions... She can eat it for me.
+Main_LahaiRoi_ZRJDYKX_34_8,I happen to know a team that specializes in desserts. We could order a cake from them if you want.
+Main_LahaiRoi_ZRJDYKX_34_9,What kind of style are you thinking of?
+Main_LahaiRoi_ZRJDYKX_34_10,"Oh, really? Then can I add Rainbow Bean Pop Rocks? And Creeping Torchpine nuts. Oh, and some Fruit Crackle too?"
+Main_LahaiRoi_ZRJDYKX_34_11,"Denia, you can't put Pop Rocks on a cake. You need to start with a base flavor..."
+Main_LahaiRoi_ZRJDYKX_34_12,Hm... okay. Let me think...
+Main_LahaiRoi_ZRJDYKX_34_13,Let's get an orange cake. I promised Sigrika we'd celebrate together. She likes oranges.
+Main_LahaiRoi_ZRJDYKX_34_14,"But make sure you add everything I mentioned earlier, okay?"
+Main_LahaiRoi_ZRJDYKX_34_15,"Having promised to help out at the Reactor Drive, Sigrika won't be able to celebrate Denia's birthday together with you.
+Before leaving, she promises Denia to spend her next birthday together."
+Main_LahaiRoi_ZRJDYKX_35_1,Tell Arman about the cake.
+Main_LahaiRoi_ZRJDYKX_35_2,"Denia needs a birthday cake, but I don't think the ones sold at the Academy will work."
+Main_LahaiRoi_ZRJDYKX_35_3,Even the vendors won't touch those. Don't buy them.
+Main_LahaiRoi_ZRJDYKX_35_4,We'll take care of the cake. Ingredients and preparation will need to be vetted.
+Main_LahaiRoi_ZRJDYKX_35_5,Did she specify what kind of cake she wants?
+Main_LahaiRoi_ZRJDYKX_35_6,An orange cake.
+Main_LahaiRoi_ZRJDYKX_35_7,An orange cake.
+Main_LahaiRoi_ZRJDYKX_35_8,Copy.
+Main_LahaiRoi_ZRJDYKX_35_9,There are some additional requirements.
+Main_LahaiRoi_ZRJDYKX_35_10,"Add Rainbow Bean Pop Rocks, Creeping Torchpine nuts, and Fruit Crackle."
+Main_LahaiRoi_ZRJDYKX_35_11,?
+Main_LahaiRoi_ZRJDYKX_35_12,Arman has withdrawn a message.
+Main_LahaiRoi_ZRJDYKX_35_13,Understood. We'll make it happen. Expect completion this evening.
+Main_LahaiRoi_ZRJDYKX_38_1,"Have you decided yet? What's it going to be, Denia?"
+Main_LahaiRoi_ZRJDYKX_38_2,Keeping it a secret for now.
+Main_LahaiRoi_ZRJDYKX_38_3,The cake will be ready by tonight.
+Main_LahaiRoi_ZRJDYKX_38_4,Tonight...
+Main_LahaiRoi_ZRJDYKX_38_5,Tonight might not work for me... I... I promised Professor Mornye I'd help out at the Reactor Drive today...
+Main_LahaiRoi_ZRJDYKX_38_6,...
+Main_LahaiRoi_ZRJDYKX_38_7,"Well, that's a shame, Siggy. I was hoping to share the birthday cake with you, but I guess you'll just have to make do with the leftovers."
+Main_LahaiRoi_ZRJDYKX_38_8,"Birthday cake...? Wait, today's your birthday? So that's why Rover is..."
+Main_LahaiRoi_ZRJDYKX_38_9,Denia wanted to surprise you.
+Main_LahaiRoi_ZRJDYKX_38_10,Then I... I'll leave Professor Mornye a message...
+Main_LahaiRoi_ZRJDYKX_38_11,"It's alright, Siggy. I'm sure you've got something really important to do with Professor Mornye."
+Main_LahaiRoi_ZRJDYKX_38_12,"Well, asking for a day off once in a while wouldn't..."
+Main_LahaiRoi_ZRJDYKX_38_13,Nope. No running away from it.
+Main_LahaiRoi_ZRJDYKX_38_14,"How can you become the kind of person you look up to, if you run away from something like this?"
+Main_LahaiRoi_ZRJDYKX_38_15,"But... aren't you the one who's been telling me ""it's okay to run away"" this whole time, Denia?"
+Main_LahaiRoi_ZRJDYKX_38_16,It was just to make you feel better. I say it to everyone.
+Main_LahaiRoi_ZRJDYKX_38_17,No. You're acting super weird today.
+Main_LahaiRoi_ZRJDYKX_38_18,"All of a sudden you asked me to come out, had me take pictures with you, revealed it's your birthday, and... told me not to run away... This... It's not like you at all..."
+Main_LahaiRoi_ZRJDYKX_38_19,"Siggy, I..."
+Main_LahaiRoi_ZRJDYKX_38_20,Are you hiding something from me?
+Main_LahaiRoi_ZRJDYKX_38_21,"Oh, couldn't you be a little less perceptive at a time like this, Sigrika?"
+Main_LahaiRoi_ZRJDYKX_38_22,"If you want me to keep playing dumb, I can do that, and I'll leave it there. As usual."
+Main_LahaiRoi_ZRJDYKX_38_23,"But, there's only one thing I want to make sure... Will you still be celebrating your birthday this time next year?"
+Main_LahaiRoi_ZRJDYKX_38_24,I will...
+Main_LahaiRoi_ZRJDYKX_38_25,Then next year... we'll celebrate your birthday together. Promise?
+Main_LahaiRoi_ZRJDYKX_38_26,Promise.
+Main_LahaiRoi_ZRJDYKX_38_27,How about we make a cake together when the time comes?
+Main_LahaiRoi_ZRJDYKX_38_28,I thought you said there's only one thing you wanted to make sure of...
+Main_LahaiRoi_ZRJDYKX_38_29,Denia still has some check-ups to do tonight. Maybe after she's fully recovered in a few days...
+Main_LahaiRoi_ZRJDYKX_38_30,"You sound just like Dr. Herssen, Senior."
+Main_LahaiRoi_ZRJDYKX_38_31,"It's fine, we've made a promise... Right, off I go to sort out some files."
+Main_LahaiRoi_ZRJDYKX_38_32,"You go get those files, Sigrika..."
+Main_LahaiRoi_ZRJDYKX_38_33,"Happy birthday, Denia!"
+Main_LahaiRoi_ZRJDYKX_38_34,"Phew, that was tough... I'm never good at this with her around."
+Main_LahaiRoi_ZRJDYKX_38_35,"Well, that made things really awkward at the end... If you'd just listened to me and moved on..."
+Main_LahaiRoi_ZRJDYKX_38_36,Sigrika really cares about you.
+Main_LahaiRoi_ZRJDYKX_38_37,You'll regret it.
+Main_LahaiRoi_ZRJDYKX_38_38,"Oh, sneaky you, being so nice and kind all of a sudden."
+Main_LahaiRoi_ZRJDYKX_38_39,"To be honest, I'm really impressed hearing those words from you, {PlayerName}... I suppose you must've gone through plenty of farewells, haven't you?"
+Main_LahaiRoi_ZRJDYKX_38_40,"Strong, caring. Keep it up and I might actually fall for you."
+Main_LahaiRoi_ZRJDYKX_38_41,...
+Main_LahaiRoi_ZRJDYKX_38_42,"All right, break time's over. I almost died of boredom being stuck in the sickbed these past few days. How about you and I go play some video games, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_38_43,"Having promised to help out at the Reactor Drive, Sigrika won't be able to celebrate Denia's birthday together with you.
+Before leaving, she promises Denia to spend her next birthday together."
+Main_LahaiRoi_ZRJDYKX_39_1,"Look at all those games... What do you have in mind, {PlayerName}? I was thinking Lahai-Roi Blocks..."
+Main_LahaiRoi_ZRJDYKX_39_2,Catchow.
+Main_LahaiRoi_ZRJDYKX_39_3,"Wait, really...? I even gave you the hint."
+Main_LahaiRoi_ZRJDYKX_39_4,Don't tell me you're the type who during a date wants to watch separate movies and just meet up afterward.
+Main_LahaiRoi_ZRJDYKX_39_5,Playing Lahai-Roi Blocks with you brings back bad memories.
+Main_LahaiRoi_ZRJDYKX_39_6,"Ugh... You have such a good memory, {PlayerName}... Alright, let's start with your game."
+Main_LahaiRoi_ZRJDYKX_4_1,"{PlayerName} is here. Yes, I understand. Please rest assured."
+Main_LahaiRoi_ZRJDYKX_4_2,"Sorry to pull you in on such short notice, {PlayerName}. I'm Arman, I sent the message. The situation's worse than we anticipated, so I'll keep it short."
+Main_LahaiRoi_ZRJDYKX_4_3,How's Denia?
+Main_LahaiRoi_ZRJDYKX_4_4,"She's... awake. But just as we feared, the Fractsidus did something to her."
+Main_LahaiRoi_ZRJDYKX_4_5,"After waking up, her frequency deteriorated rapidly into systemic failure. According to Rabelle College's estimate, she has... one week. At best."
+Main_LahaiRoi_ZRJDYKX_4_6,What's gone wrong?
+Main_LahaiRoi_ZRJDYKX_4_7,No idea. There's not enough time to even determine whether it's physiological... or caused by the Threnodian.
+Main_LahaiRoi_ZRJDYKX_4_8,The New Federation is pressing charges over the Stridergate incident and the residual frequency on the Dimmr Plains. They want Denia handed over immediately.
+Main_LahaiRoi_ZRJDYKX_4_9,"We didn't comply, of course. Denia was a Startorch Academy student. Sending her there would turn her into a mere research subject... and cost us our only chance to reach the truth or contest the charges."
+Main_LahaiRoi_ZRJDYKX_4_10,"I see the picture... When you say ""contest the charges,"" are you suggesting Denia is the key to breaking this stalemate?"
+Main_LahaiRoi_ZRJDYKX_4_11,"Exactly. First, her connection to the Voidborne Threnodian has enormous research value. Even with the Stridergate sealed, she could open new directions for Voidmatter science."
+Main_LahaiRoi_ZRJDYKX_4_12,"And based on I.R.I.S.'s review of our prior interactions, Denia likely knows the source of the Threnodian frequency on the Dimmr Plains. The reason why her condition is worsening, too."
+Main_LahaiRoi_ZRJDYKX_4_13,"If she is willing to cooperate, we can resolve this before the New Fed forces our hand. We treat her. She helps with the report. It'll be a win-win, ideally."
+Main_LahaiRoi_ZRJDYKX_4_14,Sounds like that didn't go very smoothly.
+Main_LahaiRoi_ZRJDYKX_4_15,No. She's been... resistant. To any form of contact.
+Main_LahaiRoi_ZRJDYKX_4_16,"This is where we need you, {PlayerName}. I'm sure you understand, mental stability is a prerequisite for frequency control. You have prior contact with her, and... your experience with Threnodians also makes you a safer anchor in the negotiation."
+Main_LahaiRoi_ZRJDYKX_4_17,"(Denia might be a viable opening. But until I figure out what the Fractsidus is planning and where they are now, I shouldn't commit to anything reckless.)"
+Main_LahaiRoi_ZRJDYKX_4_18,I will speak to her and make my judgment from there.
+Main_LahaiRoi_ZRJDYKX_4_19,"Also, I want this meeting kept off the record. No files, not even in I.R.I.S.'s archive."
+Main_LahaiRoi_ZRJDYKX_4_20,"...Understood. Then I'll leave this in your hands, {PlayerName}. Her identity is only known to very few now, I can assure you."
+Main_LahaiRoi_ZRJDYKX_40_1,"Wait, that character you're using... Is that me?"
+Main_LahaiRoi_ZRJDYKX_40_2,That feels a bit... odd. And is that Sigrika next to you?
+Main_LahaiRoi_ZRJDYKX_40_3,"Oh, there's a cake coming down!"
+Main_LahaiRoi_ZRJDYKX_40_4,Keep the joystick steady.
+Main_LahaiRoi_ZRJDYKX_41_1,I guess Sigrika and I don't make much of a tag team... Shame.
+Main_LahaiRoi_ZRJDYKX_41_2,You know what they say: Get good.
+Main_LahaiRoi_ZRJDYKX_41_3,What does that have to do with it?
+Main_LahaiRoi_ZRJDYKX_41_4,"I haven't figured out these new games yet. Let's just go play Lahai-Roi Blocks, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_41_5,"How about we compete for high scores? I've been really good at it since I was a child, you know."
+Main_LahaiRoi_ZRJDYKX_41_6,Sure.
+Main_LahaiRoi_ZRJDYKX_41_7,Is this why you threw blocks at me?
+Main_LahaiRoi_ZRJDYKX_41_8,"Awesome! Thanks, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_41_9,"Still holding grudges, are we? Or is this your way to get my attention?"
+Main_LahaiRoi_ZRJDYKX_42_1,I didn't know you were this good... Well...
+Main_LahaiRoi_ZRJDYKX_42_2,"Anyway, I was wondering, how did you and Siggy get acquainted, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_42_3,We met during the New Solar Celebration.
+Main_LahaiRoi_ZRJDYKX_42_4,"Ah, I heard Siggy mention you were a great help... Any stories you mind sharing?"
+Main_LahaiRoi_ZRJDYKX_42_5,You know what happened. Weren't you the ones behind it all?
+Main_LahaiRoi_ZRJDYKX_42_6,That wasn't my plan at all...
+Main_LahaiRoi_ZRJDYKX_43_1,"You were going to say goodbye to her, right?"
+Main_LahaiRoi_ZRJDYKX_43_2,"I suppose... I wanted to treat her to some cake, and then get it off my chest when the moment was right."
+Main_LahaiRoi_ZRJDYKX_43_3,"You mean the birthday, the goodbye, or you've been lying to her the whole time?"
+Main_LahaiRoi_ZRJDYKX_43_4,"All of it, I guess... I actually hoped she'd be angry."
+Main_LahaiRoi_ZRJDYKX_43_7,You want her to be mad at you? Why?
+Main_LahaiRoi_ZRJDYKX_43_8,"That way... by the time she realizes I'm gone, she won't feel as upset..."
+Main_LahaiRoi_ZRJDYKX_43_9,"Knowing your ex-friend died is better than losing an actual friend, right?"
+Main_LahaiRoi_ZRJDYKX_43_10,She won't see it that way.
+Main_LahaiRoi_ZRJDYKX_43_11,Sigh. That is why I hate people like you.
+Main_LahaiRoi_ZRJDYKX_43_12,Keeping all the burdens on yourself when you know you can ignore them... The exact way of life I loathe.
+Main_LahaiRoi_ZRJDYKX_43_13,But you still encouraged her.
+Main_LahaiRoi_ZRJDYKX_43_14,"Oh, sneaky you, beating my score while I was distracted talking."
+Main_LahaiRoi_ZRJDYKX_43_15,How else am I supposed to beat you?
+Main_LahaiRoi_ZRJDYKX_43_16,It was you who used this trick first...
+Main_LahaiRoi_ZRJDYKX_43_17,"Messing up little things like this every now and then can actually make you more likable, okay?"
+Main_LahaiRoi_ZRJDYKX_43_18,"Anyway, it's getting late, we should keep moving... The Archive is usually my favorite place for pastime. I'd like another visit."
+Main_LahaiRoi_ZRJDYKX_43_19,"Inside the Mind Dive Arcade, you and Denia talk about Sigrika, and you learn what Denia truly thinks about her.
+After a moment to collect herself, Denia continues with you through the day's arranged schedule."
+Main_LahaiRoi_ZRJDYKX_44_1,Denia? I heard from Arman that you've been hospitalized in the infirmary for the last few days. How are you feeling?
+Main_LahaiRoi_ZRJDYKX_44_2,I'm fine. There's nothing to worry about.
+Main_LahaiRoi_ZRJDYKX_44_3,"Well, you look paler than you were before. A patient should get plenty of rest."
+Main_LahaiRoi_ZRJDYKX_44_4,"And this is... Oh, wait, you must be {PlayerName}, right? I'm surprised to see Denia with you. She didn't cause you any trouble, did she?"
+Main_LahaiRoi_ZRJDYKX_44_5,"No, not at all. It's her birthday today, and the infirmary asked me to take her out for some fresh air."
+Main_LahaiRoi_ZRJDYKX_44_6,Did they now? That makes it sound even more suspicious.
+Main_LahaiRoi_ZRJDYKX_44_7,Have you known each other long?
+Main_LahaiRoi_ZRJDYKX_44_8,Sure. She wasn't hard to miss for taking naps here in her first week of school.
+Main_LahaiRoi_ZRJDYKX_44_9,"When she heard I needed data on the Void Storm at the time, she just rushed out of campus with that sketchy bubble of hers... What were you thinking, really?"
+Main_LahaiRoi_ZRJDYKX_44_10,That was ages ago... Can we please move on?
+Main_LahaiRoi_ZRJDYKX_44_11,"Well, I feel I should pass it on to as many people as possible before I graduate. And you—try not to be the hero all the time. Just learn to lean on the people around you more often."
+Main_LahaiRoi_ZRJDYKX_44_12,Graduate?
+Main_LahaiRoi_ZRJDYKX_44_13,"Here, this is for you. I never got the chance to give it to you."
+Main_LahaiRoi_ZRJDYKX_44_14,You were always nagging me about that Royan fairytales collection. I had a friend print it in color.
+Main_LahaiRoi_ZRJDYKX_44_15,"I had no idea it's your birthday today, so consider it a birthday gift from me, Denia."
+Main_LahaiRoi_ZRJDYKX_44_16,"Nastasha, your hands..."
+Main_LahaiRoi_ZRJDYKX_44_17,"Just a minor issue from that incident earlier. Don't worry, Dr. Herssen said you'll barely notice it in a few years."
+Main_LahaiRoi_ZRJDYKX_44_18,It's from that Voidmatter contamination...
+Main_LahaiRoi_ZRJDYKX_44_19,"But if it can heal as you said, then... there's really no need for you to leave, right? With all those advanced techs of the Spacetrek Collective..."
+Main_LahaiRoi_ZRJDYKX_44_20,"Well, that's exactly why they deemed it's no longer safe for me to stay here. Something about Lahai-Roi's environment makes the contamination even worse for the nervous system."
+Main_LahaiRoi_ZRJDYKX_44_21,B-But...
+Main_LahaiRoi_ZRJDYKX_44_22,Who would've thought my own thesis would set me up for early retirement?
+Main_LahaiRoi_ZRJDYKX_44_23,But you once said... your dream is to...
+Main_LahaiRoi_ZRJDYKX_44_24,"""Unveil the secrets of Voidmatter particles for all mankind?"" I recall saying something like that, yeah... But listen, Denia, dreams are sometimes just..."
+Main_LahaiRoi_ZRJDYKX_44_25,No. That's not it. Even someone like me can tell... Everyone here...
+Main_LahaiRoi_ZRJDYKX_44_26,"Everyone here signed the agreement. If they choose to leave Lahai-Roi, that means..."
+Main_LahaiRoi_ZRJDYKX_44_27,"Calling it quits? Not even close. Who knows, maybe I'll come back from the New Federation in a couple of years. It's too bad that you'd have already graduated by then."
+Main_LahaiRoi_ZRJDYKX_44_28,"That's not what I meant. You've always been a great student, Nastasha... It shouldn't have ended like this."
+Main_LahaiRoi_ZRJDYKX_44_29,"Calm down, Denia."
+Main_LahaiRoi_ZRJDYKX_44_30,"Everything that's happened, it's all my fault..."
+Main_LahaiRoi_ZRJDYKX_44_31,What's with you today? How is this your fault?
+Main_LahaiRoi_ZRJDYKX_44_32,"I'm sorry, Nastasha. Denia's not fully recovered yet. You'll have to excuse us."
+Main_LahaiRoi_ZRJDYKX_44_33,I see. Keep your eyes on the road. She seems a little off today.
+Main_LahaiRoi_ZRJDYKX_44_34,"Oh. And happy birthday, Denia!"
+Main_LahaiRoi_ZRJDYKX_44_35,"You and Denia meet with the librarian, Nastasha. When she learns it's Denia's birthday, she brings out a gift she's been waiting a long time to give her.
+You both notice Nastasha's prosthetic hand. She admits she was contaminated by Voidmatter during the previous incident and will soon be leaving the Spacetrek Collective to recover."
+Main_LahaiRoi_ZRJDYKX_45_1,"You okay, Denia?"
+Main_LahaiRoi_ZRJDYKX_45_2,...
+Main_LahaiRoi_ZRJDYKX_45_3,Your frequency is very unstable now. You should take your meds. Come with me.
+Main_LahaiRoi_ZRJDYKX_46_1,I'm sorry. I lied to you. It's actually not my birthday today.
+Main_LahaiRoi_ZRJDYKX_46_2,Why use this as your excuse?
+Main_LahaiRoi_ZRJDYKX_46_3,"That's because... a birthday is supposed to be proof that you were born. That's what they always say, right?"
+Main_LahaiRoi_ZRJDYKX_46_4,"Everyone has a birthday... Sigrika has one, so does Nastasha... Even those TARD-E Units manufactured in factories have their own birthdays."
+Main_LahaiRoi_ZRJDYKX_46_5,But I don't. The Fractsidus has no record of my birth. Nothing to prove my identity.
+Main_LahaiRoi_ZRJDYKX_46_6,"There's only this image burrowed inside my head, playing over and over again in my dreams..."
+Main_LahaiRoi_ZRJDYKX_46_7,"In it, I would always step into the same lake. A woman sways her arms in the wind, crying."
+Main_LahaiRoi_ZRJDYKX_46_8,"She stares from afar, calling out to me: Denia, Denia... Dasvidaniya."
+Main_LahaiRoi_ZRJDYKX_46_9,"So if I truly had a name and a birthday, maybe I could then die as a real person, no?"
+Main_LahaiRoi_ZRJDYKX_46_10,What makes you think so?
+Main_LahaiRoi_ZRJDYKX_46_11,Because I'm running out of time.
+Main_LahaiRoi_ZRJDYKX_46_12,"I'm out of time for so many things. But I can at least... try to die with a little dignity, right? I should get to act like a real person. Face what I've done, say a real goodbye... and then just end it the right way."
+Main_LahaiRoi_ZRJDYKX_46_13,"What a shame. I even picked a good day to do it, but I never practiced how to properly say goodbye to them."
+Main_LahaiRoi_ZRJDYKX_46_14,Lying... is the only thing I'm good at.
+Main_LahaiRoi_ZRJDYKX_46_15,Is this the ending you're happy with?
+Main_LahaiRoi_ZRJDYKX_46_16,"Of course not. But at least I was able to see their goofy smiles as I had them completely fooled just like before... Something to die happy about, I guess."
+Main_LahaiRoi_ZRJDYKX_46_17,But you're crying.
+Main_LahaiRoi_ZRJDYKX_46_18,"It's just... a reaction. That's all. The idea that everything will just vanish, that it'll all go back to the void... it makes me cry. Instantly."
+Main_LahaiRoi_ZRJDYKX_46_19,Just like years ago... When I touched it for the first time...
+Main_LahaiRoi_ZRJDYKX_46_20,"Even after you die, tomorrow, the sun still rises."
+Main_LahaiRoi_ZRJDYKX_46_21,Of course I know that. It's not like I think the world will change once I die.
+Main_LahaiRoi_ZRJDYKX_46_22,It will change.
+Main_LahaiRoi_ZRJDYKX_46_23,"Sigrika and Nastasha's lives will change. They'll lose an important friend. No matter how they ultimately break from the shadows, what is lost... is lost forever."
+Main_LahaiRoi_ZRJDYKX_46_24,Ever thought about continuing your life?
+Main_LahaiRoi_ZRJDYKX_46_25,Do I deserve to?
+Main_LahaiRoi_ZRJDYKX_46_26,That's not for me to judge.
+Main_LahaiRoi_ZRJDYKX_46_27,But in Rinascita... I've met people just like you.
+Main_LahaiRoi_ZRJDYKX_46_28,"In the lives forced upon them, happiness was always fleeting, leaving only pain and fear that never dissipate."
+Main_LahaiRoi_ZRJDYKX_46_29,"Yet, even so... they fought for those brief, gifted moments of happiness till the very end."
+Main_LahaiRoi_ZRJDYKX_46_30,"You once joked how the great {PlayerName} is a savior, but in Rinascita..."
+Main_LahaiRoi_ZRJDYKX_46_31,I failed to save them.
+Main_LahaiRoi_ZRJDYKX_46_32,But it sounds like... they made their own choices.
+Main_LahaiRoi_ZRJDYKX_46_33,True. Just like when you tried to drive me away. You also made what you thought was the best choice... You all hoped for more people to survive.
+Main_LahaiRoi_ZRJDYKX_46_34,And so did I.
+Main_LahaiRoi_ZRJDYKX_46_35,"So, if the boundaries between humans and creations are already obscure, what is it that determines who we are?"
+Main_LahaiRoi_ZRJDYKX_46_36,I... I don't know.
+Main_LahaiRoi_ZRJDYKX_46_37,"It's the heart, Denia."
+Main_LahaiRoi_ZRJDYKX_46_38,"What you are isn't defined by where you're from, but by your heart."
+Main_LahaiRoi_ZRJDYKX_46_39,Feeling better?
+Main_LahaiRoi_ZRJDYKX_46_40,...
+Main_LahaiRoi_ZRJDYKX_46_41,"(Based on the frequency shown during her complications, things are worse than what Arman said.)"
+Main_LahaiRoi_ZRJDYKX_46_42,"(At this rate, she won't even last a week... Is this why she chose today?)"
+Main_LahaiRoi_ZRJDYKX_46_43,Try to comfort her.
+Main_LahaiRoi_ZRJDYKX_46_44,Try to sit closer to her.
+Main_LahaiRoi_ZRJDYKX_46_45,Hand her Nastasha's present.
+Main_LahaiRoi_ZRJDYKX_46_46,Nastasha's got talent. The Collective won't give up on her.
+Main_LahaiRoi_ZRJDYKX_46_47,...
+Main_LahaiRoi_ZRJDYKX_46_48,...
+Main_LahaiRoi_ZRJDYKX_46_49,...You're right... I've been lying to myself all along.
+Main_LahaiRoi_ZRJDYKX_46_50,"Nastasha's condition shakes Denia deeply. Her time is running out, and she has to face the question of her true identity.
+As a creation of the Fractsidus, what ending should she choose for herself?
+You know there are no easy answers. So instead of offering one, you share your own truth with her."
+Main_LahaiRoi_ZRJDYKX_47_1,The heart.
+Main_LahaiRoi_ZRJDYKX_47_2,Are you willing to trust me?
+Main_LahaiRoi_ZRJDYKX_47_3,This right here. A gift from the Grand Architect—the page buried within my frequency... is here.
+Main_LahaiRoi_ZRJDYKX_47_4,(Could this be... Leviathan?)
+Main_LahaiRoi_ZRJDYKX_47_5,"...""Do find your way home more often""?"
+Main_LahaiRoi_ZRJDYKX_47_6,"Ha, just as I thought..."
+Main_LahaiRoi_ZRJDYKX_47_7,"You can really work wonders, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_47_8,Denia?
+Main_LahaiRoi_ZRJDYKX_47_9,You are... literally my least favorite type of person.
+Main_LahaiRoi_ZRJDYKX_47_10,"Now, can you tell me why you loathe me?"
+Main_LahaiRoi_ZRJDYKX_47_11,Hmm... Where do I start—
+Main_LahaiRoi_ZRJDYKX_47_12,"{PlayerName}, we've detected a severe frequency fluctuation! Is everything all right?"
+Main_LahaiRoi_ZRJDYKX_47_13,Everything's fine. We'll be back soon.
+Main_LahaiRoi_ZRJDYKX_47_14,Very well... I'll see you soon.
+Main_LahaiRoi_ZRJDYKX_47_15,Sounds like Professor Arman is getting a bit impatient. We should head back.
+Main_LahaiRoi_ZRJDYKX_47_16,What about your answer?
+Main_LahaiRoi_ZRJDYKX_47_17,"Ahuhuh... No need to get ahead of yourself now, {PlayerName}. You're not quite there yet. I'm keeping it secret for now."
+Main_LahaiRoi_ZRJDYKX_47_18,"Plus, we still haven't fulfilled our agreement yet. Can't let the cake go to waste."
+Main_LahaiRoi_ZRJDYKX_47_19,"Would you want to come out with me again after tomorrow, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_47_20,I would.
+Main_LahaiRoi_ZRJDYKX_47_21,I wouldn't.
+Main_LahaiRoi_ZRJDYKX_47_22,"Hmm... Well, that makes things trickier. I... still have things I have to do, after all."
+Main_LahaiRoi_ZRJDYKX_47_23,...If only today could be a bit longer.
+Main_LahaiRoi_ZRJDYKX_47_24,"Is that so? Then I'm relieved... I still have things I have to do, after all."
+Main_LahaiRoi_ZRJDYKX_47_25,"However, did it ever cross your mind, {PlayerName}, that my being alive and staying here might be an even bigger problem?"
+Main_LahaiRoi_ZRJDYKX_47_26,"...If you feel you don't belong here, then some day in the future, would you be willing to—"
+Main_LahaiRoi_ZRJDYKX_47_27,Stop right there—it was just a joke. I don't want to put you in a tough spot.
+Main_LahaiRoi_ZRJDYKX_47_28,Easy. Today is my birthday. I won't be going anywhere.
+Main_LahaiRoi_ZRJDYKX_47_29,At least to you... this will be my last lie.
+Main_LahaiRoi_ZRJDYKX_47_30,"At last, Denia confesses the secret of the Grand Architect's ""gift.""
+Following her instructions, you destroy the thing that has bound her all along—a page infused with the power of the Threnodian Leviathan. 
+For now, Denia's immediate danger seems to have passed. You talk about the future as you make your way back toward the Academy."
+Main_LahaiRoi_ZRJDYKX_48_1,"N.A.N.A. is conducting a thorough checkup on Denia. I imagine this must have been a very long day for you, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_48_2,Her conditions have greatly improved since this morning. As for the frequency fluctuation earlier... Did something happen?
+Main_LahaiRoi_ZRJDYKX_48_3,About that...
+Main_LahaiRoi_ZRJDYKX_48_4,You tell Arman about the book page left by the Grand Architect.
+Main_LahaiRoi_ZRJDYKX_48_5,Residual energy of the Threnodian from Rinascita? Could there be some form of interaction between the Threnodians? Is the Fractsidus actually manipulating her and suppressing her abilities through such means?
+Main_LahaiRoi_ZRJDYKX_48_6,"It's no wonder we couldn't find the source of the symptoms. Fortunately, you were here to assist, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_48_7,What will happen to Denia after tomorrow?
+Main_LahaiRoi_ZRJDYKX_48_8,"...It'll be the same as the past few days. Although she won't be sent to the New Federation, she'll still be kept under containment and assist with our research."
+Main_LahaiRoi_ZRJDYKX_48_9,"I know what you're thinking, {PlayerName}... I've been monitoring your itinerary and field reports all day."
+Main_LahaiRoi_ZRJDYKX_48_10,"But even if everyone recognizes her as a victim, the Spacetrek Collective's work and responsibilities will not change for her."
+Main_LahaiRoi_ZRJDYKX_48_11,We don't have better solutions now. This is the fact.
+Main_LahaiRoi_ZRJDYKX_48_12,What about her birthday cake?
+Main_LahaiRoi_ZRJDYKX_48_13,We haven't had a chance to get it yet. It's still with Zahira. You can only get that specific Fruit Crackle she requested from Zahira...
+Main_LahaiRoi_ZRJDYKX_48_14,"But since she hopes you can accompany her on her birthday, I believe you should be the one to personally bring her the cake... We'll be waiting for you here."
+Main_LahaiRoi_ZRJDYKX_49_1,"Back when I taught at the Academy, there was a student who would always sleep in my lectures."
+Main_LahaiRoi_ZRJDYKX_49_2,"I would wake her up to answer questions on purpose, because she had no idea what she was wasting."
+Main_LahaiRoi_ZRJDYKX_49_3,"Later, a TA named Nastasha asked me to go easy on her, saying she could only sleep in a place where she felt secure, and that her grades in my class were still doing well."
+Main_LahaiRoi_ZRJDYKX_49_4,"...I knew that girl had helped collect data for many people in the Department of Voidmatters, but the issue was that I couldn't understand her behavior at all."
+Main_LahaiRoi_ZRJDYKX_49_5,"While everyone else was out pursuing their scientific dreams, how can you be here sleeping? Is your dream to be a research assistant for the rest of your life?"
+Main_LahaiRoi_ZRJDYKX_49_6,It was after the Threnodian incident that I finally knew the answer.
+Main_LahaiRoi_ZRJDYKX_49_7,"To be honest, when I just sent you the message, for a moment I even fantasized a reply in which you plan to take her far away from Lahai-Roi... to somewhere no one could find."
+Main_LahaiRoi_ZRJDYKX_49_8,"Haha... I'm glad you didn't do that, {PlayerName}, or else we'd all be done for."
+Main_LahaiRoi_ZRJDYKX_5_1,"Anything else you want to confirm, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_5_2,Any progress on tracking the Threnodian frequency?
+Main_LahaiRoi_ZRJDYKX_5_3,How was Denia acting when she spoke with you?
+Main_LahaiRoi_ZRJDYKX_5_4,"That call earlier, was it Lucilla?"
+Main_LahaiRoi_ZRJDYKX_5_5,That's all.
+Main_LahaiRoi_ZRJDYKX_5_6,"We've narrowed down the location, but Voidmatter contamination there is heavy, so cleanup and investigation will be slow. That said, recent spectral analysis points to a direct correlation between the frequency and Denia's physical condition."
+Main_LahaiRoi_ZRJDYKX_5_7,"""Cold"" is the word. So cold that even N.A.N.A. can't establish any meaningful contact. We are still not sure if the Threnodian did this, but she is not the Denia we knew."
+Main_LahaiRoi_ZRJDYKX_5_8,You've met Denia before?
+Main_LahaiRoi_ZRJDYKX_5_9,"I have. Back then, I was teaching a required course in Voidmatters Science, and she slept through a good portion of it, so I remember her."
+Main_LahaiRoi_ZRJDYKX_5_10,Yes. The President is busy smoothing things over with some big names. She asked me to send her regards.
+Main_LahaiRoi_ZRJDYKX_5_11,"Oh, and she also has a message for you: ""Only the kids who make it out alive get to grow up."""
+Main_LahaiRoi_ZRJDYKX_5_12,Is that supposed to be about Denia?
+Main_LahaiRoi_ZRJDYKX_5_13,I honestly don't know. But that's her... always leaving you guessing.
+Main_LahaiRoi_ZRJDYKX_50_1,Are you here to pick up the birthday cake? One moment please...
+Main_LahaiRoi_ZRJDYKX_50_2,"(Denia... She said she had to take care of something. But what, exactly? Does it have something to do with the Threnodina's frequency in the Dimmr Plains?)"
+Main_LahaiRoi_ZRJDYKX_50_3,"(If the Spacetrek Collective finding Denia was part of the Grand Architect's plan, then what about removing that page from her? Or maybe...)"
+Main_LahaiRoi_ZRJDYKX_50_4,(If I were in Denia's shoes...)
+Main_LahaiRoi_ZRJDYKX_50_5,"""Easy. Today is my birthday. I won't be going anywhere."""
+Main_LahaiRoi_ZRJDYKX_50_6,You see the time shown by the Terminal: 00:15 a.m.
+Main_LahaiRoi_ZRJDYKX_50_7,It's past Denia's birthday.
+Main_LahaiRoi_ZRJDYKX_50_8,"Here it is... I know it's a bit late, but I believe it's more than enough to convey your heart."
+Main_LahaiRoi_ZRJDYKX_50_9,"{PlayerName}, Denia has left the Academy and is heading towards the Dimmr Plains."
+Main_LahaiRoi_ZRJDYKX_50_10,...How did she leave?
+Main_LahaiRoi_ZRJDYKX_50_11,"With her Forte. We've detected residual Voidmatter particles at the platform. Professor Arman was trapped inside a bubble. Luckily, no broken bones."
+Main_LahaiRoi_ZRJDYKX_50_12,She hasn't removed her Resonance suppression device and tracker yet. Should we initiate the emergency protocol?
+Main_LahaiRoi_ZRJDYKX_50_13,"...No, give me her location."
+Main_LahaiRoi_ZRJDYKX_50_14,"Understood, coordinates sent... Good luck, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_50_15,I thought you'd stop her.
+Main_LahaiRoi_ZRJDYKX_50_16,I tried.
+Main_LahaiRoi_ZRJDYKX_50_17,But with her condition now... she would die if I tried any harder.
+Main_LahaiRoi_ZRJDYKX_50_18,That doesn't sound like you.
+Main_LahaiRoi_ZRJDYKX_50_19,"Trees will grow tall, and leaves will turn green, {PlayerName}..."
+Main_LahaiRoi_ZRJDYKX_50_20,That child simply made a grown-up decision.
+Main_LahaiRoi_ZRJDYKX_50_21,"For the final part of your deal with Denia, you go to Zahira to pick up a birthday cake. 
+On the way, you receive an urgent call from I.R.I.S.—Denia has recovered some of her powers and escaped from Startorch Academy."
+Main_LahaiRoi_ZRJDYKX_6_1,(Whatever her reason was for saving me and Hiyuki back then... she still carried out the Fractsidus's plan.)
+Main_LahaiRoi_ZRJDYKX_6_2,(And the Grand Architect's next move is still unclear... Have to stay cautious.)
+Main_LahaiRoi_ZRJDYKX_68_1,"You can feel your eyelids sinking. In a haze, you seem to have returned to that familiar scene again."
+Main_LahaiRoi_ZRJDYKX_68_2,Denia... Do you have any clues about that scene in your memory?
+Main_LahaiRoi_ZRJDYKX_68_3,Nothing.
+Main_LahaiRoi_ZRJDYKX_68_4,It was just a scene. Maybe from some movies I watched as a kid?
+Main_LahaiRoi_ZRJDYKX_68_5,But maybe... in my opinion... you still have a chance to...
+Main_LahaiRoi_ZRJDYKX_68_6,Now you're reminding me of what Nastasha once said.
+Main_LahaiRoi_ZRJDYKX_68_7,Huh?
+Main_LahaiRoi_ZRJDYKX_68_8,"""Raise your head, what do you see?"""
+Main_LahaiRoi_ZRJDYKX_68_9,Lahai-Roi's night sky.
+Main_LahaiRoi_ZRJDYKX_68_10,"True enough. But my reply was ""The void. The darkness."""
+Main_LahaiRoi_ZRJDYKX_68_11,What was her reaction?
+Main_LahaiRoi_ZRJDYKX_68_12,She said it was actually light fighting against darkness.
+Main_LahaiRoi_ZRJDYKX_68_13,"""But it looks like darkness has the upper hand,"" I said."
+Main_LahaiRoi_ZRJDYKX_68_14,But there was only darkness in Lahai-Roi at the beginning. Then came the light.
+Main_LahaiRoi_ZRJDYKX_68_15,"Haha, you answered exactly the same way as she did."
+Main_LahaiRoi_ZRJDYKX_68_16,So light actually prevailed.
+Main_LahaiRoi_ZRJDYKX_68_17,"You're right, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_68_18,"I guess if you never give up, the story will one day have a good ending, no?"
+Main_LahaiRoi_ZRJDYKX_68_19,"Sometimes you still think about Denia, and the times you sat together on that bench.
+Will you see each other again?"
+Main_LahaiRoi_ZRJDYKX_7_1,Denia.
+Main_LahaiRoi_ZRJDYKX_7_2,"I just saw Sigrika. That was crazy, {PlayerName}. I didn't think you'd actually... you know, drive that thing off."
+Main_LahaiRoi_ZRJDYKX_7_3,So... you're just gonna keep staring? Do you always come empty-handed when you visit patients?
+Main_LahaiRoi_ZRJDYKX_7_4,(Looks like she's free of the Threnodian's influence now... but that way of talking...)
+Main_LahaiRoi_ZRJDYKX_7_5,Are you aware of your condition right now?
+Main_LahaiRoi_ZRJDYKX_7_6,"Yeah. I'm dying, right?"
+Main_LahaiRoi_ZRJDYKX_7_7,"That person gave me a gift a long time ago... Said when the time comes, I'd finally get a nice sleep."
+Main_LahaiRoi_ZRJDYKX_7_8,A gift?
+Main_LahaiRoi_ZRJDYKX_7_9,What is it exactly?
+Main_LahaiRoi_ZRJDYKX_7_10,"Who knows. But it's not hard to guess, is it? Just like a collar you put on cats and dogs, in case they get ideas."
+Main_LahaiRoi_ZRJDYKX_7_11,"Mm, no. ""Cats and dogs"" might be too generous. At least they can still bite. I'm probably closer to a lab mouse now."
+Main_LahaiRoi_ZRJDYKX_7_12,"So, {PlayerName}, did they send you to sweet-talk a lab mouse?"
+Main_LahaiRoi_ZRJDYKX_7_13,"Denia, I'm here because I chose to be."
+Main_LahaiRoi_ZRJDYKX_7_14,"We've been on opposite sides before, but..."
+Main_LahaiRoi_ZRJDYKX_7_15,"There you go, still all serious..."
+Main_LahaiRoi_ZRJDYKX_7_16,But I want to try trusting you.
+Main_LahaiRoi_ZRJDYKX_7_17,"Right... In that case, am I supposed to look more excited?"
+Main_LahaiRoi_ZRJDYKX_7_18,"Too bad, {PlayerName}, I can't trust you the same way."
+Main_LahaiRoi_ZRJDYKX_7_19,"You saw me at my worst there, and you're still playing this game... You want answers. That's why you're here."
+Main_LahaiRoi_ZRJDYKX_7_20,I won't deny it.
+Main_LahaiRoi_ZRJDYKX_7_21,You did save me once.
+Main_LahaiRoi_ZRJDYKX_7_22,How honest. I don't hate that.
+Main_LahaiRoi_ZRJDYKX_7_23,"Hah... don't get the wrong idea... If you'd died back there, it would have been game over."
+Main_LahaiRoi_ZRJDYKX_7_24,"If you really want answers, how about we make a deal?"
+Main_LahaiRoi_ZRJDYKX_7_25,A deal?
+Main_LahaiRoi_ZRJDYKX_7_26,"Yes, a fair exchange. The Collective can't get what they want from me, but you just might get what you want."
+Main_LahaiRoi_ZRJDYKX_7_27,What's your condition?
+Main_LahaiRoi_ZRJDYKX_7_28,Maybe you could stay with me for my birthday? This weekend. I'd like to have a good stroll in the Academy again.
+Main_LahaiRoi_ZRJDYKX_7_29,Your birthday is this weekend?
+Main_LahaiRoi_ZRJDYKX_7_30,"It could be, or not. Doesn't matter. What matters is... you are there."
+Main_LahaiRoi_ZRJDYKX_7_31,I'm running out of time. Some things deserve a proper ending—with a good day.
+Main_LahaiRoi_ZRJDYKX_7_32,(An ending... What is she planning to do? But in her current state...)
+Main_LahaiRoi_ZRJDYKX_7_33,"What, doesn't feel safe even if you're around? Then put another collar on me, or a bomb. What's one more, right?"
+Main_LahaiRoi_ZRJDYKX_7_34,...I'll see what I can do.
+Main_LahaiRoi_ZRJDYKX_7_35,"You mean that? But people at the Academy, do they know..."
+Main_LahaiRoi_ZRJDYKX_7_36,"Spacetrek Collective never made your identity public. So for that day, you'll still be the Academy student Denia."
+Main_LahaiRoi_ZRJDYKX_7_37,(Always the busybody.)
+Main_LahaiRoi_ZRJDYKX_7_38,"...Fine. Then it's a deal, right?"
+Main_LahaiRoi_ZRJDYKX_7_39,Relax. I'll cooperate with their research for the next few days. Just don't get your hopes up...
+Main_LahaiRoi_ZRJDYKX_7_40,...The Grand Architect wouldn't be sloppy enough to leave me unhandled.
+Main_LahaiRoi_ZRJDYKX_7_41,"Anyway, no point worrying about it now. I'll see you this weekend, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_7_42,"You visit the infirmary at Arman's request to talk with Denia.
+From Denia, you learn that her frequency decay was part of the Grand Architect's plan. She seems to have already accepted her fate.
+Denia ultimately offers you a deal: spend her birthday with her, and in exchange, she will assist the Spacetrek Collective's research and provide you with intelligence regarding the Grand Architect."
+Main_LahaiRoi_ZRJDYKX_71_1,...Don't overthink it. Let's go over there for a moment.
+Main_LahaiRoi_ZRJDYKX_8_1,{PlayerName}. How did it go? Is she willing to cooperate?
+Main_LahaiRoi_ZRJDYKX_8_2,You pass along Denia's request to Arman
+Main_LahaiRoi_ZRJDYKX_8_3,A birthday... at the Academy?
+Main_LahaiRoi_ZRJDYKX_8_4,...I see. That is an unexpected request.
+Main_LahaiRoi_ZRJDYKX_8_5,"But if that's the key to cooperation, the Collective will treat it as a special case."
+Main_LahaiRoi_ZRJDYKX_8_6,"She said she wants a ""proper ending"" for some things. But I don't know her true intent yet. We'd better be careful."
+Main_LahaiRoi_ZRJDYKX_8_7,"Noted. We'll initiate a full risk assessment immediately, and draft a comprehensive operational and contingency plan."
+Main_LahaiRoi_ZRJDYKX_8_8,"Thank you, {PlayerName}. Would you be available in the afternoons of this weekend? She asked for you specifically."
+Main_LahaiRoi_ZRJDYKX_8_9,No problem.
+Main_LahaiRoi_ZRJDYKX_8_10,I'll do my best.
+Main_LahaiRoi_ZRJDYKX_8_11,Much appreciated. We'll ensure that all procedures and contingency measures are fully in place.
+Main_LahaiRoi_ZRJDYKX_8_12,"We really appreciate your support! I know this is a very personal request, but we'll keep everything under control. You can think of it as a special escort mission."
+Main_LahaiRoi_ZRJDYKX_8_13,I'll send you the finalized plan before then. Let's stay in touch on WavesLine!
+Main_LahaiRoi_ZRJDYKX_9_1,{PlayerName}... Something's still bothering you?
+Main_LahaiRoi_ZRJDYKX_9_2,What do you know about the Grand Architect?
+Main_LahaiRoi_ZRJDYKX_9_3,Do you miss life at the Academy?
+Main_LahaiRoi_ZRJDYKX_9_4,Why did the Grand Architect leave you there?
+Main_LahaiRoi_ZRJDYKX_9_5,Nothing.
+Main_LahaiRoi_ZRJDYKX_9_6,I've never seen her true face. Wouldn't be surprised if the real one's already dead.
+Main_LahaiRoi_ZRJDYKX_9_7,"You care about that, do you? I'll tell you more once you've kept your side of the deal."
+Main_LahaiRoi_ZRJDYKX_9_8,Miss my life at the Academy? What made you think that?
+Main_LahaiRoi_ZRJDYKX_9_9,You keep staring out the window. That's where the dorms are.
+Main_LahaiRoi_ZRJDYKX_9_10,"...When you put it that way, maybe I do. The president once said that everyone ends up missing their school days when they grow up."
+Main_LahaiRoi_ZRJDYKX_9_11,I guess that really was my golden age.
+Main_LahaiRoi_ZRJDYKX_9_12,"Trash gets dumped, you know... And those little tricks of mine? She probably noticed long ago."
+Main_LahaiRoi_ZRJDYKX_9_13,Or maybe... she simply decided it was better if I died here.
+Main_LahaiRoi_ZRJDYKX_9_14,"Because you always try to save everyone, even someone like me... Heh. That kind of stubbornness must have gotten to her."
+Main_LahaiRoi_ZRJDYKX_9_15,"See you this weekend, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_90_1,"She's right, little one... You might still have a way out."
+Main_LahaiRoi_ZRJDYKX_90_2,"Because your suffering is nothing like hers. It cannot make you stronger, but neither will it last..."
+Main_LahaiRoi_ZRJDYKX_90_3,"Enough staring at the dead bird, Denia."
+Main_LahaiRoi_ZRJDYKX_90_4,Why did you kill it?
+Main_LahaiRoi_ZRJDYKX_90_5,"What's worthless doesn't deserve to continue, see? That was mercy."
+Main_LahaiRoi_ZRJDYKX_90_6,"Just hours ago, you accepted Aleph-1's gift, the first in this world to do so. Now tell me, how did it feel?"
+Main_LahaiRoi_ZRJDYKX_90_7,I felt... nothing.
+Main_LahaiRoi_ZRJDYKX_90_8,"So, nothingness. The void. The dark... Our good old friends."
+Main_LahaiRoi_ZRJDYKX_90_9,"But why do you tremble, Denia? Everything begins in the void. And you, most of all, should find it cosy..."
+Main_LahaiRoi_ZRJDYKX_90_10,Why... did you kill it?
+Main_LahaiRoi_ZRJDYKX_90_11,Heh... Self-awareness. A lamentable flaw in the course of evolution.
+Main_LahaiRoi_ZRJDYKX_90_12,"Now, look up, Denia. What do you see?"
+Main_LahaiRoi_ZRJDYKX_90_13,...The void... and the dark.
+Main_LahaiRoi_ZRJDYKX_90_14,Good. Remember what you've seen.
+Main_LahaiRoi_ZRJDYKX_90_15,"You will accept them, Denia. Become one with them. This is the world's first gift to you, and its last."
+Main_LahaiRoi_ZRJDYKX_90_16,"In the aftermath of the Aleph-1 incident, Denia is left in a coma.
+She dreams of a scene from long ago, then wakes to find herself in the infirmary at Startorch Academy."
+Main_LahaiRoi_ZRJDYKX_92_1,"Wow, the elevator was fast."
+Main_LahaiRoi_ZRJDYKX_92_2,"Let's go, Denia."
+Main_LahaiRoi_ZRJDYKX_92_3,Sigh... This feels like walking into an exam...
+Main_LahaiRoi_ZRJDYKX_92_4,"You'll have my back when she starts asking questions, right...?"
+Main_LahaiRoi_ZRJDYKX_93_1,So you'd rather do that than share an elevator with me?
+Main_LahaiRoi_ZRJDYKX_93_2,"Your guard's up way too high, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_93_3,Sigh... Fine. Can't blame you. Let's go.
+Main_LahaiRoi_ZRJDYKX_94_1,"In time, we will all meet again in eternal darkness."
+Main_LahaiRoi_ZRJDYKX_95_1,No...
+Main_LahaiRoi_ZRJDYKX_95_2,Vital signs indicate sustained recovery. Voidmatter activity remains within normal parameters. Target frequency has not yet returned to the syntony level. Initiating secondary protocol.
+Main_LahaiRoi_ZRJDYKX_95_3,"Can you hear my voice, Denia?"
+Main_LahaiRoi_ZRJDYKX_96_1,"It's still weak, but your frequency has indeed reached a level of syntony."
+Main_LahaiRoi_ZRJDYKX_96_2,Yep. Isn't that a good thing?
+Main_LahaiRoi_ZRJDYKX_96_3,"...I'm afraid I must emphasize, Miss Denia, that you do not attempt to use your Forte."
+Main_LahaiRoi_ZRJDYKX_96_4,"Given your current condition, doing so could lead to irreversible consequences."
+Main_LahaiRoi_ZRJDYKX_93_4,...
+Main_LahaiRoi_ZRJDYKX_100_1,Just as I thought... the Voidmatter here is going on a rampage.
+Main_LahaiRoi_ZRJDYKX_100_2,"I must get to the ""bedroom"" quickly."
+Main_LahaiRoi_ZRJDYKX_101_1,"Leaving just a few words inside that page, ""Do find your way home more often""... Ha, I knew it..."
+Main_LahaiRoi_ZRJDYKX_101_2,"Sorry, {PlayerName}, but just like in the fairytale, the magic wears off past midnight..."
+Main_LahaiRoi_ZRJDYKX_101_3,"At least this time, I wasn't lying, right?"
+Main_LahaiRoi_ZRJDYKX_102_1,Is the elevator locked? Could it be...
+Main_LahaiRoi_ZRJDYKX_102_2,Let's try to go around from the other side...
+Main_LahaiRoi_ZRJDYKX_103_1,Denia...
+Main_LahaiRoi_ZRJDYKX_103_2,Where did you come from? And aren't you annoying to look at...
+Main_LahaiRoi_ZRJDYKX_104_1,"Denia... I told you a long time ago, didn't I?"
+Main_LahaiRoi_ZRJDYKX_104_2,What was that...?
+Main_LahaiRoi_ZRJDYKX_105_1,"The world is a cliff, and civilization a train with carriages of different times."
+Main_LahaiRoi_ZRJDYKX_105_2,My attacks don't do anything... Does it not have a physical form?
+Main_LahaiRoi_ZRJDYKX_105_3,"I see, as long as I keep my eyes on it, it'll behave..."
+Main_LahaiRoi_ZRJDYKX_106_1,!
+Main_LahaiRoi_ZRJDYKX_107_1,"The moment it falls into the abyss, everything will also fall one after the other..."
+Main_LahaiRoi_ZRJDYKX_107_2,"Tsk, locked... But there should still be an emergency key."
+Main_LahaiRoi_ZRJDYKX_108_1,"First, people abandon their morality, then emotions, and finally faith..."
+Main_LahaiRoi_ZRJDYKX_108_2,...
+Main_LahaiRoi_ZRJDYKX_109_1,...!
+Main_LahaiRoi_ZRJDYKX_109_2,"In the end, all that's left is an empty shell. The ruins."
+Main_LahaiRoi_ZRJDYKX_109_3,What a pestering ghost.
+Main_LahaiRoi_ZRJDYKX_110_1,You've been there before. You know how it feels.
+Main_LahaiRoi_ZRJDYKX_110_2,...Hah.
+Main_LahaiRoi_ZRJDYKX_111_1,"You reach out, yet you fail, even to grab something to end your life."
+Main_LahaiRoi_ZRJDYKX_111_2,"Calm down, stop shaking, Denia... I should be able to go around from the other side..."
+Main_LahaiRoi_ZRJDYKX_112_1,"There, is where you will finally sink and rest."
+Main_LahaiRoi_ZRJDYKX_112_3,"Okay, straight through it."
+Main_LahaiRoi_ZRJDYKX_113_1,Lives rise and fall like the winter wheat. But agony… agony is the name that never dies.
+Main_LahaiRoi_ZRJDYKX_113_2,(Panting)... (Panting)... So what?
+Main_LahaiRoi_ZRJDYKX_114_1,"...Let them say, ""I walked with the crib of the void."""
+Main_LahaiRoi_ZRJDYKX_114_2,"Pfft, in your dreams."
+Main_LahaiRoi_ZRJDYKX_114_3,"Come on, I'm not hiding from you again."
+Main_LahaiRoi_ZRJDYKX_115_1,"The Solvein Heartwood... Spectacular, no matter how many times I see it."
+Main_LahaiRoi_ZRJDYKX_115_2,Will this be my last visit?
+Main_LahaiRoi_ZRJDYKX_116_1,Back to this place... Once more.
+Main_LahaiRoi_ZRJDYKX_121_1,The walls are covered in Fleet Snowfluff posters. Looks like whoever lived here was a devoted fan.
+Main_LahaiRoi_ZRJDYKX_121_2,Wonder how Aemeath would react if she knew...
+Main_LahaiRoi_ZRJDYKX_122_1,A Terminal containing equipment management logs. Notes left behind by former researchers can still be seen.
+Main_LahaiRoi_ZRJDYKX_122_2,"""At this point, the Lahai-Roi project is effectively complete. Starting tomorrow, project personnel will begin withdrawing in stages. One month from now, this facility will officially be decommissioned."""
+Main_LahaiRoi_ZRJDYKX_122_3,"""After that, power will switch to low-energy mode. That is sufficient to support the Voidmatter Pod containing the Aleph-1 fragment, some dormant equipment, and basic living needs for the stress-test subject."""
+Main_LahaiRoi_ZRJDYKX_122_4,"""No matter how it all went down... at least we've finally made some progress."""
+Main_LahaiRoi_ZRJDYKX_123_1,A Terminal containing operational logs. The screen is packed with rows of routine equipment self-check results.
+Main_LahaiRoi_ZRJDYKX_123_2,"According to the reports, this research facility was abandoned after more than a decade of operation. The final report dates back several years."
+Main_LahaiRoi_ZRJDYKX_124_1,"A sheet of white paper printed with only a few words. The paper is crisp and new, as though it had been placed here only recently."
+Main_LahaiRoi_ZRJDYKX_124_2,"It reads, ""Welcome home, Denia."""
+Main_LahaiRoi_ZRJDYKX_125_1,A Terminal containing data and experiment logs. Past records can still be viewed here. It seems nothing has been updated in a very long time.
+Main_LahaiRoi_ZRJDYKX_125_2,"""Testing complete. Based on the results, the subject shows no abnormal tissue activity. Voidmatter tolerance remains strong, with no signs of mutation or decay."""
+Main_LahaiRoi_ZRJDYKX_125_3,"""The variance in some fluctuating values is even lower than in the previous testing cycle, which rules out the possibility that changes in Resonance state are due to physical growth."""
+Main_LahaiRoi_ZRJDYKX_125_4,"""The cause of the subject's unstable frequency remains unclear. Continued use of the Voidmatter Pod is recommended in order to maintain the link between the subject and the source of Resonance."""
+Main_LahaiRoi_ZRJDYKX_170_1,"Denia, I told you—"
+Main_LahaiRoi_ZRJDYKX_170_2,A kid can't fight against this world wielding a candy bar—
+Main_LahaiRoi_ZRJDYKX_51_1,Ugh... this experimental Terminal is getting on my nerves.
+Main_LahaiRoi_ZRJDYKX_52_1,I still feel the abnormal neural reflexes even after an injection lately.
+Main_LahaiRoi_ZRJDYKX_52_2,"Oh, really? Sounds like you can properly feel pain now."
+Main_LahaiRoi_ZRJDYKX_52_3,"Remember this feeling, Denia. Pain compels us to live."
+Main_LahaiRoi_ZRJDYKX_52_4,To hell with that feeling... That bastard tried to fool me with saline as a painkiller.
+Main_LahaiRoi_ZRJDYKX_53_1,"The food here has been left untouched. Why is that, Denia?"
+Main_LahaiRoi_ZRJDYKX_53_2,"At Startorch Academy, there's something called dessert."
+Main_LahaiRoi_ZRJDYKX_53_3,Eating it brings back that scene in my dream.
+Main_LahaiRoi_ZRJDYKX_53_4,"...Starting tomorrow, come home for dinner."
+Main_LahaiRoi_ZRJDYKX_54_1,"You're awake? I prepared a present for you, Denia. I've put it in your heart."
+Main_LahaiRoi_ZRJDYKX_54_2,What's a present?
+Main_LahaiRoi_ZRJDYKX_54_3,A present is... a commodity without a fixed price. You'll be a nice little rule-follower with it.
+Main_LahaiRoi_ZRJDYKX_54_4,"Rules? What, ""Do find your way home more often"" and ""Don't bring strangers home""? Hah..."
+Main_LahaiRoi_ZRJDYKX_55_1,A broken table I picked up from somewhere... Spent quite some time here.
+Main_LahaiRoi_ZRJDYKX_55_2,"When was the last time I read a book? What was I reading? Hmm, ""A Professional Guide to Emotional Performance""?"
+Main_LahaiRoi_ZRJDYKX_55_3,"Oh, it became my draft paper anyhow..."
+Main_LahaiRoi_ZRJDYKX_55_4,"A textbook for Voidmatters Science, ""A Seal-Proof Guide to Enrollment,"" and... the ""Lahai-Roi Meteorology"" I borrowed from Nastasha?"
+Main_LahaiRoi_ZRJDYKX_55_5,"She even snuck a copy of the exam sheet inside... But she never mentioned it was from the previous year. I used all the wrong answers on the real thing, and she teased me about it for ages..."
+Main_LahaiRoi_ZRJDYKX_55_6,Those Academy courses were brutal... Barely ever scored above a D besides Voidmatters.
+Main_LahaiRoi_ZRJDYKX_55_7,Strange. They just come rushing back at times like this...
+Main_LahaiRoi_ZRJDYKX_55_8,And what's this... A memory album from the Photography Fan Club?
+Main_LahaiRoi_ZRJDYKX_56_2,Adorable!
+Main_LahaiRoi_ZRJDYKX_56_3,But it'll turn out better if you smile!
+Main_LahaiRoi_ZRJDYKX_56_4,...I spent two years watching people
+Main_LahaiRoi_ZRJDYKX_56_5,Watching their joy
+Main_LahaiRoi_ZRJDYKX_56_6,their sorrow
+Main_LahaiRoi_ZRJDYKX_56_7,What they call emotion
+Main_LahaiRoi_ZRJDYKX_56_8,is how they prove they're alive
+Main_LahaiRoi_ZRJDYKX_56_9,But
+Main_LahaiRoi_ZRJDYKX_56_10,What's behind emotion?
+Main_LahaiRoi_ZRJDYKX_56_11,The three of us
+Main_LahaiRoi_ZRJDYKX_56_12,will be best friends forever!
+Main_LahaiRoi_ZRJDYKX_56_13,Hah... What's that look on my face?
+Main_LahaiRoi_ZRJDYKX_56_14,"It's the heart, Denia"
+Main_LahaiRoi_ZRJDYKX_56_15,What you are
+Main_LahaiRoi_ZRJDYKX_56_16,isn't defined by where you're from
+Main_LahaiRoi_ZRJDYKX_56_17,but by your heart
+Main_LahaiRoi_ZRJDYKX_56_18,Is that so
+Main_LahaiRoi_ZRJDYKX_56_19,Then somewhere along the way...
+Main_LahaiRoi_ZRJDYKX_56_20,Well
+Main_LahaiRoi_ZRJDYKX_56_21,Let's put an end to this
+Main_LahaiRoi_ZRJDYKX_57_2,Happy birthday to you
+Main_LahaiRoi_ZRJDYKX_57_3,Happy birthday to you
+Main_LahaiRoi_ZRJDYKX_57_4,Happy birthday to you
+Main_LahaiRoi_ZRJDYKX_57_5,Happy birthday to you
+Main_LahaiRoi_ZRJDYKX_57_6,Ever thought about staying here with everyone?
+Main_LahaiRoi_ZRJDYKX_57_7,"Yeah, that sounds nice"
+Main_LahaiRoi_ZRJDYKX_57_8,But...
+Main_LahaiRoi_ZRJDYKX_57_9,Sorry
+Main_LahaiRoi_ZRJDYKX_57_10,I just can't
+Main_LahaiRoi_ZRJDYKX_57_11,However
+Main_LahaiRoi_ZRJDYKX_57_12,There is one thing
+Main_LahaiRoi_ZRJDYKX_57_13,I can do for you all
+Main_LahaiRoi_ZRJDYKX_57_14,Fear
+Main_LahaiRoi_ZRJDYKX_57_15,Destruction...
+Main_LahaiRoi_ZRJDYKX_57_16,All those things that don't belong here
+Main_LahaiRoi_ZRJDYKX_57_17,From now on
+Main_LahaiRoi_ZRJDYKX_57_18,They'll be gone
+Main_LahaiRoi_ZRJDYKX_57_19,Back to the void with me
+Main_LahaiRoi_ZRJDYKX_57_20,Oh... come to think of it
+Main_LahaiRoi_ZRJDYKX_57_21,I haven't had cake yet
+Main_LahaiRoi_ZRJDYKX_57_22,...That's a bit of a shame
+Main_LahaiRoi_ZRJDYKX_58_1,"How's that for teamwork? I'd sniff out Leviathan's frequency even in a pile of ashes, and snatch it right up!"
+Main_LahaiRoi_ZRJDYKX_58_2,"Great work, Abby."
+Main_LahaiRoi_ZRJDYKX_58_3,"You're very much welcome. Quick, let's go inside and check it out."
+Main_LahaiRoi_ZRJDYKX_58_4,I hope Denia's okay...
+Main_LahaiRoi_ZRJDYKX_59_1,You can read past entries from this Terminal recording experiment data and logs. It seems it hasn't been updated for quite a while.
+Main_LahaiRoi_ZRJDYKX_59_2,"""...After Phase 2 of the clinical trial, significant differences in Voidmatter particle tolerance were observed between the experimental and control groups. During this period, the experimental target's physiological activities remained normal, with frequency states experiencing intense fluctuations, but no irreversible collapse occurred."""
+Main_LahaiRoi_ZRJDYKX_59_3,"""Towards the end of the trial, all physiological indicators of the experimental group were normal, with no tissue abnormalities and no significant weight changes. This concludes Phase 2."""
+Main_LahaiRoi_ZRJDYKX_59_4,"Aside from the staggered experimental records, the Terminal only has a pre-installed game called Lahai-Roi Blocks."
+Main_LahaiRoi_ZRJDYKX_60_1,"A cabinet filled with various medicines, predominantly from the New Federation, including nutritional agents, antibiotics, suppressants, and other drugs..."
+Main_LahaiRoi_ZRJDYKX_60_2,"Some of the labels have been replaced with handwritten tags like ""Painkillers: Gross but work"", ""Sedatives: Somewhat sweet"", and ""For fevers."""
+Main_LahaiRoi_ZRJDYKX_61_1,An ordinary refrigerator. It's stuffed with tightly wrapped compressed food in the same packaging.
+Main_LahaiRoi_ZRJDYKX_61_2,Looks a bit creepy... Want to try it?
+Main_LahaiRoi_ZRJDYKX_61_3,Give it a try.
+Main_LahaiRoi_ZRJDYKX_61_4,"No, thanks."
+Main_LahaiRoi_ZRJDYKX_61_5,"There is absolutely no texture or taste to it. It can hardly be qualified as food, though fortunately, you feel no discomfort after consuming it."
+Main_LahaiRoi_ZRJDYKX_61_6,A wise choice.
+Main_LahaiRoi_ZRJDYKX_62_1,"An operating table with restraining devices. Beside it is a table placed with various surgical cutlery and sterilization tools, and an IV stand with a Fleet Snowfluff sticker."
+Main_LahaiRoi_ZRJDYKX_62_2,A pillow is tied to the head of the operating table... Would anyone really sleep on something like this?
+Main_LahaiRoi_ZRJDYKX_63_1,"A desk stacked with books, including Startorch Academy textbooks. All books are carefully labeled, showing the owner's efforts to understand the knowledge stored inside."
+Main_LahaiRoi_ZRJDYKX_63_2,A carefully preserved photo album sits right in the center of the desk. Take a look?
+Main_LahaiRoi_ZRJDYKX_63_3,Take a look.
+Main_LahaiRoi_ZRJDYKX_63_4,Not now.
+Main_LahaiRoi_ZRJDYKX_63_5,It's filled with photos of Denia. She's smiling in every picture.
+Main_LahaiRoi_ZRJDYKX_63_6,You wonder if more photos will be added to this album.
+Main_LahaiRoi_ZRJDYKX_64_1,"You see a notice on the door: ""Denia's Room. Keep Out!"""
+Main_LahaiRoi_ZRJDYKX_64_2,Denia might be on the other side of this door... Open it?
+Main_LahaiRoi_ZRJDYKX_64_3,(Open the door.)
+Main_LahaiRoi_ZRJDYKX_65_1,A bubble containing weak fluctuating frequencies. Looks like someone left a message for you.
+Main_LahaiRoi_ZRJDYKX_65_2,(Touch the bubble)
+Main_LahaiRoi_ZRJDYKX_65_3,"I assume by the time you get here, {PlayerName}, everything will have ended. Sorry I had to say goodbye this way."
+Main_LahaiRoi_ZRJDYKX_65_4,This is where it all started. The Fractsidus's Lahai-Roi plan... where the Grand Architect first made contact with Aleph-1. And... where I was created.
+Main_LahaiRoi_ZRJDYKX_65_5,"I took the Threnodian fragment the Fractsidus left here. Leaving it here would only cause more suffering... As for the experimental data, consider it a parting gift from me to the Spacetrek Collective."
+Main_LahaiRoi_ZRJDYKX_65_6,"To be honest, I did think of telling you everything about this place."
+Main_LahaiRoi_ZRJDYKX_65_7,"But sometimes gifts can be incredibly inappropriate. Your worries were correct. When the book page was removed, I received the Grand Architect's final message."
+Main_LahaiRoi_ZRJDYKX_65_8,"Now, I am the last anchor point between Aleph-1 and Solaris. If I die according to plan, its fragment will disappear, along with me."
+Main_LahaiRoi_ZRJDYKX_65_9,"I used to tell myself that was karma. But what does an ending like that mean for Sigrika? For Nastasha? For someone like you, who always tries to save everyone?"
+Main_LahaiRoi_ZRJDYKX_65_10,"You're the Grand Architect's greatest rival. So, making you betray your own heart is a bigger prize to them than the Threnodian fragment."
+Main_LahaiRoi_ZRJDYKX_65_11,"It would mean that after all the frustration and failure, you're no different from them. You'd end up going down the same path."
+Main_LahaiRoi_ZRJDYKX_65_12,"But if you had removed that page, the fragment would've lost control after receiving the message... It would've tried to find me, attempting to connect with Aleph-1 out of instinct."
+Main_LahaiRoi_ZRJDYKX_65_13,"So, when I think about it... it's a good thing you never got to finish what you wanted to say back there."
+Main_LahaiRoi_ZRJDYKX_65_14,"I was a child who showed up at the Fractsidus's door out of nowhere. Became their Threnodian lab mouse by accident. Ever since I can remember, they told me I existed for one reason... to make that moment happen."
+Main_LahaiRoi_ZRJDYKX_65_15,I've questioned myself countless times: What is the point of everything that I've been through?
+Main_LahaiRoi_ZRJDYKX_65_16,"The answer is always the same. There is no point. Birth, pain, struggle, death... None of these have meaning."
+Main_LahaiRoi_ZRJDYKX_65_17,"That's why when I first heard your story from the Grand Architect, I absolutely hated you, {PlayerName}."
+Main_LahaiRoi_ZRJDYKX_65_18,"If someone like that is actually out there... then where were they during the longest, most painful days of my life?"
+Main_LahaiRoi_ZRJDYKX_65_19,And why... why would you appear before me just as everything was about to end?
+Main_LahaiRoi_ZRJDYKX_65_20,You know what I hated most? Why did everything about you have to be so impossible?
+Main_LahaiRoi_ZRJDYKX_65_21,Our encounter was... never fair.
+Main_LahaiRoi_ZRJDYKX_65_22,"So, I hope you can forgive me for not saying goodbye. This is something I must put an end to on my own."
+Main_LahaiRoi_ZRJDYKX_65_23,"It's just... it hurts to watch the way you live, {PlayerName}... I can't even imagine a day when someone like you runs out of miracles."
+Main_LahaiRoi_ZRJDYKX_65_24,"They call you Rover, but you don't even know where you started or where you're going... Even if you made your ideals real... where would that leave you? Where is your happiness in all of that?"
+Main_LahaiRoi_ZRJDYKX_65_25,"I never understood what the Grand Architect was mumbling. The future, evolution, or what's going to happen eons later—"
+Main_LahaiRoi_ZRJDYKX_65_26,"But at that moment, in front of Aleph-1, I didn't want you to die. At least not at the hands of the Grand Architect, who's got nothing left but mere survival."
+Main_LahaiRoi_ZRJDYKX_65_27,"What surprised me was that... despite hating you so much, I actually spent such an unprecedented day with you."
+Main_LahaiRoi_ZRJDYKX_65_28,"For the first time, I had my own birthday. For the first time, I forgot about the fear brought by the void. For the first time... I met someone I can truly open up to."
+Main_LahaiRoi_ZRJDYKX_65_29,"How should I describe this emotion? It's a kind of hate, isn't it?"
+Main_LahaiRoi_ZRJDYKX_65_30,"I don't know where Voidmatter particles will take me next... if I could start over, I'd like to visit the cities Nastasha talked about, to visit places where there are no Void Storms and Soliskin."
+Main_LahaiRoi_ZRJDYKX_65_31,"Maybe I'll try picking a different major, try napping in different classes, and taste different cakes in every cafeteria I go to..."
+Main_LahaiRoi_ZRJDYKX_65_32,"Then, no matter how many times it'll take, I'll come back to Lahai-Roi, back to all of you."
+Main_LahaiRoi_ZRJDYKX_65_33,"Whatever you wanted to say, you can tell me the next time we meet."
+Main_LahaiRoi_ZRJDYKX_65_34,"Oh, I almost forgot something important... Actually, all those powers the Grand Architect displayed, including shapeshifting, are not her true Forte."
+Main_LahaiRoi_ZRJDYKX_65_35,Those are derivatives at best... And the shapeshifting has a catch: she needs long-term observation and analysis of her target to pull it off.
+Main_LahaiRoi_ZRJDYKX_65_36,It's just... the idea of her using my face to talk to you... it makes me sick. So let's have a code word. Just between us.
+Main_LahaiRoi_ZRJDYKX_65_37,"Next time, if it's truly me... every ""hate"" I used to say will be a ""like."""
+Main_LahaiRoi_ZRJDYKX_65_38,"Oh, and could you help me enjoy half of my birthday cake? You can save the whole thing for me, of course. But don't you throw away any of the toppings."
+Main_LahaiRoi_ZRJDYKX_66_1,Leave Denia's cake here?
+Main_LahaiRoi_ZRJDYKX_66_2,Yes.
+Main_LahaiRoi_ZRJDYKX_66_3,No.
+Main_LahaiRoi_ZRJDYKX_67_1,{PlayerName}... Will we ever see Denia again?
+Main_LahaiRoi_ZRJDYKX_67_2,We will.
+Main_LahaiRoi_ZRJDYKX_67_3,"Okay... But, what about the thing you didn't get to say, {PlayerName}?"
+Main_LahaiRoi_ZRJDYKX_67_4,"""If you feel you don't belong here, then some day in the future, would you be willing to..."" And? What about the rest?"
+Main_LahaiRoi_ZRJDYKX_67_5,Secret. For now.
+Main_LahaiRoi_ZRJDYKX_29_3,(Emoji: Abby Okay)
+Main_LahaiRoi_ZRJDYKX_120_1,"Ever since Void Storms vanished for good, this room has rarely been used."
+Main_LahaiRoi_ZRJDYKX_120_2,"...From the bedside, the dorms and residential zone stretch out in plain view. Out there, the Academy is still as loud and full of life as ever."
+Main_LahaiRoi_ZRJDYKX_166_1,A thick volume compiled from a dazzling array of student society publications. Pages have been whimsically torn out and rebound. Now it looks more like a yearbook than a club magazine.
+Main_LahaiRoi_ZRJDYKX_166_2,"It captures a segment of life from the past two years shared by those within its pages: vibrant souls who converged from different worlds, each pursuing their own paths."
+Main_LahaiRoi_ZRJDYKX_166_3,No one knew where this train was headed. But the owner of this book chose to jump off early—that much is clear.
+Main_LahaiRoi_ZRJDYKX_166_4,"If asked why, she'd probably say:"
+Main_LahaiRoi_ZRJDYKX_166_5,"""I'll be waiting for you at the end of the line."""
