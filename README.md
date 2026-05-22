@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white&style=for-the-badge"/>
 </a>
 
-# 02/05/2026 Update 3.3
+# 23/05/2026 Update 3.3.2
 
 muốn xem thêm việt hóa CN to VI kham khảo nguồn bên này
 https://github.com/CallMeDangDev/WuwaVH
