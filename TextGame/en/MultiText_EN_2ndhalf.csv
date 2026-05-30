@@ -114,7 +114,7 @@ Main_LahaiRoi_ZRJDYKX_20_18,"Come on, {PlayerName}, you too. And... can I borrow
 Main_LahaiRoi_ZRJDYKX_20_19,So this is what it's about?
 Main_LahaiRoi_ZRJDYKX_20_20,"Alright, ready... three, two, one—"
 Main_LahaiRoi_ZRJDYKX_20_21,Cheese!
-Main_LahaiRoi_ZRJDYKX_20_22,I'll save the photo on your Terminal for now. We can print it someday.
+Main_LahaiRoi_ZRJDYKX_20_22,I'll save the photo on {PlayerName}'s Terminal for now. We can print it someday.
 Main_LahaiRoi_ZRJDYKX_20_23,"Look, in the photo! It's the white bird... It flew that way!"
 Main_LahaiRoi_ZRJDYKX_20_24,"You learn from Sigrika and Denia about small moments from their shared past. 
 When they speak of Nivora, Denia grows still, as if reaching some quiet resolution. 
@@ -140,7 +140,7 @@ Main_LahaiRoi_ZRJDYKX_24_3,"Understood. However, based on TARD-E's logic functio
 Main_LahaiRoi_ZRJDYKX_241_1,Is Sigrika running faster than me?
 Main_LahaiRoi_ZRJDYKX_241_2,I'd like to be able to do that too...
 Main_LahaiRoi_ZRJDYKX_241_3,You can.
-Main_LahaiRoi_ZRJDYKX_242_1,...I died.
+Main_LahaiRoi_ZRJDYKX_242_1,And... I'm dead.
 Main_LahaiRoi_ZRJDYKX_25_1,I'm pretty sure it flew this way... where did it go?
 Main_LahaiRoi_ZRJDYKX_25_2,"Why don't we split up? You head that way, Siggy. {PlayerName} and I will check this way."
 Main_LahaiRoi_ZRJDYKX_25_3,Okay! Ping me on the Terminal if you find anything!
@@ -309,7 +309,7 @@ Main_LahaiRoi_ZRJDYKX_42_3,We met during the New Solar Celebration.
 Main_LahaiRoi_ZRJDYKX_42_4,"Ah, I heard Siggy mention you were a great help... Any stories you mind sharing?"
 Main_LahaiRoi_ZRJDYKX_42_5,You know what happened. Weren't you the ones behind it all?
 Main_LahaiRoi_ZRJDYKX_42_6,That wasn't my plan at all...
-Main_LahaiRoi_ZRJDYKX_43_1,"You were going to say goodbye to her, right?"
+Main_LahaiRoi_ZRJDYKX_43_1,"You were gonna say goodbye to her, right?"
 Main_LahaiRoi_ZRJDYKX_43_2,"I suppose... I wanted to treat her to some cake, and then get it off my chest when the moment was right."
 Main_LahaiRoi_ZRJDYKX_43_3,"You mean the birthday, the goodbye, or you've been lying to her the whole time?"
 Main_LahaiRoi_ZRJDYKX_43_4,"All of it, I guess... I actually hoped she'd be angry."
@@ -343,7 +343,7 @@ Main_LahaiRoi_ZRJDYKX_44_13,"Here, this is for you. I never got the chance to gi
 Main_LahaiRoi_ZRJDYKX_44_14,You were always nagging me about that Royan fairytales collection. I had a friend print it in color.
 Main_LahaiRoi_ZRJDYKX_44_15,"I had no idea it's your birthday today, so consider it a birthday gift from me, Denia."
 Main_LahaiRoi_ZRJDYKX_44_16,"Nastasha, your hands..."
-Main_LahaiRoi_ZRJDYKX_44_17,"Just a minor issue from that incident earlier. Don't worry, Dr. Herssen said you'll barely notice it in a few years."
+Main_LahaiRoi_ZRJDYKX_44_17,"Just a minor issue from that incident earlier. Don't worry, Dr. Herssen said I'll barely notice it in a few years."
 Main_LahaiRoi_ZRJDYKX_44_18,It's from that Voidmatter contamination...
 Main_LahaiRoi_ZRJDYKX_44_19,"But if it can heal as you said, then... there's really no need for you to leave, right? With all those advanced techs of the Spacetrek Collective..."
 Main_LahaiRoi_ZRJDYKX_44_20,"Well, that's exactly why they deemed it's no longer safe for me to stay here. Something about Lahai-Roi's environment makes the contamination even worse for the nervous system."
@@ -486,7 +486,7 @@ Main_LahaiRoi_ZRJDYKX_5_11,"Oh, and she also has a message for you: ""Only the k
 Main_LahaiRoi_ZRJDYKX_5_12,Is that supposed to be about Denia?
 Main_LahaiRoi_ZRJDYKX_5_13,I honestly don't know. But that's her... always leaving you guessing.
 Main_LahaiRoi_ZRJDYKX_50_1,Are you here to pick up the birthday cake? One moment please...
-Main_LahaiRoi_ZRJDYKX_50_2,"(Denia... She said she had to take care of something. But what, exactly? Does it have something to do with the Threnodina's frequency in the Dimmr Plains?)"
+Main_LahaiRoi_ZRJDYKX_50_2,"(Denia... She said she had to take care of something. But what, exactly? Does it have something to do with the Threnodian's frequency in the Dimmr Plains?)"
 Main_LahaiRoi_ZRJDYKX_50_3,"(If the Spacetrek Collective finding Denia was part of the Grand Architect's plan, then what about removing that page from her? Or maybe...)"
 Main_LahaiRoi_ZRJDYKX_50_4,(If I were in Denia's shoes...)
 Main_LahaiRoi_ZRJDYKX_50_5,"""Easy. Today is my birthday. I won't be going anywhere."""
@@ -546,7 +546,7 @@ Main_LahaiRoi_ZRJDYKX_7_14,"We've been on opposite sides before, but..."
 Main_LahaiRoi_ZRJDYKX_7_15,"There you go, still all serious..."
 Main_LahaiRoi_ZRJDYKX_7_16,But I want to try trusting you.
 Main_LahaiRoi_ZRJDYKX_7_17,"Right... In that case, am I supposed to look more excited?"
-Main_LahaiRoi_ZRJDYKX_7_18,"Too bad, {PlayerName}, I can't trust you the same way."
+Main_LahaiRoi_ZRJDYKX_7_18,"Too bad, {PlayerName}, I can't trust you in the same way."
 Main_LahaiRoi_ZRJDYKX_7_19,"You saw me at my worst there, and you're still playing this game... You want answers. That's why you're here."
 Main_LahaiRoi_ZRJDYKX_7_20,I won't deny it.
 Main_LahaiRoi_ZRJDYKX_7_21,You did save me once.
@@ -812,7 +812,7 @@ Main_LahaiRoi_ZRJDYKX_65_33,"Whatever you wanted to say, you can tell me the nex
 Main_LahaiRoi_ZRJDYKX_65_34,"Oh, I almost forgot something important... Actually, all those powers the Grand Architect displayed, including shapeshifting, are not her true Forte."
 Main_LahaiRoi_ZRJDYKX_65_35,Those are derivatives at best... And the shapeshifting has a catch: she needs long-term observation and analysis of her target to pull it off.
 Main_LahaiRoi_ZRJDYKX_65_36,It's just... the idea of her using my face to talk to you... it makes me sick. So let's have a code word. Just between us.
-Main_LahaiRoi_ZRJDYKX_65_37,"Next time, if it's truly me... every ""hate"" I used to say will be a ""like."""
+Main_LahaiRoi_ZRJDYKX_65_37,"Next time, if it's truly me... all my old ""hates"" will become ""likes."""
 Main_LahaiRoi_ZRJDYKX_65_38,"Oh, and could you help me enjoy half of my birthday cake? You can save the whole thing for me, of course. But don't you throw away any of the toppings."
 Main_LahaiRoi_ZRJDYKX_66_1,Leave Denia's cake here?
 Main_LahaiRoi_ZRJDYKX_66_2,Yes.
