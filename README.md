@@ -4,6 +4,9 @@
 
 # 23/05/2026 Update 3.3.2
 
+### Ở bản 3.4 có lỗi như hình dưới cần xóa việt hóa theo [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa#l%C6%B0u-%C3%BD-n%E1%BA%BFu-x%C3%B3a-mod). Và chờ update.
+<img width="320" height="152" alt="image" src="https://github.com/user-attachments/assets/9cb13e7d-c83c-4fba-809d-4431ae077d6c" />
+
 muốn xem thêm việt hóa CN to VI kham khảo nguồn bên này
 https://github.com/CallMeDangDev/WuwaVH
 
