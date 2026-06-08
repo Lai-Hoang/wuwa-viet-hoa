@@ -2,9 +2,9 @@
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white&style=for-the-badge"/>
 </a>
 
-# 23/05/2026 Update 3.3.2
+# 08/06/2026 Update 3.4.1
 
-### Ở bản 3.4 có lỗi như hình dưới cần xóa việt hóa theo [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa#l%C6%B0u-%C3%BD-n%E1%BA%BFu-x%C3%B3a-mod). Và chờ update.
+### Ở bản 3.4 Nếu có lỗi như hình dưới cần xóa việt hóa theo [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa#l%C6%B0u-%C3%BD-n%E1%BA%BFu-x%C3%B3a-mod). Và cài lại việt hóa.
 <img width="320" height="152" alt="image" src="https://github.com/user-attachments/assets/9cb13e7d-c83c-4fba-809d-4431ae077d6c" />
 
 muốn xem thêm việt hóa CN to VI kham khảo nguồn bên này
@@ -31,9 +31,9 @@ Trước khi đồ thừa cho cái gì ăn cắp thông tin của bạn tại sa
 Sử dụng Việt Hóa này bạn không cần phải tắt antivirus trên máy của bạn oke.
 <br>
 
-Giải thích 2 file version.dll,wuwaVietHoa.dll
+Giải thích 2 file winmm.dll,wuwaVietHoa.dll
 <br>
-version.dll có tác dụng để load wuwaVietHoa.dll vào game.
+winmm.dll có tác dụng để load wuwaVietHoa.dll vào game.
 <br>
 wuwaVietHoa.dll có tác dụng bỏ qua kiểm tra Chữ ký file Pak của game (cần thiết. nếu không có chơi 15p sẽ bị văng game).
 <br>
@@ -73,7 +73,7 @@ copy thư mục "client" vừa giải nén từ mod vào trong thư mục "Wuthe
 # lưu ý nếu xóa mod
 video hướng dẫn xóa: [Bản Launcher](https://streamable.com/gkcbgh), [Bản Steam](https://streamable.com/0kb87k)
 <br>
-cần xóa 2 tệp tin wuwaVietHoa.dll, version.dll
+cần xóa 2 tệp tin wuwaVietHoa.dll,  winmm.dll, version.dll (xóa thêm file này nếu sài nó ở phiên bản cũ).
 <!--
 <br>
 (cần xóa thêm 6 tệp nữa nếu bạn sài mod trước đây: CenSerPatch.dll, winhttp.dll, shorekeeper.dll, WuwaCheckBypass.dll, WuwaCheckBypass.json, libraries.txt)
