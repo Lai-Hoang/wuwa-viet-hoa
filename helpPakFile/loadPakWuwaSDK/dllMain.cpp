@@ -8,14 +8,20 @@ namespace fs = std::filesystem;
 
 bool CheckMountPak()
 {
-    SDK::UFunction* MountPakFunc = SDK::UKuroPakMountStatic::StaticClass()->GetFunction("KuroPakMountStatic", "MountPak");
+    /*SDK::UFunction* MountPakFunc = SDK::UKuroPakMountStatic::StaticClass()->GetFunction("KuroPakMountStatic", "MountPak");
     if (!MountPakFunc)
+        return false;
+    return true;*/ //không cần cái này nữa do driver anticheat đã khởi động cùng game.
+
+    //Nếu không đúng offset của game theo phiên bản truy vấn điều này khiến game crash ngay khi khởi động!!!
+    SDK::UEngine* Engine = SDK::UEngine::GetEngine();
+    if (!Engine)
         return false;
     return true;
 }
 
 void unloadHook(HMODULE hModule) {
-    Sleep(1000);// TIMING CHUẨN
+    Sleep(1000);// Cái này chỉ để nhìn xem file load xóa đi nếu không cần thiết
     FreeConsole();
     FreeLibraryAndExitThread(hModule, 0);
 }
@@ -46,7 +52,7 @@ bool ProcessPakFiles(const std::string& folderPath) {
 
     int idCounter = 46; // để bừa cũng đc
     bool foundPak = false;
-    Sleep(3000);// TIMING CHUẨN
+    //Sleep(3000);// TIMING CHUẨN
     for (const auto& entry : fs::directory_iterator(folderPath)) {
         if (entry.is_regular_file() && entry.path().extension() == ".pak") {
             foundPak = true;
@@ -76,7 +82,7 @@ std::string GetCurrentDllDirectory(HMODULE hModule) {
 
 DWORD MainThread(HMODULE Module)
 {
-    Logger::Init("Log");
+    Logger::Init("Log");// Cái này chỉ để nhìn xem file load xóa đi nếu không cần thiết
     LOG_SUCCESS("github.com/Lai-Hoang/wuwa-viet-hoa");
 
     while (true)
