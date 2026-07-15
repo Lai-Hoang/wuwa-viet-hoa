@@ -2,13 +2,13 @@
   <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white&style=for-the-badge"/>
 </a>
 
-# 23/06/2026 Update 3.4.2
+# 15/07/2026 Update 3.5.1
 
-### Ở bản 3.4 Nếu có lỗi như hình dưới cần xóa việt hóa theo [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa#l%C6%B0u-%C3%BD-n%E1%BA%BFu-x%C3%B3a-mod). Và cài lại việt hóa.
+### Ở bản 3.5 Nếu có lỗi như hình dưới cần xóa việt hóa theo [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa#l%C6%B0u-%C3%BD-n%E1%BA%BFu-x%C3%B3a-mod). Và cài lại việt hóa.
 <img width="320" height="152" alt="image" src="https://github.com/user-attachments/assets/9cb13e7d-c83c-4fba-809d-4431ae077d6c" />
 
 muốn xem thêm việt hóa CN to VI kham khảo nguồn bên này
-https://github.com/CallMeDangDev/WuwaVH
+[DangDev CN->VI](https://huggingface.co/datasets/BachMacThanh/WuwaVH/tree/main/Launcher)
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
